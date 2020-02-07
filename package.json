@@ -1,0 +1,81 @@
+{
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Atanas Stoyanov",
+    "email": "atanasster@gmail.com",
+    "url": "https://github.com/atanasster"
+  },
+  "homepage": "https://github.com/atanasster/component-controls",
+  "bugs": {
+    "url": "https://github.com/atanasster/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atanasster/component-controls.git"
+  },
+  "scripts": {
+    "clean": "lerna clean",
+    "bs": "lerna bootstrap",
+    "dev": "cd dev-env/basic && yarn && yarn dev",
+    "packages": "run-s packages:*",
+    "packages:fix": "lerna run --parallel fix && echo",
+    "packages:lint": "lerna run --parallel lint",
+    "packages:build": "lerna run build",
+    "packages:test": "lerna run test --stream",
+    "prerelease": "yarn run packages",
+    "release": "lerna publish --conventional-commits",
+    "release:next": "yarn run packages && lerna publish --conventional-commits --conventional-prerelease --dist-tag=next --exact",
+    "promote:next": "lerna publish --conventional-commits --conventional-graduate",
+    "release:beta": "yarn release --dist-tag=beta --preid=beta",
+    "release:canary": "yarn release --force-publish=\"*\" --canary --exact --npm-client npm",
+    "precommit": "lint-staged",
+    "commit": "git-cz",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,mdx}": [
+      "yarn packages",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-lerna-scopes": "^8.2.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^12.6.8",
+    "@types/prettier": "^1.16.4",
+    "all-contributors-cli": "^6.8.0",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-react-app": "^9.0.0",
+    "commitizen": "^3.1.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lerna": "3.15.0",
+    "lint-staged": "^9.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "rollup": "^1.17.0",
+    "trash-cli": "^3.0.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "3.5.3"
+  },
+  "workspaces": {
+    "packages": [
+      "core/*",
+      "integrations/*"
+    ]
+  }
+}
