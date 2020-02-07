@@ -1,6 +1,6 @@
 import escape from 'escape-html'
 
-import { ComponentControl, ComponentControls, ControlTypes } from '.'
+import { ComponentControl, ComponentControls, ControlTypes } from './types'
 
 export type LoadedComponentControl = ComponentControl & { defaultValue: any }
 export interface LoadedComponentControls {

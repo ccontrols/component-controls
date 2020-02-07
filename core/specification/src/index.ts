@@ -1,6 +1,6 @@
-export * from './story-controls'
+export * from './types'
 
-export * from './controls-utils'
+export * from './utils'
 
 export type SetControlValueFn = (
   storyId: string,

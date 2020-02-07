@@ -1,4 +1,4 @@
-import { ControlTypes } from './story-controls'
+import { ControlTypes } from './types'
 import {
   mergeControlValues,
   resetControlValues,
