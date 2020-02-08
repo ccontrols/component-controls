@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Component controls specification and utility routines",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
