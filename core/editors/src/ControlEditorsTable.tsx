@@ -4,12 +4,13 @@ import { transparentize } from 'polished';
 import { styled, Theme } from '@storybook/theming';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
-
 import {
+  resetControlValues,
+  getControlValues,
   LoadedComponentControls,
   LoadedComponentControl,
-  getControlValues,
-} from '@component-controls/specification';
+} from '@component-controls/core';
+
 import { Table, TabsState, ActionBar } from '@storybook/components';
 import { ControlsEditorsTableProps } from './types';
 
@@ -127,14 +128,15 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps & {
     controls,
     title,
     storyId,
-    resetControlValue,
+    setControlValue,
     extraActions = [],
   } = props;
   if (controls && Object.keys(controls).length) {
     const onReset = (e: MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
-      if (resetControlValue && storyId) {
-        resetControlValue(storyId);
+      if (setControlValue && storyId) {
+        const values = resetControlValues(controls);
+        setControlValue(storyId, undefined, values);
       }
     };
     const onCopy = (e: MouseEvent<HTMLButtonElement>) => {

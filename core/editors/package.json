@@ -30,6 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/core": "^0.1.6",
     "@component-controls/specification": "^0.1.6",
     "@storybook/components": "file:../../../storybook/lib/components/dist",
     "@storybook/theming": "file:../../../storybook/lib/theming/dist",

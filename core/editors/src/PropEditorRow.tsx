@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  LoadedComponentControl,
   SetControlValueFn,
-  ResetControlValueFn,
   ClickControlFn,
 } from '@component-controls/specification';
+import { LoadedComponentControl } from '@component-controls/core';
+
 import { getPropertyEditor } from './prop-factory';
 import { FlexContainer } from './FlexContainer';
 import { PropertyEditor } from './types';
@@ -16,7 +16,6 @@ interface PropertyEditorRowProps {
   name: string;
   storyId?: string;
   setControlValue?: SetControlValueFn;
-  resetControlValue?: ResetControlValueFn;
   clickControl?: ClickControlFn;
 }
 

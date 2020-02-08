@@ -4,7 +4,7 @@ import { ComponentControlNumber } from '@component-controls/specification';
 import { Form } from '@storybook/components';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
-interface NumberEditorProps extends PropertyControlProps {
+export interface NumberEditorProps extends PropertyControlProps {
   prop: ComponentControlNumber;
 }
 

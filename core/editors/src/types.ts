@@ -1,11 +1,10 @@
 import React from 'react';
 import {
   ComponentControl,
-  LoadedComponentControls,
   SetControlValueFn,
-  ResetControlValueFn,
   ClickControlFn,
 } from '@component-controls/specification';
+import { LoadedComponentControls } from '@component-controls/core';
 
 export type PropertyOnClick = (prop: ComponentControl) => any;
 export interface PropertyControlProps {
@@ -29,7 +28,6 @@ export interface ControlsEditorsTableProps {
   storyId?: string;
   controls?: LoadedComponentControls;
   setControlValue?: SetControlValueFn;
-  resetControlValue?: ResetControlValueFn;
   clickControl?: ClickControlFn;
   extraActions?: ExtraControlActions;
 }

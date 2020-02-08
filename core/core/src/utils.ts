@@ -11,7 +11,7 @@ import {
  * defaultValue, an additional field in Loaded...
  */
 
-export type LoadedComponentControl = ComponentControl & { defaultValue: any };
+export type LoadedComponentControl = ComponentControl & { defaultValue?: any };
 export interface LoadedComponentControls {
   [name: string]: LoadedComponentControl;
 }
@@ -66,17 +66,11 @@ export const resetControlValues = (
   controlName?: string,
 ) => {
   return controlName
-    ? {
-        ...controls,
-        [controlName]: {
-          ...controls[controlName],
-          value: controls[controlName].defaultValue,
-        },
-      }
+    ? controls[controlName].defaultValue
     : Object.keys(controls).reduce(
         (acc, key) => ({
           ...acc,
-          [key]: { ...controls[key], value: controls[key].defaultValue },
+          [key]: controls[key].defaultValue,
         }),
         {},
       );

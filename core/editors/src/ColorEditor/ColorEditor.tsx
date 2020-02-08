@@ -52,7 +52,7 @@ const Cover = styled.div({
   left: '0px',
 });
 
-interface ColorEditorProps extends PropertyControlProps {
+export interface ColorEditorProps extends PropertyControlProps {
   prop: ComponentControlColor;
 }
 

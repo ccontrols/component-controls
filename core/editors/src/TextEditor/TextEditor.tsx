@@ -3,7 +3,7 @@ import { ComponentControlText } from '@component-controls/specification';
 import { Form } from '@storybook/components';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
-interface TextEditorProps extends PropertyControlProps {
+export interface TextEditorProps extends PropertyControlProps {
   prop: ComponentControlText;
 }
 

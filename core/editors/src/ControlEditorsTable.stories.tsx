@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-  ControlTypes,
-  LoadedComponentControls,
-} from '@component-controls/specification';
+import { ControlTypes } from '@component-controls/specification';
+import { LoadedComponentControls } from '@component-controls/core';
+
 import { ControlsEditorsTable } from './ControlEditorsTable';
 
 export default {

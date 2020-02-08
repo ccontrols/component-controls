@@ -38,7 +38,7 @@ const formatTime = (date: Date | undefined) => {
   return '';
 };
 
-interface DateEditorProps extends PropertyControlProps {
+export interface DateEditorProps extends PropertyControlProps {
   prop: ComponentControlDate;
 }
 

@@ -22,7 +22,7 @@ interface OptionsSelectValueItem {
   label: string;
 }
 
-interface OptionsEditorProps extends PropertyControlProps {
+export interface OptionsEditorProps extends PropertyControlProps {
   prop: ComponentControlOptions;
 }
 

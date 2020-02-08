@@ -18,7 +18,7 @@ function fileReaderPromise(file: File) {
   });
 }
 
-interface FilesEditorProps extends PropertyControlProps {
+export interface FilesEditorProps extends PropertyControlProps {
   prop: ComponentControlFiles;
 }
 

@@ -12,7 +12,7 @@ const FlexButton = styled(Form.Button)({
   flex: '1 1',
 });
 
-interface ButtonEditorProps extends PropertyControlProps {
+export interface ButtonEditorProps extends PropertyControlProps {
   prop: ComponentControlButton;
   onClick: PropertyOnClick;
 }

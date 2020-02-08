@@ -3,6 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import {
   mergeControlValues,
   resetControlValues,
+  getControlValues,
   LoadedComponentControls,
 } from './index';
 
@@ -31,11 +32,26 @@ describe('Controls utils', () => {
   });
 
   it('Should reset property value', () => {
-    expect(resetControlValues(modifiedControls, 'name')).toMatchObject(
-      controls,
+    expect(
+      mergeControlValues(
+        modifiedControls,
+        'name',
+        resetControlValues(modifiedControls, 'name'),
+      ),
+    ).toMatchObject(controls);
+  });
+  it('Should reset entire object', () => {
+    expect(resetControlValues(modifiedControls)).toMatchObject(
+      getControlValues(controls),
     );
   });
-  it('Should reset property object', () => {
-    expect(resetControlValues(modifiedControls)).toMatchObject(controls);
+  it('Should reset reset entire object and match merged values', () => {
+    expect(
+      mergeControlValues(
+        modifiedControls,
+        undefined,
+        resetControlValues(modifiedControls),
+      ),
+    ).toMatchObject(controls);
   });
 });

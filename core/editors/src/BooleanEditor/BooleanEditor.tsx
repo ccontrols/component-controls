@@ -4,7 +4,7 @@ import { Toggle } from './Toggle';
 import { FlexContainer } from '../FlexContainer';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
-interface BooleanEditorProps extends PropertyControlProps {
+export interface BooleanEditorProps extends PropertyControlProps {
   prop: ComponentControlBoolean;
 }
 

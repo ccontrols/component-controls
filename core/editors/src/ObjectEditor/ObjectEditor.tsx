@@ -5,14 +5,13 @@ import { WithTooltipPure, Button, Icons } from '@storybook/components';
 import {
   ComponentControl,
   ComponentControlObject,
-  mergeControlValues,
-  getControlValues,
 } from '@component-controls/specification';
+import { mergeControlValues, getControlValues } from '@component-controls/core';
 import { PropertyControlProps, PropertyEditor } from '../types';
 import { FlexContainer } from '../FlexContainer';
 import { getPropertyEditor } from '../prop-factory';
 
-interface ObjectEditorProps extends PropertyControlProps {
+export interface ObjectEditorProps extends PropertyControlProps {
   prop: ComponentControlObject;
 }
 
