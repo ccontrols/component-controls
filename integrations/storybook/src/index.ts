@@ -1,0 +1,1 @@
+export { extractSmartControls } from './smartControls';

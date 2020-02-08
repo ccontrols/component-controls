@@ -1,0 +1,56 @@
+import {
+  Story,
+  Preview,
+  Props,
+  Source,
+  Meta,  
+} from '@storybook/addon-docs/blocks';
+import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
+import Button from '../../components/BaseButton';
+
+
+<Meta title="Addons/Controls/mdx" parameters={{component: Button}} />
+
+# Smart controls
+
+<Story id="." />
+
+<Props of={Button} />
+
+
+<Preview>
+  <Story name="smart story">
+    {(props) => (
+      <Button label="default" {...props}/>
+    )}  
+  </Story>
+</Preview>
+
+
+# Small story with custom controls
+
+<Preview>
+  <Story name="small story" 
+    controls={{
+      text: {type: 'text', value: 'Hello'},
+    }}
+    parameters={{
+      controls: {
+        smart: false
+      }
+    }}>
+    {({ text }) => (
+      <Button label={text}/>
+    )}  
+  </Story>
+</Preview>
+
+<ControlsEditorsTable name="small story" />
+
+# Story with no parameters == no smart controls
+
+<Preview>
+  <Story name="no controls" >
+      <Button label="Hello"/>
+  </Story>
+</Preview>
