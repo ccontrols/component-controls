@@ -1,6 +1,6 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
-import { LoadedComponentControls } from '@component-controls/specification';
+import { LoadedComponentControls } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ControlsTable } from '../shared/ControlsTable';
 
