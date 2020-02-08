@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@component-controls/storybook",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
