@@ -1,6 +1,15 @@
 import escape from 'escape-html';
 
-import { ComponentControl, ComponentControls, ControlTypes } from './types';
+import {
+  ComponentControl,
+  ComponentControls,
+  ControlTypes,
+} from '@component-controls/specification';
+
+/**
+ * once controls are loaded, the value is saved into
+ * defaultValue, an additional field in Loaded...
+ */
 
 export type LoadedComponentControl = ComponentControl & { defaultValue: any };
 export interface LoadedComponentControls {

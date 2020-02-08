@@ -1,7 +1,7 @@
 {
-  "name": "@component-controls/specification",
+  "name": "@component-controls/core",
   "version": "0.1.3",
-  "description": "Component controls specification with typescript definitions",
+  "description": "Component controls core utility routines",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -26,10 +26,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/atanasster/component-controls.git",
-    "directory": "core/specification"
+    "directory": "core/core"
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/specification": "^0.1.2",
+    "escape-html": "^1.0.3",
     "typescript": "3.5.3"
   },
   "devDependencies": {
