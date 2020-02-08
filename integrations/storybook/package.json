@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@component-controls/storybook",
   "version": "0.1.8",
   "description": "Storybook Addon For live editing of component controls",
@@ -37,29 +36,37 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/editors": "^0.1.7",
-    "@component-controls/specification": "^0.1.6",
+    "@component-controls/editors": "latest",
+    "@component-controls/specification": "latest",
     "copy-to-clipboard": "^3.0.8",
     "core-js": "^3.0.1",
     "faker": "^4.1.0",
     "global": "^4.3.2",
-    "qs": "^6.6.0"
+    "qs": "^6.6.0",
+    "react": "^16.12.0"
   },
   "devDependencies": {
-    "@component-controls/storybook": "file:./dist",
-    "@storybook/addon-docs": "6.0.0-alpha.8",
-    "@storybook/addons": "6.0.0-alpha.8",
-    "@storybook/api": "6.0.0-alpha.8",
-    "@storybook/client-api": "6.0.0-alpha.8",
-    "@storybook/components": "6.0.0-alpha.8",
+    "@storybook/addon-docs": "^6.0.0-alpha.8",
+    "@storybook/addons": "^6.0.0-alpha.8",
+    "@storybook/api": "^6.0.0-alpha.8",
+    "@storybook/client-api": "^6.0.0-alpha.8",
+    "@storybook/components": "^6.0.0-alpha.8",
     "@storybook/csf": "0.0.1",
-    "@storybook/react": "6.0.0-alpha.8",
-    "@storybook/theming": "6.0.0-alpha.8",
+    "@storybook/react": "^6.0.0-alpha.8",
+    "@storybook/theming": "^6.0.0-alpha.8",
     "@types/faker": "^4.1.9",
     "@types/node": "^13.7.0",
     "babel-loader": "^8.0.6"
   },
   "peerDependencies": {
+    "@storybook/addon-docs": "*",
+    "@storybook/addons": "*",
+    "@storybook/api": "*",
+    "@storybook/client-api": "*",
+    "@storybook/components": "*",
+    "@storybook/csf": "*",
+    "@storybook/react": "*",
+    "@storybook/theming": "*",
     "react": "*"
   },
   "publishConfig": {
