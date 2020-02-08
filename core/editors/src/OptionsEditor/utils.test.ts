@@ -37,6 +37,12 @@ describe('Options utility functions', () => {
       selected: [1],
     });
   });
+  it('Should handle null value', () => {
+    expect(normalizeOptions({ Null: null }, null)).toMatchObject({
+      entries: [{ label: 'Null', value: null }],
+      selected: [null],
+    });
+  });
   it('Should handle object value', () => {
     expect(normalizeOptions({ Object: objectData }, objectData)).toMatchObject({
       entries: [{ label: 'Object', value: objectData }],
