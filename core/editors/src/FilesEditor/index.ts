@@ -1,0 +1,1 @@
+export { FilesEditor } from './FilesEditor';

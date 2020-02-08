@@ -117,7 +117,7 @@ export interface ComponentControlData {
    *  usually comprised of two parts, separated by a dot
    *  example 'internet.avatar'
    */
-  name: string
+  name: string;
 
   /**
    * options to be passe to the random data generators
@@ -125,7 +125,7 @@ export interface ComponentControlData {
    *  min: 10, max: 20
    * }
    */
-  options?: { [key: string]: any }
+  options?: { [key: string]: any };
 }
 
 /**
@@ -134,134 +134,134 @@ export interface ComponentControlData {
  *
  */
 export interface ComponentControlBase<T> {
-  type: ControlTypes
+  type: ControlTypes;
 
   /**
    * label to display next to the field editor
    * by default uses the property name itself
    */
 
-  label?: string
+  label?: string;
 
   /**
    * a default value for the property
    */
-  value?: T
+  value?: T;
 
   /**
    * hide the label from the property editor
    */
-  hideLabel?: boolean
+  hideLabel?: boolean;
   /**
    * hide the property editor for this property
    * will only use the value
    */
 
-  hidden?: boolean
+  hidden?: boolean;
   /**
    * allows grouping of the properties
    * in a property editor
    * for example different editor tabs
    */
-  groupId?: string
+  groupId?: string;
 
   /**
    * allows custom sorting of the properties
    * if 'order' is not provided, the props
    * will be sorted by the order/key of the object (unreliable)
    */
-  order?: number
+  order?: number;
 
   /**
    * helper information to generate random data
    * can be used in conjunction with faker.js
    */
-  data?: ComponentControlData
+  data?: ComponentControlData;
 }
 
 export interface ComponentControlText extends ComponentControlBase<string> {
-  type: ControlTypes.TEXT
+  type: ControlTypes.TEXT;
 
   /**
    * placeholder for empty properties
    * either undefined initial value
    * or user clears the field
    */
-  placeholder?: string
+  placeholder?: string;
 
   /**
    * minimum number of rows in a TextArea field for longer text
    * by default, only 1 row = means a Input field
    */
-  minRows?: number
+  minRows?: number;
 
   /**
    * number of rows in a TextArea field
    */
-  maxRows?: number
+  maxRows?: number;
 
   /**
    * allows to receive escaped string values
    * to help prevent XSS attacks
    * by default - false
    */
-  escapeValue?: boolean
+  escapeValue?: boolean;
 }
 
 export interface ComponentControlBoolean extends ComponentControlBase<boolean> {
-  type: ControlTypes.BOOLEAN
+  type: ControlTypes.BOOLEAN;
 }
 
 export interface ComponentControlColor extends ComponentControlBase<string> {
-  type: ControlTypes.COLOR
+  type: ControlTypes.COLOR;
 }
 
 export interface ComponentControlDate extends ComponentControlBase<Date> {
-  type: ControlTypes.DATE
+  type: ControlTypes.DATE;
   /**
    * whether to display a date picker (calendar).
    * default: true
    */
-  datePicker?: boolean
+  datePicker?: boolean;
 
   /**
    * whether to display a time picker (calendar).
    * default: true
    */
 
-  timePicker?: boolean
+  timePicker?: boolean;
 }
 
 export interface ComponentControlFiles extends ComponentControlBase<string[]> {
-  type: ControlTypes.FILES
+  type: ControlTypes.FILES;
   /**
    * type of files to accept user to open
    * ex 'image/*',
    */
-  accept?: string
+  accept?: string;
 }
 
 export interface ComponentControlArray extends ComponentControlBase<string[]> {
-  type: ControlTypes.ARRAY
+  type: ControlTypes.ARRAY;
   /**
    * the array items separator, by default comma
    */
-  separator?: string
+  separator?: string;
 }
 
 export interface ComponentControlObject
   extends ComponentControlBase<ComponentControls> {
-  type: ControlTypes.OBJECT
+  type: ControlTypes.OBJECT;
 }
 
 export interface ComponentControlButton<ClickEvent = () => void>
   extends ComponentControlBase<ClickEvent> {
-  type: ControlTypes.BUTTON
+  type: ControlTypes.BUTTON;
 
   /**
    * for button type fields, an onClick handler
    */
-  onClick?: (prop: ComponentControlButton) => void
+  onClick?: (prop: ComponentControlButton) => void;
 }
 
 export type OptionsValueType<T = unknown> =
@@ -269,14 +269,14 @@ export type OptionsValueType<T = unknown> =
   | number
   | string[]
   | number[]
-  | { label: string; value: any }
+  | { label: string; value: any };
 
 /**
  * value/label pairs or array of OptionsValueType
  */
 export type OptionsListType<T = unknown> =
   | { [key: string]: T }
-  | OptionsValueType<T>[]
+  | OptionsValueType<T>[];
 
 /**
  * list of options can be
@@ -287,9 +287,9 @@ export type OptionsListType<T = unknown> =
 
 export interface ComponentControlOptions<T = unknown>
   extends ComponentControlBase<OptionsValueType<T>> {
-  type: ControlTypes.OPTIONS
+  type: ControlTypes.OPTIONS;
 
-  options: OptionsListType<T>
+  options: OptionsListType<T>;
   /**
    * how to render selecting the options:
    * default is 'select'
@@ -301,11 +301,11 @@ export interface ComponentControlOptions<T = unknown>
     | 'radio'
     | 'inline-radio'
     | 'check'
-    | 'inline-check'
+    | 'inline-check';
 }
 
 export interface ComponentControlNumber extends ComponentControlBase<number> {
-  type: ControlTypes.NUMBER
+  type: ControlTypes.NUMBER;
   /**
    * for numeric type fields
    */
@@ -313,23 +313,23 @@ export interface ComponentControlNumber extends ComponentControlBase<number> {
   /**
    * if true, will display a range type slider editor
    */
-  range?: boolean
+  range?: boolean;
 
   /**
    * minimum allowed value for numeric property
    */
-  min?: number
+  min?: number;
 
   /**
    * maximum allowed value for numeric property
    */
-  max?: number
+  max?: number;
 
   /**
    * stepper for numeric editor /i nc/dec value
    */
 
-  step?: number
+  step?: number;
 }
 
 /**
@@ -350,7 +350,7 @@ export type ComponentControl =
   | ComponentControlOptions
   | ComponentControlNumber
   | ComponentControlArray
-  | ComponentControlFiles
+  | ComponentControlFiles;
 
 /**
  * ComponentControls are defined in key value pairs
@@ -358,5 +358,5 @@ export type ComponentControl =
  * and the value is the ComponentControl
  */
 export interface ComponentControls {
-  [name: string]: ComponentControl
+  [name: string]: ComponentControl;
 }

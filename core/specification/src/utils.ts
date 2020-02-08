@@ -1,10 +1,10 @@
-import escape from 'escape-html'
+import escape from 'escape-html';
 
-import { ComponentControl, ComponentControls, ControlTypes } from './types'
+import { ComponentControl, ComponentControls, ControlTypes } from './types';
 
-export type LoadedComponentControl = ComponentControl & { defaultValue: any }
+export type LoadedComponentControl = ComponentControl & { defaultValue: any };
 export interface LoadedComponentControls {
-  [name: string]: LoadedComponentControl
+  [name: string]: LoadedComponentControl;
 }
 
 // save default value for 'reset'
@@ -12,9 +12,9 @@ export const loadControls = (
   controls: ComponentControls,
 ): LoadedComponentControls =>
   Object.keys(controls).reduce((v, key) => {
-    const prop = controls[key]
-    return { ...v, [key]: { ...prop, defaultValue: prop.value } }
-  }, {})
+    const prop = controls[key];
+    return { ...v, [key]: { ...prop, defaultValue: prop.value } };
+  }, {});
 
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {
@@ -25,10 +25,10 @@ const mergeValue = (control: ComponentControl, value: any): any => {
         undefined,
         value,
       ),
-    }
+    };
   }
-  return { ...control, value }
-}
+  return { ...control, value };
+};
 
 export const mergeControlValues = (
   controls: LoadedComponentControls,
@@ -49,8 +49,8 @@ export const mergeControlValues = (
           ),
         }),
         {},
-      )
-}
+      );
+};
 
 export const resetControlValues = (
   controls: LoadedComponentControls,
@@ -70,18 +70,18 @@ export const resetControlValues = (
           [key]: { ...controls[key], value: controls[key].defaultValue },
         }),
         {},
-      )
-}
+      );
+};
 
 export const getControlValues = (
   controls: LoadedComponentControls,
 ): { [name: string]: any } =>
   Object.keys(controls).reduce((acc, key) => {
-    const control: ComponentControl = controls[key]
-    let { value } = control
+    const control: ComponentControl = controls[key];
+    let { value } = control;
     if (control.type === ControlTypes.TEXT && control.escapeValue) {
       if (typeof value === 'string') {
-        value = escape(value)
+        value = escape(value);
       }
     } else if (
       control.type === ControlTypes.OBJECT &&
@@ -90,7 +90,7 @@ export const getControlValues = (
       return {
         ...acc,
         [key]: getControlValues(value as LoadedComponentControls),
-      }
+      };
     }
-    return { ...acc, [key]: value }
-  }, {})
+    return { ...acc, [key]: value };
+  }, {});

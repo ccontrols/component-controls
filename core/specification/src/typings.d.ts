@@ -1,1 +1,1 @@
-declare module 'escape-html'
+declare module 'escape-html';
