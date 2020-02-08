@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Component controls specification and utility routines",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^0.1.6",
+    "@component-controls/core": "^0.1.7",
     "@component-controls/specification": "^0.1.6",
     "@storybook/components": "file:../../../storybook/lib/components/dist",
     "@storybook/theming": "file:../../../storybook/lib/theming/dist",
