@@ -32,8 +32,8 @@
   "dependencies": {
     "@component-controls/core": "^0.1.7",
     "@component-controls/specification": "^0.1.6",
-    "@storybook/components": "file:../../../storybook/lib/components/dist",
-    "@storybook/theming": "file:../../../storybook/lib/theming/dist",
+    "@storybook/components": "^6.0.0-alpha.8",
+    "@storybook/theming": "^6.0.0-alpha.8",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "polished": "^3.4.4",
@@ -57,6 +57,8 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
+    "@storybook/components": "*",
+    "@storybook/theming": "*",
     "react": "*",
     "react-dom": "*"
   },
