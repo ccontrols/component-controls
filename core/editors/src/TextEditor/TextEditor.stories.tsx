@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { TextEditor } from './TextEditor';
 
 export default {
-  title: 'Basics/PropEditors/TextEditor',
+  title: 'Controls/Editors/TextEditor',
   component: TextEditor,
 };
 

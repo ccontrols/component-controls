@@ -18,11 +18,11 @@
     "clean": "lerna clean",
     "bootstrap": "lerna bootstrap",
     "dev": "cd dev-env/basic && yarn && yarn dev",
-    "packages": "yarn fix && yarn lint && yarn build && yarn test",
-    "fix": "lerna run --parallel fix && echo",
-    "lint": "lerna run --parallel lint",
-    "build": "lerna run build",
-    "test": "lerna run test --stream",
+    "packages": "run-s packages:*",
+    "packages:fix": "lerna run --parallel fix && echo",
+    "packages:lint": "lerna run --parallel lint",
+    "packages:build": "lerna run build",
+    "packages:test": "lerna run test --stream",
     "prerelease": "yarn run packages",
     "release": "lerna publish --conventional-commits",
     "release:next": "yarn run packages && lerna publish --conventional-commits --conventional-prerelease --dist-tag=next --exact",
@@ -32,7 +32,9 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "storybook": "start-storybook -p 9015 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o docs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
@@ -47,6 +49,10 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/config-lerna-scopes": "^8.2.0",
+    "@storybook/addon-docs": "^6.0.0-alpha.8",
+    "@storybook/addon-storysource": "^6.0.0-alpha.8",
+    "@storybook/react": "^6.0.0-alpha.8",
+    "@storybook/theming": "^6.0.0-alpha.8",
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
@@ -70,7 +76,8 @@
     "rollup": "^1.17.0",
     "trash-cli": "^3.0.0",
     "ts-jest": "^24.0.2",
-    "typescript": "3.5.3"
+    "typescript": "3.5.3",
+    "webpack-react-docgen-typescript": "^0.9.5"
   },
   "workspaces": {
     "packages": [

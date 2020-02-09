@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { DateEditor } from './DateEditor';
 
 export default {
-  title: 'Basics/PropEditors/DateEditor',
+  title: 'Controls/Editors/DateEditor',
   component: DateEditor,
 };
 

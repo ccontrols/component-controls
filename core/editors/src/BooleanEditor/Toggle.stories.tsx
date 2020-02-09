@@ -3,7 +3,7 @@ import { Icons } from '@storybook/components';
 import { Toggle } from './Toggle';
 
 export default {
-  title: 'Basics/Toggle',
+  title: 'Components/Toggle',
 };
 
 export const allToggles = () => {

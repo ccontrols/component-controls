@@ -1,11 +1,14 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { LoadedComponentControls } from '@component-controls/core';
+import {
+  LoadedComponentControls,
+  mergeControlValues,
+} from '@component-controls/core';
 
 import { ControlsEditorsTable } from './ControlEditorsTable';
 
 export default {
-  title: 'Docs/PropEditors/ControlsEditorsTable',
+  title: 'Controls/Form/ControlsEditorsTable',
   component: ControlsEditorsTable,
 };
 
@@ -38,19 +41,22 @@ export const pureControlsEditorsTable = () => {
         title="Example controls"
         storyId="1-11"
         setControlValue={(storyId, name, value) =>
+          name &&
           setControls({
             ...controls,
             [name]: { ...controls[name], value },
           })
         }
         clickControl={() =>
-          setControls({
-            ...controls,
-            age: {
-              ...controls.age,
-              value: parseInt(controls.age.value, 10) + 1,
-            },
-          })
+          setControls(
+            mergeControlValues(
+              controls,
+              'age',
+              typeof controls.age.value === 'string'
+                ? parseInt(controls.age.value, 10) + 1
+                : 19,
+            ),
+          )
         }
       />
     </>

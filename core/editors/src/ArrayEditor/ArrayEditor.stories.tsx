@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { ArrayEditor } from './ArrayEditor';
 
 export default {
-  title: 'Basics/PropEditors/ArrayEditor',
+  title: 'Controls/Editors/ArrayEditor',
   component: ArrayEditor,
 };
 

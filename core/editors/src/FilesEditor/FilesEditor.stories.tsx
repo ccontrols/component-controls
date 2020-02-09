@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { FilesEditor } from './FilesEditor';
 
 export default {
-  title: 'Basics/PropEditors/FilesEditor',
+  title: 'Controls/Editors/FilesEditor',
   component: FilesEditor,
 };
 

@@ -1136,12 +1136,12 @@
     find-up "^4.0.0"
 
 "@component-controls/editors@latest":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@component-controls/editors/-/editors-0.1.10.tgz#94172e89eb194392784e44b7303504edd8d2bfc3"
-  integrity sha512-Mbg0OURrqpd5l5xIwRMrW6Qw5swrurdVX5rtYEJ1byN7ncZuasF1OAKU0GNNoKg7Kwz3gtZN0dafaZAgX6AbvQ==
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@component-controls/editors/-/editors-0.1.11.tgz#64822382487d155f0af88ab08b29bf1dfca1dd8d"
+  integrity sha512-bnj1PTVjeEu5Gp9SRTGCuu7oBfzWq8XtGiHawl/kwGEkye3Db/wNAugyXLwhEclqn1facK3ojvjLeh16ZZncaA==
   dependencies:
-    "@component-controls/core" "^0.1.7"
-    "@component-controls/specification" "^0.1.6"
+    "@component-controls/core" "^0.1.11"
+    "@component-controls/specification" "^0.1.11"
     "@storybook/components" "^6.0.0-alpha.8"
     "@storybook/theming" "^6.0.0-alpha.8"
     copy-to-clipboard "^3.2.1"
@@ -1155,9 +1155,9 @@
     react-textarea-autosize "^7.1.0"
 
 "@component-controls/specification@latest":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@component-controls/specification/-/specification-0.1.6.tgz#e0e7d017872fe5d32b1a0188c3209ef3daf2ed69"
-  integrity sha512-dcPonpNRrjm/UQyl+NEXtyPpPFCDTHrzUXCWhEFGi5KM1ZwGp47gebwz3LGe3+IeFYCTSqI6xhSj1Fx0aZfcxA==
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@component-controls/specification/-/specification-0.1.11.tgz#be2a76435529cb6a8ca8cc4b5bca4c2d3e650f70"
+  integrity sha512-LdC4LzwtXwLrEkiIvs/cAKZv0rmNvQ1Cdb06zC7x7OAvOpiAIvud93v4bolzWz548Y5ujeSe0SSfcdo7+a/yhw==
   dependencies:
     typescript "3.5.3"
 
@@ -2483,6 +2483,28 @@
     util-deprecate "^1.0.2"
     vue-docgen-api "^4.1.0"
     vue-docgen-loader "^1.3.0-beta.0"
+
+"@storybook/addon-storysource@^6.0.0-alpha.8":
+  version "6.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-6.0.0-alpha.9.tgz#eba6b256bec4bcd8b9042337fbf2f65b1b5a8b69"
+  integrity sha512-+/w3P4MiCrU219NweSeb6IeOXTPhKyPMjk4M957NHsseaYyRw5nmsFgC45TmrhxjpkAs/a3tkxOeWGO+dtpWlw==
+  dependencies:
+    "@storybook/addons" "6.0.0-alpha.9"
+    "@storybook/api" "6.0.0-alpha.9"
+    "@storybook/client-logger" "6.0.0-alpha.9"
+    "@storybook/components" "6.0.0-alpha.9"
+    "@storybook/router" "6.0.0-alpha.9"
+    "@storybook/source-loader" "6.0.0-alpha.9"
+    "@storybook/theming" "6.0.0-alpha.9"
+    core-js "^3.0.1"
+    estraverse "^4.2.0"
+    loader-utils "^1.2.3"
+    prettier "^1.16.4"
+    prop-types "^15.7.2"
+    react "^16.9.17"
+    react-syntax-highlighter "^11.0.2"
+    regenerator-runtime "^0.13.3"
+    util-deprecate "^1.0.2"
 
 "@storybook/addons@6.0.0-alpha.9", "@storybook/addons@^6.0.0-alpha.8":
   version "6.0.0-alpha.9"
@@ -12924,6 +12946,11 @@ react-dev-utils@^10.0.0:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
+react-docgen-typescript@^1.16.1:
+  version "1.16.2"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.16.2.tgz#d5f26ba6591ac4bc61628c514d492de461ae7c2c"
+  integrity sha512-nECrg2qih81AKp0smkxXebF72/2EjmEn7gXSlWLDHLbpGcbw2yIorol24fw1FWqvndIY82sfSd0x/SyfMKY1Jw==
+
 react-docgen@^5.0.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-5.2.0.tgz#ec6f6a46cb9c66a32c703321946d3ba796689b34"
@@ -13095,7 +13122,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.12.0, react@^16.8.3:
+react@^16.12.0, react@^16.8.3, react@^16.9.17:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
@@ -13794,9 +13821,9 @@ rimraf@2.6.3, rimraf@~2.6.2:
     glob "^7.1.3"
 
 rimraf@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.1.tgz#48d3d4cb46c80d388ab26cd61b1b466ae9ae225a"
-  integrity sha512-IQ4ikL8SjBiEDZfk+DFVwqRK8md24RWMEJkdSlgNLkyyAImcjf8SWvU1qFMDOb4igBClbTQ/ugPqXcRwdFTxZw==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
+  integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
 
@@ -15946,6 +15973,14 @@ webpack-log@^2.0.0:
   dependencies:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
+
+webpack-react-docgen-typescript@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/webpack-react-docgen-typescript/-/webpack-react-docgen-typescript-0.9.5.tgz#607835802df47a8b3b93c23bd02f86d22ff1b11e"
+  integrity sha512-XhSYQWmkS22WkvOdj1WS+NYDs27yZU20kfz4uLED9lFW69oH1ImRpidXF70YhvCcdQYER9YH5/C/8arf8HZfJg==
+  dependencies:
+    fs-extra "^8.1.0"
+    react-docgen-typescript "^1.16.1"
 
 webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"
