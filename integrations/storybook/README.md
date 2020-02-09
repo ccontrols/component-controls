@@ -1,4 +1,33 @@
-# Storybook integration
+## Table of contents
+
+  * [Storybook](#storybook)
+  * [Introduction writing custom controls:](#introduction-writing-custom-controls)
+  * [Intro using smart-controls](#intro-using-smart-controls)
+  * [Getting Started](#getting-started)
+    * [With React](#with-react)
+    * [With MDX](#with-mdx)
+    * [With Vue.js](#with-vue.js)
+    * [With Angular](#with-angular)
+    * [With Ember](#with-ember)
+    * [With Ember](#with-ember)
+  * [Available Controls](#available-controls)
+  * [Smart Controls](#smart-controls)
+    * [Examples](#smart-controls-examples)
+      * [Smart Controls React](#smart-controls-react)
+      * [Smart Controls MDX](#smart-controls-mdx)
+      * [Smart Controls Angular](#smart-controls-angular)
+    * [Smart controls options](#smart-controls-options)  
+  * [Random Data Generators](#testing-with-random-data-generators)  
+  * [Categories](#categories)
+  * [Storybook Docs Block](#doc-blocks)
+  * [Options](#options)
+    * [smart](#smart-option)
+    * [addonPanel](#addonPanel-option)
+    * [docsPreview](#docsPreview-option)
+    * [docsProps](#docsProps-option)
+  
+
+## Storybook
 
 The Storybook integration of the component-controls (aka "Addon Controls") allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
 
@@ -15,13 +44,13 @@ Addon controls and the  bundled "smart-controls" can work with all frameworks su
 
 [Framework Support](https://github.com/storybookjs/storybook/blob/master/ADDONS_SUPPORT.md).
 
-## Intro writing custom controls with react:
+## Introduction writing custom controls
 
 <p align="center">
   <img src="./docs/controls-react-starter.gif" alt="introduction to using controls" width="738">
 </p>
 
-## Intro using smart-controls with react
+## Intro using smart-controls
 
 <p align="center">
   <img src="./docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
@@ -185,45 +214,12 @@ controlsStory.story = {
 }
 ```
 
-## Categorization
-
-This is very similar to the categorization concept in [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs).
-Categorize your controls by assigning them a `groupId`. When a `groupId` exists, tabs will appear in the Controls storybook panel or in the docs blocks on the Docs page to filter between the groups. Controls without a `groupId` are automatically categorized into the `OTHER` group.
-
-```js
-export const groupedControls = ({ age, name, message }) => {
-  const content = `
-    I am ${name} and I'm ${age} years old.
-    ${message}
-  `;
-
-  return <div>{content}</div>;
-};
-
-const personalGroupId = 'personal info';
-const generalGroupId = 'general info';
-
-groupedControls.story = {
-  controls: {
-    name: { type: 'text', label: 'Name', value: 'James', groupId: personalGroupId },
-    age: { type: 'number', label: 'Age', value: 35, groupId: personalGroupId },
-    message: { type: 'text', label: 'Mesage', value: 'Hello!', groupId: generalGroupId },
-  },
-};
-```
-
-You can see Controls in separate tabs as shown below.
-
-<p align="center">
-  <img src="./docs/grouped-controls.jpg" alt="control groups" width="428">
-</p>
-
 ## Available Controls
 
 The list of available controls and their documented properties is available [here](https://github.com/atanasster/component-controls/blob/master/core/specification/src/types.ts)
 
 
-## Smart Controls
+## Smart Controls Examples
 
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
@@ -238,9 +234,7 @@ A screenshot of smart controls in action.
 </p>
 
 
-## Smart controls examples:
-
-### With React
+### Smart Controls React
 ```js
 import React from 'react';
 import { Button } from './Button';
@@ -255,7 +249,7 @@ export default {
 export const smartControls = props => <Button {...props} />;
 ```
 
-### With MDX
+### Smart Controls MDX
 ```md
 import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
 import { Button } from './Button';
@@ -272,7 +266,7 @@ import { Button } from './Button';
 </Preview>
 ```
 
-### With Angular
+### Smart Controls Angular
 ```js
 import { Button } from './Button';
 
@@ -288,7 +282,7 @@ export const smartControls = props => ({
 ```
 
 
-### Smart controls options
+### Smart Controls Options
 - **include** an array of property names that allows you to select only a subset of the smart control properties to be displayed
 
 ```js
@@ -340,7 +334,43 @@ randomNumber.story = {
 };
 ```
 
-## Doc blocks
+
+## Categories
+
+This is very similar to the categorization concept in [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs).
+You can categorize your controls by assigning them a `groupId`. When a `groupId` exists, tabs will appear in the Controls storybook panel or in the docs blocks on the Docs page to filter between the groups. Controls without a `groupId` are automatically categorized into the `OTHER` group.
+
+```js
+export const groupedControls = ({ age, name, message }) => {
+  const content = `
+    I am ${name} and I'm ${age} years old.
+    ${message}
+  `;
+
+  return <div>{content}</div>;
+};
+
+const personalGroupId = 'personal info';
+const generalGroupId = 'general info';
+
+groupedControls.story = {
+  controls: {
+    name: { type: 'text', label: 'Name', value: 'James', groupId: personalGroupId },
+    age: { type: 'number', label: 'Age', value: 35, groupId: personalGroupId },
+    message: { type: 'text', label: 'Mesage', value: 'Hello!', groupId: generalGroupId },
+  },
+};
+```
+
+You can see Controls in separate tabs as shown below.
+
+<p align="center">
+  <img src="./docs/grouped-controls.jpg" alt="control groups" width="428">
+</p>
+
+
+
+## Storybook Docs Block
 
 By default, Addon Controls integrates in the addon panels, in the `<Props />` table on the StoryBook DocsPage and well as in the `<Preview />` component on the DocsPage. You can also add a specifc docs block with story controls by either changing the default DocsPage or directly in your `mdx` stories:
 
@@ -405,12 +435,12 @@ within `.storybook/main.js`:
   ],
 ```
 
-### smart
+### **smart** option
 
 Setting this option to `false` will disable auto-generating of controls for stories with a component assigned.
 
 
-### addonPanel
+### **addonPanel** option
 
 Setting this option to `false` will disable showing the Controls panel in the addons section within the Storybook Canvas page:
 
@@ -419,7 +449,7 @@ Setting this option to `false` will disable showing the Controls panel in the ad
 </p>
 
 
-### docsPreview
+### **docsPreview** option
 
 Setting this option to `false` will disable showing an additional tab and panel with Controls in the `<Preview />` component within the Storybopok DocsPage:
 
@@ -427,7 +457,7 @@ Setting this option to `false` will disable showing an additional tab and panel 
   <img src="./docs/option-docsPreview.jpg" alt="docs preview addon" width="428">
 </p>
 
-### docsProps
+### **docsProps** option
 
 Setting this option to `false` will disable showing an additional columns with Controls in the `<Props />` component within the Storybopok DocsPage:
 
