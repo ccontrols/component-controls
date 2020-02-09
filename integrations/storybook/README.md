@@ -1,9 +1,9 @@
-# Storybook Addon Controls
+# Storybook integration
 
-Storybook Addon Controls allows you to define and then edit story properties dynamically in the Storybook UI with a set of property editors. 
-The values from the controls are passed down as parameters to the stories in [Storybook](https://storybook.js.org). 
+The Storybook integration of the component-controls (aka "Addon Controls") allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
 
-The definitions of the control properties have been contributed to the [CSF](https://github.com/storybookjs/csf) so they can be used by the entire industry and contribute to an already thriving eco-system. 
+
+The definitions of the control properties can be found [here](https://github.com/atanasster/component-controls/blob/master/core/specification/src/types.ts): 
 
 Additional functionality out of the box with Addon Controls are the "smart controls" - using the story's component property table to automatically create editable controls for the stories.
 
@@ -17,11 +17,15 @@ Addon controls and the  bundled "smart-controls" can work with all frameworks su
 
 ## Intro writing custom controls with react:
 
-![Addon Controls Demo](./docs/controls-react-starter.gif)
+<p align="center">
+  <img src="./docs/controls-react-starter.gif" alt="introduction to using controls" width="738">
+</p>
 
 ## Intro using smart-controls with react
 
-![Smat Controls Demo](./docs/intro-smart-controls.gif)
+<p align="center">
+  <img src="./docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
+</p>
 
 ## Getting Started
 
@@ -210,11 +214,13 @@ groupedControls.story = {
 
 You can see Controls in separate tabs as shown below.
 
-![](./docs/grouped-controls.jpg)
+<p align="center">
+  <img src="./docs/grouped-controls.jpg" alt="control groups" width="428">
+</p>
 
 ## Available Controls
 
-The list of available controls and their documented properties is available on the [Component Story Format](https://github.com/storybookjs/csf) site.
+The list of available controls and their documented properties is available [here](https://github.com/atanasster/component-controls/blob/master/core/specification/src/types.ts)
 
 
 ## Smart Controls
@@ -225,9 +231,19 @@ By default, Addon Controls enables the smart-controls option for your storybook 
 1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
 2. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
 
+A screenshot of smart controls in action.
+
+<p align="center">
+  <img src="./docs/smart-controls.jpg" alt="control groups" width="428">
+</p>
+
+
+## Smart controls examples:
+
+### With React
 ```js
 import React from 'react';
-import Button from '../../components/BaseButton';
+import { Button } from './Button';
 
 export default {
   title: 'Storybook smart controls',
@@ -239,9 +255,37 @@ export default {
 export const smartControls = props => <Button {...props} />;
 ```
 
-A screenshot of smart controls in action.
+### With MDX
+```md
+import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
+import { Button } from './Button';
 
-![](./docs/smart-controls.jpg)
+<Meta title="Storybook smart controls" parameters={{component: Button}} />
+
+# Smart Controls
+<Preview>
+  <Story name="smartControls">
+    {(props) => (
+      <Button label="default" {...props}/>
+    )}  
+  </Story>
+</Preview>
+```
+
+### With Angular
+```js
+import { Button } from './Button';
+
+export default {
+  title: 'Storybook smart controls',
+  component: Button,
+};
+
+export const smartControls = props => ({
+  component: Button,
+  props,
+});
+```
 
 
 ### Smart controls options
@@ -370,20 +414,26 @@ Setting this option to `false` will disable auto-generating of controls for stor
 
 Setting this option to `false` will disable showing the Controls panel in the addons section within the Storybook Canvas page:
 
-![](./docs/option-addonPanel.jpg)
+<p align="center">
+  <img src="./docs/option-addonPanel.jpg" alt="addon panel" width="428">
+</p>
 
 
 ### docsPreview
 
 Setting this option to `false` will disable showing an additional tab and panel with Controls in the `<Preview />` component within the Storybopok DocsPage:
 
-![](./docs/option-docsPreview.jpg)
+<p align="center">
+  <img src="./docs/option-docsPreview.jpg" alt="docs preview addon" width="428">
+</p>
 
 ### docsProps
 
 Setting this option to `false` will disable showing an additional columns with Controls in the `<Props />` component within the Storybopok DocsPage:
 
-![](./docs/option-docsProps.jpg)
+<p align="center">
+  <img src="./docs/option-docsProps.jpg" alt="docs preview addon" width="428">
+</p>
 
 
 
