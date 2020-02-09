@@ -36,7 +36,7 @@
 The Storybook integration of the component-controls (aka "Addon Controls") allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
 
 
-The definitions of the control properties can be found [here](https://github.com/atanasster/component-controls/blob/master/core/specification/src/types.ts): 
+The definitions of the control properties can be found [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts): 
 
 Additional functionality out of the box with Addon Controls are the "smart controls" - using the story's component property table to automatically create editable controls for the stories.
 
@@ -220,7 +220,7 @@ controlsStory.story = {
 
 ## Available Controls
 
-The list of available controls and their documented properties is available [here](https://github.com/atanasster/component-controls/blob/master/core/specification/src/types.ts)
+The list of available controls and their documented properties is available [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts)
 
 
 ## Smart Controls Examples

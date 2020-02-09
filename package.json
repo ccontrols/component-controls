@@ -4,15 +4,15 @@
   "author": {
     "name": "Atanas Stoyanov",
     "email": "atanasster@gmail.com",
-    "url": "https://github.com/atanasster"
+    "url": "https://github.com/ccontrols"
   },
-  "homepage": "https://github.com/atanasster/component-controls",
+  "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
-    "url": "https://github.com/atanasster/component-controls/issues"
+    "url": "https://github.com/ccontrols/component-controls/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atanasster/component-controls.git"
+    "url": "https://github.com/ccontrols/component-controls.git"
   },
   "scripts": {
     "clean": "lerna clean",
