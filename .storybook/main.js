@@ -2,13 +2,10 @@ const path = require('path');
 
 module.exports = {
   stories: [
-    '../core/**/*.stories.(js|tsx|mdx)',
-  ],
-  presets: [
-    
-    'webpack-react-docgen-typescript/preset'
+    '../core/editors/src/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
+    'webpack-react-docgen-typescript',
     '@storybook/addon-docs',
     '@storybook/addon-storysource',
   ],
@@ -22,6 +19,7 @@ module.exports = {
       extensions: [...(config.resolve.extensions || []), '.ts', '.tsx'],
       alias: {...config.resolve.alias, ...{
         "@storybook/addon-docs": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "addon-docs"),
+        "@storybook/components": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "components"),
         "@storybook/theming": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "theming"),
         "@emotion/core": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@emotion", "core"),
         "@emotion/styled": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@emotion", "styled"),

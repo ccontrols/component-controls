@@ -34,7 +34,7 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "storybook": "start-storybook -p 9015 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o docs"
+    "build-storybook": "build-storybook -c .storybook -o docs --docs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
