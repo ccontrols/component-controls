@@ -1,3 +1,7 @@
+```diff
+- WARNING - THIS ADDON CAN NOT YET BE USED AS SOME OF THE STORYBOOK FEATURES IT REQUIRES ARE NOT YET MERGED
+```
+
 ## Table of contents
 
   * [Storybook](#storybook)
