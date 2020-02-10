@@ -1,9 +1,14 @@
 import React from 'react';
 import { styled } from '@storybook/theming';
-import { LoadedComponentControls } from '@component-controls/specification';
-import { Combo, Consumer, API, StoryInput } from '@storybook/api';
+import { LoadedComponentControls } from '@component-controls/core';
+import { Combo, Consumer, API } from '@storybook/api';
 import { ControlsTable } from '../shared/ControlsTable';
 import { NoControls } from './NoControls';
+
+interface StoryInput {
+  id: string;
+  controls: LoadedComponentControls;
+}
 
 const Wrapper = styled.div(() => ({
   display: 'flex',
@@ -30,8 +35,8 @@ const mapper = ({ state }: Combo): MapperReturnProps => {
   if (!state.storiesHash[storyId]) {
     return {};
   }
-  const { controls } = state.storiesHash[state.storyId] as StoryInput;
-  return { story: state.storiesHash[storyId] as StoryInput, controls };
+  const { controls } = (state.storiesHash[state.storyId] as any) as StoryInput;
+  return { story: (state.storiesHash[storyId] as any) as StoryInput, controls };
 };
 
 export const PropsPanel: React.FC<PropsPanelProps> = ({
@@ -52,7 +57,6 @@ export const PropsPanel: React.FC<PropsPanelProps> = ({
                 controls={controls}
                 storyId={story.id}
                 setControlValue={api.setControlValue}
-                resetControlValue={api.resetControlValue}
                 clickControl={api.clickControl}
               />
             </Container>

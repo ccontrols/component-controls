@@ -2,7 +2,7 @@ import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { polaris as theme} from '@theme-ui/presets';
 import { ThemeProvider } from 'theme-ui';
-import { lighten, darken } from 'polished';
+import { lighten } from 'polished';
 
 
 addDecorator((story) => {
@@ -43,6 +43,7 @@ addDecorator((story) => {
       },
       colors: {
         ...theme.colors,
+        accent: '#1EA7FD',
         fadedText: lighten(0.25, theme.colors.text),
         lightenPrimary: lighten(0.4, theme.colors.primary),
 

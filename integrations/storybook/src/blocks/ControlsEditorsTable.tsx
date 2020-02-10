@@ -55,7 +55,6 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps> = ({
           controls={controls}
           storyId={id}
           setControlValue={api.setControlValue}
-          resetControlValue={api.resetControlValue}
           clickControl={api.clickControl}
         />
       ) : null;

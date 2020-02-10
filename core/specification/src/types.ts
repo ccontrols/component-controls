@@ -176,7 +176,7 @@ export interface ComponentControlBase<T> {
    * helper information to generate random data
    * can be used in conjunction with faker.js
    */
-  data?: ComponentControlData;
+  data?: ComponentControlData | null;
 }
 
 export interface ComponentControlText extends ComponentControlBase<string> {

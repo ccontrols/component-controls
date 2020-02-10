@@ -11,7 +11,7 @@ import {
   LoadedComponentControl,
 } from '@component-controls/core';
 
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from '../../components/Tabs/Tabs';
 import { ControlsEditorsTableProps } from '../../types';
 import { ActionBar } from '../../components/ActionBar/ActionBar';
 
