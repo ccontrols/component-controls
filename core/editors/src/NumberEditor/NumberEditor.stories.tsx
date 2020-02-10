@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { NumberEditor } from './NumberEditor';
 
 export default {
-  title: 'Controls/Editors/NumberEditor',
+  title: 'Editors/NumberEditor',
   component: NumberEditor,
 };
 

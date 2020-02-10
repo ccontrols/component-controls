@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { ButtonEditor } from './ButtonEditor';
 
 export default {
-  title: 'Controls/Editors/ButtonEditor',
+  title: 'Editors/ButtonEditor',
   component: ButtonEditor,
 };
 

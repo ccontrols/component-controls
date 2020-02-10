@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Button, Box } from 'theme-ui';
 import {
   ComponentControl,
@@ -15,7 +15,7 @@ export interface ObjectEditorProps extends PropertyControlProps {
   prop: ComponentControlObject;
 }
 
-const ChildContainer: React.FC = props => (
+const ChildContainer: FC = props => (
   <Box
     css={{
       minWidth: 200,
@@ -93,14 +93,12 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
         </ChildContainer>
       )}
     >
-      {() => (
-        <FlexContainer>
-          <Button>
-            Edit object
-            <Box />
-          </Button>
-        </FlexContainer>
-      )}
+      <FlexContainer>
+        <Button>
+          Edit object
+          <Box />
+        </Button>
+      </FlexContainer>
     </Popover>
   );
 };

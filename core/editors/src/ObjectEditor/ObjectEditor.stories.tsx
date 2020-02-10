@@ -6,7 +6,7 @@ import {
 import { ObjectEditor } from './ObjectEditor';
 
 export default {
-  title: 'Controls/Editors/ObjectEditor',
+  title: 'Editors/ObjectEditor',
   component: ObjectEditor,
 };
 

@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { OptionsEditor } from './OptionsEditor';
 
 export default {
-  title: 'Controls/Editors/OptionsEditor',
+  title: 'Editors/OptionsEditor',
   component: OptionsEditor,
 };
 

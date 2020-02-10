@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import { window, document } from 'global';
 import styled from '@emotion/styled';
 import { Theme } from 'theme-ui';
@@ -55,11 +55,11 @@ const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
 
 const DEFAULT_GROUP_ID = 'Other';
 
-export const BlockWrapper: React.FC = ({ children }) => (
+export const BlockWrapper: FC = ({ children }) => (
   <PropEditorsContainer> {children}</PropEditorsContainer>
 );
 
-const PropGroupTable: React.FC<ControlsEditorsTableProps> = ({
+const PropGroupTable: FC<ControlsEditorsTableProps> = ({
   controls,
   storyId,
   setControlValue,
@@ -100,7 +100,7 @@ interface GroupedControlsType {
   [key: string]: LoadedComponentControls;
 }
 
-export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps & {
+export const ControlsEditorsTable: FC<ControlsEditorsTableProps & {
   title?: string;
 }> = props => {
   const [copied, setCopied] = React.useState(false);

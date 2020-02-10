@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from '@emotion/styled';
 import TooltipTrigger from 'react-popper-tooltip';
 import { TooltipTriggerProps } from 'react-popper-tooltip/dist/types';
 import { Box } from 'theme-ui';
 
-export type PopoverProps = Partial<TooltipTriggerProps>;
+export type PopoverProps = Omit<Partial<TooltipTriggerProps>, 'children'>;
 
 const SPACING = 8;
 
@@ -84,7 +84,7 @@ export const Arrow = styled.div<{ placement: string; borderColor: string }>(
   }),
 );
 
-export const Popover: React.FC<PopoverProps> = ({
+export const Popover: FC<PopoverProps> = ({
   trigger,
   placement = 'bottom',
   modifiers,

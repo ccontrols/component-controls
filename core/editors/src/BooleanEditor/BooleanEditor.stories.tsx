@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { BooleanEditor } from './BooleanEditor';
 
 export default {
-  title: 'Controls/Editors/BooleanEditor',
+  title: 'Editors/BooleanEditor',
   component: BooleanEditor,
 };
 

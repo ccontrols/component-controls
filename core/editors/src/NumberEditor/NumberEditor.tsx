@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { FC, ChangeEvent } from 'react';
 import { ComponentControlNumber } from '@component-controls/specification';
 import { Input, Box, BoxProps } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
@@ -7,7 +7,7 @@ export interface NumberEditorProps extends PropertyControlProps {
   prop: ComponentControlNumber;
 }
 
-const RangeLabel: React.FC<BoxProps> = props => (
+const RangeLabel: FC<BoxProps> = props => (
   <Box
     as="span"
     css={{
@@ -20,7 +20,7 @@ const RangeLabel: React.FC<BoxProps> = props => (
   />
 );
 
-const RangeWrapper: React.FC<BoxProps> = props => (
+const RangeWrapper: FC<BoxProps> = props => (
   <Box
     as="div"
     css={{

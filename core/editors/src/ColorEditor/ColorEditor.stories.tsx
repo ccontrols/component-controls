@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { ColorEditor } from './ColorEditor';
 
 export default {
-  title: 'Controls/Editors/ColorEditor',
+  title: 'Editors/ColorEditor',
   component: ColorEditor,
 };
 

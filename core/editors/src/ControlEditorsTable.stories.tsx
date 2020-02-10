@@ -8,11 +8,11 @@ import {
 import { ControlsEditorsTable } from './ControlEditorsTable';
 
 export default {
-  title: 'Controls/Form/ControlsEditorsTable',
+  title: 'Component Controls/ControlsEditorsTable',
   component: ControlsEditorsTable,
 };
 
-export const pureControlsEditorsTable = () => {
+export const simple = () => {
   const [controls, setControls] = React.useState<LoadedComponentControls>({
     name: {
       type: ControlTypes.TEXT,

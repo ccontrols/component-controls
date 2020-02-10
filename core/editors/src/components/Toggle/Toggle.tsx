@@ -1,4 +1,4 @@
-import React, { forwardRef, HTMLProps } from 'react';
+import React, { forwardRef, HTMLProps, FC } from 'react';
 import { Button } from 'theme-ui';
 
 interface ToggleButtonProps {
@@ -6,13 +6,13 @@ interface ToggleButtonProps {
   left: boolean;
   onClick: (e: any) => void;
 }
-const ToggleButton: React.FC<ToggleButtonProps> = ({
+const ToggleButton: FC<ToggleButtonProps> = ({
   active,
   left,
   children,
   onClick,
 }) => {
-  const activeColor = 'primary';
+  const activeColor = 'lightenPrimary';
   return (
     <Button
       onClick={onClick}

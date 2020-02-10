@@ -1,11 +1,18 @@
 const path = require('path');
 
 module.exports = {
+  presets:[
+    {
+      name: require.resolve('webpack-react-docgen-typescript/preset'),
+      options: {
+        fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
+      },
+    },  
+  ],
   stories: [
     '../core/editors/src/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
-    'webpack-react-docgen-typescript',
     '@storybook/addon-docs',
     '@storybook/addon-storysource',
   ],

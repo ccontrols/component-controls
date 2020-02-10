@@ -3,6 +3,7 @@ import { Toggle } from './Toggle';
 
 export default {
   title: 'Components/Toggle',
+  component: Toggle,
 };
 
 export const allToggles = () => {
@@ -11,8 +12,6 @@ export const allToggles = () => {
     <div>
       <p>Default toggle</p>
       <Toggle checked={checked} onChange={check => setChecked(check)} />
-      <br />
-      <p>Toggle on a Form</p>
       <br />
       <p>Custom labels</p>
       <Toggle

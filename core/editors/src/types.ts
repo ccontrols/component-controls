@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import {
   ComponentControl,
   SetControlValueFn,
@@ -14,7 +14,7 @@ export interface PropertyControlProps {
   onClick?: PropertyOnClick;
 }
 
-export type PropertyEditor<T extends PropertyControlProps = any> = React.FC<T>;
+export type PropertyEditor<T extends PropertyControlProps = any> = FC<T>;
 
 export interface ExtraControlAction {
   title: string;
