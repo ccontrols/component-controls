@@ -54,9 +54,13 @@ addDecorator((story) => {
   );
 })
 
+const categories = ['Table', 'Editors', 'Components']
 addParameters({
   options: {
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
+    storySort: (a, b) => {
+      const aIndex = categories.findIndex(c => c === a[1].kind);
+      const bIndex = categories.findIndex(c => c === b[1].kind);
+      return bIndex - aIndex;
+    },
   },
 });

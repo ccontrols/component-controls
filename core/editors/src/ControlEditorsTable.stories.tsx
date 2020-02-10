@@ -8,7 +8,7 @@ import {
 import { ControlsEditorsTable } from './ControlEditorsTable';
 
 export default {
-  title: 'Component Controls/ControlsEditorsTable',
+  title: 'Table',
   component: ControlsEditorsTable,
 };
 
