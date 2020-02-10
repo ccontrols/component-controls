@@ -12,8 +12,8 @@ import {
 } from '@component-controls/core';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { ControlsEditorsTableProps } from './types';
-import { ActionBar } from './components/ActionBar/ActionBar';
+import { ControlsEditorsTableProps } from '../../types';
+import { ActionBar } from '../../components/ActionBar/ActionBar';
 
 import { PropertyEditorRow } from './PropEditorRow';
 

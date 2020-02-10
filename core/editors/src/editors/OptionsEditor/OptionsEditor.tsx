@@ -3,7 +3,7 @@ import ReactSelect from 'react-select';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions } from './utils';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { PropertyControlProps, PropertyEditor } from '../../types';
 
 import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';

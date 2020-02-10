@@ -1,18 +1,18 @@
 import { ControlTypes } from '@component-controls/specification';
 import { PropertyEditor } from './types';
-import { TextEditor } from './TextEditor';
-import { NumberEditor } from './NumberEditor';
+import { TextEditor } from './editors/TextEditor';
+import { NumberEditor } from './editors/NumberEditor';
 
-import { BooleanEditor } from './BooleanEditor';
-import { OptionsEditor } from './OptionsEditor';
+import { BooleanEditor } from './editors/BooleanEditor';
+import { OptionsEditor } from './editors/OptionsEditor';
 
-import { DateEditor } from './DateEditor';
-import { ColorEditor } from './ColorEditor';
-import { ButtonEditor } from './ButtonEditor';
+import { DateEditor } from './editors/DateEditor';
+import { ColorEditor } from './editors/ColorEditor';
+import { ButtonEditor } from './editors/ButtonEditor';
 
-import { ObjectEditor } from './ObjectEditor';
-import { ArrayEditor } from './ArrayEditor';
-import { FilesEditor } from './FilesEditor';
+import { ObjectEditor } from './editors/ObjectEditor';
+import { ArrayEditor } from './editors/ArrayEditor';
+import { FilesEditor } from './editors/FilesEditor';
 
 const PropertyEditors: {
   [name in ControlTypes]: PropertyEditor;

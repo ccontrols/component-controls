@@ -6,7 +6,6 @@ import { lighten, darken } from 'polished';
 
 
 addDecorator((story) => {
-  console.log(theme);
   return (
     <ThemeProvider theme={{
       ...theme,

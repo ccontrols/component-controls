@@ -5,11 +5,11 @@ import {
   ComponentControlObject,
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
-import { PropertyControlProps, PropertyEditor } from '../types';
-import { FlexContainer } from '../FlexContainer';
-import { Popover } from '../components/Popover/Popover';
+import { PropertyControlProps, PropertyEditor } from '../../types';
+import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
+import { Popover } from '../../components/Popover/Popover';
 
-import { getPropertyEditor } from '../prop-factory';
+import { getPropertyEditor } from '../../prop-factory';
 
 export interface ObjectEditorProps extends PropertyControlProps {
   prop: ComponentControlObject;

@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import { ComponentControlText } from '@component-controls/specification';
 import { Input, Textarea } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { PropertyControlProps, PropertyEditor } from '../../types';
 
 export interface TextEditorProps extends PropertyControlProps {
   prop: ComponentControlText;

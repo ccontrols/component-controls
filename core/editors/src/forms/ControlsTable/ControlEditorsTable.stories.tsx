@@ -41,11 +41,7 @@ export const simple = () => {
         title="Example controls"
         storyId="1-11"
         setControlValue={(storyId, name, value) =>
-          name &&
-          setControls({
-            ...controls,
-            [name]: { ...controls[name], value },
-          })
+          setControls(mergeControlValues(controls, name, value))
         }
         clickControl={() =>
           setControls(

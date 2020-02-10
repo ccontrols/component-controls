@@ -5,7 +5,7 @@ import {
   PropertyControlProps,
   PropertyEditor,
   PropertyOnClick,
-} from '../types';
+} from '../../types';
 
 export interface ButtonEditorProps extends PropertyControlProps {
   prop: ComponentControlButton;

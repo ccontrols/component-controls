@@ -1,7 +1,7 @@
 import React, { FC, ChangeEvent } from 'react';
 import { ComponentControlNumber } from '@component-controls/specification';
 import { Input, Box, BoxProps } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { PropertyControlProps, PropertyEditor } from '../../types';
 
 export interface NumberEditorProps extends PropertyControlProps {
   prop: ComponentControlNumber;

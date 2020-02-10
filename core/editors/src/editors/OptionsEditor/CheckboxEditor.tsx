@@ -2,7 +2,7 @@ import React, { ChangeEvent } from 'react';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions, NormalizedOption } from './utils';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { PropertyControlProps, PropertyEditor } from '../../types';
 
 interface CheckboxEditorProps extends PropertyControlProps {
   prop: ComponentControlOptions;
