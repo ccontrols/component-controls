@@ -1,7 +1,7 @@
 import React, { MouseEvent } from 'react';
 import { window, document } from 'global';
-import { transparentize } from 'polished';
-import { styled, Theme } from '@storybook/theming';
+import styled from '@emotion/styled';
+import { Theme } from 'theme-ui';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
 import {
@@ -11,41 +11,16 @@ import {
   LoadedComponentControl,
 } from '@component-controls/core';
 
-import { Table, TabsState, ActionBar } from '@storybook/components';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ControlsEditorsTableProps } from './types';
+import { ActionBar } from './components/ActionBar/ActionBar';
 
 import { PropertyEditorRow } from './PropEditorRow';
 
-export const getSectionTitleStyle: (theme: Theme) => object = (
-  theme: Theme,
-) => ({
-  letterSpacing: '0.35em',
-  textTransform: 'uppercase',
-  fontWeight: theme.typography.weight.black,
-  fontSize: theme.typography.size.s1 - 1,
-  lineHeight: '24px',
-  color:
-    theme.base === 'light'
-      ? transparentize(0.4, theme.color.defaultText)
-      : transparentize(0.6, theme.color.defaultText),
-  background: `${theme.background.app} !important`,
-});
-
-export const getBlockBackgroundStyle: (theme: Theme) => object = (
-  theme: Theme,
-) => ({
-  borderRadius: theme.appBorderRadius,
-  background: theme.background.content,
-  boxShadow:
-    theme.base === 'light'
-      ? 'rgba(0, 0, 0, 0.10) 0 1px 3px 0'
-      : 'rgba(0, 0, 0, 0.20) 0 2px 5px 0',
-  border: `1px solid ${theme.appBorderColor}`,
-});
-
-const StyleTable = styled(Table)<{}>(() => ({
+const StyleTable = styled.table<{}>(({ theme }) => ({
   '&&': {
-    margin: 0,
+    //@ts-ignore
+    ...theme?.styles?.table,
     tbody: {
       boxShadow: 'none',
     },
@@ -59,24 +34,29 @@ const StyledActionBar = styled(ActionBar)<{}>(() => ({
   zIndex: 0,
 }));
 
-const PropEditorsContainer = styled.div<{}>(({ theme }) => ({
+const PropEditorsContainer = styled.div<{}>(() => ({
   position: 'relative',
   paddingBottom: '25px',
-  ...getBlockBackgroundStyle(theme),
+  boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
+  borderRadius: 4,
+  border: '1px solid rgba(0, 0, 0, 0.1)',
 }));
 
-const PropEditorsTitle = styled.div<{}>(({ theme }) => ({
-  ...getSectionTitleStyle(theme),
-  padding: '16px',
+const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
+  padding: `${theme?.space?.[3]}px`,
+  letterSpacing: '0.35em',
+  textTransform: 'uppercase',
+  //@ts-ignore
+  fontWeight: theme?.fontWeights?.bold || 900,
+  fontSize: '11px',
+  color: `${theme?.colors?.fadedText}`,
+  background: `${theme?.colors?.lightenPrimary}`,
 }));
 
 const DEFAULT_GROUP_ID = 'Other';
 
 export const BlockWrapper: React.FC = ({ children }) => (
-  <PropEditorsContainer className="docblock-propeditorsblock">
-    {' '}
-    {children}
-  </PropEditorsContainer>
+  <PropEditorsContainer> {children}</PropEditorsContainer>
 );
 
 const PropGroupTable: React.FC<ControlsEditorsTableProps> = ({
@@ -165,32 +145,32 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps & {
         const groupId = controls[k].groupId || DEFAULT_GROUP_ID;
         return { ...acc, [groupId]: { ...acc[groupId], [k]: controls[k] } };
       }, {});
+    const groupedItems = Object.keys(groupped)
+      .sort()
+      .map(key => {
+        return {
+          label: key,
+          controls: groupped[key],
+        };
+      });
     return (
       <BlockWrapper>
         {title && <PropEditorsTitle>{title}</PropEditorsTitle>}
         {Object.keys(groupped).length < 2 ? (
           <PropGroupTable {...props} />
         ) : (
-          <TabsState>
-            {Object.keys(groupped)
-              .sort()
-              .map(key => {
-                const group: LoadedComponentControls = groupped[key];
-                const tabId = `prop_editors_div_${props.storyId}_${key}`;
-                return (
-                  <div key={tabId} id={tabId} title={key}>
-                    {({ active }: { active: boolean }) =>
-                      active ? (
-                        <PropGroupTable
-                          key={tabId}
-                          {...{ ...props, controls: group }}
-                        />
-                      ) : null
-                    }
-                  </div>
-                );
-              })}
-          </TabsState>
+          <Tabs>
+            <TabList>
+              {groupedItems.map(item => (
+                <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+              ))}
+            </TabList>
+            {groupedItems.map(item => (
+              <TabPanel key={`tab_panel_${item.label}`}>
+                <PropGroupTable {...props} controls={item.controls} />
+              </TabPanel>
+            ))}
+          </Tabs>
         )}
         <StyledActionBar
           actionItems={[
@@ -204,7 +184,7 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps & {
             { title: 'Reset', onClick: onReset },
             { title: copied ? 'Copied' : 'Copy', onClick: onCopy },
           ]}
-        />
+        />{' '}
       </BlockWrapper>
     );
   }

@@ -1,7 +1,5 @@
 import React from 'react';
-import { darken } from 'polished';
-import { styled } from '@storybook/theming';
-import { WithTooltipPure, Button, Icons } from '@storybook/components';
+import { Button, Box } from 'theme-ui';
 import {
   ComponentControl,
   ComponentControlObject,
@@ -9,27 +7,25 @@ import {
 import { mergeControlValues, getControlValues } from '@component-controls/core';
 import { PropertyControlProps, PropertyEditor } from '../types';
 import { FlexContainer } from '../FlexContainer';
+import { Popover } from '../components/Popover/Popover';
+
 import { getPropertyEditor } from '../prop-factory';
 
 export interface ObjectEditorProps extends PropertyControlProps {
   prop: ComponentControlObject;
 }
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  color: theme.color.defaultText,
-  backgroundColor: darken(0.1, theme.color.light),
-}));
-
-const StyledIcon = styled(Icons)(() => ({
-  marginLeft: '10px',
-}));
-
-const ChildContainer = styled.div(() => ({
-  minWidth: 200,
-  maxWidth: 800,
-  padding: 15,
-  boxSizing: 'content-box',
-}));
+const ChildContainer: React.FC = props => (
+  <Box
+    css={{
+      minWidth: 200,
+      maxWidth: 800,
+      padding: 15,
+      boxSizing: 'content-box',
+    }}
+    {...props}
+  />
+);
 
 export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   prop,
@@ -43,7 +39,11 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       getControlValues(mergeControlValues(prop.value as any, childName, value)),
     );
   };
-  let children;
+  let children: ({
+    name: string;
+    prop: ComponentControl;
+    node: PropertyEditor;
+  } | null)[];
   if (typeof prop.value === 'object') {
     children = Object.keys(prop.value)
       .map(key => {
@@ -62,15 +62,14 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       .filter(p => p && p.node);
   }
   return (
-    <WithTooltipPure
-      closeOnClick
+    <Popover
       trigger="click"
       placement="bottom"
       tooltipShown={isOpen}
       onVisibilityChange={isVisible => {
         setIsOpen(isVisible);
       }}
-      tooltip={
+      tooltip={() => (
         <ChildContainer>
           <table>
             <tbody>
@@ -92,14 +91,16 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
             </tbody>
           </table>
         </ChildContainer>
-      }
+      )}
     >
-      <FlexContainer>
-        <StyledButton>
-          Edit object
-          <StyledIcon icon={isOpen ? 'arrowup' : 'arrowdown'} />
-        </StyledButton>
-      </FlexContainer>
-    </WithTooltipPure>
+      {() => (
+        <FlexContainer>
+          <Button>
+            Edit object
+            <Box />
+          </Button>
+        </FlexContainer>
+      )}
+    </Popover>
   );
 };

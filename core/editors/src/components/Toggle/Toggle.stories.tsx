@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icons } from '@storybook/components';
 import { Toggle } from './Toggle';
 
 export default {
@@ -21,16 +20,6 @@ export const allToggles = () => {
         labels={{
           true: 'YES',
           false: 'NO!',
-        }}
-        onChange={check => setChecked(check)}
-      />
-      <br />
-      <p>Custom icon labels</p>
-      <Toggle
-        checked={checked}
-        labels={{
-          true: <Icons icon="check" />,
-          false: <Icons icon="delete" />,
         }}
         onChange={check => setChecked(check)}
       />

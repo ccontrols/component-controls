@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { styled } from '@storybook/theming';
+import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyControlProps, PropertyEditor } from '../types';

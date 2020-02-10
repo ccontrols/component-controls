@@ -1,56 +1,8 @@
 import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { ComponentControlColor } from '@component-controls/specification';
-
-import { styled } from '@storybook/theming';
-import { Form } from '@storybook/components';
-
+import { Button, Box } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
-
-interface ColorButtonProps {
-  name: string;
-  type: string;
-  size: string;
-  width: string;
-  onClick: () => any;
-}
-
-const { Button } = Form;
-
-const Swatch = styled.div<{ color: string | undefined }>(
-  ({ theme, color }) => ({
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    left: 6,
-    width: 16,
-    height: 16,
-    backgroundColor: color,
-    boxShadow: `${theme.appBorderColor} 0 0 0 1px inset`,
-    borderRadius: '1rem',
-  }),
-);
-
-const ColorButton = styled(Button)<ColorButtonProps>(() => ({
-  zIndex: 'unset',
-  paddingLeft: '40px',
-  minHeight: '36px',
-  display: 'flex',
-  flexBasis: '100%',
-}));
-
-const Popover = styled.div({
-  position: 'absolute',
-  zIndex: 3,
-});
-
-const Cover = styled.div({
-  position: 'fixed',
-  top: '0px',
-  right: '0px',
-  bottom: '0px',
-  left: '0px',
-});
 
 export interface ColorEditorProps extends PropertyControlProps {
   prop: ComponentControlColor;
@@ -71,21 +23,50 @@ export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
   };
 
   return (
-    <ColorButton
-      active={displayColorPicker}
-      type="button"
+    <Button
       name={name}
       onClick={() => setDisplayColorPicker(!displayColorPicker)}
-      size="flex"
+      css={{
+        zIndex: 'unset',
+        paddingLeft: '10px',
+        minHeight: '36px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      }}
     >
+      <Box
+        css={{
+          left: 6,
+          width: 16,
+          height: 16,
+          marginRight: 10,
+          backgroundColor: prop.value,
+          borderRadius: '1rem',
+        }}
+      />
       {prop.value && prop.value.toUpperCase()}
-      <Swatch color={prop.value} />
       {displayColorPicker ? (
-        <Popover>
-          <Cover onClick={() => setDisplayColorPicker(false)} />
+        <Box
+          css={{
+            top: '32px',
+            position: 'absolute',
+            zIndex: 3,
+          }}
+        >
+          <Box
+            css={{
+              position: 'fixed',
+              top: '0px',
+              right: '0px',
+              bottom: '0px',
+              left: '0px',
+            }}
+            onClick={() => setDisplayColorPicker(false)}
+          />
           <SketchPicker color={prop.value} onChange={handleChange} />
-        </Popover>
+        </Box>
       ) : null}
-    </ColorButton>
+    </Button>
   );
 };

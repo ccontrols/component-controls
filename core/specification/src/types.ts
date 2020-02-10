@@ -190,15 +190,11 @@ export interface ComponentControlText extends ComponentControlBase<string> {
   placeholder?: string;
 
   /**
-   * minimum number of rows in a TextArea field for longer text
+   * number of rows for a TextArea field for longer text
    * by default, only 1 row = means a Input field
+   * > 1 rows = an area field
    */
-  minRows?: number;
-
-  /**
-   * number of rows in a TextArea field
-   */
-  maxRows?: number;
+  rows?: number;
 
   /**
    * allows to receive escaped string values

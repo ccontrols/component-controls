@@ -47,6 +47,7 @@ export const createFieldFromProps = (
   if (!propDef) {
     return null;
   }
+  //@ts-ignore
   let type = propDef.type.type || propDef.type.summary || propDef.type;
 
   // docgen typescript are ie "boolean | undefined"
@@ -126,7 +127,7 @@ export const createFieldFromProps = (
         : undefined;
       const options = Array.isArray(propDef.type)
         ? propDef.type
-        : propDef.type.value;
+        : (propDef.type as any).value;
       if (!Array.isArray(options)) {
         return null;
       }

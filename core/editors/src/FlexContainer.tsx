@@ -1,4 +1,4 @@
-import { styled } from '@storybook/theming';
+import styled from '@emotion/styled';
 
 export interface FlexContainerProps {
   align?: string;

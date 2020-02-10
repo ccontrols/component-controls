@@ -1,21 +1,7 @@
-import React, { ChangeEvent } from 'react';
-import { styled } from '@storybook/theming';
+import React, { ChangeEvent, RefObject } from 'react';
 import { ComponentControlDate } from '@component-controls/specification';
-import { Form } from '@storybook/components';
+import { Input, Box } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
-
-const FlexSpaced = styled.div({
-  flex: 1,
-  display: 'flex',
-  '&& > *': {
-    marginLeft: 10,
-  },
-  '&& > *:first-of-type': {
-    marginLeft: 0,
-  },
-});
-
-const FlexInput = styled(Form.Input)({ flex: 1 });
 
 const formatDate = (date: Date | undefined) => {
   if (date) {
@@ -101,27 +87,33 @@ export const DateEditor: PropertyEditor<DateEditorProps> = ({
   };
   const { datePicker = true, timePicker = true } = prop;
   return name ? (
-    <FlexSpaced style={{ display: 'flex' }}>
+    <Box css={{ display: 'flex' }}>
       {datePicker && (
-        <FlexInput
+        <Input
+          css={{
+            flex: 1,
+          }}
           type="date"
           max="9999-12-31" // I do this because of a rendering bug in chrome
-          ref={dateInputRef}
+          ref={dateInputRef as RefObject<HTMLInputElement>}
           id={`${name}date`}
           name={`${name}date`}
           onChange={onDateChange}
         />
       )}
       {timePicker && (
-        <FlexInput
+        <Input
+          css={{
+            flex: 1,
+          }}
           type="time"
           id={`${name}time`}
           name={`${name}time`}
-          ref={timeInputRef}
+          ref={timeInputRef as RefObject<HTMLInputElement>}
           onChange={onTimeChange}
         />
       )}
       {!valid ? <div>invalid</div> : null}
-    </FlexSpaced>
+    </Box>
   ) : null;
 };

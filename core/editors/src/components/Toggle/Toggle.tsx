@@ -1,34 +1,33 @@
 import React, { forwardRef, HTMLProps } from 'react';
-import { styled } from '@storybook/theming';
-import { transparentize, darken } from 'polished';
-
-import { Button } from '@storybook/components';
+import { Button } from 'theme-ui';
 
 interface ToggleButtonProps {
   active: boolean;
   left: boolean;
   onClick: (e: any) => void;
 }
-const ToggleButton = styled(Button)<ToggleButtonProps>(
-  ({ theme, active, left }) => {
-    const activeColor = darken(0.1, theme.color.light);
-    return {
-      '&&': {
+const ToggleButton: React.FC<ToggleButtonProps> = ({
+  active,
+  left,
+  children,
+  onClick,
+}) => {
+  const activeColor = 'primary';
+  return (
+    <Button
+      onClick={onClick}
+      sx={{
         borderRadius: left ? '14px 0 0 14px' : '0 14px 14px 0',
-        margin: 0,
-        border: 'none',
+        border: 1,
         borderColor: activeColor,
-        color: active
-          ? theme.color.defaultText
-          : transparentize(
-              theme.base === 'light' ? 0.4 : 0.6,
-              theme.color.defaultText,
-            ),
-        background: active ? activeColor : 'unset',
-      },
-    };
-  },
-);
+        color: active ? 'text' : 'fadedText',
+        bg: active ? activeColor : 'unset',
+      }}
+    >
+      {children}
+    </Button>
+  );
+};
 
 export interface ToggleOwnProps {
   /** whether checked */

@@ -3,11 +3,22 @@ import {
   SetControlValueFn,
   ClickControlFn,
 } from '@component-controls/specification';
+import styled from '@emotion/styled';
 import { LoadedComponentControl } from '@component-controls/core';
 
 import { getPropertyEditor } from './prop-factory';
 import { FlexContainer } from './FlexContainer';
 import { PropertyEditor } from './types';
+
+const StyledTR = styled.tr<{}>(({ theme }) => ({
+  //@ts-ignore
+  ...theme?.styles?.tr,
+}));
+
+const StyledTD = styled.td<{}>(({ theme }) => ({
+  //@ts-ignore
+  ...theme?.styles?.td,
+}));
 
 const InvalidType = () => <span>Invalid Type</span>;
 
@@ -38,9 +49,9 @@ export const PropertyEditorRow: React.FunctionComponent<PropertyEditorRowProps> 
     }
   };
   return (
-    <tr>
-      <td>{!prop.hideLabel ? prop.label || name : null}</td>
-      <td>
+    <StyledTR>
+      <StyledTD>{!prop.hideLabel ? prop.label || name : null}</StyledTD>
+      <StyledTD>
         <FlexContainer align="left">
           <InputType
             prop={prop}
@@ -49,7 +60,7 @@ export const PropertyEditorRow: React.FunctionComponent<PropertyEditorRowProps> 
             onClick={onClick}
           />
         </FlexContainer>
-      </td>
-    </tr>
+      </StyledTD>
+    </StyledTR>
   );
 };

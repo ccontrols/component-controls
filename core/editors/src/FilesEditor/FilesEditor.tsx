@@ -1,13 +1,8 @@
 import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
-import { styled } from '@storybook/theming';
 import { ComponentControlFiles } from '@component-controls/specification';
-import { Form } from '@storybook/components';
+import { Input } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
-
-const FileInput = styled(Form.Input)({
-  paddingTop: 4,
-});
 
 function fileReaderPromise(file: File) {
   return new Promise<string>(resolve => {
@@ -27,7 +22,7 @@ export const FilesEditor: PropertyEditor<FilesEditorProps> = ({
   name,
   onChange,
 }) => (
-  <FileInput
+  <Input
     type="file"
     name={name}
     multiple
@@ -39,6 +34,5 @@ export const FilesEditor: PropertyEditor<FilesEditorProps> = ({
       }
     }}
     accept={prop.accept}
-    size="flex"
   />
 );

@@ -19,7 +19,6 @@
     "dev": "yarn cross-env NODE_ENV=development yarn build -w",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
-    "precommit": "lint-staged",
     "prepare": "yarn build",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o docs",

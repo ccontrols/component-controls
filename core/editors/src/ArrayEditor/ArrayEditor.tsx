@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { ComponentControlArray } from '@component-controls/specification';
-import { Form } from '@storybook/components';
+import { Textarea } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface ArrayEditorProps extends PropertyControlProps {
@@ -35,12 +35,8 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   const value = prop.value && deserialize(prop.value).join(prop.separator);
 
   return (
-    <Form.Textarea
-      id={name}
-      name={name}
-      value={value}
-      onChange={handleChange}
-      size="flex"
-    />
+    <>
+      <Textarea id={name} name={name} value={value} onChange={handleChange} />
+    </>
   );
 };

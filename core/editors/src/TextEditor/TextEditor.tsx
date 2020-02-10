@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { ComponentControlText } from '@component-controls/specification';
-import { Form } from '@storybook/components';
+import { Input, Textarea } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface TextEditorProps extends PropertyControlProps {
@@ -12,23 +12,21 @@ export const TextEditor: PropertyEditor<TextEditorProps> = ({
   name,
   onChange,
 }) => {
-  const { maxRows = 1, minRows = 1 } = prop;
-  return minRows > 1 || maxRows > 1 ? (
-    <Form.Textarea
+  const { rows = 1 } = prop;
+  return rows > 1 ? (
+    <Textarea
       id={name}
       name={name}
       value={prop.value}
-      minRows={minRows}
-      maxRows={maxRows}
+      rows={rows}
       placeholder={prop.placeholder}
       onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
         const { value } = event.target;
         onChange(name, value);
       }}
-      size="flex"
     />
   ) : (
-    <Form.Input
+    <Input
       id={name}
       name={name}
       value={prop.value}
@@ -37,7 +35,6 @@ export const TextEditor: PropertyEditor<TextEditorProps> = ({
         const { value } = event.target;
         onChange(name, value);
       }}
-      size="flex"
     />
   );
 };
