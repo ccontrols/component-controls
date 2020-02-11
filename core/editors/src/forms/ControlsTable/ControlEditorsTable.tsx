@@ -12,7 +12,7 @@ import {
 } from '@component-controls/core';
 
 import { Tab, Tabs, TabList, TabPanel } from '../../components/Tabs/Tabs';
-import { ControlsEditorsTableProps } from '../../types';
+import { ControlsEditorsTableProps } from '../../editors/types';
 import { ActionBar } from '../../components/ActionBar/ActionBar';
 
 import { PropertyEditorRow } from './PropEditorRow';

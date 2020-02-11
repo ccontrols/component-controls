@@ -2,7 +2,7 @@ import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { ComponentControlColor } from '@component-controls/specification';
 import { Button, Box } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../../types';
+import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface ColorEditorProps extends PropertyControlProps {
   prop: ComponentControlColor;

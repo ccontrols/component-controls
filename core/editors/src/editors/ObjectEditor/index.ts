@@ -1,1 +1,1 @@
-export { ObjectEditor } from './ObjectEditor';
+export { ObjectEditor, AllPropertyEditors } from './ObjectEditor';

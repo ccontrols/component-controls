@@ -2,7 +2,7 @@ import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
 import { ComponentControlFiles } from '@component-controls/specification';
 import { Input } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../../types';
+import { PropertyControlProps, PropertyEditor } from '../types';
 
 function fileReaderPromise(file: File) {
   return new Promise<string>(resolve => {

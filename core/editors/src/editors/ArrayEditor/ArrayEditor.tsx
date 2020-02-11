@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import { ComponentControlArray } from '@component-controls/specification';
 import { Textarea } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../../types';
+import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface ArrayEditorProps extends PropertyControlProps {
   prop: ComponentControlArray;

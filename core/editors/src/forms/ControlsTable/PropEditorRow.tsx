@@ -6,9 +6,9 @@ import {
 import styled from '@emotion/styled';
 import { LoadedComponentControl } from '@component-controls/core';
 
-import { getPropertyEditor } from '../../prop-factory';
+import { getPropertyEditor } from '../../editors/prop-factory';
 import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
-import { PropertyEditor } from '../../types';
+import { PropertyEditor } from '../../editors/types';
 
 const StyledTR = styled.tr<{}>(({ theme }) => ({
   //@ts-ignore

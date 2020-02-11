@@ -1,7 +1,7 @@
 import React, { ChangeEvent, RefObject } from 'react';
 import { ComponentControlDate } from '@component-controls/specification';
 import { Input, Box } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../../types';
+import { PropertyControlProps, PropertyEditor } from '../types';
 
 const formatDate = (date: Date | undefined) => {
   if (date) {

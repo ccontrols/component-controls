@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
 import { Button, Box } from 'theme-ui';
 import {
+  ControlTypes,
   ComponentControl,
   ComponentControlObject,
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
-import { PropertyControlProps, PropertyEditor } from '../../types';
+import { PropertyControlProps, PropertyEditor } from '../types';
 import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
 import { Popover } from '../../components/Popover/Popover';
 
-import { getPropertyEditor } from '../../prop-factory';
+import { PropertyEditors } from '../PropertyEditors';
 
 export interface ObjectEditorProps extends PropertyControlProps {
   prop: ComponentControlObject;
@@ -56,7 +57,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
         return {
           name: key,
           prop: childProp,
-          node: getPropertyEditor(childProp.type),
+          node: AllPropertyEditors[childProp.type],
         };
       })
       .filter(p => p && p.node);
@@ -101,4 +102,12 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       </FlexContainer>
     </Popover>
   );
+};
+
+// avoid circular reference problem
+export const AllPropertyEditors: {
+  [name in ControlTypes]: PropertyEditor;
+} = {
+  ...PropertyEditors,
+  [ControlTypes.OBJECT]: ObjectEditor,
 };
