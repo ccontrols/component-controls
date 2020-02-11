@@ -5,11 +5,11 @@ import {
   Source,
   Meta,  
 } from '@storybook/addon-docs/blocks';
-import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
-import Button from '../../components/BaseButton';
+import { ControlsEditorsTable } from '@component-controls/storybook';
+import Button from '../components/BaseButton';
 
 
-<Meta title="Addons/Controls/mdx" parameters={{component: Button}} />
+<Meta title="Storybook/mdx" parameters={{component: Button}} />
 
 # Smart controls
 
@@ -31,14 +31,11 @@ import Button from '../../components/BaseButton';
 
 <Preview>
   <Story name="small story" 
-    controls={{
-      text: {type: 'text', value: 'Hello'},
+    parameters={{ controls: {
+        text: {type: 'text', value: 'Hello'},
+      }  
     }}
-    parameters={{
-      controls: {
-        smart: false
-      }
-    }}>
+    >
     {({ text }) => (
       <Button label={text}/>
     )}  

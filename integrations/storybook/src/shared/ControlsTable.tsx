@@ -3,7 +3,8 @@ import {
   ControlsEditorsTable,
   ControlsEditorsTableProps,
 } from '@component-controls/editors';
-import { randomizeData } from './randomizeData';
+//@ts-ignore
+import { randomizeData } from './randomizeData.ts';
 
 export const ControlsTable: React.FC<ControlsEditorsTableProps> = props => (
   <ControlsEditorsTable

@@ -1,8 +1,9 @@
 import {
-  LoadedComponentControls,
   ControlTypes,
   ComponentControlOptions,
 } from '@component-controls/specification';
+import { LoadedComponentControls } from '@component-controls/core';
+
 import faker from 'faker';
 
 const arrayElements = (arr: any[], c?: number) => {

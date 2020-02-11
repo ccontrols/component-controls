@@ -61,7 +61,8 @@ const TabsContainer = styled.div`
   `}
 `;
 
-const Tabs: FC<TabsProps> = (props: TabsProps) => (
+type OwnTabsProps = Omit<TabsProps, 'ref'>;
+const Tabs: FC<OwnTabsProps> = props => (
   <TabsContainer>
     <OriginalTabs {...props} />
   </TabsContainer>

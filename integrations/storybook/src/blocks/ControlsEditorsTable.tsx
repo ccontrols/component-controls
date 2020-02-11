@@ -1,6 +1,11 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
-import { LoadedComponentControls } from '@component-controls/core';
+import { FORCE_RE_RENDER } from '@storybook/core-events';
+import { SetControlValueFn } from '@component-controls/specification';
+import {
+  LoadedComponentControls,
+  mergeControlValues,
+} from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ControlsTable } from '../shared/ControlsTable';
 
@@ -13,7 +18,11 @@ interface ControlsEditorsTableProps {
 const getPropertyProps = (
   props: ControlsEditorsTableProps,
   { id: currentId, storyStore, mdxStoryNameToKey, mdxComponentMeta }: any,
-): { controls?: LoadedComponentControls; id: string | null } | null => {
+): {
+  controls?: LoadedComponentControls;
+  id: string | null;
+  storyStore: any;
+} | null => {
   const { id, name } = props;
   const inputId = id === CURRENT_SELECTION ? currentId : id;
   const previewId =
@@ -38,7 +47,8 @@ const getPropertyProps = (
   }
   return {
     id: data.id,
-    controls: data.controls,
+    storyStore,
+    controls: data.controls || data.parameters.controls,
   };
 };
 export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps> = ({
@@ -47,14 +57,28 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps> = ({
 }) => (
   <DocsContext.Consumer>
     {(context: any) => {
-      const { controls, id } = getPropertyProps(rest, context) || {};
+      const { controls, storyStore, id } =
+        getPropertyProps(rest, context) || {};
       const api: any = (context as any).clientApi;
+      const setControlValue: SetControlValueFn = api.setControlValue
+        ? api.setControlValue
+        : (storyId: string, propName: string | undefined, propValue: any) => {
+            const story: any = storyStore._data[storyId];
+            if (story) {
+              story.parameters.controls = mergeControlValues(
+                story.parameters.controls,
+                propName,
+                propValue,
+              );
+              context.channel.emit(FORCE_RE_RENDER);
+            }
+          };
       return id ? (
         <ControlsTable
           title={title}
           controls={controls}
           storyId={id}
-          setControlValue={api.setControlValue}
+          setControlValue={setControlValue}
           clickControl={api.clickControl}
         />
       ) : null;

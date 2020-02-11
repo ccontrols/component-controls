@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../components/BaseButton';
+import Button from '../components/BaseButton';
 
 export default {
-  title: 'Addons/Controls/smart',
+  title: 'Storybook/smart',
   parameters: {
     component: Button,
   },

@@ -79,21 +79,23 @@ export const resetControlValues = (
 export const getControlValues = (
   controls: LoadedComponentControls,
 ): { [name: string]: any } =>
-  Object.keys(controls).reduce((acc, key) => {
-    const control: ComponentControl = controls[key];
-    let { value } = control;
-    if (control.type === ControlTypes.TEXT && control.escapeValue) {
-      if (typeof value === 'string') {
-        value = escape(value);
-      }
-    } else if (
-      control.type === ControlTypes.OBJECT &&
-      typeof value === 'object'
-    ) {
-      return {
-        ...acc,
-        [key]: getControlValues(value as LoadedComponentControls),
-      };
-    }
-    return { ...acc, [key]: value };
-  }, {});
+  controls
+    ? Object.keys(controls).reduce((acc, key) => {
+        const control: ComponentControl = controls[key];
+        let { value } = control;
+        if (control.type === ControlTypes.TEXT && control.escapeValue) {
+          if (typeof value === 'string') {
+            value = escape(value);
+          }
+        } else if (
+          control.type === ControlTypes.OBJECT &&
+          typeof value === 'object'
+        ) {
+          return {
+            ...acc,
+            [key]: getControlValues(value as LoadedComponentControls),
+          };
+        }
+        return { ...acc, [key]: value };
+      }, {})
+    : {};

@@ -139,7 +139,7 @@ export const ControlsEditorsTable: FC<ControlsEditorsTableProps & {
     const groupped: GroupedControlsType = Object.keys(controls)
       .filter(k => {
         const p: LoadedComponentControl = controls[k];
-        return !p.hidden;
+        return p.type && !p.hidden;
       })
       .reduce((acc: GroupedControlsType, k: string) => {
         const groupId = controls[k].groupId || DEFAULT_GROUP_ID;

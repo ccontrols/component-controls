@@ -1,25 +1,11 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { Title, Subtitle, Description, Story, Props, Stories } from '@storybook/addon-docs/blocks';
-import { ControlsEditorsTable } from '../../dist/blocks';
+import { ControlsEditorsTable } from '@component-controls/storybook';
 
 export default {
-  title: 'Docs/PropEditors/ControlsEditorsTable',
+  title: 'Storybook/blocks/ControlsEditorsTable',
   parameters: {
     component: ControlsEditorsTable,
-    docs: {
-      page: () => (
-        <>
-          <Title />
-          <Subtitle />
-          <Description />
-          <Story id="." />
-          <ControlsEditorsTable id="." />
-          <Props />
-          <Stories />
-        </>
-      ),
-    },
   },
 };
 
@@ -36,13 +22,15 @@ export const docsControlsEditorsTable = ({ name, age }: DocsControlsEditorsTable
 };
 
 docsControlsEditorsTable.story = {
-  controls: {
-    name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
-    age: { type: ControlTypes.NUMBER, label: 'Age', value: 19 },
-    clickMe: {
-      type: ControlTypes.BUTTON,
-      label: 'button click',
-      onClick: () => {},
+  parameters: {
+    controls: {
+      name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
+      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19 },
+      clickMe: {
+        type: ControlTypes.BUTTON,
+        label: 'button click',
+        onClick: () => {},
+      },
     },
-  },
+  }
 };

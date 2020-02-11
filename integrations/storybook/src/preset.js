@@ -1,5 +1,5 @@
 module.exports = {
-  config: (entry: any[] = [], options: any = {}) => {
+  config: (entry = [], options = {}) => {
     const result = [...entry];
     const { docsPreview = true } = options;
     if (docsPreview) {
@@ -15,10 +15,10 @@ module.exports = {
     }
     return result;
   },
-  managerEntries: (entry: any[] = [], options: any = {}) => {
+  managerEntries: (entry = [], options = {}) => {
     const { addonPanel = true } = options;
     if (addonPanel) {
-      return [...entry, require.resolve('./register')];
+      return [...entry, require.resolve('./manager/register')];
     }
     return entry;
   },

@@ -1,5 +1,4 @@
 const path = require('path');
-
 module.exports = {
   presets:[
     {
@@ -8,12 +7,20 @@ module.exports = {
         fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
       },
     },  
+    {
+      name: path.resolve(require.resolve('@component-controls/storybook'), '..', '..','src', 'preset.js'),
+      options: {
+      },
+    },  
+
   ],
   stories: [
     '../core/editors/src/**/*.stories.(js|tsx|mdx)',
+    '../integrations/storybook/.storybook/stories/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-docs',
+    'storybook-addon-deps',
     '@storybook/addon-storysource',
   ],
   webpackFinal: async (config, { configType }) => ({
