@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/core",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "Component controls core utility routines",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/specification": "^0.1.11",
+    "@component-controls/specification": "^0.2.0",
     "escape-html": "^1.0.3",
     "typescript": "3.5.3"
   },

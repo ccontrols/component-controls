@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/ccontrols/component-controls/compare/v0.1.11...v0.2.0) (2020-02-11)
+
+
+### Features
+
+* aded tabs component ([6191630](https://github.com/ccontrols/component-controls/commit/619163027e8fb413a0cfefd65a2c5cb508a20b43))
+* remove storybook/components ([5e2f929](https://github.com/ccontrols/component-controls/commit/5e2f929964b4d37868ca1f1d891b24f10d3a9928))
+* support for storybook 5.x ([b4cf573](https://github.com/ccontrols/component-controls/commit/b4cf5733ca003417cedb89b5cddf122af2ef5a84))
+
+
+
+
+
 ## [0.1.11](https://github.com/ccontrols/component-controls/compare/v0.1.10...v0.1.11) (2020-02-09)
 
 **Note:** Version bump only for package @component-controls/storybook
