@@ -58,9 +58,11 @@ const categories = ['Table', 'Editors', 'Components']
 addParameters({
   options: {
     storySort: (a, b) => {
-      const aIndex = categories.findIndex(c => c === a[1].kind);
-      const bIndex = categories.findIndex(c => c === b[1].kind);
-      return bIndex - aIndex;
+      const aKind = a[1].kind.split('/')[0];
+      const aIndex = categories.findIndex(c => c === aKind);
+      const bKind = b[1].kind.split('/')[0];
+      const bIndex = categories.findIndex(c => c === bKind);
+      return aIndex - bIndex;
     },
   },
 });
