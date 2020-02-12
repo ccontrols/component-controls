@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/ccontrols/component-controls/compare/v0.3.0...v0.3.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* sb5 compat ([185eb3d](https://github.com/ccontrols/component-controls/commit/185eb3db7a82d293f11e4fa8acd149a4fac183f9))
+
+
+
+
+
 # [0.3.0](https://github.com/ccontrols/component-controls/compare/v0.2.0...v0.3.0) (2020-02-12)
 
 
