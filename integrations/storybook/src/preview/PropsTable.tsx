@@ -1,13 +1,13 @@
 import React from 'react';
 import { styled } from '@storybook/theming';
-import { PropDef, Icons } from '@storybook/components';
 import {
   FlexContainer,
   PropertyEditor,
   getPropertyEditor,
 } from '@component-controls/editors';
+import { PropDef } from '../smartControls';
 
-const TitleIcon = styled(Icons)({
+const TitleIcon = styled.div({
   height: 18,
   width: 18,
 });
@@ -61,7 +61,7 @@ export const createPropsTableControls = ({
   return {
     title: (
       <FlexContainer>
-        <TitleIcon icon="edit" />
+        <TitleIcon>edit</TitleIcon>
       </FlexContainer>
     ),
     rows: Object.keys(rows).length ? rows : null,

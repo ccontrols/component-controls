@@ -1,19 +1,17 @@
 import React from 'react';
-import { Placeholder, Link } from '@storybook/components';
 
 export const NoControls = () => (
-  <Placeholder>
+  <>
     <>No controls found</>
     <>
       Learn how to&nbsp;
-      <Link
+      <a
         href="https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/README.md"
+        // eslint-disable-next-line react/jsx-no-target-blank
         target="_blank"
-        withArrow
-        cancel={false}
       >
         dynamically interact with components
-      </Link>
+      </a>
     </>
-  </Placeholder>
+  </>
 );

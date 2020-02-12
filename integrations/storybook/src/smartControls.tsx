@@ -4,12 +4,22 @@ import {
   ComponentControl,
   ControlTypes,
 } from '@component-controls/specification';
-import { PropDef } from '@storybook/components';
 import {
   inferPropsExtractor,
   getInputRows,
 } from '@storybook/addon-docs/blocks';
 
+export interface PropDef {
+  name: string;
+  required: boolean;
+  type?: string;
+  defaultValue?:
+    | string
+    | boolean
+    | {
+        summary: string;
+      };
+}
 interface Parameters {
   [key: string]: any;
 }
@@ -75,7 +85,7 @@ export const createFieldFromProps = (
       if (typeof propDef.defaultValue === 'string') {
         value = propDef.defaultValue;
       } else if (
-        propDef.defaultValue &&
+        typeof propDef.defaultValue === 'object' &&
         typeof propDef.defaultValue.summary === 'string'
       ) {
         value = propDef.defaultValue.summary;
@@ -96,14 +106,16 @@ export const createFieldFromProps = (
       if (propDef.defaultValue) {
         // docgen typescript defaultValue.summary is actually a boolean type, not a string
         if (
-          propDef.defaultValue.summary === 'false' ||
-          (propDef.defaultValue.summary as unknown) === false
+          typeof propDef.defaultValue === 'object' &&
+          (propDef.defaultValue.summary === 'false' ||
+            (propDef.defaultValue.summary as unknown) === false)
         ) {
           value = false;
         }
         if (
-          propDef.defaultValue.summary === 'true' ||
-          (propDef.defaultValue.summary as unknown) === true
+          typeof propDef.defaultValue === 'object' &&
+          (propDef.defaultValue.summary === 'true' ||
+            (propDef.defaultValue.summary as unknown) === true)
         ) {
           value = true;
         }
@@ -113,18 +125,20 @@ export const createFieldFromProps = (
     case 'number': {
       let value;
       try {
-        value = propDef.defaultValue
-          ? parseFloat(propDef.defaultValue.summary)
-          : undefined;
+        value =
+          typeof propDef.defaultValue === 'object'
+            ? parseFloat(propDef.defaultValue.summary)
+            : undefined;
       } catch (e) {
         // eat exceptoin
       }
       return { type: ControlTypes.NUMBER, value };
     }
     case 'enum': {
-      const value = propDef.defaultValue
-        ? cleanQuotes(propDef.defaultValue.summary)
-        : undefined;
+      const value =
+        typeof propDef.defaultValue === 'object'
+          ? cleanQuotes(propDef.defaultValue.summary)
+          : undefined;
       const options = Array.isArray(propDef.type)
         ? propDef.type
         : (propDef.type as any).value;
