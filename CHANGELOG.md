@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/ccontrols/component-controls/compare/v0.3.2...v0.3.3) (2020-02-12)
+
+
+### Bug Fixes
+
+* esm register.js storybook ([a7289e6](https://github.com/ccontrols/component-controls/commit/a7289e6b8e446ac8f432cea1ba178c4c9b8f63bb))
+
+
+
+
+
 ## [0.3.2](https://github.com/ccontrols/component-controls/compare/v0.3.1...v0.3.2) (2020-02-12)
 
 
