@@ -1,10 +1,7 @@
 import faker from 'faker';
-import {
-  LoadedComponentControls,
-  LoadedComponentControl,
-  ControlTypes,
-} from '@component-controls/specification';
-import { randomizeData } from '../shared/randomizeData';
+import { LoadedComponentControls, LoadedComponentControl } from './utils';
+import { ControlTypes } from '@component-controls/specification';
+import { randomizeData } from '@component-controls/core/src/randomizeData';
 
 describe('Options utility functions', () => {
   const name: LoadedComponentControl = {

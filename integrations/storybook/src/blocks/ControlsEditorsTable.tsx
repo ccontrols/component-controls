@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { SetControlValueFn } from '@component-controls/specification';
@@ -52,7 +52,7 @@ const getPropertyProps = (
     controls: data.controls || data.parameters.controls,
   };
 };
-export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps> = ({
+export const ControlsEditorsTable: FC<ControlsEditorsTableProps> = ({
   title = 'Property Editors',
   ...rest
 }) => (

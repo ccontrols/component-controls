@@ -2,7 +2,7 @@ import {
   ControlTypes,
   ComponentControlOptions,
 } from '@component-controls/specification';
-import { LoadedComponentControls } from '@component-controls/core';
+import { LoadedComponentControls } from './utils';
 
 import faker from 'faker';
 

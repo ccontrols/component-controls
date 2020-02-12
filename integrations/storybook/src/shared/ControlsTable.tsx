@@ -3,10 +3,8 @@ import {
   ControlsEditorsTable,
   ControlsEditorsTableProps,
 } from '@component-controls/editors';
-//@ts-ignore
-import { ThemeProvider } from './ThemeProvider.tsx';
-//@ts-ignore
-import { randomizeData } from './randomizeData.ts';
+import { ThemeProvider } from './ThemeProvider';
+import { randomizeData } from '@component-controls/core';
 
 export const ControlsTable: React.FC<ControlsEditorsTableProps> = props => (
   <ThemeProvider>

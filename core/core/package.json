@@ -31,9 +31,11 @@
   "dependencies": {
     "@component-controls/specification": "^0.3.0",
     "escape-html": "^1.0.3",
+    "faker": "^4.1.0",
     "typescript": "3.5.3"
   },
   "devDependencies": {
+    "@types/faker": "^4.1.9",
     "@types/jest": "^25.1.2",
     "cross-env": "^5.2.1",
     "docz-rollup": "^2.1.0",

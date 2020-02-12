@@ -38,6 +38,7 @@ export const DocsPage = ({
 const categories = ['Table', 'Editors', 'Components']
 addParameters({
   docs: { page: DocsPage },
+  dependencies: { hideEmpty: true },
   options: {
     storySort: (a, b) => {
       const aKind = a[1].kind.split('/')[0];

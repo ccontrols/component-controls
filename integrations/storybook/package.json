@@ -40,23 +40,20 @@
     "@theme-ui/presets": "^0.3.0",
     "copy-to-clipboard": "^3.0.8",
     "core-js": "^3.0.1",
-    "faker": "^4.1.0",
     "global": "^4.3.2",
     "qs": "^6.6.0",
     "react": "^16.12.0"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^6.0.0-alpha.8",
-    "@storybook/addons": "^6.0.0-alpha.8",
-    "@storybook/api": "^6.0.0-alpha.8",
-    "@storybook/client-api": "^6.0.0-alpha.8",
-    "@storybook/components": "^6.0.0-alpha.8",
+    "@storybook/addon-docs": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/api": "^5.3.12",
+    "@storybook/client-api": "^5.3.12",
+    "@storybook/components": "^5.3.12",
     "@storybook/csf": "0.0.1",
-    "@storybook/react": "^6.0.0-alpha.8",
-    "@storybook/theming": "^6.0.0-alpha.8",
-    "@types/faker": "^4.1.9",
-    "@types/node": "^13.7.0",
-    "babel-loader": "^8.0.6"
+    "@storybook/react": "^5.3.12",
+    "@storybook/theming": "^5.3.12",
+    "@types/node": "^13.7.0"
   },
   "peerDependencies": {
     "@storybook/addon-docs": "*",

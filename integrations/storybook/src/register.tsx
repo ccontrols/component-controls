@@ -1,8 +1,7 @@
 import React from 'react';
 import addons from '@storybook/addons';
-import { PropsPanel } from './Panel.tsx';
-//@ts-ignore
-import { ADDON_ID, PANEL_ID, PARAM_KEY } from '../shared/shared.ts';
+import { PropsPanel } from './manager/Panel';
+import { ADDON_ID, PANEL_ID, PARAM_KEY } from './shared/shared';
 
 addons.register(ADDON_ID, api => {
   addons.addPanel(PANEL_ID, {

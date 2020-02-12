@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-  PreviewPanelCallback,
-  PreviewExpandedState,
-  PanelItemType,
-} from '@storybook/components';
 import { ControlsTable } from '../shared/ControlsTable';
 
 export const createControlsPanel = ({
@@ -12,15 +7,15 @@ export const createControlsPanel = ({
 }: {
   storyId: string;
   context: any;
-}): PreviewPanelCallback | null => {
+}): any | null => {
   // @ts-ignore
   const { storyStore, clientApi: api } = context;
   const data = storyStore.fromId(storyId);
   const name = 'controls';
   if (data && data.controls && Object.keys(data.controls).length) {
-    const { setControlValue, resetControlValue, clickControl } = api;
+    const { setControlValue, clickControl } = api;
     const { controls } = data;
-    return (expanded: PreviewExpandedState): PanelItemType => {
+    return (expanded: any): any => {
       switch (true) {
         case expanded === name: {
           return {
@@ -29,7 +24,6 @@ export const createControlsPanel = ({
                 storyId={storyId}
                 controls={controls}
                 setControlValue={setControlValue}
-                resetControlValue={resetControlValue}
                 clickControl={clickControl}
               />
             ),

@@ -1,8 +1,13 @@
 module.exports = {
-  config: (entry = [], options = {}) => {
+  config: (entry: any[] = [], options: any = {}) => {
     const result = [...entry];
+    const { legacy = false } = options;
+    if (legacy) {
+      result.push(require.resolve('./config-legacy'));
+    }
+
     const { docsPreview = true } = options;
-    if (docsPreview) {
+    if (!legacy && docsPreview) {
       result.push(require.resolve('./config-preview'));
     }
     const { docsProps = true } = options;
@@ -10,20 +15,15 @@ module.exports = {
       result.push(require.resolve('./config-props-table'));
     }
     const { smart = true } = options;
-    if (smart) {
+    if (!legacy && smart) {
       result.push(require.resolve('./config-smart'));
     }
-    const { legacy = false } = options;
-    if (legacy) {
-      result.push(require.resolve('./config-legacy'));
-    }
-
     return result;
   },
-  managerEntries: (entry = [], options = {}) => {
+  managerEntries: (entry: any[] = [], options: any = {}) => {
     const { addonPanel = true } = options;
     if (addonPanel) {
-      return [...entry, require.resolve('./manager/register')];
+      return [...entry, require.resolve('./register')];
     }
     return entry;
   },

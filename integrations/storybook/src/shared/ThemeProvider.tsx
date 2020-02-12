@@ -42,7 +42,7 @@ export const ThemeProvider: React.FC = ({ children }) => (
         ...theme.colors,
         accent: '#1EA7FD',
         fadedText: lighten(0.25, theme.colors.text),
-        lightenPrimary: lighten(0.4, theme.colors.primary),
+        lightenPrimary: '#F6F9FC',
       },
     }}
   >

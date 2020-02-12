@@ -8,13 +8,9 @@ import {
 import { SetControlValueFn } from '@component-controls/specification';
 
 import { API } from '@storybook/api';
-//@ts-ignore
-import { SET_DATA_MSG } from '../shared/shared.ts';
-
-//@ts-ignore
-import { ControlsTable } from '../shared/ControlsTable.tsx';
-//@ts-ignore
-import { NoControls } from './NoControls.tsx';
+import { SET_DATA_MSG } from '../shared/shared';
+import { ControlsTable } from '../shared/ControlsTable';
+import { NoControls } from './NoControls';
 
 interface StoryInput {
   id: string;
@@ -96,7 +92,7 @@ export const PropsPanel: React.FC<PropsPanelProps> = ({
     }) => {
       const story = api.getData(storyId);
       if (story) {
-        story.parameters.controls = controls;
+        (story as any).parameters.controls = controls;
       }
     };
     channel.on(SET_DATA_MSG, onNewData);

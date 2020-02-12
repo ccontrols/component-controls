@@ -36,7 +36,14 @@ const mergeValue = (control: ComponentControl, value: any): any => {
       ),
     };
   }
-  return { ...control, value };
+  return {
+    ...control,
+    value,
+    defaultValue:
+      (control as LoadedComponentControl).defaultValue === undefined
+        ? control.value
+        : (control as LoadedComponentControl).defaultValue,
+  };
 };
 
 export const mergeControlValues = (

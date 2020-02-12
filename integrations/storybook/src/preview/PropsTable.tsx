@@ -1,11 +1,6 @@
 import React from 'react';
 import { styled } from '@storybook/theming';
-import {
-  PropDef,
-  PropsTableExtraColumn,
-  PropsTableExtraRows,
-  Icons,
-} from '@storybook/components';
+import { PropDef, Icons } from '@storybook/components';
 import {
   FlexContainer,
   PropertyEditor,
@@ -25,7 +20,7 @@ export const createPropsTableControls = ({
   storyId: string;
   rows: PropDef[];
   context: any;
-}): PropsTableExtraColumn => {
+}): any => {
   const api: any = (context as any).clientApi;
   const story = context.storyStore.fromId(storyId) || {};
   const { controls } = story;
@@ -42,7 +37,7 @@ export const createPropsTableControls = ({
   const rows = controls
     ? Object.keys(controls)
         .filter(name => propsTable.find(row => row.name === name) !== undefined)
-        .reduce((acc: PropsTableExtraRows, name) => {
+        .reduce((acc: any, name) => {
           const field = controls[name];
           const InputType: PropertyEditor = getPropertyEditor(field.type);
           if (InputType) {
