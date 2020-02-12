@@ -38,10 +38,18 @@
     "@types/faker": "^4.1.9",
     "@types/jest": "^25.1.2",
     "cross-env": "^5.2.1",
-    "docz-rollup": "^2.1.0",
     "eslint": "^6.5.1",
     "eslint-config-docz-ts": "^2.1.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "rollup-plugin-alias": "^1.5.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-typescript2": "^0.22.0"
   },
   "publishConfig": {
     "access": "public"
