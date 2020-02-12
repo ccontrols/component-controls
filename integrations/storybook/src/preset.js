@@ -13,6 +13,11 @@ module.exports = {
     if (smart) {
       result.push(require.resolve('./config-smart'));
     }
+    const { legacy = false } = options;
+    if (legacy) {
+      result.push(require.resolve('./config-legacy'));
+    }
+
     return result;
   },
   managerEntries: (entry = [], options = {}) => {

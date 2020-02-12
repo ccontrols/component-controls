@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Title, Subtitle, Description, Story, Props, Stories } from '@storybook/addon-docs/blocks';
 
 export default {
-  title: 'Storybook/controls',
+  title: 'Storybook/Controls',
 };
 
 export const textDefaultProp = ({ text }) => text;

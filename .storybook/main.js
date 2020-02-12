@@ -10,6 +10,7 @@ module.exports = {
     {
       name: path.resolve(require.resolve('@component-controls/storybook'), '..', '..','src', 'preset.js'),
       options: {
+        legacy: true,
       },
     },  
 

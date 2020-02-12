@@ -7,7 +7,7 @@ export const NoControls = () => (
     <>
       Learn how to&nbsp;
       <Link
-        href="https://github.com/storybookjs/storybook/tree/master/addons/controls"
+        href="https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/README.md"
         target="_blank"
         withArrow
         cancel={false}

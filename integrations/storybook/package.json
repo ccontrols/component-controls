@@ -35,8 +35,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/editors": "latest",
-    "@component-controls/specification": "latest",
+    "@component-controls/editors": "^0.2.0",
+    "@component-controls/specification": "^0.2.0",
+    "@theme-ui/presets": "^0.3.0",
     "copy-to-clipboard": "^3.0.8",
     "core-js": "^3.0.1",
     "faker": "^4.1.0",
@@ -73,5 +74,6 @@
   },
   "authors": [
     "Atanas Stoyanov"
-  ]
+  ],
+  "gitHead": "d01851e6b244a4e04dd5eed1146bffb5cceb3e5a"
 }

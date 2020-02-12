@@ -65,7 +65,7 @@ const PropGroupTable: FC<ControlsEditorsTableProps> = ({
   setControlValue,
   clickControl,
 }) => (
-  <StyleTable className="docblock-propeditorstable">
+  <StyleTable className="component-controls-table">
     <tbody>
       {controls &&
         Object.keys(controls)
@@ -153,11 +153,14 @@ export const ControlsEditorsTable: FC<ControlsEditorsTableProps & {
           controls: groupped[key],
         };
       });
+    if (groupedItems.length === 0) {
+      return null;
+    }
     return (
       <BlockWrapper>
         {title && <PropEditorsTitle>{title}</PropEditorsTitle>}
-        {Object.keys(groupped).length < 2 ? (
-          <PropGroupTable {...props} />
+        {groupedItems.length === 1 ? (
+          <PropGroupTable {...props} controls={groupedItems[0].controls} />
         ) : (
           <Tabs>
             <TabList>

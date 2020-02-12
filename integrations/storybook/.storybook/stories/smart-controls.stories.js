@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../components/BaseButton';
 
 export default {
-  title: 'Storybook/smart',
+  title: 'Storybook/Smart',
   parameters: {
     component: Button,
   },

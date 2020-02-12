@@ -3,7 +3,7 @@ import { ControlTypes } from '@component-controls/specification';
 import { ControlsEditorsTable } from '@component-controls/storybook';
 
 export default {
-  title: 'Storybook/blocks/ControlsEditorsTable',
+  title: 'Storybook/Blocks/ControlsEditorsTable',
   parameters: {
     component: ControlsEditorsTable,
   },

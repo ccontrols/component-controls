@@ -8,6 +8,7 @@ import {
 } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ControlsTable } from '../shared/ControlsTable';
+import { SET_DATA_MSG } from '../shared/shared';
 
 interface ControlsEditorsTableProps {
   title?: string;
@@ -65,12 +66,17 @@ export const ControlsEditorsTable: React.FC<ControlsEditorsTableProps> = ({
         : (storyId: string, propName: string | undefined, propValue: any) => {
             const story: any = storyStore._data[storyId];
             if (story) {
-              story.parameters.controls = mergeControlValues(
+              const newValues = mergeControlValues(
                 story.parameters.controls,
                 propName,
                 propValue,
               );
+              story.parameters.controls = newValues;
               context.channel.emit(FORCE_RE_RENDER);
+              context.channel.emit(SET_DATA_MSG, {
+                storyId,
+                controls: newValues,
+              });
             }
           };
       return id ? (

@@ -13,7 +13,6 @@
     * [With Vue.js](#with-vue.js)
     * [With Angular](#with-angular)
     * [With Ember](#with-ember)
-    * [With Ember](#with-ember)
   * [Available Controls](#available-controls)
   * [Smart Controls](#smart-controls)
     * [Examples](#smart-controls-examples)
@@ -23,7 +22,7 @@
     * [Smart controls options](#smart-controls-options)  
   * [Random Data Generators](#testing-with-random-data-generators)  
   * [Categories](#categories)
-  * [Storybook Docs Block](#doc-blocks)
+  * [Storybook Docs Block](#storybook-docs-block)
   * [Options](#options)
     * [smart](#smart-option)
     * [addonPanel](#addonPanel-option)
@@ -51,13 +50,13 @@ Addon controls and the  bundled "smart-controls" can work with all frameworks su
 ## Introduction writing custom controls
 
 <p align="center">
-  <img src="./docs/controls-react-starter.gif" alt="introduction to using controls" width="738">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/controls-react-starter.gif" alt="introduction to using controls" width="738">
 </p>
 
 ## Intro using smart-controls
 
 <p align="center">
-  <img src="./docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
 </p>
 
 ## Getting Started
@@ -223,7 +222,7 @@ controlsStory.story = {
 The list of available controls and their documented properties is available [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts)
 
 
-## Smart Controls Examples
+## Smart Controls
 
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
@@ -234,9 +233,10 @@ By default, Addon Controls enables the smart-controls option for your storybook 
 A screenshot of smart controls in action.
 
 <p align="center">
-  <img src="./docs/smart-controls.jpg" alt="control groups" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/smart-controls.jpg" alt="control groups" width="428">
 </p>
 
+## Smart Controls Examples
 
 ### Smart Controls React
 ```js
@@ -369,7 +369,7 @@ groupedControls.story = {
 You can see Controls in separate tabs as shown below.
 
 <p align="center">
-  <img src="./docs/grouped-controls.jpg" alt="control groups" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
 
@@ -449,7 +449,7 @@ Setting this option to `false` will disable auto-generating of controls for stor
 Setting this option to `false` will disable showing the Controls panel in the addons section within the Storybook Canvas page:
 
 <p align="center">
-  <img src="./docs/option-addonPanel.jpg" alt="addon panel" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-addonPanel.jpg" alt="addon panel" width="428">
 </p>
 
 
@@ -458,7 +458,7 @@ Setting this option to `false` will disable showing the Controls panel in the ad
 Setting this option to `false` will disable showing an additional tab and panel with Controls in the `<Preview />` component within the Storybopok DocsPage:
 
 <p align="center">
-  <img src="./docs/option-docsPreview.jpg" alt="docs preview addon" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-docsPreview.jpg" alt="docs preview addon" width="428">
 </p>
 
 ### **docsProps** option
@@ -466,7 +466,7 @@ Setting this option to `false` will disable showing an additional tab and panel 
 Setting this option to `false` will disable showing an additional columns with Controls in the `<Props />` component within the Storybopok DocsPage:
 
 <p align="center">
-  <img src="./docs/option-docsProps.jpg" alt="docs preview addon" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-docsProps.jpg" alt="docs preview addon" width="428">
 </p>
 
 
