@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/ccontrols/component-controls/compare/v0.5.0...v0.5.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* number random generator with step and min/max ([c42d7e4](https://github.com/ccontrols/component-controls/commit/c42d7e4dc55855014f921261d267157afa1636df))
+
+
+
+
+
 # [0.5.0](https://github.com/ccontrols/component-controls/compare/v0.4.0...v0.5.0) (2020-02-12)
 
 **Note:** Version bump only for package @component-controls/core
