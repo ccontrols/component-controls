@@ -12,9 +12,9 @@ module.exports = {
       name: path.resolve(path.dirname(require.resolve('@component-controls/storybook')), 'preset.js'),
       options: {
         legacy: true,
+        addonPanel: true,
       },
     },  
-
   ],
   stories: [
     '../core/editors/src/**/*.stories.(js|tsx|mdx)',

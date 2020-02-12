@@ -8,6 +8,6 @@ export default config({
     './src/config-preview.ts',
     './src/config-props-table.ts',
     './src/config-smart.ts',
-    './src/register.tsx',
+    './src/manager/register.tsx',
   ],
 });

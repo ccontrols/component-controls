@@ -23,7 +23,7 @@ module.exports = {
   managerEntries: (entry: any[] = [], options: any = {}) => {
     const { addonPanel = true } = options;
     if (addonPanel) {
-      return [...entry, require.resolve('./register')];
+      return [...entry, require.resolve('./register.esm')];
     }
     return entry;
   },

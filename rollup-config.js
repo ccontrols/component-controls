@@ -65,9 +65,16 @@ const createOutput = (dir = 'dist', defaultOpts) => {
   const outputs = [
     {
       dir,
-      format: 'esm',
+      format: 'cjs',
       chunkFileNames: filename ? `${filename}.js` : `[name].js`,
       entryFileNames: filename ? `${filename}.js` : `[name].js`,
+      ...output,
+    },
+    {
+      dir,
+      format: 'esm',
+      chunkFileNames: filename ? `${filename}.esm.js` : `[name].esm.js`,
+      entryFileNames: filename ? `${filename}.esm.js` : `[name].esm.js`,
       ...output,
     },
   ];
