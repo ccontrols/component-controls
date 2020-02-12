@@ -5,7 +5,7 @@ addParameters({
   options: {
     enhanceControls: extractSmartControls,
   },
-  controls: {
+  addonControls: {
     smart: true,
   },
 });

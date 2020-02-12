@@ -292,7 +292,7 @@ export const smartControls = props => ({
 ```js
 onlyColors.story = {
   parameters: {
-    controls: {
+    addonControls: {
       smart: {
         include: ['color', 'backgroundColor'],
       },
@@ -306,7 +306,7 @@ onlyColors.story = {
 ```js
 noColors.story = {
   parameters: {
-    controls: {
+    addonControls: {
       smart: {
         exclude: ['color', 'backgroundColor'],
       },

@@ -1,4 +1,4 @@
-import { addDecorator, addParameters, useEffect } from '@storybook/client-api';
+import { addDecorator, useEffect } from '@storybook/client-api';
 import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
@@ -32,20 +32,14 @@ addDecorator(
           channel.removeListener(SET_DATA_MSG, onNewData);
         };
       }, []);
-      const { controls } = context.parameters || {};
-      const { modernSyntax } = controls;
+      const { controls, addonControls } = context.parameters || {};
+      const { legacyContext = false } = addonControls || {};
       const props = getControlValues(controls);
-      if (modernSyntax) {
-        //@ts-ignore
-        return storyFn(props, context);
+      if (legacyContext) {
+        return storyFn({ ...context, props });
       }
-      return storyFn({ ...context, props });
+      //@ts-ignore
+      return storyFn(props, context);
     },
   }),
 );
-
-addParameters({
-  controls: {
-    legacy: true,
-  },
-});

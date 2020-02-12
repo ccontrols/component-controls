@@ -183,8 +183,8 @@ export const extractSmartControls = (
   parameters: Parameters,
 ): ComponentControls | null => {
   const params = parameters || {};
-  const { component, framework = null, controls = {} } = params;
-  const { smart: smartControls } = controls;
+  const { component, framework = null, addonControls = {} } = params;
+  const { smart: smartControls } = addonControls;
   if (!smartControls) {
     return null;
   }

@@ -8,13 +8,13 @@ export default {
   },
 };
 
-export const allProps = ({ props }) => <Button {...props} />;
+export const allProps = props => <Button {...props} />;
 
-export const onlyColors = ({ props }) => <Button label="Choose colors" {...props} />;
+export const onlyColors = props => <Button label="Choose colors" {...props} />;
 
 onlyColors.story = {
   parameters: {
-    controls: {
+    addonControls: {
       smart: {
         include: ['color', 'backgroundColor'],
       },
@@ -22,11 +22,11 @@ onlyColors.story = {
   },
 };
 
-export const noColors = ({ props }) => <Button label="Choose colors" {...props} />;
+export const noColors = props => <Button label="Choose colors" {...props} />;
 
 noColors.story = {
   parameters: {
-    controls: {
+    addonControls: {
       smart: {
         exclude: ['color', 'backgroundColor'],
       },
