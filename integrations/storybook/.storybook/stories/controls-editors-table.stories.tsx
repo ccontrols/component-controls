@@ -29,7 +29,7 @@ docsControlsEditorsTable.story = {
       clickMe: {
         type: ControlTypes.BUTTON,
         label: 'button click',
-        onClick: () => {},
+        onClick: () => {console.log('log')},
       },
     },
   }

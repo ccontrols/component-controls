@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
-import { SetControlValueFn } from '@component-controls/specification';
+import {
+  SetControlValueFn,
+  ClickControlFn,
+  ComponentControlButton,
+} from '@component-controls/specification';
 import {
   LoadedComponentControls,
   mergeControlValues,
@@ -11,8 +15,11 @@ import { ControlsTable } from '../shared/ControlsTable';
 import { SET_DATA_MSG } from '../shared/shared';
 
 interface ControlsEditorsTableProps {
+  /** a title to display */
   title?: string;
+  /** id of the story */
   id?: string;
+  /** name of the story */
   name?: string;
 }
 
@@ -79,13 +86,25 @@ export const ControlsEditorsTable: FC<ControlsEditorsTableProps> = ({
               });
             }
           };
+      const clickControl: ClickControlFn = api.clickControl
+        ? api.clickControl
+        : (storyId: string, propName: string) => {
+            if (controls && controls[propName]) {
+              const control: ComponentControlButton = controls[
+                propName
+              ] as ComponentControlButton;
+              if (control && typeof control.onClick === 'function') {
+                control.onClick(control);
+              }
+            }
+          };
       return id ? (
         <ControlsTable
           title={title}
           controls={controls}
           storyId={id}
           setControlValue={setControlValue}
-          clickControl={api.clickControl}
+          clickControl={clickControl}
         />
       ) : null;
     }}
