@@ -13,7 +13,7 @@ interface DocsControlsEditorsTable {
   name: string;
   age: number;
 }
-export const docsControlsEditorsTable = ({ name, age }: DocsControlsEditorsTable) => {
+export const docsControlsEditorsTable = ({ props: { name, age }}: { props: DocsControlsEditorsTable}) => {
   return (
     <>
       <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>

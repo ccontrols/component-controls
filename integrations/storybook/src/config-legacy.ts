@@ -1,5 +1,6 @@
 import { addDecorator, addParameters, useEffect } from '@storybook/client-api';
 import { ComponentControls } from '@component-controls/specification';
+import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
@@ -31,7 +32,14 @@ addDecorator(
           channel.removeListener(SET_DATA_MSG, onNewData);
         };
       }, []);
-      return storyFn(context);
+      const { controls } = context.parameters || {};
+      const { modernSyntax } = controls;
+      const props = getControlValues(controls);
+      if (modernSyntax) {
+        //@ts-ignore
+        return storyFn(props, context);
+      }
+      return storyFn({ ...context, props });
     },
   }),
 );

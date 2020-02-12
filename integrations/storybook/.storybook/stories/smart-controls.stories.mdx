@@ -20,7 +20,7 @@ import Button from '../components/BaseButton';
 
 <Preview>
   <Story name="smart story">
-    {(props) => (
+    {({ props }) => (
       <Button label="default" {...props}/>
     )}  
   </Story>
@@ -36,7 +36,7 @@ import Button from '../components/BaseButton';
       }  
     }}
     >
-    {({ text }) => (
+    {({ props: { text } }) => (
       <Button label={text}/>
     )}  
   </Story>

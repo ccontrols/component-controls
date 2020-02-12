@@ -1,15 +1,13 @@
 import React, { FC } from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { Title, Subtitle, Source, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
-import { getControlValues } from '@component-controls/core';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
 import { ControlsEditorsTable, ThemeProvider } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
-  const { controls } = ctx.parameters || {};
   return (
     <ThemeProvider>
-      {story(getControlValues(controls))}
+      {story(ctx)}
     </ThemeProvider>
   );
 })

@@ -1,5 +1,4 @@
 const path = require('path');
-console.log(path.resolve(path.dirname(require.resolve('@component-controls/storybook')), 'preset.js'));
 module.exports = {
   presets:[
     {

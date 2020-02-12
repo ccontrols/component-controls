@@ -19,9 +19,7 @@ export const ThemeProvider: React.FC = ({ children }) => (
           borderSpacing: '0px',
         },
         td: {
-          paddingTop: '16px',
-          paddingBottom: '16px',
-          paddingLeft: '20px',
+          padding: '16px 20px',
         },
         tr: {
           borderTop: '1px solid rgba(0, 0, 0, 0.1)',

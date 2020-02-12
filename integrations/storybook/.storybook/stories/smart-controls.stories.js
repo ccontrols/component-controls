@@ -8,9 +8,9 @@ export default {
   },
 };
 
-export const allProps = props => <Button {...props} />;
+export const allProps = ({ props }) => <Button {...props} />;
 
-export const onlyColors = props => <Button label="Choose colors" {...props} />;
+export const onlyColors = ({ props }) => <Button label="Choose colors" {...props} />;
 
 onlyColors.story = {
   parameters: {
@@ -22,7 +22,7 @@ onlyColors.story = {
   },
 };
 
-export const noColors = props => <Button label="Choose colors" {...props} />;
+export const noColors = ({ props }) => <Button label="Choose colors" {...props} />;
 
 noColors.story = {
   parameters: {

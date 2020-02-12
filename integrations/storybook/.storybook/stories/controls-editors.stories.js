@@ -6,7 +6,7 @@ export default {
   title: 'Storybook/Controls',
 };
 
-export const textDefaultProp = ({ text }) => text;
+export const textDefaultProp = ({ props: { text } }) => text;
 textDefaultProp.story = {
   parameters: {
     controls: {
@@ -15,7 +15,7 @@ textDefaultProp.story = {
   }  
 };
 
-export const selectProp = ({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;
+export const selectProp = ({ props: { value } }) => <div>{JSON.stringify({ value }, null, 2)}</div>;
 
 selectProp.propTypes = {
   value: PropTypes.string,
@@ -39,7 +39,7 @@ selectProp.story = {
   }  
 };
 
-export const tweaksStaticValues = ({
+export const tweaksStaticValues = ({ props: {
   userName,
   age,
   fruit,
@@ -54,7 +54,7 @@ export const tweaksStaticValues = ({
   images,
   dog,
   birthday,
-}) => {
+} }) => {
   const intro = `My name is ${userName}, I'm ${age} years old, and my favorite fruit is ${fruit}. I also enjoy ${otherFruit}, and hanging out with my dog ${dog.label}`;
   const style = { backgroundColor, color, ...otherStyles };
   const salutation = nice ? 'Nice to meet you!' : 'Leave me alone!';
@@ -227,7 +227,7 @@ tweaksStaticValues.story = {
   }  
 };
 
-export const dynamicProps = ({ showOptional }) => {
+export const dynamicProps = ({ props: { showOptional }}) => {
   return (
     <>
       <div>I must be here</div>
@@ -254,7 +254,7 @@ dynamicProps.story = {
   }  
 };
 
-export const complexSelect = ({ m }) => {
+export const complexSelect = ({ props: { m }}) => {
   const value = m.toString();
   const type = Array.isArray(m) ? 'array' : typeof m;
   return (
@@ -262,11 +262,6 @@ export const complexSelect = ({ m }) => {
       the type of {JSON.stringify(value, null, 2)} = {type}
     </pre>
   );
-};
-
-complexSelect.propTypes = {
-  m: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.arrayOf(PropTypes.number)])
-    .isRequired,
 };
 
 complexSelect.story = {
@@ -288,14 +283,14 @@ complexSelect.story = {
   }  
 };
 
-export const optionsProperties = ({
+export const optionsProperties = ({ props: {
   optionRadio,
   optionInlineRadio,
   optionSelect,
   optionsMultiSelect,
   optionsCheck,
   optionsInlineCheck,
-}) => {
+}}) => {
   return (
     <div>
       <p>Weekday: {optionRadio}</p>
@@ -463,7 +458,7 @@ triggersActionsViaButton.story = {
   },  
 };
 
-export const radioEnum = ({ radio }) => radio;
+export const radioEnum = ({ props: { radio } }) => radio;
 
 radioEnum.story = {
   parameters: {
@@ -493,7 +488,7 @@ reservedKeyword.story = {
   },  
 };
 
-export const XssSafety = ({ content }) => (
+export const XssSafety = ({ props: { content } }) => (
   <div
     // eslint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{
@@ -520,7 +515,7 @@ XssSafety.story = {
   },  
 };
 
-export const generateRandomData = ({ street }) => street;
+export const generateRandomData = ({ props: { street } }) => street;
 
 generateRandomData.story = {
   parameters: {
