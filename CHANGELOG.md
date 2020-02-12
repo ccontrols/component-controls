@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/ccontrols/component-controls/compare/v0.4.0...v0.5.0) (2020-02-12)
+
+
+### Features
+
+* legacy context mode ([741898b](https://github.com/ccontrols/component-controls/commit/741898b6088ece230523af16631a301667b27fa3))
+
+
+
+
+
 # [0.4.0](https://github.com/ccontrols/component-controls/compare/v0.3.5...v0.4.0) (2020-02-12)
 
 
