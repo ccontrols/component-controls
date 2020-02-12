@@ -1,5 +1,6 @@
 import {
   ControlTypes,
+  ComponentControlNumber,
   ComponentControlOptions,
 } from '@component-controls/specification';
 import { LoadedComponentControls } from './utils';
@@ -81,12 +82,27 @@ export const randomizeData = (
             value: faker.random.boolean(),
           };
         case ControlTypes.NUMBER:
+          const step: number = control
+            ? (control as ComponentControlNumber).step || 1
+            : 1;
+
+          const randomNumber: number = Math.max(
+            Math.min(
+              faker.random.number({
+                min:
+                  (control as ComponentControlNumber).min ||
+                  (control.value as number) / 2,
+                max:
+                  (control as ComponentControlNumber).max ||
+                  (control.value as number) * 2,
+              }),
+              (control as ComponentControlNumber).max || Infinity,
+            ),
+            (control as ComponentControlNumber).min || -Infinity,
+          );
           return {
             name,
-            value: faker.random.number({
-              min: (control.value as number) / 2,
-              max: (control.value as number) * 2,
-            }),
+            value: Math.ceil(randomNumber / step) * step,
           };
         case ControlTypes.OBJECT: {
           if (typeof control.value === 'object') {

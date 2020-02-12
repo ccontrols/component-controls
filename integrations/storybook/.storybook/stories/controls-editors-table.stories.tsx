@@ -25,7 +25,7 @@ docsControlsEditorsTable.story = {
   parameters: {
     controls: {
       name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
-      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19 },
+      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75 },
       clickMe: {
         type: ControlTypes.BUTTON,
         label: 'button click',

@@ -27,7 +27,7 @@ export const docsControlsEditorsTable = ({ name, age }: DocsControlsEditorsTable
 docsControlsEditorsTable.story = {
   parameters: {
     controls: {
-      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, order: 2 },
+      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75, step: 5 },
     },
   },  
 };
