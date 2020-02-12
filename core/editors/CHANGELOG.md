@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/ccontrols/component-controls/compare/v0.2.0...v0.3.0) (2020-02-12)
+
+
+### Features
+
+* synchronize manage/preview legacy mode ([4fc7de3](https://github.com/ccontrols/component-controls/commit/4fc7de3e6c3bda3df83f8af4d50a1f8f402b8029))
+
+
+
+
+
 # [0.2.0](https://github.com/ccontrols/component-controls/compare/v0.1.11...v0.2.0) (2020-02-11)
 
 
