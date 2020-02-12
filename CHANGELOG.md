@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/ccontrols/component-controls/compare/v0.3.5...v0.4.0) (2020-02-12)
+
+
+### Features
+
+* integrate legacy calling ([fd00bd8](https://github.com/ccontrols/component-controls/commit/fd00bd88f3e0e6b2cab88875e080a18d1f325584))
+
+
+
+
+
 ## [0.3.5](https://github.com/ccontrols/component-controls/compare/v0.3.4...v0.3.5) (2020-02-12)
 
 **Note:** Version bump only for package component-controls
