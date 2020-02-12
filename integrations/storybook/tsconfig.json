@@ -2,12 +2,13 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
-    "outDir": "dist",
-    "rootDir": "src",
     "declaration": true,
-    "types": ["node", "jest"],
+    "sourceMap": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./",
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*", "src/typings.d.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules/**"]
 }
