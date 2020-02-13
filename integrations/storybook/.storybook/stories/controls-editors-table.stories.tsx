@@ -6,6 +6,9 @@ export default {
   title: 'Storybook/Blocks/ControlsEditorsTable',
   parameters: {
     component: ControlsEditorsTable,
+    addonControls: {
+      smart: false,
+    }
   },
 };
 
