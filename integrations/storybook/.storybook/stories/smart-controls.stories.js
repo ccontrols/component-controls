@@ -36,3 +36,9 @@ noColors.story = {
 
 // this story does not have parameters, and smart controls will be disabled for it
 export const noProps = () => <Button label="No properties" />;
+
+noProps.story = {
+  parameters: {
+    addonControls: { smart: false }
+  }  
+}
