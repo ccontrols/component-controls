@@ -5,7 +5,7 @@ import {
   PropertyEditor,
   getPropertyEditor,
 } from '@component-controls/editors';
-import { PropDef } from '../smartControls';
+import { PropDef } from '../shared/smartControls';
 
 const TitleIcon = styled.div({
   height: 18,

@@ -1,9 +1,9 @@
 import { addParameters } from '@storybook/client-api';
-import { extractSmartControls } from './smartControls';
+// import { extractSmartControls } from './shared/smartControls';
 
 addParameters({
   options: {
-    enhanceControls: extractSmartControls,
+    enhanceControls: undefined, //extractSmartControls,
   },
   addonControls: {
     smart: true,

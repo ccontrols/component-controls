@@ -34,7 +34,7 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "storybook": "start-storybook -p 9015 -c .storybook",
-    "watch": "uno watch",
+    "watch": "lerna run --parallel watch",
     "build-storybook": "build-storybook -c .storybook -o docs"
   },
   "lint-staged": {

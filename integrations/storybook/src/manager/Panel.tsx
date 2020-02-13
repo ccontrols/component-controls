@@ -6,9 +6,13 @@ import {
   mergeControlValues,
 } from '@component-controls/core';
 import { SetControlValueFn } from '@component-controls/specification';
-
+import { SET_STORIES } from '@storybook/core-events';
 import { API } from '@storybook/api';
-import { SET_DATA_MSG } from '../shared/shared';
+import {
+  SET_DATA_MSG,
+  SYNC_SMART_STORIES,
+  GET_ALL_STORIES,
+} from '../shared/shared';
 import { ControlsTable } from '../shared/ControlsTable';
 import { NoControls } from './NoControls';
 
@@ -81,6 +85,7 @@ export const PropsPanel: React.FC<PropsPanelProps> = ({
   active: panelActive,
 }: PropsPanelProps) => {
   const { storyId: id } = useStorybookState();
+  const [refreshed, forceRefresh] = React.useState(false);
   const channel = api.getChannel();
   React.useEffect(() => {
     const onNewData = ({
@@ -96,8 +101,33 @@ export const PropsPanel: React.FC<PropsPanelProps> = ({
       }
     };
     channel.on(SET_DATA_MSG, onNewData);
+
+    const onStoriesReady = () => {
+      if (refreshed === false) {
+        api.emit(GET_ALL_STORIES);
+      }
+    };
+    channel.on(SET_STORIES, onStoriesReady);
+
+    const onSyncStories = (
+      stories: { storyId: string; controls: LoadedComponentControls }[],
+    ) => {
+      stories.forEach(({ storyId, controls }) => {
+        const data = api.getData(storyId);
+        if (data) {
+          (data as any).parameters.controls = controls;
+          if (data.id === id) {
+            forceRefresh(true);
+          }
+        }
+      });
+    };
+    channel.on(SYNC_SMART_STORIES, onSyncStories);
+
     return () => {
       channel.removeListener(SET_DATA_MSG, onNewData);
+      channel.removeListener(SET_STORIES, onStoriesReady);
+      channel.removeListener(SYNC_SMART_STORIES, onSyncStories);
     };
   }, []);
   if (!panelActive) {

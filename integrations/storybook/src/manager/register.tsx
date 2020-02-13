@@ -7,9 +7,10 @@ addons.register(ADDON_ID, api => {
   addons.addPanel(PANEL_ID, {
     title: 'Controls',
     // eslint-disable-next-line react/display-name
-    render: ({ active, key }) => (
-      <PropsPanel api={api} key={key} active={active} />
-    ),
+    render: ({ active, key, ...rest }) => {
+      console.log(rest);
+      return <PropsPanel api={api} key={key} active={active} />;
+    },
     paramKey: PARAM_KEY,
   });
 });

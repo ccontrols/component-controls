@@ -15,7 +15,7 @@ module.exports = {
       result.push(require.resolve('./config-props-table'));
     }
     const { smart = true } = options;
-    if (!legacy && smart) {
+    if (smart) {
       result.push(require.resolve('./config-smart'));
     }
     return result;

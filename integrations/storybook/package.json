@@ -36,6 +36,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/editors": "^0.5.1",
+    "@component-controls/instrument": "^0.5.1",
     "@component-controls/specification": "^0.5.1",
     "@theme-ui/presets": "^0.3.0",
     "copy-to-clipboard": "^3.0.8",

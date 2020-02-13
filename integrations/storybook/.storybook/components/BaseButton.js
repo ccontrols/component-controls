@@ -9,7 +9,7 @@ const BaseButton = ({ disabled, label, onClick, style, backgroundColor, color, t
     type={type}
     disabled={disabled}
     onClick={onClick}
-    style={{ ...style, backgroundColor, color: lighten(disabled ? 0.3 : 0, color), padding }}
+    style={{ ...style, backgroundColor, color: lighten(disabled ? 0.4 : 0, color), padding }}
   >
     {label}
   </button>
@@ -17,6 +17,7 @@ const BaseButton = ({ disabled, label, onClick, style, backgroundColor, color, t
 
 BaseButton.defaultProps = {
   disabled: false,
+  label: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -29,7 +30,7 @@ BaseButton.propTypes = {
   /** Boolean indicating whether the button should render as disabled */
   disabled: PropTypes.bool,
   /** button label. */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   /** onClick handler */
   onClick: PropTypes.func,
   /** Custom styles */
