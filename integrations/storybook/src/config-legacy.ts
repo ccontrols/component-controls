@@ -1,9 +1,14 @@
 import { addDecorator, useEffect } from '@storybook/client-api';
 import { CHANNEL_CREATED } from '@storybook/core-events';
+import { storyNameFromExport } from '@storybook/csf';
 import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
-// import { parseSource } from '@component-controls/instrument';
+import {
+  parseSource,
+  Stories,
+  StoryParameters,
+} from '@component-controls/instrument';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { docgenToControls } from './shared/smartControls';
@@ -39,22 +44,49 @@ addDecorator(
           if (storyStore._smartcontrols === undefined) {
             storyStore._smartcontrols = true;
             Object.keys(storyStore._data).forEach((id: string) => {
-              const parameters = storyStore._data[id].parameters || {};
+              const story = storyStore._data[id];
+              const parameters = story.parameters || {};
               const { addonControls = {}, controls } = parameters;
               const { smart } = addonControls;
               if (smart) {
-                const smartControls = docgenToControls(
-                  storyStore._data[id].parameters,
-                );
-                if (smartControls && Object.keys(smartControls).length) {
-                  storyStore._data[id].parameters.controls = {
-                    ...smartControls,
-                    ...controls,
-                  };
-                  storyStore._data[id].parameters.addonControls = {
-                    ...storyStore._data[id].parameters.addonControls,
-                    smartLoaded: true,
-                  };
+                const code =
+                  parameters.mdxSource ||
+                  (parameters.storySource && parameters.storySource.source);
+                let params: StoryParameters | undefined;
+                if (code) {
+                  const stories: Stories = parseSource(code);
+                  const storyProps:
+                    | {
+                        name: string;
+                        parameters: StoryParameters | undefined;
+                      }
+                    | undefined = Object.keys(stories)
+                    .map(name => ({
+                      parameters: stories[name].parameters,
+                      name: storyNameFromExport(name),
+                    }))
+                    .find(({ name }) => name === story.name);
+                  if (
+                    storyProps &&
+                    storyProps.parameters &&
+                    storyProps.parameters.length
+                  ) {
+                    params = storyProps.parameters;
+                    story.parameters.addonControls.properties = params;
+                  }
+                }
+                if (params && params.length) {
+                  const smartControls = docgenToControls(story.parameters);
+                  if (smartControls && Object.keys(smartControls).length) {
+                    story.parameters.controls = {
+                      ...smartControls,
+                      ...controls,
+                    };
+                    story.parameters.addonControls = {
+                      ...story.parameters.addonControls,
+                      smartLoaded: true,
+                    };
+                  }
                 }
               }
             });
@@ -96,13 +128,7 @@ addDecorator(
         };
       }, []);
       const { parameters = {} } = context; // parseSource(source));
-      /*       const source =
-        parameters.mdxSource ||
-        (parameters.storySource && parameters.storySource.source);
- */ const {
-        controls,
-        addonControls,
-      } = parameters;
+      const { controls, addonControls } = parameters;
       const { legacyContext = false } = addonControls || {};
       const props = getControlValues(controls);
 
