@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/ccontrols/component-controls/compare/v0.5.1...v0.6.0) (2020-02-14)
+
+
+### Features
+
+* smart controls synchronization ([d181774](https://github.com/ccontrols/component-controls/commit/d1817747cc55123be17de1d4a72b8a58ace7fa1c))
+
+
+
+
+
 ## [0.5.1](https://github.com/ccontrols/component-controls/compare/v0.5.0...v0.5.1) (2020-02-12)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/editors": "^0.5.1",
-    "@component-controls/instrument": "^0.5.1",
-    "@component-controls/specification": "^0.5.1",
+    "@component-controls/editors": "^0.6.0",
+    "@component-controls/instrument": "^0.6.0",
+    "@component-controls/specification": "^0.6.0",
     "@theme-ui/presets": "^0.3.0",
     "copy-to-clipboard": "^3.0.8",
     "core-js": "^3.0.1",
