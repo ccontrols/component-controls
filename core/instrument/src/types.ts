@@ -9,6 +9,7 @@ export interface CodeSource {
 }
 export interface StoryParameter {
   value: string | StoryParameters;
+  name?: string;
   loc: CodeSource;
 }
 

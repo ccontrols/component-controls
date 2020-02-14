@@ -1,9 +1,13 @@
 import { Story, CodeSource, StoryParameters } from '../types';
 
+interface KeyType {
+  name: string;
+}
 interface ASTPropNode {
   name?: string;
   loc: CodeSource;
   properties?: any;
+  key?: KeyType;
 }
 export const extractFunctionParameters = (story: Story) => ({
   ArrowFunctionExpression: (path: any) => {
@@ -11,7 +15,11 @@ export const extractFunctionParameters = (story: Story) => ({
     if (!story.parameters) {
       story.parameters = [];
     }
-    const pushParams = (node: ASTPropNode, parameters: StoryParameters) => {
+    const pushParams = (
+      node: ASTPropNode,
+      parameters: StoryParameters,
+      key?: KeyType,
+    ) => {
       const loc = {
         start: {
           column: node.loc.start.column,
@@ -25,17 +33,21 @@ export const extractFunctionParameters = (story: Story) => ({
       if (node.name) {
         parameters.push({
           value: node.name,
+          name: key ? key.name : node.name,
           loc,
         });
       } else if (node.properties) {
         const nestedParameters: StoryParameters = [];
         parameters.push({
           value: nestedParameters,
+          name: key ? key.name : node.name,
           loc,
         });
-        node.properties.forEach(({ value }: { value: ASTPropNode }) => {
-          pushParams(value, nestedParameters);
-        });
+        node.properties.forEach(
+          ({ value, key }: { value: ASTPropNode; key?: KeyType }) => {
+            pushParams(value, nestedParameters, key);
+          },
+        );
       }
     };
     if (node.params) {
