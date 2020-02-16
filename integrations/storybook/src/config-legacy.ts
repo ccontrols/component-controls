@@ -5,7 +5,7 @@ import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
 import {
-  parseSource,
+  parseCSF,
   Stories,
   StoryParameters,
 } from '@component-controls/instrument';
@@ -54,7 +54,7 @@ addDecorator(
                   (parameters.storySource && parameters.storySource.source);
                 let params: StoryParameters | undefined;
                 if (code) {
-                  const stories: Stories = parseSource(code);
+                  const stories: Stories = parseCSF(code);
                   const storyProps:
                     | {
                         name: string;

@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-parameters story propery name 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "name": "Custom story name",
+      "properties": Array [
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 1,
+              "line": 4,
+            },
+          },
+          "name": "name",
+          "value": "Custom story name",
+        },
+      ],
+      "source": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 29,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-parameters story propery name and parameters 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "name": "Custom story name",
+      "properties": Array [
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 27,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 4,
+            },
+          },
+          "name": "name",
+          "value": "Custom story name",
+        },
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 10,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 5,
+            },
+          },
+          "name": "parameters",
+          "value": Array [
+            Object {
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 35,
+                  "line": 6,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 6,
+                },
+              },
+              "name": "component",
+              "value": "ControlsEditorsTable",
+            },
+            Object {
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 9,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 7,
+                },
+              },
+              "name": "addonControls",
+              "value": Array [
+                Object {
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 18,
+                      "line": 8,
+                    },
+                    "start": Position {
+                      "column": 6,
+                      "line": 8,
+                    },
+                  },
+                  "name": "smart",
+                  "value": false,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      "source": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 29,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-parameters story propery name parameters and controls 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "name": "Custom story name",
+      "properties": Array [
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 27,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 4,
+            },
+          },
+          "name": "name",
+          "value": "Custom story name",
+        },
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 17,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 5,
+            },
+          },
+          "name": "parameters",
+          "value": Array [
+            Object {
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 13,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 6,
+                },
+              },
+              "name": "controls",
+              "value": Array [
+                Object {
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 7,
+                      "line": 12,
+                    },
+                    "start": Position {
+                      "column": 6,
+                      "line": 7,
+                    },
+                  },
+                  "name": "name",
+                  "value": Array [
+                    Object {
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 31,
+                          "line": 8,
+                        },
+                        "start": Position {
+                          "column": 8,
+                          "line": 8,
+                        },
+                      },
+                      "name": "type",
+                      "value": "ControlTypes.TEXT",
+                    },
+                    Object {
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 21,
+                          "line": 9,
+                        },
+                        "start": Position {
+                          "column": 8,
+                          "line": 9,
+                        },
+                      },
+                      "name": "label",
+                      "value": "Name",
+                    },
+                    Object {
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 21,
+                          "line": 10,
+                        },
+                        "start": Position {
+                          "column": 8,
+                          "line": 10,
+                        },
+                      },
+                      "name": "value",
+                      "value": "Mark",
+                    },
+                    Object {
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 19,
+                          "line": 11,
+                        },
+                        "start": Position {
+                          "column": 8,
+                          "line": 11,
+                        },
+                      },
+                      "name": "order",
+                      "value": 9999,
+                    },
+                  ],
+                },
+              ],
+            },
+            Object {
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 16,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 14,
+                },
+              },
+              "name": "addonControls",
+              "value": Array [
+                Object {
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 18,
+                      "line": 15,
+                    },
+                    "start": Position {
+                      "column": 6,
+                      "line": 15,
+                    },
+                  },
+                  "name": "smart",
+                  "value": false,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      "source": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 29,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;

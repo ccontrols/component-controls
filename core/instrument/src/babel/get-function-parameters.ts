@@ -12,8 +12,8 @@ interface ASTPropNode {
 export const extractFunctionParameters = (story: Story) => ({
   ArrowFunctionExpression: (path: any) => {
     const node = path.node;
-    if (!story.parameters) {
-      story.parameters = [];
+    if (!story.arguments) {
+      story.arguments = [];
     }
     const pushParams = (
       node: ASTPropNode,
@@ -53,8 +53,8 @@ export const extractFunctionParameters = (story: Story) => ({
     if (node.params) {
       node.params.forEach(
         (p: { name: string; loc: CodeSource; properties?: any }) => {
-          if (story.parameters) {
-            pushParams(p, story.parameters);
+          if (story.arguments) {
+            pushParams(p, story.arguments);
           }
         },
       );

@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-story Named object export 1`] = `
+Object {
+  "stories": Object {},
+}
+`;
+
+exports[`csf-story No arguments 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 37,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 35,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story No story 1`] = `
+Object {
+  "stories": Object {},
+}
+`;
+
+exports[`csf-story Props argument 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 34,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 29,
+              "line": 2,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 40,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 38,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story Three levels - alias 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 60,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 30,
+              "line": 2,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 53,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 38,
+                  "line": 2,
+                },
+              },
+              "name": "name",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 45,
+                      "line": 2,
+                    },
+                    "start": Object {
+                      "column": 40,
+                      "line": 2,
+                    },
+                  },
+                  "name": "first",
+                  "value": "first",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 51,
+                      "line": 2,
+                    },
+                    "start": Object {
+                      "column": 47,
+                      "line": 2,
+                    },
+                  },
+                  "name": "last",
+                  "value": "last",
+                },
+              ],
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 58,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 55,
+                  "line": 2,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 67,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 65,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story Two arguments 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 35,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 30,
+              "line": 2,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 44,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 37,
+              "line": 2,
+            },
+          },
+          "name": "context",
+          "value": "context",
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 51,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 49,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story Two levels - alias 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 50,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 30,
+              "line": 2,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 43,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 38,
+                  "line": 2,
+                },
+              },
+              "name": "name",
+              "value": "MyNam",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 48,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 45,
+                  "line": 2,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 57,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 55,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story Two levels sub arguments 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 43,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 30,
+              "line": 2,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 36,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 32,
+                  "line": 2,
+                },
+              },
+              "name": "name",
+              "value": "name",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 41,
+                  "line": 2,
+                },
+                "start": Object {
+                  "column": 38,
+                  "line": 2,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 50,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 48,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-story Typescript 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 47,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 30,
+              "line": 2,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+      ],
+      "name": "myStory",
+      "source": Object {
+        "end": Object {
+          "column": 54,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 52,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;

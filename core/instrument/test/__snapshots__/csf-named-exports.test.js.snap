@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-named-exports exported alias name 1`] = `
+Object {
+  "stories": Object {
+    "exportedStory": Object {
+      "arguments": Array [],
+      "name": "Custom story name",
+      "properties": Array [
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 1,
+              "line": 4,
+            },
+          },
+          "name": "name",
+          "value": "Custom story name",
+        },
+      ],
+      "source": Object {
+        "end": Object {
+          "column": 24,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`csf-named-exports re-exported name 1`] = `
+Object {
+  "stories": Object {},
+}
+`;
+
+exports[`csf-named-exports story propery name 1`] = `
+Object {
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "name": "Custom story name",
+      "properties": Array [
+        Object {
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 1,
+              "line": 4,
+            },
+          },
+          "name": "name",
+          "value": "Custom story name",
+        },
+      ],
+      "source": Object {
+        "end": Object {
+          "column": 24,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 2,
+        },
+      },
+    },
+  },
+}
+`;

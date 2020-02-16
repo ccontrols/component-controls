@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mdx-stories Props argument 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "story-with-props": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 8,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 3,
+              "line": 24,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+      ],
+      "name": "story-with-props",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories Three levels - alias 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "story-with-props": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 7,
+              "line": 30,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 24,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 28,
+                },
+                "start": Object {
+                  "column": 14,
+                  "line": 25,
+                },
+              },
+              "name": "name",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 26,
+                    },
+                    "start": Object {
+                      "column": 10,
+                      "line": 26,
+                    },
+                  },
+                  "name": "first",
+                  "value": "first",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 27,
+                    },
+                    "start": Object {
+                      "column": 10,
+                      "line": 27,
+                    },
+                  },
+                  "name": "last",
+                  "value": "last",
+                },
+              ],
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 29,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 29,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "story-with-props",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 31,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories Two arguments 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "story-with-props": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 9,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 24,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 18,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 11,
+              "line": 24,
+            },
+          },
+          "name": "context",
+          "value": "context",
+        },
+      ],
+      "name": "story-with-props",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories Two levels - alias 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "story-with-props": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 7,
+              "line": 27,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 24,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 25,
+                },
+                "start": Object {
+                  "column": 14,
+                  "line": 25,
+                },
+              },
+              "name": "name",
+              "value": "MyName",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 26,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 26,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "story-with-props",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 28,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories Two levels sub arguments 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "story-with-props": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 7,
+              "line": 27,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 24,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 25,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 25,
+                },
+              },
+              "name": "name",
+              "value": "name",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 26,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 26,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "name": "story-with-props",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 28,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories mdx-story 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {
+    "smart story": Object {
+      "name": "smart story",
+      "source": Object {
+        "end": Object {
+          "column": 12,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 4,
+          "line": 23,
+        },
+      },
+    },
+  },
+  "title": "Storybook/MDX",
+}
+`;
+
+exports[`mdx-stories no name 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 20,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 20,
+        },
+      },
+      "name": "title",
+      "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 21,
+          "line": 22,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 22,
+        },
+      },
+      "name": "mdxType",
+      "value": "Meta",
+    },
+  ],
+  "stories": Object {},
+  "title": "Storybook/MDX",
+}
+`;

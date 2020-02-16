@@ -16,10 +16,18 @@ export interface StoryParameter {
 export type StoryParameters = StoryParameter[];
 
 export interface Story {
-  parameters?: StoryParameters;
-  source: CodeSource;
+  name?: string;
+  arguments?: StoryParameters;
+  properties?: StoryParameters;
+  source?: CodeSource;
 }
 
 export interface Stories {
   [name: string]: Story;
+}
+
+export interface StoriesGroup {
+  title?: string;
+  properties?: StoryParameters;
+  stories: Stories;
 }

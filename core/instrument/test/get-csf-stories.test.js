@@ -1,51 +1,55 @@
-import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
-import { extractCSFStories } from './babel-traverse/get-csf-stories';
-export * from './types';
+import { parseCSF } from '../src/index';
 
-describe('Extract CSF stories', () => {
-  const traverseStories = (code: string) => {
-    const ast = parser.parse(code, {
-      sourceType: 'module',
-      plugins: ['jsx', 'typescript'],
-    });
-    const stories = {};
-    traverse(ast, extractCSFStories(stories));
-    return stories;
-  };
-  it('No parameters', () => {
+describe('csf-story', () => {
+  it('No story', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
+      const i = 1;
+    `),
+    ).toMatchSnapshot();
+  });
+  it('Named object export', () => {
+    expect(
+      parseCSF(`
+      export const myStory = {
+        i: 1,
+      };
+    `),
+    ).toMatchSnapshot();
+  });
+  it('No arguments', () => {
+    expect(
+      parseCSF(`
       export const myStory = () => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('Props parameters', () => {
+  it('Props argument', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = props => {};
     `),
     ).toMatchSnapshot();
   });
-  it('Two parameters', () => {
+  it('Two arguments', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = (props, context) => {};
     `),
     ).toMatchSnapshot();
   });
   it('Typescript', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = (props: Properties) => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('Two levels sub parameters', () => {
+  it('Two levels sub arguments', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = ({ name, age }) => {};
     `),
     ).toMatchSnapshot();
@@ -53,14 +57,14 @@ describe('Extract CSF stories', () => {
 
   it('Two levels - alias', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = ({ name: MyNam, age }) => {};
     `),
     ).toMatchSnapshot();
   });
   it('Three levels - alias', () => {
     expect(
-      traverseStories(`
+      parseCSF(`
       export const myStory = ({ name: { first, last }, age }) => {};
     `),
     ).toMatchSnapshot();
