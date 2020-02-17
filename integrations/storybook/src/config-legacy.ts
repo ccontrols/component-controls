@@ -1,14 +1,9 @@
 import { addDecorator, useEffect } from '@storybook/client-api';
 import { CHANNEL_CREATED } from '@storybook/core-events';
-import { storyNameFromExport } from '@storybook/csf';
 import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
-import {
-  parseCSF,
-  Stories,
-  StoryParameters,
-} from '@component-controls/instrument';
+import injectedStoryStore from '@component-controls/loader/dist/story-store-data';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { docgenToControls } from './shared/smartControls';
@@ -48,45 +43,24 @@ addDecorator(
               const parameters = story.parameters || {};
               const { addonControls = {}, controls } = parameters;
               const { smart } = addonControls;
-              if (smart) {
-                const code =
-                  parameters.mdxSource ||
-                  (parameters.storySource && parameters.storySource.source);
-                let params: StoryParameters | undefined;
-                if (code) {
-                  const stories: Stories = parseCSF(code);
-                  const storyProps:
-                    | {
-                        name: string;
-                        parameters: StoryParameters | undefined;
-                      }
-                    | undefined = Object.keys(stories)
-                    .map(name => ({
-                      parameters: stories[name].parameters,
-                      name: storyNameFromExport(name),
-                    }))
-                    .find(({ name }) => name === story.name);
-                  if (
-                    storyProps &&
-                    storyProps.parameters &&
-                    storyProps.parameters.length
-                  ) {
-                    params = storyProps.parameters;
-                    story.parameters.addonControls.properties = params;
+              if (injectedStoryStore && smart) {
+                const ccStory = injectedStoryStore[id];
+                if (ccStory) {
+                  if (ccStory.arguments && ccStory.arguments.length) {
+                    const smartControls = docgenToControls(story.parameters);
+                    if (smartControls && Object.keys(smartControls).length) {
+                      story.parameters.controls = {
+                        ...smartControls,
+                        ...controls,
+                      };
+                      story.parameters.addonControls = {
+                        ...story.parameters.addonControls,
+                        smartLoaded: true,
+                      };
+                    }
                   }
-                }
-                if (params && params.length) {
-                  const smartControls = docgenToControls(story.parameters);
-                  if (smartControls && Object.keys(smartControls).length) {
-                    story.parameters.controls = {
-                      ...smartControls,
-                      ...controls,
-                    };
-                    story.parameters.addonControls = {
-                      ...story.parameters.addonControls,
-                      smartLoaded: true,
-                    };
-                  }
+                } else {
+                  console.error('Invalid story id:', id);
                 }
               }
             });

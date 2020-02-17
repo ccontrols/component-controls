@@ -1,70 +1,70 @@
 import { parseCSF } from '../src/index';
 
 describe('csf-story', () => {
-  it('No story', () => {
+  it('No story', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       const i = 1;
     `),
     ).toMatchSnapshot();
   });
-  it('Named object export', () => {
+  it('Named object export', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = {
         i: 1,
       };
     `),
     ).toMatchSnapshot();
   });
-  it('No arguments', () => {
+  it('No arguments', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = () => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('Props argument', () => {
+  it('Props argument', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = props => {};
     `),
     ).toMatchSnapshot();
   });
-  it('Two arguments', () => {
+  it('Two arguments', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = (props, context) => {};
     `),
     ).toMatchSnapshot();
   });
-  it('Typescript', () => {
+  it('Typescript', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = (props: Properties) => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('Two levels sub arguments', () => {
+  it('Two levels sub arguments', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = ({ name, age }) => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('Two levels - alias', () => {
+  it('Two levels - alias', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = ({ name: MyNam, age }) => {};
     `),
     ).toMatchSnapshot();
   });
-  it('Three levels - alias', () => {
-    expect(
-      parseCSF(`
+  it('Three levels - alias', async () => {
+    await expect(
+      await parseCSF(`
       export const myStory = ({ name: { first, last }, age }) => {};
     `),
     ).toMatchSnapshot();

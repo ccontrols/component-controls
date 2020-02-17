@@ -1,4 +1,7 @@
 const path = require('path');
+const storyStorePlugin = require('@component-controls/loader/plugin');
+const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
+
 module.exports = {
   presets:[
     {
@@ -22,12 +25,31 @@ module.exports = {
   addons: [
     '@storybook/addon-docs',
     'storybook-addon-deps',
-    '@storybook/addon-storysource',
   ],
-  webpackFinal: async (config, { configType }) => ({
+  webpackFinal: async (config, { configType }) => {
+    return {
     ...config,
     module: {
       ...config.module,
+      rules: [
+        ...config.module.rules,
+        {
+          test: /\.(story|stories).(js|jsx|ts|tsx)$/,
+          loader: "@component-controls/loader/loader",
+          exclude: [/node_modules/],
+          enforce: 'pre',
+          options: {
+            type: 'csf'
+          },
+        },
+        {
+          test: /\.(story|stories).(mdx)$/,
+          loader: "@component-controls/loader/loader",
+          options: {
+            type: 'mdx'
+          },
+        },
+      ],
     },
     resolve: {
       ...config.resolve,
@@ -40,5 +62,9 @@ module.exports = {
         "@emotion/styled": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@emotion", "styled"),
       }}
     },
-  }),
+    plugins: [
+      new storyStorePlugin(),
+      ...config.plugins,
+    ]
+  }},
 };

@@ -1,9 +1,9 @@
 import { parseCSF } from '../src/index';
 
 describe('csf-parameters', () => {
-  it('story propery name', () => {
+  it('story propery name', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
 export const myStory = () => {};
 myStory.story = {
  name: 'Custom story name',
@@ -13,9 +13,9 @@ myStory.story = {
     ).toMatchSnapshot();
   });
 
-  it('story propery name and parameters', () => {
+  it('story propery name and parameters', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',
@@ -31,9 +31,9 @@ myStory.story = {
     ).toMatchSnapshot();
   });
 
-  it('story propery name parameters and controls', () => {
+  it('story propery name parameters and controls', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',

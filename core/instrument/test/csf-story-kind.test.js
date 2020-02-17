@@ -1,26 +1,26 @@
 import { parseCSF } from '../src/index';
 
 describe('csf-story-kind', () => {
-  it('No default export', () => {
+  it('No default export', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export const myStory = () => {};
     `),
     ).toMatchSnapshot();
   });
 
-  it('default export - no title', () => {
+  it('default export - no title', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export default {
         test: 1,
       };
     `),
     ).toMatchSnapshot();
   });
-  it('default export - with title', () => {
+  it('default export - with title', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
         export default {
           title: 'Storybook/Blocks/ControlsEditorsTable',
         };
@@ -28,9 +28,9 @@ describe('csf-story-kind', () => {
     ).toMatchSnapshot();
   });
 
-  it('default export - with title and parameters', () => {
+  it('default export - with title and parameters', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
         export default {
           title: 'Storybook/Blocks/ControlsEditorsTable',
           parameters: {
@@ -44,9 +44,9 @@ describe('csf-story-kind', () => {
     ).toMatchSnapshot();
   });
 
-  it('default export - with title and controls', () => {
+  it('default export - with title and controls', async () => {
     expect(
-      parseCSF(`
+      await parseCSF(`
       export default {
         title: 'Storybook/Kind',
         component: ControlsEditorsTable,

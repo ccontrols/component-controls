@@ -20,7 +20,7 @@ const parseSource = (source: string, traverseFn: TraverseFn): StoriesGroup => {
   return stories;
 };
 
-export const parseCSF = (source: string): StoriesGroup => {
+export const parseCSF = async (source: string): Promise<StoriesGroup> => {
   return parseSource(source, extractCSFStories);
 };
 

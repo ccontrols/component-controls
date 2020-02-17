@@ -35,7 +35,7 @@ export const extractProperties = (node: any): StoryParameters | undefined => {
               };
             }
             default:
-              console.log(property.value);
+              // console.log(property.value);
               return null;
           }
         }

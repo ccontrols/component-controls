@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-toggle Toggle story 1`] = `
+Object {
+  "properties": Array [
+    Object {
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 32,
+          "line": 6,
+        },
+        "start": Position {
+          "column": 6,
+          "line": 6,
+        },
+      },
+      "name": "title",
+      "value": "Components/Toggle",
+    },
+    Object {
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 23,
+          "line": 7,
+        },
+        "start": Position {
+          "column": 6,
+          "line": 7,
+        },
+      },
+      "name": "component",
+      "value": "Toggle",
+    },
+  ],
+  "stories": Object {
+    "allToggles": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 51,
+              "line": 15,
+            },
+            "start": Object {
+              "column": 46,
+              "line": 15,
+            },
+          },
+          "name": "check",
+          "value": "check",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 22,
+              "line": 24,
+            },
+          },
+          "name": "check",
+          "value": "check",
+        },
+      ],
+      "name": "allToggles",
+      "source": Object {
+        "end": Object {
+          "column": 5,
+          "line": 29,
+        },
+        "start": Object {
+          "column": 36,
+          "line": 10,
+        },
+      },
+    },
+  },
+  "title": "Components/Toggle",
+}
+`;
