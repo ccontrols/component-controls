@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { Title, Subtitle, Source, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
-import { ControlsEditorsTable, ThemeProvider } from '@component-controls/storybook';
+import { ControlsEditorsTable, ThemeProvider, Source } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
   return (

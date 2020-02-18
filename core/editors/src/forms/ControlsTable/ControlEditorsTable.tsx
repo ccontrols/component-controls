@@ -11,6 +11,7 @@ import {
   LoadedComponentControl,
 } from '@component-controls/core';
 
+import { BlockContainer } from '../../blocks/BlockContainer/BlockContainer';
 import { Tab, Tabs, TabList, TabPanel } from '../../components/Tabs/Tabs';
 import { ControlsEditorsTableProps } from '../../editors/types';
 import { ActionBar } from '../../components/ActionBar/ActionBar';
@@ -34,13 +35,9 @@ const StyledActionBar = styled(ActionBar)<{}>(() => ({
   zIndex: 0,
 }));
 
-const PropEditorsContainer = styled.div<{}>(() => ({
-  position: 'relative',
-  paddingBottom: '25px',
-  boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
-  borderRadius: 4,
-  border: '1px solid rgba(0, 0, 0, 0.1)',
-}));
+const StyledContainer = styled.div`
+  padding-bottom: 25px;
+`;
 
 const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
   padding: `${theme?.space?.[3]}px`,
@@ -54,10 +51,6 @@ const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
 }));
 
 const DEFAULT_GROUP_ID = 'Other';
-
-export const BlockWrapper: FC = ({ children }) => (
-  <PropEditorsContainer> {children}</PropEditorsContainer>
-);
 
 const PropGroupTable: FC<ControlsEditorsTableProps> = ({
   controls,
@@ -157,38 +150,40 @@ export const ControlsEditorsTable: FC<ControlsEditorsTableProps & {
       return null;
     }
     return (
-      <BlockWrapper>
-        {title && <PropEditorsTitle>{title}</PropEditorsTitle>}
-        {groupedItems.length === 1 ? (
-          <PropGroupTable {...props} controls={groupedItems[0].controls} />
-        ) : (
-          <Tabs>
-            <TabList>
+      <BlockContainer>
+        <StyledContainer>
+          {title && <PropEditorsTitle>{title}</PropEditorsTitle>}
+          {groupedItems.length === 1 ? (
+            <PropGroupTable {...props} controls={groupedItems[0].controls} />
+          ) : (
+            <Tabs>
+              <TabList>
+                {groupedItems.map(item => (
+                  <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                ))}
+              </TabList>
               {groupedItems.map(item => (
-                <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                <TabPanel key={`tab_panel_${item.label}`}>
+                  <PropGroupTable {...props} controls={item.controls} />
+                </TabPanel>
               ))}
-            </TabList>
-            {groupedItems.map(item => (
-              <TabPanel key={`tab_panel_${item.label}`}>
-                <PropGroupTable {...props} controls={item.controls} />
-              </TabPanel>
-            ))}
-          </Tabs>
-        )}
-        <StyledActionBar
-          actionItems={[
-            ...extraActions.map(item => ({
-              title: item.title,
-              onClick: (e: MouseEvent<HTMLButtonElement>) => {
-                e.preventDefault();
-                item.onAction(props);
-              },
-            })),
-            { title: 'Reset', onClick: onReset },
-            { title: copied ? 'Copied' : 'Copy', onClick: onCopy },
-          ]}
-        />{' '}
-      </BlockWrapper>
+            </Tabs>
+          )}
+          <StyledActionBar
+            actionItems={[
+              ...extraActions.map(item => ({
+                title: item.title,
+                onClick: (e: MouseEvent<HTMLButtonElement>) => {
+                  e.preventDefault();
+                  item.onAction(props);
+                },
+              })),
+              { title: 'Reset', onClick: onReset },
+              { title: copied ? 'Copied' : 'Copy', onClick: onCopy },
+            ]}
+          />
+        </StyledContainer>
+      </BlockContainer>
     );
   }
   return null;

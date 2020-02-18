@@ -1,5 +1,6 @@
 import React from 'react';
 import { polaris as theme } from '@theme-ui/presets';
+import prismTheme from '@theme-ui/prism/presets/dracula.json';
 import { ThemeProvider as ThemeUIProvider } from 'theme-ui';
 import { lighten } from 'polished';
 
@@ -7,8 +8,12 @@ export const ThemeProvider: React.FC = ({ children }) => (
   <ThemeUIProvider
     theme={{
       ...theme,
+
       styles: {
         ...theme.styles,
+        code: {
+          ...prismTheme,
+        },
         table: {
           margin: 0,
           borderCollapse: 'collapse',

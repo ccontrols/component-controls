@@ -41,7 +41,8 @@
     "react-popper-tooltip": "^2.10.1",
     "react-select": "^3.0.8",
     "react-tabs": "^3.1.0",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "@theme-ui/prism": "^0.3.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",

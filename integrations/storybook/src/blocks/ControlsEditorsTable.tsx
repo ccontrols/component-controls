@@ -1,103 +1,64 @@
 import React, { FC } from 'react';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import {
   SetControlValueFn,
   ClickControlFn,
   ComponentControlButton,
 } from '@component-controls/specification';
+import { mergeControlValues } from '@component-controls/core';
 import {
-  LoadedComponentControls,
-  mergeControlValues,
-} from '@component-controls/core';
-import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
+  BlockContext,
+  BlockContextProvider,
+  BlockContextProviderProps,
+} from './BlockContext';
 import { ControlsTable } from '../shared/ControlsTable';
 import { SET_DATA_MSG } from '../shared/shared';
 
-interface ControlsEditorsTableProps {
+export interface ControlsEditorsTableProps {
   /** a title to display */
   title?: string;
-  /** id of the story */
-  id?: string;
-  /** name of the story */
-  name?: string;
 }
 
-const getPropertyProps = (
-  props: ControlsEditorsTableProps,
-  { id: currentId, storyStore, mdxStoryNameToKey, mdxComponentMeta }: any,
-): {
-  controls?: LoadedComponentControls;
-  id: string | null;
-  storyStore: any;
-} | null => {
-  const { id, name } = props;
-  const inputId = id === CURRENT_SELECTION ? currentId : id;
-  const previewId =
-    inputId ||
-    (mdxStoryNameToKey &&
-      mdxComponentMeta &&
-      name &&
-      toId(
-        mdxComponentMeta.id || mdxComponentMeta.title,
-        storyNameFromExport(mdxStoryNameToKey[name]),
-      ));
-  if (!previewId) {
-    return null;
-  }
-  const data = storyStore.fromId(previewId);
-
-  const propsParam =
-    (data && data.parameters && data.parameters.controls) || {};
-
-  if (!data || propsParam.disable) {
-    return null;
-  }
-  return {
-    id: data.id,
-    storyStore,
-    controls: data.controls || data.parameters.controls,
-  };
-};
-export const ControlsEditorsTable: FC<ControlsEditorsTableProps> = ({
-  title = 'Property Editors',
-  ...rest
+const ControlsEditorsTableBlock: FC<ControlsEditorsTableProps> = ({
+  title,
 }) => (
-  <DocsContext.Consumer>
-    {(context: any) => {
-      const { controls, storyStore, id } =
-        getPropertyProps(rest, context) || {};
-      const api: any = (context as any).clientApi;
-      const setControlValue: SetControlValueFn = api.setControlValue
-        ? api.setControlValue
-        : (storyId: string, propName: string | undefined, propValue: any) => {
-            const story: any = storyStore._data[storyId];
-            if (story) {
-              const newValues = mergeControlValues(
-                story.parameters.controls,
-                propName,
-                propValue,
-              );
-              story.parameters.controls = newValues;
-              context.channel.emit(FORCE_RE_RENDER);
-              context.channel.emit(SET_DATA_MSG, {
-                storyId,
-                controls: newValues,
-              });
-            }
-          };
-      const clickControl: ClickControlFn = api.clickControl
-        ? api.clickControl
-        : (storyId: string, propName: string) => {
-            if (controls && controls[propName]) {
-              const control: ComponentControlButton = controls[
-                propName
-              ] as ComponentControlButton;
-              if (control && typeof control.onClick === 'function') {
-                control.onClick(control);
+  <BlockContext.Consumer>
+    {({ id, controls, story, api, channel }) => {
+      const setControlValue: SetControlValueFn =
+        api && api.setControlValue
+          ? api.setControlValue
+          : (storyId: string, propName: string | undefined, propValue: any) => {
+              if (story) {
+                const newValues = mergeControlValues(
+                  story.parameters.controls,
+                  propName,
+                  propValue,
+                );
+                story.parameters.controls = newValues;
+                channel.emit(FORCE_RE_RENDER);
+                channel.emit(SET_DATA_MSG, {
+                  storyId,
+                  controls: newValues,
+                });
               }
-            }
-          };
+            };
+      const clickControl: ClickControlFn =
+        api && api.clickControl
+          ? api.clickControl
+          : (storyId: string, propName: string) => {
+              if (controls && controls[propName]) {
+                const control: ComponentControlButton = controls[
+                  propName
+                ] as ComponentControlButton;
+                if (control && typeof control.onClick === 'function') {
+                  control.onClick(control);
+                }
+              }
+            };
+      if (!story || controls.disable) {
+        return null;
+      }
+
       return id ? (
         <ControlsTable
           title={title}
@@ -108,5 +69,12 @@ export const ControlsEditorsTable: FC<ControlsEditorsTableProps> = ({
         />
       ) : null;
     }}
-  </DocsContext.Consumer>
+  </BlockContext.Consumer>
+);
+
+export const ControlsEditorsTable: FC<BlockContextProviderProps &
+  ControlsEditorsTableProps> = ({ title = 'Property Editors', ...rest }) => (
+  <BlockContextProvider {...rest}>
+    <ControlsEditorsTableBlock title={title} />
+  </BlockContextProvider>
 );

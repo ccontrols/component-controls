@@ -14,6 +14,7 @@ import {
   GET_ALL_STORIES,
 } from '../shared/shared';
 import { ControlsTable } from '../shared/ControlsTable';
+import { ThemeProvider } from '../shared/ThemeProvider';
 import { NoControls } from './NoControls';
 
 interface StoryInput {
@@ -68,12 +69,14 @@ const WrappedControlsTable: React.FC<WrappedControlsTableProps> = ({
   return story && controls && Object.keys(controls).length ? (
     <Wrapper className="addon-controls-panel">
       <Container>
-        <ControlsTable
-          controls={controls}
-          storyId={story.id}
-          setControlValue={setControlValue}
-          clickControl={api.clickControl}
-        />
+        <ThemeProvider>
+          <ControlsTable
+            controls={controls}
+            storyId={story.id}
+            setControlValue={setControlValue}
+            clickControl={api.clickControl}
+          />
+        </ThemeProvider>
       </Container>
     </Wrapper>
   ) : (

@@ -16,7 +16,6 @@ export const BooleanEditor: PropertyEditor<BooleanEditorProps> = ({
   <FlexContainer>
     <Toggle
       id={name}
-      name={name}
       onChange={checked => onChange(name, checked)}
       checked={prop.value}
     />
