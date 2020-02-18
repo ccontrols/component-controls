@@ -9,7 +9,7 @@ import dracula from 'prism-react-renderer/themes/dracula';
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
 import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 import github from 'prism-react-renderer/themes/github';
-import nightOwl from 'prism-react-renderer/themes/nightOwl';
+import nightowl from 'prism-react-renderer/themes/nightOwl';
 import nightOwlLight from 'prism-react-renderer/themes/nightOwlLight';
 import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
 import palenight from 'prism-react-renderer/themes/palenight';
@@ -24,17 +24,17 @@ import { BlockContainer } from '../BlockContainer/BlockContainer';
 const themes: {
   [key: string]: PrismTheme;
 } = {
-  nightOwlLight,
-  nightOwl,
+  'nightowl-light': nightOwlLight,
+  nightowl,
   github,
-  vsDark,
-  oceanicNext,
+  'vs-dark': vsDark,
+  'oceanic-next': oceanicNext,
   palenight,
   ultramin,
-  duotoneLight,
-  duotoneDark,
+  'duotone-light': duotoneLight,
+  'duotone-dark': duotoneDark,
   dracula,
-  shadesOfPurple,
+  'shades-of-purple': shadesOfPurple,
 };
 export interface SourceProps {
   children?: string;
@@ -45,7 +45,7 @@ export const Source: FC<SourceProps> = ({
   children = '',
   language = 'jsx',
 }) => {
-  const [themeName, setThemeName] = React.useState<string>('nightOwlLight');
+  const [themeName, setThemeName] = React.useState<string>('nightowl-light');
   let prismTheme = themes[themeName] || defaultProps.theme;
   const [copied, setCopied] = React.useState(false);
 
