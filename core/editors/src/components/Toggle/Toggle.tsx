@@ -1,33 +1,5 @@
-import React, { forwardRef, HTMLProps, FC } from 'react';
-import { Button } from 'theme-ui';
-
-interface ToggleButtonProps {
-  active: boolean;
-  left: boolean;
-  onClick: (e: any) => void;
-}
-const ToggleButton: FC<ToggleButtonProps> = ({
-  active,
-  left,
-  children,
-  onClick,
-}) => {
-  const activeColor = 'lightenPrimary';
-  return (
-    <Button
-      onClick={onClick}
-      sx={{
-        borderRadius: left ? '14px 0 0 14px' : '0 14px 14px 0',
-        border: 1,
-        borderColor: activeColor,
-        color: active ? 'text' : 'fadedText',
-        bg: active ? activeColor : 'unset',
-      }}
-    >
-      {children}
-    </Button>
-  );
-};
+import React, { FC } from 'react';
+import { Box, BoxProps, Checkbox, Label, Text } from 'theme-ui';
 
 export interface ToggleOwnProps {
   /** whether checked */
@@ -42,41 +14,38 @@ export interface ToggleOwnProps {
   };
 }
 
-export type ToggleProps = Omit<
-  HTMLProps<HTMLDivElement>,
-  keyof ToggleOwnProps
-> &
-  ToggleOwnProps;
-export const Toggle = forwardRef<HTMLDivElement, ToggleProps>(
-  (
-    {
-      checked = false,
-      onChange,
-      labels = {
-        true: 'True',
-        false: 'False',
-      },
-      ...rest
-    }: ToggleProps,
-    ref,
-  ) => (
-    <div ref={ref} {...rest}>
-      <ToggleButton
-        active={checked}
-        left
-        onClick={() => onChange && onChange(true)}
+export type ToggleProps = Omit<BoxProps, keyof ToggleOwnProps> & ToggleOwnProps;
+
+export const Toggle: FC<ToggleProps> = ({
+  checked = false,
+  onChange,
+  labels = {
+    true: 'True',
+    false: 'False',
+  },
+  ...rest
+}) => (
+  <Box {...rest}>
+    <Label
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      }}
+    >
+      <Text
+        sx={{
+          paddingRight: 1,
+        }}
       >
-        {labels.true}
-      </ToggleButton>
-      <ToggleButton
-        active={!checked}
-        left={false}
-        onClick={() => onChange && onChange(false)}
-      >
-        {labels.false}
-      </ToggleButton>
-    </div>
-  ),
+        {checked ? labels.true : labels.false}
+      </Text>
+      <Checkbox
+        checked={checked}
+        onClick={() => onChange && onChange(!checked)}
+      />
+    </Label>
+  </Box>
 );
 
 Toggle.displayName = 'Toggle';
