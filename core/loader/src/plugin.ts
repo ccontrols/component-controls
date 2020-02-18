@@ -1,17 +1,13 @@
 import { ReplaceSource } from 'webpack-sources';
-import { toId, storyNameFromExport } from '@storybook/csf';
-import { Story, StoriesGroup } from '@component-controls/instrument';
 import jsStringEscape from 'js-string-escape';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
-import { StoryStore } from './types';
 import store from './store';
 
 class StoriesInjectPlugin {
   public static pluginName = 'stories-inject-plugin';
   private readonly compilationHash: string;
-
   constructor() {
     const hash = createHash('md5')
       .update(new Date().getTime().toString())
@@ -63,19 +59,8 @@ class StoriesInjectPlugin {
     const source = compilation.assets[file];
     const placeholderPos = source.source().indexOf(placeholder);
     if (placeholderPos > -1) {
-      const stories: StoryStore = {};
-      store.forEach((kind: StoriesGroup) => {
-        Object.keys(kind.stories).forEach(key => {
-          const story: Story = kind.stories[key];
-          if (kind.title && story.name) {
-            stories[toId(kind.title, storyNameFromExport(story.name))] = {
-              ...story,
-              kind: kind.title,
-            };
-          }
-        });
-      });
-      const newContent = jsStringEscape(JSON.stringify(stories));
+      const newContent = jsStringEscape(JSON.stringify(store));
+      const source = compilation.assets[file];
       const newSource = new ReplaceSource(source, file);
       newSource.replace(
         placeholderPos,

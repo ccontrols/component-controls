@@ -33,6 +33,7 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
+    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9015 -c .storybook",
     "storybook": "start-storybook -p 9015 -c .storybook",
     "watch": "lerna run --parallel watch",
     "build-storybook": "build-storybook -c .storybook -o docs"

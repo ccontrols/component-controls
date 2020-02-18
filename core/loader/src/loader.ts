@@ -1,7 +1,7 @@
 import { getOptions } from 'loader-utils';
 import { parseCSF, parseMDX } from '@component-controls/instrument';
 import { LoaderOptions } from './types';
-import storyFiles from './store';
+import { addStoriesKind } from './store';
 
 module.exports.default = async function(source: string) {
   const options: LoaderOptions = getOptions(this) || {};
@@ -16,7 +16,7 @@ module.exports.default = async function(source: string) {
       break;
   }
   if (stories) {
-    storyFiles.push(stories);
+    addStoriesKind(stories);
   }
   return source;
 };

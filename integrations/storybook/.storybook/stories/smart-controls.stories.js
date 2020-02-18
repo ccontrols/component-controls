@@ -22,7 +22,7 @@ onlyColors.story = {
   },
 };
 
-export const noColors = props => <Button label="Choose colors" {...props} />;
+export const noColors = () => <Button label="Choose colors" />;
 
 noColors.story = {
   parameters: {
