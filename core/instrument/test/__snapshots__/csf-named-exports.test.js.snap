@@ -5,6 +5,16 @@ Object {
   "stories": Object {
     "exportedStory": Object {
       "arguments": Array [],
+      "location": Object {
+        "end": Object {
+          "column": 24,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 16,
+          "line": 2,
+        },
+      },
       "name": "Custom story name",
       "properties": Array [
         Object {
@@ -22,16 +32,7 @@ Object {
           "value": "Custom story name",
         },
       ],
-      "source": Object {
-        "end": Object {
-          "column": 24,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 22,
-          "line": 2,
-        },
-      },
+      "source": "() => {}",
     },
   },
 }
@@ -48,6 +49,16 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "location": Object {
+        "end": Object {
+          "column": 24,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 16,
+          "line": 2,
+        },
+      },
       "name": "Custom story name",
       "properties": Array [
         Object {
@@ -65,16 +76,7 @@ Object {
           "value": "Custom story name",
         },
       ],
-      "source": Object {
-        "end": Object {
-          "column": 24,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 22,
-          "line": 2,
-        },
-      },
+      "source": "() => {}",
     },
   },
 }

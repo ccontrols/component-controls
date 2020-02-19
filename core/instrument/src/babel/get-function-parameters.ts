@@ -15,6 +15,17 @@ export const extractFunctionParameters = (story: Story) => ({
     if (!story.arguments) {
       story.arguments = [];
     }
+    story.location = {
+      start: {
+        column: node.loc.start.column,
+        line: node.loc.start.line,
+      },
+      end: {
+        column: node.loc.end.column,
+        line: node.loc.end.line,
+      },
+    };
+
     const pushParams = (
       node: ASTPropNode,
       parameters: StoryParameters,
@@ -59,5 +70,6 @@ export const extractFunctionParameters = (story: Story) => ({
         },
       );
     }
+    path.skip();
   },
 });

@@ -5,6 +5,16 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "location": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
       "name": "Custom story name",
       "properties": Array [
         Object {
@@ -22,16 +32,7 @@ Object {
           "value": "Custom story name",
         },
       ],
-      "source": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 29,
-          "line": 2,
-        },
-      },
+      "source": "() => {}",
     },
   },
 }
@@ -42,6 +43,16 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "location": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
       "name": "Custom story name",
       "properties": Array [
         Object {
@@ -117,16 +128,7 @@ Object {
           ],
         },
       ],
-      "source": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 29,
-          "line": 2,
-        },
-      },
+      "source": "() => {}",
     },
   },
 }
@@ -137,6 +139,16 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "location": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
       "name": "Custom story name",
       "properties": Array [
         Object {
@@ -284,16 +296,7 @@ Object {
           ],
         },
       ],
-      "source": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 29,
-          "line": 2,
-        },
-      },
+      "source": "() => {}",
     },
   },
 }

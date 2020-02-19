@@ -11,17 +11,18 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 37,
           "line": 2,
         },
         "start": Object {
-          "column": 35,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "() => {}",
     },
   },
 }
@@ -53,17 +54,18 @@ Object {
           "value": "props",
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 40,
           "line": 2,
         },
         "start": Object {
-          "column": 38,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "props => {}",
     },
   },
 }
@@ -147,17 +149,18 @@ Object {
           ],
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 67,
           "line": 2,
         },
         "start": Object {
-          "column": 65,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "({ name: { first, last }, age }) => {}",
     },
   },
 }
@@ -197,17 +200,18 @@ Object {
           "value": "context",
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 51,
           "line": 2,
         },
         "start": Object {
-          "column": 49,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "(props, context) => {}",
     },
   },
 }
@@ -262,17 +266,18 @@ Object {
           ],
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 57,
           "line": 2,
         },
         "start": Object {
-          "column": 55,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "({ name: MyNam, age }) => {}",
     },
   },
 }
@@ -327,17 +332,18 @@ Object {
           ],
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 50,
           "line": 2,
         },
         "start": Object {
-          "column": 48,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "({ name, age }) => {}",
     },
   },
 }
@@ -363,17 +369,18 @@ Object {
           "value": "props",
         },
       ],
-      "name": "myStory",
-      "source": Object {
+      "location": Object {
         "end": Object {
           "column": 54,
           "line": 2,
         },
         "start": Object {
-          "column": 52,
+          "column": 29,
           "line": 2,
         },
       },
+      "name": "myStory",
+      "source": "(props: Properties) => {}",
     },
   },
 }

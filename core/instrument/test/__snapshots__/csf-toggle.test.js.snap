@@ -34,47 +34,38 @@ Object {
   ],
   "stories": Object {
     "allToggles": Object {
-      "arguments": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 51,
-              "line": 15,
-            },
-            "start": Object {
-              "column": 46,
-              "line": 15,
-            },
-          },
-          "name": "check",
-          "value": "check",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 24,
-            },
-            "start": Object {
-              "column": 22,
-              "line": 24,
-            },
-          },
-          "name": "check",
-          "value": "check",
-        },
-      ],
-      "name": "allToggles",
-      "source": Object {
+      "arguments": Array [],
+      "location": Object {
         "end": Object {
           "column": 5,
           "line": 29,
         },
         "start": Object {
-          "column": 36,
+          "column": 30,
           "line": 10,
         },
       },
+      "name": "allToggles",
+      "source": "() => {
+      const [checked, setChecked] = React.useState(false);
+      return (
+        <div>
+          <p>Default toggle</p>
+          <Toggle checked={checked} onChange={check => setChecked(check)} />
+          <br />
+          <p>Custom labels</p>
+          <Toggle
+            checked={checked}
+            labels={{
+              true: 'YES',
+              false: 'NO!',
+            }}
+            onChange={check => setChecked(check)}
+          />
+          <br />
+        </div>
+      );
+    }",
     },
   },
   "title": "Components/Toggle",

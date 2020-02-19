@@ -19,7 +19,8 @@ export interface Story {
   name?: string;
   arguments?: StoryParameters;
   properties?: StoryParameters;
-  source?: CodeSource;
+  location?: CodeSource;
+  source?: string;
 }
 
 export interface Stories {

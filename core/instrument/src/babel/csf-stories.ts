@@ -18,7 +18,7 @@ export const extractCSFStories = (stories: StoriesGroup) => {
       const el = declaration.init.body;
       const name = declaration.id.name;
       const story: Story = {
-        source: {
+        location: {
           start: {
             column: el.loc.start.column,
             line: el.loc.start.line,

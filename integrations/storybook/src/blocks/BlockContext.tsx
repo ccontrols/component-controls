@@ -1,5 +1,6 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
+import myStoryStore from '@component-controls/loader/dist/story-store-data';
 import { LoadedComponentControls } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
@@ -54,29 +55,10 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     return null;
   }
   const story = storyStore.fromId(previewId) || {};
-  const { parameters = {} } = story;
-  let source: string | undefined;
-  if (parameters.mdxSource) {
-    source = parameters.mdxSource;
-  } else if (parameters.storySource) {
-    const { source: code, locationsMap } = parameters.storySource;
-    if (locationsMap) {
-      const location = locationsMap[previewId];
-      if (location) {
-        const { startBody: start, endBody: end } = location;
-        const lines = code.split('\n');
-        const startLine = lines[start.line - 1];
-        const endLine = lines[end.line - 1];
-        if (startLine !== undefined && endLine !== undefined) {
-          source = [
-            startLine.substring(start.col),
-            ...lines.slice(start.line, end.line - 1),
-            endLine.substring(0, end.col),
-          ].join('\n');
-        }
-      }
-    }
-  }
+  console.log(myStoryStore);
+  const source: string | undefined = myStoryStore[previewId]
+    ? myStoryStore[previewId].source
+    : undefined;
   return (
     <BlockContext.Provider
       value={{

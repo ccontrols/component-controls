@@ -3,7 +3,7 @@ const mdx = require('@mdx-js/mdx');
 import traverse from '@babel/traverse';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
-import { StoriesGroup } from './types';
+import { StoriesGroup, Story } from './types';
 export * from './types';
 
 type TraverseFn = (stories: StoriesGroup) => any;
@@ -17,6 +17,31 @@ const parseSource = (source: string, traverseFn: TraverseFn): StoriesGroup => {
     stories: {},
   };
   traverse(ast, traverseFn(stories));
+  Object.keys(stories.stories).forEach((key: string) => {
+    //@ts-ignore
+    const story: Story = stories.stories[key];
+    const { start, end } = story.location || {};
+    if (start && end) {
+      const lines = source.split('\n');
+
+      if (start.line === end.line) {
+        story.source = lines[start.line - 1].substring(
+          start.column,
+          end.column,
+        );
+      } else {
+        const startLine = lines[start.line - 1];
+        const endLine = lines[end.line - 1];
+        if (startLine !== undefined && endLine !== undefined) {
+          story.source = [
+            startLine.substring(start.column),
+            ...lines.slice(start.line, end.line - 1),
+            endLine.substring(0, end.column),
+          ].join('\n');
+        }
+      }
+    }
+  });
   return stories;
 };
 
