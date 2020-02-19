@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { getOptions } from 'loader-utils';
 import { parseCSF, parseMDX } from '@component-controls/instrument';
 import { LoaderOptions } from './types';
@@ -16,6 +18,9 @@ module.exports.default = async function(source: string) {
       break;
   }
   if (stories) {
+    const time = new Date();
+    const fileName = path.join(__dirname, 'story-store-data.js');
+    fs.utimesSync(fileName, time, time);
     addStoriesKind(stories);
   }
   return source;

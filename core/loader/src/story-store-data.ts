@@ -1,10 +1,6 @@
-import { StoryStore } from './types';
-
 const injectedStories = '__STORIES_HASH__INJECTED_STORIES__';
 
-type StringifyFunction = () => StoryStore | undefined;
-
-const storyStore: StringifyFunction = () => {
+const storyStore = () => {
   if (injectedStories) {
     const store = JSON.parse(injectedStories);
     return store;
@@ -12,4 +8,4 @@ const storyStore: StringifyFunction = () => {
   return undefined;
 };
 
-export default storyStore;
+export default storyStore();
