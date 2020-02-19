@@ -42,13 +42,19 @@ export const normalizeOptions = (
     entries = options.reduce((acc: NormalizedOptions, o) => {
       return [...acc, findLabelOption(null, o)];
     }, []) as NormalizedOptions;
-  } else {
+  } else if (typeof options === 'object') {
     entries = Object.keys(options).reduce(
       (acc: NormalizedOptions, key: string) => {
         return [...acc, findLabelOption(key, options[key])];
       },
       [],
     );
+  } else {
+    console.error('invalid options parameter passed to controls');
+    return {
+      entries: [],
+      selected: [],
+    };
   }
   const selected = entries
     .filter(option => {

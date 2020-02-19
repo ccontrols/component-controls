@@ -55,7 +55,7 @@ const ControlsEditorsTableBlock: FC<ControlsEditorsTableProps> = ({
                 }
               }
             };
-      if (!story || controls.disable) {
+      if (!story || !controls || controls.disable) {
         return null;
       }
 

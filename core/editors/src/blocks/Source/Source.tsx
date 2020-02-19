@@ -21,8 +21,20 @@ import copy from 'copy-to-clipboard';
 import { ActionBar } from '../../components/ActionBar/ActionBar';
 import { BlockContainer } from '../BlockContainer/BlockContainer';
 
-const themes: {
-  [key: string]: PrismTheme;
+export type ThemeType =
+  | 'nightowl-light'
+  | 'nightowl'
+  | 'github'
+  | 'vs-dark'
+  | 'oceanic-next'
+  | 'palenight'
+  | 'ultramin'
+  | 'duotone-light'
+  | 'duotone-dark'
+  | 'dracula'
+  | 'shades-of-purple';
+export const themes: {
+  [key in ThemeType]: PrismTheme;
 } = {
   'nightowl-light': nightOwlLight,
   nightowl,
@@ -39,13 +51,22 @@ const themes: {
 export interface SourceProps {
   children?: string;
   language?: Language;
+  /**
+   * prism theme passed from parent
+   * if the theme is selected in the parent, the Source
+   * componnet will not have a thmme selection option
+   */
+  theme?: ThemeType;
 }
 
 export const Source: FC<SourceProps> = ({
   children = '',
   language = 'jsx',
+  theme: parentTheme,
 }) => {
-  const [themeName, setThemeName] = React.useState<string>('nightowl-light');
+  const [themeName, setThemeName] = React.useState<ThemeType>(
+    parentTheme || 'nightowl-light',
+  );
   let prismTheme = themes[themeName] || defaultProps.theme;
   const [copied, setCopied] = React.useState(false);
 
@@ -53,7 +74,7 @@ export const Source: FC<SourceProps> = ({
     const themeKeys = Object.keys(themes);
     const themeIdx = themeKeys.indexOf(themeName);
     const newIdx = themeIdx >= themeKeys.length - 1 ? 0 : themeIdx + 1;
-    setThemeName(themeKeys[newIdx]);
+    setThemeName(themeKeys[newIdx] as ThemeType);
   };
 
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
@@ -62,12 +83,18 @@ export const Source: FC<SourceProps> = ({
     copy(children);
     window.setTimeout(() => setCopied(false), 1500);
   };
+
+  const actions = [];
+  if (parentTheme === undefined) {
+    actions.push({ title: themeName, onClick: onRotateTheme });
+  }
+  actions.push({ title: copied ? 'Copied' : 'Copy', onClick: onCopy });
   return (
     <BlockContainer>
       <Highlight
         {...defaultProps}
         theme={prismTheme}
-        code={typeof children === 'string' ? children.trim() : ''}
+        code={typeof children === 'string' ? children : ''}
         language={language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -88,12 +115,7 @@ export const Source: FC<SourceProps> = ({
           </Styled.pre>
         )}
       </Highlight>
-      <ActionBar
-        actionItems={[
-          { title: themeName, onClick: onRotateTheme },
-          { title: copied ? 'Copied' : 'Copy', onClick: onCopy },
-        ]}
-      />
+      <ActionBar actionItems={actions} />
     </BlockContainer>
   );
 };
