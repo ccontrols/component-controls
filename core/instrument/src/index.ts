@@ -1,8 +1,10 @@
 import * as parser from '@babel/parser';
 const mdx = require('@mdx-js/mdx');
 import traverse from '@babel/traverse';
+import generate from '@babel/generator';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
+import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { StoriesGroup, Story } from './types';
 export * from './types';
 
@@ -51,5 +53,15 @@ export const parseCSF = async (source: string): Promise<StoriesGroup> => {
 
 export const parseMDX = async (source: string): Promise<StoriesGroup> => {
   const code = await mdx(source);
-  return parseSource(code, extractMDXStories);
+
+  const ast = parser.parse(code, {
+    sourceType: 'module',
+    plugins: ['jsx', 'typescript'],
+  });
+  traverse(ast, removeMDXAttributes());
+  const newCode = generate(ast, {
+    retainFunctionParens: true,
+    retainLines: true,
+  });
+  return parseSource(newCode.code, extractMDXStories);
 };

@@ -17,20 +17,6 @@ Object {
       "name": "title",
       "value": "Storybook/MDX",
     },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
-    },
   ],
   "stories": Object {
     "story-with-props": Object {
@@ -52,7 +38,7 @@ Object {
       ],
       "location": Object {
         "end": Object {
-          "column": 39,
+          "column": 22,
           "line": 24,
         },
         "start": Object {
@@ -61,7 +47,7 @@ Object {
         },
       },
       "name": "story-with-props",
-      "source": "props => <Button mdxType=\\"Button\\" />",
+      "source": "props => <Button />",
     },
   },
   "title": "Storybook/MDX",
@@ -85,20 +71,6 @@ Object {
       "name": "title",
       "value": "Storybook/MDX",
     },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
-    },
   ],
   "stories": Object {
     "story-with-props": Object {
@@ -106,8 +78,8 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 7,
-              "line": 30,
+              "column": 13,
+              "line": 29,
             },
             "start": Object {
               "column": 4,
@@ -119,8 +91,8 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 9,
-                  "line": 28,
+                  "column": 16,
+                  "line": 27,
                 },
                 "start": Object {
                   "column": 14,
@@ -178,7 +150,7 @@ Object {
       ],
       "location": Object {
         "end": Object {
-          "column": 39,
+          "column": 16,
           "line": 30,
         },
         "start": Object {
@@ -190,10 +162,10 @@ Object {
       "source": "({
         name: {
           first,
-          last
-        },
-        age
-      }) => <Button mdxType=\\"Button\\" />",
+          last },
+
+        age }) =>
+      <Button />",
     },
   },
   "title": "Storybook/MDX",
@@ -216,20 +188,6 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
     },
   ],
   "stories": Object {
@@ -266,7 +224,7 @@ Object {
       ],
       "location": Object {
         "end": Object {
-          "column": 50,
+          "column": 33,
           "line": 24,
         },
         "start": Object {
@@ -275,7 +233,7 @@ Object {
         },
       },
       "name": "story-with-props",
-      "source": "(props, context) => <Button mdxType=\\"Button\\" />",
+      "source": "(props, context) => <Button />",
     },
   },
   "title": "Storybook/MDX",
@@ -299,20 +257,6 @@ Object {
       "name": "title",
       "value": "Storybook/MDX",
     },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
-    },
   ],
   "stories": Object {
     "story-with-props": Object {
@@ -320,8 +264,8 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 7,
-              "line": 27,
+              "column": 13,
+              "line": 26,
             },
             "start": Object {
               "column": 4,
@@ -363,7 +307,7 @@ Object {
       ],
       "location": Object {
         "end": Object {
-          "column": 39,
+          "column": 16,
           "line": 27,
         },
         "start": Object {
@@ -374,8 +318,8 @@ Object {
       "name": "story-with-props",
       "source": "({
         name: MyName,
-        age
-      }) => <Button mdxType=\\"Button\\" />",
+        age }) =>
+      <Button />",
     },
   },
   "title": "Storybook/MDX",
@@ -399,20 +343,6 @@ Object {
       "name": "title",
       "value": "Storybook/MDX",
     },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
-    },
   ],
   "stories": Object {
     "story-with-props": Object {
@@ -420,8 +350,8 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 7,
-              "line": 27,
+              "column": 13,
+              "line": 26,
             },
             "start": Object {
               "column": 4,
@@ -463,7 +393,7 @@ Object {
       ],
       "location": Object {
         "end": Object {
-          "column": 39,
+          "column": 16,
           "line": 27,
         },
         "start": Object {
@@ -474,8 +404,8 @@ Object {
       "name": "story-with-props",
       "source": "({
         name,
-        age
-      }) => <Button mdxType=\\"Button\\" />",
+        age }) =>
+      <Button />",
     },
   },
   "title": "Storybook/MDX",
@@ -499,20 +429,6 @@ Object {
       "name": "title",
       "value": "Storybook/MDX",
     },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
-    },
   ],
   "stories": Object {
     "smart story": Object {
@@ -527,8 +443,8 @@ Object {
         },
       },
       "name": "smart story",
-      "source": "<Story name=\\"smart story\\" mdxType=\\"Story\\">
-  <Button mdxType=\\"Button\\" />
+      "source": "<Story name=\\"smart story\\">
+  <Button />
     </Story>",
     },
   },
@@ -552,20 +468,6 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 21,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 7,
-          "line": 22,
-        },
-      },
-      "name": "mdxType",
-      "value": "Meta",
     },
   ],
   "stories": Object {},
