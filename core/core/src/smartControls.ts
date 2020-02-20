@@ -97,7 +97,9 @@ export const controlFromProps = (
     case 'number': {
       let value;
       try {
-        if (typeof defaultValue === 'string') {
+        if (typeof defaultValue === 'number') {
+          value = defaultValue;
+        } else if (typeof defaultValue === 'string') {
           value = parseFloat(defaultValue);
         }
       } catch (e) {
@@ -112,7 +114,7 @@ export const controlFromProps = (
           : undefined;
       const options = Array.isArray(propDef.type)
         ? propDef.type
-        : splitType || (propDef.type as any).value;
+        : (propDef.type as any).value || splitType;
       if (!Array.isArray(options)) {
         return null;
       }

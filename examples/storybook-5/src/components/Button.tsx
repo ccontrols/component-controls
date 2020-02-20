@@ -24,9 +24,8 @@ interface ButtonProps {
   padding: number,
 };
 
-/** Button component description imported from comments inside the component file */
+/** Button with react Typescript properties */
 export const Button: FC<ButtonProps> = ({ disabled, label, onClick, style, backgroundColor, color, type, padding }) => (
-  // eslint-disable-next-line react/button-has-type
   <button
     type={type}
     disabled={disabled}

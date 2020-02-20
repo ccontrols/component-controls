@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from '../components/Button';
+import { Button } from '../components/PropTypesButton';
 
 export default {
-  title: 'Storybook/Smart',
+  title: 'Storybook/Smart PropTypes',
   parameters: {
     component: Button,
   },
