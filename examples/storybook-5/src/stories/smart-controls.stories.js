@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/BaseButton';
+import { Button } from '../components/Button';
 
 export default {
   title: 'Storybook/Smart',

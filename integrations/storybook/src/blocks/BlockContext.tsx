@@ -55,7 +55,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     return null;
   }
   const story = storyStore.fromId(previewId) || {};
-  console.log(myStoryStore);
+  // console.log(myStoryStore);
   const source: string | undefined = myStoryStore[previewId]
     ? myStoryStore[previewId].source
     : undefined;

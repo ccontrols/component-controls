@@ -1,6 +1,5 @@
 const path = require('path');
 const storyStorePlugin = require('@component-controls/loader/plugin');
-const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 
 module.exports = {
   presets:[
@@ -19,8 +18,8 @@ module.exports = {
     },  
   ],
   stories: [
-    '../core/editors/src/**/*.stories.(js|tsx|mdx)',
-    '../integrations/storybook/.storybook/stories/**/*.stories.(js|tsx|mdx)',
+    '../../../core/editors/src/**/*.stories.(js|tsx|mdx)',
+    '../src/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-docs',
@@ -32,7 +31,7 @@ module.exports = {
     module: {
       ...config.module,
       rules: [
-        ...config.module.rules,
+        ...config.module.rules, 
         {
           test: /\.(story|stories).(js|jsx|ts|tsx)$/,
           loader: "@component-controls/loader/loader",
@@ -45,6 +44,7 @@ module.exports = {
         {
           test: /\.(story|stories).(mdx)$/,
           loader: "@component-controls/loader/loader",
+          exclude: [/node_modules/],
           options: {
             type: 'mdx'
           },
@@ -54,13 +54,6 @@ module.exports = {
     resolve: {
       ...config.resolve,
       extensions: [...(config.resolve.extensions || []), '.ts', '.tsx'],
-      alias: {...config.resolve.alias, ...{
-        "@storybook/addon-docs": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "addon-docs"),
-        "@storybook/components": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "components"),
-        "@storybook/theming": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@storybook", "theming"),
-        "@emotion/core": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@emotion", "core"),
-        "@emotion/styled": path.resolve(path.resolve(__dirname, '..'), "node_modules", "@emotion", "styled"),
-      }}
     },
     plugins: [
       new storyStorePlugin(),

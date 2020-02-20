@@ -33,10 +33,7 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9015 -c .storybook",
-    "storybook": "start-storybook -p 9015 -c .storybook",
-    "watch": "lerna run --parallel watch",
-    "build-storybook": "build-storybook -c .storybook -o docs"
+    "watch": "lerna run --parallel watch"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
@@ -51,10 +48,6 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/config-lerna-scopes": "^8.2.0",
-    "@storybook/addon-docs": "^5.3.12",
-    "@storybook/addon-storysource": "^5.3.12",
-    "@storybook/react": "^5.3.12",
-    "@storybook/theming": "^5.3.12",
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
@@ -78,17 +71,15 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "rollup": "^1.31.0",
-    "storybook-addon-deps": "^1.0.11",
-    "storybook-dark-mode": "^0.3.0",
     "trash-cli": "^3.0.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.7.5",
-    "webpack-react-docgen-typescript": "^0.9.5"
+    "typescript": "^3.7.5"
   },
   "workspaces": {
     "packages": [
       "core/*",
-      "integrations/*"
+      "integrations/*",
+      "examples/*"
     ]
   }
 }

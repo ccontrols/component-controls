@@ -37,18 +37,23 @@ export const controlFromProps = (
     return null;
   }
   let type = propDef.type.name;
-
+  let splitType: string[] | undefined = undefined;
   // docgen typescript are ie "boolean | undefined"
   if (typeof type === 'string') {
-    const splitType = type.split(' | ');
+    splitType = type.split(' | ');
     if (splitType.length > 1) {
+      let found: string | undefined;
       // we have a typescrpit type definitio of "|" type
       for (let i = 0; i < splitType.length; i += 1) {
-        const found = handledTypes.find(a => a === splitType[i]);
+        const match = splitType[i];
+        found = handledTypes.find(a => a === match);
         if (found !== undefined) {
           type = found;
           break;
         }
+      }
+      if (found === undefined) {
+        type = 'enum';
       }
     }
   }
@@ -59,7 +64,6 @@ export const controlFromProps = (
   const defaultValue = propDef.defaultValue
     ? propDef.defaultValue.value
     : undefined;
-
   switch (type) {
     case 'string': {
       let value: string | undefined;
@@ -108,13 +112,13 @@ export const controlFromProps = (
           : undefined;
       const options = Array.isArray(propDef.type)
         ? propDef.type
-        : (propDef.type as any).value;
+        : splitType || (propDef.type as any).value;
       if (!Array.isArray(options)) {
         return null;
       }
       return {
         type: ControlTypes.OPTIONS,
-        options: options.map((v: any) => cleanQuotes(v.value)),
+        options: options.map((v: any) => cleanQuotes(v.value ? v.value : v)),
         value,
       };
     }

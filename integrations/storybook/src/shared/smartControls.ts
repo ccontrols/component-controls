@@ -39,6 +39,7 @@ export const docgenToControls = (
   if (!component) {
     return null;
   }
+
   if (component.__docgenInfo && component.__docgenInfo.props) {
     const newControls = controlsFromProps(component.__docgenInfo.props);
     const { include, exclude } = smartControls;
