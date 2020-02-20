@@ -1,6 +1,6 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
-import myStoryStore from '@component-controls/loader/dist/story-store-data';
+import myStoryStore from '@component-controls/loader/story-store-data';
 import { LoadedComponentControls } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
@@ -55,7 +55,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     return null;
   }
   const story = storyStore.fromId(previewId) || {};
-  console.log(myStoryStore);
+  // console.log(myStoryStore);
   const source: string | undefined = myStoryStore[previewId]
     ? myStoryStore[previewId].source
     : undefined;

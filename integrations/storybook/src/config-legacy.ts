@@ -2,7 +2,7 @@ import { addDecorator, useEffect } from '@storybook/client-api';
 import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
-import myStoryStore from '@component-controls/loader/dist/story-store-data';
+import myStoryStore from '@component-controls/loader/story-store-data';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { docgenToControls } from './shared/smartControls';

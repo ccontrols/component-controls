@@ -17,7 +17,6 @@
   "scripts": {
     "clean": "lerna clean",
     "bootstrap": "lerna bootstrap",
-    "dev": "cd dev-env/basic && yarn && yarn dev",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",
     "lint": "lerna run --parallel lint",
@@ -33,7 +32,7 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "watch": "lerna run --parallel watch"
+    "watch": "lerna run --parallel dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
