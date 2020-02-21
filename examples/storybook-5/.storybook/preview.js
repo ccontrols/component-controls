@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { Title, Subtitle, Source as DocsSource, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
+import { Title, Subtitle, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
 import { ControlsEditorsTable, ThemeProvider, Source } from '@component-controls/storybook';
 
@@ -26,7 +26,6 @@ export const DocsPage = ({
       <Description slot={descriptionSlot} />
       <Story id="." />
       <Source id="." />
-      <DocsSource id="." />
       <ControlsEditorsTable id="." />
       <Props slot={propsSlot} />
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
