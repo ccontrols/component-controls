@@ -22,7 +22,7 @@ describe('csf-story-kind', () => {
     expect(
       await parseCSF(`
         export default {
-          title: 'Storybook/Blocks/ControlsEditorsTable',
+          title: 'Storybook/Blocks/ControlsTable',
         };
       `),
     ).toMatchSnapshot();
@@ -32,9 +32,9 @@ describe('csf-story-kind', () => {
     expect(
       await parseCSF(`
         export default {
-          title: 'Storybook/Blocks/ControlsEditorsTable',
+          title: 'Storybook/Blocks/ControlsTable',
           parameters: {
-            component: ControlsEditorsTable,
+            component: ControlsTable,
             addonControls: {
               smart: false,
             }
@@ -49,7 +49,7 @@ describe('csf-story-kind', () => {
       await parseCSF(`
       export default {
         title: 'Storybook/Kind',
-        component: ControlsEditorsTable,
+        component: ControlsTable,
         parameters: {
           controls: {
             name: {

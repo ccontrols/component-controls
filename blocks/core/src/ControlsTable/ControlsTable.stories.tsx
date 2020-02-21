@@ -7,11 +7,11 @@ import {
   loadControls,
 } from '@component-controls/core';
 
-import { ControlsEditorsTable } from './ControlEditorsTable';
+import { ControlsTable } from './ControlsTable';
 
 export default {
-  title: 'Table',
-  component: ControlsEditorsTable,
+  title: 'Blocks/ControlsTable',
+  component: ControlsTable,
 };
 
 export const simple = () => {
@@ -38,7 +38,7 @@ export const simple = () => {
   return (
     <>
       <h2>{`Hello, my name is ${controls.name.value}, and I am ${controls.age.value} years old.`}</h2>
-      <ControlsEditorsTable
+      <ControlsTable
         controls={controls as LoadedComponentControls}
         title="Example controls"
         storyId="1-11"
@@ -250,7 +250,7 @@ export const advanced = () => {
           When I am happy I look like this: <img src={images[0]} alt="happy" />
         </p>
       </div>
-      <ControlsEditorsTable
+      <ControlsTable
         controls={controls as LoadedComponentControls}
         title="Complex controls"
         storyId="1-12"

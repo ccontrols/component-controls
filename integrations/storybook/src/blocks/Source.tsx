@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Source as SourceBlock } from '@component-controls/editors';
+import { Source as SourceBlock } from '@component-controls/blocks-core';
 import {
   BlockContext,
   BlockContextProvider,

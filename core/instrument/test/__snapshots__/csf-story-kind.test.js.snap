@@ -51,7 +51,7 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 56,
+          "column": 49,
           "line": 3,
         },
         "start": Position {
@@ -60,11 +60,11 @@ Object {
         },
       },
       "name": "title",
-      "value": "Storybook/Blocks/ControlsEditorsTable",
+      "value": "Storybook/Blocks/ControlsTable",
     },
   ],
   "stories": Object {},
-  "title": "Storybook/Blocks/ControlsEditorsTable",
+  "title": "Storybook/Blocks/ControlsTable",
 }
 `;
 
@@ -88,7 +88,7 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 39,
+          "column": 32,
           "line": 4,
         },
         "start": Position {
@@ -97,7 +97,7 @@ Object {
         },
       },
       "name": "component",
-      "value": "ControlsEditorsTable",
+      "value": "ControlsTable",
     },
     Object {
       "loc": SourceLocation {
@@ -212,7 +212,7 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 56,
+          "column": 49,
           "line": 3,
         },
         "start": Position {
@@ -221,7 +221,7 @@ Object {
         },
       },
       "name": "title",
-      "value": "Storybook/Blocks/ControlsEditorsTable",
+      "value": "Storybook/Blocks/ControlsTable",
     },
     Object {
       "loc": SourceLocation {
@@ -239,7 +239,7 @@ Object {
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 43,
+              "column": 36,
               "line": 5,
             },
             "start": Position {
@@ -248,7 +248,7 @@ Object {
             },
           },
           "name": "component",
-          "value": "ControlsEditorsTable",
+          "value": "ControlsTable",
         },
         Object {
           "loc": SourceLocation {
@@ -283,6 +283,6 @@ Object {
     },
   ],
   "stories": Object {},
-  "title": "Storybook/Blocks/ControlsEditorsTable",
+  "title": "Storybook/Blocks/ControlsTable",
 }
 `;

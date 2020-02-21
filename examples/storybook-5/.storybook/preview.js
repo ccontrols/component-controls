@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { Title, Subtitle, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
-import { ControlsEditorsTable, ThemeProvider, Source } from '@component-controls/storybook';
+import { ControlsTable, ThemeProvider, Source } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
   return (
@@ -26,14 +26,14 @@ export const DocsPage = ({
       <Description slot={descriptionSlot} />
       <Story id="." />
       <Source id="." />
-      <ControlsEditorsTable id="." />
+      <ControlsTable id="." />
       <Props slot={propsSlot} />
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
       <Stories slot={storiesSlot} />
     </>
   );
 };
-const categories = ['Table', 'Editors', 'Components']
+const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
   docs: { page: DocsPage },
   dependencies: { hideEmpty: true },

@@ -18,8 +18,8 @@ import ultramin from 'prism-react-renderer/themes/ultramin';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { Styled } from 'theme-ui';
 import copy from 'copy-to-clipboard';
-import { ActionBar } from '../../components/ActionBar/ActionBar';
-import { BlockContainer } from '../BlockContainer/BlockContainer';
+import { ActionBar } from '../ActionBar';
+import { BlockContainer } from '../BlockContainer';
 
 export type ThemeType =
   | 'nightowl-light'

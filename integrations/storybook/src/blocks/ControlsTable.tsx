@@ -11,17 +11,15 @@ import {
   BlockContextProvider,
   BlockContextProviderProps,
 } from './BlockContext';
-import { ControlsTable } from '../shared/ControlsTable';
+import { SharedControlsTable } from '../shared/ControlsTable';
 import { SET_DATA_MSG } from '../shared/shared';
 
-export interface ControlsEditorsTableProps {
+export interface ControlsTableProps {
   /** a title to display */
   title?: string;
 }
 
-const ControlsEditorsTableBlock: FC<ControlsEditorsTableProps> = ({
-  title,
-}) => (
+const ControlsTableBlock: FC<ControlsTableProps> = ({ title }) => (
   <BlockContext.Consumer>
     {({ id, controls, story, api, channel }) => {
       const setControlValue: SetControlValueFn =
@@ -60,7 +58,7 @@ const ControlsEditorsTableBlock: FC<ControlsEditorsTableProps> = ({
       }
 
       return id ? (
-        <ControlsTable
+        <SharedControlsTable
           title={title}
           controls={controls}
           storyId={id}
@@ -72,9 +70,9 @@ const ControlsEditorsTableBlock: FC<ControlsEditorsTableProps> = ({
   </BlockContext.Consumer>
 );
 
-export const ControlsEditorsTable: FC<BlockContextProviderProps &
-  ControlsEditorsTableProps> = ({ title = 'Property Editors', ...rest }) => (
+export const ControlsTable: FC<BlockContextProviderProps &
+  ControlsTableProps> = ({ title = 'Property Editors', ...rest }) => (
   <BlockContextProvider {...rest}>
-    <ControlsEditorsTableBlock title={title} />
+    <ControlsTableBlock title={title} />
   </BlockContextProvider>
 );

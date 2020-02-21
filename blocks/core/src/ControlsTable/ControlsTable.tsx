@@ -5,18 +5,37 @@ import { Theme } from 'theme-ui';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
 import {
+  SetControlValueFn,
+  ClickControlFn,
+} from '@component-controls/specification';
+import {
   resetControlValues,
   getControlValues,
   LoadedComponentControls,
   LoadedComponentControl,
 } from '@component-controls/core';
 
-import { BlockContainer } from '../../blocks/BlockContainer/BlockContainer';
-import { Tab, Tabs, TabList, TabPanel } from '../../components/Tabs/Tabs';
-import { ControlsEditorsTableProps } from '../../editors/types';
-import { ActionBar } from '../../components/ActionBar/ActionBar';
+import { BlockContainer } from '../BlockContainer';
+import { Tab, Tabs, TabList, TabPanel } from '../Tabs';
+import { ActionBar } from '../ActionBar';
 
 import { PropertyEditorRow } from './PropEditorRow';
+
+export interface ExtraControlAction {
+  title: string;
+  onAction: (props: ControlsTableProps) => void;
+}
+
+export type ExtraControlActions = ExtraControlAction[];
+
+export interface ControlsTableProps {
+  title?: string;
+  storyId?: string;
+  controls?: LoadedComponentControls;
+  setControlValue?: SetControlValueFn;
+  clickControl?: ClickControlFn;
+  extraActions?: ExtraControlActions;
+}
 
 const StyleTable = styled.table<{}>(({ theme }) => ({
   '&&': {
@@ -52,7 +71,7 @@ const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
 
 const DEFAULT_GROUP_ID = 'Other';
 
-const PropGroupTable: FC<ControlsEditorsTableProps> = ({
+const PropGroupTable: FC<ControlsTableProps> = ({
   controls,
   storyId,
   setControlValue,
@@ -93,7 +112,7 @@ interface GroupedControlsType {
   [key: string]: LoadedComponentControls;
 }
 
-export const ControlsEditorsTable: FC<ControlsEditorsTableProps & {
+export const ControlsTable: FC<ControlsTableProps & {
   title?: string;
 }> = props => {
   const [copied, setCopied] = React.useState(false);

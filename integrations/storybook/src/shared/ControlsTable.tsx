@@ -1,27 +1,27 @@
 import React from 'react';
 import {
-  ControlsEditorsTable,
-  ControlsEditorsTableProps,
-} from '@component-controls/editors';
-
+  ControlsTable,
+  ControlsTableProps,
+} from '@component-controls/blocks-core';
 import { randomizeData } from '@component-controls/core';
 
-export const ControlsTable: React.FC<ControlsEditorsTableProps> = props => (
-  <ControlsEditorsTable
-    {...props}
-    extraActions={[
-      {
-        title: 'Randomize',
-        onAction: (state: ControlsEditorsTableProps) => {
-          if (state.setControlValue && state.controls && state.storyId) {
-            state.setControlValue(
-              state.storyId,
-              undefined,
-              randomizeData(state.controls),
-            );
-          }
+export const SharedControlsTable: React.FC<ControlsTableProps> = props =>
+  ControlsTable ? (
+    <ControlsTable
+      {...props}
+      extraActions={[
+        {
+          title: 'randomize',
+          onAction: (state: ControlsTableProps) => {
+            if (state.setControlValue && state.controls && state.storyId) {
+              state.setControlValue(
+                state.storyId,
+                undefined,
+                randomizeData(state.controls),
+              );
+            }
+          },
         },
-      },
-    ]}
-  />
-);
+      ]}
+    />
+  ) : null;

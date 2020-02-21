@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlsTable } from '../shared/ControlsTable';
+import { SharedControlsTable } from '../shared/ControlsTable';
 
 export const createControlsPanel = ({
   storyId,
@@ -20,7 +20,7 @@ export const createControlsPanel = ({
         case expanded === name: {
           return {
             node: (
-              <ControlsTable
+              <SharedControlsTable
                 storyId={storyId}
                 controls={controls}
                 setControlValue={setControlValue}

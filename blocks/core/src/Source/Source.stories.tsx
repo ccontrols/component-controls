@@ -3,7 +3,7 @@ import React from 'react';
 import { Source, SourceProps, themes } from './Source';
 
 export default {
-  title: 'Components/Source',
+  title: 'Blocks/Source',
   component: Source,
 };
 

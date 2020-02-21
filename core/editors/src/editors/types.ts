@@ -1,10 +1,5 @@
 import { FC } from 'react';
-import {
-  ComponentControl,
-  SetControlValueFn,
-  ClickControlFn,
-} from '@component-controls/specification';
-import { LoadedComponentControls } from '@component-controls/core';
+import { ComponentControl } from '@component-controls/specification';
 
 export type PropertyOnClick = (prop: ComponentControl) => any;
 export interface PropertyControlProps {
@@ -15,19 +10,3 @@ export interface PropertyControlProps {
 }
 
 export type PropertyEditor<T extends PropertyControlProps = any> = FC<T>;
-
-export interface ExtraControlAction {
-  title: string;
-  onAction: (props: ControlsEditorsTableProps) => void;
-}
-
-export type ExtraControlActions = ExtraControlAction[];
-
-export interface ControlsEditorsTableProps {
-  title?: string;
-  storyId?: string;
-  controls?: LoadedComponentControls;
-  setControlValue?: SetControlValueFn;
-  clickControl?: ClickControlFn;
-  extraActions?: ExtraControlActions;
-}

@@ -85,7 +85,7 @@ Object {
             Object {
               "loc": SourceLocation {
                 "end": Position {
-                  "column": 35,
+                  "column": 28,
                   "line": 6,
                 },
                 "start": Position {
@@ -94,7 +94,7 @@ Object {
                 },
               },
               "name": "component",
-              "value": "ControlsEditorsTable",
+              "value": "ControlsTable",
             },
             Object {
               "loc": SourceLocation {

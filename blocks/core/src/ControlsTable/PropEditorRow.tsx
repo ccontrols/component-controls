@@ -1,4 +1,5 @@
 import React from 'react';
+import { Flex } from 'theme-ui';
 import {
   SetControlValueFn,
   ClickControlFn,
@@ -6,9 +7,7 @@ import {
 import styled from '@emotion/styled';
 import { LoadedComponentControl } from '@component-controls/core';
 
-import { getPropertyEditor } from '../../editors/prop-factory';
-import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
-import { PropertyEditor } from '../../editors/types';
+import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 
 const StyledTR = styled.tr<{}>(({ theme }) => ({
   //@ts-ignore
@@ -52,14 +51,20 @@ export const PropertyEditorRow: React.FunctionComponent<PropertyEditorRowProps> 
     <StyledTR>
       <StyledTD>{!prop.hideLabel ? prop.label || name : null}</StyledTD>
       <StyledTD>
-        <FlexContainer align="left">
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            alignItems: 'left',
+            flexBasis: '100%',
+          }}
+        >
           <InputType
             prop={prop}
             name={name}
             onChange={onChange}
             onClick={onClick}
           />
-        </FlexContainer>
+        </Flex>
       </StyledTD>
     </StyledTR>
   );

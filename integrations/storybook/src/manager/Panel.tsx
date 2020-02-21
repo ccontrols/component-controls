@@ -13,7 +13,7 @@ import {
   SYNC_SMART_STORIES,
   GET_ALL_STORIES,
 } from '../shared/shared';
-import { ControlsTable } from '../shared/ControlsTable';
+import { SharedControlsTable } from '../shared/ControlsTable';
 import { ThemeProvider } from '../shared/ThemeProvider';
 import { NoControls } from './NoControls';
 
@@ -65,14 +65,13 @@ const WrappedControlsTable: React.FC<WrappedControlsTableProps> = ({
           api.emit(SET_DATA_MSG, { storyId, controls: updated });
         }
       };
-
   return story && controls && Object.keys(controls).length ? (
     <Wrapper className="addon-controls-panel">
       <Container>
         <ThemeProvider>
-          <ControlsTable
+          <SharedControlsTable
             controls={controls}
-            storyId={story.id}
+            storyId={story?.id}
             setControlValue={setControlValue}
             clickControl={api.clickControl}
           />

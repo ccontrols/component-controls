@@ -102,7 +102,7 @@ controlsStory.story = {
 ### With MDX
 ```md
 import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
-import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
+import { ControlsTable } from '@component-controls/storybook/blocks';
 
 <Meta title="Storybook controls" />
 
@@ -380,7 +380,7 @@ By default, Addon Controls integrates in the addon panels, in the `<Props />` ta
 
 ```js
 import { Title, Subtitle, Description, Story, Props, Stories } from '@storybook/addon-docs/blocks';
-import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
+import { ControlsTable } from '@component-controls/storybook/blocks';
 
 
 export default {
@@ -393,7 +393,7 @@ export default {
           <Subtitle />
           <Description />
           <Story id="." />
-          <ControlsEditorsTable id="." />
+          <ControlsTable id="." />
           <Props />
           <Stories />
         </>
@@ -404,7 +404,7 @@ export default {
 
 ```md
 import { Story, Meta } from '@storybook/addon-docs/blocks';
-import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
+import { ControlsTable } from '@component-controls/storybook/blocks';
 
 <Meta title="Storybook controls" parameters={{component: Button}} />
 
@@ -415,7 +415,7 @@ import { ControlsEditorsTable } from '@component-controls/storybook/blocks';
   )}  
 </Story>
 
-<ControlsEditorsTable name="small story" />
+<ControlsTable name="small story" />
 
 ```
 ## Options
