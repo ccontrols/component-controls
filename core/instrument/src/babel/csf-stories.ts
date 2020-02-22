@@ -1,4 +1,8 @@
-import { StoriesGroup, Story, Stories } from '../types';
+import {
+  StoriesGroup,
+  Story,
+  Stories,
+} from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractProperties } from './extract-properties';
@@ -38,11 +42,11 @@ export const extractCSFStories = (stories: StoriesGroup) => {
   return {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
-      const properties = extractProperties(declaration);
-      stories.properties = properties;
+      const parameters = extractProperties(declaration);
+      stories.parameters = parameters;
 
-      const title = properties
-        ? properties.find(p => p.name === 'title')
+      const title = parameters
+        ? parameters.find(p => p.name === 'title')
         : null;
       stories.title =
         title && typeof title.value === 'string' ? title.value : undefined;
@@ -56,20 +60,20 @@ export const extractCSFStories = (stories: StoriesGroup) => {
         node.right.type === 'ObjectExpression'
       ) {
         const storyName = node.left.object.name;
-        const properties = extractProperties(node.right);
-        const nameProp = properties
-          ? properties.find(p => p.name === 'name')
+        const parameters = extractProperties(node.right);
+        const nameProp = parameters
+          ? parameters.find(p => p.name === 'name')
           : null;
         const name = nameProp ? nameProp.value : storyName;
         globals[storyName] = {
-          properties,
+          parameters,
           name,
         };
         const story = stories.stories[storyName];
 
         if (story) {
           story.name = name;
-          story.properties = properties;
+          story.parameters = parameters;
         }
       }
     },
@@ -98,7 +102,7 @@ export const extractCSFStories = (stories: StoriesGroup) => {
         const global = globals[localName];
         if (global) {
           story.name = global.name;
-          story.properties = global.properties;
+          story.parameters = global.parameters;
         }
         stories.stories[exportedName] = story;
       }
@@ -114,7 +118,7 @@ export const extractCSFStories = (stories: StoriesGroup) => {
             const global = globals[name];
             if (global) {
               story.name = global.name;
-              story.properties = global.properties;
+              story.parameters = global.parameters;
             }
             stories.stories[name] = story;
           }

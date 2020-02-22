@@ -1,3 +1,6 @@
+/** @jsx jsx */
+/* eslint react/jsx-key: 0 */
+import { jsx } from 'theme-ui';
 import React, { FC } from 'react';
 import { Box, BoxProps, Checkbox, Label, Text } from 'theme-ui';
 

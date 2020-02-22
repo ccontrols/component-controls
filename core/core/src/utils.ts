@@ -83,9 +83,13 @@ export const resetControlValues = (
       );
 };
 
+export interface ControlValues {
+  [name: string]: any;
+}
+
 export const getControlValues = (
   controls: LoadedComponentControls,
-): { [name: string]: any } =>
+): ControlValues =>
   controls
     ? Object.keys(controls).reduce((acc, key) => {
         const control: ComponentControl = controls[key];

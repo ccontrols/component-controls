@@ -1,11 +1,18 @@
-import { Story, CodeSource, StoryParameters } from '../types';
+import traverse from '@babel/traverse';
+import {
+  Story,
+  CodeLocation,
+  StoryArguments,
+} from '@component-controls/specification';
+import { adjustSourceLocation } from './utils';
+import { extractParametersUsage } from './control-values-in-source';
 
 interface KeyType {
   name: string;
 }
 interface ASTPropNode {
   name?: string;
-  loc: CodeSource;
+  loc: CodeLocation;
   properties?: any;
   key?: KeyType;
 }
@@ -28,19 +35,10 @@ export const extractFunctionParameters = (story: Story) => ({
 
     const pushParams = (
       node: ASTPropNode,
-      parameters: StoryParameters,
+      parameters: StoryArguments,
       key?: KeyType,
     ) => {
-      const loc = {
-        start: {
-          column: node.loc.start.column,
-          line: node.loc.start.line,
-        },
-        end: {
-          column: node.loc.end.column,
-          line: node.loc.end.line,
-        },
-      };
+      const loc = adjustSourceLocation(story, node.loc);
       if (node.name) {
         parameters.push({
           value: node.name,
@@ -48,7 +46,7 @@ export const extractFunctionParameters = (story: Story) => ({
           loc,
         });
       } else if (node.properties) {
-        const nestedParameters: StoryParameters = [];
+        const nestedParameters: StoryArguments = [];
         parameters.push({
           value: nestedParameters,
           name: key ? key.name : node.name,
@@ -63,11 +61,20 @@ export const extractFunctionParameters = (story: Story) => ({
     };
     if (node.params) {
       node.params.forEach(
-        (p: { name: string; loc: CodeSource; properties?: any }) => {
+        (p: { name: string; loc: CodeLocation; properties?: any }) => {
           if (story.arguments) {
             pushParams(p, story.arguments);
           }
         },
+      );
+    }
+    if (story.arguments.length) {
+      const params = story.arguments[0];
+      traverse(
+        node.body,
+        extractParametersUsage(story, [params]),
+        path.scope,
+        path,
       );
     }
     path.skip();

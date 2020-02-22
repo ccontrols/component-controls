@@ -16,7 +16,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "() => {}",
+      "source": "() => {};",
     },
   },
 }
@@ -24,7 +24,7 @@ Object {
 
 exports[`csf-story-kind default export - no title 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": SourceLocation {
         "end": Position {
@@ -47,7 +47,7 @@ Object {
 
 exports[`csf-story-kind default export - with title 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": SourceLocation {
         "end": Position {
@@ -70,7 +70,7 @@ Object {
 
 exports[`csf-story-kind default export - with title and controls 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": SourceLocation {
         "end": Position {
@@ -208,7 +208,7 @@ Object {
 
 exports[`csf-story-kind default export - with title and parameters 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": SourceLocation {
         "end": Position {

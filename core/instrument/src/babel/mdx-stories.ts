@@ -1,4 +1,9 @@
-import { StoriesGroup, Story, StoryParameters, CodeSource } from '../types';
+import {
+  StoriesGroup,
+  Story,
+  StoryArguments,
+  CodeLocation,
+} from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 
@@ -7,9 +12,9 @@ export const extractMDXStories = (stories: StoriesGroup) => {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
       if (['Meta', 'Story'].indexOf(node.name.name) > -1) {
-        const parameters: StoryParameters = node.attributes
+        const parameters: StoryArguments = node.attributes
           .map((attribute: any) => {
-            const loc: CodeSource = {
+            const loc: CodeLocation = {
               start: {
                 column: attribute.loc?.start.column,
                 line: attribute.loc?.start.line,
@@ -65,7 +70,7 @@ export const extractMDXStories = (stories: StoriesGroup) => {
               title && typeof title.value === 'string'
                 ? title.value
                 : undefined;
-            stories.properties = parameters;
+            stories.parameters = parameters;
             break;
           }
           default:

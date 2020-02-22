@@ -2,7 +2,7 @@
 
 exports[`csf-toggle Toggle story 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": SourceLocation {
         "end": Position {
@@ -65,7 +65,7 @@ Object {
           <br />
         </div>
       );
-    }",
+    };",
     },
   },
   "title": "Components/Toggle",

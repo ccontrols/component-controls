@@ -1,5 +1,13 @@
-/* eslint-disable react/jsx-key */
+/** @jsx jsx */
+/* eslint react/jsx-key: 0 */
+import { jsx } from 'theme-ui';
 import React, { FC, MouseEvent } from 'react';
+import { StoryArguments } from '@component-controls/specification';
+import { LoadedComponentControls } from '@component-controls/core';
+
+import { Options } from 'prettier';
+import prettier from 'prettier/standalone';
+import parserBabel from 'prettier/parser-babylon';
 import Highlight, {
   defaultProps,
   Language,
@@ -18,8 +26,10 @@ import ultramin from 'prism-react-renderer/themes/ultramin';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { Styled } from 'theme-ui';
 import copy from 'copy-to-clipboard';
+import { transparentize } from 'polished';
 import { ActionBar } from '../ActionBar';
 import { BlockContainer } from '../BlockContainer';
+import { getArgumentNames, mergeControlValues } from './argument-utils';
 
 export type ThemeType =
   | 'nightowl-light'
@@ -48,6 +58,7 @@ export const themes: {
   dracula,
   'shades-of-purple': shadesOfPurple,
 };
+
 export interface SourceProps {
   children?: string;
   language?: Language;
@@ -57,16 +68,42 @@ export interface SourceProps {
    * componnet will not have a thmme selection option
    */
   theme?: ThemeType;
+  /**
+   * options for the prettier integration
+   * if set to false, will utrn prettier off
+   */
+  prettier?: null | Options;
+  /**
+   * a list of story arguments accepted by Source
+   * this is used to syntax-highlight the arguments
+   * and their usage
+   */
+  args?: StoryArguments;
+
+  /**
+   * any control values to render in place of props in the editor
+   */
+  controls?: LoadedComponentControls;
 }
 
 export const Source: FC<SourceProps> = ({
   children = '',
   language = 'jsx',
   theme: parentTheme,
+  prettier: prettierOptions,
+  args,
+  controls,
 }) => {
   const [themeName, setThemeName] = React.useState<ThemeType>(
     parentTheme || 'nightowl-light',
   );
+
+  const [showMerged, setShowMerged] = React.useState<boolean>(
+    !!controls && !!args,
+  );
+  const parameters: string[] | undefined = args
+    ? getArgumentNames(args)
+    : undefined;
   let prismTheme = themes[themeName] || defaultProps.theme;
   const [copied, setCopied] = React.useState(false);
 
@@ -77,6 +114,7 @@ export const Source: FC<SourceProps> = ({
     setThemeName(themeKeys[newIdx] as ThemeType);
   };
 
+  const onMergeValues = () => setShowMerged(!showMerged);
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setCopied(true);
@@ -88,13 +126,39 @@ export const Source: FC<SourceProps> = ({
   if (parentTheme === undefined) {
     actions.push({ title: themeName, onClick: onRotateTheme });
   }
+  if (controls && args) {
+    actions.push({ title: 'values', onClick: onMergeValues });
+  }
+
   actions.push({ title: copied ? 'Copied' : 'Copy', onClick: onCopy });
+  let colorIdx = 0;
+  const colorRoll = parameters
+    ? parameters.map(() => {
+        const style = prismTheme.styles[colorIdx];
+        const color: string =
+          style.style.color || prismTheme.plain.color || '#fff';
+        colorIdx = colorIdx < prismTheme.styles.length - 1 ? colorIdx + 1 : 0;
+        return color;
+      })
+    : [];
+  let code = typeof children === 'string' ? children : '';
+  if (showMerged && args && controls) {
+    code = mergeControlValues(code, args, controls);
+  }
+  const source =
+    prettierOptions !== null
+      ? prettier.format(code, {
+          parser: 'babel',
+          plugins: [parserBabel],
+          ...prettierOptions,
+        })
+      : code;
   return (
     <BlockContainer>
       <Highlight
         {...defaultProps}
         theme={prismTheme}
-        code={typeof children === 'string' ? children : ''}
+        code={source}
         language={language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -104,12 +168,56 @@ export const Source: FC<SourceProps> = ({
           >
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span
-                    {...getTokenProps({ token, key })}
-                    sx={{ display: 'inline-block' }}
-                  />
-                ))}
+                {line.map((token, key) => {
+                  const paramIdx = parameters
+                    ? parameters.indexOf(token.content.trim())
+                    : -1;
+                  const isParameterDefiinition =
+                    paramIdx > -1 && token.types.indexOf('parameter') > -1;
+                  const isParameterUsage =
+                    paramIdx > -1 &&
+                    ((token.types.indexOf('attr-value') > -1 &&
+                      token.types.indexOf('spread') > -1) ||
+                      (token.types.indexOf('tag') > -1 &&
+                        token.types.indexOf('script') > -1));
+                  const isParam = isParameterDefiinition || isParameterUsage;
+                  if (isParam) {
+                    const splitToken = getTokenProps({
+                      token,
+                      key,
+                    }).children.split(/(\s+)/);
+                    console.log(splitToken);
+                    return splitToken.map(s =>
+                      s.trim().length ? (
+                        <span
+                          {...getTokenProps({ token, key })}
+                          sx={{
+                            display: 'inline-block',
+                            backgroundColor: transparentize(
+                              0.8,
+                              colorRoll[paramIdx],
+                            ),
+                            paddingLeft: 1,
+                            paddingRight: 1,
+                            border: `1px solid ${colorRoll[paramIdx]}`,
+                          }}
+                        >
+                          {s}
+                        </span>
+                      ) : (
+                        s
+                      ),
+                    );
+                  }
+                  return (
+                    <span
+                      {...getTokenProps({ token, key })}
+                      sx={{
+                        display: 'inline-block',
+                      }}
+                    />
+                  );
+                })}
               </div>
             ))}
           </Styled.pre>

@@ -1,12 +1,14 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import myStoryStore from '@component-controls/loader/story-store-data';
+import { Story, StoryArguments } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
 
 export interface BlockContextProps {
   controls: LoadedComponentControls;
+  args?: StoryArguments;
   story: any;
   api?: any;
   id?: string;
@@ -56,9 +58,8 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
   }
   const story = storyStore.fromId(previewId) || {};
   // console.log(myStoryStore);
-  const source: string | undefined = myStoryStore[previewId]
-    ? myStoryStore[previewId].source
-    : undefined;
+  const myStory: Story = myStoryStore[previewId];
+  const source: string | undefined = myStory ? myStory.source : undefined;
   return (
     <BlockContext.Provider
       value={{
@@ -67,6 +68,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
         story,
         channel,
         source,
+        args: myStory.arguments,
         controls: story.controls || story.parameters.controls,
       }}
     >

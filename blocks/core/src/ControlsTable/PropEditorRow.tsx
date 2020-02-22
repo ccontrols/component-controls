@@ -1,3 +1,7 @@
+/** @jsx jsx */
+/* eslint react/jsx-key: 0 */
+import { jsx } from 'theme-ui';
+
 import React from 'react';
 import { Flex } from 'theme-ui';
 import {

@@ -20,7 +20,7 @@ module.exports = {
   stories: [
     '../../../core/editors/src/**/*.stories.(js|tsx|mdx)',
     '../../../blocks/core/src/**/*.stories.(js|tsx|mdx)',
-    // '../src/**/*.stories.(js|tsx|mdx)',
+    '../src/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-docs',

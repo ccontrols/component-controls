@@ -2,7 +2,7 @@
 
 exports[`mdx-stories Props argument 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -25,11 +25,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 8,
-              "line": 24,
+              "line": 0,
             },
             "start": Object {
               "column": 3,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": "props",
@@ -47,7 +47,7 @@ Object {
         },
       },
       "name": "story-with-props",
-      "source": "props => <Button />",
+      "source": "props => <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -56,7 +56,7 @@ Object {
 
 exports[`mdx-stories Three levels - alias 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -79,11 +79,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 13,
-              "line": 29,
+              "line": 5,
             },
             "start": Object {
               "column": 4,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": undefined,
@@ -92,11 +92,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 16,
-                  "line": 27,
+                  "line": 3,
                 },
                 "start": Object {
                   "column": 14,
-                  "line": 25,
+                  "line": 1,
                 },
               },
               "name": "name",
@@ -105,11 +105,11 @@ Object {
                   "loc": Object {
                     "end": Object {
                       "column": 15,
-                      "line": 26,
+                      "line": 2,
                     },
                     "start": Object {
                       "column": 10,
-                      "line": 26,
+                      "line": 2,
                     },
                   },
                   "name": "first",
@@ -119,11 +119,11 @@ Object {
                   "loc": Object {
                     "end": Object {
                       "column": 14,
-                      "line": 27,
+                      "line": 3,
                     },
                     "start": Object {
                       "column": 10,
-                      "line": 27,
+                      "line": 3,
                     },
                   },
                   "name": "last",
@@ -135,11 +135,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 11,
-                  "line": 29,
+                  "line": 5,
                 },
                 "start": Object {
                   "column": 8,
-                  "line": 29,
+                  "line": 5,
                 },
               },
               "name": "age",
@@ -165,7 +165,7 @@ Object {
           last },
 
         age }) =>
-      <Button />",
+      <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -174,7 +174,7 @@ Object {
 
 exports[`mdx-stories Two arguments 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -197,11 +197,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 9,
-              "line": 24,
+              "line": 0,
             },
             "start": Object {
               "column": 4,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": "props",
@@ -211,11 +211,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 18,
-              "line": 24,
+              "line": 0,
             },
             "start": Object {
               "column": 11,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": "context",
@@ -233,7 +233,7 @@ Object {
         },
       },
       "name": "story-with-props",
-      "source": "(props, context) => <Button />",
+      "source": "(props, context) => <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -242,7 +242,7 @@ Object {
 
 exports[`mdx-stories Two levels - alias 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -265,11 +265,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 13,
-              "line": 26,
+              "line": 2,
             },
             "start": Object {
               "column": 4,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": undefined,
@@ -278,11 +278,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 20,
-                  "line": 25,
+                  "line": 1,
                 },
                 "start": Object {
                   "column": 14,
-                  "line": 25,
+                  "line": 1,
                 },
               },
               "name": "name",
@@ -292,11 +292,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 11,
-                  "line": 26,
+                  "line": 2,
                 },
                 "start": Object {
                   "column": 8,
-                  "line": 26,
+                  "line": 2,
                 },
               },
               "name": "age",
@@ -319,7 +319,7 @@ Object {
       "source": "({
         name: MyName,
         age }) =>
-      <Button />",
+      <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -328,7 +328,7 @@ Object {
 
 exports[`mdx-stories Two levels sub arguments 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -351,11 +351,11 @@ Object {
           "loc": Object {
             "end": Object {
               "column": 13,
-              "line": 26,
+              "line": 2,
             },
             "start": Object {
               "column": 4,
-              "line": 24,
+              "line": 0,
             },
           },
           "name": undefined,
@@ -364,11 +364,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 12,
-                  "line": 25,
+                  "line": 1,
                 },
                 "start": Object {
                   "column": 8,
-                  "line": 25,
+                  "line": 1,
                 },
               },
               "name": "name",
@@ -378,11 +378,11 @@ Object {
               "loc": Object {
                 "end": Object {
                   "column": 11,
-                  "line": 26,
+                  "line": 2,
                 },
                 "start": Object {
                   "column": 8,
-                  "line": 26,
+                  "line": 2,
                 },
               },
               "name": "age",
@@ -405,7 +405,7 @@ Object {
       "source": "({
         name,
         age }) =>
-      <Button />",
+      <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -414,7 +414,7 @@ Object {
 
 exports[`mdx-stories mdx-story 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {
@@ -454,7 +454,7 @@ Object {
 
 exports[`mdx-stories no name 1`] = `
 Object {
-  "properties": Array [
+  "parameters": Array [
     Object {
       "loc": Object {
         "end": Object {

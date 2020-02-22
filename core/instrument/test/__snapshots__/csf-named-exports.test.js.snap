@@ -16,7 +16,7 @@ Object {
         },
       },
       "name": "Custom story name",
-      "properties": Array [
+      "parameters": Array [
         Object {
           "loc": SourceLocation {
             "end": Position {
@@ -32,7 +32,7 @@ Object {
           "value": "Custom story name",
         },
       ],
-      "source": "() => {}",
+      "source": "() => {};",
     },
   },
 }
@@ -60,7 +60,7 @@ Object {
         },
       },
       "name": "Custom story name",
-      "properties": Array [
+      "parameters": Array [
         Object {
           "loc": SourceLocation {
             "end": Position {
@@ -76,7 +76,7 @@ Object {
           "value": "Custom story name",
         },
       ],
-      "source": "() => {}",
+      "source": "() => {};",
     },
   },
 }

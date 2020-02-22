@@ -1,7 +1,8 @@
-import { StoryParameters } from '../types';
-export const extractProperties = (node: any): StoryParameters | undefined => {
+import { StoryArguments } from '@component-controls/specification';
+
+export const extractProperties = (node: any): StoryArguments | undefined => {
   if (node && node.properties) {
-    const properties: StoryParameters = node.properties
+    const properties: StoryArguments = node.properties
       .map((property: any) => {
         if (property.value) {
           switch (property.value.type) {
