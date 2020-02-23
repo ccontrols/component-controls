@@ -97,6 +97,8 @@ export interface SourceProps {
   fileSource?: string;
 }
 
+type ViewStyle = 'plain' | 'tags' | 'values';
+
 export const Source: FC<SourceProps> = ({
   children = '',
   language = 'jsx',
@@ -110,8 +112,8 @@ export const Source: FC<SourceProps> = ({
     parentTheme || 'nightowl-light',
   );
 
-  const [showMerged, setShowMerged] = React.useState<boolean>(
-    !!controls && !!args,
+  const [viewStyle, setViewStyle] = React.useState<ViewStyle>(
+    !!controls && !!args ? 'values' : 'tags',
   );
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
 
@@ -128,7 +130,14 @@ export const Source: FC<SourceProps> = ({
     setThemeName(themeKeys[newIdx] as ThemeType);
   };
 
-  const onMergeValues = () => setShowMerged(!showMerged);
+  const onMergeValues = () =>
+    setViewStyle(
+      viewStyle === 'plain'
+        ? 'tags'
+        : viewStyle === 'tags'
+        ? 'values'
+        : 'plain',
+    );
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
@@ -149,7 +158,7 @@ export const Source: FC<SourceProps> = ({
     actions.push({ title: themeName, onClick: onRotateTheme });
   }
   if (controls && args) {
-    actions.push({ title: 'values', onClick: onMergeValues });
+    actions.push({ title: viewStyle, onClick: onMergeValues });
   }
 
   actions.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
@@ -167,7 +176,7 @@ export const Source: FC<SourceProps> = ({
   let source: string;
   if (!showFileSource) {
     let code = typeof children === 'string' ? children : '';
-    if (showMerged && args && controls) {
+    if (viewStyle === 'values' && args && controls) {
       code = mergeControlValues(code, args, controls);
     }
     source =
@@ -197,45 +206,47 @@ export const Source: FC<SourceProps> = ({
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => {
-                  const paramIdx = parameters
-                    ? parameters.indexOf(token.content.trim())
-                    : -1;
-                  const isParameterDefiinition =
-                    paramIdx > -1 && token.types.indexOf('parameter') > -1;
-                  const isParameterUsage =
-                    paramIdx > -1 &&
-                    ((token.types.indexOf('attr-value') > -1 &&
-                      token.types.indexOf('spread') > -1) ||
-                      (token.types.indexOf('tag') > -1 &&
-                        token.types.indexOf('script') > -1));
-                  const isParam = isParameterDefiinition || isParameterUsage;
-                  if (isParam) {
-                    const splitToken = getTokenProps({
-                      token,
-                      key,
-                    }).children.split(/(\s+)/);
-                    console.log(splitToken);
-                    return splitToken.map(s =>
-                      s.trim().length ? (
-                        <span
-                          {...getTokenProps({ token, key })}
-                          sx={{
-                            display: 'inline-block',
-                            backgroundColor: transparentize(
-                              0.8,
-                              colorRoll[paramIdx],
-                            ),
-                            paddingLeft: 1,
-                            paddingRight: 1,
-                            border: `1px solid ${colorRoll[paramIdx]}`,
-                          }}
-                        >
-                          {s}
-                        </span>
-                      ) : (
-                        s
-                      ),
-                    );
+                  if (viewStyle === 'tags') {
+                    const paramIdx = parameters
+                      ? parameters.indexOf(token.content.trim())
+                      : -1;
+                    const isParameterDefiinition =
+                      paramIdx > -1 && token.types.indexOf('parameter') > -1;
+                    const isParameterUsage =
+                      paramIdx > -1 &&
+                      ((token.types.indexOf('attr-value') > -1 &&
+                        token.types.indexOf('spread') > -1) ||
+                        (token.types.indexOf('tag') > -1 &&
+                          token.types.indexOf('script') > -1));
+                    const isParam = isParameterDefiinition || isParameterUsage;
+                    if (isParam) {
+                      const splitToken = getTokenProps({
+                        token,
+                        key,
+                      }).children.split(/(\s+)/);
+                      console.log(splitToken);
+                      return splitToken.map(s =>
+                        s.trim().length ? (
+                          <span
+                            {...getTokenProps({ token, key })}
+                            sx={{
+                              display: 'inline-block',
+                              backgroundColor: transparentize(
+                                0.8,
+                                colorRoll[paramIdx],
+                              ),
+                              paddingLeft: 1,
+                              paddingRight: 1,
+                              border: `1px solid ${colorRoll[paramIdx]}`,
+                            }}
+                          >
+                            {s}
+                          </span>
+                        ) : (
+                          s
+                        ),
+                      );
+                    }
                   }
                   return (
                     <span
