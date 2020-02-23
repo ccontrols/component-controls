@@ -2,10 +2,17 @@
 
 exports[`csf-parameters story propery name 1`] = `
 Object {
+  "source": "
+export const myStory = () => {};
+myStory.story = {
+ name: 'Custom story name',
+}
+      
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 31,
           "line": 2,
@@ -40,10 +47,23 @@ Object {
 
 exports[`csf-parameters story propery name and parameters 1`] = `
 Object {
+  "source": "
+export const myStory = () => {};
+myStory.story = {
+  name: 'Custom story name',
+  parameters: {
+    component: ControlsTable,
+    addonControls: {
+      smart: false,
+    }
+  },
+}
+      
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 31,
           "line": 2,
@@ -136,10 +156,30 @@ Object {
 
 exports[`csf-parameters story propery name parameters and controls 1`] = `
 Object {
+  "source": "
+export const myStory = () => {};
+myStory.story = {
+  name: 'Custom story name',
+  parameters: {
+    controls: {
+      name: {
+        type: ControlTypes.TEXT,
+        label: 'Name',
+        value: 'Mark',
+        order: 9999,
+      },
+    },
+    addonControls: {
+      smart: false,
+    }
+  },
+}
+      
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 31,
           "line": 2,

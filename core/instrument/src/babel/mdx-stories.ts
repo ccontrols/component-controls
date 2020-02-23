@@ -39,7 +39,7 @@ export const extractMDXStories = (stories: StoriesGroup) => {
         switch (node.name.name) {
           case 'Story': {
             const story: Story = {
-              location: {
+              loc: {
                 start: {
                   column: path.node.loc.start.column,
                   line: path.node.loc.start.line,

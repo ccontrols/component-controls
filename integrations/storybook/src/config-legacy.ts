@@ -50,7 +50,7 @@ addDecorator(
             const { addonControls = {}, controls } = parameters;
             const { smart } = addonControls;
             if (injectedStoryStore && smart) {
-              const ccStory = injectedStoryStore[id];
+              const ccStory = injectedStoryStore.stories[id];
               if (ccStory) {
                 if (ccStory.arguments && ccStory.arguments.length) {
                   const smartControls = docgenToControls(story.parameters);

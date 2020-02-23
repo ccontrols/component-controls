@@ -84,7 +84,7 @@ export interface Story {
   /**
    * location in the source file of the story definition
    */
-  location?: CodeLocation;
+  loc?: CodeLocation;
   /**
    * the source code of the story, extracted byt the AST instrumenting loaders
    */
@@ -116,4 +116,9 @@ export interface StoriesGroup {
    * any parameters passed to the story groupds, such as title, parameters etc
    */
   parameters?: StoryArguments;
+
+  /**
+   * source code of the entire file of stories
+   */
+  source?: string;
 }

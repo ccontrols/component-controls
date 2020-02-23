@@ -1,19 +1,34 @@
 import { toId, storyNameFromExport } from '@storybook/csf';
-import { StoriesGroup, Story } from '@component-controls/instrument';
-import { StoryStore } from './types';
+import { StoriesGroup, Story } from '@component-controls/specification';
+import { StoryStore, StoriesKind } from './types';
 
-const storyFiles: StoryStore = {};
+const store: StoryStore = {
+  kinds: {},
+  stories: {},
+};
 
 export const addStoriesKind = (kind: StoriesGroup) => {
+  let stories: StoriesKind;
+  if (kind.title) {
+    stories = {
+      title: kind.title,
+      stories: [],
+      source: kind.source,
+    };
+    store.kinds[kind.title] = stories;
+  }
   Object.keys(kind.stories).forEach(key => {
     const story: Story = kind.stories[key];
     if (kind.title && story.name) {
       const id = toId(kind.title, storyNameFromExport(story.name));
-      storyFiles[id] = {
+      if (stories) {
+        stories.stories.push(id);
+      }
+      store.stories[id] = {
         ...story,
         kind: kind.title,
       };
     }
   });
 };
-export default storyFiles;
+export default store;

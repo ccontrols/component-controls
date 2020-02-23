@@ -60,7 +60,13 @@ export const themes: {
 };
 
 export interface SourceProps {
+  /**
+   * source for the story
+   */
   children?: string;
+  /**
+   * language to be used for syntax hilighting
+   */
   language?: Language;
   /**
    * prism theme passed from parent
@@ -84,6 +90,11 @@ export interface SourceProps {
    * any control values to render in place of props in the editor
    */
   controls?: LoadedComponentControls;
+
+  /**
+   * full file source code of the file where the story was declared
+   */
+  fileSource?: string;
 }
 
 export const Source: FC<SourceProps> = ({
@@ -93,6 +104,7 @@ export const Source: FC<SourceProps> = ({
   prettier: prettierOptions,
   args,
   controls,
+  fileSource,
 }) => {
   const [themeName, setThemeName] = React.useState<ThemeType>(
     parentTheme || 'nightowl-light',
@@ -101,6 +113,8 @@ export const Source: FC<SourceProps> = ({
   const [showMerged, setShowMerged] = React.useState<boolean>(
     !!controls && !!args,
   );
+  const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+
   const parameters: string[] | undefined = args
     ? getArgumentNames(args)
     : undefined;
@@ -115,6 +129,8 @@ export const Source: FC<SourceProps> = ({
   };
 
   const onMergeValues = () => setShowMerged(!showMerged);
+  const onShowFileSource = () => setShowFileSource(!showFileSource);
+
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setCopied(true);
@@ -123,6 +139,12 @@ export const Source: FC<SourceProps> = ({
   };
 
   const actions = [];
+  if (fileSource) {
+    actions.push({
+      title: showFileSource ? 'story code' : 'file code',
+      onClick: onShowFileSource,
+    });
+  }
   if (parentTheme === undefined) {
     actions.push({ title: themeName, onClick: onRotateTheme });
   }
@@ -141,18 +163,24 @@ export const Source: FC<SourceProps> = ({
         return color;
       })
     : [];
-  let code = typeof children === 'string' ? children : '';
-  if (showMerged && args && controls) {
-    code = mergeControlValues(code, args, controls);
+
+  let source: string;
+  if (!showFileSource) {
+    let code = typeof children === 'string' ? children : '';
+    if (showMerged && args && controls) {
+      code = mergeControlValues(code, args, controls);
+    }
+    source =
+      prettierOptions !== null
+        ? prettier.format(code, {
+            parser: 'babel',
+            plugins: [parserBabel],
+            ...prettierOptions,
+          })
+        : code;
+  } else {
+    source = fileSource || '';
   }
-  const source =
-    prettierOptions !== null
-      ? prettier.format(code, {
-          parser: 'babel',
-          plugins: [parserBabel],
-          ...prettierOptions,
-        })
-      : code;
   return (
     <BlockContainer>
       <Highlight

@@ -25,7 +25,7 @@ export const extractFunctionParameters = (story: Story) => ({
     if (!story.arguments) {
       story.arguments = [];
     }
-    story.location = {
+    story.loc = {
       start: {
         column: node.loc.start.column,
         line: node.loc.start.line,

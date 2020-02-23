@@ -2,10 +2,18 @@
 
 exports[`csf-named-exports exported alias name 1`] = `
 Object {
+  "source": "
+const myStory = () => {};
+myStory.story = {
+ name: 'Custom story name',
+}
+
+export { myStory as exportedStory}
+    ",
   "stories": Object {
     "exportedStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 24,
           "line": 2,
@@ -40,16 +48,33 @@ Object {
 
 exports[`csf-named-exports re-exported name 1`] = `
 Object {
+  "source": "
+import { myStory } from 'stories.tsx';
+myStory.story = {
+  name: 'Custom story name',
+};
+
+export { myStory };
+    
+    ",
   "stories": Object {},
 }
 `;
 
 exports[`csf-named-exports story propery name 1`] = `
 Object {
+  "source": "
+const myStory = () => {};
+myStory.story = {
+ name: 'Custom story name',
+}
+
+export { myStory }
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 24,
           "line": 2,

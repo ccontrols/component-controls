@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/instrument": "^0.6.0",
+    "@component-controls/specification": "^0.6.0",
     "@storybook/csf": "0.0.1",
     "crypto": "^1.0.1",
     "js-string-escape": "^1.0.1",

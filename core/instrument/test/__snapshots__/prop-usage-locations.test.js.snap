@@ -2,6 +2,14 @@
 
 exports[`prop-usage-locations Three levels - alias 1`] = `
 Object {
+  "source": "
+      export const myStory = ({ name: { first, last }, age }) => (
+        <>
+          <Story first={first} last={last} />
+          <Age value={age} />
+        </>
+      );    
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -120,7 +128,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 7,
           "line": 7,
@@ -160,6 +168,18 @@ Object {
       "value": "Hello",
     },
   ],
+  "source": "
+      export default {
+        name: 'Hello',
+      }
+
+      export const myStory = props => (
+        <Story
+         {...props}
+        />
+      );
+
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -192,7 +212,7 @@ Object {
           "value": "props",
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 7,
           "line": 10,
@@ -216,6 +236,7 @@ Object {
 
 exports[`prop-usage-locations empty body 1`] = `
 Object {
+  "source": "export const story = ({ name }) => name;",
   "stories": Object {
     "story": Object {
       "arguments": Array [
@@ -263,7 +284,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 39,
           "line": 1,
@@ -282,6 +303,7 @@ Object {
 
 exports[`prop-usage-locations expression usage 1`] = `
 Object {
+  "source": "export const selectProp = ({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;",
   "stories": Object {
     "selectProp": Object {
       "arguments": Array [
@@ -342,7 +364,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 88,
           "line": 1,
@@ -361,6 +383,14 @@ Object {
 
 exports[`prop-usage-locations multiple usage 1`] = `
 Object {
+  "source": "
+      export const myStory = ({ age }) => (
+        <>
+          <Story name={name} age={age} />
+          <Age value={age} />
+        </>  
+      );
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -420,7 +450,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 7,
           "line": 7,
@@ -444,6 +474,9 @@ Object {
 
 exports[`prop-usage-locations props argument 1`] = `
 Object {
+  "source": "
+      export const myStory = props => <Story {...props} />;
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -476,7 +509,7 @@ Object {
           "value": "props",
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 58,
           "line": 2,
@@ -495,6 +528,7 @@ Object {
 
 exports[`prop-usage-locations string template 1`] = `
 Object {
+  "source": "export const myStory = ({ text }) => \`\${text}\`;",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -542,7 +576,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 46,
           "line": 1,
@@ -561,6 +595,9 @@ Object {
 
 exports[`prop-usage-locations two arguments 1`] = `
 Object {
+  "source": "
+      export const myStory = (props, context) => <Story {...props} />;
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -607,7 +644,7 @@ Object {
           "value": "context",
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 69,
           "line": 2,
@@ -626,6 +663,9 @@ Object {
 
 exports[`prop-usage-locations two levels - alias 1`] = `
 Object {
+  "source": "
+      export const myStory = ({ name: MyName, age }) => <Story name={MyName} age={age} />;
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -701,7 +741,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 89,
           "line": 2,
@@ -720,6 +760,9 @@ Object {
 
 exports[`prop-usage-locations two levels sub arguments 1`] = `
 Object {
+  "source": "
+      export const myStory = ({ name, age }) => <Story name={name} age={age} />;
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -795,7 +838,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 79,
           "line": 2,

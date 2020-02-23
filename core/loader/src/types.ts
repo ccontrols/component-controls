@@ -1,9 +1,19 @@
-import { Story } from '@component-controls/instrument';
+import { Story } from '@component-controls/specification';
 
 export interface LoaderOptions {
   type?: 'csf' | 'mdx';
 }
 
+export interface StoriesKind {
+  title: string;
+  stories: string[];
+  source?: string;
+}
 export interface StoryStore {
-  [id: string]: Story & { kind: string };
+  kinds: {
+    [title: string]: StoriesKind;
+  };
+  stories: {
+    [id: string]: Story & { kind: string };
+  };
 }

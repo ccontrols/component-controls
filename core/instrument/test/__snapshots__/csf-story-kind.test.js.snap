@@ -2,10 +2,13 @@
 
 exports[`csf-story-kind No default export 1`] = `
 Object {
+  "source": "
+      export const myStory = () => {};
+    ",
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 37,
           "line": 2,
@@ -40,6 +43,11 @@ Object {
       "value": 1,
     },
   ],
+  "source": "
+      export default {
+        test: 1,
+      };
+    ",
   "stories": Object {},
   "title": undefined,
 }
@@ -63,6 +71,11 @@ Object {
       "value": "Storybook/Blocks/ControlsTable",
     },
   ],
+  "source": "
+        export default {
+          title: 'Storybook/Blocks/ControlsTable',
+        };
+      ",
   "stories": Object {},
   "title": "Storybook/Blocks/ControlsTable",
 }
@@ -201,6 +214,22 @@ Object {
       ],
     },
   ],
+  "source": "
+      export default {
+        title: 'Storybook/Kind',
+        component: ControlsTable,
+        parameters: {
+          controls: {
+            name: {
+              type: ControlTypes.TEXT,
+              label: 'Name',
+              value: 'Mark',
+              order: 9999,
+            },
+          },
+        },
+      };
+      ",
   "stories": Object {},
   "title": "Storybook/Kind",
 }
@@ -282,6 +311,17 @@ Object {
       ],
     },
   ],
+  "source": "
+        export default {
+          title: 'Storybook/Blocks/ControlsTable',
+          parameters: {
+            component: ControlsTable,
+            addonControls: {
+              smart: false,
+            }
+          },
+        };
+      ",
   "stories": Object {},
   "title": "Storybook/Blocks/ControlsTable",
 }

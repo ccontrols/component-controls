@@ -9,19 +9,24 @@ import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 
 type TraverseFn = (stories: StoriesGroup) => any;
 
-const parseSource = (source: string, traverseFn: TraverseFn): StoriesGroup => {
+const parseSource = (
+  source: string,
+  traverseFn: TraverseFn,
+  originalSource: string,
+): StoriesGroup => {
   const ast = parser.parse(source, {
     sourceType: 'module',
     plugins: ['jsx', 'typescript'],
   });
   const stories = {
     stories: {},
+    source: originalSource,
   };
   traverse(ast, traverseFn(stories));
   Object.keys(stories.stories).forEach((key: string) => {
     //@ts-ignore
     const story: Story = stories.stories[key];
-    const { start, end } = story.location || {};
+    const { start, end } = story.loc || {};
     if (start && end) {
       const lines = source.split('\n');
 
@@ -47,7 +52,7 @@ const parseSource = (source: string, traverseFn: TraverseFn): StoriesGroup => {
 };
 
 export const parseCSF = async (source: string): Promise<StoriesGroup> => {
-  return parseSource(source, extractCSFStories);
+  return parseSource(source, extractCSFStories, source);
 };
 
 export const parseMDX = async (source: string): Promise<StoriesGroup> => {
@@ -62,5 +67,5 @@ export const parseMDX = async (source: string): Promise<StoriesGroup> => {
     retainFunctionParens: true,
     retainLines: true,
   });
-  return parseSource(newCode.code, extractMDXStories);
+  return parseSource(newCode.code, extractMDXStories, source);
 };

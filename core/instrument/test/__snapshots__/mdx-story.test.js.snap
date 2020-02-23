@@ -18,6 +18,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {props => <Button />}
+</Story>
+
+  ",
   "stories": Object {
     "story-with-props": Object {
       "arguments": Array [
@@ -36,7 +48,7 @@ Object {
           "value": "props",
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 22,
           "line": 24,
@@ -72,6 +84,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name: { first, last }, age }) => <Button />}
+</Story>
+
+  ",
   "stories": Object {
     "story-with-props": Object {
       "arguments": Array [
@@ -148,7 +172,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 16,
           "line": 30,
@@ -190,6 +214,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {(props, context) => <Button />}
+</Story>
+
+  ",
   "stories": Object {
     "story-with-props": Object {
       "arguments": Array [
@@ -222,7 +258,7 @@ Object {
           "value": "context",
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 33,
           "line": 24,
@@ -258,6 +294,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name: MyName, age }) => <Button />}
+</Story>
+
+  ",
   "stories": Object {
     "story-with-props": Object {
       "arguments": Array [
@@ -305,7 +353,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 16,
           "line": 27,
@@ -344,6 +392,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name, age }) => <Button />}
+</Story>
+
+  ",
   "stories": Object {
     "story-with-props": Object {
       "arguments": Array [
@@ -391,7 +451,7 @@ Object {
           ],
         },
       ],
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 16,
           "line": 27,
@@ -430,9 +490,21 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"smart story\\">
+  <Button />
+</Story>
+
+  ",
   "stories": Object {
     "smart story": Object {
-      "location": Object {
+      "loc": Object {
         "end": Object {
           "column": 12,
           "line": 25,
@@ -470,6 +542,18 @@ Object {
       "value": "Storybook/MDX",
     },
   ],
+  "source": "
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story>
+  <Button />
+</Story>
+
+  ",
   "stories": Object {},
   "title": "Storybook/MDX",
 }

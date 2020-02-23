@@ -14,6 +14,7 @@ export interface BlockContextProps {
   id?: string;
   channel: any;
   source?: string;
+  fileSource?: string;
 }
 export const BlockContext = React.createContext<BlockContextProps>({
   controls: {},
@@ -58,7 +59,15 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
   }
   const story = storyStore.fromId(previewId) || {};
   // console.log(myStoryStore);
-  const myStory: Story = myStoryStore[previewId];
+  const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
+  const kindTitle =
+    myStoryStore &&
+    myStoryStore.kinds &&
+    Object.keys(myStoryStore.kinds).find(key => {
+      const k = myStoryStore.kinds[key];
+      return k.stories.indexOf(previewId) > -1;
+    });
+  const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
   return (
     <BlockContext.Provider
@@ -68,6 +77,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
         story,
         channel,
         source,
+        fileSource: kind ? kind.source : undefined,
         args: myStory.arguments,
         controls: story.controls || story.parameters.controls,
       }}
