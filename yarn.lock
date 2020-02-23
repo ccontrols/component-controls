@@ -14974,10 +14974,10 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.10.0.tgz#46b82bb91878daf1b0d56dec2f1d41e54d5103cf"
   integrity sha512-tWEpK0snS2RPUq1i3R6OahfJNjWCQYNxq0+by1amCSuw0mXtymJpzmZIeYpA1UAa+7B0grCpNYIbDcd7AgTbFg==
 
-storybook-addon-deps@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/storybook-addon-deps/-/storybook-addon-deps-1.0.11.tgz#0b4ecd70994f8b59a18b80f3f6d041c4c26fa860"
-  integrity sha512-wSUqoQ3Qm8dewsYl3mJlgd4VpnEzRj40R9z3ltSD/KvOk/ugk4cv/Qsk8BsN5gogXlerodLKf6OyMY6ixwncZQ==
+storybook-addon-deps@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/storybook-addon-deps/-/storybook-addon-deps-1.0.12.tgz#6295cf0086f5f59da8c81999bb0baddd41ce8dcd"
+  integrity sha512-+DEXPLQU/KSon7kBbMHL0yv5BhB/EoK5VtsHavp3jcxZZcCanNvl8eKfy6PsJ/XB1YCqGddmG7n+/iPxLGyfxg==
   dependencies:
     memoizerific "^1.11.3"
     react-dnd "8.0.3"

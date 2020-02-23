@@ -19,7 +19,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "storybook-addon-deps": "^1.0.11",
+    "storybook-addon-deps": "^1.0.12",
     "storybook-dark-mode": "^0.3.0",
     "typescript": "^3.7.5",
     "webpack-react-docgen-typescript": "^0.9.5"

@@ -1,8 +1,8 @@
 import jsStringEscape from 'js-string-escape';
 import {
-  ControlTypes,
   StoryArguments,
   ArgUsageLocation,
+  ControlTypes,
 } from '@component-controls/specification';
 import {
   LoadedComponentControl,
@@ -38,6 +38,16 @@ export const getArgumentsUsage = (args: StoryArguments): UsageProp[] => {
   }, []);
 };
 
+const stringifyValue = (type: string, value: any): string => {
+  switch (type) {
+    case ControlTypes.TEXT:
+      return `"${jsStringEscape(value)}"`;
+    case ControlTypes.OPTIONS:
+      return `[${stringifyValue(ControlTypes.TEXT, value)}]`;
+    default:
+      return value;
+  }
+};
 const replaceString = (
   s: string,
   newStr: string,
@@ -66,9 +76,7 @@ export const mergeControlValues = (
       const val: LoadedComponentControl = controls[l.name];
       if (val && val.value !== val.defaultValue) {
         const value: any = val.value;
-        let strValue: string =
-          val.type === ControlTypes.TEXT ? `"${jsStringEscape(value)}"` : value;
-        console.log(l);
+        let strValue: string = stringifyValue(val.type, value);
         if (l.loc.name) {
           if (l.loc.name.name === l.name) {
             strValue = `${l.loc.name.name}: ${strValue}`;
