@@ -17,6 +17,23 @@ export interface CodeLocation {
   start: CodePosition;
   end: CodePosition;
 }
+export interface ArgUsageLocation {
+  /**
+   * where in the story source code is the argument used
+   * code location is relative to the start of the story
+   */
+  loc: CodeLocation;
+
+  /**
+   * optional name for the usage of the argument
+   * example: export const story = ({ value }) => <Story value={{ age: value }} />;
+   * in this example the name will be 'age'
+   */
+  name?: {
+    name: string;
+    loc: CodeLocation;
+  };
+}
 
 /**
  * arguments passed to the 'story' as extracted by an AST loader
@@ -38,7 +55,7 @@ export interface StoryArgument {
   /**
    * list of locations where the argument is used in the body of the story
    */
-  usage?: CodeLocation[];
+  usage?: ArgUsageLocation[];
 }
 
 /**

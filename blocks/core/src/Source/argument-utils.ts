@@ -2,7 +2,7 @@ import jsStringEscape from 'js-string-escape';
 import {
   ControlTypes,
   StoryArguments,
-  CodeLocation,
+  ArgUsageLocation,
 } from '@component-controls/specification';
 import {
   LoadedComponentControl,
@@ -20,7 +20,7 @@ export const getArgumentNames = (args: StoryArguments): string[] => {
 
 interface UsageProp {
   name: string;
-  loc: CodeLocation;
+  loc: ArgUsageLocation;
 }
 export const getArgumentsUsage = (args: StoryArguments): UsageProp[] => {
   return args.reduce((acc: any, a) => {
@@ -56,18 +56,24 @@ export const mergeControlValues = (
   //sort locations in reverse order, so to replace source backwards
   locations
     .sort((a, b) => {
-      if (a.loc.start.line === b.loc.start.line) {
-        return b.loc.start.column - a.loc.start.column;
+      if (a.loc.loc.start.line === b.loc.loc.start.line) {
+        return b.loc.loc.start.column - a.loc.loc.start.column;
       }
-      return b.loc.start.line - a.loc.start.line;
+      return b.loc.loc.start.line - a.loc.loc.start.line;
     })
     .forEach(l => {
-      const { start, end } = l.loc;
+      const { start, end } = l.loc.loc;
       const val: LoadedComponentControl = controls[l.name];
       if (val && val.value !== val.defaultValue) {
         const value: any = val.value;
-        const strValue: string =
+        let strValue: string =
           val.type === ControlTypes.TEXT ? `"${jsStringEscape(value)}"` : value;
+        console.log(l);
+        if (l.loc.name) {
+          if (l.loc.name.name === l.name) {
+            strValue = `${l.loc.name.name}: ${strValue}`;
+          }
+        }
         if (start.line === end.line) {
           lines[start.line] = replaceString(
             lines[start.line],

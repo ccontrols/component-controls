@@ -84,4 +84,12 @@ describe('prop-usage-locations', () => {
       await parseCSF('export const story = ({ name }) => name;'),
     ).toMatchSnapshot();
   });
+
+  it('expression usage', async () => {
+    await expect(
+      await parseCSF(
+        'export const selectProp = ({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;',
+      ),
+    ).toMatchSnapshot();
+  });
 });
