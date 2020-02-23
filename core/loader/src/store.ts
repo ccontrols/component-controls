@@ -1,3 +1,4 @@
+import { loader } from 'webpack';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { StoriesGroup, Story } from '@component-controls/specification';
 import { StoryStore, StoriesKind } from './types';
@@ -7,10 +8,14 @@ const store: StoryStore = {
   stories: {},
 };
 
-export const addStoriesKind = (kind: StoriesGroup) => {
+export const addStoriesKind = (
+  kind: StoriesGroup,
+  context: loader.LoaderContext,
+) => {
   let stories: StoriesKind;
   if (kind.title) {
     stories = {
+      fileName: context.resourcePath,
       title: kind.title,
       stories: [],
       source: kind.source,

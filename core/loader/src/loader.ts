@@ -21,7 +21,7 @@ module.exports.default = async function(source: string) {
     const time = new Date();
     const fileName = path.join(__dirname, 'story-store-data.js');
     fs.utimesSync(fileName, time, time);
-    addStoriesKind(stories);
+    addStoriesKind(stories, this);
   }
   return source;
 };
