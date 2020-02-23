@@ -5,15 +5,15 @@ import {
 } from '@component-controls/specification';
 import { adjustSourceLocation } from './utils';
 
-const findParameter = (
-  parameters: StoryArguments,
+const findArguments = (
+  args: StoryArguments,
   paramName: string,
 ): StoryArgument | undefined => {
   let result: StoryArgument | undefined;
-  for (let i = 0; i < parameters.length; i += 1) {
-    const p = parameters[i];
+  for (let i = 0; i < args.length; i += 1) {
+    const p = args[i];
     if (Array.isArray(p.value)) {
-      result = findParameter(p.value, paramName);
+      result = findArguments(p.value, paramName);
       if (result) {
         break;
       }
@@ -26,22 +26,24 @@ const findParameter = (
   }
   return result;
 };
-export const extractParametersUsage = (
+export const addArgumentUsage = (
   story: Story,
-  parameters: StoryArguments,
+  args: StoryArguments,
+  node: any,
 ) => {
+  const param = findArguments(args, node.name);
+
+  if (param) {
+    if (param.usage === undefined) {
+      param.usage = [];
+    }
+    param.usage.push(adjustSourceLocation(story, node.loc));
+  }
+};
+export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
   return {
     Identifier: (path: any) => {
-      const node = path.node;
-
-      const param = findParameter(parameters, node.name);
-
-      if (param) {
-        if (param.usage === undefined) {
-          param.usage = [];
-        }
-        param.usage.push(adjustSourceLocation(story, node.loc));
-      }
+      addArgumentUsage(story, args, path.node);
     },
   };
 };

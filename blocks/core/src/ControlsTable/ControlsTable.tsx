@@ -197,8 +197,8 @@ export const ControlsTable: FC<ControlsTableProps & {
                   item.onAction(props);
                 },
               })),
-              { title: 'Reset', onClick: onReset },
-              { title: copied ? 'Copied' : 'Copy', onClick: onCopy },
+              { title: 'reset', onClick: onReset },
+              { title: copied ? 'copied' : 'copy', onClick: onCopy },
             ]}
           />
         </StyledContainer>

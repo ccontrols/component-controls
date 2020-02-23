@@ -5,7 +5,10 @@ import {
   StoryArguments,
 } from '@component-controls/specification';
 import { adjustSourceLocation } from './utils';
-import { extractParametersUsage } from './control-values-in-source';
+import {
+  extractArgumentsUsage,
+  addArgumentUsage,
+} from './control-values-in-source';
 
 interface KeyType {
   name: string;
@@ -70,12 +73,16 @@ export const extractFunctionParameters = (story: Story) => ({
     }
     if (story.arguments.length) {
       const params = story.arguments[0];
-      traverse(
-        node.body,
-        extractParametersUsage(story, [params]),
-        path.scope,
-        path,
-      );
+      if (node.body.type === 'Identifier') {
+        addArgumentUsage(story, [params], node.body);
+      } else {
+        traverse(
+          node.body,
+          extractArgumentsUsage(story, [params]),
+          path.scope,
+          path,
+        );
+      }
     }
     path.skip();
   },

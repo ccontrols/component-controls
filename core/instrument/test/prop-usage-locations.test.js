@@ -79,4 +79,9 @@ describe('prop-usage-locations', () => {
       await parseCSF('export const myStory = ({ text }) => `${text}`;'),
     ).toMatchSnapshot();
   });
+  it('empty body', async () => {
+    await expect(
+      await parseCSF('export const story = ({ name }) => name;'),
+    ).toMatchSnapshot();
+  });
 });

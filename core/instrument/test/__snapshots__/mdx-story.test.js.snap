@@ -24,11 +24,11 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 8,
+              "column": 5,
               "line": 0,
             },
             "start": Object {
-              "column": 3,
+              "column": 0,
               "line": 0,
             },
           },
@@ -82,7 +82,7 @@ Object {
               "line": 5,
             },
             "start": Object {
-              "column": 4,
+              "column": 1,
               "line": 0,
             },
           },
@@ -196,11 +196,11 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 9,
+              "column": 6,
               "line": 0,
             },
             "start": Object {
-              "column": 4,
+              "column": 1,
               "line": 0,
             },
           },
@@ -210,11 +210,11 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 18,
+              "column": 15,
               "line": 0,
             },
             "start": Object {
-              "column": 11,
+              "column": 8,
               "line": 0,
             },
           },
@@ -268,7 +268,7 @@ Object {
               "line": 2,
             },
             "start": Object {
-              "column": 4,
+              "column": 1,
               "line": 0,
             },
           },
@@ -354,7 +354,7 @@ Object {
               "line": 2,
             },
             "start": Object {
-              "column": 4,
+              "column": 1,
               "line": 0,
             },
           },

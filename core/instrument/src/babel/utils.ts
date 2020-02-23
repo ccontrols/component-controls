@@ -10,11 +10,17 @@ export const adjustSourceLocation = (
   return {
     start: {
       line: loc.start.line - story.location.start.line,
-      column: loc.start.column,
+      column:
+        loc.start.line === story.location.start.line
+          ? loc.start.column - story.location.start.column
+          : loc.start.column,
     },
     end: {
       line: loc.end.line - story.location.start.line,
-      column: loc.end.column,
+      column:
+        loc.end.line === story.location.start.line
+          ? loc.end.column - story.location.start.column
+          : loc.end.column,
     },
   };
 };

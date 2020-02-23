@@ -130,7 +130,7 @@ export const Source: FC<SourceProps> = ({
     actions.push({ title: 'values', onClick: onMergeValues });
   }
 
-  actions.push({ title: copied ? 'Copied' : 'Copy', onClick: onCopy });
+  actions.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
   let colorIdx = 0;
   const colorRoll = parameters
     ? parameters.map(() => {
