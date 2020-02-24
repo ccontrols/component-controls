@@ -3,6 +3,7 @@ import {
   StoryArguments,
   ArgUsageLocation,
   ControlTypes,
+  ComponentControl,
 } from '@component-controls/specification';
 import {
   LoadedComponentControl,
@@ -33,10 +34,22 @@ const stringifyValue = (type: string, value: any): string => {
   switch (type) {
     case ControlTypes.TEXT:
       return `"${jsStringEscape(value)}"`;
-    case ControlTypes.OPTIONS:
-      return `[${stringifyValue(ControlTypes.TEXT, value)}]`;
+    case ControlTypes.OBJECT:
+      if (value) {
+        return `{ ${Object.keys(value)
+          .map((key: string) => {
+            const obj: ComponentControl = value[key];
+            return `${key}: ${stringifyValue(obj.type, obj.value)}`;
+          })
+          .join(', ')} }`;
+      }
+      return '';
+
     default:
-      return value;
+      if (Array.isArray(value)) {
+        return `[${stringifyValue(ControlTypes.OPTIONS, value.join(', '))}]`;
+      }
+      return typeof value === 'string' ? `"${jsStringEscape(value)}"` : value;
   }
 };
 const replaceString = (
