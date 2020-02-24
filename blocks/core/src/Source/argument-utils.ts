@@ -12,7 +12,7 @@ import {
 export const getArgumentNames = (args: StoryArguments): string[] => {
   return args.reduce((acc: string[], a) => {
     if (Array.isArray(a.value)) {
-      return [...acc, ...getArgumentNames(a.value as StoryArguments)];
+      return [...acc, ...getArgumentNames(a.value)];
     }
     return [...acc, a.value];
   }, []);
@@ -62,7 +62,6 @@ export const mergeControlValues = (
 ): string => {
   const locations = getArgumentsUsage(args);
   const lines = source.split('\n');
-
   //sort locations in reverse order, so to replace source backwards
   locations
     .sort((a, b) => {

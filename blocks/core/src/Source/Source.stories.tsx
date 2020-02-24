@@ -176,13 +176,15 @@ export const controlsValues = () => {
               name: 'name',
               usage: [
                 {
-                  end: {
-                    column: 65,
-                    line: 0,
-                  },
-                  start: {
-                    column: 61,
-                    line: 0,
+                  loc: {
+                    end: {
+                      column: 65,
+                      line: 0,
+                    },
+                    start: {
+                      column: 61,
+                      line: 0,
+                    },
                   },
                 },
               ],
@@ -202,13 +204,15 @@ export const controlsValues = () => {
               name: 'age',
               usage: [
                 {
-                  end: {
-                    column: 75,
-                    line: 0,
-                  },
-                  start: {
-                    column: 72,
-                    line: 0,
+                  loc: {
+                    end: {
+                      column: 75,
+                      line: 0,
+                    },
+                    start: {
+                      column: 72,
+                      line: 0,
+                    },
                   },
                 },
               ],
