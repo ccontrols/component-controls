@@ -94,9 +94,7 @@ export const Source: FC<SourceProps> = ({
     parentTheme || 'nightowl-light',
   );
 
-  const [viewStyle, setViewStyle] = React.useState<ViewStyle>(
-    !!controls && !!args ? 'values' : 'tags',
-  );
+  const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
 
   let prismTheme = themes[themeName] || defaultProps.theme;
@@ -113,7 +111,7 @@ export const Source: FC<SourceProps> = ({
     setViewStyle(
       viewStyle === 'plain'
         ? 'tags'
-        : viewStyle === 'tags'
+        : viewStyle === 'tags' && !!controls && !!args
         ? 'values'
         : 'plain',
     );
@@ -136,7 +134,7 @@ export const Source: FC<SourceProps> = ({
   if (parentTheme === undefined) {
     actions.push({ title: themeName, onClick: onRotateTheme });
   }
-  if (controls && args) {
+  if (args) {
     actions.push({ title: viewStyle, onClick: onMergeValues });
   }
 
