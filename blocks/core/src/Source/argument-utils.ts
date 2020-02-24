@@ -9,15 +9,6 @@ import {
   LoadedComponentControls,
 } from '@component-controls/core';
 
-export const getArgumentNames = (args: StoryArguments): string[] => {
-  return args.reduce((acc: string[], a) => {
-    if (Array.isArray(a.value)) {
-      return [...acc, ...getArgumentNames(a.value)];
-    }
-    return [...acc, a.value];
-  }, []);
-};
-
 interface UsageProp {
   name: string;
   loc: ArgUsageLocation;

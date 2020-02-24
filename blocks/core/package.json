@@ -36,7 +36,6 @@
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
     "polished": "^3.4.4",
-    "prettier": "^1.19.1",
     "prism-react-renderer": "^1.0.2",
     "qs": "^6.9.1",
     "react": "^16.8.3",

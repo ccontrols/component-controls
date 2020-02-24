@@ -10,12 +10,12 @@ Object {
       "arguments": Array [],
       "loc": Object {
         "end": Object {
-          "column": 37,
-          "line": 2,
+          "column": 31,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -31,12 +31,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 15,
-          "line": 3,
+          "column": 9,
+          "line": 2,
         },
         "start": Position {
-          "column": 8,
-          "line": 3,
+          "column": 2,
+          "line": 2,
         },
       },
       "name": "test",
@@ -59,12 +59,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 49,
-          "line": 3,
+          "column": 41,
+          "line": 2,
         },
         "start": Position {
-          "column": 10,
-          "line": 3,
+          "column": 2,
+          "line": 2,
         },
       },
       "name": "title",
@@ -87,12 +87,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 31,
-          "line": 3,
+          "column": 25,
+          "line": 2,
         },
         "start": Position {
-          "column": 8,
-          "line": 3,
+          "column": 2,
+          "line": 2,
         },
       },
       "name": "title",
@@ -101,12 +101,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 32,
-          "line": 4,
+          "column": 26,
+          "line": 3,
         },
         "start": Position {
-          "column": 8,
-          "line": 4,
+          "column": 2,
+          "line": 3,
         },
       },
       "name": "component",
@@ -115,12 +115,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 9,
-          "line": 14,
+          "column": 3,
+          "line": 13,
         },
         "start": Position {
-          "column": 8,
-          "line": 5,
+          "column": 2,
+          "line": 4,
         },
       },
       "name": "parameters",
@@ -128,12 +128,12 @@ Object {
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 11,
-              "line": 13,
+              "column": 5,
+              "line": 12,
             },
             "start": Position {
-              "column": 10,
-              "line": 6,
+              "column": 4,
+              "line": 5,
             },
           },
           "name": "controls",
@@ -141,12 +141,12 @@ Object {
             Object {
               "loc": SourceLocation {
                 "end": Position {
-                  "column": 13,
-                  "line": 12,
+                  "column": 7,
+                  "line": 11,
                 },
                 "start": Position {
-                  "column": 12,
-                  "line": 7,
+                  "column": 6,
+                  "line": 6,
                 },
               },
               "name": "name",
@@ -154,12 +154,12 @@ Object {
                 Object {
                   "loc": SourceLocation {
                     "end": Position {
-                      "column": 37,
-                      "line": 8,
+                      "column": 31,
+                      "line": 7,
                     },
                     "start": Position {
-                      "column": 14,
-                      "line": 8,
+                      "column": 8,
+                      "line": 7,
                     },
                   },
                   "name": "type",
@@ -168,12 +168,12 @@ Object {
                 Object {
                   "loc": SourceLocation {
                     "end": Position {
-                      "column": 27,
-                      "line": 9,
+                      "column": 21,
+                      "line": 8,
                     },
                     "start": Position {
-                      "column": 14,
-                      "line": 9,
+                      "column": 8,
+                      "line": 8,
                     },
                   },
                   "name": "label",
@@ -182,12 +182,12 @@ Object {
                 Object {
                   "loc": SourceLocation {
                     "end": Position {
-                      "column": 27,
-                      "line": 10,
+                      "column": 21,
+                      "line": 9,
                     },
                     "start": Position {
-                      "column": 14,
-                      "line": 10,
+                      "column": 8,
+                      "line": 9,
                     },
                   },
                   "name": "value",
@@ -196,12 +196,12 @@ Object {
                 Object {
                   "loc": SourceLocation {
                     "end": Position {
-                      "column": 25,
-                      "line": 11,
+                      "column": 19,
+                      "line": 10,
                     },
                     "start": Position {
-                      "column": 14,
-                      "line": 11,
+                      "column": 8,
+                      "line": 10,
                     },
                   },
                   "name": "order",
@@ -241,12 +241,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 49,
-          "line": 3,
+          "column": 41,
+          "line": 2,
         },
         "start": Position {
-          "column": 10,
-          "line": 3,
+          "column": 2,
+          "line": 2,
         },
       },
       "name": "title",
@@ -255,12 +255,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 11,
-          "line": 9,
+          "column": 3,
+          "line": 8,
         },
         "start": Position {
-          "column": 10,
-          "line": 4,
+          "column": 2,
+          "line": 3,
         },
       },
       "name": "parameters",
@@ -268,12 +268,12 @@ Object {
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 36,
-              "line": 5,
+              "column": 28,
+              "line": 4,
             },
             "start": Position {
-              "column": 12,
-              "line": 5,
+              "column": 4,
+              "line": 4,
             },
           },
           "name": "component",
@@ -282,12 +282,12 @@ Object {
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 13,
-              "line": 8,
+              "column": 5,
+              "line": 7,
             },
             "start": Position {
-              "column": 12,
-              "line": 6,
+              "column": 4,
+              "line": 5,
             },
           },
           "name": "addonControls",
@@ -295,12 +295,12 @@ Object {
             Object {
               "loc": SourceLocation {
                 "end": Position {
-                  "column": 26,
-                  "line": 7,
+                  "column": 18,
+                  "line": 6,
                 },
                 "start": Position {
-                  "column": 14,
-                  "line": 7,
+                  "column": 6,
+                  "line": 6,
                 },
               },
               "name": "smart",

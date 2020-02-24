@@ -6,12 +6,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -50,12 +50,12 @@ import Button from '../components/BaseButton';
       ],
       "loc": Object {
         "end": Object {
-          "column": 22,
-          "line": 24,
+          "column": 57,
+          "line": 28,
         },
         "start": Object {
-          "column": 3,
-          "line": 24,
+          "column": 38,
+          "line": 28,
         },
       },
       "name": "story-with-props",
@@ -72,12 +72,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -102,8 +102,8 @@ import Button from '../components/BaseButton';
         Object {
           "loc": Object {
             "end": Object {
-              "column": 13,
-              "line": 5,
+              "column": 9,
+              "line": 4,
             },
             "start": Object {
               "column": 1,
@@ -115,11 +115,11 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 16,
-                  "line": 3,
+                  "column": 31,
+                  "line": 1,
                 },
                 "start": Object {
-                  "column": 14,
+                  "column": 16,
                   "line": 1,
                 },
               },
@@ -128,12 +128,12 @@ import Button from '../components/BaseButton';
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 15,
-                      "line": 2,
+                      "column": 23,
+                      "line": 1,
                     },
                     "start": Object {
-                      "column": 10,
-                      "line": 2,
+                      "column": 18,
+                      "line": 1,
                     },
                   },
                   "name": "first",
@@ -142,12 +142,12 @@ import Button from '../components/BaseButton';
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 14,
-                      "line": 3,
+                      "column": 29,
+                      "line": 1,
                     },
                     "start": Object {
-                      "column": 10,
-                      "line": 3,
+                      "column": 25,
+                      "line": 1,
                     },
                   },
                   "name": "last",
@@ -158,12 +158,12 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 11,
-                  "line": 5,
+                  "column": 13,
+                  "line": 3,
                 },
                 "start": Object {
-                  "column": 8,
-                  "line": 5,
+                  "column": 10,
+                  "line": 3,
                 },
               },
               "name": "age",
@@ -174,22 +174,20 @@ import Button from '../components/BaseButton';
       ],
       "loc": Object {
         "end": Object {
-          "column": 16,
-          "line": 30,
+          "column": 24,
+          "line": 33,
         },
         "start": Object {
-          "column": 3,
-          "line": 24,
+          "column": 9,
+          "line": 29,
         },
       },
       "name": "story-with-props",
       "source": "({
-        name: {
-          first,
-          last },
+          name: { first, last },
 
-        age }) =>
-      <Button />}",
+          age
+        }) => <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -202,12 +200,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -260,12 +258,12 @@ import Button from '../components/BaseButton';
       ],
       "loc": Object {
         "end": Object {
-          "column": 33,
-          "line": 24,
+          "column": 68,
+          "line": 28,
         },
         "start": Object {
-          "column": 3,
-          "line": 24,
+          "column": 38,
+          "line": 28,
         },
       },
       "name": "story-with-props",
@@ -282,12 +280,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -312,8 +310,8 @@ import Button from '../components/BaseButton';
         Object {
           "loc": Object {
             "end": Object {
-              "column": 13,
-              "line": 2,
+              "column": 22,
+              "line": 0,
             },
             "start": Object {
               "column": 1,
@@ -325,12 +323,12 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 20,
-                  "line": 1,
+                  "column": 15,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 14,
-                  "line": 1,
+                  "column": 9,
+                  "line": 0,
                 },
               },
               "name": "name",
@@ -339,12 +337,12 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 11,
-                  "line": 2,
+                  "column": 20,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 8,
-                  "line": 2,
+                  "column": 17,
+                  "line": 0,
                 },
               },
               "name": "age",
@@ -355,19 +353,16 @@ import Button from '../components/BaseButton';
       ],
       "loc": Object {
         "end": Object {
-          "column": 16,
-          "line": 27,
+          "column": 46,
+          "line": 29,
         },
         "start": Object {
-          "column": 3,
-          "line": 24,
+          "column": 9,
+          "line": 29,
         },
       },
       "name": "story-with-props",
-      "source": "({
-        name: MyName,
-        age }) =>
-      <Button />}",
+      "source": "({ name: MyName, age }) => <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -380,12 +375,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -410,8 +405,8 @@ import Button from '../components/BaseButton';
         Object {
           "loc": Object {
             "end": Object {
-              "column": 13,
-              "line": 2,
+              "column": 14,
+              "line": 0,
             },
             "start": Object {
               "column": 1,
@@ -423,12 +418,12 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 12,
-                  "line": 1,
+                  "column": 7,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 8,
-                  "line": 1,
+                  "column": 3,
+                  "line": 0,
                 },
               },
               "name": "name",
@@ -437,12 +432,12 @@ import Button from '../components/BaseButton';
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 11,
-                  "line": 2,
+                  "column": 12,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 8,
-                  "line": 2,
+                  "column": 9,
+                  "line": 0,
                 },
               },
               "name": "age",
@@ -453,19 +448,16 @@ import Button from '../components/BaseButton';
       ],
       "loc": Object {
         "end": Object {
-          "column": 16,
-          "line": 27,
+          "column": 67,
+          "line": 28,
         },
         "start": Object {
-          "column": 3,
-          "line": 24,
+          "column": 38,
+          "line": 28,
         },
       },
       "name": "story-with-props",
-      "source": "({
-        name,
-        age }) =>
-      <Button />}",
+      "source": "({ name, age }) => <Button />}",
     },
   },
   "title": "Storybook/MDX",
@@ -478,12 +470,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",
@@ -506,18 +498,18 @@ import Button from '../components/BaseButton';
     "smart story": Object {
       "loc": Object {
         "end": Object {
-          "column": 12,
-          "line": 25,
+          "column": 14,
+          "line": 30,
         },
         "start": Object {
-          "column": 4,
-          "line": 23,
+          "column": 6,
+          "line": 28,
         },
       },
       "name": "smart story",
       "source": "<Story name=\\"smart story\\">
-  <Button />
-    </Story>",
+        <Button />
+      </Story>",
     },
   },
   "title": "Storybook/MDX",
@@ -530,12 +522,12 @@ Object {
     Object {
       "loc": Object {
         "end": Object {
-          "column": 31,
-          "line": 20,
+          "column": 29,
+          "line": 22,
         },
         "start": Object {
-          "column": 10,
-          "line": 20,
+          "column": 8,
+          "line": 22,
         },
       },
       "name": "title",

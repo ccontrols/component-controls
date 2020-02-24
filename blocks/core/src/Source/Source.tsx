@@ -1,18 +1,8 @@
-/** @jsx jsx */
-/* eslint react/jsx-key: 0 */
-import { jsx } from 'theme-ui';
 import React, { FC, MouseEvent } from 'react';
 import { StoryArguments } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
+import { defaultProps, Language, PrismTheme } from 'prism-react-renderer';
 
-import { Options } from 'prettier';
-import prettier from 'prettier/standalone';
-import parserBabel from 'prettier/parser-babylon';
-import Highlight, {
-  defaultProps,
-  Language,
-  PrismTheme,
-} from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
 import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
@@ -24,13 +14,11 @@ import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import ultramin from 'prism-react-renderer/themes/ultramin';
 import vsDark from 'prism-react-renderer/themes/vsDark';
-import { Styled } from 'theme-ui';
 import copy from 'copy-to-clipboard';
-import { transparentize } from 'polished';
 import { ActionBar } from '../ActionBar';
 import { BlockContainer } from '../BlockContainer';
-import { getArgumentNames, mergeControlValues } from './argument-utils';
-
+import { mergeControlValues } from './argument-utils';
+import { TaggedSource } from './TaggedSource';
 export type ThemeType =
   | 'nightowl-light'
   | 'nightowl'
@@ -75,11 +63,6 @@ export interface SourceProps {
    */
   theme?: ThemeType;
   /**
-   * options for the prettier integration
-   * if set to false, will utrn prettier off
-   */
-  prettier?: null | Options;
-  /**
    * a list of story arguments accepted by Source
    * this is used to syntax-highlight the arguments
    * and their usage
@@ -103,7 +86,6 @@ export const Source: FC<SourceProps> = ({
   children = '',
   language = 'jsx',
   theme: parentTheme,
-  prettier: prettierOptions,
   args,
   controls,
   fileSource,
@@ -117,9 +99,6 @@ export const Source: FC<SourceProps> = ({
   );
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
 
-  const parameters: string[] | undefined = args
-    ? getArgumentNames(args)
-    : undefined;
   let prismTheme = themes[themeName] || defaultProps.theme;
   const [copied, setCopied] = React.useState(false);
 
@@ -162,16 +141,6 @@ export const Source: FC<SourceProps> = ({
   }
 
   actions.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
-  let colorIdx = 0;
-  const colorRoll = parameters
-    ? parameters.map(() => {
-        const style = prismTheme.styles[colorIdx];
-        const color: string =
-          style.style.color || prismTheme.plain.color || '#fff';
-        colorIdx = colorIdx < prismTheme.styles.length - 1 ? colorIdx + 1 : 0;
-        return color;
-      })
-    : [];
 
   let source: string;
   if (!showFileSource) {
@@ -179,89 +148,18 @@ export const Source: FC<SourceProps> = ({
     if (viewStyle === 'values' && args && controls) {
       code = mergeControlValues(code, args, controls);
     }
-    source =
-      prettierOptions !== null
-        ? prettier.format(code, {
-            parser: 'babel',
-            plugins: [parserBabel],
-            ...prettierOptions,
-          })
-        : code;
+    source = code;
   } else {
     source = fileSource || '';
   }
   return (
     <BlockContainer>
-      <Highlight
-        {...defaultProps}
+      <TaggedSource
+        args={viewStyle === 'tags' && !showFileSource ? args : undefined}
+        source={source}
         theme={prismTheme}
-        code={source}
         language={language}
-      >
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <Styled.pre
-            className={`${className}`}
-            style={{ ...style, padding: '10px 10px 25px 10px', margin: 0 }}
-          >
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => {
-                  if (viewStyle === 'tags') {
-                    const paramIdx = parameters
-                      ? parameters.indexOf(token.content.trim())
-                      : -1;
-                    const isParameterDefiinition =
-                      paramIdx > -1 && token.types.indexOf('parameter') > -1;
-                    const isParameterUsage =
-                      paramIdx > -1 &&
-                      ((token.types.indexOf('attr-value') > -1 &&
-                        token.types.indexOf('spread') > -1) ||
-                        (token.types.indexOf('tag') > -1 &&
-                          token.types.indexOf('script') > -1));
-                    const isParam = isParameterDefiinition || isParameterUsage;
-                    if (isParam) {
-                      const splitToken = getTokenProps({
-                        token,
-                        key,
-                      }).children.split(/(\s+)/);
-                      console.log(splitToken);
-                      return splitToken.map(s =>
-                        s.trim().length ? (
-                          <span
-                            {...getTokenProps({ token, key })}
-                            sx={{
-                              display: 'inline-block',
-                              backgroundColor: transparentize(
-                                0.8,
-                                colorRoll[paramIdx],
-                              ),
-                              paddingLeft: 1,
-                              paddingRight: 1,
-                              border: `1px solid ${colorRoll[paramIdx]}`,
-                            }}
-                          >
-                            {s}
-                          </span>
-                        ) : (
-                          s
-                        ),
-                      );
-                    }
-                  }
-                  return (
-                    <span
-                      {...getTokenProps({ token, key })}
-                      sx={{
-                        display: 'inline-block',
-                      }}
-                    />
-                  );
-                })}
-              </div>
-            ))}
-          </Styled.pre>
-        )}
-      </Highlight>
+      />
       <ActionBar actionItems={actions} />
     </BlockContainer>
   );

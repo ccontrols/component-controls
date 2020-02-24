@@ -2,6 +2,8 @@ import * as parser from '@babel/parser';
 const mdx = require('@mdx-js/mdx');
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
+import prettier, { Options } from 'prettier';
+import parserBabel from 'prettier/parser-babylon';
 import { StoriesGroup, Story } from '@component-controls/specification';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
@@ -10,10 +12,20 @@ import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 type TraverseFn = (stories: StoriesGroup) => any;
 
 const parseSource = (
-  source: string,
+  code: string,
   traverseFn: TraverseFn,
   originalSource: string,
+  prettierOptions?: Options,
 ): StoriesGroup => {
+  const source =
+    prettierOptions !== null
+      ? prettier.format(code, {
+          parser: 'typescript',
+          plugins: [parserBabel],
+          ...prettierOptions,
+        })
+      : code;
+
   const ast = parser.parse(source, {
     sourceType: 'module',
     plugins: ['jsx', 'typescript'],

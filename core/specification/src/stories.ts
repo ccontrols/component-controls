@@ -17,6 +17,13 @@ export interface CodeLocation {
   start: CodePosition;
   end: CodePosition;
 }
+/**
+ * an identifier/variable.argument in the source code
+ */
+export interface SourceIdentifier {
+  name: string;
+  loc?: CodeLocation;
+}
 export interface ArgUsageLocation {
   /**
    * where in the story source code is the argument used
@@ -29,10 +36,7 @@ export interface ArgUsageLocation {
    * example: export const story = ({ value }) => <Story value={{ age: value }} />;
    * in this example the name will be 'age'
    */
-  name?: {
-    name: string;
-    loc: CodeLocation;
-  };
+  name?: SourceIdentifier;
 }
 
 /**

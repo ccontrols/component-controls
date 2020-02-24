@@ -16,11 +16,11 @@ export { myStory as exportedStory}
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 2,
+          "line": 1,
         },
         "start": Object {
           "column": 16,
-          "line": 2,
+          "line": 1,
         },
       },
       "name": "Custom story name",
@@ -28,12 +28,12 @@ export { myStory as exportedStory}
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 26,
-              "line": 4,
+              "column": 27,
+              "line": 3,
             },
             "start": Position {
-              "column": 1,
-              "line": 4,
+              "column": 2,
+              "line": 3,
             },
           },
           "name": "name",
@@ -77,11 +77,11 @@ export { myStory }
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 2,
+          "line": 1,
         },
         "start": Object {
           "column": 16,
-          "line": 2,
+          "line": 1,
         },
       },
       "name": "Custom story name",
@@ -89,12 +89,12 @@ export { myStory }
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 26,
-              "line": 4,
+              "column": 27,
+              "line": 3,
             },
             "start": Position {
-              "column": 1,
-              "line": 4,
+              "column": 2,
+              "line": 3,
             },
           },
           "name": "name",

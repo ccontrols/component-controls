@@ -21,12 +21,12 @@ Object {
       "arguments": Array [],
       "loc": Object {
         "end": Object {
-          "column": 37,
-          "line": 2,
+          "column": 31,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -70,12 +70,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 40,
-          "line": 2,
+          "column": 34,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -168,12 +168,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 67,
-          "line": 2,
+          "column": 61,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -222,12 +222,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 51,
-          "line": 2,
+          "column": 45,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -291,12 +291,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 57,
-          "line": 2,
+          "column": 51,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -360,12 +360,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 50,
-          "line": 2,
+          "column": 44,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -400,12 +400,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 54,
-          "line": 2,
+          "column": 48,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",

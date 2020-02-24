@@ -6,12 +6,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 32,
-          "line": 6,
+          "column": 28,
+          "line": 5,
         },
         "start": Position {
-          "column": 6,
-          "line": 6,
+          "column": 2,
+          "line": 5,
         },
       },
       "name": "title",
@@ -20,12 +20,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 23,
-          "line": 7,
+          "column": 19,
+          "line": 6,
         },
         "start": Position {
-          "column": 6,
-          "line": 7,
+          "column": 2,
+          "line": 6,
         },
       },
       "name": "component",
@@ -67,35 +67,35 @@ Object {
       "arguments": Array [],
       "loc": Object {
         "end": Object {
-          "column": 5,
-          "line": 29,
+          "column": 1,
+          "line": 28,
         },
         "start": Object {
-          "column": 30,
-          "line": 10,
+          "column": 26,
+          "line": 9,
         },
       },
       "name": "allToggles",
       "source": "() => {
-      const [checked, setChecked] = React.useState(false);
-      return (
-        <div>
-          <p>Default toggle</p>
-          <Toggle checked={checked} onChange={check => setChecked(check)} />
-          <br />
-          <p>Custom labels</p>
-          <Toggle
-            checked={checked}
-            labels={{
-              true: 'YES',
-              false: 'NO!',
-            }}
-            onChange={check => setChecked(check)}
-          />
-          <br />
-        </div>
-      );
-    };",
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <div>
+      <p>Default toggle</p>
+      <Toggle checked={checked} onChange={check => setChecked(check)} />
+      <br />
+      <p>Custom labels</p>
+      <Toggle
+        checked={checked}
+        labels={{
+          true: \\"YES\\",
+          false: \\"NO!\\"
+        }}
+        onChange={check => setChecked(check)}
+      />
+      <br />
+    </div>
+  );
+};",
     },
   },
   "title": "Components/Toggle",

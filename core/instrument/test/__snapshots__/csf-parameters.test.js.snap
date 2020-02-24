@@ -15,11 +15,11 @@ myStory.story = {
       "loc": Object {
         "end": Object {
           "column": 31,
-          "line": 2,
+          "line": 1,
         },
         "start": Object {
           "column": 23,
-          "line": 2,
+          "line": 1,
         },
       },
       "name": "Custom story name",
@@ -27,12 +27,12 @@ myStory.story = {
         Object {
           "loc": SourceLocation {
             "end": Position {
-              "column": 26,
-              "line": 4,
+              "column": 27,
+              "line": 3,
             },
             "start": Position {
-              "column": 1,
-              "line": 4,
+              "column": 2,
+              "line": 3,
             },
           },
           "name": "name",
@@ -66,11 +66,11 @@ myStory.story = {
       "loc": Object {
         "end": Object {
           "column": 31,
-          "line": 2,
+          "line": 1,
         },
         "start": Object {
           "column": 23,
-          "line": 2,
+          "line": 1,
         },
       },
       "name": "Custom story name",
@@ -79,11 +79,11 @@ myStory.story = {
           "loc": SourceLocation {
             "end": Position {
               "column": 27,
-              "line": 4,
+              "line": 3,
             },
             "start": Position {
               "column": 2,
-              "line": 4,
+              "line": 3,
             },
           },
           "name": "name",
@@ -93,11 +93,11 @@ myStory.story = {
           "loc": SourceLocation {
             "end": Position {
               "column": 3,
-              "line": 10,
+              "line": 9,
             },
             "start": Position {
               "column": 2,
-              "line": 5,
+              "line": 4,
             },
           },
           "name": "parameters",
@@ -106,11 +106,11 @@ myStory.story = {
               "loc": SourceLocation {
                 "end": Position {
                   "column": 28,
-                  "line": 6,
+                  "line": 5,
                 },
                 "start": Position {
                   "column": 4,
-                  "line": 6,
+                  "line": 5,
                 },
               },
               "name": "component",
@@ -120,11 +120,11 @@ myStory.story = {
               "loc": SourceLocation {
                 "end": Position {
                   "column": 5,
-                  "line": 9,
+                  "line": 8,
                 },
                 "start": Position {
                   "column": 4,
-                  "line": 7,
+                  "line": 6,
                 },
               },
               "name": "addonControls",
@@ -133,11 +133,11 @@ myStory.story = {
                   "loc": SourceLocation {
                     "end": Position {
                       "column": 18,
-                      "line": 8,
+                      "line": 7,
                     },
                     "start": Position {
                       "column": 6,
-                      "line": 8,
+                      "line": 7,
                     },
                   },
                   "name": "smart",
@@ -182,11 +182,11 @@ myStory.story = {
       "loc": Object {
         "end": Object {
           "column": 31,
-          "line": 2,
+          "line": 1,
         },
         "start": Object {
           "column": 23,
-          "line": 2,
+          "line": 1,
         },
       },
       "name": "Custom story name",
@@ -195,11 +195,11 @@ myStory.story = {
           "loc": SourceLocation {
             "end": Position {
               "column": 27,
-              "line": 4,
+              "line": 3,
             },
             "start": Position {
               "column": 2,
-              "line": 4,
+              "line": 3,
             },
           },
           "name": "name",
@@ -209,11 +209,11 @@ myStory.story = {
           "loc": SourceLocation {
             "end": Position {
               "column": 3,
-              "line": 17,
+              "line": 16,
             },
             "start": Position {
               "column": 2,
-              "line": 5,
+              "line": 4,
             },
           },
           "name": "parameters",
@@ -222,11 +222,11 @@ myStory.story = {
               "loc": SourceLocation {
                 "end": Position {
                   "column": 5,
-                  "line": 13,
+                  "line": 12,
                 },
                 "start": Position {
                   "column": 4,
-                  "line": 6,
+                  "line": 5,
                 },
               },
               "name": "controls",
@@ -235,11 +235,11 @@ myStory.story = {
                   "loc": SourceLocation {
                     "end": Position {
                       "column": 7,
-                      "line": 12,
+                      "line": 11,
                     },
                     "start": Position {
                       "column": 6,
-                      "line": 7,
+                      "line": 6,
                     },
                   },
                   "name": "name",
@@ -248,11 +248,11 @@ myStory.story = {
                       "loc": SourceLocation {
                         "end": Position {
                           "column": 31,
-                          "line": 8,
+                          "line": 7,
                         },
                         "start": Position {
                           "column": 8,
-                          "line": 8,
+                          "line": 7,
                         },
                       },
                       "name": "type",
@@ -262,11 +262,11 @@ myStory.story = {
                       "loc": SourceLocation {
                         "end": Position {
                           "column": 21,
-                          "line": 9,
+                          "line": 8,
                         },
                         "start": Position {
                           "column": 8,
-                          "line": 9,
+                          "line": 8,
                         },
                       },
                       "name": "label",
@@ -276,11 +276,11 @@ myStory.story = {
                       "loc": SourceLocation {
                         "end": Position {
                           "column": 21,
-                          "line": 10,
+                          "line": 9,
                         },
                         "start": Position {
                           "column": 8,
-                          "line": 10,
+                          "line": 9,
                         },
                       },
                       "name": "value",
@@ -290,11 +290,11 @@ myStory.story = {
                       "loc": SourceLocation {
                         "end": Position {
                           "column": 19,
-                          "line": 11,
+                          "line": 10,
                         },
                         "start": Position {
                           "column": 8,
-                          "line": 11,
+                          "line": 10,
                         },
                       },
                       "name": "order",
@@ -308,11 +308,11 @@ myStory.story = {
               "loc": SourceLocation {
                 "end": Position {
                   "column": 5,
-                  "line": 16,
+                  "line": 15,
                 },
                 "start": Position {
                   "column": 4,
-                  "line": 14,
+                  "line": 13,
                 },
               },
               "name": "addonControls",
@@ -321,11 +321,11 @@ myStory.story = {
                   "loc": SourceLocation {
                     "end": Position {
                       "column": 18,
-                      "line": 15,
+                      "line": 14,
                     },
                     "start": Position {
                       "column": 6,
-                      "line": 15,
+                      "line": 14,
                     },
                   },
                   "name": "smart",

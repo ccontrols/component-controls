@@ -92,4 +92,15 @@ describe('prop-usage-locations', () => {
       ),
     ).toMatchSnapshot();
   });
+
+  it('nested arguments', async () => {
+    await expect(
+      await parseCSF(
+        `
+export const story = ({ height, weight, style: { border, color } }) => (
+  <div height={height} weight={weight} border={border} color={color} />
+);`,
+      ),
+    ).toMatchSnapshot();
+  });
 });

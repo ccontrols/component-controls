@@ -69,6 +69,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     });
   const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
+  console.log(JSON.stringify(myStory.arguments, null, 2));
   return (
     <BlockContext.Provider
       value={{

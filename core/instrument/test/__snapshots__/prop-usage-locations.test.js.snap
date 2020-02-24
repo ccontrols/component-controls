@@ -55,11 +55,11 @@ Object {
                     Object {
                       "loc": Object {
                         "end": Object {
-                          "column": 29,
+                          "column": 23,
                           "line": 2,
                         },
                         "start": Object {
-                          "column": 24,
+                          "column": 18,
                           "line": 2,
                         },
                       },
@@ -83,11 +83,11 @@ Object {
                     Object {
                       "loc": Object {
                         "end": Object {
-                          "column": 41,
+                          "column": 35,
                           "line": 2,
                         },
                         "start": Object {
-                          "column": 37,
+                          "column": 31,
                           "line": 2,
                         },
                       },
@@ -113,11 +113,11 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 25,
+                      "column": 19,
                       "line": 3,
                     },
                     "start": Object {
-                      "column": 22,
+                      "column": 16,
                       "line": 3,
                     },
                   },
@@ -130,21 +130,21 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 7,
-          "line": 7,
+          "column": 1,
+          "line": 6,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
       "source": "({ name: { first, last }, age }) => (
-        <>
-          <Story first={first} last={last} />
-          <Age value={age} />
-        </>
-      );",
+  <>
+    <Story first={first} last={last} />
+    <Age value={age} />
+  </>
+);",
     },
   },
 }
@@ -156,12 +156,12 @@ Object {
     Object {
       "loc": SourceLocation {
         "end": Position {
-          "column": 21,
-          "line": 3,
+          "column": 15,
+          "line": 2,
         },
         "start": Position {
-          "column": 8,
-          "line": 3,
+          "column": 2,
+          "line": 2,
         },
       },
       "name": "name",
@@ -199,12 +199,12 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 18,
-                  "line": 2,
+                  "column": 25,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 13,
-                  "line": 2,
+                  "column": 20,
+                  "line": 0,
                 },
               },
             },
@@ -214,20 +214,16 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 7,
-          "line": 10,
+          "column": 52,
+          "line": 5,
         },
         "start": Object {
-          "column": 29,
-          "line": 6,
+          "column": 23,
+          "line": 5,
         },
       },
       "name": "myStory",
-      "source": "props => (
-        <Story
-         {...props}
-        />
-      );",
+      "source": "props => <Story {...props} />;",
     },
   },
   "title": undefined,
@@ -336,23 +332,23 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 43,
-                      "line": 0,
+                      "column": 30,
+                      "line": 1,
                     },
                     "start": Object {
-                      "column": 38,
-                      "line": 0,
+                      "column": 25,
+                      "line": 1,
                     },
                   },
                   "name": Object {
                     "loc": Object {
                       "end": Object {
-                        "column": 43,
-                        "line": 0,
+                        "column": 30,
+                        "line": 1,
                       },
                       "start": Object {
-                        "column": 38,
-                        "line": 0,
+                        "column": 25,
+                        "line": 1,
                       },
                     },
                     "name": "value",
@@ -366,8 +362,8 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 88,
-          "line": 1,
+          "column": 1,
+          "line": 3,
         },
         "start": Object {
           "column": 26,
@@ -375,7 +371,9 @@ Object {
         },
       },
       "name": "selectProp",
-      "source": "({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;",
+      "source": "({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+);",
     },
   },
 }
@@ -423,11 +421,11 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 37,
+                      "column": 31,
                       "line": 2,
                     },
                     "start": Object {
-                      "column": 34,
+                      "column": 28,
                       "line": 2,
                     },
                   },
@@ -435,11 +433,11 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 25,
+                      "column": 19,
                       "line": 3,
                     },
                     "start": Object {
-                      "column": 22,
+                      "column": 16,
                       "line": 3,
                     },
                   },
@@ -452,21 +450,192 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 7,
-          "line": 7,
+          "column": 1,
+          "line": 6,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
       "source": "({ age }) => (
-        <>
-          <Story name={name} age={age} />
-          <Age value={age} />
-        </>  
-      );",
+  <>
+    <Story name={name} age={age} />
+    <Age value={age} />
+  </>
+);",
+    },
+  },
+}
+`;
+
+exports[`prop-usage-locations nested arguments 1`] = `
+Object {
+  "source": "
+export const story = ({ height, weight, style: { border, color } }) => (
+  <div height={height} weight={weight} border={border} color={color} />
+);",
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 45,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "height",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 15,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
+              "value": "height",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 17,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 11,
+                  "line": 0,
+                },
+              },
+              "name": "weight",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 37,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 31,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
+              "value": "weight",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 43,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 26,
+                  "line": 0,
+                },
+              },
+              "name": "style",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 34,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 28,
+                      "line": 0,
+                    },
+                  },
+                  "name": "border",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 53,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 47,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "border",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 41,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 36,
+                      "line": 0,
+                    },
+                  },
+                  "name": "color",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 67,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 62,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "color",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 1,
+        },
+      },
+      "name": "story",
+      "source": "({ height, weight, style: { border, color } }) => (
+  <div height={height} weight={weight} border={border} color={color} />
+);",
     },
   },
 }
@@ -511,12 +680,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 58,
-          "line": 2,
+          "column": 52,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -646,12 +815,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 69,
-          "line": 2,
+          "column": 63,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
@@ -698,12 +867,12 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 46,
-                      "line": 0,
+                      "column": 21,
+                      "line": 1,
                     },
                     "start": Object {
-                      "column": 40,
-                      "line": 0,
+                      "column": 15,
+                      "line": 1,
                     },
                   },
                 },
@@ -726,12 +895,12 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 56,
-                      "line": 0,
+                      "column": 31,
+                      "line": 1,
                     },
                     "start": Object {
-                      "column": 53,
-                      "line": 0,
+                      "column": 28,
+                      "line": 1,
                     },
                   },
                 },
@@ -743,16 +912,18 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 89,
-          "line": 2,
+          "column": 1,
+          "line": 3,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",
-      "source": "({ name: MyName, age }) => <Story name={MyName} age={age} />;",
+      "source": "({ name: MyName, age }) => (
+  <Story name={MyName} age={age} />
+);",
     },
   },
 }
@@ -840,12 +1011,12 @@ Object {
       ],
       "loc": Object {
         "end": Object {
-          "column": 79,
-          "line": 2,
+          "column": 73,
+          "line": 1,
         },
         "start": Object {
-          "column": 29,
-          "line": 2,
+          "column": 23,
+          "line": 1,
         },
       },
       "name": "myStory",

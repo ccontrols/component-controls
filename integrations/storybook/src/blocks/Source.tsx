@@ -14,12 +14,7 @@ export interface SourceProps {
 const SourceConsumner: FC<SourceProps> = () => (
   <BlockContext.Consumer>
     {({ source, controls, args, fileSource }) => (
-      <SourceBlock
-        controls={controls}
-        args={args}
-        prettier={null}
-        fileSource={fileSource}
-      >
+      <SourceBlock controls={controls} args={args} fileSource={fileSource}>
         {source}
       </SourceBlock>
     )}

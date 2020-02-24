@@ -16,8 +16,10 @@ interface KeyType {
 interface ASTPropNode {
   name?: string;
   loc: CodeLocation;
-  properties?: any;
+  properties?: ASTPropNode[];
   key?: KeyType;
+  value?: ASTPropNode;
+  left?: ASTPropNode;
 }
 export const extractFunctionParameters = (story: Story) => ({
   ArrowFunctionExpression: (path: any) => {
@@ -41,6 +43,19 @@ export const extractFunctionParameters = (story: Story) => ({
       parameters: StoryArguments,
       key?: KeyType,
     ) => {
+      const pushProperties = (properties: ASTPropNode[]) => {
+        const nestedParameters: StoryArguments = [];
+        parameters.push({
+          value: nestedParameters,
+          name: key ? key.name : node.name,
+          loc,
+        });
+        properties.forEach(({ value, key }) => {
+          if (value) {
+            pushParams(value, nestedParameters, key);
+          }
+        });
+      };
       const loc = adjustSourceLocation(story, node.loc);
       if (node.name) {
         parameters.push({
@@ -48,18 +63,10 @@ export const extractFunctionParameters = (story: Story) => ({
           name: key ? key.name : node.name,
           loc,
         });
+      } else if (node.left && node.left.properties) {
+        pushProperties(node.left.properties);
       } else if (node.properties) {
-        const nestedParameters: StoryArguments = [];
-        parameters.push({
-          value: nestedParameters,
-          name: key ? key.name : node.name,
-          loc,
-        });
-        node.properties.forEach(
-          ({ value, key }: { value: ASTPropNode; key?: KeyType }) => {
-            pushParams(value, nestedParameters, key);
-          },
-        );
+        pushProperties(node.properties);
       }
     };
     if (node.params) {

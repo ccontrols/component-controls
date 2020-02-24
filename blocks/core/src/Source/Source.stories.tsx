@@ -75,68 +75,246 @@ export const sample = () => {
   },
 };
 
+export const simplyStoryFn = () => (
+  <Source
+    args={[
+      {
+        value: [
+          {
+            value: 'text',
+            name: 'text',
+            loc: {
+              start: {
+                line: 0,
+                column: 3,
+              },
+              end: {
+                line: 0,
+                column: 7,
+              },
+            },
+            usage: [
+              {
+                loc: {
+                  start: {
+                    line: 0,
+                    column: 14,
+                  },
+                  end: {
+                    line: 0,
+                    column: 18,
+                  },
+                },
+              },
+            ],
+          },
+        ],
+        loc: {
+          start: {
+            line: 0,
+            column: 1,
+          },
+          end: {
+            line: 0,
+            column: 9,
+          },
+        },
+      },
+    ]}
+  >
+    {`({ text }) => text;`}
+  </Source>
+);
+
 export const props = () => {
   return (
     <Source
-      args={[{ value: 'props' }]}
-    >{`export const story = props => (<Source {...props} />)`}</Source>
+      args={[
+        {
+          value: 'props',
+          name: 'props',
+          loc: {
+            start: {
+              line: 0,
+              column: 0,
+            },
+            end: {
+              line: 0,
+              column: 5,
+            },
+          },
+          usage: [
+            {
+              loc: {
+                start: {
+                  line: 0,
+                  column: 19,
+                },
+                end: {
+                  line: 0,
+                  column: 24,
+                },
+              },
+            },
+          ],
+        },
+      ]}
+    >
+      {`props => (<div {...props} />);`}
+    </Source>
   );
 };
 
-const code = `
-export const story = ({ height, weight, style: { border, color }}) => (
-  <Source
-    height={height}
-    weight={weight}
-    border={border}
-    color={color}
-  />);
+const code = `({ height, weight, style: { border, color } }) => (
+  <div height={height} weight={weight} border={border} color={color} />
+);
 `;
 
 export const multiProps = () => {
   return (
     <Source
       args={[
-        { value: 'height' },
-        { value: 'weight' },
-        { value: 'border' },
-        { value: 'color' },
-      ]}
-    >
-      {code}
-    </Source>
-  );
-};
-
-export const noPrettier = () => {
-  return (
-    <Source
-      prettier={null}
-      args={[
-        { value: 'height' },
-        { value: 'weight' },
-        { value: 'border' },
-        { value: 'color' },
-      ]}
-    >
-      {code}
-    </Source>
-  );
-};
-
-export const prettierFormatting = () => {
-  return (
-    <Source
-      prettier={{
-        tabWidth: 4,
-        bracketSpacing: false,
-        printWidth: 40,
-      }}
-      args={[
-        { value: 'height' },
-        { value: 'weight' },
-        { value: 'border' },
-        { value: 'color' },
+        {
+          value: [
+            {
+              value: 'height',
+              name: 'height',
+              loc: {
+                start: {
+                  line: 0,
+                  column: 3,
+                },
+                end: {
+                  line: 0,
+                  column: 9,
+                },
+              },
+              usage: [
+                {
+                  loc: {
+                    start: {
+                      line: 1,
+                      column: 15,
+                    },
+                    end: {
+                      line: 1,
+                      column: 21,
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              value: 'weight',
+              name: 'weight',
+              loc: {
+                start: {
+                  line: 0,
+                  column: 11,
+                },
+                end: {
+                  line: 0,
+                  column: 17,
+                },
+              },
+              usage: [
+                {
+                  loc: {
+                    start: {
+                      line: 1,
+                      column: 31,
+                    },
+                    end: {
+                      line: 1,
+                      column: 37,
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              value: [
+                {
+                  value: 'border',
+                  name: 'border',
+                  loc: {
+                    start: {
+                      line: 0,
+                      column: 28,
+                    },
+                    end: {
+                      line: 0,
+                      column: 34,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          column: 47,
+                        },
+                        end: {
+                          line: 1,
+                          column: 53,
+                        },
+                      },
+                    },
+                  ],
+                },
+                {
+                  value: 'color',
+                  name: 'color',
+                  loc: {
+                    start: {
+                      line: 0,
+                      column: 36,
+                    },
+                    end: {
+                      line: 0,
+                      column: 41,
+                    },
+                  },
+                  usage: [
+                    {
+                      loc: {
+                        start: {
+                          line: 1,
+                          column: 62,
+                        },
+                        end: {
+                          line: 1,
+                          column: 67,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+              name: 'style',
+              loc: {
+                start: {
+                  line: 0,
+                  column: 26,
+                },
+                end: {
+                  line: 0,
+                  column: 48,
+                },
+              },
+            },
+          ],
+          loc: {
+            start: {
+              line: 0,
+              column: 1,
+            },
+            end: {
+              line: 0,
+              column: 50,
+            },
+          },
+        },
       ]}
     >
       {code}
@@ -147,7 +325,6 @@ export const prettierFormatting = () => {
 export const controlsValues = () => {
   return (
     <Source
-      prettier={null}
       args={[
         {
           loc: {
