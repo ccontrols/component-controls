@@ -19,7 +19,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "() => {};",
+      "source": "() => {}",
     },
   },
 }

@@ -30,7 +30,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "() => {};",
+      "source": "() => {}",
     },
   },
 }
@@ -79,7 +79,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => {};",
+      "source": "props => {}",
     },
   },
 }
@@ -177,7 +177,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name: { first, last }, age }) => {};",
+      "source": "({ name: { first, last }, age }) => {}",
     },
   },
 }
@@ -231,7 +231,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "(props, context) => {};",
+      "source": "(props, context) => {}",
     },
   },
 }
@@ -300,7 +300,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name: MyNam, age }) => {};",
+      "source": "({ name: MyNam, age }) => {}",
     },
   },
 }
@@ -369,7 +369,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name, age }) => {};",
+      "source": "({ name, age }) => {}",
     },
   },
 }
@@ -409,7 +409,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "(props: Properties) => {};",
+      "source": "(props: Properties) => {}",
     },
   },
 }

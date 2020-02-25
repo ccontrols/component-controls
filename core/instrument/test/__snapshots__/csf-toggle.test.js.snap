@@ -95,7 +95,7 @@ Object {
       <br />
     </div>
   );
-};",
+}",
     },
   },
   "title": "Components/Toggle",

@@ -144,7 +144,7 @@ Object {
     <Story first={first} last={last} />
     <Age value={age} />
   </>
-);",
+)",
     },
   },
 }
@@ -223,7 +223,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />;",
+      "source": "props => <Story {...props} />",
     },
   },
   "title": undefined,
@@ -291,7 +291,7 @@ Object {
         },
       },
       "name": "story",
-      "source": "({ name }) => name;",
+      "source": "({ name }) => name",
     },
   },
 }
@@ -373,7 +373,7 @@ Object {
       "name": "selectProp",
       "source": "({ value }) => (
   <div>{JSON.stringify({ value }, null, 2)}</div>
-);",
+)",
     },
   },
 }
@@ -464,7 +464,7 @@ Object {
     <Story name={name} age={age} />
     <Age value={age} />
   </>
-);",
+)",
     },
   },
 }
@@ -635,7 +635,7 @@ export const story = ({ height, weight, style: { border, color } }) => (
       "name": "story",
       "source": "({ height, weight, style: { border, color } }) => (
   <div height={height} weight={weight} border={border} color={color} />
-);",
+)",
     },
   },
 }
@@ -689,7 +689,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />;",
+      "source": "props => <Story {...props} />",
     },
   },
 }
@@ -756,7 +756,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ text }) => \`\${text}\`;",
+      "source": "({ text }) => \`\${text}\`",
     },
   },
 }
@@ -824,7 +824,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "(props, context) => <Story {...props} />;",
+      "source": "(props, context) => <Story {...props} />",
     },
   },
 }
@@ -923,7 +923,7 @@ Object {
       "name": "myStory",
       "source": "({ name: MyName, age }) => (
   <Story name={MyName} age={age} />
-);",
+)",
     },
   },
 }
@@ -1020,7 +1020,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name, age }) => <Story name={name} age={age} />;",
+      "source": "({ name, age }) => <Story name={name} age={age} />",
     },
   },
 }

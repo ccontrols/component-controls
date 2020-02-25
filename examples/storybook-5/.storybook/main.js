@@ -39,7 +39,10 @@ module.exports = {
           exclude: [/node_modules/],
           enforce: 'pre',
           options: {
-            type: 'csf'
+            type: 'csf',
+            prettier: {
+              tabWidth: 2,
+            }
           },
         },
         {
@@ -47,7 +50,7 @@ module.exports = {
           loader: "@component-controls/loader/loader",
           exclude: [/node_modules/],
           options: {
-            type: 'mdx'
+            type: 'mdx',
           },
         },
       ],

@@ -39,7 +39,7 @@ myStory.story = {
           "value": "Custom story name",
         },
       ],
-      "source": "() => {};",
+      "source": "() => {}",
     },
   },
 }
@@ -148,7 +148,7 @@ myStory.story = {
           ],
         },
       ],
-      "source": "() => {};",
+      "source": "() => {}",
     },
   },
 }
@@ -336,7 +336,7 @@ myStory.story = {
           ],
         },
       ],
-      "source": "() => {};",
+      "source": "() => {}",
     },
   },
 }
