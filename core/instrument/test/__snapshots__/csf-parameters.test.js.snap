@@ -25,12 +25,12 @@ myStory.story = {
       "name": "Custom story name",
       "parameters": Array [
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 27,
               "line": 3,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 3,
             },
@@ -76,12 +76,12 @@ myStory.story = {
       "name": "Custom story name",
       "parameters": Array [
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 27,
               "line": 3,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 3,
             },
@@ -90,12 +90,12 @@ myStory.story = {
           "value": "Custom story name",
         },
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 3,
               "line": 9,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 4,
             },
@@ -103,12 +103,12 @@ myStory.story = {
           "name": "parameters",
           "value": Array [
             Object {
-              "loc": SourceLocation {
-                "end": Position {
+              "loc": Object {
+                "end": Object {
                   "column": 28,
                   "line": 5,
                 },
-                "start": Position {
+                "start": Object {
                   "column": 4,
                   "line": 5,
                 },
@@ -117,12 +117,12 @@ myStory.story = {
               "value": "ControlsTable",
             },
             Object {
-              "loc": SourceLocation {
-                "end": Position {
+              "loc": Object {
+                "end": Object {
                   "column": 5,
                   "line": 8,
                 },
-                "start": Position {
+                "start": Object {
                   "column": 4,
                   "line": 6,
                 },
@@ -130,12 +130,12 @@ myStory.story = {
               "name": "addonControls",
               "value": Array [
                 Object {
-                  "loc": SourceLocation {
-                    "end": Position {
+                  "loc": Object {
+                    "end": Object {
                       "column": 18,
                       "line": 7,
                     },
-                    "start": Position {
+                    "start": Object {
                       "column": 6,
                       "line": 7,
                     },
@@ -192,12 +192,12 @@ myStory.story = {
       "name": "Custom story name",
       "parameters": Array [
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 27,
               "line": 3,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 3,
             },
@@ -206,12 +206,12 @@ myStory.story = {
           "value": "Custom story name",
         },
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 3,
               "line": 16,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 4,
             },
@@ -219,12 +219,12 @@ myStory.story = {
           "name": "parameters",
           "value": Array [
             Object {
-              "loc": SourceLocation {
-                "end": Position {
+              "loc": Object {
+                "end": Object {
                   "column": 5,
                   "line": 12,
                 },
-                "start": Position {
+                "start": Object {
                   "column": 4,
                   "line": 5,
                 },
@@ -232,12 +232,12 @@ myStory.story = {
               "name": "controls",
               "value": Array [
                 Object {
-                  "loc": SourceLocation {
-                    "end": Position {
+                  "loc": Object {
+                    "end": Object {
                       "column": 7,
                       "line": 11,
                     },
-                    "start": Position {
+                    "start": Object {
                       "column": 6,
                       "line": 6,
                     },
@@ -245,12 +245,12 @@ myStory.story = {
                   "name": "name",
                   "value": Array [
                     Object {
-                      "loc": SourceLocation {
-                        "end": Position {
+                      "loc": Object {
+                        "end": Object {
                           "column": 31,
                           "line": 7,
                         },
-                        "start": Position {
+                        "start": Object {
                           "column": 8,
                           "line": 7,
                         },
@@ -259,12 +259,12 @@ myStory.story = {
                       "value": "ControlTypes.TEXT",
                     },
                     Object {
-                      "loc": SourceLocation {
-                        "end": Position {
+                      "loc": Object {
+                        "end": Object {
                           "column": 21,
                           "line": 8,
                         },
-                        "start": Position {
+                        "start": Object {
                           "column": 8,
                           "line": 8,
                         },
@@ -273,12 +273,12 @@ myStory.story = {
                       "value": "Name",
                     },
                     Object {
-                      "loc": SourceLocation {
-                        "end": Position {
+                      "loc": Object {
+                        "end": Object {
                           "column": 21,
                           "line": 9,
                         },
-                        "start": Position {
+                        "start": Object {
                           "column": 8,
                           "line": 9,
                         },
@@ -287,12 +287,12 @@ myStory.story = {
                       "value": "Mark",
                     },
                     Object {
-                      "loc": SourceLocation {
-                        "end": Position {
+                      "loc": Object {
+                        "end": Object {
                           "column": 19,
                           "line": 10,
                         },
-                        "start": Position {
+                        "start": Object {
                           "column": 8,
                           "line": 10,
                         },
@@ -305,12 +305,12 @@ myStory.story = {
               ],
             },
             Object {
-              "loc": SourceLocation {
-                "end": Position {
+              "loc": Object {
+                "end": Object {
                   "column": 5,
                   "line": 15,
                 },
-                "start": Position {
+                "start": Object {
                   "column": 4,
                   "line": 13,
                 },
@@ -318,12 +318,12 @@ myStory.story = {
               "name": "addonControls",
               "value": Array [
                 Object {
-                  "loc": SourceLocation {
-                    "end": Position {
+                  "loc": Object {
+                    "end": Object {
                       "column": 18,
                       "line": 14,
                     },
-                    "start": Position {
+                    "start": Object {
                       "column": 6,
                       "line": 14,
                     },

@@ -8,6 +8,7 @@ import { StoriesGroup, Story } from '@component-controls/specification';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
+import { extractComponent } from './babel/extract-component';
 
 type TraverseFn = (stories: StoriesGroup) => any;
 
@@ -41,16 +42,16 @@ const parseSource = async (
   } else {
     source = code;
   }
-
   const ast = parser.parse(source, {
     sourceType: 'module',
     plugins: ['jsx', 'typescript'],
   });
-  const stories = {
+  const stories: StoriesGroup = {
     stories: {},
     source: originalSource,
   };
   traverse(ast, traverseFn(stories));
+  extractComponent(ast, stories);
   Object.keys(stories.stories).forEach((key: string) => {
     //@ts-ignore
     const story: Story = stories.stories[key];

@@ -69,6 +69,30 @@ export interface StoryArgument {
 export type StoryArguments = StoryArgument[];
 
 /**
+ * component specified for stories or story files
+ */
+export interface StoryComponent {
+  /**
+   * name of the component as used in the fiel
+   */
+  name: string;
+  /**
+   * imported name ex: import { Btn as Button } from 'buttons';
+   */
+  imported?: string;
+
+  /**
+   * imported from
+   */
+  from?: string;
+
+  /**
+   * location of the import statement in the source code file
+   */
+  loc?: CodeLocation;
+}
+
+/**
  * Story interface - usually extracted by the AST instrumenting loader
  */
 export interface Story {
@@ -93,6 +117,11 @@ export interface Story {
    * the source code of the story, extracted byt the AST instrumenting loaders
    */
   source?: string;
+
+  /**
+   * component associated with the story
+   */
+  component?: StoryComponent;
 }
 
 /**
@@ -125,4 +154,9 @@ export interface StoriesGroup {
    * source code of the entire file of stories
    */
   source?: string;
+
+  /**
+   * component associated with the stories file
+   */
+  component?: StoryComponent;
 }

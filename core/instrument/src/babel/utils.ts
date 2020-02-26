@@ -24,3 +24,8 @@ export const adjustSourceLocation = (
     },
   };
 };
+
+export const sourceLocation = (loc: CodeLocation): CodeLocation => ({
+  start: { ...loc.start },
+  end: { ...loc.end },
+});

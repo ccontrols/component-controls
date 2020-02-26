@@ -26,12 +26,12 @@ export { myStory as exportedStory}
       "name": "Custom story name",
       "parameters": Array [
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 27,
               "line": 3,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 3,
             },
@@ -87,12 +87,12 @@ export { myStory }
       "name": "Custom story name",
       "parameters": Array [
         Object {
-          "loc": SourceLocation {
-            "end": Position {
+          "loc": Object {
+            "end": Object {
               "column": 27,
               "line": 3,
             },
-            "start": Position {
+            "start": Object {
               "column": 2,
               "line": 3,
             },

@@ -1,49 +1,65 @@
-import { StoryArguments } from '@component-controls/specification';
+import {
+  StoryArguments,
+  StoryArgument,
+} from '@component-controls/specification';
+import { sourceLocation } from './utils';
 
-export const extractProperties = (node: any): StoryArguments | undefined => {
-  if (node && node.properties) {
-    const properties: StoryArguments = node.properties
-      .map((property: any) => {
-        if (property.value) {
-          switch (property.value.type) {
-            case 'BooleanLiteral':
-            case 'NumericLiteral':
-            case 'StringLiteral': {
-              return {
-                value: property.value.value,
-                name: property.key.name,
-                loc: property.loc,
-              };
-            }
-            case 'Identifier':
-              return {
-                value: property.value.name,
-                name: property.key.name,
-                loc: property.loc,
-              };
-            case 'MemberExpression':
-              return {
-                value: `${property.value.object.name}.${property.value.property.name}`,
-                name: property.key.name,
-                loc: property.loc,
-              };
-
-            case 'ObjectExpression': {
-              return {
-                value: extractProperties(property.value),
-                name: property.key.name,
-                loc: property.loc,
-              };
-            }
-            default:
-              // console.log(property.value);
-              return null;
-          }
+const nodeToParameter = (node: any): StoryArgument | undefined => {
+  const value = node.value || node;
+  const name = node.key ? node.key.name : node.name;
+  if (value) {
+    switch (value.type) {
+      case 'BooleanLiteral':
+      case 'NumericLiteral':
+      case 'StringLiteral': {
+        return {
+          value: value.value,
+          name,
+          loc: sourceLocation(node.loc),
+        };
+      }
+      case 'Identifier':
+        return {
+          value: value.name,
+          name,
+          loc: sourceLocation(node.loc),
+        };
+      case 'MemberExpression':
+        return {
+          value: `${value.object.name}.${value.property.name}`,
+          name,
+          loc: sourceLocation(node.loc),
+        };
+      case 'ObjectExpression': {
+        const val = extractProperties(value);
+        if (val) {
+          return {
+            value: val,
+            name,
+            loc: sourceLocation(node.loc),
+          };
         }
-        return null;
-      })
-      .filter((p: any) => p);
-    return properties;
+        break;
+      }
+      default:
+        // console.log(property.value);
+        return undefined;
+    }
+  }
+  return undefined;
+};
+export const extractProperties = (node: any): StoryArguments | undefined => {
+  if (node) {
+    if (node.properties) {
+      const properties: StoryArguments = node.properties
+        .map((propNode: any) => nodeToParameter(propNode))
+        .filter((p: any) => p);
+      return properties;
+    }
+    const parameter = nodeToParameter(node);
+    if (parameter) {
+      return [parameter];
+    }
   }
   return undefined;
 };

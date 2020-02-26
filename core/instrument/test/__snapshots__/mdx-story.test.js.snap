@@ -2,6 +2,21 @@
 
 exports[`mdx-stories Props argument 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -16,6 +31,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -59,6 +103,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 36,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "story-with-props",
+        },
+      ],
       "source": "props => <Button />",
     },
   },
@@ -68,6 +128,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Three levels - alias 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -82,6 +157,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -183,6 +287,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 36,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "story-with-props",
+        },
+      ],
       "source": "({
           name: { first, last },
 
@@ -196,6 +316,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two arguments 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -210,6 +345,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -267,6 +431,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 36,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "story-with-props",
+        },
+      ],
       "source": "(props, context) => <Button />",
     },
   },
@@ -276,6 +456,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two levels - alias 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -290,6 +485,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -362,6 +586,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 36,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "story-with-props",
+        },
+      ],
       "source": "({ name: MyName, age }) => <Button />",
     },
   },
@@ -371,6 +611,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two levels sub arguments 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -385,6 +640,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -457,6 +741,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 36,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "story-with-props",
+        },
+      ],
       "source": "({ name, age }) => <Button />",
     },
   },
@@ -466,6 +766,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories mdx-story 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -480,6 +795,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "
@@ -507,6 +851,22 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "smart story",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 31,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 28,
+            },
+          },
+          "name": "name",
+          "value": "smart story",
+        },
+      ],
       "source": "<Story name=\\"smart story\\">
         <Button />
       </Story>",
@@ -518,6 +878,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories no name 1`] = `
 Object {
+  "component": Object {
+    "from": "../components/BaseButton",
+    "imported": "default",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 46,
+        "line": 3,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "Button",
+  },
   "parameters": Array [
     Object {
       "loc": Object {
@@ -532,6 +907,35 @@ Object {
       },
       "name": "title",
       "value": "Storybook/MDX",
+    },
+    Object {
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 25,
+        },
+        "start": Object {
+          "column": 8,
+          "line": 23,
+        },
+      },
+      "name": "parameters",
+      "value": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 27,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 24,
+            },
+          },
+          "name": "component",
+          "value": "Button",
+        },
+      ],
     },
   ],
   "source": "

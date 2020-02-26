@@ -2,14 +2,29 @@
 
 exports[`csf-toggle Toggle story 1`] = `
 Object {
+  "component": Object {
+    "from": "./Toggle",
+    "imported": "Toggle",
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 34,
+        "line": 2,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 2,
+      },
+    },
+    "name": "Toggle",
+  },
   "parameters": Array [
     Object {
-      "loc": SourceLocation {
-        "end": Position {
+      "loc": Object {
+        "end": Object {
           "column": 28,
           "line": 5,
         },
-        "start": Position {
+        "start": Object {
           "column": 2,
           "line": 5,
         },
@@ -18,12 +33,12 @@ Object {
       "value": "Components/Toggle",
     },
     Object {
-      "loc": SourceLocation {
-        "end": Position {
+      "loc": Object {
+        "end": Object {
           "column": 19,
           "line": 6,
         },
-        "start": Position {
+        "start": Object {
           "column": 2,
           "line": 6,
         },

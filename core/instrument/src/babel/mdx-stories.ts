@@ -6,6 +6,8 @@ import {
 } from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
+import { extractProperties } from './extract-properties';
+import { sourceLocation } from './utils';
 
 export const extractMDXStories = (stories: StoriesGroup) => {
   return {
@@ -14,16 +16,7 @@ export const extractMDXStories = (stories: StoriesGroup) => {
       if (['Meta', 'Story'].indexOf(node.name.name) > -1) {
         const parameters: StoryArguments = node.attributes
           .map((attribute: any) => {
-            const loc: CodeLocation = {
-              start: {
-                column: attribute.loc?.start.column,
-                line: attribute.loc?.start.line,
-              },
-              end: {
-                column: attribute.loc?.end.column,
-                line: attribute.loc?.end.line,
-              },
-            };
+            const loc: CodeLocation = sourceLocation(attribute.loc);
             if (attribute.value.type === 'StringLiteral') {
               return {
                 value: attribute.value?.value,
@@ -31,6 +24,11 @@ export const extractMDXStories = (stories: StoriesGroup) => {
                 loc,
               };
             } else if (attribute.value.type === 'JSXExpressionContainer') {
+              return {
+                name: attribute.name?.name,
+                value: extractProperties(attribute.value.expression),
+                loc,
+              };
             }
             return null;
           })
@@ -39,16 +37,7 @@ export const extractMDXStories = (stories: StoriesGroup) => {
         switch (node.name.name) {
           case 'Story': {
             const story: Story = {
-              loc: {
-                start: {
-                  column: path.node.loc.start.column,
-                  line: path.node.loc.start.line,
-                },
-                end: {
-                  column: path.node.loc.end.column,
-                  line: path.node.loc.end.line,
-                },
-              },
+              loc: sourceLocation(path.node.loc),
             };
             const name = parameters.find(p => p.name === 'name');
 
@@ -60,6 +49,7 @@ export const extractMDXStories = (stories: StoriesGroup) => {
                 path,
               );
               story.name = name.value;
+              story.parameters = parameters;
               stories.stories[name.value] = story;
             }
             break;

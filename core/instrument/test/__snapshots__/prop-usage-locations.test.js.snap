@@ -154,12 +154,12 @@ exports[`prop-usage-locations adjust lines 1`] = `
 Object {
   "parameters": Array [
     Object {
-      "loc": SourceLocation {
-        "end": Position {
+      "loc": Object {
+        "end": Object {
           "column": 15,
           "line": 2,
         },
-        "start": Position {
+        "start": Object {
           "column": 2,
           "line": 2,
         },
