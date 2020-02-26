@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { StorySource as SourceBlock } from '@component-controls/blocks-core';
+import { Source as SourceBlock } from '@component-controls/blocks-core';
 import {
   BlockContext,
   BlockContextProvider,
@@ -13,16 +13,12 @@ export interface SourceProps {
 
 const SourceConsumer: FC<SourceProps> = () => (
   <BlockContext.Consumer>
-    {({ source, controls, args, fileSource }) => (
-      <SourceBlock controls={controls} args={args} fileSource={fileSource}>
-        {source}
-      </SourceBlock>
-    )}
+    {({ import: source }) => <SourceBlock source={source || ''} />}
   </BlockContext.Consumer>
 );
 
-export const Source: FC<BlockContextProviderProps & SourceProps> = ({
-  title = 'Source code',
+export const ImportSource: FC<BlockContextProviderProps & SourceProps> = ({
+  title = 'Import component',
   ...rest
 }) => (
   <BlockContextProvider {...rest}>

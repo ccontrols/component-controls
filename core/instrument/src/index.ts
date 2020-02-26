@@ -22,26 +22,28 @@ const parseSource = async (
   filePath?: string,
   prettierOptions?: PrettierOptions,
 ): Promise<StoriesGroup> => {
-  let source: string;
-  if (prettierOptions !== false) {
-    const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
-    let allPrettierOptions = otherOptions;
-    if (filePath) {
-      const userOptions = await prettier.resolveConfig(
-        filePath,
-        resolveConfigOptions,
-      );
-      allPrettierOptions = { ...userOptions, ...allPrettierOptions };
-    }
+  const prettify = async (c: string): Promise<string> => {
+    if (prettierOptions !== false) {
+      const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
+      let allPrettierOptions = otherOptions;
+      if (filePath) {
+        const userOptions = await prettier.resolveConfig(
+          filePath,
+          resolveConfigOptions,
+        );
+        allPrettierOptions = { ...userOptions, ...allPrettierOptions };
+      }
 
-    source = prettier.format(code, {
-      parser: 'typescript',
-      plugins: [parserBabel],
-      ...allPrettierOptions,
-    });
-  } else {
-    source = code;
-  }
+      return prettier.format(c, {
+        parser: 'typescript',
+        plugins: [parserBabel],
+        ...allPrettierOptions,
+      });
+    } else {
+      return c;
+    }
+  };
+  const source = await prettify(code);
   const ast = parser.parse(source, {
     sourceType: 'module',
     plugins: ['jsx', 'typescript'],
@@ -51,7 +53,7 @@ const parseSource = async (
     source: originalSource,
   };
   traverse(ast, traverseFn(stories));
-  extractComponent(ast, stories);
+  await extractComponent(ast, stories, prettify);
   Object.keys(stories.stories).forEach((key: string) => {
     //@ts-ignore
     const story: Story = stories.stories[key];

@@ -64,21 +64,38 @@ const findComponentImport = (
   return result;
 };
 
-export const extractComponent = (ast: any, kind: StoriesGroup) => {
+type PrettifyFn = (code: string) => Promise<string>;
+export const extractComponent = async (
+  ast: any,
+  kind: StoriesGroup,
+  prettifyFn: PrettifyFn,
+) => {
+  const prettyImport = async (
+    component: StoryComponent,
+  ): Promise<StoryComponent> => {
+    return {
+      ...component,
+      import: await prettifyFn(
+        component.imported
+          ? `import { ${component.name} } from '${component.from}';`
+          : `import ${component.name} from '${component.from}';`,
+      ),
+    };
+  };
   const componentName = componentFromParams(kind.parameters);
   if (componentName) {
     const component = findComponentImport(ast, componentName);
     if (component) {
-      kind.component = component;
+      kind.component = await prettyImport(component);
     }
   }
-  Object.keys(kind.stories).forEach(name => {
+  Object.keys(kind.stories).forEach(async (name: string) => {
     const story = kind.stories[name];
     const componentName = componentFromParams(story.parameters);
     if (componentName) {
       const component = findComponentImport(ast, componentName);
       if (component) {
-        story.component = component;
+        story.component = await prettyImport(component);
       }
     }
   });

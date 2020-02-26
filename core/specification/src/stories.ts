@@ -87,6 +87,15 @@ export interface StoryComponent {
   from?: string;
 
   /**
+   * import string for the component
+   */
+  import?: string;
+
+  /**
+   * resolved import request
+   */
+  request?: string;
+  /**
    * location of the import statement in the source code file
    */
   loc?: CodeLocation;

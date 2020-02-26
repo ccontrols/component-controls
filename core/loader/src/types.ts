@@ -1,4 +1,4 @@
-import { Story } from '@component-controls/specification';
+import { Story, StoryComponent } from '@component-controls/specification';
 import { PrettierOptions } from '@component-controls/instrument';
 
 export interface LoaderOptions {
@@ -15,6 +15,7 @@ export interface StoriesKind {
   title: string;
   stories: string[];
   source?: string;
+  component?: StoryComponent;
 }
 export interface StoryStore {
   kinds: {

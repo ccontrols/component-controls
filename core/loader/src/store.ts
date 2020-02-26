@@ -8,17 +8,28 @@ const store: StoryStore = {
   stories: {},
 };
 
-export const addStoriesKind = (
+export const addStoriesKind = async (
   kind: StoriesGroup,
   context: loader.LoaderContext,
 ) => {
   let stories: StoriesKind;
   if (kind.title) {
+    if (kind.component && kind.component.from) {
+      context.resolve(context.context, kind.component.from, function(
+        err,
+        result: string,
+      ) {
+        if (!err && kind.component) {
+          kind.component.request = result;
+        }
+      });
+    }
     stories = {
       fileName: context.resourcePath,
       title: kind.title,
       stories: [],
       source: kind.source,
+      component: kind.component,
     };
     store.kinds[kind.title] = stories;
   }

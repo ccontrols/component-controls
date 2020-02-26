@@ -15,6 +15,7 @@ export interface BlockContextProps {
   channel: any;
   source?: string;
   fileSource?: string;
+  import?: string;
 }
 export const BlockContext = React.createContext<BlockContextProps>({
   controls: {},
@@ -69,7 +70,9 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     });
   const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
-  console.log(JSON.stringify(myStory.arguments, null, 2));
+  if (kind && kind.component) {
+    console.log(kind.component.import);
+  }
   return (
     <BlockContext.Provider
       value={{
@@ -79,6 +82,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
         channel,
         source,
         fileSource: kind ? kind.source : undefined,
+        import: kind && kind.component ? kind.component.import : undefined,
         args: myStory.arguments,
         controls: story.controls || story.parameters.controls,
       }}
