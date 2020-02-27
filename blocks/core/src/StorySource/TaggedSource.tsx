@@ -50,9 +50,14 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
     : undefined;
   if (tags) {
     tags.forEach((tag, index) => {
-      const colorIdx = index % (theme.styles.length - 1);
-      const style = theme.styles[colorIdx];
-      const color: string = style.style.color || theme.plain.color || '#fff';
+      let color: string;
+      if (theme) {
+        const colorIdx = index % (theme.styles.length - 1);
+        const style = theme.styles[colorIdx];
+        color = style.style.color || theme.plain.color || '#fff';
+      } else {
+        color = '#333';
+      }
       tag.color = color;
     });
   }
@@ -63,7 +68,7 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
           className={`${className}`}
           style={{ ...style, padding: '10px 10px 25px 10px', margin: 0 }}
         >
-          {tokens.map((line, i) => (
+          {tokens.map((line: { content: string }[], i: number) => (
             <div {...getLineProps({ line, key: i })}>
               {(() => {
                 let column = 0;
@@ -84,7 +89,7 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
                     : null;
                   column += token.content.length;
                   if (param) {
-                    const splitToken = getTokenProps({
+                    const splitToken: string[] = getTokenProps({
                       token,
                       key,
                     }).children.split(/(\s+)/);
