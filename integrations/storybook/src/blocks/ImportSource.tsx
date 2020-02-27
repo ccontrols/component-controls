@@ -9,12 +9,10 @@ export type SourceProps = ControlsContextInputProps & {
 };
 
 export const ImportSource: FC<SourceProps> = ({ id, name }) => {
-  const all = useControlsContext({
+  const { component } = useControlsContext({
     id,
     name,
   });
-  const { component } = all;
-  console.log(all);
   return (
     <ThemeProvider>
       <SourceBlock

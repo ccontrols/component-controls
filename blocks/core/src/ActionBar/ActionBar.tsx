@@ -67,18 +67,19 @@ export interface ActionItem {
 
 export interface ActionBarProps {
   actionItems: ActionItem[];
-  zIndex?: number;
 }
 
 export const ActionBar: FunctionComponent<ActionBarProps> = ({
   actionItems,
-  zIndex,
   ...props
 }) => (
-  <Container zIndex={zIndex} {...props}>
+  <Container {...props}>
     {actionItems.map(({ title, onClick, disabled }, index: number) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <ActionButton key={index} onClick={onClick} disabled={disabled}>
+      <ActionButton
+        key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+        onClick={onClick}
+        disabled={disabled}
+      >
         {title}
       </ActionButton>
     ))}

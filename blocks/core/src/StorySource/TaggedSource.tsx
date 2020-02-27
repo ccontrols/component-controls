@@ -8,11 +8,7 @@ import {
 } from '@component-controls/specification';
 import { Styled } from 'theme-ui';
 import { transparentize } from 'polished';
-import Highlight, {
-  defaultProps,
-  PrismTheme,
-  Language,
-} from 'prism-react-renderer';
+import { Source, SourceProps } from '../Source';
 
 interface ArgumentLocations {
   name: string;
@@ -40,17 +36,14 @@ const getArgumentsLocations = (args: StoryArguments): ArgumentLocations[] => {
   }, []);
 };
 
-export interface TaggedSourceProps {
+export type TaggedSourceProps = SourceProps & {
   args?: StoryArguments;
-  source: string;
-  theme: PrismTheme;
-  language: Language;
-}
+};
+
 export const TaggedSource: React.FC<TaggedSourceProps> = ({
   args,
   theme,
-  source,
-  language,
+  ...rest
 }) => {
   const tags: (ArgumentLocations & { color?: string })[] | undefined = args
     ? getArgumentsLocations(args)
@@ -64,12 +57,7 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
     });
   }
   return (
-    <Highlight
-      {...defaultProps}
-      theme={theme}
-      code={source}
-      language={language}
-    >
+    <Source theme={theme} {...rest}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Styled.pre
           className={`${className}`}
@@ -136,6 +124,6 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
           ))}
         </Styled.pre>
       )}
-    </Highlight>
+    </Source>
   );
 };

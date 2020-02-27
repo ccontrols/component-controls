@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC } from 'react';
 import { StoryArguments } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
 import { defaultProps, Language, PrismTheme } from 'prism-react-renderer';
@@ -14,9 +14,6 @@ import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import ultramin from 'prism-react-renderer/themes/ultramin';
 import vsDark from 'prism-react-renderer/themes/vsDark';
-import copy from 'copy-to-clipboard';
-import { ActionBar } from '../ActionBar';
-import { BlockContainer } from '../BlockContainer';
 import { mergeControlValues } from './argument-utils';
 import { TaggedSource } from './TaggedSource';
 export type ThemeType =
@@ -98,7 +95,6 @@ export const StorySource: FC<StorySourceProps> = ({
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
 
   let prismTheme = themes[themeName] || defaultProps.theme;
-  const [copied, setCopied] = React.useState(false);
 
   const onRotateTheme = () => {
     const themeKeys = Object.keys(themes);
@@ -117,13 +113,6 @@ export const StorySource: FC<StorySourceProps> = ({
     );
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
-  const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setCopied(true);
-    copy(children);
-    window.setTimeout(() => setCopied(false), 1500);
-  };
-
   const actions = [];
   if (fileSource) {
     actions.push({
@@ -138,8 +127,6 @@ export const StorySource: FC<StorySourceProps> = ({
     actions.push({ title: viewStyle, onClick: onMergeValues });
   }
 
-  actions.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
-
   let source: string;
   if (!showFileSource) {
     let code = typeof children === 'string' ? children : '';
@@ -151,14 +138,12 @@ export const StorySource: FC<StorySourceProps> = ({
     source = fileSource || '';
   }
   return (
-    <BlockContainer>
-      <TaggedSource
-        args={viewStyle === 'tags' && !showFileSource ? args : undefined}
-        source={source}
-        theme={prismTheme}
-        language={language}
-      />
-      <ActionBar actionItems={actions} />
-    </BlockContainer>
+    <TaggedSource
+      args={viewStyle === 'tags' && !showFileSource ? args : undefined}
+      source={source}
+      theme={prismTheme}
+      language={language}
+      actions={actions}
+    />
   );
 };

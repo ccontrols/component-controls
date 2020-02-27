@@ -1,27 +1,72 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
-import React from 'react';
+import React, { FC, MouseEvent } from 'react';
 import { Styled } from 'theme-ui';
+import copy from 'copy-to-clipboard';
 import Highlight, {
   defaultProps,
   PrismTheme,
   Language,
 } from 'prism-react-renderer';
+import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
+import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
+
+import { BlockContainer } from '../BlockContainer';
+import { ActionBar, ActionItem } from '../ActionBar';
 
 export interface SourceProps {
+  /**
+   * source code to display
+   */
   source: string;
+  /**
+   * optional theme provided to the component
+   */
   theme?: PrismTheme;
+  /**
+   * code lnguage used, by default "jsx"
+   */
   language?: Language;
+  /**
+   * custom function to render the source code
+   */
   children?: (props: any) => React.ReactNode;
+  /**
+   * additional actions provided to the component
+   */
+  actions?: ActionItem[];
+  /**
+   * used to specify a "dark" color theme - applcable only if no custom theme prop is provided
+   */
+  dark?: boolean;
 }
-export const Source: React.FC<SourceProps> = ({
+
+/**
+ * Source component used to display source code
+ *
+ */
+export const Source: FC<SourceProps> = ({
   source = '',
   language = 'jsx',
   theme,
   children,
+  actions,
+  dark = false,
 }) => {
-  console.log(source);
+  const [copied, setCopied] = React.useState(false);
+
+  const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setCopied(true);
+    copy(source);
+    window.setTimeout(() => setCopied(false), 1500);
+  };
+
+  const actionsItems = actions || [];
+
+  actionsItems.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
+
   const renderProps =
     typeof children === 'function'
       ? children
@@ -42,12 +87,19 @@ export const Source: React.FC<SourceProps> = ({
             ))}
           </Styled.pre>
         );
+  const props = { ...defaultProps };
   if (theme) {
-    defaultProps.theme = theme;
+    props.theme = theme;
+  } else {
+    props.theme = dark ? duotoneDark : duotoneLight;
   }
+
   return (
-    <Highlight {...defaultProps} code={source} language={language}>
-      {renderProps}
-    </Highlight>
+    <BlockContainer>
+      <Highlight {...props} code={source} language={language}>
+        {renderProps}
+      </Highlight>
+      <ActionBar actionItems={actionsItems} />
+    </BlockContainer>
   );
 };

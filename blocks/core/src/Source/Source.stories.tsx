@@ -6,8 +6,8 @@ export default {
   component: Source,
 };
 
-export const simpleSource = ({ language, source }: SourceProps) => {
-  return <Source language={language} source={source} />;
+export const simpleSource = ({ language, source, dark }: SourceProps) => {
+  return <Source language={language} source={source} dark={dark} />;
 };
 
 const languages: string[] = [
@@ -49,6 +49,7 @@ simpleSource.story = {
   parameters: {
     controls: {
       language: { type: 'options', options: languages, value: 'jsx' },
+      dark: { type: 'boolean' },
       source: {
         type: 'text',
         rows: 10,

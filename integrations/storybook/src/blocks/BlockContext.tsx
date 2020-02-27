@@ -102,7 +102,6 @@ export const useControlsContext = ({
   const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
   const kindTitle = myStory.kind;
   const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
-  console.log(kind.component);
   const source: string | undefined = myStory ? myStory.source : undefined;
   return {
     api,
