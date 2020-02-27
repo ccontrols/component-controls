@@ -1,27 +1,25 @@
 import React, { FC } from 'react';
 import { Source as SourceBlock } from '@component-controls/blocks-core';
-import {
-  BlockContext,
-  BlockContextProvider,
-  BlockContextProviderProps,
-} from './BlockContext';
+import { useControlsContext, ControlsContextInputProps } from './BlockContext';
+import { ThemeProvider } from '../shared/ThemeProvider';
 
-export interface SourceProps {
+export type SourceProps = ControlsContextInputProps & {
   /** a title to display */
   title?: string;
-}
+};
 
-const SourceConsumer: FC<SourceProps> = () => (
-  <BlockContext.Consumer>
-    {({ import: source }) => <SourceBlock source={source || ''} />}
-  </BlockContext.Consumer>
-);
-
-export const ImportSource: FC<BlockContextProviderProps & SourceProps> = ({
-  title = 'Import component',
-  ...rest
-}) => (
-  <BlockContextProvider {...rest}>
-    <SourceConsumer title={title} />
-  </BlockContextProvider>
-);
+export const ImportSource: FC<SourceProps> = ({ id, name }) => {
+  const all = useControlsContext({
+    id,
+    name,
+  });
+  const { component } = all;
+  console.log(all);
+  return (
+    <ThemeProvider>
+      <SourceBlock
+        source={component && component.import ? component.import : ''}
+      />
+    </ThemeProvider>
+  );
+};

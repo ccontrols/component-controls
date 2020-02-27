@@ -110,6 +110,10 @@ export interface Story {
    */
   name?: string;
   /**
+   * title of the file/group of stories
+   */
+  kind?: string;
+  /**
    * arguments pass to a CSF story
    * eg `export const story = props => <Story {...props} />;`
    */

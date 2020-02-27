@@ -1,31 +1,23 @@
 import React, { FC } from 'react';
 import { StorySource as SourceBlock } from '@component-controls/blocks-core';
-import {
-  BlockContext,
-  BlockContextProvider,
-  BlockContextProviderProps,
-} from './BlockContext';
+import { useControlsContext, ControlsContextInputProps } from './BlockContext';
+import { ThemeProvider } from '../shared/ThemeProvider';
 
-export interface SourceProps {
+export type SourceProps = ControlsContextInputProps & {
   /** a title to display */
   title?: string;
-}
+};
 
-const SourceConsumer: FC<SourceProps> = () => (
-  <BlockContext.Consumer>
-    {({ source, controls, args, fileSource }) => (
+export const Source: FC<SourceProps> = ({ id, name }) => {
+  const { source, controls, args, fileSource } = useControlsContext({
+    id,
+    name,
+  });
+  return (
+    <ThemeProvider>
       <SourceBlock controls={controls} args={args} fileSource={fileSource}>
         {source}
       </SourceBlock>
-    )}
-  </BlockContext.Consumer>
-);
-
-export const Source: FC<BlockContextProviderProps & SourceProps> = ({
-  title = 'Source code',
-  ...rest
-}) => (
-  <BlockContextProvider {...rest}>
-    <SourceConsumer title={title} />
-  </BlockContextProvider>
-);
+    </ThemeProvider>
+  );
+};

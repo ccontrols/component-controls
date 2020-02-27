@@ -52,8 +52,7 @@ simpleSource.story = {
       source: {
         type: 'text',
         rows: 10,
-        value: `
-export const sample = () => {
+        value: `export const sample = () => {
   const [state, setState] = React.useState(false);
   return (
     <BooleanEditor
@@ -62,8 +61,7 @@ export const sample = () => {
       prop={{ type: ControlTypes.BOOLEAN, value: state }}
     />
   );
-};      
-      `,
+};`,
       },
     },
   },

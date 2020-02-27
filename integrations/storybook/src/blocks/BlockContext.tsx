@@ -1,41 +1,28 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import myStoryStore from '@component-controls/loader/story-store-data';
-import { Story, StoryArguments } from '@component-controls/specification';
+import {
+  Story,
+  StoryArguments,
+  StoryComponent,
+} from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
 import { CURRENT_SELECTION, DocsContext } from '@storybook/addon-docs/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
 
 export interface BlockContextProps {
-  controls: LoadedComponentControls;
-  args?: StoryArguments;
-  story: any;
   api?: any;
-  id?: string;
   channel: any;
-  source?: string;
-  fileSource?: string;
-  import?: string;
+  currentId?: string;
+  storyStore: any;
+  storyIdFromName: (name?: string) => string | undefined;
 }
 export const BlockContext = React.createContext<BlockContextProps>({
-  controls: {},
-  story: {},
   channel: {},
-  source: '',
+  storyStore: {},
+  storyIdFromName: name => name,
 });
 
-export interface BlockContextProviderProps {
-  /** id of the story */
-  id?: string;
-  /** name of the story */
-  name?: string;
-}
-
-export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
-  id,
-  name,
-  children,
-}) => {
+export const BlockContextProvider: React.FC = ({ children }) => {
   const context = React.useContext(DocsContext);
   const {
     id: currentId,
@@ -45,49 +32,86 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
     mdxComponentMeta,
     channel,
   } = context as any;
-  const inputId = id === CURRENT_SELECTION ? currentId : id;
-  const previewId =
-    inputId ||
-    (mdxStoryNameToKey &&
+
+  const storyIdFromName = (name?: string): string | undefined => {
+    return (
+      mdxStoryNameToKey &&
       mdxComponentMeta &&
       name &&
       toId(
         mdxComponentMeta.id || mdxComponentMeta.title,
         storyNameFromExport(mdxStoryNameToKey[name]),
-      ));
-  if (!previewId) {
-    return null;
-  }
-  const story = storyStore.fromId(previewId) || {};
-  // console.log(myStoryStore);
-  const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
-  const kindTitle =
-    myStoryStore &&
-    myStoryStore.kinds &&
-    Object.keys(myStoryStore.kinds).find(key => {
-      const k = myStoryStore.kinds[key];
-      return k.stories.indexOf(previewId) > -1;
-    });
-  const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
-  const source: string | undefined = myStory ? myStory.source : undefined;
-  if (kind && kind.component) {
-    console.log(kind.component.import);
-  }
+      )
+    );
+  };
   return (
     <BlockContext.Provider
       value={{
         api: clientApi,
-        id: story.id,
-        story,
+        currentId,
         channel,
-        source,
-        fileSource: kind ? kind.source : undefined,
-        import: kind && kind.component ? kind.component.import : undefined,
-        args: myStory.arguments,
-        controls: story.controls || story.parameters.controls,
+        storyIdFromName,
+        storyStore,
       }}
     >
-      <ThemeProvider>{children}</ThemeProvider>
+      {children}
     </BlockContext.Provider>
   );
+};
+
+export interface ControlsContextInputProps {
+  /** id of the story */
+  id?: string;
+  /** name of the story */
+  name?: string;
+}
+
+export interface ControlsContextProps {
+  api?: any;
+  channel?: any;
+  controls?: LoadedComponentControls;
+  args?: StoryArguments;
+  story?: any;
+  id?: string;
+  source?: string;
+  fileSource?: string;
+  component?: StoryComponent;
+}
+
+export const useControlsContext = ({
+  id,
+  name,
+}: ControlsContextInputProps): ControlsContextProps => {
+  const {
+    currentId,
+    storyStore,
+    storyIdFromName,
+    api,
+    channel,
+  } = React.useContext(BlockContext);
+  const inputId = id === CURRENT_SELECTION ? currentId : id;
+  const previewId = inputId || storyIdFromName(name);
+  if (!previewId) {
+    return {
+      api,
+      channel,
+    };
+  }
+  const story = storyStore.fromId(previewId) || {};
+  // console.log(myStoryStore);
+  const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
+  const kindTitle = myStory.kind;
+  const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
+  console.log(kind.component);
+  const source: string | undefined = myStory ? myStory.source : undefined;
+  return {
+    api,
+    channel,
+    story,
+    source,
+    fileSource: kind ? kind.source : undefined,
+    component: kind ? kind.component : undefined,
+    args: myStory.arguments,
+    controls: story.controls || story.parameters.controls,
+  };
 };

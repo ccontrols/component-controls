@@ -2,7 +2,7 @@ import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { Title, Subtitle, Story, Stories, Props, Description } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
-import { ControlsTable, ThemeProvider, Source, ImportSource } from '@component-controls/storybook';
+import { ControlsTable, ThemeProvider, Source, ImportSource, BlockContextProvider } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
   return (
@@ -20,18 +20,18 @@ export const DocsPage = ({
   storiesSlot,
 }) => {
   return (
-    <>
+    <BlockContextProvider>
       <Title slot={titleSlot} />
       <Subtitle slot={subtitleSlot} />
       <Description slot={descriptionSlot} />
-      <ImportSource />
+      <ImportSource id="." />
       <Story id="." />
       <Source id="." />
       <ControlsTable id="." />
       <Props slot={propsSlot} />
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
       <Stories slot={storiesSlot} />
-    </>
+    </BlockContextProvider>  
   );
 };
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']

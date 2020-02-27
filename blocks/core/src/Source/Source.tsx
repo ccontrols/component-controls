@@ -21,6 +21,7 @@ export const Source: React.FC<SourceProps> = ({
   theme,
   children,
 }) => {
+  console.log(source);
   const renderProps =
     typeof children === 'function'
       ? children
