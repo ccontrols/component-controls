@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Source as SourceBlock } from '@component-controls/blocks-core';
+import { Source as SourceBlock } from '@component-controls/block-components';
 import { useControlsContext, ControlsContextInputProps } from './BlockContext';
 import { ThemeProvider } from '../shared/ThemeProvider';
 

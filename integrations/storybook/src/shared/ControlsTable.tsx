@@ -2,7 +2,7 @@ import React from 'react';
 import {
   ControlsTable,
   ControlsTableProps,
-} from '@component-controls/blocks-core';
+} from '@component-controls/block-components';
 import { randomizeData } from '@component-controls/core';
 
 export const SharedControlsTable: React.FC<ControlsTableProps> = props =>
