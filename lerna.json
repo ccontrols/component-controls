@@ -3,7 +3,7 @@
   "packages": [
     "core/**/*",
     "integrations/**/*",
-    "blocks/**/*"
+    "ui/**/*"
   ],
   "version": "0.6.0",
   "npmClient": "yarn",

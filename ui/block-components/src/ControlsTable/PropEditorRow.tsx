@@ -10,7 +10,6 @@ import {
 } from '@component-controls/specification';
 import styled from '@emotion/styled';
 import { LoadedComponentControl } from '@component-controls/core';
-
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 
 const StyledTR = styled.tr<{}>(({ theme }) => ({

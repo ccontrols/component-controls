@@ -78,7 +78,7 @@
     "packages": [
       "core/*",
       "integrations/*",
-      "blocks/*",
+      "ui/*",
       "examples/*"
     ]
   }

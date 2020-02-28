@@ -10,7 +10,7 @@ import {
 import { ControlsTable } from './ControlsTable';
 
 export default {
-  title: 'Blocks/ControlsTable',
+  title: 'Blocks/Components/ControlsTable',
   component: ControlsTable,
 };
 

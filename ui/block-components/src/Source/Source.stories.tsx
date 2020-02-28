@@ -1,13 +1,28 @@
 import React from 'react';
+import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import { Source, SourceProps } from './Source';
 
 export default {
-  title: 'Blocks/Source',
+  title: 'Blocks/Components/Source',
   component: Source,
 };
 
-export const simpleSource = ({ language, source, dark }: SourceProps) => {
-  return <Source language={language} source={source} dark={dark} />;
+const source = `export const sample = () => {
+  const [state, setState] = React.useState(false);
+  return (
+    <BooleanEditor
+      name="prop"
+      onChange={(name, newVal) => setState(newVal)}
+      prop={{ type: ControlTypes.BOOLEAN, value: state }}
+    />
+  );
+};`;
+export const simpleSource = ({ language, children, dark }: SourceProps) => {
+  return (
+    <Source language={language} dark={dark}>
+      {children}
+    </Source>
+  );
 };
 
 const languages: string[] = [
@@ -53,18 +68,11 @@ simpleSource.story = {
       children: {
         type: 'text',
         rows: 10,
-        value: `export const sample = () => {
-  const [state, setState] = React.useState(false);
-  return (
-    <BooleanEditor
-      name="prop"
-      onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.BOOLEAN, value: state }}
-    />
-  );
-};`,
+        value: source,
         data: null,
       },
     },
   },
 };
+
+export const theme = () => <Source theme={shadesOfPurple}>{source}</Source>;

@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "outDir": "../block-components/dist",
+    "rootDir": "../block-components/src",
+    "declaration": true,
+    "types": ["node", "jest"],
+    "typeRoots": ["../../node_modules/@types", "../block-components/node_modules/@types"]
+  },
+  "include": ["../block-components/src/**/*", "../block-components/src/typings.d.ts"],
+  "exclude": ["../block-components/node_modules/**"]
+}

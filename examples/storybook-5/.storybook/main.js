@@ -18,8 +18,8 @@ module.exports = {
     },  
   ],
   stories: [
-    '../../../core/editors/src/**/*.stories.(js|tsx|mdx)',
-    '../../../blocks/core/src/**/*.stories.(js|tsx|mdx)',
+    '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
+    '../../../ui/block-components/src/**/*.stories.(js|tsx|mdx)',
     '../src/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [

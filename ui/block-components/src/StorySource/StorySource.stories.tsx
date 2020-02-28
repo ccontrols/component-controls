@@ -1,13 +1,17 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { StorySource, SourceProps, themes } from './StorySource';
+import { StorySource, StorySourceProps, themes } from './StorySource';
 
 export default {
-  title: 'Blocks/StorySource',
+  title: 'Blocks/Components/StorySource',
   component: StorySource,
 };
 
-export const simpleSource = ({ language, children, theme }: SourceProps) => {
+export const simpleSource = ({
+  language,
+  children,
+  theme,
+}: StorySourceProps) => {
   return (
     <StorySource language={language} theme={theme}>
       {children}
