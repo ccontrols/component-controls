@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { ActionBar, ActionItem } from '../ActionBar';
+import { ActionBar, ActionItem } from '@component-controls/components';
 
 const SpacedBlockContainer = styled.div(() => ({
   position: 'relative',

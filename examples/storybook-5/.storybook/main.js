@@ -19,6 +19,7 @@ module.exports = {
   ],
   stories: [
     '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
+    '../../../ui/components/src/**/*.stories.(js|tsx|mdx)',
     '../../../ui/block-components/src/**/*.stories.(js|tsx|mdx)',
     '../src/**/*.stories.(js|tsx|mdx)',
   ],

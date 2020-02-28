@@ -16,7 +16,7 @@ import {
 } from '@component-controls/core';
 
 import { BlockContainer } from '../BlockContainer';
-import { Tab, Tabs, TabList, TabPanel } from '../Tabs';
+import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 import { PropertyEditorRow } from './PropEditorRow';
 
 export interface ExtraControlAction {

@@ -6,9 +6,9 @@ import {
   ComponentControlObject,
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
+import { Popover } from '@component-controls/components';
 import { PropertyControlProps, PropertyEditor } from '../types';
 import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
-import { Popover } from '../../components/Popover/Popover';
 
 import { PropertyEditors } from '../PropertyEditors';
 

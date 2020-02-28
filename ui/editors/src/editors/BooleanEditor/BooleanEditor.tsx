@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentControlBoolean } from '@component-controls/specification';
-import { Toggle } from '../../components/Toggle/Toggle';
+import { Toggle } from '@component-controls/components';
 import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
 import { PropertyControlProps, PropertyEditor } from '../types';
 

@@ -10,7 +10,7 @@ import {
 } from 'react-tabs';
 
 const TabsContainer = styled.div`
-  ${({ theme }: { theme: Theme }) => `
+  ${({ theme }: { theme?: Theme }) => `
     .react-tabs {
       -webkit-tap-highlight-color: transparent;
     }
