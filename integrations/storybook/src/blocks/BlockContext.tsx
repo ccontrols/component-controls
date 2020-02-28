@@ -104,6 +104,7 @@ export const useControlsContext = ({
   const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
   return {
+    id: previewId,
     api,
     channel,
     story,
