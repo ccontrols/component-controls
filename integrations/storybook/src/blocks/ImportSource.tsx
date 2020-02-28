@@ -15,9 +15,9 @@ export const ImportSource: FC<SourceProps> = ({ id, name }) => {
   });
   return (
     <ThemeProvider>
-      <SourceBlock
-        source={component && component.import ? component.import : ''}
-      />
+      <SourceBlock>
+        {component && component.import ? component.import : ''}
+      </SourceBlock>
     </ThemeProvider>
   );
 };

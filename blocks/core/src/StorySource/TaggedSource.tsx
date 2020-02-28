@@ -49,8 +49,13 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
     ? getArgumentsLocations(args)
     : undefined;
   return (
-    <Source theme={theme} {...rest}>
-      {({ className, style, tokens, getLineProps, getTokenProps, theme }) => {
+    <Source
+      theme={theme}
+      {...rest}
+      renderFn={(
+        { className, style, tokens, getLineProps, getTokenProps },
+        { theme },
+      ) => {
         if (tags) {
           tags.forEach((tag, index) => {
             let color: string;
@@ -63,9 +68,9 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
         return (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '0px 10px', margin: 0 }}
+            style={{ ...style, padding: '10px 10px', margin: 0 }}
           >
-            {tokens.map((line: { content: string }[], i: number) => (
+            {tokens.map((line, i: number) => (
               <div {...getLineProps({ line, key: i })}>
                 {(() => {
                   let column = 0;
@@ -88,7 +93,7 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
 
                     column += token.content.length;
                     if (param) {
-                      const splitToken: string[] = getTokenProps({
+                      const splitToken = getTokenProps({
                         token,
                         key,
                       }).children.split(/(\s+)/);
@@ -129,6 +134,6 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
           </Styled.pre>
         );
       }}
-    </Source>
+    />
   );
 };

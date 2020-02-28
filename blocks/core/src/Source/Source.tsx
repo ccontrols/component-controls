@@ -14,11 +14,13 @@ import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 
 import { BlockContainer, BlockContainerProps } from '../BlockContainer';
 
+type RenderProps = Parameters<Highlight['props']['children']>[0];
+
 export interface SourceOwnProps {
   /**
    * source code to display
    */
-  source: string;
+  children?: string;
   /**
    * optional theme provided to the component
    */
@@ -30,7 +32,10 @@ export interface SourceOwnProps {
   /**
    * custom function to render the source code
    */
-  children?: (props: any) => React.ReactNode;
+  renderFn?: (
+    props: RenderProps,
+    other: { theme: PrismTheme },
+  ) => ReturnType<Highlight['props']['children']>;
   /**
    * used to specify a "dark" color theme - applcable only if no custom theme prop is provided
    */
@@ -43,10 +48,10 @@ export type SourceProps = SourceOwnProps & BlockContainerProps;
  *
  */
 export const Source: FC<SourceProps> = ({
-  source = '',
+  children = '',
   language = 'jsx',
   theme: customTheme,
-  children,
+  renderFn,
   actions,
   dark = false,
 }) => {
@@ -55,7 +60,7 @@ export const Source: FC<SourceProps> = ({
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setCopied(true);
-    copy(source);
+    copy(children);
     window.setTimeout(() => setCopied(false), 1500);
   };
 
@@ -64,12 +69,12 @@ export const Source: FC<SourceProps> = ({
   actionsItems.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
   const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
   const renderProps =
-    typeof children === 'function'
-      ? (props: any) => children({ ...props, theme })
+    typeof renderFn === 'function'
+      ? (props: RenderProps) => renderFn(props, { theme })
       : ({ className, style, tokens, getLineProps, getTokenProps }: any) => (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '0px 10px', margin: 0 }}
+            style={{ ...style, padding: '10px 10px', margin: 0 }}
           >
             {tokens.map((line: string[], i: number) => (
               <div {...getLineProps({ line, key: i })}>
@@ -87,7 +92,7 @@ export const Source: FC<SourceProps> = ({
 
   return (
     <BlockContainer actions={actionsItems}>
-      <Highlight {...props} code={source} language={language}>
+      <Highlight {...props} code={children} language={language}>
         {renderProps}
       </Highlight>
     </BlockContainer>

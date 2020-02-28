@@ -140,10 +140,11 @@ export const StorySource: FC<StorySourceProps> = ({
   return (
     <TaggedSource
       args={viewStyle === 'tags' && !showFileSource ? args : undefined}
-      source={source}
       theme={prismTheme}
       language={language}
       actions={actions}
-    />
+    >
+      {source}
+    </TaggedSource>
   );
 };

@@ -50,7 +50,7 @@ simpleSource.story = {
     controls: {
       language: { type: 'options', options: languages, value: 'jsx' },
       dark: { type: 'boolean' },
-      source: {
+      children: {
         type: 'text',
         rows: 10,
         value: `export const sample = () => {
