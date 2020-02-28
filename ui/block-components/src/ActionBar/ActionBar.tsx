@@ -2,7 +2,7 @@ import React, { FunctionComponent, MouseEvent } from 'react';
 import styled from '@emotion/styled';
 import { Theme } from 'theme-ui';
 
-const Container = styled.div(({ theme }: { theme: Theme }) => ({
+const Container = styled.div(({ theme }: { theme?: Theme }) => ({
   bottom: 0,
   right: 0,
   maxWidth: '100%',
