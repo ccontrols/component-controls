@@ -63,6 +63,7 @@ simpleSource.story = {
     />
   );
 };`,
+        data: null,
       },
     },
   },

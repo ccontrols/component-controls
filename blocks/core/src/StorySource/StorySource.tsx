@@ -123,7 +123,7 @@ export const StorySource: FC<StorySourceProps> = ({
   if (parentTheme === undefined) {
     actions.push({ title: themeName, onClick: onRotateTheme });
   }
-  if (args) {
+  if (args && args.length) {
     actions.push({ title: viewStyle, onClick: onMergeValues });
   }
 

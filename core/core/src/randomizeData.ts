@@ -39,7 +39,7 @@ export const randomizeData = (
     .map(name => {
       const control = controls[name];
       const { data } = control;
-      if (data === null) {
+      if (data === false || data === null) {
         return null;
       }
       // check if control has custom settings for generating data
