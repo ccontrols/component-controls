@@ -2,20 +2,15 @@ import React, { FunctionComponent, MouseEvent } from 'react';
 import styled from '@emotion/styled';
 import { Theme } from 'theme-ui';
 
-interface ContainerProps {
-  zIndex?: number;
-}
-const Container = styled.div<ContainerProps>(
-  ({ theme, zIndex = 1 }: { theme: Theme } & ContainerProps) => ({
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    maxWidth: '100%',
-    display: 'flex',
-    background: theme?.colors?.background,
-    zIndex,
-  }),
-);
+const Container = styled.div(({ theme }: { theme: Theme }) => ({
+  bottom: 0,
+  right: 0,
+  maxWidth: '100%',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+  background: theme?.colors?.background,
+}));
 
 interface ActionButtonProps {
   disabled?: boolean;
@@ -34,8 +29,9 @@ export const ActionButton = styled.button<ActionButtonProps>(
     lineHeight: '16px',
     fontWeight: 'bold',
 
-    borderTop: `1px solid ${theme?.colors?.muted}`,
+    borderBottom: `1px solid ${theme?.colors?.muted}`,
     borderLeft: `1px solid ${theme?.colors?.muted}`,
+    borderRight: `1px solid ${theme?.colors?.muted}`,
     marginLeft: -1,
 
     borderRadius: `4px 0 0 0`,

@@ -12,10 +12,9 @@ import Highlight, {
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
 import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 
-import { BlockContainer } from '../BlockContainer';
-import { ActionBar, ActionItem } from '../ActionBar';
+import { BlockContainer, BlockContainerProps } from '../BlockContainer';
 
-export interface SourceProps {
+export interface SourceOwnProps {
   /**
    * source code to display
    */
@@ -33,15 +32,12 @@ export interface SourceProps {
    */
   children?: (props: any) => React.ReactNode;
   /**
-   * additional actions provided to the component
-   */
-  actions?: ActionItem[];
-  /**
    * used to specify a "dark" color theme - applcable only if no custom theme prop is provided
    */
   dark?: boolean;
 }
 
+export type SourceProps = SourceOwnProps & BlockContainerProps;
 /**
  * Source component used to display source code
  *
@@ -49,7 +45,7 @@ export interface SourceProps {
 export const Source: FC<SourceProps> = ({
   source = '',
   language = 'jsx',
-  theme,
+  theme: customTheme,
   children,
   actions,
   dark = false,
@@ -63,17 +59,17 @@ export const Source: FC<SourceProps> = ({
     window.setTimeout(() => setCopied(false), 1500);
   };
 
-  const actionsItems = actions || [];
+  const actionsItems = Array.isArray(actions) ? [...actions] : [];
 
   actionsItems.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
-
+  const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
   const renderProps =
     typeof children === 'function'
-      ? children
+      ? (props: any) => children({ ...props, theme })
       : ({ className, style, tokens, getLineProps, getTokenProps }: any) => (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '10px 10px 25px 10px', margin: 0 }}
+            style={{ ...style, padding: '0px 10px', margin: 0 }}
           >
             {tokens.map((line: string[], i: number) => (
               <div {...getLineProps({ line, key: i })}>
@@ -87,19 +83,13 @@ export const Source: FC<SourceProps> = ({
             ))}
           </Styled.pre>
         );
-  const props = { ...defaultProps };
-  if (theme) {
-    props.theme = theme;
-  } else {
-    props.theme = dark ? duotoneDark : duotoneLight;
-  }
+  const props = { ...defaultProps, theme };
 
   return (
-    <BlockContainer>
+    <BlockContainer actions={actionsItems}>
       <Highlight {...props} code={source} language={language}>
         {renderProps}
       </Highlight>
-      <ActionBar actionItems={actionsItems} />
     </BlockContainer>
   );
 };
