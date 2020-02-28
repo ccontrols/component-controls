@@ -34,6 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/block-components": "^0.6.0",
+    "@component-controls/components": "^0.6.0",
     "@component-controls/editors": "^0.6.0",
     "@component-controls/loader": "^0.6.0",
     "@component-controls/specification": "^0.6.0",

@@ -15,10 +15,6 @@ const match = (
   fallback: number | string = 0,
 ) => (actual.split('-')[0] === requested ? value : fallback);
 
-export interface FlexContainerProps {
-  align?: string;
-}
-
 export const Wrapper = styled.div<{
   placement: string;
   borderColor: string;

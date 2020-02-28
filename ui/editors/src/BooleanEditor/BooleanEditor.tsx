@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentControlBoolean } from '@component-controls/specification';
-import { Toggle } from '@component-controls/components';
-import { FlexContainer } from '../../components/FlexContainer/FlexContainer';
+import { Toggle, FlexContainer } from '@component-controls/components';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface BooleanEditorProps extends PropertyControlProps {

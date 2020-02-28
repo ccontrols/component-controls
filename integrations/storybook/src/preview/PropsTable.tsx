@@ -1,10 +1,7 @@
 import React from 'react';
 import { styled } from '@storybook/theming';
-import {
-  FlexContainer,
-  PropertyEditor,
-  getPropertyEditor,
-} from '@component-controls/editors';
+import { FlexContainer } from '@component-controls/components';
+import { PropertyEditor, getPropertyEditor } from '@component-controls/editors';
 import { PropDef } from '../shared/smartControls';
 
 const TitleIcon = styled.div({
