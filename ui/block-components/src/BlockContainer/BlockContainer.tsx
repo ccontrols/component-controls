@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { Heading } from 'theme-ui';
+import { Subtitle } from '../Subtitle';
 import { ActionBar, ActionItem } from '@component-controls/components';
 
 const SpacedBlockContainer = styled.div(() => ({
@@ -30,7 +30,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   actions,
 }) => (
   <SpacedBlockContainer>
-    {title && <Heading as="h3">{title}</Heading>}
+    {title && <Subtitle>{title}</Subtitle>}
     <FramedBlockContainer>{children}</FramedBlockContainer>
     {actions && <ActionBar actionItems={actions} />}
   </SpacedBlockContainer>
