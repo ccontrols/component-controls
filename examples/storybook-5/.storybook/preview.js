@@ -24,9 +24,9 @@ export const DocsPage = ({
       <Title slot={titleSlot} />
       <Subtitle slot={subtitleSlot} />
       <Description slot={descriptionSlot} />
-      <ImportSource id="." />
+      <ImportSource id="." title='import component' />
       <Story id="." />
-      <Source id="." />
+      <Source id="." title='source'/>
       <ControlsTable id="." />
       <Props slot={propsSlot} />
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
