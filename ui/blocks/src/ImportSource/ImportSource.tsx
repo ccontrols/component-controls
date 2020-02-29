@@ -11,7 +11,7 @@ import { ThemeContext } from '../ThemeContext';
 
 export type ImportSourceProps = ControlsContextInputProps & SourceProps;
 
-export const ImportSource: FC<ImportSourceProps> = ({ id, name }) => {
+export const ImportSource: FC<ImportSourceProps> = ({ id, name, ...rest }) => {
   const { component } = useControlsContext({
     id,
     name,
@@ -21,5 +21,9 @@ export const ImportSource: FC<ImportSourceProps> = ({ id, name }) => {
     return null;
   }
   const { dark } = React.useContext(ThemeContext);
-  return <SourceBlock dark={dark}>{source}</SourceBlock>;
+  return (
+    <SourceBlock dark={dark} {...rest}>
+      {source}
+    </SourceBlock>
+  );
 };

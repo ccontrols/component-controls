@@ -11,7 +11,7 @@ import { ThemeContext } from '../ThemeContext';
 
 export type StorySourceProps = ControlsContextInputProps & BaseStorySourceProps;
 
-export const StorySource: FC<StorySourceProps> = ({ id, name }) => {
+export const StorySource: FC<StorySourceProps> = ({ id, name, ...rest }) => {
   const { source, controls, args, fileSource } = useControlsContext({
     id,
     name,
@@ -23,6 +23,7 @@ export const StorySource: FC<StorySourceProps> = ({ id, name }) => {
       controls={controls}
       args={args}
       fileSource={fileSource}
+      {...rest}
     >
       {source}
     </BaseStorySource>

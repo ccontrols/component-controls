@@ -54,6 +54,7 @@ export const Source: FC<SourceProps> = ({
   renderFn,
   actions,
   dark = false,
+  title,
 }) => {
   const [copied, setCopied] = React.useState(false);
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
@@ -90,7 +91,7 @@ export const Source: FC<SourceProps> = ({
   const props = { ...defaultProps, theme };
 
   return (
-    <BlockContainer actions={actionsItems}>
+    <BlockContainer actions={actionsItems} title={title}>
       <Highlight {...props} code={children} language={language}>
         {renderProps}
       </Highlight>

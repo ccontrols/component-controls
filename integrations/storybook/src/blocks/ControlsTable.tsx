@@ -7,22 +7,21 @@ import {
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
 import {
-  ControlsTable as SharedControlsTable,
+  ControlsTable as BaseControlsTable,
+  ControlsTableProps as BaseControlsTableProps,
   useControlsContext,
   ControlsContextInputProps,
 } from '@component-controls/blocks';
 
 import { SET_DATA_MSG } from '../shared/shared';
 import { ThemeProvider } from '../shared/ThemeProvider';
-export type ControlsTableProps = ControlsContextInputProps & {
-  /** a title to display */
-  title?: string;
-};
+export type ControlsTableProps = ControlsContextInputProps &
+  BaseControlsTableProps;
 
 export const ControlsTable: FC<ControlsTableProps> = ({
-  title,
   id: propId,
   name,
+  ...rest
 }) => {
   const { id, controls, story, api, channel } = useControlsContext({
     id: propId,
@@ -65,12 +64,12 @@ export const ControlsTable: FC<ControlsTableProps> = ({
 
   return id ? (
     <ThemeProvider>
-      <SharedControlsTable
-        title={title}
+      <BaseControlsTable
         controls={controls}
         storyId={id}
         setControlValue={setControlValue}
         clickControl={clickControl}
+        {...rest}
       />
     </ThemeProvider>
   ) : null;

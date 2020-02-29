@@ -1,7 +1,6 @@
 import React, { FC, MouseEvent } from 'react';
 import { window, document } from 'global';
 import styled from '@emotion/styled';
-import { Theme } from 'theme-ui';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
 import {
@@ -46,17 +45,6 @@ const StyleTable = styled.table<{}>(({ theme }) => ({
       width: '70%',
     },
   },
-}));
-
-const PropEditorsTitle = styled.div<{}>(({ theme }: { theme: Theme }) => ({
-  padding: `${theme?.space?.[3]}px`,
-  letterSpacing: '0.35em',
-  textTransform: 'uppercase',
-  //@ts-ignore
-  fontWeight: theme?.fontWeights?.bold || 900,
-  fontSize: '11px',
-  color: `${theme?.colors?.fadedText}`,
-  background: `${theme?.colors?.lightenPrimary}`,
 }));
 
 const DEFAULT_GROUP_ID = 'Other';
@@ -170,8 +158,7 @@ export const ControlsTable: FC<ControlsTableProps & {
       { title: copied ? 'copied' : 'copy', onClick: onCopy },
     ];
     return (
-      <BlockContainer actions={actionItems}>
-        {title && <PropEditorsTitle>{title}</PropEditorsTitle>}
+      <BlockContainer actions={actionItems} title={title}>
         {groupedItems.length === 1 ? (
           <PropGroupTable {...props} controls={groupedItems[0].controls} />
         ) : (

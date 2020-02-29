@@ -5,6 +5,8 @@ import {
 } from '@component-controls/block-components';
 import { randomizeData } from '@component-controls/core';
 
+export { ControlsTableProps };
+
 export const ControlsTable: React.FC<ControlsTableProps> = props =>
   ControlsTable ? (
     <BaseControlsTable
