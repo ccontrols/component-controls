@@ -25,6 +25,7 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-docs',
+    'storybook-dark-mode',
     'storybook-addon-deps',
   ],
   webpackFinal: async (config, { configType }) => {

@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  ControlsTable,
+  ControlsTable as BaseControlsTable,
   ControlsTableProps,
 } from '@component-controls/block-components';
 import { randomizeData } from '@component-controls/core';
 
-export const SharedControlsTable: React.FC<ControlsTableProps> = props =>
+export const ControlsTable: React.FC<ControlsTableProps> = props =>
   ControlsTable ? (
-    <ControlsTable
+    <BaseControlsTable
       {...props}
       extraActions={[
         {

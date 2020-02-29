@@ -6,8 +6,12 @@ import {
   ComponentControlButton,
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
-import { useControlsContext, ControlsContextInputProps } from './BlockContext';
-import { SharedControlsTable } from '../shared/ControlsTable';
+import {
+  ControlsTable as SharedControlsTable,
+  useControlsContext,
+  ControlsContextInputProps,
+} from '@component-controls/blocks';
+
 import { SET_DATA_MSG } from '../shared/shared';
 import { ThemeProvider } from '../shared/ThemeProvider';
 export type ControlsTableProps = ControlsContextInputProps & {

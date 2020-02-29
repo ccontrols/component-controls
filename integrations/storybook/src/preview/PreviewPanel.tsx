@@ -1,5 +1,5 @@
 import React from 'react';
-import { SharedControlsTable } from '../shared/ControlsTable';
+import { ControlsTable as SharedControlsTable } from '@component-controls/blocks';
 
 export const createControlsPanel = ({
   storyId,

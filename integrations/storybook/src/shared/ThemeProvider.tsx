@@ -1,54 +1,15 @@
 import React from 'react';
-import { polaris as theme } from '@theme-ui/presets';
-import prismTheme from '@theme-ui/prism/presets/dracula.json';
-import { ThemeProvider as ThemeUIProvider } from 'theme-ui';
-import { lighten } from 'polished';
+import { getLuminance } from 'polished';
+import { ThemeContext, Theme } from '@storybook/theming';
+import { ThemeProvider as ThemeUIProvider } from '@component-controls/blocks';
 
-export const ThemeProvider: React.FC = ({ children }) => (
-  <ThemeUIProvider
-    theme={{
-      ...theme,
-
-      styles: {
-        ...theme.styles,
-        code: {
-          ...prismTheme,
-        },
-        table: {
-          margin: 0,
-          borderCollapse: 'collapse',
-          fontSize: '14px',
-          lineHeight: '20px',
-          textAlign: 'left',
-          width: '100%',
-          borderSpacing: '0px',
-        },
-        td: {
-          padding: '16px 20px',
-        },
-        tr: {
-          borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-        },
-      },
-      buttons: {
-        primary: {
-          color: '#333',
-          bg: '#f3f3f3',
-          borderRadius: 5,
-          boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset',
-        },
-        secondary: {
-          bg: 'highlight',
-        },
-      },
-      colors: {
-        ...theme.colors,
-        accent: '#1EA7FD',
-        fadedText: lighten(0.25, theme.colors.text),
-        lightenPrimary: '#F6F9FC',
-      },
-    }}
-  >
-    {children}
-  </ThemeUIProvider>
-);
+export const ThemeProvider: React.FC = ({ children }) => {
+  const { background: { content = '#ffffff' } = {} } = React.useContext<Theme>(
+    ThemeContext as any,
+  );
+  return (
+    <ThemeUIProvider dark={getLuminance(content) < 0.5}>
+      {children}
+    </ThemeUIProvider>
+  );
+};

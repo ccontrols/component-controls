@@ -8,12 +8,12 @@ import {
 import { SetControlValueFn } from '@component-controls/specification';
 import { SET_STORIES } from '@storybook/core-events';
 import { API } from '@storybook/api';
+import { ControlsTable as SharedControlsTable } from '@component-controls/blocks';
 import {
   SET_DATA_MSG,
   SYNC_SMART_STORIES,
   GET_ALL_STORIES,
 } from '../shared/shared';
-import { SharedControlsTable } from '../shared/ControlsTable';
 import { ThemeProvider } from '../shared/ThemeProvider';
 import { NoControls } from './NoControls';
 

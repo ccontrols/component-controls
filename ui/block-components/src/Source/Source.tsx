@@ -56,7 +56,6 @@ export const Source: FC<SourceProps> = ({
   dark = false,
 }) => {
   const [copied, setCopied] = React.useState(false);
-
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setCopied(true);

@@ -37,6 +37,11 @@ const getArgumentsLocations = (args: StoryArguments): ArgumentLocations[] => {
 };
 
 export type TaggedSourceProps = SourceProps & {
+  /**
+   * a list of story arguments accepted by Source
+   * this is used to syntax-highlight the arguments
+   * and their usage
+   */
   args?: StoryArguments;
 };
 

@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import { StoryArguments } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
-import { defaultProps, Language, PrismTheme } from 'prism-react-renderer';
+import { PrismTheme } from 'prism-react-renderer';
 
 import dracula from 'prism-react-renderer/themes/dracula';
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
@@ -15,7 +14,7 @@ import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import ultramin from 'prism-react-renderer/themes/ultramin';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { mergeControlValues } from './argument-utils';
-import { TaggedSource } from './TaggedSource';
+import { TaggedSource, TaggedSourceProps } from './TaggedSource';
 export type ThemeType =
   | 'nightowl-light'
   | 'nightowl'
@@ -44,28 +43,7 @@ export const themes: {
   'shades-of-purple': shadesOfPurple,
 };
 
-export interface StorySourceProps {
-  /**
-   * source for the story
-   */
-  children?: string;
-  /**
-   * language to be used for syntax hilighting
-   */
-  language?: Language;
-  /**
-   * prism theme passed from parent
-   * if the theme is selected in the parent, the Source
-   * componnet will not have a thmme selection option
-   */
-  theme?: ThemeType;
-  /**
-   * a list of story arguments accepted by Source
-   * this is used to syntax-highlight the arguments
-   * and their usage
-   */
-  args?: StoryArguments;
-
+export type StorySourceProps = TaggedSourceProps & {
   /**
    * any control values to render in place of props in the editor
    */
@@ -75,33 +53,19 @@ export interface StorySourceProps {
    * full file source code of the file where the story was declared
    */
   fileSource?: string;
-}
+};
 
 type ViewStyle = 'plain' | 'tags' | 'values';
 
 export const StorySource: FC<StorySourceProps> = ({
-  children = '',
-  language = 'jsx',
-  theme: parentTheme,
-  args,
   controls,
   fileSource,
+  children,
+  args,
+  ...rest
 }) => {
-  const [themeName, setThemeName] = React.useState<ThemeType>(
-    parentTheme || 'nightowl-light',
-  );
-
   const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
-
-  let prismTheme = themes[themeName] || defaultProps.theme;
-
-  const onRotateTheme = () => {
-    const themeKeys = Object.keys(themes);
-    const themeIdx = themeKeys.indexOf(themeName);
-    const newIdx = themeIdx >= themeKeys.length - 1 ? 0 : themeIdx + 1;
-    setThemeName(themeKeys[newIdx] as ThemeType);
-  };
 
   const onMergeValues = () =>
     setViewStyle(
@@ -120,9 +84,6 @@ export const StorySource: FC<StorySourceProps> = ({
       onClick: onShowFileSource,
     });
   }
-  if (parentTheme === undefined) {
-    actions.push({ title: themeName, onClick: onRotateTheme });
-  }
   if (args && args.length) {
     actions.push({ title: viewStyle, onClick: onMergeValues });
   }
@@ -139,9 +100,8 @@ export const StorySource: FC<StorySourceProps> = ({
   }
   return (
     <TaggedSource
+      {...rest}
       args={viewStyle === 'tags' && !showFileSource ? args : undefined}
-      theme={prismTheme}
-      language={language}
       actions={actions}
     >
       {source}
