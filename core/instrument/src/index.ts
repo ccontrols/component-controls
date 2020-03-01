@@ -1,16 +1,18 @@
 import * as parser from '@babel/parser';
 const mdx = require('@mdx-js/mdx');
+import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import prettier, { Options, ResolveConfigOptions } from 'prettier';
 import parserBabel from 'prettier/parser-babylon';
-import { StoriesGroup, Story } from '@component-controls/specification';
+import { StoriesStore, Story } from '@component-controls/specification';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractComponent } from './babel/extract-component';
+import { packageInfo } from './project/packageInfo';
 
-type TraverseFn = (stories: StoriesGroup) => any;
+type TraverseFn = (stories: StoriesStore) => any;
 
 export type PrettierOptions = Options & {
   resolveConfigOptions?: ResolveConfigOptions;
@@ -21,7 +23,7 @@ const parseSource = async (
   originalSource: string,
   filePath?: string,
   prettierOptions?: PrettierOptions,
-): Promise<StoriesGroup> => {
+): Promise<StoriesStore> => {
   const prettify = async (c: string): Promise<string> => {
     if (prettierOptions !== false) {
       const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
@@ -48,15 +50,44 @@ const parseSource = async (
     sourceType: 'module',
     plugins: ['jsx', 'typescript'],
   });
-  const stories: StoriesGroup = {
+  const store: StoriesStore = {
     stories: {},
-    source: originalSource,
+    kinds: {},
+    components: {},
   };
-  traverse(ast, traverseFn(stories));
-  await extractComponent(ast, stories, prettify);
-  Object.keys(stories.stories).forEach((key: string) => {
-    //@ts-ignore
-    const story: Story = stories.stories[key];
+  traverse(ast, traverseFn(store));
+  if (Object.keys(store.kinds).length > 0) {
+    const kind = store.kinds[Object.keys(store.kinds)[0]];
+    kind.source = originalSource;
+    store.stories = Object.keys(store.stories).reduce(
+      (acc: { [key: string]: Story }, name) => {
+        const story: Story = store.stories[name];
+        if (kind.title && story.name) {
+          const id = toId(kind.title, storyNameFromExport(story.name));
+          if (!kind.stories) {
+            kind.stories = [];
+          }
+          kind.stories.push(id);
+          return { ...acc, [id]: { ...story, id, kind: kind.title } };
+        }
+        return acc;
+      },
+      {},
+    );
+  }
+  await extractComponent(ast, store, prettify);
+  await packageInfo(store, filePath);
+  /*
+  if (filePath && stories.component && stories.component.from) {
+    console.log(
+      stories.component.from,
+      ': ',
+      path.resolve(filePath, stories.component.from),
+    );
+  }
+  */
+  Object.keys(store.stories).forEach((key: string) => {
+    const story: Story = store.stories[key];
     const { start, end } = story.loc || {};
     if (start && end) {
       const lines = source.split('\n');
@@ -79,14 +110,14 @@ const parseSource = async (
       }
     }
   });
-  return stories;
+  return store;
 };
 
 export const parseCSF = async (
   source: string,
   filePath?: string,
   prettierOptions?: PrettierOptions,
-): Promise<StoriesGroup> => {
+): Promise<StoriesStore> => {
   return await parseSource(
     source,
     extractCSFStories,
@@ -100,7 +131,7 @@ export const parseMDX = async (
   source: string,
   filePath?: string,
   prettierOptions?: PrettierOptions,
-): Promise<StoriesGroup> => {
+): Promise<StoriesStore> => {
   const code = await mdx(source);
 
   const ast = parser.parse(code, {

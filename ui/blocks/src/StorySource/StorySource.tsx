@@ -12,7 +12,7 @@ import { ThemeContext } from '../ThemeContext';
 export type StorySourceProps = ControlsContextInputProps & BaseStorySourceProps;
 
 export const StorySource: FC<StorySourceProps> = ({ id, name, ...rest }) => {
-  const { source, controls, args, fileSource } = useControlsContext({
+  const { source, controls, args, kind } = useControlsContext({
     id,
     name,
   });
@@ -22,7 +22,7 @@ export const StorySource: FC<StorySourceProps> = ({ id, name, ...rest }) => {
       dark={dark}
       controls={controls}
       args={args}
-      fileSource={fileSource}
+      fileSource={kind ? kind.source : undefined}
       {...rest}
     >
       {source}

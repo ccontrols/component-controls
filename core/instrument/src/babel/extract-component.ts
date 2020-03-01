@@ -1,6 +1,7 @@
 import traverse from '@babel/traverse';
 import {
-  StoriesGroup,
+  StoriesStore,
+  StoryArgument,
   StoryArguments,
   StoryComponent,
 } from '@component-controls/specification';
@@ -9,12 +10,16 @@ const componentFromParams = (
   parameters?: StoryArguments,
 ): string | undefined => {
   if (parameters) {
-    let component = parameters.find(p => p.name === 'component');
+    let component = parameters.find(
+      (p: StoryArgument) => p.name === 'component',
+    );
     if (!component) {
-      const params = parameters.find(p => p.name === 'parameters');
+      const params = parameters.find(
+        (p: StoryArgument) => p.name === 'parameters',
+      );
       if (params) {
         component = (params.value as StoryArguments).find(
-          p => p.name === 'component',
+          (p: StoryArgument) => p.name === 'component',
         );
       }
     }
@@ -67,7 +72,7 @@ const findComponentImport = (
 type PrettifyFn = (code: string) => Promise<string>;
 export const extractComponent = async (
   ast: any,
-  kind: StoriesGroup,
+  store: StoriesStore,
   prettifyFn: PrettifyFn,
 ) => {
   const prettyImport = async (
@@ -82,20 +87,26 @@ export const extractComponent = async (
       ),
     };
   };
-  const componentName = componentFromParams(kind.parameters);
-  if (componentName) {
-    const component = findComponentImport(ast, componentName);
-    if (component) {
-      kind.component = await prettyImport(component);
+  const kinds = Object.keys(store.kinds);
+  if (kinds.length > 0) {
+    const kind = store.kinds[kinds[0]];
+    const componentName = componentFromParams(kind.parameters);
+    if (componentName) {
+      const component = findComponentImport(ast, componentName);
+      if (component) {
+        store.components[componentName] = await prettyImport(component);
+        kind.component = componentName;
+      }
     }
   }
-  Object.keys(kind.stories).forEach(async (name: string) => {
-    const story = kind.stories[name];
+  Object.keys(store.stories).forEach(async (name: string) => {
+    const story = store.stories[name];
     const componentName = componentFromParams(story.parameters);
     if (componentName) {
       const component = findComponentImport(ast, componentName);
       if (component) {
-        story.component = await prettyImport(component);
+        store.components[componentName] = await prettyImport(component);
+        story.component = componentName;
       }
     }
   });

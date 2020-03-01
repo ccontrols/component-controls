@@ -3,6 +3,7 @@ import * as path from 'path';
 import { getOptions } from 'loader-utils';
 import { loader } from 'webpack';
 import { parseCSF, parseMDX } from '@component-controls/instrument';
+import { StoriesStore } from '@component-controls/specification';
 import { LoaderOptions } from './types';
 import { addStoriesKind } from './store';
 
@@ -11,20 +12,20 @@ module.exports.default = async function(source: string) {
   const { type = 'csf', prettier } = options;
   const context = this as loader.LoaderContext;
   const filePath = context.resourcePath;
-  let stories;
+  let store: StoriesStore;
   switch (type) {
     case 'csf':
-      stories = await parseCSF(source, filePath, prettier);
+      store = await parseCSF(source, filePath, prettier);
       break;
     case 'mdx':
-      stories = await parseMDX(source, filePath, prettier);
+      store = await parseMDX(source, filePath, prettier);
       break;
   }
-  if (stories) {
+  if (store) {
     const time = new Date();
     const fileName = path.join(__dirname, 'story-store-data.js');
     fs.utimesSync(fileName, time, time);
-    addStoriesKind(stories, context);
+    addStoriesKind(store, context);
   }
   return source;
 };

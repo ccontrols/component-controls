@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 import { Heading } from 'theme-ui';
 
 const StyledHeading = styled(Heading)(() => ({
-  fontWeight: 700,
+  fontWeight: 500,
   paddingBottom: '15px',
 }));
 
 export const Subtitle: FC = ({ children }) => (
-  <StyledHeading as="h2">{children}</StyledHeading>
+  <StyledHeading as="h3">{children}</StyledHeading>
 );

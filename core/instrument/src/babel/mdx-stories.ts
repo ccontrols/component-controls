@@ -1,7 +1,8 @@
 import {
-  StoriesGroup,
+  StoriesStore,
   Story,
   StoryArguments,
+  StoryArgument,
   CodeLocation,
 } from '@component-controls/specification';
 import traverse from '@babel/traverse';
@@ -9,7 +10,7 @@ import { extractFunctionParameters } from './get-function-parameters';
 import { extractProperties } from './extract-properties';
 import { sourceLocation } from './utils';
 
-export const extractMDXStories = (stories: StoriesGroup) => {
+export const extractMDXStories = (stories: StoriesStore) => {
   return {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
@@ -39,7 +40,9 @@ export const extractMDXStories = (stories: StoriesGroup) => {
             const story: Story = {
               loc: sourceLocation(path.node.loc),
             };
-            const name = parameters.find(p => p.name === 'name');
+            const name = parameters.find(
+              (p: StoryArgument) => p.name === 'name',
+            );
 
             if (name && typeof name.value === 'string') {
               traverse(
@@ -55,12 +58,19 @@ export const extractMDXStories = (stories: StoriesGroup) => {
             break;
           }
           case 'Meta': {
-            const title = parameters.find(p => p.name === 'title');
-            stories.title =
+            const title = parameters.find(
+              (p: StoryArgument) => p.name === 'title',
+            );
+            const kindTitle =
               title && typeof title.value === 'string'
                 ? title.value
                 : undefined;
-            stories.parameters = parameters;
+            if (kindTitle) {
+              stories.kinds[kindTitle] = {
+                title: kindTitle,
+                parameters,
+              };
+            }
             break;
           }
           default:

@@ -1,13 +1,14 @@
 import {
-  StoriesGroup,
+  StoriesStore,
   Story,
   Stories,
+  StoryArgument,
 } from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractProperties } from './extract-properties';
 
-export const extractCSFStories = (stories: StoriesGroup) => {
+export const extractCSFStories = (stories: StoriesStore) => {
   const globals: Stories = {};
   const localStories: Stories = {};
 
@@ -43,13 +44,18 @@ export const extractCSFStories = (stories: StoriesGroup) => {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
       const parameters = extractProperties(declaration);
-      stories.parameters = parameters;
 
       const title = parameters
-        ? parameters.find(p => p.name === 'title')
+        ? parameters.find((p: StoryArgument) => p.name === 'title')
         : null;
-      stories.title =
+      const kindTitle =
         title && typeof title.value === 'string' ? title.value : undefined;
+      if (kindTitle) {
+        stories.kinds[kindTitle] = {
+          title: kindTitle,
+          parameters,
+        };
+      }
     },
     AssignmentExpression: (path: any) => {
       const node = path.node;
@@ -62,13 +68,14 @@ export const extractCSFStories = (stories: StoriesGroup) => {
         const storyName = node.left.object.name;
         const parameters = extractProperties(node.right);
         const nameProp = parameters
-          ? parameters.find(p => p.name === 'name')
+          ? parameters.find((p: StoryArgument) => p.name === 'name')
           : null;
         const name = nameProp ? nameProp.value : storyName;
         globals[storyName] = {
           parameters,
           name,
         };
+
         const story = stories.stories[storyName];
 
         if (story) {

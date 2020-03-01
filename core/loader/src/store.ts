@@ -1,50 +1,42 @@
 import { loader } from 'webpack';
-import { toId, storyNameFromExport } from '@storybook/csf';
-import { StoriesGroup, Story } from '@component-controls/specification';
-import { StoryStore, StoriesKind } from './types';
+import { StoriesStore } from '@component-controls/specification';
 
-const store: StoryStore = {
+const store: StoriesStore = {
   kinds: {},
   stories: {},
+  components: {},
 };
 
 export const addStoriesKind = async (
-  kind: StoriesGroup,
+  added: StoriesStore,
   context: loader.LoaderContext,
 ) => {
-  let stories: StoriesKind;
-  if (kind.title) {
-    if (kind.component && kind.component.from) {
-      context.resolve(context.context, kind.component.from, function(
-        err,
+  Object.keys(added.kinds).forEach(key => {
+    store.kinds[key] = {
+      ...added.kinds[key],
+      fileName: context.resourcePath,
+    };
+  });
+  Object.keys(added.components).forEach(key => {
+    store.components[key] = {
+      ...added.components[key],
+    };
+    const { from } = added.components[key];
+    if (typeof from === 'string') {
+      context.resolve(context.context, from, function(
+        err: any,
         result: string,
       ) {
-        if (!err && kind.component) {
-          kind.component.request = result;
+        if (!err) {
+          store.components[key].request = result;
+        } else {
+          console.error(err);
         }
       });
     }
-    stories = {
-      fileName: context.resourcePath,
-      title: kind.title,
-      stories: [],
-      source: kind.source,
-      component: kind.component,
-    };
-    store.kinds[kind.title] = stories;
-  }
-  Object.keys(kind.stories).forEach(key => {
-    const story: Story = kind.stories[key];
-    if (kind.title && story.name) {
-      const id = toId(kind.title, storyNameFromExport(story.name));
-      if (stories) {
-        stories.stories.push(id);
-      }
-      store.stories[id] = {
-        ...story,
-        kind: kind.title,
-      };
-    }
+  });
+  Object.keys(added.stories).forEach(key => {
+    store.stories[key] = { ...added.stories[key] };
   });
 };
 export default store;

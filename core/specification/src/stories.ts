@@ -69,6 +69,26 @@ export interface StoryArgument {
 export type StoryArguments = StoryArgument[];
 
 /**
+ * information about the repository of the stories and components
+ *
+ */
+export interface Repository {
+  /**
+   * link for browsing the file
+   */
+  browse: string;
+
+  /**
+   * link for project readme
+   */
+  docs: string;
+
+  /**
+   * link for filing issues with the project
+   */
+  issues: string;
+}
+/**
  * component specified for stories or story files
  */
 export interface StoryComponent {
@@ -95,10 +115,16 @@ export interface StoryComponent {
    * resolved import request
    */
   request?: string;
+
   /**
    * location of the import statement in the source code file
    */
   loc?: CodeLocation;
+
+  /**
+   * component project repository information
+   */
+  repository?: Repository;
 }
 
 /**
@@ -132,9 +158,9 @@ export interface Story {
   source?: string;
 
   /**
-   * component associated with the story
+   * id for component associated with the story
    */
-  component?: StoryComponent;
+  component?: string;
 }
 
 /**
@@ -145,19 +171,19 @@ export interface Stories {
 }
 
 /**
- * a group of stories. Usually multiple stories are in the same file
+ * a group of stories. Usually multiple stories are in one  csf file
  * and the 'group' is the default export
- * in the case of MDX stories, the group is crated using a <Meta /> tag
+ * in the case of MDX stories, the kind is crated using a <Meta /> tag
  */
-export interface StoriesGroup {
+export interface StoriesKind {
   /**
    * title of the groups of stories (or kind). used to generate CSF story ids
    */
-  title?: string;
+  title: string;
   /**
    * list of stories contained in the file/groups
    */
-  stories: Stories;
+  stories?: string[];
   /**
    * any parameters passed to the story groupds, such as title, parameters etc
    */
@@ -169,7 +195,32 @@ export interface StoriesGroup {
   source?: string;
 
   /**
-   * component associated with the stories file
+   *  id for component associated with the stories file
    */
-  component?: StoryComponent;
+  component?: string;
+
+  /**
+   * file name of the file of stories
+   */
+  fileName?: string;
+
+  /**
+   * project repository information
+   */
+  repository?: Repository;
+}
+
+/**
+ * store of stories information in memory afte the loader is applied
+ */
+export interface StoriesStore {
+  kinds: {
+    [title: string]: StoriesKind;
+  };
+  stories: {
+    [id: string]: Story;
+  };
+  components: {
+    [id: string]: StoryComponent;
+  };
 }

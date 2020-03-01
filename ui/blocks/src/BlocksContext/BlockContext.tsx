@@ -2,6 +2,7 @@ import React from 'react';
 import myStoryStore from '@component-controls/loader/story-store-data';
 import {
   Story,
+  StoriesKind,
   StoryArguments,
   StoryComponent,
 } from '@component-controls/specification';
@@ -36,7 +37,7 @@ export interface ControlsContextProps {
   story?: any;
   id?: string;
   source?: string;
-  fileSource?: string;
+  kind?: StoriesKind;
   component?: StoryComponent;
 }
 
@@ -62,17 +63,23 @@ export const useControlsContext = ({
   const story = storyStore.fromId(previewId) || {};
   // console.log(myStoryStore);
   const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
-  const kindTitle = myStory.kind;
-  const kind = kindTitle ? myStoryStore.kinds[kindTitle] : undefined;
+  const kind =
+    myStory && myStory.kind ? myStoryStore.kinds[myStory.kind] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
+  const component =
+    myStory && myStory.component
+      ? myStoryStore.components[myStory.component]
+      : kind
+      ? myStoryStore.components[kind.component]
+      : undefined;
   return {
     id: previewId,
     api,
     channel,
     story,
     source,
-    fileSource: kind ? kind.source : undefined,
-    component: kind ? kind.component : undefined,
+    kind,
+    component,
     args: myStory.arguments,
     controls: story.controls || story.parameters.controls,
   };
