@@ -7,20 +7,16 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
+import { toId, storyNameFromExport } from '@storybook/csf';
 
 export const CURRENT_SELECTION = '.';
 export interface BlockContextProps {
   api?: any;
-  channel: any;
+  channel?: any;
   currentId?: string;
-  storyStore: any;
-  storyIdFromName: (name?: string) => string | undefined;
+  storyStore?: any;
 }
-export const BlockContext = React.createContext<BlockContextProps>({
-  channel: {},
-  storyStore: {},
-  storyIdFromName: name => name,
-});
+export const BlockContext = React.createContext<BlockContextProps>({});
 
 export interface ControlsContextInputProps {
   /** id of the story */
@@ -45,22 +41,31 @@ export const useControlsContext = ({
   id,
   name,
 }: ControlsContextInputProps): ControlsContextProps => {
-  const {
-    currentId,
-    storyStore,
-    storyIdFromName,
-    api,
-    channel,
-  } = React.useContext(BlockContext);
+  const { currentId, storyStore, api, channel } = React.useContext(
+    BlockContext,
+  );
   const inputId = id === CURRENT_SELECTION ? currentId : id;
-  const previewId = inputId || storyIdFromName(name);
+
+  const storyIdFromName = (name: string): string | undefined => {
+    const kinds = Object.keys(myStoryStore.kinds);
+    for (let i = 0; i < kinds.length; i += 1) {
+      const title = kinds[i];
+      const storyId = toId(title, storyNameFromExport(name));
+      if (myStoryStore.kinds[title].stories.indexOf(storyId) > -1) {
+        return storyId;
+      }
+    }
+    return undefined;
+  };
+
+  const previewId = inputId || (name && storyIdFromName(name));
   if (!previewId) {
     return {
       api,
       channel,
     };
   }
-  const story = storyStore.fromId(previewId) || {};
+  const story = (storyStore && storyStore.fromId(previewId)) || {};
   // console.log(myStoryStore);
   const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
   const kind =
@@ -81,6 +86,6 @@ export const useControlsContext = ({
     kind,
     component,
     args: myStory.arguments,
-    controls: story.controls || story.parameters.controls,
+    controls: story.controls || (story.parameters && story.parameters.controls),
   };
 };

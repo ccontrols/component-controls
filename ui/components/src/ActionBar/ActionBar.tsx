@@ -56,8 +56,8 @@ export const ActionButton = styled.button<ActionButtonProps>(
 ActionButton.displayName = 'ActionButton';
 
 export interface ActionItem {
-  title: string | JSX.Element;
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  title: React.ReactNode;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
 }
 

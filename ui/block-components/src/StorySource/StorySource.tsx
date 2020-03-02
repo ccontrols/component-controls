@@ -62,6 +62,7 @@ export const StorySource: FC<StorySourceProps> = ({
   fileSource,
   children,
   args,
+  actions = [],
   ...rest
 }) => {
   const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
@@ -77,15 +78,15 @@ export const StorySource: FC<StorySourceProps> = ({
     );
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
-  const actions = [];
+  const allActions = [...actions];
   if (fileSource) {
-    actions.push({
+    allActions.push({
       title: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
     });
   }
   if (args && args.length) {
-    actions.push({ title: viewStyle, onClick: onMergeValues });
+    allActions.push({ title: viewStyle, onClick: onMergeValues });
   }
 
   let source: string;
@@ -102,7 +103,7 @@ export const StorySource: FC<StorySourceProps> = ({
     <TaggedSource
       {...rest}
       args={viewStyle === 'tags' && !showFileSource ? args : undefined}
-      actions={actions}
+      actions={allActions}
     >
       {source}
     </TaggedSource>

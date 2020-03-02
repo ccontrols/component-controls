@@ -34,6 +34,7 @@
     "@component-controls/core": "^0.6.0",
     "@component-controls/editors": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
+    "@storybook/csf": "^0.0.1",
     "copy-to-clipboard": "^3.2.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

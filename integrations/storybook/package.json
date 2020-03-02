@@ -62,7 +62,6 @@
     "@storybook/addons": "*",
     "@storybook/api": "*",
     "@storybook/client-api": "*",
-    "@storybook/csf": "*",
     "@storybook/react": "*",
     "@storybook/theming": "*",
     "polished": "*",
