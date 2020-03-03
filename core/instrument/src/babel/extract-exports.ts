@@ -3,11 +3,11 @@ import traverse from '@babel/traverse';
 import { CodeLocation } from '@component-controls/specification';
 import { sourceLocation } from './utils';
 
-interface ExportType {
+export interface ExportType {
   path: any;
   node: any;
   name: string;
-  exportedAs?: string;
+  internalName?: string;
   loc: CodeLocation;
   type: 'function' | 'indentifier';
 }
@@ -35,6 +35,7 @@ export const traverseExports = (results: ExportTypes) => {
       const exportType: ExportType = {
         loc: sourceLocation(declaration.init.body.loc),
         name,
+        internalName: name,
         path,
         node: path.node,
         type: 'function',
@@ -52,30 +53,6 @@ export const traverseExports = (results: ExportTypes) => {
         loc: sourceLocation(path.node.loc),
         type: 'indentifier',
       };
-    },
-    AssignmentExpression: (path: any) => {
-      const node = path.node;
-      if (
-        node.left.type === 'MemberExpression' &&
-        node.left.property.type === 'Identifier' &&
-        node.left.property.name === 'story' &&
-        node.right.type === 'ObjectExpression'
-      ) {
-        const name = node.left.object.name;
-        globals[name] = {
-          loc: sourceLocation(node.loc),
-          path,
-          node: node.right,
-          name,
-          type: 'indentifier',
-        };
-
-        const parsed = results.named[name];
-
-        if (parsed) {
-          parsed.name = name;
-        }
-      }
     },
     VariableDeclaration: (path: any) => {
       const { declarations } = path.node;
@@ -98,10 +75,12 @@ export const traverseExports = (results: ExportTypes) => {
       const localName = node.local.name;
       const exportedName = node.exported.name;
       const namedExport = localExports[localName];
+
       if (namedExport) {
+        namedExport.internalName = namedExport.name;
+        namedExport.name = exportedName;
         const global = globals[localName];
         if (global) {
-          namedExport.name = global.name;
           namedExport.path = global.path;
           namedExport.node = global.node;
           namedExport.loc = global.loc;
@@ -121,6 +100,7 @@ export const traverseExports = (results: ExportTypes) => {
               const name = namedExport.name || '';
               const global = globals[name];
               if (global) {
+                namedExport.internalName = global.name;
                 namedExport.name = global.name;
                 namedExport.path = global.path;
                 namedExport.node = global.node;
@@ -139,7 +119,7 @@ const cleanExportType = (exportType?: ExportType) => {
   return exportType
     ? {
         name: exportType.name,
-        exportedAs: exportType.exportedAs,
+        internalName: exportType.internalName,
         loc: exportType.loc,
       }
     : undefined;

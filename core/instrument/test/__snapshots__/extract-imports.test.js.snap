@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extract-imports all imports 1`] = `
+Object {
+  "./buttons": Array [
+    Object {
+      "importedName": "Button",
+      "name": "Btn",
+    },
+  ],
+  "buttons": Array [
+    Object {
+      "importedName": "default",
+      "name": "Button1",
+    },
+    Object {
+      "importedName": "namespace",
+      "name": "Button2",
+    },
+    Object {
+      "importedName": "Button",
+      "name": "Button",
+    },
+  ],
+  "react": Array [
+    Object {
+      "importedName": "default",
+      "name": "React",
+    },
+    Object {
+      "importedName": "FC",
+      "name": "FC",
+    },
+    Object {
+      "importedName": "MouseEvent",
+      "name": "MouseEvent",
+    },
+  ],
+}
+`;
+
+exports[`extract-imports default import 1`] = `
+Object {
+  "buttons": Array [
+    Object {
+      "importedName": "default",
+      "name": "Button",
+    },
+  ],
+}
+`;
+
+exports[`extract-imports mixed import 1`] = `
+Object {
+  "./react": Array [
+    Object {
+      "importedName": "default",
+      "name": "React",
+    },
+    Object {
+      "importedName": "FC",
+      "name": "FC",
+    },
+    Object {
+      "importedName": "MouseEvent",
+      "name": "MouseEvent",
+    },
+  ],
+}
+`;
+
+exports[`extract-imports named alias import 1`] = `
+Object {
+  "buttons": Array [
+    Object {
+      "importedName": "Button",
+      "name": "Btn",
+    },
+  ],
+}
+`;
+
+exports[`extract-imports named import 1`] = `
+Object {
+  "buttons": Array [
+    Object {
+      "importedName": "Button",
+      "name": "Button",
+    },
+  ],
+}
+`;
+
+exports[`extract-imports namespace import 1`] = `
+Object {
+  "buttons": Array [
+    Object {
+      "importedName": "namespace",
+      "name": "Button",
+    },
+  ],
+}
+`;

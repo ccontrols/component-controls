@@ -1,9 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`extract-exports props argument 1`] = `
+exports[`extract-exports named const export 1`] = `
+Object {
+  "default": undefined,
+  "named": Array [
+    Object {
+      "internalName": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 24,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 1,
+        },
+      },
+      "name": "myStory",
+    },
+  ],
+}
+`;
+
+exports[`extract-exports named export 1`] = `
 Object {
   "default": Object {
-    "exportedAs": undefined,
+    "internalName": undefined,
     "loc": Object {
       "end": Object {
         "column": 28,
@@ -18,7 +40,7 @@ Object {
   },
   "named": Array [
     Object {
-      "exportedAs": undefined,
+      "internalName": "namedExport",
       "loc": Object {
         "end": Object {
           "column": 40,
@@ -32,5 +54,34 @@ Object {
       "name": "namedExport",
     },
   ],
+}
+`;
+
+exports[`extract-exports named export alias 1`] = `
+Object {
+  "default": undefined,
+  "named": Array [
+    Object {
+      "internalName": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 24,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 1,
+        },
+      },
+      "name": "exportedStory",
+    },
+  ],
+}
+`;
+
+exports[`extract-exports re-exported name 1`] = `
+Object {
+  "default": undefined,
+  "named": Array [],
 }
 `;

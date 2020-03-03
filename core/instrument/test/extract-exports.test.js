@@ -8,7 +8,26 @@ describe('extract-exports', () => {
     const content = fs.readFileSync(path.join(__dirname, fileName), 'utf8');
     return extractExports(content, defaultParserOptions);
   };
-  it('props argument', () => {
-    expect(extractExportsForFile('./examples/main.js')).toMatchSnapshot();
+  it('named export', () => {
+    expect(
+      extractExportsForFile('./examples/named-export.js'),
+    ).toMatchSnapshot();
+  });
+  it('named const export', () => {
+    expect(
+      extractExportsForFile('./examples/named-const-export.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('named export alias', () => {
+    expect(
+      extractExportsForFile('./examples/named-export-alias.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('re-exported name', () => {
+    expect(
+      extractExportsForFile('./examples/re-exported-name.js'),
+    ).toMatchSnapshot();
   });
 });
