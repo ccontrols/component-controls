@@ -1,5 +1,5 @@
 export { ControlsTable, ControlsTableProps } from './ControlsTable';
 export { Description } from './Description';
-export { Source } from './Source';
-export { ImportSource } from './ImportSource';
+export { StorySource } from './StorySource';
+export { ComponentSource } from './ComponentSource';
 export { BlockContextProvider } from './BlockContext';

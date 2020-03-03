@@ -6,9 +6,13 @@ import {
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
 import { ThemeContext } from '../ThemeContext';
 
-export type ImportSourceProps = StoryInputProps & SourceProps;
+export type ComponentSourceProps = StoryInputProps & SourceProps;
 
-export const ImportSource: FC<ImportSourceProps> = ({ id, name, ...rest }) => {
+export const ComponentSource: FC<ComponentSourceProps> = ({
+  id,
+  name,
+  ...rest
+}) => {
   const { component } = useControlsContext({
     id,
     name,

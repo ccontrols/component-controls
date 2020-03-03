@@ -5,7 +5,7 @@ import {
 } from '@component-controls/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
 
-export const Source: FC<StorySourceProps> = props => {
+export const StorySource: FC<StorySourceProps> = props => {
   return (
     <ThemeProvider>
       <BaseStorySource {...props} />
