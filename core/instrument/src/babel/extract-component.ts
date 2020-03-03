@@ -1,5 +1,5 @@
-import fs from 'fs';
 import nodePath from 'path';
+import * as resolve from 'resolve';
 import traverse from '@babel/traverse';
 import {
   StoriesStore,
@@ -44,6 +44,7 @@ const componentFromParams = (
 const findComponentImport = (
   ast: any,
   componentName: string,
+  resolveOptions: resolve.SyncOpts,
   filePath?: string,
 ): StoryComponent | undefined => {
   let result: StoryComponent | undefined = undefined;
@@ -65,38 +66,11 @@ const findComponentImport = (
           };
           if (node.source.value && filePath) {
             const folderName = nodePath.dirname(filePath);
-            let fileName: string | undefined;
-            // console.log(folderName, node.source.value);
-            try {
-              fileName = require.resolve(node.source.value, {
-                paths: [nodePath.relative(process.cwd(), folderName)],
-              });
-            } catch (e) {
-              // node10 - paths option does not work
-              const imported = nodePath.parse(node.source.value);
-              var files = fs.readdirSync(
-                nodePath.resolve(folderName, imported.dir),
-              );
-              const importedExt = imported.ext.length > 0;
-              const importedName = nodePath.format({
-                name: imported.name || 'index',
-                ext: imported.ext,
-              });
-              for (let i = 0; i < files.length; i += 1) {
-                const file = files[i];
-                let found = false;
-                if (importedExt) {
-                  found = file === importedName;
-                } else {
-                  found = nodePath.parse(file).name === importedName;
-                }
-                if (found) {
-                  fileName = nodePath.join(folderName, file);
-                  break;
-                }
-              }
-            }
-            console.log(fileName);
+            const resolveName = resolve.sync(node.source.value, {
+              ...resolveOptions,
+              basedir: folderName,
+            });
+            console.log(resolveName);
           }
           path.skip();
           break;
@@ -110,6 +84,7 @@ const findComponentImport = (
 export const extractComponent = async (
   ast: any,
   store: StoriesStore,
+  resolveOptions: resolve.SyncOpts,
   filePath?: string,
 ) => {
   const kinds = Object.keys(store.kinds);
@@ -117,7 +92,12 @@ export const extractComponent = async (
     const kind = store.kinds[kinds[0]];
     const componentName = componentFromParams(kind.parameters);
     if (componentName) {
-      const component = findComponentImport(ast, componentName, filePath);
+      const component = findComponentImport(
+        ast,
+        componentName,
+        resolveOptions,
+        filePath,
+      );
       if (component) {
         store.components[componentName] = component;
         kind.component = componentName;
@@ -128,7 +108,12 @@ export const extractComponent = async (
     const story = store.stories[name];
     const componentName = componentFromParams(story.parameters);
     if (componentName) {
-      const component = findComponentImport(ast, componentName, filePath);
+      const component = findComponentImport(
+        ast,
+        componentName,
+        resolveOptions,
+        filePath,
+      );
       if (component) {
         store.components[componentName] = component;
         story.component = componentName;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extract-exports props argument 1`] = `
+Object {
+  "default": Object {
+    "exportedAs": undefined,
+    "loc": Object {
+      "end": Object {
+        "column": 28,
+        "line": 2,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 2,
+      },
+    },
+    "name": "default",
+  },
+  "named": Array [
+    Object {
+      "exportedAs": undefined,
+      "loc": Object {
+        "end": Object {
+          "column": 40,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 33,
+          "line": 1,
+        },
+      },
+      "name": "namedExport",
+    },
+  ],
+}
+`;

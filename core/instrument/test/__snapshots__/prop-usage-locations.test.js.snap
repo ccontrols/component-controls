@@ -45,6 +45,20 @@ Object {
                     },
                   },
                   "name": "first",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 23,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 2,
+                        },
+                      },
+                    },
+                  ],
                   "value": "first",
                 },
                 Object {
@@ -59,6 +73,20 @@ Object {
                     },
                   },
                   "name": "last",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 35,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 31,
+                          "line": 2,
+                        },
+                      },
+                    },
+                  ],
                   "value": "last",
                 },
               ],
@@ -75,6 +103,20 @@ Object {
                 },
               },
               "name": "age",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 19,
+                      "line": 3,
+                    },
+                    "start": Object {
+                      "column": 16,
+                      "line": 3,
+                    },
+                  },
+                },
+              ],
               "value": "age",
             },
           ],
@@ -338,6 +380,32 @@ Object {
                 },
               },
               "name": "age",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 31,
+                      "line": 2,
+                    },
+                    "start": Object {
+                      "column": 28,
+                      "line": 2,
+                    },
+                  },
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 19,
+                      "line": 3,
+                    },
+                    "start": Object {
+                      "column": 16,
+                      "line": 3,
+                    },
+                  },
+                },
+              ],
               "value": "age",
             },
           ],
@@ -397,6 +465,20 @@ Object {
                 },
               },
               "name": "height",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 15,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
               "value": "height",
             },
             Object {
@@ -411,6 +493,20 @@ Object {
                 },
               },
               "name": "weight",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 37,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 31,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
               "value": "weight",
             },
             Object {
@@ -438,6 +534,20 @@ Object {
                     },
                   },
                   "name": "border",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 53,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 47,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
                   "value": "border",
                 },
                 Object {
@@ -452,6 +562,20 @@ Object {
                     },
                   },
                   "name": "color",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 67,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 62,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
                   "value": "color",
                 },
               ],
@@ -684,6 +808,20 @@ Object {
                 },
               },
               "name": "name",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 15,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
               "value": "MyName",
             },
             Object {
@@ -698,6 +836,20 @@ Object {
                 },
               },
               "name": "age",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 31,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 28,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
               "value": "age",
             },
           ],
@@ -754,6 +906,20 @@ Object {
                 },
               },
               "name": "name",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 36,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 32,
+                      "line": 0,
+                    },
+                  },
+                },
+              ],
               "value": "name",
             },
             Object {
@@ -768,6 +934,20 @@ Object {
                 },
               },
               "name": "age",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 46,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                },
+              ],
               "value": "age",
             },
           ],

@@ -3,6 +3,7 @@ const mdx = require('@mdx-js/mdx');
 import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
+import * as resolve from 'resolve';
 import prettier, { Options, ResolveConfigOptions } from 'prettier';
 import parserBabel from 'prettier/parser-babylon';
 import { StoriesStore, Story } from '@component-controls/specification';
@@ -17,12 +18,23 @@ type TraverseFn = (stories: StoriesStore) => any;
 export type PrettierOptions = Options & {
   resolveConfigOptions?: ResolveConfigOptions;
 };
+
+export const defaultResolveOptions: resolve.SyncOpts = {
+  extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.mjs', '.es', '.es6'],
+};
+
+export const defaultParserOptions: parser.ParserOptions = {
+  sourceType: 'module',
+  plugins: ['jsx', 'typescript'],
+};
 const parseSource = async (
   code: string,
   traverseFn: TraverseFn,
   originalSource: string,
   filePath?: string,
+  parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
+  resolveOptions?: resolve.SyncOpts,
 ): Promise<StoriesStore> => {
   const prettify = async (c: string): Promise<string> => {
     if (prettierOptions !== false) {
@@ -47,8 +59,8 @@ const parseSource = async (
   };
   const source = await prettify(code);
   const ast = parser.parse(source, {
-    sourceType: 'module',
-    plugins: ['jsx', 'typescript'],
+    ...defaultParserOptions,
+    ...parserOptions,
   });
   const store: StoriesStore = {
     stories: {},
@@ -75,7 +87,13 @@ const parseSource = async (
       {},
     );
   }
-  await extractComponent(ast, store, filePath);
+
+  await extractComponent(
+    ast,
+    store,
+    { ...defaultResolveOptions, ...resolveOptions },
+    filePath,
+  );
   await packageInfo(store, filePath);
   /*
   if (filePath && stories.component && stories.component.from) {
@@ -125,21 +143,27 @@ const parseSource = async (
 export const parseCSF = async (
   source: string,
   filePath?: string,
+  parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
+  resolveOptions?: resolve.SyncOpts,
 ): Promise<StoriesStore> => {
   return await parseSource(
     source,
     extractCSFStories,
     source,
     filePath,
+    parserOptions,
     prettierOptions,
+    resolveOptions,
   );
 };
 
 export const parseMDX = async (
   source: string,
   filePath?: string,
+  parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
+  resolveOptions?: resolve.SyncOpts,
 ): Promise<StoriesStore> => {
   const code = await mdx(source);
 
@@ -157,6 +181,8 @@ export const parseMDX = async (
     extractMDXStories,
     source,
     filePath,
+    parserOptions,
     prettierOptions,
+    resolveOptions,
   );
 };

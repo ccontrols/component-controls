@@ -7,6 +7,7 @@ import {
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractProperties } from './extract-properties';
+import { sourceLocation } from './utils';
 
 export const extractCSFStories = (stories: StoriesStore) => {
   const globals: Stories = {};
@@ -23,18 +24,9 @@ export const extractCSFStories = (stories: StoriesStore) => {
       const el = declaration.init.body;
       const name = declaration.id.name;
       const story: Story = {
-        loc: {
-          start: {
-            column: el.loc.start.column,
-            line: el.loc.start.line,
-          },
-          end: {
-            column: el.loc.end.column,
-            line: el.loc.end.line,
-          },
-        },
+        loc: sourceLocation(el.loc),
+        name,
       };
-      story.name = name;
       traverse(path.node, extractFunctionParameters(story), path.scope, path);
       return story;
     }
