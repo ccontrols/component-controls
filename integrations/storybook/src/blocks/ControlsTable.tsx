@@ -10,13 +10,12 @@ import {
   ControlsTable as BaseControlsTable,
   ControlsTableProps as BaseControlsTableProps,
   useControlsContext,
-  ControlsContextInputProps,
+  StoryInputProps,
 } from '@component-controls/blocks';
 
 import { SET_DATA_MSG } from '../shared/shared';
 import { ThemeProvider } from '../shared/ThemeProvider';
-export type ControlsTableProps = ControlsContextInputProps &
-  BaseControlsTableProps;
+export type ControlsTableProps = StoryInputProps & BaseControlsTableProps;
 
 export const ControlsTable: FC<ControlsTableProps> = ({
   id: propId,

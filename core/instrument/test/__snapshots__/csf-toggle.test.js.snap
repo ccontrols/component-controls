@@ -2,52 +2,59 @@
 
 exports[`csf-toggle Toggle story 1`] = `
 Object {
-  "component": Object {
-    "from": "./Toggle",
-    "imported": "Toggle",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 34,
-        "line": 2,
+  "components": Object {
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import { Toggle } from \\"./Toggle\\";
+",
+      "imported": "Toggle",
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 34,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
       },
-      "start": Position {
-        "column": 0,
-        "line": 2,
-      },
+      "name": "Toggle",
     },
-    "name": "Toggle",
   },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 28,
-          "line": 5,
+  "kinds": Object {
+    "Components/Toggle": Object {
+      "component": "Toggle",
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 28,
+              "line": 5,
+            },
+            "start": Object {
+              "column": 2,
+              "line": 5,
+            },
+          },
+          "name": "title",
+          "value": "Components/Toggle",
         },
-        "start": Object {
-          "column": 2,
-          "line": 5,
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 19,
+              "line": 6,
+            },
+            "start": Object {
+              "column": 2,
+              "line": 6,
+            },
+          },
+          "name": "component",
+          "value": "Toggle",
         },
-      },
-      "name": "title",
-      "value": "Components/Toggle",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 6,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 6,
-        },
-      },
-      "name": "component",
-      "value": "Toggle",
-    },
-  ],
-  "source": "
+      ],
+      "source": "
     import React from 'react';
     import { Toggle } from './Toggle';
     
@@ -77,9 +84,17 @@ Object {
       );
     };      
   ",
+      "stories": Array [
+        "components-toggle--all-toggles",
+      ],
+      "title": "Components/Toggle",
+    },
+  },
   "stories": Object {
-    "allToggles": Object {
+    "components-toggle--all-toggles": Object {
       "arguments": Array [],
+      "id": "components-toggle--all-toggles",
+      "kind": "Components/Toggle",
       "loc": Object {
         "end": Object {
           "column": 1,
@@ -113,6 +128,5 @@ Object {
 }",
     },
   },
-  "title": "Components/Toggle",
 }
 `;

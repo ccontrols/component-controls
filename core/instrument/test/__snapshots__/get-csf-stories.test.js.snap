@@ -2,20 +2,16 @@
 
 exports[`csf-story Named object export 1`] = `
 Object {
-  "source": "
-      export const myStory = {
-        i: 1,
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
 }
 `;
 
 exports[`csf-story No arguments 1`] = `
 Object {
-  "source": "
-      export const myStory = () => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
@@ -38,18 +34,16 @@ Object {
 
 exports[`csf-story No story 1`] = `
 Object {
-  "source": "
-      const i = 1;
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
 }
 `;
 
 exports[`csf-story Props argument 1`] = `
 Object {
-  "source": "
-      export const myStory = props => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -87,9 +81,8 @@ Object {
 
 exports[`csf-story Three levels - alias 1`] = `
 Object {
-  "source": "
-      export const myStory = ({ name: { first, last }, age }) => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -185,9 +178,8 @@ Object {
 
 exports[`csf-story Two arguments 1`] = `
 Object {
-  "source": "
-      export const myStory = (props, context) => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -239,9 +231,8 @@ Object {
 
 exports[`csf-story Two levels - alias 1`] = `
 Object {
-  "source": "
-      export const myStory = ({ name: MyNam, age }) => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -308,9 +299,8 @@ Object {
 
 exports[`csf-story Two levels sub arguments 1`] = `
 Object {
-  "source": "
-      export const myStory = ({ name, age }) => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -377,9 +367,8 @@ Object {
 
 exports[`csf-story Typescript 1`] = `
 Object {
-  "source": "
-      export const myStory = (props: Properties) => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [

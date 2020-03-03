@@ -2,9 +2,8 @@
 
 exports[`csf-story-kind No default export 1`] = `
 Object {
-  "source": "
-      export const myStory = () => {};
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
@@ -27,194 +26,182 @@ Object {
 
 exports[`csf-story-kind default export - no title 1`] = `
 Object {
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 9,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 2,
-        },
-      },
-      "name": "test",
-      "value": 1,
-    },
-  ],
-  "source": "
-      export default {
-        test: 1,
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-story-kind default export - with title 1`] = `
 Object {
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 41,
-          "line": 2,
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/ControlsTable": Object {
+      "parameters": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 41,
+              "line": 2,
+            },
+            "start": Object {
+              "column": 2,
+              "line": 2,
+            },
+          },
+          "name": "title",
+          "value": "Storybook/Blocks/ControlsTable",
         },
-        "start": Object {
-          "column": 2,
-          "line": 2,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/Blocks/ControlsTable",
-    },
-  ],
-  "source": "
+      ],
+      "source": "
         export default {
           title: 'Storybook/Blocks/ControlsTable',
         };
       ",
+      "title": "Storybook/Blocks/ControlsTable",
+    },
+  },
   "stories": Object {},
-  "title": "Storybook/Blocks/ControlsTable",
 }
 `;
 
 exports[`csf-story-kind default export - with title and controls 1`] = `
 Object {
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 25,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 2,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/Kind",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 26,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "component",
-      "value": "ControlsTable",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 3,
-          "line": 13,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 4,
-        },
-      },
-      "name": "parameters",
-      "value": Array [
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Kind": Object {
+      "parameters": Array [
         Object {
           "loc": Object {
             "end": Object {
-              "column": 5,
-              "line": 12,
+              "column": 25,
+              "line": 2,
             },
             "start": Object {
-              "column": 4,
-              "line": 5,
+              "column": 2,
+              "line": 2,
             },
           },
-          "name": "controls",
+          "name": "title",
+          "value": "Storybook/Kind",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 26,
+              "line": 3,
+            },
+            "start": Object {
+              "column": 2,
+              "line": 3,
+            },
+          },
+          "name": "component",
+          "value": "ControlsTable",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 3,
+              "line": 13,
+            },
+            "start": Object {
+              "column": 2,
+              "line": 4,
+            },
+          },
+          "name": "parameters",
           "value": Array [
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 7,
-                  "line": 11,
+                  "column": 5,
+                  "line": 12,
                 },
                 "start": Object {
-                  "column": 6,
-                  "line": 6,
+                  "column": 4,
+                  "line": 5,
                 },
               },
-              "name": "name",
+              "name": "controls",
               "value": Array [
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 31,
-                      "line": 7,
+                      "column": 7,
+                      "line": 11,
                     },
                     "start": Object {
-                      "column": 8,
-                      "line": 7,
+                      "column": 6,
+                      "line": 6,
                     },
                   },
-                  "name": "type",
-                  "value": "ControlTypes.TEXT",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 21,
-                      "line": 8,
+                  "name": "name",
+                  "value": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 31,
+                          "line": 7,
+                        },
+                        "start": Object {
+                          "column": 8,
+                          "line": 7,
+                        },
+                      },
+                      "name": "type",
+                      "value": "ControlTypes.TEXT",
                     },
-                    "start": Object {
-                      "column": 8,
-                      "line": 8,
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 21,
+                          "line": 8,
+                        },
+                        "start": Object {
+                          "column": 8,
+                          "line": 8,
+                        },
+                      },
+                      "name": "label",
+                      "value": "Name",
                     },
-                  },
-                  "name": "label",
-                  "value": "Name",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 21,
-                      "line": 9,
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 21,
+                          "line": 9,
+                        },
+                        "start": Object {
+                          "column": 8,
+                          "line": 9,
+                        },
+                      },
+                      "name": "value",
+                      "value": "Mark",
                     },
-                    "start": Object {
-                      "column": 8,
-                      "line": 9,
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 19,
+                          "line": 10,
+                        },
+                        "start": Object {
+                          "column": 8,
+                          "line": 10,
+                        },
+                      },
+                      "name": "order",
+                      "value": 9999,
                     },
-                  },
-                  "name": "value",
-                  "value": "Mark",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 19,
-                      "line": 10,
-                    },
-                    "start": Object {
-                      "column": 8,
-                      "line": 10,
-                    },
-                  },
-                  "name": "order",
-                  "value": 9999,
+                  ],
                 },
               ],
             },
           ],
         },
       ],
-    },
-  ],
-  "source": "
+      "source": "
       export default {
         title: 'Storybook/Kind',
         component: ControlsTable,
@@ -230,88 +217,93 @@ Object {
         },
       };
       ",
+      "title": "Storybook/Kind",
+    },
+  },
   "stories": Object {},
-  "title": "Storybook/Kind",
 }
 `;
 
 exports[`csf-story-kind default export - with title and parameters 1`] = `
 Object {
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 41,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 2,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/Blocks/ControlsTable",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 3,
-          "line": 8,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "parameters",
-      "value": Array [
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/ControlsTable": Object {
+      "parameters": Array [
         Object {
           "loc": Object {
             "end": Object {
-              "column": 28,
-              "line": 4,
+              "column": 41,
+              "line": 2,
             },
             "start": Object {
-              "column": 4,
-              "line": 4,
+              "column": 2,
+              "line": 2,
             },
           },
-          "name": "component",
-          "value": "ControlsTable",
+          "name": "title",
+          "value": "Storybook/Blocks/ControlsTable",
         },
         Object {
           "loc": Object {
             "end": Object {
-              "column": 5,
-              "line": 7,
+              "column": 3,
+              "line": 8,
             },
             "start": Object {
-              "column": 4,
-              "line": 5,
+              "column": 2,
+              "line": 3,
             },
           },
-          "name": "addonControls",
+          "name": "parameters",
           "value": Array [
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 18,
-                  "line": 6,
+                  "column": 28,
+                  "line": 4,
                 },
                 "start": Object {
-                  "column": 6,
-                  "line": 6,
+                  "column": 4,
+                  "line": 4,
                 },
               },
-              "name": "smart",
-              "value": false,
+              "name": "component",
+              "value": "ControlsTable",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 7,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 5,
+                },
+              },
+              "name": "addonControls",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 18,
+                      "line": 6,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 6,
+                    },
+                  },
+                  "name": "smart",
+                  "value": false,
+                },
+              ],
             },
           ],
         },
       ],
-    },
-  ],
-  "source": "
+      "source": "
         export default {
           title: 'Storybook/Blocks/ControlsTable',
           parameters: {
@@ -322,7 +314,9 @@ Object {
           },
         };
       ",
+      "title": "Storybook/Blocks/ControlsTable",
+    },
+  },
   "stories": Object {},
-  "title": "Storybook/Blocks/ControlsTable",
 }
 `;

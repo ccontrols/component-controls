@@ -1,22 +1,6 @@
-/**
- * position in the stories source code
- * usually taken from AST traverse loaders
- */
+import { CodeLocation, Repository } from './utility';
+import { StoryComponent } from './components';
 
-export interface CodePosition {
-  line: number;
-  column: number;
-}
-
-/**
- * location in the source code of a story or part of it
- * ie. arguments, usage of arguments
- 
-*/
-export interface CodeLocation {
-  start: CodePosition;
-  end: CodePosition;
-}
 /**
  * an identifier/variable.argument in the source code
  */
@@ -67,65 +51,6 @@ export interface StoryArgument {
  * the second argument can contain the context
  */
 export type StoryArguments = StoryArgument[];
-
-/**
- * information about the repository of the stories and components
- *
- */
-export interface Repository {
-  /**
-   * link for browsing the file
-   */
-  browse: string;
-
-  /**
-   * link for project readme
-   */
-  docs: string;
-
-  /**
-   * link for filing issues with the project
-   */
-  issues: string;
-}
-/**
- * component specified for stories or story files
- */
-export interface StoryComponent {
-  /**
-   * name of the component as used in the fiel
-   */
-  name: string;
-  /**
-   * imported name ex: import { Btn as Button } from 'buttons';
-   */
-  imported?: string;
-
-  /**
-   * imported from
-   */
-  from?: string;
-
-  /**
-   * import string for the component
-   */
-  import?: string;
-
-  /**
-   * resolved import request
-   */
-  request?: string;
-
-  /**
-   * location of the import statement in the source code file
-   */
-  loc?: CodeLocation;
-
-  /**
-   * component project repository information
-   */
-  repository?: Repository;
-}
 
 /**
  * Story interface - usually extracted by the AST instrumenting loader

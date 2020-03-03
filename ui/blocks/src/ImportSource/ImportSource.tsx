@@ -3,13 +3,10 @@ import {
   Source as SourceBlock,
   SourceProps,
 } from '@component-controls/block-components';
-import {
-  useControlsContext,
-  ControlsContextInputProps,
-} from '../BlocksContext';
+import { useControlsContext, StoryInputProps } from '../BlocksContext';
 import { ThemeContext } from '../ThemeContext';
 
-export type ImportSourceProps = ControlsContextInputProps & SourceProps;
+export type ImportSourceProps = StoryInputProps & SourceProps;
 
 export const ImportSource: FC<ImportSourceProps> = ({ id, name, ...rest }) => {
   const { component } = useControlsContext({

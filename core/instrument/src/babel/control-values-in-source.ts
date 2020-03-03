@@ -56,8 +56,22 @@ export const addArgumentUsage = (
 };
 export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
   return {
-    Identifier: (path: any) => {
-      addArgumentUsage(story, args, path.node);
+    TemplateLiteral: (path: any) => {
+      path.node.expressions.forEach((expression: any) => {
+        if (expression.type === 'Identifier') {
+          addArgumentUsage(story, args, expression);
+        }
+      });
+    },
+    JSXSpreadAttribute: (path: any) => {
+      if (path.node.argument === 'Identifier') {
+        addArgumentUsage(story, args, path.node.argument);
+      }
+    },
+    ArrowFunctionExpression: (path: any) => {
+      if (path.node.body === 'Identifier') {
+        addArgumentUsage(story, args, path.node.body);
+      }
     },
     Property: (path: any) => {
       const node = path.node;

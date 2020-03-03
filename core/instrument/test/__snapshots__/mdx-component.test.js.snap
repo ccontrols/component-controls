@@ -2,211 +2,253 @@
 
 exports[`mdx-component component parameter 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Button",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 34,
-        "line": 3,
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import { Button } from \\"./Button\\";
+",
+      "imported": "Button",
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 34,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
       },
-      "start": Position {
-        "column": 0,
-        "line": 3,
-      },
+      "name": "Button",
     },
-    "name": "Button",
   },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 27,
-          "line": 4,
-        },
-        "start": Object {
-          "column": 6,
-          "line": 4,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/MDX",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 46,
-          "line": 4,
-        },
-        "start": Object {
-          "column": 28,
-          "line": 4,
-        },
-      },
-      "name": "component",
-      "value": Array [
+  "kinds": Object {
+    "Storybook/MDX": Object {
+      "component": "Button",
+      "parameters": Array [
         Object {
           "loc": Object {
             "end": Object {
-              "column": 45,
+              "column": 27,
               "line": 4,
             },
             "start": Object {
-              "column": 39,
+              "column": 6,
               "line": 4,
             },
           },
-          "name": "Button",
-          "value": "Button",
+          "name": "title",
+          "value": "Storybook/MDX",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 46,
+              "line": 4,
+            },
+            "start": Object {
+              "column": 28,
+              "line": 4,
+            },
+          },
+          "name": "component",
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 45,
+                  "line": 4,
+                },
+                "start": Object {
+                  "column": 39,
+                  "line": 4,
+                },
+              },
+              "name": "Button",
+              "value": "Button",
+            },
+          ],
         },
       ],
-    },
-  ],
-  "source": "
+      "source": "
 import { Meta } from '@storybook/addon-docs/blocks';
 import { Button } from './Button';
 <Meta title=\\"Storybook/MDX\\" component={Button} />
       ",
+      "title": "Storybook/MDX",
+    },
+  },
   "stories": Object {},
-  "title": "Storybook/MDX",
 }
 `;
 
 exports[`mdx-component named alias import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Btn",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 41,
-        "line": 3,
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import { Button } from \\"./Button\\";
+",
+      "imported": "Btn",
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 41,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
       },
-      "start": Position {
-        "column": 0,
-        "line": 3,
-      },
+      "name": "Button",
     },
-    "name": "Button",
   },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 27,
-          "line": 4,
-        },
-        "start": Object {
-          "column": 6,
-          "line": 4,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/MDX",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 46,
-          "line": 4,
-        },
-        "start": Object {
-          "column": 28,
-          "line": 4,
-        },
-      },
-      "name": "component",
-      "value": Array [
+  "kinds": Object {
+    "Storybook/MDX": Object {
+      "component": "Button",
+      "parameters": Array [
         Object {
           "loc": Object {
             "end": Object {
-              "column": 45,
+              "column": 27,
               "line": 4,
             },
             "start": Object {
-              "column": 39,
+              "column": 6,
               "line": 4,
             },
           },
-          "name": "Button",
-          "value": "Button",
+          "name": "title",
+          "value": "Storybook/MDX",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 46,
+              "line": 4,
+            },
+            "start": Object {
+              "column": 28,
+              "line": 4,
+            },
+          },
+          "name": "component",
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 45,
+                  "line": 4,
+                },
+                "start": Object {
+                  "column": 39,
+                  "line": 4,
+                },
+              },
+              "name": "Button",
+              "value": "Button",
+            },
+          ],
         },
       ],
-    },
-  ],
-  "source": "
+      "source": "
 import { Meta } from '@storybook/addon-docs/blocks';
 import { Btn as Button } from './Button';
 <Meta title=\\"Storybook/MDX\\" component={Button} />
       ",
+      "title": "Storybook/MDX",
+    },
+  },
   "stories": Object {},
-  "title": "Storybook/MDX",
 }
 `;
 
 exports[`mdx-component story import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Btn",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 41,
-        "line": 3,
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import { Button } from \\"./Button\\";
+",
+      "imported": "Btn",
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 41,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
       },
-      "start": Position {
-        "column": 0,
-        "line": 3,
-      },
+      "name": "Button",
     },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 33,
-          "line": 22,
-        },
-        "start": Object {
-          "column": 12,
-          "line": 22,
-        },
-      },
-      "name": "title",
-      "value": "Storybook/MDX",
-    },
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 52,
-          "line": 22,
-        },
-        "start": Object {
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import { Toggle } from \\"./Toggle\\";
+",
+      "imported": "Toggle",
+      "loc": SourceLocation {
+        "end": Position {
           "column": 34,
-          "line": 22,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 4,
         },
       },
-      "name": "component",
-      "value": Array [
+      "name": "Toggle",
+    },
+  },
+  "kinds": Object {
+    "Storybook/MDX": Object {
+      "component": "Button",
+      "parameters": Array [
         Object {
           "loc": Object {
             "end": Object {
-              "column": 51,
+              "column": 33,
               "line": 22,
             },
             "start": Object {
-              "column": 45,
+              "column": 12,
               "line": 22,
             },
           },
-          "name": "Button",
-          "value": "Button",
+          "name": "title",
+          "value": "Storybook/MDX",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 52,
+              "line": 22,
+            },
+            "start": Object {
+              "column": 34,
+              "line": 22,
+            },
+          },
+          "name": "component",
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 51,
+                  "line": 22,
+                },
+                "start": Object {
+                  "column": 45,
+                  "line": 22,
+                },
+              },
+              "name": "Button",
+              "value": "Button",
+            },
+          ],
         },
       ],
-    },
-  ],
-  "source": "
+      "source": "
 import { Meta, Story } from '@storybook/addon-docs/blocks';
 import { Btn as Button } from './Button';
 import { Toggle } from './Toggle';
@@ -215,23 +257,17 @@ import { Toggle } from './Toggle';
 
 <Story name=\\"my-story\\" component={Toggle} />
       ",
+      "stories": Array [
+        "storybook-mdx--my-story",
+      ],
+      "title": "Storybook/MDX",
+    },
+  },
   "stories": Object {
-    "my-story": Object {
-      "component": Object {
-        "from": "./Toggle",
-        "imported": "Toggle",
-        "loc": SourceLocation {
-          "end": Position {
-            "column": 34,
-            "line": 4,
-          },
-          "start": Position {
-            "column": 0,
-            "line": 4,
-          },
-        },
-        "name": "Toggle",
-      },
+    "storybook-mdx--my-story": Object {
+      "component": "Toggle",
+      "id": "storybook-mdx--my-story",
+      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 50,
@@ -291,6 +327,5 @@ import { Toggle } from './Toggle';
       "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },
-  "title": "Storybook/MDX",
 }
 `;

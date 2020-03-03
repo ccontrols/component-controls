@@ -1,5 +1,7 @@
+export * from './components';
 export * from './controls';
 export * from './stories';
+export * from './utility';
 
 export type SetControlValueFn = (
   storyId: string,

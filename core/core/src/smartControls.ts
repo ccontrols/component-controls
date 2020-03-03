@@ -3,18 +3,9 @@ import {
   ComponentControl,
   ComponentControls,
   ControlTypes,
+  PropType,
+  PropTypes,
 } from '@component-controls/specification';
-
-export interface PropType {
-  defaultValue: { value?: string | boolean; computed: boolean };
-  type: { name?: string };
-  required: boolean;
-  description: string;
-}
-
-export interface PropTypes {
-  [key: string]: PropType;
-}
 
 const cleanQuotes = (txt?: string) => (txt ? txt.replace(/['"]+/g, '') : txt);
 

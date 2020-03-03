@@ -18,19 +18,24 @@ export interface BlockContextProps {
 }
 export const BlockContext = React.createContext<BlockContextProps>({});
 
-export interface ControlsContextInputProps {
+export interface StoryInputProps {
   /** id of the story */
   id?: string;
   /** name of the story */
   name?: string;
 }
 
+export interface ComponentInputProps {
+  /** component */
+  of?: '.' | any;
+}
+
 export interface ControlsContextProps {
   api?: any;
   channel?: any;
+  story?: any;
   controls?: LoadedComponentControls;
   args?: StoryArguments;
-  story?: any;
   id?: string;
   source?: string;
   kind?: StoriesKind;
@@ -40,7 +45,8 @@ export interface ControlsContextProps {
 export const useControlsContext = ({
   id,
   name,
-}: ControlsContextInputProps): ControlsContextProps => {
+  of = CURRENT_SELECTION,
+}: StoryInputProps & ComponentInputProps): ControlsContextProps => {
   const { currentId, storyStore, api, channel } = React.useContext(
     BlockContext,
   );
@@ -58,32 +64,40 @@ export const useControlsContext = ({
     return undefined;
   };
 
-  const previewId = inputId || (name && storyIdFromName(name));
+  const previewId = inputId || (name && storyIdFromName(name)) || currentId;
   if (!previewId) {
     return {
       api,
       channel,
     };
   }
-  const story = (storyStore && storyStore.fromId(previewId)) || {};
-  // console.log(myStoryStore);
   const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
   const kind =
     myStory && myStory.kind ? myStoryStore.kinds[myStory.kind] : undefined;
   const source: string | undefined = myStory ? myStory.source : undefined;
-  const component =
-    myStory && myStory.component
-      ? myStoryStore.components[myStory.component]
-      : kind
-      ? myStoryStore.components[kind.component]
-      : undefined;
+  let component;
+  if (of === CURRENT_SELECTION) {
+    component =
+      myStory && myStory.component
+        ? myStoryStore.components[myStory.component]
+        : kind
+        ? myStoryStore.components[kind.component]
+        : undefined;
+  } else {
+    component = of;
+  }
+
+  const story = (storyStore && storyStore.fromId(previewId)) || {};
+  if (component && !component.info && story && story.parameters.component) {
+    component.info = story.parameters.component.__docgenInfo;
+  }
   return {
     id: previewId,
     api,
     channel,
-    story,
     source,
     kind,
+    story,
     component,
     args: myStory.arguments,
     controls: story.controls || (story.parameters && story.parameters.controls),

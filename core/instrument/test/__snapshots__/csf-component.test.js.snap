@@ -2,331 +2,78 @@
 
 exports[`csf-component No import 1`] = `
 Object {
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 2,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-      export default {
-        component: Button
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component default alias import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": undefined,
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 35,
-        "line": 1,
-      },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
-    },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-        import * as Button from './Button';
-        export default {
-          component: Button
-        };
-      ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component default import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "default",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 30,
-        "line": 1,
-      },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
-    },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-      import Button from './Button';
-      export default {
-        component: Button
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component named alias import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Btn",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 41,
-        "line": 1,
-      },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
-    },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-      import { Btn as Button } from './Button';
-      export default {
-        component: Button
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component named import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Button",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 34,
-        "line": 1,
-      },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
-    },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 3,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-      import { Button } from './Button';
-      export default {
-        component: Button
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component parameters component 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Button",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 34,
-        "line": 1,
-      },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
-    },
-    "name": "Button",
-  },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 3,
-          "line": 5,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 3,
-        },
-      },
-      "name": "parameters",
-      "value": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 21,
-              "line": 4,
-            },
-            "start": Object {
-              "column": 4,
-              "line": 4,
-            },
-          },
-          "name": "component",
-          "value": "Button",
-        },
-      ],
-    },
-  ],
-  "source": "
-      import { Button } from './Button';
-      export default {
-        parameters: {
-          component: Button
-        }  
-      };
-    ",
+  "components": Object {},
+  "kinds": Object {},
   "stories": Object {},
-  "title": undefined,
 }
 `;
 
 exports[`csf-component story import 1`] = `
 Object {
-  "component": Object {
-    "from": "./Button",
-    "imported": "Btn",
-    "loc": SourceLocation {
-      "end": Position {
-        "column": 41,
-        "line": 1,
+  "components": Object {
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import { Toggle } from \\"./Toggle\\";
+",
+      "imported": "Toggle",
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 34,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
       },
-      "start": Position {
-        "column": 0,
-        "line": 1,
-      },
+      "name": "Toggle",
     },
-    "name": "Button",
   },
-  "parameters": Array [
-    Object {
-      "loc": Object {
-        "end": Object {
-          "column": 19,
-          "line": 4,
-        },
-        "start": Object {
-          "column": 2,
-          "line": 4,
-        },
-      },
-      "name": "component",
-      "value": "Button",
-    },
-  ],
-  "source": "
-      import { Btn as Button } from './Button';
-      import { Toggle } from './Toggle';
-      export default {
-        component: Button
-      };
-      export const story = () => <Toggle />;
-      story.story = {
-        component: Toggle,
-      }
-    ",
+  "kinds": Object {},
   "stories": Object {
     "story": Object {
       "arguments": Array [],
-      "component": Object {
-        "from": "./Toggle",
-        "imported": "Toggle",
-        "loc": SourceLocation {
-          "end": Position {
-            "column": 34,
-            "line": 2,
-          },
-          "start": Position {
-            "column": 0,
-            "line": 2,
-          },
-        },
-        "name": "Toggle",
-      },
+      "component": "Toggle",
       "loc": Object {
         "end": Object {
           "column": 37,
@@ -357,6 +104,5 @@ Object {
       "source": "() => <Toggle />",
     },
   },
-  "title": undefined,
 }
 `;
