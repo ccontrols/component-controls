@@ -121,6 +121,20 @@ Object {
             },
           },
           "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 25,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+              },
+            },
+          ],
           "value": "props",
         },
       ],
@@ -483,6 +497,20 @@ Object {
             },
           },
           "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 25,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+              },
+            },
+          ],
           "value": "props",
         },
       ],
@@ -576,6 +604,20 @@ Object {
             },
           },
           "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 36,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 31,
+                  "line": 0,
+                },
+              },
+            },
+          ],
           "value": "props",
         },
         Object {

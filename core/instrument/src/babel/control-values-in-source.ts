@@ -64,12 +64,17 @@ export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
       });
     },
     JSXSpreadAttribute: (path: any) => {
-      if (path.node.argument === 'Identifier') {
+      if (path.node.argument.type === 'Identifier') {
         addArgumentUsage(story, args, path.node.argument);
       }
     },
+    JSXExpressionContainer: (path: any) => {
+      if (path.node.expression.type === 'Identifier') {
+        addArgumentUsage(story, args, path.node.expression);
+      }
+    },
     ArrowFunctionExpression: (path: any) => {
-      if (path.node.body === 'Identifier') {
+      if (path.node.body.type === 'Identifier') {
         addArgumentUsage(story, args, path.node.body);
       }
     },
