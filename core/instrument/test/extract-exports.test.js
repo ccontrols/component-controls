@@ -10,24 +10,24 @@ describe('extract-exports', () => {
   };
   it('named export', () => {
     expect(
-      extractExportsForFile('./examples/named-export.js'),
+      extractExportsForFile('./examples/exports/named-export.js'),
     ).toMatchSnapshot();
   });
   it('named const export', () => {
     expect(
-      extractExportsForFile('./examples/named-const-export.js'),
+      extractExportsForFile('./examples/exports/named-const-export.js'),
     ).toMatchSnapshot();
   });
 
   it('named export alias', () => {
     expect(
-      extractExportsForFile('./examples/named-export-alias.js'),
+      extractExportsForFile('./examples/exports/named-export-alias.js'),
     ).toMatchSnapshot();
   });
 
   it('re-exported name', () => {
     expect(
-      extractExportsForFile('./examples/re-exported-name.js'),
+      extractExportsForFile('./examples/exports/re-exported-name.js'),
     ).toMatchSnapshot();
   });
 });
