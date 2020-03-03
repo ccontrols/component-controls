@@ -55,8 +55,14 @@ export type StorySourceProps = TaggedSourceProps & {
   fileSource?: string;
 };
 
-type ViewStyle = 'plain' | 'tags' | 'values';
+type ViewStyle = 'tags' | 'values';
 
+const ViewStyleNext: {
+  [key in ViewStyle]: ViewStyle;
+} = {
+  values: 'tags',
+  tags: 'values',
+};
 export const StorySource: FC<StorySourceProps> = ({
   controls,
   fileSource,
@@ -68,14 +74,7 @@ export const StorySource: FC<StorySourceProps> = ({
   const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
 
-  const onMergeValues = () =>
-    setViewStyle(
-      viewStyle === 'plain'
-        ? 'tags'
-        : viewStyle === 'tags' && !!controls && !!args
-        ? 'values'
-        : 'plain',
-    );
+  const onMergeValues = () => setViewStyle(ViewStyleNext[viewStyle]);
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
   const allActions = [...actions];
@@ -86,7 +85,10 @@ export const StorySource: FC<StorySourceProps> = ({
     });
   }
   if (args && args.length) {
-    allActions.push({ title: viewStyle, onClick: onMergeValues });
+    allActions.push({
+      title: ViewStyleNext[viewStyle],
+      onClick: onMergeValues,
+    });
   }
 
   let source: string;
