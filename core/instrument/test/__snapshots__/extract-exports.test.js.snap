@@ -22,6 +22,46 @@ Object {
 }
 `;
 
+exports[`extract-exports export default class 1`] = `
+Object {
+  "default": Object {
+    "internalName": "Button",
+    "loc": Object {
+      "end": Object {
+        "column": 1,
+        "line": 7,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "default",
+  },
+  "named": Object {},
+}
+`;
+
+exports[`extract-exports export default class export 1`] = `
+Object {
+  "default": Object {
+    "internalName": "Button",
+    "loc": Object {
+      "end": Object {
+        "column": 1,
+        "line": 7,
+      },
+      "start": Object {
+        "column": 37,
+        "line": 3,
+      },
+    },
+    "name": "default",
+  },
+  "named": Object {},
+}
+`;
+
 exports[`extract-exports export from import 1`] = `
 Object {
   "named": Object {
@@ -61,6 +101,48 @@ Object {
         },
       },
       "name": "newStory",
+    },
+  },
+}
+`;
+
+exports[`extract-exports export named class 1`] = `
+Object {
+  "named": Object {
+    "Button": Object {
+      "internalName": "Button",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 44,
+          "line": 3,
+        },
+      },
+      "name": "Button",
+    },
+  },
+}
+`;
+
+exports[`extract-exports export named class export 1`] = `
+Object {
+  "named": Object {
+    "Button": Object {
+      "internalName": "Button",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 37,
+          "line": 3,
+        },
+      },
+      "name": "Button",
     },
   },
 }

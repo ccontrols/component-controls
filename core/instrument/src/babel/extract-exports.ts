@@ -45,10 +45,17 @@ export const traverseExports = (results: ExportTypes) => {
   };
   return {
     ExportDefaultDeclaration: (path: any) => {
+      const { declaration } = path.node;
+      const internalName = declaration
+        ? declaration.id
+          ? declaration.id.name
+          : declaration.name || EXPORT_DEFAULT
+        : EXPORT_DEFAULT;
+      const localExport = localExports[internalName];
       results.default = {
         name: EXPORT_DEFAULT,
-        internalName: EXPORT_DEFAULT,
-        loc: sourceLocation(path.node.loc),
+        internalName,
+        loc: localExport ? localExport.loc : sourceLocation(path.node.loc),
       };
     },
     ImportDeclaration: (path: any) => {
@@ -81,12 +88,23 @@ export const traverseExports = (results: ExportTypes) => {
         });
       }
     },
+    ClassDeclaration: (path: any) => {
+      const node = path.node.declaration || path.node;
+      if (node.id) {
+        const name = node.id.name;
+        localExports[name] = {
+          name,
+          internalName: name,
+          loc: sourceLocation(node.body ? node.body.loc : node.loc),
+        };
+      }
+    },
+
     ExportSpecifier: (path: any) => {
       const { node } = path;
       const localName = node.local.name;
       const exportedName = node.exported.name;
       const namedExport = localExports[localName];
-
       if (namedExport) {
         namedExport.internalName = namedExport.name;
         namedExport.name = exportedName;
@@ -101,7 +119,6 @@ export const traverseExports = (results: ExportTypes) => {
       const { declaration, specifiers, source } = path.node;
       if (declaration) {
         const { declarations } = declaration;
-
         if (Array.isArray(declarations)) {
           declarations.forEach(declaration => {
             const namedExport = extractArrowFunction(declaration);
@@ -116,6 +133,15 @@ export const traverseExports = (results: ExportTypes) => {
               results.named[name] = namedExport;
             }
           });
+        } else {
+          const name = declaration.id.name;
+          results.named[name] = {
+            name,
+            internalName: name,
+            loc: sourceLocation(
+              declaration.body ? declaration.body.loc : path.node.loc,
+            ),
+          };
         }
       } else if (specifiers) {
         specifiers.forEach((specifier: any) => {

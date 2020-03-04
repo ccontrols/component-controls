@@ -48,4 +48,29 @@ describe('extract-exports', () => {
       extractExportsForFile('./examples/exports/export-all-from.js'),
     ).toMatchSnapshot();
   });
+
+  it('export named class', () => {
+    expect(
+      extractExportsForFile('./examples/exports/button-named-class.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('export named class export', () => {
+    expect(
+      extractExportsForFile('./examples/exports/button-named-class-export.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('export default class', () => {
+    expect(
+      extractExportsForFile('./examples/exports/button-default-class.js'),
+    ).toMatchSnapshot();
+  });
+  it('export default class export', () => {
+    expect(
+      extractExportsForFile(
+        './examples/exports/button-default-class-export.js',
+      ),
+    ).toMatchSnapshot();
+  });
 });
