@@ -34,7 +34,22 @@ Object {
 }
 `;
 
-exports[`follow-imports one level index import 1`] = `undefined`;
+exports[`follow-imports one level index import 1`] = `
+Object {
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 28,
+      "line": 1,
+    },
+  },
+}
+`;
 
 exports[`follow-imports one level namespace import 1`] = `
 Object {

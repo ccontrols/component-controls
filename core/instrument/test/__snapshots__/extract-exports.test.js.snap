@@ -90,6 +90,7 @@ Object {
 exports[`extract-exports named export 1`] = `
 Object {
   "default": Object {
+    "internalName": "default",
     "loc": Object {
       "end": Object {
         "column": 28,
@@ -146,7 +147,7 @@ exports[`extract-exports re-exported name 1`] = `
 Object {
   "named": Object {
     "myStory": Object {
-      "from": undefined,
+      "from": "stories.tsx",
       "internalName": "myStory",
       "loc": Object {
         "end": Object {

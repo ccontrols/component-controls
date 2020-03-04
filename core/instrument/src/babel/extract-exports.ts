@@ -5,7 +5,7 @@ import { sourceLocation } from './utils';
 
 export interface ExportType {
   name: string;
-  internalName?: string;
+  internalName: string;
   loc: CodeLocation;
   /**
    * in case of export { Button } from './button-named-export';
@@ -15,6 +15,7 @@ export interface ExportType {
 }
 
 export const EXPORT_ALL = '*';
+export const EXPORT_DEFAULT = 'default';
 
 export interface NamedExportTypes {
   [key: string]: ExportType;
@@ -45,15 +46,30 @@ export const traverseExports = (results: ExportTypes) => {
   return {
     ExportDefaultDeclaration: (path: any) => {
       results.default = {
-        name: 'default',
+        name: EXPORT_DEFAULT,
+        internalName: EXPORT_DEFAULT,
         loc: sourceLocation(path.node.loc),
       };
     },
+    ImportDeclaration: (path: any) => {
+      const { specifiers, source } = path.node;
+      if (Array.isArray(specifiers)) {
+        specifiers.forEach(specifier => {
+          globals[specifier.local.name] = {
+            name: specifier.local.name,
+            internalName: specifier.imported
+              ? specifier.imported.name
+              : specifier.local.name,
+            from: source.value,
+            loc: sourceLocation(specifier.loc),
+          };
+        });
+      }
+    },
     VariableDeclaration: (path: any) => {
       const { declarations } = path.node;
-      if (Array.isArray(declarations) && declarations.length > 0) {
-        const declaration = declarations[0];
-        if (declaration) {
+      if (Array.isArray(declarations)) {
+        declarations.forEach(declaration => {
           const name = declaration.id.name;
           //check if it was a named export
           if (!results.named[name]) {
@@ -62,7 +78,7 @@ export const traverseExports = (results: ExportTypes) => {
               localExports[namedExport.name] = namedExport;
             }
           }
-        }
+        });
       }
     },
     ExportSpecifier: (path: any) => {
@@ -103,13 +119,15 @@ export const traverseExports = (results: ExportTypes) => {
         }
       } else if (specifiers) {
         specifiers.forEach((specifier: any) => {
+          const internalName = specifier.local
+            ? specifier.local.name
+            : specifier.exported.name;
+          const global = globals[internalName];
           results.named[specifier.exported.name] = {
             name: specifier.exported.name,
-            internalName: specifier.local
-              ? specifier.local.name
-              : specifier.exported.name,
+            internalName: global ? global.internalName : internalName,
             loc: sourceLocation(specifier.exported.loc),
-            from: source ? source.value : undefined,
+            from: source ? source.value : global ? global.from : undefined,
           };
         });
       }

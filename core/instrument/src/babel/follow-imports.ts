@@ -30,23 +30,35 @@ export const followImports = (
     named: {},
   };
   traverse(ast, traverseExports(exports));
-
+  const folderName = path.dirname(filePath);
   const findExport =
     baseImportedName === 'default' || baseImportedName === 'namespace'
       ? exports.default
       : exports.named[baseImportedName];
   if (findExport !== undefined) {
-    return {
-      filePath,
-      exportedAs: findExport.name,
-      loc: findExport.loc,
-    };
+    if (!findExport.from) {
+      return {
+        filePath,
+        exportedAs: findExport.name,
+        loc: findExport.loc,
+      };
+    } else {
+      const resolvedFilePath = resolve.sync(findExport.from, {
+        ...resolveOptions,
+        basedir: folderName,
+      });
+      return followImports(
+        findExport.internalName,
+        resolvedFilePath,
+        parserOptions,
+        resolveOptions,
+      );
+    }
   }
   const imports: ImportTypes = {};
   traverse(ast, traverseImports(imports));
   const findImport = imports[baseImportedName];
   if (findImport) {
-    const folderName = path.dirname(filePath);
     const resolvedFilePath = resolve.sync(findImport.from, {
       ...resolveOptions,
       basedir: folderName,
