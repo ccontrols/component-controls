@@ -4,17 +4,18 @@ import traverse from '@babel/traverse';
 export interface ImportType {
   name: string;
   importedName: 'default' | 'namespace' | string;
+  from: string;
 }
 
 export interface ImportTypes {
-  [key: string]: ImportType[];
+  [key: string]: ImportType;
 }
 
 export const traverseImports = (results: ImportTypes) => {
   return {
     ImportDeclaration: (path: any) => {
       const node = path.node;
-      const imports: ImportType[] = node.specifiers.map((specifier: any) => {
+      node.specifiers.forEach((specifier: any) => {
         let importedName;
         switch (specifier.type) {
           case 'ImportDefaultSpecifier':
@@ -29,19 +30,12 @@ export const traverseImports = (results: ImportTypes) => {
               ? specifier.imported.name
               : specifier.local.name;
         }
-        return {
+        results[specifier.local.name] = {
           name: specifier.local.name,
           importedName,
+          from: node.source.value,
         };
       });
-      if (Array.isArray(results[node.source.value])) {
-        results[node.source.value] = [
-          ...results[node.source.value],
-          ...imports,
-        ];
-      } else {
-        results[node.source.value] = imports;
-      }
     },
   };
 };

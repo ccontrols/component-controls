@@ -2,102 +2,100 @@
 
 exports[`extract-imports all imports 1`] = `
 Object {
-  "./buttons": Array [
-    Object {
-      "importedName": "Button",
-      "name": "Btn",
-    },
-  ],
-  "buttons": Array [
-    Object {
-      "importedName": "default",
-      "name": "Button1",
-    },
-    Object {
-      "importedName": "namespace",
-      "name": "Button2",
-    },
-    Object {
-      "importedName": "Button",
-      "name": "Button",
-    },
-  ],
-  "react": Array [
-    Object {
-      "importedName": "default",
-      "name": "React",
-    },
-    Object {
-      "importedName": "FC",
-      "name": "FC",
-    },
-    Object {
-      "importedName": "MouseEvent",
-      "name": "MouseEvent",
-    },
-  ],
+  "Btn": Object {
+    "from": "./buttons",
+    "importedName": "Button",
+    "name": "Btn",
+  },
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Button",
+  },
+  "Button1": Object {
+    "from": "buttons",
+    "importedName": "default",
+    "name": "Button1",
+  },
+  "Button2": Object {
+    "from": "buttons",
+    "importedName": "namespace",
+    "name": "Button2",
+  },
+  "FC": Object {
+    "from": "react",
+    "importedName": "FC",
+    "name": "FC",
+  },
+  "MouseEvent": Object {
+    "from": "react",
+    "importedName": "MouseEvent",
+    "name": "MouseEvent",
+  },
+  "React": Object {
+    "from": "react",
+    "importedName": "default",
+    "name": "React",
+  },
 }
 `;
 
 exports[`extract-imports default import 1`] = `
 Object {
-  "buttons": Array [
-    Object {
-      "importedName": "default",
-      "name": "Button",
-    },
-  ],
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "default",
+    "name": "Button",
+  },
 }
 `;
 
 exports[`extract-imports mixed import 1`] = `
 Object {
-  "./react": Array [
-    Object {
-      "importedName": "default",
-      "name": "React",
-    },
-    Object {
-      "importedName": "FC",
-      "name": "FC",
-    },
-    Object {
-      "importedName": "MouseEvent",
-      "name": "MouseEvent",
-    },
-  ],
+  "FC": Object {
+    "from": "./react",
+    "importedName": "FC",
+    "name": "FC",
+  },
+  "MouseEvent": Object {
+    "from": "./react",
+    "importedName": "MouseEvent",
+    "name": "MouseEvent",
+  },
+  "React": Object {
+    "from": "./react",
+    "importedName": "default",
+    "name": "React",
+  },
 }
 `;
 
 exports[`extract-imports named alias import 1`] = `
 Object {
-  "buttons": Array [
-    Object {
-      "importedName": "Button",
-      "name": "Btn",
-    },
-  ],
+  "Btn": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Btn",
+  },
 }
 `;
 
 exports[`extract-imports named import 1`] = `
 Object {
-  "buttons": Array [
-    Object {
-      "importedName": "Button",
-      "name": "Button",
-    },
-  ],
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Button",
+  },
 }
 `;
 
 exports[`extract-imports namespace import 1`] = `
 Object {
-  "buttons": Array [
-    Object {
-      "importedName": "namespace",
-      "name": "Button",
-    },
-  ],
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "namespace",
+    "name": "Button",
+  },
 }
 `;

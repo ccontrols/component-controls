@@ -30,4 +30,22 @@ describe('extract-exports', () => {
       extractExportsForFile('./examples/exports/re-exported-name.js'),
     ).toMatchSnapshot();
   });
+
+  it('export from import', () => {
+    expect(
+      extractExportsForFile('./examples/exports/export-from.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('export from import with alias', () => {
+    expect(
+      extractExportsForFile('./examples/exports/export-from-alias.js'),
+    ).toMatchSnapshot();
+  });
+
+  it('export * from import', () => {
+    expect(
+      extractExportsForFile('./examples/exports/export-all-from.js'),
+    ).toMatchSnapshot();
+  });
 });

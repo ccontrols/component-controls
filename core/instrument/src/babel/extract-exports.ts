@@ -4,13 +4,17 @@ import { CodeLocation } from '@component-controls/specification';
 import { sourceLocation } from './utils';
 
 export interface ExportType {
-  path: any;
-  node: any;
   name: string;
   internalName?: string;
   loc: CodeLocation;
-  type: 'function' | 'indentifier';
+  /**
+   * in case of export { Button } from './button-named-export';
+   * specifies the import from statememnt
+   */
+  from?: string;
 }
+
+export const EXPORT_ALL = '*';
 
 export interface NamedExportTypes {
   [key: string]: ExportType;
@@ -23,10 +27,7 @@ export const traverseExports = (results: ExportTypes) => {
   const globals: NamedExportTypes = {};
   const localExports: NamedExportTypes = {};
 
-  const extractArrowFunction = (
-    path: any,
-    declaration: any,
-  ): ExportType | undefined => {
+  const extractArrowFunction = (declaration: any): ExportType | undefined => {
     if (
       declaration.init &&
       declaration.init.type === 'ArrowFunctionExpression'
@@ -36,9 +37,6 @@ export const traverseExports = (results: ExportTypes) => {
         loc: sourceLocation(declaration.init.body.loc),
         name,
         internalName: name,
-        path,
-        node: path.node,
-        type: 'function',
       };
       return exportType;
     }
@@ -48,10 +46,7 @@ export const traverseExports = (results: ExportTypes) => {
     ExportDefaultDeclaration: (path: any) => {
       results.default = {
         name: 'default',
-        path,
-        node: path.node.declaration,
         loc: sourceLocation(path.node.loc),
-        type: 'indentifier',
       };
     },
     VariableDeclaration: (path: any) => {
@@ -62,7 +57,7 @@ export const traverseExports = (results: ExportTypes) => {
           const name = declaration.id.name;
           //check if it was a named export
           if (!results.named[name]) {
-            const namedExport = extractArrowFunction(path, declaration);
+            const namedExport = extractArrowFunction(declaration);
             if (namedExport && namedExport.name) {
               localExports[namedExport.name] = namedExport;
             }
@@ -81,49 +76,59 @@ export const traverseExports = (results: ExportTypes) => {
         namedExport.name = exportedName;
         const global = globals[localName];
         if (global) {
-          namedExport.path = global.path;
-          namedExport.node = global.node;
           namedExport.loc = global.loc;
         }
         results.named[exportedName] = namedExport;
       }
     },
     ExportNamedDeclaration: (path: any) => {
-      const { declaration } = path.node;
+      const { declaration, specifiers, source } = path.node;
       if (declaration) {
         const { declarations } = declaration;
 
         if (Array.isArray(declarations)) {
           declarations.forEach(declaration => {
-            const namedExport = extractArrowFunction(path, declaration);
+            const namedExport = extractArrowFunction(declaration);
             if (namedExport) {
               const name = namedExport.name || '';
               const global = globals[name];
               if (global) {
                 namedExport.internalName = global.name;
                 namedExport.name = global.name;
-                namedExport.path = global.path;
-                namedExport.node = global.node;
                 namedExport.loc = global.loc;
               }
               results.named[name] = namedExport;
             }
           });
         }
+      } else if (specifiers) {
+        specifiers.forEach((specifier: any) => {
+          results.named[specifier.exported.name] = {
+            name: specifier.exported.name,
+            internalName: specifier.local
+              ? specifier.local.name
+              : specifier.exported.name,
+            loc: sourceLocation(specifier.exported.loc),
+            from: source ? source.value : undefined,
+          };
+        });
+      }
+    },
+    ExportAllDeclaration: (path: any) => {
+      const node = path.node;
+      const { source } = node;
+      if (source) {
+        results.named[source.value] = {
+          name: EXPORT_ALL,
+          internalName: EXPORT_ALL,
+          loc: sourceLocation(source.loc),
+          from: source.value,
+        };
       }
     },
   };
 };
 
-const cleanExportType = (exportType?: ExportType) => {
-  return exportType
-    ? {
-        name: exportType.name,
-        internalName: exportType.internalName,
-        loc: exportType.loc,
-      }
-    : undefined;
-};
 export const extractExports = (
   source: string,
   parserOptions?: parser.ParserOptions,
@@ -134,10 +139,5 @@ export const extractExports = (
   const ast = parser.parse(source, parserOptions);
 
   traverse(ast, traverseExports(results));
-  return {
-    default: cleanExportType(results.default),
-    named: Object.keys(results.named).map(key =>
-      cleanExportType(results.named[key]),
-    ),
-  };
+  return results;
 };

@@ -1,10 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`extract-exports export * from import 1`] = `
+Object {
+  "named": Object {
+    "stories.tsx": Object {
+      "from": "stories.tsx",
+      "internalName": "*",
+      "loc": Object {
+        "end": Object {
+          "column": 27,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 14,
+          "line": 1,
+        },
+      },
+      "name": "*",
+    },
+  },
+}
+`;
+
+exports[`extract-exports export from import 1`] = `
+Object {
+  "named": Object {
+    "myStory": Object {
+      "from": "stories.tsx",
+      "internalName": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 16,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 9,
+          "line": 1,
+        },
+      },
+      "name": "myStory",
+    },
+  },
+}
+`;
+
+exports[`extract-exports export from import with alias 1`] = `
+Object {
+  "named": Object {
+    "newStory": Object {
+      "from": "stories.tsx",
+      "internalName": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 28,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 20,
+          "line": 1,
+        },
+      },
+      "name": "newStory",
+    },
+  },
+}
+`;
+
 exports[`extract-exports named const export 1`] = `
 Object {
-  "default": undefined,
-  "named": Array [
-    Object {
+  "named": Object {
+    "myStory": Object {
       "internalName": "myStory",
       "loc": Object {
         "end": Object {
@@ -18,14 +83,13 @@ Object {
       },
       "name": "myStory",
     },
-  ],
+  },
 }
 `;
 
 exports[`extract-exports named export 1`] = `
 Object {
   "default": Object {
-    "internalName": undefined,
     "loc": Object {
       "end": Object {
         "column": 28,
@@ -38,8 +102,8 @@ Object {
     },
     "name": "default",
   },
-  "named": Array [
-    Object {
+  "named": Object {
+    "namedExport": Object {
       "internalName": "namedExport",
       "loc": Object {
         "end": Object {
@@ -53,15 +117,14 @@ Object {
       },
       "name": "namedExport",
     },
-  ],
+  },
 }
 `;
 
 exports[`extract-exports named export alias 1`] = `
 Object {
-  "default": undefined,
-  "named": Array [
-    Object {
+  "named": Object {
+    "exportedStory": Object {
       "internalName": "myStory",
       "loc": Object {
         "end": Object {
@@ -75,13 +138,28 @@ Object {
       },
       "name": "exportedStory",
     },
-  ],
+  },
 }
 `;
 
 exports[`extract-exports re-exported name 1`] = `
 Object {
-  "default": undefined,
-  "named": Array [],
+  "named": Object {
+    "myStory": Object {
+      "from": undefined,
+      "internalName": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 16,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 9,
+          "line": 3,
+        },
+      },
+      "name": "myStory",
+    },
+  },
 }
 `;
