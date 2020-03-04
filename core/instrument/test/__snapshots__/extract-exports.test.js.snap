@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`extract-exports commonjs named export 1`] = `
+Object {
+  "named": Object {
+    "Button": Object {
+      "internalName": "Button",
+      "loc": Object {
+        "end": Object {
+          "column": 23,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 1,
+        },
+      },
+      "name": "Button",
+    },
+  },
+}
+`;
+
 exports[`extract-exports export * from import 1`] = `
 Object {
   "named": Object {
@@ -234,11 +255,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 16,
-          "line": 3,
+          "line": 1,
         },
         "start": Object {
           "column": 9,
-          "line": 3,
+          "line": 1,
         },
       },
       "name": "myStory",

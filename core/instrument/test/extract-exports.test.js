@@ -73,4 +73,10 @@ describe('extract-exports', () => {
       ),
     ).toMatchSnapshot();
   });
+
+  it('commonjs named export', () => {
+    expect(
+      extractExportsForFile('./examples/exports/cjs-named-export.js'),
+    ).toMatchSnapshot();
+  });
 });

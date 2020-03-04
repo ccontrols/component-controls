@@ -5,7 +5,12 @@ import * as path from 'path';
 import traverse from '@babel/traverse';
 import { CodeLocation } from '@component-controls/specification';
 import { ImportTypes, traverseImports } from './extract-imports';
-import { traverseExports, ExportTypes } from './extract-exports';
+import {
+  traverseExports,
+  ExportTypes,
+  ExportType,
+  EXPORT_ALL,
+} from './extract-exports';
 
 export interface FollowImportType {
   exportedAs: string;
@@ -54,6 +59,31 @@ export const followImports = (
         resolveOptions,
       );
     }
+  }
+  const allExports: ExportType[] = Object.keys(exports.named).reduce(
+    (acc: ExportType[], key: string) => [...acc, exports.named[key]],
+    [],
+  );
+  let foundInExportAll: FollowImportType | undefined;
+  allExports
+    .filter(e => e.internalName === EXPORT_ALL && e.from)
+    .some(e => {
+      if (e.from) {
+        const resolvedFilePath = resolve.sync(e.from, {
+          ...resolveOptions,
+          basedir: folderName,
+        });
+        foundInExportAll = followImports(
+          baseImportedName,
+          resolvedFilePath,
+          parserOptions,
+          resolveOptions,
+        );
+      }
+      return foundInExportAll;
+    });
+  if (foundInExportAll) {
+    return foundInExportAll;
   }
   const imports: ImportTypes = {};
   traverse(ast, traverseImports(imports));

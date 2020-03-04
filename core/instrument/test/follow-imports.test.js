@@ -50,4 +50,28 @@ describe('follow-imports', () => {
       ),
     ).toMatchSnapshot();
   });
+  it('export all', () => {
+    expect(
+      extractFollowImportsForFile(
+        'Button',
+        './examples/follow-imports/export-all.js',
+      ),
+    ).toMatchSnapshot();
+  });
+  it('cjs named export', () => {
+    expect(
+      extractFollowImportsForFile(
+        'Button',
+        './examples/follow-imports/cjs-import.js',
+      ),
+    ).toMatchSnapshot();
+  });
+  it('export node modules', () => {
+    expect(
+      extractFollowImportsForFile(
+        'Button',
+        './examples/follow-imports/button-from-node-nodules.js',
+      ),
+    ).toMatchSnapshot();
+  });
 });

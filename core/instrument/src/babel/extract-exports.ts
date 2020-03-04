@@ -62,7 +62,7 @@ export const traverseExports = (results: ExportTypes) => {
       const { specifiers, source } = path.node;
       if (Array.isArray(specifiers)) {
         specifiers.forEach(specifier => {
-          globals[specifier.local.name] = {
+          localExports[specifier.local.name] = {
             name: specifier.local.name,
             internalName: specifier.imported
               ? specifier.imported.name
@@ -99,7 +99,25 @@ export const traverseExports = (results: ExportTypes) => {
         };
       }
     },
-
+    AssignmentExpression: (path: any) => {
+      //exports.Button = Buttton;
+      const { node } = path;
+      if (
+        node.left &&
+        node.right &&
+        node.left.object &&
+        node.left.object.name === 'exports'
+      ) {
+        const exportedName = node.left.property.name;
+        const localName = node.right.name;
+        const namedExport = localExports[localName];
+        if (namedExport) {
+          namedExport.internalName = namedExport.name;
+          namedExport.name = exportedName;
+          results.named[exportedName] = namedExport;
+        }
+      }
+    },
     ExportSpecifier: (path: any) => {
       const { node } = path;
       const localName = node.local.name;
