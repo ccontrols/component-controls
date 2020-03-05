@@ -3,15 +3,12 @@ import {
   StorySource as BaseStorySource,
   StorySourceProps as BaseStorySourceProps,
 } from '@component-controls/block-components';
-import { Link, LinkProps } from 'theme-ui';
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
 import { ThemeContext } from '../ThemeContext';
+import { repositoryActions } from '../utils/repositoryActions';
 
 export type StorySourceProps = StoryInputProps & BaseStorySourceProps;
 
-const ExternalLink = (props: LinkProps) => (
-  <Link {...props} target="_blank" rel="noopener noreferrer" />
-);
 export const StorySource: FC<StorySourceProps> = ({
   id,
   name,
@@ -24,28 +21,10 @@ export const StorySource: FC<StorySourceProps> = ({
   });
   const { dark } = React.useContext(ThemeContext);
   const allActions = [...actions];
-  if (kind) {
-    const { repository } = kind;
-    if (repository) {
-      const { browse, docs, issues } = repository;
-      if (browse) {
-        allActions.push({
-          title: <ExternalLink href={browse}>browse</ExternalLink>,
-        });
-      }
-      if (docs) {
-        allActions.push({
-          title: <ExternalLink href={docs}>docs</ExternalLink>,
-        });
-      }
-      if (issues) {
-        allActions.push({
-          title: <ExternalLink href={issues}>issues</ExternalLink>,
-        });
-      }
-    }
+  const repositoryItems = kind && repositoryActions(kind?.repository);
+  if (repositoryItems) {
+    allActions.push.apply(allActions, repositoryItems);
   }
-
   return (
     <BaseStorySource
       dark={dark}
