@@ -1,5 +1,6 @@
 import * as resolve from 'resolve';
 import * as parser from '@babel/parser';
+import { File } from '@babel/types';
 import {
   StoriesStore,
   StoryArgument,
@@ -44,7 +45,7 @@ const componentFromParams = (
 
 export const extractComponent = async (
   componentName: string,
-  filePath?: string,
+  filePath: string,
   parserOptions?: parser.ParserOptions,
   resolveOptions?: resolve.SyncOpts,
   initialAST?: File,
@@ -70,7 +71,7 @@ export const extractComponent = async (
 
 export const extractSotreComponent = async (
   store: StoriesStore,
-  filePath?: string,
+  filePath: string,
   parserOptions?: parser.ParserOptions,
   resolveOptions?: resolve.SyncOpts,
   initialAST?: File,
@@ -86,6 +87,7 @@ export const extractSotreComponent = async (
         filePath,
         parserOptions,
         resolveOptions,
+        initialAST,
       );
       if (component) {
         store.components[componentName] = component;
@@ -102,6 +104,7 @@ export const extractSotreComponent = async (
         filePath,
         parserOptions,
         resolveOptions,
+        initialAST,
       );
       if (component) {
         store.components[componentName] = component;
