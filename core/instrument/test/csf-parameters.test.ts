@@ -3,19 +3,23 @@ import { parseCSF } from '../src/index';
 describe('csf-parameters', () => {
   it('story propery name', async () => {
     expect(
-      await parseCSF(`
+      await parseCSF(
+        `
 export const myStory = () => {};
 myStory.story = {
  name: 'Custom story name',
 }
       
-    `),
+    `,
+        __filename,
+      ),
     ).toMatchSnapshot();
   });
 
   it('story propery name and parameters', async () => {
     expect(
-      await parseCSF(`
+      await parseCSF(
+        `
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',
@@ -27,13 +31,16 @@ myStory.story = {
   },
 }
       
-    `),
+    `,
+        __filename,
+      ),
     ).toMatchSnapshot();
   });
 
   it('story propery name parameters and controls', async () => {
     expect(
-      await parseCSF(`
+      await parseCSF(
+        `
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',
@@ -52,7 +59,9 @@ myStory.story = {
   },
 }
       
-    `),
+    `,
+        __filename,
+      ),
     ).toMatchSnapshot();
   });
 });

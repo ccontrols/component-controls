@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extract-component non-existing-file.js 1`] = `
+Object {
+  "from": "./Button",
+  "loc": undefined,
+  "name": "Button",
+  "repository": undefined,
+  "request": undefined,
+  "source": undefined,
+}
+`;

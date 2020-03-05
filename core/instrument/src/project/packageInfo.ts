@@ -3,7 +3,7 @@ import path from 'path';
 import readJson from 'read-package-json';
 import hostedGitInfo from 'hosted-git-info';
 import parseRepositoryURL from '@hutson/parse-repository-url';
-import { StoriesStore, StoriesKind } from '@component-controls/specification';
+import { Repository } from '@component-controls/specification';
 
 const traverseFolder = (
   filePath: string,
@@ -63,14 +63,10 @@ export interface PackageInfoReturnType {
 }
 
 export const packageInfo = async (
-  store: StoriesStore,
   filePath?: string,
   opts?: FindPackageJsonOptions,
-): Promise<void> => {
-  const kinds = Object.keys(store.kinds);
-
-  if (filePath && kinds.length > 0) {
-    const kind: StoriesKind = store.kinds[kinds[0]];
+): Promise<Repository | undefined> => {
+  if (filePath) {
     const { fileName, packageJSON } =
       (await getPackageJson(filePath, opts)) || {};
     if (fileName && packageJSON) {
@@ -103,7 +99,7 @@ export const packageInfo = async (
             .replace('{committish}', templates.committish || 'master');
         };
 
-        kind.repository = {
+        return {
           browse: fillTemplate(templates.browsefiletemplate),
           docs: fillTemplate(templates.docstemplate),
           issues: fillTemplate(templates.bugstemplate),
@@ -111,4 +107,5 @@ export const packageInfo = async (
       }
     }
   }
+  return undefined;
 };

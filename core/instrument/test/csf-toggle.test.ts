@@ -2,7 +2,8 @@ import { parseCSF } from '../src/index';
 
 describe('csf-toggle', () => {
   it('Toggle story', async () => {
-    const stories = await parseCSF(`
+    const stories = await parseCSF(
+      `
     import React from 'react';
     import { Toggle } from './Toggle';
     
@@ -31,7 +32,9 @@ describe('csf-toggle', () => {
         </div>
       );
     };      
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 });

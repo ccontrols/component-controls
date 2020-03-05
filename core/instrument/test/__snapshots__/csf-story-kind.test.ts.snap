@@ -53,6 +53,11 @@ Object {
           "value": "Storybook/Blocks/ControlsTable",
         },
       ],
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
       "source": "
         export default {
           title: 'Storybook/Blocks/ControlsTable',
@@ -201,6 +206,11 @@ Object {
           ],
         },
       ],
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
       "source": "
       export default {
         title: 'Storybook/Kind',
@@ -303,6 +313,11 @@ Object {
           ],
         },
       ],
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
       "source": "
         export default {
           title: 'Storybook/Blocks/ControlsTable',

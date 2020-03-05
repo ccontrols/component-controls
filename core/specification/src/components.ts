@@ -100,7 +100,10 @@ export interface StoryComponent {
    * component project repository information
    */
   repository?: Repository;
-
+  /**
+   * the source code of the component file, extracted byt the AST instrumenting loaders
+   */
+  source?: string;
   /**
    * docgen generated component info
    */

@@ -6,11 +6,15 @@ import generate from '@babel/generator';
 import * as resolve from 'resolve';
 import prettier, { Options, ResolveConfigOptions } from 'prettier';
 import parserBabel from 'prettier/parser-babylon';
-import { StoriesStore, Story } from '@component-controls/specification';
+import {
+  StoriesStore,
+  Story,
+  StoriesKind,
+} from '@component-controls/specification';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
-import { extractComponent } from './babel/extract-component';
+import { extractSotreComponent } from './babel/extract-component';
 import { packageInfo } from './project/packageInfo';
 
 type TraverseFn = (stories: StoriesStore) => any;
@@ -31,7 +35,7 @@ const parseSource = async (
   code: string,
   traverseFn: TraverseFn,
   originalSource: string,
-  filePath?: string,
+  filePath: string,
   parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
   resolveOptions?: resolve.SyncOpts,
@@ -58,10 +62,11 @@ const parseSource = async (
     }
   };
   const source = await prettify(code);
-  const ast = parser.parse(source, {
+  const mergedParserOptions = {
     ...defaultParserOptions,
     ...parserOptions,
-  });
+  };
+  const ast = parser.parse(source, mergedParserOptions);
   const store: StoriesStore = {
     stories: {},
     kinds: {},
@@ -87,14 +92,18 @@ const parseSource = async (
       {},
     );
   }
-
-  await extractComponent(
-    ast,
-    store,
-    { ...defaultResolveOptions, ...resolveOptions },
-    filePath,
-  );
-  await packageInfo(store, filePath);
+  await extractSotreComponent(store, filePath, mergedParserOptions, {
+    ...defaultResolveOptions,
+    ...resolveOptions,
+  });
+  const kindsNames = Object.keys(store.kinds);
+  for (let i = 0; i < kindsNames.length; i += 1) {
+    const kind: StoriesKind = store.kinds[kindsNames[i]];
+    const repository = await packageInfo(filePath);
+    if (repository) {
+      kind.repository = repository;
+    }
+  }
   /*
   if (filePath && stories.component && stories.component.from) {
     console.log(
@@ -142,7 +151,7 @@ const parseSource = async (
 
 export const parseCSF = async (
   source: string,
-  filePath?: string,
+  filePath: string,
   parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
   resolveOptions?: resolve.SyncOpts,
@@ -160,7 +169,7 @@ export const parseCSF = async (
 
 export const parseMDX = async (
   source: string,
-  filePath?: string,
+  filePath: string,
   parserOptions?: parser.ParserOptions,
   prettierOptions?: PrettierOptions,
   resolveOptions?: resolve.SyncOpts,

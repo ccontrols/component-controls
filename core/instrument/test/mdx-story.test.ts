@@ -2,7 +2,8 @@ import { parseMDX } from '../src/index';
 
 describe('mdx-stories', () => {
   test('mdx-story', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -13,12 +14,15 @@ import Button from '../components/BaseButton';
   <Button />
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 
   test('no name', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -29,12 +33,15 @@ import Button from '../components/BaseButton';
   <Button />
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 
   test('Props argument', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -45,12 +52,15 @@ import Button from '../components/BaseButton';
   {props => <Button />}
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 
   test('Two arguments', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -61,12 +71,15 @@ import Button from '../components/BaseButton';
   {(props, context) => <Button />}
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 
   test('Two levels sub arguments', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -77,11 +90,14 @@ import Button from '../components/BaseButton';
   {({ name, age }) => <Button />}
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
   test('Two levels - alias', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -92,11 +108,14 @@ import Button from '../components/BaseButton';
   {({ name: MyName, age }) => <Button />}
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
   test('Three levels - alias', async () => {
-    const stories = await parseMDX(`
+    const stories = await parseMDX(
+      `
 import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
@@ -107,7 +126,9 @@ import Button from '../components/BaseButton';
   {({ name: { first, last }, age }) => <Button />}
 </Story>
 
-  `);
+  `,
+      __filename,
+    );
     expect(stories).toMatchSnapshot();
   });
 });

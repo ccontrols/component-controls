@@ -1,12 +1,13 @@
-import nodePath from 'path';
 import * as resolve from 'resolve';
-import traverse from '@babel/traverse';
+import * as parser from '@babel/parser';
 import {
   StoriesStore,
   StoryArgument,
   StoryArguments,
   StoryComponent,
 } from '@component-controls/specification';
+import { followImports } from './follow-imports';
+import { packageInfo } from '../project/packageInfo';
 
 const componentFromParams = (
   parameters?: StoryArguments,
@@ -41,62 +42,50 @@ const componentFromParams = (
   return undefined;
 };
 
-const findComponentImport = (
-  ast: any,
+export const extractComponent = async (
   componentName: string,
-  resolveOptions: resolve.SyncOpts,
   filePath?: string,
-): StoryComponent | undefined => {
-  let result: StoryComponent | undefined = undefined;
-  traverse(ast, {
-    ImportDeclaration: (path: any) => {
-      const node = path.node;
-      for (let i = 0; i < node.specifiers.length; i += 1) {
-        const specifier = node.specifiers[i];
-        if (specifier.local && specifier.local.name === componentName) {
-          result = {
-            name: specifier.local.name,
-            imported: specifier.imported
-              ? specifier.imported.name
-              : specifier.type === 'ImportDefaultSpecifier'
-              ? 'default'
-              : undefined,
-            from: node.source ? node.source.value : undefined,
-            loc: node.loc,
-          };
-          if (node.source.value && filePath) {
-            const folderName = nodePath.dirname(filePath);
-            const resolveName = resolve.sync(node.source.value, {
-              ...resolveOptions,
-              basedir: folderName,
-            });
-            console.log(resolveName);
-          }
-          path.skip();
-          break;
-        }
+  parserOptions?: parser.ParserOptions,
+  resolveOptions?: resolve.SyncOpts,
+  initialAST?: File,
+): Promise<StoryComponent | undefined> => {
+  const follow = followImports(
+    componentName,
+    filePath,
+    parserOptions,
+    resolveOptions,
+    initialAST,
+  );
+  return follow
+    ? {
+        name: componentName,
+        from: follow.from,
+        request: follow.filePath,
+        loc: follow.loc,
+        source: follow.source,
+        repository: await packageInfo(follow.filePath),
       }
-    },
-  });
-  return result;
+    : undefined;
 };
 
-export const extractComponent = async (
-  ast: any,
+export const extractSotreComponent = async (
   store: StoriesStore,
-  resolveOptions: resolve.SyncOpts,
   filePath?: string,
+  parserOptions?: parser.ParserOptions,
+  resolveOptions?: resolve.SyncOpts,
+  initialAST?: File,
 ) => {
   const kinds = Object.keys(store.kinds);
   if (kinds.length > 0) {
     const kind = store.kinds[kinds[0]];
     const componentName = componentFromParams(kind.parameters);
+
     if (componentName) {
-      const component = findComponentImport(
-        ast,
+      const component = await extractComponent(
         componentName,
-        resolveOptions,
         filePath,
+        parserOptions,
+        resolveOptions,
       );
       if (component) {
         store.components[componentName] = component;
@@ -108,11 +97,11 @@ export const extractComponent = async (
     const story = store.stories[name];
     const componentName = componentFromParams(story.parameters);
     if (componentName) {
-      const component = findComponentImport(
-        ast,
+      const component = await extractComponent(
         componentName,
-        resolveOptions,
         filePath,
+        parserOptions,
+        resolveOptions,
       );
       if (component) {
         store.components[componentName] = component;

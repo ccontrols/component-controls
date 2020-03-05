@@ -50,30 +50,11 @@ Object {
 
 exports[`csf-component story import 1`] = `
 Object {
-  "components": Object {
-    "Toggle": Object {
-      "from": "./Toggle",
-      "import": "import { Toggle } from \\"./Toggle\\";
-",
-      "imported": "Toggle",
-      "loc": SourceLocation {
-        "end": Position {
-          "column": 34,
-          "line": 2,
-        },
-        "start": Position {
-          "column": 0,
-          "line": 2,
-        },
-      },
-      "name": "Toggle",
-    },
-  },
+  "components": Object {},
   "kinds": Object {},
   "stories": Object {
     "story": Object {
       "arguments": Array [],
-      "component": "Toggle",
       "loc": Object {
         "end": Object {
           "column": 37,
