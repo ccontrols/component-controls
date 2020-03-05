@@ -24,11 +24,12 @@ export interface FollowImportType {
 export const followImports = (
   importName: string,
   filePath: string,
+  fileSource?: string,
   parserOptions?: parser.ParserOptions,
   resolveOptions?: resolve.SyncOpts,
   initialAST?: File,
 ): FollowImportType | undefined => {
-  const source = fs.readFileSync(filePath, 'utf8');
+  const source = fileSource || fs.readFileSync(filePath, 'utf8');
   const ast = initialAST || parser.parse(source, parserOptions);
 
   const baseImportedName = importName.split('.')[0];
@@ -59,6 +60,7 @@ export const followImports = (
       const imported = followImports(
         findExport.internalName,
         resolvedFilePath,
+        undefined,
         parserOptions,
         resolveOptions,
       );
@@ -81,6 +83,7 @@ export const followImports = (
         foundInExportAll = followImports(
           baseImportedName,
           resolvedFilePath,
+          undefined,
           parserOptions,
           resolveOptions,
         );
@@ -102,6 +105,7 @@ export const followImports = (
       const imported = followImports(
         findImport.importedName,
         resolvedFilePath,
+        undefined,
         parserOptions,
         resolveOptions,
       );

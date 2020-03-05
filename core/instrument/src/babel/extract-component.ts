@@ -46,6 +46,7 @@ const componentFromParams = (
 export const extractComponent = async (
   componentName: string,
   filePath: string,
+  source?: string,
   parserOptions?: parser.ParserOptions,
   resolveOptions?: resolve.SyncOpts,
   initialAST?: File,
@@ -53,6 +54,7 @@ export const extractComponent = async (
   const follow = followImports(
     componentName,
     filePath,
+    source,
     parserOptions,
     resolveOptions,
     initialAST,
@@ -72,6 +74,7 @@ export const extractComponent = async (
 export const extractSotreComponent = async (
   store: StoriesStore,
   filePath: string,
+  source: string,
   parserOptions?: parser.ParserOptions,
   resolveOptions?: resolve.SyncOpts,
   initialAST?: File,
@@ -85,6 +88,7 @@ export const extractSotreComponent = async (
       const component = await extractComponent(
         componentName,
         filePath,
+        source,
         parserOptions,
         resolveOptions,
         initialAST,
@@ -102,6 +106,7 @@ export const extractSotreComponent = async (
       const component = await extractComponent(
         componentName,
         filePath,
+        source,
         parserOptions,
         resolveOptions,
         initialAST,

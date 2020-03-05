@@ -92,10 +92,17 @@ const parseSource = async (
       {},
     );
   }
-  await extractSotreComponent(store, filePath, mergedParserOptions, {
-    ...defaultResolveOptions,
-    ...resolveOptions,
-  });
+  await extractSotreComponent(
+    store,
+    filePath,
+    source,
+    mergedParserOptions,
+    {
+      ...defaultResolveOptions,
+      ...resolveOptions,
+    },
+    ast,
+  );
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
