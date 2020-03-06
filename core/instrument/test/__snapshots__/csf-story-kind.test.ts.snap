@@ -59,7 +59,11 @@ Object {
 
 exports[`csf-story-kind default export - with title and controls 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "ControlsTable": Object {
+      "name": "ControlsTable",
+    },
+  },
   "kinds": Object {
     "Storybook/Kind": Object {
       "attributes": Object {
@@ -76,6 +80,7 @@ Object {
         },
         "title": "Storybook/Kind",
       },
+      "component": "ControlsTable",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -106,7 +111,11 @@ Object {
 
 exports[`csf-story-kind default export - with title and parameters 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "ControlsTable": Object {
+      "name": "ControlsTable",
+    },
+  },
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "attributes": Object {
@@ -118,6 +127,7 @@ Object {
         },
         "title": "Storybook/Blocks/ControlsTable",
       },
+      "component": "ControlsTable",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

@@ -58,7 +58,9 @@ export const extractComponent = async (
         source: follow.source,
         repository: await packageInfo(follow.originalFilePath),
       }
-    : undefined;
+    : {
+        name: componentName,
+      };
 };
 
 export const extractSotreComponent = async (

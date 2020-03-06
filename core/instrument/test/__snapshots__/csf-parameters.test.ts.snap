@@ -29,7 +29,11 @@ Object {
 
 exports[`csf-parameters story propery name and parameters 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "ControlsTable": Object {
+      "name": "ControlsTable",
+    },
+  },
   "kinds": Object {},
   "stories": Object {
     "myStory": Object {
@@ -43,6 +47,7 @@ Object {
           "component": "ControlsTable",
         },
       },
+      "component": "ControlsTable",
       "loc": Object {
         "end": Object {
           "column": 31,

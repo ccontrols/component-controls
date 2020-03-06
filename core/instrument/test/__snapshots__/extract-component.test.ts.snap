@@ -1,5 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`extract-component default-alias-import.js 1`] = `
+Object {
+  "from": "../components/button-default-class-export",
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 7,
+    },
+    "start": Object {
+      "column": 37,
+      "line": 3,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-default-class-export.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-default-class-export.js",
+  "source": "import React from 'react';
+
+class Button extends React.Component {
+  render() {
+    return <button>Hello, {this.props.name}</button>;
+  }
+}
+
+export default Button;
+",
+}
+`;
+
+exports[`extract-component default-import.js 1`] = `
+Object {
+  "from": "../components/button-default-arrow-func",
+  "loc": Object {
+    "end": Object {
+      "column": 65,
+      "line": 3,
+    },
+    "start": Object {
+      "column": 24,
+      "line": 3,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-default-arrow-func.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-default-arrow-func.js",
+  "source": "import React from 'react';
+
+const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
+
+export default Button;
+",
+}
+`;
+
+exports[`extract-component kind-component.js 1`] = `
+Object {
+  "name": "Button",
+}
+`;
+
+exports[`extract-component named-alias-import.js 1`] = `
+Object {
+  "from": "../components/button-named-arrow-func",
+  "loc": undefined,
+  "name": "Button",
+  "repository": undefined,
+  "request": undefined,
+  "source": undefined,
+}
+`;
+
+exports[`extract-component named-import.js 1`] = `
+Object {
+  "from": "../components/button-named-class",
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 7,
+    },
+    "start": Object {
+      "column": 44,
+      "line": 3,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-class.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-class.js",
+  "source": "import React from 'react';
+
+export class Button extends React.Component {
+  render() {
+    return <button>Hello, {this.props.name}</button>;
+  }
+}
+",
+}
+`;
+
 exports[`extract-component node-modules.js 1`] = `
 Object {
   "from": "theme-ui",
@@ -716,5 +826,63 @@ Object {
   "repository": undefined,
   "request": undefined,
   "source": undefined,
+}
+`;
+
+exports[`extract-component parameters-component.js 1`] = `
+Object {
+  "from": "../components/button-named-arrow-func",
+  "loc": Object {
+    "end": Object {
+      "column": 72,
+      "line": 3,
+    },
+    "start": Object {
+      "column": 31,
+      "line": 3,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-arrow-func.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-arrow-func.js",
+  "source": "import React from 'react';
+
+export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
+",
+}
+`;
+
+exports[`extract-component story-component.js 1`] = `
+Object {
+  "from": "../components/button-named-class",
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 7,
+    },
+    "start": Object {
+      "column": 44,
+      "line": 3,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-class.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-class.js",
+  "source": "import React from 'react';
+
+export class Button extends React.Component {
+  render() {
+    return <button>Hello, {this.props.name}</button>;
+  }
+}
+",
 }
 `;
