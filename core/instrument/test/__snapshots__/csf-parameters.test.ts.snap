@@ -7,6 +7,9 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "attributes": Object {
+        "name": "Custom story name",
+      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -18,22 +21,6 @@ Object {
         },
       },
       "name": "Custom story name",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 3,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 3,
-            },
-          },
-          "name": "name",
-          "value": "Custom story name",
-        },
-      ],
       "source": "() => {}",
     },
   },
@@ -47,6 +34,15 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "attributes": Object {
+        "name": "Custom story name",
+        "parameters": Object {
+          "addonControls": Object {
+            "smart": false,
+          },
+          "component": "ControlsTable",
+        },
+      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -58,80 +54,6 @@ Object {
         },
       },
       "name": "Custom story name",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 3,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 3,
-            },
-          },
-          "name": "name",
-          "value": "Custom story name",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 3,
-              "line": 9,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 4,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 28,
-                  "line": 5,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 5,
-                },
-              },
-              "name": "component",
-              "value": "ControlsTable",
-            },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 8,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 6,
-                },
-              },
-              "name": "addonControls",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 18,
-                      "line": 7,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 7,
-                    },
-                  },
-                  "name": "smart",
-                  "value": false,
-                },
-              ],
-            },
-          ],
-        },
-      ],
       "source": "() => {}",
     },
   },
@@ -145,6 +67,22 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "attributes": Object {
+        "name": "Custom story name",
+        "parameters": Object {
+          "addonControls": Object {
+            "smart": false,
+          },
+          "controls": Object {
+            "name": Object {
+              "label": "Name",
+              "order": 9999,
+              "type": "ControlTypes.TEXT",
+              "value": "Mark",
+            },
+          },
+        },
+      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -156,152 +94,6 @@ Object {
         },
       },
       "name": "Custom story name",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 3,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 3,
-            },
-          },
-          "name": "name",
-          "value": "Custom story name",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 3,
-              "line": 16,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 4,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 12,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 5,
-                },
-              },
-              "name": "controls",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 11,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 6,
-                    },
-                  },
-                  "name": "name",
-                  "value": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 31,
-                          "line": 7,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 7,
-                        },
-                      },
-                      "name": "type",
-                      "value": "ControlTypes.TEXT",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 21,
-                          "line": 8,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 8,
-                        },
-                      },
-                      "name": "label",
-                      "value": "Name",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 21,
-                          "line": 9,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 9,
-                        },
-                      },
-                      "name": "value",
-                      "value": "Mark",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 19,
-                          "line": 10,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 10,
-                        },
-                      },
-                      "name": "order",
-                      "value": 9999,
-                    },
-                  ],
-                },
-              ],
-            },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 15,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 13,
-                },
-              },
-              "name": "addonControls",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 18,
-                      "line": 14,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 14,
-                    },
-                  },
-                  "name": "smart",
-                  "value": false,
-                },
-              ],
-            },
-          ],
-        },
-      ],
       "source": "() => {}",
     },
   },

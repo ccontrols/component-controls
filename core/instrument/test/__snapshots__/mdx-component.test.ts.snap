@@ -2,66 +2,15 @@
 
 exports[`mdx-component component parameter 1`] = `
 Object {
-  "components": Object {
-    "Button": Object {
-      "from": "./Button",
-      "import": "import Button from './Button';
-",
-      "loc": undefined,
-      "name": "Button",
-      "repository": undefined,
-      "request": undefined,
-      "source": undefined,
-    },
-  },
+  "components": Object {},
   "kinds": Object {
     "Storybook/MDX": Object {
-      "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 4,
-            },
-            "start": Object {
-              "column": 6,
-              "line": 4,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
+      "attributes": Object {
+        "component": Object {
+          "Button": "Button",
         },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 46,
-              "line": 4,
-            },
-            "start": Object {
-              "column": 28,
-              "line": 4,
-            },
-          },
-          "name": "component",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 45,
-                  "line": 4,
-                },
-                "start": Object {
-                  "column": 39,
-                  "line": 4,
-                },
-              },
-              "name": "Button",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
+        "title": "Storybook/MDX",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -81,66 +30,15 @@ import { Button } from './Button';
 
 exports[`mdx-component named alias import 1`] = `
 Object {
-  "components": Object {
-    "Button": Object {
-      "from": "./Button",
-      "import": "import Button from './Button';
-",
-      "loc": undefined,
-      "name": "Button",
-      "repository": undefined,
-      "request": undefined,
-      "source": undefined,
-    },
-  },
+  "components": Object {},
   "kinds": Object {
     "Storybook/MDX": Object {
-      "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 27,
-              "line": 4,
-            },
-            "start": Object {
-              "column": 6,
-              "line": 4,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
+      "attributes": Object {
+        "component": Object {
+          "Button": "Button",
         },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 46,
-              "line": 4,
-            },
-            "start": Object {
-              "column": 28,
-              "line": 4,
-            },
-          },
-          "name": "component",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 45,
-                  "line": 4,
-                },
-                "start": Object {
-                  "column": 39,
-                  "line": 4,
-                },
-              },
-              "name": "Button",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
+        "title": "Storybook/MDX",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -160,76 +58,15 @@ import { Btn as Button } from './Button';
 
 exports[`mdx-component story import 1`] = `
 Object {
-  "components": Object {
-    "Button": Object {
-      "from": "./Button",
-      "import": "import Button from './Button';
-",
-      "loc": undefined,
-      "name": "Button",
-      "repository": undefined,
-      "request": undefined,
-      "source": undefined,
-    },
-    "Toggle": Object {
-      "from": "./Toggle",
-      "import": "import Toggle from './Toggle';
-",
-      "loc": undefined,
-      "name": "Toggle",
-      "repository": undefined,
-      "request": undefined,
-      "source": undefined,
-    },
-  },
+  "components": Object {},
   "kinds": Object {
     "Storybook/MDX": Object {
-      "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 33,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 12,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
+      "attributes": Object {
+        "component": Object {
+          "Button": "Button",
         },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 52,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 34,
-              "line": 22,
-            },
-          },
-          "name": "component",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 51,
-                  "line": 22,
-                },
-                "start": Object {
-                  "column": 45,
-                  "line": 22,
-                },
-              },
-              "name": "Button",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
+        "title": "Storybook/MDX",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -252,7 +89,12 @@ import { Toggle } from './Toggle';
   },
   "stories": Object {
     "storybook-mdx--my-story": Object {
-      "component": "Toggle",
+      "attributes": Object {
+        "component": Object {
+          "Toggle": "Toggle",
+        },
+        "name": "my-story",
+      },
       "id": "storybook-mdx--my-story",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -266,51 +108,6 @@ import { Toggle } from './Toggle';
         },
       },
       "name": "my-story",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 28,
-              "line": 23,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 23,
-            },
-          },
-          "name": "name",
-          "value": "my-story",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 47,
-              "line": 23,
-            },
-            "start": Object {
-              "column": 29,
-              "line": 23,
-            },
-          },
-          "name": "component",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 46,
-                  "line": 23,
-                },
-                "start": Object {
-                  "column": 40,
-                  "line": 23,
-                },
-              },
-              "name": "Toggle",
-              "value": "Toggle",
-            },
-          ],
-        },
-      ],
       "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },

@@ -51,11 +51,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 66,
+      "line": 91,
     },
     "start": Object {
       "column": 28,
-      "line": 18,
+      "line": 42,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -65,78 +65,16 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var tslib = require('tslib');
 var React = _interopDefault(require('react'));
-var coreEvents = require('@storybook/core-events');
-var core = require('@component-controls/core');
 var blocks = require('@component-controls/blocks');
-var shared = require('./shared.js');
+var blocks$1 = require('@storybook/addon-docs/blocks');
 require('polished');
 require('@storybook/theming');
 var ThemeProvider = require('./ThemeProvider.js');
-var blocks$1 = require('@storybook/addon-docs/blocks');
-
-const ControlsTable = _a => {
-  var {
-    id: propId,
-    name
-  } = _a,
-      rest = tslib.__rest(_a, [\\"id\\", \\"name\\"]);
-
-  const {
-    id,
-    controls,
-    story,
-    api,
-    channel
-  } = blocks.useControlsContext({
-    id: propId,
-    name
-  });
-  const setControlValue = api && api.setControlValue ? api.setControlValue : (storyId, propName, propValue) => {
-    if (story) {
-      const newValues = core.mergeControlValues(story.parameters.controls, propName, propValue);
-      story.parameters.controls = newValues;
-      channel.emit(coreEvents.FORCE_RE_RENDER);
-      channel.emit(shared.SET_DATA_MSG, {
-        storyId,
-        controls: newValues
-      });
-    }
-  };
-  const clickControl = api && api.clickControl ? api.clickControl : (storyId, propName) => {
-    if (controls && controls[propName]) {
-      const control = controls[propName];
-
-      if (control && typeof control.onClick === 'function') {
-        control.onClick(control);
-      }
-    }
-  };
-
-  if (!story || !controls || controls.disable) {
-    return null;
-  }
-
-  return id ? React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ControlsTable, Object.assign({
-    controls: controls,
-    storyId: id,
-    setControlValue: setControlValue,
-    clickControl: clickControl
-  }, rest))) : null;
-};
-
-const Description = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Description, Object.assign({}, props)));
-};
-
-const StorySource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.StorySource, Object.assign({}, props)));
-};
-
-const ComponentSource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ComponentSource, Object.assign({}, props)));
-};
+var tslib = require('tslib');
+var coreEvents = require('@storybook/core-events');
+var core = require('@component-controls/core');
+var shared = require('./shared.js');
 
 const BlockContextProvider = ({
   children
@@ -158,12 +96,85 @@ const BlockContextProvider = ({
   }, children);
 };
 
+const ComponentSource = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ComponentSource, Object.assign({}, props)));
+};
+
+const ControlsTable = _a => {
+  var {
+    id: propId,
+    name
+  } = _a,
+      rest = tslib.__rest(_a, [\\"id\\", \\"name\\"]);
+
+  const {
+    id,
+    controls,
+    api,
+    channel
+  } = blocks.useControlsContext({
+    id: propId,
+    name
+  });
+  const setControlValue = api && api.setControlValue ? api.setControlValue : (storyId, propName, propValue) => {
+    if (controls) {
+      const newValues = core.mergeControlValues(controls, propName, propValue);
+      Object.keys(controls).forEach(key => {
+        controls[key] = newValues[key];
+      });
+      channel.emit(coreEvents.FORCE_RE_RENDER);
+      channel.emit(shared.SET_DATA_MSG, {
+        storyId,
+        controls: newValues
+      });
+    }
+  };
+  const clickControl = api && api.clickControl ? api.clickControl : (storyId, propName) => {
+    if (controls && controls[propName]) {
+      const control = controls[propName];
+
+      if (control && typeof control.onClick === 'function') {
+        control.onClick(control);
+      }
+    }
+  };
+
+  if (!controls || controls.disable) {
+    return null;
+  }
+
+  return id ? React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ControlsTable, Object.assign({
+    controls: controls,
+    storyId: id,
+    setControlValue: setControlValue,
+    clickControl: clickControl
+  }, rest))) : null;
+};
+
+const Description = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Description, Object.assign({}, props)));
+};
+
+const StorySource = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.StorySource, Object.assign({}, props)));
+};
+
+const Subtitle = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Subtitle, Object.assign({}, props)));
+};
+
+const Title = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Title, Object.assign({}, props)));
+};
+
 exports.ThemeProvider = ThemeProvider.ThemeProvider;
 exports.BlockContextProvider = BlockContextProvider;
 exports.ComponentSource = ComponentSource;
 exports.ControlsTable = ControlsTable;
 exports.Description = Description;
 exports.StorySource = StorySource;
+exports.Subtitle = Subtitle;
+exports.Title = Title;
 ",
 }
 `;

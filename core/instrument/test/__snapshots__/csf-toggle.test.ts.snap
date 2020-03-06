@@ -16,37 +16,11 @@ Object {
   },
   "kinds": Object {
     "Components/Toggle": Object {
+      "attributes": Object {
+        "component": "Toggle",
+        "title": "Components/Toggle",
+      },
       "component": "Toggle",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 28,
-              "line": 5,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 5,
-            },
-          },
-          "name": "title",
-          "value": "Components/Toggle",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 19,
-              "line": 6,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 6,
-            },
-          },
-          "name": "component",
-          "value": "Toggle",
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-toggle.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

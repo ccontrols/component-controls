@@ -37,22 +37,9 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 41,
-              "line": 2,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 2,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/Blocks/ControlsTable",
-        },
-      ],
+      "attributes": Object {
+        "title": "Storybook/Blocks/ControlsTable",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -75,137 +62,20 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Kind": Object {
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 25,
-              "line": 2,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 2,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/Kind",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 26,
-              "line": 3,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 3,
+      "attributes": Object {
+        "component": "ControlsTable",
+        "parameters": Object {
+          "controls": Object {
+            "name": Object {
+              "label": "Name",
+              "order": 9999,
+              "type": "ControlTypes.TEXT",
+              "value": "Mark",
             },
           },
-          "name": "component",
-          "value": "ControlsTable",
         },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 3,
-              "line": 13,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 4,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 12,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 5,
-                },
-              },
-              "name": "controls",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 11,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 6,
-                    },
-                  },
-                  "name": "name",
-                  "value": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 31,
-                          "line": 7,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 7,
-                        },
-                      },
-                      "name": "type",
-                      "value": "ControlTypes.TEXT",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 21,
-                          "line": 8,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 8,
-                        },
-                      },
-                      "name": "label",
-                      "value": "Name",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 21,
-                          "line": 9,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 9,
-                        },
-                      },
-                      "name": "value",
-                      "value": "Mark",
-                    },
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 19,
-                          "line": 10,
-                        },
-                        "start": Object {
-                          "column": 8,
-                          "line": 10,
-                        },
-                      },
-                      "name": "order",
-                      "value": 9999,
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
+        "title": "Storybook/Kind",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -239,80 +109,15 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 41,
-              "line": 2,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 2,
-            },
+      "attributes": Object {
+        "parameters": Object {
+          "addonControls": Object {
+            "smart": false,
           },
-          "name": "title",
-          "value": "Storybook/Blocks/ControlsTable",
+          "component": "ControlsTable",
         },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 3,
-              "line": 8,
-            },
-            "start": Object {
-              "column": 2,
-              "line": 3,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 28,
-                  "line": 4,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 4,
-                },
-              },
-              "name": "component",
-              "value": "ControlsTable",
-            },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 7,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 5,
-                },
-              },
-              "name": "addonControls",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 18,
-                      "line": 6,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 6,
-                    },
-                  },
-                  "name": "smart",
-                  "value": false,
-                },
-              ],
-            },
-          ],
-        },
-      ],
+        "title": "Storybook/Blocks/ControlsTable",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

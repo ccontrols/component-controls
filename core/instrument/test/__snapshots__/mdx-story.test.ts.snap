@@ -16,52 +16,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -103,6 +64,9 @@ import Button from '../components/BaseButton';
           "value": "props",
         },
       ],
+      "attributes": Object {
+        "name": "story-with-props",
+      },
       "id": "storybook-mdx--story-with-props",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -116,22 +80,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 36,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "story-with-props",
-        },
-      ],
       "source": "props => <Button />",
     },
   },
@@ -154,52 +102,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -299,6 +208,9 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "attributes": Object {
+        "name": "story-with-props",
+      },
       "id": "storybook-mdx--story-with-props",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -312,22 +224,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 36,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "story-with-props",
-        },
-      ],
       "source": "({
           name: { first, last },
 
@@ -354,52 +250,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -455,6 +312,9 @@ import Button from '../components/BaseButton';
           "value": "context",
         },
       ],
+      "attributes": Object {
+        "name": "story-with-props",
+      },
       "id": "storybook-mdx--story-with-props",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -468,22 +328,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 36,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "story-with-props",
-        },
-      ],
       "source": "(props, context) => <Button />",
     },
   },
@@ -506,52 +350,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -622,6 +427,9 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "attributes": Object {
+        "name": "story-with-props",
+      },
       "id": "storybook-mdx--story-with-props",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -635,22 +443,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 36,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "story-with-props",
-        },
-      ],
       "source": "({ name: MyName, age }) => <Button />",
     },
   },
@@ -673,52 +465,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -789,6 +542,9 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "attributes": Object {
+        "name": "story-with-props",
+      },
       "id": "storybook-mdx--story-with-props",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -802,22 +558,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 36,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "story-with-props",
-        },
-      ],
       "source": "({ name, age }) => <Button />",
     },
   },
@@ -840,52 +580,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -911,6 +612,9 @@ import Button from '../components/BaseButton';
   },
   "stories": Object {
     "storybook-mdx--smart-story": Object {
+      "attributes": Object {
+        "name": "smart story",
+      },
       "id": "storybook-mdx--smart-story",
       "kind": "Storybook/MDX",
       "loc": Object {
@@ -924,22 +628,6 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "smart story",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 31,
-              "line": 28,
-            },
-            "start": Object {
-              "column": 13,
-              "line": 28,
-            },
-          },
-          "name": "name",
-          "value": "smart story",
-        },
-      ],
       "source": "<Story name=\\"smart story\\">
         <Button />
       </Story>",
@@ -964,52 +652,13 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "attributes": Object {
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Storybook/MDX",
+      },
       "component": "Button",
-      "parameters": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 29,
-              "line": 22,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 22,
-            },
-          },
-          "name": "title",
-          "value": "Storybook/MDX",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 10,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 8,
-              "line": 23,
-            },
-          },
-          "name": "parameters",
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 27,
-                  "line": 24,
-                },
-                "start": Object {
-                  "column": 10,
-                  "line": 24,
-                },
-              },
-              "name": "component",
-              "value": "Button",
-            },
-          ],
-        },
-      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-story.test.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
