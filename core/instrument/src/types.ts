@@ -16,10 +16,7 @@ export const defaultParserOptions: parser.ParserOptions = {
 };
 
 export interface ComponentOptions {
-  resolveComponent?: (
-    componentName: string,
-    FilePath: string,
-  ) => string | undefined;
+  resolveFile?: (componentName: string, FilePath: string) => string | undefined;
 }
 
 export type ParserOptions = parser.ParserOptions;

@@ -15,6 +15,16 @@ describe('extract-component', () => {
         await extractComponent('Button', fileName, undefined, {
           parser: defaultParserOptions,
           resolve: defaultResolveOptions,
+          component: {
+            resolveFile: (componentName: string, filePath: string) => {
+              if (filePath.includes('/theme-ui/dist')) {
+                return `${
+                  filePath.split('/theme-ui/dist')[0]
+                }/@theme-ui/components/src/${componentName}.js`;
+              }
+              return filePath;
+            },
+          },
         }),
       ).toMatchSnapshot();
     });

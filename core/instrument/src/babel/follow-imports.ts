@@ -18,6 +18,7 @@ export interface FollowImportType {
   exportedAs: string;
   from: string;
   filePath?: string;
+  originalFilePath?: string;
   loc?: CodeLocation;
   source?: string;
 }
@@ -29,9 +30,16 @@ export const followImports = (
   options?: InstrumentOptions,
   initialAST?: File,
 ): FollowImportType | undefined => {
-  const { parser: parserOptions, resolve: resolveOptions } = options || {};
-
-  const source = fileSource || fs.readFileSync(filePath, 'utf8');
+  const { parser: parserOptions, resolve: resolveOptions, component } =
+    options || {};
+  const fileName =
+    component && component.resolveFile
+      ? component.resolveFile(importName, filePath)
+      : filePath;
+  if (!fileName) {
+    return undefined;
+  }
+  const source = fileSource || fs.readFileSync(fileName, 'utf8');
   const ast = initialAST || parser.parse(source, parserOptions);
   const baseImportedName = importName.split('.')[0];
 
@@ -39,7 +47,7 @@ export const followImports = (
     named: {},
   };
   traverse(ast, traverseExports(exports));
-  const folderName = path.dirname(filePath);
+  const folderName = path.dirname(fileName);
   const findExport =
     baseImportedName === 'default' || baseImportedName === 'namespace'
       ? exports.default
@@ -47,7 +55,8 @@ export const followImports = (
   if (findExport !== undefined) {
     if (!findExport.from) {
       return {
-        filePath,
+        filePath: fileName,
+        originalFilePath: filePath,
         exportedAs: findExport.name,
         loc: findExport.loc,
         from: '',

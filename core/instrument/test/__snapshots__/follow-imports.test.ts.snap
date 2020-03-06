@@ -15,6 +15,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
   "source": "const Button = () => {};
 exports.Button = Button;
 ",
@@ -36,6 +37,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
   "source": "export const Button = () => {};
 ",
 }
@@ -56,6 +58,7 @@ Object {
       "line": 18,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "source": "'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -180,6 +183,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
   "source": "export default () => {};
 ",
 }
@@ -200,6 +204,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
   "source": "export const Button = () => {};
 ",
 }
@@ -220,6 +225,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
   "source": "export const Button = () => {};
 ",
 }
@@ -240,6 +246,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
   "source": "export default () => {};
 ",
 }
@@ -260,6 +267,7 @@ Object {
       "line": 1,
     },
   },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
   "source": "export const Button = () => {};
 ",
 }

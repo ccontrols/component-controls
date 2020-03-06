@@ -63,7 +63,7 @@ export const extractComponent = async (
         request: follow.filePath,
         loc: follow.loc,
         source: follow.source,
-        repository: await packageInfo(follow.filePath),
+        repository: await packageInfo(follow.originalFilePath),
       }
     : undefined;
 };

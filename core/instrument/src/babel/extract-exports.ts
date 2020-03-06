@@ -28,14 +28,15 @@ export const traverseExports = (results: ExportTypes) => {
   const globals: NamedExportTypes = {};
   const localExports: NamedExportTypes = {};
 
-  const extractArrowFunction = (declaration: any): ExportType | undefined => {
-    if (
-      declaration.init &&
-      declaration.init.type === 'ArrowFunctionExpression'
-    ) {
+  const extractExportVariable = (declaration: any): ExportType | undefined => {
+    if (declaration.init && declaration.id.name) {
       const name = declaration.id.name;
       const exportType: ExportType = {
-        loc: sourceLocation(declaration.init.body.loc),
+        loc: sourceLocation(
+          declaration.init.body
+            ? declaration.init.body.loc
+            : declaration.init.loc,
+        ),
         name,
         internalName: name,
       };
@@ -80,7 +81,7 @@ export const traverseExports = (results: ExportTypes) => {
           const name = declaration.id.name;
           //check if it was a named export
           if (!results.named[name]) {
-            const namedExport = extractArrowFunction(declaration);
+            const namedExport = extractExportVariable(declaration);
             if (namedExport && namedExport.name) {
               localExports[namedExport.name] = namedExport;
             }
@@ -139,7 +140,7 @@ export const traverseExports = (results: ExportTypes) => {
         const { declarations } = declaration;
         if (Array.isArray(declarations)) {
           declarations.forEach(declaration => {
-            const namedExport = extractArrowFunction(declaration);
+            const namedExport = extractExportVariable(declaration);
             if (namedExport) {
               const name = namedExport.name || '';
               const global = globals[name];
