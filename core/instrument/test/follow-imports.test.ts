@@ -2,10 +2,14 @@ import { defaultParserOptions, defaultResolveOptions } from '../src/index';
 import { followImports } from '../src/babel/follow-imports';
 
 describe('follow-imports', () => {
-  const extractFollowImportsForFile = (importName, fileName) => {
+  const extractFollowImportsForFile = (
+    importName: string,
+    fileName: string,
+  ) => {
     return followImports(
       importName,
       require.resolve(fileName),
+      undefined,
       defaultParserOptions,
       defaultResolveOptions,
     );

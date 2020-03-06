@@ -11,6 +11,8 @@ import {
   Story,
   StoriesKind,
 } from '@component-controls/specification';
+import { getASTSource } from '@component-controls/core';
+
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
@@ -131,6 +133,7 @@ const parseSource = async (
   }
   Object.keys(store.stories).forEach((key: string) => {
     const story: Story = store.stories[key];
+    story.source = getASTSource(source, story.loc);
     const { start, end } = story.loc || {};
     if (start && end) {
       const lines = source.split('\n');

@@ -50,11 +50,21 @@ Object {
 
 exports[`csf-component story import 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Toggle": Object {
+      "from": "./Toggle",
+      "loc": undefined,
+      "name": "Toggle",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {},
   "stories": Object {
     "story": Object {
       "arguments": Array [],
+      "component": "Toggle",
       "loc": Object {
         "end": Object {
           "column": 37,

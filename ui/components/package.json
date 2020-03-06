@@ -16,7 +16,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest"
+    "test": "yarn jest --passWithNoTests"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {

@@ -25,18 +25,28 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
     return null;
   }
   const { dark } = React.useContext(ThemeContext);
-  console.log(component);
+  const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+
+  const onShowFileSource = () => setShowFileSource(!showFileSource);
   const allActions: ActionItem[] = [];
   if (actions) {
     allActions.push.apply(allActions, actions);
   }
+
+  if (component && component.source) {
+    allActions.push({
+      title: showFileSource ? 'import' : 'component',
+      onClick: onShowFileSource,
+    });
+  }
+  console.log(component);
   const repositoryItems = component && repositoryActions(component?.repository);
   if (repositoryItems) {
     allActions.push.apply(allActions, repositoryItems);
   }
   return (
     <SourceBlock dark={dark} {...rest} actions={allActions}>
-      {source}
+      {showFileSource ? component?.source : source}
     </SourceBlock>
   );
 };

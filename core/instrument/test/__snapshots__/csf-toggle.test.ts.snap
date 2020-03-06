@@ -2,9 +2,21 @@
 
 exports[`csf-toggle Toggle story 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import Toggle from './Toggle';
+",
+      "loc": undefined,
+      "name": "Toggle",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Components/Toggle": Object {
+      "component": "Toggle",
       "parameters": Array [
         Object {
           "loc": Object {

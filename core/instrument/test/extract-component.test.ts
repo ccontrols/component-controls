@@ -13,6 +13,7 @@ describe('extract-component', () => {
         await extractComponent(
           'Button',
           fileName,
+          undefined,
           defaultParserOptions,
           defaultResolveOptions,
         ),

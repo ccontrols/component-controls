@@ -2,9 +2,21 @@
 
 exports[`mdx-stories Props argument 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -128,9 +140,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Three levels - alias 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -316,9 +340,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two arguments 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -456,9 +492,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two levels - alias 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -611,9 +659,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories Two levels sub arguments 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -766,9 +826,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories mdx-story 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -878,9 +950,21 @@ import Button from '../components/BaseButton';
 
 exports[`mdx-stories no name 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../components/BaseButton",
+      "import": "import Button from '../components/BaseButton';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {

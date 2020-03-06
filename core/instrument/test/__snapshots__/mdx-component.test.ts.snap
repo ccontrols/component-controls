@@ -2,9 +2,21 @@
 
 exports[`mdx-component component parameter 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import Button from './Button';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -69,9 +81,21 @@ import { Button } from './Button';
 
 exports[`mdx-component named alias import 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import Button from './Button';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -136,9 +160,31 @@ import { Btn as Button } from './Button';
 
 exports[`mdx-component story import 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import Button from './Button';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import Toggle from './Toggle';
+",
+      "loc": undefined,
+      "name": "Toggle",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
+      "component": "Button",
       "parameters": Array [
         Object {
           "loc": Object {
@@ -206,6 +252,7 @@ import { Toggle } from './Toggle';
   },
   "stories": Object {
     "storybook-mdx--my-story": Object {
+      "component": "Toggle",
       "id": "storybook-mdx--my-story",
       "kind": "Storybook/MDX",
       "loc": Object {

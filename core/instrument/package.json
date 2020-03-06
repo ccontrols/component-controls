@@ -32,6 +32,7 @@
     "@babel/generator": "^7.8.4", 
     "@babel/parser": "^7.8.4",
     "@babel/traverse": "^7.8.4",
+    "@component-controls/core": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
     "@hutson/parse-repository-url": "^5.0.0",
     "@mdx-js/loader": "^1.5.5",
@@ -40,11 +41,7 @@
     "hosted-git-info": "^3.0.4",
     "resolve": "^1.15.1",
     "prettier": "^1.19.1",
-    "typescript": "3.5.3",
-    "loader-utils": "^1.2.3",
-    "memory-fs": "^0.5.0",
-    "webpack": "^4.41.2"
-
+    "typescript": "3.5.3"
   },
   "devDependencies": {
     "@babel/types": "^7.8.3",

@@ -20,6 +20,7 @@ export const StorySource: FC<StorySourceProps> = ({
     name,
   });
   const { dark } = React.useContext(ThemeContext);
+
   const allActions = [...actions];
   const repositoryItems = kind && repositoryActions(kind?.repository);
   if (repositoryItems) {
