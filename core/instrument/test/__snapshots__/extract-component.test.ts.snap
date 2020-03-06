@@ -50,6 +50,664 @@ export const Button = React.forwardRef((props, ref) => (
 }
 `;
 
+exports[`extract-component node-modules-source.js 1`] = `
+Object {
+  "from": "@component-controls/block-components",
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 56,
+    },
+    "start": Object {
+      "column": 23,
+      "line": 46,
+    },
+  },
+  "name": "Button",
+  "repository": Object {
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/block-components/dist/index.js",
+    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+    "issues": "https://github.com/ccontrols/component-controls/issues",
+  },
+  "request": "/Users/atanasster/component-controls/node_modules/@component-controls/block-components/dist/index.js",
+  "source": "'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = _interopDefault(require('react'));
+var styled = _interopDefault(require('@emotion/styled'));
+var tslib = require('tslib');
+var themeUi = require('theme-ui');
+var components = require('@component-controls/components');
+var global = require('global');
+var qs = _interopDefault(require('qs'));
+var copy = _interopDefault(require('copy-to-clipboard'));
+var core = require('@component-controls/core');
+var editors = require('@component-controls/editors');
+var MarkdownToJSX = _interopDefault(require('markdown-to-jsx'));
+var react = require('@mdx-js/react');
+var dracula = _interopDefault(require('prism-react-renderer/themes/dracula'));
+var duotoneDark = _interopDefault(require('prism-react-renderer/themes/duotoneDark'));
+var duotoneLight = _interopDefault(require('prism-react-renderer/themes/duotoneLight'));
+var github = _interopDefault(require('prism-react-renderer/themes/github'));
+var nightowl = _interopDefault(require('prism-react-renderer/themes/nightOwl'));
+var nightOwlLight = _interopDefault(require('prism-react-renderer/themes/nightOwlLight'));
+var oceanicNext = _interopDefault(require('prism-react-renderer/themes/oceanicNext'));
+var palenight = _interopDefault(require('prism-react-renderer/themes/palenight'));
+var shadesOfPurple = _interopDefault(require('prism-react-renderer/themes/shadesOfPurple'));
+var ultramin = _interopDefault(require('prism-react-renderer/themes/ultramin'));
+var vsDark = _interopDefault(require('prism-react-renderer/themes/vsDark'));
+var jsStringEscape = _interopDefault(require('js-string-escape'));
+var specification = require('@component-controls/specification');
+var polished = require('polished');
+var Highlight = require('prism-react-renderer');
+var Highlight__default = _interopDefault(Highlight);
+
+const StyledHeading = styled(themeUi.Heading)(({
+  theme
+}) => {
+  var _a;
+
+  return {
+    fontWeight: 400,
+    paddingBottom: \`\${(_a = theme === null || theme === void 0 ? void 0 : theme.space) === null || _a === void 0 ? void 0 : _a[3]}px\`
+  };
+});
+const Subtitle = _a => {
+  var {
+    children
+  } = _a,
+      rest = tslib.__rest(_a, [\\"children\\"]);
+
+  return React.createElement(StyledHeading, Object.assign({
+    as: \\"h3\\",
+    color: \\"fadedText\\"
+  }, rest), children);
+};
+
+const SpacedBlockContainer = styled.div(() => ({
+  position: 'relative',
+  margin: '25px 0 40px 0'
+}));
+const FramedBlockContainer = styled.div(() => ({
+  boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
+  borderRadius: 4,
+  border: '1px solid rgba(0, 0, 0, 0.1)'
+}));
+const BlockContainer = ({
+  children,
+  title,
+  actions
+}) => React.createElement(SpacedBlockContainer, null, title && React.createElement(Subtitle, null, title), actions && React.createElement(components.ActionBar, {
+  actionItems: actions
+}), React.createElement(FramedBlockContainer, null, children));
+
+/** @jsx jsx */
+const StyledTR = styled.tr(({
+  theme
+}) => {
+  var _a;
+
+  return Object.assign({}, (_a = theme === null || theme === void 0 ? void 0 : theme.styles) === null || _a === void 0 ? void 0 : _a.tr);
+});
+const StyledTD = styled.td(({
+  theme
+}) => {
+  var _a;
+
+  return Object.assign({}, (_a = theme === null || theme === void 0 ? void 0 : theme.styles) === null || _a === void 0 ? void 0 : _a.td);
+});
+
+const InvalidType = () => themeUi.jsx(\\"span\\", null, \\"Invalid Type\\");
+
+const PropertyEditorRow = ({
+  prop,
+  name,
+  setControlValue,
+  clickControl,
+  storyId
+}) => {
+  const InputType = editors.getPropertyEditor(prop.type) || InvalidType;
+
+  const onChange = (propName, value) => {
+    if (setControlValue && storyId) {
+      setControlValue(storyId, propName, value);
+    }
+  };
+
+  const onClick = () => {
+    if (clickControl && storyId) {
+      clickControl(storyId, name);
+    }
+  };
+
+  return themeUi.jsx(StyledTR, null, themeUi.jsx(StyledTD, null, !prop.hideLabel ? prop.label || name : null), themeUi.jsx(StyledTD, null, themeUi.jsx(themeUi.Flex, {
+    sx: {
+      flexDirection: 'column',
+      alignItems: 'left',
+      flexBasis: '100%'
+    }
+  }, themeUi.jsx(InputType, {
+    prop: prop,
+    name: name,
+    onChange: onChange,
+    onClick: onClick
+  }))));
+};
+
+const StyleTable = styled.table(({
+  theme
+}) => {
+  var _a;
+
+  return {
+    '&&': Object.assign(Object.assign({}, (_a = theme === null || theme === void 0 ? void 0 : theme.styles) === null || _a === void 0 ? void 0 : _a.table), {
+      tbody: {
+        boxShadow: 'none'
+      },
+      'th:last-of-type, td:last-of-type': {
+        width: '70%'
+      }
+    })
+  };
+});
+const DEFAULT_GROUP_ID = 'Other';
+
+const PropGroupTable = ({
+  controls,
+  storyId,
+  setControlValue,
+  clickControl
+}) => React.createElement(StyleTable, {
+  className: \\"component-controls-table\\"
+}, React.createElement(\\"tbody\\", null, controls && Object.keys(controls).map((key, index) => ({
+  name: key,
+  property: Object.assign(Object.assign({}, controls[key]), {
+    order: controls[key].order === undefined ? index : controls[key].order
+  })
+})).sort((a, b) => {
+  const aOrder = a.property.order || 0;
+  const bOrder = b.property.order || 0;
+  return aOrder - bOrder;
+}).map(p => React.createElement(PropertyEditorRow, {
+  storyId: storyId,
+  key: \`prop_editor_row_\${storyId}_\${p.name}\`,
+  prop: p.property,
+  name: p.name,
+  setControlValue: setControlValue,
+  clickControl: clickControl
+}))));
+
+const ControlsTable = props => {
+  const [copied, setCopied] = React.useState(false);
+  const {
+    controls,
+    title,
+    storyId,
+    setControlValue,
+    extraActions = []
+  } = props;
+
+  if (controls && Object.keys(controls).length) {
+    const onReset = e => {
+      e.preventDefault();
+
+      if (setControlValue && storyId) {
+        const values = core.resetControlValues(controls);
+        setControlValue(storyId, undefined, values);
+      }
+    };
+
+    const onCopy = e => {
+      e.preventDefault();
+      setCopied(true);
+      const {
+        location
+      } = global.document;
+      const query = qs.parse(location.search, {
+        ignoreQueryPrefix: true
+      });
+      const values = core.getControlValues(controls);
+      Object.keys(values).forEach(key => {
+        query[\`controls-\${key}\`] = values[key];
+      });
+      copy(\`\${location.origin + location.pathname}?\${qs.stringify(query, {
+        encode: false
+      })}\`);
+      global.window.setTimeout(() => setCopied(false), 1500);
+    };
+
+    const groupped = Object.keys(controls).filter(k => {
+      const p = controls[k];
+      return p.type && !p.hidden;
+    }).reduce((acc, k) => {
+      const groupId = controls[k].groupId || DEFAULT_GROUP_ID;
+      return Object.assign(Object.assign({}, acc), {
+        [groupId]: Object.assign(Object.assign({}, acc[groupId]), {
+          [k]: controls[k]
+        })
+      });
+    }, {});
+    const groupedItems = Object.keys(groupped).sort().map(key => {
+      return {
+        label: key,
+        controls: groupped[key]
+      };
+    });
+
+    if (groupedItems.length === 0) {
+      return null;
+    }
+
+    const actionItems = [...extraActions.map(item => ({
+      title: item.title,
+      onClick: e => {
+        e.preventDefault();
+        item.onAction(props);
+      }
+    })), {
+      title: 'reset',
+      onClick: onReset
+    }, {
+      title: copied ? 'copied' : 'copy',
+      onClick: onCopy
+    }];
+    return React.createElement(BlockContainer, {
+      actions: actionItems,
+      title: title
+    }, groupedItems.length === 1 ? React.createElement(PropGroupTable, Object.assign({}, props, {
+      controls: groupedItems[0].controls
+    })) : React.createElement(components.Tabs, null, React.createElement(components.TabList, null, groupedItems.map(item => React.createElement(components.Tab, {
+      key: \`tab_\${item.label}\`
+    }, item.label))), groupedItems.map(item => React.createElement(components.TabPanel, {
+      key: \`tab_panel_\${item.label}\`
+    }, React.createElement(PropGroupTable, Object.assign({}, props, {
+      controls: item.controls
+    }))))));
+  }
+
+  return null;
+};
+
+/* eslint-disable react/display-name */
+const Markdown = ({
+  children,
+  components
+}) => React.createElement(react.MDXProvider, {
+  components: components
+}, React.createElement(MarkdownToJSX, null, children));
+
+const getArgumentsUsage = args => {
+  return args.reduce((acc, a) => {
+    var _a;
+
+    if (Array.isArray(a.value)) {
+      return [...acc, ...getArgumentsUsage(a.value)];
+    }
+
+    const usage = (_a = a.usage) === null || _a === void 0 ? void 0 : _a.map(u => ({
+      name: a.value,
+      loc: u
+    }));
+
+    if (usage) {
+      return [...acc, ...usage];
+    }
+
+    return acc;
+  }, []);
+};
+
+const stringifyValue = (type, value) => {
+  switch (type) {
+    case specification.ControlTypes.TEXT:
+      return \`\\"\${jsStringEscape(value)}\\"\`;
+
+    case specification.ControlTypes.OBJECT:
+      if (value) {
+        return \`{ \${Object.keys(value).map(key => {
+          const obj = value[key];
+          return \`\${key}: \${stringifyValue(obj.type, obj.value)}\`;
+        }).join(', ')} }\`;
+      }
+
+      return '';
+
+    default:
+      if (Array.isArray(value)) {
+        return \`[\${stringifyValue(specification.ControlTypes.OPTIONS, value.join(', '))}]\`;
+      }
+
+      return typeof value === 'string' ? \`\\"\${jsStringEscape(value)}\\"\` : value;
+  }
+};
+
+const replaceString = (s, newStr, start, length) => s.substr(0, start) + newStr + s.substr(start + length);
+
+const mergeControlValues = (source, args, controls) => {
+  const locations = getArgumentsUsage(args);
+  const lines = source.split('\\\\n'); //sort locations in reverse order, so to replace source backwards
+
+  locations.sort((a, b) => {
+    if (a.loc.loc.start.line === b.loc.loc.start.line) {
+      return b.loc.loc.start.column - a.loc.loc.start.column;
+    }
+
+    return b.loc.loc.start.line - a.loc.loc.start.line;
+  }).forEach(l => {
+    const {
+      start,
+      end
+    } = l.loc.loc;
+    const val = controls[l.name];
+
+    if (val && val.value !== val.defaultValue) {
+      const value = val.value;
+      let strValue = stringifyValue(val.type, value);
+
+      if (l.loc.name) {
+        if (l.loc.name.name === l.name) {
+          strValue = \`\${l.loc.name.name}: \${strValue}\`;
+        }
+      }
+
+      if (start.line === end.line) {
+        lines[start.line] = replaceString(lines[start.line], strValue, start.column, end.column - start.column);
+      } else {
+        const startLine = lines[start.line];
+        const endLine = lines[end.line];
+
+        if (startLine !== undefined && endLine !== undefined) {
+          lines[start.line - 1] = replaceString(lines[start.line - 1], strValue, start.column, lines[start.line - 1].length - start.column);
+
+          if (end.line - start.line > 1) {
+            lines.splice(start.line, end.line - start.line - 1);
+          }
+
+          lines[end.line - 1] = lines[end.line - 1].slice(end.column);
+        }
+      }
+    }
+  });
+  return lines.join('\\\\n');
+};
+
+/** @jsx jsx */
+/**
+ * Source component used to display source code
+ *
+ */
+
+const Source = ({
+  children = '',
+  language = 'jsx',
+  theme: customTheme,
+  renderFn,
+  actions,
+  dark = false,
+  title
+}) => {
+  const [copied, setCopied] = React.useState(false);
+
+  const onCopy = e => {
+    e.preventDefault();
+    setCopied(true);
+    copy(children);
+    window.setTimeout(() => setCopied(false), 1500);
+  };
+
+  const actionsItems = Array.isArray(actions) ? [...actions] : [];
+  actionsItems.push({
+    title: copied ? 'copied' : 'copy',
+    onClick: onCopy
+  });
+  const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
+  const renderProps = typeof renderFn === 'function' ? props => renderFn(props, {
+    theme
+  }) : ({
+    className,
+    style,
+    tokens,
+    getLineProps,
+    getTokenProps
+  }) => themeUi.jsx(themeUi.Styled.pre, {
+    className: \`\${className}\`,
+    style: Object.assign(Object.assign({}, style), {
+      padding: '10px 10px',
+      margin: 0
+    })
+  }, tokens.map((line, i) => themeUi.jsx(\\"div\\", Object.assign({}, getLineProps({
+    line,
+    key: i
+  })), line.map((token, key) => themeUi.jsx(\\"span\\", Object.assign({}, getTokenProps({
+    token,
+    key
+  }), {
+    sx: {
+      display: 'inline-block'
+    }
+  }))))));
+  const props = Object.assign(Object.assign({}, Highlight.defaultProps), {
+    theme
+  });
+  return themeUi.jsx(BlockContainer, {
+    actions: actionsItems,
+    title: title
+  }, themeUi.jsx(Highlight__default, Object.assign({}, props, {
+    code: children,
+    language: language
+  }), renderProps));
+};
+
+const getArgumentsLocations = args => {
+  return args.reduce((acc, a) => {
+    if (Array.isArray(a.value)) {
+      return [...acc, ...getArgumentsLocations(a.value)];
+    }
+
+    const locs = [];
+
+    if (a.loc) {
+      locs.push(a.loc);
+    }
+
+    if (a.usage) {
+      locs.push(...a.usage.map(u => u.loc));
+    }
+
+    return [...acc, {
+      name: a.value,
+      locs
+    }];
+  }, []);
+};
+
+const TaggedSource = _a => {
+  var {
+    args,
+    theme
+  } = _a,
+      rest = tslib.__rest(_a, [\\"args\\", \\"theme\\"]);
+
+  const tags = args ? getArgumentsLocations(args) : undefined;
+  return themeUi.jsx(Source, Object.assign({
+    theme: theme
+  }, rest, {
+    renderFn: ({
+      className,
+      style,
+      tokens,
+      getLineProps,
+      getTokenProps
+    }, {
+      theme
+    }) => {
+      if (tags) {
+        tags.forEach((tag, index) => {
+          let color;
+          const colorIdx = index % (theme.styles.length - 1);
+          const style = theme.styles[colorIdx];
+          color = style.style.color || theme.plain.color || '#fff';
+          tag.color = color;
+        });
+      }
+
+      return themeUi.jsx(themeUi.Styled.pre, {
+        className: \`\${className}\`,
+        style: Object.assign(Object.assign({}, style), {
+          padding: '10px 10px',
+          margin: 0
+        })
+      }, tokens.map((line, i) => themeUi.jsx(\\"div\\", Object.assign({}, getLineProps({
+        line,
+        key: i
+      })), (() => {
+        let column = 0;
+        return line.map((token, key) => {
+          const tokenTrim = token.content.trim();
+          const param = tags ? tags.find(tag => {
+            if (tag.name === tokenTrim) {
+              return tag.locs.find(loc => loc.start.line === i && loc.start.column >= column && loc.start.column <= column + token.content.length);
+            }
+
+            return false;
+          }) : null;
+          column += token.content.length;
+
+          if (param) {
+            const splitToken = getTokenProps({
+              token,
+              key
+            }).children.split(/(\\\\s+)/);
+            return splitToken.map(s => s.trim().length ? themeUi.jsx(\\"span\\", Object.assign({}, getTokenProps({
+              token,
+              key
+            }), {
+              sx: {
+                display: 'inline-block',
+                //@ts-ignore
+                backgroundColor: polished.transparentize(0.8, param.color),
+                paddingLeft: 1,
+                paddingRight: 1,
+                //@ts-ignore
+                border: \`1px solid \${param.color}\`
+              }
+            }), s) : s);
+          }
+
+          return themeUi.jsx(\\"span\\", Object.assign({}, getTokenProps({
+            token,
+            key
+          }), {
+            sx: {
+              display: 'inline-block'
+            }
+          }));
+        });
+      })())));
+    }
+  }));
+};
+
+const themes = {
+  'nightowl-light': nightOwlLight,
+  nightowl,
+  github,
+  'vs-dark': vsDark,
+  'oceanic-next': oceanicNext,
+  palenight,
+  ultramin,
+  'duotone-light': duotoneLight,
+  'duotone-dark': duotoneDark,
+  dracula,
+  'shades-of-purple': shadesOfPurple
+};
+const ViewStyleNext = {
+  values: 'tags',
+  tags: 'values'
+};
+const StorySource = _a => {
+  var {
+    controls,
+    fileSource,
+    children,
+    args,
+    actions = []
+  } = _a,
+      rest = tslib.__rest(_a, [\\"controls\\", \\"fileSource\\", \\"children\\", \\"args\\", \\"actions\\"]);
+
+  const [viewStyle, setViewStyle] = React.useState('tags');
+  const [showFileSource, setShowFileSource] = React.useState(false);
+
+  const onMergeValues = () => setViewStyle(ViewStyleNext[viewStyle]);
+
+  const onShowFileSource = () => setShowFileSource(!showFileSource);
+
+  const allActions = [...actions];
+
+  if (fileSource) {
+    allActions.push({
+      title: showFileSource ? 'story code' : 'file code',
+      onClick: onShowFileSource
+    });
+  }
+
+  if (args && args.length) {
+    allActions.push({
+      title: ViewStyleNext[viewStyle],
+      onClick: onMergeValues
+    });
+  }
+
+  let source;
+
+  if (!showFileSource) {
+    let code = typeof children === 'string' ? children : '';
+
+    if (viewStyle === 'values' && args && controls) {
+      code = mergeControlValues(code, args, controls);
+    }
+
+    source = code;
+  } else {
+    source = fileSource || '';
+  }
+
+  return React.createElement(TaggedSource, Object.assign({}, rest, {
+    args: viewStyle === 'tags' && !showFileSource ? args : undefined,
+    actions: allActions
+  }), source);
+};
+
+const StyledHeading$1 = styled(themeUi.Heading)(() => ({
+  fontWeight: 900,
+  paddingBottom: '25px'
+}));
+const Title = _a => {
+  var {
+    children
+  } = _a,
+      rest = tslib.__rest(_a, [\\"children\\"]);
+
+  return React.createElement(StyledHeading$1, Object.assign({
+    as: \\"h1\\"
+  }, rest), children);
+};
+
+exports.BlockContainer = BlockContainer;
+exports.ControlsTable = ControlsTable;
+exports.Markdown = Markdown;
+exports.Source = Source;
+exports.StorySource = StorySource;
+exports.Subtitle = Subtitle;
+exports.Title = Title;
+exports.themes = themes;
+",
+}
+`;
+
 exports[`extract-component non-existing-file.js 1`] = `
 Object {
   "from": "./Button",
