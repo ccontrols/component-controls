@@ -3,8 +3,7 @@ const mdx = require('@mdx-js/mdx');
 import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import * as resolve from 'resolve';
-import prettier, { Options, ResolveConfigOptions } from 'prettier';
+import prettier from 'prettier';
 import parserBabel from 'prettier/parser-babylon';
 import {
   StoriesStore,
@@ -18,30 +17,43 @@ import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractSotreComponent } from './babel/extract-component';
 import { packageInfo } from './project/packageInfo';
+import {
+  InstrumentOptions,
+  defaultParserOptions,
+  defaultResolveOptions,
+} from './types';
+
+export * from './types';
 
 type TraverseFn = (stories: StoriesStore) => any;
 
-export type PrettierOptions = Options & {
-  resolveConfigOptions?: ResolveConfigOptions;
-};
-
-export const defaultResolveOptions: resolve.SyncOpts = {
-  extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.mjs', '.es', '.es6'],
-};
-
-export const defaultParserOptions: parser.ParserOptions = {
-  sourceType: 'module',
-  plugins: ['jsx', 'typescript'],
-};
 const parseSource = async (
   code: string,
   traverseFn: TraverseFn,
   originalSource: string,
   filePath: string,
-  parserOptions?: parser.ParserOptions,
-  prettierOptions?: PrettierOptions,
-  resolveOptions?: resolve.SyncOpts,
+  options?: InstrumentOptions,
 ): Promise<StoriesStore> => {
+  const {
+    parser: parserOptions,
+    prettier: prettierOptions,
+    resolve: resolveOptions,
+    component: componentOptions,
+  } = options || {};
+
+  const mergedOptions = {
+    parser: {
+      ...defaultParserOptions,
+      ...parserOptions,
+    },
+    resolve: {
+      ...defaultResolveOptions,
+      ...resolveOptions,
+    },
+    prettier: prettierOptions,
+    component: componentOptions,
+  };
+
   const prettify = async (c: string): Promise<string> => {
     if (prettierOptions !== false) {
       const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
@@ -64,11 +76,7 @@ const parseSource = async (
     }
   };
   const source = await prettify(code);
-  const mergedParserOptions = {
-    ...defaultParserOptions,
-    ...parserOptions,
-  };
-  const ast = parser.parse(source, mergedParserOptions);
+  const ast = parser.parse(source, mergedOptions.parser);
   const store: StoriesStore = {
     stories: {},
     kinds: {},
@@ -94,17 +102,7 @@ const parseSource = async (
       {},
     );
   }
-  await extractSotreComponent(
-    store,
-    filePath,
-    source,
-    mergedParserOptions,
-    {
-      ...defaultResolveOptions,
-      ...resolveOptions,
-    },
-    ast,
-  );
+  await extractSotreComponent(store, filePath, source, mergedOptions, ast);
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
@@ -162,27 +160,21 @@ const parseSource = async (
 export const parseCSF = async (
   source: string,
   filePath: string,
-  parserOptions?: parser.ParserOptions,
-  prettierOptions?: PrettierOptions,
-  resolveOptions?: resolve.SyncOpts,
+  options?: InstrumentOptions,
 ): Promise<StoriesStore> => {
   return await parseSource(
     source,
     extractCSFStories,
     source,
     filePath,
-    parserOptions,
-    prettierOptions,
-    resolveOptions,
+    options,
   );
 };
 
 export const parseMDX = async (
   source: string,
   filePath: string,
-  parserOptions?: parser.ParserOptions,
-  prettierOptions?: PrettierOptions,
-  resolveOptions?: resolve.SyncOpts,
+  options?: InstrumentOptions,
 ): Promise<StoriesStore> => {
   const code = await mdx(source);
 
@@ -200,8 +192,6 @@ export const parseMDX = async (
     extractMDXStories,
     source,
     filePath,
-    parserOptions,
-    prettierOptions,
-    resolveOptions,
+    options,
   );
 };

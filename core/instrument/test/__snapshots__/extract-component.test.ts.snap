@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`extract-component non-existing-file.js 1`] = `
+exports[`extract-component node-modules.js 1`] = `
 Object {
-  "from": "./Button",
+  "from": "theme-ui",
   "loc": undefined,
   "name": "Button",
   "repository": undefined,

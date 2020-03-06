@@ -6,13 +6,10 @@ describe('follow-imports', () => {
     importName: string,
     fileName: string,
   ) => {
-    return followImports(
-      importName,
-      require.resolve(fileName),
-      undefined,
-      defaultParserOptions,
-      defaultResolveOptions,
-    );
+    return followImports(importName, require.resolve(fileName), undefined, {
+      parser: defaultParserOptions,
+      resolve: defaultResolveOptions,
+    });
   };
   it('simple import', () => {
     expect(

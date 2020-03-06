@@ -12,6 +12,7 @@ import {
   ExportType,
   EXPORT_ALL,
 } from './extract-exports';
+import { InstrumentOptions } from '../types';
 
 export interface FollowImportType {
   exportedAs: string;
@@ -25,13 +26,13 @@ export const followImports = (
   importName: string,
   filePath: string,
   fileSource?: string,
-  parserOptions?: parser.ParserOptions,
-  resolveOptions?: resolve.SyncOpts,
+  options?: InstrumentOptions,
   initialAST?: File,
 ): FollowImportType | undefined => {
+  const { parser: parserOptions, resolve: resolveOptions } = options || {};
+
   const source = fileSource || fs.readFileSync(filePath, 'utf8');
   const ast = initialAST || parser.parse(source, parserOptions);
-
   const baseImportedName = importName.split('.')[0];
 
   const exports: ExportTypes = {
@@ -61,8 +62,7 @@ export const followImports = (
         findExport.internalName,
         resolvedFilePath,
         undefined,
-        parserOptions,
-        resolveOptions,
+        options,
       );
       return imported ? { ...imported, from: findExport.from } : undefined;
     }
@@ -84,8 +84,7 @@ export const followImports = (
           baseImportedName,
           resolvedFilePath,
           undefined,
-          parserOptions,
-          resolveOptions,
+          options,
         );
       }
       return { ...foundInExportAll, from: e.from };
@@ -96,6 +95,7 @@ export const followImports = (
   const imports: ImportTypes = {};
   traverse(ast, traverseImports(imports));
   const findImport = imports[baseImportedName];
+
   if (findImport) {
     try {
       const resolvedFilePath = resolve.sync(findImport.from, {
@@ -106,12 +106,13 @@ export const followImports = (
         findImport.importedName,
         resolvedFilePath,
         undefined,
-        parserOptions,
-        resolveOptions,
+        options,
       );
-      return imported ? { ...imported, from: findImport.from } : undefined;
+      return imported
+        ? { ...imported, from: findImport.from }
+        : { exportedAs: findImport.importedName, from: findImport.from };
     } catch (e) {
-      //non-exxsiting file
+      //non-existing file
       return { exportedAs: findImport.importedName, from: findImport.from };
     }
   }

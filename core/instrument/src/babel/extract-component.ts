@@ -1,5 +1,3 @@
-import * as resolve from 'resolve';
-import * as parser from '@babel/parser';
 import { File } from '@babel/types';
 import {
   StoriesStore,
@@ -9,6 +7,7 @@ import {
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../project/packageInfo';
+import { InstrumentOptions } from '../types';
 
 const componentFromParams = (
   parameters?: StoryArguments,
@@ -47,16 +46,14 @@ export const extractComponent = async (
   componentName: string,
   filePath: string,
   source?: string,
-  parserOptions?: parser.ParserOptions,
-  resolveOptions?: resolve.SyncOpts,
+  optiomns?: InstrumentOptions,
   initialAST?: File,
 ): Promise<StoryComponent | undefined> => {
   const follow = followImports(
     componentName,
     filePath,
     source,
-    parserOptions,
-    resolveOptions,
+    optiomns,
     initialAST,
   );
   return follow
@@ -75,8 +72,7 @@ export const extractSotreComponent = async (
   store: StoriesStore,
   filePath: string,
   source: string,
-  parserOptions?: parser.ParserOptions,
-  resolveOptions?: resolve.SyncOpts,
+  optiomns?: InstrumentOptions,
   initialAST?: File,
 ) => {
   const kinds = Object.keys(store.kinds);
@@ -89,8 +85,7 @@ export const extractSotreComponent = async (
         componentName,
         filePath,
         source,
-        parserOptions,
-        resolveOptions,
+        optiomns,
         initialAST,
       );
       if (component) {
@@ -107,8 +102,7 @@ export const extractSotreComponent = async (
         componentName,
         filePath,
         source,
-        parserOptions,
-        resolveOptions,
+        optiomns,
         initialAST,
       );
       if (component) {

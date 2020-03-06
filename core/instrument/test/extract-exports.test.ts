@@ -4,7 +4,7 @@ import { defaultParserOptions } from '../src/index';
 import { extractExports } from '../src/babel/extract-exports';
 
 describe('extract-exports', () => {
-  const extractExportsForFile = fileName => {
+  const extractExportsForFile = (fileName: string) => {
     const content = fs.readFileSync(path.join(__dirname, fileName), 'utf8');
     return extractExports(content, defaultParserOptions);
   };
