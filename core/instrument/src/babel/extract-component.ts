@@ -1,8 +1,7 @@
 import { File } from '@babel/types';
 import {
   StoriesStore,
-  StoryArgument,
-  StoryArguments,
+  StoryAttributes,
   StoryComponent,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
@@ -10,32 +9,26 @@ import { packageInfo } from '../project/packageInfo';
 import { InstrumentOptions } from '../types';
 
 const componentFromParams = (
-  parameters?: StoryArguments,
+  attributes?: StoryAttributes,
 ): string | undefined => {
-  if (parameters) {
-    let component = parameters.find(
-      (p: StoryArgument) => p.name === 'component',
-    );
+  if (attributes) {
+    let component = attributes['component'];
     if (!component) {
-      const params = parameters.find(
-        (p: StoryArgument) => p.name === 'parameters',
-      );
+      const params = attributes['parameters'];
       if (params) {
-        component = (params.value as StoryArguments).find(
-          (p: StoryArgument) => p.name === 'component',
-        );
+        component = params['component'];
       }
     }
     if (component) {
-      if (typeof component.value === 'string') {
-        return component.value as string;
+      if (typeof component === 'string') {
+        return component as string;
       }
       if (
-        Array.isArray(component.value) &&
-        component.value.length > 0 &&
-        typeof component.value[0].value === 'string'
+        Array.isArray(component) &&
+        component.length > 0 &&
+        typeof component[0].value === 'string'
       ) {
-        return component.value[0].value;
+        return component[0].value;
       }
     }
   }
@@ -78,7 +71,7 @@ export const extractSotreComponent = async (
   const kinds = Object.keys(store.kinds);
   if (kinds.length > 0) {
     const kind = store.kinds[kinds[0]];
-    const componentName = componentFromParams(kind.parameters);
+    const componentName = componentFromParams(kind.attributes);
 
     if (componentName) {
       const component = await extractComponent(
@@ -96,7 +89,7 @@ export const extractSotreComponent = async (
   }
   Object.keys(store.stories).forEach(async (name: string) => {
     const story = store.stories[name];
-    const componentName = componentFromParams(story.parameters);
+    const componentName = componentFromParams(story.attributes);
     if (componentName) {
       const component = await extractComponent(
         componentName,

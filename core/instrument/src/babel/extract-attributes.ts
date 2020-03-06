@@ -1,10 +1,10 @@
-import {
-  StoryArguments,
-  StoryArgument,
-} from '@component-controls/specification';
-import { sourceLocation } from './utils';
+import { StoryAttributes } from '@component-controls/specification';
 
-const nodeToParameter = (node: any): StoryArgument | undefined => {
+interface StoryAttribute {
+  name: string;
+  value: any;
+}
+const nodeToAttribute = (node: any): StoryAttribute | undefined => {
   const value = node.value || node;
   const name = node.key ? node.key.name : node.name;
   if (value) {
@@ -15,28 +15,24 @@ const nodeToParameter = (node: any): StoryArgument | undefined => {
         return {
           value: value.value,
           name,
-          loc: sourceLocation(node.loc),
         };
       }
       case 'Identifier':
         return {
           value: value.name,
           name,
-          loc: sourceLocation(node.loc),
         };
       case 'MemberExpression':
         return {
           value: `${value.object.name}.${value.property.name}`,
           name,
-          loc: sourceLocation(node.loc),
         };
       case 'ObjectExpression': {
-        const val = extractProperties(value);
+        const val = extractAttributes(value);
         if (val) {
           return {
             value: val,
             name,
-            loc: sourceLocation(node.loc),
           };
         }
         break;
@@ -48,17 +44,25 @@ const nodeToParameter = (node: any): StoryArgument | undefined => {
   }
   return undefined;
 };
-export const extractProperties = (node: any): StoryArguments | undefined => {
+export const extractAttributes = (node: any): StoryAttributes | undefined => {
   if (node) {
     if (node.properties) {
-      const properties: StoryArguments = node.properties
-        .map((propNode: any) => nodeToParameter(propNode))
-        .filter((p: any) => p);
-      return properties;
+      const attributes: StoryAttributes = node.properties.reduce(
+        (acc: StoryAttributes, propNode: any) => {
+          const attribute = nodeToAttribute(propNode);
+          if (attribute) {
+            return { ...acc, [attribute.name]: attribute.value };
+          } else {
+            return acc;
+          }
+        },
+        {},
+      );
+      return attributes;
     }
-    const parameter = nodeToParameter(node);
-    if (parameter) {
-      return [parameter];
+    const attribute = nodeToAttribute(node);
+    if (attribute) {
+      return { [attribute.name]: attribute.value };
     }
   }
   return undefined;

@@ -15,5 +15,6 @@ simple.story = {
     controls: {
       children: { type: 'text', value: 'Subtitle text' },
     },
+    componentSubtitle: 'This is subtitle',
   },
 };

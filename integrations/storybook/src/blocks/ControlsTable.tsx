@@ -22,7 +22,7 @@ export const ControlsTable: FC<ControlsTableProps> = ({
   name,
   ...rest
 }) => {
-  const { id, controls, story, api, channel } = useControlsContext({
+  const { id, controls, api, channel } = useControlsContext({
     id: propId,
     name,
   });
@@ -30,13 +30,11 @@ export const ControlsTable: FC<ControlsTableProps> = ({
     api && api.setControlValue
       ? api.setControlValue
       : (storyId: string, propName: string | undefined, propValue: any) => {
-          if (story) {
-            const newValues = mergeControlValues(
-              story.parameters.controls,
-              propName,
-              propValue,
-            );
-            story.parameters.controls = newValues;
+          if (controls) {
+            const newValues = mergeControlValues(controls, propName, propValue);
+            Object.keys(controls).forEach(key => {
+              controls[key] = newValues[key];
+            });
             channel.emit(FORCE_RE_RENDER);
             channel.emit(SET_DATA_MSG, {
               storyId,
@@ -57,7 +55,7 @@ export const ControlsTable: FC<ControlsTableProps> = ({
             }
           }
         };
-  if (!story || !controls || controls.disable) {
+  if (!controls || controls.disable) {
     return null;
   }
 

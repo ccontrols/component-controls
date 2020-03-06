@@ -1,13 +1,11 @@
 import {
   StoriesStore,
   Story,
-  StoryArguments,
-  StoryArgument,
-  CodeLocation,
+  StoryAttributes,
 } from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
-import { extractProperties } from './extract-properties';
+import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from './utils';
 
 export const extractMDXStories = (stories: StoriesStore) => {
@@ -15,60 +13,50 @@ export const extractMDXStories = (stories: StoriesStore) => {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
       if (['Meta', 'Story'].indexOf(node.name.name) > -1) {
-        const parameters: StoryArguments = node.attributes
-          .map((attribute: any) => {
-            const loc: CodeLocation = sourceLocation(attribute.loc);
+        const attributes: StoryAttributes = node.attributes.reduce(
+          (acc: StoryAttributes, attribute: any) => {
             if (attribute.value.type === 'StringLiteral') {
-              return {
-                value: attribute.value?.value,
-                name: attribute.name?.name,
-                loc,
-              };
+              return { ...acc, [attribute.name?.name]: attribute.value?.value };
             } else if (attribute.value.type === 'JSXExpressionContainer') {
               return {
-                name: attribute.name?.name,
-                value: extractProperties(attribute.value.expression),
-                loc,
+                ...acc,
+                [attribute.name?.name]: extractAttributes(
+                  attribute.value.expression,
+                ),
               };
             }
-            return null;
-          })
-          .filter((p: any) => p);
+            return acc;
+          },
+          {},
+        );
 
         switch (node.name.name) {
           case 'Story': {
             const story: Story = {
               loc: sourceLocation(path.node.loc),
             };
-            const name = parameters.find(
-              (p: StoryArgument) => p.name === 'name',
-            );
+            const name = attributes['name'];
 
-            if (name && typeof name.value === 'string') {
+            if (typeof name === 'string') {
               traverse(
                 path.node,
                 extractFunctionParameters(story),
                 path.scope,
                 path,
               );
-              story.name = name.value;
-              story.parameters = parameters;
-              stories.stories[name.value] = story;
+              story.name = name;
+              story.attributes = attributes;
+              stories.stories[name] = story;
             }
             break;
           }
           case 'Meta': {
-            const title = parameters.find(
-              (p: StoryArgument) => p.name === 'title',
-            );
-            const kindTitle =
-              title && typeof title.value === 'string'
-                ? title.value
-                : undefined;
+            const title = attributes['title'];
+            const kindTitle = typeof title === 'string' ? title : undefined;
             if (kindTitle) {
               stories.kinds[kindTitle] = {
                 title: kindTitle,
-                parameters,
+                attributes,
               };
             }
             break;
@@ -76,7 +64,7 @@ export const extractMDXStories = (stories: StoriesStore) => {
           default:
             break;
         }
-        // console.log(node.name.name, parameters);
+        // console.log(node.name.name, attributes);
       }
     },
   };

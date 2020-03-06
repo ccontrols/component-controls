@@ -5,7 +5,7 @@ import {
   Source as DocsSource,
   Meta,  
 } from '@storybook/addon-docs/blocks';
-import { ControlsTable, StorySource } from '@component-controls/storybook';
+import { BlockContextProvider, ControlsTable, StorySource } from '@component-controls/storybook';
 import { Button } from '../components/Button';
 
 
@@ -15,7 +15,9 @@ import { Button } from '../components/Button';
 
 <Story id="." />
 
-<StorySource id="." />
+<BlockContextProvider>
+  <StorySource id="." />
+</BlockContextProvider>
 
 <DocsSource id="." />
 
@@ -46,7 +48,9 @@ import { Button } from '../components/Button';
   </Story>
 </Preview>
 
-<ControlsTable name="small story" />
+<BlockContextProvider>
+  <ControlsTable name="small story" />
+</BlockContextProvider>  
 
 # Story with no parameters == no smart controls
 

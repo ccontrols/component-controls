@@ -24,7 +24,7 @@ export interface ArgUsageLocation {
 }
 
 /**
- * arguments passed to the 'story' as extracted by an AST loader
+ * arguments passed to the 'story' function, extracted by an AST loader
  */
 export interface StoryArgument {
   /**
@@ -47,10 +47,18 @@ export interface StoryArgument {
 }
 
 /**
- * list of story arguments. The first argument contains the 'controls' name/value pairs
- * the second argument can contain the context
+ * list of story arguments. Each argument can be a deconstructed argument of itself
+ * the first argument are the control 'values'
  */
 export type StoryArguments = StoryArgument[];
+
+/**
+ * list of configuration attributes for stories and 'kinds'
+ * can be specified either through CSF or MDX tags
+ */
+export interface StoryAttributes {
+  [name: string]: any;
+}
 
 /**
  * Story interface - usually extracted by the AST instrumenting loader
@@ -70,9 +78,9 @@ export interface Story {
    */
   arguments?: StoryArguments;
   /**
-   * configuration parameters passed to the story
+   * configuration attributes passed to the story - either CSF or MDX Story attributes
    */
-  parameters?: StoryArguments;
+  attributes?: StoryAttributes;
   /**
    * location in the source file of the story definition
    */
@@ -110,9 +118,11 @@ export interface StoriesKind {
    */
   stories?: string[];
   /**
-   * any parameters passed to the story groupds, such as title, parameters etc
+   * any attributes passed to the story groupds, such as title, parameters etc
+   * configured either as CSF default export
+   * or MDX <Meta /> tag
    */
-  parameters?: StoryArguments;
+  attributes?: StoryAttributes;
 
   /**
    * source code of the entire file of stories

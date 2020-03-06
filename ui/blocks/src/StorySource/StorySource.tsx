@@ -15,7 +15,7 @@ export const StorySource: FC<StorySourceProps> = ({
   actions = [],
   ...rest
 }) => {
-  const { source, controls, args, kind } = useControlsContext({
+  const { source, controls, story, kind } = useControlsContext({
     id,
     name,
   });
@@ -30,7 +30,7 @@ export const StorySource: FC<StorySourceProps> = ({
     <BaseStorySource
       dark={dark}
       controls={controls}
-      args={args}
+      args={story?.arguments}
       fileSource={kind ? kind.source : undefined}
       actions={allActions}
       {...rest}

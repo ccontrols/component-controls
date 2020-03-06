@@ -3,7 +3,6 @@ import myStoryStore from '@component-controls/loader/story-store-data';
 import {
   Story,
   StoriesKind,
-  StoryArguments,
   StoryComponent,
 } from '@component-controls/specification';
 import { LoadedComponentControls } from '@component-controls/core';
@@ -33,9 +32,8 @@ export interface ComponentInputProps {
 export interface ControlsContextProps {
   api?: any;
   channel?: any;
-  story?: any;
+  story?: Story;
   controls?: LoadedComponentControls;
-  args?: StoryArguments;
   id?: string;
   source?: string;
   kind?: StoriesKind;
@@ -71,15 +69,14 @@ export const useControlsContext = ({
       channel,
     };
   }
-  const myStory: Story = myStoryStore && myStoryStore.stories[previewId];
-  const kind =
-    myStory && myStory.kind ? myStoryStore.kinds[myStory.kind] : undefined;
-  const source: string | undefined = myStory ? myStory.source : undefined;
+  const story: Story = myStoryStore && myStoryStore.stories[previewId];
+  const kind = story && story.kind ? myStoryStore.kinds[story.kind] : undefined;
+  const source: string | undefined = story ? story.source : undefined;
   let component;
   if (of === CURRENT_SELECTION) {
     component =
-      myStory && myStory.component
-        ? myStoryStore.components[myStory.component]
+      story && story.component
+        ? myStoryStore.components[story.component]
         : kind
         ? myStoryStore.components[kind.component]
         : undefined;
@@ -87,9 +84,9 @@ export const useControlsContext = ({
     component = of;
   }
 
-  const story = (storyStore && storyStore.fromId(previewId)) || {};
-  if (component && !component.info && story && story.parameters.component) {
-    component.info = story.parameters.component.__docgenInfo;
+  const sbStory = (storyStore && storyStore.fromId(previewId)) || {};
+  if (component && !component.info && sbStory && sbStory.parameters.component) {
+    component.info = sbStory.parameters.component.__docgenInfo;
   }
   return {
     id: previewId,
@@ -99,7 +96,7 @@ export const useControlsContext = ({
     kind,
     story,
     component,
-    args: myStory.arguments,
-    controls: story.controls || (story.parameters && story.parameters.controls),
+    controls:
+      sbStory.controls || (sbStory.parameters && sbStory.parameters.controls),
   };
 };

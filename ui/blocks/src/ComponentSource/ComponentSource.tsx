@@ -39,7 +39,6 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
       onClick: onShowFileSource,
     });
   }
-  console.log(component);
   const repositoryItems = component && repositoryActions(component?.repository);
   if (repositoryItems) {
     allActions.push.apply(allActions, repositoryItems);
