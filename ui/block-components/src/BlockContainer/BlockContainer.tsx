@@ -31,7 +31,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
 }) => (
   <SpacedBlockContainer>
     {title && <Subtitle>{title}</Subtitle>}
-    <FramedBlockContainer>{children}</FramedBlockContainer>
     {actions && <ActionBar actionItems={actions} />}
+    <FramedBlockContainer>{children}</FramedBlockContainer>
   </SpacedBlockContainer>
 );
