@@ -44,7 +44,7 @@ module.exports = {
           options: {
             type: 'csf',
             prettier: {
-              tabWidth: 2,
+              tabWidth: 4,
             }
           },
         },

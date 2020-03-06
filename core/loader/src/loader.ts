@@ -9,16 +9,16 @@ import { addStoriesKind } from './store';
 
 module.exports.default = async function(source: string) {
   const options: LoaderOptions = getOptions(this) || {};
-  const { type = 'csf', prettier } = options;
+  const { type = 'csf', ...instrumentOptions } = options;
   const context = this as loader.LoaderContext;
   const filePath = context.resourcePath;
   let store: StoriesStore;
   switch (type) {
     case 'csf':
-      store = await parseCSF(source, filePath, prettier);
+      store = await parseCSF(source, filePath, instrumentOptions);
       break;
     case 'mdx':
-      store = await parseMDX(source, filePath, prettier);
+      store = await parseMDX(source, filePath, instrumentOptions);
       break;
   }
   if (store) {

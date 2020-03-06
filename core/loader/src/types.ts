@@ -1,6 +1,5 @@
-import { PrettierOptions } from '@component-controls/instrument';
+import { InstrumentOptions } from '@component-controls/instrument';
 
-export interface LoaderOptions {
+export type LoaderOptions = {
   type?: 'csf' | 'mdx';
-  prettier?: PrettierOptions;
-}
+} & InstrumentOptions;
