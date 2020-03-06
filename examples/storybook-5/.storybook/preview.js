@@ -1,8 +1,8 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { Title, Description as SBDescription, Subtitle, Story, Stories, Props } from '@storybook/addon-docs/blocks';
+import { Title as SBTitle, Description as SBDescription, Subtitle, Story, Stories, Props } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
-import { ControlsTable, ThemeProvider, Description, StorySource, ComponentSource, BlockContextProvider } from '@component-controls/storybook';
+import { ControlsTable, ThemeProvider, Title, Description, StorySource, ComponentSource, BlockContextProvider } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
   return (
@@ -21,6 +21,7 @@ export const DocsPage = ({
 }) => {
   return (
     <BlockContextProvider>
+      <SBTitle slot={titleSlot} />
       <Title slot={titleSlot} />
       <Subtitle slot={subtitleSlot} />
       <SBDescription slot={descriptionSlot} />
