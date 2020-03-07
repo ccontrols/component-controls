@@ -1,49 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`follow-imports cjs named export 1`] = `
-Object {
-  "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
-  "from": "../exports/cjs-named-export",
-  "loc": Object {
-    "end": Object {
-      "column": 23,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 21,
-      "line": 1,
-    },
-  },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
-  "source": "const Button = () => {};
-exports.Button = Button;
-",
-}
-`;
+exports[`follow-imports button-default-export.js 1`] = `undefined`;
 
-exports[`follow-imports export all 1`] = `
-Object {
-  "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "from": "",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
-}
-`;
-
-exports[`follow-imports export node modules 1`] = `
+exports[`follow-imports button-from-node-nodules.js 1`] = `
 Object {
   "exportedAs": "ControlsTable",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -179,28 +138,228 @@ exports.Title = Title;
 }
 `;
 
-exports[`follow-imports one level default import 1`] = `
+exports[`follow-imports button-named-export.js 1`] = `
 Object {
-  "exportedAs": "default",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
-  "from": "./button-default-export",
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "from": "",
   "loc": Object {
     "end": Object {
-      "column": 24,
+      "column": 30,
       "line": 1,
     },
     "start": Object {
-      "column": 0,
+      "column": 28,
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
-  "source": "export default () => {};
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
 ",
 }
 `;
 
-exports[`follow-imports one level import 1`] = `
+exports[`follow-imports cjs-import.js 1`] = `
+Object {
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
+  "from": "../exports/cjs-named-export",
+  "loc": Object {
+    "end": Object {
+      "column": 23,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 21,
+      "line": 1,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
+  "source": "const Button = () => {};
+exports.Button = Button;
+",
+}
+`;
+
+exports[`follow-imports direct-import.js 1`] = `
+Object {
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
+  "from": "",
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 28,
+      "line": 1,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
+  "source": "export const Button = () => {};
+",
+}
+`;
+
+exports[`follow-imports export-all.js 1`] = `
+Object {
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "from": "",
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 28,
+      "line": 1,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
+}
+`;
+
+exports[`follow-imports import-node-modules.js 1`] = `
+Object {
+  "exportedAs": "ControlsTable",
+  "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
+  "from": "./button-from-node-nodules",
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 91,
+    },
+    "start": Object {
+      "column": 28,
+      "line": 42,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
+  "source": "'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = _interopDefault(require('react'));
+var blocks = require('@component-controls/blocks');
+var blocks$1 = require('@storybook/addon-docs/blocks');
+require('polished');
+require('@storybook/theming');
+var ThemeProvider = require('./ThemeProvider.js');
+var tslib = require('tslib');
+var coreEvents = require('@storybook/core-events');
+var core = require('@component-controls/core');
+var shared = require('./shared.js');
+
+const BlockContextProvider = ({
+  children
+}) => {
+  const context = React.useContext(blocks$1.DocsContext);
+  const {
+    id: currentId,
+    clientApi,
+    storyStore,
+    channel
+  } = context;
+  return React.createElement(blocks.BlockContext.Provider, {
+    value: {
+      api: clientApi,
+      currentId,
+      channel,
+      storyStore
+    }
+  }, children);
+};
+
+const ComponentSource = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ComponentSource, Object.assign({}, props)));
+};
+
+const ControlsTable = _a => {
+  var {
+    id: propId,
+    name
+  } = _a,
+      rest = tslib.__rest(_a, [\\"id\\", \\"name\\"]);
+
+  const {
+    id,
+    controls,
+    api,
+    channel
+  } = blocks.useControlsContext({
+    id: propId,
+    name
+  });
+  const setControlValue = api && api.setControlValue ? api.setControlValue : (storyId, propName, propValue) => {
+    if (controls) {
+      const newValues = core.mergeControlValues(controls, propName, propValue);
+      Object.keys(controls).forEach(key => {
+        controls[key] = newValues[key];
+      });
+      channel.emit(coreEvents.FORCE_RE_RENDER);
+      channel.emit(shared.SET_DATA_MSG, {
+        storyId,
+        controls: newValues
+      });
+    }
+  };
+  const clickControl = api && api.clickControl ? api.clickControl : (storyId, propName) => {
+    if (controls && controls[propName]) {
+      const control = controls[propName];
+
+      if (control && typeof control.onClick === 'function') {
+        control.onClick(control);
+      }
+    }
+  };
+
+  if (!controls || controls.disable) {
+    return null;
+  }
+
+  return id ? React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ControlsTable, Object.assign({
+    controls: controls,
+    storyId: id,
+    setControlValue: setControlValue,
+    clickControl: clickControl
+  }, rest))) : null;
+};
+
+const Description = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Description, Object.assign({}, props)));
+};
+
+const StorySource = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.StorySource, Object.assign({}, props)));
+};
+
+const Subtitle = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Subtitle, Object.assign({}, props)));
+};
+
+const Title = props => {
+  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Title, Object.assign({}, props)));
+};
+
+exports.ThemeProvider = ThemeProvider.ThemeProvider;
+exports.BlockContextProvider = BlockContextProvider;
+exports.ComponentSource = ComponentSource;
+exports.ControlsTable = ControlsTable;
+exports.Description = Description;
+exports.StorySource = StorySource;
+exports.Subtitle = Subtitle;
+exports.Title = Title;
+",
+}
+`;
+
+exports[`follow-imports index.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
@@ -221,28 +380,7 @@ Object {
 }
 `;
 
-exports[`follow-imports one level index import 1`] = `
-Object {
-  "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "from": "./",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
-}
-`;
-
-exports[`follow-imports one level namespace import 1`] = `
+exports[`follow-imports one-level-default-import.js 1`] = `
 Object {
   "exportedAs": "default",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
@@ -263,11 +401,11 @@ Object {
 }
 `;
 
-exports[`follow-imports simple import 1`] = `
+exports[`follow-imports one-level-import.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
-  "from": "",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "from": "./button-named-export",
   "loc": Object {
     "end": Object {
       "column": 30,
@@ -278,8 +416,50 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
   "source": "export const Button = () => {};
+",
+}
+`;
+
+exports[`follow-imports one-level-index-import.js 1`] = `
+Object {
+  "exportedAs": "Button",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "from": "./",
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 28,
+      "line": 1,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
+}
+`;
+
+exports[`follow-imports one-level-namespace-import.js 1`] = `
+Object {
+  "exportedAs": "default",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "from": "./button-default-export",
+  "loc": Object {
+    "end": Object {
+      "column": 24,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "source": "export default () => {};
 ",
 }
 `;
