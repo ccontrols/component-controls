@@ -1,52 +1,6 @@
+import { loadCSFTests } from './loadTestFiles';
 import { parseCSF } from '../src/index';
 
 describe('csf-named-exports', () => {
-  it('story propery name', async () => {
-    expect(
-      await parseCSF(
-        `
-const myStory = () => {};
-myStory.story = {
- name: 'Custom story name',
-}
-
-export { myStory }
-    `,
-        __filename,
-      ),
-    ).toMatchSnapshot();
-  });
-
-  it('exported alias name', async () => {
-    expect(
-      await parseCSF(
-        `
-const myStory = () => {};
-myStory.story = {
- name: 'Custom story name',
-}
-
-export { myStory as exportedStory}
-    `,
-        __filename,
-      ),
-    ).toMatchSnapshot();
-  });
-
-  it('re-exported name', async () => {
-    expect(
-      await parseCSF(
-        `
-import { myStory } from 'stories.tsx';
-myStory.story = {
-  name: 'Custom story name',
-};
-
-export { myStory };
-    
-    `,
-        __filename,
-      ),
-    ).toMatchSnapshot();
-  });
+  loadCSFTests('csf', 'named-exports');
 });
