@@ -1,0 +1,9 @@
+export default {
+  name: 'Hello',
+}
+
+export const myStory = props => (
+  <Story
+   {...props}
+  />
+);

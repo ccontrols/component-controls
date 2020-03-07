@@ -1,150 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`prop-usage-locations Three levels - alias 1`] = `
-Object {
-  "components": Object {},
-  "kinds": Object {},
-  "stories": Object {
-    "myStory": Object {
-      "arguments": Array [
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 31,
-              "line": 0,
-            },
-            "start": Object {
-              "column": 1,
-              "line": 0,
-            },
-          },
-          "name": undefined,
-          "value": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 24,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 9,
-                  "line": 0,
-                },
-              },
-              "name": "name",
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 16,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 11,
-                      "line": 0,
-                    },
-                  },
-                  "name": "first",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 23,
-                          "line": 2,
-                        },
-                        "start": Object {
-                          "column": 18,
-                          "line": 2,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "first",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 22,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 18,
-                      "line": 0,
-                    },
-                  },
-                  "name": "last",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 35,
-                          "line": 2,
-                        },
-                        "start": Object {
-                          "column": 31,
-                          "line": 2,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "last",
-                },
-              ],
-            },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 29,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 26,
-                  "line": 0,
-                },
-              },
-              "name": "age",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 19,
-                      "line": 3,
-                    },
-                    "start": Object {
-                      "column": 16,
-                      "line": 3,
-                    },
-                  },
-                },
-              ],
-              "value": "age",
-            },
-          ],
-        },
-      ],
-      "loc": Object {
-        "end": Object {
-          "column": 1,
-          "line": 6,
-        },
-        "start": Object {
-          "column": 23,
-          "line": 1,
-        },
-      },
-      "name": "myStory",
-      "source": "({ name: { first, last }, age }) => (
-  <>
-    <Story first={first} last={last} />
-    <Age value={age} />
-  </>
-)",
-    },
-  },
-}
-`;
-
-exports[`prop-usage-locations adjust lines 1`] = `
+exports[`csf-props-usage adjust-lines.any 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -197,7 +53,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations empty body 1`] = `
+exports[`csf-props-usage empty-body.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -265,7 +121,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations expression usage 1`] = `
+exports[`csf-props-usage expression.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -348,7 +204,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations multiple usage 1`] = `
+exports[`csf-props-usage multiple-usage.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -433,7 +289,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations nested arguments 1`] = `
+exports[`csf-props-usage nested-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -602,7 +458,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations props argument 1`] = `
+exports[`csf-props-usage props.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -655,7 +511,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations string template 1`] = `
+exports[`csf-props-usage string-template.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -687,6 +543,45 @@ Object {
                 },
               },
               "name": "text",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": Object {
+                    "loc": Object {
+                      "end": Object {
+                        "column": 7,
+                        "line": 0,
+                      },
+                      "start": Object {
+                        "column": 3,
+                        "line": 0,
+                      },
+                    },
+                    "name": "text",
+                  },
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 17,
+                      "line": 0,
+                    },
+                  },
+                },
+              ],
               "value": "text",
             },
           ],
@@ -709,7 +604,151 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations two arguments 1`] = `
+exports[`csf-props-usage three-levels-alias.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 31,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 24,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+              },
+              "name": "name",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 16,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 11,
+                      "line": 0,
+                    },
+                  },
+                  "name": "first",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 23,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 2,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "first",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 22,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 18,
+                      "line": 0,
+                    },
+                  },
+                  "name": "last",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 35,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 31,
+                          "line": 2,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "last",
+                },
+              ],
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 29,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 26,
+                  "line": 0,
+                },
+              },
+              "name": "age",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 19,
+                      "line": 3,
+                    },
+                    "start": Object {
+                      "column": 16,
+                      "line": 3,
+                    },
+                  },
+                },
+              ],
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+        },
+      },
+      "name": "myStory",
+      "source": "({ name: { first, last }, age }) => (
+  <>
+    <Story first={first} last={last} />
+    <Age value={age} />
+  </>
+)",
+    },
+  },
+}
+`;
+
+exports[`csf-props-usage two-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -776,7 +815,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations two levels - alias 1`] = `
+exports[`csf-props-usage two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -874,7 +913,7 @@ Object {
 }
 `;
 
-exports[`prop-usage-locations two levels sub arguments 1`] = `
+exports[`csf-props-usage two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},

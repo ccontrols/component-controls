@@ -8,7 +8,7 @@ import { adjustSourceLocation } from './utils';
 import {
   extractArgumentsUsage,
   addArgumentUsage,
-} from './control-values-in-source';
+} from './extract-arguments-usage';
 
 interface KeyType {
   name: string;
@@ -82,6 +82,13 @@ export const extractFunctionParameters = (story: Story) => ({
       const params = story.arguments[0];
       if (node.body.type === 'Identifier') {
         addArgumentUsage(story, [params], node.body);
+      } else if (node.body.type === 'TemplateLiteral') {
+        traverse(
+          node,
+          extractArgumentsUsage(story, [params]),
+          path.scope,
+          path,
+        );
       } else {
         traverse(
           node.body,
