@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-story-kind No default export 1`] = `
+exports[`csf-story-kind no-default-export.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -24,7 +24,7 @@ Object {
 }
 `;
 
-exports[`csf-story-kind default export - no title 1`] = `
+exports[`csf-story-kind no-title.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -32,24 +32,40 @@ Object {
 }
 `;
 
-exports[`csf-story-kind default export - with title 1`] = `
+exports[`csf-story-kind title-and-parameters.js 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "ControlsTable": Object {
+      "name": "ControlsTable",
+    },
+  },
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "attributes": Object {
+        "parameters": Object {
+          "addonControls": Object {
+            "smart": false,
+          },
+          "component": "ControlsTable",
+        },
         "title": "Storybook/Blocks/ControlsTable",
       },
+      "component": "ControlsTable",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/title-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-        export default {
-          title: 'Storybook/Blocks/ControlsTable',
-        };
-      ",
+      "source": "export default {
+  title: 'Storybook/Blocks/ControlsTable',
+  parameters: {
+    component: ControlsTable,
+    addonControls: {
+      smart: false,
+    },
+  },
+};
+",
       "title": "Storybook/Blocks/ControlsTable",
     },
   },
@@ -57,7 +73,7 @@ Object {
 }
 `;
 
-exports[`csf-story-kind default export - with title and controls 1`] = `
+exports[`csf-story-kind title-controls-and-parameters.js 1`] = `
 Object {
   "components": Object {
     "ControlsTable": Object {
@@ -82,26 +98,25 @@ Object {
       },
       "component": "ControlsTable",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/title-controls-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-      export default {
-        title: 'Storybook/Kind',
-        component: ControlsTable,
-        parameters: {
-          controls: {
-            name: {
-              type: ControlTypes.TEXT,
-              label: 'Name',
-              value: 'Mark',
-              order: 9999,
-            },
-          },
-        },
-      };
-      ",
+      "source": "export default {
+  title: 'Storybook/Kind',
+  component: ControlsTable,
+  parameters: {
+    controls: {
+      name: {
+        type: ControlTypes.TEXT,
+        label: 'Name',
+        value: 'Mark',
+        order: 9999,
+      },
+    },
+  },
+};
+",
       "title": "Storybook/Kind",
     },
   },
@@ -109,41 +124,23 @@ Object {
 }
 `;
 
-exports[`csf-story-kind default export - with title and parameters 1`] = `
+exports[`csf-story-kind with-title.js 1`] = `
 Object {
-  "components": Object {
-    "ControlsTable": Object {
-      "name": "ControlsTable",
-    },
-  },
+  "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "attributes": Object {
-        "parameters": Object {
-          "addonControls": Object {
-            "smart": false,
-          },
-          "component": "ControlsTable",
-        },
         "title": "Storybook/Blocks/ControlsTable",
       },
-      "component": "ControlsTable",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/csf-story-kind.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/with-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-        export default {
-          title: 'Storybook/Blocks/ControlsTable',
-          parameters: {
-            component: ControlsTable,
-            addonControls: {
-              smart: false,
-            }
-          },
-        };
-      ",
+      "source": "export default {
+  title: 'Storybook/Blocks/ControlsTable',
+};
+",
       "title": "Storybook/Blocks/ControlsTable",
     },
   },
