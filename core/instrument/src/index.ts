@@ -1,5 +1,6 @@
 import * as parser from '@babel/parser';
-const mdx = require('@mdx-js/mdx');
+//@ts-ignore
+import mdx from '@mdx-js/mdx';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
@@ -27,6 +28,14 @@ export * from './types';
 
 type TraverseFn = (stories: StoriesStore) => any;
 
+/**
+ * Instrument a source file, with options
+ * @param code The source code
+ * @param traverseFn A traverse function. can be different for MDX and CSF story files
+ * @param originalSource If the source was modified (ie mdx compiler)
+ * @param filePath file name with fiull path
+ * @param options Instrument options
+ */
 const parseSource = async (
   code: string,
   traverseFn: TraverseFn,
@@ -57,7 +66,9 @@ const parseSource = async (
   const prettify = async (c: string): Promise<string> => {
     if (prettierOptions !== false) {
       const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
-      let allPrettierOptions = otherOptions;
+      let allPrettierOptions:
+        | prettier.Options
+        | undefined = otherOptions as any;
       if (filePath) {
         const userOptions = await prettier.resolveConfig(
           filePath,
@@ -158,7 +169,12 @@ const parseSource = async (
   });
   return store;
 };
-
+/**
+ * Parse and instrument a javascript or typescript file of stories
+ * @param source Source of the file to be instrumented
+ * @param filePath Resolved file path name.
+ * @param options Instrumenting options
+ */
 export const parseCSF = async (
   source: string,
   filePath: string,
@@ -172,6 +188,13 @@ export const parseCSF = async (
     options,
   );
 };
+
+/**
+ * Parse and instrument an MDX file of stories
+ * @param source Source of the file to be instrumented
+ * @param filePath Resolved file path name.
+ * @param options Instrumenting options
+ */
 
 export const parseMDX = async (
   source: string,

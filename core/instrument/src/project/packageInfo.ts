@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+//@ts-ignore
 import readJson from 'read-package-json';
 import hostedGitInfo from 'hosted-git-info';
+//@ts-ignore
 import parseRepositoryURL from '@hutson/parse-repository-url';
 import { Repository } from '@component-controls/specification';
 
