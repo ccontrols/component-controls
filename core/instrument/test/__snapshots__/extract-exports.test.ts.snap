@@ -1,6 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`extract-exports commonjs named export 1`] = `
+exports[`extract-exports button-default-class.js 1`] = `
+Object {
+  "default": Object {
+    "internalName": "Button",
+    "loc": Object {
+      "end": Object {
+        "column": 1,
+        "line": 7,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "name": "default",
+  },
+  "named": Object {},
+}
+`;
+
+exports[`extract-exports button-default-class-export.js 1`] = `
+Object {
+  "default": Object {
+    "internalName": "Button",
+    "loc": Object {
+      "end": Object {
+        "column": 1,
+        "line": 7,
+      },
+      "start": Object {
+        "column": 37,
+        "line": 3,
+      },
+    },
+    "name": "default",
+  },
+  "named": Object {},
+}
+`;
+
+exports[`extract-exports button-named-class.js 1`] = `
+Object {
+  "named": Object {
+    "Button": Object {
+      "internalName": "Button",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 44,
+          "line": 3,
+        },
+      },
+      "name": "Button",
+    },
+  },
+}
+`;
+
+exports[`extract-exports button-named-class-export.js 1`] = `
+Object {
+  "named": Object {
+    "Button": Object {
+      "internalName": "Button",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 37,
+          "line": 3,
+        },
+      },
+      "name": "Button",
+    },
+  },
+}
+`;
+
+exports[`extract-exports cjs-named-export.js 1`] = `
 Object {
   "named": Object {
     "Button": Object {
@@ -21,7 +103,7 @@ Object {
 }
 `;
 
-exports[`extract-exports export * from import 1`] = `
+exports[`extract-exports export-all-from.js 1`] = `
 Object {
   "named": Object {
     "stories.tsx": Object {
@@ -43,47 +125,7 @@ Object {
 }
 `;
 
-exports[`extract-exports export default class 1`] = `
-Object {
-  "default": Object {
-    "internalName": "Button",
-    "loc": Object {
-      "end": Object {
-        "column": 1,
-        "line": 7,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 3,
-      },
-    },
-    "name": "default",
-  },
-  "named": Object {},
-}
-`;
-
-exports[`extract-exports export default class export 1`] = `
-Object {
-  "default": Object {
-    "internalName": "Button",
-    "loc": Object {
-      "end": Object {
-        "column": 1,
-        "line": 7,
-      },
-      "start": Object {
-        "column": 37,
-        "line": 3,
-      },
-    },
-    "name": "default",
-  },
-  "named": Object {},
-}
-`;
-
-exports[`extract-exports export from import 1`] = `
+exports[`extract-exports export-from.js 1`] = `
 Object {
   "named": Object {
     "myStory": Object {
@@ -105,7 +147,7 @@ Object {
 }
 `;
 
-exports[`extract-exports export from import with alias 1`] = `
+exports[`extract-exports export-from-alias.js 1`] = `
 Object {
   "named": Object {
     "newStory": Object {
@@ -127,49 +169,7 @@ Object {
 }
 `;
 
-exports[`extract-exports export named class 1`] = `
-Object {
-  "named": Object {
-    "Button": Object {
-      "internalName": "Button",
-      "loc": Object {
-        "end": Object {
-          "column": 1,
-          "line": 7,
-        },
-        "start": Object {
-          "column": 44,
-          "line": 3,
-        },
-      },
-      "name": "Button",
-    },
-  },
-}
-`;
-
-exports[`extract-exports export named class export 1`] = `
-Object {
-  "named": Object {
-    "Button": Object {
-      "internalName": "Button",
-      "loc": Object {
-        "end": Object {
-          "column": 1,
-          "line": 7,
-        },
-        "start": Object {
-          "column": 37,
-          "line": 3,
-        },
-      },
-      "name": "Button",
-    },
-  },
-}
-`;
-
-exports[`extract-exports named const export 1`] = `
+exports[`extract-exports named-const-export.js 1`] = `
 Object {
   "named": Object {
     "myStory": Object {
@@ -190,7 +190,7 @@ Object {
 }
 `;
 
-exports[`extract-exports named export 1`] = `
+exports[`extract-exports named-export.js 1`] = `
 Object {
   "default": Object {
     "internalName": "default",
@@ -225,7 +225,7 @@ Object {
 }
 `;
 
-exports[`extract-exports named export alias 1`] = `
+exports[`extract-exports named-export-alias.js 1`] = `
 Object {
   "named": Object {
     "exportedStory": Object {
@@ -246,7 +246,7 @@ Object {
 }
 `;
 
-exports[`extract-exports re-exported name 1`] = `
+exports[`extract-exports re-exported-name.js 1`] = `
 Object {
   "named": Object {
     "myStory": Object {
