@@ -1,6 +1,6 @@
 import * as path from 'path';
 import * as fs from 'fs';
-import { parseCSF } from '../src/index';
+import { parseCSF, parseMDX } from '../src/index';
 
 export type LoadTestCallbackFn = (fileName: string) => any;
 
@@ -21,5 +21,12 @@ export const loadCSFTests = (...args) => {
   loadTestFiles(async fileName => {
     const content = fs.readFileSync(fileName, 'utf8');
     return await parseCSF(content, fileName);
+  }, ...args);
+};
+
+export const loadMDXTests = (...args) => {
+  loadTestFiles(async fileName => {
+    const content = fs.readFileSync(fileName, 'utf8');
+    return await parseMDX(content, fileName);
   }, ...args);
 };

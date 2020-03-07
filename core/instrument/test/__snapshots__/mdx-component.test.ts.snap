@@ -1,26 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mdx-component component parameter 1`] = `
+exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
-  "components": Object {},
-  "kinds": Object {
-    "Storybook/MDX": Object {
-      "attributes": Object {
-        "component": Object {
-          "Button": "Button",
+  "components": Object {
+    "Button": Object {
+      "from": "../../components/button-named-arrow-func",
+      "import": "import Button from '../../components/button-named-arrow-func';
+",
+      "loc": Object {
+        "end": Object {
+          "column": 72,
+          "line": 3,
         },
-        "title": "Storybook/MDX",
+        "start": Object {
+          "column": 31,
+          "line": 3,
+        },
       },
+      "name": "Button",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-arrow-func.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-import { Meta } from '@storybook/addon-docs/blocks';
-import { Button } from './Button';
+      "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-arrow-func.js",
+      "source": "import React from 'react';
+
+export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
+",
+    },
+  },
+  "kinds": Object {
+    "Storybook/MDX": Object {
+      "attributes": Object {
+        "component": "Button",
+        "title": "Storybook/MDX",
+      },
+      "component": "Button",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/component-parameters.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "source": "import { Meta } from '@storybook/addon-docs/blocks';
+import { Button } from '../../components/button-named-arrow-func';
+
 <Meta title=\\"Storybook/MDX\\" component={Button} />
-      ",
+",
       "title": "Storybook/MDX",
     },
   },
@@ -28,27 +54,35 @@ import { Button } from './Button';
 }
 `;
 
-exports[`mdx-component named alias import 1`] = `
+exports[`mdx-component named-alias-import.mdx 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "../../components/button-named-class",
+      "import": "import Button from '../../components/button-named-class';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
       "attributes": Object {
-        "component": Object {
-          "Button": "Button",
-        },
+        "component": "Button",
         "title": "Storybook/MDX",
       },
+      "component": "Button",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/named-alias-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-import { Meta } from '@storybook/addon-docs/blocks';
-import { Btn as Button } from './Button';
-<Meta title=\\"Storybook/MDX\\" component={Button} />
-      ",
+      "source": "import { Meta } from '@storybook/addon-docs/blocks';
+import { Btn as Button } from '../../components/button-named-class';
+<Meta title=\\"Storybook/MDX\\" component={Button} />",
       "title": "Storybook/MDX",
     },
   },
@@ -56,31 +90,49 @@ import { Btn as Button } from './Button';
 }
 `;
 
-exports[`mdx-component story import 1`] = `
+exports[`mdx-component story-import.mdx 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "Button": Object {
+      "from": "./Button",
+      "import": "import Button from './Button';
+",
+      "loc": undefined,
+      "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+    "Toggle": Object {
+      "from": "./Toggle",
+      "import": "import Toggle from './Toggle';
+",
+      "loc": undefined,
+      "name": "Toggle",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
+    },
+  },
   "kinds": Object {
     "Storybook/MDX": Object {
       "attributes": Object {
-        "component": Object {
-          "Button": "Button",
-        },
+        "component": "Button",
         "title": "Storybook/MDX",
       },
+      "component": "Button",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/mdx-component.test.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/story-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+      "source": "import { Meta, Story } from '@storybook/addon-docs/blocks';
 import { Btn as Button } from './Button';
 import { Toggle } from './Toggle';
 
 <Meta title=\\"Storybook/MDX\\" component={Button} />
 
-<Story name=\\"my-story\\" component={Toggle} />
-      ",
+<Story name=\\"my-story\\" component={Toggle} />",
       "stories": Array [
         "storybook-mdx--my-story",
       ],
@@ -90,11 +142,10 @@ import { Toggle } from './Toggle';
   "stories": Object {
     "storybook-mdx--my-story": Object {
       "attributes": Object {
-        "component": Object {
-          "Toggle": "Toggle",
-        },
+        "component": "Toggle",
         "name": "my-story",
       },
+      "component": "Toggle",
       "id": "storybook-mdx--my-story",
       "kind": "Storybook/MDX",
       "loc": Object {
