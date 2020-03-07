@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-parameters story propery name 1`] = `
-Object {
-  "components": Object {},
-  "kinds": Object {},
-  "stories": Object {
-    "myStory": Object {
-      "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-      },
-      "loc": Object {
-        "end": Object {
-          "column": 31,
-          "line": 1,
-        },
-        "start": Object {
-          "column": 23,
-          "line": 1,
-        },
-      },
-      "name": "Custom story name",
-      "source": "() => {}",
-    },
-  },
-}
-`;
-
-exports[`csf-parameters story propery name and parameters 1`] = `
+exports[`csf-parameters name-and-parameters.js 1`] = `
 Object {
   "components": Object {
     "ControlsTable": Object {
@@ -65,7 +38,7 @@ Object {
 }
 `;
 
-exports[`csf-parameters story propery name parameters and controls 1`] = `
+exports[`csf-parameters name-parameters-and-controls.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -87,6 +60,33 @@ Object {
             },
           },
         },
+      },
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 1,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 1,
+        },
+      },
+      "name": "Custom story name",
+      "source": "() => {}",
+    },
+  },
+}
+`;
+
+exports[`csf-parameters story-property-name.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "attributes": Object {
+        "name": "Custom story name",
       },
       "loc": Object {
         "end": Object {
