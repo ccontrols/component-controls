@@ -18,12 +18,11 @@ export const extractMDXStories = (stories: StoriesStore) => {
             if (attribute.value.type === 'StringLiteral') {
               return { ...acc, [attribute.name?.name]: attribute.value?.value };
             } else if (attribute.value.type === 'JSXExpressionContainer') {
-              const atrs = extractAttributes(attribute.value.expression);
-              const attrsKeys = atrs ? Object.keys(atrs) : [];
               return {
                 ...acc,
-                [attribute.name?.name]:
-                  attrsKeys.length === 1 && atrs ? atrs[attrsKeys[0]] : atrs,
+                [attribute.name?.name]: extractAttributes(
+                  attribute.value.expression,
+                ),
               };
             }
             return acc;

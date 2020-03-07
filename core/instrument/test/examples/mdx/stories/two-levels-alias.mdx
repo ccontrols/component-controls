@@ -1,0 +1,9 @@
+import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title="Storybook/MDX" parameters={{component: Button}} />
+
+<Story name="story-with-props">
+  {({ name: MyName, age }) => <Button />}
+</Story>

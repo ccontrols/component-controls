@@ -44,7 +44,9 @@ const nodeToAttribute = (node: any): StoryAttribute | undefined => {
   }
   return undefined;
 };
-export const extractAttributes = (node: any): StoryAttributes | undefined => {
+export const extractAttributes = (
+  node: any,
+): StoryAttributes | any | undefined => {
   if (node) {
     if (node.properties) {
       const attributes: StoryAttributes = node.properties.reduce(
@@ -62,7 +64,7 @@ export const extractAttributes = (node: any): StoryAttributes | undefined => {
     }
     const attribute = nodeToAttribute(node);
     if (attribute) {
-      return { [attribute.name]: attribute.value };
+      return attribute.value;
     }
   }
   return undefined;
