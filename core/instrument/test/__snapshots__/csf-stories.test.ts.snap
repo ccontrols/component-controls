@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-story Named object export 1`] = `
+exports[`csf-stories named-object-export.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -8,7 +8,7 @@ Object {
 }
 `;
 
-exports[`csf-story No arguments 1`] = `
+exports[`csf-stories no-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`csf-story No story 1`] = `
+exports[`csf-stories no-story.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`csf-story Props argument 1`] = `
+exports[`csf-stories props-argument.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -79,7 +79,7 @@ Object {
 }
 `;
 
-exports[`csf-story Three levels - alias 1`] = `
+exports[`csf-stories three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -176,7 +176,7 @@ Object {
 }
 `;
 
-exports[`csf-story Two arguments 1`] = `
+exports[`csf-stories two-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -229,7 +229,7 @@ Object {
 }
 `;
 
-exports[`csf-story Two levels - alias 1`] = `
+exports[`csf-stories two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -297,7 +297,7 @@ Object {
 }
 `;
 
-exports[`csf-story Two levels sub arguments 1`] = `
+exports[`csf-stories two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
@@ -365,7 +365,7 @@ Object {
 }
 `;
 
-exports[`csf-story Typescript 1`] = `
+exports[`csf-stories typescript.ts 1`] = `
 Object {
   "components": Object {},
   "kinds": Object {},
