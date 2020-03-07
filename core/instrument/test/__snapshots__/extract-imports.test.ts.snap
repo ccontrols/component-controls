@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`extract-imports all imports 1`] = `
+exports[`extract-imports all-imports.js 1`] = `
 Object {
   "Btn": Object {
     "from": "./buttons",
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`extract-imports default import 1`] = `
+exports[`extract-imports default-import.js 1`] = `
 Object {
   "Button": Object {
     "from": "buttons",
@@ -50,7 +50,7 @@ Object {
 }
 `;
 
-exports[`extract-imports mixed import 1`] = `
+exports[`extract-imports mixed-import.js 1`] = `
 Object {
   "FC": Object {
     "from": "./react",
@@ -70,7 +70,7 @@ Object {
 }
 `;
 
-exports[`extract-imports named alias import 1`] = `
+exports[`extract-imports named-alias-import.js 1`] = `
 Object {
   "Btn": Object {
     "from": "buttons",
@@ -80,7 +80,7 @@ Object {
 }
 `;
 
-exports[`extract-imports named import 1`] = `
+exports[`extract-imports named-import.js 1`] = `
 Object {
   "Button": Object {
     "from": "buttons",
@@ -90,7 +90,7 @@ Object {
 }
 `;
 
-exports[`extract-imports namespace import 1`] = `
+exports[`extract-imports namespace-import.js 1`] = `
 Object {
   "Button": Object {
     "from": "buttons",
