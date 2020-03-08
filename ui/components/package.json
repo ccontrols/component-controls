@@ -29,6 +29,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "markdown-to-jsx": "^6.11.0",
+    "@mdx-js/react": "^1.5.7",
     "react": "^16.8.3",
     "react-animate-height": "^2.0.20",
     "react-dom": "^16.8.3",
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
+    "@types/markdown-to-jsx": "^6.11.0",
     "@types/react-tabs": "^2.3.1",
     "@types/theme-ui": "^0.3.0",
     "cross-env": "^5.2.1",

@@ -12,7 +12,10 @@ import Highlight, {
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
 import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 
-import { BlockContainer, BlockContainerProps } from '../BlockContainer';
+import {
+  BlockContainer,
+  BlockContainerProps,
+} from '@component-controls/components';
 
 type RenderProps = Parameters<Highlight['props']['children']>[0];
 

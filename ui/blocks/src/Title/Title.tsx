@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Title as TitleBlock,
   TitleProps as TitlePropsBase,
-} from '@component-controls/block-components';
+} from '@component-controls/components';
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
 
 export type TitleProps = StoryInputProps & TitlePropsBase;

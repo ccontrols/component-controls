@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {
   Subtitle as SubtitleBlock,
   SubtitleProps as SubtitlePropsBase,
-} from '@component-controls/block-components';
+} from '@component-controls/components';
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
 
 export type SubtitleProps = StoryInputProps & SubtitlePropsBase;

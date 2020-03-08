@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Markdown, MarkdownProps } from '@component-controls/block-components';
+import { Markdown, MarkdownProps } from '@component-controls/components';
 import { useControlsContext, ComponentInputProps } from '../BlocksContext';
 
 export type DescriptionProps = Omit<MarkdownProps, 'children'> &

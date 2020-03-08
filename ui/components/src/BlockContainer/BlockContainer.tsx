@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import styled from '@emotion/styled';
 import { Subtitle } from '../Subtitle';
-import { ActionBar, ActionItem } from '@component-controls/components';
+import { ActionBar, ActionItem } from '../ActionBar';
 
 const SpacedBlockContainer = styled.div(() => ({
   position: 'relative',
