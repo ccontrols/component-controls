@@ -26,15 +26,15 @@ export interface Repository {
   /**
    * link for browsing the file
    */
-  browse: string;
+  browse?: string;
 
   /**
    * link for project readme
    */
-  docs: string;
+  docs?: string;
 
   /**
    * link for filing issues with the project
    */
-  issues: string;
+  issues?: string;
 }

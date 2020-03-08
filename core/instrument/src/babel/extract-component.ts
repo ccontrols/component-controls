@@ -39,24 +39,28 @@ export const extractComponent = async (
   componentName: string,
   filePath: string,
   source?: string,
-  optiomns?: InstrumentOptions,
+  options?: InstrumentOptions,
   initialAST?: File,
 ): Promise<StoryComponent | undefined> => {
   const follow = followImports(
     componentName,
     filePath,
     source,
-    optiomns,
+    options,
     initialAST,
   );
+  const { components } = options || {};
   return follow
     ? {
         name: componentName,
         from: follow.from,
         request: follow.filePath,
         loc: follow.loc,
-        source: follow.source,
-        repository: await packageInfo(follow.originalFilePath),
+        source: components?.storeSourceFile ? follow.source : undefined,
+        repository: await packageInfo(
+          follow.originalFilePath,
+          options?.components?.package,
+        ),
       }
     : {
         name: componentName,
@@ -67,7 +71,7 @@ export const extractSotreComponent = async (
   store: StoriesStore,
   filePath: string,
   source: string,
-  optiomns?: InstrumentOptions,
+  options?: InstrumentOptions,
   initialAST?: File,
 ) => {
   const kinds = Object.keys(store.kinds);
@@ -80,7 +84,7 @@ export const extractSotreComponent = async (
         componentName,
         filePath,
         source,
-        optiomns,
+        options,
         initialAST,
       );
       if (component) {
@@ -97,7 +101,7 @@ export const extractSotreComponent = async (
         componentName,
         filePath,
         source,
-        optiomns,
+        options,
         initialAST,
       );
       if (component) {

@@ -39,6 +39,7 @@
     "@mdx-js/loader": "^1.5.5",
     "@storybook/csf": "^0.0.1",
     "crypto": "^1.0.1",
+    "deepmerge": "^4.2.2",
     "hosted-git-info": "^3.0.4",
     "resolve": "^1.15.1",
     "prettier": "^1.19.1",

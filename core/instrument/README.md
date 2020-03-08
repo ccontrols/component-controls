@@ -67,7 +67,7 @@ Name | Type | Description |
 
 *Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)*
 
-### **defaultParserOptions**: ParserOptions
+### **defaultParserOptions**: *[ParserOptions](#parseroptions)*
 
 • **plugins**: *"typescript" | "jsx"[]* = ['jsx', 'typescript']
 
@@ -75,12 +75,23 @@ Name | Type | Description |
 
 ___
 
-### **defaultResolveOptions**: ResolverOptions
+### **defaultResolveOptions**: *[ResolverOptions](#resolveroptions)*
 
 • **extensions**: *string[]* = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.mjs', '.es', '.es6']
 
 ___
 
+### **defaultComponentOptions**: *[ComponentOptions](#componentoptions)*
+
+• **storeSourceFile**: *boolean* = true;
+
+___
+
+### **defaultStoriesOptions**: *[StoriesOptions](#storiesoptions)*
+
+• **storeSourceFile**: *boolean* = true;
+
+___
 
 # Interfaces
 
@@ -92,13 +103,18 @@ Options that can control the parsing and instrumentation process
 
 ### Properties
  
-• **component**? : *[ComponentOptions](#componentoptions)*
+• **components**? : *[ComponentOptions](#componentoptions)*
+
+Options for extracting stories information.
+
+• **stories**? : *[StoriesOptions](#storiesoptions)*
 
 Options for extracting component information.
 
+
 • **parser**? : *[ParserOptions](#parseroptions)*
 
-Options to control the babel parser.
+Options to control babel parser.
 
 • **prettier**? : *[PrettierOptions](#prettieroptions) | false*
 
@@ -106,7 +122,7 @@ prettier options are used to prettify the code at the end of the process
 this is useful for "story" code, where the story is extracted from the full file
 passing a value of false as prettier option will disabled prettifying
 
-• **resolve**? : *[ResolverOptions](#resolveroptions)*
+• **resolver**? : *[ResolverOptions](#resolveroptions)*
 
 Options to control resolving filenames.
 
@@ -122,7 +138,37 @@ Options for extracting component information.
 
 • **resolveFile**? : *undefined | `(componentName: string, filePath: string) => string | undefined;`*
 
-Callback function toresolve the source file name of a component. 
+Callback function to resolve the source file name of a component. 
+Return false if this file should not be processed.
+
+
+• **storeSourceFile**? : *boolean*
+
+If set to false, will not save the component's source file.
+
+
+• **package**? : *[PackageInfoOptions](#packageinfooptions) | false*
+
+Otions for extracting repository information from the component's package,json file.
+
+___
+
+## StoriesOptions
+
+Options for extracting stories information.
+
+*Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)*
+
+### Properties
+
+• **storeSourceFile**? : *boolean*
+
+If set to false, will not save the stories's source file, only the source of each individual story.
+
+
+• **package**? : *[PackageInfoOptions](#packageinfooptions) | false*
+
+Options for extracting repository information from the component's package,json file.
 
 ___
 
@@ -201,6 +247,7 @@ Defaults to true if sourceType === 'module'. Otherwise, false.
 
 Adds all parsed tokens to a tokens property on the File node.
 
+___
 
 # PrettierOptions
 
@@ -315,6 +362,7 @@ Whether or not to indent the code inside <script> and <style> tags in Vue files.
 
 Whether or not to indent the code inside <script> and <style> tags in Vue files.
 
+___
 
 # ResolvePrettierConfigOptions
 
@@ -342,7 +390,7 @@ the following EditorConfig properties are supported:
 • **useCache**? : *undefined | false | true*
 
 If set to `false`, all caching will be bypassed.
-
+___
 
 # ResolverOptions
 
@@ -396,3 +444,37 @@ algorithm does not preserve symlinks by default.
 • **readFileSync**? : *undefined | function*
 
 how to read files synchronously (defaults to fs.readFileSync)
+
+___
+
+## PackageInfoOptions
+
+Options for finding and extracting package.json informtation, applies both for components and stories.
+
+*Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)*
+
+### Properties
+
+• **maxLevels**? : *number*
+
+ Max levels of folders to look up to find the `package.json` file.
+
+
+• **packageJsonName**? : *string*
+
+`package.json` alternative name
+
+
+• **storeBrowseLink**? : *boolean*
+
+Whether to save the link for browsing the file in the repository field.
+
+
+• **storeDocsLink**? : *boolean*
+
+Whether to save the link for project readme file in the repository field.
+
+
+• **storeIssuesLink**? : *boolean*
+
+Whether to save the link for filing issues with the project in the repository field.

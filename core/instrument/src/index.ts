@@ -5,6 +5,7 @@ import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import prettier from 'prettier';
+import deepMerge from 'deepmerge';
 import parserBabel from 'prettier/parser-babylon';
 import {
   StoriesStore,
@@ -20,8 +21,14 @@ import { extractSotreComponent } from './babel/extract-component';
 import { packageInfo } from './project/packageInfo';
 import {
   InstrumentOptions,
+  ParserOptions,
   defaultParserOptions,
+  ResolveOptions,
   defaultResolveOptions,
+  ComponentOptions,
+  defaultComponentOptions,
+  StoriesOptions,
+  defaultStoriesOptions,
 } from './types';
 
 export * from './types';
@@ -44,23 +51,22 @@ const parseSource = async (
   options?: InstrumentOptions,
 ): Promise<StoriesStore> => {
   const {
-    parser: parserOptions,
-    prettier: prettierOptions,
-    resolve: resolveOptions,
-    component: componentOptions,
+    parser: parserOptions = {},
+    prettier: prettierOptions = {},
+    resolver: resolveOptions = {},
+    components: componentOptions = {},
+    stories: storiesOptions = {},
   } = options || {};
 
   const mergedOptions = {
-    parser: {
-      ...defaultParserOptions,
-      ...parserOptions,
-    },
-    resolve: {
-      ...defaultResolveOptions,
-      ...resolveOptions,
-    },
+    parser: deepMerge<ParserOptions>(defaultParserOptions, parserOptions),
+    resolve: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
     prettier: prettierOptions,
-    component: componentOptions,
+    components: deepMerge<ComponentOptions>(
+      defaultComponentOptions,
+      componentOptions,
+    ),
+    stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
   };
 
   const prettify = async (c: string): Promise<string> => {
@@ -96,7 +102,9 @@ const parseSource = async (
   traverse(ast, traverseFn(store));
   if (Object.keys(store.kinds).length > 0) {
     const kind = store.kinds[Object.keys(store.kinds)[0]];
-    kind.source = originalSource;
+    if (mergedOptions.stories.storeSourceFile) {
+      kind.source = originalSource;
+    }
     store.stories = Object.keys(store.stories).reduce(
       (acc: { [key: string]: Story }, name) => {
         const story: Story = store.stories[name];
@@ -117,7 +125,11 @@ const parseSource = async (
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
-    const repository = await packageInfo(filePath);
+
+    const repository = await packageInfo(
+      filePath,
+      mergedOptions.stories?.package,
+    );
     if (repository) {
       kind.repository = repository;
     }

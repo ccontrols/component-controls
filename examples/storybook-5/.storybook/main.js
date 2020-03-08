@@ -45,7 +45,14 @@ module.exports = {
             type: 'csf',
             prettier: {
               tabWidth: 4,
-            }
+            },
+            components: {
+              storeSourceFile: true, //false
+            },
+            stories: {
+              storeSourceFile: true, //false
+            },
+
           },
         },
         {

@@ -30,11 +30,11 @@ export const followImports = (
   options?: InstrumentOptions,
   initialAST?: File,
 ): FollowImportType | undefined => {
-  const { parser: parserOptions, resolve: resolveOptions, component } =
+  const { parser: parserOptions, resolver: resolveOptions, components } =
     options || {};
   const fileName =
-    component && component.resolveFile
-      ? component.resolveFile(importName, filePath)
+    components && components.resolveFile
+      ? components.resolveFile(importName, filePath)
       : filePath;
   if (!fileName) {
     return undefined;

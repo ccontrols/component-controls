@@ -6,6 +6,7 @@ import hostedGitInfo from 'hosted-git-info';
 //@ts-ignore
 import parseRepositoryURL from '@hutson/parse-repository-url';
 import { Repository } from '@component-controls/specification';
+import { PackageInfoOptions } from '../types';
 
 const traverseFolder = (
   filePath: string,
@@ -27,20 +28,18 @@ const traverseFolder = (
   );
 };
 
-export interface FindPackageJsonOptions {
-  maxLevels?: number;
-  packageJsonName?: string;
-}
-
 const getPackageJson = async (
   filePath?: string,
-  opts?: FindPackageJsonOptions,
+  opts?: PackageInfoOptions | false,
 ): Promise<{
   fileName: string;
   packageJSON: { [key: string]: any };
 } | null> => {
   return new Promise((resolve, reject) => {
     if (!filePath) {
+      return resolve(null);
+    }
+    if (opts === false) {
       return resolve(null);
     }
     const fileName = traverseFolder(
@@ -66,7 +65,7 @@ export interface PackageInfoReturnType {
 
 export const packageInfo = async (
   filePath?: string,
-  opts?: FindPackageJsonOptions,
+  opts?: PackageInfoOptions | false,
 ): Promise<Repository | undefined> => {
   if (filePath) {
     const { fileName, packageJSON } =
@@ -100,12 +99,18 @@ export const packageInfo = async (
             )
             .replace('{committish}', templates.committish || 'master');
         };
-
-        return {
-          browse: fillTemplate(templates.browsefiletemplate),
-          docs: fillTemplate(templates.docstemplate),
-          issues: fillTemplate(templates.bugstemplate),
-        };
+        const result: Repository = {};
+        const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
+        if (storeBrowseLink) {
+          result.browse = fillTemplate(templates.browsefiletemplate);
+        }
+        if (storeDocsLink) {
+          result.docs = fillTemplate(templates.docstemplate);
+        }
+        if (storeIssuesLink) {
+          result.issues = fillTemplate(templates.bugstemplate);
+        }
+        return result;
       }
     }
   }

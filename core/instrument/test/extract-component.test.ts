@@ -6,8 +6,14 @@ describe('extract-component', () => {
   loadTestFiles(async (fileName: string) => {
     return await extractComponent('Button', fileName, undefined, {
       parser: defaultParserOptions,
-      resolve: defaultResolveOptions,
-      component: {
+      resolver: defaultResolveOptions,
+      components: {
+        storeSourceFile: true,
+        package: {
+          storeBrowseLink: true,
+          storeDocsLink: true,
+          storeIssuesLink: true,
+        },
         resolveFile: (componentName: string, filePath: string) => {
           if (filePath.includes('/theme-ui/dist')) {
             return `${

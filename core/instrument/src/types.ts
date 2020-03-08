@@ -19,13 +19,92 @@ export const defaultParserOptions: ParserOptions = {
   plugins: ['jsx', 'typescript'],
 };
 
-export interface ComponentOptions {
-  resolveFile?: (componentName: string, filePath: string) => string | undefined;
+export const defaultPackageOptions: PackageInfoOptions = {
+  maxLevels: 10,
+  packageJsonName: 'package.json',
+  storeBrowseLink: true,
+  storeDocsLink: true,
+  storeIssuesLink: true,
+};
+
+export const defaultComponentOptions: ComponentOptions = {
+  storeSourceFile: true,
+  package: defaultPackageOptions,
+};
+
+export const defaultStoriesOptions: StoriesOptions = {
+  storeSourceFile: true,
+  package: defaultPackageOptions,
+};
+
+/**
+ * options for finding and extracting package.json informtation
+ * applies both for components and stories
+ */
+export interface PackageInfoOptions {
+  /**
+   * max levels of folders to look up to find the package.json file
+   */
+  maxLevels?: number;
+  /**
+   * package.json alternative name
+   */
+  packageJsonName?: string;
+
+  /**
+   * Whether to save the link for browsing the file in the repository field
+   */
+  storeBrowseLink?: boolean;
+
+  /**
+   * Whether to save the link for project readme file in the repository field
+   */
+  storeDocsLink?: boolean;
+
+  /**
+   * Whether to save the link for filing issues with the project in the repository field
+   */
+
+  storeIssuesLink?: boolean;
 }
+
+export interface ComponentOptions {
+  /**
+   * Callback function to resolve the source file name of a component.
+   * Return false if this file should not be processed.
+   */
+  resolveFile?: (componentName: string, filePath: string) => string | undefined;
+
+  /**
+   * If set to false, will not save the component's source file
+   */
+  storeSourceFile?: boolean;
+
+  /**
+   * options for extracting repository information from the component's package,json file
+   */
+  package?: PackageInfoOptions | false;
+}
+
+export interface StoriesOptions {
+  /**
+   * If set to false, will not save the stories's source file, only the source of each individual story
+   */
+  storeSourceFile?: boolean;
+
+  /**
+   * options for extracting repository information from the component's package,json file
+   */
+  package?: PackageInfoOptions | false;
+}
+
 /**
  * Options passed for instrumenting
  */
 export interface InstrumentOptions {
+  /**
+   * Options to control babel parser.
+   */
   parser?: ParserOptions;
   /**
    * prettier options are used to prettify the code at the end of the process
@@ -33,6 +112,19 @@ export interface InstrumentOptions {
    * fassing a value of false as prettier option will disabled prettifying
    */
   prettier?: PrettierOptions | false;
-  resolve?: ResolveOptions;
-  component?: ComponentOptions;
+
+  /**
+   * Options to control the `resolve` import resolving utilities.
+   */
+  resolver?: ResolveOptions;
+
+  /**
+   * Options for extracting components information.
+   */
+  components?: ComponentOptions;
+
+  /**
+   * Options for extracting stories information.
+   */
+  stories?: StoriesOptions;
 }
