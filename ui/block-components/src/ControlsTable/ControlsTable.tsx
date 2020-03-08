@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Box } from 'theme-ui';
 import React, { FC, MouseEvent } from 'react';
 import { window, document } from 'global';
 import styled from '@emotion/styled';
@@ -159,22 +161,28 @@ export const ControlsTable: FC<ControlsTableProps & {
     ];
     return (
       <BlockContainer actions={actionItems} title={title}>
-        {groupedItems.length === 1 ? (
-          <PropGroupTable {...props} controls={groupedItems[0].controls} />
-        ) : (
-          <Tabs>
-            <TabList>
+        <Box
+          sx={{
+            pt: 4,
+          }}
+        >
+          {groupedItems.length === 1 ? (
+            <PropGroupTable {...props} controls={groupedItems[0].controls} />
+          ) : (
+            <Tabs>
+              <TabList>
+                {groupedItems.map(item => (
+                  <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                ))}
+              </TabList>
               {groupedItems.map(item => (
-                <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                <TabPanel key={`tab_panel_${item.label}`}>
+                  <PropGroupTable {...props} controls={item.controls} />
+                </TabPanel>
               ))}
-            </TabList>
-            {groupedItems.map(item => (
-              <TabPanel key={`tab_panel_${item.label}`}>
-                <PropGroupTable {...props} controls={item.controls} />
-              </TabPanel>
-            ))}
-          </Tabs>
-        )}
+            </Tabs>
+          )}
+        </Box>
       </BlockContainer>
     );
   }

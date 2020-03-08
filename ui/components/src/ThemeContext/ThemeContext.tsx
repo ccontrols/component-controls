@@ -32,7 +32,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         padding: '16px 20px',
       },
       tr: {
-        borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
       },
     },
     buttons: {
@@ -48,6 +48,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     },
     colors: {
       ...polaris.colors,
+      highlight: '#339793',
       accent: '#1EA7FD',
       fadedText: lighten(0.25, polaris.colors.text),
       lightenPrimary: '#F6F9FC',

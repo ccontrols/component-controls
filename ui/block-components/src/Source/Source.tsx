@@ -74,7 +74,7 @@ export const Source: FC<SourceProps> = ({
       : ({ className, style, tokens, getLineProps, getTokenProps }: any) => (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '10px 10px', margin: 0 }}
+            style={{ ...style, padding: '26px 10px 10px', margin: 0 }}
           >
             {tokens.map((line: string[], i: number) => (
               <div {...getLineProps({ line, key: i })}>

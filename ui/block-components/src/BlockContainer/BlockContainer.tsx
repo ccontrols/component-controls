@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, Box } from 'theme-ui';
 import styled from '@emotion/styled';
 import { Subtitle } from '../Subtitle';
 import { ActionBar, ActionItem } from '@component-controls/components';
@@ -31,7 +33,9 @@ export const BlockContainer: FC<BlockContainerProps> = ({
 }) => (
   <SpacedBlockContainer>
     {title && <Subtitle>{title}</Subtitle>}
-    {actions && <ActionBar actionItems={actions} />}
-    <FramedBlockContainer>{children}</FramedBlockContainer>
+    <Box>
+      {actions && <ActionBar actionItems={actions} />}
+      <FramedBlockContainer>{children}</FramedBlockContainer>
+    </Box>
   </SpacedBlockContainer>
 );

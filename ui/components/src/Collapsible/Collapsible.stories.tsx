@@ -1,20 +1,36 @@
 import React from 'react';
 import { Box, Button } from 'theme-ui';
-import { Collapsible } from './Collapsible';
+import { Collapsible, CollapsibleProps } from './Collapsible';
 
 export default {
   title: 'Components/Collapsible',
   component: Collapsible,
 };
 
-export const simple = () => {
+export const simple = ({ easing }: CollapsibleProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Box>
       <Button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? 'close' : 'open'}
       </Button>
-      <Collapsible isOpen={isOpen}>content</Collapsible>
+      <Collapsible isOpen={isOpen} easing={easing}>
+        content
+      </Collapsible>
     </Box>
   );
+};
+
+simple.story = {
+  parameters: {
+    addonControls: {
+      smart: false,
+    },
+    controls: {
+      easing: {
+        type: 'options',
+        options: ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'],
+      },
+    },
+  },
 };

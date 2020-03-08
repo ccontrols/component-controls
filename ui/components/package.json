@@ -34,7 +34,8 @@
     "react-dom": "^16.8.3",
     "react-popper-tooltip": "^2.10.1",
     "react-tabs": "^3.1.0",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "@theme-ui/presets": "^0.3.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",

@@ -5,7 +5,7 @@ import {
   SourceProps,
 } from '@component-controls/block-components';
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export type ComponentSourceProps = StoryInputProps & SourceProps;
