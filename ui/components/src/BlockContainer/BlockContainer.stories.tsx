@@ -3,7 +3,7 @@ import { Donut } from 'theme-ui';
 import { BlockContainer, BlockContainerProps } from './BlockContainer';
 
 export default {
-  title: 'Blocks/Components/BlockContainer',
+  title: 'Components/BlockContainer',
   component: BlockContainer,
 };
 

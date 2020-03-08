@@ -2,7 +2,7 @@ import React from 'react';
 import { Markdown } from './Markdown';
 
 export default {
-  title: 'Blocks/Components/Markdown',
+  title: 'Components/Markdown',
   component: Markdown,
 };
 

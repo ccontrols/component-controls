@@ -1,16 +1,10 @@
 import React, { FC } from 'react';
-import styled from '@emotion/styled';
-import { Heading, HeadingProps, Theme } from 'theme-ui';
-
-const StyledHeading = styled(Heading)<{ theme?: Theme }>(({ theme }) => ({
-  fontWeight: 400,
-  paddingBottom: `${theme?.space?.[3]}px`,
-}));
+import { Heading, HeadingProps } from 'theme-ui';
 
 export type SubtitleProps = HeadingProps;
 
 export const Subtitle: FC<SubtitleProps> = ({ children, ...rest }) => (
-  <StyledHeading as="h3" color="fadedText" {...rest}>
+  <Heading as="h3" color="fadedText" css={{ fontWeight: 400 }} {...rest}>
     {children}
-  </StyledHeading>
+  </Heading>
 );

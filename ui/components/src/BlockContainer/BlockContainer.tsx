@@ -1,8 +1,14 @@
 /** @jsx jsx */
-import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import React, { FC } from 'react';
+import { jsx, Box, Flex, Link, Divider } from 'theme-ui';
+import Octicon, {
+  Link as LinkIcon,
+  ChevronRight,
+  ChevronDown,
+} from '@primer/octicons-react';
 import styled from '@emotion/styled';
 import { Subtitle } from '../Subtitle';
+import { Collapsible } from '../Collapsible';
 import { ActionBar, ActionItem } from '../ActionBar';
 
 const SpacedBlockContainer = styled.div(() => ({
@@ -26,16 +32,66 @@ export interface BlockContainerProps {
    */
   actions?: ActionItem[];
 }
+
 export const BlockContainer: FC<BlockContainerProps> = ({
   children,
   title,
   actions,
-}) => (
-  <SpacedBlockContainer>
-    {title && <Subtitle>{title}</Subtitle>}
-    <Box>
-      {actions && <ActionBar actionItems={actions} />}
-      <FramedBlockContainer>{children}</FramedBlockContainer>
-    </Box>
-  </SpacedBlockContainer>
-);
+}) => {
+  const [isOpen, setIsOpen] = React.useState(true);
+  const id = title ? title.toLowerCase().replace(/\s/g, '-') : undefined;
+  //workaround for storybook iframe url
+  const url =
+    (window.location != window.parent.location
+      ? document.referrer
+      : document.location.href) || '';
+  return (
+    <SpacedBlockContainer id={id}>
+      <Flex
+        sx={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          pb: 2,
+          ':hover': {
+            a: {
+              visibility: 'visible',
+            },
+          },
+        }}
+      >
+        {id && (
+          <Link
+            sx={{
+              position: 'absolute',
+              left: -4,
+              px: 2,
+              visibility: 'hidden',
+              ':hover': {
+                visibility: 'visible',
+              },
+            }}
+            href={`${url.split('#')[0]}#${id}`}
+          >
+            <Octicon icon={LinkIcon} />
+          </Link>
+        )}
+
+        {title && <Subtitle css={{ paddingRight: 10 }}>{title}</Subtitle>}
+        <Link
+          aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
+          css={{
+            cursor: 'pointer',
+          }}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
+        </Link>
+      </Flex>
+      <Collapsible isOpen={isOpen}>
+        {actions && <ActionBar actionItems={actions} />}
+        <FramedBlockContainer>{children}</FramedBlockContainer>
+      </Collapsible>
+      {!isOpen && <Divider />}
+    </SpacedBlockContainer>
+  );
+};
