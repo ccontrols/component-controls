@@ -19,8 +19,10 @@ export interface FollowImportType {
   from: string;
   filePath?: string;
   originalFilePath?: string;
+  importedName?: string;
   loc?: CodeLocation;
   source?: string;
+  imported?: string;
 }
 
 export const followImports = (
@@ -118,11 +120,23 @@ export const followImports = (
         options,
       );
       return imported
-        ? { ...imported, from: findImport.from }
-        : { exportedAs: findImport.importedName, from: findImport.from };
+        ? {
+            ...imported,
+            importedName: findImport.importedName,
+            from: findImport.from,
+          }
+        : {
+            exportedAs: findImport.importedName,
+            importedName: findImport.importedName,
+            from: findImport.from,
+          };
     } catch (e) {
       //non-existing file
-      return { exportedAs: findImport.importedName, from: findImport.from };
+      return {
+        exportedAs: findImport.importedName,
+        importedName: findImport.importedName,
+        from: findImport.from,
+      };
     }
   }
   return undefined;

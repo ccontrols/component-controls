@@ -143,17 +143,6 @@ const parseSource = async (
     );
   }
   */
-  const componentNames = Object.keys(store.components);
-  for (let i = 0; i < componentNames.length; i += 1) {
-    const component = store.components[componentNames[i]];
-    if (component.from) {
-      component.import = await prettify(
-        component.imported
-          ? `import { ${component.name} } from '${component.from}';`
-          : `import ${component.name} from '${component.from}';`,
-      );
-    }
-  }
   Object.keys(store.stories).forEach((key: string) => {
     const story: Story = store.stories[key];
     story.source = getASTSource(source, story.loc);

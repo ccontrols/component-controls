@@ -44,8 +44,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../components/BaseButton",
-      "import": "import Button from '../components/BaseButton';
-",
+      "importedName": "default",
       "loc": undefined,
       "name": "Button",
       "repository": undefined,
@@ -128,8 +127,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../../components/button-default-arrow-func",
-      "import": "import Button from '../../components/button-default-arrow-func';
-",
+      "importedName": "default",
       "loc": Object {
         "end": Object {
           "column": 65,
@@ -216,8 +214,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../components/BaseButton",
-      "import": "import Button from '../components/BaseButton';
-",
+      "importedName": "default",
       "loc": undefined,
       "name": "Button",
       "repository": undefined,
@@ -362,8 +359,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../components/BaseButton",
-      "import": "import Button from '../components/BaseButton';
-",
+      "importedName": "default",
       "loc": undefined,
       "name": "Button",
       "repository": undefined,
@@ -474,8 +470,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../components/BaseButton",
-      "import": "import Button from '../components/BaseButton';
-",
+      "importedName": "default",
       "loc": undefined,
       "name": "Button",
       "repository": undefined,
@@ -571,8 +566,7 @@ Object {
   "components": Object {
     "Button": Object {
       "from": "../components/BaseButton",
-      "import": "import Button from '../components/BaseButton';
-",
+      "importedName": "default",
       "loc": undefined,
       "name": "Button",
       "repository": undefined,

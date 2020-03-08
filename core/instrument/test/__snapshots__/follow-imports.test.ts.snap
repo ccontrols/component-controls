@@ -164,6 +164,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
   "from": "../exports/cjs-named-export",
+  "importedName": "Button",
   "loc": Object {
     "end": Object {
       "column": 23,
@@ -385,6 +386,7 @@ Object {
   "exportedAs": "default",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
   "from": "./button-default-export",
+  "importedName": "default",
   "loc": Object {
     "end": Object {
       "column": 24,
@@ -427,6 +429,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
   "from": "./",
+  "importedName": "Button",
   "loc": Object {
     "end": Object {
       "column": 30,
@@ -448,6 +451,7 @@ Object {
   "exportedAs": "default",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
   "from": "./button-default-export",
+  "importedName": "namespace",
   "loc": Object {
     "end": Object {
       "column": 24,

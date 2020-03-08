@@ -72,19 +72,18 @@ export interface StoryComponent {
    */
   name: string;
   /**
-   * imported name ex: import { Btn as Button } from 'buttons';
+   * imported name ex:
+   * - default import import Button from 'buttons';
+   * - namespace import import * as Button from 'buttons';
+   * - named import import { Button } from 'buttons';
+   * - named alias import import { Btn as Button } from 'buttons';
    */
-  imported?: string;
+  importedName?: 'default' | 'namespace' | string;
 
   /**
    * imported from
    */
   from?: string;
-
-  /**
-   * import string for the component
-   */
-  import?: string;
 
   /**
    * resolved import request

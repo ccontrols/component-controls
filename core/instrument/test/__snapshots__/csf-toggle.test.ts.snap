@@ -5,8 +5,7 @@ Object {
   "components": Object {
     "Toggle": Object {
       "from": "./Toggle",
-      "import": "import Toggle from './Toggle';
-",
+      "importedName": "Toggle",
       "loc": undefined,
       "name": "Toggle",
       "repository": undefined,

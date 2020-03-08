@@ -56,6 +56,7 @@ export const extractComponent = async (
         from: follow.from,
         request: follow.filePath,
         loc: follow.loc,
+        importedName: follow.importedName,
         source: components?.storeSourceFile ? follow.source : undefined,
         repository: await packageInfo(
           follow.originalFilePath,

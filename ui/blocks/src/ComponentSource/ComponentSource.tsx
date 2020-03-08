@@ -20,7 +20,15 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
     id,
     name,
   });
-  const source = component && component.import;
+  let source;
+  const { from, importedName, name: componentName } = component || {};
+  if (from) {
+    source =
+      importedName !== 'default' && importedName !== 'namespace'
+        ? `import { ${componentName} } from '${from}';`
+        : `import ${componentName} from '${from}';`;
+  }
+
   if (!source) {
     return null;
   }
