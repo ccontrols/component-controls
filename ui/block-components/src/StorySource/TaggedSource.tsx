@@ -8,7 +8,7 @@ import {
 } from '@component-controls/specification';
 import { Styled } from 'theme-ui';
 import { transparentize } from 'polished';
-import { Source, SourceProps } from '../Source';
+import { Source, SourceProps } from '@component-controls/components';
 
 interface ArgumentLocations {
   name: string;
@@ -73,7 +73,7 @@ export const TaggedSource: React.FC<TaggedSourceProps> = ({
         return (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '26px 10px 10px', margin: 0 }}
+            style={{ ...style, padding: '16px 10px 10px', margin: 0 }}
           >
             {tokens.map((line, i: number) => (
               <div {...getLineProps({ line, key: i })}>

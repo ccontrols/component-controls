@@ -5,6 +5,7 @@ export * from './ExternalLink';
 export * from './FlexContainer';
 export * from './Markdown';
 export * from './Popover';
+export * from './Source';
 export * from './Subtitle';
 export * from './Tabs';
 export * from './ThemeContext';

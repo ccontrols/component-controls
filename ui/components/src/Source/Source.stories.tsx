@@ -3,7 +3,7 @@ import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import { Source, SourceProps } from './Source';
 
 export default {
-  title: 'Blocks/Components/Source',
+  title: 'Components/Source',
   component: Source,
 };
 

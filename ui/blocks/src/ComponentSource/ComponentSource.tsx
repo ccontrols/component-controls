@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { ActionItem } from '@component-controls/components';
+import { useControlsContext, StoryInputProps } from '../BlocksContext';
 import {
+  ThemeContext,
   Source as SourceBlock,
   SourceProps,
-} from '@component-controls/block-components';
-import { useControlsContext, StoryInputProps } from '../BlocksContext';
-import { ThemeContext } from '@component-controls/components';
+} from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export type ComponentSourceProps = StoryInputProps & SourceProps;

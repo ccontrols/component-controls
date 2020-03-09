@@ -29,9 +29,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/react": "^1.5.7",
     "@primer/octicons-react": "^9.5.0",
+    "copy-to-clipboard": "^3.2.1",
     "markdown-to-jsx": "^6.11.0",
+    "prism-react-renderer": "^1.0.2",
     "react": "^16.8.3",
     "react-animate-height": "^2.0.20",
     "react-dom": "^16.8.3",

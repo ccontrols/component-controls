@@ -1,9 +1,8 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
-import React, { FC, MouseEvent } from 'react';
-import { Styled } from 'theme-ui';
-import copy from 'copy-to-clipboard';
+import React, { FC } from 'react';
+import { Styled, Box } from 'theme-ui';
 import Highlight, {
   defaultProps,
   PrismTheme,
@@ -12,18 +11,13 @@ import Highlight, {
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
 import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 
-import {
-  BlockContainer,
-  BlockContainerProps,
-} from '@component-controls/components';
-
 type RenderProps = Parameters<Highlight['props']['children']>[0];
 
-export interface SourceOwnProps {
+export interface SyntaxHighlighterProps {
   /**
-   * source code to display
+   * source code to be displayed
    */
-  children?: string;
+  children: React.ReactNode;
   /**
    * optional theme provided to the component
    */
@@ -43,33 +37,36 @@ export interface SourceOwnProps {
    * used to specify a "dark" color theme - applcable only if no custom theme prop is provided
    */
   dark?: boolean;
+
+  /**
+   * css styles for the container
+   */
+  style?: React.CSSProperties;
+
+  /**
+   * syntax container as element
+   */
+  as?: React.ElementType;
 }
 
-export type SourceProps = SourceOwnProps & BlockContainerProps;
 /**
- * Source component used to display source code
- *
+ * Syntax highlighter component
  */
-export const Source: FC<SourceProps> = ({
+export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
   children = '',
   language = 'jsx',
   theme: customTheme,
   renderFn,
-  actions,
   dark = false,
-  title,
+  style: propStyle,
+  as = 'span',
 }) => {
-  const [copied, setCopied] = React.useState(false);
-  const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setCopied(true);
-    copy(children);
-    window.setTimeout(() => setCopied(false), 1500);
-  };
+  if (typeof children !== 'string') {
+    console.error(
+      'Invalid children roperty passed to Source: must be a string',
+    );
+  }
 
-  const actionsItems = Array.isArray(actions) ? [...actions] : [];
-
-  actionsItems.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
   const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
   const renderProps =
     typeof renderFn === 'function'
@@ -77,27 +74,31 @@ export const Source: FC<SourceProps> = ({
       : ({ className, style, tokens, getLineProps, getTokenProps }: any) => (
           <Styled.pre
             className={`${className}`}
-            style={{ ...style, padding: '26px 10px 10px', margin: 0 }}
+            style={{
+              ...style,
+              padding: '3px 5px',
+              display: 'inline',
+              margin: 0,
+              ...propStyle,
+            }}
           >
             {tokens.map((line: string[], i: number) => (
-              <div {...getLineProps({ line, key: i })}>
+              <Box as={as} {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
                   <span
                     {...getTokenProps({ token, key })}
                     sx={{ display: 'inline-block' }}
                   />
                 ))}
-              </div>
+              </Box>
             ))}
           </Styled.pre>
         );
   const props = { ...defaultProps, theme };
 
   return (
-    <BlockContainer actions={actionsItems} title={title}>
-      <Highlight {...props} code={children} language={language}>
-        {renderProps}
-      </Highlight>
-    </BlockContainer>
+    <Highlight {...props} code={children as string} language={language}>
+      {renderProps}
+    </Highlight>
   );
 };
