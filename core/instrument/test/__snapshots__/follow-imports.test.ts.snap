@@ -10,11 +10,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 91,
+      "line": 92,
     },
     "start": Object {
       "column": 28,
-      "line": 42,
+      "line": 43,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -29,6 +29,7 @@ var blocks = require('@component-controls/blocks');
 var blocks$1 = require('@storybook/addon-docs/blocks');
 require('polished');
 require('@storybook/theming');
+require('@component-controls/components');
 var ThemeProvider = require('./ThemeProvider.js');
 var tslib = require('tslib');
 var coreEvents = require('@storybook/core-events');
@@ -232,11 +233,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 91,
+      "line": 92,
     },
     "start": Object {
       "column": 28,
-      "line": 42,
+      "line": 43,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -251,6 +252,7 @@ var blocks = require('@component-controls/blocks');
 var blocks$1 = require('@storybook/addon-docs/blocks');
 require('polished');
 require('@storybook/theming');
+require('@component-controls/components');
 var ThemeProvider = require('./ThemeProvider.js');
 var tslib = require('tslib');
 var coreEvents = require('@storybook/core-events');

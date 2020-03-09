@@ -1,1 +1,1 @@
-import { Subtitle as Button } from '@component-controls/block-components';
+import { Subtitle as Button } from '@component-controls/components';
