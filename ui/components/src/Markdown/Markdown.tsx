@@ -4,7 +4,13 @@ import MarkdownToJSX, { MarkdownOptions } from 'markdown-to-jsx';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 
 export interface MarkdownProps {
+  /**
+   * the markdown code is passed as a children prop
+   */
   children: string;
+  /**
+   * components to customize the markdown display
+   */
   components?: MarkdownOptions['overrides'];
 }
 

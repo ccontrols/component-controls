@@ -80,6 +80,11 @@ export const Arrow = styled.div<{ placement: string; borderColor: string }>(
   }),
 );
 
+/**
+ * A Popover container that is triggered by a click, or hover
+ * used to display enhanced information that could not fit into the main scren
+ *
+ */
 export const Popover: FC<PopoverProps> = ({
   trigger,
   placement = 'bottom',
