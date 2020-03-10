@@ -1,17 +1,54 @@
 import { CodeLocation, Repository } from './utility';
 
+export type TypeValue =
+  | 'any'
+  | 'boolean'
+  | 'number'
+  | 'string'
+  | 'array'
+  | 'object'
+  | 'enum'
+  | 'union'
+  | 'literal'
+  | 'symbol'
+  | 'function'
+  | string;
+
+export interface TypeInformatiom {
+  name: TypeValue;
+
+  /**
+   * type value
+   * elements of enum, array, fields of object
+   * return value of function
+   */
+  value?: TypeInformatiom[] | any;
+
+  /**
+   * raw type code
+   */
+  raw?: string;
+
+  /**
+   * argument types of function
+   */
+  arguments?: TypeInformatiom[] | any;
+}
+
 /**
  * docgen generated property types
+ * mapped to common types to be consumed by component-controls
+ * check props-info packages for implementations
  */
 export interface PropType {
   /**
    * default value for the property
    */
-  defaultValue: { value?: string | boolean; computed: boolean };
+  defaultValue?: any;
   /**
    * propertty type
    */
-  type: { name?: string };
+  type: TypeInformatiom;
   /**
    * is the property required
    */
@@ -19,21 +56,11 @@ export interface PropType {
   /**
    * description of the property
    */
-  description: string;
+  description?: string;
   /**
-   * where was the propetyy declared
+   * name of the parent/inherited property
    */
-  parent?: {
-    /**
-     * file name where the parent property was declared
-     */
-    fileName: string;
-
-    /**
-     * name of the parent/inherited property
-     */
-    name: string;
-  };
+  parentName?: string;
 }
 
 /**

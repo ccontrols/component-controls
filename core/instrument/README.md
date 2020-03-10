@@ -49,7 +49,7 @@ ___
 
 ### parseMDX
 
-▸ **parseMDX**(`source`: string, `filePath`: string, `options?`: [InstrumentOptions](#instrumentoptions)): *Promise‹StoriesStore›*
+▸ **parseMDX**(`source`: string, `filePath`: string, `optionsMDX?`: [InstrumentOptionsMDX](#instrumentoptionsmdx)): *Promise‹StoriesStore›*
 
 Parse and instrument an MDX file of stories
 
@@ -59,7 +59,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `source` | string | Source of the file to be instrumented |
 `filePath` | string | Resolved file path name. |
-`options?` | [InstrumentOptions](#instrumentoptions) | Instrumenting options  |
+`optionsMDX?` | [InstrumentOptionsMDX](#instrumentoptionsmdx) | Instrumenting options  |
 
 **Returns:** *Promise‹StoriesStore›*
 
@@ -125,6 +125,19 @@ passing a value of false as prettier option will disabled prettifying
 • **resolver**? : *[ResolverOptions](#resolveroptions)*
 
 Options to control resolving filenames.
+
+___
+
+## InstrumentOptionsMDX
+
+extends [InstrumentOptions](#instrumentoptions)) and adds options for `mdx-js`.
+
+### Properties
+
+• **mdx**? : *[MDXOptions](#mdxoptions)*
+
+Options for mdx-js compiling
+
 
 ___
 
@@ -444,6 +457,39 @@ algorithm does not preserve symlinks by default.
 • **readFileSync**? : *undefined | function*
 
 how to read files synchronously (defaults to fs.readFileSync)
+
+___
+
+# MDXOptions
+
+Options to control `mdx-js`.
+
+*Defined in [@types/resolve/index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/82af14cb371792e3f98e9f10b176de8cf78fd858/types/resolve/index.d.ts#L104)*
+
+
+• **footnotes**? : *boolean*
+
+enable footnotes
+
+
+• **mdPlugins**? : *any[]*
+
+specify remark plugins
+
+
+• **hastPlugins**? : *any[]*
+
+specify rehype plugins
+
+
+• **compilers**? : *any[]*
+
+specify markdown compilers
+
+
+• **blocks**? : *string[]*
+
+regex for blocks, defaults to ['[a-z\\.]+(\\.){0,1}[a-z\\.]']
 
 ___
 

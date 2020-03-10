@@ -128,3 +128,38 @@ export interface InstrumentOptions {
    */
   stories?: StoriesOptions;
 }
+
+/**
+ * mdx-js options
+ */
+export interface MDXOptions {
+  /**
+   * enable footnotes
+   */
+
+  footnotes?: boolean;
+  /**
+   * specify remark plugins
+   */
+  mdPlugins?: any[];
+  /**
+   * specify rehype plugins
+   */
+  hastPlugins?: any[];
+  /**
+   * specify markdown compilers
+   */
+  compilers?: any[];
+
+  /**
+   * regex for blocks, defaults to ['[a-z\\.]+(\\.){0,1}[a-z\\.]']
+   */
+  blocks?: string[];
+}
+
+/**
+ * instrument MDX has additional mdx options
+ */
+export interface InstrumentOptionsMDX extends InstrumentOptions {
+  mdx?: MDXOptions;
+}

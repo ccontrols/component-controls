@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`typescript full.tsx 1`] = `
+Object {
+  "description": "General component description.",
+  "displayName": "MyComponent",
+  "methods": Array [],
+  "props": Object {
+    "optionalArray": Object {
+      "description": "You can declare that a prop is a specific JS primitive. By default, these
+are all optional.",
+      "type": Object {
+        "name": "array",
+        "value": Array [
+          Object {
+            "name": "any",
+          },
+        ],
+      },
+    },
+    "optionalArrayOf": Object {
+      "description": "An array of a certain type",
+      "type": Object {
+        "name": "array",
+        "value": Array [
+          Object {
+            "name": "number",
+          },
+        ],
+      },
+    },
+    "optionalBool": Object {
+      "type": Object {
+        "name": "boolean",
+      },
+    },
+    "optionalElement": Object {
+      "description": "A React element (ie. <MyComponent />).",
+      "type": Object {
+        "name": "ReactReactElement",
+        "raw": "React.ReactElement",
+      },
+    },
+    "optionalElementType": Object {
+      "description": "A React element type (ie. MyComponent).",
+      "type": Object {
+        "name": "JSX.Element",
+      },
+    },
+    "optionalEnum": Object {
+      "description": "You can ensure that your prop is limited to specific values by treating
+it as an enum.",
+      "type": Object {
+        "elements": Array [
+          Object {
+            "name": "literal",
+            "value": "'News'",
+          },
+          Object {
+            "name": "literal",
+            "value": "'Photos'",
+          },
+        ],
+        "name": "union",
+        "raw": "'News' | 'Photos'",
+      },
+    },
+    "optionalFunc": Object {
+      "type": Object {
+        "arguments": Array [
+          Object {
+            "name": "args",
+            "type": Object {
+              "name": "any",
+            },
+          },
+        ],
+        "name": "function",
+        "value": Object {
+          "name": "any",
+        },
+      },
+    },
+    "optionalMessage": Object {
+      "description": "You can also declare that a prop is an instance of a class. This uses
+JS's instanceof operator.",
+      "type": Object {
+        "name": "Message",
+      },
+    },
+    "optionalNode": Object {
+      "description": "Anything that can be rendered: numbers, strings, elements or an array
+(or fragment) containing these types.",
+      "type": Object {
+        "name": "ReactReactNode",
+        "raw": "React.ReactNode",
+      },
+    },
+    "optionalNumber": Object {
+      "defaultValue": "21",
+      "type": Object {
+        "name": "number",
+      },
+    },
+    "optionalObject": Object {
+      "type": Object {
+        "name": "object",
+      },
+    },
+    "optionalObjectOf": Object {
+      "description": "An object with property values of a certain type",
+      "type": Object {
+        "name": "object",
+        "value": Array [
+          Object {
+            "key": Object {
+              "name": "string",
+            },
+            "value": Object {
+              "name": "number",
+              "required": true,
+            },
+          },
+        ],
+      },
+    },
+    "optionalObjectWithShape": Object {
+      "description": "You can chain any of the above with \`isRequired\` to make sure a warning
+is shown if the prop isn't provided.
+An object taking on a particular shape",
+      "type": Object {
+        "name": "object",
+        "value": Array [
+          Object {
+            "key": "optionalProperty",
+            "value": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          Object {
+            "key": "requiredProperty",
+            "value": Object {
+              "name": "number",
+              "required": true,
+            },
+          },
+        ],
+      },
+    },
+    "optionalObjectWithStrictShape": Object {
+      "description": "An object with warnings on extra properties",
+      "type": Object {
+        "name": "object",
+        "value": Array [
+          Object {
+            "key": "optionalProperty",
+            "value": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          Object {
+            "key": "requiredProperty",
+            "value": Object {
+              "name": "number",
+              "required": true,
+            },
+          },
+        ],
+      },
+    },
+    "optionalString": Object {
+      "type": Object {
+        "name": "string",
+      },
+    },
+    "optionalSymbol": Object {
+      "type": Object {
+        "name": "symbol",
+      },
+    },
+    "optionalUnion": Object {
+      "description": "An object that could be one of many types",
+      "type": Object {
+        "elements": Array [
+          Object {
+            "name": "string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "Message",
+          },
+        ],
+        "name": "union",
+        "raw": "string | number | Message",
+      },
+    },
+    "requiredAny": Object {
+      "description": "A value of any data type",
+      "required": true,
+      "type": Object {
+        "name": "any",
+      },
+    },
+    "requiredFunc": Object {
+      "required": true,
+      "type": Object {
+        "arguments": Array [
+          Object {
+            "name": "prop",
+            "type": Object {
+              "name": "any",
+            },
+          },
+        ],
+        "name": "function",
+        "value": Object {
+          "name": "any",
+        },
+      },
+    },
+  },
+}
+`;

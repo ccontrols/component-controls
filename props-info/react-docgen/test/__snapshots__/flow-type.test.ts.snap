@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flow-type flow-type.js 1`] = `
+Object {
+  "description": "General component description.",
+  "displayName": "MyComponent",
+  "methods": Array [],
+  "props": Object {
+    "arr": Object {
+      "required": true,
+      "type": Object {
+        "name": "array",
+        "value": Array [
+          Object {
+            "name": "any",
+          },
+        ],
+      },
+    },
+    "func": Object {
+      "type": Object {
+        "arguments": Array [
+          Object {
+            "name": "value",
+            "type": Object {
+              "name": "string",
+            },
+          },
+        ],
+        "name": "function",
+        "value": Object {
+          "name": "void",
+        },
+      },
+    },
+    "literalsAndUnion": Object {
+      "description": "Description of prop \\"bar\\".",
+      "required": true,
+      "type": Object {
+        "elements": Array [
+          Object {
+            "name": "literal",
+            "value": "'string'",
+          },
+          Object {
+            "name": "literal",
+            "value": "'otherstring'",
+          },
+          Object {
+            "name": "number",
+          },
+        ],
+        "name": "union",
+        "raw": "'string' | 'otherstring' | number",
+      },
+    },
+    "noParameterName": Object {
+      "type": Object {
+        "arguments": Array [
+          Object {
+            "name": "",
+            "type": Object {
+              "name": "string",
+            },
+          },
+        ],
+        "name": "function",
+        "value": Object {
+          "name": "void",
+        },
+      },
+    },
+    "obj": Object {
+      "type": Object {
+        "name": "object",
+        "value": Array [
+          Object {
+            "key": "subvalue",
+            "value": Object {
+              "name": "boolean",
+              "nullable": true,
+              "required": true,
+            },
+          },
+        ],
+      },
+    },
+    "primitive": Object {
+      "description": "Description of prop \\"foo\\".",
+      "required": true,
+      "type": Object {
+        "name": "number",
+      },
+    },
+  },
+}
+`;

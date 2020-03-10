@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`full typescript.tsx 1`] = `
+Object {
+  "description": "General component description.",
+  "displayName": "typescript",
+  "methods": Array [],
+  "props": Object {
+    "optionalArray": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "array",
+        "raw": "any[]",
+        "value": Array [
+          Object {
+            "name": "any",
+          },
+        ],
+      },
+    },
+    "optionalArrayOf": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "array",
+        "raw": "number[]",
+        "value": Array [
+          Object {
+            "name": "number",
+          },
+        ],
+      },
+    },
+    "optionalBool": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "boolean",
+      },
+    },
+    "optionalElement": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "any",
+      },
+    },
+    "optionalElementType": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "Element",
+      },
+    },
+    "optionalEnum": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "enum",
+        "raw": "\\"News\\" | \\"Photos\\"",
+        "value": Array [
+          Object {
+            "name": "string",
+            "value": "News",
+          },
+          Object {
+            "name": "string",
+            "value": "Photos",
+          },
+        ],
+      },
+    },
+    "optionalFunc": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "function",
+        "raw": "(args: any) => any",
+      },
+    },
+    "optionalMessage": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "Message",
+      },
+    },
+    "optionalNode": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "any",
+      },
+    },
+    "optionalNumber": Object {
+      "defaultValue": 21,
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "number",
+      },
+    },
+    "optionalObject": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "object",
+      },
+    },
+    "optionalObjectOf": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "object",
+        "raw": "{ [key: string]: number; }",
+      },
+    },
+    "optionalObjectWithShape": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "object",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
+      },
+    },
+    "optionalObjectWithStrictShape": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "object",
+        "raw": "{ optionalProperty?: string; requiredProperty: number; }",
+      },
+    },
+    "optionalString": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "string",
+      },
+    },
+    "optionalSymbol": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "symbol",
+      },
+    },
+    "optionalUnion": Object {
+      "parentName": "MyComponentProps",
+      "type": Object {
+        "name": "union",
+        "raw": "string | number | Message",
+        "value": Array [
+          Object {
+            "name": "string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "Message",
+          },
+        ],
+      },
+    },
+    "requiredAny": Object {
+      "parentName": "MyComponentProps",
+      "required": true,
+      "type": Object {
+        "name": "any",
+      },
+    },
+    "requiredFunc": Object {
+      "parentName": "MyComponentProps",
+      "required": true,
+      "type": Object {
+        "name": "function",
+        "raw": "(prop: any) => any",
+      },
+    },
+  },
+}
+`;

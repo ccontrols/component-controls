@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsx jsx-intrinsic.tsx 1`] = `
+Object {
+  "description": "A Button with a hover effect, all properties of Button apply<br />
+\`import { IconButton } from 'grommet-controls';\`<br />
+\`<IconButton icon='...' />\`<br />",
+  "displayName": "Button",
+  "methods": Array [],
+  "props": undefined,
+}
+`;

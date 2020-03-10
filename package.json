@@ -78,6 +78,7 @@
     "packages": [
       "core/*",
       "integrations/*",
+      "props-info/*",
       "ui/*",
       "examples/*"
     ]

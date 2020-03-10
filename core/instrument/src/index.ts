@@ -21,6 +21,7 @@ import { extractSotreComponent } from './babel/extract-component';
 import { packageInfo } from './project/packageInfo';
 import {
   InstrumentOptions,
+  InstrumentOptionsMDX,
   ParserOptions,
   defaultParserOptions,
   ResolveOptions,
@@ -200,9 +201,10 @@ export const parseCSF = async (
 export const parseMDX = async (
   source: string,
   filePath: string,
-  options?: InstrumentOptions,
+  optionsMDX?: InstrumentOptionsMDX,
 ): Promise<StoriesStore> => {
-  const code = await mdx(source);
+  const { mdx: mdxOptions, ...options } = optionsMDX || {};
+  const code = await mdx(source, mdxOptions);
 
   const ast = parser.parse(code, {
     sourceType: 'module',

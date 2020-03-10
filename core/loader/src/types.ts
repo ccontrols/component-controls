@@ -1,5 +1,8 @@
-import { InstrumentOptions } from '@component-controls/instrument';
+import {
+  InstrumentOptions,
+  InstrumentOptionsMDX,
+} from '@component-controls/instrument';
 
 export type LoaderOptions = {
   type?: 'csf' | 'mdx';
-} & InstrumentOptions;
+} & (InstrumentOptions | InstrumentOptionsMDX);
