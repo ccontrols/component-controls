@@ -9,6 +9,10 @@
     "build-storybook": "build-storybook -c .storybook -o ../../docs"
   },
   "dependencies": {
+    "@component-controls/loader": "^0.6.0",
+    "@component-controls/react-docgen-info": "^0.6.0",
+    "@component-controls/react-docgen-typescript-info": "^0.6.0",
+    "@component-controls/storybook": "^0.6.0",
     "@storybook/addon-docs": "^5.3.12",
     "@storybook/addon-storysource": "^5.3.12",
     "@storybook/react": "^5.3.12",

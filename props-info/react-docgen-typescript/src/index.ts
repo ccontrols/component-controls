@@ -1,4 +1,4 @@
-import { PropTypes } from '@component-controls/specification';
+import { ComponentInfo } from '@component-controls/specification';
 import {
   extractDocgenTypescriptInfo,
   RectDocgenTypescriptOptions,
@@ -6,15 +6,24 @@ import {
 import { transformProps } from './transform-props';
 
 export default (options?: RectDocgenTypescriptOptions) => {
-  return (fileName: string, componentName?: string): PropTypes | undefined => {
+  return async (
+    fileName: string,
+    componentName?: string,
+  ): Promise<ComponentInfo | undefined> => {
     const propTable = extractDocgenTypescriptInfo(
       fileName,
       componentName,
       options,
     );
-    return {
-      ...propTable,
-      props: transformProps(propTable.props),
-    };
+    return new Promise(resolve =>
+      resolve(
+        propTable
+          ? {
+              ...propTable,
+              props: transformProps(propTable.props),
+            }
+          : undefined,
+      ),
+    );
   };
 };

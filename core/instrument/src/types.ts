@@ -4,7 +4,7 @@ import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
 } from 'prettier';
-import { PropTypes } from '@component-controls/specification';
+import { ComponentInfo } from '@component-controls/specification';
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -42,7 +42,7 @@ export type PropsInfoExtractor = (
    * react-docgen-typescript does not use it
    */
   source?: string,
-) => PropTypes | undefined;
+) => Promise<ComponentInfo | undefined>;
 
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
@@ -101,10 +101,6 @@ export interface ComponentOptions {
   resolveFile?: (componentName: string, filePath: string) => string | undefined;
 
   /**
-   * optional module to extract prop tables information for components
-   */
-  extractProps?: PropsInfoExtractor;
-  /**
    * If set to false, will not save the component's source file
    */
   storeSourceFile?: boolean;
@@ -156,6 +152,11 @@ export interface InstrumentOptions {
    * Options for extracting stories information.
    */
   stories?: StoriesOptions;
+
+  /**
+   * optional module to extract prop tables information for components
+   */
+  extractPropsFn?: PropsInfoExtractor;
 }
 
 /**

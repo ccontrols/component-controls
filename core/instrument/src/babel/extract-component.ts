@@ -57,7 +57,7 @@ export const extractComponent = async (
     initialAST,
   );
   const { components } = options || {};
-  const component = follow
+  const component: StoryComponent = follow
     ? {
         name: componentName,
         from: follow.from,
@@ -73,6 +73,20 @@ export const extractComponent = async (
     : {
         name: componentName,
       };
+  const { extractPropsFn } = options || {};
+  if (follow && follow.filePath && typeof extractPropsFn === 'function') {
+    component.info = await extractPropsFn(
+      follow.filePath,
+      component.importedName,
+      follow.source,
+    );
+    if (component.info) {
+      console.log(component.info);
+    } else {
+      console.log(follow.filePath);
+    }
+  }
+
   globalCache[filePath] = component;
   return component;
 };

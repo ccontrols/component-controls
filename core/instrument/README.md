@@ -107,20 +107,28 @@ Options that can control the parsing and instrumentation process
 
 Options for extracting stories information.
 
+
 • **stories**? : *[StoriesOptions](#storiesoptions)*
 
 Options for extracting component information.
+
+
+• **extractPropsFn**? : *[PropsInfoExtractor](#propsinfoextractor)*
+   
+ optional module to extract prop tables information for components
 
 
 • **parser**? : *[ParserOptions](#parseroptions)*
 
 Options to control babel parser.
 
+
 • **prettier**? : *[PrettierOptions](#prettieroptions) | false*
 
 prettier options are used to prettify the code at the end of the process
 this is useful for "story" code, where the story is extracted from the full file
 passing a value of false as prettier option will disabled prettifying
+
 
 • **resolver**? : *[ResolverOptions](#resolveroptions)*
 
@@ -153,11 +161,6 @@ Options for extracting component information.
 
 Callback function to resolve the source file name of a component. 
 Return false if this file should not be processed.
-
-
-• **extractProps**? : *[PropsInfoExtractor](#propsinfoextractor)*
-   
- optional module to extract prop tables information for components
 
 
 • **storeSourceFile**? : *boolean*

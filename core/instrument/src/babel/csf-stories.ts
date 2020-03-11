@@ -42,6 +42,7 @@ export const extractCSFStories = (stories: StoriesStore) => {
         stories.kinds[kindTitle] = {
           title: kindTitle,
           attributes,
+          components: {},
         };
       }
     },

@@ -57,6 +57,7 @@ const parseSource = async (
     resolver: resolveOptions = {},
     components: componentOptions = {},
     stories: storiesOptions = {},
+    extractPropsFn,
   } = options || {};
 
   const mergedOptions = {
@@ -68,6 +69,7 @@ const parseSource = async (
       componentOptions,
     ),
     stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
+    extractPropsFn,
   };
 
   const prettify = async (c: string): Promise<string> => {

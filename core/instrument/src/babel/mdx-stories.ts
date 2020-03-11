@@ -57,6 +57,7 @@ export const extractMDXStories = (stories: StoriesStore) => {
               stories.kinds[kindTitle] = {
                 title: kindTitle,
                 attributes,
+                components: {},
               };
             }
             break;

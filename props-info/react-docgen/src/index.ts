@@ -1,18 +1,24 @@
-import { PropTypes } from '@component-controls/specification';
+import { ComponentInfo } from '@component-controls/specification';
 
 import { extractDocgenInfo, RectDocgenOptions } from './react-docgen';
 import { transformProps } from './transform-props';
 
 export default (options?: RectDocgenOptions) => {
-  return (
+  return async (
     fileName: string,
     componentName?: string,
     source?: string,
-  ): PropTypes | undefined => {
+  ): Promise<ComponentInfo | undefined> => {
     const propTable = extractDocgenInfo(fileName, source, options);
-    return {
-      ...propTable,
-      props: transformProps(propTable.props),
-    };
+    return new Promise(resolve =>
+      resolve(
+        propTable
+          ? {
+              ...propTable,
+              props: transformProps(propTable.props),
+            }
+          : undefined,
+      ),
+    );
   };
 };

@@ -43,6 +43,10 @@ module.exports = {
           enforce: 'pre',
           options: {
             type: 'csf',
+            propsLoaders: [
+              { name: '@component-controls/react-docgen-info', include: /\.(js|jsx)$/},
+              { name: '@component-controls/react-docgen-typescript-info', include: /\.(ts|tsx)$/}
+            ],
             prettier: {
               tabWidth: 4,
             },
