@@ -41,7 +41,9 @@ export const extractDocgenTypescriptInfo = (
       return transformProps(docgenInfo);
     }
   } catch (e) {
-    console.warn(`\nTS: issue parsing ${fileName}`);
+    console.error(
+      `\nreact-docgen-typescript unable to parse ${componentName}: ${fileName}`,
+    );
     return undefined;
   }
 };

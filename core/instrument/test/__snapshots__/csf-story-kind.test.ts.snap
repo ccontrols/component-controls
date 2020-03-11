@@ -35,7 +35,7 @@ Object {
 exports[`csf-story-kind title-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "ControlsTable": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/csf/kind/title-and-parameters.js": Object {
       "name": "ControlsTable",
     },
   },
@@ -51,6 +51,9 @@ Object {
         "title": "Storybook/Blocks/ControlsTable",
       },
       "component": "ControlsTable",
+      "components": Object {
+        "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/examples/csf/kind/title-and-parameters.js",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/title-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -76,7 +79,7 @@ Object {
 exports[`csf-story-kind title-controls-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "ControlsTable": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/csf/kind/title-controls-and-parameters.js": Object {
       "name": "ControlsTable",
     },
   },
@@ -97,6 +100,9 @@ Object {
         "title": "Storybook/Kind",
       },
       "component": "ControlsTable",
+      "components": Object {
+        "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/examples/csf/kind/title-controls-and-parameters.js",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/title-controls-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -132,6 +138,7 @@ Object {
       "attributes": Object {
         "title": "Storybook/Blocks/ControlsTable",
       },
+      "components": Object {},
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/kind/with-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

@@ -2,11 +2,7 @@
 
 exports[`csf-parameters name-and-parameters.js 1`] = `
 Object {
-  "components": Object {
-    "ControlsTable": Object {
-      "name": "ControlsTable",
-    },
-  },
+  "components": Object {},
   "kinds": Object {},
   "stories": Object {
     "myStory": Object {
@@ -20,7 +16,6 @@ Object {
           "component": "ControlsTable",
         },
       },
-      "component": "ControlsTable",
       "loc": Object {
         "end": Object {
           "column": 31,

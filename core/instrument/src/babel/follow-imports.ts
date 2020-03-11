@@ -49,6 +49,7 @@ export const followImports = (
     named: {},
   };
   traverse(ast, traverseExports(exports));
+
   const folderName = path.dirname(fileName);
   const findExport =
     baseImportedName === 'default' || baseImportedName === 'namespace'
@@ -105,8 +106,8 @@ export const followImports = (
   }
   const imports: ImportTypes = {};
   traverse(ast, traverseImports(imports));
-  const findImport = imports[baseImportedName];
 
+  const findImport = imports[baseImportedName];
   if (findImport) {
     try {
       const resolvedFilePath = resolve.sync(findImport.from, {

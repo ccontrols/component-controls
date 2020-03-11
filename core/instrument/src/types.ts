@@ -24,7 +24,7 @@ export const defaultParserOptions: ParserOptions = {
  * callback function to extract props info table  - ie docgen type libraries
  * used to extract displayName, and props tables for a component
  */
-export type PropsInfoExtractor = (
+export type PropsInfoExtractorFunction = (
   /**
    * full name and path of the component path
    * react-docgen needs it to extract babel configurations
@@ -43,6 +43,32 @@ export type PropsInfoExtractor = (
    */
   source?: string,
 ) => Promise<ComponentInfo | undefined>;
+
+/**
+ * settings to load component props tables
+ * each component file extension must resolve to only 1 props info loader
+ */
+export interface PropsLoaderConfig {
+  /**
+   * module name - must be usable by require(....)
+   * if a local file name, use require.esolve('../..')
+   */
+  name: string;
+
+  /**
+   * a regex or a list of regex masks
+   * ex: use: /\.(js|jsx)$/
+   */
+  use: RegExp | RegExp[];
+  /**
+   * a regex or a list of regex masks for files to be excluded
+   */
+  exclude?: RegExp | RegExp[];
+  /**
+   * options specific to the props info loader module
+   */
+  options?: any;
+}
 
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
@@ -154,9 +180,10 @@ export interface InstrumentOptions {
   stories?: StoriesOptions;
 
   /**
-   * optional module to extract prop tables information for components
+   * props tables loaders
+   * must have a default export that returns a PropsInfoExtractorFunction
    */
-  extractPropsFn?: PropsInfoExtractor;
+  propsLoaders?: PropsLoaderConfig[];
 }
 
 /**

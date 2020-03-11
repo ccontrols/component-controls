@@ -55,10 +55,18 @@ export interface RectDocgenOptions {
 }
 export const extractDocgenInfo = (
   fileName: string,
+  componentName?: string,
   source?: string,
   reactDocGenOptions?: RectDocgenOptions,
 ) => {
   const { resolver, handlers, options } = reactDocGenOptions || {};
   const src = source ? source : fs.readFileSync(fileName, 'utf8');
-  return parse(src, resolver, handlers, { filename: fileName, ...options });
+  try {
+    return parse(src, resolver, handlers, { filename: fileName, ...options });
+  } catch (e) {
+    console.error(
+      `\nreact-docgen unable to parse ${componentName}: ${fileName}`,
+    );
+    return undefined;
+  }
 };

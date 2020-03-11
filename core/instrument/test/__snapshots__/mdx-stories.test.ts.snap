@@ -3,7 +3,7 @@
 exports[`mdx-stories no-name.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/no-name.mdx": Object {
       "name": "Button",
     },
   },
@@ -16,6 +16,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/no-name.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/no-name.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -42,7 +45,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories props-argument.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/props-argument.mdx": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -61,6 +64,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/props-argument.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/props-argument.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -125,7 +131,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories story.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/story.mdx": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "loc": Object {
@@ -162,6 +168,9 @@ export default Button;
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/story.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/story.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -212,7 +221,7 @@ import Button from '../../components/button-default-arrow-func';
 exports[`mdx-stories three-levels-alias.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/three-levels-alias.mdx": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -231,6 +240,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/three-levels-alias.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/three-levels-alias.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -357,7 +369,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories tw0-levels-sub-arguments.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/tw0-levels-sub-arguments.mdx": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -376,6 +388,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/tw0-levels-sub-arguments.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/tw0-levels-sub-arguments.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -468,7 +483,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories two-arguments.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/two-arguments.mdx": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -487,6 +502,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/two-arguments.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/two-arguments.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -564,7 +582,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories two-levels-alias.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/two-levels-alias.mdx": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -583,6 +601,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/two-levels-alias.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/stories/two-levels-alias.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

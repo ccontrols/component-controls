@@ -9,37 +9,10 @@ import { addStoriesKind } from './store';
 
 module.exports.default = async function(source: string) {
   const options: LoaderOptions = getOptions(this) || {};
-  const { type = 'csf', propsLoaders = [], ...otherOptions } = options;
+  const { type = 'csf', ...instrumentOptions } = options;
   const context = this as loader.LoaderContext;
   const filePath = context.resourcePath;
-  const loaders = propsLoaders.filter(loader => {
-    const include = Array.isArray(loader.include)
-      ? loader.include
-      : loader.include
-      ? [loader.include]
-      : undefined;
-    const exclude = Array.isArray(loader.exclude)
-      ? loader.exclude
-      : loader.exclude
-      ? [loader.exclude]
-      : undefined;
-    return (
-      include &&
-      include.some(mask => filePath.match(mask)) &&
-      (!exclude || !exclude.some(mask => filePath.match(mask)))
-    );
-  });
 
-  if (loaders.length > 1) {
-    console.error(`Multiple propsloaders found for file ${filePath}`);
-  }
-  const propsLoader = loaders.length === 1 ? loaders[0] : undefined;
-  const instrumentOptions = propsLoader
-    ? {
-        ...otherOptions,
-        extractPropsFn: require(propsLoader.name)(propsLoader.options),
-      }
-    : otherOptions;
   let store: StoriesStore;
   switch (type) {
     case 'csf':

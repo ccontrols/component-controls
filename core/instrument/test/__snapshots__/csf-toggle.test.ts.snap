@@ -3,7 +3,7 @@
 exports[`csf-toggle toggle-story.js 1`] = `
 Object {
   "components": Object {
-    "Toggle": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/csf/toggle/toggle-story.js": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
       "loc": undefined,
@@ -20,6 +20,9 @@ Object {
         "title": "Components/Toggle",
       },
       "component": "Toggle",
+      "components": Object {
+        "Toggle": "/Users/atanasster/component-controls/core/instrument/test/examples/csf/toggle/toggle-story.js",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/csf/toggle/toggle-story.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

@@ -3,7 +3,7 @@
 exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/component-parameters.mdx": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "loc": Object {
@@ -36,6 +36,9 @@ export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/component-parameters.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/component-parameters.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -56,7 +59,7 @@ import { Button } from '../../components/button-named-arrow-func';
 exports[`mdx-component named-alias-import.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/named-alias-import.mdx": Object {
       "from": "../../components/button-named-class",
       "importedName": "Btn",
       "loc": undefined,
@@ -73,6 +76,9 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/named-alias-import.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/named-alias-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -91,20 +97,11 @@ import { Btn as Button } from '../../components/button-named-class';
 exports[`mdx-component story-import.mdx 1`] = `
 Object {
   "components": Object {
-    "Button": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx": Object {
       "from": "./Button",
       "importedName": "Btn",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
-      "request": undefined,
-      "source": undefined,
-    },
-    "Toggle": Object {
-      "from": "./Toggle",
-      "importedName": "Toggle",
-      "loc": undefined,
-      "name": "Toggle",
       "repository": undefined,
       "request": undefined,
       "source": undefined,
@@ -117,6 +114,10 @@ Object {
         "title": "Storybook/MDX",
       },
       "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx",
+        "Toggle": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx",
+      },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/story-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

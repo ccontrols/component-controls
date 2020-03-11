@@ -9,7 +9,12 @@ export default (options?: RectDocgenOptions) => {
     componentName?: string,
     source?: string,
   ): Promise<ComponentInfo | undefined> => {
-    const propTable = extractDocgenInfo(fileName, source, options);
+    const propTable = extractDocgenInfo(
+      fileName,
+      componentName,
+      source,
+      options,
+    );
     return new Promise(resolve =>
       resolve(
         propTable

@@ -44,14 +44,24 @@ module.exports = {
           options: {
             type: 'csf',
             propsLoaders: [
-              { name: '@component-controls/react-docgen-info', include: /\.(js|jsx)$/},
-              { name: '@component-controls/react-docgen-typescript-info', include: /\.(ts|tsx)$/}
+              { name: '@component-controls/react-docgen-info', use: /\.(js|jsx)$/},
+              { name: '@component-controls/react-docgen-typescript-info', use: /\.(ts|tsx)$/}
             ],
             prettier: {
               tabWidth: 4,
             },
             components: {
               storeSourceFile: true, //false
+              resolveFile: (componentName, filePath) => {
+                if (filePath.includes('/theme-ui/dist')) {
+                  return `${
+                    filePath.split('/theme-ui/dist')[0]
+                  }/@theme-ui/components/src/${componentName}.js`;
+                } else if (filePath.includes('@component-controls/storybook/dist')) {
+                  return path.resolve(path.dirname(filePath), `../src/blocks/${componentName}.tsx`)
+                }
+                return filePath;
+              },
             },
             stories: {
               storeSourceFile: true, //false
@@ -65,6 +75,10 @@ module.exports = {
           exclude: [/node_modules/],
           options: {
             type: 'mdx',
+            propsLoaders: [
+              { name: '@component-controls/react-docgen-info', use: /\.(js|jsx)$/},
+              { name: '@component-controls/react-docgen-typescript-info', use: /\.(ts|tsx)$/}
+            ],
           },
         },
       ],

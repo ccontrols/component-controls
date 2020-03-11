@@ -57,19 +57,19 @@ const parseSource = async (
     resolver: resolveOptions = {},
     components: componentOptions = {},
     stories: storiesOptions = {},
-    extractPropsFn,
+    propsLoaders,
   } = options || {};
 
-  const mergedOptions = {
+  const mergedOptions: Required<InstrumentOptions> = {
     parser: deepMerge<ParserOptions>(defaultParserOptions, parserOptions),
-    resolve: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
+    resolver: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
     prettier: prettierOptions,
     components: deepMerge<ComponentOptions>(
       defaultComponentOptions,
       componentOptions,
     ),
     stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
-    extractPropsFn,
+    propsLoaders: propsLoaders || [],
   };
 
   const prettify = async (c: string): Promise<string> => {

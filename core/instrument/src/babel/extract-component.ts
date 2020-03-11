@@ -4,11 +4,52 @@ import {
   StoryAttributes,
   StoryComponent,
   StoriesKind,
+  ComponentInfo,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../project/packageInfo';
-import { InstrumentOptions } from '../types';
+import {
+  InstrumentOptions,
+  PropsLoaderConfig,
+  PropsInfoExtractorFunction,
+} from '../types';
 
+const extractComponentProps = async (
+  options: PropsLoaderConfig[],
+  filePath: string,
+  componentName?: string,
+  source?: string,
+): Promise<ComponentInfo | undefined> => {
+  const loaders = options.filter(loader => {
+    const include = Array.isArray(loader.use)
+      ? loader.use
+      : loader.use
+      ? [loader.use]
+      : undefined;
+    const exclude = Array.isArray(loader.exclude)
+      ? loader.exclude
+      : loader.exclude
+      ? [loader.exclude]
+      : undefined;
+    return (
+      include &&
+      include.some(mask => filePath.match(mask)) &&
+      (!exclude || !exclude.some(mask => filePath.match(mask)))
+    );
+  });
+
+  if (loaders.length > 1) {
+    console.error(`Multiple propsloaders found for file ${filePath}`);
+  }
+  const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
+  if (propsLoaderName) {
+    const propsLoader: PropsInfoExtractorFunction = require(propsLoaderName.name)(
+      propsLoaderName.options,
+    );
+    return await propsLoader(filePath, componentName, source);
+  }
+  return undefined;
+};
 const componentFromParams = (
   attributes?: StoryAttributes,
 ): string | undefined => {
@@ -73,20 +114,18 @@ export const extractComponent = async (
     : {
         name: componentName,
       };
-  const { extractPropsFn } = options || {};
-  if (follow && follow.filePath && typeof extractPropsFn === 'function') {
-    component.info = await extractPropsFn(
+  const { propsLoaders } = options || {};
+  if (follow && follow.filePath && Array.isArray(propsLoaders)) {
+    const info = await extractComponentProps(
+      propsLoaders,
       follow.filePath,
-      component.importedName,
+      follow.importedName,
       follow.source,
     );
-    if (component.info) {
-      console.log(component.info);
-    } else {
-      console.log(follow.filePath);
+    if (info) {
+      component.info = info;
     }
   }
-
   globalCache[filePath] = component;
   return component;
 };
