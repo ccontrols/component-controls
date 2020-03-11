@@ -20,6 +20,10 @@ export const defaultParserOptions: ParserOptions = {
   plugins: ['jsx', 'typescript'],
 };
 
+export const defaultMDXOptions: MDXOptions = {
+  test: /\.mdx$/,
+};
+
 /**
  * callback function to extract props info table  - ie docgen type libraries
  * used to extract displayName, and props tables for a component
@@ -57,9 +61,9 @@ export interface PropsLoaderConfig {
 
   /**
    * a regex or a list of regex masks
-   * ex: use: /\.(js|jsx)$/
+   * ex: test: /\.(js|jsx)$/
    */
-  use: RegExp | RegExp[];
+  test: RegExp | RegExp[];
   /**
    * a regex or a list of regex masks for files to be excluded
    */
@@ -150,6 +154,39 @@ export interface StoriesOptions {
 }
 
 /**
+ * mdx-js options
+ */
+export interface MDXOptions {
+  /**
+   * regular expression for files to pass through the MDX parser
+   * by default /\.mdx$/
+   */
+  test?: RegExp;
+  /**
+   * enable footnotes
+   */
+
+  footnotes?: boolean;
+  /**
+   * specify remark plugins
+   */
+  mdPlugins?: any[];
+  /**
+   * specify rehype plugins
+   */
+  hastPlugins?: any[];
+  /**
+   * specify markdown compilers
+   */
+  compilers?: any[];
+
+  /**
+   * regex for blocks, defaults to ['[a-z\\.]+(\\.){0,1}[a-z\\.]']
+   */
+  blocks?: string[];
+}
+
+/**
  * Options passed for instrumenting
  */
 export interface InstrumentOptions {
@@ -184,39 +221,9 @@ export interface InstrumentOptions {
    * must have a default export that returns a PropsInfoExtractorFunction
    */
   propsLoaders?: PropsLoaderConfig[];
-}
-
-/**
- * mdx-js options
- */
-export interface MDXOptions {
-  /**
-   * enable footnotes
-   */
-
-  footnotes?: boolean;
-  /**
-   * specify remark plugins
-   */
-  mdPlugins?: any[];
-  /**
-   * specify rehype plugins
-   */
-  hastPlugins?: any[];
-  /**
-   * specify markdown compilers
-   */
-  compilers?: any[];
 
   /**
-   * regex for blocks, defaults to ['[a-z\\.]+(\\.){0,1}[a-z\\.]']
+   * mdx-js parsing options
    */
-  blocks?: string[];
-}
-
-/**
- * instrument MDX has additional mdx options
- */
-export interface InstrumentOptionsMDX extends InstrumentOptions {
   mdx?: MDXOptions;
 }

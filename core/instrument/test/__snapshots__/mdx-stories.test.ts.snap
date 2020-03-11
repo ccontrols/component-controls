@@ -4,7 +4,13 @@ exports[`mdx-stories no-name.mdx 1`] = `
 Object {
   "components": Object {
     "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/stories/no-name.mdx": Object {
+      "from": "../components/BaseButton",
+      "importedName": "default",
+      "loc": undefined,
       "name": "Button",
+      "repository": undefined,
+      "request": undefined,
+      "source": undefined,
     },
   },
   "kinds": Object {
@@ -24,9 +30,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "const stories = await parseMDX(
-      \`
-import { Story, Meta } from '@storybook/addon-docs/blocks';
+      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
 
 

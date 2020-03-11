@@ -1,5 +1,5 @@
-import { loadCSFTests } from './loadTestFiles';
+import { loadStoriesTests } from './loadTestFiles';
 
 describe('csf-named-exports', () => {
-  loadCSFTests('csf', 'named-exports');
+  loadStoriesTests('csf', 'named-exports');
 });

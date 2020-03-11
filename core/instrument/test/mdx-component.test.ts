@@ -1,5 +1,5 @@
-import { loadMDXTests } from './loadTestFiles';
+import { loadStoriesTests } from './loadTestFiles';
 
 describe('mdx-component', () => {
-  loadMDXTests('mdx', 'component');
+  loadStoriesTests('mdx', 'component');
 });

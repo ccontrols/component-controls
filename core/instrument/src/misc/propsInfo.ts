@@ -31,15 +31,16 @@ export const propsInfo = async (
     const fileStats = fs.statSync(filePath);
     if (cacheStats.mtime.getTime() >= fileStats.mtime.getTime()) {
       const fileData = fs.readFileSync(cachedFileName, 'utf8');
-      return JSON.parse(fileData);
+      const json = JSON.parse(fileData);
+      return Object.keys(json).length ? json : undefined;
     }
   }
   let result: ComponentInfo | undefined = undefined;
   const loaders = options.filter(loader => {
-    const include = Array.isArray(loader.use)
-      ? loader.use
-      : loader.use
-      ? [loader.use]
+    const include = Array.isArray(loader.test)
+      ? loader.test
+      : loader.test
+      ? [loader.test]
       : undefined;
     const exclude = Array.isArray(loader.exclude)
       ? loader.exclude

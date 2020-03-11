@@ -1,5 +1,5 @@
-import { loadCSFTests } from './loadTestFiles';
+import { loadStoriesTests } from './loadTestFiles';
 
 describe('csf-props-usage', () => {
-  loadCSFTests('csf', 'props-usage');
+  loadStoriesTests('csf', 'props-usage');
 });

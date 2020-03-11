@@ -1,5 +1,5 @@
-import { loadMDXTests } from './loadTestFiles';
+import { loadStoriesTests } from './loadTestFiles';
 
 describe('mdx-stories', () => {
-  loadMDXTests('mdx', 'stories');
+  loadStoriesTests('mdx', 'stories');
 });

@@ -37,15 +37,14 @@ module.exports = {
       rules: [
         ...config.module.rules, 
         {
-          test: /\.(story|stories).(js|jsx|ts|tsx)$/,
+          test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/,
           loader: "@component-controls/loader/loader",
           exclude: [/node_modules/],
           enforce: 'pre',
           options: {
-            type: 'csf',
             propsLoaders: [
-              { name: '@component-controls/react-docgen-info', use: /\.(js|jsx)$/},
-              { name: '@component-controls/react-docgen-typescript-info', use: /\.(ts|tsx)$/}
+              { name: '@component-controls/react-docgen-info', test: /\.(js|jsx)$/},
+              { name: '@component-controls/react-docgen-typescript-info', test: /\.(ts|tsx)$/}
             ],
             prettier: {
               tabWidth: 4,
@@ -67,18 +66,6 @@ module.exports = {
               storeSourceFile: true, //false
             },
 
-          },
-        },
-        {
-          test: /\.(story|stories).(mdx)$/,
-          loader: "@component-controls/loader/loader",
-          exclude: [/node_modules/],
-          options: {
-            type: 'mdx',
-            propsLoaders: [
-              { name: '@component-controls/react-docgen-info', use: /\.(js|jsx)$/},
-              { name: '@component-controls/react-docgen-typescript-info', use: /\.(ts|tsx)$/}
-            ],
           },
         },
       ],

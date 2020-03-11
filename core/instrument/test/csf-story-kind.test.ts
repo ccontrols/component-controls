@@ -1,5 +1,5 @@
-import { loadCSFTests } from './loadTestFiles';
+import { loadStoriesTests } from './loadTestFiles';
 
 describe('csf-story-kind', () => {
-  loadCSFTests('csf', 'kind');
+  loadStoriesTests('csf', 'kind');
 });

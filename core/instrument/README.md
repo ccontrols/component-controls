@@ -29,11 +29,11 @@ $ npm install @component-controls/instrument --save-dev
 
 *Defined in [core/instrument/src/index.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/index.ts)*
 
-### parseCSF
+### parseStories
 
-▸ **parseCSF**(`source`: string, `filePath`: string, `options?`: [InstrumentOptions](#instrumentoptions)): *Promise‹StoriesStore›*
+▸ **parseStories**(`source`: string, `filePath`: string, `options?`: [InstrumentOptions](#instrumentoptions)): *Promise‹StoriesStore›*
 
-Parse and instrument a javascript or typescript file of stories
+Parse and instrument a javascript, typescript or MDX file of stories
 
 **Parameters:**
 
@@ -47,21 +47,6 @@ Name | Type | Description |
 
 ___
 
-### parseMDX
-
-▸ **parseMDX**(`source`: string, `filePath`: string, `optionsMDX?`: [InstrumentOptionsMDX](#instrumentoptionsmdx)): *Promise‹StoriesStore›*
-
-Parse and instrument an MDX file of stories
-
-**Parameters:**
-
-Name | Type | Description |
------- | ------ | ------ |
-`source` | string | Source of the file to be instrumented |
-`filePath` | string | Resolved file path name. |
-`optionsMDX?` | [InstrumentOptionsMDX](#instrumentoptionsmdx) | Instrumenting options  |
-
-**Returns:** *Promise‹StoriesStore›*
 
 ## Default options
 

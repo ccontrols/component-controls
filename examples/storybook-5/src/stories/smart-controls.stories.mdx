@@ -5,7 +5,7 @@ import {
   Source as DocsSource,
   Meta,  
 } from '@storybook/addon-docs/blocks';
-import { BlockContextProvider, ControlsTable, StorySource } from '@component-controls/storybook';
+import { BlockContextProvider, ControlsTable, ComponentSource, StorySource } from '@component-controls/storybook';
 import { Button } from '../components/Button';
 
 
@@ -13,13 +13,13 @@ import { Button } from '../components/Button';
 
 # Smart controls
 
+<ComponentSource of={Button} title='Component source' />
+
 <Story id="." />
 
 <BlockContextProvider>
   <StorySource id="." />
 </BlockContextProvider>
-
-<DocsSource id="." />
 
 <Props of={Button} />
 

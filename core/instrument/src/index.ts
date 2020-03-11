@@ -1,5 +1,4 @@
 import * as parser from '@babel/parser';
-//@ts-ignore
 import mdx from '@mdx-js/mdx';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
@@ -21,7 +20,6 @@ import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/packageInfo';
 import {
   InstrumentOptions,
-  InstrumentOptionsMDX,
   ParserOptions,
   defaultParserOptions,
   ResolveOptions,
@@ -30,12 +28,18 @@ import {
   defaultComponentOptions,
   StoriesOptions,
   defaultStoriesOptions,
+  MDXOptions,
+  defaultMDXOptions,
 } from './types';
 
 export * from './types';
 
+type ParseType = 'mdx' | 'csf';
 type TraverseFn = (stories: StoriesStore) => any;
 
+const TraverseFunctions: {
+  [key in ParseType]: TraverseFn;
+} = { csf: extractCSFStories, mdx: extractMDXStories };
 /**
  * Instrument a source file, with options
  * @param code The source code
@@ -46,35 +50,14 @@ type TraverseFn = (stories: StoriesStore) => any;
  */
 const parseSource = async (
   code: string,
-  traverseFn: TraverseFn,
+  parseType: ParseType,
   originalSource: string,
   filePath: string,
-  options?: InstrumentOptions,
+  options: Required<InstrumentOptions>,
 ): Promise<StoriesStore> => {
-  const {
-    parser: parserOptions = {},
-    prettier: prettierOptions = {},
-    resolver: resolveOptions = {},
-    components: componentOptions = {},
-    stories: storiesOptions = {},
-    propsLoaders,
-  } = options || {};
-
-  const mergedOptions: Required<InstrumentOptions> = {
-    parser: deepMerge<ParserOptions>(defaultParserOptions, parserOptions),
-    resolver: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
-    prettier: prettierOptions,
-    components: deepMerge<ComponentOptions>(
-      defaultComponentOptions,
-      componentOptions,
-    ),
-    stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
-    propsLoaders: propsLoaders || [],
-  };
-
   const prettify = async (c: string): Promise<string> => {
-    if (prettierOptions !== false) {
-      const { resolveConfigOptions, ...otherOptions } = prettierOptions || {};
+    if (options.prettier !== false) {
+      const { resolveConfigOptions, ...otherOptions } = options.prettier || {};
       let allPrettierOptions:
         | prettier.Options
         | undefined = otherOptions as any;
@@ -96,16 +79,16 @@ const parseSource = async (
     }
   };
   const source = await prettify(code);
-  const ast = parser.parse(source, mergedOptions.parser);
+  const ast = parser.parse(source, options.parser);
   const store: StoriesStore = {
     stories: {},
     kinds: {},
     components: {},
   };
-  traverse(ast, traverseFn(store));
+  traverse(ast, TraverseFunctions[parseType](store));
   if (Object.keys(store.kinds).length > 0) {
     const kind = store.kinds[Object.keys(store.kinds)[0]];
-    if (mergedOptions.stories.storeSourceFile) {
+    if (options.stories.storeSourceFile) {
       kind.source = originalSource;
     }
     store.stories = Object.keys(store.stories).reduce(
@@ -124,15 +107,12 @@ const parseSource = async (
       {},
     );
   }
-  await extractStoreComponent(store, filePath, source, mergedOptions, ast);
+  await extractStoreComponent(store, filePath, source, options, ast);
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
 
-    const repository = await packageInfo(
-      filePath,
-      mergedOptions.stories?.package,
-    );
+    const repository = await packageInfo(filePath, options.stories.package);
     if (repository) {
       kind.repository = repository;
     }
@@ -164,55 +144,57 @@ const parseSource = async (
   });
   return store;
 };
+
 /**
- * Parse and instrument a javascript or typescript file of stories
+ * Parse and instrument a javascript, typescript or MDX file of stories
  * @param source Source of the file to be instrumented
  * @param filePath Resolved file path name.
  * @param options Instrumenting options
  */
-export const parseCSF = async (
+
+export const parseStories = async (
   source: string,
   filePath: string,
   options?: InstrumentOptions,
 ): Promise<StoriesStore> => {
-  return await parseSource(
-    source,
-    extractCSFStories,
-    source,
-    filePath,
-    options,
-  );
-};
+  const {
+    parser: parserOptions = {},
+    prettier: prettierOptions = {},
+    resolver: resolveOptions = {},
+    components: componentOptions = {},
+    stories: storiesOptions = {},
+    mdx: mdxOptions = {},
+    propsLoaders,
+  } = options || {};
 
-/**
- * Parse and instrument an MDX file of stories
- * @param source Source of the file to be instrumented
- * @param filePath Resolved file path name.
- * @param options Instrumenting options
- */
+  const mergedOptions: Required<InstrumentOptions> = {
+    parser: deepMerge<ParserOptions>(defaultParserOptions, parserOptions),
+    resolver: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
+    prettier: prettierOptions,
+    components: deepMerge<ComponentOptions>(
+      defaultComponentOptions,
+      componentOptions,
+    ),
+    stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
+    mdx: deepMerge<MDXOptions>(defaultMDXOptions, mdxOptions),
+    propsLoaders: propsLoaders || [],
+  };
+  let code: string;
+  let type: ParseType;
+  const { test, ...otherMDXOptions } = mergedOptions.mdx;
+  if (test && filePath.match(test)) {
+    const mdxParsed = await mdx(source, otherMDXOptions);
+    const ast = parser.parse(mdxParsed, mergedOptions.parser);
+    traverse(ast, removeMDXAttributes());
+    ({ code } = generate(ast, {
+      retainFunctionParens: true,
+      retainLines: true,
+    }));
+    type = 'mdx';
+  } else {
+    code = source;
+    type = 'csf';
+  }
 
-export const parseMDX = async (
-  source: string,
-  filePath: string,
-  optionsMDX?: InstrumentOptionsMDX,
-): Promise<StoriesStore> => {
-  const { mdx: mdxOptions, ...options } = optionsMDX || {};
-  const code = await mdx(source, mdxOptions);
-
-  const ast = parser.parse(code, {
-    sourceType: 'module',
-    plugins: ['jsx', 'typescript'],
-  });
-  traverse(ast, removeMDXAttributes());
-  const newCode = generate(ast, {
-    retainFunctionParens: true,
-    retainLines: true,
-  });
-  return await parseSource(
-    newCode.code,
-    extractMDXStories,
-    source,
-    filePath,
-    options,
-  );
+  return await parseSource(code, type, source, filePath, mergedOptions);
 };
