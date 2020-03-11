@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 //@ts-ignore
 import readJson from 'read-package-json';
 import hostedGitInfo from 'hosted-git-info';

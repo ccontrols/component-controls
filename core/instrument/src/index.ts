@@ -18,7 +18,7 @@ import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractStoreComponent } from './babel/extract-component';
-import { packageInfo } from './project/packageInfo';
+import { packageInfo } from './misc/packageInfo';
 import {
   InstrumentOptions,
   InstrumentOptionsMDX,

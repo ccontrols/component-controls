@@ -4,52 +4,12 @@ import {
   StoryAttributes,
   StoryComponent,
   StoriesKind,
-  ComponentInfo,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
-import { packageInfo } from '../project/packageInfo';
-import {
-  InstrumentOptions,
-  PropsLoaderConfig,
-  PropsInfoExtractorFunction,
-} from '../types';
+import { packageInfo } from '../misc/packageInfo';
+import { propsInfo } from '../misc/propsInfo';
+import { InstrumentOptions } from '../types';
 
-const extractComponentProps = async (
-  options: PropsLoaderConfig[],
-  filePath: string,
-  componentName?: string,
-  source?: string,
-): Promise<ComponentInfo | undefined> => {
-  const loaders = options.filter(loader => {
-    const include = Array.isArray(loader.use)
-      ? loader.use
-      : loader.use
-      ? [loader.use]
-      : undefined;
-    const exclude = Array.isArray(loader.exclude)
-      ? loader.exclude
-      : loader.exclude
-      ? [loader.exclude]
-      : undefined;
-    return (
-      include &&
-      include.some(mask => filePath.match(mask)) &&
-      (!exclude || !exclude.some(mask => filePath.match(mask)))
-    );
-  });
-
-  if (loaders.length > 1) {
-    console.error(`Multiple propsloaders found for file ${filePath}`);
-  }
-  const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
-  if (propsLoaderName) {
-    const propsLoader: PropsInfoExtractorFunction = require(propsLoaderName.name)(
-      propsLoaderName.options,
-    );
-    return await propsLoader(filePath, componentName, source);
-  }
-  return undefined;
-};
 const componentFromParams = (
   attributes?: StoryAttributes,
 ): string | undefined => {
@@ -116,7 +76,7 @@ export const extractComponent = async (
       };
   const { propsLoaders } = options || {};
   if (follow && follow.filePath && Array.isArray(propsLoaders)) {
-    const info = await extractComponentProps(
+    const info = await propsInfo(
       propsLoaders,
       follow.filePath,
       follow.importedName,
