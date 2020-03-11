@@ -11,10 +11,16 @@ export type RectDocgenTypescriptOptions = {
 
 export const extractDocgenTypescriptInfo = (
   fileName: string,
+  componentName?: string,
   reactDocGenTypescriptOptions?: RectDocgenTypescriptOptions,
 ) => {
   const {
-    transformProps = (tables: any[]) => tables[0],
+    transformProps = (tables: any[]) => {
+      const byName =
+        componentName &&
+        tables.find(table => table.displayName === componentName);
+      return byName ? byName : tables[0];
+    },
     propFilter,
     componentNameResolver = computeComponentName,
     shouldExtractLiteralValuesFromEnum = true,

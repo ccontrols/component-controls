@@ -150,17 +150,17 @@ Object {
     },
     "requiredAny": Object {
       "parentName": "MyComponentProps",
-      "required": true,
       "type": Object {
         "name": "any",
+        "required": true,
       },
     },
     "requiredFunc": Object {
       "parentName": "MyComponentProps",
-      "required": true,
       "type": Object {
         "name": "function",
         "raw": "(prop: any) => any",
+        "required": true,
       },
     },
   },

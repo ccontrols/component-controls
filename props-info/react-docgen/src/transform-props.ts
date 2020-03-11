@@ -1,8 +1,7 @@
 import {
   PropTypes,
   PropType,
-  TypeInformatiom,
-  TypeValue,
+  TypeInformation,
 } from '@component-controls/specification';
 
 const rdPropToCCProp = (rdProp: any): PropType => {
@@ -13,22 +12,19 @@ const rdPropToCCProp = (rdProp: any): PropType => {
   if (rdProp.defaultValue !== null && rdProp.defaultValue !== undefined) {
     prop.defaultValue = rdProp.defaultValue.value || rdProp.defaultValue;
   }
-  if (rdProp.required) {
-    prop.required = rdProp.required;
-  }
-  let type: Partial<TypeInformatiom> = {};
+  let type: Partial<TypeInformation> = {};
   if (rdProp.type) {
-    type = propTypeToCCType(rdProp.type);
+    type = propTypeToCCType({ ...rdProp.type, required: rdProp.required });
   } else if (rdProp.tsType) {
-    type = tsTypeToCCType(rdProp.tsType);
+    type = tsTypeToCCType({ ...rdProp.tsType, required: rdProp.required });
   } else if (rdProp.flowType) {
-    type = tsTypeToCCType(rdProp.flowType);
+    type = tsTypeToCCType({ ...rdProp.flowType, required: rdProp.required });
   }
-  prop.type = type as TypeInformatiom;
+  prop.type = type as TypeInformation;
   return prop as PropType;
 };
-const propTypeToCCType = (dgType: any): TypeValue => {
-  let type: TypeValue = {};
+const propTypeToCCType = (dgType: any): TypeInformation => {
+  let type: Partial<TypeInformation> = {};
   if (dgType) {
     const typeName = dgType.name;
     if (dgType.required) {
@@ -71,6 +67,15 @@ const propTypeToCCType = (dgType: any): TypeValue => {
         };
         break;
 
+      case 'objectOf':
+        type = {
+          name: 'object',
+          value: Object.keys(dgType.value).map(key => ({
+            name: dgType.value[key],
+          })),
+        };
+        break;
+
       case 'instanceOf':
         type = {
           name: 'object',
@@ -83,7 +88,7 @@ const propTypeToCCType = (dgType: any): TypeValue => {
         type = {
           name: 'object',
           value: Object.keys(dgType.value).map(name => {
-            const t: TypeValue = {
+            const t: TypeInformation = {
               name: dgType.value[name].name,
               value: name,
             };
@@ -112,11 +117,11 @@ const propTypeToCCType = (dgType: any): TypeValue => {
         type = dgType;
     }
   }
-  return type;
+  return type as TypeInformation;
 };
 
-const tsTypeToCCType = (dgType: any): TypeValue => {
-  let type: TypeValue = {};
+const tsTypeToCCType = (dgType: any): TypeInformation => {
+  let type: Partial<TypeInformation> = {};
   if (dgType) {
     const typeName = dgType.name;
     if (dgType.required) {
@@ -152,7 +157,7 @@ const tsTypeToCCType = (dgType: any): TypeValue => {
         type = dgType;
     }
   }
-  return type;
+  return type as TypeInformation;
 };
 export const transformProps = (props: any): PropTypes | undefined => {
   return props

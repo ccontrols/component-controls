@@ -72,18 +72,18 @@ export const useControlsContext = ({
   const story: Story = myStoryStore && myStoryStore.stories[previewId];
   const kind = story && story.kind ? myStoryStore.kinds[story.kind] : undefined;
   const source: string | undefined = story ? story.source : undefined;
-  let component;
+  let componentName: string;
   if (of === CURRENT_SELECTION) {
-    component =
-      story && story.component
-        ? myStoryStore.components[story.component]
-        : kind
-        ? myStoryStore.components[kind.component]
-        : undefined;
+    componentName =
+      story && story.component ? story.component : kind?.component;
   } else {
-    component = of;
+    componentName = typeof of === 'string' ? of : of && (of as any).displayName;
   }
 
+  const component =
+    componentName && kind && kind.components[componentName]
+      ? myStoryStore.components[kind.components[componentName]]
+      : undefined;
   const sbStory = (storyStore && storyStore.fromId(previewId)) || {};
   if (component && !component.info && sbStory && sbStory.parameters.component) {
     component.info = sbStory.parameters.component.__docgenInfo;

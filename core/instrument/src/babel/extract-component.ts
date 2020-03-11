@@ -3,6 +3,7 @@ import {
   StoriesStore,
   StoryAttributes,
   StoryComponent,
+  StoriesKind,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../project/packageInfo';
@@ -35,6 +36,9 @@ const componentFromParams = (
   return undefined;
 };
 
+const globalCache: {
+  [filePath: string]: StoryComponent;
+} = {};
 export const extractComponent = async (
   componentName: string,
   filePath: string,
@@ -42,6 +46,9 @@ export const extractComponent = async (
   options?: InstrumentOptions,
   initialAST?: File,
 ): Promise<StoryComponent | undefined> => {
+  if (globalCache[filePath]) {
+    return globalCache[filePath];
+  }
   const follow = followImports(
     componentName,
     filePath,
@@ -50,7 +57,7 @@ export const extractComponent = async (
     initialAST,
   );
   const { components } = options || {};
-  return follow
+  const component = follow
     ? {
         name: componentName,
         from: follow.from,
@@ -66,9 +73,11 @@ export const extractComponent = async (
     : {
         name: componentName,
       };
+  globalCache[filePath] = component;
+  return component;
 };
 
-export const extractSotreComponent = async (
+export const extractStoreComponent = async (
   store: StoriesStore,
   filePath: string,
   source: string,
@@ -77,7 +86,8 @@ export const extractSotreComponent = async (
 ) => {
   const kinds = Object.keys(store.kinds);
   if (kinds.length > 0) {
-    const kind = store.kinds[kinds[0]];
+    const kind: StoriesKind = store.kinds[kinds[0]];
+    kind.components = {};
     const componentName = componentFromParams(kind.attributes);
 
     if (componentName) {
@@ -89,26 +99,28 @@ export const extractSotreComponent = async (
         initialAST,
       );
       if (component) {
-        store.components[componentName] = component;
+        store.components[filePath] = component;
+        kind.components[componentName] = filePath;
         kind.component = componentName;
       }
     }
-  }
-  Object.keys(store.stories).forEach(async (name: string) => {
-    const story = store.stories[name];
-    const componentName = componentFromParams(story.attributes);
-    if (componentName) {
-      const component = await extractComponent(
-        componentName,
-        filePath,
-        source,
-        options,
-        initialAST,
-      );
-      if (component) {
-        store.components[componentName] = component;
-        story.component = componentName;
+    Object.keys(store.stories).forEach(async (name: string) => {
+      const story = store.stories[name];
+      const componentName = componentFromParams(story.attributes);
+      if (componentName) {
+        const component = await extractComponent(
+          componentName,
+          filePath,
+          source,
+          options,
+          initialAST,
+        );
+        if (component) {
+          store.components[filePath] = component;
+          kind.components[componentName] = filePath;
+          story.component = componentName;
+        }
       }
-    }
-  });
+    });
+  }
 };

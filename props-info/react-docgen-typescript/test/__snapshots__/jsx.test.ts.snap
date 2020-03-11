@@ -2109,9 +2109,9 @@ import { jsx } from 'theme-ui'
     },
     "title": Object {
       "parentName": "ButtonProps",
-      "required": true,
       "type": Object {
         "name": "string",
+        "required": true,
       },
     },
     "translate": Object {

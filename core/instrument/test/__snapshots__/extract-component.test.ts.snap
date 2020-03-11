@@ -481,6 +481,12 @@ const Arrow = styled.div(({
   borderLeftColor: match('left', placement, borderColor, 'transparent'),
   borderRightColor: match('right', placement, borderColor, 'transparent')
 }));
+/**
+ * A Popover container that is triggered by a click, or hover
+ * used to display enhanced information that could not fit into the main scren
+ *
+ */
+
 const Popover = _a => {
   var {
     trigger,

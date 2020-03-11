@@ -143,6 +143,15 @@ export interface StoriesKind {
    * project repository information
    */
   repository?: Repository;
+
+  /**
+   * lookup into the global store.components
+   * since multiple components of the same name can be used
+   * example: ['Button']: 'c:/myapp/Button.tsx'
+   */
+  components: {
+    [name: string]: string;
+  };
 }
 
 /**
@@ -156,6 +165,6 @@ export interface StoriesStore {
     [id: string]: Story;
   };
   components: {
-    [id: string]: StoryComponent;
+    [fileName: string]: StoryComponent;
   };
 }

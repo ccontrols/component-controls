@@ -4,6 +4,7 @@ import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
 } from 'prettier';
+import { PropTypes } from '@component-controls/specification';
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -18,6 +19,30 @@ export const defaultParserOptions: ParserOptions = {
   sourceType: 'module',
   plugins: ['jsx', 'typescript'],
 };
+
+/**
+ * callback function to extract props info table  - ie docgen type libraries
+ * used to extract displayName, and props tables for a component
+ */
+export type PropsInfoExtractor = (
+  /**
+   * full name and path of the component path
+   * react-docgen needs it to extract babel configurations
+   */
+  fileName: string,
+  /**
+   * optional component name
+   * react-docgen-typescript supports multiple exports for a file
+   * react-docgne does not use it
+   */
+  componentName?: string,
+  /**
+   * optional soure, saves time if its already loaded
+   * react-docgen accepts source as input parameter
+   * react-docgen-typescript does not use it
+   */
+  source?: string,
+) => PropTypes | undefined;
 
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
@@ -75,6 +100,10 @@ export interface ComponentOptions {
    */
   resolveFile?: (componentName: string, filePath: string) => string | undefined;
 
+  /**
+   * optional module to extract prop tables information for components
+   */
+  extractProps?: PropsInfoExtractor;
   /**
    * If set to false, will not save the component's source file
    */

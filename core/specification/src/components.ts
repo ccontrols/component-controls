@@ -14,7 +14,7 @@ export type TypeValue =
   | 'function'
   | string;
 
-export interface TypeInformatiom {
+export interface TypeInformation {
   name: TypeValue;
 
   /**
@@ -22,7 +22,7 @@ export interface TypeInformatiom {
    * elements of enum, array, fields of object
    * return value of function
    */
-  value?: TypeInformatiom[] | any;
+  value?: TypeInformation[] | any;
 
   /**
    * raw type code
@@ -32,7 +32,11 @@ export interface TypeInformatiom {
   /**
    * argument types of function
    */
-  arguments?: TypeInformatiom[] | any;
+  arguments?: TypeInformation[] | any;
+  /**
+   * is the property required
+   */
+  required?: boolean;
 }
 
 /**
@@ -48,11 +52,7 @@ export interface PropType {
   /**
    * propertty type
    */
-  type: TypeInformatiom;
-  /**
-   * is the property required
-   */
-  required: boolean;
+  type: TypeInformation;
   /**
    * description of the property
    */

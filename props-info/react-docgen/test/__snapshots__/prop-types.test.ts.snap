@@ -63,6 +63,7 @@ it as an enum.",
     "optionalFunc": Object {
       "type": Object {
         "name": "function",
+        "required": false,
       },
     },
     "optionalMessage": Object {
@@ -86,20 +87,24 @@ JS's instanceof operator.",
       "defaultValue": "21",
       "type": Object {
         "name": "number",
+        "required": false,
       },
     },
     "optionalObject": Object {
       "type": Object {
         "name": "object",
+        "required": false,
       },
     },
     "optionalObjectOf": Object {
       "description": "An object with property values of a certain type",
       "type": Object {
-        "name": "objectOf",
-        "value": Object {
-          "name": "number",
-        },
+        "name": "object",
+        "value": Array [
+          Object {
+            "name": "number",
+          },
+        ],
       },
     },
     "optionalObjectWithShape": Object {
@@ -139,11 +144,13 @@ JS's instanceof operator.",
     "optionalString": Object {
       "type": Object {
         "name": "string",
+        "required": false,
       },
     },
     "optionalSymbol": Object {
       "type": Object {
         "name": "symbol",
+        "required": false,
       },
     },
     "optionalUnion": Object {
@@ -167,15 +174,15 @@ JS's instanceof operator.",
     },
     "requiredAny": Object {
       "description": "A value of any data type",
-      "required": true,
       "type": Object {
         "name": "any",
+        "required": true,
       },
     },
     "requiredFunc": Object {
-      "required": true,
       "type": Object {
         "name": "function",
+        "required": true,
       },
     },
   },

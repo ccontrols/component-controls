@@ -7,7 +7,6 @@ Object {
   "methods": Array [],
   "props": Object {
     "arr": Object {
-      "required": true,
       "type": Object {
         "name": "array",
         "value": Array [
@@ -35,7 +34,6 @@ Object {
     },
     "literalsAndUnion": Object {
       "description": "Description of prop \\"bar\\".",
-      "required": true,
       "type": Object {
         "elements": Array [
           Object {
@@ -52,6 +50,7 @@ Object {
         ],
         "name": "union",
         "raw": "'string' | 'otherstring' | number",
+        "required": true,
       },
     },
     "noParameterName": Object {
@@ -87,9 +86,9 @@ Object {
     },
     "primitive": Object {
       "description": "Description of prop \\"foo\\".",
-      "required": true,
       "type": Object {
         "name": "number",
+        "required": true,
       },
     },
   },

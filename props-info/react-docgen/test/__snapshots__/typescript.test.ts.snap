@@ -32,6 +32,7 @@ are all optional.",
     "optionalBool": Object {
       "type": Object {
         "name": "boolean",
+        "required": false,
       },
     },
     "optionalElement": Object {
@@ -39,12 +40,14 @@ are all optional.",
       "type": Object {
         "name": "ReactReactElement",
         "raw": "React.ReactElement",
+        "required": false,
       },
     },
     "optionalElementType": Object {
       "description": "A React element type (ie. MyComponent).",
       "type": Object {
         "name": "JSX.Element",
+        "required": false,
       },
     },
     "optionalEnum": Object {
@@ -63,6 +66,7 @@ it as an enum.",
         ],
         "name": "union",
         "raw": "'News' | 'Photos'",
+        "required": false,
       },
     },
     "optionalFunc": Object {
@@ -86,6 +90,7 @@ it as an enum.",
 JS's instanceof operator.",
       "type": Object {
         "name": "Message",
+        "required": false,
       },
     },
     "optionalNode": Object {
@@ -94,17 +99,20 @@ JS's instanceof operator.",
       "type": Object {
         "name": "ReactReactNode",
         "raw": "React.ReactNode",
+        "required": false,
       },
     },
     "optionalNumber": Object {
       "defaultValue": "21",
       "type": Object {
         "name": "number",
+        "required": false,
       },
     },
     "optionalObject": Object {
       "type": Object {
         "name": "object",
+        "required": false,
       },
     },
     "optionalObjectOf": Object {
@@ -173,11 +181,13 @@ An object taking on a particular shape",
     "optionalString": Object {
       "type": Object {
         "name": "string",
+        "required": false,
       },
     },
     "optionalSymbol": Object {
       "type": Object {
         "name": "symbol",
+        "required": false,
       },
     },
     "optionalUnion": Object {
@@ -196,17 +206,17 @@ An object taking on a particular shape",
         ],
         "name": "union",
         "raw": "string | number | Message",
+        "required": false,
       },
     },
     "requiredAny": Object {
       "description": "A value of any data type",
-      "required": true,
       "type": Object {
         "name": "any",
+        "required": true,
       },
     },
     "requiredFunc": Object {
-      "required": true,
       "type": Object {
         "arguments": Array [
           Object {

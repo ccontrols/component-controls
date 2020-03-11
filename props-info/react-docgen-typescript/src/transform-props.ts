@@ -1,7 +1,7 @@
 import {
   PropTypes,
   PropType,
-  TypeInformatiom,
+  TypeInformation,
   TypeValue,
 } from '@component-controls/specification';
 import { Props, PropItem } from 'react-docgen-typescript';
@@ -22,11 +22,12 @@ export const transformProps = (props: Props): PropTypes => {
     if (rdProp.defaultValue !== null && rdProp.defaultValue !== undefined) {
       prop.defaultValue = rdProp.defaultValue.value || rdProp.defaultValue;
     }
-    if (rdProp.required) {
-      prop.required = rdProp.required;
-    }
     const typeName = rdProp.type.name || '';
-    let type: Partial<TypeInformatiom> = {};
+    let type: Partial<TypeInformation> = {};
+    if (rdProp.required) {
+      type.required = rdProp.required;
+    }
+
     if (typeName === 'enum') {
       type.name = 'enum';
       type.value = rdProp.type.value.map(({ value }: any) => {
@@ -59,7 +60,7 @@ export const transformProps = (props: Props): PropTypes => {
     if (type.name !== raw) {
       type.raw = raw;
     }
-    prop.type = type as TypeInformatiom;
+    prop.type = type as TypeInformation;
     return { ...acc, [name]: prop };
   }, {});
 };

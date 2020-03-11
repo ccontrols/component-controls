@@ -155,6 +155,11 @@ Callback function to resolve the source file name of a component.
 Return false if this file should not be processed.
 
 
+• **extractProps**? : *[PropsInfoExtractor](#propsinfoextractor)*
+   
+ optional module to extract prop tables information for components
+
+
 • **storeSourceFile**? : *boolean*
 
 If set to false, will not save the component's source file.
@@ -524,3 +529,31 @@ Whether to save the link for project readme file in the repository field.
 • **storeIssuesLink**? : *boolean*
 
 Whether to save the link for filing issues with the project in the repository field.
+
+___
+
+
+## PropsInfoExtractor
+
+`(fileName: string, componentName?: string, source?: string) => PropTypes | undefined;`
+
+Callback function to extract props info table  - ie docgen type libraries. Used to extract displayName, and props tables for a component
+
+*Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)*
+
+
+### Arguments
+
+• **fileName** : *string*
+
+Full name and path of the component path. react-docgen needs it to extract babel configurations
+
+
+• **componentName**? : *string*
+
+Optional component name.  react-docgen-typescript supports multiple exports for a file.  react-docgne does not use it.
+
+
+• **source**? : *string*
+
+Optional soure, saves time if its already loaded.  react-docgen accepts source as input parameter.  react-docgen-typescript does not use it.

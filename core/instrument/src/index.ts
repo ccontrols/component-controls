@@ -17,7 +17,7 @@ import { getASTSource } from '@component-controls/core';
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
-import { extractSotreComponent } from './babel/extract-component';
+import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './project/packageInfo';
 import {
   InstrumentOptions,
@@ -122,7 +122,7 @@ const parseSource = async (
       {},
     );
   }
-  await extractSotreComponent(store, filePath, source, mergedOptions, ast);
+  await extractStoreComponent(store, filePath, source, mergedOptions, ast);
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
@@ -135,15 +135,6 @@ const parseSource = async (
       kind.repository = repository;
     }
   }
-  /*
-  if (filePath && stories.component && stories.component.from) {
-    console.log(
-      stories.component.from,
-      ': ',
-      path.resolve(filePath, stories.component.from),
-    );
-  }
-  */
   Object.keys(store.stories).forEach((key: string) => {
     const story: Story = store.stories[key];
     story.source = getASTSource(source, story.loc);

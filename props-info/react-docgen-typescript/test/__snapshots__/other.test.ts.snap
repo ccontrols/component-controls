@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`other multiple-exports.tsx 1`] = `
+Object {
+  "description": "",
+  "displayName": "MyCompoent",
+  "methods": Array [],
+  "props": Object {
+    "prop1": Object {
+      "parentName": "BarProps",
+      "type": Object {
+        "name": "string",
+        "required": true,
+      },
+    },
+  },
+}
+`;
