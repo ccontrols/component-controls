@@ -43,7 +43,7 @@ export const themes: {
   'shades-of-purple': shadesOfPurple,
 };
 
-export type StorySourceProps = TaggedSourceProps & {
+export type PureStorySourceProps = TaggedSourceProps & {
   /**
    * any control values to render in place of props in the editor
    */
@@ -63,7 +63,7 @@ const ViewStyleNext: {
   values: 'tags',
   tags: 'values',
 };
-export const StorySource: FC<StorySourceProps> = ({
+export const PureStorySource: FC<PureStorySourceProps> = ({
   controls,
   fileSource,
   children,

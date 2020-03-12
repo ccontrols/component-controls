@@ -1,13 +1,11 @@
 import React, { FC } from 'react';
-import {
-  StorySource as BaseStorySource,
-  StorySourceProps as BaseStorySourceProps,
-} from '@component-controls/block-components';
 import { ThemeContext } from '@component-controls/components';
 import { useControlsContext, StoryInputProps } from '../BlocksContext';
+import { PureStorySource, PureStorySourceProps } from './PureStorySource';
+
 import { repositoryActions } from '../utils/repositoryActions';
 
-export type StorySourceProps = StoryInputProps & BaseStorySourceProps;
+export type StorySourceProps = StoryInputProps & PureStorySourceProps;
 
 export const StorySource: FC<StorySourceProps> = ({
   id,
@@ -27,7 +25,7 @@ export const StorySource: FC<StorySourceProps> = ({
     allActions.push.apply(allActions, repositoryItems);
   }
   return (
-    <BaseStorySource
+    <PureStorySource
       dark={dark}
       controls={controls}
       args={story?.arguments}
@@ -36,6 +34,6 @@ export const StorySource: FC<StorySourceProps> = ({
       {...rest}
     >
       {source}
-    </BaseStorySource>
+    </PureStorySource>
   );
 };

@@ -29,9 +29,11 @@ export const Source: FC<SourceProps> = ({
     window.setTimeout(() => setCopied(false), 1500);
   };
 
-  const actionsItems = Array.isArray(actions) ? [...actions] : [];
+  const actionsItems = [
+    { title: copied ? 'copied' : 'copy', onClick: onCopy },
+    ...(Array.isArray(actions) ? [...actions] : []),
+  ];
 
-  actionsItems.push({ title: copied ? 'copied' : 'copy', onClick: onCopy });
   return (
     <BlockContainer actions={actionsItems} title={title}>
       <SyntaxHighlighter

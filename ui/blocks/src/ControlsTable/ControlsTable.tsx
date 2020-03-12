@@ -78,6 +78,8 @@ export const ControlsTable: FC<ControlsTableProps & {
       return null;
     }
     const actionItems = [
+      { title: copied ? 'copied' : 'copy', onClick: onCopy },
+      { title: 'reset', onClick: onReset },
       {
         title: 'randomize',
         onAction: (state: ControlsTableProps) => {
@@ -90,8 +92,6 @@ export const ControlsTable: FC<ControlsTableProps & {
           }
         },
       },
-      { title: 'reset', onClick: onReset },
-      { title: copied ? 'copied' : 'copy', onClick: onCopy },
     ];
     return (
       <BlockContainer actions={actionItems} title={title}>

@@ -172,11 +172,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 80,
+      "line": 103,
     },
     "start": Object {
       "column": 23,
-      "line": 67,
+      "line": 90,
     },
   },
   "name": "Button",
@@ -193,6 +193,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var styled = _interopDefault(require('@emotion/styled'));
+var polished = require('polished');
 var themeUi = require('theme-ui');
 var React = _interopDefault(require('react'));
 var Octicon = require('@primer/octicons-react');
@@ -206,9 +207,10 @@ var duotoneDark = _interopDefault(require('prism-react-renderer/themes/duotoneDa
 var duotoneLight = _interopDefault(require('prism-react-renderer/themes/duotoneLight'));
 var TooltipTrigger = _interopDefault(require('react-popper-tooltip'));
 var copy = _interopDefault(require('copy-to-clipboard'));
+var css = require('@theme-ui/css');
+var reactTable = require('react-table');
 var reactTabs = require('react-tabs');
 var presets = require('@theme-ui/presets');
-var polished = require('polished');
 
 const StyledContainer = styled.div\`
   position: relative;
@@ -220,37 +222,58 @@ const StyledFlex = styled.div\`
   width: 100%;
 \`;
 
-const ActionColors = disabled => ({
-  backgroundColor: 'highlight',
-  color: disabled ? '#ddd' : 'background',
-  cursor: disabled ? 'not-allowed' : undefined,
-  px: 2,
-  py: 1,
-  lineHeight: 1,
-  borderRadius: 0,
-  border: 'none'
-});
+const ActionColors = ({
+  theme,
+  disabled
+}) => {
+  var _a, _b, _c, _d;
+
+  return {
+    backgroundColor: polished.transparentize(0.15, (_a = theme.colors) === null || _a === void 0 ? void 0 : _a['highlight']),
+    color: disabled ? '#ddd' : 'background',
+    cursor: disabled ? 'not-allowed' : undefined,
+    px: 2,
+    py: 1,
+    lineHeight: 1,
+    borderRadius: 1,
+    display: 'inline-block',
+    boxShadow: \`\${polished.transparentize(0.9, (_b = theme.colors) === null || _b === void 0 ? void 0 : _b.text)} 0 1px 3px 1px, \${polished.transparentize(0.35, (_c = theme.colors) === null || _c === void 0 ? void 0 : _c.text)} 0 0 0 1px\`,
+    border: \`1px solid \${(_d = theme.colors) === null || _d === void 0 ? void 0 : _d['highlight']}\`
+  };
+};
 
 const ActionBar = ({
   actionItems
-}) => themeUi.jsx(StyledContainer, null, themeUi.jsx(StyledFlex, null, actionItems.filter(({
-  hidden
-}) => !hidden).map(({
-  title,
-  onClick,
-  disabled
-}, index) => themeUi.jsx(themeUi.Box, {
-  key: \`\${typeof title === 'string' ? title : 'item'}_\${index}\`,
-  sx: {
-    ml: 1,
-    fontSize: 1,
-    a: ActionColors(disabled),
-    button: ActionColors(disabled)
-  }
-}, typeof title === 'string' ? themeUi.jsx(themeUi.Button, {
-  onClick: onClick,
-  disabled: disabled
-}, title) : title))));
+}) => {
+  const {
+    theme
+  } = themeUi.useThemeUI();
+  return themeUi.jsx(StyledContainer, null, themeUi.jsx(StyledFlex, null, actionItems.filter(({
+    hidden
+  }) => !hidden).map(({
+    title,
+    onClick,
+    disabled
+  }, index) => themeUi.jsx(themeUi.Box, {
+    key: \`\${typeof title === 'string' ? title : 'item'}_\${index}\`,
+    sx: {
+      mt: 2,
+      mr: 2,
+      fontSize: 1,
+      a: ActionColors({
+        theme,
+        disabled
+      }),
+      button: ActionColors({
+        theme,
+        disabled
+      })
+    }
+  }, typeof title === 'string' ? themeUi.jsx(themeUi.Button, {
+    onClick: onClick,
+    disabled: disabled
+  }, title) : title))));
+};
 
 const Subtitle = _a => {
   var {
@@ -280,25 +303,26 @@ const Collapsible = _a => {
 };
 
 /** @jsx jsx */
-const SpacedBlockContainer = styled.div(() => ({
-  position: 'relative',
-  margin: '25px 0 40px 0'
-}));
-const FramedBlockContainer = styled.div(() => ({
-  boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
-  borderRadius: 4,
-  border: '1px solid rgba(0, 0, 0, 0.1)'
-}));
 const BlockContainer = ({
   children,
   title,
   actions
 }) => {
+  var _a, _b;
+
   const [isOpen, setIsOpen] = React.useState(true);
+  const {
+    theme
+  } = themeUi.useThemeUI();
   const id = title ? title.toLowerCase().replace(/\\\\s/g, '-') : undefined; //workaround for storybook iframe url
 
   const url = (window.location != window.parent.location ? document.referrer : document.location.href) || '';
-  return themeUi.jsx(SpacedBlockContainer, {
+  return themeUi.jsx(themeUi.Box, {
+    sx: {
+      position: 'relative',
+      mt: 3,
+      mb: 4
+    },
     id: id
   }, themeUi.jsx(themeUi.Flex, {
     sx: {
@@ -324,23 +348,33 @@ const BlockContainer = ({
     href: \`\${url.split('#')[0]}#\${id}\`
   }, themeUi.jsx(Octicon__default, {
     icon: Octicon.Link
-  })), title && themeUi.jsx(Subtitle, {
-    css: {
-      paddingRight: 10
-    }
-  }, title), themeUi.jsx(themeUi.Link, {
+  })), title && themeUi.jsx(themeUi.Link, {
     \\"aria-label\\": isOpen ? 'Collapse this block' : 'Expand this block',
     css: {
       cursor: 'pointer'
     },
     onClick: () => setIsOpen(!isOpen)
-  }, themeUi.jsx(Octicon__default, {
+  }, themeUi.jsx(themeUi.Flex, {
+    sx: {
+      flexDirection: 'row',
+      alignItems: 'center'
+    }
+  }, themeUi.jsx(Subtitle, {
+    css: {
+      paddingRight: 10
+    }
+  }, title), themeUi.jsx(Octicon__default, {
     icon: isOpen ? Octicon.ChevronDown : Octicon.ChevronRight
-  }))), themeUi.jsx(Collapsible, {
+  })))), themeUi.jsx(Collapsible, {
     isOpen: isOpen
   }, actions && themeUi.jsx(ActionBar, {
     actionItems: actions
-  }), themeUi.jsx(FramedBlockContainer, null, children)), !isOpen && themeUi.jsx(themeUi.Divider, null));
+  }), themeUi.jsx(themeUi.Box, {
+    sx: {
+      borderRadius: 4,
+      boxShadow: \`\${polished.transparentize(0.9, (_a = theme.colors) === null || _a === void 0 ? void 0 : _a.text)} 0 1px 3px 1px, \${polished.transparentize(0.9, (_b = theme.colors) === null || _b === void 0 ? void 0 : _b.text)} 0 0 0 1px\`
+    }
+  }, children)), !isOpen && themeUi.jsx(themeUi.Divider, null));
 };
 
 const ExternalLink = props => React.createElement(themeUi.Link, Object.assign({}, props, {
@@ -566,11 +600,10 @@ const Source = _a => {
     window.setTimeout(() => setCopied(false), 1500);
   };
 
-  const actionsItems = Array.isArray(actions) ? [...actions] : [];
-  actionsItems.push({
+  const actionsItems = [{
     title: copied ? 'copied' : 'copy',
     onClick: onCopy
-  });
+  }, ...(Array.isArray(actions) ? [...actions] : [])];
   return themeUi.jsx(BlockContainer, {
     actions: actionsItems,
     title: title
@@ -582,6 +615,62 @@ const Source = _a => {
       display: 'block'
     }
   }), children));
+};
+
+const Table = _a => {
+  var {
+    columns,
+    data = [],
+    showHeader = true
+  } = _a,
+      rest = tslib.__rest(_a, [\\"columns\\", \\"data\\", \\"showHeader\\"]);
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow
+  } = reactTable.useTable({
+    columns,
+    data
+  });
+  const {
+    theme
+  } = themeUi.useThemeUI();
+  return React.createElement(themeUi.Box, Object.assign({
+    as: \\"table\\"
+  }, getTableProps(), {
+    css: css.get(theme, 'styles.table')
+  }, rest), showHeader && React.createElement(themeUi.Box, {
+    as: \\"thead\\",
+    css: css.get(theme, 'styles.thead')
+  }, headerGroups.map(headerGroup => React.createElement(themeUi.Box, Object.assign({
+    as: \\"tr\\"
+  }, headerGroup.getHeaderGroupProps(), {
+    css: css.get(theme, 'styles.tr')
+  }), headerGroup.headers.map(column => React.createElement(themeUi.Box, Object.assign({
+    as: \\"th\\"
+  }, column.getHeaderProps(), {
+    css: css.get(theme, 'styles.th')
+  }), column.render('Header')))))), React.createElement(themeUi.Box, Object.assign({
+    as: \\"tbody\\"
+  }, getTableBodyProps(), {
+    css: css.get(theme, 'styles.tbody')
+  }), rows.map(row => {
+    prepareRow(row);
+    return React.createElement(themeUi.Box, Object.assign({
+      as: \\"tr\\"
+    }, row.getRowProps(), {
+      css: css.get(theme, 'styles.tr')
+    }), row.cells.map(cell => {
+      return React.createElement(themeUi.Box, Object.assign({
+        as: \\"td\\"
+      }, cell.getCellProps(), {
+        css: css.get(theme, 'styles.td')
+      }), cell.render('Cell'));
+    }));
+  })));
 };
 
 const TabsContainer = styled.div\`
@@ -660,11 +749,19 @@ const ThemeProvider = ({
         width: '100%',
         borderSpacing: '0px'
       },
+      th: {
+        border: 'none',
+        padding: '10px 0 10px 20px'
+      },
+      thead: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.8)'
+      },
       td: {
-        padding: '16px 20px'
+        padding: '16px 20px',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
       },
       tr: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
+        borderBottom: 'none'
       }
     }),
     buttons: {
@@ -766,6 +863,7 @@ exports.Markdown = Markdown;
 exports.Popover = Popover;
 exports.Source = Source;
 exports.Subtitle = Subtitle;
+exports.Table = Table;
 exports.Tabs = Tabs;
 exports.ThemeContext = ThemeContext;
 exports.ThemeProvider = ThemeProvider;

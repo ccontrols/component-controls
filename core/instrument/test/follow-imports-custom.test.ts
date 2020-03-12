@@ -58,7 +58,7 @@ describe('follow-imports-custom', () => {
     'ControlsTable',
     path.resolve(
       __dirname,
-      '../../../ui/block-components/src/ControlsTable/ControlsTable.stories.tsx',
+      '../../../ui/blocks/src/ControlsTable/ControlsTable.stories.tsx',
     ),
   );
   loadTestFiles(

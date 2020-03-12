@@ -46,36 +46,32 @@ export const BooleanEditor: PropertyEditor<BooleanEditorProps> = ({
 exports[`follow-imports-custom ControlsTable 1`] = `
 Object {
   "exportedAs": "ControlsTable",
-  "filePath": "/Users/atanasster/component-controls/ui/block-components/src/ControlsTable/ControlsTable.tsx",
+  "filePath": "/Users/atanasster/component-controls/ui/blocks/src/ControlsTable/ControlsTable.tsx",
   "from": "./ControlsTable",
   "importedName": "ControlsTable",
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 194,
+      "line": 127,
     },
     "start": Object {
       "column": 14,
-      "line": 101,
+      "line": 32,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/ui/block-components/src/ControlsTable/ControlsTable.tsx",
+  "originalFilePath": "/Users/atanasster/component-controls/ui/blocks/src/ControlsTable/ControlsTable.tsx",
   "source": "/** @jsx jsx */
 import { jsx, Box } from 'theme-ui';
 import React, { FC, MouseEvent } from 'react';
 import { window, document } from 'global';
-import styled from '@emotion/styled';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
-import {
-  SetControlValueFn,
-  ClickControlFn,
-} from '@component-controls/specification';
 import {
   resetControlValues,
   getControlValues,
   LoadedComponentControls,
   LoadedComponentControl,
+  randomizeData,
 } from '@component-controls/core';
 import {
   BlockContainer,
@@ -84,75 +80,10 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
-import { PropertyEditorRow } from './PropEditorRow';
-
-export interface ExtraControlAction {
-  title: string;
-  onAction: (props: ControlsTableProps) => void;
-}
-
-export type ExtraControlActions = ExtraControlAction[];
-
-export interface ControlsTableProps {
-  title?: string;
-  storyId?: string;
-  controls?: LoadedComponentControls;
-  setControlValue?: SetControlValueFn;
-  clickControl?: ClickControlFn;
-  extraActions?: ExtraControlActions;
-}
-
-const StyleTable = styled.table<{}>(({ theme }) => ({
-  '&&': {
-    //@ts-ignore
-    ...theme?.styles?.table,
-    tbody: {
-      boxShadow: 'none',
-    },
-    'th:last-of-type, td:last-of-type': {
-      width: '70%',
-    },
-  },
-}));
+import { ControlsTableProps } from './ControlsTableProps';
+import { SingleControlsTable } from './SingleControlsTable';
 
 const DEFAULT_GROUP_ID = 'Other';
-
-const PropGroupTable: FC<ControlsTableProps> = ({
-  controls,
-  storyId,
-  setControlValue,
-  clickControl,
-}) => (
-  <StyleTable className=\\"component-controls-table\\">
-    <tbody>
-      {controls &&
-        Object.keys(controls)
-          .map((key, index) => ({
-            name: key,
-            property: {
-              ...controls[key],
-              order:
-                controls[key].order === undefined ? index : controls[key].order,
-            },
-          }))
-          .sort((a, b) => {
-            const aOrder = a.property.order || 0;
-            const bOrder = b.property.order || 0;
-            return aOrder - bOrder;
-          })
-          .map(p => (
-            <PropertyEditorRow
-              storyId={storyId}
-              key={\`prop_editor_row_\${storyId}_\${p.name}\`}
-              prop={p.property}
-              name={p.name}
-              setControlValue={setControlValue}
-              clickControl={clickControl}
-            />
-          ))}
-    </tbody>
-  </StyleTable>
-);
 
 interface GroupedControlsType {
   [key: string]: LoadedComponentControls;
@@ -162,13 +93,7 @@ export const ControlsTable: FC<ControlsTableProps & {
   title?: string;
 }> = props => {
   const [copied, setCopied] = React.useState(false);
-  const {
-    controls,
-    title,
-    storyId,
-    setControlValue,
-    extraActions = [],
-  } = props;
+  const { controls, title, storyId, setControlValue } = props;
   if (controls && Object.keys(controls).length) {
     const onReset = (e: MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
@@ -215,15 +140,20 @@ export const ControlsTable: FC<ControlsTableProps & {
       return null;
     }
     const actionItems = [
-      ...extraActions.map(item => ({
-        title: item.title,
-        onClick: (e: MouseEvent<HTMLButtonElement>) => {
-          e.preventDefault();
-          item.onAction(props);
-        },
-      })),
-      { title: 'reset', onClick: onReset },
       { title: copied ? 'copied' : 'copy', onClick: onCopy },
+      { title: 'reset', onClick: onReset },
+      {
+        title: 'randomize',
+        onAction: (state: ControlsTableProps) => {
+          if (state.setControlValue && state.controls && state.storyId) {
+            state.setControlValue(
+              state.storyId,
+              undefined,
+              randomizeData(state.controls),
+            );
+          }
+        },
+      },
     ];
     return (
       <BlockContainer actions={actionItems} title={title}>
@@ -233,7 +163,10 @@ export const ControlsTable: FC<ControlsTableProps & {
           }}
         >
           {groupedItems.length === 1 ? (
-            <PropGroupTable {...props} controls={groupedItems[0].controls} />
+            <SingleControlsTable
+              {...props}
+              controls={groupedItems[0].controls}
+            />
           ) : (
             <Tabs>
               <TabList>
@@ -243,7 +176,7 @@ export const ControlsTable: FC<ControlsTableProps & {
               </TabList>
               {groupedItems.map(item => (
                 <TabPanel key={\`tab_panel_\${item.label}\`}>
-                  <PropGroupTable {...props} controls={item.controls} />
+                  <SingleControlsTable {...props} controls={item.controls} />
                 </TabPanel>
               ))}
             </Tabs>

@@ -1,21 +1,25 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { StorySource, StorySourceProps, themes } from './StorySource';
+import {
+  PureStorySource,
+  PureStorySourceProps,
+  themes,
+} from './PureStorySource';
 
 export default {
-  title: 'Blocks/Components/StorySource',
-  component: StorySource,
+  title: 'Blocks/Core/PureStorySource',
+  component: PureStorySource,
 };
 
 export const simpleSource = ({
   language,
   children,
   theme,
-}: StorySourceProps) => {
+}: PureStorySourceProps) => {
   return (
-    <StorySource language={language} theme={theme}>
+    <PureStorySource language={language} theme={theme}>
       {children}
-    </StorySource>
+    </PureStorySource>
   );
 };
 
@@ -80,7 +84,7 @@ export const sample = () => {
 };
 
 export const simplyStoryFn = () => (
-  <StorySource
+  <PureStorySource
     args={[
       {
         value: [
@@ -127,12 +131,12 @@ export const simplyStoryFn = () => (
     ]}
   >
     {`({ text }) => text;`}
-  </StorySource>
+  </PureStorySource>
 );
 
 export const props = () => {
   return (
-    <StorySource
+    <PureStorySource
       args={[
         {
           value: 'props',
@@ -165,7 +169,7 @@ export const props = () => {
       ]}
     >
       {`props => (<div {...props} />);`}
-    </StorySource>
+    </PureStorySource>
   );
 };
 
@@ -176,7 +180,7 @@ const code = `({ height, weight, style: { border, color } }) => (
 
 export const multiProps = () => {
   return (
-    <StorySource
+    <PureStorySource
       args={[
         {
           value: [
@@ -322,13 +326,13 @@ export const multiProps = () => {
       ]}
     >
       {code}
-    </StorySource>
+    </PureStorySource>
   );
 };
 
 export const controlsValues = () => {
   return (
-    <StorySource
+    <PureStorySource
       args={[
         {
           loc: {
@@ -408,6 +412,6 @@ export const controlsValues = () => {
       }}
     >
       {`      export const myStory = ({ name, age }) => <Story name={name} age={age} />;`}
-    </StorySource>
+    </PureStorySource>
   );
 };

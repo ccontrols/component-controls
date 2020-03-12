@@ -37,9 +37,6 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
 
   const onShowFileSource = () => setShowFileSource(!showFileSource);
   const allActions: ActionItem[] = [];
-  if (actions) {
-    allActions.push.apply(allActions, actions);
-  }
 
   if (component && component.source) {
     allActions.push({
@@ -50,6 +47,9 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
   const repositoryItems = component && repositoryActions(component?.repository);
   if (repositoryItems) {
     allActions.push.apply(allActions, repositoryItems);
+  }
+  if (actions) {
+    allActions.push.apply(allActions, actions);
   }
   return (
     <SourceBlock dark={dark} {...rest} actions={allActions}>
