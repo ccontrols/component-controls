@@ -32,30 +32,25 @@ const ActionColors = ({
 }: {
   theme: Theme;
   disabled: boolean | undefined;
-}) => {
-  console.log(theme);
-  return {
-    backgroundColor: transparentize(
-      0.15,
-      theme.colors?.['highlight'] as string,
-    ),
-    color: disabled ? '#ddd' : 'background',
-    cursor: disabled ? 'not-allowed' : undefined,
-    px: 2,
-    py: 1,
-    lineHeight: 1,
-    borderRadius: 1,
-    display: 'inline-block',
-    boxShadow: `${transparentize(
-      0.9,
-      theme.colors?.text as string,
-    )} 0 1px 3px 1px, ${transparentize(
-      0.35,
-      theme.colors?.text as string,
-    )} 0 0 0 1px`,
-    border: `1px solid ${theme.colors?.['highlight'] as string}`,
-  };
-};
+}) => ({
+  backgroundColor: transparentize(0.15, theme.colors?.['highlight'] as string),
+  color: disabled ? '#ddd' : 'background',
+  cursor: disabled ? 'not-allowed' : undefined,
+  px: 2,
+  py: 1,
+  lineHeight: 1,
+  borderRadius: 1,
+  display: 'inline-block',
+  boxShadow: `${transparentize(
+    0.9,
+    theme.colors?.text as string,
+  )} 0 1px 3px 1px, ${transparentize(
+    0.35,
+    theme.colors?.text as string,
+  )} 0 0 0 1px`,
+  border: `1px solid ${theme.colors?.['highlight'] as string}`,
+});
+
 export const ActionBar: FunctionComponent<ActionBarProps> = ({
   actionItems,
 }) => {

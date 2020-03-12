@@ -28,11 +28,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         width: '100%',
         borderSpacing: '0px',
       },
+      th: {
+        border: 'none',
+        padding: '10px 0 10px 20px',
+      },
+      thead: {
+        borderBottom: '1px solid rgba(0, 0, 0, 0.8)',
+      },
       td: {
         padding: '16px 20px',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
       },
       tr: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        borderBottom: 'none',
       },
     },
     buttons: {

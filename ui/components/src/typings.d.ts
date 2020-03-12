@@ -1,5 +1,6 @@
 declare module '@theme-ui/presets';
 declare module '@mdx-js/runtime';
+declare module '@theme-ui/css';
 declare module '@mdx-js/react' {
   import * as React from 'react';
   type ComponentType =

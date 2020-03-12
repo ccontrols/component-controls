@@ -37,6 +37,7 @@
     "react-animate-height": "^2.0.20",
     "react-dom": "^16.8.3",
     "react-popper-tooltip": "^2.10.1",
+    "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
     "theme-ui": "^0.3.1",
     "@theme-ui/presets": "^0.3.0"
@@ -44,6 +45,7 @@
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "@types/markdown-to-jsx": "^6.11.0",
+    "@types/react-table": "^7.0.10",
     "@types/react-tabs": "^2.3.1",
     "@types/theme-ui": "^0.3.0",
     "cross-env": "^5.2.1",
