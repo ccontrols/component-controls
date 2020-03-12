@@ -32,15 +32,21 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         border: 'none',
         padding: '10px 0 10px 20px',
       },
+      tbody: {
+        'tr:last-of-type': {
+          borderBottom: 0,
+        },
+      },
       thead: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.8)',
+        borderBottom: '1px solid #999',
+        backgroundColor: '#F6F9FC',
       },
       td: {
         padding: '16px 20px',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        borderBottom: 0,
       },
       tr: {
-        borderBottom: 'none',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
       },
     },
     buttons: {

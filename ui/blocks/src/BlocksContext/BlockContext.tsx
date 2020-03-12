@@ -79,7 +79,6 @@ export const useControlsContext = ({
   } else {
     componentName = typeof of === 'string' ? of : of && (of as any).displayName;
   }
-
   const component =
     componentName && kind && kind.components[componentName]
       ? myStoryStore.components[kind.components[componentName]]

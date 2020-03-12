@@ -15,7 +15,7 @@ export const SingleControlsTable: FC<ControlsTableProps> = ({
 }) => (
   <Table
     className="component-controls-table"
-    showHeader={false}
+    header={false}
     columns={[
       {
         Header: 'Name',

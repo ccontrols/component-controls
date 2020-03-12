@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extract-props-info Button 1`] = `
+Object {
+  "description": "",
+  "displayName": "Button",
+  "methods": Array [],
+}
+`;
+
+exports[`extract-props-info PropsTable 1`] = `
+Object {
+  "description": "",
+  "displayName": "PropsTable",
+  "methods": Array [],
+  "props": Object {
+    "actions": Object {
+      "description": "additional actions provided to the component",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "array",
+        "raw": "ActionItem[]",
+        "value": Array [
+          Object {
+            "name": "ActionItem",
+          },
+        ],
+      },
+    },
+    "of": Object {
+      "description": "component",
+      "parentName": "ComponentInputProps",
+      "type": Object {
+        "name": "any",
+      },
+    },
+    "title": Object {
+      "description": "optional section title for the block",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "string",
+      },
+    },
+  },
+}
+`;

@@ -98,6 +98,7 @@ export const Markdown: FC<MarkdownProps> = ({ children, components }) => (
 }
 `;
 
+
 exports[`follow-imports-custom Title 1`] = `
 Object {
   "exportedAs": "Title",

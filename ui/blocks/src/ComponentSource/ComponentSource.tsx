@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ActionItem } from '@component-controls/components';
-import { useControlsContext, StoryInputProps } from '../BlocksContext';
+import { useControlsContext, ComponentInputProps } from '../BlocksContext';
 import {
   ThemeContext,
   Source as SourceBlock,
@@ -8,17 +8,15 @@ import {
 } from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
 
-export type ComponentSourceProps = StoryInputProps & SourceProps;
+export type ComponentSourceProps = ComponentInputProps & SourceProps;
 
 export const ComponentSource: FC<ComponentSourceProps> = ({
-  id,
-  name,
+  of,
   actions,
   ...rest
 }) => {
   const { component } = useControlsContext({
-    id,
-    name,
+    of,
   });
   let source;
   const { from, importedName, name: componentName } = component || {};

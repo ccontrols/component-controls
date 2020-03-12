@@ -64,8 +64,8 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             <Box
               key={`${typeof title === 'string' ? title : 'item'}_${index}`}
               sx={{
-                mt: 2,
-                mr: 2,
+                mt: 1,
+                mx: 1,
                 fontSize: 1,
                 a: ActionColors({ theme, disabled }),
                 button: ActionColors({ theme, disabled }),

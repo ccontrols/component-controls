@@ -1,20 +1,24 @@
 /* eslint-disable react/jsx-key */
-import React, { FC } from 'react';
+/** @jsx jsx */
+import { FC } from 'react';
 import { get } from '@theme-ui/css';
-import { Box, useThemeUI } from 'theme-ui';
-import { useTable, Column } from 'react-table';
+import { Box, Flex, useThemeUI, jsx } from 'theme-ui';
+import { useTable, useSortBy, Column } from 'react-table';
+import Octicon, { ChevronUp, ChevronDown } from '@primer/octicons-react';
 
 interface TableOwnProps {
   columns: Column[];
   data?: any[];
-  showHeader?: boolean;
+  header?: boolean;
+  sorting?: boolean;
 }
 
 export type TableProps = TableOwnProps & JSX.IntrinsicElements['table'];
 export const Table: FC<TableProps> = ({
   columns,
   data = [],
-  showHeader = true,
+  header = true,
+  sorting = false,
   ...rest
 }) => {
   const {
@@ -23,10 +27,13 @@ export const Table: FC<TableProps> = ({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({
-    columns,
-    data,
-  });
+  } = useTable(
+    {
+      columns,
+      data,
+    },
+    useSortBy,
+  );
   const { theme } = useThemeUI();
   return (
     <Box
@@ -35,21 +42,31 @@ export const Table: FC<TableProps> = ({
       css={get(theme, 'styles.table')}
       {...rest}
     >
-      {showHeader && (
+      {header && (
         <Box as="thead" css={get(theme, 'styles.thead')}>
           {headerGroups.map((headerGroup: any) => (
-            <Box
-              as="tr"
-              {...headerGroup.getHeaderGroupProps()}
-              css={get(theme, 'styles.tr')}
-            >
+            <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
                 <Box
                   as="th"
-                  {...column.getHeaderProps()}
+                  {...column.getHeaderProps(
+                    sorting ? column.getSortByToggleProps() : undefined,
+                  )}
                   css={get(theme, 'styles.th')}
                 >
-                  {column.render('Header')}
+                  <Flex
+                    sx={{
+                      flexDirection: 'row',
+                      alignItems: 'center ',
+                    }}
+                  >
+                    <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
+                    {sorting && column.isSorted && (
+                      <Octicon
+                        icon={column.isSortedDesc ? ChevronDown : ChevronUp}
+                      />
+                    )}
+                  </Flex>
                 </Box>
               ))}
             </Box>

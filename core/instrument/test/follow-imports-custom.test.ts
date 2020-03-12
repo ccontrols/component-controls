@@ -7,7 +7,11 @@ import {
 import { followImports } from '../src/babel/follow-imports';
 
 describe('follow-imports-custom', () => {
-  const loadTestFiles = (componentName, fileName, source?: string) => {
+  const loadTestFiles = (
+    componentName: string,
+    fileName: string,
+    source?: string,
+  ) => {
     it(componentName, async () => {
       expect(
         await followImports(componentName, fileName, source, {
@@ -54,6 +58,7 @@ describe('follow-imports-custom', () => {
       '../../../ui/components/src/Markdown/Markdown.stories.tsx',
     ),
   );
+
   loadTestFiles(
     'Title',
     path.resolve(__dirname, '../../../ui/blocks/src/Title/Title.stories.tsx'),

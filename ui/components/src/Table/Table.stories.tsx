@@ -44,19 +44,26 @@ const columns = [
     ],
   },
 ];
+const mockData = () =>
+  Array.apply(null, Array(20)).map(() => ({
+    ...faker.helpers.userCard(),
+    subRows: undefined,
+  }));
 
-export const simple = () => {
-  const data = React.useMemo(
-    () =>
-      Array.apply(null, Array(20)).map(() => ({
-        ...faker.helpers.userCard(),
-        subRows: undefined,
-      })),
-    [],
-  );
+export const main = () => {
+  const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
       <Table columns={columns} data={data} />
+    </ThemeProvider>
+  );
+};
+
+export const sortable = () => {
+  const data = React.useMemo(mockData, []);
+  return (
+    <ThemeProvider>
+      <Table sorting={true} columns={columns} data={data} />
     </ThemeProvider>
   );
 };

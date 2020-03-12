@@ -1,7 +1,8 @@
-export { BlockContextProvider } from './BlockContext';
-export { ComponentSource } from './ComponentSource';
-export { ControlsTable, ControlsTableProps } from './ControlsTable';
-export { Description } from './Description';
-export { StorySource } from './StorySource';
-export { Subtitle } from './Subtitle';
-export { Title } from './Title';
+export * from './BlockContext';
+export * from './ComponentSource';
+export * from './ControlsTable';
+export * from './Description';
+export * from './PropsTable';
+export * from './StorySource';
+export * from './Subtitle';
+export * from './Title';
