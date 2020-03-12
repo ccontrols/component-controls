@@ -4,12 +4,19 @@ import { get } from '@theme-ui/css';
 import { Box, useThemeUI } from 'theme-ui';
 import { useTable, Column } from 'react-table';
 
-export interface TableProps {
+interface TableOwnProps {
   columns: Column[];
-  data: any[];
+  data?: any[];
   showHeader?: boolean;
 }
-export const Table: FC<TableProps> = ({ columns, data, showHeader = true }) => {
+
+export type TableProps = TableOwnProps & JSX.IntrinsicElements['table'];
+export const Table: FC<TableProps> = ({
+  columns,
+  data = [],
+  showHeader = true,
+  ...rest
+}) => {
   const {
     getTableProps,
     getTableBodyProps,
@@ -22,7 +29,12 @@ export const Table: FC<TableProps> = ({ columns, data, showHeader = true }) => {
   });
   const { theme } = useThemeUI();
   return (
-    <Box as="table" {...getTableProps()} css={get(theme, 'styles.table')}>
+    <Box
+      as="table"
+      {...getTableProps()}
+      css={get(theme, 'styles.table')}
+      {...rest}
+    >
       {showHeader && (
         <Box as="thead" css={get(theme, 'styles.thead')}>
           {headerGroups.map((headerGroup: any) => (
