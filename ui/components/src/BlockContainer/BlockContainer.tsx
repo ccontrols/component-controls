@@ -7,16 +7,9 @@ import Octicon, {
   ChevronRight,
   ChevronDown,
 } from '@primer/octicons-react';
-import styled from '@emotion/styled';
 import { Subtitle } from '../Subtitle';
 import { Collapsible } from '../Collapsible';
 import { ActionBar, ActionItem } from '../ActionBar';
-
-const FramedBlockContainer = styled.div(() => ({
-  boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
-  borderRadius: 4,
-  border: '1px solid rgba(0, 0, 0, 0.1)',
-}));
 
 export interface BlockContainerProps {
   /**
