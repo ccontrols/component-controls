@@ -55,13 +55,6 @@ describe('follow-imports-custom', () => {
     ),
   );
   loadTestFiles(
-    'ControlsTable',
-    path.resolve(
-      __dirname,
-      '../../../ui/blocks/src/ControlsTable/ControlsTable.stories.tsx',
-    ),
-  );
-  loadTestFiles(
     'Title',
     path.resolve(__dirname, '../../../ui/blocks/src/Title/Title.stories.tsx'),
   );

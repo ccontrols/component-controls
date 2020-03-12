@@ -27,6 +27,9 @@ interface GroupedControlsType {
   [key: string]: LoadedComponentControls;
 }
 
+/**
+ * Table component to display a story's controls and their editors
+ */
 export const ControlsTable: FC<ControlsTableProps & {
   title?: string;
 }> = props => {
