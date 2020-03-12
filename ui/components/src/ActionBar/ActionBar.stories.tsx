@@ -14,7 +14,7 @@ const Container: React.FC = ({ children }) => (
     <Box
       style={{
         height: 100,
-        backgroundColor: 'red',
+        backgroundColor: 'rgb(250, 248, 245)',
       }}
     >
       {children}
@@ -30,7 +30,7 @@ export const simple = () => (
           onClick: () => console.log('clicked'),
         },
         {
-          title: 'action 2',
+          title: <ExternalLink href="https://google.com">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
       ]}

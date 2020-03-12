@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider } from 'theme-ui';
+import { transparentize } from 'polished';
+import { jsx, Flex, Link, Divider, Box, useThemeUI } from 'theme-ui';
 import Octicon, {
   Link as LinkIcon,
   ChevronRight,
@@ -10,11 +11,6 @@ import styled from '@emotion/styled';
 import { Subtitle } from '../Subtitle';
 import { Collapsible } from '../Collapsible';
 import { ActionBar, ActionItem } from '../ActionBar';
-
-const SpacedBlockContainer = styled.div(() => ({
-  position: 'relative',
-  margin: '25px 0 40px 0',
-}));
 
 const FramedBlockContainer = styled.div(() => ({
   boxSadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
@@ -39,6 +35,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   actions,
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
+  const { theme } = useThemeUI();
   const id = title ? title.toLowerCase().replace(/\s/g, '-') : undefined;
   //workaround for storybook iframe url
   const url =
@@ -46,7 +43,14 @@ export const BlockContainer: FC<BlockContainerProps> = ({
       ? document.referrer
       : document.location.href) || '';
   return (
-    <SpacedBlockContainer id={id}>
+    <Box
+      sx={{
+        position: 'relative',
+        mt: 3,
+        mb: 4,
+      }}
+      id={id}
+    >
       <Flex
         sx={{
           flexDirection: 'row',
@@ -75,23 +79,39 @@ export const BlockContainer: FC<BlockContainerProps> = ({
             <Octicon icon={LinkIcon} />
           </Link>
         )}
-
-        {title && <Subtitle css={{ paddingRight: 10 }}>{title}</Subtitle>}
-        <Link
-          aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
-          css={{
-            cursor: 'pointer',
-          }}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
-        </Link>
+        {title && (
+          <Link
+            aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
+            css={{
+              cursor: 'pointer',
+            }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Subtitle css={{ paddingRight: 10 }}>{title}</Subtitle>
+              <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
+            </Flex>
+          </Link>
+        )}
       </Flex>
       <Collapsible isOpen={isOpen}>
         {actions && <ActionBar actionItems={actions} />}
-        <FramedBlockContainer>{children}</FramedBlockContainer>
+        <Box
+          sx={{
+            borderRadius: 4,
+            boxShadow: `${transparentize(
+              0.9,
+              theme.colors?.text as string,
+            )} 0 1px 3px 1px, ${transparentize(
+              0.9,
+              theme.colors?.text as string,
+            )} 0 0 0 1px`,
+          }}
+        >
+          {children}
+        </Box>
       </Collapsible>
       {!isOpen && <Divider />}
-    </SpacedBlockContainer>
+    </Box>
   );
 };
