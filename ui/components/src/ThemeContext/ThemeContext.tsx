@@ -39,7 +39,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       },
       thead: {
         borderBottom: '1px solid #999',
-        backgroundColor: '#F6F9FC',
       },
       td: {
         padding: '16px 20px',

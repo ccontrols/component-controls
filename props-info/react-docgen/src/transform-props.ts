@@ -10,7 +10,7 @@ const rdPropToCCProp = (rdProp: any): PropType => {
     prop.description = rdProp.description;
   }
   if (rdProp.defaultValue !== null && rdProp.defaultValue !== undefined) {
-    prop.defaultValue = rdProp.defaultValue.value || rdProp.defaultValue;
+    prop.defaultValue = rdProp.defaultValue.value ?? rdProp.defaultValue;
   }
   let type: Partial<TypeInformation> = {};
   if (rdProp.type) {

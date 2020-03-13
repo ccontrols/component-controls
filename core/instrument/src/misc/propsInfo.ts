@@ -25,7 +25,6 @@ export const propsInfo = async (
       .update(filePath)
       .digest('hex'),
   );
-  console.log(componentName);
   if (fs.existsSync(cachedFileName)) {
     const cacheStats = fs.statSync(cachedFileName);
     const fileStats = fs.statSync(filePath);

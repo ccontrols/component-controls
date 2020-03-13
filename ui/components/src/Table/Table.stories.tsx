@@ -67,3 +67,12 @@ export const sortable = () => {
     </ThemeProvider>
   );
 };
+
+export const filteravle = () => {
+  const data = React.useMemo(mockData, []);
+  return (
+    <ThemeProvider>
+      <Table filtering={true} columns={columns} data={data} />
+    </ThemeProvider>
+  );
+};

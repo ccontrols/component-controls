@@ -31,7 +31,9 @@
   "dependencies": {
     "@primer/octicons-react": "^9.5.0",
     "copy-to-clipboard": "^3.2.1",
+    "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
+    "match-sorter": "^4.0.2",
     "prism-react-renderer": "^1.0.2",
     "react": "^16.8.3",
     "react-animate-height": "^2.0.20",
@@ -45,6 +47,7 @@
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "@types/markdown-to-jsx": "^6.11.0",
+    "@types/match-sorter": "^4.0.0",
     "@types/react-table": "^7.0.10",
     "@types/react-tabs": "^2.3.1",
     "@types/theme-ui": "^0.3.0",
