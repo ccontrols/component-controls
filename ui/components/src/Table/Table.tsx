@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
 import { FC } from 'react';
-import { Box, Flex, useThemeUI, jsx } from 'theme-ui';
+import { Box, BoxProps, Flex, useThemeUI, jsx } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import memoize from 'fast-memoize';
 import {
@@ -32,7 +32,7 @@ interface TableOwnProps {
   itemsLabel?: string;
 }
 
-export type TableProps = TableOwnProps & JSX.IntrinsicElements['table'];
+export type TableProps = TableOwnProps & BoxProps;
 export const Table: FC<TableProps> = ({
   columns,
   data = [],
