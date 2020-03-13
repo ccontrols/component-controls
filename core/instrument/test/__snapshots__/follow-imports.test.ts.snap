@@ -18,124 +18,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
-  "source": "'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-var blocks = require('@component-controls/blocks');
-var blocks$1 = require('@storybook/addon-docs/blocks');
-require('polished');
-require('@storybook/theming');
-require('@component-controls/components');
-var ThemeProvider = require('./ThemeProvider.js');
-var tslib = require('tslib');
-var coreEvents = require('@storybook/core-events');
-var core = require('@component-controls/core');
-var shared = require('./shared.js');
-
-const BlockContextProvider = ({
-  children
-}) => {
-  const context = React.useContext(blocks$1.DocsContext);
-  const {
-    id: currentId,
-    clientApi,
-    storyStore,
-    channel
-  } = context;
-  return React.createElement(blocks.BlockContext.Provider, {
-    value: {
-      api: clientApi,
-      currentId,
-      channel,
-      storyStore
-    }
-  }, children);
-};
-
-const ComponentSource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ComponentSource, Object.assign({}, props)));
-};
-
-const ControlsTable = _a => {
-  var {
-    id: propId,
-    name
-  } = _a,
-      rest = tslib.__rest(_a, [\\"id\\", \\"name\\"]);
-
-  const {
-    id,
-    controls,
-    api,
-    channel
-  } = blocks.useControlsContext({
-    id: propId,
-    name
-  });
-  const setControlValue = api && api.setControlValue ? api.setControlValue : (storyId, propName, propValue) => {
-    if (controls) {
-      const newValues = core.mergeControlValues(controls, propName, propValue);
-      Object.keys(controls).forEach(key => {
-        controls[key] = newValues[key];
-      });
-      channel.emit(coreEvents.FORCE_RE_RENDER);
-      channel.emit(shared.SET_DATA_MSG, {
-        storyId,
-        controls: newValues
-      });
-    }
-  };
-  const clickControl = api && api.clickControl ? api.clickControl : (storyId, propName) => {
-    if (controls && controls[propName]) {
-      const control = controls[propName];
-
-      if (control && typeof control.onClick === 'function') {
-        control.onClick(control);
-      }
-    }
-  };
-
-  if (!controls || controls.disable) {
-    return null;
-  }
-
-  return id ? React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ControlsTable, Object.assign({
-    controls: controls,
-    storyId: id,
-    setControlValue: setControlValue,
-    clickControl: clickControl
-  }, rest))) : null;
-};
-
-const Description = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Description, Object.assign({}, props)));
-};
-
-const StorySource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.StorySource, Object.assign({}, props)));
-};
-
-const Subtitle = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Subtitle, Object.assign({}, props)));
-};
-
-const Title = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Title, Object.assign({}, props)));
-};
-
-exports.ThemeProvider = ThemeProvider.ThemeProvider;
-exports.BlockContextProvider = BlockContextProvider;
-exports.ComponentSource = ComponentSource;
-exports.ControlsTable = ControlsTable;
-exports.Description = Description;
-exports.StorySource = StorySource;
-exports.Subtitle = Subtitle;
-exports.Title = Title;
-",
+  "source": undefined,
 }
 `;
 
@@ -155,8 +38,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -177,9 +59,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
-  "source": "const Button = () => {};
-exports.Button = Button;
-",
+  "source": undefined,
 }
 `;
 
@@ -199,8 +79,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -220,8 +99,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -241,124 +119,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
-  "source": "'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-var blocks = require('@component-controls/blocks');
-var blocks$1 = require('@storybook/addon-docs/blocks');
-require('polished');
-require('@storybook/theming');
-require('@component-controls/components');
-var ThemeProvider = require('./ThemeProvider.js');
-var tslib = require('tslib');
-var coreEvents = require('@storybook/core-events');
-var core = require('@component-controls/core');
-var shared = require('./shared.js');
-
-const BlockContextProvider = ({
-  children
-}) => {
-  const context = React.useContext(blocks$1.DocsContext);
-  const {
-    id: currentId,
-    clientApi,
-    storyStore,
-    channel
-  } = context;
-  return React.createElement(blocks.BlockContext.Provider, {
-    value: {
-      api: clientApi,
-      currentId,
-      channel,
-      storyStore
-    }
-  }, children);
-};
-
-const ComponentSource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ComponentSource, Object.assign({}, props)));
-};
-
-const ControlsTable = _a => {
-  var {
-    id: propId,
-    name
-  } = _a,
-      rest = tslib.__rest(_a, [\\"id\\", \\"name\\"]);
-
-  const {
-    id,
-    controls,
-    api,
-    channel
-  } = blocks.useControlsContext({
-    id: propId,
-    name
-  });
-  const setControlValue = api && api.setControlValue ? api.setControlValue : (storyId, propName, propValue) => {
-    if (controls) {
-      const newValues = core.mergeControlValues(controls, propName, propValue);
-      Object.keys(controls).forEach(key => {
-        controls[key] = newValues[key];
-      });
-      channel.emit(coreEvents.FORCE_RE_RENDER);
-      channel.emit(shared.SET_DATA_MSG, {
-        storyId,
-        controls: newValues
-      });
-    }
-  };
-  const clickControl = api && api.clickControl ? api.clickControl : (storyId, propName) => {
-    if (controls && controls[propName]) {
-      const control = controls[propName];
-
-      if (control && typeof control.onClick === 'function') {
-        control.onClick(control);
-      }
-    }
-  };
-
-  if (!controls || controls.disable) {
-    return null;
-  }
-
-  return id ? React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.ControlsTable, Object.assign({
-    controls: controls,
-    storyId: id,
-    setControlValue: setControlValue,
-    clickControl: clickControl
-  }, rest))) : null;
-};
-
-const Description = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Description, Object.assign({}, props)));
-};
-
-const StorySource = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.StorySource, Object.assign({}, props)));
-};
-
-const Subtitle = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Subtitle, Object.assign({}, props)));
-};
-
-const Title = props => {
-  return React.createElement(ThemeProvider.ThemeProvider, null, React.createElement(blocks.Title, Object.assign({}, props)));
-};
-
-exports.ThemeProvider = ThemeProvider.ThemeProvider;
-exports.BlockContextProvider = BlockContextProvider;
-exports.ComponentSource = ComponentSource;
-exports.ControlsTable = ControlsTable;
-exports.Description = Description;
-exports.StorySource = StorySource;
-exports.Subtitle = Subtitle;
-exports.Title = Title;
-",
+  "source": undefined,
 }
 `;
 
@@ -378,8 +139,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -400,8 +160,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
-  "source": "export default () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -421,8 +180,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -443,8 +201,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
-  "source": "export const Button = () => {};
-",
+  "source": undefined,
 }
 `;
 
@@ -465,7 +222,6 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
-  "source": "export default () => {};
-",
+  "source": undefined,
 }
 `;

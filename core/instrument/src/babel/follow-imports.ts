@@ -63,7 +63,7 @@ export const followImports = (
         exportedAs: findExport.name,
         loc: findExport.loc,
         from: '',
-        source,
+        source: components?.storeSourceFile ? source : undefined,
       };
     } else {
       const resolvedFilePath = resolve.sync(findExport.from, {

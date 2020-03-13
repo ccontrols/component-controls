@@ -8,7 +8,7 @@ describe('extract-component', () => {
       parser: defaultParserOptions,
       resolver: defaultResolveOptions,
       components: {
-        storeSourceFile: true,
+        storeSourceFile: false,
         package: {
           storeBrowseLink: true,
           storeDocsLink: true,

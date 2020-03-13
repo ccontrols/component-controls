@@ -17,29 +17,7 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/ui/editors/src/BooleanEditor/BooleanEditor.tsx",
-  "source": "import React from 'react';
-import { ComponentControlBoolean } from '@component-controls/specification';
-import { Toggle, FlexContainer } from '@component-controls/components';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-export interface BooleanEditorProps extends PropertyControlProps {
-  prop: ComponentControlBoolean;
-}
-
-export const BooleanEditor: PropertyEditor<BooleanEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => (
-  <FlexContainer>
-    <Toggle
-      id={name}
-      onChange={checked => onChange(name, checked)}
-      checked={prop.value}
-    />
-  </FlexContainer>
-);
-",
+  "source": undefined,
 }
 `;
 
@@ -60,44 +38,9 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.tsx",
-  "source": "/* eslint-disable react/display-name */
-import React, { FC } from 'react';
-import MarkdownToJSX, { MarkdownOptions } from 'markdown-to-jsx';
-import { SyntaxHighlighter } from '../SyntaxHighlighter';
-
-export interface MarkdownProps {
-  /**
-   * the markdown code is passed as a children prop
-   */
-  children: string;
-  /**
-   * components to customize the markdown display
-   */
-  components?: MarkdownOptions['overrides'];
-}
-
-const defaultComponents: MarkdownOptions['overrides'] = {
-  code: SyntaxHighlighter,
-};
-
-/**
- * MDX display component that works at run time
- * uses \`markdown-to-jsx\` to compile MDX
- */
-export const Markdown: FC<MarkdownProps> = ({ children, components }) => (
-  <MarkdownToJSX
-    options={{
-      forceBlock: true,
-      overrides: { ...defaultComponents, ...components },
-    }}
-  >
-    {children}
-  </MarkdownToJSX>
-);
-",
+  "source": undefined,
 }
 `;
-
 
 exports[`follow-imports-custom Title 1`] = `
 Object {
@@ -116,29 +59,6 @@ Object {
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.tsx",
-  "source": "import React, { FC } from 'react';
-import {
-  Title as TitleBlock,
-  TitleProps as TitlePropsBase,
-} from '@component-controls/components';
-import { useControlsContext, StoryInputProps } from '../BlocksContext';
-
-export type TitleProps = StoryInputProps & TitlePropsBase;
-
-export const Title: FC<TitleProps> = ({ id, name, ...rest }) => {
-  const { component, kind } = useControlsContext({
-    id,
-    name,
-  });
-  let title;
-  if (component && component.info && component.info.displayName) {
-    title = component.info.displayName;
-  } else if (kind) {
-    const titleParts = kind.title.split('/');
-    title = titleParts[titleParts.length - 1];
-  }
-  return title ? <TitleBlock {...rest}>{title}</TitleBlock> : null;
-};
-",
+  "source": undefined,
 }
 `;

@@ -24,7 +24,10 @@ describe('extract-props-info', () => {
   };
   loadTestFiles(
     'PropsTable',
-    path.resolve(__dirname, '../../../ui/blocks/src/PropsTable/PropsTable.tsx'),
+    path.resolve(
+      __dirname,
+      '../../../ui/blocks/src/PropsTable/PropsTable/PropsTable.tsx',
+    ),
   );
 
   loadTestFiles(

@@ -17,7 +17,7 @@ describe('follow-imports-custom', () => {
         await followImports(componentName, fileName, source, {
           parser: defaultParserOptions,
           resolver: defaultResolveOptions,
-          components: defaultComponentOptions,
+          components: { ...defaultComponentOptions, storeSourceFile: false },
         }),
       ).toMatchSnapshot();
     });
