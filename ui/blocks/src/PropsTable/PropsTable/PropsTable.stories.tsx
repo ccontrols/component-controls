@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropsTable } from './PropsTable';
-import { MockContext } from '../test/MockContext';
+import { MockContext } from '../../test/MockContext';
 
 export default {
   title: 'Blocks/Core/PropsTable',
@@ -9,6 +9,6 @@ export default {
 
 export const simple = () => (
   <MockContext storyId="blocks-core-propstable--simple" component={PropsTable}>
-    <PropsTable title="Props table" />
+    <PropsTable />
   </MockContext>
 );
