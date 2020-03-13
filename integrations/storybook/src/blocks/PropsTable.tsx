@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import {
-  PropsTable as BasePropsTable,
-  PropsTableProps,
+  BlockPropsTable,
+  BlockPropsTableProps,
 } from '@component-controls/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
 
-export const PropsTable: FC<PropsTableProps> = props => {
+export const PropsTable: FC<BlockPropsTableProps> = props => {
   return (
     <ThemeProvider>
-      <BasePropsTable {...props} />
+      <BlockPropsTable {...props} />
     </ThemeProvider>
   );
 };
