@@ -39,7 +39,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       },
       thead: {
         borderBottom: '1px solid #999',
-        backgroundColor: '#faf8f5',
+        backgroundColor: '#f6f8fa',
       },
       td: {
         padding: '16px 20px',
@@ -49,7 +49,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         fontWeight: 900,
         lineHeight: '24px',
         color: 'rgba(51,51,51,0.6)',
-        background: '#fffdfa',
+        background: '#fafbfc',
         whiteSpace: 'nowrap',
         padding: '16px 20px',
       },
