@@ -7,19 +7,26 @@ import memoize from 'fast-memoize';
 import {
   useTable,
   useSortBy,
-  useFilters,
   useGlobalFilter,
+  useGroupBy,
+  useExpanded,
   Column,
+  Cell,
   Row,
   PluginHook,
   TableOptions,
   UseFiltersOptions,
+  UseGroupByCellProps,
+  UseGroupByRowProps,
+  UseExpandedState,
+  UseGroupByState,
+  TableState,
 } from 'react-table';
-import Octicon, { ChevronUp, ChevronDown } from '@primer/octicons-react';
-import { DefaultColumnFilter, GlobalFilter, filterTypes } from './TableFilter';
+import Octicon, { TriangleUp, TriangleDown } from '@primer/octicons-react';
+import { GlobalFilter } from './TableFilter';
+import { useExpanderColumn } from './TableGrouping';
 
 const defaultColumn = memoize(() => ({
-  Filter: () => DefaultColumnFilter,
   subRows: undefined,
 }));
 
@@ -30,6 +37,11 @@ interface TableOwnProps {
   sorting?: boolean;
   filtering?: boolean;
   itemsLabel?: string;
+  groupBy?: string[];
+  hiddenColumns?: string[];
+  expanded?: {
+    [key: string]: boolean;
+  };
 }
 
 export type TableProps = TableOwnProps & BoxProps;
@@ -40,18 +52,37 @@ export const Table: FC<TableProps> = ({
   sorting = false,
   filtering = false,
   itemsLabel = 'properties',
+  groupBy,
+  expanded,
+  hiddenColumns,
   ...rest
 }) => {
-  const plugins: PluginHook<any>[] = [useFilters, useGlobalFilter, useSortBy];
+  const plugins: PluginHook<any>[] = [
+    useGlobalFilter,
+    useGroupBy,
+    useSortBy,
+    useExpanded,
+    useExpanderColumn,
+  ];
+  const initialState: Partial<TableState<{}>> &
+    Partial<UseExpandedState<{}>> &
+    Partial<UseGroupByState<{}>> = {};
+  if (Array.isArray(groupBy)) {
+    initialState.groupBy = groupBy;
+    initialState.hiddenColumns = hiddenColumns || groupBy;
+  } else if (hiddenColumns !== undefined) {
+    initialState.hiddenColumns = hiddenColumns;
+  }
+  if (typeof expanded === 'object') {
+    initialState.expanded = expanded;
+  }
   const options: TableOptions<{}> & UseFiltersOptions<{}> = {
     columns,
     data,
     defaultColumn: defaultColumn() as Column,
+    initialState,
   };
 
-  if (filtering) {
-    options.filterTypes = filterTypes();
-  }
   if (sorting) {
     plugins.push();
   }
@@ -96,15 +127,10 @@ export const Table: FC<TableProps> = ({
                     <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
                     {sorting && column.isSorted && (
                       <Octicon
-                        icon={column.isSortedDesc ? ChevronDown : ChevronUp}
+                        icon={column.isSortedDesc ? TriangleDown : TriangleUp}
                       />
                     )}
                   </Flex>
-                  {filtering && (
-                    <div>
-                      {column.canFilter ? column.render('Filter') : null}
-                    </div>
-                  )}
                 </Box>
               ))}
             </Box>
@@ -130,21 +156,25 @@ export const Table: FC<TableProps> = ({
         </Box>
       )}
       <Box as="tbody" {...getTableBodyProps()} css={get(theme, 'styles.tbody')}>
-        {rows.map((row: Row) => {
+        {rows.map((row: Row & UseGroupByRowProps<{}>) => {
           prepareRow(row);
           return (
             <Box as="tr" {...row.getRowProps()} css={get(theme, 'styles.tr')}>
-              {row.cells.map(cell => {
-                return (
-                  <Box
-                    as="td"
-                    {...cell.getCellProps()}
-                    css={get(theme, 'styles.td')}
-                  >
-                    {cell.render('Cell')}
-                  </Box>
-                );
-              })}
+              {row.isGrouped
+                ? row.cells[0].render('Aggregated')
+                : row.cells.map(
+                    (cell: Cell & Partial<UseGroupByCellProps<{}>>) => {
+                      return (
+                        <Box
+                          as="td"
+                          {...cell.getCellProps()}
+                          css={get(theme, 'styles.td')}
+                        >
+                          {cell.render('Cell')}
+                        </Box>
+                      );
+                    },
+                  )}
             </Box>
           );
         })}

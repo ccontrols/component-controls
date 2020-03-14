@@ -39,11 +39,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       },
       thead: {
         borderBottom: '1px solid #999',
-        backgroundColor: '#F6F9FC',
+        backgroundColor: '#faf8f5',
       },
       td: {
         padding: '16px 20px',
         borderBottom: 0,
+      },
+      tdgroup: {
+        fontWeight: 900,
+        lineHeight: '24px',
+        color: 'rgba(51,51,51,0.6)',
+        background: '#fffdfa',
+        whiteSpace: 'nowrap',
+        padding: '16px 20px',
       },
       tr: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',

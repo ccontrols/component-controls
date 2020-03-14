@@ -2,12 +2,15 @@
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled } from 'theme-ui';
 import { FC } from 'react';
-import { PropType } from '@component-controls/specification';
 import { Table, TableProps } from '@component-controls/components';
 import { useControlsContext, ComponentInputProps } from '../../BlocksContext';
 
 export type PropsTableProps = ComponentInputProps &
   Omit<TableProps, 'columns' | 'data'>;
+
+type GroupingProps = Partial<
+  Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
+>;
 
 export const PropsTable: FC<PropsTableProps> = ({
   of,
@@ -18,95 +21,124 @@ export const PropsTable: FC<PropsTableProps> = ({
     of,
   });
   const { info } = component || {};
-  return info ? (
+  if (!info) {
+    return null;
+  }
+  const parents = new Set();
+  const rows = Object.keys(info.props).map(key => {
+    const prop = info.props[key];
+    parents.add(prop.parentName);
+    return {
+      name: key,
+      prop: prop,
+    };
+  });
+  const groupProps: GroupingProps = {};
+  if (parents.size > 1) {
+    groupProps.expanded = {
+      [`prop.parentName:${parents.values().next().value}`]: true,
+    };
+    console.log(groupProps.expanded);
+    groupProps.groupBy = ['prop.parentName'];
+  } else {
+    groupProps.hiddenColumns = ['parent'];
+  }
+  /*
+   */
+
+  return (
     <Table
+      {...groupProps}
       {...rest}
       sorting={sorting}
       columns={[
         {
+          Header: 'Parent',
+          accessor: 'prop.parentName',
+        },
+        {
           Header: 'Name',
           accessor: 'name',
-          Cell: ({
-            row: {
-              original: {
-                name,
-                prop: {
-                  type: { required },
-                },
+          Cell: ({ row: { original } }: any) => {
+            if (!original) {
+              return null;
+            }
+            const {
+              name,
+              prop: {
+                type: { required },
               },
-            },
-          }: {
-            row: { original: { name: string; prop: PropType } };
-          }) => (
-            <Text
-              sx={{
-                fontWeight: 'bold',
-                color: required ? 'red' : undefined,
-                textOverflow: 'ellipsis',
-              }}
-            >
-              {name}
-              {required ? '*' : ''}
-            </Text>
-          ),
+            } = original;
+
+            return (
+              <Text
+                sx={{
+                  fontWeight: 'bold',
+                  color: required ? 'red' : undefined,
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                {name}
+                {required ? '*' : ''}
+              </Text>
+            );
+          },
         },
         {
           Header: 'Description',
           accessor: 'prop.description',
-          Cell: ({
-            row: {
-              original: {
-                prop: {
-                  description,
-                  type: { raw },
-                },
+          Cell: ({ row: { original } }: any) => {
+            if (!original) {
+              return null;
+            }
+            const {
+              prop: {
+                description,
+                type: { raw },
               },
-            },
-          }: {
-            row: { original: { name: string; prop: PropType } };
-          }) => (
-            <Flex
-              sx={{
-                flexDirection: 'column',
-              }}
-            >
-              {description && (
-                <Text
-                  sx={{
-                    textOverflow: 'ellipsis',
-                  }}
-                >
-                  {description}
-                </Text>
-              )}
-              {raw && (
-                <Styled.pre
-                  sx={{
-                    color: 'fadedText',
-                    mt: 2,
-                    letterSpacing: '0.10em',
-                    whiteSpace: 'pre-wrap',
-                  }}
-                >
-                  {raw}
-                </Styled.pre>
-              )}
-            </Flex>
-          ),
+            } = original;
+            return (
+              <Flex
+                sx={{
+                  flexDirection: 'column',
+                }}
+              >
+                {description && (
+                  <Text
+                    sx={{
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {description}
+                  </Text>
+                )}
+                {raw && (
+                  <Styled.pre
+                    sx={{
+                      color: 'fadedText',
+                      mt: 2,
+                      letterSpacing: '0.10em',
+                      whiteSpace: 'pre-wrap',
+                    }}
+                  >
+                    {raw}
+                  </Styled.pre>
+                )}
+              </Flex>
+            );
+          },
         },
         {
           Header: 'Default',
           accessor: 'prop.defaultValue',
           width: '20%',
-          Cell: ({
-            row: {
-              original: {
-                prop: { defaultValue },
-              },
-            },
-          }: {
-            row: { original: { name: string; prop: PropType } };
-          }) => {
+          Cell: ({ row: { original } }: any) => {
+            if (!original) {
+              return null;
+            }
+            const {
+              prop: { defaultValue },
+            } = original;
             let value = null;
             switch (typeof defaultValue) {
               case 'object':
@@ -130,13 +162,7 @@ export const PropsTable: FC<PropsTableProps> = ({
           },
         },
       ]}
-      data={Object.keys(info.props).map(key => {
-        const prop = info.props[key];
-        return {
-          name: key,
-          prop: prop,
-        };
-      })}
+      data={rows}
     />
-  ) : null;
+  );
 };

@@ -12,7 +12,6 @@ export const Subtitle: FC<SubtitleProps> = ({ id, name, ...rest }) => {
     id,
     name,
   });
-  console.log(story);
   const title =
     story && story.attributes && story.attributes.parameters
       ? story.attributes.parameters.componentSubtitle

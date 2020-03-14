@@ -27,8 +27,8 @@ export const BlockPropsTable: FC<BlockPropsTableProps> = ({
     <BlockContainer actions={allActions} title={title}>
       <PropsTable
         css={{
-          'thead :first-of-type': {
-            marginTop: 15,
+          'thead tr:first-of-type>th': {
+            paddingTop: 26,
           },
         }}
         filtering={filtering}

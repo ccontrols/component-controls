@@ -10,6 +10,10 @@ export default {
 
 const columns = [
   {
+    Header: 'Age',
+    accessor: 'age',
+  },
+  {
     Header: 'Name',
     columns: [
       {
@@ -44,17 +48,21 @@ const columns = [
     ],
   },
 ];
-const mockData = () =>
-  Array.apply(null, Array(20)).map(() => ({
+const mockData = () => {
+  let i = 10;
+  return Array.apply(null, Array(20)).map(() => ({
+    id: i++,
     ...faker.helpers.userCard(),
+    age: faker.random.number({ min: 21, max: 25 }),
     subRows: undefined,
   }));
+};
 
 export const main = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
-      <Table columns={columns} data={data} />
+      <Table hiddenColumns={['age']} columns={columns} data={data} />
     </ThemeProvider>
   );
 };
@@ -73,6 +81,20 @@ export const filteravle = () => {
   return (
     <ThemeProvider>
       <Table filtering={true} columns={columns} data={data} />
+    </ThemeProvider>
+  );
+};
+
+export const grouping = () => {
+  const data = React.useMemo(mockData, []);
+  return (
+    <ThemeProvider>
+      <Table
+        expanded={{ 'age:21': true }}
+        groupBy={['age']}
+        columns={columns}
+        data={data}
+      />
     </ThemeProvider>
   );
 };
