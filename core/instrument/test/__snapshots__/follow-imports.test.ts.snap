@@ -25,7 +25,7 @@ Object {
 exports[`follow-imports button-named-export.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
   "loc": Object {
     "end": Object {
@@ -37,7 +37,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "source": undefined,
 }
 `;
@@ -45,7 +45,7 @@ Object {
 exports[`follow-imports cjs-import.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
   "from": "../exports/cjs-named-export",
   "importedName": "Button",
   "loc": Object {
@@ -58,7 +58,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/exports/cjs-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
   "source": undefined,
 }
 `;
@@ -66,7 +66,7 @@ Object {
 exports[`follow-imports direct-import.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
   "from": "",
   "loc": Object {
     "end": Object {
@@ -78,7 +78,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/direct-import.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
   "source": undefined,
 }
 `;
@@ -86,7 +86,7 @@ Object {
 exports[`follow-imports export-all.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
   "loc": Object {
     "end": Object {
@@ -98,7 +98,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "source": undefined,
 }
 `;
@@ -126,7 +126,7 @@ Object {
 exports[`follow-imports index.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
   "loc": Object {
     "end": Object {
@@ -138,7 +138,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "source": undefined,
 }
 `;
@@ -146,7 +146,7 @@ Object {
 exports[`follow-imports one-level-default-import.js 1`] = `
 Object {
   "exportedAs": "default",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "default",
   "loc": Object {
@@ -159,7 +159,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "source": undefined,
 }
 `;
@@ -167,7 +167,7 @@ Object {
 exports[`follow-imports one-level-import.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
   "loc": Object {
     "end": Object {
@@ -179,7 +179,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "source": undefined,
 }
 `;
@@ -187,7 +187,7 @@ Object {
 exports[`follow-imports one-level-index-import.js 1`] = `
 Object {
   "exportedAs": "Button",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./",
   "importedName": "Button",
   "loc": Object {
@@ -200,7 +200,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-named-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "source": undefined,
 }
 `;
@@ -208,7 +208,7 @@ Object {
 exports[`follow-imports one-level-namespace-import.js 1`] = `
 Object {
   "exportedAs": "default",
-  "filePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "namespace",
   "loc": Object {
@@ -221,7 +221,7 @@ Object {
       "line": 1,
     },
   },
-  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/examples/follow-imports/button-default-export.js",
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "source": undefined,
 }
 `;

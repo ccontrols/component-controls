@@ -16,11 +16,11 @@ Object {
   },
   "name": "Button",
   "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-default-class-export.js",
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-class-export.js",
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-default-class-export.js",
+  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-class-export.js",
   "source": undefined,
 }
 `;
@@ -41,11 +41,11 @@ Object {
   },
   "name": "Button",
   "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-default-arrow-func.js",
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-default-arrow-func.js",
+  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
   "source": undefined,
 }
 `;
@@ -84,11 +84,11 @@ Object {
   },
   "name": "Button",
   "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-class.js",
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-class.js",
+  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
   "source": undefined,
 }
 `;
@@ -125,11 +125,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 105,
+      "line": 104,
     },
     "start": Object {
       "column": 23,
-      "line": 92,
+      "line": 91,
     },
   },
   "name": "Button",
@@ -171,11 +171,11 @@ Object {
   },
   "name": "Button",
   "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-arrow-func.js",
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-arrow-func.js",
+  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
   "source": undefined,
 }
 `;
@@ -196,11 +196,11 @@ Object {
   },
   "name": "Button",
   "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-class.js",
+    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-class.js",
+  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
   "source": undefined,
 }
 `;

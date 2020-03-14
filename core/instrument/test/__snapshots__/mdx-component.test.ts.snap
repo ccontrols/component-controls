@@ -3,7 +3,7 @@
 exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/component-parameters.mdx": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/component-parameters.mdx": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "loc": Object {
@@ -18,11 +18,11 @@ Object {
       },
       "name": "Button",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/components/button-named-arrow-func.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "request": "/Users/atanasster/component-controls/core/instrument/test/examples/components/button-named-arrow-func.js",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
       "source": "import React from 'react';
 
 export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
@@ -37,10 +37,10 @@ export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
       },
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/component-parameters.mdx",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/component-parameters.mdx",
       },
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/component-parameters.mdx",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/component/component-parameters.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -59,7 +59,7 @@ import { Button } from '../../components/button-named-arrow-func';
 exports[`mdx-component named-alias-import.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/named-alias-import.mdx": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx": Object {
       "from": "../../components/button-named-class",
       "importedName": "Btn",
       "loc": undefined,
@@ -77,10 +77,10 @@ Object {
       },
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/named-alias-import.mdx",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx",
       },
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/named-alias-import.mdx",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -97,7 +97,7 @@ import { Btn as Button } from '../../components/button-named-class';
 exports[`mdx-component story-import.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx": Object {
       "from": "./Button",
       "importedName": "Btn",
       "loc": undefined,
@@ -115,11 +115,11 @@ Object {
       },
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx",
-        "Toggle": "/Users/atanasster/component-controls/core/instrument/test/examples/mdx/component/story-import.mdx",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx",
+        "Toggle": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx",
       },
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/examples/mdx/component/story-import.mdx",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/component/story-import.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },

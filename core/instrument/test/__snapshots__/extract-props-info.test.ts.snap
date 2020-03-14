@@ -5,6 +5,7 @@ Object {
   "description": "",
   "displayName": "Button",
   "methods": Array [],
+  "props": undefined,
 }
 `;
 
@@ -779,10 +780,29 @@ Array values are converted into responsive values.
         "name": "Booleanish",
       },
     },
+    "expanded": Object {
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "object",
+        "raw": "{ [key: string]: boolean; }",
+      },
+    },
     "filtering": Object {
       "parentName": "TableOwnProps",
       "type": Object {
         "name": "boolean",
+      },
+    },
+    "groupBy": Object {
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "array",
+        "raw": "string[]",
+        "value": Array [
+          Object {
+            "name": "string",
+          },
+        ],
       },
     },
     "header": Object {
@@ -795,6 +815,18 @@ Array values are converted into responsive values.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+      },
+    },
+    "hiddenColumns": Object {
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "array",
+        "raw": "string[]",
+        "value": Array [
+          Object {
+            "name": "string",
+          },
+        ],
       },
     },
     "id": Object {
