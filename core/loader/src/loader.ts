@@ -30,6 +30,7 @@ module.exports.default = async function(source: string) {
           ...acc,
           [key]: {
             ...store.kinds[key],
+            fileName,
             moduleId: moduleId,
           },
         }),
