@@ -67,7 +67,13 @@ export interface Story {
   /**
    * name of the Story.
    */
-  name?: string;
+  name: string;
+
+  /**
+   * csf id of the story
+   */
+  id?: string;
+
   /**
    * title of the file/group of stories
    */

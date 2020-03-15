@@ -1,6 +1,5 @@
 import * as parser from '@babel/parser';
 import mdx from '@mdx-js/mdx';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import prettier from 'prettier';
@@ -91,21 +90,6 @@ const parseSource = async (
     if (options.stories.storeSourceFile) {
       kind.source = originalSource;
     }
-    store.stories = Object.keys(store.stories).reduce(
-      (acc: { [key: string]: Story }, name) => {
-        const story: Story = store.stories[name];
-        if (kind.title && story.name) {
-          const id = toId(kind.title, storyNameFromExport(story.name));
-          if (!kind.stories) {
-            kind.stories = [];
-          }
-          kind.stories.push(id);
-          return { ...acc, [id]: { ...story, id, kind: kind.title } };
-        }
-        return acc;
-      },
-      {},
-    );
   }
   await extractStoreComponent(store, filePath, source, options, ast);
   const kindsNames = Object.keys(store.kinds);

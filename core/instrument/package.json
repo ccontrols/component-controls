@@ -37,7 +37,6 @@
     "@component-controls/specification": "^0.6.0",
     "@hutson/parse-repository-url": "^5.0.0",
     "@mdx-js/loader": "^1.5.5",
-    "@storybook/csf": "^0.0.1",
     "crypto": "^1.0.1",
     "deepmerge": "^4.2.2",
     "find-cache-dir": "^3.3.1",

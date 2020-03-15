@@ -5,7 +5,6 @@ Object {
   "description": "",
   "displayName": "Button",
   "methods": Array [],
-  "props": undefined,
 }
 `;
 

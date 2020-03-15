@@ -46,7 +46,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         borderBottom: 0,
       },
       tdgroup: {
-        fontWeight: 900,
+        fontWeight: 400,
         lineHeight: '24px',
         color: 'rgba(51,51,51,0.6)',
         background: '#fafbfc',
