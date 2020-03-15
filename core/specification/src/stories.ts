@@ -78,10 +78,16 @@ export interface Story {
    * title of the file/group of stories
    */
   kind?: string;
+
+  /**
+   * render function for the story
+   */
+  renderFn?: (controls: { [key: string]: any; context: any }) => any;
   /**
    * arguments pass to a CSF story
    * eg `export const story = props => <Story {...props} />;`
    */
+
   arguments?: StoryArguments;
   /**
    * configuration parameters passed to the story - either CSF or MDX

@@ -16,6 +16,8 @@ module.exports.default = async function(source: string) {
 
   const store: StoriesStore = await parseStories(source, filePath, options);
   if (store) {
+    const relPath = path.relative(context.rootContext, context.resourcePath);
+    const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
     const time = new Date();
     const fileName = path.join(__dirname, 'story-store-data.js');
     fs.utimesSync(fileName, time, time);
@@ -28,9 +30,7 @@ module.exports.default = async function(source: string) {
           ...acc,
           [key]: {
             ...store.kinds[key],
-            request: require.resolve(
-              path.relative(__dirname, context.resourcePath),
-            ),
+            moduleId: moduleId,
           },
         }),
         {},

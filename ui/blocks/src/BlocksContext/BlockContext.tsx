@@ -84,6 +84,7 @@ export const useControlsContext = ({
       ? myStoryStore.components[kind.components[componentName]]
       : undefined;
   const sbStory = (storyStore && storyStore.fromId(previewId)) || {};
+  console.log(kind, story);
   return {
     id: previewId,
     api,
