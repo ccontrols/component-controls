@@ -119,6 +119,7 @@ export interface StoriesKind {
    * title of the groups of stories (or kind). used to generate CSF story ids
    */
   title: string;
+
   /**
    * list of stories contained in the file/groups
    */
@@ -172,6 +173,8 @@ export interface StoriesKind {
    */
 
   includeStories?: string[] | RegExp;
+
+  [name: string]: any;
 }
 
 /**

@@ -64,7 +64,7 @@ export const useExpanderColumn = (hooks: UseTableHooks<{}>) => {
                       mx: 2,
                     }}
                   >
-                    {row.groupByVal} ({row.subRows.length})
+                    {row.groupByVal ?? ''} ({row.subRows.length})
                   </Text>
                 </Flex>
               </td>

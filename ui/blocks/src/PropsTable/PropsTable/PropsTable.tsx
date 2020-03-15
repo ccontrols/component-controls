@@ -38,7 +38,6 @@ export const PropsTable: FC<PropsTableProps> = ({
     groupProps.expanded = {
       [`prop.parentName:${parents.values().next().value}`]: true,
     };
-    console.log(groupProps.expanded);
     groupProps.groupBy = ['prop.parentName'];
   } else {
     groupProps.hiddenColumns = ['parent'];

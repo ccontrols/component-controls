@@ -19,7 +19,23 @@ module.exports.default = async function(source: string) {
     const time = new Date();
     const fileName = path.join(__dirname, 'story-store-data.js');
     fs.utimesSync(fileName, time, time);
-    addStoriesKind(store, context);
+    // console.log(context);
+    addStoriesKind({
+      stories: store.stories,
+      components: store.components,
+      kinds: Object.keys(store.kinds).reduce(
+        (acc, key) => ({
+          ...acc,
+          [key]: {
+            ...store.kinds[key],
+            request: require.resolve(
+              path.relative(__dirname, context.resourcePath),
+            ),
+          },
+        }),
+        {},
+      ),
+    });
   }
   return source;
 };

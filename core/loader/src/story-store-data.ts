@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import { StoriesStore, Story } from '@component-controls/specification';
 import { toId, storyNameFromExport } from '@storybook/csf';
 const injectedStories = '__STORIES_HASH__INJECTED_STORIES__';
@@ -21,6 +22,16 @@ const loadStoryStore = (): StoriesStore | undefined => {
           if (Object.keys(store.kinds).length > 0) {
             Object.keys(store.kinds).forEach(kindName => {
               const kind = store.kinds[kindName];
+              /*
+              if (kind.request) {
+                try {
+                  const exports = require(kind.request);
+                  console.log(exports);
+                } catch (e) {
+                  console.log(e);
+                }
+              }
+              */
               globalStore.kinds[kindName] = kind;
               Object.keys(store.stories).forEach(storyName => {
                 const story: Story = store.stories[storyName];
