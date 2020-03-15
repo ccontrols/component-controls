@@ -104,27 +104,6 @@ const parseSource = async (
   Object.keys(store.stories).forEach((key: string) => {
     const story: Story = store.stories[key];
     story.source = getASTSource(source, story.loc);
-    const { start, end } = story.loc || {};
-    if (start && end) {
-      const lines = source.split('\n');
-
-      if (start.line === end.line) {
-        story.source = lines[start.line - 1].substring(
-          start.column,
-          end.column,
-        );
-      } else {
-        const startLine = lines[start.line - 1];
-        const endLine = lines[end.line - 1];
-        if (startLine !== undefined && endLine !== undefined) {
-          story.source = [
-            startLine.substring(start.column),
-            ...lines.slice(start.line, end.line - 1),
-            endLine.substring(0, end.column),
-          ].join('\n');
-        }
-      }
-    }
   });
   return store;
 };
