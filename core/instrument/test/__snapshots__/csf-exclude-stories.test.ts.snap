@@ -5,14 +5,11 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/EXCLUDEStoryArray": Object {
-      "attributes": Object {
-        "excludeStories": Array [
-          "story1",
-          "story2",
-        ],
-        "title": "Storybook/Blocks/EXCLUDEStoryArray",
-      },
       "components": Object {},
+      "excludeStories": Array [
+        "story1",
+        "story2",
+      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-array.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -46,11 +43,8 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/ExcludeStoryRegex": Object {
-      "attributes": Object {
-        "excludeStories": "story(2|3)",
-        "title": "Storybook/Blocks/ExcludeStoryRegex",
-      },
       "components": Object {},
+      "excludeStories": "story(2|3)",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-regex.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -84,14 +78,11 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/IncludeStoryArray": Object {
-      "attributes": Object {
-        "includeStories": Array [
-          "story1",
-          "story2",
-        ],
-        "title": "Storybook/Blocks/IncludeStoryArray",
-      },
       "components": Object {},
+      "includeStories": Array [
+        "story1",
+        "story2",
+      ],
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-array.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -140,11 +131,8 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/IncludeStoryRegex": Object {
-      "attributes": Object {
-        "includeStories": "story(2|3)",
-        "title": "Storybook/Blocks/IncludeStoryRegex",
-      },
       "components": Object {},
+      "includeStories": "story(2|3)",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-regex.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",

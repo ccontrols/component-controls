@@ -1,8 +1,8 @@
 import { File } from '@babel/types';
 import {
   StoriesStore,
-  StoryAttributes,
   StoryComponent,
+  Story,
   StoriesKind,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
@@ -10,29 +10,15 @@ import { packageInfo } from '../misc/packageInfo';
 import { propsInfo } from '../misc/propsInfo';
 import { InstrumentOptions } from '../types';
 
-const componentFromParams = (
-  attributes?: StoryAttributes,
+const componentsFromParams = (
+  element: StoriesKind | Story,
 ): string | undefined => {
-  if (attributes) {
-    let component = attributes['component'];
-    if (!component) {
-      const params = attributes['parameters'];
-      if (params) {
-        component = params['component'];
-      }
-    }
-    if (component) {
-      if (typeof component === 'string') {
-        return component as string;
-      }
-      if (
-        Array.isArray(component) &&
-        component.length > 0 &&
-        typeof component[0].value === 'string'
-      ) {
-        return component[0].value;
-      }
-    }
+  let { component } = element;
+  if (!component && element.parameters) {
+    ({ component } = element.parameters);
+  }
+  if (typeof component === 'string') {
+    return component;
   }
   return undefined;
 };
@@ -101,7 +87,7 @@ export const extractStoreComponent = async (
   if (kinds.length > 0) {
     const kind: StoriesKind = store.kinds[kinds[0]];
     kind.components = {};
-    const componentName = componentFromParams(kind.attributes);
+    const componentName = componentsFromParams(kind);
 
     if (componentName) {
       const component = await extractComponent(
@@ -119,7 +105,7 @@ export const extractStoreComponent = async (
     }
     Object.keys(store.stories).forEach(async (name: string) => {
       const story = store.stories[name];
-      const componentName = componentFromParams(story.attributes);
+      const componentName = componentsFromParams(story);
       if (componentName) {
         const component = await extractComponent(
           componentName,

@@ -1,4 +1,4 @@
-import { StoryAttributes } from '@component-controls/specification';
+import { StoryParameters } from '@component-controls/specification';
 
 interface StoryAttribute {
   name: string;
@@ -52,11 +52,11 @@ const nodeToAttribute = (node: any): StoryAttribute | undefined => {
 };
 export const extractAttributes = (
   node: any,
-): StoryAttributes | any | undefined => {
+): StoryParameters | any | undefined => {
   if (node) {
     if (node.properties) {
-      const attributes: StoryAttributes = node.properties.reduce(
-        (acc: StoryAttributes, propNode: any) => {
+      const attributes: StoryParameters = node.properties.reduce(
+        (acc: StoryParameters, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {
             return { ...acc, [attribute.name]: attribute.value };

@@ -41,18 +41,15 @@ Object {
   },
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "addonControls": Object {
-            "smart": false,
-          },
-          "component": "ControlsTable",
-        },
-        "title": "Storybook/Blocks/ControlsTable",
-      },
       "component": "ControlsTable",
       "components": Object {
         "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-and-parameters.js",
+      },
+      "parameters": Object {
+        "addonControls": Object {
+          "smart": false,
+        },
+        "component": "ControlsTable",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-and-parameters.js",
@@ -75,23 +72,19 @@ Object {
   },
   "kinds": Object {
     "Storybook/Kind": Object {
-      "attributes": Object {
-        "component": "ControlsTable",
-        "parameters": Object {
-          "controls": Object {
-            "name": Object {
-              "label": "Name",
-              "order": 9999,
-              "type": "ControlTypes.TEXT",
-              "value": "Mark",
-            },
-          },
-        },
-        "title": "Storybook/Kind",
-      },
       "component": "ControlsTable",
       "components": Object {
         "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js",
+      },
+      "parameters": Object {
+        "controls": Object {
+          "name": Object {
+            "label": "Name",
+            "order": 9999,
+            "type": "ControlTypes.TEXT",
+            "value": "Mark",
+          },
+        },
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js",
@@ -110,9 +103,6 @@ Object {
   "components": Object {},
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
-      "attributes": Object {
-        "title": "Storybook/Blocks/ControlsTable",
-      },
       "components": Object {},
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/with-title.js",

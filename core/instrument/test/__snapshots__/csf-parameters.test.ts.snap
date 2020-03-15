@@ -7,15 +7,6 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-        "parameters": Object {
-          "addonControls": Object {
-            "smart": false,
-          },
-          "component": "ControlsTable",
-        },
-      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -26,7 +17,13 @@ Object {
           "line": 1,
         },
       },
-      "name": "Custom story name",
+      "name": "myStory",
+      "parameters": Object {
+        "addonControls": Object {
+          "smart": false,
+        },
+        "component": "ControlsTable",
+      },
       "source": "() => {}",
     },
   },
@@ -40,22 +37,6 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-        "parameters": Object {
-          "addonControls": Object {
-            "smart": false,
-          },
-          "controls": Object {
-            "name": Object {
-              "label": "Name",
-              "order": 9999,
-              "type": "ControlTypes.TEXT",
-              "value": "Mark",
-            },
-          },
-        },
-      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -66,7 +47,20 @@ Object {
           "line": 1,
         },
       },
-      "name": "Custom story name",
+      "name": "myStory",
+      "parameters": Object {
+        "addonControls": Object {
+          "smart": false,
+        },
+        "controls": Object {
+          "name": Object {
+            "label": "Name",
+            "order": 9999,
+            "type": "ControlTypes.TEXT",
+            "value": "Mark",
+          },
+        },
+      },
       "source": "() => {}",
     },
   },
@@ -80,9 +74,6 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-      },
       "loc": Object {
         "end": Object {
           "column": 31,
@@ -93,7 +84,7 @@ Object {
           "line": 1,
         },
       },
-      "name": "Custom story name",
+      "name": "myStory",
       "source": "() => {}",
     },
   },

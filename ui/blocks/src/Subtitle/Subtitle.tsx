@@ -13,8 +13,6 @@ export const Subtitle: FC<SubtitleProps> = ({ id, name, ...rest }) => {
     name,
   });
   const title =
-    story && story.attributes && story.attributes.parameters
-      ? story.attributes.parameters.componentSubtitle
-      : null;
+    story && story.parameters ? story.parameters.componentSubtitle : null;
   return title ? <SubtitleBlock {...rest}>{title}</SubtitleBlock> : null;
 };

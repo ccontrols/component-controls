@@ -7,9 +7,6 @@ Object {
   "stories": Object {
     "exportedStory": Object {
       "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-      },
       "loc": Object {
         "end": Object {
           "column": 24,
@@ -20,7 +17,7 @@ Object {
           "line": 1,
         },
       },
-      "name": "Custom story name",
+      "name": "myStory",
       "source": "() => {}",
     },
   },
@@ -34,9 +31,6 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
-      "attributes": Object {
-        "name": "Custom story name",
-      },
       "loc": Object {
         "end": Object {
           "column": 24,
@@ -47,7 +41,7 @@ Object {
           "line": 1,
         },
       },
-      "name": "Custom story name",
+      "name": "myStory",
       "source": "() => {}",
     },
   },

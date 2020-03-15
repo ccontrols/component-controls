@@ -53,10 +53,10 @@ export interface StoryArgument {
 export type StoryArguments = StoryArgument[];
 
 /**
- * list of configuration attributes for stories and 'kinds'
+ * list of configuration parameters for stories and 'kinds'
  * can be specified either through CSF or MDX tags
  */
-export interface StoryAttributes {
+export interface StoryParameters {
   [name: string]: any;
 }
 
@@ -84,9 +84,9 @@ export interface Story {
    */
   arguments?: StoryArguments;
   /**
-   * configuration attributes passed to the story - either CSF or MDX Story attributes
+   * configuration parameters passed to the story - either CSF or MDX
    */
-  attributes?: StoryAttributes;
+  parameters?: StoryParameters;
   /**
    * location in the source file of the story definition
    */
@@ -123,12 +123,13 @@ export interface StoriesKind {
    * list of stories contained in the file/groups
    */
   stories?: string[];
+
   /**
-   * any attributes passed to the story groupds, such as title, parameters etc
+   * configuration parameters passed to the story groups
    * configured either as CSF default export
    * or MDX <Meta /> tag
    */
-  attributes?: StoryAttributes;
+  parameters?: StoryParameters;
 
   /**
    * source code of the entire file of stories
@@ -158,6 +159,19 @@ export interface StoriesKind {
   components: {
     [name: string]: string;
   };
+
+  /**
+   * list of stories to exclude from the stories file
+   * can also use regexp match
+   */
+  excludeStories?: string[] | RegExp;
+
+  /**
+   * list of stories to include in the stories file
+   * can also use regexp match
+   */
+
+  includeStories?: string[] | RegExp;
 }
 
 /**

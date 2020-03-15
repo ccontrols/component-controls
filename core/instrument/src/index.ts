@@ -97,8 +97,7 @@ const parseSource = async (
     const kind: StoriesKind = store.kinds[kindsNames[i]];
     if (store.stories) {
       let includedStories = Object.keys(store.stories);
-      const { attributes } = kind;
-      const { includeStories, excludeStories } = attributes || {};
+      const { includeStories, excludeStories } = kind;
       if (includeStories) {
         if (Array.isArray(includeStories)) {
           includedStories = includedStories.filter(

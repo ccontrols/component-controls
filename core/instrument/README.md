@@ -8,7 +8,7 @@ Parsing a source file will generate the following information:
 - MDX: List of `<Meta />` stories file information
 - Source code extracted for the stories
 - Source code of the entire stories file
-- List of attributes(parameters) passed to CSF/MDX stories
+- List of all attributes(ie parameters) passed to CSF/MDX stories
 - List of story function arguments passed to CSF/MDX stories
 - Usage location (in thesource code) of the function arguments
 - Extract 'component' information for stories: import clause, source file,source loction

@@ -15,10 +15,6 @@ Object {
   },
   "kinds": Object {
     "Components/Toggle": Object {
-      "attributes": Object {
-        "component": "Toggle",
-        "title": "Components/Toggle",
-      },
       "component": "Toggle",
       "components": Object {
         "Toggle": "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/toggle/toggle-story.js",

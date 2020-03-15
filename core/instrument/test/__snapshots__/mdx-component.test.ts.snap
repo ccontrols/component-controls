@@ -31,10 +31,6 @@ export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "component": "Button",
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/component-parameters.mdx",
@@ -71,10 +67,6 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "component": "Button",
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx",
@@ -109,10 +101,6 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "component": "Button",
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx",
@@ -135,10 +123,6 @@ import { Toggle } from './Toggle';
   },
   "stories": Object {
     "my-story": Object {
-      "attributes": Object {
-        "component": "Toggle",
-        "name": "my-story",
-      },
       "component": "Toggle",
       "loc": Object {
         "end": Object {

@@ -36,12 +36,10 @@ export const extractCSFStories = (stories: StoriesStore) => {
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);
 
-      const title = attributes ? attributes['title'] : null;
-      const kindTitle = typeof title === 'string' ? title : undefined;
-      if (kindTitle) {
-        stories.kinds[kindTitle] = {
-          title: kindTitle,
-          attributes,
+      const { title } = attributes || {};
+      if (typeof title === 'string') {
+        stories.kinds[title] = {
+          ...attributes,
           components: {},
         };
       }
@@ -56,18 +54,18 @@ export const extractCSFStories = (stories: StoriesStore) => {
       ) {
         const storyName = node.left.object.name;
         const attributes = extractAttributes(node.right);
-        const nameProp = attributes ? attributes['name'] : null;
-        const name = nameProp ? nameProp : storyName;
+        const { name = storyName } = attributes;
         globals[storyName] = {
-          attributes,
+          ...attributes,
           name,
         };
 
-        const story = stories.stories[storyName];
-
-        if (story) {
-          story.name = name;
-          story.attributes = attributes;
+        if (stories.stories[storyName]) {
+          stories.stories[storyName] = {
+            ...attributes,
+            name,
+            ...stories.stories[storyName],
+          };
         }
       }
     },
@@ -95,8 +93,10 @@ export const extractCSFStories = (stories: StoriesStore) => {
       if (story) {
         const global = globals[localName];
         if (global) {
-          story.name = global.name;
-          story.attributes = global.attributes;
+          localStories[localName] = {
+            ...story,
+            ...global,
+          };
         }
         stories.stories[exportedName] = story;
       }
@@ -108,13 +108,11 @@ export const extractCSFStories = (stories: StoriesStore) => {
         if (Array.isArray(declarations) && declarations.length > 0) {
           const story = extractArrowFunction(path, declarations[0]);
           if (story) {
-            const name = story.name || '';
-            const global = globals[name];
-            if (global) {
-              story.name = global.name;
-              story.attributes = global.attributes;
-            }
-            stories.stories[name] = story;
+            const name = story.name;
+            stories.stories[name] = {
+              ...story,
+              ...globals[name],
+            };
           }
         }
       }

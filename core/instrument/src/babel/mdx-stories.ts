@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Story,
-  StoryAttributes,
+  StoryParameters,
 } from '@component-controls/specification';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
@@ -13,8 +13,8 @@ export const extractMDXStories = (stories: StoriesStore) => {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
       if (['Meta', 'Story'].indexOf(node.name.name) > -1) {
-        const attributes: StoryAttributes = node.attributes.reduce(
-          (acc: StoryAttributes, attribute: any) => {
+        const attributes: StoryParameters = node.attributes.reduce(
+          (acc: StoryParameters, attribute: any) => {
             if (attribute.value.type === 'StringLiteral') {
               return { ...acc, [attribute.name?.name]: attribute.value?.value };
             } else if (attribute.value.type === 'JSXExpressionContainer') {
@@ -32,31 +32,29 @@ export const extractMDXStories = (stories: StoriesStore) => {
 
         switch (node.name.name) {
           case 'Story': {
-            const story: Story = {
-              loc: sourceLocation(path.node.loc),
-            };
-            const name = attributes['name'];
-
+            const { name } = attributes;
             if (typeof name === 'string') {
+              const story: Story = {
+                ...attributes,
+                name,
+                loc: sourceLocation(path.node.loc),
+              };
               traverse(
                 path.node,
                 extractFunctionParameters(story),
                 path.scope,
                 path,
               );
-              story.name = name;
-              story.attributes = attributes;
               stories.stories[name] = story;
             }
             break;
           }
           case 'Meta': {
-            const title = attributes['title'];
-            const kindTitle = typeof title === 'string' ? title : undefined;
-            if (kindTitle) {
-              stories.kinds[kindTitle] = {
-                title: kindTitle,
-                attributes,
+            const { title } = attributes;
+            if (title) {
+              stories.kinds[title] = {
+                ...attributes,
+                title,
                 components: {},
               };
             }

@@ -15,15 +15,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
@@ -61,15 +58,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
@@ -107,9 +101,6 @@ import Button from '../components/BaseButton';
           "value": "props",
         },
       ],
-      "attributes": Object {
-        "name": "story-with-props",
-      },
       "loc": Object {
         "end": Object {
           "column": 57,
@@ -160,15 +151,12 @@ export default Button;
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/story.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/story.mdx",
@@ -190,9 +178,6 @@ import Button from '../../components/button-default-arrow-func';
   },
   "stories": Object {
     "smart story": Object {
-      "attributes": Object {
-        "name": "smart story",
-      },
       "loc": Object {
         "end": Object {
           "column": 14,
@@ -227,15 +212,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
@@ -331,9 +313,6 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
-      "attributes": Object {
-        "name": "story-with-props",
-      },
       "loc": Object {
         "end": Object {
           "column": 24,
@@ -370,15 +349,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
@@ -444,9 +420,6 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
-      "attributes": Object {
-        "name": "story-with-props",
-      },
       "loc": Object {
         "end": Object {
           "column": 67,
@@ -479,15 +452,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
@@ -538,9 +508,6 @@ import Button from '../components/BaseButton';
           "value": "context",
         },
       ],
-      "attributes": Object {
-        "name": "story-with-props",
-      },
       "loc": Object {
         "end": Object {
           "column": 68,
@@ -573,15 +540,12 @@ Object {
   },
   "kinds": Object {
     "Storybook/MDX": Object {
-      "attributes": Object {
-        "parameters": Object {
-          "component": "Button",
-        },
-        "title": "Storybook/MDX",
-      },
       "component": "Button",
       "components": Object {
         "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
+      },
+      "parameters": Object {
+        "component": "Button",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
@@ -647,9 +611,6 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
-      "attributes": Object {
-        "name": "story-with-props",
-      },
       "loc": Object {
         "end": Object {
           "column": 46,
