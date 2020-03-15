@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-exclude-stories exclude-stories-array.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/EXCLUDEStoryArray": Object {
+      "attributes": Object {
+        "excludeStories": Array [
+          "story1",
+          "story2",
+        ],
+        "title": "Storybook/Blocks/EXCLUDEStoryArray",
+      },
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-array.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "title": "Storybook/Blocks/EXCLUDEStoryArray",
+    },
+  },
+  "stories": Object {
+    "story3": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 8,
+        },
+      },
+      "name": "story3",
+      "source": "() => {}",
+    },
+  },
+}
+`;
+
+exports[`csf-exclude-stories exclude-stories-regex.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/ExcludeStoryRegex": Object {
+      "attributes": Object {
+        "excludeStories": "story(2|3)",
+        "title": "Storybook/Blocks/ExcludeStoryRegex",
+      },
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-regex.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "title": "Storybook/Blocks/ExcludeStoryRegex",
+    },
+  },
+  "stories": Object {
+    "story1": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 6,
+        },
+      },
+      "name": "story1",
+      "source": "() => {}",
+    },
+  },
+}
+`;
+
+exports[`csf-exclude-stories include-stories-array.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/IncludeStoryArray": Object {
+      "attributes": Object {
+        "includeStories": Array [
+          "story1",
+          "story2",
+        ],
+        "title": "Storybook/Blocks/IncludeStoryArray",
+      },
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-array.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "title": "Storybook/Blocks/IncludeStoryArray",
+    },
+  },
+  "stories": Object {
+    "story1": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 6,
+        },
+      },
+      "name": "story1",
+      "source": "() => {}",
+    },
+    "story2": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 7,
+        },
+      },
+      "name": "story2",
+      "source": "() => {}",
+    },
+  },
+}
+`;
+
+exports[`csf-exclude-stories include-stories-regex.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Storybook/Blocks/IncludeStoryRegex": Object {
+      "attributes": Object {
+        "includeStories": "story(2|3)",
+        "title": "Storybook/Blocks/IncludeStoryRegex",
+      },
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-regex.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "title": "Storybook/Blocks/IncludeStoryRegex",
+    },
+  },
+  "stories": Object {
+    "story2": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 7,
+        },
+      },
+      "name": "story2",
+      "source": "() => {}",
+    },
+    "story3": Object {
+      "arguments": Array [],
+      "loc": Object {
+        "end": Object {
+          "column": 30,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 8,
+        },
+      },
+      "name": "story3",
+      "source": "() => {}",
+    },
+  },
+}
+`;

@@ -1,5 +1,9 @@
 import { loadStoriesTests } from './loadTestFiles';
 
 describe('csf-parameters', () => {
-  loadStoriesTests('csf', 'parameters');
+  loadStoriesTests(
+    { stories: { storeSourceFile: false } },
+    'csf',
+    'parameters',
+  );
 });

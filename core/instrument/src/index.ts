@@ -95,7 +95,40 @@ const parseSource = async (
   const kindsNames = Object.keys(store.kinds);
   for (let i = 0; i < kindsNames.length; i += 1) {
     const kind: StoriesKind = store.kinds[kindsNames[i]];
-
+    if (store.stories) {
+      let includedStories = Object.keys(store.stories);
+      const { attributes } = kind;
+      const { includeStories, excludeStories } = attributes || {};
+      if (includeStories) {
+        if (Array.isArray(includeStories)) {
+          includedStories = includedStories.filter(
+            name => includeStories.indexOf(name) > -1,
+          );
+        } else {
+          const match = new RegExp(includeStories);
+          includedStories = includedStories.filter(name => {
+            return name.match(match);
+          });
+        }
+      }
+      if (excludeStories) {
+        if (Array.isArray(excludeStories)) {
+          includedStories = includedStories.filter(
+            name => excludeStories.indexOf(name) === -1,
+          );
+        } else {
+          const match = new RegExp(excludeStories);
+          includedStories = includedStories.filter(name => !name.match(match));
+        }
+      }
+      if (includeStories || excludeStories) {
+        for (var key in store.stories) {
+          if (includedStories.indexOf(key) === -1) {
+            delete store.stories[key];
+          }
+        }
+      }
+    }
     const repository = await packageInfo(filePath, options.stories.package);
     if (repository) {
       kind.repository = repository;

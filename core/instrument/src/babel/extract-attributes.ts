@@ -4,45 +4,51 @@ interface StoryAttribute {
   name: string;
   value: any;
 }
-const nodeToAttribute = (node: any): StoryAttribute | undefined => {
-  const value = node.value || node;
-  const name = node.key ? node.key.name : node.name;
-  if (value) {
-    switch (value.type) {
+const nodeToValue = (node: any): any => {
+  if (node) {
+    switch (node.type) {
       case 'BooleanLiteral':
       case 'NumericLiteral':
-      case 'StringLiteral': {
-        return {
-          value: value.value,
-          name,
-        };
-      }
+      case 'StringLiteral':
+        return node.value;
       case 'Identifier':
-        return {
-          value: value.name,
-          name,
-        };
+        return node.name;
+      case 'Property':
+        return node.name;
+
+      case 'Literal':
+        return node.raw;
+      case 'RegExpLiteral':
+        const value = node.raw ?? node.extra ? node.extra.raw : undefined;
+        // remove leading trailing slashes for string to reg xonversion
+        return typeof value === 'string'
+          ? value.replace(/^\/|\/$/g, '')
+          : value;
       case 'MemberExpression':
-        return {
-          value: `${value.object.name}.${value.property.name}`,
-          name,
-        };
-      case 'ObjectExpression': {
-        const val = extractAttributes(value);
-        if (val) {
-          return {
-            value: val,
-            name,
-          };
+        return `${node.object.name}.${node.property.name}`;
+      case 'ObjectExpression':
+        return extractAttributes(node);
+      case 'ArrayExpression':
+        if (Array.isArray(node.elements)) {
+          return node.elements.map((v: any) => nodeToValue(v));
         }
         break;
-      }
       default:
         // console.log(property.value);
         return undefined;
     }
   }
   return undefined;
+};
+const nodeToAttribute = (node: any): StoryAttribute | undefined => {
+  const value = node.value || node;
+  const name = node.key ? node.key.name : node.name;
+  const retVal = nodeToValue(value);
+  return retVal !== undefined
+    ? name
+      ? { value: retVal, name }
+      : retVal
+    : undefined;
 };
 export const extractAttributes = (
   node: any,

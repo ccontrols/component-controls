@@ -1,9 +1,9 @@
 import { loadStoriesTests } from './loadTestFiles';
 
-describe('csf-props-usage', () => {
+describe('csf-exclude-stories', () => {
   loadStoriesTests(
     { stories: { storeSourceFile: false } },
     'csf',
-    'props-usage',
+    'exclude-stories',
   );
 });

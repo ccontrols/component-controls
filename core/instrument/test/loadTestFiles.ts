@@ -18,9 +18,9 @@ export const loadTestFiles = (callback: LoadTestCallbackFn, ...args) => {
   });
 };
 
-export const loadStoriesTests = (...args) => {
+export const loadStoriesTests = (options, ...args) => {
   loadTestFiles(async fileName => {
     const content = fs.readFileSync(fileName, 'utf8');
-    return await parseStories(content, fileName);
+    return await parseStories(content, fileName, options);
   }, ...args);
 };

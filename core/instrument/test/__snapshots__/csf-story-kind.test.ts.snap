@@ -59,16 +59,6 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "export default {
-  title: 'Storybook/Blocks/ControlsTable',
-  parameters: {
-    component: ControlsTable,
-    addonControls: {
-      smart: false,
-    },
-  },
-};
-",
       "title": "Storybook/Blocks/ControlsTable",
     },
   },
@@ -108,21 +98,6 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "export default {
-  title: 'Storybook/Kind',
-  component: ControlsTable,
-  parameters: {
-    controls: {
-      name: {
-        type: ControlTypes.TEXT,
-        label: 'Name',
-        value: 'Mark',
-        order: 9999,
-      },
-    },
-  },
-};
-",
       "title": "Storybook/Kind",
     },
   },
@@ -144,10 +119,6 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "source": "export default {
-  title: 'Storybook/Blocks/ControlsTable',
-};
-",
       "title": "Storybook/Blocks/ControlsTable",
     },
   },
