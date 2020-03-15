@@ -130,21 +130,16 @@ import { Toggle } from './Toggle';
 <Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"my-story\\" component={Toggle} />",
-      "stories": Array [
-        "storybook-mdx--my-story",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--my-story": Object {
+    "my-story": Object {
       "attributes": Object {
         "component": "Toggle",
         "name": "my-story",
       },
       "component": "Toggle",
-      "id": "storybook-mdx--my-story",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 50,

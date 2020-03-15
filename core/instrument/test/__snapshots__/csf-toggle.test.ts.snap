@@ -57,17 +57,12 @@ export const allToggles = () => {
   );
 };
 ",
-      "stories": Array [
-        "components-toggle--all-toggles",
-      ],
       "title": "Components/Toggle",
     },
   },
   "stories": Object {
-    "components-toggle--all-toggles": Object {
+    "allToggles": Object {
       "arguments": Array [],
-      "id": "components-toggle--all-toggles",
-      "kind": "Components/Toggle",
       "loc": Object {
         "end": Object {
           "column": 1,

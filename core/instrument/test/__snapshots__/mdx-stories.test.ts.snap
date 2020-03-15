@@ -86,14 +86,11 @@ import Button from '../components/BaseButton';
   {props => <Button />}
 </Story>
 ",
-      "stories": Array [
-        "storybook-mdx--story-with-props",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--story-with-props": Object {
+    "story-with-props": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -113,8 +110,6 @@ import Button from '../components/BaseButton';
       "attributes": Object {
         "name": "story-with-props",
       },
-      "id": "storybook-mdx--story-with-props",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 57,
@@ -190,19 +185,14 @@ import Button from '../../components/button-default-arrow-func';
   <Button />
 </Story>
 ",
-      "stories": Array [
-        "storybook-mdx--smart-story",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--smart-story": Object {
+    "smart story": Object {
       "attributes": Object {
         "name": "smart story",
       },
-      "id": "storybook-mdx--smart-story",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 14,
@@ -262,14 +252,11 @@ import Button from '../components/BaseButton';
   {({ name: { first, last }, age }) => <Button />}
 </Story>
 ",
-      "stories": Array [
-        "storybook-mdx--story-with-props",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--story-with-props": Object {
+    "story-with-props": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -347,8 +334,6 @@ import Button from '../components/BaseButton';
       "attributes": Object {
         "name": "story-with-props",
       },
-      "id": "storybook-mdx--story-with-props",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 24,
@@ -409,14 +394,11 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {({ name, age }) => <Button />}
 </Story>",
-      "stories": Array [
-        "storybook-mdx--story-with-props",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--story-with-props": Object {
+    "story-with-props": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -465,8 +447,6 @@ import Button from '../components/BaseButton';
       "attributes": Object {
         "name": "story-with-props",
       },
-      "id": "storybook-mdx--story-with-props",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 67,
@@ -523,14 +503,11 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {(props, context) => <Button />}
 </Story>",
-      "stories": Array [
-        "storybook-mdx--story-with-props",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--story-with-props": Object {
+    "story-with-props": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -564,8 +541,6 @@ import Button from '../components/BaseButton';
       "attributes": Object {
         "name": "story-with-props",
       },
-      "id": "storybook-mdx--story-with-props",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 68,
@@ -622,14 +597,11 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {({ name: MyName, age }) => <Button />}
 </Story>",
-      "stories": Array [
-        "storybook-mdx--story-with-props",
-      ],
       "title": "Storybook/MDX",
     },
   },
   "stories": Object {
-    "storybook-mdx--story-with-props": Object {
+    "story-with-props": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -678,8 +650,6 @@ import Button from '../components/BaseButton';
       "attributes": Object {
         "name": "story-with-props",
       },
-      "id": "storybook-mdx--story-with-props",
-      "kind": "Storybook/MDX",
       "loc": Object {
         "end": Object {
           "column": 46,
