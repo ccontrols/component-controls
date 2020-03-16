@@ -1,6 +1,7 @@
 import {
   StoriesStore,
   Story,
+  StoryKind,
   Stories,
 } from '@component-controls/specification';
 import { File } from '@babel/types';
@@ -33,6 +34,7 @@ export const extractCSFStories = (ast: File): StoriesStore => {
     }
     return undefined;
   };
+  let components: { [key: string]: string | undefined } = {};
   const store: StoriesStore = {
     stories: {},
     kinds: {},
@@ -45,14 +47,19 @@ export const extractCSFStories = (ast: File): StoriesStore => {
 
       const { title } = attributes || {};
       if (typeof title === 'string') {
-        const components = componentsFromParams(attributes);
-        store.kinds[title] = {
+        const attrComponents = componentsFromParams(attributes);
+        components = attrComponents.reduce(
+          (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+          components,
+        );
+        const kind: StoryKind = {
           ...attributes,
-          components: components.reduce(
-            (acc, componentName) => ({ ...acc, [componentName]: undefined }),
-            {},
-          ),
+          components: {},
         };
+        if (attrComponents.length > 0) {
+          kind.component = attrComponents[0];
+        }
+        store.kinds[title] = kind;
       }
     },
     AssignmentExpression: (path: any) => {
@@ -72,11 +79,20 @@ export const extractCSFStories = (ast: File): StoriesStore => {
         };
 
         if (store.stories[storyName]) {
-          store.stories[storyName] = {
+          const attrComponents = componentsFromParams(attributes);
+          components = attrComponents.reduce(
+            (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+            components,
+          );
+          const story: Story = {
             ...attributes,
             name,
             ...store.stories[storyName],
           };
+          if (attrComponents.length > 0) {
+            story.component = attrComponents[0];
+          }
+          store.stories[storyName] = story;
         }
       }
     },
@@ -129,5 +145,9 @@ export const extractCSFStories = (ast: File): StoriesStore => {
       }
     },
   });
+  if (Object.keys(store.kinds).length === 1) {
+    //@ts-ignore
+    store.kinds[Object.keys(store.kinds)[0]].components = components;
+  }
   return store;
 };

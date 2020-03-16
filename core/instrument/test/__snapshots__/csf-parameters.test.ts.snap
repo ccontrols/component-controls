@@ -7,6 +7,7 @@ Object {
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "component": "ControlsTable",
       "loc": Object {
         "end": Object {
           "column": 31,

@@ -1,6 +1,7 @@
 import {
   StoriesStore,
   Story,
+  StoriesKind,
   StoryParameters,
 } from '@component-controls/specification';
 import { File } from '@babel/types';
@@ -8,8 +9,10 @@ import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from './utils';
+import { componentsFromParams } from '../misc/componentAttributes';
 
 export const extractMDXStories = (ast: File): StoriesStore => {
+  let components: { [key: string]: string | undefined } = {};
   const store: StoriesStore = {
     stories: {},
     kinds: {},
@@ -39,7 +42,13 @@ export const extractMDXStories = (ast: File): StoriesStore => {
           },
           {},
         );
-
+        const attrComponents = componentsFromParams(attributes);
+        components = attrComponents.reduce(
+          (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+          components,
+        );
+        const component =
+          attrComponents.length > 0 ? attrComponents[0] : undefined;
         switch (node.name.name) {
           case 'Story': {
             const { name } = attributes;
@@ -49,6 +58,9 @@ export const extractMDXStories = (ast: File): StoriesStore => {
                 name,
                 loc: sourceLocation(path.node.loc),
               };
+              if (component) {
+                story.component = component;
+              }
               traverse(
                 path.node,
                 extractFunctionParameters(story),
@@ -62,11 +74,15 @@ export const extractMDXStories = (ast: File): StoriesStore => {
           case 'Meta': {
             const { title } = attributes;
             if (title) {
-              store.kinds[title] = {
+              const kind: StoriesKind = {
+                components: {},
                 ...attributes,
                 title,
-                components: {},
               };
+              if (component !== undefined) {
+                kind.component = component;
+              }
+              store.kinds[title] = kind;
             }
             break;
           }
@@ -77,5 +93,10 @@ export const extractMDXStories = (ast: File): StoriesStore => {
       }
     },
   });
+
+  if (Object.keys(store.kinds).length === 1) {
+    //@ts-ignore
+    store.kinds[Object.keys(store.kinds)[0]].components = components;
+  }
   return store;
 };

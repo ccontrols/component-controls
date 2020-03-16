@@ -1,7 +1,11 @@
-import { Story, StoriesKind } from '@component-controls/specification';
+import {
+  Story,
+  StoriesKind,
+  StoryParameters,
+} from '@component-controls/specification';
 
 export const componentsFromParams = (
-  element: StoriesKind | Story,
+  element: StoriesKind | Story | StoryParameters,
 ): string[] => {
   const result = [];
   let { component } = element;
