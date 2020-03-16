@@ -10,11 +10,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 92,
+      "line": 90,
     },
     "start": Object {
       "column": 28,
-      "line": 43,
+      "line": 41,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -111,11 +111,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 92,
+      "line": 90,
     },
     "start": Object {
       "column": 28,
-      "line": 43,
+      "line": 41,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",

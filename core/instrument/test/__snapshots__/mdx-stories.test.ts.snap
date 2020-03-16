@@ -26,6 +26,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -69,6 +70,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -139,6 +141,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
       "source": "import React from 'react';
@@ -162,6 +165,7 @@ export default Button;
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/story.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../../components/button-default-arrow-func';
@@ -223,6 +227,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -360,6 +365,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -463,6 +469,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -551,6 +558,7 @@ Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';

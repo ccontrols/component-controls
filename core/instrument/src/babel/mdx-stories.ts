@@ -3,16 +3,26 @@ import {
   Story,
   StoryParameters,
 } from '@component-controls/specification';
+import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from './utils';
 
-export const extractMDXStories = (stories: StoriesStore) => {
-  return {
+export const extractMDXStories = (ast: File): StoriesStore => {
+  const store: StoriesStore = {
+    stories: {},
+    kinds: {},
+    components: {},
+  };
+  traverse(ast, {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
-      if (['Meta', 'Story'].indexOf(node.name.name) > -1) {
+      if (
+        ['Meta', 'Story', 'Preview', 'Playground', 'ComponentSource'].indexOf(
+          node.name.name,
+        ) > -1
+      ) {
         const attributes: StoryParameters = node.attributes.reduce(
           (acc: StoryParameters, attribute: any) => {
             if (attribute.value.type === 'StringLiteral') {
@@ -45,14 +55,14 @@ export const extractMDXStories = (stories: StoriesStore) => {
                 path.scope,
                 path,
               );
-              stories.stories[name] = story;
+              store.stories[name] = story;
             }
             break;
           }
           case 'Meta': {
             const { title } = attributes;
             if (title) {
-              stories.kinds[title] = {
+              store.kinds[title] = {
                 ...attributes,
                 title,
                 components: {},
@@ -66,5 +76,6 @@ export const extractMDXStories = (stories: StoriesStore) => {
         // console.log(node.name.name, attributes);
       }
     },
-  };
+  });
+  return store;
 };

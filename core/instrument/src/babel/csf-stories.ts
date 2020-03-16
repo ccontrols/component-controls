@@ -3,12 +3,14 @@ import {
   Story,
   Stories,
 } from '@component-controls/specification';
+import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './get-function-parameters';
 import { extractAttributes } from './extract-attributes';
+import { componentsFromParams } from '../misc/componentAttributes';
 import { sourceLocation } from './utils';
 
-export const extractCSFStories = (stories: StoriesStore) => {
+export const extractCSFStories = (ast: File): StoriesStore => {
   const globals: Stories = {};
   const localStories: Stories = {};
 
@@ -31,16 +33,25 @@ export const extractCSFStories = (stories: StoriesStore) => {
     }
     return undefined;
   };
-  return {
+  const store: StoriesStore = {
+    stories: {},
+    kinds: {},
+    components: {},
+  };
+  traverse(ast, {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);
 
       const { title } = attributes || {};
       if (typeof title === 'string') {
-        stories.kinds[title] = {
+        const components = componentsFromParams(attributes);
+        store.kinds[title] = {
           ...attributes,
-          components: {},
+          components: components.reduce(
+            (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+            {},
+          ),
         };
       }
     },
@@ -60,11 +71,11 @@ export const extractCSFStories = (stories: StoriesStore) => {
           name,
         };
 
-        if (stories.stories[storyName]) {
-          stories.stories[storyName] = {
+        if (store.stories[storyName]) {
+          store.stories[storyName] = {
             ...attributes,
             name,
-            ...stories.stories[storyName],
+            ...store.stories[storyName],
           };
         }
       }
@@ -76,7 +87,7 @@ export const extractCSFStories = (stories: StoriesStore) => {
         if (declaration) {
           const name = declaration.id.name;
           //check if it was a named export
-          if (!stories.stories[name]) {
+          if (!store.stories[name]) {
             const story = extractArrowFunction(path, declaration);
             if (story && story.name) {
               localStories[story.name] = story;
@@ -98,7 +109,7 @@ export const extractCSFStories = (stories: StoriesStore) => {
             ...global,
           };
         }
-        stories.stories[exportedName] = story;
+        store.stories[exportedName] = story;
       }
     },
     ExportNamedDeclaration: (path: any) => {
@@ -109,7 +120,7 @@ export const extractCSFStories = (stories: StoriesStore) => {
           const story = extractArrowFunction(path, declarations[0]);
           if (story) {
             const name = story.name;
-            stories.stories[name] = {
+            store.stories[name] = {
               ...story,
               ...globals[name],
             };
@@ -117,5 +128,6 @@ export const extractCSFStories = (stories: StoriesStore) => {
         }
       }
     },
-  };
+  });
+  return store;
 };

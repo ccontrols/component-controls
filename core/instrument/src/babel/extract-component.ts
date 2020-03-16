@@ -2,26 +2,13 @@ import { File } from '@babel/types';
 import {
   StoriesStore,
   StoryComponent,
-  Story,
   StoriesKind,
 } from '@component-controls/specification';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/packageInfo';
 import { propsInfo } from '../misc/propsInfo';
 import { InstrumentOptions } from '../types';
-
-const componentsFromParams = (
-  element: StoriesKind | Story,
-): string | undefined => {
-  let { component } = element;
-  if (!component && element.parameters) {
-    ({ component } = element.parameters);
-  }
-  if (typeof component === 'string') {
-    return component;
-  }
-  return undefined;
-};
+import { componentsFromParams } from '../misc/componentAttributes';
 
 const globalCache: {
   [filePath: string]: StoryComponent;
@@ -87,26 +74,10 @@ export const extractStoreComponent = async (
   if (kinds.length > 0) {
     const kind: StoriesKind = store.kinds[kinds[0]];
     kind.components = {};
-    const componentName = componentsFromParams(kind);
+    const componentNames = componentsFromParams(kind);
 
-    if (componentName) {
-      const component = await extractComponent(
-        componentName,
-        filePath,
-        source,
-        options,
-        initialAST,
-      );
-      if (component) {
-        store.components[filePath] = component;
-        kind.components[componentName] = filePath;
-        kind.component = componentName;
-      }
-    }
-    Object.keys(store.stories).forEach(async (name: string) => {
-      const story = store.stories[name];
-      const componentName = componentsFromParams(story);
-      if (componentName) {
+    if (componentNames) {
+      for (const componentName of componentNames) {
         const component = await extractComponent(
           componentName,
           filePath,
@@ -117,7 +88,27 @@ export const extractStoreComponent = async (
         if (component) {
           store.components[filePath] = component;
           kind.components[componentName] = filePath;
-          story.component = componentName;
+          kind.component = componentName;
+        }
+      }
+    }
+    Object.keys(store.stories).forEach(async (name: string) => {
+      const story = store.stories[name];
+      const componentNames = componentsFromParams(story);
+      if (componentNames) {
+        for (const componentName of componentNames) {
+          const component = await extractComponent(
+            componentName,
+            filePath,
+            source,
+            options,
+            initialAST,
+          );
+          if (component) {
+            store.components[filePath] = component;
+            kind.components[componentName] = filePath;
+            story.component = componentName;
+          }
         }
       }
     });

@@ -1,5 +1,6 @@
 import * as parser from '@babel/parser';
 import mdx from '@mdx-js/mdx';
+import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import prettier from 'prettier';
@@ -34,7 +35,7 @@ import {
 export * from './types';
 
 type ParseType = 'mdx' | 'csf';
-type TraverseFn = (stories: StoriesStore) => any;
+type TraverseFn = (ast: File) => StoriesStore;
 
 const TraverseFunctions: {
   [key in ParseType]: TraverseFn;
@@ -79,12 +80,8 @@ const parseSource = async (
   };
   const source = await prettify(code);
   const ast = parser.parse(source, options.parser);
-  const store: StoriesStore = {
-    stories: {},
-    kinds: {},
-    components: {},
-  };
-  traverse(ast, TraverseFunctions[parseType](store));
+
+  const store = TraverseFunctions[parseType](ast);
   if (Object.keys(store.kinds).length > 0) {
     const kind = store.kinds[Object.keys(store.kinds)[0]];
     if (options.stories.storeSourceFile) {

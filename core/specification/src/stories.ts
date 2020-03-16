@@ -106,7 +106,12 @@ export interface Story {
   /**
    * id for component associated with the story
    */
-  component?: string;
+  component?: string | object;
+
+  /**
+   * multiple components option
+   */
+  subcomponents?: string[] | object[];
 
   /**
    * object of key/value pairs specifying the controls for the story
@@ -150,9 +155,14 @@ export interface StoriesKind {
   source?: string;
 
   /**
-   *  id for component associated with the stories file
+   * id for component associated with the stories file
    */
-  component?: string;
+  component?: string | object;
+
+  /**
+   * multiple components option
+   */
+  subcomponents?: string[] | object[];
 
   /**
    * file name of the file of stories
