@@ -19,8 +19,9 @@ export const extractComponent = async (
   options?: InstrumentOptions,
   initialAST?: File,
 ): Promise<StoryComponent | undefined> => {
-  if (globalCache[filePath]) {
-    return globalCache[filePath];
+  const cacheKey = `${filePath}-${componentName}`;
+  if (globalCache[cacheKey]) {
+    return globalCache[cacheKey];
   }
   const follow = followImports(
     componentName,

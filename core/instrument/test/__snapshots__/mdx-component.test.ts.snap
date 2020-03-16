@@ -92,10 +92,10 @@ exports[`mdx-component story-import.mdx 1`] = `
 Object {
   "components": Object {
     "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx": Object {
-      "from": "./Button",
-      "importedName": "Btn",
+      "from": "./Toggle",
+      "importedName": "Toggle",
       "loc": undefined,
-      "name": "Button",
+      "name": "Toggle",
       "request": undefined,
       "source": undefined,
     },

@@ -15,6 +15,9 @@ const nodeToValue = (node: any): any => {
         return node.name;
       case 'Property':
         return node.name;
+      case 'ObjectProperty':
+        console.log('ObjectProperty', node.key.value);
+        return node.key.value;
 
       case 'Literal':
         return node.raw;
@@ -42,7 +45,7 @@ const nodeToValue = (node: any): any => {
 };
 const nodeToAttribute = (node: any): StoryAttribute | undefined => {
   const value = node.value || node;
-  const name = node.key ? node.key.name : node.name;
+  const name = node.key ? node.key.name ?? node.key.value : node.name;
   const retVal = nodeToValue(value);
   return retVal !== undefined
     ? name

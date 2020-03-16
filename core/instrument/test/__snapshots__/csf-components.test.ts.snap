@@ -23,6 +23,55 @@ Object {
 }
 `;
 
+exports[`csf-components story-subcomponents.js 1`] = `
+Object {
+  "components": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    },
+  },
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {
+        "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+      },
+      "title": "Story",
+    },
+  },
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [],
+      "component": "ArrowButton",
+      "loc": Object {
+        "end": Object {
+          "column": 34,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 8,
+        },
+      },
+      "name": "story",
+      "source": "() => 'hello'",
+      "subcomponents": Object {
+        "My Button Tab": "Button",
+      },
+    },
+  },
+}
+`;
+
 exports[`csf-components subcomponents.js 1`] = `
 Object {
   "components": Object {
@@ -32,13 +81,19 @@ Object {
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    },
   },
   "kinds": Object {
     "Story": Object {
       "component": "ArrowButton",
       "components": Object {
         "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
       },
       "subcomponents": Object {
         "Button": "Button",
