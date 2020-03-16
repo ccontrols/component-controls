@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Story,
-  StoryKind,
+  StoriesKind,
   Stories,
 } from '@component-controls/specification';
 import { File } from '@babel/types';
@@ -52,7 +52,7 @@ export const extractCSFStories = (ast: File): StoriesStore => {
           (acc, componentName) => ({ ...acc, [componentName]: undefined }),
           components,
         );
-        const kind: StoryKind = {
+        const kind: StoriesKind = {
           ...attributes,
           components: {},
         };
