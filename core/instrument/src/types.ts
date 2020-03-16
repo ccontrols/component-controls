@@ -80,6 +80,7 @@ export const defaultPackageOptions: PackageInfoOptions = {
   storeBrowseLink: true,
   storeDocsLink: true,
   storeIssuesLink: true,
+  storePackageName: true,
 };
 
 export const defaultComponentOptions: ComponentOptions = {
@@ -105,6 +106,11 @@ export interface PackageInfoOptions {
    * package.json alternative name
    */
   packageJsonName?: string;
+
+  /**
+   * Whether to save the package name in the repository field
+   */
+  storePackageName?: boolean;
 
   /**
    * Whether to save the link for browsing the file in the repository field

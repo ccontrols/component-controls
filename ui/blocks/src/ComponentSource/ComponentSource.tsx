@@ -19,12 +19,14 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
     of,
   });
   let source;
-  const { from, importedName, name: componentName } = component || {};
-  if (from) {
+  const { from, importedName, name: componentName, repository } =
+    component || {};
+  const importFrom = repository && repository.name ? repository.name : from;
+  if (importFrom) {
     source =
       importedName !== 'default' && importedName !== 'namespace'
-        ? `import { ${componentName} } from '${from}';`
-        : `import ${componentName} from '${from}';`;
+        ? `import { ${componentName} } from '${importFrom}';`
+        : `import ${componentName} from '${importFrom}';`;
   }
 
   if (!source) {

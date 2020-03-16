@@ -24,6 +24,10 @@ export interface CodeLocation {
  */
 export interface Repository {
   /**
+   * package name
+   */
+  name?: string;
+  /**
    * link for browsing the file
    */
   browse?: string;

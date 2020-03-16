@@ -100,7 +100,12 @@ export const packageInfo = async (
             .replace('{committish}', templates.committish || 'master');
         };
         const result: Repository = {};
-        const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
+        const {
+          storeBrowseLink,
+          storeDocsLink,
+          storeIssuesLink,
+          storePackageName,
+        } = opts || {};
         if (storeBrowseLink) {
           result.browse = fillTemplate(templates.browsefiletemplate);
         }
@@ -109,6 +114,9 @@ export const packageInfo = async (
         }
         if (storeIssuesLink) {
           result.issues = fillTemplate(templates.bugstemplate);
+        }
+        if (storePackageName) {
+          result.name = packageJSON.name;
         }
         return result;
       }
