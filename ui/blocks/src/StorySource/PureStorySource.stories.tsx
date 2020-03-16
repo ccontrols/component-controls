@@ -59,27 +59,25 @@ const languages: string[] = [
 ];
 
 simpleSource.story = {
-  parameters: {
-    controls: {
-      language: { type: 'options', options: languages, value: 'jsx' },
-      children: {
-        type: 'text',
-        rows: 10,
-        value: `
+  controls: {
+    language: { type: 'options', options: languages, value: 'jsx' },
+    children: {
+      type: 'text',
+      rows: 10,
+      value: `
 export const sample = () => {
-  const [state, setState] = React.useState(false);
-  return (
-    <BooleanEditor
-      name="prop"
-      onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.BOOLEAN, value: state }}
-    />
-  );
+const [state, setState] = React.useState(false);
+return (
+  <BooleanEditor
+    name="prop"
+    onChange={(name, newVal) => setState(newVal)}
+    prop={{ type: ControlTypes.BOOLEAN, value: state }}
+  />
+);
 };      
-      `,
-      },
-      theme: { type: 'options', options: Object.keys(themes) },
+    `,
     },
+    theme: { type: 'options', options: Object.keys(themes) },
   },
 };
 

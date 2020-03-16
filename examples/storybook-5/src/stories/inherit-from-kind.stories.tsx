@@ -5,11 +5,9 @@ import { ControlsTable } from '@component-controls/storybook';
 export default {
   title: 'Storybook/Kind',
   component: ControlsTable,
-  parameters:{ 
-    controls: {
-      name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark', order: 9999 },
-    },
-  },  
+  controls: {
+    name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark', order: 9999 },
+  },
 };
 
 interface DocsControlsTable {
@@ -25,9 +23,7 @@ export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
 };
 
 docsControlsTable.story = {
-  parameters: {
-    controls: {
-      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75, step: 5 },
-    },
-  },  
+  controls: {
+    age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75, step: 5 },
+  },
 };

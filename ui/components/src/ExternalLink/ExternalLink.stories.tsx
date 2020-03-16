@@ -15,12 +15,12 @@ simple.story = {
     addonControls: {
       smart: false,
     },
-    controls: {
-      href: {
-        type: 'text',
-        value: 'https://www.google.com',
-        data: { name: 'internet.url' },
-      },
+  },
+  controls: {
+    href: {
+      type: 'text',
+      value: 'https://www.google.com',
+      data: { name: 'internet.url' },
     },
   },
 };

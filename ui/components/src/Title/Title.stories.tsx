@@ -11,9 +11,7 @@ export const simple = ({ children }: { children: React.ReactNode }) => {
 };
 
 simple.story = {
-  parameters: {
-    controls: {
-      children: { type: 'text', value: 'Title text' },
-    },
+  controls: {
+    children: { type: 'text', value: 'Title text' },
   },
 };

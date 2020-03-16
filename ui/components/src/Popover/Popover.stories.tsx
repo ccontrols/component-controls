@@ -29,34 +29,32 @@ export const simple = ({ placement, trigger }: PopoverProps) => {
 };
 
 simple.story = {
-  parameters: {
-    controls: {
-      placement: {
-        type: 'options',
-        options: [
-          'auto-start',
-          'auto',
-          'auto-end',
-          'top-start',
-          'top',
-          'top-end',
-          'right-start',
-          'right',
-          'right-end',
-          'bottom-end',
-          'bottom',
-          'bottom-start',
-          'left-end',
-          'left',
-          'left-start',
-        ],
-        value: 'bottom',
-      },
-      trigger: {
-        type: 'options',
-        options: ['none', 'click', 'right-click', 'hover', 'focus'],
-        value: 'click',
-      },
+  controls: {
+    placement: {
+      type: 'options',
+      options: [
+        'auto-start',
+        'auto',
+        'auto-end',
+        'top-start',
+        'top',
+        'top-end',
+        'right-start',
+        'right',
+        'right-end',
+        'bottom-end',
+        'bottom',
+        'bottom-start',
+        'left-end',
+        'left',
+        'left-start',
+      ],
+      value: 'bottom',
+    },
+    trigger: {
+      type: 'options',
+      options: ['none', 'click', 'right-click', 'hover', 'focus'],
+      value: 'click',
     },
   },
 };

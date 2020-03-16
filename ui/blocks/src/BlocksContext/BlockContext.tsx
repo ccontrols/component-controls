@@ -13,7 +13,6 @@ export interface BlockContextProps {
   api?: any;
   channel?: any;
   currentId?: string;
-  storyStore?: any;
 }
 export const BlockContext = React.createContext<BlockContextProps>({});
 
@@ -45,9 +44,7 @@ export const useControlsContext = ({
   name,
   of = CURRENT_SELECTION,
 }: StoryInputProps & ComponentInputProps): ControlsContextProps => {
-  const { currentId, storyStore, api, channel } = React.useContext(
-    BlockContext,
-  );
+  const { currentId, api, channel } = React.useContext(BlockContext);
   const inputId = id === CURRENT_SELECTION ? currentId : id;
 
   const storyIdFromName = (name: string): string | undefined => {
@@ -72,19 +69,19 @@ export const useControlsContext = ({
   const story: Story = myStoryStore && myStoryStore.stories[previewId];
   const kind = story && story.kind ? myStoryStore.kinds[story.kind] : undefined;
   const source: string | undefined = story ? story.source : undefined;
-  let componentName: string;
+
+  let cmp: any;
   if (of === CURRENT_SELECTION) {
-    componentName =
-      story && story.component ? story.component : kind?.component;
+    cmp = story && story.component ? story.component : kind?.component;
   } else {
-    componentName = typeof of === 'string' ? of : of && (of as any).displayName;
+    cmp = of;
   }
+  const componentName =
+    typeof cmp === 'string' ? cmp : cmp.name || cmp.displayName;
   const component =
     componentName && kind && kind.components[componentName]
       ? myStoryStore.components[kind.components[componentName]]
       : undefined;
-  const sbStory = (storyStore && storyStore.fromId(previewId)) || {};
-  console.log(kind, story);
   return {
     id: previewId,
     api,
@@ -93,7 +90,6 @@ export const useControlsContext = ({
     kind,
     story,
     component,
-    controls:
-      sbStory.controls || (sbStory.parameters && sbStory.parameters.controls),
+    controls: story.controls,
   };
 };

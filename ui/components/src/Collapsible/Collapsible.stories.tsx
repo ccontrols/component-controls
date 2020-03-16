@@ -26,11 +26,11 @@ simple.story = {
     addonControls: {
       smart: false,
     },
-    controls: {
-      easing: {
-        type: 'options',
-        options: ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'],
-      },
+  },
+  controls: {
+    easing: {
+      type: 'options',
+      options: ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'],
     },
   },
 };

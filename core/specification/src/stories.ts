@@ -1,5 +1,6 @@
 import { CodeLocation, Repository } from './utility';
 import { StoryComponent } from './components';
+import { ComponentControls } from './controls';
 
 /**
  * an identifier/variable.argument in the source code
@@ -106,6 +107,11 @@ export interface Story {
    * id for component associated with the story
    */
   component?: string;
+
+  /**
+   * object of key/value pairs specifying the controls for the story
+   */
+  controls?: ComponentControls;
 }
 
 /**
@@ -179,6 +185,12 @@ export interface StoriesKind {
    */
 
   includeStories?: string[] | RegExp;
+
+  /**
+   * object of key/value pairs specifying the controls for the stories file
+   * this will apply to all the stories in the file
+   */
+  controls?: ComponentControls;
 
   [name: string]: any;
 }

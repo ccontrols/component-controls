@@ -47,6 +47,8 @@ const loadStoryStore = (): StoriesStore | undefined => {
                 } catch (e) {
                   console.error(`unable to load module ${kind.moduleId}`);
                 }
+                // clean-up
+                delete kind.moduleId;
               }
               globalStore.kinds[kindName] = kind;
               Object.keys(store.stories).forEach(storyName => {

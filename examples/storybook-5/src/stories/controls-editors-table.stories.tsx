@@ -25,15 +25,13 @@ export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
 };
 
 docsControlsTable.story = {
-  parameters: {
-    controls: {
-      name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
-      age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75 },
-      clickMe: {
-        type: ControlTypes.BUTTON,
-        label: 'button click',
-        onClick: () => {console.log('log')},
-      },
+  controls: {
+    name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
+    age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75 },
+    clickMe: {
+      type: ControlTypes.BUTTON,
+      label: 'button click',
+      onClick: () => {console.log('log')},
     },
-  }
+  },
 };

@@ -4,7 +4,7 @@ import { DocsContext } from '@storybook/addon-docs/blocks';
 
 export const BlockContextProvider: React.FC = ({ children }) => {
   const context = React.useContext(DocsContext);
-  const { id: currentId, clientApi, storyStore, channel } = context as any;
+  const { id: currentId, clientApi, channel } = context as any;
 
   return (
     <BlockContext.Provider
@@ -12,7 +12,6 @@ export const BlockContextProvider: React.FC = ({ children }) => {
         api: clientApi,
         currentId,
         channel,
-        storyStore,
       }}
     >
       {children}

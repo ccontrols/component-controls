@@ -13,16 +13,14 @@ export const simpleSource = ({ children, dark }: SyntaxHighlighterProps) => {
 };
 
 simpleSource.story = {
-  parameters: {
-    controls: {
-      children: {
-        type: 'text',
-        rows: 10,
-        value: source,
-        data: null,
-      },
-      dark: { type: 'boolean' },
+  controls: {
+    children: {
+      type: 'text',
+      rows: 10,
+      value: source,
+      data: null,
     },
+    dark: { type: 'boolean' },
   },
 };
 

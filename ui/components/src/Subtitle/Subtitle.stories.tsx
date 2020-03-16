@@ -12,9 +12,9 @@ export const simple = ({ children }: { children: React.ReactNode }) => {
 
 simple.story = {
   parameters: {
-    controls: {
-      children: { type: 'text', value: 'Subtitle text' },
-    },
     componentSubtitle: 'This is subtitle',
+  },
+  controls: {
+    children: { type: 'text', value: 'Subtitle text' },
   },
 };

@@ -61,16 +61,14 @@ const languages: string[] = [
 ];
 
 simpleSource.story = {
-  parameters: {
-    controls: {
-      language: { type: 'options', options: languages, value: 'jsx' },
-      dark: { type: 'boolean' },
-      children: {
-        type: 'text',
-        rows: 10,
-        value: source,
-        data: null,
-      },
+  controls: {
+    language: { type: 'options', options: languages, value: 'jsx' },
+    dark: { type: 'boolean' },
+    children: {
+      type: 'text',
+      rows: 10,
+      value: source,
+      data: null,
     },
   },
 };

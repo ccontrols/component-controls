@@ -19,9 +19,7 @@ export const simple = ({ title }: BlockContainerProps) => {
 };
 
 simple.story = {
-  parameters: {
-    controls: {
-      title: { type: 'text', value: 'Block title' },
-    },
+  controls: {
+    title: { type: 'text', value: 'Block title' },
   },
 };
