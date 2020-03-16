@@ -6,7 +6,7 @@ export default {
   title: 'Storybook/Kind',
   component: ControlsTable,
   controls: {
-    name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark', order: 9999 },
+    name: { type: 'text', label: 'Name', value: 'Mark', order: 9999 },
   },
 };
 
@@ -24,6 +24,6 @@ export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
 
 docsControlsTable.story = {
   controls: {
-    age: { type: ControlTypes.NUMBER, label: 'Age', value: 19, min: 10, max: 75, step: 5 },
+    age: { type: 'number', label: 'Age', value: 19, min: 10, max: 75, step: 5 },
   },
 };
