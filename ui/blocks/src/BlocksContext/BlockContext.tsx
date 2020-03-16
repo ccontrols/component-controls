@@ -76,8 +76,11 @@ export const useControlsContext = ({
   } else {
     cmp = of;
   }
-  const componentName =
-    typeof cmp === 'string' ? cmp : cmp.name || cmp.displayName;
+  const componentName = cmp
+    ? typeof cmp === 'string'
+      ? cmp
+      : cmp.name || cmp.displayName
+    : undefined;
   const component =
     componentName && kind && kind.components[componentName]
       ? myStoryStore.components[kind.components[componentName]]

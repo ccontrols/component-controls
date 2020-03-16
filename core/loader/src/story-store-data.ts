@@ -26,14 +26,12 @@ const loadStoryStore = (): StoriesStore | undefined => {
               const kind = store.kinds[kindName];
 
               if (kind.moduleId && __webpack_require__) {
-                if (!__webpack_require__.m[kind.moduleId].l) {
-                  console.error(`module not loaded yet ${kind.moduleId}`);
-                } else {
-                  try {
-                    // './src/stories/smart-prop-type.stories.js'
-                    const exports = __webpack_require__(kind.moduleId);
-                    Object.keys(exports).forEach(key => {
-                      const exported = exports[key];
+                try {
+                  // './src/stories/smart-prop-type.stories.js'
+                  const exports = __webpack_require__(kind.moduleId);
+                  Object.keys(exports).forEach(key => {
+                    const exported = exports[key];
+                    if (exported) {
                       if (key === 'default') {
                         const { storySource, ...rest } = exported;
                         Object.assign(kind, rest);
@@ -46,13 +44,13 @@ const loadStoryStore = (): StoriesStore | undefined => {
                           }
                         }
                       }
-                    });
-                  } catch (e) {
-                    console.error(`unable to load module ${kind.moduleId}`);
-                  }
-                  // clean-up
-                  delete kind.moduleId;
+                    }
+                  });
+                } catch (e) {
+                  console.error(`unable to load module ${kind.moduleId}`, e);
                 }
+                // clean-up
+                delete kind.moduleId;
               }
               globalStore.kinds[kindName] = kind;
               Object.keys(store.stories).forEach(storyName => {
