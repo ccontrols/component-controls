@@ -30,22 +30,31 @@ export const extractComponent = async (
     initialAST,
   );
   const { components } = options || {};
-  const component: StoryComponent = follow
-    ? {
-        name: componentName,
-        from: follow.from,
-        request: follow.filePath,
-        loc: follow.loc,
-        importedName: follow.importedName,
-        source: components?.storeSourceFile ? follow.source : undefined,
-        repository: await packageInfo(
-          follow.originalFilePath,
-          options?.components?.package,
-        ),
-      }
-    : {
-        name: componentName,
-      };
+  let component: StoryComponent;
+  if (follow) {
+    component = {
+      name: componentName,
+      from: follow.from,
+      request: follow.filePath,
+
+      importedName: follow.importedName,
+    };
+    if (components?.storeSourceFile) {
+      component.source = follow.source;
+      component.loc = follow.loc;
+    }
+    const repository = await packageInfo(
+      follow.originalFilePath,
+      options?.components?.package,
+    );
+    if (repository !== undefined) {
+      component.repository = repository;
+    }
+  } else {
+    component = {
+      name: componentName,
+    };
+  }
   const { propsLoaders } = options || {};
   if (follow && follow.filePath && Array.isArray(propsLoaders)) {
     const info = await propsInfo(
@@ -83,8 +92,9 @@ export const extractStoreComponent = async (
           initialAST,
         );
         if (component) {
-          store.components[filePath] = component;
-          kind.components[componentName] = filePath;
+          const componentKey = component.request ?? filePath;
+          store.components[componentKey] = component;
+          kind.components[componentName] = componentKey;
         }
       }
     }

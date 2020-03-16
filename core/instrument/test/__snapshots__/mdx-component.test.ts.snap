@@ -3,7 +3,7 @@
 exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/component-parameters.mdx": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "loc": Object {
@@ -34,7 +34,7 @@ export const Button = props => <button>{\`Hello, \${props.name}\`}</button>;
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/component-parameters.mdx",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/component/component-parameters.mdx",
@@ -62,7 +62,6 @@ Object {
       "importedName": "Btn",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -97,7 +96,6 @@ Object {
       "importedName": "Btn",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },

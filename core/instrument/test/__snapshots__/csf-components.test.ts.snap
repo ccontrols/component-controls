@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-components default-import.js 1`] = `
+Object {
+  "components": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
+  "kinds": Object {
+    "Story": Object {
+      "component": "Button",
+      "components": Object {
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      },
+      "title": "Story",
+    },
+  },
+  "stories": Object {},
+}
+`;
+
+exports[`csf-components subcomponents.js 1`] = `
+Object {
+  "components": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
+  "kinds": Object {
+    "Story": Object {
+      "component": "ArrowButton",
+      "components": Object {
+        "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      },
+      "subcomponents": Object {
+        "Button": "Button",
+      },
+      "title": "Story",
+    },
+  },
+  "stories": Object {},
+}
+`;

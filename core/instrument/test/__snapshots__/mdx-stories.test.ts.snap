@@ -8,7 +8,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -52,7 +51,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -123,7 +121,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories story.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/story.mdx": Object {
+    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "loc": Object {
@@ -156,7 +154,7 @@ export default Button;
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/story.mdx",
+        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
       },
       "parameters": Object {
         "component": "Button",
@@ -209,7 +207,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -347,7 +344,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -451,7 +447,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
@@ -540,7 +535,6 @@ Object {
       "importedName": "default",
       "loc": undefined,
       "name": "Button",
-      "repository": undefined,
       "request": undefined,
       "source": undefined,
     },
