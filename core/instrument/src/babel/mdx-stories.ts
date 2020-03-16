@@ -22,9 +22,15 @@ export const extractMDXStories = (ast: File): StoriesStore => {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
       if (
-        ['Meta', 'Story', 'Preview', 'Playground', 'ComponentSource'].indexOf(
-          node.name.name,
-        ) > -1
+        [
+          'Description',
+          'Meta',
+          'Story',
+          'Preview',
+          'PropsTable',
+          'Playground',
+          'ComponentSource',
+        ].indexOf(node.name.name) > -1
       ) {
         const attributes: StoryParameters = node.attributes.reduce(
           (acc: StoryParameters, attribute: any) => {
