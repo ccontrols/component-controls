@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ThemeContext } from '@component-controls/components';
-import { useStoryContext, StoryInputProps } from '../BlocksContext';
+import { useStoryContext, StoryInputProps } from '../context';
 import { PureStorySource, PureStorySourceProps } from './PureStorySource';
 
 import { repositoryActions } from '../utils/repositoryActions';

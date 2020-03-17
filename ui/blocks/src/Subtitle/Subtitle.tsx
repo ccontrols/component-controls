@@ -3,7 +3,7 @@ import {
   Subtitle as SubtitleBlock,
   SubtitleProps as SubtitlePropsBase,
 } from '@component-controls/components';
-import { useStoryContext, StoryInputProps } from '../BlocksContext';
+import { useStoryContext, StoryInputProps } from '../context';
 
 export type SubtitleProps = StoryInputProps & SubtitlePropsBase;
 

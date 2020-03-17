@@ -1,2 +1,2 @@
-export * from './PropsTable';
-export * from './BlockPropsTable';
+export * from './plain';
+export * from './block';

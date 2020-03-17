@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlockContext } from '../BlocksContext';
+import { BlockContext } from '../context';
 import { storyStore } from './storyStore';
 
 export interface MockContexProps {

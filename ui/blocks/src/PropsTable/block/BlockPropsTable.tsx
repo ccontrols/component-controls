@@ -4,7 +4,7 @@ import {
   BlockContainerProps,
   ActionItem,
 } from '@component-controls/components';
-import { PropsTable, PropsTableProps } from '../PropsTable';
+import { PropsTable, PropsTableProps } from '../plain';
 
 export type BlockPropsTableProps = PropsTableProps & BlockContainerProps;
 

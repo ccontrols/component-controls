@@ -3,7 +3,7 @@ import {
   Title as TitleBlock,
   TitleProps as TitlePropsBase,
 } from '@component-controls/components';
-import { useStoryContext, StoryInputProps } from '../BlocksContext';
+import { useStoryContext, StoryInputProps } from '../context';
 
 export type TitleProps = StoryInputProps & TitlePropsBase;
 

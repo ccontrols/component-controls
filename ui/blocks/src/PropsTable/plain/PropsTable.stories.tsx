@@ -1,9 +1,14 @@
 import React from 'react';
 import { PropsTable } from './PropsTable';
+import { MockContext } from '../../test/MockContext';
 
 export default {
   title: 'Blocks/Core/PropsTable',
   component: PropsTable,
 };
 
-export const simple = () => <PropsTable />;
+export const simple = () => (
+  <MockContext>
+    <PropsTable />
+  </MockContext>
+);

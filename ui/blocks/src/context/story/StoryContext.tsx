@@ -5,7 +5,7 @@ import {
   StoriesKind,
   StoryComponent,
 } from '@component-controls/specification';
-import { BlockContext, CURRENT_SELECTION, storyIdFromName } from './shared';
+import { BlockContext, CURRENT_SELECTION, storyIdFromName } from '../context';
 
 export interface StoryInputProps {
   /** id of the story */

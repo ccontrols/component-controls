@@ -1,4 +1,4 @@
-export * from './BlocksContext';
+export * from './context';
 export * from './ControlsTable';
 export * from './Description';
 export * from './StorySource';
