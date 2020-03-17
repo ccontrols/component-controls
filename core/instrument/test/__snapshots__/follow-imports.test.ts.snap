@@ -7,18 +7,7 @@ Object {
   "exportedAs": "ControlsTable",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "@component-controls/storybook",
-  "loc": Object {
-    "end": Object {
-      "column": 1,
-      "line": 90,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 41,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
-  "source": undefined,
 }
 `;
 
@@ -27,18 +16,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -48,18 +26,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
   "from": "../exports/cjs-named-export",
   "importedName": "Button",
-  "loc": Object {
-    "end": Object {
-      "column": 23,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 21,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -68,18 +35,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
   "from": "",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
-  "source": undefined,
 }
 `;
 
@@ -88,18 +44,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -108,18 +53,7 @@ Object {
   "exportedAs": "ControlsTable",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "./button-from-node-nodules",
-  "loc": Object {
-    "end": Object {
-      "column": 1,
-      "line": 90,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 41,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
-  "source": undefined,
 }
 `;
 
@@ -128,18 +62,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -149,18 +72,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "default",
-  "loc": Object {
-    "end": Object {
-      "column": 24,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 0,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
-  "source": undefined,
 }
 `;
 
@@ -169,18 +81,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -190,18 +91,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./",
   "importedName": "Button",
-  "loc": Object {
-    "end": Object {
-      "column": 30,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 28,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "source": undefined,
 }
 `;
 
@@ -211,17 +101,6 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "namespace",
-  "loc": Object {
-    "end": Object {
-      "column": 24,
-      "line": 1,
-    },
-    "start": Object {
-      "column": 0,
-      "line": 1,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
-  "source": undefined,
 }
 `;

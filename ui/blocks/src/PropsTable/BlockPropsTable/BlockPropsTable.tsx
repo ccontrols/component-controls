@@ -23,17 +23,21 @@ export const BlockPropsTable: FC<BlockPropsTableProps> = ({
   if (actions) {
     allActions.push.apply(allActions, actions);
   }
-  return (
-    <BlockContainer actions={allActions} title={title}>
-      <PropsTable
-        css={{
-          'thead tr:first-of-type>th': {
-            paddingTop: 26,
-          },
-        }}
-        filtering={filtering}
-        {...rest}
-      />
-    </BlockContainer>
+  // add some padding for the actions bar
+  const propsTable = (
+    <PropsTable
+      css={{
+        'thead tr:first-of-type>th': {
+          paddingTop: 26,
+        },
+      }}
+      filtering={filtering}
+      {...rest}
+    />
   );
+  return propsTable ? (
+    <BlockContainer actions={allActions} title={title}>
+      {propsTable}
+    </BlockContainer>
+  ) : null;
 };

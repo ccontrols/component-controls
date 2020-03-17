@@ -8,7 +8,7 @@ export default {
 };
 
 export const simple = () => (
-  <MockContext storyId="blocks-core-subtitle--simple" component={Subtitle}>
+  <MockContext>
     <Subtitle />
   </MockContext>
 );

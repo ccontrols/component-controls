@@ -1,5 +1,6 @@
 import React from 'react';
 import { BlockContext } from '../BlocksContext';
+import { storyStore } from './storyStore';
 
 export interface MockContexProps {
   storyId?: string;
@@ -8,19 +9,12 @@ export interface MockContexProps {
 
 export const MockContext: React.FC<MockContexProps> = ({
   children,
-  storyId = 'blocks-core-description--simple',
-  component = BlockContext,
+  storyId = 'story',
 }) => (
   <BlockContext.Provider
     value={{
       currentId: storyId,
-      storyStore: {
-        fromId: () => ({
-          parameters: {
-            component,
-          },
-        }),
-      },
+      mockStore: storyStore as any,
     }}
   >
     {children}

@@ -57,14 +57,17 @@ export const followImports = (
       : exports.named[baseImportedName];
   if (findExport !== undefined) {
     if (!findExport.from) {
-      return {
+      const result: FollowImportType = {
         filePath: fileName,
         originalFilePath: filePath,
         exportedAs: findExport.name,
-        loc: findExport.loc,
         from: '',
-        source: components?.storeSourceFile ? source : undefined,
       };
+      if (components?.storeSourceFile) {
+        result.loc = findExport.loc;
+        result.source = source ? source : undefined;
+      }
+      return result;
     } else {
       const resolvedFilePath = resolve.sync(findExport.from, {
         ...resolveOptions,

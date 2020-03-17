@@ -8,7 +8,7 @@ export default {
 };
 
 export const simple = () => (
-  <MockContext storyId="blocks-core-description--simple" component={Title}>
+  <MockContext>
     <Title />
   </MockContext>
 );

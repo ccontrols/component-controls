@@ -9,7 +9,7 @@ import { mergeControlValues } from '@component-controls/core';
 import {
   ControlsTable as BaseControlsTable,
   ControlsTableProps as BaseControlsTableProps,
-  useControlsContext,
+  useStoryContext,
   StoryInputProps,
 } from '@component-controls/blocks';
 
@@ -22,10 +22,11 @@ export const ControlsTable: FC<ControlsTableProps> = ({
   name,
   ...rest
 }) => {
-  const { id, controls, api, channel } = useControlsContext({
+  const { id, story, api, channel } = useStoryContext({
     id: propId,
     name,
   });
+  const { controls } = story || {};
   const setControlValue: SetControlValueFn =
     api && api.setControlValue
       ? api.setControlValue

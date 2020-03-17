@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ThemeContext } from '@component-controls/components';
-import { useControlsContext, StoryInputProps } from '../BlocksContext';
+import { useStoryContext, StoryInputProps } from '../BlocksContext';
 import { PureStorySource, PureStorySourceProps } from './PureStorySource';
 
 import { repositoryActions } from '../utils/repositoryActions';
@@ -13,10 +13,11 @@ export const StorySource: FC<StorySourceProps> = ({
   actions = [],
   ...rest
 }) => {
-  const { source, controls, story, kind } = useControlsContext({
+  const { story, kind } = useStoryContext({
     id,
     name,
   });
+  const { source, controls } = story || {};
   const { dark } = React.useContext(ThemeContext);
 
   const allActions = [...actions];

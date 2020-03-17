@@ -6,18 +6,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/editors/src/BooleanEditor/BooleanEditor.tsx",
   "from": "./BooleanEditor",
   "importedName": "BooleanEditor",
-  "loc": Object {
-    "end": Object {
-      "column": 18,
-      "line": 21,
-    },
-    "start": Object {
-      "column": 2,
-      "line": 15,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/editors/src/BooleanEditor/BooleanEditor.tsx",
-  "source": undefined,
 }
 `;
 
@@ -27,18 +16,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.tsx",
   "from": "./Markdown",
   "importedName": "Markdown",
-  "loc": Object {
-    "end": Object {
-      "column": 18,
-      "line": 33,
-    },
-    "start": Object {
-      "column": 2,
-      "line": 26,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.tsx",
-  "source": undefined,
 }
 `;
 
@@ -48,17 +26,6 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.tsx",
   "from": "./",
   "importedName": "Title",
-  "loc": Object {
-    "end": Object {
-      "column": 1,
-      "line": 23,
-    },
-    "start": Object {
-      "column": 64,
-      "line": 10,
-    },
-  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.tsx",
-  "source": undefined,
 }
 `;

@@ -3,7 +3,7 @@
 import { jsx, Text, Flex, Styled } from 'theme-ui';
 import { FC } from 'react';
 import { Table, TableProps } from '@component-controls/components';
-import { useControlsContext, ComponentInputProps } from '../../BlocksContext';
+import { useComponentsContext, ComponentInputProps } from '../../BlocksContext';
 
 export type PropsTableProps = ComponentInputProps &
   Omit<TableProps, 'columns' | 'data'>;
@@ -17,9 +17,10 @@ export const PropsTable: FC<PropsTableProps> = ({
   sorting = true,
   ...rest
 }) => {
-  const { component } = useControlsContext({
+  const { components } = useComponentsContext({
     of,
   });
+  const component = components.length > 0 ? components[0] : undefined;
   const { info } = component || {};
   if (!info) {
     return null;

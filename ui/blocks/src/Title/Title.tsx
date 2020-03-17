@@ -3,12 +3,12 @@ import {
   Title as TitleBlock,
   TitleProps as TitlePropsBase,
 } from '@component-controls/components';
-import { useControlsContext, StoryInputProps } from '../BlocksContext';
+import { useStoryContext, StoryInputProps } from '../BlocksContext';
 
 export type TitleProps = StoryInputProps & TitlePropsBase;
 
 export const Title: FC<TitleProps> = ({ id, name, ...rest }) => {
-  const { component, kind } = useControlsContext({
+  const { component, kind } = useStoryContext({
     id,
     name,
   });

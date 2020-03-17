@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Markdown, MarkdownProps } from '@component-controls/components';
-import { useControlsContext, ComponentInputProps } from '../BlocksContext';
+import { useComponentsContext, ComponentInputProps } from '../BlocksContext';
 
 export type DescriptionProps = Omit<MarkdownProps, 'children'> &
   ComponentInputProps;
@@ -10,8 +10,8 @@ export type DescriptionProps = Omit<MarkdownProps, 'children'> &
  * 'of' property can specify which component's description to use
  */
 export const Description: FC<DescriptionProps> = ({ of, ...rest }) => {
-  const p = useControlsContext({ of });
-  const { component } = p;
+  const { components } = useComponentsContext({ of });
+  const component = components.length > 0 && components[0];
   if (!component || !component.info || !component.info.description) {
     return null;
   }
