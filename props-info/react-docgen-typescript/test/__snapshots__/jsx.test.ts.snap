@@ -12,12 +12,14 @@ Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "accessKey": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-activedescendant": Object {
@@ -25,6 +27,7 @@ Object {
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-atomic": Object {
@@ -32,6 +35,7 @@ Object {
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-autocomplete": Object {
@@ -66,6 +70,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-checked": Object {
@@ -98,6 +103,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-colindex": Object {
@@ -107,6 +113,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-colspan": Object {
@@ -116,6 +123,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-controls": Object {
@@ -124,6 +132,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-current": Object {
@@ -166,6 +175,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-details": Object {
@@ -174,6 +184,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-disabled": Object {
@@ -183,6 +194,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-dropeffect": Object {
@@ -227,6 +239,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-expanded": Object {
@@ -234,6 +247,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-flowto": Object {
@@ -242,6 +256,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-grabbed": Object {
@@ -250,6 +265,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-haspopup": Object {
@@ -292,6 +308,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-invalid": Object {
@@ -325,6 +342,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-label": Object {
@@ -333,6 +351,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-labelledby": Object {
@@ -341,6 +360,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-level": Object {
@@ -348,6 +368,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-live": Object {
@@ -377,6 +398,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-multiline": Object {
@@ -384,6 +406,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-multiselectable": Object {
@@ -391,6 +414,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-orientation": Object {
@@ -418,6 +442,7 @@ between DOM elements where the DOM hierarchy cannot be used to represent the rel
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-placeholder": Object {
@@ -426,6 +451,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-posinset": Object {
@@ -434,6 +460,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-pressed": Object {
@@ -466,6 +493,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-relevant": Object {
@@ -504,6 +532,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-roledescription": Object {
@@ -511,6 +540,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "aria-rowcount": Object {
@@ -519,6 +549,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-rowindex": Object {
@@ -528,6 +559,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-rowspan": Object {
@@ -537,6 +569,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-selected": Object {
@@ -546,6 +579,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "aria-setsize": Object {
@@ -554,6 +588,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-sort": Object {
@@ -587,6 +622,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-valuemin": Object {
@@ -594,6 +630,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-valuenow": Object {
@@ -602,6 +639,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "aria-valuetext": Object {
@@ -609,42 +647,49 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "autoCapitalize": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "autoCorrect": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "autoFocus": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "autoSave": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "className": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "color": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "contentEditable": Object {
@@ -672,12 +717,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "css": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "InterpolationWithTheme<any>",
+        "raw": "InterpolationWithTheme<any>",
       },
     },
     "dangerouslySetInnerHTML": Object {
@@ -691,12 +738,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "defaultChecked": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "defaultValue": Object {
@@ -715,72 +764,84 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "disabled": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "draggable": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "form": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "formAction": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "formEncType": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "formMethod": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "formNoValidate": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "formTarget": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "hidden": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "id": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "inlist": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "any",
+        "raw": "any",
       },
     },
     "inputMode": Object {
@@ -832,54 +893,63 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "itemID": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "itemProp": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "itemRef": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "itemScope": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "itemType": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
         "name": "Key",
+        "raw": "Key",
       },
     },
     "lang": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "name": Object {
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "onAbort": Object {
@@ -2006,84 +2076,98 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "prefix": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "property": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "radioGroup": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "ref": Object {
       "parentName": "ClassAttributes",
       "type": Object {
         "name": "LegacyRef<HTMLButtonElement>",
+        "raw": "LegacyRef<HTMLButtonElement>",
       },
     },
     "resource": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "results": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "role": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "security": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "slot": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "spellCheck": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "Booleanish",
+        "raw": "Booleanish",
       },
     },
     "style": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "CSSProperties",
+        "raw": "CSSProperties",
       },
     },
     "suppressContentEditableWarning": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "suppressHydrationWarning": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "sx": Object {
@@ -2099,18 +2183,21 @@ import { jsx } from 'theme-ui'
       "parentName": "SxProps",
       "type": Object {
         "name": "SystemStyleObject",
+        "raw": "SystemStyleObject",
       },
     },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "title": Object {
       "parentName": "ButtonProps",
       "type": Object {
         "name": "string",
+        "raw": "string",
         "required": true,
       },
     },
@@ -2156,6 +2243,7 @@ import { jsx } from 'theme-ui'
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "unselectable": Object {
@@ -2191,6 +2279,7 @@ import { jsx } from 'theme-ui'
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
   },

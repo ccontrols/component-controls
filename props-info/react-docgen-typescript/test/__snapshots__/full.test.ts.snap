@@ -34,18 +34,21 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "boolean",
+        "raw": "boolean",
       },
     },
     "optionalElement": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "any",
+        "raw": "any",
       },
     },
     "optionalElementType": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "Element",
+        "raw": "Element",
       },
     },
     "optionalEnum": Object {
@@ -76,12 +79,14 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "Message",
+        "raw": "Message",
       },
     },
     "optionalNode": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "any",
+        "raw": "any",
       },
     },
     "optionalNumber": Object {
@@ -89,12 +94,14 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "number",
+        "raw": "number",
       },
     },
     "optionalObject": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "object",
+        "raw": "object",
       },
     },
     "optionalObjectOf": Object {
@@ -122,12 +129,14 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "string",
+        "raw": "string",
       },
     },
     "optionalSymbol": Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "symbol",
+        "raw": "symbol",
       },
     },
     "optionalUnion": Object {
@@ -152,6 +161,7 @@ Object {
       "parentName": "MyComponentProps",
       "type": Object {
         "name": "any",
+        "raw": "any",
         "required": true,
       },
     },

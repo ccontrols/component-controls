@@ -1,6 +1,8 @@
-# @component-controls/instrument
+# Overview 
 
-> Component controls instrumentation library. 
+## package: @component-controls/instrument
+
+Component controls instrumentation library. 
 Parsing a source file will generate the following information:
 - CSF: List of story named exports
 - CSF: Default export stories file information
@@ -15,7 +17,7 @@ Parsing a source file will generate the following information:
 - Extract package.json repository information for the stories file
 - Extract package.json repository information for the components file (in canse the components and the stories and in different packages)
 
-## Installation
+# Installation
 
 This package is usually installed as part of the @component-controls package, but you can also install it standalone to parse story files and extract information in a script
 

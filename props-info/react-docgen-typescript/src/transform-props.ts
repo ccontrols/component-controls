@@ -23,14 +23,14 @@ export const transformProps = (props: Props): PropTypes => {
       prop.defaultValue = rdProp.defaultValue.value ?? rdProp.defaultValue;
     }
     const typeName = rdProp.type.name || '';
-    let type: Partial<TypeInformation> = {};
+    let propType: Partial<TypeInformation> = {};
     if (rdProp.required) {
-      type.required = rdProp.required;
+      propType.required = rdProp.required;
     }
 
     if (typeName === 'enum') {
-      type.name = 'enum';
-      type.value = rdProp.type.value.map(({ value }: any) => {
+      propType.name = 'enum';
+      propType.value = rdProp.type.value.map(({ value }: any) => {
         const val = cleanQuotes(value);
         return {
           name: typeof val,
@@ -38,29 +38,28 @@ export const transformProps = (props: Props): PropTypes => {
         };
       });
     } else if (typeName.endsWith('[]')) {
-      type.name = 'array';
-      type.value = [{ name: typeName.split('[]')[0] as TypeValue }];
+      propType.name = 'array';
+      propType.value = [{ name: typeName.split('[]')[0] as TypeValue }];
     } else if (typeName.match(/\(([^)]+)\)/)) {
-      type.name = 'function';
+      propType.name = 'function';
     } else if (typeName.match(/\{[^{}]*}/)) {
-      type.name = 'object';
-      type.raw = typeName;
+      propType.name = 'object';
+      propType.raw = typeName;
     } else {
       const enumSplit = typeName.split(' | ');
       if (enumSplit.length > 1) {
-        type.name = 'union';
-        type.value = enumSplit.map(str => ({
+        propType.name = 'union';
+        propType.value = enumSplit.map(str => ({
           name: cleanQuotes(str),
         }));
       } else {
-        type.name = typeName as TypeValue;
+        propType.name = typeName as TypeValue;
       }
     }
-    const raw = rdProp.type.raw || typeName;
-    if (type.name !== raw) {
-      type.raw = raw;
+    if (propType.raw === undefined) {
+      propType.raw = rdProp.type.raw || typeName;
     }
-    prop.type = type as TypeInformation;
+    prop.type = propType as TypeInformation;
     return { ...acc, [name]: prop };
   }, {});
 };

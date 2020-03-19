@@ -10,6 +10,7 @@ Object {
       "parentName": "BarProps",
       "type": Object {
         "name": "string",
+        "raw": "string",
         "required": true,
       },
     },

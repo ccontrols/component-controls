@@ -37,6 +37,7 @@ export const useExpanderColumn = (hooks: UseTableHooks<{}>) => {
     return [
       {
         id: 'expander',
+        width: 20,
         Header: () => null,
         Cell: ({
           row,

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled } from 'theme-ui';
 import { FC } from 'react';
-import { Table, TableProps } from '@component-controls/components';
+import { Table, TableProps, Markdown } from '@component-controls/components';
 import { ComponentsContainer } from '../../context/components/ComponentsContainer';
 import { ComponentInputProps } from '../../context/components/ComponentsContext';
 
@@ -86,6 +86,7 @@ export const PropsTable: FC<PropsTableProps> = ({
             {
               Header: 'Description',
               accessor: 'prop.description',
+              width: '60%',
               Cell: ({ row: { original } }: any) => {
                 if (!original) {
                   return null;
@@ -93,7 +94,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                 const {
                   prop: {
                     description,
-                    type: { raw },
+                    type: { raw, name },
                   },
                 } = original;
                 return (
@@ -102,16 +103,8 @@ export const PropsTable: FC<PropsTableProps> = ({
                       flexDirection: 'column',
                     }}
                   >
-                    {description && (
-                      <Text
-                        sx={{
-                          textOverflow: 'ellipsis',
-                        }}
-                      >
-                        {description}
-                      </Text>
-                    )}
-                    {raw && (
+                    {description && <Markdown>{description}</Markdown>}
+                    {(raw ?? name) && (
                       <Styled.pre
                         sx={{
                           color: 'fadedText',
@@ -120,7 +113,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                           whiteSpace: 'pre-wrap',
                         }}
                       >
-                        {raw}
+                        {raw ?? name}
                       </Styled.pre>
                     )}
                   </Flex>

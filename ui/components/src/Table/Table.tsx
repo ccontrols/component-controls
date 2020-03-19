@@ -25,6 +25,7 @@ import {
 import Octicon, { TriangleUp, TriangleDown } from '@primer/octicons-react';
 import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
+import { useTableLayout } from './useTableLayout';
 
 const defaultColumn = memoize(() => ({
   subRows: undefined,
@@ -58,6 +59,7 @@ export const Table: FC<TableProps> = ({
   ...rest
 }) => {
   const plugins: PluginHook<any>[] = [
+    useTableLayout,
     useGlobalFilter,
     useGroupBy,
     useSortBy,

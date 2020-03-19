@@ -10,7 +10,11 @@ import { BlockContext, CURRENT_SELECTION } from '../context';
 import { getComponentName } from './utils';
 
 export interface ComponentInputProps {
-  /** component */
+  /**
+   * Specify the component(s), for which to have information displayed.
+   * The default, a value of `"."` will indicate to display information for the current component (associated with the current Story).
+   * If an array of components is specified, each component will be displayed in a separate tab.
+   */
   of?: '.' | any;
 }
 

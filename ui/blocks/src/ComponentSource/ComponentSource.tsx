@@ -12,6 +12,12 @@ import { repositoryActions } from '../utils/repositoryActions';
 export type ComponentSourceProps = ComponentInputProps &
   Omit<SourceProps, 'children'>;
 
+/**
+ * Displays import statement for a component as well as the component file source code
+ * Optionally also displays some repository information from the component's package.json
+ * Under the hood, uses [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) for syntax highlighting
+ */
+
 export const ComponentSource: FC<ComponentSourceProps> = ({
   of,
   actions,

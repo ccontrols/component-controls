@@ -15,37 +15,28 @@ const columns = [
   },
   {
     Header: 'Name',
-    columns: [
-      {
-        Header: 'Name',
-        accessor: 'name',
-      },
-      {
-        Header: 'User Name',
-        accessor: 'username',
-      },
-    ],
+    accessor: 'name',
   },
   {
-    Header: 'Address',
-    columns: [
-      {
-        Header: 'Street',
-        accessor: 'address.street',
-      },
-      {
-        Header: 'Suite',
-        accessor: 'address.suite',
-      },
-      {
-        Header: 'City',
-        accessor: 'address.city',
-      },
-      {
-        Header: 'Zip Code',
-        accessor: 'address.zipcode',
-      },
-    ],
+    Header: 'User Name',
+    accessor: 'username',
+    width: '20%',
+  },
+  {
+    Header: 'Street',
+    accessor: 'address.street',
+  },
+  {
+    Header: 'Suite',
+    accessor: 'address.suite',
+  },
+  {
+    Header: 'City',
+    accessor: 'address.city',
+  },
+  {
+    Header: 'Zip Code',
+    accessor: 'address.zipcode',
   },
 ];
 const mockData = () => {
