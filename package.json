@@ -16,6 +16,7 @@
   },
   "scripts": {
     "clean": "lerna clean",
+    "docs": "lerna run docs && node ./scripts/docs.js",
     "bootstrap": "lerna bootstrap",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",

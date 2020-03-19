@@ -25,9 +25,11 @@ function insertOverview(options) {
                 foundDepth = section.depth;
               } else if (foundDepth >= section.depth) {
                 break;
+              } else if (foundDepth > 0) {
+                overviewNodes.push(section)
               }
             }
-            if (foundDepth > 0) {
+            else if (foundDepth > 0) {
               overviewNodes.push(section)
             }
           }

@@ -1,8 +1,8 @@
-# Componnet Control Block UI components
-
 # Table of contents
 
--   [Components](#components)
+-   [Overview](#overview)
+    -   [@component-controls/blocks](#component-controlsblocks)
+-   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
@@ -14,7 +14,20 @@
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
 
-# Components
+# Overview
+
+## @component-controls/blocks
+
+A collection of core block components - intended to be displayed on the documentation page of stories.
+
+Some of the guidingdesign goals for this library:
+
+-   Most components should have a 'plain' and a 'block' version, where the block versions adds a collapsible ox with a title.
+-   There are two main categories of components: components that display story data (i.e. story source, story render) and component(s) data (i.e. prop tables, component sources)
+-   All components accept a list of custom ActionItems to be extended. 
+-   The compnents that deal with source code (sotory or component) display actions to visit the repositories.
+
+# List of components
 
 <react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,PureStorySource.stories.tsx" />
 

@@ -1,6 +1,6 @@
 # Overview 
 
-## package: @component-controls/instrument
+## @component-controls/instrument
 
 Component controls instrumentation library. 
 Parsing a source file will generate the following information:
