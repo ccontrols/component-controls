@@ -41,7 +41,19 @@ Parsing a source file will generate the following information:
 
 ## @component-controls/components
 
-A collection of the base UI components used by component-controls
+A collection of commonly used UI components for component-controls
+
+The third-libraries used include in no particular order:
+
+-   [theme-ui](https://theme-ui.com) as the theming and components foundation.
+-   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
+-   [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
+-   [react-table](https://github.com/tannerlinsley/react-table) to display tabular data. 
+-   [octicons](https://octicons.github.com) for icons used in the components.
+-   [react-tabs](https://reactcommunity.org/react-tabs/) for tabs and multi-page components.
+-   [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
+-   [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
+-   [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -63,7 +75,7 @@ A collection of editors used to enter the control values
 
 A collection of core block components - intended to be displayed on the documentation page of stories.
 
-Some of the guidingdesign goals for this library:
+Some of the guiding design goals for this library:
 
 -   Most components should have a 'plain' and a 'block' version, where the block versions adds a collapsible ox with a title.
 -   There are two main categories of components: components that display story data (i.e. story source, story render) and component(s) data (i.e. prop tables, component sources)

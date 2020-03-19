@@ -4,21 +4,22 @@
     -   [@component-controls/components](#component-controlscomponents)
 -   [List of components](#list-of-components)
     -   [<ins>ActionBar</ins>](#insactionbarins)
-    -   [<ins>simple</ins>](#inssimpleins)
+    -   [<ins>ActionContainer</ins>](#insactioncontainerins)
+    -   [<ins>overview</ins>](#insoverviewins)
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
-    -   [<ins>simple</ins>](#inssimpleins-1)
+    -   [<ins>simple</ins>](#inssimpleins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
-    -   [<ins>simple</ins>](#inssimpleins-2)
+    -   [<ins>simple</ins>](#inssimpleins-1)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>FlexContainer</ins>](#insflexcontainerins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
-    -   [<ins>simple</ins>](#inssimpleins-3)
+    -   [<ins>simple</ins>](#inssimpleins-2)
     -   [<ins>Wrapper</ins>](#inswrapperins)
     -   [<ins>Arrow</ins>](#insarrowins)
     -   [<ins>Popover</ins>](#inspopoverins)
     -   [<ins>simpleSource</ins>](#inssimplesourceins)
     -   [<ins>Source</ins>](#inssourceins)
-    -   [<ins>simple</ins>](#inssimpleins-4)
+    -   [<ins>simple</ins>](#inssimpleins-3)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>simpleSource</ins>](#inssimplesourceins-1)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
@@ -30,7 +31,7 @@
     -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
-    -   [<ins>simple</ins>](#inssimpleins-5)
+    -   [<ins>simple</ins>](#inssimpleins-4)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>Toggle</ins>](#instoggleins)
 
@@ -40,18 +41,17 @@
 
 A collection of commonly used UI components for component-controls
 
-The libraries used include in no particular order:
+The third-libraries used include in no particular order:
 
-- [theme-ui](https://theme-ui.com) as the theming and components foundation.
-- [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
-- [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
-- [react-table](https://github.com/tannerlinsley/react-table) to display tabular data. 
-- [octicons](https://octicons.github.com) for icons used in the components.
-- [react-tabs](https://reactcommunity.org/react-tabs/) for tabs and multi-page components.
-- [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
-- [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
-- [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
-
+-   [theme-ui](https://theme-ui.com) as the theming and components foundation.
+-   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
+-   [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
+-   [react-table](https://github.com/tannerlinsley/react-table) to display tabular data. 
+-   [octicons](https://octicons.github.com) for icons used in the components.
+-   [react-tabs](https://reactcommunity.org/react-tabs/) for tabs and multi-page components.
+-   [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
+-   [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
+-   [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
 
 # List of components
 
@@ -61,26 +61,41 @@ The libraries used include in no particular order:
 
 ## <ins>ActionBar</ins>
 
+a strip of actions to be attached to a container
+the action items contain the labels and click event handler
+actions can accept an order prop, and can also be superimposed
+
 _ActionBar [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ActionBar/ActionBar.tsx)_
 
 **Properties:**
 
--   **actionItems** : _ActionItem\[]_
+-   **actions**? : _ActionItem\[]_
 
-## <ins>simple</ins>
+## <ins>ActionContainer</ins>
 
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/BlockContainer/BlockContainer.stories.tsx)_
+a boxed container with actions.
+
+_ActionContainer [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
+
+**Properties:**
+
+-   **actions**? : _ActionItem\[]_
+
+    optional actions provided to the component
+
+## <ins>overview</ins>
+
+_overview [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/BlockContainer/BlockContainer.stories.tsx)_
 
 **Properties:**
 
 -   **title**? : _string_
 
     optional section title for the block
--   **actions**? : _ActionItem\[]_
-
-    additional actions provided to the component
 
 ## <ins>BlockContainer</ins>
+
+a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
 
 _BlockContainer [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
 
@@ -89,9 +104,6 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/blo
 -   **title**? : _string_
 
     optional section title for the block
--   **actions**? : _ActionItem\[]_
-
-    additional actions provided to the component
 
 ## <ins>simple</ins>
 
@@ -227,12 +239,9 @@ _simpleSource [source code](https:/github.com/ccontrols/component-controls/blob/
 -   **as**? : _any_
 
     syntax container as element
--   **title**? : _string_
-
-    optional section title for the block
 -   **actions**? : _ActionItem\[]_
 
-    additional actions provided to the component
+    optional actions provided to the component
 
 ## <ins>Source</ins>
 
@@ -263,12 +272,9 @@ _Source [source code](https:/github.com/ccontrols/component-controls/blob/master
 -   **as**? : _any_
 
     syntax container as element
--   **title**? : _string_
-
-    optional section title for the block
 -   **actions**? : _ActionItem\[]_
 
-    additional actions provided to the component
+    optional actions provided to the component
 
 ## <ins>simple</ins>
 
