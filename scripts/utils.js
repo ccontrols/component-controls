@@ -11,29 +11,32 @@ const inlineNewContent = ({section, tagName, node}, newContent) => {
   const startTag = `<!-- START-${tagName.toUpperCase()} -->`;
   const endTag = `<!-- END-${tagName.toUpperCase()} -->`;
   const index = node.children.indexOf(section);
-      let deleteNodes = 0;
-      let foundComment = false;
-      for (let i = index + 1; i < node.children.length; i +=1) {
-        const childNode = node.children[i];
-        if (childNode.type == 'html' && childNode.value == startTag) {
-          foundComment = true;
-        }
-        if (foundComment) {
-          deleteNodes += 1;
-        }
-        if (childNode.type == 'html' && childNode.value == endTag) {
-          break;
-        }
-      }
-      node.children.splice(index + 1, deleteNodes, ...[
-        {
-          type:'html',
-          value: startTag
-        },
-        ...newContent, {
-        type:'html',
-        value: endTag
-      }]); 
+  if (index === -1) {
+    return;
+  }
+  let deleteNodes = 0;
+  let foundComment = false;
+  for (let i = index + 1; i < node.children.length; i +=1) {
+    const childNode = node.children[i];
+    if (childNode.type == 'html' && childNode.value == startTag) {
+      foundComment = true;
+    }
+    if (foundComment) {
+      deleteNodes += 1;
+    }
+    if (childNode.type == 'html' && (childNode.value == endTag || childNode.value.toLowerCase().startsWith(`<${tagName}`))) {
+      break;
+    }
+  }
+  node.children.splice(index + 1, deleteNodes, ...[
+    {
+      type:'html',
+      value: startTag
+    },
+    ...newContent, {
+    type:'html',
+    value: endTag
+  }]); 
 
 }
 module.exports.extractCustomTag = extractCustomTag;

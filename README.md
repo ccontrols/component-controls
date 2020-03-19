@@ -3,6 +3,8 @@
 -   [Core packages](#core-packages)
     -   [@component-controls/instrument](#component-controlsinstrument)
 -   [UI packages](#ui-packages)
+    -   [@component-controls/components](#component-controlscomponents)
+    -   [@component-controls/editors](#component-controlseditors)
     -   [@component-controls/blocks](#component-controlsblocks)
 
 # Core packages
@@ -35,7 +37,23 @@ Parsing a source file will generate the following information:
 
 <package-section file="./ui/components/README.md" section="overview" />
 
+<!-- START-PACKAGE-SECTION -->
+
+## @component-controls/components
+
+A collection of the base UI components used by component-controls
+
+<!-- END-PACKAGE-SECTION -->
+
 <package-section file="./ui/editors/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## @component-controls/editors
+
+A collection of editors used to enter the control values
+
+<!-- END-PACKAGE-SECTION -->
 
 <package-section file="./ui/blocks/README.md" section="overview" />
 
