@@ -1,30 +1,42 @@
 /** @jsx jsx */
 import React, { FunctionComponent, MouseEvent } from 'react';
-import styled from '@emotion/styled';
 import { transparentize } from 'polished';
-import { Theme, Box, Button, jsx, useThemeUI } from 'theme-ui';
+import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
 
+/**
+ * an item in the ActionBar component
+ */
 export interface ActionItem {
+  /**
+   * optional id, used if title is not set
+   */
+  id?: string;
+  /**
+   * title - if a string, will use the Button component, else can prvide custom React component
+   */
   title: React.ReactNode;
+  /**
+   * onClick event when passing a string as the title
+   */
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  /**
+   * displays the Button as disabled
+   */
   disabled?: boolean;
+  /**
+   * hide an action item
+   */
   hidden?: boolean;
+
+  /**
+   * optional order, if not provided will use the natural order of items from right to left
+   */
+  order?: number;
 }
 
 export interface ActionBarProps {
-  actionItems: ActionItem[];
+  actions: ActionItem[];
 }
-
-const StyledContainer = styled.div`
-  position: relative;
-`;
-
-const StyledFlex = styled.div`
-  display: flex;
-  position: absolute;
-  flex-direction: row-reverse;
-  width: 100%;
-`;
 
 const ActionColors = ({
   theme,
@@ -51,16 +63,55 @@ const ActionColors = ({
   border: `1px solid ${theme.colors?.['highlight'] as string}`,
 });
 
+/**
+ * a strip of actions to be attached to a container
+ * the action items contain the labels and click event handler
+ * actions can accept an order prop, and can also be superimposed
+ *
+ */
 export const ActionBar: FunctionComponent<ActionBarProps> = ({
-  actionItems,
+  actions = [],
 }) => {
   const { theme } = useThemeUI();
   return (
-    <StyledContainer>
-      <StyledFlex>
-        {actionItems
+    <Box
+      sx={{
+        position: 'relative',
+      }}
+    >
+      <Flex
+        sx={{
+          position: 'absolute',
+          flexDirection: 'row-reverse',
+          width: '100%',
+        }}
+      >
+        {actions
           .filter(({ hidden }) => !hidden)
-          .map(({ title, onClick, disabled }, index: number) => (
+          .reduce((acc: ActionItem[], item: ActionItem) => {
+            const accIndex = acc.findIndex(
+              accItem =>
+                (accItem.id ?? accItem.title) === (item.id ?? item.title),
+            );
+            if (accIndex > -1) {
+              acc[accIndex] = { ...acc[accIndex], ...item };
+              return acc;
+            } else {
+              return [...acc, item];
+            }
+          }, [])
+          .map(
+            ({ order, ...item }, index) =>
+              ({
+                ...item,
+                order: order ?? index,
+              } as ActionItem),
+          )
+          .sort((a: ActionItem, b: ActionItem) => {
+            //@ts-ignore
+            return a.order - b.order;
+          })
+          .map(({ title, onClick, disabled }, index) => (
             <Box
               key={`${typeof title === 'string' ? title : 'item'}_${index}`}
               sx={{
@@ -80,7 +131,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
               )}
             </Box>
           ))}
-      </StyledFlex>
-    </StyledContainer>
+      </Flex>
+    </Box>
   );
 };

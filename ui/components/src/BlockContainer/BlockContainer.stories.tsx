@@ -7,18 +7,15 @@ export default {
   component: BlockContainer,
 };
 
-export const simple = ({ title }: BlockContainerProps) => {
+export const overview = ({ title }: BlockContainerProps) => {
   return (
-    <BlockContainer
-      title={title}
-      actions={[{ title: 'click me', onClick: () => console.log('clicked') }]}
-    >
+    <BlockContainer title={title}>
       <Donut value={1 / 2} />
     </BlockContainer>
   );
 };
 
-simple.story = {
+overview.story = {
   controls: {
     title: { type: 'text', value: 'Block title' },
   },

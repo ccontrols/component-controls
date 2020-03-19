@@ -21,10 +21,10 @@ const Container: React.FC = ({ children }) => (
     </Box>
   </ThemeProvider>
 );
-export const simple = () => (
+export const overview = () => (
   <Container>
     <ActionBar
-      actionItems={[
+      actions={[
         {
           title: 'action 1',
           onClick: () => console.log('clicked'),
@@ -41,7 +41,7 @@ export const simple = () => (
 export const disabled = () => (
   <Container>
     <ActionBar
-      actionItems={[
+      actions={[
         {
           title: 'click action',
           onClick: () => console.log('clicked'),
@@ -55,9 +55,51 @@ export const disabled = () => (
 export const link = () => (
   <Container>
     <ActionBar
-      actionItems={[
+      actions={[
         {
           title: <ExternalLink href="https://google.com">google</ExternalLink>,
+        },
+      ]}
+    />
+  </Container>
+);
+
+export const order = () => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'action 1',
+          onClick: () => console.log('clicked'),
+          order: 1,
+        },
+        {
+          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          onClick: () => console.log('clicked'),
+          order: 0,
+        },
+      ]}
+    />
+  </Container>
+);
+
+export const override = () => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'action 1',
+          onClick: () => console.log('clicked'),
+          id: 'copy',
+        },
+        {
+          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          onClick: () => console.log('clicked'),
+        },
+        {
+          //this will override the action above
+          title: 'Copy',
+          id: 'copy',
         },
       ]}
     />

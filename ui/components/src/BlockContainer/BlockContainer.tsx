@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { transparentize } from 'polished';
 import { jsx, Flex, Link, Divider, Box, useThemeUI } from 'theme-ui';
 import Octicon, {
   Link as LinkIcon,
@@ -9,26 +8,23 @@ import Octicon, {
 } from '@primer/octicons-react';
 import { Subtitle } from '../Subtitle';
 import { Collapsible } from '../Collapsible';
-import { ActionBar, ActionItem } from '../ActionBar';
 
 export interface BlockContainerProps {
   /**
    * optional section title for the block
    */
   title?: string;
-  /**
-   * additional actions provided to the component
-   */
-  actions?: ActionItem[];
 }
 
+/**
+ * a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
+ *
+ */
 export const BlockContainer: FC<BlockContainerProps> = ({
   children,
   title,
-  actions,
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
-  const { theme } = useThemeUI();
   const id = title ? title.toLowerCase().replace(/\s/g, '-') : undefined;
   //workaround for storybook iframe url
   const url =
@@ -87,23 +83,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
           </Link>
         )}
       </Flex>
-      <Collapsible isOpen={isOpen}>
-        {actions && <ActionBar actionItems={actions} />}
-        <Box
-          sx={{
-            borderRadius: 4,
-            boxShadow: `${transparentize(
-              0.9,
-              theme.colors?.text as string,
-            )} 0 1px 3px 1px, ${transparentize(
-              0.9,
-              theme.colors?.text as string,
-            )} 0 0 0 1px`,
-          }}
-        >
-          {children}
-        </Box>
-      </Collapsible>
+      <Collapsible isOpen={isOpen}>{children}</Collapsible>
       {!isOpen && <Divider />}
     </Box>
   );

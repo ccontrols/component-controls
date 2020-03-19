@@ -20,7 +20,7 @@
 
 A collection of core block components - intended to be displayed on the documentation page of stories.
 
-Some of the guidingdesign goals for this library:
+Some of the guiding design goals for this library:
 
 -   Most components should have a 'plain' and a 'block' version, where the block versions adds a collapsible ox with a title.
 -   There are two main categories of components: components that display story data (i.e. story source, story render) and component(s) data (i.e. prop tables, component sources)

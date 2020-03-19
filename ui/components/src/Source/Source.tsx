@@ -7,9 +7,9 @@ import {
   SyntaxHighlighter,
   SyntaxHighlighterProps,
 } from '../SyntaxHighlighter';
-import { BlockContainer, BlockContainerProps } from '../BlockContainer';
+import { ActionContainer, ActionContainerProps } from '../ActionContainer';
 
-export type SourceProps = SyntaxHighlighterProps & BlockContainerProps;
+export type SourceProps = SyntaxHighlighterProps & ActionContainerProps;
 /**
  * Source component used to display source code
  *
@@ -17,7 +17,6 @@ export type SourceProps = SyntaxHighlighterProps & BlockContainerProps;
 export const Source: FC<SourceProps> = ({
   children = '',
   actions,
-  title,
   as = 'div',
   ...props
 }) => {
@@ -35,7 +34,7 @@ export const Source: FC<SourceProps> = ({
   ];
 
   return (
-    <BlockContainer actions={actionsItems} title={title}>
+    <ActionContainer actions={actionsItems}>
       <SyntaxHighlighter
         as={as}
         {...props}
@@ -46,6 +45,6 @@ export const Source: FC<SourceProps> = ({
       >
         {children}
       </SyntaxHighlighter>
-    </BlockContainer>
+    </ActionContainer>
   );
 };
