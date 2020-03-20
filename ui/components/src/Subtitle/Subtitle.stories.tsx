@@ -1,12 +1,12 @@
 import React from 'react';
-import { Subtitle } from './Subtitle';
+import { Subtitle, SubtitleProps } from './Subtitle';
 
 export default {
   title: 'Components/Subtitle',
   component: Subtitle,
 };
 
-export const overview = ({ children }: { children: React.ReactNode }) => {
+export const overview = ({ children }: SubtitleProps) => {
   return <Subtitle>{children}</Subtitle>;
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Title } from './Title';
+import { Title, TitleProps } from './Title';
 
 export default {
   title: 'Components/Title',
   component: Title,
 };
 
-export const overview = ({ children }: { children: React.ReactNode }) => {
+export const overview = ({ children }: TitleProps) => {
   return <Title>{children}</Title>;
 };
 

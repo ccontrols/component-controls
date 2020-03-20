@@ -58,6 +58,19 @@ export const overview = () => {
   );
 };
 
+export const noHeader = () => {
+  const data = React.useMemo(mockData, []);
+  return (
+    <ThemeProvider>
+      <Table
+        header={false}
+        hiddenColumns={['age']}
+        columns={columns}
+        data={data}
+      />
+    </ThemeProvider>
+  );
+};
 export const sortable = () => {
   const data = React.useMemo(mockData, []);
   return (

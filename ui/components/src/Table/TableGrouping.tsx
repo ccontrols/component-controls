@@ -27,7 +27,9 @@ const useControlledState = (state: GroupByState) => {
     return state;
   }, [state]);
 };
-export const useExpanderColumn = (hooks: UseTableHooks<{}>) => {
+export const useExpanderColumn = (itemsLabel: string) => (
+  hooks: UseTableHooks<{}>,
+) => {
   hooks.useControlledState.push(useControlledState);
   hooks.visibleColumns.push((columns, { instance }) => {
     if (!(instance.state as UseGroupByState<{}>).groupBy.length) {
@@ -65,7 +67,8 @@ export const useExpanderColumn = (hooks: UseTableHooks<{}>) => {
                       mx: 2,
                     }}
                   >
-                    {row.groupByVal ?? ''} ({row.subRows.length})
+                    {row.groupByVal ?? ''} (
+                    {`${row.subRows.length} ${itemsLabel}`})
                   </Text>
                 </Flex>
               </td>

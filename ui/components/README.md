@@ -251,19 +251,40 @@ _SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/
 
 ## <ins>Table</ins>
 
+Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
+Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
+
 _Table [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Table/Table.tsx)_
 
 **Properties:**
 
 -   **columns** : _Column&lt;{}>\[]_
+
+    the colmns object as an array.
 -   **data**? : _any\[]_
+
+    array of data rows.
 -   **header**? : _boolean_
+
+    show or hide the header element.
 -   **sorting**? : _boolean_
+
+    enable.disable sorting.
 -   **filtering**? : _boolean_
+
+    enable/disable filtering.
 -   **itemsLabel**? : _string_
+
+    string label for 'items' - used in the filter placeholder and grouping header.
 -   **groupBy**? : _string\[]_
+
+    field to be grouped by.
 -   **hiddenColumns**? : _string\[]_
+
+    list of columns to hide.
 -   **expanded**? : _{ \[key: string]: boolean; }_
+
+    object listing the initially expanded rows.
 
 ## <ins>Tab</ins>
 

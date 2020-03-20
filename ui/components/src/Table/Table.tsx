@@ -32,20 +32,52 @@ const defaultColumn = memoize(() => ({
 }));
 
 interface TableOwnProps {
+  /**
+   * the colmns object as an array.
+   */
   columns: Column[];
+  /**
+   * array of data rows.
+   */
   data?: any[];
+  /**
+   * show or hide the header element.
+   */
   header?: boolean;
+  /**
+   * enable.disable sorting.
+   */
   sorting?: boolean;
+  /**
+   * enable/disable filtering.
+   */
   filtering?: boolean;
+  /**
+   * string label for 'items' - used in the filter placeholder and grouping header.
+   */
   itemsLabel?: string;
+  /**
+   * field to be grouped by.
+   */
   groupBy?: string[];
+  /**
+   * list of columns to hide.
+   */
   hiddenColumns?: string[];
+  /**
+   * object listing the initially expanded rows.
+   */
   expanded?: {
     [key: string]: boolean;
   };
 }
 
 export type TableProps = TableOwnProps & BoxProps;
+
+/**
+ * Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
+ * Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
+ */
 export const Table: FC<TableProps> = ({
   columns,
   data = [],
@@ -64,7 +96,7 @@ export const Table: FC<TableProps> = ({
     useGroupBy,
     useSortBy,
     useExpanded,
-    useExpanderColumn,
+    useExpanderColumn(itemsLabel),
   ];
   const initialState: Partial<TableState<{}>> &
     Partial<UseExpandedState<{}>> &
