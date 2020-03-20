@@ -171,39 +171,38 @@ _Popover [source code](https:/github.com/ccontrols/component-controls/blob/maste
 
 ## <ins>Source</ins>
 
-Source component used to display source code
+Syntax highliting source code component. Uses [prism](https://prismjs.com) for the actual source display.
 
 _Source [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Source/Source.tsx)_
 
 **Properties:**
 
--   **children**? : _any_
-
-    source code to be displayed
--   **theme**? : _PrismTheme_
-
-    optional theme provided to the component
--   **language**? : _Language_
-
-    code lnguage used, by default "jsx"
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
--   **style**? : _any_
-
-    css styles for the container
--   **as**? : _any_
-
-    syntax container as element
 -   **actions**? : _ActionItem\[]_
 
     optional actions provided to the component
--   **paddingTop**? : _string | number_
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
 
-    padding at the top, to account for the absolute position of the ActionBar
+    source code to be displayed.
+-   **theme**? : _PrismTheme_
+
+    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
+-   **language**? : _Language_
+
+    source lnguage used, by default "jsx".
+-   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
+
+    custom function to render the source code.
+-   **dark**? : _boolean_
+
+    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+    if dark: true, duotoneDark theme is used.
+    if dark: false, duotoneLight theme is used.
+-   **style**? : _any_
+
+    css styles for the container.
+-   **as**? : _any_
+
+    syntax container as element. Can be used as `div` or `span`.
 
 ## <ins>Subtitle</ins>
 
@@ -215,33 +214,35 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
 ## <ins>SyntaxHighlighter</ins>
 
-Syntax highlighter component
+Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual source display.
 
 _SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
 
 **Properties:**
 
--   **children**? : _any_
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
 
-    source code to be displayed
+    source code to be displayed.
 -   **theme**? : _PrismTheme_
 
-    optional theme provided to the component
+    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
 -   **language**? : _Language_
 
-    code lnguage used, by default "jsx"
+    source lnguage used, by default "jsx".
 -   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
 
-    custom function to render the source code
+    custom function to render the source code.
 -   **dark**? : _boolean_
 
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
+    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+    if dark: true, duotoneDark theme is used.
+    if dark: false, duotoneLight theme is used.
 -   **style**? : _any_
 
-    css styles for the container
+    css styles for the container.
 -   **as**? : _any_
 
-    syntax container as element
+    syntax container as element. Can be used as `div` or `span`.
 
 ## <ins>Table</ins>
 

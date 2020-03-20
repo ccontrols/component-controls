@@ -15,42 +15,44 @@ type RenderProps = Parameters<Highlight['props']['children']>[0];
 
 export interface SyntaxHighlighterProps {
   /**
-   * source code to be displayed
+   * source code to be displayed.
    */
-  children: React.ReactNode;
+  children: string;
   /**
-   * optional theme provided to the component
+   * optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
    */
   theme?: PrismTheme;
   /**
-   * code lnguage used, by default "jsx"
+   * source lnguage used, by default "jsx".
    */
   language?: Language;
   /**
-   * custom function to render the source code
+   * custom function to render the source code.
    */
   renderFn?: (
     props: RenderProps,
     other: { theme: PrismTheme },
   ) => ReturnType<Highlight['props']['children']>;
   /**
-   * used to specify a "dark" color theme - applcable only if no custom theme prop is provided
+   * used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+   * if dark: true, duotoneDark theme is used.
+   * if dark: false, duotoneLight theme is used.
    */
   dark?: boolean;
 
   /**
-   * css styles for the container
+   * css styles for the container.
    */
   style?: React.CSSProperties;
 
   /**
-   * syntax container as element
+   * syntax container as element. Can be used as `div` or `span`.
    */
   as?: React.ElementType;
 }
 
 /**
- * Syntax highlighter component
+ * Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual source display.
  */
 export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
   children = '',
@@ -61,12 +63,6 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
   style: propStyle,
   as = 'span',
 }) => {
-  if (typeof children !== 'string') {
-    console.error(
-      'Invalid children roperty passed to Source: must be a string',
-    );
-  }
-
   const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
   const renderProps =
     typeof renderFn === 'function'
