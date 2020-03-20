@@ -16,9 +16,9 @@
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
     -   [<ins>Tab</ins>](#instabins)
-    -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
+    -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>Toggle</ins>](#instoggleins)
 
@@ -288,19 +288,27 @@ _Table [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 ## <ins>Tab</ins>
 
+Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
+
 _Tab [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
 
-## <ins>Tabs</ins>
-
-_Tabs [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
-
 ## <ins>TabList</ins>
+
+Container for `<Tab />` headings, to be created inside the `<Tabs />` component. The list of `<Tab />` components should be passed as the children prop.
 
 _TabList [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>TabPanel</ins>
 
+Panel body container, to be created inside the `<Tabs />` component through the children prop.
+
 _TabPanel [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
+
+## <ins>Tabs</ins>
+
+Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
+
+_Tabs [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>Title</ins>
 

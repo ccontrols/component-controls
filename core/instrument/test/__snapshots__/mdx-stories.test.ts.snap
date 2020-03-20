@@ -3,7 +3,7 @@
 exports[`mdx-stories no-name.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/no-name.mdx": Object {
+    "2855216c2faa4ab43ed978e3ff6743e4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -16,7 +16,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
+        "Button": "2855216c2faa4ab43ed978e3ff6743e4",
       },
       "parameters": Object {
         "component": "Button",
@@ -46,7 +46,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories props-argument.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/props-argument.mdx": Object {
+    "adb0a7ff2c278d595f4ce67bb4b42887": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -59,7 +59,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
+        "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
       },
       "parameters": Object {
         "component": "Button",
@@ -121,7 +121,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories story.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
+    "ceea0565a65f75c8c7b6b355d6d335ac": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "loc": Object {
@@ -154,7 +154,7 @@ export default Button;
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
       },
       "parameters": Object {
         "component": "Button",
@@ -202,7 +202,7 @@ import Button from '../../components/button-default-arrow-func';
 exports[`mdx-stories three-levels-alias.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx": Object {
+    "c63d685efb0c65f18ffc63184e852ef4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -215,7 +215,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
+        "Button": "c63d685efb0c65f18ffc63184e852ef4",
       },
       "parameters": Object {
         "component": "Button",
@@ -339,7 +339,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories tw0-levels-sub-arguments.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx": Object {
+    "88c2f5883a4daf6051d3f8a38ce7bf75": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -352,7 +352,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
+        "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
       },
       "parameters": Object {
         "component": "Button",
@@ -442,7 +442,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories two-arguments.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx": Object {
+    "fe664c2ffbbcacffdac896ace94db697": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -455,7 +455,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
+        "Button": "fe664c2ffbbcacffdac896ace94db697",
       },
       "parameters": Object {
         "component": "Button",
@@ -530,7 +530,7 @@ import Button from '../components/BaseButton';
 exports[`mdx-stories two-levels-alias.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx": Object {
+    "0a73df5cffa26ca62ec534813a77384f": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "loc": undefined,
@@ -543,7 +543,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
+        "Button": "0a73df5cffa26ca62ec534813a77384f",
       },
       "parameters": Object {
         "component": "Button",

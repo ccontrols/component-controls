@@ -35,7 +35,7 @@ Object {
 exports[`csf-story-kind title-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-and-parameters.js": Object {
+    "21455c8d3b1413b6aaaa56c7ca6e1dde": Object {
       "name": "ControlsTable",
     },
   },
@@ -43,7 +43,7 @@ Object {
     "Storybook/Blocks/ControlsTable": Object {
       "component": "ControlsTable",
       "components": Object {
-        "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-and-parameters.js",
+        "ControlsTable": "21455c8d3b1413b6aaaa56c7ca6e1dde",
       },
       "parameters": Object {
         "addonControls": Object {
@@ -67,7 +67,7 @@ Object {
 exports[`csf-story-kind title-controls-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js": Object {
+    "dec877e66c549940695c423429a5d00b": Object {
       "name": "ControlsTable",
     },
   },
@@ -75,7 +75,7 @@ Object {
     "Storybook/Kind": Object {
       "component": "ControlsTable",
       "components": Object {
-        "ControlsTable": "/Users/atanasster/component-controls/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js",
+        "ControlsTable": "dec877e66c549940695c423429a5d00b",
       },
       "parameters": Object {
         "controls": Object {

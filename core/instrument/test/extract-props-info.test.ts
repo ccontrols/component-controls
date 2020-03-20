@@ -23,10 +23,28 @@ describe('extract-props-info', () => {
     });
   };
   loadTestFiles(
+    'Tab',
+    path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
+  );
+  loadTestFiles(
+    'Tabs',
+    path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
+  );
+
+  loadTestFiles(
+    'TabList',
+    path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
+  );
+
+  loadTestFiles(
+    'TabPanel',
+    path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
+  );
+  loadTestFiles(
     'PropsTable',
     path.resolve(
       __dirname,
-      '../../../ui/blocks/src/PropsTable/PropsTable/PropsTable.tsx',
+      '../../../ui/blocks/src/PropsTable/block/BlockPropsTable.tsx',
     ),
   );
 

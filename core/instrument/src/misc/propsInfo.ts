@@ -22,7 +22,7 @@ export const propsInfo = async (
   const cachedFileName = path.join(
     cacheFolder,
     createHash('md5')
-      .update(filePath)
+      .update(`${filePath}-${componentName}`)
       .digest('hex'),
   );
   if (fs.existsSync(cachedFileName)) {

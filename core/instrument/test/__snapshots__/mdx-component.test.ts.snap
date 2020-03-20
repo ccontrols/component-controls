@@ -3,7 +3,7 @@
 exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
+    "2f4bd34d15be236674abaf6e894afe6e": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "name": "Button",
@@ -14,7 +14,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+        "Button": "2f4bd34d15be236674abaf6e894afe6e",
       },
       "title": "Storybook/MDX",
     },
@@ -26,7 +26,7 @@ Object {
 exports[`mdx-component named-alias-import.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx": Object {
+    "dc86c4457416c54c13147e780d972747": Object {
       "from": "../../components/button-named-class",
       "importedName": "Btn",
       "name": "Button",
@@ -37,7 +37,7 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/named-alias-import.mdx",
+        "Button": "dc86c4457416c54c13147e780d972747",
       },
       "title": "Storybook/MDX",
     },
@@ -49,7 +49,7 @@ Object {
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
+    "dc262d21cd7820523c7e0bacca461e87": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "name": "ArrowButton",
@@ -59,7 +59,7 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {
-        "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
       },
       "title": "Story",
     },
@@ -71,7 +71,13 @@ Object {
 exports[`mdx-component story-import.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx": Object {
+    "1e542c3ba23e8699f77ec19bf3f9e3ea": Object {
+      "from": "./Button",
+      "importedName": "Btn",
+      "name": "Button",
+      "request": undefined,
+    },
+    "7e2f74e50bd73c6a0bf50c40d3c149d4": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
       "name": "Toggle",
@@ -82,8 +88,8 @@ Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx",
-        "Toggle": "/Users/atanasster/component-controls/core/instrument/test/fixtures/mdx/component/story-import.mdx",
+        "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
+        "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
       },
       "title": "Storybook/MDX",
     },
@@ -111,24 +117,24 @@ Object {
 exports[`mdx-component story-subcomponents.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-    },
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
+    "2f4bd34d15be236674abaf6e894afe6e": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
+    "dc262d21cd7820523c7e0bacca461e87": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
   },
   "kinds": Object {
     "Story": Object {
       "components": Object {
-        "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+        "Button": "2f4bd34d15be236674abaf6e894afe6e",
       },
       "title": "Story",
     },
@@ -165,25 +171,25 @@ Object {
 exports[`mdx-component subcomponents.mdx 1`] = `
 Object {
   "components": Object {
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-    },
-    "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js": Object {
+    "2f4bd34d15be236674abaf6e894afe6e": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    },
+    "dc262d21cd7820523c7e0bacca461e87": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
   "kinds": Object {
     "Story": Object {
       "component": "ArrowButton",
       "components": Object {
-        "ArrowButton": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-        "Button": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+        "Button": "2f4bd34d15be236674abaf6e894afe6e",
       },
       "subcomponents": Object {
         "Button": "Button",

@@ -4,6 +4,7 @@ import {
   StoryComponent,
   StoriesKind,
 } from '@component-controls/specification';
+import { createHash } from 'crypto';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/packageInfo';
 import { propsInfo } from '../misc/propsInfo';
@@ -93,7 +94,9 @@ export const extractStoreComponent = async (
           initialAST,
         );
         if (component) {
-          const componentKey = component.request ?? filePath;
+          const componentKey = createHash('md5')
+            .update(`${component.request ?? filePath}-${componentName}`)
+            .digest('hex');
           store.components[componentKey] = component;
           kind.components[componentName] = componentKey;
         }

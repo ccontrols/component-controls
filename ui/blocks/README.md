@@ -48,30 +48,32 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/bl
     Specify the component(s), for which to have information displayed.
     The default, a value of `"."` will indicate to display information for the current component (associated with the current Story).
     If an array of components is specified, each component will be displayed in a separate tab.
+-   **actions**? : _ActionItem\[]_
+
+    optional actions provided to the component
 -   **theme**? : _PrismTheme_
 
-    optional theme provided to the component
+    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
 -   **language**? : _Language_
 
-    code lnguage used, by default "jsx"
+    source lnguage used, by default "jsx".
 -   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
 
-    custom function to render the source code
+    custom function to render the source code.
 -   **dark**? : _boolean_
 
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
+    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+    if dark: true, duotoneDark theme is used.
+    if dark: false, duotoneLight theme is used.
 -   **style**? : _any_
 
-    css styles for the container
+    css styles for the container.
 -   **as**? : _any_
 
-    syntax container as element
+    syntax container as element. Can be used as `div` or `span`.
 -   **title**? : _string_
 
     optional section title for the block
--   **actions**? : _ActionItem\[]_
-
-    additional actions provided to the component
 
 ## <ins>ControlsTable</ins>
 
@@ -110,7 +112,7 @@ _Description [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 -   **components**? : _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_
 
-    components to customize the markdown display
+    components to customize the markdown display.
 -   **of**? : _any_
 
     Specify the component(s), for which to have information displayed.
@@ -129,15 +131,29 @@ _BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/bl
     The default, a value of `"."` will indicate to display information for the current component (associated with the current Story).
     If an array of components is specified, each component will be displayed in a separate tab.
 -   **header**? : _boolean_
+
+    show or hide the header element.
 -   **sorting**? : _boolean_
+
+    enable.disable sorting.
 -   **filtering**? : _boolean_
+
+    enable/disable filtering.
 -   **itemsLabel**? : _string_
+
+    string label for 'items' - used in the filter placeholder and grouping header.
 -   **groupBy**? : _string\[]_
+
+    field to be grouped by.
 -   **hiddenColumns**? : _string\[]_
+
+    list of columns to hide.
 -   **expanded**? : _{ \[key: string]: boolean; }_
+
+    object listing the initially expanded rows.
 -   **actions**? : _ActionItem\[]_
 
-    additional actions provided to the component
+    optional actions provided to the component
 
 ## <ins>PropsTable</ins>
 
@@ -151,12 +167,26 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/blob/ma
     The default, a value of `"."` will indicate to display information for the current component (associated with the current Story).
     If an array of components is specified, each component will be displayed in a separate tab.
 -   **header**? : _boolean_
+
+    show or hide the header element.
 -   **sorting**? : _boolean_
+
+    enable.disable sorting.
 -   **filtering**? : _boolean_
+
+    enable/disable filtering.
 -   **itemsLabel**? : _string_
+
+    string label for 'items' - used in the filter placeholder and grouping header.
 -   **groupBy**? : _string\[]_
+
+    field to be grouped by.
 -   **hiddenColumns**? : _string\[]_
+
+    list of columns to hide.
 -   **expanded**? : _{ \[key: string]: boolean; }_
+
+    object listing the initially expanded rows.
 
 ## <ins>PureStorySource</ins>
 
@@ -164,38 +194,40 @@ _PureStorySource [source code](https:/github.com/ccontrols/component-controls/bl
 
 **Properties:**
 
--   **children** : _any_
-
-    source code to be displayed
--   **theme**? : _PrismTheme_
-
-    optional theme provided to the component
--   **language**? : _Language_
-
-    code lnguage used, by default "jsx"
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
--   **style**? : _any_
-
-    css styles for the container
--   **as**? : _any_
-
-    syntax container as element
--   **title**? : _string_
-
-    optional section title for the block
--   **actions**? : _ActionItem\[]_
-
-    additional actions provided to the component
 -   **args**? : _StoryArguments_
 
     a list of story arguments accepted by Source
     this is used to syntax-highlight the arguments
     and their usage
+-   **actions**? : _ActionItem\[]_
+
+    optional actions provided to the component
+-   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    source code to be displayed.
+-   **theme**? : _PrismTheme_
+
+    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
+-   **language**? : _Language_
+
+    source lnguage used, by default "jsx".
+-   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
+
+    custom function to render the source code.
+-   **dark**? : _boolean_
+
+    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+    if dark: true, duotoneDark theme is used.
+    if dark: false, duotoneLight theme is used.
+-   **style**? : _any_
+
+    css styles for the container.
+-   **as**? : _any_
+
+    syntax container as element. Can be used as `div` or `span`.
+-   **title**? : _string_
+
+    optional section title for the block
 -   **controls**? : _LoadedComponentControls_
 
     any control values to render in place of props in the editor
@@ -216,38 +248,40 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/blob/m
 
     or - name of the story if in an external file
     will be used to find the story
--   **children** : _any_
-
-    source code to be displayed
--   **theme**? : _PrismTheme_
-
-    optional theme provided to the component
--   **language**? : _Language_
-
-    code lnguage used, by default "jsx"
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
--   **style**? : _any_
-
-    css styles for the container
--   **as**? : _any_
-
-    syntax container as element
--   **title**? : _string_
-
-    optional section title for the block
--   **actions**? : _ActionItem\[]_
-
-    additional actions provided to the component
 -   **args**? : _StoryArguments_
 
     a list of story arguments accepted by Source
     this is used to syntax-highlight the arguments
     and their usage
+-   **actions**? : _ActionItem\[]_
+
+    optional actions provided to the component
+-   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    source code to be displayed.
+-   **theme**? : _PrismTheme_
+
+    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
+-   **language**? : _Language_
+
+    source lnguage used, by default "jsx".
+-   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
+
+    custom function to render the source code.
+-   **dark**? : _boolean_
+
+    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
+    if dark: true, duotoneDark theme is used.
+    if dark: false, duotoneLight theme is used.
+-   **style**? : _any_
+
+    css styles for the container.
+-   **as**? : _any_
+
+    syntax container as element. Can be used as `div` or `span`.
+-   **title**? : _string_
+
+    optional section title for the block
 -   **controls**? : _LoadedComponentControls_
 
     any control values to render in place of props in the editor
@@ -268,6 +302,9 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
     or - name of the story if in an external file
     will be used to find the story
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    text to be displayed in the component.
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
 
 ## <ins>Title</ins>
@@ -283,6 +320,9 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
     or - name of the story if in an external file
     will be used to find the story
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    text to be displayed in the component.
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

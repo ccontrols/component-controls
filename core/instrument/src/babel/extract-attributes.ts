@@ -16,7 +16,6 @@ const nodeToValue = (node: any): any => {
       case 'Property':
         return node.name;
       case 'ObjectProperty':
-        console.log('ObjectProperty', node.key.value);
         return node.key.value;
 
       case 'Literal':

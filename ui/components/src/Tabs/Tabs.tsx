@@ -1,13 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, ComponentClass } from 'react';
 import styled from '@emotion/styled';
 import { Theme } from 'theme-ui';
 import {
-  Tab,
+  Tab as OriginalTab,
+  TabProps,
   Tabs as OriginalTabs,
   TabsProps,
-  TabList,
-  TabPanel,
+  TabList as OriginalTabList,
+  TabListProps,
+  TabPanel as OriginalTabPanel,
+  TabPanelProps,
 } from 'react-tabs';
+
+/**
+ * Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
+ */
+export const Tab: ComponentClass<TabProps> = OriginalTab;
+
+/**
+ * Container for `<Tab />` headings, to be created inside the `<Tabs />` component. The list of `<Tab />` components should be passed as the children prop. */
+export const TabList: ComponentClass<TabListProps> = OriginalTabList;
+
+/**
+ * Panel body container, to be created inside the `<Tabs />` component through the children prop.
+ */
+export const TabPanel: ComponentClass<TabPanelProps> = OriginalTabPanel;
 
 const TabsContainer = styled.div`
   ${({ theme }: { theme?: Theme }) => `
@@ -62,9 +79,12 @@ const TabsContainer = styled.div`
 `;
 
 type OwnTabsProps = Omit<TabsProps, 'ref'>;
-const Tabs: FC<OwnTabsProps> = props => (
+/**
+ * Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
+ *
+ */
+export const Tabs: FC<OwnTabsProps> = props => (
   <TabsContainer>
     <OriginalTabs {...props} />
   </TabsContainer>
 );
-export { Tab, Tabs, TabList, TabPanel };
