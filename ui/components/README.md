@@ -109,11 +109,34 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 ## <ins>ExternalLink</ins>
 
+Anchor link to an external url,
+adds the default `target="_blank" rel="noopener noreferrer"` props
+
 _ExternalLink [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
 
 **Properties:**
 
--   **ref**? : _((instance: HTMLAnchorElement) => void) | RefObject&lt;HTMLAnchorElement>_
+-   **download**? : _any_
+
+    specifies that the target will be downloaded when a user clicks on the hyperlink.
+-   **href**? : _string_
+
+    specifies the URL of the page the link goes to.
+-   **hrefLang**? : _string_
+
+    specifies the language of the linked document.
+-   **media**? : _string_
+
+    specifies what media/device the linked document is optimized for.
+-   **ping**? : _string_
+
+    specifies a list of URLs to be notified if the user follows the hyperlink.
+-   **type**? : _string_
+
+    specifies the media type of the linked document.
+-   **referrerPolicy**? : _"no-referrer" | "no-referrer-when-downgrade" | "origin" | "origin-when-cross-origin" | "unsafe-url"_
+
+    specifies which referrer to send.
 
 ## <ins>FlexContainer</ins>
 
