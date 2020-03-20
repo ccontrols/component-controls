@@ -9,6 +9,11 @@ export interface ActionContainerProps {
    * optional actions provided to the component
    */
   actions?: ActionItem[];
+
+  /**
+   * padding at the top, to account for the absolute position of the ActionBar
+   */
+  paddingTop?: string | number;
 }
 
 /**
@@ -17,6 +22,7 @@ export interface ActionContainerProps {
 export const ActionContainer: FC<ActionContainerProps> = ({
   children,
   actions,
+  paddingTop,
 }) => {
   const { theme } = useThemeUI();
   return (
@@ -33,7 +39,7 @@ export const ActionContainer: FC<ActionContainerProps> = ({
             theme.colors?.text as string,
           )} 0 0 0 1px`,
           'div:first-child, svg:first-child': {
-            paddingTop: '20px',
+            paddingTop,
           },
         }}
       >

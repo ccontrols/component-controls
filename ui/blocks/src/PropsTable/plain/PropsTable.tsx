@@ -27,10 +27,11 @@ export const PropsTable: FC<PropsTableProps> = ({
       const parents = new Set();
       const rows = Object.keys(info.props).map(key => {
         const prop = info.props[key];
-        parents.add(prop.parentName);
+        const parentName = prop.parentName ?? '-';
+        parents.add(parentName);
         return {
           name: key,
-          prop: prop,
+          prop: { ...prop, parentName },
         };
       });
       const groupProps: GroupingProps = {};
@@ -108,9 +109,9 @@ export const PropsTable: FC<PropsTableProps> = ({
                       <Styled.pre
                         sx={{
                           color: 'fadedText',
-                          mt: 2,
                           letterSpacing: '0.10em',
                           whiteSpace: 'pre-wrap',
+                          margin: 0,
                         }}
                       >
                         {raw ?? name}

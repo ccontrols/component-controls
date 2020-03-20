@@ -34,7 +34,7 @@ export const Source: FC<SourceProps> = ({
   ];
 
   return (
-    <ActionContainer actions={actionsItems}>
+    <ActionContainer actions={actionsItems} paddingTop="20px">
       <SyntaxHighlighter
         as={as}
         {...props}

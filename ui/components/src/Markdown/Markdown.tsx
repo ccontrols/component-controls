@@ -1,5 +1,7 @@
 /* eslint-disable react/display-name */
-import React, { FC } from 'react';
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, Box } from 'theme-ui';
 import MarkdownToJSX, { MarkdownOptions } from 'markdown-to-jsx';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 
@@ -16,6 +18,11 @@ export interface MarkdownProps {
 
 const defaultComponents: MarkdownOptions['overrides'] = {
   code: SyntaxHighlighter,
+  p: ({ children }) => (
+    <Box as="p" sx={{ my: 2 }}>
+      {children}
+    </Box>
+  ),
 };
 
 /**

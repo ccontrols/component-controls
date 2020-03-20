@@ -69,6 +69,9 @@ _ActionContainer [source code](https:/github.com/ccontrols/component-controls/bl
 -   **actions**? : _ActionItem\[]_
 
     optional actions provided to the component
+-   **paddingTop**? : _string | number_
+
+    padding at the top, to account for the absolute position of the ActionBar
 
 ## <ins>BlockContainer</ins>
 
@@ -84,10 +87,15 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/blo
 
 ## <ins>Collapsible</ins>
 
+Animated expand/collapse container component
+
 _Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Collapsible/Collapsible.tsx)_
 
 **Properties:**
 
+-   **isOpen** : _boolean_
+
+    controlled open state
 -   **animateOpacity**? : _boolean_
 -   **animationStateClasses**? : _AnimationStateClasses_
 -   **applyInlineTransitions**? : _boolean_
@@ -98,7 +106,6 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/m
 -   **height**? : _ReactText_
 -   **onAnimationEnd**? : _(props: { newHeight: number; }) => void_
 -   **onAnimationStart**? : _(props: { newHeight: number; }) => void_
--   **isOpen** : _boolean_
 
 ## <ins>ExternalLink</ins>
 
@@ -171,6 +178,9 @@ _Source [source code](https:/github.com/ccontrols/component-controls/blob/master
 -   **actions**? : _ActionItem\[]_
 
     optional actions provided to the component
+-   **paddingTop**? : _string | number_
+
+    padding at the top, to account for the absolute position of the ActionBar
 
 ## <ins>Subtitle</ins>
 
