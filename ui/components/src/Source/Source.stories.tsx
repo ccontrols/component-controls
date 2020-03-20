@@ -17,7 +17,7 @@ const source = `export const sample = () => {
     />
   );
 };`;
-export const simpleSource = ({ language, children, dark }: SourceProps) => {
+export const overview = ({ language, children, dark }: SourceProps) => {
   return (
     <Source language={language} dark={dark}>
       {children}
@@ -60,7 +60,7 @@ const languages: string[] = [
   'yaml',
 ];
 
-simpleSource.story = {
+overview.story = {
   controls: {
     language: { type: 'options', options: languages, value: 'jsx' },
     dark: { type: 'boolean' },

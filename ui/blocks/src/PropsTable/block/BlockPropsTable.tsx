@@ -2,11 +2,15 @@ import React, { FC, useState } from 'react';
 import {
   BlockContainer,
   BlockContainerProps,
+  ActionContainer,
+  ActionContainerProps,
   ActionItem,
 } from '@component-controls/components';
 import { PropsTable, PropsTableProps } from '../plain';
 
-export type BlockPropsTableProps = PropsTableProps & BlockContainerProps;
+export type BlockPropsTableProps = PropsTableProps &
+  BlockContainerProps &
+  ActionContainerProps;
 
 export const BlockPropsTable: FC<BlockPropsTableProps> = ({
   title,
@@ -24,20 +28,10 @@ export const BlockPropsTable: FC<BlockPropsTableProps> = ({
     allActions.push.apply(allActions, actions);
   }
   // add some padding for the actions bar
-  const propsTable = (
-    <PropsTable
-      css={{
-        'thead tr:first-of-type>th': {
-          paddingTop: 26,
-        },
-      }}
-      filtering={filtering}
-      {...rest}
-    />
-  );
+  const propsTable = <PropsTable filtering={filtering} {...rest} />;
   return propsTable ? (
-    <BlockContainer actions={allActions} title={title}>
-      {propsTable}
+    <BlockContainer title={title}>
+      <ActionContainer actions={allActions}>{propsTable}</ActionContainer>
     </BlockContainer>
   ) : null;
 };

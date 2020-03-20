@@ -7,13 +7,13 @@ export default {
   component: Subtitle,
 };
 
-export const simple = () => (
+export const overview = () => (
   <MockContext>
     <Subtitle />
   </MockContext>
 );
 
-simple.story = {
+overview.story = {
   parameters: {
     componentSubtitle: 'This is subtitle',
   },

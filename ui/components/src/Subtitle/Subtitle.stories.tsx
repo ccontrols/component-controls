@@ -6,11 +6,11 @@ export default {
   component: Subtitle,
 };
 
-export const simple = ({ children }: { children: React.ReactNode }) => {
+export const overview = ({ children }: { children: React.ReactNode }) => {
   return <Subtitle>{children}</Subtitle>;
 };
 
-simple.story = {
+overview.story = {
   parameters: {
     componentSubtitle: 'This is subtitle',
   },

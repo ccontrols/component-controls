@@ -39,7 +39,7 @@ export const Source: FC<SourceProps> = ({
         as={as}
         {...props}
         style={{
-          padding: '16px 10px 10px',
+          padding: '0 10px 10px',
           display: 'block',
         }}
       >

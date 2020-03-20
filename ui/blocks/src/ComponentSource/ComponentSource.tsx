@@ -4,13 +4,16 @@ import { ComponentsContainer } from '../context/components/ComponentsContainer';
 import { ComponentInputProps } from '../context/components/ComponentsContext';
 import {
   ThemeContext,
-  Source as SourceBlock,
+  Source,
   SourceProps,
+  BlockContainer,
+  BlockContainerProps,
 } from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export type ComponentSourceProps = ComponentInputProps &
-  Omit<SourceProps, 'children'>;
+  Omit<SourceProps, 'children'> &
+  BlockContainerProps;
 
 /**
  * Displays import statement for a component as well as the component file source code
@@ -21,6 +24,7 @@ export type ComponentSourceProps = ComponentInputProps &
 export const ComponentSource: FC<ComponentSourceProps> = ({
   of,
   actions,
+  title,
   ...rest
 }) => {
   return (
@@ -64,9 +68,11 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
           allActions.push.apply(allActions, actions);
         }
         return (
-          <SourceBlock dark={dark} {...rest} actions={allActions}>
-            {showFileSource ? component?.source : source}
-          </SourceBlock>
+          <BlockContainer title={title}>
+            <Source dark={dark} {...rest} actions={allActions}>
+              {showFileSource ? component?.source : source}
+            </Source>
+          </BlockContainer>
         );
       }}
     </ComponentsContainer>

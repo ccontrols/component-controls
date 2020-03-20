@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider, Box, useThemeUI } from 'theme-ui';
+import { jsx, Flex, Link, Divider, Box } from 'theme-ui';
 import Octicon, {
   Link as LinkIcon,
   ChevronRight,

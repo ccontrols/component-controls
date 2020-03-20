@@ -6,11 +6,11 @@ export default {
   component: ExternalLink,
 };
 
-export const simple = ({ href }: ExternalLinkProps) => {
+export const overview = ({ href }: ExternalLinkProps) => {
   return <ExternalLink href={href}>{href}</ExternalLink>;
 };
 
-simple.story = {
+overview.story = {
   parameters: {
     addonControls: {
       smart: false,

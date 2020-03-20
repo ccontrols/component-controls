@@ -7,7 +7,7 @@ export default {
   component: Popover,
 };
 
-export const simple = ({ placement, trigger }: PopoverProps) => {
+export const overview = ({ placement, trigger }: PopoverProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Popover
@@ -28,7 +28,7 @@ export const simple = ({ placement, trigger }: PopoverProps) => {
   );
 };
 
-simple.story = {
+overview.story = {
   controls: {
     placement: {
       type: 'options',

@@ -7,7 +7,7 @@ export default {
   component: Markdown,
 };
 
-export const simple = () => (
+export const overview = () => (
   <ThemeProvider>
     <Markdown>{`
 # Header H1

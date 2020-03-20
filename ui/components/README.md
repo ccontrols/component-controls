@@ -5,33 +5,20 @@
 -   [List of components](#list-of-components)
     -   [<ins>ActionBar</ins>](#insactionbarins)
     -   [<ins>ActionContainer</ins>](#insactioncontainerins)
-    -   [<ins>overview</ins>](#insoverviewins)
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
-    -   [<ins>simple</ins>](#inssimpleins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
-    -   [<ins>simple</ins>](#inssimpleins-1)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>FlexContainer</ins>](#insflexcontainerins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
-    -   [<ins>simple</ins>](#inssimpleins-2)
-    -   [<ins>Wrapper</ins>](#inswrapperins)
-    -   [<ins>Arrow</ins>](#insarrowins)
     -   [<ins>Popover</ins>](#inspopoverins)
-    -   [<ins>simpleSource</ins>](#inssimplesourceins)
     -   [<ins>Source</ins>](#inssourceins)
-    -   [<ins>simple</ins>](#inssimpleins-3)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
-    -   [<ins>simpleSource</ins>](#inssimplesourceins-1)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
-    -   [<ins>GlobalFilter</ins>](#insglobalfilterins)
-    -   [<ins>useExpanderColumn</ins>](#insuseexpandercolumnins)
-    -   [<ins>useTableLayout</ins>](#insusetablelayoutins)
     -   [<ins>Tab</ins>](#instabins)
     -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
-    -   [<ins>simple</ins>](#inssimpleins-4)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>Toggle</ins>](#instoggleins)
 
@@ -55,7 +42,7 @@ The third-libraries used include in no particular order:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts" />
+<react-docgen-typescript path="./src" exclude=".ts$,.stories.tsx$,TableGrouping.tsx,TableFilter.tsx,PopoverUtils.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -83,16 +70,6 @@ _ActionContainer [source code](https:/github.com/ccontrols/component-controls/bl
 
     optional actions provided to the component
 
-## <ins>overview</ins>
-
-_overview [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/BlockContainer/BlockContainer.stories.tsx)_
-
-**Properties:**
-
--   **title**? : _string_
-
-    optional section title for the block
-
 ## <ins>BlockContainer</ins>
 
 a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
@@ -104,24 +81,6 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/blo
 -   **title**? : _string_
 
     optional section title for the block
-
-## <ins>simple</ins>
-
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Collapsible/Collapsible.stories.tsx)_
-
-**Properties:**
-
--   **animateOpacity**? : _boolean_
--   **animationStateClasses**? : _AnimationStateClasses_
--   **applyInlineTransitions**? : _boolean_
--   **contentClassName**? : _string_
--   **delay**? : _number_
--   **duration**? : _number_
--   **easing**? : _string_
--   **height**? : _ReactText_
--   **onAnimationEnd**? : _(props: { newHeight: number; }) => void_
--   **onAnimationStart**? : _(props: { newHeight: number; }) => void_
--   **isOpen** : _boolean_
 
 ## <ins>Collapsible</ins>
 
@@ -140,14 +99,6 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/m
 -   **onAnimationEnd**? : _(props: { newHeight: number; }) => void_
 -   **onAnimationStart**? : _(props: { newHeight: number; }) => void_
 -   **isOpen** : _boolean_
-
-## <ins>simple</ins>
-
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ExternalLink/ExternalLink.stories.tsx)_
-
-**Properties:**
-
--   **ref**? : _((instance: HTMLAnchorElement) => void) | RefObject&lt;HTMLAnchorElement>_
 
 ## <ins>ExternalLink</ins>
 
@@ -181,67 +132,12 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
     components to customize the markdown display
 
-## <ins>simple</ins>
-
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.stories.tsx)_
-
-## <ins>Wrapper</ins>
-
-_Wrapper [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.tsx)_
-
-**Properties:**
-
--   **placement**? : _string_
--   **borderColor** : _string_
--   **theme**? : _object_
-
-## <ins>Arrow</ins>
-
-_Arrow [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.tsx)_
-
-**Properties:**
-
--   **placement**? : _string_
--   **borderColor** : _string_
--   **theme**? : _object_
-
 ## <ins>Popover</ins>
 
 A Popover container that is triggered by a click, or hover
 used to display enhanced information that could not fit into the main scren
 
 _Popover [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.tsx)_
-
-## <ins>simpleSource</ins>
-
-_simpleSource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Source/Source.stories.tsx)_
-
-**Properties:**
-
--   **children** : _any_
-
-    source code to be displayed
--   **theme**? : _PrismTheme_
-
-    optional theme provided to the component
--   **language**? : _Language_
-
-    code lnguage used, by default "jsx"
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
--   **style**? : _any_
-
-    css styles for the container
--   **as**? : _any_
-
-    syntax container as element
--   **actions**? : _ActionItem\[]_
-
-    optional actions provided to the component
 
 ## <ins>Source</ins>
 
@@ -276,10 +172,6 @@ _Source [source code](https:/github.com/ccontrols/component-controls/blob/master
 
     optional actions provided to the component
 
-## <ins>simple</ins>
-
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Subtitle/Subtitle.stories.tsx)_
-
 ## <ins>Subtitle</ins>
 
 _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Subtitle/Subtitle.tsx)_
@@ -287,34 +179,6 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 **Properties:**
 
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
-
-## <ins>simpleSource</ins>
-
-_simpleSource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.stories.tsx)_
-
-**Properties:**
-
--   **children** : _any_
-
-    source code to be displayed
--   **theme**? : _PrismTheme_
-
-    optional theme provided to the component
--   **language**? : _Language_
-
-    code lnguage used, by default "jsx"
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided
--   **style**? : _any_
-
-    css styles for the container
--   **as**? : _any_
-
-    syntax container as element
 
 ## <ins>SyntaxHighlighter</ins>
 
@@ -362,23 +226,6 @@ _Table [source code](https:/github.com/ccontrols/component-controls/blob/master/
 -   **hiddenColumns**? : _string\[]_
 -   **expanded**? : _{ \[key: string]: boolean; }_
 
-## <ins>GlobalFilter</ins>
-
-_GlobalFilter [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Table/TableFilter.tsx)_
-
-**Properties:**
-
--   **globalFilter**? : _string | ((rows: Row&lt;any>\[], columnIds: string\[], filterValue: any) => Row&lt;any>\[])_
--   **itemsLabel** : _string_
-
-## <ins>useExpanderColumn</ins>
-
-_useExpanderColumn [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Table/TableGrouping.tsx)_
-
-## <ins>useTableLayout</ins>
-
-_useTableLayout [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Table/useTableLayout.ts)_
-
 ## <ins>Tab</ins>
 
 _Tab [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
@@ -394,10 +241,6 @@ _TabList [source code](https:/github.com/ccontrols/component-controls/blob/maste
 ## <ins>TabPanel</ins>
 
 _TabPanel [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
-
-## <ins>simple</ins>
-
-_simple [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Title/Title.stories.tsx)_
 
 ## <ins>Title</ins>
 

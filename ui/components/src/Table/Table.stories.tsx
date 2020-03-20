@@ -49,7 +49,7 @@ const mockData = () => {
   }));
 };
 
-export const main = () => {
+export const overview = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>

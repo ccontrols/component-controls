@@ -86,17 +86,16 @@ function insertTypescriptDocs(options) {
     const parser = withDefaultConfig(parserOptions);
 
     const getDirectories = (folder, excludeFiles, repoDir, newNodes) => {
-      const items = fs.readdirSync(folder, { withFileTypes: true });
+      const items = fs.readdirSync(folder, { withFileTypes: true })
+        .filter(entry => !excludeFiles.some(excluded => entry.name.match(new RegExp(excluded))));
       const files = items.filter(entry => !entry.isDirectory());
       for (const entry of files) {
-        if (excludeFiles.indexOf(entry.name) === -1) {
-          const propTables = parser.parse(path.join(folder, entry.name));
-          if (propTables && propTables.length > 0) {
-            propTables.forEach(propTable => {
-              const propNodes = propsToMDNodes(propTable, path.join(repoDir,entry.name ));
-              newNodes.push.apply(newNodes, propNodes);
-            })
-          }  
+        const propTables = parser.parse(path.join(folder, entry.name));
+        if (propTables && propTables.length > 0) {
+          propTables.forEach(propTable => {
+            const propNodes = propsToMDNodes(propTable, path.join(repoDir,entry.name ));
+            newNodes.push.apply(newNodes, propNodes);
+          })
         }  
       };
       items.filter(entry => entry.isDirectory())

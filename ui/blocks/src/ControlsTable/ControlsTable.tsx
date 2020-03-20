@@ -13,6 +13,7 @@ import {
 } from '@component-controls/core';
 import {
   BlockContainer,
+  ActionContainer,
   Tab,
   Tabs,
   TabList,
@@ -97,32 +98,34 @@ export const ControlsTable: FC<ControlsTableProps & {
       },
     ];
     return (
-      <BlockContainer actions={actionItems} title={title}>
-        <Box
-          sx={{
-            pt: 4,
-          }}
-        >
-          {groupedItems.length === 1 ? (
-            <SingleControlsTable
-              {...props}
-              controls={groupedItems[0].controls}
-            />
-          ) : (
-            <Tabs>
-              <TabList>
+      <BlockContainer title={title}>
+        <ActionContainer actions={actionItems}>
+          <Box
+            sx={{
+              pt: 4,
+            }}
+          >
+            {groupedItems.length === 1 ? (
+              <SingleControlsTable
+                {...props}
+                controls={groupedItems[0].controls}
+              />
+            ) : (
+              <Tabs>
+                <TabList>
+                  {groupedItems.map(item => (
+                    <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                  ))}
+                </TabList>
                 {groupedItems.map(item => (
-                  <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                  <TabPanel key={`tab_panel_${item.label}`}>
+                    <SingleControlsTable {...props} controls={item.controls} />
+                  </TabPanel>
                 ))}
-              </TabList>
-              {groupedItems.map(item => (
-                <TabPanel key={`tab_panel_${item.label}`}>
-                  <SingleControlsTable {...props} controls={item.controls} />
-                </TabPanel>
-              ))}
-            </Tabs>
-          )}
-        </Box>
+              </Tabs>
+            )}
+          </Box>
+        </ActionContainer>
       </BlockContainer>
     );
   }

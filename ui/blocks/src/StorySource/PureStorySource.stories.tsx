@@ -11,7 +11,7 @@ export default {
   component: PureStorySource,
 };
 
-export const simpleSource = ({
+export const overview = ({
   language,
   children,
   theme,
@@ -58,7 +58,7 @@ const languages: string[] = [
   'yaml',
 ];
 
-simpleSource.story = {
+overview.story = {
   controls: {
     language: { type: 'options', options: languages, value: 'jsx' },
     children: {

@@ -32,8 +32,8 @@ export const ActionContainer: FC<ActionContainerProps> = ({
             0.9,
             theme.colors?.text as string,
           )} 0 0 0 1px`,
-          '*:first-child': {
-            paddingTop: 3,
+          'div:first-child, svg:first-child': {
+            paddingTop: '20px',
           },
         }}
       >

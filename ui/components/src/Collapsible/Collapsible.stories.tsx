@@ -7,7 +7,7 @@ export default {
   component: Collapsible,
 };
 
-export const simple = ({ easing }: CollapsibleProps) => {
+export const overview = ({ easing }: CollapsibleProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Box>
@@ -21,7 +21,7 @@ export const simple = ({ easing }: CollapsibleProps) => {
   );
 };
 
-simple.story = {
+overview.story = {
   parameters: {
     addonControls: {
       smart: false,

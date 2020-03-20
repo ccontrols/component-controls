@@ -6,11 +6,11 @@ export default {
   component: Title,
 };
 
-export const simple = ({ children }: { children: React.ReactNode }) => {
+export const overview = ({ children }: { children: React.ReactNode }) => {
   return <Title>{children}</Title>;
 };
 
-simple.story = {
+overview.story = {
   controls: {
     children: { type: 'text', value: 'Title text' },
   },
