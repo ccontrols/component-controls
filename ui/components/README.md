@@ -206,10 +206,15 @@ _Source [source code](https:/github.com/ccontrols/component-controls/blob/master
 
 ## <ins>Subtitle</ins>
 
+`h3` level heading with faded text and font-weight 400.
+
 _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Subtitle/Subtitle.tsx)_
 
 **Properties:**
 
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    text to be displayed in the component.
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
 
 ## <ins>SyntaxHighlighter</ins>
@@ -282,6 +287,9 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 **Properties:**
 
+-   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
+
+    text to be displayed in the component.
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
 
 ## <ins>Toggle</ins>
