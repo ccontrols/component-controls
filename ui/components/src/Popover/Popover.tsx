@@ -7,9 +7,8 @@ import { Arrow, Wrapper } from './PopoverUtils';
 export type PopoverProps = Omit<Partial<TooltipTriggerProps>, 'children'>;
 
 /**
- * A Popover container that is triggered by a click, or hover
- * used to display enhanced information that could not fit into the main scren
- *
+ * A Popover container that is triggered by a click/hover event.
+ * Used to display enhanced information that could not fit into the main scren.
  */
 export const Popover: FC<PopoverProps> = ({
   trigger,

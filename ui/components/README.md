@@ -148,8 +148,8 @@ _FlexContainer [source code](https:/github.com/ccontrols/component-controls/blob
 
 ## <ins>Markdown</ins>
 
-MDX display component that works at run time
-uses `markdown-to-jsx` to compile MDX
+Markdown display component to compile and display markdown at run-time.
+Uses `markdown-to-jsx` to compile the markdown.
 
 _Markdown [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Markdown/Markdown.tsx)_
 
@@ -157,15 +157,15 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
 -   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
 
-    the markdown code is passed as a children prop
+    the markdown source code is passed as a children pro.
 -   **components**? : _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_
 
-    components to customize the markdown display
+    components to customize the markdown display.
 
 ## <ins>Popover</ins>
 
-A Popover container that is triggered by a click, or hover
-used to display enhanced information that could not fit into the main scren
+A Popover container that is triggered by a click/hover event.
+Used to display enhanced information that could not fit into the main scren.
 
 _Popover [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.tsx)_
 

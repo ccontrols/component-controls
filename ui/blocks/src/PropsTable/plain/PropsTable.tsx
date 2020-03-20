@@ -41,7 +41,7 @@ export const PropsTable: FC<PropsTableProps> = ({
         };
         groupProps.groupBy = ['prop.parentName'];
       } else {
-        groupProps.hiddenColumns = ['parent'];
+        groupProps.hiddenColumns = ['prop.parentName'];
       }
       /*
        */
