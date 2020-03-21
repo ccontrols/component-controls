@@ -6,12 +6,15 @@ import {
   ComponentControlObject,
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
-import { Popover, FlexContainer } from '@component-controls/components';
+import { Popover } from '@component-controls/components';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 import { PropertyEditors } from '../PropertyEditors';
 
 export interface ObjectEditorProps extends PropertyControlProps {
+  /**
+   * the object property that is being edited.
+   */
   prop: ComponentControlObject;
 }
 
@@ -26,6 +29,10 @@ const ChildContainer: FC = props => (
     {...props}
   />
 );
+
+/**
+ * Object control editor.
+ */
 
 export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   prop,
@@ -93,12 +100,10 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
         </ChildContainer>
       )}
     >
-      <FlexContainer>
-        <Button>
-          Edit object
-          <Box />
-        </Button>
-      </FlexContainer>
+      <Button>
+        Edit object
+        <Box />
+      </Button>
     </Popover>
   );
 };

@@ -25,9 +25,15 @@ const formatTime = (date: Date | undefined) => {
 };
 
 export interface DateEditorProps extends PropertyControlProps {
+  /**
+   * the date property that is being edited.
+   */
   prop: ComponentControlDate;
 }
 
+/**
+ * Date control editor.
+ */
 export const DateEditor: PropertyEditor<DateEditorProps> = ({
   prop,
   name,

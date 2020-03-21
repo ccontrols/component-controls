@@ -5,8 +5,15 @@ import { Button, Box } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface ColorEditorProps extends PropertyControlProps {
+  /**
+   * the color property that is being edited.
+   */
   prop: ComponentControlColor;
 }
+
+/**
+ * Color control editor.
+ */
 
 export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
   prop,

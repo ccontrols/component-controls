@@ -7,7 +7,7 @@ export default {
   component: ColorEditor,
 };
 
-export const sample = () => {
+export const overview = () => {
   const [state, setState] = React.useState('#dedede');
   return (
     <ColorEditor

@@ -43,7 +43,12 @@ Parsing a source file will generate the following information:
 
 A collection of commonly used UI components for component-controls
 
-The third-libraries used include in no particular order:
+Some of the guiding design goals for this library:
+
+-   Use theme-ui/system-ui as an foundation for a react UI library.
+-   As much as possible possible, avoid using components with css dependencies.
+
+Third-libraries used in no particular order:
 
 -   [theme-ui](https://theme-ui.com) as the theming and components foundation.
 -   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
@@ -64,7 +69,12 @@ The third-libraries used include in no particular order:
 
 ## @component-controls/editors
 
-A collection of editors used to enter the control values
+A collection of editors used to edit component control values.
+
+Some of the guiding design goals for this library:
+
+-   Extensible using `addPropertyEditor`, so you can replace or add new editors.
+-   All editors offer a consistent interface through the `getPropertyEditor` factory.
 
 <!-- END-PACKAGE-SECTION -->
 

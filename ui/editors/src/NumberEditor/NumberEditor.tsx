@@ -4,6 +4,9 @@ import { Input, Box, BoxProps } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface NumberEditorProps extends PropertyControlProps {
+  /**
+   * the number property that is being edited.
+   */
   prop: ComponentControlNumber;
 }
 
@@ -32,6 +35,9 @@ const RangeWrapper: FC<BoxProps> = props => (
   />
 );
 
+/**
+ * Number control editor.
+ */
 export const NumberEditor: PropertyEditor<NumberEditorProps> = ({
   prop,
   name,

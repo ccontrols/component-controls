@@ -7,7 +7,7 @@ export default {
   component: ButtonEditor,
 };
 
-export const sample = () => (
+export const overview = () => (
   <ButtonEditor
     name="Check in console"
     onClick={() => console.log('clicked')}

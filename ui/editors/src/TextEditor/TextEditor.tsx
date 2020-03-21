@@ -4,8 +4,15 @@ import { Input, Textarea } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface TextEditorProps extends PropertyControlProps {
+  /**
+   * the text property that is being edited.
+   */
   prop: ComponentControlText;
 }
+
+/**
+ * Text control editor.
+ */
 
 export const TextEditor: PropertyEditor<TextEditorProps> = ({
   prop,

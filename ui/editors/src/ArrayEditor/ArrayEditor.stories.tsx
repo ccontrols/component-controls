@@ -7,7 +7,7 @@ export default {
   component: ArrayEditor,
 };
 
-export const sample = () => {
+export const overview = () => {
   const [state, setState] = React.useState(['Laptop', 'Book', 'Whiskey']);
   return (
     <>

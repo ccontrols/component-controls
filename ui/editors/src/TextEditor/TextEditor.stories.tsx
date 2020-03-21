@@ -7,7 +7,7 @@ export default {
   component: TextEditor,
 };
 
-export const simple = () => {
+export const overview = () => {
   const [state, setState] = React.useState('Hello');
   return (
     <TextEditor

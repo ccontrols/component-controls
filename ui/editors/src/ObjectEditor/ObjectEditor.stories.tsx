@@ -10,7 +10,7 @@ export default {
   component: ObjectEditor,
 };
 
-export const sample = () => {
+export const overview = () => {
   const [state, setState] = React.useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },

@@ -4,6 +4,9 @@ import { Textarea } from 'theme-ui';
 import { PropertyControlProps, PropertyEditor } from '../types';
 
 export interface ArrayEditorProps extends PropertyControlProps {
+  /**
+   * the array property that is being edited.
+   */
   prop: ComponentControlArray;
 }
 
@@ -21,6 +24,10 @@ const deserialize = (value: string[]) => {
     .reduce((array, key) => [...array, value[key]], []);
 };
 
+/**
+ * Array control editor.
+ *
+ */
 export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   prop,
   name,

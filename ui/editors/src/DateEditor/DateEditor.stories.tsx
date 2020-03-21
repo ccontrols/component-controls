@@ -7,7 +7,7 @@ export default {
   component: DateEditor,
 };
 
-export const sample = () => {
+export const overview = () => {
   const [state, setState] = React.useState(new Date());
   return (
     <DateEditor

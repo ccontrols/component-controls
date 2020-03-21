@@ -7,7 +7,7 @@ export default {
   component: OptionsEditor,
 };
 
-export const simple = () => {
+export const overview = () => {
   const [state, setState] = React.useState('one');
   return (
     <OptionsEditor

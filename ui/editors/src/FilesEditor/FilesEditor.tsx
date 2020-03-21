@@ -14,8 +14,15 @@ function fileReaderPromise(file: File) {
 }
 
 export interface FilesEditorProps extends PropertyControlProps {
+  /**
+   * the files property that is being edited.
+   */
   prop: ComponentControlFiles;
 }
+
+/**
+ * Files control editor.
+ */
 
 export const FilesEditor: PropertyEditor<FilesEditorProps> = ({
   prop,

@@ -23,8 +23,15 @@ interface OptionsSelectValueItem {
 }
 
 export interface OptionsEditorProps extends PropertyControlProps {
+  /**
+   * the options property that is being edited.
+   */
   prop: ComponentControlOptions;
 }
+
+/**
+ * Options control editor.
+ */
 
 export const OptionsEditor: PropertyEditor<OptionsEditorProps> = props => {
   const { prop, name, onChange } = props;

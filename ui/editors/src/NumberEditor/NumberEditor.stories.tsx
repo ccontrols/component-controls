@@ -7,7 +7,7 @@ export default {
   component: NumberEditor,
 };
 
-export const simple = () => {
+export const overview = () => {
   const [value, setValue] = React.useState(10);
   return (
     <NumberEditor

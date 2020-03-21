@@ -7,7 +7,7 @@ export default {
   component: BooleanEditor,
 };
 
-export const sample = () => {
+export const overview = () => {
   const [state, setState] = React.useState(false);
   return (
     <BooleanEditor
