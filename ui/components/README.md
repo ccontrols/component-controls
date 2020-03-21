@@ -39,6 +39,7 @@ The third-libraries used include in no particular order:
 -   [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
 -   [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
 -   [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
+-   [react-switch](https://github.com/markusenglund/react-switch) for toggle editor
 
 # List of components
 
@@ -323,18 +324,14 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 ## <ins>Toggle</ins>
 
+Toggle components can be used to edit boolean values. Uses [react-switch](https://github.com/markusenglund/react-switch) component.
+
 _Toggle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Toggle/Toggle.tsx)_
 
 **Properties:**
 
--   **checked**? : _boolean_
+-   **label**? : _string_
 
-    whether checked
--   **onChange**? : _(checked: boolean) => void_
-
-    onChange event - when one of the toggles in clicked
--   **labels**? : _{ true: any; false: any; }_
-
-    custom labels - by defaut 'True' and 'False'
+    optional label to be displayed alongside the toggle
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
