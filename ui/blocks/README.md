@@ -185,8 +185,8 @@ _SingleControlsTable [source code](https:/github.com/ccontrols/component-control
 
 ## <ins>Description</ins>
 
-Description component with context
-'of' property can specify which component's description to use
+Description component with markdown.
+The 'of' property can specify which component's description to display.
 
 _Description [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Description/Description.tsx)_
 

@@ -7,8 +7,8 @@ export type DescriptionProps = Omit<MarkdownProps, 'children'> &
   ComponentInputProps;
 
 /**
- * Description component with context
- * 'of' property can specify which component's description to use
+ * Description component with markdown.
+ * The 'of' property can specify which component's description to display.
  */
 export const Description: FC<DescriptionProps> = ({ of, ...rest }) => (
   <ComponentsContainer of={of}>

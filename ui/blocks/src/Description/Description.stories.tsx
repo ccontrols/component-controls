@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react';
 import { Description } from './Description';
 import { MockContext } from '../test/MockContext';
@@ -6,8 +7,21 @@ export default {
   component: Description,
 };
 
-export const simple = () => (
+export const overview = () => (
   <MockContext>
-    <Description of="." />
+    <Description of="Button" />
+  </MockContext>
+);
+
+export const components = () => (
+  <MockContext>
+    <Description
+      of="Button"
+      components={{
+        h1: ({ children }: { children: string }) => (
+          <h1>{`custom component: ${children} `}</h1>
+        ),
+      }}
+    />
   </MockContext>
 );
