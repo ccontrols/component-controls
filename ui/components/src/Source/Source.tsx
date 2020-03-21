@@ -30,7 +30,12 @@ export const Source: FC<SourceProps> = ({
   };
 
   const actionsItems = [
-    { title: copied ? 'copied' : 'copy', onClick: onCopy },
+    {
+      title: copied ? 'copied' : 'copy',
+      onClick: onCopy,
+      id: 'copy',
+      'aria-label': 'copy the displayed source code',
+    },
     ...(Array.isArray(actions) ? [...actions] : []),
   ];
 

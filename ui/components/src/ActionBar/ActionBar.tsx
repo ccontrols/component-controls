@@ -32,6 +32,11 @@ export interface ActionItem {
    * optional order, if not provided will use the natural order of items from right to left
    */
   order?: number;
+
+  /**
+   * optional label visible to screen readers for aria accessibility.
+   */
+  'aria-label'?: string;
 }
 
 export interface ActionBarProps {
@@ -111,26 +116,32 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             //@ts-ignore
             return a.order - b.order;
           })
-          .map(({ title, onClick, disabled }, index) => (
-            <Box
-              key={`${typeof title === 'string' ? title : 'item'}_${index}`}
-              sx={{
-                mt: 1,
-                mx: 1,
-                fontSize: 1,
-                a: ActionColors({ theme, disabled }),
-                button: ActionColors({ theme, disabled }),
-              }}
-            >
-              {typeof title === 'string' ? (
-                <Button onClick={onClick} disabled={disabled}>
-                  {title}
-                </Button>
-              ) : (
-                title
-              )}
-            </Box>
-          ))}
+          .map(
+            ({ title, onClick, disabled, 'aria-label': ariaLabel }, index) => (
+              <Box
+                key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+                sx={{
+                  mt: 1,
+                  mx: 1,
+                  fontSize: 1,
+                  a: ActionColors({ theme, disabled }),
+                  button: ActionColors({ theme, disabled }),
+                }}
+              >
+                {typeof title === 'string' ? (
+                  <Button
+                    onClick={onClick}
+                    disabled={disabled}
+                    aria-label={ariaLabel}
+                  >
+                    {title}
+                  </Button>
+                ) : (
+                  title
+                )}
+              </Box>
+            ),
+          )}
       </Flex>
     </Box>
   );
