@@ -1,13 +1,40 @@
 /* eslint-disable react/display-name */
 import React, { FC } from 'react';
+import {
+  SetControlValueFn,
+  ClickControlFn,
+  ComponentControls,
+} from '@component-controls/specification';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table } from '@component-controls/components';
 import { Flex } from 'theme-ui';
-import { ControlsTableProps } from './ControlsTableProps';
 
 const InvalidType = () => <span>Invalid Type</span>;
 
-export const SingleControlsTable: FC<ControlsTableProps> = ({
+export interface SingleControlsTableProps {
+  /**
+   * componnet controls to display in the table.
+   */
+  controls?: ComponentControls;
+  /**
+   * storyId, will be used to update the values of the controls
+   */
+  storyId?: string;
+  /**
+   * generic function to update the values of component controls.
+   */
+  setControlValue?: SetControlValueFn;
+
+  /**
+   * generic function to propagate a click event for component controls.
+   */
+}
+
+/**
+ * Single table of controls, without specific handliong of groups.
+ * The controls and storyId are already set in priops;
+ */
+export const SingleControlsTable: FC<SingleControlsTableProps> = ({
   controls,
   storyId,
   setControlValue,

@@ -70,8 +70,7 @@ const WrappedControlsTable: React.FC<WrappedControlsTableProps> = ({
       <Container>
         <ThemeProvider>
           <SharedControlsTable
-            controls={controls}
-            storyId={story?.id}
+            id={story?.id}
             setControlValue={setControlValue}
             clickControl={api.clickControl}
           />

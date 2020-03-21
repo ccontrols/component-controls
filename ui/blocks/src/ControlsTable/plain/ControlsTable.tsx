@@ -5,6 +5,10 @@ import { window, document } from 'global';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
 import {
+  SetControlValueFn,
+  ClickControlFn,
+} from '@component-controls/specification';
+import {
   resetControlValues,
   getControlValues,
   LoadedComponentControls,
@@ -12,15 +16,31 @@ import {
   randomizeData,
 } from '@component-controls/core';
 import {
-  BlockContainer,
   ActionContainer,
   Tab,
   Tabs,
   TabList,
   TabPanel,
 } from '@component-controls/components';
-import { ControlsTableProps } from './ControlsTableProps';
+import { useStoryContext } from '../../context/story/StoryContext';
+
 import { SingleControlsTable } from './SingleControlsTable';
+
+import { StoryInputProps } from '../../context/story/StoryContext';
+
+export interface ControlsTableOwnProps {
+  /**
+   * generic function to update the values of component controls.
+   */
+  setControlValue?: SetControlValueFn;
+
+  /**
+   * generic function to propagate a click event for component controls.
+   */
+  clickControl?: ClickControlFn;
+}
+
+export type ControlsTableProps = ControlsTableOwnProps & StoryInputProps;
 
 const DEFAULT_GROUP_ID = 'Other';
 
@@ -29,13 +49,21 @@ interface GroupedControlsType {
 }
 
 /**
- * Table component to display a story's controls and their editors
+ * Table component to display a story's controls and their editors.
+ * Can adapt to multiple groups of controls, displaying them in their own tabs.
  */
-export const ControlsTable: FC<ControlsTableProps & {
-  title?: string;
-}> = props => {
+export const ControlsTable: FC<ControlsTableProps> = ({
+  id,
+  name,
+  ...rest
+}) => {
   const [copied, setCopied] = React.useState(false);
-  const { controls, title, storyId, setControlValue } = props;
+  const { story, id: storyId } = useStoryContext({
+    id,
+    name,
+  });
+  const { controls } = story || {};
+  const { setControlValue } = rest;
   if (controls && Object.keys(controls).length) {
     const onReset = (e: MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
@@ -82,51 +110,62 @@ export const ControlsTable: FC<ControlsTableProps & {
       return null;
     }
     const actionItems = [
-      { title: copied ? 'copied' : 'copy', onClick: onCopy },
-      { title: 'reset', onClick: onReset },
+      {
+        title: copied ? 'copied' : 'copy',
+        onClick: onCopy,
+        id: 'copy',
+        'aria-label': 'copy control values',
+      },
+      {
+        title: 'reset',
+        onClick: onReset,
+        id: 'reset',
+        'aria-label': 'reset control values to their initial value',
+      },
       {
         title: 'randomize',
-        onAction: (state: ControlsTableProps) => {
-          if (state.setControlValue && state.controls && state.storyId) {
-            state.setControlValue(
-              state.storyId,
-              undefined,
-              randomizeData(state.controls),
-            );
+        onClick: () => {
+          if (setControlValue && controls && storyId) {
+            setControlValue(storyId, undefined, randomizeData(controls));
           }
         },
+        id: 'randomize',
+        'aria-label': 'generate random values for the component controls',
       },
     ];
     return (
-      <BlockContainer title={title}>
-        <ActionContainer actions={actionItems}>
-          <Box
-            sx={{
-              pt: 4,
-            }}
-          >
-            {groupedItems.length === 1 ? (
-              <SingleControlsTable
-                {...props}
-                controls={groupedItems[0].controls}
-              />
-            ) : (
-              <Tabs>
-                <TabList>
-                  {groupedItems.map(item => (
-                    <Tab key={`tab_${item.label}`}>{item.label}</Tab>
-                  ))}
-                </TabList>
+      <ActionContainer actions={actionItems}>
+        <Box
+          sx={{
+            pt: 4,
+          }}
+        >
+          {groupedItems.length === 1 ? (
+            <SingleControlsTable
+              {...rest}
+              storyId={storyId}
+              controls={groupedItems[0].controls}
+            />
+          ) : (
+            <Tabs>
+              <TabList>
                 {groupedItems.map(item => (
-                  <TabPanel key={`tab_panel_${item.label}`}>
-                    <SingleControlsTable {...props} controls={item.controls} />
-                  </TabPanel>
+                  <Tab key={`tab_${item.label}`}>{item.label}</Tab>
                 ))}
-              </Tabs>
-            )}
-          </Box>
-        </ActionContainer>
-      </BlockContainer>
+              </TabList>
+              {groupedItems.map(item => (
+                <TabPanel key={`tab_panel_${item.label}`}>
+                  <SingleControlsTable
+                    {...rest}
+                    storyId={storyId}
+                    controls={item.controls}
+                  />
+                </TabPanel>
+              ))}
+            </Tabs>
+          )}
+        </Box>
+      </ActionContainer>
     );
   }
   return null;

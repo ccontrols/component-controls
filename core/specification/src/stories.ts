@@ -111,7 +111,9 @@ export interface Story {
   /**
    * multiple components option
    */
-  subcomponents?: string[] | object[];
+  subcomponents?: {
+    [key: string]: string | object;
+  };
 
   /**
    * object of key/value pairs specifying the controls for the story

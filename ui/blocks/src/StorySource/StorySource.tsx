@@ -34,7 +34,7 @@ export const StorySource: FC<StorySourceProps> = ({
       actions={allActions}
       {...rest}
     >
-      {source}
+      {source ?? ''}
     </PureStorySource>
   );
 };

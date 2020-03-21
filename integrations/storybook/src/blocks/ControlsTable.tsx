@@ -7,15 +7,14 @@ import {
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
 import {
-  ControlsTable as BaseControlsTable,
-  ControlsTableProps as BaseControlsTableProps,
+  BlockControlsTable,
+  BlockControlsTableProps,
   useStoryContext,
-  StoryInputProps,
 } from '@component-controls/blocks';
 
 import { SET_DATA_MSG } from '../shared/shared';
 import { ThemeProvider } from '../shared/ThemeProvider';
-export type ControlsTableProps = StoryInputProps & BaseControlsTableProps;
+export type ControlsTableProps = BlockControlsTableProps;
 
 export const ControlsTable: FC<ControlsTableProps> = ({
   id: propId,
@@ -62,9 +61,8 @@ export const ControlsTable: FC<ControlsTableProps> = ({
 
   return id ? (
     <ThemeProvider>
-      <BaseControlsTable
-        controls={controls}
-        storyId={id}
+      <BlockControlsTable
+        id={id}
         setControlValue={setControlValue}
         clickControl={clickControl}
         {...rest}

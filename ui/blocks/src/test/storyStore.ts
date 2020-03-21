@@ -1,4 +1,6 @@
-export const storyStore = {
+import { StoriesStore } from '@component-controls/specification';
+
+export const storyStore: StoriesStore = {
   components: {
     '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js': {
       from: '../../components/button-default-arrow-func',
@@ -49,6 +51,23 @@ export const storyStore = {
       parameters: {
         componentSubtitle: 'story subtitle',
       },
+    },
+    controls: {
+      arguments: [],
+      kind: 'Story',
+      component: 'ArrowButton',
+      loc: {
+        end: {
+          column: 34,
+          line: 8,
+        },
+        start: {
+          column: 21,
+          line: 8,
+        },
+      },
+      name: 'story',
+      source: "() => 'hello'",
     },
   },
 };

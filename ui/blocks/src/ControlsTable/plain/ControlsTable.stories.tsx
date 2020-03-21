@@ -6,15 +6,15 @@ import {
   getControlValues,
   loadControls,
 } from '@component-controls/core';
-
 import { ControlsTable } from './ControlsTable';
+import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/ControlsTable',
+  title: 'Blocks/Core/ControlsTable/plain',
   component: ControlsTable,
 };
 
-export const simple = () => {
+export const overview = () => {
   const [controls, setControls] = React.useState<LoadedComponentControls>({
     name: {
       type: ControlTypes.TEXT,
@@ -28,20 +28,13 @@ export const simple = () => {
       value: 19,
       defaultValue: 19,
     },
-    clickMe: {
-      type: ControlTypes.BUTTON,
-      label: '+1',
-      onClick: () => {},
-    },
   });
 
   return (
-    <>
+    <MockContext controls={controls}>
       <h2>{`Hello, my name is ${controls.name.value}, and I am ${controls.age.value} years old.`}</h2>
       <ControlsTable
-        controls={controls as LoadedComponentControls}
-        title="Example controls"
-        storyId="1-11"
+        id="story"
         setControlValue={(storyId, name, value) =>
           setControls(mergeControlValues(controls, name, value))
         }
@@ -57,7 +50,7 @@ export const simple = () => {
           )
         }
       />
-    </>
+    </MockContext>
   );
 };
 
@@ -231,7 +224,7 @@ export const advanced = () => {
   };
 
   return (
-    <>
+    <MockContext controls={controls}>
       <div style={style}>
         <p>{intro}</p>
         <p>
@@ -251,13 +244,11 @@ export const advanced = () => {
         </p>
       </div>
       <ControlsTable
-        controls={controls as LoadedComponentControls}
-        title="Complex controls"
-        storyId="1-12"
+        id="story"
         setControlValue={(storyId, name, value) =>
           setControls(mergeControlValues(controls, name, value))
         }
       />
-    </>
+    </MockContext>
   );
 };

@@ -1,2 +1,2 @@
-export { ControlsTable } from './ControlsTable';
-export { ControlsTableProps } from './ControlsTableProps';
+export * from './block';
+export * from './plain';

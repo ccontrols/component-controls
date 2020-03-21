@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import {
-  ComponentSource as BaseComponentSource,
-  ComponentSourceProps,
+  BlockComponentSource,
+  BlockComponentSourceProps,
 } from '@component-controls/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
 
-export const ComponentSource: FC<ComponentSourceProps> = props => {
+export const ComponentSource: FC<BlockComponentSourceProps> = props => {
   return (
     <ThemeProvider>
-      <BaseComponentSource {...props} />
+      <BlockComponentSource {...props} />
     </ThemeProvider>
   );
 };

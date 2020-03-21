@@ -44,7 +44,7 @@ Third-libraries used in no particular order:
 -   [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
 -   [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
 -   [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
--   [react-switch](https://github.com/markusenglund/react-switch) for toggle editor
+-   [react-switch](https://github.com/markusenglund/react-switch) for toggle/boolean inputs.
 
 # List of components
 

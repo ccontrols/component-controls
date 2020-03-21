@@ -1,1 +1,2 @@
-export * from './ComponentSource';
+export * from './block';
+export * from './plain';
