@@ -4,6 +4,8 @@ import {
   Story,
   StoriesKind,
   StoryComponent,
+  SetControlValueFn,
+  ClickControlFn,
 } from '@component-controls/specification';
 
 import { BlockContext, CURRENT_SELECTION } from '../context';
@@ -18,21 +20,38 @@ export interface ComponentInputProps {
   of?: '.' | any;
 }
 
-export interface ComponnetContextProps {
+export interface ComponentContextProps {
   components: {
     [label: string]: StoryComponent;
   };
   kind?: StoriesKind;
+  story?: Story;
+  /**
+   * generic function to update the values of component controls.
+   */
+  setControlValue?: SetControlValueFn;
+
+  /**
+   * generic function to propagate a click event for component controls.
+   */
+  clickControl?: ClickControlFn;
 }
 
 export const useComponentsContext = ({
   of = CURRENT_SELECTION,
-}: ComponentInputProps): ComponnetContextProps => {
-  const { currentId, mockStore } = React.useContext(BlockContext);
+}: ComponentInputProps): ComponentContextProps => {
+  const {
+    currentId,
+    mockStore,
+    setControlValue,
+    clickControl,
+  } = React.useContext(BlockContext);
   const store = mockStore || storyStore;
   if (!currentId) {
     return {
       components: {},
+      setControlValue,
+      clickControl,
     };
   }
   const story: Story = store && store.stories[currentId];
@@ -68,5 +87,8 @@ export const useComponentsContext = ({
   return {
     components: { ...components, ...subComponents },
     kind,
+    story,
+    setControlValue,
+    clickControl,
   };
 };

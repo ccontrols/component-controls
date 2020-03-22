@@ -6,3 +6,4 @@ export * from './ComponentSource';
 export * from './PropsTable';
 export * from './Subtitle';
 export * from './Title';
+export * from './notifications';

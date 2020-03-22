@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import storyStore from '@component-controls/loader/story-store-data';
 import {
   Story,
   StoriesKind,
   StoryComponent,
+  SetControlValueFn,
+  ClickControlFn,
 } from '@component-controls/specification';
+
 import { BlockContext, CURRENT_SELECTION, storyIdFromName } from '../context';
 
 export interface StoryInputProps {
@@ -18,12 +21,31 @@ export interface StoryInputProps {
 }
 
 export interface StoryContextProps {
+  /**
+   * story id
+   */
   id?: string;
-  api?: any;
-  channel?: any;
+  /**
+   * the current story object
+   */
   story?: Story;
+  /**
+   * the file/document of stories
+   */
   kind?: StoriesKind;
+  /**
+   * current story's/document's component
+   */
   component?: StoryComponent;
+  /**
+   * generic function to update the values of component controls.
+   */
+  setControlValue?: SetControlValueFn;
+
+  /**
+   * generic function to propagate a click event for component controls.
+   */
+  clickControl?: ClickControlFn;
 }
 
 /**
@@ -34,7 +56,12 @@ export const useStoryContext = ({
   id,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { currentId, api, channel, mockStore } = React.useContext(BlockContext);
+  const {
+    currentId,
+    mockStore,
+    clickControl,
+    setControlValue,
+  } = React.useContext(BlockContext);
   const store = mockStore || storyStore;
   const inputId = id === CURRENT_SELECTION ? currentId : id;
 
@@ -43,8 +70,8 @@ export const useStoryContext = ({
 
   if (!storyId) {
     return {
-      api,
-      channel,
+      clickControl,
+      setControlValue,
     };
   }
   const story: Story = store && store.stories[storyId];
@@ -61,10 +88,19 @@ export const useStoryContext = ({
       : undefined;
   return {
     id: storyId,
-    api,
-    channel,
     kind,
     story,
     component,
+    clickControl,
+    setControlValue,
   };
+};
+
+export interface StoryContextConsumer {
+  children: (context: StoryContextProps) => React.ReactElement;
+}
+export const StoryContextConsumer: FC<StoryContextConsumer &
+  StoryInputProps> = ({ children, ...rest }) => {
+  const context = useStoryContext(rest);
+  return children(context);
 };

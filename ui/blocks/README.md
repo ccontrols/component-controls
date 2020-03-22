@@ -15,6 +15,7 @@
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
+    -   [<ins>InvalidType</ins>](#insinvalidtypeins)
 
 # Overview
 
@@ -124,12 +125,6 @@ _BlockControlsTable [source code](https:/github.com/ccontrols/component-controls
 
 **Properties:**
 
--   **setControlValue**? : _SetControlValueFn_
-
-    generic function to update the values of component controls.
--   **clickControl**? : _ClickControlFn_
-
-    generic function to propagate a click event for component controls.
 -   **id**? : _string_
 
     id of the story
@@ -150,12 +145,6 @@ _ControlsTable [source code](https:/github.com/ccontrols/component-controls/blob
 
 **Properties:**
 
--   **setControlValue**? : _SetControlValueFn_
-
-    generic function to update the values of component controls.
--   **clickControl**? : _ClickControlFn_
-
-    generic function to propagate a click event for component controls.
 -   **id**? : _string_
 
     id of the story
@@ -175,13 +164,16 @@ _SingleControlsTable [source code](https:/github.com/ccontrols/component-control
 
 -   **controls**? : _ComponentControls_
 
-    componnet controls to display in the table.
+    component controls to display in the table.
 -   **storyId**? : _string_
 
     storyId, will be used to update the values of the controls
 -   **setControlValue**? : _SetControlValueFn_
 
     generic function to update the values of component controls.
+-   **clickControl**? : _ClickControlFn_
+
+    generic function to propagate a click event for component controls.
 
 ## <ins>Description</ins>
 
@@ -207,6 +199,9 @@ _BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/bl
 
 **Properties:**
 
+-   **extraColumns**? : _Column&lt;{}>\[]_
+
+    extra custom columns passed to the PropsTable.
 -   **of**? : _any_
 
     Specify the component(s), for which to have information displayed.
@@ -243,6 +238,9 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/blob/ma
 
 **Properties:**
 
+-   **extraColumns**? : _Column&lt;{}>\[]_
+
+    extra custom columns passed to the PropsTable.
 -   **of**? : _any_
 
     Specify the component(s), for which to have information displayed.
@@ -406,5 +404,11 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
     text to be displayed in the component.
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
+
+## <ins>InvalidType</ins>
+
+error message when the control type is not found.
+
+_InvalidType [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/notifications/InvalidType.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

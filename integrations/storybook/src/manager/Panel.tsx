@@ -8,6 +8,7 @@ import {
 import { SetControlValueFn } from '@component-controls/specification';
 import { SET_STORIES } from '@storybook/core-events';
 import { API } from '@storybook/api';
+import { BlockContext } from '@component-controls/blocks';
 import { ControlsTable as SharedControlsTable } from '@component-controls/blocks';
 import {
   SET_DATA_MSG,
@@ -69,11 +70,14 @@ const WrappedControlsTable: React.FC<WrappedControlsTableProps> = ({
     <Wrapper className="addon-controls-panel">
       <Container>
         <ThemeProvider>
-          <SharedControlsTable
-            id={story?.id}
-            setControlValue={setControlValue}
-            clickControl={api.clickControl}
-          />
+          <BlockContext.Provider
+            value={{
+              currentId: story?.id,
+              setControlValue,
+            }}
+          >
+            <SharedControlsTable id={story?.id} />
+          </BlockContext.Provider>
         </ThemeProvider>
       </Container>
     </Wrapper>

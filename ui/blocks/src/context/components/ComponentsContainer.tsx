@@ -1,18 +1,35 @@
 import React from 'react';
-import { StoryComponent } from '@component-controls/specification';
+import {
+  Story,
+  StoryComponent,
+  SetControlValueFn,
+  ClickControlFn,
+} from '@component-controls/specification';
 
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 import { ComponentInputProps, useComponentsContext } from './ComponentsContext';
 
 export type ComponentsContainerProps = {
-  children: (component: StoryComponent) => React.ReactElement | null;
+  children: (
+    component: StoryComponent,
+    props: {
+      story?: Story;
+      setControlValue?: SetControlValueFn;
+      clickControl?: ClickControlFn;
+    },
+  ) => React.ReactElement | null;
 } & ComponentInputProps;
 
 export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
   of,
   children,
 }) => {
-  const { components } = useComponentsContext({
+  const {
+    components,
+    story,
+    setControlValue,
+    clickControl,
+  } = useComponentsContext({
     of,
   });
   if (!components) {
@@ -23,7 +40,11 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
     return null;
   }
   if (keys.length === 1) {
-    return children(components[keys[0]]);
+    return children(components[keys[0]], {
+      story,
+      setControlValue,
+      clickControl,
+    });
   }
   return (
     <Tabs>
@@ -34,7 +55,7 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
       </TabList>
       {keys.map(key => (
         <TabPanel key={`component_panel_${key}`}>
-          {children(components[key])}
+          {children(components[key], { story, setControlValue, clickControl })}
         </TabPanel>
       ))}
     </Tabs>

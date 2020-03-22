@@ -8,12 +8,11 @@ import {
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table } from '@component-controls/components';
 import { Flex } from 'theme-ui';
-
-const InvalidType = () => <span>Invalid Type</span>;
+import { InvalidType } from '../../notifications/InvalidType';
 
 export interface SingleControlsTableProps {
   /**
-   * componnet controls to display in the table.
+   * component controls to display in the table.
    */
   controls?: ComponentControls;
   /**
@@ -28,6 +27,7 @@ export interface SingleControlsTableProps {
   /**
    * generic function to propagate a click event for component controls.
    */
+  clickControl?: ClickControlFn;
 }
 
 /**

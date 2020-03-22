@@ -3,12 +3,12 @@ import { BlockPropsTable } from './BlockPropsTable';
 import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/BlockPropsTable',
+  title: 'Blocks/Core/PropsTable/block',
   component: BlockPropsTable,
 };
 
-export const simple = () => (
-  <MockContext>
+export const overview = () => (
+  <MockContext storyId="button">
     <BlockPropsTable title="BlockPropsTable table" />
   </MockContext>
 );

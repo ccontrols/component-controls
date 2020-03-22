@@ -1,12 +1,30 @@
 import React from 'react';
-import { StoriesStore } from '@component-controls/specification';
+import {
+  StoriesStore,
+  SetControlValueFn,
+  ClickControlFn,
+} from '@component-controls/specification';
 import { toId, storyNameFromExport } from '@storybook/csf';
 
 export const CURRENT_SELECTION = '.';
 export interface BlockContextProps {
-  api?: any;
-  channel?: any;
+  /**
+   * current story id
+   */
   currentId?: string;
+
+  /**
+   * generic function to update the values of component controls.
+   */
+  setControlValue?: SetControlValueFn;
+
+  /**
+   * generic function to propagate a click event for component controls.
+   */
+  clickControl?: ClickControlFn;
+  /**
+   * store mockup when running tests
+   */
   mockStore?: StoriesStore;
 }
 

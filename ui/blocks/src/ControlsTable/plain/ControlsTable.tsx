@@ -5,10 +5,6 @@ import { window, document } from 'global';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
 import {
-  SetControlValueFn,
-  ClickControlFn,
-} from '@component-controls/specification';
-import {
   resetControlValues,
   getControlValues,
   LoadedComponentControls,
@@ -28,19 +24,7 @@ import { SingleControlsTable } from './SingleControlsTable';
 
 import { StoryInputProps } from '../../context/story/StoryContext';
 
-export interface ControlsTableOwnProps {
-  /**
-   * generic function to update the values of component controls.
-   */
-  setControlValue?: SetControlValueFn;
-
-  /**
-   * generic function to propagate a click event for component controls.
-   */
-  clickControl?: ClickControlFn;
-}
-
-export type ControlsTableProps = ControlsTableOwnProps & StoryInputProps;
+export type ControlsTableProps = StoryInputProps;
 
 const DEFAULT_GROUP_ID = 'Other';
 
@@ -58,12 +42,13 @@ export const ControlsTable: FC<ControlsTableProps> = ({
   ...rest
 }) => {
   const [copied, setCopied] = React.useState(false);
-  const { story, id: storyId } = useStoryContext({
-    id,
-    name,
-  });
+  const { story, id: storyId, setControlValue, clickControl } = useStoryContext(
+    {
+      id,
+      name,
+    },
+  );
   const { controls } = story || {};
-  const { setControlValue } = rest;
   if (controls && Object.keys(controls).length) {
     const onReset = (e: MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
@@ -143,6 +128,8 @@ export const ControlsTable: FC<ControlsTableProps> = ({
           {groupedItems.length === 1 ? (
             <SingleControlsTable
               {...rest}
+              setControlValue={setControlValue}
+              clickControl={clickControl}
               storyId={storyId}
               controls={groupedItems[0].controls}
             />
@@ -157,6 +144,8 @@ export const ControlsTable: FC<ControlsTableProps> = ({
                 <TabPanel key={`tab_panel_${item.label}`}>
                   <SingleControlsTable
                     {...rest}
+                    setControlValue={setControlValue}
+                    clickControl={clickControl}
                     storyId={storyId}
                     controls={item.controls}
                   />

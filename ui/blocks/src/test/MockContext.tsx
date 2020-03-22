@@ -1,7 +1,7 @@
 import React from 'react';
+import { mergeControlValues } from '@component-controls/core';
 import { BlockContext } from '../context';
 import { storyStore } from './storyStore';
-import { Story } from '@component-controls/specification';
 
 export interface MockContexProps {
   storyId?: string;
@@ -13,19 +13,32 @@ export const MockContext: React.FC<MockContexProps> = ({
   children,
   storyId = 'story',
   ...rest
-}) => (
-  <BlockContext.Provider
-    value={{
-      currentId: storyId,
-      mockStore: {
-        ...(storyStore as any),
-        stories: {
-          ...storyStore.stories,
-          [storyId]: { ...(storyStore.stories[storyId] || {}), ...rest },
+}) => {
+  const story = storyStore.stories[storyId];
+  const [controls, setControls] = React.useState(story.controls);
+  return (
+    <BlockContext.Provider
+      value={{
+        currentId: storyId,
+        setControlValue: (storyId, name, value) => {
+          if (controls) {
+            setControls(mergeControlValues(controls, name, value));
+          }
         },
-      },
-    }}
-  >
-    {children}
-  </BlockContext.Provider>
-);
+        mockStore: {
+          ...(storyStore as any),
+          stories: {
+            ...storyStore.stories,
+            [storyId]: {
+              ...(storyStore.stories[storyId] || {}),
+              controls,
+              ...rest,
+            },
+          },
+        },
+      }}
+    >
+      {children}
+    </BlockContext.Provider>
+  );
+};

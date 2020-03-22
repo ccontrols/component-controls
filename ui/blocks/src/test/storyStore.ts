@@ -1,4 +1,4 @@
-import { StoriesStore } from '@component-controls/specification';
+import { StoriesStore, ControlTypes } from '@component-controls/specification';
 
 export const storyStore: StoriesStore = {
   components: {
@@ -195,6 +195,31 @@ and a [link](https://google.com)
         },
       },
     },
+    '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js': {
+      from: '../../components/button-named-arrow-func',
+      importedName: 'Button',
+      name: 'Button',
+      request:
+        '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
+      info: {
+        description: '',
+        displayName: 'Control',
+        props: {
+          name: {
+            type: {
+              name: 'string',
+            },
+            description: 'a name property',
+          },
+          age: {
+            type: {
+              name: 'number',
+            },
+            description: 'age is a number property',
+          },
+        },
+      },
+    },
   },
   kinds: {
     Story: {
@@ -203,12 +228,15 @@ and a [link](https://google.com)
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
         Button:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js',
+        Control:
+          '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js',
       },
       title: 'Story',
     },
   },
   stories: {
     story: {
+      id: 'story',
       arguments: [],
       kind: 'Story',
       component: 'ArrowButton',
@@ -232,6 +260,7 @@ and a [link](https://google.com)
       },
     },
     single: {
+      id: 'single',
       arguments: [],
       kind: 'Story',
       component: 'ArrowButton',
@@ -255,6 +284,7 @@ and a [link](https://google.com)
       },
     },
     button: {
+      id: 'button',
       arguments: [],
       kind: 'Story',
       component: 'Button',
@@ -270,6 +300,25 @@ and a [link](https://google.com)
       },
       name: 'button',
       source: "() => 'hello'",
+    },
+    controls: {
+      id: 'controls',
+      arguments: [],
+      kind: 'Story',
+      name: 'controls',
+      component: 'Control',
+      controls: {
+        name: {
+          type: ControlTypes.TEXT,
+          label: 'Name',
+          value: 'Mark',
+        },
+        age: {
+          type: ControlTypes.NUMBER,
+          label: 'Age',
+          value: 19,
+        },
+      },
     },
   },
 };
