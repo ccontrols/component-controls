@@ -59,7 +59,7 @@ Third-libraries used in no particular order:
 -   [react-popper-tooltip](https://react-popper-tooltip.netlify.com) for popups and tooltips.
 -   [react-animate-height](https://muffinman.io/react-animate-height/) for collapsible components.
 -   [@theme-ui/presets](https://theme-ui.com/packages/presets/) for custom theming.
--   [react-switch](https://github.com/markusenglund/react-switch) for toggle editor
+-   [react-switch](https://github.com/markusenglund/react-switch) for toggle/boolean inputs.
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -88,9 +88,11 @@ A collection of core block components - intended to be displayed on the document
 
 Some of the guiding design goals for this library:
 
--   Most components should have a 'plain' and a 'block' version, where the block versions adds a collapsible ox with a title.
--   There are two main categories of components: components that display story data (i.e. story source, story render) and component(s) data (i.e. prop tables, component sources)
--   All components accept a list of custom ActionItems to be extended. 
--   The compnents that deal with source code (sotory or component) display actions to visit the repositories.
+-   Most components should have a 'plain' and a 'block' version, where the block version adds a collapsible Box with a title.
+-   There are two main categories of components: 
+    -   that display story data (i.e. story source, story render)
+    -   that display component(s) data (i.e. prop tables, component sources)
+-   Components accept a list of custom ActionItems to be extended. 
+-   Compnents that deal with source code (story or component source) display actions to browse their respective repositories.
 
 <!-- END-PACKAGE-SECTION -->

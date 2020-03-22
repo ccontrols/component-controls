@@ -310,11 +310,17 @@ _BlockStorySource [source code](https:/github.com/ccontrols/component-controls/b
 
 ## <ins>StorySource</ins>
 
-Display source code of a story. If controls are used, all story arguments will be highlighted. Additional commands are made available if the repository data of the story is available.
+Display source code of a story.
+If controls are used, all story arguments will be highlighted.
+Additional commands are made available if the repository data of the story is available.
 
 _StorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/plain/StorySource.tsx)_
 
 ## <ins>Subtitle</ins>
+
+displays a subtitle as assigned to the story parameters:
+story.parameters.componentSubtitle
+or story.subtitle
 
 _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Subtitle/Subtitle.tsx)_
 
@@ -333,6 +339,8 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 -   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
 
 ## <ins>Title</ins>
+
+displays a title as assigned to the story document
 
 _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Title/Title.tsx)_
 
