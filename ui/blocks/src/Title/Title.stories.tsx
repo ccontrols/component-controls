@@ -7,7 +7,7 @@ export default {
   component: Title,
 };
 
-export const simple = () => (
+export const overview = () => (
   <MockContext>
     <Title />
   </MockContext>

@@ -7,6 +7,9 @@ import { useStoryContext, StoryInputProps } from '../context';
 
 export type TitleProps = StoryInputProps & TitlePropsBase;
 
+/**
+ * displays a title as assigned to the story document
+ */
 export const Title: FC<TitleProps> = ({ id, name, ...rest }) => {
   const { component, kind } = useStoryContext({
     id,

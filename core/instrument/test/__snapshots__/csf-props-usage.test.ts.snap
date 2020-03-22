@@ -53,6 +53,90 @@ Object {
 }
 `;
 
+exports[`csf-props-usage age-and-name.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {},
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 14,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "name",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 32,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 28,
+                      "line": 1,
+                    },
+                  },
+                },
+              ],
+              "value": "name",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 1,
+        },
+      },
+      "name": "story",
+      "source": "({ name, age }) => (
+  <h2>{\`Hello, my name is \${name}, and I am \\\\\${age} years old.\`}</h2>
+)",
+    },
+  },
+}
+`;
+
 exports[`csf-props-usage empty-body.js 1`] = `
 Object {
   "components": Object {},

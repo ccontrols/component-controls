@@ -11,7 +11,7 @@
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>BlockPropsTable</ins>](#insblockpropstableins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
-    -   [<ins>PureStorySource</ins>](#inspurestorysourceins)
+    -   [<ins>BlockStorySource</ins>](#insblockstorysourceins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
@@ -34,7 +34,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,PureStorySource.stories.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -268,56 +268,9 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/blob/ma
 
     object listing the initially expanded rows.
 
-## <ins>PureStorySource</ins>
+## <ins>BlockStorySource</ins>
 
-_PureStorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/PureStorySource.tsx)_
-
-**Properties:**
-
--   **args**? : _StoryArguments_
-
-    a list of story arguments accepted by Source
-    this is used to syntax-highlight the arguments
-    and their usage
--   **actions**? : _ActionItem\[]_
-
-    optional actions provided to the component
--   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    source code to be displayed.
--   **theme**? : _PrismTheme_
-
-    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
--   **language**? : _Language_
-
-    source lnguage used, by default "jsx".
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code.
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
-    if dark: true, duotoneDark theme is used.
-    if dark: false, duotoneLight theme is used.
--   **style**? : _any_
-
-    css styles for the container.
--   **as**? : _any_
-
-    syntax container as element. Can be used as `div` or `span`.
--   **title**? : _string_
-
-    optional section title for the block
--   **controls**? : _LoadedComponentControls_
-
-    any control values to render in place of props in the editor
--   **fileSource**? : _string_
-
-    full file source code of the file where the story was declared
-
-## <ins>StorySource</ins>
-
-_StorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/StorySource.tsx)_
+_BlockStorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/block/BlockStorySource.tsx)_
 
 **Properties:**
 
@@ -328,17 +281,9 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/blob/m
 
     or - name of the story if in an external file
     will be used to find the story
--   **args**? : _StoryArguments_
-
-    a list of story arguments accepted by Source
-    this is used to syntax-highlight the arguments
-    and their usage
 -   **actions**? : _ActionItem\[]_
 
     optional actions provided to the component
--   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    source code to be displayed.
 -   **theme**? : _PrismTheme_
 
     optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
@@ -362,12 +307,12 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/blob/m
 -   **title**? : _string_
 
     optional section title for the block
--   **controls**? : _LoadedComponentControls_
 
-    any control values to render in place of props in the editor
--   **fileSource**? : _string_
+## <ins>StorySource</ins>
 
-    full file source code of the file where the story was declared
+Display source code of a story. If controls are used, all story arguments will be highlighted. Additional commands are made available if the repository data of the story is available.
+
+_StorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/plain/StorySource.tsx)_
 
 ## <ins>Subtitle</ins>
 

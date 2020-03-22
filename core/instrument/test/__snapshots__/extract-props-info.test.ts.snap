@@ -2884,7 +2884,7 @@ import { jsx } from 'theme-ui'
 
 exports[`extract-props-info Tab 1`] = `
 Object {
-  "description": "Tab heading - pass the title string as children property.",
+  "description": "Tab heading - you should specify the title/label string as the children property. To be created inside the \`<TabList />\` component through the children prop.",
   "displayName": "Tab",
   "methods": Array [],
   "props": Object {
@@ -5905,8 +5905,7 @@ import { jsx } from 'theme-ui'
 
 exports[`extract-props-info TabList 1`] = `
 Object {
-  "description": "Container for \`<Tab />\`  headings - pass the \`<Tab />\` components as children.
-Pass as children to the \`<Tabs />\` component",
+  "description": "Container for \`<Tab />\` headings, to be created inside the \`<Tabs />\` component. The list of \`<Tab />\` components should be passed as the children prop.",
   "displayName": "TabList",
   "methods": Array [],
   "props": Object {
@@ -8913,7 +8912,7 @@ import { jsx } from 'theme-ui'
 
 exports[`extract-props-info TabPanel 1`] = `
 Object {
-  "description": "Panel container - pass as children to the \`<Tabs />\` component",
+  "description": "Panel body container, to be created inside the \`<Tabs />\` component through the children prop.",
   "displayName": "TabPanel",
   "methods": Array [],
   "props": Object {

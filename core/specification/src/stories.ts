@@ -104,6 +104,11 @@ export interface Story {
   source?: string;
 
   /**
+   * optional story subtitle property
+   */
+  subtitle?: string;
+
+  /**
    * id for component associated with the story
    */
   component?: string | object;

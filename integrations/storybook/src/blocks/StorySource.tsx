@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import {
-  StorySource as BaseStorySource,
-  StorySourceProps,
+  BlockStorySource,
+  BlockStorySourceProps,
 } from '@component-controls/blocks';
 import { ThemeProvider } from '../shared/ThemeProvider';
 
-export const StorySource: FC<StorySourceProps> = props => {
+export const StorySource: FC<BlockStorySourceProps> = props => {
   return (
     <ThemeProvider>
-      <BaseStorySource {...props} />
+      <BlockStorySource {...props} />
     </ThemeProvider>
   );
 };

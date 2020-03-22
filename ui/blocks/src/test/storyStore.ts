@@ -237,7 +237,6 @@ and a [link](https://google.com)
   stories: {
     story: {
       id: 'story',
-      arguments: [],
       kind: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -261,7 +260,6 @@ and a [link](https://google.com)
     },
     single: {
       id: 'single',
-      arguments: [],
       kind: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -285,7 +283,6 @@ and a [link](https://google.com)
     },
     button: {
       id: 'button',
-      arguments: [],
       kind: 'Story',
       component: 'Button',
       loc: {
@@ -303,7 +300,6 @@ and a [link](https://google.com)
     },
     controls: {
       id: 'controls',
-      arguments: [],
       kind: 'Story',
       name: 'controls',
       component: 'Control',
@@ -319,6 +315,83 @@ and a [link](https://google.com)
           value: 19,
         },
       },
+      arguments: [
+        {
+          loc: {
+            end: {
+              column: 14,
+              line: 0,
+            },
+            start: {
+              column: 1,
+              line: 0,
+            },
+          },
+          name: undefined,
+          value: [
+            {
+              loc: {
+                end: {
+                  column: 7,
+                  line: 0,
+                },
+                start: {
+                  column: 3,
+                  line: 0,
+                },
+              },
+              name: 'name',
+              usage: [
+                {
+                  loc: {
+                    end: {
+                      column: 32,
+                      line: 1,
+                    },
+                    start: {
+                      column: 28,
+                      line: 1,
+                    },
+                  },
+                },
+              ],
+              value: 'name',
+            },
+            {
+              loc: {
+                end: {
+                  column: 12,
+                  line: 0,
+                },
+                start: {
+                  column: 9,
+                  line: 0,
+                },
+              },
+              name: 'age',
+              value: 'age',
+              usage: [
+                {
+                  loc: {
+                    end: {
+                      column: 49,
+                      line: 1,
+                    },
+                    start: {
+                      column: 46,
+                      line: 1,
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      source: `({ name, age }) => (
+  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
+);
+`,
     },
   },
 };
