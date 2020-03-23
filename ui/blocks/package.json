@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/blocks",
   "version": "0.6.0",
-  "description": "Core blocks component controls",
+  "description": "Component controls core documentation blocks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

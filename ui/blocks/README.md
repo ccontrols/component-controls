@@ -19,10 +19,6 @@
 
 # Overview
 
-## @component-controls/blocks
-
-A collection of core block components - intended to be displayed on the documentation page of stories.
-
 Some of the guiding design goals for this library:
 
 -   Most components should have a 'plain' and a 'block' version, where the block version adds a collapsible Box with a title.

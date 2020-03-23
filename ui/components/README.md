@@ -24,9 +24,6 @@
 
 # Overview
 
-## @component-controls/components
-
-A collection of commonly used UI components for component-controls
 
 Some of the guiding design goals for this library:
 

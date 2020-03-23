@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/editors",
   "version": "0.6.0",
-  "description": "Component controls specification and utility routines",
+  "description": "Component controls editors for component control values.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

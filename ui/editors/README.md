@@ -18,10 +18,6 @@
 
 # Overview
 
-## @component-controls/editors
-
-A collection of editors used to edit component control values.
-
 Some of the guiding design goals for this library:
 
 -   Extensible using `addPropertyEditor`, so you can replace or add new editors.

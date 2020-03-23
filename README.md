@@ -13,9 +13,10 @@
 
 <!-- START-PACKAGE-SECTION -->
 
-## @component-controls/instrument
+## [@component-controls/instrument](https://github.com/ccontrols/component-controls/blob/master/core/instrument)
 
-Component controls instrumentation library. 
+Component controls instrumentation library
+
 Parsing a source file will generate the following information:
 
 -   CSF: List of story named exports
@@ -39,9 +40,9 @@ Parsing a source file will generate the following information:
 
 <!-- START-PACKAGE-SECTION -->
 
-## @component-controls/components
+## [@component-controls/components](https://github.com/ccontrols/component-controls/blob/master/ui/components)
 
-A collection of commonly used UI components for component-controls
+Component controls commonly used UI components.
 
 Some of the guiding design goals for this library:
 
@@ -67,9 +68,9 @@ Third-libraries used in no particular order:
 
 <!-- START-PACKAGE-SECTION -->
 
-## @component-controls/editors
+## [@component-controls/editors](https://github.com/ccontrols/component-controls/blob/master/core/specification)
 
-A collection of editors used to edit component control values.
+Component controls editors for component control values.
 
 Some of the guiding design goals for this library:
 
@@ -82,9 +83,9 @@ Some of the guiding design goals for this library:
 
 <!-- START-PACKAGE-SECTION -->
 
-## @component-controls/blocks
+## [@component-controls/blocks](https://github.com/ccontrols/component-controls/blob/master/ui/blocks)
 
-A collection of core block components - intended to be displayed on the documentation page of stories.
+Component controls core documentation blocks.
 
 Some of the guiding design goals for this library:
 

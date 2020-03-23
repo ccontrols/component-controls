@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/components",
   "version": "0.6.0",
-  "description": "Component controls user interface components",
+  "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

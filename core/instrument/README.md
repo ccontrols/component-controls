@@ -1,8 +1,5 @@
 # Overview 
 
-## @component-controls/instrument
-
-Component controls instrumentation library. 
 Parsing a source file will generate the following information:
 - CSF: List of story named exports
 - CSF: Default export stories file information
