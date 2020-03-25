@@ -1,13 +1,41 @@
 # Table of contents
 
 -   [Core packages](#core-packages)
+    -   [@component-controls/specification](#component-controlsspecification)
+    -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/instrument](#component-controlsinstrument)
+    -   [@component-controls/loader](#component-controlsloader)
 -   [UI packages](#ui-packages)
     -   [@component-controls/components](#component-controlscomponents)
     -   [@component-controls/editors](#component-controlseditors)
     -   [@component-controls/blocks](#component-controlsblocks)
+-   [Props info](#props-info)
+    -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
+    -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
 
 # Core packages
+
+<package-section file="./core/specification/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/specification](https://github.com/ccontrols/component-controls/blob/master/core/specification)
+
+Component controls specification with typescript definitions
+
+Typescript definitions of the component-controls specification.
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/core/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/core](https://github.com/ccontrols/component-controls/blob/master/core/core)
+
+Component controls core utility routines
+
+<!-- END-PACKAGE-SECTION -->
 
 <package-section file="./core/instrument/README.md" section="overview" />
 
@@ -31,6 +59,16 @@ Parsing a source file will generate the following information:
 -   Extract 'component' information for stories: import clause, source file,source loction
 -   Extract package.json repository information for the stories file
 -   Extract package.json repository information for the components file (in canse the components and the stories and in different packages)
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/loader/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/loader](https://github.com/ccontrols/component-controls/blob/master/core/loader)
+
+Webpack loader for component controls instrumentation
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -95,5 +133,35 @@ Some of the guiding design goals for this library:
     -   that display component(s) data (i.e. prop tables, component sources)
 -   Components accept a list of custom ActionItems to be extended. 
 -   Compnents that deal with source code (story or component source) display actions to browse their respective repositories.
+
+<!-- END-PACKAGE-SECTION -->
+
+# Props info
+
+<package-section file="./props-info/react-docgen/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/react-docgen-info](https://github.com/ccontrols/component-controls/blob/master/frameworks/react)
+
+Component controls react-docgen props info loader
+
+Extract props info from react components. Although the latest version of `react-docgen` does support typescript, the typescript support still lags and is not recommended for use
+
+-   Uses [react-docgen](https://github.com/reactjs/react-docgen)
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./props-info/react-docgen-typescript/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/react-docgen-typescript-info](https://github.com/ccontrols/component-controls/blob/master/frameworks/react)
+
+Component controls react-docgen-typescript props info loader
+
+Extract props info from react typescript components:
+
+-   Uses [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
 
 <!-- END-PACKAGE-SECTION -->

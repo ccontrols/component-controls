@@ -1,7 +1,6 @@
 # Table of contents
 
 -   [Overview](#overview)
-    -   [@component-controls/components](#component-controlscomponents)
 -   [List of components](#list-of-components)
     -   [<ins>ActionBar</ins>](#insactionbarins)
     -   [<ins>ActionContainer</ins>](#insactioncontainerins)
@@ -23,7 +22,6 @@
     -   [<ins>Toggle</ins>](#instoggleins)
 
 # Overview
-
 
 Some of the guiding design goals for this library:
 

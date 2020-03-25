@@ -1,29 +1,33 @@
-import { ComponentInfo } from '@component-controls/specification';
 import {
-  extractDocgenTypescriptInfo,
-  RectDocgenTypescriptOptions,
-} from './react-docgen-typescript';
+  ComponentInfo,
+  PropsInfoExtractorFunction,
+} from '@component-controls/specification';
+import { extractDocgenTypescriptInfo } from './react-docgen-typescript';
+import { RectDocgenTypescriptOptions } from './types';
 import { transformProps } from './transform-props';
 
-export default (options?: RectDocgenTypescriptOptions) => {
-  return async (
+/**
+ * run API to generate react-docgen-typescript props information tables.
+ * @param options configuration options
+ * @returns a callable function of type PropsInfoExtractorFunction
+ */
+export const run = (
+  options?: RectDocgenTypescriptOptions,
+): PropsInfoExtractorFunction => {
+  return (
     fileName: string,
     componentName?: string,
-  ): Promise<ComponentInfo | undefined> => {
+  ): ComponentInfo | undefined => {
     const propTable = extractDocgenTypescriptInfo(
       fileName,
       componentName,
       options,
     );
-    return new Promise(resolve =>
-      resolve(
-        propTable
-          ? {
-              ...propTable,
-              props: transformProps(propTable.props),
-            }
-          : undefined,
-      ),
-    );
+    return propTable
+      ? {
+          ...propTable,
+          props: transformProps(propTable.props),
+        }
+      : undefined;
   };
 };

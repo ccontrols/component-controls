@@ -3,7 +3,7 @@ import { ComponentInfo } from '@component-controls/specification';
 import { extractDocgenInfo, RectDocgenOptions } from './react-docgen';
 import { transformProps } from './transform-props';
 
-export default (options?: RectDocgenOptions) => {
+export const run = (options?: RectDocgenOptions) => {
   return async (
     fileName: string,
     componentName?: string,

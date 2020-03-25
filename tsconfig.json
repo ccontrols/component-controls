@@ -24,5 +24,6 @@
     "listFiles": false,
     "pretty": true,
     "lib": ["es2017", "dom"]
-  }
+  },
+  "include": ["doc/**/*"],
 }

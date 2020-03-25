@@ -1,7 +1,6 @@
 # Table of contents
 
 -   [Overview](#overview)
-    -   [@component-controls/blocks](#component-controlsblocks)
 -   [List of components](#list-of-components)
     -   [<ins>BlockComponentSource</ins>](#insblockcomponentsourceins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)

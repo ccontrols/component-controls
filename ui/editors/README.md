@@ -1,7 +1,6 @@
 # Table of contents
 
 -   [Overview](#overview)
-    -   [@component-controls/editors](#component-controlseditors)
 -   [List of components](#list-of-components)
     -   [<ins>getPropertyEditor</ins>](#insgetpropertyeditorins)
     -   [<ins>addPropertyEditor</ins>](#insaddpropertyeditorins)

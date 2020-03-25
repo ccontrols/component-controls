@@ -2,7 +2,7 @@
   "name": "@component-controls/react-docgen-typescript-info",
   "version": "0.6.0",
   "private": true,
-  "description": "Component controls addon to read react-docgen-typescript props informtion",
+  "description": "Component controls react-docgen-typescript props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -14,6 +14,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development yarn build -w",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -26,7 +27,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "frameworks/react"
+    "directory": "props-info/react-docgen-typescript"
   },
   "license": "MIT",
   "dependencies": {

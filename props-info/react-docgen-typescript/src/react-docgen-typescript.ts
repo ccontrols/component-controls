@@ -1,13 +1,6 @@
-import {
-  ParserOptions,
-  ComponentDoc,
-  withDefaultConfig,
-} from 'react-docgen-typescript';
+import { ParserOptions, withDefaultConfig } from 'react-docgen-typescript';
 import { computeComponentName } from './defaults';
-
-export type RectDocgenTypescriptOptions = {
-  transformProps?: (props: ComponentDoc[]) => ComponentDoc;
-} & ParserOptions;
+import { RectDocgenTypescriptOptions } from './types';
 
 export const extractDocgenTypescriptInfo = (
   fileName: string,
@@ -21,7 +14,9 @@ export const extractDocgenTypescriptInfo = (
         tables.find(table => table.displayName === componentName);
       return byName ? byName : tables[0];
     },
-    propFilter,
+    propFilter = {
+      skipPropsWithoutDoc: false,
+    },
     componentNameResolver = computeComponentName,
     shouldExtractLiteralValuesFromEnum = true,
     savePropValueAsString,

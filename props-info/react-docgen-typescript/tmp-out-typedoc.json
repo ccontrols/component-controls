@@ -1,0 +1,3397 @@
+{
+	"id": 0,
+	"name": "react-docgen-typescript",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "\"parser.d\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/node_modules/react-docgen-typescript/lib/parser.d.ts",
+			"children": [
+				{
+					"id": 68,
+					"name": "Parser",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 73,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 74,
+									"name": "new Parser",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 75,
+											"name": "program",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Program"
+											}
+										},
+										{
+											"id": 76,
+											"name": "opts",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 46,
+												"name": "ParserOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 68,
+										"name": "Parser"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 95,
+									"character": 34
+								}
+							]
+						},
+						{
+							"id": 69,
+							"name": "checker",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true,
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 92,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 70,
+							"name": "propFilter",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true,
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 93,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 72,
+							"name": "savePropValueAsString",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true,
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 95,
+									"character": 33
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 71,
+							"name": "shouldExtractLiteralValuesFromEnum",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true,
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 94,
+									"character": 46
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 125,
+							"name": "extractDefaultPropsFromComponent",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 126,
+									"name": "extractDefaultPropsFromComponent",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 127,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										},
+										{
+											"id": 128,
+											"name": "source",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "SourceFile"
+											}
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 129,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {
+												"isExported": true
+											},
+											"sources": [
+												{
+													"fileName": "parser.d.ts",
+													"line": 117,
+													"character": 79
+												}
+											]
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 117,
+									"character": 36
+								}
+							]
+						},
+						{
+							"id": 88,
+							"name": "extractMembersFromType",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 89,
+									"name": "extractMembersFromType",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 90,
+											"name": "type",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Type"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "Symbol"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 100,
+									"character": 26
+								}
+							]
+						},
+						{
+							"id": 85,
+							"name": "extractPropsFromTypeIfStatefulComponent",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 86,
+									"name": "extractPropsFromTypeIfStatefulComponent",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 87,
+											"name": "type",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Type"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "Symbol"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 99,
+									"character": 43
+								}
+							]
+						},
+						{
+							"id": 82,
+							"name": "extractPropsFromTypeIfStatelessComponent",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 83,
+									"name": "extractPropsFromTypeIfStatelessComponent",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 84,
+											"name": "type",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Type"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "Symbol"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 98,
+									"character": 44
+								}
+							]
+						},
+						{
+							"id": 116,
+							"name": "findDocComment",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 117,
+									"name": "findDocComment",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 118,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 64,
+										"name": "JSDoc"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 109,
+									"character": 18
+								}
+							]
+						},
+						{
+							"id": 100,
+							"name": "getCallSignature",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 101,
+									"name": "getCallSignature",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 102,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "Signature"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 104,
+									"character": 20
+								}
+							]
+						},
+						{
+							"id": 77,
+							"name": "getComponentInfo",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 78,
+									"name": "getComponentInfo",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 79,
+											"name": "exp",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										},
+										{
+											"id": 80,
+											"name": "source",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "SourceFile"
+											}
+										},
+										{
+											"id": 81,
+											"name": "componentNameResolver",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 141,
+												"name": "ComponentNameResolver"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 6,
+												"name": "ComponentDoc"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 97,
+									"character": 20
+								}
+							]
+						},
+						{
+							"id": 109,
+							"name": "getDocgenType",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 110,
+									"name": "getDocgenType",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 111,
+											"name": "propType",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Type"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 39,
+										"name": "PropItemType"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 107,
+									"character": 17
+								}
+							]
+						},
+						{
+							"id": 119,
+							"name": "getFullJsDocComment",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 120,
+									"name": "getFullJsDocComment",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"shortText": "Extracts a full JsDoc comment from a symbol, even\nthough TypeScript has broken down the JsDoc comment into plain\ntext and JsDoc tags."
+									},
+									"parameters": [
+										{
+											"id": 121,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 64,
+										"name": "JSDoc"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 115,
+									"character": 23
+								}
+							]
+						},
+						{
+							"id": 122,
+							"name": "getFunctionStatement",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 123,
+									"name": "getFunctionStatement",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 124,
+											"name": "statement",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Statement"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "ArrowFunction"
+											},
+											{
+												"type": "reference",
+												"name": "FunctionExpression"
+											},
+											{
+												"type": "reference",
+												"name": "FunctionDeclaration"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 116,
+									"character": 24
+								}
+							]
+						},
+						{
+							"id": 130,
+							"name": "getLiteralValueFromPropertyAssignment",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 131,
+									"name": "getLiteralValueFromPropertyAssignment",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 132,
+											"name": "property",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "reference",
+														"name": "PropertyAssignment"
+													},
+													{
+														"type": "reference",
+														"name": "BindingElement"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "boolean"
+											},
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 118,
+									"character": 41
+								}
+							]
+						},
+						{
+							"id": 91,
+							"name": "getMethodsInfo",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 92,
+									"name": "getMethodsInfo",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 93,
+											"name": "type",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Type"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 21,
+											"name": "Method"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 101,
+									"character": 18
+								}
+							]
+						},
+						{
+							"id": 94,
+							"name": "getModifiers",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 95,
+									"name": "getModifiers",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 96,
+											"name": "member",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 102,
+									"character": 16
+								}
+							]
+						},
+						{
+							"id": 97,
+							"name": "getParameterInfo",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 98,
+									"name": "getParameterInfo",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 99,
+											"name": "callSignature",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Signature"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 31,
+											"name": "MethodParameter"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 103,
+									"character": 20
+								}
+							]
+						},
+						{
+							"id": 133,
+							"name": "getPropMap",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 134,
+									"name": "getPropMap",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 135,
+											"name": "properties",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "union",
+														"types": [
+															{
+																"type": "reference",
+																"name": "PropertyAssignment"
+															},
+															{
+																"type": "reference",
+																"name": "BindingElement"
+															}
+														]
+													}
+												],
+												"name": "NodeArray"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"typeArguments": [
+											{
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "boolean"
+													},
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "intrinsic",
+														"name": "null"
+													}
+												]
+											}
+										],
+										"name": "StringIndexedObject"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 119,
+									"character": 14
+								}
+							]
+						},
+						{
+							"id": 112,
+							"name": "getPropsInfo",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 113,
+									"name": "getPropsInfo",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 114,
+											"name": "propsObj",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										},
+										{
+											"id": 115,
+											"name": "defaultProps",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 2,
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"name": "StringIndexedObject"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 11,
+										"name": "Props"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 108,
+									"character": 16
+								}
+							]
+						},
+						{
+							"id": 106,
+							"name": "getReturnDescription",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 107,
+									"name": "getReturnDescription",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 108,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 106,
+									"character": 24
+								}
+							]
+						},
+						{
+							"id": 103,
+							"name": "isTaggedPublic",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 104,
+									"name": "isTaggedPublic",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 105,
+											"name": "symbol",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 105,
+									"character": 18
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								73
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								69,
+								70,
+								72,
+								71
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								125,
+								88,
+								85,
+								82,
+								116,
+								100,
+								77,
+								109,
+								119,
+								122,
+								130,
+								91,
+								94,
+								97,
+								133,
+								112,
+								106,
+								103
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 91,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 37,
+					"name": "Component",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 38,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 41,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								38
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 40,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 6,
+					"name": "ComponentDoc",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 8,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 7,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 7,
+							"name": "displayName",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 6,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 10,
+							"name": "methods",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 9,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 21,
+									"name": "Method"
+								}
+							}
+						},
+						{
+							"id": 9,
+							"name": "props",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 8,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 11,
+								"name": "Props"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								8,
+								7,
+								10,
+								9
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 5,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 54,
+					"name": "FileParser",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 55,
+							"name": "parse",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 56,
+									"name": "parse",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 57,
+											"name": "filePathOrPaths",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 6,
+											"name": "ComponentDoc"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 66,
+									"character": 9
+								}
+							]
+						},
+						{
+							"id": 58,
+							"name": "parseWithProgramProvider",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 59,
+									"name": "parseWithProgramProvider",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 60,
+											"name": "filePathOrPaths",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												]
+											}
+										},
+										{
+											"id": 61,
+											"name": "programProvider",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "reflection",
+														"declaration": {
+															"id": 62,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {
+																"isExported": true
+															},
+															"signatures": [
+																{
+																	"id": 63,
+																	"name": "__call",
+																	"kind": 4096,
+																	"kindString": "Call signature",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "reference",
+																		"name": "Program"
+																	}
+																}
+															]
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 6,
+											"name": "ComponentDoc"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 67,
+									"character": 28
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								55,
+								58
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 65,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 64,
+					"name": "JSDoc",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 65,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 87,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 66,
+							"name": "fullComment",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 88,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 67,
+							"name": "tags",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 89,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 2,
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "StringIndexedObject"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								65,
+								66,
+								67
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 86,
+							"character": 15
+						}
+					]
+				},
+				{
+					"id": 21,
+					"name": "Method",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 30,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 30,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 23,
+							"name": "docblock",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 23,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 24,
+							"name": "modifiers",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 24,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						},
+						{
+							"id": 22,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 22,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 25,
+							"name": "params",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 25,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 31,
+									"name": "MethodParameter"
+								}
+							}
+						},
+						{
+							"id": 26,
+							"name": "returns",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 26,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 27,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {
+												"isExported": true
+											},
+											"children": [
+												{
+													"id": 28,
+													"name": "description",
+													"kind": 32,
+													"kindString": "Variable",
+													"flags": {
+														"isExported": true,
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "parser.d.ts",
+															"line": 27,
+															"character": 19
+														}
+													],
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "intrinsic",
+																"name": "string"
+															},
+															{
+																"type": "intrinsic",
+																"name": "null"
+															}
+														]
+													}
+												},
+												{
+													"id": 29,
+													"name": "type",
+													"kind": 32,
+													"kindString": "Variable",
+													"flags": {
+														"isExported": true,
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "parser.d.ts",
+															"line": 28,
+															"character": 12
+														}
+													],
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "intrinsic",
+																"name": "undefined"
+															},
+															{
+																"type": "intrinsic",
+																"name": "string"
+															}
+														]
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Variables",
+													"kind": 32,
+													"children": [
+														28,
+														29
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "parser.d.ts",
+													"line": 26,
+													"character": 13
+												}
+											]
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "null"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								30,
+								23,
+								24,
+								22,
+								25,
+								26
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 21,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 31,
+					"name": "MethodParameter",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 33,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 34,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "null"
+									}
+								]
+							}
+						},
+						{
+							"id": 32,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 33,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 34,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 35,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 35,
+								"name": "MethodParameterType"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								33,
+								32,
+								34
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 32,
+							"character": 32
+						}
+					]
+				},
+				{
+					"id": 35,
+					"name": "MethodParameterType",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 36,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 38,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								36
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 37,
+							"character": 36
+						}
+					]
+				},
+				{
+					"id": 43,
+					"name": "ParentType",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 45,
+							"name": "fileName",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 50,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 44,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 49,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								45,
+								44
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 48,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 46,
+					"name": "ParserOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 48,
+							"name": "componentNameResolver",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 56,
+									"character": 25
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 141,
+								"name": "ComponentNameResolver"
+							}
+						},
+						{
+							"id": 47,
+							"name": "propFilter",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 55,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 51,
+										"name": "StaticPropFilter"
+									},
+									{
+										"type": "reference",
+										"id": 136,
+										"name": "PropFilter"
+									}
+								]
+							}
+						},
+						{
+							"id": 50,
+							"name": "savePropValueAsString",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 58,
+									"character": 25
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 49,
+							"name": "shouldExtractLiteralValuesFromEnum",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 57,
+									"character": 38
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								48,
+								47,
+								50,
+								49
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 54,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 14,
+					"name": "PropItem",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 19,
+							"name": "defaultValue",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 18,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 18,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 17,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 15,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 14,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 20,
+							"name": "parent",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 19,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 43,
+								"name": "ParentType"
+							}
+						},
+						{
+							"id": 16,
+							"name": "required",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 15,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 17,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 16,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 39,
+								"name": "PropItemType"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								19,
+								18,
+								15,
+								20,
+								16,
+								17
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 13,
+							"character": 25
+						}
+					]
+				},
+				{
+					"id": 39,
+					"name": "PropItemType",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 40,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 44,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 42,
+							"name": "raw",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 46,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 41,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 45,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								40,
+								42,
+								41
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 43,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "Props",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"indexSignature": [
+						{
+							"id": 12,
+							"name": "__index",
+							"kind": 8192,
+							"kindString": "Index signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 13,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 14,
+								"name": "PropItem"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 11,
+							"character": 22
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 2,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 14,
+									"name": "PropItem"
+								}
+							],
+							"name": "StringIndexedObject"
+						}
+					]
+				},
+				{
+					"id": 51,
+					"name": "StaticPropFilter",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 52,
+							"name": "skipPropsWithName",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 61,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 53,
+							"name": "skipPropsWithoutDoc",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 62,
+									"character": 23
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								52,
+								53
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 60,
+							"character": 33
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "StringIndexedObject",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"typeParameter": [
+						{
+							"id": 3,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExported": true
+							}
+						}
+					],
+					"indexSignature": [
+						{
+							"id": 4,
+							"name": "__index",
+							"kind": 8192,
+							"kindString": "Index signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 5,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "typeParameter",
+								"name": "T"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 2,
+							"character": 36
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 11,
+							"name": "Props"
+						}
+					]
+				},
+				{
+					"id": 141,
+					"name": "ComponentNameResolver",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 53,
+							"character": 41
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 142,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 143,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 144,
+											"name": "exp",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Symbol"
+											}
+										},
+										{
+											"id": 145,
+											"name": "source",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "SourceFile"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											},
+											{
+												"type": "intrinsic",
+												"name": "false"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 53,
+									"character": 43
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 136,
+					"name": "PropFilter",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 52,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 137,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 138,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 139,
+											"name": "props",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 14,
+												"name": "PropItem"
+											}
+										},
+										{
+											"id": 140,
+											"name": "component",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 37,
+												"name": "Component"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "parser.d.ts",
+									"line": 52,
+									"character": 32
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 146,
+					"name": "defaultParserOpts",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 64,
+							"character": 38
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 46,
+						"name": "ParserOptions"
+					}
+				},
+				{
+					"id": 162,
+					"name": "getDefaultExportForFile",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 163,
+							"name": "getDefaultExportForFile",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 164,
+									"name": "source",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "SourceFile"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 121,
+							"character": 47
+						}
+					]
+				},
+				{
+					"id": 147,
+					"name": "parse",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 148,
+							"name": "parse",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Parses a file with default TS options"
+							},
+							"parameters": [
+								{
+									"id": 149,
+									"name": "filePathOrPaths",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										]
+									}
+								},
+								{
+									"id": 150,
+									"name": "parserOpts",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 46,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 6,
+									"name": "ComponentDoc"
+								}
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 73,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 158,
+					"name": "withCompilerOptions",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 159,
+							"name": "withCompilerOptions",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Constructs a parser for a specified set of TS compiler options."
+							},
+							"parameters": [
+								{
+									"id": 160,
+									"name": "compilerOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "CompilerOptions"
+									}
+								},
+								{
+									"id": 161,
+									"name": "parserOpts",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 46,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 54,
+								"name": "FileParser"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 85,
+							"character": 43
+						}
+					]
+				},
+				{
+					"id": 154,
+					"name": "withCustomConfig",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 155,
+							"name": "withCustomConfig",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Constructs a parser for a specified tsconfig file."
+							},
+							"parameters": [
+								{
+									"id": 156,
+									"name": "tsconfigPath",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 157,
+									"name": "parserOpts",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 46,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 54,
+								"name": "FileParser"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 81,
+							"character": 40
+						}
+					]
+				},
+				{
+					"id": 151,
+					"name": "withDefaultConfig",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 152,
+							"name": "withDefaultConfig",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Constructs a parser for a default configuration."
+							},
+							"parameters": [
+								{
+									"id": 153,
+									"name": "parserOpts",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 46,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 54,
+								"name": "FileParser"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "parser.d.ts",
+							"line": 77,
+							"character": 41
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						68
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						37,
+						6,
+						54,
+						64,
+						21,
+						31,
+						35,
+						43,
+						46,
+						14,
+						39,
+						11,
+						51,
+						2
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						141,
+						136
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						146
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						162,
+						147,
+						158,
+						154,
+						151
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "parser.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1
+			]
+		}
+	]
+}

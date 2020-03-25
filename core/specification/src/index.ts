@@ -1,5 +1,6 @@
 export * from './components';
 export * from './controls';
+export * from './propsInfo';
 export * from './stories';
 export * from './utility';
 

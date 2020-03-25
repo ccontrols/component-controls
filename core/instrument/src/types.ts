@@ -4,7 +4,6 @@ import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
 } from 'prettier';
-import { ComponentInfo } from '@component-controls/specification';
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -23,30 +22,6 @@ export const defaultParserOptions: ParserOptions = {
 export const defaultMDXOptions: MDXOptions = {
   test: /\.mdx$/,
 };
-
-/**
- * callback function to extract props info table  - ie docgen type libraries
- * used to extract displayName, and props tables for a component
- */
-export type PropsInfoExtractorFunction = (
-  /**
-   * full name and path of the component path
-   * react-docgen needs it to extract babel configurations
-   */
-  fileName: string,
-  /**
-   * optional component name
-   * react-docgen-typescript supports multiple exports for a file
-   * react-docgne does not use it
-   */
-  componentName?: string,
-  /**
-   * optional soure, saves time if its already loaded
-   * react-docgen accepts source as input parameter
-   * react-docgen-typescript does not use it
-   */
-  source?: string,
-) => Promise<ComponentInfo | undefined>;
 
 /**
  * settings to load component props tables

@@ -1,0 +1,209 @@
+{
+	"id": 0,
+	"name": "@component-controls/specification",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "\"propsinfo\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/core/specification/src/propsinfo.ts",
+			"children": [
+				{
+					"id": 2,
+					"name": "PropsInfoExtractorFunction",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "callback function to extract props info table  - ie docgen type libraries\nused to extract displayName, and props tables for a component",
+						"tags": [
+							{
+								"tag": "param",
+								"text": "full name and path of the component path react-docgen needs it to extract babel configurations.",
+								"param": "fileName"
+							},
+							{
+								"tag": "param",
+								"text": "optional component name react-docgen-typescript supports multiple exports for a file react-docgne does not use it.",
+								"param": "componentName"
+							},
+							{
+								"tag": "param",
+								"text": "optional soure, saves time if its already loaded react-docgen accepts source as input parameter react-docgen-typescript does not use it.\n",
+								"param": "source"
+							},
+							{
+								"tag": "returns",
+								"text": "async or normal function that loads ComponentInfo props info.\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "propsinfo.ts",
+							"line": 13,
+							"character": 38
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 3,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 4,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 5,
+											"name": "fileName",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 6,
+											"name": "componentName",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										},
+										{
+											"id": 7,
+											"name": "source",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "union",
+														"types": [
+															{
+																"type": "reference",
+																"name": "ComponentInfo"
+															},
+															{
+																"type": "intrinsic",
+																"name": "undefined"
+															}
+														]
+													}
+												],
+												"name": "Promise"
+											},
+											{
+												"type": "reference",
+												"name": "ComponentInfo"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "propsinfo.ts",
+									"line": 13,
+									"character": 40
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "propsinfo.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1
+			]
+		}
+	]
+}

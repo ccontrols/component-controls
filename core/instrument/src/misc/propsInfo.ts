@@ -3,8 +3,11 @@ import * as path from 'path';
 import * as os from 'os';
 import { createHash } from 'crypto';
 import findCacheDir from 'find-cache-dir';
-import { ComponentInfo } from '@component-controls/specification';
-import { PropsLoaderConfig, PropsInfoExtractorFunction } from '../types';
+import {
+  ComponentInfo,
+  PropsInfoExtractorFunction,
+} from '@component-controls/specification';
+import { PropsLoaderConfig } from '../types';
 
 export const propsInfo = async (
   options: PropsLoaderConfig[],
@@ -58,10 +61,13 @@ export const propsInfo = async (
   }
   const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
   if (propsLoaderName) {
-    const propsLoader: PropsInfoExtractorFunction = require(propsLoaderName.name)(
-      propsLoaderName.options,
-    );
-    result = await propsLoader(filePath, componentName, source);
+    const { run } = require(propsLoaderName.name);
+    if (run) {
+      const propsLoader: PropsInfoExtractorFunction = run(
+        propsLoaderName.options,
+      );
+      result = await propsLoader(filePath, componentName, source);
+    }
   }
   fs.writeFileSync(cachedFileName, JSON.stringify(result || {}));
   return result;
