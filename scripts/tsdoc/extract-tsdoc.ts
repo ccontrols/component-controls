@@ -2,9 +2,9 @@ import path from 'path';
 import fs from 'fs';
 import { Application } from 'typedoc';
 import { ModuleKind, ScriptTarget } from 'typescript';
-import { getRepoPath } from '../package-info';
-
-import { Node, NodeChildren } from '../types';
+import { getRepoPath } from '../common/package-info';
+import { createPropsRow, createPropsTable, PropItem } from '../blocks/props-table';
+import { Node, NodeChildren } from '../common/types';
 
 const app = new Application();
 app.bootstrap({
@@ -23,68 +23,31 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
   const addedTypeNames: string[] = [];
   const repoNames: { [key: string]: { repo?: string, filePath?: string, packageName?: string, relativePath?: string} } = {};
 
-  const createPropsRpw = (name: string, isOptional: boolean, type: any, comment: string): NodeChildren => {
-    return { type : 'tableRow' , children: [
-      { type: 'tableCell', children: [ { type: 'inlineCode', value: `${name}${isOptional ? '': '*'}`}]},
-      {
-        type: 'tableCell',
-        children: type,
-      },
-      {
-        type: 'tableCell',
-        children: [{ type: 'text', value: comment }],
-      }
-    ]}
-  }
   const extractPropTable = (nodes: Node[], title: string): { propsTable: Node[], table?: NodeChildren} => {
-    const propsTable: Node[] = [];
-    let table: NodeChildren | undefined;
-    if (nodes) {
-      propsTable.push({
-        type: 'paragraph',
-        children: [{
-          type: 'heading',
-          depth: 3,
-          children: [{
-            type: 'text',
-            value: title,
-          }]
-        }]  
-      })
-      table = {
-        type: 'table',
-        children: [
-          { type: 'tableRow', children: [
-            { type: 'tableCell', children: [ { type: 'text', value: 'Name'}]},
-            { type: 'tableCell', children: [ { type: 'text', value: 'Type'}]},
-            { type: 'tableCell', children: [ { type: 'text', value: 'Description'}]},
-          ]}
-        ]
-      }
-      propsTable.push({
-        type: 'paragraph',
-        children: [table]
-      });
-      nodes.forEach && nodes.forEach((child: any) => {
-        if (child.declaration) {
-          //@ts-ignore
-          table.children.push.apply(table.children, child.declaration.children.map((d: any) => createPropsRpw(
-            d.name,
-            d.flags ? d.flags.isOptional : true,
-            d.type ? extractPropType(d.type) : extractFunction(d, false),
-            d.comment ? d.comment.shortText : '')));
-        } else {
-          const tableRow: NodeChildren = createPropsRpw(
-            child.name,
-            child.flags ? child.flags.isOptional : true,
-            child.type ? extractPropType(child.type.type ? child.type: child) : extractFunction(child, false),
-            child.comment ? child.comment.shortText : '');
-          //@ts-ignore
-          table.children.push(tableRow);
-          }  
-      });
+    const props: PropItem[] = nodes && nodes.map && nodes.reduce((acc: any, child: any) => {
+      if (child.declaration) {
+        return [
+          ...acc,
+          ...child.declaration.children.map((d: any) => ({
+          name: d.name,
+          isOptional: d.flags ? d.flags.isOptional : true,
+          type: d.type ? extractPropType(d.type) : extractFunction(d, false),
+          description: d.comment ? d.comment.shortText : ''
+        }))
+      ];
+    } else {
+      return [
+        ...acc,
+        {
+          name: child.name,
+          isOptional: child.flags ? child.flags.isOptional : true,
+          type: child.type ? extractPropType(child.type.type ? child.type: child) : extractFunction(child, false),
+          description: child.comment ? child.comment.shortText : ''
+        }
+      ]
     }
-    return { propsTable, table };
+    }, []);  
+    return createPropsTable(title, props);
   }
   const extractFunction = (node: any, extractTable: boolean = true): Node[] => {
     const result: Node[] = [];
@@ -164,11 +127,12 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         if (extractTable) {
           const { propsTable, table } = extractPropTable(signature.parameters, 'parameters');
           if (table && signature.type) {
-            table.children.push(createPropsRpw(
-              'returns',
-              true,
-              extractPropType(signature.type),
-              signature.comment ? signature.comment.returns : ''))
+            table.children.push(createPropsRow({
+              name: 'returns',
+              isOptional: true,
+              type: extractPropType(signature.type),
+              description: signature.comment ? signature.comment.returns : ''
+            }))
           }
           result.push.apply(result, propsTable);
         }  

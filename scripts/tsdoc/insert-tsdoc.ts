@@ -1,6 +1,6 @@
 import path from 'path';
-import { Settings, Node } from '../types';
-import { extractCustomTag, inlineNewContent } from '../utils';
+import { Settings, Node } from '../common/types';
+import { extractCustomTag, inlineNewContent } from '../common/utils';
 import { extractTSDoc } from './extract-tsdoc';
 
 export const insertTSDoc = (settings: Settings = { path: './src' }) => {

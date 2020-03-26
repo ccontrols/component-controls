@@ -41,32 +41,17 @@ _defined in [@component-controls/loader/src/story-store-data.ts](https://github.
 
 
 
-### properties
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-
 ## injectedStories
 
 _defined in [@component-controls/loader/src/story-store-data.ts](https://github.com/ccontrols/component-controls/tree/master/core/loader/src/story-store-data.ts#L6)_
 
 
 
-### properties
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-
 ## storyStore
 
 _defined in [@component-controls/loader/src/story-store-data.ts](https://github.com/ccontrols/component-controls/tree/master/core/loader/src/story-store-data.ts#L8)_
 
 
-
-### properties
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
 
 ## loadStoryStore
 

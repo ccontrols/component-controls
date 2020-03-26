@@ -84,6 +84,8 @@ Webpack loader that injects the data collected by [@component-controls/instrumen
 
 # UI packages
 
+The UI libraries are built around [theme-ui](https://theme-ui.com) and are designed to abstract the user interface level of components.
+
 <package-section file="./ui/components/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
@@ -147,6 +149,10 @@ Some of the guiding design goals for this library:
 <!-- END-PACKAGE-SECTION -->
 
 # Props info
+
+The props-info packages are designed to solidify prop tables extraction for components. Every props-info package must export a props extractor factory that is initialized with the options for the specific library and returns a function that can parse a file and extract prop tables.
+
+The props-info libraries are specifically meant to be used only at build-time, as they can add significant overhead to the sites at run-time.
 
 <package-section file="./props-info/react-docgen/README.md" section="overview" />
 

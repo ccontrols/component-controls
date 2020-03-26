@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import remark from 'remark';
-import { Node } from '../types';
-import { extractCustomTag, inlineNewContent } from '../utils';
+import { Node } from '../common/types';
+import { extractCustomTag, inlineNewContent } from '../common/utils';
 
 export const insertOverview = () => {
   return  (node: Node ) => {

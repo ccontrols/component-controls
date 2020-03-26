@@ -6,8 +6,8 @@ import {
   PropItem,
   ParserOptions,
 } from 'react-docgen-typescript';
-import { Settings, Node, NodeChildren } from '../types';
-import { extractCustomTag, inlineNewContent, traverseDirs }from '../utils';
+import { Settings, Node, NodeChildren } from '../common/types';
+import { extractCustomTag, inlineNewContent, traverseDirs }from '../common/utils';
 
 const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
   const nodes: Node[] = [];
