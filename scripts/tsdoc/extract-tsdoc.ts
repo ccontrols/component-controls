@@ -66,13 +66,22 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         children: [table]
       });  
       nodes.forEach((child: any) => {
-        const tableRow: NodeChildren = createPropsRpw(
-          child.name,
-          child.flags.isOptional,
-          child.type ? extractPropType(child.type) : extractFunction(child, false),
-          child.comment ? child.comment.shortText : '');
-        //@ts-ignore
-        table.children.push(tableRow);
+        if (child.declaration) {
+          //@ts-ignore
+          table.children.push.apply(table.children, child.declaration.children.map((d: any) => createPropsRpw(
+            d.name,
+            d.flags ? d.flags.isOptional : true,
+            d.type ? extractPropType(d.type) : extractFunction(d, false),
+            d.comment ? d.comment.shortText : '')));
+        } else {
+          const tableRow: NodeChildren = createPropsRpw(
+            child.name,
+            child.flags ? child.flags.isOptional : true,
+            child.type ? extractPropType(child.type.type ? child.type: child) : extractFunction(child, false),
+            child.comment ? child.comment.shortText : '');
+          //@ts-ignore
+          table.children.push(tableRow);
+          }  
       });  
     }
     return { propsTable, table };
@@ -97,7 +106,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }]
       });
     }  
-    const signature = node.signatures.find((s: any) => s.kindString === 'Call signature');
+    const signature = node.signatures && node.signatures.find((s: any) => s.kindString === 'Call signature');
       if (signature) {
         declaration.children.push({
           type: 'text',
@@ -320,28 +329,8 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }, []);
       }
       case 'intersection': {
-        return [
-          { 
-            type: 'strong',
-            children: [
-              {
-                type: 'text',
-                value: 'properties:',
-              }
-            ]
-          },
-          ...p.types.reduce((acc: any, t: any, idx: number) => {
-            const props = extractPropType(t);
-            return [...acc,
-              ...props
-            ];
-          }, []),
-          { 
-            type: 'text',
-            value: '--'
-          },
-
-        ];
+        const { propsTable } = extractPropTable(p.types, 'properties');
+        return propsTable;
       }
       case 'array': {
         return [{
@@ -436,16 +425,13 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
 
     switch (node.kindString) {
       case 'Type alias': 
-      case 'Type literal': {        
-        if (node.type) {
-          result.push.apply(result, extractPropType(node.type, true));
-        } else {
+        result.push.apply(result, extractPropType(node.type, true));
+        break;
+      case 'Type literal':
           node.children.forEach((child: any) => {
             result.push.apply(result, extractPropType(child, true));
           })
-        }  
         break;
-      }
       case 'Class':
       case 'Interface':
         default:  {

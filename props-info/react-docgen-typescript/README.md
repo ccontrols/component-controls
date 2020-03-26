@@ -49,9 +49,10 @@ _defined in [@component-controls/react-docgen-typescript-info/src/index.ts](http
 
 ### parameters
 
-| Name      | Type                                                        | Description           |
-| --------- | ----------------------------------------------------------- | --------------------- |
-| `options` | [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions) | configuration options |
+| Name      | Type                                                        | Description                                             |
+| --------- | ----------------------------------------------------------- | ------------------------------------------------------- |
+| `options` | [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions) | configuration options                                   |
+| `returns` | [PropsInfoExtractorFunction](#propsinfoextractorfunction)   | a callable function of type PropsInfoExtractorFunction  |
 
 ## RectDocgenTypescriptOptions
 
@@ -59,15 +60,12 @@ a callback to transfor them props table and the options to be passd to react-doc
 
 _defined in [@component-controls/react-docgen-typescript-info/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen-typescript/src/types.ts#L6)_
 
-**properties:**
+### properties
 
-callback to transform the props table
-
-**transformProps**: undefined | (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc);
-
-[ParserOptions](#parseroptions)
-
---
+| Name             | Type                                                                                       | Description                           |
+| ---------------- | ------------------------------------------------------------------------------------------ | ------------------------------------- |
+| `transformProps` | undefined \| (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc); | callback to transform the props table |
+| `ParserOptions`  | [ParserOptions](#parseroptions)                                                            |                                       |
 
 ## ComponentDoc
 
@@ -130,10 +128,11 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 
 ### parameters
 
-| Name      | Type                      | Description |
-| --------- | ------------------------- | ----------- |
-| `exp*`    | [Symbol](#symbol)         |             |
-| `source*` | [SourceFile](#sourcefile) |             |
+| Name      | Type                                 | Description |
+| --------- | ------------------------------------ | ----------- |
+| `exp*`    | [Symbol](#symbol)                    |             |
+| `source*` | [SourceFile](#sourcefile)            |             |
+| `returns` | string \| undefined \| null \| false |             |
 
 ## StaticPropFilter
 
@@ -160,6 +159,7 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 | ------------ | ----------------------- | ----------- |
 | `props*`     | [PropItem](#propitem)   |             |
 | `component*` | [Component](#component) |             |
+| `returns`    | boolean                 |             |
 
 ## MethodParameter
 

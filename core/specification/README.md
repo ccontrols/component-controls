@@ -3,7 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [run](#run)
+    -   [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)
 
 # Overview
 
@@ -23,19 +23,17 @@ $ npm install @component-controls/specification --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## run
+## RectDocgenTypescriptOptions
 
-run API to generate react-docgen-typescript props information tables.
+a callback to transfor them props table and the options to be passd to react-docgen-typescript.
 
 _defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L6)_
 
-**run**(`options`: undefined | string): number;
+### properties
 
-### parameters
-
-| Name      | Type                | Description                                             |
-| --------- | ------------------- | ------------------------------------------------------- |
-| `options` | undefined \| string | configuration options                                   |
-| `returns` | number              | a callable function of type PropsInfoExtractorFunction  |
+| Name             | Type                                                                                       | Description                           |
+| ---------------- | ------------------------------------------------------------------------------------------ | ------------------------------------- |
+| `transformProps` | undefined \| (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc); | callback to transform the props table |
+| `ParserOptions`  | [ParserOptions](#parseroptions)                                                            |                                       |
 
 <!-- END-TSDOC-TYPESCRIPT -->

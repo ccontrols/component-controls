@@ -17,77 +17,141 @@
 			"children": [
 				{
 					"id": 2,
-					"name": "run",
-					"kind": 64,
-					"kindString": "Function",
+					"name": "RectDocgenTypescriptOptions",
+					"kind": 4194304,
+					"kindString": "Type alias",
 					"flags": {
-						"isExported": true,
-						"isConst": true
+						"isExported": true
 					},
 					"comment": {
-						"shortText": "run API to generate react-docgen-typescript props information tables.",
-						"returns": "a callable function of type PropsInfoExtractorFunction\n"
+						"shortText": "a callback to transfor them props table and the options to be passd to react-docgen-typescript."
 					},
-					"signatures": [
-						{
-							"id": 3,
-							"name": "run",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "run API to generate react-docgen-typescript props information tables.",
-								"returns": "a callable function of type PropsInfoExtractorFunction\n"
-							},
-							"parameters": [
-								{
-									"id": 4,
-									"name": "options",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {
-										"isExported": true,
-										"isOptional": true
-									},
-									"comment": {
-										"shortText": "configuration options"
-									},
-									"type": {
-										"type": "union",
-										"types": [
-											{
-												"type": "intrinsic",
-												"name": "undefined"
-											},
-											{
-												"type": "intrinsic",
-												"name": "string"
-											}
-										]
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "number"
-							}
-						}
-					],
 					"sources": [
 						{
 							"fileName": "test.ts",
 							"line": 6,
-							"character": 16
+							"character": 39
 						}
-					]
+					],
+					"type": {
+						"type": "intersection",
+						"types": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 3,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"children": [
+										{
+											"id": 4,
+											"name": "transformProps",
+											"kind": 32,
+											"kindString": "Variable",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"comment": {
+												"shortText": "callback to transform the props table"
+											},
+											"sources": [
+												{
+													"fileName": "test.ts",
+													"line": 10,
+													"character": 16
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "reflection",
+														"declaration": {
+															"id": 5,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {
+																"isExported": true
+															},
+															"signatures": [
+																{
+																	"id": 6,
+																	"name": "__call",
+																	"kind": 4096,
+																	"kindString": "Call signature",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"parameters": [
+																		{
+																			"id": 7,
+																			"name": "props",
+																			"kind": 32768,
+																			"kindString": "Parameter",
+																			"flags": {
+																				"isExported": true
+																			},
+																			"type": {
+																				"type": "array",
+																				"elementType": {
+																					"type": "reference",
+																					"name": "ComponentDoc"
+																				}
+																			}
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"name": "ComponentDoc"
+																	}
+																}
+															]
+														}
+													}
+												]
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Variables",
+											"kind": 32,
+											"children": [
+												4
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "test.ts",
+											"line": 6,
+											"character": 41
+										}
+									]
+								}
+							},
+							{
+								"type": "reference",
+								"name": "ParserOptions"
+							}
+						]
+					}
 				}
 			],
 			"groups": [
 				{
-					"title": "Functions",
-					"kind": 64,
+					"title": "Type aliases",
+					"kind": 4194304,
 					"children": [
 						2
 					]

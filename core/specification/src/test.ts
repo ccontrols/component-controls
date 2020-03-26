@@ -1,8 +1,11 @@
+import { ParserOptions, ComponentDoc } from 'react-docgen-typescript';
+
 /**
- * run API to generate react-docgen-typescript props information tables.
- * @param options configuration options
- * @returns a callable function of type PropsInfoExtractorFunction
+ * a callback to transfor them props table and the options to be passd to react-docgen-typescript.
  */
-export const run = (options?: string): number => {
-  return parseInt(options || '');
-};
+export type RectDocgenTypescriptOptions = {
+  /**
+   * callback to transform the props table
+   */
+  transformProps?: (props: ComponentDoc[]) => ComponentDoc;
+} & ParserOptions;
