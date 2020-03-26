@@ -48,7 +48,7 @@ addDecorator(
           Object.keys(injectedStoryStore.stories).forEach((id: string) => {
             const story = injectedStoryStore.stories[id];
             if (storyStore._data[id]) {
-              story.storyFn = storyStore._data[id].storyFn;
+              story.renderFn = storyStore._data[id].storyFn;
             }
 
             const { controls } = story;

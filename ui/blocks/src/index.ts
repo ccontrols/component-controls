@@ -4,6 +4,7 @@ export * from './Description';
 export * from './StorySource';
 export * from './ComponentSource';
 export * from './PropsTable';
+export * from './Story';
 export * from './Subtitle';
 export * from './Title';
 export * from './notifications';
