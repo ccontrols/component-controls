@@ -3,7 +3,9 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)
+    -   [NodePath](#nodepath)
+    -   [Scope](#scope)
+    -   [ParserPluginWithOptions](#parserpluginwithoptions)
 
 # Overview
 
@@ -23,17 +25,36 @@ $ npm install @component-controls/specification --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## RectDocgenTypescriptOptions
-
-a callback to transfor them props table and the options to be passd to react-docgen-typescript.
+## NodePath
 
 _defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L6)_
 
+
+
 ### properties
 
-| Name             | Type                                                                                       | Description                           |
-| ---------------- | ------------------------------------------------------------------------------------------ | ------------------------------------- |
-| `transformProps` | undefined \| (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc); | callback to transform the props table |
-| `ParserOptions`  | [ParserOptions](#parseroptions)                                                            |                                       |
+| Name          | Type                  | Description |
+| ------------- | --------------------- | ----------- |
+| `parentPath*` | [NodePath](#nodepath) |             |
+| `scope*`      | [Scope](#scope)       |             |
+
+## Scope
+
+_defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L1)_
+
+
+
+### properties
+
+| Name      | Type                                              | Description |
+| --------- | ------------------------------------------------- | ----------- |
+| `lookup*` | (`name`\*: string): [Scope](#scope) \| undefined; |             |
+| `node*`   | [NodePath](#nodepath)                             |             |
+
+## ParserPluginWithOptions
+
+_defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L11)_
+
+\['decorators', [NodePath](#nodepath)] \| \['pipelineOperator', [Scope](#scope)]
 
 <!-- END-TSDOC-TYPESCRIPT -->

@@ -16,133 +16,244 @@
 			"originalName": "/Users/atanasster/component-controls/core/specification/src/test.ts",
 			"children": [
 				{
-					"id": 2,
-					"name": "RectDocgenTypescriptOptions",
-					"kind": 4194304,
-					"kindString": "Type alias",
+					"id": 8,
+					"name": "NodePath",
+					"kind": 256,
+					"kindString": "Interface",
 					"flags": {
 						"isExported": true
 					},
-					"comment": {
-						"shortText": "a callback to transfor them props table and the options to be passd to react-docgen-typescript."
-					},
+					"children": [
+						{
+							"id": 9,
+							"name": "parentPath",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "test.ts",
+									"line": 7,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 8,
+								"name": "NodePath"
+							}
+						},
+						{
+							"id": 10,
+							"name": "scope",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "test.ts",
+									"line": 8,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 2,
+								"name": "Scope"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								9,
+								10
+							]
+						}
+					],
 					"sources": [
 						{
 							"fileName": "test.ts",
 							"line": 6,
-							"character": 39
+							"character": 25
 						}
-					],
-					"type": {
-						"type": "intersection",
-						"types": [
-							{
+					]
+				},
+				{
+					"id": 2,
+					"name": "Scope",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 3,
+							"name": "lookup",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "test.ts",
+									"line": 2,
+									"character": 8
+								}
+							],
+							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 3,
+									"id": 4,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {
 										"isExported": true
 									},
-									"children": [
+									"signatures": [
 										{
-											"id": 4,
-											"name": "transformProps",
-											"kind": 32,
-											"kindString": "Variable",
+											"id": 5,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
 											"flags": {
-												"isExported": true,
-												"isOptional": true
+												"isExported": true
 											},
-											"comment": {
-												"shortText": "callback to transform the props table"
-											},
-											"sources": [
+											"parameters": [
 												{
-													"fileName": "test.ts",
-													"line": 10,
-													"character": 16
+													"id": 6,
+													"name": "name",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isExported": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
 												}
 											],
 											"type": {
 												"type": "union",
 												"types": [
 													{
-														"type": "intrinsic",
-														"name": "undefined"
+														"type": "reference",
+														"id": 2,
+														"name": "Scope"
 													},
 													{
-														"type": "reflection",
-														"declaration": {
-															"id": 5,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {
-																"isExported": true
-															},
-															"signatures": [
-																{
-																	"id": 6,
-																	"name": "__call",
-																	"kind": 4096,
-																	"kindString": "Call signature",
-																	"flags": {
-																		"isExported": true
-																	},
-																	"parameters": [
-																		{
-																			"id": 7,
-																			"name": "props",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {
-																				"isExported": true
-																			},
-																			"type": {
-																				"type": "array",
-																				"elementType": {
-																					"type": "reference",
-																					"name": "ComponentDoc"
-																				}
-																			}
-																		}
-																	],
-																	"type": {
-																		"type": "reference",
-																		"name": "ComponentDoc"
-																	}
-																}
-															]
-														}
+														"type": "intrinsic",
+														"name": "undefined"
 													}
 												]
 											}
 										}
 									],
-									"groups": [
-										{
-											"title": "Variables",
-											"kind": 32,
-											"children": [
-												4
-											]
-										}
-									],
 									"sources": [
 										{
 											"fileName": "test.ts",
-											"line": 6,
-											"character": 41
+											"line": 2,
+											"character": 9
 										}
 									]
 								}
+							}
+						},
+						{
+							"id": 7,
+							"name": "node",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "test.ts",
+									"line": 3,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 8,
+								"name": "NodePath"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								3,
+								7
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "test.ts",
+							"line": 1,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "ParserPluginWithOptions",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "test.ts",
+							"line": 11,
+							"character": 35
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "stringLiteral",
+										"value": "decorators"
+									},
+									{
+										"type": "reference",
+										"id": 8,
+										"name": "NodePath"
+									}
+								]
 							},
 							{
-								"type": "reference",
-								"name": "ParserOptions"
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "stringLiteral",
+										"value": "pipelineOperator"
+									},
+									{
+										"type": "reference",
+										"id": 2,
+										"name": "Scope"
+									}
+								]
 							}
 						]
 					}
@@ -150,10 +261,18 @@
 			],
 			"groups": [
 				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						8,
+						2
+					]
+				},
+				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						2
+						11
 					]
 				}
 			],

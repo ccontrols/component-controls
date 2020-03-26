@@ -21,6 +21,7 @@ app.bootstrap({
 
 export const extractTSDoc = (files: string[], entries: string[]): Node[] | undefined => {
   const unresolvedTypeNames: string[] = [];
+  const addedTypeNames: string[] = [];
   const repoNames: { [key: string]: { repo?: string, filePath?: string, packageName?: string, relativePath?: string} } = {};
 
   const createPropsRpw = (name: string, isOptional: boolean, type: any, comment: string): NodeChildren => {
@@ -92,12 +93,9 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       type: 'paragraph',
       children: [],
     }
+    addedTypeNames.push(node.name);
     result.push(declaration);
     if (node.kindString !== 'Type literal') {
-      if (unresolvedTypeNames.indexOf(node.name) > -1) {
-        // unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
-      }
-
       declaration.children.push({
         type: 'strong',
         children: [{
@@ -177,10 +175,8 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       type: 'paragraph',
       children: [],
     }
+    addedTypeNames.push(node.name);
     result.push(declaration);
-    if (unresolvedTypeNames.indexOf(node.name) > -1) {
-      // unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
-    }
 
     if (node.extendedTypes && node.extendedTypes.length) {
 
@@ -345,14 +341,45 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }];
       }  
       case 'union': {
-        return p.types.reduce((acc: Node[], t: any, idx: number) =>  {
-          const r = [...acc,...extractPropType(t)];
-          if (idx < p.types.length - 1) {
-            r.push({ type: 'text', value: ' | '});
+        return  [{
+          type: 'paragraph',
+          children: p.types.reduce((acc: Node[], t: any, idx: number) =>  {
+            const r = [...acc,...extractPropType(t)];
+            if (idx < p.types.length - 1) {
+              r.push({ type: 'text', value: ' | '});
+            }
+            return r;
+          }, [])
           }
-          return r;
-        }, []);
+        ];
       }
+
+      case 'tuple': {
+        return [
+          { type: 'paragraph',
+          children:[
+            {  type: 'text', value: '['},
+            ...p.elements.reduce((acc: Node[], t: any, idx: number) =>  {
+                const r = extractPropType(t);
+                if (idx < p.elements.length - 1) {
+                  r.push({
+                    type: 'text',
+                    value:', '
+                  })
+                }
+                return [...acc,...r];
+              }, []),
+            {  type: 'text', value: ']'},
+          ]}  
+        ]  
+      }
+      case 'stringLiteral': {
+        return [{
+          type: 'text',
+          value: `'${p.value}'`,
+        }];
+      }
+
       case 'intrinsic': {
         return [{
           type: 'text',
@@ -360,6 +387,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }];
       }
       default:
+        console.log('unknown type: ', p.type)
         return [];
     }  
   }
@@ -396,6 +424,10 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     
     if (repoNames[fileName]) {
       const { repo, relativePath, packageName } = repoNames[fileName];
+      if (!repo) {
+        console.log(fileName, repoNames);
+        
+      }
       const source = node.sources && node.sources.length && node.sources[0];
       const { line }: { fileName?: string, line?: number, character?: number } = source || {};
       let sourceLocation = fileName.includes('node_modules') ? repo : `${repo}/${relativePath}#L${line}`;
@@ -466,23 +498,25 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       }
       while (unresolvedTypeNames.length > 0) {
         const propName = unresolvedTypeNames[0];
-        let propNode;
-        let fileName;
-        for (const child of content.children) {
-          if (child.children) {
-            propNode = child.children.find((c: any) => c.name === propName);
-            if (propNode) {
-              fileName = child.originalName;
-              break;
-            }
-          }  
-        };
-        if (propNode) {
-          const nodes = extractTSType(propNode, fileName);
-          result.push.apply(result, nodes);
-        } else {
-          console.log('could not find external reference: ', propName);
-        }
+        if (addedTypeNames.indexOf(propName) === -1) {
+          let propNode;
+          let fileName;
+          for (const child of content.children) {
+            if (child.children) {
+              propNode = child.children.find((c: any) => c.name === propName);
+              if (propNode) {
+                fileName = child.originalName;
+                break;
+              }
+            }  
+          };
+          if (propNode) {
+            const nodes = extractTSType(propNode, fileName);
+            result.push.apply(result, nodes);
+          } else {
+            console.log('could not find external reference: ', propName);
+          }
+        }  
         unresolvedTypeNames.splice(0, 1);
       }
       // console.log(JSON.stringify(result, null, 2));

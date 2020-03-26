@@ -1,11 +1,13 @@
-import { ParserOptions, ComponentDoc } from 'react-docgen-typescript';
+export interface Scope {
+  lookup: (name: string) => Scope | undefined;
+  node: NodePath;
+}
 
-/**
- * a callback to transfor them props table and the options to be passd to react-docgen-typescript.
- */
-export type RectDocgenTypescriptOptions = {
-  /**
-   * callback to transform the props table
-   */
-  transformProps?: (props: ComponentDoc[]) => ComponentDoc;
-} & ParserOptions;
+export interface NodePath {
+  parentPath: NodePath;
+  scope: Scope;
+}
+
+export type ParserPluginWithOptions =
+  | ['decorators', NodePath]
+  | ['pipelineOperator', Scope];

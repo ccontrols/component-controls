@@ -1,0 +1,3081 @@
+{
+	"id": 0,
+	"name": "@babel/parser",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "\"node_modules/@babel/parser/typings/babel-parser.d\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/node_modules/@babel/parser/typings/babel-parser.d.ts",
+			"children": [
+				{
+					"id": 16,
+					"name": "DecoratorsPluginOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 17,
+							"name": "decoratorsBeforeExport",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 137,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								17
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 136,
+							"character": 40
+						}
+					]
+				},
+				{
+					"id": 20,
+					"name": "FlowPluginOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 21,
+							"name": "all",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 145,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								21
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 144,
+							"character": 34
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "ParserOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 4,
+							"name": "allowAwaitOutsideFunction",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, await use is not allowed outside of an async function.\nSet this to true to accept such code."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 29,
+									"character": 29
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 3,
+							"name": "allowImportExportEverywhere",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, import and export declarations can only appear at a program's top level.\nSetting this option to true allows them anywhere where a statement is allowed."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 23,
+									"character": 31
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 5,
+							"name": "allowReturnOutsideFunction",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, a return statement at the top level raises an error.\nSet this to true to accept such code."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 35,
+									"character": 30
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 6,
+							"name": "allowSuperOutsideMethod",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 37,
+									"character": 27
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 7,
+							"name": "allowUndeclaredExports",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, exported identifiers must refer to a declared variable.\nSet this to true to allow export statements to reference undeclared variables."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 43,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 15,
+							"name": "createParenthesizedExpressions",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, the parser adds information about parentheses by setting\n`extra.parenthesized` to `true` as needed.\nWhen this option is `true` the parser creates `ParenthesizedExpression`\nAST nodes instead of using the `extra` property."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 94,
+									"character": 34
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 11,
+							"name": "plugins",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Array containing the plugins that you want to enable."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 70,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 30,
+									"name": "ParserPlugin"
+								}
+							}
+						},
+						{
+							"id": 13,
+							"name": "ranges",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Adds a ranges property to each node: [node.start, node.end]"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 81,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 9,
+							"name": "sourceFilename",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Correlate output AST nodes with their source filename.\nUseful when generating code and source maps from the ASTs of multiple input files."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 58,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 8,
+							"name": "sourceType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Indicate the mode the code should be parsed in.\nCan be one of \"script\", \"module\", or \"unambiguous\". Defaults to \"script\".\n\"unambiguous\" will make @babel/parser attempt to guess, based on the presence\nof ES6 import or export statements.\nFiles with ES6 imports and exports are considered \"module\" and are otherwise \"script\"."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 52,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "stringLiteral",
+										"value": "script"
+									},
+									{
+										"type": "stringLiteral",
+										"value": "module"
+									},
+									{
+										"type": "stringLiteral",
+										"value": "unambiguous"
+									}
+								]
+							}
+						},
+						{
+							"id": 10,
+							"name": "startLine",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "By default, the first line of code parsed is treated as line 1.\nYou can provide a line number to alternatively start with.\nUseful for integration with other source tools."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 65,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 12,
+							"name": "strictMode",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Should the parser work in strict mode.\nDefaults to true if sourceType === 'module'. Otherwise, false."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 76,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 14,
+							"name": "tokens",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Adds all parsed tokens to a tokens property on the File node."
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 86,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								4,
+								3,
+								5,
+								6,
+								7,
+								15,
+								11,
+								13,
+								9,
+								8,
+								10,
+								12,
+								14
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 18,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 18,
+					"name": "PipelineOperatorPluginOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 19,
+							"name": "proposal",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+									"line": 141,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "stringLiteral",
+										"value": "minimal"
+									},
+									{
+										"type": "stringLiteral",
+										"value": "smart"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								19
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 140,
+							"character": 46
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "ParserPlugin",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 97,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "stringLiteral",
+								"value": "asyncGenerators"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "bigInt"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "classPrivateMethods"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "classPrivateProperties"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "classProperties"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "decorators"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "decorators-legacy"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "doExpressions"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "dynamicImport"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "estree"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "exportDefaultFrom"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "exportNamespaceFrom"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "flow"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "flowComments"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "functionBind"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "functionSent"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "importMeta"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "jsx"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "logicalAssignment"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "nullishCoalescingOperator"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "numericSeparator"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "objectRestSpread"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "optionalCatchBinding"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "optionalChaining"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "partialApplication"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "pipelineOperator"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "placeholders"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "throwExpressions"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "topLevelAwait"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "typescript"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "v8intrinsic"
+							},
+							{
+								"type": "reference",
+								"id": 31,
+								"name": "ParserPluginWithOptions"
+							}
+						]
+					}
+				},
+				{
+					"id": 31,
+					"name": "ParserPluginWithOptions",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 131,
+							"character": 35
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "stringLiteral",
+										"value": "decorators"
+									},
+									{
+										"type": "reference",
+										"id": 16,
+										"name": "DecoratorsPluginOptions"
+									}
+								]
+							},
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "stringLiteral",
+										"value": "pipelineOperator"
+									},
+									{
+										"type": "reference",
+										"id": 18,
+										"name": "PipelineOperatorPluginOptions"
+									}
+								]
+							},
+							{
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "stringLiteral",
+										"value": "flow"
+									},
+									{
+										"type": "reference",
+										"id": 20,
+										"name": "FlowPluginOptions"
+									}
+								]
+							}
+						]
+					}
+				},
+				{
+					"id": 22,
+					"name": "parse",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 23,
+							"name": "parse",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Parse the provided code as an entire ECMAScript program."
+							},
+							"parameters": [
+								{
+									"id": 24,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 25,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "File"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 11,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "parseExpression",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 27,
+							"name": "parseExpression",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Parse the provided code as a single expression."
+							},
+							"parameters": [
+								{
+									"id": 28,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 29,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "ParserOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "ArrayExpression"
+									},
+									{
+										"type": "reference",
+										"name": "AssignmentExpression"
+									},
+									{
+										"type": "reference",
+										"name": "BinaryExpression"
+									},
+									{
+										"type": "reference",
+										"name": "CallExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ConditionalExpression"
+									},
+									{
+										"type": "reference",
+										"name": "FunctionExpression"
+									},
+									{
+										"type": "reference",
+										"name": "Identifier"
+									},
+									{
+										"type": "reference",
+										"name": "StringLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "NumericLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "NullLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "BooleanLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "RegExpLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "LogicalExpression"
+									},
+									{
+										"type": "reference",
+										"name": "MemberExpression"
+									},
+									{
+										"type": "reference",
+										"name": "NewExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ObjectExpression"
+									},
+									{
+										"type": "reference",
+										"name": "SequenceExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ParenthesizedExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ThisExpression"
+									},
+									{
+										"type": "reference",
+										"name": "UnaryExpression"
+									},
+									{
+										"type": "reference",
+										"name": "UpdateExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ArrowFunctionExpression"
+									},
+									{
+										"type": "reference",
+										"name": "ClassExpression"
+									},
+									{
+										"type": "reference",
+										"name": "MetaProperty"
+									},
+									{
+										"type": "reference",
+										"name": "Super"
+									},
+									{
+										"type": "reference",
+										"name": "TaggedTemplateExpression"
+									},
+									{
+										"type": "reference",
+										"name": "TemplateLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "YieldExpression"
+									},
+									{
+										"type": "reference",
+										"name": "TypeCastExpression"
+									},
+									{
+										"type": "reference",
+										"name": "JSXElement"
+									},
+									{
+										"type": "reference",
+										"name": "JSXFragment"
+									},
+									{
+										"type": "reference",
+										"name": "AwaitExpression"
+									},
+									{
+										"type": "reference",
+										"name": "BindExpression"
+									},
+									{
+										"type": "reference",
+										"name": "OptionalMemberExpression"
+									},
+									{
+										"type": "reference",
+										"name": "PipelinePrimaryTopicReference"
+									},
+									{
+										"type": "reference",
+										"name": "OptionalCallExpression"
+									},
+									{
+										"type": "reference",
+										"name": "Import"
+									},
+									{
+										"type": "reference",
+										"name": "DoExpression"
+									},
+									{
+										"type": "reference",
+										"name": "BigIntLiteral"
+									},
+									{
+										"type": "reference",
+										"name": "TSAsExpression"
+									},
+									{
+										"type": "reference",
+										"name": "TSTypeAssertion"
+									},
+									{
+										"type": "reference",
+										"name": "TSNonNullExpression"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+							"line": 16,
+							"character": 31
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						16,
+						20,
+						2,
+						18
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						30,
+						31
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						22,
+						26
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "node_modules/@babel/parser/typings/babel-parser.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "\"props-info/react-docgen/src/types\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/props-info/react-docgen/src/types.ts",
+			"children": [
+				{
+					"id": 55,
+					"name": "NodePath",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 57,
+							"name": "node",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 15,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 100,
+								"name": "ASTNode"
+							}
+						},
+						{
+							"id": 58,
+							"name": "parent",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 16,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 55,
+								"name": "NodePath"
+							}
+						},
+						{
+							"id": 59,
+							"name": "parentPath",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 17,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 55,
+								"name": "NodePath"
+							}
+						},
+						{
+							"id": 60,
+							"name": "scope",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 18,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 33,
+								"name": "Scope"
+							}
+						},
+						{
+							"id": 56,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 14,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 100,
+										"name": "ASTNode"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 100,
+											"name": "ASTNode"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 64,
+							"name": "each",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 65,
+									"name": "each",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 66,
+											"name": "f",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 67,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"signatures": [
+														{
+															"id": 68,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExported": true
+															},
+															"parameters": [
+																{
+																	"id": 69,
+																	"name": "p",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "reference",
+																		"id": 55,
+																		"name": "NodePath"
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 20,
+															"character": 9
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 20,
+									"character": 6
+								}
+							]
+						},
+						{
+							"id": 77,
+							"name": "filter",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 78,
+									"name": "filter",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 79,
+											"name": "f",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 80,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"signatures": [
+														{
+															"id": 81,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExported": true
+															},
+															"parameters": [
+																{
+																	"id": 82,
+																	"name": "p",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "reference",
+																		"id": 55,
+																		"name": "NodePath"
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "boolean"
+															}
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 22,
+															"character": 11
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 55,
+											"name": "NodePath"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 22,
+									"character": 8
+								}
+							]
+						},
+						{
+							"id": 61,
+							"name": "get",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 62,
+									"name": "get",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 63,
+											"name": "x",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "union",
+													"types": [
+														{
+															"type": "intrinsic",
+															"name": "string"
+														},
+														{
+															"type": "intrinsic",
+															"name": "number"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 55,
+										"name": "NodePath"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 19,
+									"character": 5
+								}
+							]
+						},
+						{
+							"id": 70,
+							"name": "map",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 71,
+									"name": "map",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"typeParameter": [
+										{
+											"id": 72,
+											"name": "T",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExported": true
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 73,
+											"name": "f",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 74,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"signatures": [
+														{
+															"id": 75,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExported": true
+															},
+															"parameters": [
+																{
+																	"id": 76,
+																	"name": "p",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "reference",
+																		"id": 55,
+																		"name": "NodePath"
+																	}
+																}
+															],
+															"type": {
+																"type": "typeParameter",
+																"name": "T"
+															}
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 21,
+															"character": 11
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "typeParameter",
+											"name": "T"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 21,
+									"character": 5
+								}
+							]
+						},
+						{
+							"id": 83,
+							"name": "push",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 84,
+									"name": "push",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 85,
+											"name": "node",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 100,
+												"name": "ASTNode"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 23,
+									"character": 6
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								57,
+								58,
+								59,
+								60,
+								56
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								64,
+								77,
+								61,
+								70,
+								83
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 13,
+							"character": 25
+						}
+					]
+				},
+				{
+					"id": 86,
+					"name": "OptionsType",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 89,
+							"name": "babelrc",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 35,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 90,
+							"name": "babelrcRoots",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 36,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 93,
+							"name": "configFile",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 39,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 88,
+							"name": "cwd",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 34,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 94,
+							"name": "envName",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 40,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 87,
+							"name": "filename",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 33,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 95,
+							"name": "parserOptions",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 41,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 2,
+								"name": "ParserOptions"
+							}
+						},
+						{
+							"id": 91,
+							"name": "root",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 37,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 92,
+							"name": "rootMode",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 38,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								89,
+								90,
+								93,
+								88,
+								94,
+								87,
+								95,
+								91,
+								92
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 32,
+							"character": 28
+						}
+					]
+				},
+				{
+					"id": 96,
+					"name": "RectDocgenOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 98,
+							"name": "handlers",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 51,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 112,
+									"name": "HandlerType"
+								}
+							}
+						},
+						{
+							"id": 99,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 52,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 86,
+								"name": "OptionsType"
+							}
+						},
+						{
+							"id": 97,
+							"name": "resolver",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 50,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 102,
+								"name": "ResolverType"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								98,
+								99,
+								97
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 49,
+							"character": 34
+						}
+					]
+				},
+				{
+					"id": 33,
+					"name": "Scope",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 42,
+							"name": "getBindings",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 8,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 43,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"signatures": [
+										{
+											"id": 44,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 45,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"indexSignature": [
+														{
+															"id": 46,
+															"name": "__index",
+															"kind": 8192,
+															"kindString": "Index signature",
+															"flags": {
+																"isExported": true
+															},
+															"parameters": [
+																{
+																	"id": 47,
+																	"name": "key",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															],
+															"type": {
+																"type": "array",
+																"elementType": {
+																	"type": "reference",
+																	"id": 55,
+																	"name": "NodePath"
+																}
+															}
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 8,
+															"character": 20
+														}
+													]
+												}
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "props-info/react-docgen/src/types.ts",
+											"line": 8,
+											"character": 14
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 48,
+							"name": "getTypes",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 9,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 49,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"signatures": [
+										{
+											"id": 50,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 51,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"indexSignature": [
+														{
+															"id": 52,
+															"name": "__index",
+															"kind": 8192,
+															"kindString": "Index signature",
+															"flags": {
+																"isExported": true
+															},
+															"parameters": [
+																{
+																	"id": 53,
+																	"name": "key",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															],
+															"type": {
+																"type": "array",
+																"elementType": {
+																	"type": "reference",
+																	"id": 55,
+																	"name": "NodePath"
+																}
+															}
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 9,
+															"character": 17
+														}
+													]
+												}
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "props-info/react-docgen/src/types.ts",
+											"line": 9,
+											"character": 11
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 34,
+							"name": "lookup",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 6,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 35,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"signatures": [
+										{
+											"id": 36,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExported": true
+											},
+											"parameters": [
+												{
+													"id": 37,
+													"name": "name",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isExported": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "reference",
+														"id": 33,
+														"name": "Scope"
+													},
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "props-info/react-docgen/src/types.ts",
+											"line": 6,
+											"character": 9
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 38,
+							"name": "lookupType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 7,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 39,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"signatures": [
+										{
+											"id": 40,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExported": true
+											},
+											"parameters": [
+												{
+													"id": 41,
+													"name": "name",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isExported": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "reference",
+														"id": 33,
+														"name": "Scope"
+													},
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "props-info/react-docgen/src/types.ts",
+											"line": 7,
+											"character": 13
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 54,
+							"name": "node",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 10,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 55,
+								"name": "NodePath"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								42,
+								48,
+								34,
+								38,
+								54
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 5,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 100,
+					"name": "ASTNode",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 3,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					}
+				},
+				{
+					"id": 101,
+					"name": "Documentation",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 25,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 112,
+					"name": "HandlerType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 43,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 113,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 114,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 115,
+											"name": "documentation",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 101,
+												"name": "Documentation"
+											}
+										},
+										{
+											"id": 116,
+											"name": "definition",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 55,
+												"name": "NodePath"
+											}
+										},
+										{
+											"id": 117,
+											"name": "parser",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 118,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"children": [
+														{
+															"id": 119,
+															"name": "parse",
+															"kind": 32,
+															"kindString": "Variable",
+															"flags": {
+																"isExported": true
+															},
+															"sources": [
+																{
+																	"fileName": "props-info/react-docgen/src/types.ts",
+																	"line": 46,
+																	"character": 17
+																}
+															],
+															"type": {
+																"type": "reflection",
+																"declaration": {
+																	"id": 120,
+																	"name": "__type",
+																	"kind": 65536,
+																	"kindString": "Type literal",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"signatures": [
+																		{
+																			"id": 121,
+																			"name": "__call",
+																			"kind": 4096,
+																			"kindString": "Call signature",
+																			"flags": {
+																				"isExported": true
+																			},
+																			"parameters": [
+																				{
+																					"id": 122,
+																					"name": "source",
+																					"kind": 32768,
+																					"kindString": "Parameter",
+																					"flags": {
+																						"isExported": true
+																					},
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				}
+																			],
+																			"type": {
+																				"type": "reference",
+																				"id": 100,
+																				"name": "ASTNode"
+																			}
+																		}
+																	],
+																	"sources": [
+																		{
+																			"fileName": "props-info/react-docgen/src/types.ts",
+																			"line": 46,
+																			"character": 18
+																		}
+																	]
+																}
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Variables",
+															"kind": 32,
+															"children": [
+																119
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 46,
+															"character": 9
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 43,
+									"character": 25
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 102,
+					"name": "ResolverType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/types.ts",
+							"line": 27,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 103,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 104,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 105,
+											"name": "ast",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reference",
+												"id": 100,
+												"name": "ASTNode"
+											}
+										},
+										{
+											"id": 106,
+											"name": "parser",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 107,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
+													},
+													"children": [
+														{
+															"id": 108,
+															"name": "parse",
+															"kind": 32,
+															"kindString": "Variable",
+															"flags": {
+																"isExported": true
+															},
+															"sources": [
+																{
+																	"fileName": "props-info/react-docgen/src/types.ts",
+																	"line": 29,
+																	"character": 17
+																}
+															],
+															"type": {
+																"type": "reflection",
+																"declaration": {
+																	"id": 109,
+																	"name": "__type",
+																	"kind": 65536,
+																	"kindString": "Type literal",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"signatures": [
+																		{
+																			"id": 110,
+																			"name": "__call",
+																			"kind": 4096,
+																			"kindString": "Call signature",
+																			"flags": {
+																				"isExported": true
+																			},
+																			"parameters": [
+																				{
+																					"id": 111,
+																					"name": "srource",
+																					"kind": 32768,
+																					"kindString": "Parameter",
+																					"flags": {
+																						"isExported": true
+																					},
+																					"type": {
+																						"type": "intrinsic",
+																						"name": "string"
+																					}
+																				}
+																			],
+																			"type": {
+																				"type": "reference",
+																				"id": 100,
+																				"name": "ASTNode"
+																			}
+																		}
+																	],
+																	"sources": [
+																		{
+																			"fileName": "props-info/react-docgen/src/types.ts",
+																			"line": 29,
+																			"character": 18
+																		}
+																	]
+																}
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Variables",
+															"kind": 32,
+															"children": [
+																108
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen/src/types.ts",
+															"line": 29,
+															"character": 9
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 55,
+												"name": "NodePath"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 55,
+													"name": "NodePath"
+												}
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "props-info/react-docgen/src/types.ts",
+									"line": 27,
+									"character": 26
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						55,
+						86,
+						96,
+						33
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						100,
+						101,
+						112,
+						102
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "props-info/react-docgen/src/types.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				32
+			]
+		}
+	]
+}
