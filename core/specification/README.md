@@ -3,7 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [MethodParameterType](#methodparametertype)
+    -   [run](#run)
 
 # Overview
 
@@ -23,16 +23,19 @@ $ npm install @component-controls/specification --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## MethodParameterType
+## run
 
-_defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L1)_
+run API to generate react-docgen-typescript props information tables.
 
+_defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L6)_
 
+**run**(`options`: undefined | string): number;
 
-### properties
+### parameters
 
-| Name    | Type   | Description |
-| ------- | ------ | ----------- |
-| `name*` | string |             |
+| Name      | Type                | Description                                             |
+| --------- | ------------------- | ------------------------------------------------------- |
+| `options` | undefined \| string | configuration options                                   |
+| `returns` | number              | a callable function of type PropsInfoExtractorFunction  |
 
 <!-- END-TSDOC-TYPESCRIPT -->

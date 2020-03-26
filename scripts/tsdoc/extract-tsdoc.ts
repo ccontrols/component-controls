@@ -22,10 +22,25 @@ app.bootstrap({
 export const extractTSDoc = (files: string[], entries: string[]): Node[] | undefined => {
   const unresolvedTypeNames: string[] = [];
   const repoNames: { [key: string]: { repo?: string, filePath?: string, packageName?: string, relativePath?: string} } = {};
-  const pushPropTable = (nodes: Node[], title: string) => {
-    const result: Node[] = [];
+
+  const createPropsRpw = (name: string, isOptional: boolean, type: any, comment: string): NodeChildren => {
+    return { type : 'tableRow' , children: [
+      { type: 'tableCell', children: [ { type: 'inlineCode', value: `${name}${isOptional ? '': '*'}`}]},
+      {
+        type: 'tableCell',
+        children: type,
+      },
+      {
+        type: 'tableCell',
+        children: [{ type: 'text', value: comment }],
+      }
+    ]}
+  }
+  const extractPropTable = (nodes: Node[], title: string): { propsTable: Node[], table?: NodeChildren} => {
+    const propsTable: Node[] = [];
+    let table: NodeChildren | undefined;
     if (nodes) {
-      result.push({
+      propsTable.push({
         type: 'paragraph',
         children: [{
           type: 'heading',
@@ -36,7 +51,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
           }]
         }]  
       })
-      const table: NodeChildren = {
+      table = {
         type: 'table',
         children: [
           { type: 'tableRow', children: [
@@ -46,26 +61,21 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
           ]}
         ]
       }
-      result.push({
+      propsTable.push({
         type: 'paragraph',
         children: [table]
       });  
       nodes.forEach((child: any) => {
-        const tableRow: NodeChildren = { type : 'tableRow' , children: [
-          { type: 'tableCell', children: [ { type: 'inlineCode', value: `${child.name}${child.flags.isOptional ? '': '*'}`}]}
-        ]}
-        tableRow.children.push({
-          type: 'tableCell',
-          children: child.type ? extractPropType(child.type) : extractFunction(child, false),
-        });
-        tableRow.children.push({
-          type: 'tableCell',
-          children: [{ type: 'text', value: child.comment ? child.comment.shortText : ''}],
-        });
+        const tableRow: NodeChildren = createPropsRpw(
+          child.name,
+          child.flags.isOptional,
+          child.type ? extractPropType(child.type) : extractFunction(child, false),
+          child.comment ? child.comment.shortText : '');
+        //@ts-ignore
         table.children.push(tableRow);
       });  
-    }      
-    return result;
+    }
+    return { propsTable, table };
   }
   const extractFunction = (node: any, extractTable: boolean = true): Node[] => {
     const result: Node[] = [];
@@ -137,7 +147,15 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
           value: ';'
         })
         if (extractTable) {
-          result.push.apply(result, pushPropTable(signature.parameters, 'parameters'));
+          const { propsTable, table } = extractPropTable(signature.parameters, 'parameters');
+          if (table && signature.type) {
+            table.children.push(createPropsRpw(
+              'returns',
+              true,
+              extractPropType(signature.type),
+              signature.comment ? signature.comment.returns : ''))
+          }
+          result.push.apply(result, propsTable);
         }  
       }
       return result;
@@ -205,7 +223,8 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }
       });
     }
-    result.push.apply(result, pushPropTable(node.children || node.type, 'properties'));
+    const { propsTable } = extractPropTable(node.children || node.type, 'properties');
+    result.push.apply(result, propsTable);
     return result;
   }
 
