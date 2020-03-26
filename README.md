@@ -78,6 +78,8 @@ Parsing a source file will generate the following information:
 
 Webpack loader for component controls instrumentation
 
+Webpack loader that injects the data collected by [@component-controls/instrument](https://github.com/ccontrols/component-controls/tree/master/core/instrument).
+
 <!-- END-PACKAGE-SECTION -->
 
 # UI packages

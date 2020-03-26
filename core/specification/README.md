@@ -120,7 +120,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | Name             | Type                                    | Description                                                                                                                                |
 | ---------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `component`      | string \| object                        | id for component associated with the stories file                                                                                          |
-| `components*`    |                                         | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx' |
+| `components*`    | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx' |
 | `controls`       | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                      |
 | `excludeStories` | string\[] \| [RegExp](#regexp)          | list of stories to exclude from the stories file can also use regexp match                                                                 |
 | `fileName`       | string                                  | file name of the file of stories                                                                                                           |
@@ -142,11 +142,11 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ### properties
 
-| Name          | Type | Description |
-| ------------- | ---- | ----------- |
-| `components*` |      |             |
-| `kinds*`      |      |             |
-| `stories*`    |      |             |
+| Name          | Type                                                   | Description |
+| ------------- | ------------------------------------------------------ | ----------- |
+| `components*` | \[fileName: string]: [StoryComponent](#storycomponent) |             |
+| `kinds*`      | \[title: string]: [StoriesKind](#storieskind)          |             |
+| `stories*`    | \[id: string]: [Story](#story)                         |             |
 
 ## Story
 
@@ -158,20 +158,20 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ### properties
 
-| Name            | Type                                                | Description                                                                                 |
-| --------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `arguments`     | [StoryArguments](#storyarguments)                   | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
-| `component`     | string \| object                                    | id for component associated with the story                                                  |
-| `controls`      | [ComponentControls](#componentcontrols)             | object of key/value pairs specifying the controls for the story                             |
-| `id`            | string                                              | csf id of the story                                                                         |
-| `kind`          | string                                              | title of the file/group of stories                                                          |
-| `loc`           | [CodeLocation](#codelocation)                       | location in the source file of the story definition                                         |
-| `name*`         | string                                              | name of the Story.                                                                          |
-| `parameters`    | [StoryParameters](#storyparameters)                 | configuration parameters passed to the story - either CSF or MDX                            |
-| `renderFn`      | **function** (`controls`\*: **context**: any): any; | render function for the story                                                               |
-| `source`        | string                                              | the source code of the story, extracted byt the AST instrumenting loaders                   |
-| `subcomponents` |                                                     | multiple components option                                                                  |
-| `subtitle`      | string                                              | optional story subtitle property                                                            |
+| Name            | Type                                                   | Description                                                                                 |
+| --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `arguments`     | [StoryArguments](#storyarguments)                      | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
+| `component`     | string \| object                                       | id for component associated with the story                                                  |
+| `controls`      | [ComponentControls](#componentcontrols)                | object of key/value pairs specifying the controls for the story                             |
+| `id`            | string                                                 | csf id of the story                                                                         |
+| `kind`          | string                                                 | title of the file/group of stories                                                          |
+| `loc`           | [CodeLocation](#codelocation)                          | location in the source file of the story definition                                         |
+| `name*`         | string                                                 | name of the Story.                                                                          |
+| `parameters`    | [StoryParameters](#storyparameters)                    | configuration parameters passed to the story - either CSF or MDX                            |
+| `renderFn`      | **function** (`controls`\*: \[key: string]: any): any; | render function for the story                                                               |
+| `source`        | string                                                 | the source code of the story, extracted byt the AST instrumenting loaders                   |
+| `subcomponents` | \[key: string]: string \| object                       | multiple components option                                                                  |
+| `subtitle`      | string                                                 | optional story subtitle property                                                            |
 
 ## StoryArgument
 
@@ -340,10 +340,10 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ### properties
 
-| Name      | Type   | Description                                                                                                                    |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `name*`   | string | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
-| `options` |        | options to be passe to the random data generators example {  min: 10, max: 20 }                                                |
+| Name      | Type                | Description                                                                                                                    |
+| --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `name*`   | string              | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
+| `options` | \[key: string]: any | options to be passe to the random data generators example {  min: 10, max: 20 }                                                |
 
 ## ComponentControlDate
 
@@ -504,7 +504,7 @@ value/label pairs or array of OptionsValueType
 
 _defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L274)_
 
- \| OptionsValueType&lt;>\[]
+\[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 

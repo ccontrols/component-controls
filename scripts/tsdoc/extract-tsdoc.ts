@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import { Application } from 'typedoc';
-import { ModuleKind, ScriptTarget} from 'typescript';
+import { ModuleKind, ScriptTarget } from 'typescript';
 import { getRepoPath } from '../package-info';
 
 import { Node, NodeChildren } from '../types';
@@ -64,8 +64,8 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       propsTable.push({
         type: 'paragraph',
         children: [table]
-      });  
-      nodes.forEach((child: any) => {
+      });
+      nodes.forEach && nodes.forEach((child: any) => {
         if (child.declaration) {
           //@ts-ignore
           table.children.push.apply(table.children, child.declaration.children.map((d: any) => createPropsRpw(
@@ -82,7 +82,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
           //@ts-ignore
           table.children.push(tableRow);
           }  
-      });  
+      });
     }
     return { propsTable, table };
   }
@@ -298,6 +298,38 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
 
           }  
         }
+        if (p.declaration.indexSignature && p.declaration.indexSignature.length) {
+          const signature = p.declaration.indexSignature[0];
+          
+          const children = signature.parameters.reduce((acc: any, p: any) => {
+            const r = [
+              ...acc,
+              { type: 'text', value: p.name },
+              { type: 'text', value: ': '},
+              ...extractPropType(p.type)
+            ];
+            return r;  
+          }, []);
+          // console.log(children);
+          return [{
+            type: 'text',
+            value: '['
+          },
+          ...children,
+          {
+            type: 'text',
+            value: ']'
+          },
+          {
+            type: 'text',
+            value: ': '
+          }, 
+          {
+            type: 'paragraph',
+            children:  extractPropType(signature.type)
+          }, 
+          ]
+        }
         if (!p.declaration.children) {
           return [];
         }
@@ -497,7 +529,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       for (const entry of entries) {
         
         const main = content.children.find((child: any) => child.originalName === entry);
-        if (main) {
+        if (main && main.children) {
           main.children.forEach((child: any) => {
             const nodes = extractTSType(child, main.originalName);
             result.push.apply(result, nodes);

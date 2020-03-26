@@ -184,8 +184,8 @@ _defined in [@component-controls/react-docgen-info/src/types.ts](https://github.
 
 | Name           | Type                                                           | Description |
 | -------------- | -------------------------------------------------------------- | ----------- |
-| `getBindings*` | **function** (): ;                                             |             |
-| `getTypes*`    | **function** (): ;                                             |             |
+| `getBindings*` | **function** (): \[key: string]: [NodePath](#nodepath)\[];     |             |
+| `getTypes*`    | **function** (): \[key: string]: [NodePath](#nodepath)\[];     |             |
 | `lookup*`      | **function** (`name`\*: string): [Scope](#scope) \| undefined; |             |
 | `lookupType*`  | **function** (`name`\*: string): [Scope](#scope) \| undefined; |             |
 | `node*`        | [NodePath](#nodepath)                                          |             |

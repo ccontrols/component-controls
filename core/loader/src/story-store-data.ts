@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/camelcase */
 import { StoriesStore, Story } from '@component-controls/specification';
-import deepMerge from 'deepmerge';
+import * as deepMerge from 'deepmerge';
 import { toId, storyNameFromExport } from '@storybook/csf';
 const injectedStories = '__STORIES_HASH__INJECTED_STORIES__';
 
