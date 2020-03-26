@@ -41,21 +41,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -102,21 +89,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -166,21 +140,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -203,21 +164,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -240,21 +188,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -274,21 +209,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -311,21 +233,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -348,21 +257,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -413,21 +309,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -450,17 +333,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "string"
-									}
-								]
+								"type": "intrinsic",
+								"name": "string"
 							}
 						},
 						{
@@ -520,17 +394,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "number"
-									}
-								]
+								"type": "intrinsic",
+								"name": "number"
 							}
 						},
 						{
@@ -553,21 +418,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -590,21 +442,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -1241,6 +1080,94 @@
 			]
 		},
 		{
+			"id": 123,
+			"name": "\"props-info/react-docgen/src/index\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/props-info/react-docgen/src/index.ts",
+			"children": [
+				{
+					"id": 124,
+					"name": "run",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "run API to generate react-docgen props information tables.",
+						"returns": "a callable function of type PropsInfoExtractorFunction\n"
+					},
+					"signatures": [
+						{
+							"id": 125,
+							"name": "run",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "run API to generate react-docgen props information tables.",
+								"returns": "a callable function of type PropsInfoExtractorFunction\n"
+							},
+							"parameters": [
+								{
+									"id": 126,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "configuration options"
+									},
+									"type": {
+										"type": "reference",
+										"id": 96,
+										"name": "RectDocgenOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PropsInfoExtractorFunction"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen/src/index.ts",
+							"line": 15,
+							"character": 16
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						124
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "props-info/react-docgen/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
 			"id": 32,
 			"name": "\"props-info/react-docgen/src/types\"",
 			"kind": 1,
@@ -1837,21 +1764,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -1871,21 +1785,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -1905,21 +1806,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -1939,17 +1827,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "string"
-									}
-								]
+								"type": "intrinsic",
+								"name": "string"
 							}
 						},
 						{
@@ -1969,21 +1848,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -2003,17 +1869,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "string"
-									}
-								]
+								"type": "intrinsic",
+								"name": "string"
 							}
 						},
 						{
@@ -2055,21 +1912,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -2089,21 +1933,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -3074,6 +2905,7 @@
 			"kind": 1,
 			"children": [
 				1,
+				123,
 				32
 			]
 		}

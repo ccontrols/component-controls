@@ -26,11 +26,15 @@ export const run = (
       source,
       options,
     );
-    return propTable
-      ? {
+    if (propTable) {
+      const props = transformProps(propTable.props);
+      if (props) {
+        return {
           ...propTable,
-          props: transformProps(propTable.props),
-        }
-      : undefined;
+          props,
+        };
+      }
+    }
+    return undefined;
   };
 };

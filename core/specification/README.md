@@ -46,10 +46,10 @@ _defined in [@component-controls/specification/src/test.ts](https://github.com/c
 
 ### properties
 
-| Name      | Type                                              | Description |
-| --------- | ------------------------------------------------- | ----------- |
-| `lookup*` | (`name`\*: string): [Scope](#scope) \| undefined; |             |
-| `node*`   | [NodePath](#nodepath)                             |             |
+| Name      | Type                                                           | Description |
+| --------- | -------------------------------------------------------------- | ----------- |
+| `lookup*` | **function** (`name`\*: string): [Scope](#scope) \| undefined; |             |
+| `node*`   | [NodePath](#nodepath)                                          |             |
 
 ## ParserPluginWithOptions
 

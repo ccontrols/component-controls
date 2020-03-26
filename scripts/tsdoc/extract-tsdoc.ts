@@ -1,16 +1,15 @@
 import path from 'path';
 import fs from 'fs';
-import { Application, TSConfigReader } from 'typedoc';
+import { Application } from 'typedoc';
 import { ModuleKind, ScriptTarget} from 'typescript';
 import { getRepoPath } from '../package-info';
 
 import { Node, NodeChildren } from '../types';
 
 const app = new Application();
-app.options.addReader(new TSConfigReader());
 app.bootstrap({
   mode: 'modules',
-  logger: 'none',
+  logger: 'console',
   target: ScriptTarget.ES5,
   module: ModuleKind.CommonJS,
   experimentalDecorators: true,
@@ -95,13 +94,22 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     }
     addedTypeNames.push(node.name);
     result.push(declaration);
+    declaration.children.push({
+      type: 'strong',
+      children: [{
+        type: 'text',
+        value: 'function'
+      }]  
+    });
+    declaration.children.push({
+        type: 'text',
+        value: ' '
+    });
+
     if (node.kindString !== 'Type literal') {
       declaration.children.push({
-        type: 'strong',
-        children: [{
           type: 'text',
           value: node.name
-        }]
       });
     }  
     const signature = node.signatures && node.signatures.find((s: any) => s.kindString === 'Call signature');

@@ -1462,40 +1462,38 @@
 												"isOptional": true
 											},
 											"type": {
-												"type": "union",
-												"types": [
-													{
-														"type": "intrinsic",
-														"name": "undefined"
+												"type": "reflection",
+												"declaration": {
+													"id": 62,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
 													},
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 62,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
+													"signatures": [
+														{
+															"id": 63,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
 															"flags": {
 																"isExported": true
 															},
-															"signatures": [
-																{
-																	"id": 63,
-																	"name": "__call",
-																	"kind": 4096,
-																	"kindString": "Call signature",
-																	"flags": {
-																		"isExported": true
-																	},
-																	"type": {
-																		"type": "reference",
-																		"name": "Program"
-																	}
-																}
-															]
+															"type": {
+																"type": "reference",
+																"name": "Program"
+															}
 														}
-													}
-												]
+													],
+													"sources": [
+														{
+															"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
+															"line": 67,
+															"character": 82
+														}
+													]
+												}
 											}
 										}
 									],
@@ -1817,17 +1815,8 @@
 														}
 													],
 													"type": {
-														"type": "union",
-														"types": [
-															{
-																"type": "intrinsic",
-																"name": "undefined"
-															},
-															{
-																"type": "intrinsic",
-																"name": "string"
-															}
-														]
+														"type": "intrinsic",
+														"name": "string"
 													}
 												}
 											],
@@ -2175,21 +2164,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						},
 						{
@@ -2209,21 +2185,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -2448,17 +2411,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "string"
-									}
-								]
+								"type": "intrinsic",
+								"name": "string"
 							}
 						},
 						{
@@ -2622,21 +2576,8 @@
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "false"
-									},
-									{
-										"type": "intrinsic",
-										"name": "true"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							}
 						}
 					],
@@ -3440,60 +3381,58 @@
 												}
 											],
 											"type": {
-												"type": "union",
-												"types": [
-													{
-														"type": "intrinsic",
-														"name": "undefined"
+												"type": "reflection",
+												"declaration": {
+													"id": 165,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExported": true
 													},
-													{
-														"type": "reflection",
-														"declaration": {
-															"id": 165,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
+													"signatures": [
+														{
+															"id": 166,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
 															"flags": {
 																"isExported": true
 															},
-															"signatures": [
+															"parameters": [
 																{
-																	"id": 166,
-																	"name": "__call",
-																	"kind": 4096,
-																	"kindString": "Call signature",
+																	"id": 167,
+																	"name": "props",
+																	"kind": 32768,
+																	"kindString": "Parameter",
 																	"flags": {
 																		"isExported": true
 																	},
-																	"parameters": [
-																		{
-																			"id": 167,
-																			"name": "props",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {
-																				"isExported": true
-																			},
-																			"type": {
-																				"type": "array",
-																				"elementType": {
-																					"type": "reference",
-																					"id": 6,
-																					"name": "ComponentDoc"
-																				}
-																			}
-																		}
-																	],
 																	"type": {
-																		"type": "reference",
-																		"id": 6,
-																		"name": "ComponentDoc"
+																		"type": "array",
+																		"elementType": {
+																			"type": "reference",
+																			"id": 6,
+																			"name": "ComponentDoc"
+																		}
 																	}
 																}
-															]
+															],
+															"type": {
+																"type": "reference",
+																"id": 6,
+																"name": "ComponentDoc"
+															}
 														}
-													}
-												]
+													],
+													"sources": [
+														{
+															"fileName": "props-info/react-docgen-typescript/src/types.ts",
+															"line": 10,
+															"character": 18
+														}
+													]
+												}
 											}
 										}
 									],

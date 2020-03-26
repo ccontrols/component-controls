@@ -45,7 +45,7 @@ run API to generate react-docgen-typescript props information tables.
 
 _defined in [@component-controls/react-docgen-typescript-info/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen-typescript/src/index.ts#L14)_
 
-**run**(`options`: [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)): [PropsInfoExtractorFunction](#propsinfoextractorfunction);
+**function** run(`options`: [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)): [PropsInfoExtractorFunction](#propsinfoextractorfunction);
 
 ### parameters
 
@@ -64,7 +64,7 @@ _defined in [@component-controls/react-docgen-typescript-info/src/types.ts](http
 
 | Name             | Type                                                                                       | Description                           |
 | ---------------- | ------------------------------------------------------------------------------------------ | ------------------------------------- |
-| `transformProps` | undefined \| (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc); | callback to transform the props table |
+| `transformProps` | **function** (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc); | callback to transform the props table |
 | `ParserOptions`  | [ParserOptions](#parseroptions)                                                            |                                       |
 
 ## ComponentDoc
@@ -94,8 +94,8 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 | ------------------------------------ | ------------------------------------------------------------------ | ----------- |
 | `componentNameResolver`              | [ComponentNameResolver](#componentnameresolver)                    |             |
 | `propFilter`                         | [StaticPropFilter](#staticpropfilter) \| [PropFilter](#propfilter) |             |
-| `savePropValueAsString`              | undefined \| false \| true                                         |             |
-| `shouldExtractLiteralValuesFromEnum` | undefined \| false \| true                                         |             |
+| `savePropValueAsString`              | boolean                                                            |             |
+| `shouldExtractLiteralValuesFromEnum` | boolean                                                            |             |
 
 ## Method
 
@@ -105,14 +105,14 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 
 ### properties
 
-| Name           | Type                                                                 | Description |
-| -------------- | -------------------------------------------------------------------- | ----------- |
-| `description*` | string                                                               |             |
-| `docblock*`    | string                                                               |             |
-| `modifiers*`   | string\[]                                                            |             |
-| `name*`        | string                                                               |             |
-| `params*`      | [MethodParameter](#methodparameter)\[]                               |             |
-| `returns`      | **description**: string \| null**type**: undefined \| string \| null |             |
+| Name           | Type                                                    | Description |
+| -------------- | ------------------------------------------------------- | ----------- |
+| `description*` | string                                                  |             |
+| `docblock*`    | string                                                  |             |
+| `modifiers*`   | string\[]                                               |             |
+| `name*`        | string                                                  |             |
+| `params*`      | [MethodParameter](#methodparameter)\[]                  |             |
+| `returns`      | **description**: string \| null**type**: string \| null |             |
 
 ## Props
 
@@ -124,7 +124,7 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 
 _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-(`exp`\*: [Symbol](#symbol), `source`\*: [SourceFile](#sourcefile)): string | undefined | null | false;
+**function** (`exp`\*: [Symbol](#symbol), `source`\*: [SourceFile](#sourcefile)): string | undefined | null | false;
 
 ### parameters
 
@@ -142,16 +142,16 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 
 ### properties
 
-| Name                  | Type                       | Description |
-| --------------------- | -------------------------- | ----------- |
-| `skipPropsWithName`   | string\[] \| string        |             |
-| `skipPropsWithoutDoc` | undefined \| false \| true |             |
+| Name                  | Type                | Description |
+| --------------------- | ------------------- | ----------- |
+| `skipPropsWithName`   | string\[] \| string |             |
+| `skipPropsWithoutDoc` | boolean             |             |
 
 ## PropFilter
 
 _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-(`props`\*: [PropItem](#propitem), `component`\*: [Component](#component)): boolean;
+**function** (`props`\*: [PropItem](#propitem), `component`\*: [Component](#component)): boolean;
 
 ### parameters
 
@@ -237,10 +237,10 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 
 ### properties
 
-| Name    | Type                | Description |
-| ------- | ------------------- | ----------- |
-| `name*` | string              |             |
-| `raw`   | undefined \| string |             |
-| `value` | any                 |             |
+| Name    | Type   | Description |
+| ------- | ------ | ----------- |
+| `name*` | string |             |
+| `raw`   | string |             |
+| `value` | any    |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->
