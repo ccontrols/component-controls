@@ -24,6 +24,14 @@
 Component controls specification with typescript definitions
 
 Typescript definitions of the component-controls specification.
+Includes definitions for:
+
+-   [Story](#story)
+-   [Stories](#stories)
+-   [ControlTypes](#controltypes)
+-   [ComponentControl](#componentcontrol-1)
+-   [PropTypes](#proptypes)
+-   and more...
 
 <!-- END-PACKAGE-SECTION -->
 
