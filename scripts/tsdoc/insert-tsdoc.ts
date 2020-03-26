@@ -13,7 +13,7 @@ export const insertTSDoc = (settings: Settings = { path: './src' }) => {
   return (node: Node) => {
     const sections = extractCustomTag(node, 'tsdoc-typescript');
     if (sections) {
-      sections.forEach(({ attrs, attributes}) => {
+      sections.forEach(({ attrs, attributes }) => {
         
         if (attributes) {
           const newNodes: Node[] = [];
@@ -21,6 +21,7 @@ export const insertTSDoc = (settings: Settings = { path: './src' }) => {
           const entry = attributes.find(attribute => attribute[0] === 'entry');
           
           if (entry) {
+
             const fileNames = files ? files[1].split(',').filter(s => s) : [];
             const entryNames = entry ? entry[1].split(',').filter(s => s) : [];
             fileNames.push.apply(fileNames, entryNames);

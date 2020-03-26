@@ -1,6 +1,8 @@
+import path from 'path';
 import fs from 'fs';
 import { Application, TSConfigReader } from 'typedoc';
 import { ModuleKind, ScriptTarget} from 'typescript';
+import { getRepoPath } from '../package-info';
 
 import { Node, NodeChildren } from '../types';
 
@@ -14,11 +16,12 @@ app.bootstrap({
   experimentalDecorators: true,
   includeDeclarations: true,
   excludeExternals: true,
+  excludePrivate: true,
 });
 
 export const extractTSDoc = (files: string[], entries: string[]): Node[] | undefined => {
   const unresolvedTypeNames: string[] = [];
-
+  const repoNames: { [key: string]: { repo?: string, filePath?: string, packageName?: string, relativePath?: string} } = {};
   const pushPropTable = (nodes: Node[], title: string) => {
     const result: Node[] = [];
     if (nodes) {
@@ -53,7 +56,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         ]}
         tableRow.children.push({
           type: 'tableCell',
-          children: child.type ? extractPropType(child.type) : extractFunction(child),
+          children: child.type ? extractPropType(child.type) : extractFunction(child, false),
         });
         tableRow.children.push({
           type: 'tableCell',
@@ -64,7 +67,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     }      
     return result;
   }
-  const extractFunction = (node: any): Node[] => {
+  const extractFunction = (node: any, extractTable: boolean = true): Node[] => {
     const result: Node[] = [];
     const declaration: NodeChildren = {
       type: 'paragraph',
@@ -73,7 +76,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     result.push(declaration);
     if (node.kindString !== 'Type literal') {
       if (unresolvedTypeNames.indexOf(node.name) > -1) {
-        unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
+        // unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
       }
 
       declaration.children.push({
@@ -133,7 +136,9 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
           type: 'text',
           value: ';'
         })
-        result.push.apply(result, pushPropTable(signature.parameters, 'parameters'));
+        if (extractTable) {
+          result.push.apply(result, pushPropTable(signature.parameters, 'parameters'));
+        }  
       }
       return result;
   }
@@ -147,28 +152,24 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     }
     result.push(declaration);
     if (unresolvedTypeNames.indexOf(node.name) > -1) {
-      unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
-    }
-    const interfaceNode: NodeChildren = {
-      type: 'strong',
-      children: [{
-        type: 'text',
-        value: node.name,
-      }]
-    };
-    declaration.children.push(interfaceNode);
-    if (node.extendedTypes && node.extendedTypes.length) {
-      interfaceNode.children.push({
-        type: 'text',
-        value: ' extends ',
-      });
-      node.extendedTypes.forEach((t: any) => {
-        interfaceNode.children.push.apply(interfaceNode.children, extractPropType(t));
-      })
+      // unresolvedTypeNames.splice(unresolvedTypeNames.indexOf(node.name), 1);
     }
 
-    if (node.indexSignature) {
-      node.indexSignature.forEach((signature: any) => {
+    if (node.extendedTypes && node.extendedTypes.length) {
+
+      declaration.children.push({
+        type: 'strong',
+        children: [{
+          type: 'text',
+          value: ' extends ',
+        },
+        ...node.extendedTypes.reduce((acc: any,t: any) => ([...acc, ...extractPropType(t)]), [])
+        ]
+      });
+    }
+    const children = node.indexSignature;
+    if (children) {
+      children.forEach((signature: any) => {
         for (let i = 0; i < signature.parameters.length; i +=1) {
           const p: any = signature.parameters[i];
           if (i > 0) {
@@ -204,11 +205,11 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
         }
       });
     }
-    result.push.apply(result, pushPropTable(node.children, 'properties'));
+    result.push.apply(result, pushPropTable(node.children || node.type, 'properties'));
     return result;
   }
 
-  const extractPropType = (p: any): Node[] =>  {
+  const extractPropType = (p: any, extractTable: boolean = false): Node[] =>  {
     switch (p.type) {
       case 'reference': {
         if (p.typeArguments) {
@@ -236,6 +237,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
             value: '>'
           }]
         }
+        
         if (unresolvedTypeNames.indexOf(p.name) === -1) {
           unresolvedTypeNames.push(p.name);
         }
@@ -257,7 +259,15 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       }
       case 'reflection': {
         if (p.declaration.signatures) {
-          return extractFunction(p.declaration);
+          if (p.declaration.signatures.type) {
+            return extractPropType(p.declaration.signatures.type);
+          } else {
+            return extractFunction(p.declaration, extractTable);
+
+          }  
+        }
+        if (!p.declaration.children) {
+          return [];
         }
         return p.declaration.children.map((t: any) => ({ t, value: extractPropType(t.type)})).reduce((acc: any, { t, value}: { t: any, value: Node[] }) => {
           const children: Node[] = [];
@@ -347,41 +357,79 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
   }
   
   
-  const extractTSType = (node: any): Node[] => {
+  const extractTSType = (node: any, fileName: string): Node[] => {
     const result: Node[] = [];
-    switch (node.kindString) {
-      case 'Type alias': 
-      case 'Type literal': 
-      default: {
-        result.push({
-          type: 'heading',
-          depth: 2,
+    result.push({
+      type: 'heading',
+      depth: 2,
+      children: [
+        { type: 'text',
+          value: node.name,
+        }
+      ]
+    });
+    
+    if (node.comment && node.comment.shortText) {
+      result.push({
+        type: 'paragraph',
+        children: [{
+          type: 'text',
+          value: node.comment.shortText,
+        }]
+      });    
+    };
+    if (!repoNames[fileName]) {
+      repoNames[fileName] = getRepoPath(path.dirname(path.resolve(fileName)));
+      if (repoNames[fileName].filePath) {
+        repoNames[fileName].packageName = JSON.parse(fs.readFileSync(repoNames[fileName].filePath || '', 'utf8')).name;
+        repoNames[fileName].relativePath =  path.relative(path.dirname(repoNames[fileName].filePath || './'), fileName);
+      }
+    }
+    
+    if (repoNames[fileName]) {
+      const { repo, relativePath, packageName } = repoNames[fileName];
+      const source = node.sources && node.sources.length && node.sources[0];
+      const { line }: { fileName?: string, line?: number, character?: number } = source || {};
+      let sourceLocation = fileName.includes('node_modules') ? repo : `${repo}/${relativePath}#L${line}`;
+      result.push({
+        type: 'paragraph',
+        children: [{
+          type: 'emphasis',
           children: [
-            { type: 'text',
-              value: node.name,
+            {
+              type: 'text',
+              value: 'defined in '
+            },
+            {
+              type: 'link',
+              url: sourceLocation,
+              children: [
+                {
+                  type: 'text',
+                  value: `${packageName}/${relativePath}`
+                }
+              ]
             }
           ]
-        });
-        if (node.comment && node.comment.shortText) {
-          result.push({
-            type: 'paragraph',
-            children: [{
-              type: 'text',
-              value: node.comment.shortText,
-            }]
-          });    
-        };
-        
+        }]
+      });
+    }  
+
+    switch (node.kindString) {
+      case 'Type alias': 
+      case 'Type literal': {        
         if (node.type) {
-          result.push.apply(result, extractPropType(node.type));
+          result.push.apply(result, extractPropType(node.type, true));
         } else {
           node.children.forEach((child: any) => {
-            result.push.apply(result, extractPropType(child));
+            result.push.apply(result, extractPropType(child, true));
           })
         }  
         break;
       }
-      case 'Interface': {
+      case 'Class':
+      case 'Interface':
+        default:  {
         result.push.apply(result, extractInterface(node));
         break;
       }
@@ -402,10 +450,11 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       const content = JSON.parse(fs.readFileSync(fName, 'utf8'))
       const result: Node[]= [];
       for (const entry of entries) {
+        
         const main = content.children.find((child: any) => child.originalName === entry);
         if (main) {
           main.children.forEach((child: any) => {
-            const nodes = extractTSType(child);
+            const nodes = extractTSType(child, main.originalName);
             result.push.apply(result, nodes);
           })
         }
@@ -413,17 +462,21 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       while (unresolvedTypeNames.length > 0) {
         const propName = unresolvedTypeNames[0];
         let propNode;
+        let fileName;
         for (const child of content.children) {
           if (child.children) {
             propNode = child.children.find((c: any) => c.name === propName);
             if (propNode) {
+              fileName = child.originalName;
               break;
             }
           }  
         };
         if (propNode) {
-          const nodes = extractTSType(propNode);
+          const nodes = extractTSType(propNode, fileName);
           result.push.apply(result, nodes);
+        } else {
+          console.log('could not find external reference: ', propName);
         }
         unresolvedTypeNames.splice(0, 1);
       }
@@ -432,6 +485,8 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
     } finally {
       // fs.unlinkSync(fName)
     }  
+  } else {
+    console.error('could not compile project')
   }
   return undefined;
 }

@@ -3,7 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
+    -   [MethodParameterType](#methodparametertype)
 
 # Overview
 
@@ -19,23 +19,20 @@ $ npm install @component-controls/specification --save-dev
 
 # API
 
-<tsdoc-typescript entry="./src/propsinfo.ts"/>
+<tsdoc-typescript entry="./src/test.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## PropsInfoExtractorFunction
+## MethodParameterType
 
-callback function to extract props info table  - ie docgen type libraries
-used to extract displayName, and props tables for a component
+_defined in [@component-controls/specification/src/test.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/test.ts#L1)_
 
-(`fileName`\*: string, `componentName`: undefined | string, `source`: undefined | string): Promise&lt;[ComponentInfo](#componentinfo) | undefined> | [ComponentInfo](#componentinfo) | undefined;
 
-### parameters
 
-| Name            | Type                | Description |
-| --------------- | ------------------- | ----------- |
-| `fileName*`     | string              |             |
-| `componentName` | undefined \| string |             |
-| `source`        | undefined \| string |             |
+### properties
+
+| Name    | Type   | Description |
+| ------- | ------ | ----------- |
+| `name*` | string |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

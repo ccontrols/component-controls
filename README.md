@@ -142,7 +142,7 @@ Some of the guiding design goals for this library:
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/react-docgen-info](https://github.com/ccontrols/component-controls/blob/master/frameworks/react)
+## [@component-controls/react-docgen-info](https://github.com/ccontrols/component-controls/blob/master/props-info/react-docgen)
 
 Component controls react-docgen props info loader
 
@@ -156,7 +156,7 @@ Extract props info from react components. Although the latest version of `react-
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/react-docgen-typescript-info](https://github.com/ccontrols/component-controls/blob/master/frameworks/react)
+## [@component-controls/react-docgen-typescript-info](https://github.com/ccontrols/component-controls/blob/master/props-info/react-docgen-typescript)
 
 Component controls react-docgen-typescript props info loader
 

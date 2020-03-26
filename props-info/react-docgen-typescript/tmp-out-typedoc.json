@@ -7,7 +7,7 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "\"parser.d\"",
+			"name": "\"node_modules/react-docgen-typescript/lib/parser.d\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -25,7 +25,7 @@
 					},
 					"children": [
 						{
-							"id": 73,
+							"id": 69,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -34,7 +34,7 @@
 							},
 							"signatures": [
 								{
-									"id": 74,
+									"id": 70,
 									"name": "new Parser",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -43,7 +43,7 @@
 									},
 									"parameters": [
 										{
-											"id": 75,
+											"id": 71,
 											"name": "program",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -56,7 +56,7 @@
 											}
 										},
 										{
-											"id": 76,
+											"id": 72,
 											"name": "opts",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -79,98 +79,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 95,
 									"character": 34
 								}
 							]
 						},
 						{
-							"id": 69,
-							"name": "checker",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPrivate": true,
-								"isExported": true
-							},
-							"sources": [
-								{
-									"fileName": "parser.d.ts",
-									"line": 92,
-									"character": 19
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						},
-						{
-							"id": 70,
-							"name": "propFilter",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPrivate": true,
-								"isExported": true
-							},
-							"sources": [
-								{
-									"fileName": "parser.d.ts",
-									"line": 93,
-									"character": 22
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						},
-						{
-							"id": 72,
-							"name": "savePropValueAsString",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPrivate": true,
-								"isExported": true
-							},
-							"sources": [
-								{
-									"fileName": "parser.d.ts",
-									"line": 95,
-									"character": 33
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						},
-						{
-							"id": 71,
-							"name": "shouldExtractLiteralValuesFromEnum",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isPrivate": true,
-								"isExported": true
-							},
-							"sources": [
-								{
-									"fileName": "parser.d.ts",
-									"line": 94,
-									"character": 46
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						},
-						{
-							"id": 125,
+							"id": 121,
 							"name": "extractDefaultPropsFromComponent",
 							"kind": 2048,
 							"kindString": "Method",
@@ -179,7 +95,7 @@
 							},
 							"signatures": [
 								{
-									"id": 126,
+									"id": 122,
 									"name": "extractDefaultPropsFromComponent",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -188,7 +104,7 @@
 									},
 									"parameters": [
 										{
-											"id": 127,
+											"id": 123,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -201,7 +117,7 @@
 											}
 										},
 										{
-											"id": 128,
+											"id": 124,
 											"name": "source",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -217,7 +133,7 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 129,
+											"id": 125,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
@@ -226,7 +142,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "parser.d.ts",
+													"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 													"line": 117,
 													"character": 79
 												}
@@ -237,14 +153,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 117,
 									"character": 36
 								}
 							]
 						},
 						{
-							"id": 88,
+							"id": 84,
 							"name": "extractMembersFromType",
 							"kind": 2048,
 							"kindString": "Method",
@@ -253,7 +169,7 @@
 							},
 							"signatures": [
 								{
-									"id": 89,
+									"id": 85,
 									"name": "extractMembersFromType",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -262,7 +178,7 @@
 									},
 									"parameters": [
 										{
-											"id": 90,
+											"id": 86,
 											"name": "type",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -286,14 +202,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 100,
 									"character": 26
 								}
 							]
 						},
 						{
-							"id": 85,
+							"id": 81,
 							"name": "extractPropsFromTypeIfStatefulComponent",
 							"kind": 2048,
 							"kindString": "Method",
@@ -302,7 +218,7 @@
 							},
 							"signatures": [
 								{
-									"id": 86,
+									"id": 82,
 									"name": "extractPropsFromTypeIfStatefulComponent",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -311,7 +227,7 @@
 									},
 									"parameters": [
 										{
-											"id": 87,
+											"id": 83,
 											"name": "type",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -341,14 +257,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 99,
 									"character": 43
 								}
 							]
 						},
 						{
-							"id": 82,
+							"id": 78,
 							"name": "extractPropsFromTypeIfStatelessComponent",
 							"kind": 2048,
 							"kindString": "Method",
@@ -357,7 +273,7 @@
 							},
 							"signatures": [
 								{
-									"id": 83,
+									"id": 79,
 									"name": "extractPropsFromTypeIfStatelessComponent",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -366,7 +282,7 @@
 									},
 									"parameters": [
 										{
-											"id": 84,
+											"id": 80,
 											"name": "type",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -396,14 +312,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 98,
 									"character": 44
 								}
 							]
 						},
 						{
-							"id": 116,
+							"id": 112,
 							"name": "findDocComment",
 							"kind": 2048,
 							"kindString": "Method",
@@ -412,7 +328,7 @@
 							},
 							"signatures": [
 								{
-									"id": 117,
+									"id": 113,
 									"name": "findDocComment",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -421,7 +337,7 @@
 									},
 									"parameters": [
 										{
-											"id": 118,
+											"id": 114,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -443,14 +359,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 109,
 									"character": 18
 								}
 							]
 						},
 						{
-							"id": 100,
+							"id": 96,
 							"name": "getCallSignature",
 							"kind": 2048,
 							"kindString": "Method",
@@ -459,7 +375,7 @@
 							},
 							"signatures": [
 								{
-									"id": 101,
+									"id": 97,
 									"name": "getCallSignature",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -468,7 +384,7 @@
 									},
 									"parameters": [
 										{
-											"id": 102,
+											"id": 98,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -489,14 +405,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 104,
 									"character": 20
 								}
 							]
 						},
 						{
-							"id": 77,
+							"id": 73,
 							"name": "getComponentInfo",
 							"kind": 2048,
 							"kindString": "Method",
@@ -505,7 +421,7 @@
 							},
 							"signatures": [
 								{
-									"id": 78,
+									"id": 74,
 									"name": "getComponentInfo",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -514,7 +430,7 @@
 									},
 									"parameters": [
 										{
-											"id": 79,
+											"id": 75,
 											"name": "exp",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -527,7 +443,7 @@
 											}
 										},
 										{
-											"id": 80,
+											"id": 76,
 											"name": "source",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -540,7 +456,7 @@
 											}
 										},
 										{
-											"id": 81,
+											"id": 77,
 											"name": "componentNameResolver",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -550,7 +466,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 141,
+												"id": 137,
 												"name": "ComponentNameResolver"
 											}
 										}
@@ -573,14 +489,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 97,
 									"character": 20
 								}
 							]
 						},
 						{
-							"id": 109,
+							"id": 105,
 							"name": "getDocgenType",
 							"kind": 2048,
 							"kindString": "Method",
@@ -589,7 +505,7 @@
 							},
 							"signatures": [
 								{
-									"id": 110,
+									"id": 106,
 									"name": "getDocgenType",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -598,7 +514,7 @@
 									},
 									"parameters": [
 										{
-											"id": 111,
+											"id": 107,
 											"name": "propType",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -620,14 +536,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 107,
 									"character": 17
 								}
 							]
 						},
 						{
-							"id": 119,
+							"id": 115,
 							"name": "getFullJsDocComment",
 							"kind": 2048,
 							"kindString": "Method",
@@ -636,7 +552,7 @@
 							},
 							"signatures": [
 								{
-									"id": 120,
+									"id": 116,
 									"name": "getFullJsDocComment",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -648,7 +564,7 @@
 									},
 									"parameters": [
 										{
-											"id": 121,
+											"id": 117,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -670,14 +586,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 115,
 									"character": 23
 								}
 							]
 						},
 						{
-							"id": 122,
+							"id": 118,
 							"name": "getFunctionStatement",
 							"kind": 2048,
 							"kindString": "Method",
@@ -686,7 +602,7 @@
 							},
 							"signatures": [
 								{
-									"id": 123,
+									"id": 119,
 									"name": "getFunctionStatement",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -695,7 +611,7 @@
 									},
 									"parameters": [
 										{
-											"id": 124,
+											"id": 120,
 											"name": "statement",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -733,14 +649,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 116,
 									"character": 24
 								}
 							]
 						},
 						{
-							"id": 130,
+							"id": 126,
 							"name": "getLiteralValueFromPropertyAssignment",
 							"kind": 2048,
 							"kindString": "Method",
@@ -749,7 +665,7 @@
 							},
 							"signatures": [
 								{
-									"id": 131,
+									"id": 127,
 									"name": "getLiteralValueFromPropertyAssignment",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -758,7 +674,7 @@
 									},
 									"parameters": [
 										{
-											"id": 132,
+											"id": 128,
 											"name": "property",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -809,14 +725,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 118,
 									"character": 41
 								}
 							]
 						},
 						{
-							"id": 91,
+							"id": 87,
 							"name": "getMethodsInfo",
 							"kind": 2048,
 							"kindString": "Method",
@@ -825,7 +741,7 @@
 							},
 							"signatures": [
 								{
-									"id": 92,
+									"id": 88,
 									"name": "getMethodsInfo",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -834,7 +750,7 @@
 									},
 									"parameters": [
 										{
-											"id": 93,
+											"id": 89,
 											"name": "type",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -859,14 +775,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 101,
 									"character": 18
 								}
 							]
 						},
 						{
-							"id": 94,
+							"id": 90,
 							"name": "getModifiers",
 							"kind": 2048,
 							"kindString": "Method",
@@ -875,7 +791,7 @@
 							},
 							"signatures": [
 								{
-									"id": 95,
+									"id": 91,
 									"name": "getModifiers",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -884,7 +800,7 @@
 									},
 									"parameters": [
 										{
-											"id": 96,
+											"id": 92,
 											"name": "member",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -908,14 +824,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 102,
 									"character": 16
 								}
 							]
 						},
 						{
-							"id": 97,
+							"id": 93,
 							"name": "getParameterInfo",
 							"kind": 2048,
 							"kindString": "Method",
@@ -924,7 +840,7 @@
 							},
 							"signatures": [
 								{
-									"id": 98,
+									"id": 94,
 									"name": "getParameterInfo",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -933,7 +849,7 @@
 									},
 									"parameters": [
 										{
-											"id": 99,
+											"id": 95,
 											"name": "callSignature",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -958,14 +874,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 103,
 									"character": 20
 								}
 							]
 						},
 						{
-							"id": 133,
+							"id": 129,
 							"name": "getPropMap",
 							"kind": 2048,
 							"kindString": "Method",
@@ -974,7 +890,7 @@
 							},
 							"signatures": [
 								{
-									"id": 134,
+									"id": 130,
 									"name": "getPropMap",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -983,7 +899,7 @@
 									},
 									"parameters": [
 										{
-											"id": 135,
+											"id": 131,
 											"name": "properties",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1043,14 +959,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 119,
 									"character": 14
 								}
 							]
 						},
 						{
-							"id": 112,
+							"id": 108,
 							"name": "getPropsInfo",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1059,7 +975,7 @@
 							},
 							"signatures": [
 								{
-									"id": 113,
+									"id": 109,
 									"name": "getPropsInfo",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1068,7 +984,7 @@
 									},
 									"parameters": [
 										{
-											"id": 114,
+											"id": 110,
 											"name": "propsObj",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1081,7 +997,7 @@
 											}
 										},
 										{
-											"id": 115,
+											"id": 111,
 											"name": "defaultProps",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1111,14 +1027,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 108,
 									"character": 16
 								}
 							]
 						},
 						{
-							"id": 106,
+							"id": 102,
 							"name": "getReturnDescription",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1127,7 +1043,7 @@
 							},
 							"signatures": [
 								{
-									"id": 107,
+									"id": 103,
 									"name": "getReturnDescription",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1136,7 +1052,7 @@
 									},
 									"parameters": [
 										{
-											"id": 108,
+											"id": 104,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1166,14 +1082,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 106,
 									"character": 24
 								}
 							]
 						},
 						{
-							"id": 103,
+							"id": 99,
 							"name": "isTaggedPublic",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1182,7 +1098,7 @@
 							},
 							"signatures": [
 								{
-									"id": 104,
+									"id": 100,
 									"name": "isTaggedPublic",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1191,7 +1107,7 @@
 									},
 									"parameters": [
 										{
-											"id": 105,
+											"id": 101,
 											"name": "symbol",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1212,7 +1128,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 105,
 									"character": 18
 								}
@@ -1224,47 +1140,37 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								73
-							]
-						},
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								69,
-								70,
-								72,
-								71
+								69
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								125,
-								88,
-								85,
-								82,
-								116,
-								100,
-								77,
-								109,
-								119,
-								122,
-								130,
-								91,
-								94,
-								97,
-								133,
+								121,
+								84,
+								81,
+								78,
 								112,
-								106,
-								103
+								96,
+								73,
+								105,
+								115,
+								118,
+								126,
+								87,
+								90,
+								93,
+								129,
+								108,
+								102,
+								99
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 91,
 							"character": 27
 						}
@@ -1289,7 +1195,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 41,
 									"character": 8
 								}
@@ -1311,7 +1217,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 40,
 							"character": 26
 						}
@@ -1336,7 +1242,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 7,
 									"character": 15
 								}
@@ -1356,7 +1262,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 6,
 									"character": 15
 								}
@@ -1376,7 +1282,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 9,
 									"character": 11
 								}
@@ -1400,7 +1306,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 8,
 									"character": 9
 								}
@@ -1426,7 +1332,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 5,
 							"character": 29
 						}
@@ -1497,7 +1403,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 66,
 									"character": 9
 								}
@@ -1605,7 +1511,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 67,
 									"character": 28
 								}
@@ -1624,7 +1530,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 65,
 							"character": 27
 						}
@@ -1645,7 +1551,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 87,
 									"character": 15
 								}
@@ -1663,7 +1569,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 88,
 									"character": 15
 								}
@@ -1681,7 +1587,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 89,
 									"character": 8
 								}
@@ -1712,7 +1618,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 86,
 							"character": 15
 						}
@@ -1737,7 +1643,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 30,
 									"character": 15
 								}
@@ -1757,7 +1663,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 23,
 									"character": 12
 								}
@@ -1777,7 +1683,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 24,
 									"character": 13
 								}
@@ -1800,7 +1706,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 22,
 									"character": 8
 								}
@@ -1820,7 +1726,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 25,
 									"character": 10
 								}
@@ -1845,7 +1751,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 26,
 									"character": 11
 								}
@@ -1875,7 +1781,7 @@
 													},
 													"sources": [
 														{
-															"fileName": "parser.d.ts",
+															"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 															"line": 27,
 															"character": 19
 														}
@@ -1905,7 +1811,7 @@
 													},
 													"sources": [
 														{
-															"fileName": "parser.d.ts",
+															"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 															"line": 28,
 															"character": 12
 														}
@@ -1937,7 +1843,7 @@
 											],
 											"sources": [
 												{
-													"fileName": "parser.d.ts",
+													"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 													"line": 26,
 													"character": 13
 												}
@@ -1968,7 +1874,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 21,
 							"character": 23
 						}
@@ -1994,7 +1900,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 34,
 									"character": 15
 								}
@@ -2023,7 +1929,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 33,
 									"character": 8
 								}
@@ -2043,7 +1949,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 35,
 									"character": 8
 								}
@@ -2068,7 +1974,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 32,
 							"character": 32
 						}
@@ -2093,7 +1999,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 38,
 									"character": 8
 								}
@@ -2115,7 +2021,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 37,
 							"character": 36
 						}
@@ -2140,7 +2046,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 50,
 									"character": 12
 								}
@@ -2160,7 +2066,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 49,
 									"character": 8
 								}
@@ -2183,7 +2089,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 48,
 							"character": 27
 						}
@@ -2209,14 +2115,14 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 56,
 									"character": 25
 								}
 							],
 							"type": {
 								"type": "reference",
-								"id": 141,
+								"id": 137,
 								"name": "ComponentNameResolver"
 							}
 						},
@@ -2231,7 +2137,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 55,
 									"character": 14
 								}
@@ -2246,7 +2152,7 @@
 									},
 									{
 										"type": "reference",
-										"id": 136,
+										"id": 132,
 										"name": "PropFilter"
 									}
 								]
@@ -2263,7 +2169,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 58,
 									"character": 25
 								}
@@ -2297,7 +2203,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 57,
 									"character": 38
 								}
@@ -2335,7 +2241,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 54,
 							"character": 30
 						}
@@ -2360,7 +2266,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 18,
 									"character": 16
 								}
@@ -2380,7 +2286,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 17,
 									"character": 15
 								}
@@ -2400,7 +2306,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 14,
 									"character": 8
 								}
@@ -2421,7 +2327,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 19,
 									"character": 10
 								}
@@ -2442,7 +2348,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 15,
 									"character": 12
 								}
@@ -2462,7 +2368,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 16,
 									"character": 8
 								}
@@ -2490,7 +2396,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 13,
 							"character": 25
 						}
@@ -2515,7 +2421,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 44,
 									"character": 8
 								}
@@ -2536,7 +2442,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 46,
 									"character": 7
 								}
@@ -2566,7 +2472,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 45,
 									"character": 9
 								}
@@ -2590,7 +2496,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 43,
 							"character": 29
 						}
@@ -2637,7 +2543,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 11,
 							"character": 22
 						}
@@ -2677,7 +2583,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 61,
 									"character": 21
 								}
@@ -2710,7 +2616,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 62,
 									"character": 23
 								}
@@ -2746,7 +2652,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 60,
 							"character": 33
 						}
@@ -2803,7 +2709,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 2,
 							"character": 36
 						}
@@ -2817,7 +2723,7 @@
 					]
 				},
 				{
-					"id": 141,
+					"id": 137,
 					"name": "ComponentNameResolver",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -2826,7 +2732,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 53,
 							"character": 41
 						}
@@ -2834,7 +2740,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 142,
+							"id": 138,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -2843,7 +2749,7 @@
 							},
 							"signatures": [
 								{
-									"id": 143,
+									"id": 139,
 									"name": "__call",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2852,7 +2758,7 @@
 									},
 									"parameters": [
 										{
-											"id": 144,
+											"id": 140,
 											"name": "exp",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2865,7 +2771,7 @@
 											}
 										},
 										{
-											"id": 145,
+											"id": 141,
 											"name": "source",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2903,7 +2809,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 53,
 									"character": 43
 								}
@@ -2912,7 +2818,7 @@
 					}
 				},
 				{
-					"id": 136,
+					"id": 132,
 					"name": "PropFilter",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -2921,7 +2827,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 52,
 							"character": 30
 						}
@@ -2929,7 +2835,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 137,
+							"id": 133,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -2938,7 +2844,7 @@
 							},
 							"signatures": [
 								{
-									"id": 138,
+									"id": 134,
 									"name": "__call",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2947,7 +2853,7 @@
 									},
 									"parameters": [
 										{
-											"id": 139,
+											"id": 135,
 											"name": "props",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2961,7 +2867,7 @@
 											}
 										},
 										{
-											"id": 140,
+											"id": 136,
 											"name": "component",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2983,7 +2889,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "parser.d.ts",
+									"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 									"line": 52,
 									"character": 32
 								}
@@ -2992,7 +2898,7 @@
 					}
 				},
 				{
-					"id": 146,
+					"id": 142,
 					"name": "defaultParserOpts",
 					"kind": 32,
 					"kindString": "Variable",
@@ -3002,7 +2908,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 64,
 							"character": 38
 						}
@@ -3014,7 +2920,7 @@
 					}
 				},
 				{
-					"id": 162,
+					"id": 158,
 					"name": "getDefaultExportForFile",
 					"kind": 64,
 					"kindString": "Function",
@@ -3023,7 +2929,7 @@
 					},
 					"signatures": [
 						{
-							"id": 163,
+							"id": 159,
 							"name": "getDefaultExportForFile",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3032,7 +2938,7 @@
 							},
 							"parameters": [
 								{
-									"id": 164,
+									"id": 160,
 									"name": "source",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3053,14 +2959,14 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 121,
 							"character": 47
 						}
 					]
 				},
 				{
-					"id": 147,
+					"id": 143,
 					"name": "parse",
 					"kind": 64,
 					"kindString": "Function",
@@ -3069,7 +2975,7 @@
 					},
 					"signatures": [
 						{
-							"id": 148,
+							"id": 144,
 							"name": "parse",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3081,7 +2987,7 @@
 							},
 							"parameters": [
 								{
-									"id": 149,
+									"id": 145,
 									"name": "filePathOrPaths",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3106,7 +3012,7 @@
 									}
 								},
 								{
-									"id": 150,
+									"id": 146,
 									"name": "parserOpts",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3133,14 +3039,14 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 73,
 							"character": 29
 						}
 					]
 				},
 				{
-					"id": 158,
+					"id": 154,
 					"name": "withCompilerOptions",
 					"kind": 64,
 					"kindString": "Function",
@@ -3149,7 +3055,7 @@
 					},
 					"signatures": [
 						{
-							"id": 159,
+							"id": 155,
 							"name": "withCompilerOptions",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3161,7 +3067,7 @@
 							},
 							"parameters": [
 								{
-									"id": 160,
+									"id": 156,
 									"name": "compilerOptions",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3174,7 +3080,7 @@
 									}
 								},
 								{
-									"id": 161,
+									"id": 157,
 									"name": "parserOpts",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3198,14 +3104,14 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 85,
 							"character": 43
 						}
 					]
 				},
 				{
-					"id": 154,
+					"id": 150,
 					"name": "withCustomConfig",
 					"kind": 64,
 					"kindString": "Function",
@@ -3214,7 +3120,7 @@
 					},
 					"signatures": [
 						{
-							"id": 155,
+							"id": 151,
 							"name": "withCustomConfig",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3226,7 +3132,7 @@
 							},
 							"parameters": [
 								{
-									"id": 156,
+									"id": 152,
 									"name": "tsconfigPath",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3239,7 +3145,7 @@
 									}
 								},
 								{
-									"id": 157,
+									"id": 153,
 									"name": "parserOpts",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3262,14 +3168,14 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 81,
 							"character": 40
 						}
 					]
 				},
 				{
-					"id": 151,
+					"id": 147,
 					"name": "withDefaultConfig",
 					"kind": 64,
 					"kindString": "Function",
@@ -3278,7 +3184,7 @@
 					},
 					"signatures": [
 						{
-							"id": 152,
+							"id": 148,
 							"name": "withDefaultConfig",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -3290,7 +3196,7 @@
 							},
 							"parameters": [
 								{
-									"id": 153,
+									"id": 149,
 									"name": "parserOpts",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -3314,7 +3220,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "parser.d.ts",
+							"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
 							"line": 77,
 							"character": 41
 						}
@@ -3353,32 +3259,283 @@
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						141,
-						136
+						137,
+						132
 					]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						146
+						142
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						162,
-						147,
 						158,
+						143,
 						154,
-						151
+						150,
+						147
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "parser.d.ts",
+					"fileName": "node_modules/react-docgen-typescript/lib/parser.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 168,
+			"name": "\"props-info/react-docgen-typescript/src/index\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/props-info/react-docgen-typescript/src/index.ts",
+			"children": [
+				{
+					"id": 169,
+					"name": "run",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "run API to generate react-docgen-typescript props information tables.",
+						"returns": "a callable function of type PropsInfoExtractorFunction\n"
+					},
+					"signatures": [
+						{
+							"id": 170,
+							"name": "run",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "run API to generate react-docgen-typescript props information tables.",
+								"returns": "a callable function of type PropsInfoExtractorFunction\n"
+							},
+							"parameters": [
+								{
+									"id": 171,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "configuration options"
+									},
+									"type": {
+										"type": "reference",
+										"id": 162,
+										"name": "RectDocgenTypescriptOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PropsInfoExtractorFunction"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen-typescript/src/index.ts",
+							"line": 14,
+							"character": 16
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						169
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "props-info/react-docgen-typescript/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 161,
+			"name": "\"props-info/react-docgen-typescript/src/types\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/atanasster/component-controls/props-info/react-docgen-typescript/src/types.ts",
+			"children": [
+				{
+					"id": 162,
+					"name": "RectDocgenTypescriptOptions",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "a callback to transfor them props table and the options to be passd to react-docgen-typescript."
+					},
+					"sources": [
+						{
+							"fileName": "props-info/react-docgen-typescript/src/types.ts",
+							"line": 6,
+							"character": 39
+						}
+					],
+					"type": {
+						"type": "intersection",
+						"types": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 163,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"children": [
+										{
+											"id": 164,
+											"name": "transformProps",
+											"kind": 32,
+											"kindString": "Variable",
+											"flags": {
+												"isExported": true,
+												"isOptional": true
+											},
+											"comment": {
+												"shortText": "callback to transform the props table"
+											},
+											"sources": [
+												{
+													"fileName": "props-info/react-docgen-typescript/src/types.ts",
+													"line": 10,
+													"character": 16
+												}
+											],
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													},
+													{
+														"type": "reflection",
+														"declaration": {
+															"id": 165,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {
+																"isExported": true
+															},
+															"signatures": [
+																{
+																	"id": 166,
+																	"name": "__call",
+																	"kind": 4096,
+																	"kindString": "Call signature",
+																	"flags": {
+																		"isExported": true
+																	},
+																	"parameters": [
+																		{
+																			"id": 167,
+																			"name": "props",
+																			"kind": 32768,
+																			"kindString": "Parameter",
+																			"flags": {
+																				"isExported": true
+																			},
+																			"type": {
+																				"type": "array",
+																				"elementType": {
+																					"type": "reference",
+																					"id": 6,
+																					"name": "ComponentDoc"
+																				}
+																			}
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"id": 6,
+																		"name": "ComponentDoc"
+																	}
+																}
+															]
+														}
+													}
+												]
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Variables",
+											"kind": 32,
+											"children": [
+												164
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "props-info/react-docgen-typescript/src/types.ts",
+											"line": 6,
+											"character": 41
+										}
+									]
+								}
+							},
+							{
+								"type": "reference",
+								"id": 46,
+								"name": "ParserOptions"
+							}
+						]
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						162
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "props-info/react-docgen-typescript/src/types.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -3390,7 +3547,9 @@
 			"title": "Modules",
 			"kind": 1,
 			"children": [
-				1
+				1,
+				168,
+				161
 			]
 		}
 	]

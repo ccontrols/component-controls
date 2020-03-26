@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { Node, AttrsArg, SectionArg, TraverseCallback } from './types';
+import { getRepoPath } from './package-info';
 
 const cleanQuotes = (txt: string): string => (txt ? txt.replace(/['"]+/g, '') : txt);
+
 
 export const extractCustomTag = (node: Node, tagName: string): SectionArg[] | undefined => {
   const nodes = node.children && node.children.filter((child: Node) => child.type ==='html' && child.value && child.value.startsWith(`<${tagName}`));
@@ -64,11 +66,9 @@ export const traverseDirs = (attributes:  string[][] | undefined, callback: Trav
   if (attributes) {
     const file = attributes.find(attribute => attribute[0] === 'path');
     const sourcePath = file ? file[1] : './src';
-    const packageJSON = JSON.parse(fs.readFileSync(path.resolve('./package.json'), 'utf8'));
-    const { repository: { directory }} = packageJSON;
-    const rootRepoDir = `https://github.com/ccontrols/component-controls/blob/master/${directory}`;
+    const { repo = ''} = getRepoPath(sourcePath) || './src';
     const excludeFiles = attributes.find(attribute => attribute[0] === 'exclude');
     const newNodes: Node[] = [];
-    getDirectories(path.resolve(sourcePath), excludeFiles ? excludeFiles[1].split(','): ['index.ts'], path.join(rootRepoDir, sourcePath), newNodes);
+    getDirectories(path.resolve(sourcePath), excludeFiles ? excludeFiles[1].split(','): ['index.ts'], path.join(repo, sourcePath), newNodes);
   }  
 }

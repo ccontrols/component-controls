@@ -3,12 +3,21 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [Parser](#parser)
+    -   [run](#run)
+    -   [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)
+    -   [ComponentDoc](#componentdoc)
+    -   [ParserOptions](#parseroptions)
+    -   [Method](#method)
+    -   [Props](#props)
     -   [ComponentNameResolver](#componentnameresolver)
+    -   [StaticPropFilter](#staticpropfilter)
     -   [PropFilter](#propfilter)
-    -   [defaultParserOpts](#defaultparseropts)
-    -   [ComponentNameResolver](#componentnameresolver-1)
-    -   [PropFilter](#propfilter-1)
+    -   [MethodParameter](#methodparameter)
+    -   [PropItem](#propitem)
+    -   [Component](#component)
+    -   [MethodParameterType](#methodparametertype)
+    -   [ParentType](#parenttype)
+    -   [PropItemType](#propitemtype)
 
 # Overview
 
@@ -26,21 +35,45 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 
 # API
 
-<tsdoc-typescript entry="react-docgen-typescript/lib/parser.d.ts"/>
+<tsdoc-typescript files="./src/types.ts,react-docgen-typescript/lib/parser.d.ts" entry="./src/index.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## Parser
+## run
 
-**Component**
+run API to generate react-docgen-typescript props information tables.
 
-### properties
+_defined in [@component-controls/react-docgen-typescript-info/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen-typescript/src/index.ts#L14)_
 
-| Name    | Type   | Description |
-| ------- | ------ | ----------- |
-| `name*` | string |             |
+**run**(`options`: [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions)): [PropsInfoExtractorFunction](#propsinfoextractorfunction);
 
-**ComponentDoc**
+### parameters
+
+| Name      | Type                                                        | Description           |
+| --------- | ----------------------------------------------------------- | --------------------- |
+| `options` | [RectDocgenTypescriptOptions](#rectdocgentypescriptoptions) | configuration options |
+
+## RectDocgenTypescriptOptions
+
+a callback to transfor them props table and the options to be passd to react-docgen-typescript.
+
+_defined in [@component-controls/react-docgen-typescript-info/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/props-info/react-docgen-typescript/src/types.ts#L6)_
+
+**properties:**
+
+callback to transform the props table
+
+**transformProps**: undefined | (`props`\*: [ComponentDoc](#componentdoc)\[]): [ComponentDoc](#componentdoc);
+
+[ParserOptions](#parseroptions)
+
+--
+
+## ComponentDoc
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+
 
 ### properties
 
@@ -51,26 +84,26 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 | `methods*`     | [Method](#method)\[] |             |
 | `props*`       | [Props](#props)      |             |
 
-**FileParser**
+## ParserOptions
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+
 
 ### properties
 
-| Name                        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `parse*`                    | **parse**(`filePathOrPaths`\*: string \| string\[]): [ComponentDoc](#componentdoc)\[];### parameters| Name               | Type                | Description | | ------------------ | ------------------- | ----------- | | `filePathOrPaths*` | string \| string\[] |             |                                                                                                                                                                                                                 |             |
-| `parseWithProgramProvider*` | **parseWithProgramProvider**(`filePathOrPaths`\*: string \| string\[], `programProvider`: undefined \| (): [Program](#program);): [ComponentDoc](#componentdoc)\[];### parameters| Name               | Type                                  | Description | | ------------------ | ------------------------------------- | ----------- | | `filePathOrPaths*` | string \| string\[]                   |             | | `programProvider`  | undefined \| (): [Program](#program); |             | |             |
+| Name                                 | Type                                                               | Description |
+| ------------------------------------ | ------------------------------------------------------------------ | ----------- |
+| `componentNameResolver`              | [ComponentNameResolver](#componentnameresolver)                    |             |
+| `propFilter`                         | [StaticPropFilter](#staticpropfilter) \| [PropFilter](#propfilter) |             |
+| `savePropValueAsString`              | undefined \| false \| true                                         |             |
+| `shouldExtractLiteralValuesFromEnum` | undefined \| false \| true                                         |             |
 
-**JSDoc**
+## Method
 
-### properties
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-| Name           | Type                           | Description |
-| -------------- | ------------------------------ | ----------- |
-| `description*` | string                         |             |
-| `fullComment*` | string                         |             |
-| `tags*`        | StringIndexedObject&lt;string> |             |
 
-**Method**
 
 ### properties
 
@@ -83,7 +116,56 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 | `params*`      | [MethodParameter](#methodparameter)\[]                               |             |
 | `returns`      | **description**: string \| null**type**: undefined \| string \| null |             |
 
-**MethodParameter**
+## Props
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+** extends StringIndexedObject&lt;[PropItem](#propitem)>**`key`\*: string: [PropItem](#propitem)
+
+## ComponentNameResolver
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+(`exp`\*: [Symbol](#symbol), `source`\*: [SourceFile](#sourcefile)): string | undefined | null | false;
+
+### parameters
+
+| Name      | Type                      | Description |
+| --------- | ------------------------- | ----------- |
+| `exp*`    | [Symbol](#symbol)         |             |
+| `source*` | [SourceFile](#sourcefile) |             |
+
+## StaticPropFilter
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+
+
+### properties
+
+| Name                  | Type                       | Description |
+| --------------------- | -------------------------- | ----------- |
+| `skipPropsWithName`   | string\[] \| string        |             |
+| `skipPropsWithoutDoc` | undefined \| false \| true |             |
+
+## PropFilter
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+(`props`\*: [PropItem](#propitem), `component`\*: [Component](#component)): boolean;
+
+### parameters
+
+| Name         | Type                    | Description |
+| ------------ | ----------------------- | ----------- |
+| `props*`     | [PropItem](#propitem)   |             |
+| `component*` | [Component](#component) |             |
+
+## MethodParameter
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+
 
 ### properties
 
@@ -93,35 +175,11 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 | `name*`       | string                                      |             |
 | `type*`       | [MethodParameterType](#methodparametertype) |             |
 
-**MethodParameterType**
+## PropItem
 
-### properties
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-| Name    | Type   | Description |
-| ------- | ------ | ----------- |
-| `name*` | string |             |
 
-**ParentType**
-
-### properties
-
-| Name        | Type   | Description |
-| ----------- | ------ | ----------- |
-| `fileName*` | string |             |
-| `name*`     | string |             |
-
-**ParserOptions**
-
-### properties
-
-| Name                                 | Type                                                               | Description |
-| ------------------------------------ | ------------------------------------------------------------------ | ----------- |
-| `componentNameResolver`              | [ComponentNameResolver](#componentnameresolver)                    |             |
-| `propFilter`                         | [StaticPropFilter](#staticpropfilter) \| [PropFilter](#propfilter) |             |
-| `savePropValueAsString`              | undefined \| false \| true                                         |             |
-| `shouldExtractLiteralValuesFromEnum` | undefined \| false \| true                                         |             |
-
-**PropItem**
 
 ### properties
 
@@ -134,132 +192,35 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 | `required*`     | boolean                       |             |
 | `type*`         | [PropItemType](#propitemtype) |             |
 
-**PropItemType**
+## Component
+
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
+
+
 
 ### properties
 
-| Name    | Type                | Description |
-| ------- | ------------------- | ----------- |
-| `name*` | string              |             |
-| `raw`   | undefined \| string |             |
-| `value` | any                 |             |
+| Name    | Type   | Description |
+| ------- | ------ | ----------- |
+| `name*` | string |             |
 
-**Props extends StringIndexedObject&lt;[PropItem](#propitem)>**`key`\*: string: [PropItem](#propitem)
+## MethodParameterType
 
-**StaticPropFilter**
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-### properties
 
-| Name                  | Type                       | Description |
-| --------------------- | -------------------------- | ----------- |
-| `skipPropsWithName`   | string\[] \| string        |             |
-| `skipPropsWithoutDoc` | undefined \| false \| true |             |
-
-**StringIndexedObject**`key`\*: string: 
-
-## ComponentNameResolver
-
-(`exp`\*: [Symbol](#symbol), `source`\*: [SourceFile](#sourcefile)): string | undefined | null | false;
-
-### parameters
-
-| Name      | Type                      | Description |
-| --------- | ------------------------- | ----------- |
-| `exp*`    | [Symbol](#symbol)         |             |
-| `source*` | [SourceFile](#sourcefile) |             |
-
-## PropFilter
-
-(`props`\*: [PropItem](#propitem), `component`\*: [Component](#component)): boolean;
-
-### parameters
-
-| Name         | Type                    | Description |
-| ------------ | ----------------------- | ----------- |
-| `props*`     | [PropItem](#propitem)   |             |
-| `component*` | [Component](#component) |             |
-
-## defaultParserOpts
-
-[ParserOptions](#parseroptions)
-
-**getDefaultExportForFile**(`source`\*: [SourceFile](#sourcefile)): string;
-
-### parameters
-
-| Name      | Type                      | Description |
-| --------- | ------------------------- | ----------- |
-| `source*` | [SourceFile](#sourcefile) |             |
-
-**parse**(`filePathOrPaths`\*: string | string\[], `parserOpts`: [ParserOptions](#parseroptions)): [ComponentDoc](#componentdoc)\[];
-
-### parameters
-
-| Name               | Type                            | Description |
-| ------------------ | ------------------------------- | ----------- |
-| `filePathOrPaths*` | string \| string\[]             |             |
-| `parserOpts`       | [ParserOptions](#parseroptions) |             |
-
-**withCompilerOptions**(`compilerOptions`\*: [CompilerOptions](#compileroptions), `parserOpts`: [ParserOptions](#parseroptions)): [FileParser](#fileparser);
-
-### parameters
-
-| Name               | Type                                | Description |
-| ------------------ | ----------------------------------- | ----------- |
-| `compilerOptions*` | [CompilerOptions](#compileroptions) |             |
-| `parserOpts`       | [ParserOptions](#parseroptions)     |             |
-
-**withCustomConfig**(`tsconfigPath`\*: string, `parserOpts`\*: [ParserOptions](#parseroptions)): [FileParser](#fileparser);
-
-### parameters
-
-| Name            | Type                            | Description |
-| --------------- | ------------------------------- | ----------- |
-| `tsconfigPath*` | string                          |             |
-| `parserOpts*`   | [ParserOptions](#parseroptions) |             |
-
-**withDefaultConfig**(`parserOpts`: [ParserOptions](#parseroptions)): [FileParser](#fileparser);
-
-### parameters
-
-| Name         | Type                            | Description |
-| ------------ | ------------------------------- | ----------- |
-| `parserOpts` | [ParserOptions](#parseroptions) |             |
-
-**ComponentDoc**
 
 ### properties
 
-| Name           | Type                 | Description |
-| -------------- | -------------------- | ----------- |
-| `description*` | string               |             |
-| `displayName*` | string               |             |
-| `methods*`     | [Method](#method)\[] |             |
-| `props*`       | [Props](#props)      |             |
+| Name    | Type   | Description |
+| ------- | ------ | ----------- |
+| `name*` | string |             |
 
-## ComponentNameResolver
+## ParentType
 
-(`exp`\*: [Symbol](#symbol), `source`\*: [SourceFile](#sourcefile)): string | undefined | null | false;
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-### parameters
 
-| Name      | Type                      | Description |
-| --------- | ------------------------- | ----------- |
-| `exp*`    | [Symbol](#symbol)         |             |
-| `source*` | [SourceFile](#sourcefile) |             |
-
-## PropFilter
-
-(`props`\*: [PropItem](#propitem), `component`\*: [Component](#component)): boolean;
-
-### parameters
-
-| Name         | Type                    | Description |
-| ------------ | ----------------------- | ----------- |
-| `props*`     | [PropItem](#propitem)   |             |
-| `component*` | [Component](#component) |             |
-
-**ParentType**
 
 ### properties
 
@@ -268,39 +229,11 @@ $ npm install @component-controls/react-docgen-typescript-info --save-dev
 | `fileName*` | string |             |
 | `name*`     | string |             |
 
-**Component**
+## PropItemType
 
-### properties
+_defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/styleguidist/react-docgen-typescript)_
 
-| Name    | Type   | Description |
-| ------- | ------ | ----------- |
-| `name*` | string |             |
 
-**FileParser**
-
-### properties
-
-| Name                        | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `parse*`                    | **parse**(`filePathOrPaths`\*: string \| string\[]): [ComponentDoc](#componentdoc)\[];### parameters| Name               | Type                | Description | | ------------------ | ------------------- | ----------- | | `filePathOrPaths*` | string \| string\[] |             |                                                                                                                                                                                                                 |             |
-| `parseWithProgramProvider*` | **parseWithProgramProvider**(`filePathOrPaths`\*: string \| string\[], `programProvider`: undefined \| (): [Program](#program);): [ComponentDoc](#componentdoc)\[];### parameters| Name               | Type                                  | Description | | ------------------ | ------------------------------------- | ----------- | | `filePathOrPaths*` | string \| string\[]                   |             | | `programProvider`  | undefined \| (): [Program](#program); |             | |             |
-
-**Props extends StringIndexedObject&lt;[PropItem](#propitem)>**`key`\*: string: [PropItem](#propitem)
-
-**PropItem**
-
-### properties
-
-| Name            | Type                          | Description |
-| --------------- | ----------------------------- | ----------- |
-| `defaultValue*` | any                           |             |
-| `description*`  | string                        |             |
-| `name*`         | string                        |             |
-| `parent`        | [ParentType](#parenttype)     |             |
-| `required*`     | boolean                       |             |
-| `type*`         | [PropItemType](#propitemtype) |             |
-
-**PropItemType**
 
 ### properties
 

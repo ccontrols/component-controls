@@ -38,7 +38,7 @@ Some of the guiding design goals for this library:
 Displays import statement for a component as well as the component file source code
 Optionally also displays some repository information from the component's package.json
 
-_BlockComponentSource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/ComponentSource/block/BlockComponentSource.tsx)_
+_BlockComponentSource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentSource/block/BlockComponentSource.tsx)_
 
 **Properties:**
 
@@ -79,7 +79,7 @@ _BlockComponentSource [source code](https:/github.com/ccontrols/component-contro
 Displays import statement for a component as well as the component file source code
 Optionally also displays some repository information from the component's package.json
 
-_ComponentSource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/ComponentSource/plain/ComponentSource.tsx)_
+_ComponentSource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentSource/plain/ComponentSource.tsx)_
 
 **Properties:**
 
@@ -116,7 +116,7 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/bl
 
 Table block component to display a story's controls and their editors
 
-_BlockControlsTable [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/ControlsTable/block/BlockControlsTable.tsx)_
+_BlockControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/block/BlockControlsTable.tsx)_
 
 **Properties:**
 
@@ -136,7 +136,7 @@ _BlockControlsTable [source code](https:/github.com/ccontrols/component-controls
 Table component to display a story's controls and their editors.
 Can adapt to multiple groups of controls, displaying them in their own tabs.
 
-_ControlsTable [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/ControlsTable/plain/ControlsTable.tsx)_
+_ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/plain/ControlsTable.tsx)_
 
 **Properties:**
 
@@ -153,7 +153,7 @@ _ControlsTable [source code](https:/github.com/ccontrols/component-controls/blob
 Single table of controls, without specific handliong of groups.
 The controls and storyId are already set in priops;
 
-_SingleControlsTable [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/ControlsTable/plain/SingleControlsTable.tsx)_
+_SingleControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/plain/SingleControlsTable.tsx)_
 
 **Properties:**
 
@@ -175,7 +175,7 @@ _SingleControlsTable [source code](https:/github.com/ccontrols/component-control
 Description component with markdown.
 The 'of' property can specify which component's description to display.
 
-_Description [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Description/Description.tsx)_
+_Description [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Description/Description.tsx)_
 
 **Properties:**
 
@@ -190,7 +190,7 @@ _Description [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 ## <ins>BlockPropsTable</ins>
 
-_BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/PropsTable/block/BlockPropsTable.tsx)_
+_BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/block/BlockPropsTable.tsx)_
 
 **Properties:**
 
@@ -229,7 +229,7 @@ _BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/bl
 
 ## <ins>PropsTable</ins>
 
-_PropsTable [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/PropsTable/plain/PropsTable.tsx)_
+_PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/plain/PropsTable.tsx)_
 
 **Properties:**
 
@@ -265,7 +265,7 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/blob/ma
 
 ## <ins>BlockStorySource</ins>
 
-_BlockStorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/block/BlockStorySource.tsx)_
+_BlockStorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/block/BlockStorySource.tsx)_
 
 **Properties:**
 
@@ -309,7 +309,7 @@ Display source code of a story.
 If controls are used, all story arguments will be highlighted.
 Additional commands are made available if the repository data of the story is available.
 
-_StorySource [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/StorySource/plain/StorySource.tsx)_
+_StorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/plain/StorySource.tsx)_
 
 ## <ins>Subtitle</ins>
 
@@ -317,7 +317,7 @@ displays a subtitle as assigned to the story parameters:
 story.parameters.componentSubtitle
 or story.subtitle
 
-_Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Subtitle/Subtitle.tsx)_
+_Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Subtitle/Subtitle.tsx)_
 
 **Properties:**
 
@@ -337,7 +337,7 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
 displays a title as assigned to the story document
 
-_Title [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/Title/Title.tsx)_
+_Title [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.tsx)_
 
 **Properties:**
 
@@ -357,6 +357,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 error message when the control type is not found.
 
-_InvalidType [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/blocks/src/notifications/InvalidType.tsx)_
+_InvalidType [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/notifications/InvalidType.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

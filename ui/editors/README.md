@@ -34,20 +34,20 @@ Property editors factory. Given a propey type, will return a editor compnent cla
 @param type : specify the type ie 'text'
 @returns a Property Editor class.
 
-_getPropertyEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/prop-factory.ts)_
+_getPropertyEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
 
 ## <ins>addPropertyEditor</ins>
 
 @param type : specify the type ie 'text'
 @param editor : a Property Editor class.
 
-_addPropertyEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/prop-factory.ts)_
+_addPropertyEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
 
 ## <ins>ArrayEditor</ins>
 
 Array control editor.
 
-_ArrayEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
+_ArrayEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
 
 **Properties:**
 
@@ -68,7 +68,7 @@ _ArrayEditor [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 Boolean control editor. Uses the Toggle component.
 
-_BooleanEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
+_BooleanEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
 
 **Properties:**
 
@@ -89,7 +89,7 @@ _BooleanEditor [source code](https:/github.com/ccontrols/component-controls/blob
 
 Button control editor.
 
-_ButtonEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
+_ButtonEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
 
 **Properties:**
 
@@ -110,7 +110,7 @@ _ButtonEditor [source code](https:/github.com/ccontrols/component-controls/blob/
 
 Color control editor.
 
-_ColorEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
+_ColorEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
 
 **Properties:**
 
@@ -131,7 +131,7 @@ _ColorEditor [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 Date control editor.
 
-_DateEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/DateEditor/DateEditor.tsx)_
+_DateEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/DateEditor/DateEditor.tsx)_
 
 **Properties:**
 
@@ -152,7 +152,7 @@ _DateEditor [source code](https:/github.com/ccontrols/component-controls/blob/ma
 
 Files control editor.
 
-_FilesEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
+_FilesEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
 
 **Properties:**
 
@@ -173,7 +173,7 @@ _FilesEditor [source code](https:/github.com/ccontrols/component-controls/blob/m
 
 Number control editor.
 
-_NumberEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
+_NumberEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
 
 **Properties:**
 
@@ -194,7 +194,7 @@ _NumberEditor [source code](https:/github.com/ccontrols/component-controls/blob/
 
 Object control editor.
 
-_ObjectEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
+_ObjectEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
 
 **Properties:**
 
@@ -215,7 +215,7 @@ _ObjectEditor [source code](https:/github.com/ccontrols/component-controls/blob/
 
 Options control editor.
 
-_OptionsEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
+_OptionsEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
 
 **Properties:**
 
@@ -236,7 +236,7 @@ _OptionsEditor [source code](https:/github.com/ccontrols/component-controls/blob
 
 Text control editor.
 
-_TextEditor [source code](https:/github.com/ccontrols/component-controls/blob/master/core/specification/src/TextEditor/TextEditor.tsx)_
+_TextEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/TextEditor/TextEditor.tsx)_
 
 **Properties:**
 

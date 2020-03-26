@@ -53,7 +53,7 @@ a strip of actions to be attached to a container
 the action items contain the labels and click event handler
 actions can accept an order prop, and can also be superimposed
 
-_ActionBar [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ActionBar/ActionBar.tsx)_
+_ActionBar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx)_
 
 **Properties:**
 
@@ -63,7 +63,7 @@ _ActionBar [source code](https:/github.com/ccontrols/component-controls/blob/mas
 
 a boxed container with actions.
 
-_ActionContainer [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
+_ActionContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
 
 **Properties:**
 
@@ -78,7 +78,7 @@ _ActionContainer [source code](https:/github.com/ccontrols/component-controls/bl
 
 a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
 
-_BlockContainer [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
+_BlockContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
 
 **Properties:**
 
@@ -90,7 +90,7 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/blo
 
 Animated expand/collapse container component
 
-_Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Collapsible/Collapsible.tsx)_
+_Collapsible [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Collapsible/Collapsible.tsx)_
 
 **Properties:**
 
@@ -113,7 +113,7 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/blob/m
 Anchor link to an external url,
 adds the default `target="_blank" rel="noopener noreferrer"` props
 
-_ExternalLink [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
+_ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
 
 **Properties:**
 
@@ -141,7 +141,7 @@ _ExternalLink [source code](https:/github.com/ccontrols/component-controls/blob/
 
 ## <ins>FlexContainer</ins>
 
-_FlexContainer [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/FlexContainer/FlexContainer.tsx)_
+_FlexContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/FlexContainer/FlexContainer.tsx)_
 
 **Properties:**
 
@@ -152,7 +152,7 @@ _FlexContainer [source code](https:/github.com/ccontrols/component-controls/blob
 Markdown display component to compile and display markdown at run-time.
 Uses `markdown-to-jsx` to compile the markdown.
 
-_Markdown [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Markdown/Markdown.tsx)_
+_Markdown [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Markdown/Markdown.tsx)_
 
 **Properties:**
 
@@ -168,13 +168,13 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/blob/mast
 A Popover container that is triggered by a click/hover event.
 Used to display enhanced information that could not fit into the main scren.
 
-_Popover [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Popover/Popover.tsx)_
+_Popover [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
 
 ## <ins>Source</ins>
 
 Syntax highliting source code component. Uses [prism](https://prismjs.com) for the actual source display.
 
-_Source [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Source/Source.tsx)_
+_Source [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Source/Source.tsx)_
 
 **Properties:**
 
@@ -209,7 +209,7 @@ _Source [source code](https:/github.com/ccontrols/component-controls/blob/master
 
 `h3` level heading with faded text and font-weight 400.
 
-_Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Subtitle/Subtitle.tsx)_
+_Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Subtitle/Subtitle.tsx)_
 
 **Properties:**
 
@@ -222,7 +222,7 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/blob/mast
 
 Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual source display.
 
-_SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
+_SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
 
 **Properties:**
 
@@ -255,7 +255,7 @@ _SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/
 Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
 Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
 
-_Table [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Table/Table.tsx)_
+_Table [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/Table.tsx)_
 
 **Properties:**
 
@@ -291,29 +291,29 @@ _Table [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
 
-_Tab [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
+_Tab [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>TabList</ins>
 
 Container for `<Tab />` headings, to be created inside the `<Tabs />` component. The list of `<Tab />` components should be passed as the children prop.
 
-_TabList [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
+_TabList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>TabPanel</ins>
 
 Panel body container, to be created inside the `<Tabs />` component through the children prop.
 
-_TabPanel [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
+_TabPanel [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>Tabs</ins>
 
 Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
 
-_Tabs [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Tabs/Tabs.tsx)_
+_Tabs [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>Title</ins>
 
-_Title [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Title/Title.tsx)_
+_Title [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Title/Title.tsx)_
 
 **Properties:**
 
@@ -326,7 +326,7 @@ _Title [source code](https:/github.com/ccontrols/component-controls/blob/master/
 
 Toggle components can be used to edit boolean values. Uses [react-switch](https://github.com/markusenglund/react-switch) component.
 
-_Toggle [source code](https:/github.com/ccontrols/component-controls/blob/master/ui/components/src/Toggle/Toggle.tsx)_
+_Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Toggle/Toggle.tsx)_
 
 **Properties:**
 
