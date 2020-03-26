@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
+    -   [deepMerge](#deepmerge)
     -   [injectedStories](#injectedstories)
     -   [storyStore](#storystore)
     -   [loadStoryStore](#loadstorystore)
@@ -33,6 +34,17 @@ $ npm install @component-controls/loader --save-dev
 <tsdoc-typescript files="../specification/src/stories.ts" entry="./src/story-store-data.ts,./src/loader.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
+
+## deepMerge
+
+_defined in [@component-controls/loader/src/story-store-data.ts](https://github.com/ccontrols/component-controls/tree/master/core/loader/src/story-store-data.ts#L4)_
+
+
+
+### properties
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
 
 ## injectedStories
 

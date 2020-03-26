@@ -44,8 +44,13 @@ addDecorator(
             controls: ComponentControls;
           }[] = [];
           const injectedStoryStore = storyStoreData;
+
           Object.keys(injectedStoryStore.stories).forEach((id: string) => {
             const story = injectedStoryStore.stories[id];
+            if (storyStore._data[id]) {
+              story.storyFn = storyStore._data[id].storyFn;
+            }
+
             const { controls } = story;
             const parameters = story.parameters || {};
             const { addonControls = {} } = parameters;

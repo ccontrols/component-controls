@@ -6,7 +6,7 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 79,
+			"id": 80,
 			"name": "\"loader/src/loader\"",
 			"kind": 1,
 			"kindString": "Module",
@@ -34,6 +34,27 @@
 			"children": [
 				{
 					"id": 75,
+					"name": "deepMerge",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "loader/src/story-store-data.ts",
+							"line": 4,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"defaultValue": "require('deepmerge')"
+				},
+				{
+					"id": 76,
 					"name": "injectedStories",
 					"kind": 32,
 					"kindString": "Variable",
@@ -54,7 +75,7 @@
 					"defaultValue": "\"__STORIES_HASH__INJECTED_STORIES__\""
 				},
 				{
-					"id": 76,
+					"id": 77,
 					"name": "storyStore",
 					"kind": 32,
 					"kindString": "Variable",
@@ -84,7 +105,7 @@
 					"defaultValue": "undefined"
 				},
 				{
-					"id": 77,
+					"id": 78,
 					"name": "loadStoryStore",
 					"kind": 64,
 					"kindString": "Function",
@@ -93,7 +114,7 @@
 					},
 					"signatures": [
 						{
-							"id": 78,
+							"id": 79,
 							"name": "loadStoryStore",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -128,14 +149,15 @@
 					"kind": 32,
 					"children": [
 						75,
-						76
+						76,
+						77
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						77
+						78
 					]
 				}
 			],
@@ -1817,7 +1839,7 @@
 			"title": "Modules",
 			"kind": 1,
 			"children": [
-				79,
+				80,
 				74,
 				1
 			]
