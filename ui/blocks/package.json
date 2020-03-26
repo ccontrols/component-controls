@@ -38,10 +38,12 @@
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
+    "@primer/octicons-react":"^9.6.0",
     "qs": "^6.9.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-table": "^7.0.0",
+    "react-zoom-pan-pinch": "^1.6.1",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
@@ -55,6 +57,7 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
+    "@primer/octicons-react": "*",
     "react": "*",
     "react-dom": "*",
     "react-table": "*",

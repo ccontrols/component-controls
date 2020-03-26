@@ -2255,11 +2255,6 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.7.tgz#335358feb2d511bfdb3aa46e31752a10aa51270a"
   integrity sha512-SV+V8A+Y33pmVT/LWk/2y51ixIyA/QH1XL+nrWAhoqre1rFtxOEZ4jr0W+bKZpeahOvkn/BQTheK+dRty9o/ig==
 
-"@microsoft/tsdoc@^0.12.18":
-  version "0.12.18"
-  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.18.tgz#7e7aadc7009e57a25fbf6c9f48b44c2fe30ada88"
-  integrity sha512-3rypGnknRaPGlU4HFx2MorC4zmhoGJx773cVbDfcUgc6zI/PFfFaiWmeRR6JiVyKRrLnU/ZH0pc/6jePzy/QyQ==
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -8465,7 +8460,7 @@ gzip-size@5.1.1, gzip-size@^5.1.1:
     duplexer "^0.1.1"
     pify "^4.0.1"
 
-handlebars@^4.4.0, handlebars@^4.7.2, handlebars@^4.7.3:
+handlebars@^4.4.0, handlebars@^4.7.2:
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.3.tgz#8ece2797826886cf8082d1726ff21d2a022550ee"
   integrity sha512-SRGwSYuNfx8DwHD/6InAPzD6RgeruWLT+B8e8a7gGs8FWgHzlExpTFMEq2IA6QpAfOClpKHy6+8IqTjeBCu6Kg==
@@ -13672,6 +13667,11 @@ react-virtualized@^9.19.1:
     prop-types "^15.6.0"
     react-lifecycles-compat "^3.0.4"
 
+react-zoom-pan-pinch@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/react-zoom-pan-pinch/-/react-zoom-pan-pinch-1.6.1.tgz#da16267c258ab37e8ebcdc7c252794a9633e91ec"
+  integrity sha512-J2eM0gZ04XiUWvmKZrOhSAB2zjyoK7kw2POIeN1X0yTTlmp6HPGV0zYfjnlkhgt8nQwpvXAbsF/oAnkuiwk1kA==
+
 react@^16.12.0, react@^16.3.0, react@^16.8.3, react@^16.9.0:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.0.tgz#d046eabcdf64e457bbeed1e792e235e1b9934cf7"
@@ -16028,14 +16028,6 @@ typedoc-default-themes@0.8.0-0:
     jquery "^3.4.1"
     lunr "^2.3.8"
     underscore "^1.9.1"
-
-typedoc-plugin-markdown@^2.2.17:
-  version "2.2.17"
-  resolved "https://registry.yarnpkg.com/typedoc-plugin-markdown/-/typedoc-plugin-markdown-2.2.17.tgz#aaef7420e8268170e62c764f43740e10f842548d"
-  integrity sha512-eE6cTeqsZIbjur6RG91Lhx1vTwjR49OHwVPRlmsxY3dthS4FNRL8sHxT5Y9pkosBwv1kSmNGQEPHjMYy1Ag6DQ==
-  dependencies:
-    fs-extra "^8.1.0"
-    handlebars "^4.7.3"
 
 typedoc@^0.17.0-3:
   version "0.17.0-3"

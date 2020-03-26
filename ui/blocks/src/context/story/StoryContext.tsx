@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import storyStore from '@component-controls/loader/story-store-data';
 import {
   Story,
+  StoriesStore,
   StoriesKind,
   StoryComponent,
   SetControlValueFn,
@@ -37,6 +38,12 @@ export interface StoryContextProps {
    * current story's/document's component
    */
   component?: StoryComponent;
+
+  /**
+   * access the the fil story store
+   */
+  store?: StoriesStore;
+
   /**
    * generic function to update the values of component controls.
    */
@@ -93,6 +100,7 @@ export const useStoryContext = ({
     component,
     clickControl,
     setControlValue,
+    store,
   };
 };
 

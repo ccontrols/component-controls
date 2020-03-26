@@ -9,6 +9,8 @@ export const Story: FC<StoryProps> = ({ id, name, ...rest }) => {
     name,
   });
   return story && story.renderFn ? (
-    <div {...rest}>{createElement(story.renderFn)}</div>
+    <div id={story.id} {...rest}>
+      {createElement(story.renderFn)}
+    </div>
   ) : null;
 };
