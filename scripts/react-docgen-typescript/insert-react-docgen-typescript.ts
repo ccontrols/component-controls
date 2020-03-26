@@ -3,10 +3,11 @@ import remark from 'remark';
 import {
   withDefaultConfig,
   ComponentDoc,
-  PropItem,
+  PropItem as RDPropItem,
   ParserOptions,
 } from 'react-docgen-typescript';
-import { Settings, Node, NodeChildren } from '../common/types';
+import { PropItem, createPropsTable } from '../blocks/props-table';
+import { Settings, Node } from '../common/types';
 import { extractCustomTag, inlineNewContent, traverseDirs }from '../common/utils';
 
 const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
@@ -37,35 +38,26 @@ const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
     ]}    
   ]
 });
-  if (Object.keys(propTable.props).length) {
-    nodes.push({type: 'paragraph', children: [ {type: 'strong', children: [{ type: 'text', value: 'Properties:' }]} ]});
-    const list: NodeChildren = { type: 'list', children: [] }
-    nodes.push(list);
-    Object.keys(propTable.props).forEach(propName => {
+  if (Object.keys(propTable.props).length) {  
+    const props: PropItem[] = Object.keys(propTable.props).map(propName => {
       const prop = propTable.props[propName];
-      const listItem: NodeChildren = { type: 'listItem', children: [] };
-      const listItems: Node[] = listItem.children;
-      list.children.push(listItem);
-      const propTitle: NodeChildren = {type: 'paragraph', children: [{type: 'strong', children: [{ type: 'text', value: propName }]}]}
-      listItems.push(propTitle)
-      propTitle.children.push({ type: 'text', value : `${prop.required ? '' : '?'} : ` });
-      propTitle.children.push({ type: 'emphasis', children: [{ type: 'text', value: prop.type.raw ||  prop.type.name }]});
-      remark()
-      .use(() => (node: Node) => {
-        if (node.children) {
-          listItems.push.apply(listItems, [...node.children]);
-        }  
-      })
-      .process(prop.description);
+      return {
+        name: propName,
+        isOptional: !prop.required,
+        type: [{ type: 'emphasis', children: [{ type: 'text', value: prop.type.raw ||  prop.type.name }]}],
+        description: prop.description,
+      }
       
     });
+    const { propsTable } = createPropsTable('properties', props);
+    nodes.push.apply(nodes, propsTable);
   }  
   return nodes;
 }
 export const insertReactDocgenTypescript = (settings: Settings = { path: './src' }) =>{
   return  (node: Node ) => {
     const {
-      propFilter = (prop: PropItem) => {
+      propFilter = (prop: RDPropItem) => {
         // Currently not working, prop.parent is always null.
         if (prop.parent) {
           return !prop.parent.fileName.includes('node_modules');

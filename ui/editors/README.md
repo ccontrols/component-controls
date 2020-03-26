@@ -49,20 +49,14 @@ Array control editor.
 
 _ArrayEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlArray_
-
-    the array property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlArray_             | the array property that is being edited.                |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>BooleanEditor</ins>
 
@@ -70,20 +64,14 @@ Boolean control editor. Uses the Toggle component.
 
 _BooleanEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlBoolean_
-
-    the property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlBoolean_           | the property that is being edited.                      |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>ButtonEditor</ins>
 
@@ -91,20 +79,14 @@ Button control editor.
 
 _ButtonEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlButton&lt;() => void>_
-
-    the button property that is being edited.
--   **onClick** : _PropertyOnClick_
-
-    the onClick event handler for the button
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
+| Name        | Type                                    | Description                                        |
+| ----------- | --------------------------------------- | -------------------------------------------------- |
+| `prop*`     | _ComponentControlButton&lt;() => void>_ | the button property that is being edited.          |
+| `onClick*`  | _PropertyOnClick_                       | the onClick event handler for the button           |
+| `name*`     | _string_                                | name of the control.                               |
+| `onChange*` | _(name: string, prop: any) => void_     | onChange event called when the propery is changing |
 
 ## <ins>ColorEditor</ins>
 
@@ -112,20 +94,14 @@ Color control editor.
 
 _ColorEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlColor_
-
-    the color property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlColor_             | the color property that is being edited.                |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>DateEditor</ins>
 
@@ -133,20 +109,14 @@ Date control editor.
 
 _DateEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/DateEditor/DateEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlDate_
-
-    the date property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlDate_              | the date property that is being edited.                 |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>FilesEditor</ins>
 
@@ -154,20 +124,14 @@ Files control editor.
 
 _FilesEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlFiles_
-
-    the files property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlFiles_             | the files property that is being edited.                |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>NumberEditor</ins>
 
@@ -175,20 +139,14 @@ Number control editor.
 
 _NumberEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlNumber_
-
-    the number property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlNumber_            | the number property that is being edited.               |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>ObjectEditor</ins>
 
@@ -196,20 +154,14 @@ Object control editor.
 
 _ObjectEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlObject_
-
-    the object property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlObject_            | the object property that is being edited.               |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>OptionsEditor</ins>
 
@@ -217,20 +169,14 @@ Options control editor.
 
 _OptionsEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlOptions&lt;unknown>_
-
-    the options property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                  | Description                                             |
+| ----------- | ------------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlOptions&lt;unknown>_ | the options property that is being edited.              |
+| `name*`     | _string_                              | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_   | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                     | onClick event handler for Button type property editors. |
 
 ## <ins>TextEditor</ins>
 
@@ -238,19 +184,13 @@ Text control editor.
 
 _TextEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/TextEditor/TextEditor.tsx)_
 
-**Properties:**
+### properties
 
--   **prop** : _ComponentControlText_
-
-    the text property that is being edited.
--   **name** : _string_
-
-    name of the control.
--   **onChange** : _(name: string, prop: any) => void_
-
-    onChange event called when the propery is changing
--   **onClick**? : _PropertyOnClick_
-
-    onClick event handler for Button type property editors.
+| Name        | Type                                | Description                                             |
+| ----------- | ----------------------------------- | ------------------------------------------------------- |
+| `prop*`     | _ComponentControlText_              | the text property that is being edited.                 |
+| `name*`     | _string_                            | name of the control.                                    |
+| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
+| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -55,9 +55,11 @@ actions can accept an order prop, and can also be superimposed
 
 _ActionBar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx)_
 
-**Properties:**
+### properties
 
--   **actions**? : _ActionItem\[]_
+| Name      | Type            | Description |
+| --------- | --------------- | ----------- |
+| `actions` | _ActionItem\[]_ |             |
 
 ## <ins>ActionContainer</ins>
 
@@ -65,14 +67,12 @@ a boxed container with actions.
 
 _ActionContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
 
-**Properties:**
+### properties
 
--   **actions**? : _ActionItem\[]_
-
-    optional actions provided to the component
--   **paddingTop**? : _string | number_
-
-    padding at the top, to account for the absolute position of the ActionBar
+| Name         | Type               | Description                                                               |
+| ------------ | ------------------ | ------------------------------------------------------------------------- |
+| `actions`    | _ActionItem\[]_    | optional actions provided to the component                                |
+| `paddingTop` | _string \| number_ | padding at the top, to account for the absolute position of the ActionBar |
 
 ## <ins>BlockContainer</ins>
 
@@ -80,11 +80,11 @@ a collapsible block with a title. The title creates also an attribute id and an 
 
 _BlockContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
 
-**Properties:**
+### properties
 
--   **title**? : _string_
-
-    optional section title for the block
+| Name    | Type     | Description                          |
+| ------- | -------- | ------------------------------------ |
+| `title` | _string_ | optional section title for the block |
 
 ## <ins>Collapsible</ins>
 
@@ -92,21 +92,21 @@ Animated expand/collapse container component
 
 _Collapsible [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Collapsible/Collapsible.tsx)_
 
-**Properties:**
+### properties
 
--   **isOpen** : _boolean_
-
-    controlled open state
--   **animateOpacity**? : _boolean_
--   **animationStateClasses**? : _AnimationStateClasses_
--   **applyInlineTransitions**? : _boolean_
--   **contentClassName**? : _string_
--   **delay**? : _number_
--   **duration**? : _number_
--   **easing**? : _string_
--   **height**? : _ReactText_
--   **onAnimationEnd**? : _(props: { newHeight: number; }) => void_
--   **onAnimationStart**? : _(props: { newHeight: number; }) => void_
+| Name                     | Type                                      | Description           |
+| ------------------------ | ----------------------------------------- | --------------------- |
+| `isOpen*`                | _boolean_                                 | controlled open state |
+| `animateOpacity`         | _boolean_                                 |                       |
+| `animationStateClasses`  | _AnimationStateClasses_                   |                       |
+| `applyInlineTransitions` | _boolean_                                 |                       |
+| `contentClassName`       | _string_                                  |                       |
+| `delay`                  | _number_                                  |                       |
+| `duration`               | _number_                                  |                       |
+| `easing`                 | _string_                                  |                       |
+| `height`                 | _ReactText_                               |                       |
+| `onAnimationEnd`         | _(props: { newHeight: number; }) => void_ |                       |
+| `onAnimationStart`       | _(props: { newHeight: number; }) => void_ |                       |
 
 ## <ins>ExternalLink</ins>
 
@@ -115,37 +115,27 @@ adds the default `target="_blank" rel="noopener noreferrer"` props
 
 _ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
 
-**Properties:**
+### properties
 
--   **download**? : _any_
-
-    specifies that the target will be downloaded when a user clicks on the hyperlink.
--   **href**? : _string_
-
-    specifies the URL of the page the link goes to.
--   **hrefLang**? : _string_
-
-    specifies the language of the linked document.
--   **media**? : _string_
-
-    specifies what media/device the linked document is optimized for.
--   **ping**? : _string_
-
-    specifies a list of URLs to be notified if the user follows the hyperlink.
--   **type**? : _string_
-
-    specifies the media type of the linked document.
--   **referrerPolicy**? : _"no-referrer" | "no-referrer-when-downgrade" | "origin" | "origin-when-cross-origin" | "unsafe-url"_
-
-    specifies which referrer to send.
+| Name             | Type                                                                                                      | Description                                                                       |
+| ---------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `download`       | _any_                                                                                                     | specifies that the target will be downloaded when a user clicks on the hyperlink. |
+| `href`           | _string_                                                                                                  | specifies the URL of the page the link goes to.                                   |
+| `hrefLang`       | _string_                                                                                                  | specifies the language of the linked document.                                    |
+| `media`          | _string_                                                                                                  | specifies what media/device the linked document is optimized for.                 |
+| `ping`           | _string_                                                                                                  | specifies a list of URLs to be notified if the user follows the hyperlink.        |
+| `type`           | _string_                                                                                                  | specifies the media type of the linked document.                                  |
+| `referrerPolicy` | _"no-referrer" \| "no-referrer-when-downgrade" \| "origin" \| "origin-when-cross-origin" \| "unsafe-url"_ | specifies which referrer to send.                                                 |
 
 ## <ins>FlexContainer</ins>
 
 _FlexContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/FlexContainer/FlexContainer.tsx)_
 
-**Properties:**
+### properties
 
--   **align**? : _string_
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `align` | _string_ |             |
 
 ## <ins>Markdown</ins>
 
@@ -154,14 +144,12 @@ Uses `markdown-to-jsx` to compile the markdown.
 
 _Markdown [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Markdown/Markdown.tsx)_
 
-**Properties:**
+### properties
 
--   **children** : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    the markdown source code is passed as a children pro.
--   **components**? : _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_
-
-    components to customize the markdown display.
+| Name         | Type                                                                                                                                                                                                                                                                                 | Description                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| `children*`  | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | the markdown source code is passed as a children pro. |
+| `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_                                                             | components to customize the markdown display.         |
 
 ## <ins>Popover</ins>
 
@@ -176,34 +164,18 @@ Syntax highliting source code component. Uses [prism](https://prismjs.com) for t
 
 _Source [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Source/Source.tsx)_
 
-**Properties:**
+### properties
 
--   **actions**? : _ActionItem\[]_
-
-    optional actions provided to the component
--   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    source code to be displayed.
--   **theme**? : _PrismTheme_
-
-    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
--   **language**? : _Language_
-
-    source lnguage used, by default "jsx".
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code.
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
-    if dark: true, duotoneDark theme is used.
-    if dark: false, duotoneLight theme is used.
--   **style**? : _any_
-
-    css styles for the container.
--   **as**? : _any_
-
-    syntax container as element. Can be used as `div` or `span`.
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `actions`  | _ActionItem\[]_                                                                                                                                                                                                                                                                      | optional actions provided to the component                                                                                                                                       |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
+| `theme`    | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `language` | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn` | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                   | custom function to render the source code.                                                                                                                                       |
+| `dark`     | _boolean_                                                                                                                                                                                                                                                                            | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`    | _any_                                                                                                                                                                                                                                                                                | css styles for the container.                                                                                                                                                    |
+| `as`       | _any_                                                                                                                                                                                                                                                                                | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
 ## <ins>Subtitle</ins>
 
@@ -211,12 +183,12 @@ _Source [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 _Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Subtitle/Subtitle.tsx)_
 
-**Properties:**
+### properties
 
--   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    text to be displayed in the component.
--   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
 
 ## <ins>SyntaxHighlighter</ins>
 
@@ -224,31 +196,17 @@ Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual s
 
 _SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
 
-**Properties:**
+### properties
 
--   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    source code to be displayed.
--   **theme**? : _PrismTheme_
-
-    optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
--   **language**? : _Language_
-
-    source lnguage used, by default "jsx".
--   **renderFn**? : _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_
-
-    custom function to render the source code.
--   **dark**? : _boolean_
-
-    used to specify a "dark" color theme - applcable only if no custom theme prop is provided.
-    if dark: true, duotoneDark theme is used.
-    if dark: false, duotoneLight theme is used.
--   **style**? : _any_
-
-    css styles for the container.
--   **as**? : _any_
-
-    syntax container as element. Can be used as `div` or `span`.
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
+| `theme`    | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `language` | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn` | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                   | custom function to render the source code.                                                                                                                                       |
+| `dark`     | _boolean_                                                                                                                                                                                                                                                                            | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`    | _any_                                                                                                                                                                                                                                                                                | css styles for the container.                                                                                                                                                    |
+| `as`       | _any_                                                                                                                                                                                                                                                                                | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
 ## <ins>Table</ins>
 
@@ -257,35 +215,19 @@ Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
 
 _Table [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/Table.tsx)_
 
-**Properties:**
+### properties
 
--   **columns** : _Column&lt;{}>\[]_
-
-    the colmns object as an array.
--   **data**? : _any\[]_
-
-    array of data rows.
--   **header**? : _boolean_
-
-    show or hide the header element.
--   **sorting**? : _boolean_
-
-    enable.disable sorting.
--   **filtering**? : _boolean_
-
-    enable/disable filtering.
--   **itemsLabel**? : _string_
-
-    string label for 'items' - used in the filter placeholder and grouping header.
--   **groupBy**? : _string\[]_
-
-    field to be grouped by.
--   **hiddenColumns**? : _string\[]_
-
-    list of columns to hide.
--   **expanded**? : _{ \[key: string]: boolean; }_
-
-    object listing the initially expanded rows.
+| Name            | Type                           | Description                                                                    |
+| --------------- | ------------------------------ | ------------------------------------------------------------------------------ |
+| `columns*`      | _Column&lt;{}>\[]_             | the colmns object as an array.                                                 |
+| `data`          | _any\[]_                       | array of data rows.                                                            |
+| `header`        | _boolean_                      | show or hide the header element.                                               |
+| `sorting`       | _boolean_                      | enable.disable sorting.                                                        |
+| `filtering`     | _boolean_                      | enable/disable filtering.                                                      |
+| `itemsLabel`    | _string_                       | string label for 'items' - used in the filter placeholder and grouping header. |
+| `groupBy`       | _string\[]_                    | field to be grouped by.                                                        |
+| `hiddenColumns` | _string\[]_                    | list of columns to hide.                                                       |
+| `expanded`      | _{ \[key: string]: boolean; }_ | object listing the initially expanded rows.                                    |
 
 ## <ins>Tab</ins>
 
@@ -315,12 +257,12 @@ _Tabs [source code](https:/github.com/ccontrols/component-controls/tree/master/u
 
 _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Title/Title.tsx)_
 
-**Properties:**
+### properties
 
--   **children**? : _string | (string & {}) | (string & ReactElement&lt;any, string | ((props: any) => ReactElement&lt;any, string | ... | (new (props: any) => Component&lt;any, any, any>)>) | (new (props: any) => Component&lt;...>)>) | (string & ReactNodeArray) | (string & ReactPortal)_
-
-    text to be displayed in the component.
--   **ref**? : _((instance: HTMLHeadingElement) => void) | RefObject&lt;HTMLHeadingElement>_
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
 
 ## <ins>Toggle</ins>
 
@@ -328,10 +270,10 @@ Toggle components can be used to edit boolean values. Uses [react-switch](https:
 
 _Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Toggle/Toggle.tsx)_
 
-**Properties:**
+### properties
 
--   **label**? : _string_
-
-    optional label to be displayed alongside the toggle
+| Name    | Type     | Description                                         |
+| ------- | -------- | --------------------------------------------------- |
+| `label` | _string_ | optional label to be displayed alongside the toggle |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
