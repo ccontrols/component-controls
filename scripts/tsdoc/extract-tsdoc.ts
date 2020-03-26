@@ -562,7 +562,7 @@ export const extractTSDoc = (files: string[], entries: string[]): Node[] | undef
       // console.log(JSON.stringify(result, null, 2));
       return result;
     } finally {
-      // fs.unlinkSync(fName)
+      fs.unlinkSync(fName)
     }  
   } else {
     console.error('could not compile project')
