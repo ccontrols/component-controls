@@ -45,12 +45,12 @@
     "typescript": "^3.7.5"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^5.3.12",
-    "@storybook/addons": "^5.3.12",
-    "@storybook/api": "^5.3.12",
-    "@storybook/client-api": "^5.3.12",
-    "@storybook/react": "^5.3.12",
-    "@storybook/theming": "^5.3.12",
+    "@storybook/addon-docs": "next",
+    "@storybook/addons": "next",
+    "@storybook/api": "next",
+    "@storybook/client-api": "next",
+    "@storybook/react": "next",
+    "@storybook/theming": "next",
     "@types/node": "^13.7.0",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",

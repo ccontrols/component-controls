@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import storyStore from '@component-controls/loader/story-store-data';
+import storyFn from '@component-controls/loader/story-store-data';
 import {
   Story,
   StoriesStore,
@@ -69,7 +69,7 @@ export const useStoryContext = ({
     clickControl,
     setControlValue,
   } = React.useContext(BlockContext);
-  const store = mockStore || storyStore;
+  const store = mockStore || storyFn();
   const inputId = id === CURRENT_SELECTION ? currentId : id;
 
   const storyId =
@@ -81,7 +81,7 @@ export const useStoryContext = ({
       setControlValue,
     };
   }
-  const story: Story = store && store.stories[storyId];
+  const story: Story = store && store.stories && store.stories[storyId];
   const kind = story && story.kind ? store.kinds[story.kind] : undefined;
   const storyComponent: any = story ? story.component : undefined;
   const componentName = storyComponent

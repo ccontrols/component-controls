@@ -1,5 +1,5 @@
 import React from 'react';
-import storyStore from '@component-controls/loader/story-store-data';
+import storyFn from '@component-controls/loader/story-store-data';
 import {
   Story,
   StoriesKind,
@@ -46,7 +46,7 @@ export const useComponentsContext = ({
     setControlValue,
     clickControl,
   } = React.useContext(BlockContext);
-  const store = mockStore || storyStore;
+  const store = mockStore || storyFn();
   if (!currentId) {
     return {
       components: {},
@@ -54,7 +54,7 @@ export const useComponentsContext = ({
       clickControl,
     };
   }
-  const story: Story = store && store.stories[currentId];
+  const story: Story = store && store.stories && store.stories[currentId];
   const kind = story && story.kind ? store.kinds[story.kind] : undefined;
 
   let cmp: any;

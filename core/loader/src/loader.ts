@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 import { getOptions } from 'loader-utils';
 import { loader } from 'webpack';
@@ -18,10 +17,9 @@ module.exports.default = async function(source: string) {
   if (store) {
     const relPath = path.relative(context.rootContext, context.resourcePath);
     const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
-    const time = new Date();
+    // const time = new Date();
     const fileName = path.join(__dirname, 'story-store-data.js');
-    fs.utimesSync(fileName, time, time);
-    // console.log(context);
+    // fs.utimesSync(fileName, time, time);
     addStoriesKind({
       stories: store.stories,
       components: store.components,

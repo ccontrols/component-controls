@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlockContext } from '@component-controls/blocks';
-import storyStore from '@component-controls/loader/story-store-data';
+import storyFn from '@component-controls/loader/story-store-data';
 import { DocsContext } from '@storybook/addon-docs/blocks';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import {
@@ -14,6 +14,7 @@ import { SET_DATA_MSG } from '../shared/shared';
 export const BlockContextProvider: React.FC = ({ children }) => {
   const context = React.useContext(DocsContext);
   const { id: currentId, clientApi, channel } = context as any;
+  const storyStore = storyFn();
   const story = storyStore && storyStore[currentId];
   const { controls } = story || {};
   const setControlValue: SetControlValueFn =

@@ -2,7 +2,7 @@ import { addDecorator, useEffect } from '@storybook/client-api';
 import { ComponentControls } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import { __STORYBOOK_STORY_STORE__ as storyStore } from 'global';
-import storyStoreData from '@component-controls/loader/story-store-data';
+import storeFn from '@component-controls/loader/story-store-data';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { docgenToControls } from './shared/smartControls';
@@ -18,10 +18,10 @@ addDecorator(
     parameterName: 'controls',
     wrapper: (storyFn, context) => {
       useEffect(() => {
-        if (storyStoreData.__initilized) {
+        if (storeFn.__initilized) {
           return;
         }
-        storyStoreData.__initilized = true;
+        storeFn.__initilized = true;
         const channel = addons.getChannel();
         const onNewData = ({
           storyId,
@@ -30,6 +30,7 @@ addDecorator(
           storyId: string;
           controls: ComponentControls;
         }) => {
+          const storyStoreData = storeFn();
           const story = storyStoreData.stories[storyId];
           if (story) {
             story.controls = controls;
@@ -43,13 +44,14 @@ addDecorator(
             storyId: string;
             controls: ComponentControls;
           }[] = [];
-          const injectedStoryStore = storyStoreData;
+          const injectedStoryStore = storeFn();
 
           Object.keys(injectedStoryStore.stories).forEach((id: string) => {
             const story = injectedStoryStore.stories[id];
-            if (storyStore._data[id]) {
-              story.renderFn = storyStore._data[id].storyFn;
-            }
+            // const dataStore = storyStore._data || storyStore._stories;
+            // if (dataStore && dataStore[id]) {
+            //  story.renderFn = dataStore[id].storyFn;
+            // }
 
             const { controls } = story;
             const parameters = story.parameters || {};
@@ -94,12 +96,13 @@ addDecorator(
         };
         channel.on(GET_ALL_STORIES, onGetAllStories);
         return () => {
-          storyStoreData.__initilized = false;
+          storeFn.__initilized = false;
           channel.removeListener(SET_DATA_MSG, onNewData);
           channel.removeListener(GET_ALL_STORIES, onGetAllStories);
         };
       }, []);
       const { id } = context;
+      const storyStoreData = storeFn();
       const story = storyStoreData.stories[id] || {};
       const { controls = {}, parameters = {} } = story;
       const { addonControls } = parameters;

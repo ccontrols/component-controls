@@ -12,14 +12,15 @@ const loadStoryStore = (): StoriesStore | undefined => {
     return storyStore;
   }
   if (injectedStories) {
-    const globalStore: StoriesStore = {
-      kinds: {},
-      stories: {},
-      components: {},
-    };
     try {
-      const stores: StoriesStore[] = (storyStore = JSON.parse(injectedStories));
+      const stores: StoriesStore[] = JSON.parse(injectedStories);
+
       if (stores) {
+        const globalStore: StoriesStore = {
+          kinds: {},
+          stories: {},
+          components: {},
+        };
         stores.forEach(store => {
           if (Object.keys(store.kinds).length > 0) {
             Object.keys(store.kinds).forEach(kindName => {
@@ -83,11 +84,13 @@ const loadStoryStore = (): StoriesStore | undefined => {
             });
           }
         });
+        storyStore = globalStore;
       }
-    } catch (e) {}
-    storyStore = globalStore;
+    } catch (e) {
+      console.error(e);
+    }
   }
   return storyStore;
 };
 
-export default storyStore ? storyStore : loadStoryStore();
+export default loadStoryStore;
