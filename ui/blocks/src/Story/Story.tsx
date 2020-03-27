@@ -8,9 +8,22 @@ export const Story: FC<StoryProps> = ({ id, name, ...rest }) => {
     id,
     name,
   });
-  return story && story.renderFn ? (
-    <div id={story.id} {...rest}>
-      {createElement(story.renderFn)}
-    </div>
-  ) : null;
+
+  if (story && story.renderFn) {
+    let children;
+    try {
+      children = createElement(story.renderFn);
+    } catch (e) {
+      console.log(e);
+    }
+    console.log(children);
+    if (children) {
+      return (
+        <div id={story.id} {...rest}>
+          {children}
+        </div>
+      );
+    }
+  }
+  return null;
 };

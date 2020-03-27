@@ -18,7 +18,6 @@ export const Stories: FC<StoriesProps> = ({ id, name, ...rest }) => {
   if (!stories || !stories.length) {
     return null;
   }
-  console.log(stories);
   return (
     <div>
       {stories.map(story => (

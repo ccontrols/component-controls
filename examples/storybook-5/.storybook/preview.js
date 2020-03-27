@@ -12,33 +12,27 @@ addDecorator((story, ctx ) => {
   );
 })
 
-export const DocsPage = ({
-  titleSlot,
-  subtitleSlot,
-  descriptionSlot,
-  propsSlot,
-  storiesSlot,
-}) => {
+export const DocsPage = () => {
   return (
     <BlockContextProvider>
-      <SBTitle slot={titleSlot} />
-      <Title slot={titleSlot} />
-      <Subtitle slot={subtitleSlot} />
-      <SBDescription slot={descriptionSlot} />
-      <Description slot={descriptionSlot} />
+      <SBTitle />
+      <Title />
+      <Subtitle />
+      <SBDescription />
+      <Description />
       <ComponentSource id="." title='Component source' />
       <Story id="." />
       <SBStory id="." />
       <StorySource id="." title='Story source'/>
       <ControlsTable id="." />
       <PropsTable of="." />
-      <Props slot={propsSlot} />
+      <Props />
       <Playground>
         <Story id="." />
       </Playground>
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
       <Stories />
-      <SBStories slot={storiesSlot} />
+      <SBStories />
     </BlockContextProvider>  
   );
 };
