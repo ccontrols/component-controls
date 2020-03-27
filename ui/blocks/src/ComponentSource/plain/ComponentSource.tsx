@@ -22,6 +22,8 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
   actions,
   ...rest
 }) => {
+  const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+  const { dark } = React.useContext(ThemeContext);
   return (
     <ComponentsContainer of={of}>
       {component => {
@@ -40,10 +42,6 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
         if (!source) {
           return null;
         }
-        const { dark } = React.useContext(ThemeContext);
-        const [showFileSource, setShowFileSource] = React.useState<boolean>(
-          false,
-        );
 
         const onShowFileSource = () => setShowFileSource(!showFileSource);
         const allActions: ActionItem[] = [];

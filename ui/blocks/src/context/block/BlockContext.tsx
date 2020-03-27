@@ -38,22 +38,36 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   currentId,
 }) => {
-  const store = storyFn();
+  const [store, setStore] = React.useState<StoriesStore>({
+    components: {},
+    stories: {},
+    kinds: {},
+  });
+  React.useEffect(() => {
+    setStore(storyFn());
+  }, []);
+
   const setControlValue: SetControlValueFn = (
     storyId: string,
     propName: string | undefined,
     propValue: any,
   ) => {
-    const controls = store && store[storyId] && store[storyId].controls;
+    const controls =
+      store && store.stories[storyId] && store.stories[storyId].controls;
     if (controls) {
       const newValues = mergeControlValues(controls, propName, propValue);
-      Object.keys(controls).forEach(key => {
-        controls[key] = newValues[key];
+      setStore({
+        ...store,
+        stories: {
+          ...store.stories,
+          [storyId]: { ...store.stories[storyId], controls: newValues },
+        },
       });
     }
   };
   const clickControl: ClickControlFn = (storyId: string, propName: string) => {
-    const controls = store && store[storyId] && store[storyId].controls;
+    const controls =
+      store && store.stories[storyId] && store.stories[storyId].controls;
     if (controls && controls[propName]) {
       const control: ComponentControlButton = controls[
         propName

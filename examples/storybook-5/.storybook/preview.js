@@ -1,6 +1,5 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { Title as SBTitle, Description as SBDescription, Story as SBStory, Stories as SBStories, Props } from '@storybook/addon-docs/blocks';
 import { DependenciesTable } from 'storybook-addon-deps/blocks';
 import { ControlsTable, ThemeProvider, Title, Subtitle, Story, Stories, Description, StorySource, Playground, ComponentSource, PropsTable, BlockContextProvider } from '@component-controls/storybook';
 
@@ -15,24 +14,19 @@ addDecorator((story, ctx ) => {
 export const DocsPage = () => {
   return (
     <BlockContextProvider>
-      <SBTitle />
       <Title />
       <Subtitle />
-      <SBDescription />
       <Description />
       <ComponentSource id="." title='Component source' />
       <Story id="." />
-      <SBStory id="." />
       <StorySource id="." title='Story source'/>
       <ControlsTable id="." />
       <PropsTable of="." />
-      <Props />
       <Playground>
         <Story id="." />
       </Playground>
       <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
       <Stories />
-      <SBStories />
     </BlockContextProvider>  
   );
 };
