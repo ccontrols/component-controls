@@ -1,30 +1,8 @@
 module.exports = {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   config: (entry: any[] = [], options: any = {}) => {
     const result = [...entry];
-    const { legacy = false } = options;
-    if (legacy) {
-      result.push(require.resolve('./config-legacy'));
-    }
-
-    const { docsPreview = true } = options;
-    if (!legacy && docsPreview) {
-      result.push(require.resolve('./config-preview'));
-    }
-    const { docsProps = true } = options;
-    if (docsProps) {
-      result.push(require.resolve('./config-props-table'));
-    }
-    const { smart = true } = options;
-    if (smart) {
-      result.push(require.resolve('./config-smart'));
-    }
+    result.push(require.resolve('./config'));
     return result;
-  },
-  managerEntries: (entry: any[] = [], options: any = {}) => {
-    const { addonPanel = true } = options;
-    if (addonPanel) {
-      return [...entry, require.resolve('./register.esm')];
-    }
-    return entry;
   },
 };

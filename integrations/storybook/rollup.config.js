@@ -1,13 +1,5 @@
 import { config } from 'docz-rollup';
 
 export default config({
-  input: [
-    './src/index.ts',
-    './src/preset.ts',
-    './src/config-legacy.ts',
-    './src/config-preview.ts',
-    './src/config-props-table.ts',
-    './src/config-smart.ts',
-    './src/manager/register.tsx',
-  ],
+  input: ['./src/index.ts', './src/preset.ts', './src/config.ts'],
 });
