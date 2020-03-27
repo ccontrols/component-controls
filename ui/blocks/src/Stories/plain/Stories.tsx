@@ -1,12 +1,17 @@
 import React, { FC } from 'react';
-import { useStoryContext, StoryInputProps } from '../../context';
+import {
+  useStoryContext,
+  StoryInputProps,
+  useBlockContext,
+} from '../../context';
 import { Playground, PlaygroundProps } from '../../Playground';
 import { Story } from '../../Story';
 
 export type StoriesProps = StoryInputProps & PlaygroundProps;
 
 export const Stories: FC<StoriesProps> = ({ id, name, ...rest }) => {
-  const { story: selected, kind, store } = useStoryContext({
+  const { store } = useBlockContext();
+  const { story: selected, kind } = useStoryContext({
     id,
     name,
   });

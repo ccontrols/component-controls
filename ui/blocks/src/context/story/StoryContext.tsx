@@ -1,15 +1,32 @@
 import React, { FC } from 'react';
-import storyFn from '@component-controls/loader/story-store-data';
+import { toId, storyNameFromExport } from '@storybook/csf';
 import {
   Story,
   StoriesStore,
   StoriesKind,
   StoryComponent,
-  SetControlValueFn,
-  ClickControlFn,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_SELECTION, storyIdFromName } from '../context';
+import { BlockContext, CURRENT_SELECTION } from '../block';
+
+/**
+ *
+ * find a story id from a story 'name'
+ * will navigate through the store kinds and look for a matching story id
+ */
+export const storyIdFromName = (
+  store: StoriesStore,
+  name: string,
+): string | undefined => {
+  for (const title in store.kinds) {
+    const kind = store.kinds[title];
+    const storyId = toId(title, storyNameFromExport(name));
+    if (kind.stories && kind.stories.indexOf(storyId) > -1) {
+      return storyId;
+    }
+  }
+  return undefined;
+};
 
 export interface StoryInputProps {
   /** id of the story */
@@ -38,21 +55,6 @@ export interface StoryContextProps {
    * current story's/document's component
    */
   component?: StoryComponent;
-
-  /**
-   * access the the fil story store
-   */
-  store?: StoriesStore;
-
-  /**
-   * generic function to update the values of component controls.
-   */
-  setControlValue?: SetControlValueFn;
-
-  /**
-   * generic function to propagate a click event for component controls.
-   */
-  clickControl?: ClickControlFn;
 }
 
 /**
@@ -63,26 +65,20 @@ export const useStoryContext = ({
   id,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const {
-    currentId,
-    mockStore,
-    clickControl,
-    setControlValue,
-  } = React.useContext(BlockContext);
-  const store = mockStore || storyFn();
+  const { currentId, store } = React.useContext(BlockContext);
   const inputId = id === CURRENT_SELECTION ? currentId : id;
 
-  const storyId =
-    inputId || (name && storyIdFromName(store, name)) || currentId;
+  const storyId = store
+    ? inputId || (name && storyIdFromName(store, name)) || currentId
+    : undefined;
 
   if (!storyId) {
-    return {
-      clickControl,
-      setControlValue,
-    };
+    return {};
   }
-  const story: Story = store && store.stories && store.stories[storyId];
-  const kind = story && story.kind ? store.kinds[story.kind] : undefined;
+  const story: Story | undefined =
+    store && store.stories && store.stories[storyId];
+  const kind =
+    store && story && story.kind ? store.kinds[story.kind] : undefined;
   const storyComponent: any = story ? story.component : undefined;
   const componentName = storyComponent
     ? typeof storyComponent === 'string'
@@ -90,7 +86,7 @@ export const useStoryContext = ({
       : storyComponent.name || storyComponent.displayName
     : undefined;
   const component =
-    componentName && kind && kind.components[componentName]
+    store && componentName && kind && kind.components[componentName]
       ? store.components[kind.components[componentName]]
       : undefined;
   return {
@@ -98,9 +94,6 @@ export const useStoryContext = ({
     kind,
     story,
     component,
-    clickControl,
-    setControlValue,
-    store,
   };
 };
 

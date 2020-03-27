@@ -18,7 +18,7 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
-import { useStoryContext } from '../../context/story/StoryContext';
+import { useStoryContext, useBlockContext } from '../../context';
 
 import { SingleControlsTable } from './SingleControlsTable';
 
@@ -42,12 +42,11 @@ export const ControlsTable: FC<ControlsTableProps> = ({
   ...rest
 }) => {
   const [copied, setCopied] = React.useState(false);
-  const { story, id: storyId, setControlValue, clickControl } = useStoryContext(
-    {
-      id,
-      name,
-    },
-  );
+  const { setControlValue, clickControl } = useBlockContext();
+  const { story, id: storyId } = useStoryContext({
+    id,
+    name,
+  });
   const { controls } = story || {};
   if (controls && Object.keys(controls).length) {
     const onReset = (e: MouseEvent<HTMLButtonElement>) => {

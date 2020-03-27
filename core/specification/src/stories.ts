@@ -83,7 +83,7 @@ export interface Story {
   /**
    * render function for the story
    */
-  renderFn?: (controls: { [key: string]: any; context: any }) => any;
+  renderFn?: (controlValues: { [key: string]: any }, context?: any) => any;
   /**
    * arguments pass to a CSF story
    * eg `export const story = props => <Story {...props} />;`

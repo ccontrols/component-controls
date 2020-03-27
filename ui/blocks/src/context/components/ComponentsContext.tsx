@@ -1,14 +1,11 @@
 import React from 'react';
-import storyFn from '@component-controls/loader/story-store-data';
 import {
   Story,
   StoriesKind,
   StoryComponent,
-  SetControlValueFn,
-  ClickControlFn,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_SELECTION } from '../context';
+import { BlockContext, CURRENT_SELECTION } from '../block';
 import { getComponentName } from './utils';
 
 export interface ComponentInputProps {
@@ -26,36 +23,21 @@ export interface ComponentContextProps {
   };
   kind?: StoriesKind;
   story?: Story;
-  /**
-   * generic function to update the values of component controls.
-   */
-  setControlValue?: SetControlValueFn;
-
-  /**
-   * generic function to propagate a click event for component controls.
-   */
-  clickControl?: ClickControlFn;
 }
 
 export const useComponentsContext = ({
   of = CURRENT_SELECTION,
 }: ComponentInputProps): ComponentContextProps => {
-  const {
-    currentId,
-    mockStore,
-    setControlValue,
-    clickControl,
-  } = React.useContext(BlockContext);
-  const store = mockStore || storyFn();
+  const { currentId, store } = React.useContext(BlockContext);
   if (!currentId) {
     return {
       components: {},
-      setControlValue,
-      clickControl,
     };
   }
-  const story: Story = store && store.stories && store.stories[currentId];
-  const kind = story && story.kind ? store.kinds[story.kind] : undefined;
+  const story: Story | undefined =
+    store && store.stories && store.stories[currentId];
+  const kind =
+    store && story && story.kind ? store.kinds[story.kind] : undefined;
 
   let cmp: any;
   if (of === CURRENT_SELECTION) {
@@ -63,14 +45,14 @@ export const useComponentsContext = ({
   } else {
     cmp = of;
   }
-  const subcomponents = kind && (story.subcomponents || kind.subcomponents);
+  const subcomponents = story && kind && story.subcomponents;
   const subComponents = subcomponents
     ? Object.keys(subcomponents).reduce((acc, key) => {
         const name = getComponentName(subcomponents[key]);
         const component =
           name &&
-          kind.components[name] &&
-          store.components[kind.components[name]];
+          kind?.components[name] &&
+          store?.components[kind.components[name]];
         if (component) {
           return { ...acc, [key]: component };
         } else {
@@ -81,14 +63,12 @@ export const useComponentsContext = ({
   const componentName = getComponentName(cmp);
   const components = componentName &&
   kind && { [componentName]: kind.components[componentName] }
-    ? { [componentName]: store.components[kind.components[componentName]] }
+    ? { [componentName]: store?.components[kind.components[componentName]] }
     : {};
 
   return {
     components: { ...components, ...subComponents },
     kind,
     story,
-    setControlValue,
-    clickControl,
   };
 };

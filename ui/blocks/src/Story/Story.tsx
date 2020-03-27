@@ -1,28 +1,31 @@
 import React, { createElement, FC } from 'react';
+import { getControlValues } from '@component-controls/core';
 import { useStoryContext, StoryInputProps } from '../context';
 
 export type StoryProps = StoryInputProps;
 
 export const Story: FC<StoryProps> = ({ id, name, ...rest }) => {
-  const { story } = useStoryContext({
+  const context = useStoryContext({
     id,
     name,
   });
-
+  const { story } = context;
   if (story && story.renderFn) {
     let children;
     try {
-      children = createElement(story.renderFn);
-    } catch (e) {
-      console.log(e);
-    }
-    console.log(children);
-    if (children) {
+      const values = story.controls ? getControlValues(story.controls) : {};
+      children = createElement(
+        'div',
+        null,
+        story.renderFn(values, { context }),
+      );
       return (
         <div id={story.id} {...rest}>
           {children}
         </div>
       );
+    } catch (e) {
+      console.error(e);
     }
   }
   return null;
