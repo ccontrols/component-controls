@@ -1,6 +1,6 @@
 import React, { createElement, FC } from 'react';
 import { getControlValues } from '@component-controls/core';
-import { useStoryContext, StoryInputProps } from '../context';
+import { useStoryContext, StoryInputProps } from '../../context';
 
 export type StoryProps = StoryInputProps;
 
@@ -10,6 +10,7 @@ export const Story: FC<StoryProps> = ({ id, name, ...rest }) => {
     name,
   });
   const { story } = context;
+  // console.log(story);
   if (story && story.renderFn) {
     let children;
     try {

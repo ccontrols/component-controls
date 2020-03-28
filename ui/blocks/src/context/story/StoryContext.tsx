@@ -67,7 +67,6 @@ export const useStoryContext = ({
 }: StoryInputProps): StoryContextProps => {
   const { currentId, store } = React.useContext(BlockContext);
   const inputId = id === CURRENT_SELECTION ? currentId : id;
-
   const storyId = store
     ? inputId || (name && storyIdFromName(store, name)) || currentId
     : undefined;

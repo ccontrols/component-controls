@@ -9,7 +9,14 @@ import {
 import { mergeControlValues } from '@component-controls/core';
 
 export interface BlockContextInputProps {
+  /**
+   * current story id
+   */
   currentId: string;
+  /**
+   * store mockup when running tests
+   */
+  mockStore?: StoriesStore;
 }
 export const CURRENT_SELECTION = '.';
 export interface BlockContextProps {
@@ -27,7 +34,7 @@ export interface BlockContextProps {
    */
   clickControl?: ClickControlFn;
   /**
-   * store mockup when running tests
+   * store of stories global access
    */
   store?: StoriesStore;
 }
@@ -37,16 +44,20 @@ export const BlockContext = React.createContext<BlockContextProps>({});
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   currentId,
+  mockStore,
 }) => {
-  const [store, setStore] = React.useState<StoriesStore>({
-    components: {},
-    stories: {},
-    kinds: {},
-  });
+  const [store, setStore] = React.useState<StoriesStore>(
+    mockStore || {
+      components: {},
+      stories: {},
+      kinds: {},
+    },
+  );
   React.useEffect(() => {
-    setStore(storyFn());
+    if (mockStore === undefined) {
+      setStore(storyFn());
+    }
   }, []);
-
   const setControlValue: SetControlValueFn = (
     storyId: string,
     propName: string | undefined,

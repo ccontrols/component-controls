@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlockContext } from '../context';
+import { BlockContextProvider } from '../context';
 import { storyStore } from './storyStore';
 
 export interface MockContexProps {
@@ -13,13 +13,8 @@ export const MockContext: React.FC<MockContexProps> = ({
   storyId = 'story',
 }) => {
   return (
-    <BlockContext.Provider
-      value={{
-        currentId: storyId,
-        mockStore: storyStore,
-      }}
-    >
+    <BlockContextProvider currentId={storyId} mockStore={storyStore}>
       {children}
-    </BlockContext.Provider>
+    </BlockContextProvider>
   );
 };

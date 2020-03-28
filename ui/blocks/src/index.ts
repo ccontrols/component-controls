@@ -5,7 +5,7 @@ export * from './Description';
 export * from './Playground';
 export * from './PropsTable';
 export * from './Stories';
-export * from './Story';
+export * from './Story/plain';
 export * from './StorySource';
 export * from './Subtitle';
 export * from './Title';

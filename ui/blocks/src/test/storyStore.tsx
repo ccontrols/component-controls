@@ -1,4 +1,7 @@
+/* eslint-disable react/display-name */
+import React from 'react';
 import { StoriesStore, ControlTypes } from '@component-controls/specification';
+import { Donut } from 'theme-ui';
 
 export const storyStore: StoriesStore = {
   components: {
@@ -299,6 +302,7 @@ and a [link](https://google.com)
       source: "() => 'hello'",
     },
     controls: {
+      renderFn: () => <Donut value={1 / 2} />,
       id: 'controls',
       kind: 'Story',
       name: 'controls',

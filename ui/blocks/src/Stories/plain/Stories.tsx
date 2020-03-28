@@ -5,7 +5,7 @@ import {
   useBlockContext,
 } from '../../context';
 import { Playground, PlaygroundProps } from '../../Playground';
-import { Story } from '../../Story';
+import { Story } from '../../Story/plain';
 
 export type StoriesProps = StoryInputProps & PlaygroundProps;
 
