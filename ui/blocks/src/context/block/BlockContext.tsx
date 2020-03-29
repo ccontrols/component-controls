@@ -18,7 +18,7 @@ export interface BlockContextInputProps {
    */
   mockStore?: StoriesStore;
 }
-export const CURRENT_SELECTION = '.';
+export const CURRENT_STORY = '.';
 export interface BlockContextProps {
   /**
    * current story id

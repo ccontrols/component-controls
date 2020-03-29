@@ -5,7 +5,7 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_SELECTION } from '../block';
+import { BlockContext, CURRENT_STORY } from '../block';
 import { getComponentName } from './utils';
 
 export interface ComponentInputProps {
@@ -26,7 +26,7 @@ export interface ComponentContextProps {
 }
 
 export const useComponentsContext = ({
-  of = CURRENT_SELECTION,
+  of = CURRENT_STORY,
 }: ComponentInputProps): ComponentContextProps => {
   const { currentId, store } = React.useContext(BlockContext);
   if (!currentId) {
@@ -40,7 +40,7 @@ export const useComponentsContext = ({
     store && story && story.kind ? store.kinds[story.kind] : undefined;
 
   let cmp: any;
-  if (of === CURRENT_SELECTION) {
+  if (of === CURRENT_STORY) {
     cmp = story && story.component ? story.component : kind?.component;
   } else {
     cmp = of;

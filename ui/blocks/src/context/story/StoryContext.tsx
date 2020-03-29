@@ -7,7 +7,7 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_SELECTION } from '../block';
+import { BlockContext, CURRENT_STORY } from '../block';
 
 /**
  *
@@ -66,7 +66,7 @@ export const useStoryContext = ({
   name,
 }: StoryInputProps): StoryContextProps => {
   const { currentId, store } = React.useContext(BlockContext);
-  const inputId = id === CURRENT_SELECTION ? currentId : id;
+  const inputId = id === CURRENT_STORY ? currentId : id;
   const storyId = store
     ? inputId || (name && storyIdFromName(store, name)) || currentId
     : undefined;
