@@ -14,7 +14,7 @@ import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 import { StorySource } from './StorySource';
 import { MockContext } from '../../test/MockContext';
 export default {
-  title: 'Blocks/Core/StorySource/plain',
+  title: 'Blocks/StorySource/plain',
   component: StorySource,
 };
 

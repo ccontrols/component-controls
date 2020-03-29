@@ -5,8 +5,8 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_STORY } from '../block';
-import { getComponentName } from './utils';
+import { BlockContext } from '../block';
+import { getComponentName, CURRENT_STORY } from '../../utils';
 
 export interface ComponentInputProps {
   /**

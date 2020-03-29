@@ -20,3 +20,19 @@ overview.story = {
     title: { type: 'text', value: 'Block title' },
   },
 };
+
+export const notCollapsible = () => {
+  return (
+    <BlockContainer title="BlockContainer" collapsible={false}>
+      <Donut value={1 / 2} />
+    </BlockContainer>
+  );
+};
+
+export const customId = () => {
+  return (
+    <BlockContainer title="BlockContainer" id="custom-id">
+      <Donut value={1 / 2} />
+    </BlockContainer>
+  );
+};

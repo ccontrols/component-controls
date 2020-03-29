@@ -3,7 +3,7 @@ import { Subtitle } from '.';
 import { MockContext } from '../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/Subtitle',
+  title: 'Blocks/Subtitle',
   component: Subtitle,
 };
 

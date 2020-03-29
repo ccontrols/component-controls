@@ -4,7 +4,7 @@ import { ControlsTable } from './ControlsTable';
 import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/ControlsTable/plain',
+  title: 'Blocks/ControlsTable/plain',
   component: ControlsTable,
 };
 

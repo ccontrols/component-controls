@@ -4,7 +4,7 @@ import { StoryContextConsumer } from '../../context/story/StoryContext';
 import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/PropsTable/plain',
+  title: 'Blocks/PropsTable/plain',
   component: PropsTable,
 };
 

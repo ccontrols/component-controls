@@ -4,7 +4,7 @@ import { MockContext } from '../../test/MockContext';
 import { BlockControlsTable } from './BlockControlsTable';
 
 export default {
-  title: 'Blocks/Core/ControlsTable/block',
+  title: 'Blocks/ControlsTable/block',
   component: BlockControlsTable,
 };
 

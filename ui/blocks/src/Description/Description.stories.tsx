@@ -3,7 +3,7 @@ import React from 'react';
 import { Description } from './Description';
 import { MockContext } from '../test/MockContext';
 export default {
-  title: 'Blocks/Core/Description',
+  title: 'Blocks/Description',
   component: Description,
 };
 

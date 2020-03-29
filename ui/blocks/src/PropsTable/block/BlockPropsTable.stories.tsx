@@ -3,7 +3,7 @@ import { BlockPropsTable } from './BlockPropsTable';
 import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/PropsTable/block',
+  title: 'Blocks/PropsTable/block',
   component: BlockPropsTable,
 };
 

@@ -3,7 +3,7 @@ import { ComponentSource } from './ComponentSource';
 import { MockContext } from '../../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/ComponentSource/plain',
+  title: 'Blocks/ComponentSource/plain',
   component: ComponentSource,
 };
 

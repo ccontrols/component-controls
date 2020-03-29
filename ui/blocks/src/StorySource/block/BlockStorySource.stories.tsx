@@ -3,7 +3,7 @@ import { MockContext } from '../../test/MockContext';
 import { BlockStorySource } from './BlockStorySource';
 
 export default {
-  title: 'Blocks/Core/StorySource/block',
+  title: 'Blocks/StorySource/block',
   component: BlockStorySource,
 };
 

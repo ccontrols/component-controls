@@ -303,7 +303,7 @@ and a [link](https://google.com)
     },
     controls: {
       renderFn: () => <Donut value={1 / 2} />,
-      id: 'controls',
+      id: 'blocks-core-story-plain--controls',
       kind: 'Story',
       name: 'controls',
       component: 'Control',

@@ -3,7 +3,7 @@ import { Title } from './';
 import { MockContext } from '../test/MockContext';
 
 export default {
-  title: 'Blocks/Core/Title',
+  title: 'Blocks/Title',
   component: Title,
 };
 

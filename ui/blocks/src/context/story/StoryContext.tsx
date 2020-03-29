@@ -7,7 +7,8 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 
-import { BlockContext, CURRENT_STORY } from '../block';
+import { BlockContext } from '../block';
+import { CURRENT_STORY } from '../../utils';
 
 /**
  *
