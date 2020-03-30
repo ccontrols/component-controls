@@ -3,21 +3,46 @@ import {
   BlockContainer,
   BlockContainerProps,
 } from '@component-controls/components';
-import { ComponentsContainer, ComponentsContainerProps } from '../../context';
+import { CURRENT_STORY, getComponentName } from '../../utils';
+import {
+  ComponentsContainer,
+  ComponentsContainerProps,
+  useComponentsContext,
+} from '../../context';
 
 export type ComponentsBlockContainerProps = ComponentsContainerProps &
-  Omit<BlockContainerProps, 'id'>;
+  BlockContainerProps;
 
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
-  title,
+  title: userTitle,
   collapsible,
+  id,
   of,
   children,
+  ...rest
 }) => {
+  const [title, setTitle] = React.useState<string | undefined>();
+  const { components } = useComponentsContext({ of });
+  const componentNames = Object.keys(components);
+  React.useEffect(() => {
+    setTitle(
+      userTitle === CURRENT_STORY && componentNames.length
+        ? getComponentName(components[componentNames[0]])
+        : userTitle,
+    );
+  }, [userTitle]);
   return (
-    <BlockContainer title={title} collapsible={collapsible}>
-      <ComponentsContainer of={of}>
-        {(component, props) => children(component, props)}
+    <BlockContainer title={title} collapsible={collapsible} id={id}>
+      <ComponentsContainer
+        of={of}
+        onSelect={tabName =>
+          userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
+        }
+        {...rest}
+      >
+        {(component, props, otherProps) =>
+          children(component, props, otherProps)
+        }
       </ComponentsContainer>
     </BlockContainer>
   );

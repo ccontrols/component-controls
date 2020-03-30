@@ -1,15 +1,20 @@
 import React, { FC } from 'react';
 import { ActionItem } from '@component-controls/components';
-import { ComponentsContainer } from '../../context/components/ComponentsContainer';
-import { ComponentInputProps } from '../../context/components/ComponentsContext';
+import {
+  ComponentsBlockContainer,
+  ComponentsBlockContainerProps,
+} from '../BlockContainer/components/ComponentsBlockContainer';
 import {
   ThemeContext,
   Source,
   SourceProps,
 } from '@component-controls/components';
-import { repositoryActions } from '../../utils/repositoryActions';
+import { repositoryActions } from '../utils/repositoryActions';
 
-export type ComponentSourceProps = ComponentInputProps &
+export type ComponentSourceProps = Omit<
+  ComponentsBlockContainerProps,
+  'children'
+> &
   Omit<SourceProps, 'children'>;
 
 /**
@@ -18,15 +23,14 @@ export type ComponentSourceProps = ComponentInputProps &
  */
 
 export const ComponentSource: FC<ComponentSourceProps> = ({
-  of,
   actions,
   ...rest
 }) => {
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
   const { dark } = React.useContext(ThemeContext);
   return (
-    <ComponentsContainer of={of}>
-      {component => {
+    <ComponentsBlockContainer {...rest}>
+      {(component, props, sourceProps) => {
         let source;
         const { from, importedName, name: componentName, repository } =
           component || {};
@@ -61,11 +65,11 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
           allActions.push.apply(allActions, actions);
         }
         return (
-          <Source dark={dark} {...rest} actions={allActions}>
+          <Source dark={dark} {...sourceProps} actions={allActions}>
             {showFileSource ? component?.source ?? '' : source}
           </Source>
         );
       }}
-    </ComponentsContainer>
+    </ComponentsBlockContainer>
   );
 };

@@ -31,3 +31,18 @@ export const overview = () => {
     </Tabs>
   );
 };
+
+export const onSelect = () => {
+  return (
+    <Tabs onSelect={index => console.log(index)}>
+      <TabList>
+        {Object.keys(tabs).map(key => (
+          <Tab key={`tab_${key}`}>{key}</Tab>
+        ))}
+      </TabList>
+      {Object.keys(tabs).map(key => (
+        <TabPanel key={`panel_${key}`}>{tabs[key]}</TabPanel>
+      ))}
+    </Tabs>
+  );
+};

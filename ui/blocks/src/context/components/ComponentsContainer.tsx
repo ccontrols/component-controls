@@ -9,13 +9,22 @@ export type ComponentsContainerProps = {
     component: StoryComponent,
     props: {
       story?: Story;
+      tabName: string;
     },
+    rest: any,
   ) => React.ReactElement | null;
+  /**
+   * callback to be called when the tab changes
+   * if the function returns false, it can stop chabging to the new tab
+   */
+  onSelect?: (name: string, component: StoryComponent) => boolean | void;
 } & ComponentInputProps;
 
 export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
   of,
   children,
+  onSelect,
+  ...rest
 }) => {
   const { components, story } = useComponentsContext({
     of,
@@ -28,12 +37,25 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
     return null;
   }
   if (keys.length === 1) {
-    return children(components[keys[0]], {
-      story,
-    });
+    return children(
+      components[keys[0]],
+      {
+        story,
+        tabName: keys[0],
+      },
+      rest,
+    );
   }
   return (
-    <Tabs>
+    <Tabs
+      onSelect={
+        onSelect
+          ? index => {
+              return onSelect(keys[index], components[keys[index]]);
+            }
+          : undefined
+      }
+    >
       <TabList>
         {keys.map(key => (
           <Tab key={`component_tab_${key}`}>{key}</Tab>
@@ -41,7 +63,7 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
       </TabList>
       {keys.map(key => (
         <TabPanel key={`component_panel_${key}`}>
-          {children(components[key], { story })}
+          {children(components[key], { story, tabName: key }, rest)}
         </TabPanel>
       ))}
     </Tabs>
