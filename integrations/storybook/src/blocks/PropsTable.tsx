@@ -3,7 +3,7 @@ import {
   BlockPropsTable,
   BlockPropsTableProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export const PropsTable: FC<BlockPropsTableProps> = props => {
   return (

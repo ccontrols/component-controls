@@ -8,7 +8,7 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext>
+  <MockContext storyId="id-of-story">
     <ComponentSource />
   </MockContext>
 );

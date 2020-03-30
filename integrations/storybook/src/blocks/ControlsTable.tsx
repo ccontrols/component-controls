@@ -5,7 +5,7 @@ import {
   useStoryContext,
 } from '@component-controls/blocks';
 
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 export type ControlsTableProps = BlockControlsTableProps;
 
 export const ControlsTable: FC<ControlsTableProps> = ({

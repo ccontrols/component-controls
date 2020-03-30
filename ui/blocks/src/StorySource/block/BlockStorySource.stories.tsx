@@ -9,7 +9,7 @@ export default {
 
 export const overview = () => {
   return (
-    <MockContext storyId="controls">
+    <MockContext storyId="blocks-core-story-plain--controls">
       <BlockStorySource title="with title" id="." />
     </MockContext>
   );

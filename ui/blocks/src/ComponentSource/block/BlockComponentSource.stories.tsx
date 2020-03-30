@@ -8,13 +8,13 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext>
+  <MockContext storyId="id-of-story">
     <BlockComponentSource />
   </MockContext>
 );
 
 export const withTitle = () => (
-  <MockContext>
+  <MockContext storyId="id-of-story">
     <BlockComponentSource title="Custom title" />
   </MockContext>
 );

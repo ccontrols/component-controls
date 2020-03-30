@@ -9,19 +9,19 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext storyId="button">
+  <MockContext storyId="id-of-button-story">
     <PropsTable />
   </MockContext>
 );
 
 export const subcomponents = () => (
-  <MockContext storyId="story">
+  <MockContext storyId="id-of-button-story">
     <PropsTable />
   </MockContext>
 );
 
 export const extraColumns = () => (
-  <MockContext storyId="button">
+  <MockContext storyId="id-of-button-story">
     <PropsTable
       extraColumns={[
         {
@@ -37,8 +37,8 @@ export const extraColumns = () => (
 );
 
 export const controls = () => (
-  <MockContext storyId="controls">
-    <StoryContextConsumer id="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <StoryContextConsumer id="blocks-core-story-plain--controls">
       {({ story: { controls } = {} }) => (
         <h2>{`Hello, my name is ${controls?.name.value}, and I am ${controls?.age.value} years old.`}</h2>
       )}

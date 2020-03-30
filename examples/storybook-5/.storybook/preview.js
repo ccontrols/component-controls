@@ -1,7 +1,7 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { DependenciesTable } from 'storybook-addon-deps/blocks';
-import { ControlsTable, ThemeProvider, Title, Subtitle, Story, Stories, Description, StorySource, Playground, ComponentSource, PropsTable, BlockContextProvider } from '@component-controls/storybook';
+import { ThemeProvider, BlockContextProvider } from '@component-controls/storybook';
+import { ControlsTable, Title, Subtitle, Story, Stories, Description, StorySource, Playground, ComponentSource, PropsTable } from '@component-controls/blocks';
 
 addDecorator((story, ctx ) => {
   return (
@@ -13,21 +13,22 @@ addDecorator((story, ctx ) => {
 
 export const DocsPage = () => {
   return (
-    <BlockContextProvider>
-      <Title />
-      <Subtitle />
-      <Description />
-      <ComponentSource id="." title='Component source' />
-      <Story id="." />
-      <StorySource id="." title='Story source'/>
-      <ControlsTable id="." />
-      <PropsTable of="." />
-      <Playground>
+    <ThemeProvider>
+      <BlockContextProvider>
+        <Title />
+        <Subtitle />
+        <Description />
+        <ComponentSource id="." title='Component source' />
         <Story id="." />
-      </Playground>
-      <DependenciesTable titleDependencies='Dependencies' titleDependents='Dependents' />
-      <Stories />
-    </BlockContextProvider>  
+        <StorySource id="." title='Story source'/>
+        <ControlsTable id="." />
+        <PropsTable of="." />
+        <Playground>
+          <Story id="." />
+        </Playground>
+        <Stories />
+      </BlockContextProvider>  
+    </ThemeProvider>  
   );
 };
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']

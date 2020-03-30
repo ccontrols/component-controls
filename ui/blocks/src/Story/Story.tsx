@@ -11,7 +11,6 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
   <StoryBlockContainer {...props}>
     {(rest, context) => {
       const { story } = context;
-      // console.log(story);
       if (story && story.renderFn) {
         let children;
         try {

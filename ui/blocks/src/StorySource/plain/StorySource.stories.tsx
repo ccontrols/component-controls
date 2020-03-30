@@ -19,13 +19,13 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <StorySource id="." />
   </MockContext>
 );
 
 export const theme = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <StorySource id="." theme={shadesOfPurple} />
   </MockContext>
 );
@@ -55,7 +55,7 @@ export const themeSelector = () => {
     },
   };
   return (
-    <MockContext storyId="controls">
+    <MockContext storyId="blocks-core-story-plain--controls">
       <StorySource id="." actions={[themeAction]} theme={themes[theme]} />
     </MockContext>
   );

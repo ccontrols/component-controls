@@ -3,7 +3,7 @@ import {
   Stories as BlockStories,
   StoriesProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export { StoriesProps };
 

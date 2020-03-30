@@ -33,8 +33,7 @@ export interface StoryInputProps {
   /** id of the story */
   id?: string;
   /**
-   * or - name of the story if in an external file
-   * will be used to find the story
+   * alternatively you can use the name of a story to load from an external file
    */
   name?: string;
 }
@@ -56,6 +55,10 @@ export interface StoryContextProps {
    * current story's/document's component
    */
   component?: StoryComponent;
+  /**
+   * store of stories global access
+   */
+  store?: StoriesStore;
 }
 
 /**
@@ -94,6 +97,7 @@ export const useStoryContext = ({
     kind,
     story,
     component,
+    store,
   };
 };
 

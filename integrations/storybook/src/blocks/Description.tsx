@@ -3,7 +3,7 @@ import {
   Description as BaseDescription,
   DescriptionProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export const Description: FC<DescriptionProps> = props => {
   return (

@@ -10,8 +10,8 @@ export default {
 
 export const overview = () => {
   return (
-    <MockContext storyId="controls">
-      <StoryContextConsumer id="controls">
+    <MockContext storyId="blocks-core-story-plain--controls">
+      <StoryContextConsumer id="blocks-core-story-plain--controls">
         {({ story: { controls } = {} }) => (
           <h2>{`Hello, my name is ${controls?.name.value}, and I am ${controls?.age.value} years old.`}</h2>
         )}

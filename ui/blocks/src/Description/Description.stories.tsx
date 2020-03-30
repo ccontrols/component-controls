@@ -8,13 +8,13 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext>
+  <MockContext id="id-of-story">
     <Description of="Button" />
   </MockContext>
 );
 
 export const components = () => (
-  <MockContext>
+  <MockContext id="id-of-story">
     <Description
       of="Button"
       components={{

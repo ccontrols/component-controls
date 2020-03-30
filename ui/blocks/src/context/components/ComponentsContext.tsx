@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Story,
   StoriesKind,
+  StoriesStore,
   StoryComponent,
 } from '@component-controls/specification';
 
@@ -23,6 +24,10 @@ export interface ComponentContextProps {
   };
   kind?: StoriesKind;
   story?: Story;
+  /**
+   * store of stories global access
+   */
+  store?: StoriesStore;
 }
 
 export const useComponentsContext = ({
@@ -70,5 +75,6 @@ export const useComponentsContext = ({
     components: { ...components, ...subComponents },
     kind,
     story,
+    store,
   };
 };

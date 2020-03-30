@@ -8,25 +8,28 @@ import {
 } from '@component-controls/components';
 
 export interface PlaygroundZoomProps {
-  limitToBounds?: true;
-  panningEnabled?: true;
-  transformEnabled?: true;
-  pinchEnabled?: true;
-  limitToWrapper?: false;
-  disabled?: false;
-  dbClickEnabled?: true;
-  lockAxisX?: false;
-  lockAxisY?: false;
-  velocityEqualToMove?: true;
-  enableWheel?: true;
-  enableTouchPadPinch?: true;
-  enableVelocity?: true;
-  limitsOnWheel?: false;
+  zoomPanEnabled?: boolean;
+  limitToBounds?: boolean;
+  panningEnabled?: boolean;
+  transformEnabled?: boolean;
+  pinchEnabled?: boolean;
+  limitToWrapper?: boolean;
+  disabled?: boolean;
+  dbClickEnabled?: boolean;
+  lockAxisX?: boolean;
+  lockAxisY?: boolean;
+  velocityEqualToMove?: boolean;
+  enableWheel?: boolean;
+  enableTouchPadPinch?: boolean;
+  enableVelocity?: boolean;
+  limitsOnWheel?: boolean;
 }
 
 export type PlaygroundProps = PlaygroundZoomProps &
   Omit<ActionContainerProps, 'paddingTop'>;
+
 export const Playground: FC<PlaygroundProps> = ({
+  zoomPanEnabled = true,
   limitToBounds = true,
   panningEnabled = true,
   transformEnabled = true,
@@ -44,7 +47,9 @@ export const Playground: FC<PlaygroundProps> = ({
   actions,
   children,
 }) => {
-  return (
+  const childStories = <div>{children}</div>;
+
+  return zoomPanEnabled ? (
     <div style={{ paddingTop: '20px' }}>
       <TransformWrapper
         options={{
@@ -106,12 +111,14 @@ export const Playground: FC<PlaygroundProps> = ({
           return (
             <ActionContainer actions={actionsItems}>
               <div>
-                <TransformComponent>{children}</TransformComponent>
+                <TransformComponent>{childStories}</TransformComponent>
               </div>
             </ActionContainer>
           );
         }}
       </TransformWrapper>
     </div>
+  ) : (
+    childStories
   );
 };

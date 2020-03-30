@@ -7,24 +7,24 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <Story id="." />
   </MockContext>
 );
 
 export const title = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <Story title="." id="." />
   </MockContext>
 );
 
 export const customTitle = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <Story title="My Story Title" id="." />
   </MockContext>
 );
 export const notCollapsible = () => (
-  <MockContext storyId="controls">
+  <MockContext storyId="blocks-core-story-plain--controls">
     <Story title="." collapsible={false} />
   </MockContext>
 );

@@ -3,7 +3,7 @@ import {
   Subtitle as BaseSubtitle,
   SubtitleProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export const Subtitle: FC<SubtitleProps> = props => {
   return (

@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import { StoriesStore, ControlTypes } from '@component-controls/specification';
-import { Donut } from 'theme-ui';
+import { Donut, Button, Heading } from 'theme-ui';
 
 export const storyStore: StoriesStore = {
   components: {
@@ -235,11 +235,18 @@ and a [link](https://google.com)
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js',
       },
       title: 'Story',
+      stories: [
+        'id-of-story',
+        'id-of-single',
+        'id-of-button-story',
+        'blocks-core-story-plain--controls',
+      ],
     },
   },
   stories: {
-    story: {
-      id: 'story',
+    'id-of-story': {
+      renderFn: () => <Heading>Components</Heading>,
+      id: 'id-of-story',
       kind: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -261,8 +268,9 @@ and a [link](https://google.com)
         componentSubtitle: 'story subtitle',
       },
     },
-    single: {
-      id: 'single',
+    'id-of-single': {
+      id: 'id-of-single',
+      renderFn: () => <Heading>Components</Heading>,
       kind: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -284,8 +292,9 @@ and a [link](https://google.com)
         componentSubtitle: 'story subtitle',
       },
     },
-    button: {
-      id: 'button',
+    'id-of-button-story': {
+      id: 'id-of-button-story',
+      renderFn: () => <Button>test</Button>,
       kind: 'Story',
       component: 'Button',
       loc: {
@@ -301,7 +310,7 @@ and a [link](https://google.com)
       name: 'button',
       source: "() => 'hello'",
     },
-    controls: {
+    'blocks-core-story-plain--controls': {
       renderFn: () => <Donut value={1 / 2} />,
       id: 'blocks-core-story-plain--controls',
       kind: 'Story',

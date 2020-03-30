@@ -8,7 +8,7 @@ export default {
 };
 
 export const overview = () => (
-  <MockContext storyId="button">
+  <MockContext storyId="id-of-button-story">
     <BlockPropsTable title="BlockPropsTable table" />
   </MockContext>
 );

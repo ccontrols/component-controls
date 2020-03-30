@@ -1,4 +1,3 @@
-export * from './BlockContext';
 export * from './ComponentSource';
 export * from './ControlsTable';
 export * from './Description';

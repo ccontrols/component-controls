@@ -3,7 +3,7 @@ import {
   Playground as BlockPlayground,
   PlaygroundProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../shared/ThemeProvider';
+import { ThemeProvider } from '../context/ThemeProvider';
 
 export { PlaygroundProps };
 
