@@ -5,10 +5,13 @@ import { FC } from 'react';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table, TableProps, Markdown } from '@component-controls/components';
 import { Column } from 'react-table';
-import { ComponentsContainer } from '../../context/components/ComponentsContainer';
-import { ComponentInputProps } from '../../context/components/ComponentsContext';
-import { useBlockContext } from '../../context';
-import { InvalidType } from '../../notifications';
+import {
+  ComponentsBlockContainer,
+  ComponentsBlockContainerProps,
+} from '../BlockContainer/components/ComponentsBlockContainer';
+import { useBlockContext } from '../context';
+import { InvalidType } from '../notifications';
+
 export interface PropsTableOwnProps {
   /**
    * extra custom columns passed to the PropsTable.
@@ -16,7 +19,7 @@ export interface PropsTableOwnProps {
   extraColumns?: Column[];
 }
 export type PropsTableProps = PropsTableOwnProps &
-  ComponentInputProps &
+  Omit<ComponentsBlockContainerProps, 'children'> &
   Omit<TableProps, 'columns' | 'data'>;
 
 type GroupingProps = Partial<
@@ -24,15 +27,14 @@ type GroupingProps = Partial<
 >;
 
 export const PropsTable: FC<PropsTableProps> = ({
-  of,
   extraColumns = [],
-  sorting = true,
-  ...rest
+  ...props
 }) => {
   const { setControlValue, clickControl } = useBlockContext();
+
   return (
-    <ComponentsContainer of={of}>
-      {(component, { story }) => {
+    <ComponentsBlockContainer {...props}>
+      {(component, { story }, rest) => {
         const { info } = component || {};
         if (!info) {
           return null;
@@ -217,12 +219,11 @@ export const PropsTable: FC<PropsTableProps> = ({
           <Table
             {...groupProps}
             {...rest}
-            sorting={sorting}
             columns={[...columns, ...extraColumns]}
             data={rows}
           />
         );
       }}
-    </ComponentsContainer>
+    </ComponentsBlockContainer>
   );
 };

@@ -50,7 +50,7 @@ export const useComponentsContext = ({
   } else {
     cmp = of;
   }
-  const subcomponents = story && kind && story.subcomponents;
+  const subcomponents = story && story.subcomponents;
   const subComponents = subcomponents
     ? Object.keys(subcomponents).reduce((acc, key) => {
         const name = getComponentName(subcomponents[key]);

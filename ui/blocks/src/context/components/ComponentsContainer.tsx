@@ -50,7 +50,7 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
     <Tabs
       onSelect={
         onSelect
-          ? index => {
+          ? (index: number) => {
               return onSelect(keys[index], components[keys[index]]);
             }
           : undefined

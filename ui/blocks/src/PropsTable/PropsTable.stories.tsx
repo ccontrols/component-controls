@@ -1,10 +1,10 @@
 import React from 'react';
 import { PropsTable } from './PropsTable';
-import { StoryContextConsumer } from '../../context/story/StoryContext';
-import { MockContext } from '../../test/MockContext';
+import { StoryContextConsumer } from '../context/story/StoryContext';
+import { MockContext } from '../test/MockContext';
 
 export default {
-  title: 'Blocks/PropsTable/plain',
+  title: 'Blocks/PropsTable',
   component: PropsTable,
 };
 
@@ -15,7 +15,7 @@ export const overview = () => (
 );
 
 export const subcomponents = () => (
-  <MockContext storyId="id-of-button-story">
+  <MockContext storyId="id-of-story">
     <PropsTable />
   </MockContext>
 );
@@ -44,5 +44,22 @@ export const controls = () => (
       )}
     </StoryContextConsumer>
     <PropsTable />
+  </MockContext>
+);
+
+export const title = () => (
+  <MockContext storyId="id-of-story">
+    <PropsTable title="." />
+  </MockContext>
+);
+
+export const customTitle = () => (
+  <MockContext storyId="id-of-story">
+    <PropsTable title="Custom Props Table Title" />
+  </MockContext>
+);
+export const notCollapsible = () => (
+  <MockContext storyId="id-of-story">
+    <PropsTable title="." collapsible={false} />
   </MockContext>
 );
