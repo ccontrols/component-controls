@@ -134,7 +134,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
                 key={`${typeof title === 'string' ? title : 'item'}_${index}`}
                 sx={{
                   mt: 1,
-                  ml: nextGroup != group ? 2 : 0,
+                  ml: nextGroup != group || group === undefined ? 2 : 0,
                   fontSize: 1,
                   a: ActionColors({ theme, disabled }),
                   button: ActionColors({ theme, disabled }),
