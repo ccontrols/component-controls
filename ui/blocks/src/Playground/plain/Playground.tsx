@@ -95,7 +95,6 @@ export const Playground: FC<PlaygroundProps> = ({
               title: (
                 <Button
                   onClick={e => {
-                    console.log(rest);
                     zoomIn(e);
                   }}
                   aria-label="zoom in"

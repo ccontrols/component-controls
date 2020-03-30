@@ -12,9 +12,9 @@ import palenight from 'prism-react-renderer/themes/palenight';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
 
 import { StorySource } from './StorySource';
-import { MockContext } from '../../test/MockContext';
+import { MockContext } from '../test/MockContext';
 export default {
-  title: 'Blocks/StorySource/plain',
+  title: 'Blocks/StorySource',
   component: StorySource,
 };
 
@@ -60,3 +60,14 @@ export const themeSelector = () => {
     </MockContext>
   );
 };
+
+export const customTitle = () => (
+  <MockContext storyId="id-of-story">
+    <StorySource title="Story source" />
+  </MockContext>
+);
+export const notCollapsible = () => (
+  <MockContext storyId="id-of-story">
+    <StorySource title="." collapsible={false} />
+  </MockContext>
+);

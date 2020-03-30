@@ -15,6 +15,7 @@ export type StoryBlockContainerProps = {
     context: StoryContextProps,
     props: any,
   ) => React.ReactElement | null;
+  [key: string]: any;
 } & StoryInputProps &
   Omit<BlockContainerProps, 'id'>;
 
@@ -33,14 +34,13 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
   const { component, kind, story } = context;
   const title =
     userTitle == CURRENT_STORY ? getStoryTitle(kind, component) : userTitle;
-  // console.log(userTitle, title);
   return (
     <BlockContainer
       title={title}
       collapsible={collapsible}
       id={userTitle == CURRENT_STORY && story ? story.id : undefined}
     >
-      {children(rest, context)}
+      {children(context, rest)}
     </BlockContainer>
   );
 };

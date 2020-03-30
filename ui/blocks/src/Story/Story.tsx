@@ -9,7 +9,7 @@ export type StoryProps = Omit<StoryBlockContainerProps, 'children'>;
 
 export const Story: FC<StoryProps> = (props: StoryProps) => (
   <StoryBlockContainer {...props}>
-    {(rest, context) => {
+    {(context, rest) => {
       const { story } = context;
       if (story && story.renderFn) {
         let children;

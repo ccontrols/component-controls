@@ -12,7 +12,7 @@ export type StoriesProps = Omit<StoryBlockContainerProps, 'children'> &
 
 export const Stories: FC<StoriesProps> = props => (
   <StoryBlockContainer {...props}>
-    {(rest, context) => {
+    {(context, rest) => {
       const { story: selected, store, kind } = context;
       const stories =
         store &&
