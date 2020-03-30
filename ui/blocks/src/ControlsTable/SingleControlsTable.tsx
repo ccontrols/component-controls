@@ -8,7 +8,7 @@ import {
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table } from '@component-controls/components';
 import { Flex } from 'theme-ui';
-import { InvalidType } from '../../notifications/InvalidType';
+import { InvalidType } from '../notifications/InvalidType';
 
 export interface SingleControlsTableProps {
   /**

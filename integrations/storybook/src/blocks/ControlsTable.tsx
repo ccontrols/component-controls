@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import {
-  BlockControlsTable,
-  BlockControlsTableProps,
+  ControlsTable as BaseControlsTable,
+  ControlsTableProps,
   useStoryContext,
 } from '@component-controls/blocks';
 
 import { ThemeProvider } from '../context/ThemeProvider';
-export type ControlsTableProps = BlockControlsTableProps;
 
 export const ControlsTable: FC<ControlsTableProps> = ({
   id: propId,
@@ -25,7 +24,7 @@ export const ControlsTable: FC<ControlsTableProps> = ({
 
   return id ? (
     <ThemeProvider>
-      <BlockControlsTable id={id} {...rest} />
+      <BaseControlsTable id={id} {...rest} />
     </ThemeProvider>
   ) : null;
 };
