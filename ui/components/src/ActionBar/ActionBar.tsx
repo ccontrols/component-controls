@@ -34,6 +34,11 @@ export interface ActionItem {
   order?: number;
 
   /**
+   * optional group. ActionItems in the same group will not be separated by horizonal margin
+   */
+  group?: string | number;
+
+  /**
    * optional label visible to screen readers for aria accessibility.
    */
   'aria-label'?: string;
@@ -78,6 +83,30 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
   actions = [],
 }) => {
   const { theme } = useThemeUI();
+  const sortedItems = actions
+    .filter(({ hidden }) => !hidden)
+    .reduce((acc: ActionItem[], item: ActionItem) => {
+      const accIndex = acc.findIndex(
+        accItem => (accItem.id ?? accItem.title) === (item.id ?? item.title),
+      );
+      if (accIndex > -1) {
+        acc[accIndex] = { ...acc[accIndex], ...item };
+        return acc;
+      } else {
+        return [...acc, item];
+      }
+    }, [])
+    .map(
+      ({ order, ...item }, index) =>
+        ({
+          ...item,
+          order: order ?? index,
+        } as ActionItem),
+    )
+    .sort((a: ActionItem, b: ActionItem) => {
+      //@ts-ignore
+      return a.order - b.order;
+    });
   return (
     <Box
       sx={{
@@ -91,38 +120,21 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
           width: '100%',
         }}
       >
-        {actions
-          .filter(({ hidden }) => !hidden)
-          .reduce((acc: ActionItem[], item: ActionItem) => {
-            const accIndex = acc.findIndex(
-              accItem =>
-                (accItem.id ?? accItem.title) === (item.id ?? item.title),
-            );
-            if (accIndex > -1) {
-              acc[accIndex] = { ...acc[accIndex], ...item };
-              return acc;
-            } else {
-              return [...acc, item];
-            }
-          }, [])
-          .map(
-            ({ order, ...item }, index) =>
-              ({
-                ...item,
-                order: order ?? index,
-              } as ActionItem),
-          )
-          .sort((a: ActionItem, b: ActionItem) => {
-            //@ts-ignore
-            return a.order - b.order;
-          })
-          .map(
-            ({ title, onClick, disabled, 'aria-label': ariaLabel }, index) => (
+        {sortedItems.map(
+          (
+            { title, onClick, disabled, 'aria-label': ariaLabel, group },
+            index,
+          ) => {
+            const nextGroup =
+              index < sortedItems.length - 1
+                ? sortedItems[index + 1].group
+                : group;
+            return (
               <Box
                 key={`${typeof title === 'string' ? title : 'item'}_${index}`}
                 sx={{
                   mt: 1,
-                  mx: 1,
+                  ml: nextGroup != group ? 2 : 0,
                   fontSize: 1,
                   a: ActionColors({ theme, disabled }),
                   button: ActionColors({ theme, disabled }),
@@ -140,8 +152,9 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
                   title
                 )}
               </Box>
-            ),
-          )}
+            );
+          },
+        )}
       </Flex>
     </Box>
   );

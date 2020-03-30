@@ -52,6 +52,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
         position: 'relative',
         mt: 3,
         mb: 4,
+        width: '100%',
       }}
       id={blockId}
     >

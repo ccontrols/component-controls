@@ -97,9 +97,48 @@ export const override = () => (
           onClick: () => console.log('clicked'),
         },
         {
-          //this will override the action above
           title: 'Copy',
           id: 'copy',
+        },
+      ]}
+    />
+  </Container>
+);
+
+export const groupEnd = () => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'item 1',
+        },
+        {
+          title: 'item 2',
+          group: '1',
+        },
+        {
+          title: 'item 3',
+          group: '1',
+        },
+      ]}
+    />
+  </Container>
+);
+
+export const groupStart = () => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'item 1',
+          group: '1',
+        },
+        {
+          title: 'item 2',
+          group: '1',
+        },
+        {
+          title: 'item 3',
         },
       ]}
     />
