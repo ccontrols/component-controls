@@ -75,7 +75,12 @@ const loadStoryStore = (): StoriesStore | undefined => {
                     kind.stories = [];
                   }
                   kind.stories.push(id);
-                  globalStore.stories[id] = { ...story, id, kind: kind.title };
+                  globalStore.stories[id] = {
+                    ...story,
+                    name: storyNameFromExport(story.name),
+                    id,
+                    kind: kind.title,
+                  };
                 }
               });
               Object.keys(store.components).forEach(key => {

@@ -6,6 +6,7 @@ import { ControlsTable, Title, Subtitle, Story, Stories, Description, StorySourc
 addDecorator((story, ctx ) => {
   return (
     <ThemeProvider>
+      {console.log(ctx)}
       {story(ctx)}
     </ThemeProvider>
   );

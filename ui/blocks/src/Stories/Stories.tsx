@@ -4,7 +4,6 @@ import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
-import { getStoryTitle } from '../utils';
 import { Playground, PlaygroundProps } from '../Playground';
 import { Story as StoryComponent } from '../Story';
 
