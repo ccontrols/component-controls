@@ -46,3 +46,20 @@ export const onSelect = () => {
     </Tabs>
   );
 };
+
+export const direction = () => {
+  return (
+    <div dir="rtl">
+      <Tabs onSelect={index => console.log(index)} direction="rtl">
+        <TabList>
+          {Object.keys(tabs).map(key => (
+            <Tab key={`tab_${key}`}>{key}</Tab>
+          ))}
+        </TabList>
+        {Object.keys(tabs).map(key => (
+          <TabPanel key={`panel_${key}`}>{tabs[key]}</TabPanel>
+        ))}
+      </Tabs>
+    </div>
+  );
+};

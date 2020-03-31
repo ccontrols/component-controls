@@ -1,13 +1,24 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
 import { Global, css } from '@emotion/core';
+import {
+  Collapsible,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel,
+} from '@component-controls/components';
 
 import { Button } from 'theme-ui';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import {
+  getSortedPanels,
+  ActionItems,
+  ActionItem,
   ActionContainer,
   ActionContainerProps,
 } from '@component-controls/components';
+import { StorySource } from '../StorySource';
 
 export interface TransformOptions {
   limitToBounds?: boolean;
@@ -61,13 +72,62 @@ export type PlaygroundProps = PlaygroundOwnProps &
 
 export const Playground: FC<PlaygroundProps> = ({
   transform,
-  actions = [],
+  actions: userActions = [],
   children,
 }) => {
+  const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
+    undefined,
+  );
   const childStories = <>{children}</>;
   const zoomEnabled = !transform?.options?.disabled;
-  return zoomEnabled ? (
-    <>
+
+  let storyId: string;
+  const childArr = React.Children.toArray(children);
+  if (childArr.length === 1) {
+    //@ts-ignore
+    storyId = childArr[0].props.id;
+    userActions.push({
+      title: 'source',
+      id: 'source',
+      'aria-label': 'display story source code',
+      panel: <StorySource id={storyId} />,
+    });
+  }
+  const panels: ActionItems = getSortedPanels(userActions);
+  const panelActions = userActions.map((panel: ActionItem) => {
+    return panel.panel
+      ? {
+          ...panel,
+          onClick: (e: MouseEvent<HTMLButtonElement>) => {
+            const index = panels.findIndex(
+              (p: ActionItem) => p.title === panel.title,
+            );
+            if (index < 0) {
+              return undefined;
+            }
+            if (tabsIndex === index) {
+              setTabsIndex(undefined);
+            } else {
+              if (panel.onClick) {
+                const ret = panel.onClick(e);
+                if (ret === true) {
+                  setTabsIndex(index);
+                  return ret;
+                } else if (ret === false) {
+                  setTabsIndex(undefined);
+                  return ret;
+                }
+              }
+              setTabsIndex(index);
+            }
+            return undefined;
+          },
+        }
+      : panel;
+  });
+
+  return (
+    <ActionContainer>
       <Global
         styles={css`
           .react-transform-component,
@@ -112,19 +172,44 @@ export const Playground: FC<PlaygroundProps> = ({
               group: 'zoom',
             },
           ];
+          const actions: ActionItem[] = [];
+          actions.push.apply(actions, panelActions);
           const actionsItems = zoomEnabled
             ? [...zoomActions, ...actions]
             : actions;
           return (
-            <ActionContainer actions={actionsItems}>
+            <ActionContainer plain={true} actions={actionsItems}>
               <TransformComponent>{childStories}</TransformComponent>
             </ActionContainer>
           );
         }}
       </TransformWrapper>
-    </>
-  ) : (
-    childStories
+      <Collapsible isOpen={tabsIndex !== undefined}>
+        {panels.length === 1 ? (
+          panels[0].panel
+        ) : (
+          <Tabs
+            selectedIndex={tabsIndex || 0}
+            onSelect={(index: number) => setTabsIndex(index)}
+          >
+            <TabList
+              style={{
+                textAlign: 'right',
+              }}
+            >
+              {panels.map((panel: ActionItem) => (
+                <Tab key={`playground_tab_${panel.title}`}>{panel.title}</Tab>
+              ))}
+            </TabList>
+            {panels.map((panel: ActionItem) => (
+              <TabPanel key={`playground_panel_${panel.title}`}>
+                {panel.panel}
+              </TabPanel>
+            ))}
+          </Tabs>
+        )}
+      </Collapsible>
+    </ActionContainer>
   );
 };
 

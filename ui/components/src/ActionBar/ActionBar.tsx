@@ -1,51 +1,14 @@
 /** @jsx jsx */
-import React, { FunctionComponent, MouseEvent } from 'react';
+import { FunctionComponent } from 'react';
 import { transparentize } from 'polished';
 import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
-
-/**
- * an item in the ActionBar component
- */
-export interface ActionItem {
-  /**
-   * optional id, used if title is not set
-   */
-  id?: string;
-  /**
-   * title - if a string, will use the Button component, else can prvide custom React component
-   */
-  title: React.ReactNode;
-  /**
-   * onClick event when passing a string as the title
-   */
-  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
-  /**
-   * displays the Button as disabled
-   */
-  disabled?: boolean;
-  /**
-   * hide an action item
-   */
-  hidden?: boolean;
-
-  /**
-   * optional order, if not provided will use the natural order of items from right to left
-   */
-  order?: number;
-
-  /**
-   * optional group. ActionItems in the same group will not be separated by horizonal margin
-   */
-  group?: string | number;
-
-  /**
-   * optional label visible to screen readers for aria accessibility.
-   */
-  'aria-label'?: string;
-}
+import { getSortedActions, ActionItems } from './utils';
 
 export interface ActionBarProps {
-  actions: ActionItem[];
+  /**
+   * collection of action items
+   */
+  actions: ActionItems;
 }
 
 const ActionColors = ({
@@ -83,30 +46,8 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
   actions = [],
 }) => {
   const { theme } = useThemeUI();
-  const sortedItems = actions
-    .filter(({ hidden }) => !hidden)
-    .reduce((acc: ActionItem[], item: ActionItem) => {
-      const accIndex = acc.findIndex(
-        accItem => (accItem.id ?? accItem.title) === (item.id ?? item.title),
-      );
-      if (accIndex > -1) {
-        acc[accIndex] = { ...acc[accIndex], ...item };
-        return acc;
-      } else {
-        return [...acc, item];
-      }
-    }, [])
-    .map(
-      ({ order, ...item }, index) =>
-        ({
-          ...item,
-          order: order ?? index,
-        } as ActionItem),
-    )
-    .sort((a: ActionItem, b: ActionItem) => {
-      //@ts-ignore
-      return a.order - b.order;
-    });
+  const sortedItems = getSortedActions(actions);
+
   return (
     <Box
       sx={{

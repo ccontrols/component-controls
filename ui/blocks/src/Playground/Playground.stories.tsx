@@ -1,4 +1,5 @@
 import React from 'react';
+import { Donut } from 'theme-ui';
 import { Playground } from './Playground';
 import { Story } from '../Story';
 import { MockContext } from '../test/MockContext';
@@ -55,6 +56,21 @@ export const customTitle = () => (
 export const notCollapsible = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
     <Playground title="." collapsible={false}>
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);
+
+export const extraPanel = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground
+      actions={[
+        {
+          title: 'custom panel',
+          panel: <Donut value={1 / 2} />,
+        },
+      ]}
+    >
       <Story id="." />
     </Playground>
   </MockContext>
