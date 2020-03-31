@@ -126,7 +126,39 @@ export const Playground: FC<PlaygroundProps> = ({
       : panel;
   });
 
-  return (
+  const panelsElement = (
+    <Collapsible isOpen={tabsIndex !== undefined}>
+      {panels.length === 1 ? (
+        panels[0].panel
+      ) : (
+        <Tabs
+          selectedIndex={tabsIndex || 0}
+          onSelect={(index: number) => setTabsIndex(index)}
+        >
+          <TabList
+            style={{
+              textAlign: 'right',
+            }}
+          >
+            {panels.map((panel: ActionItem) => (
+              <Tab key={`playground_tab_${panel.title}`}>{panel.title}</Tab>
+            ))}
+          </TabList>
+          {panels.map((panel: ActionItem) => (
+            <TabPanel key={`playground_panel_${panel.title}`}>
+              {panel.panel}
+            </TabPanel>
+          ))}
+        </Tabs>
+      )}
+    </Collapsible>
+  );
+  return !zoomEnabled ? (
+    <ActionContainer actions={panelActions}>
+      {children}
+      {panelsElement}
+    </ActionContainer>
+  ) : (
     <ActionContainer>
       <Global
         styles={css`
@@ -184,31 +216,7 @@ export const Playground: FC<PlaygroundProps> = ({
           );
         }}
       </TransformWrapper>
-      <Collapsible isOpen={tabsIndex !== undefined}>
-        {panels.length === 1 ? (
-          panels[0].panel
-        ) : (
-          <Tabs
-            selectedIndex={tabsIndex || 0}
-            onSelect={(index: number) => setTabsIndex(index)}
-          >
-            <TabList
-              style={{
-                textAlign: 'right',
-              }}
-            >
-              {panels.map((panel: ActionItem) => (
-                <Tab key={`playground_tab_${panel.title}`}>{panel.title}</Tab>
-              ))}
-            </TabList>
-            {panels.map((panel: ActionItem) => (
-              <TabPanel key={`playground_panel_${panel.title}`}>
-                {panel.panel}
-              </TabPanel>
-            ))}
-          </Tabs>
-        )}
-      </Collapsible>
+      {panelsElement}
     </ActionContainer>
   );
 };

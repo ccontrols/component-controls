@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { ActionItem } from '@component-controls/components';
 import {
-  ComponentsBlockContainer,
-  ComponentsBlockContainerProps,
-} from '../BlockContainer/components/ComponentsBlockContainer';
-import {
   ThemeContext,
   Source,
   SourceProps,
 } from '@component-controls/components';
+import {
+  ComponentsBlockContainer,
+  ComponentsBlockContainerProps,
+} from '../BlockContainer/components/ComponentsBlockContainer';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export type ComponentSourceProps = Omit<

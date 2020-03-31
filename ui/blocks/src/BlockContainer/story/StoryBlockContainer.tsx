@@ -34,13 +34,14 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
   const { component, kind, story } = context;
   const title =
     userTitle == CURRENT_STORY ? getStoryTitle(kind, component) : userTitle;
+  const block = children(context, rest);
   return (
     <BlockContainer
       title={title}
       collapsible={collapsible}
       id={userTitle == CURRENT_STORY && story ? story.id : undefined}
     >
-      {children(context, rest)}
+      {block}
     </BlockContainer>
   );
 };

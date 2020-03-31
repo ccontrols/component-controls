@@ -31,19 +31,20 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
         : userTitle,
     );
   }, [userTitle]);
+  const block = (
+    <ComponentsContainer
+      of={of}
+      onSelect={tabName =>
+        userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
+      }
+      {...rest}
+    >
+      {(component, props, otherProps) => children(component, props, otherProps)}
+    </ComponentsContainer>
+  );
   return (
     <BlockContainer title={title} collapsible={collapsible} id={id}>
-      <ComponentsContainer
-        of={of}
-        onSelect={tabName =>
-          userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
-        }
-        {...rest}
-      >
-        {(component, props, otherProps) =>
-          children(component, props, otherProps)
-        }
-      </ComponentsContainer>
+      {block}
     </BlockContainer>
   );
 };

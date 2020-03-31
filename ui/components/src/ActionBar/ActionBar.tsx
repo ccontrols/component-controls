@@ -76,6 +76,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
                 key={`${typeof title === 'string' ? title : 'item'}_${index}`}
                 sx={{
                   mt: 1,
+                  mr: index === 0 ? 1 : 0,
                   ml: nextGroup != group || group === undefined ? 2 : 1,
                   fontSize: 1,
                   a: ActionColors({ theme, disabled }),

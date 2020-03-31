@@ -23,7 +23,7 @@ export const Stories: FC<StoriesProps> = props => (
         return null;
       }
       return (
-        <div>
+        <>
           {stories.map((story: Story) => {
             const storyTitle = story.name;
             return (
@@ -33,7 +33,7 @@ export const Stories: FC<StoriesProps> = props => (
                     disabled: true,
                   },
                 }}
-                key={story.id}
+                key={`playground-${story.id}`}
                 {...rest}
               >
                 <StoryComponent
@@ -44,7 +44,7 @@ export const Stories: FC<StoriesProps> = props => (
               </Playground>
             );
           })}
-        </div>
+        </>
       );
     }}
   </StoryBlockContainer>
