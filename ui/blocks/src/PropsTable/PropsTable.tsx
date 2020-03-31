@@ -133,7 +133,7 @@ export const PropsTable: FC<PropsTableProps> = ({
           {
             Header: 'Default',
             accessor: 'prop.defaultValue',
-            width: '20%',
+            width: '40%',
             Cell: ({ row: { original } }: any) => {
               if (!original) {
                 return null;

@@ -120,8 +120,8 @@ export const StorySource: React.FC<StorySourceProps> = (
           dark={dark}
           {...rest}
           renderFn={(
-            { className, style, tokens, getLineProps, getTokenProps },
-            { theme },
+            { className, style, tokens, getLineProps, getTokenProps }: any,
+            { theme }: any,
           ) => {
             if (tags) {
               tags.forEach((tag, index) => {
@@ -137,11 +137,11 @@ export const StorySource: React.FC<StorySourceProps> = (
                 className={`${className}`}
                 style={{ ...style, padding: '0 10px 10px', margin: 0 }}
               >
-                {tokens.map((line, i: number) => (
+                {tokens.map((line: any, i: number) => (
                   <div {...getLineProps({ line, key: i })}>
                     {(() => {
                       let column = 0;
-                      return line.map((token, key) => {
+                      return line.map((token: any, key: string) => {
                         const tokenTrim = token.content.trim();
                         const param = tags
                           ? tags.find(tag => {
@@ -165,7 +165,7 @@ export const StorySource: React.FC<StorySourceProps> = (
                             key,
                           }).children.split(/(\s+)/);
 
-                          return splitToken.map(s =>
+                          return splitToken.map((s: string) =>
                             s.trim().length ? (
                               <span
                                 {...getTokenProps({ token, key })}

@@ -53,19 +53,20 @@ export interface PlaygroundTransformOptions {
   doubleClick?: DoubleClickOptions;
   wheel?: WheelOptions;
 }
-export type PlaygroundProps = { transform: PlaygroundTransformOptions } & Omit<
-  ActionContainerProps,
-  'paddingTop'
->;
+export interface PlaygroundOwnProps {
+  transform?: PlaygroundTransformOptions;
+}
+export type PlaygroundProps = PlaygroundOwnProps &
+  Omit<ActionContainerProps, 'paddingTop'>;
 
 export const Playground: FC<PlaygroundProps> = ({
   transform,
-  actions,
+  actions = [],
   children,
 }) => {
   const childStories = <>{children}</>;
-
-  return (
+  const zoomEnabled = !transform?.options?.disabled;
+  return zoomEnabled ? (
     <>
       <Global
         styles={css`
@@ -77,7 +78,7 @@ export const Playground: FC<PlaygroundProps> = ({
       />
       <TransformWrapper {...transform}>
         {({ zoomIn, zoomOut, resetTransform }: any) => {
-          const actionsItems = [
+          const zoomActions = [
             {
               title: (
                 <Button onClick={resetTransform} aria-label="reset zoom">
@@ -85,6 +86,7 @@ export const Playground: FC<PlaygroundProps> = ({
                 </Button>
               ),
               id: 'zoomreset',
+              group: 'zoom',
             },
             {
               title: (
@@ -93,6 +95,7 @@ export const Playground: FC<PlaygroundProps> = ({
                 </Button>
               ),
               id: 'zoomout',
+              group: 'zoom',
             },
             {
               title: (
@@ -106,10 +109,12 @@ export const Playground: FC<PlaygroundProps> = ({
                 </Button>
               ),
               id: 'zoomin',
+              group: 'zoom',
             },
-
-            ...(Array.isArray(actions) ? [...actions] : []),
           ];
+          const actionsItems = zoomEnabled
+            ? [...zoomActions, ...actions]
+            : actions;
           return (
             <ActionContainer actions={actionsItems}>
               <TransformComponent>{childStories}</TransformComponent>
@@ -118,6 +123,8 @@ export const Playground: FC<PlaygroundProps> = ({
         }}
       </TransformWrapper>
     </>
+  ) : (
+    childStories
   );
 };
 

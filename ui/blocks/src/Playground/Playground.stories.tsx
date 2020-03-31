@@ -15,6 +15,19 @@ export const overview = () => (
   </MockContext>
 );
 
+export const disableZoomPan = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground
+      transform={{
+        options: {
+          disabled: true,
+        },
+      }}
+    >
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);
 export const multiStories = () => (
   <MockContext storyId="id-of-story">
     <Playground id=".">

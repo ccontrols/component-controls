@@ -111,6 +111,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
     <Box
       sx={{
         position: 'relative',
+        zIndex: 1,
       }}
     >
       <Flex
@@ -134,7 +135,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
                 key={`${typeof title === 'string' ? title : 'item'}_${index}`}
                 sx={{
                   mt: 1,
-                  ml: nextGroup != group || group === undefined ? 2 : 0,
+                  ml: nextGroup != group || group === undefined ? 2 : 1,
                   fontSize: 1,
                   a: ActionColors({ theme, disabled }),
                   button: ActionColors({ theme, disabled }),

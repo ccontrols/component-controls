@@ -25,7 +25,15 @@ export const Stories: FC<StoriesProps> = props => (
       return (
         <div>
           {stories.map((story: Story) => (
-            <Playground zoomPanEnabled={false} key={story.id} {...rest}>
+            <Playground
+              transform={{
+                options: {
+                  disabled: true,
+                },
+              }}
+              key={story.id}
+              {...rest}
+            >
               <StoryComponent id={story.id} title="." collapsible={false} />
             </Playground>
           ))}

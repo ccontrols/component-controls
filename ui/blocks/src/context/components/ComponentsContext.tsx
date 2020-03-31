@@ -43,7 +43,6 @@ export const useComponentsContext = ({
     store && store.stories && store.stories[currentId];
   const kind =
     store && story && story.kind ? store.kinds[story.kind] : undefined;
-
   let cmp: any;
   if (of === CURRENT_STORY) {
     cmp = story && story.component ? story.component : kind?.component;
@@ -66,6 +65,7 @@ export const useComponentsContext = ({
       }, {})
     : undefined;
   const componentName = getComponentName(cmp);
+
   const components = componentName &&
   kind && { [componentName]: kind.components[componentName] }
     ? { [componentName]: store?.components[kind.components[componentName]] }

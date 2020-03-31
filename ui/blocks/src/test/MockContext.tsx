@@ -10,7 +10,7 @@ export interface MockContexProps {
 
 export const MockContext: React.FC<MockContexProps> = ({
   children,
-  storyId = 'story',
+  storyId = 'id-of-story',
 }) => {
   return (
     <BlockContextProvider currentId={storyId} mockStore={storyStore}>

@@ -3,7 +3,6 @@ export * from './ActionContainer';
 export * from './BlockContainer';
 export * from './Collapsible';
 export * from './ExternalLink';
-export * from './FlexContainer';
 export * from './Markdown';
 export * from './Popover';
 export * from './Source';
