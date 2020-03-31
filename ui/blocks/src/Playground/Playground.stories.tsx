@@ -16,6 +16,14 @@ export const overview = () => (
   </MockContext>
 );
 
+export const defaultOpenSource = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground openTab="source">
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);
+
 export const disableZoomPan = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
     <Playground

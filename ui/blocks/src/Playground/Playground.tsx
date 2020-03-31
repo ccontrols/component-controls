@@ -66,6 +66,10 @@ export interface PlaygroundTransformOptions {
 }
 export interface PlaygroundOwnProps {
   transform?: PlaygroundTransformOptions;
+  /**
+   * by default, which tab to have open.
+   */
+  openTab?: React.ReactNode;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
   Omit<ActionContainerProps, 'paddingTop'>;
@@ -74,10 +78,12 @@ export const Playground: FC<PlaygroundProps> = ({
   transform,
   actions: userActions = [],
   children,
+  openTab,
 }) => {
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
     undefined,
   );
+
   const childStories = <>{children}</>;
   const zoomEnabled = !transform?.options?.disabled;
 
@@ -94,6 +100,11 @@ export const Playground: FC<PlaygroundProps> = ({
     });
   }
   const panels: ActionItems = getSortedPanels(userActions);
+
+  React.useEffect(() => {
+    const index = panels.findIndex((p: ActionItem) => p.title === openTab);
+    setTabsIndex(index > -1 ? index : undefined);
+  }, [openTab]);
   const panelActions = userActions.map((panel: ActionItem) => {
     return panel.panel
       ? {

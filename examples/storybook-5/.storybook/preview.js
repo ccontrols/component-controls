@@ -1,7 +1,7 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider, BlockContextProvider } from '@component-controls/storybook';
-import { ControlsTable, Title, Subtitle, Story, Stories, Description, StorySource, ComponentSource, PropsTable } from '@component-controls/blocks';
+import { ControlsTable, Title, Subtitle, Story, Playground, Stories, Description, StorySource, ComponentSource, PropsTable } from '@component-controls/blocks';
 
 addDecorator((story, ctx ) => {
   return (
@@ -20,8 +20,9 @@ export const DocsPage = () => {
         <Subtitle />
         <Description />
         <ComponentSource id="." title='Component source' />
-        <Story id="." />
-        <StorySource id="." title='Story source'/>
+        <Playground openTab="source">
+          <Story id="." />
+        </Playground>  
         <ControlsTable id="." />
         <PropsTable of="." />
         <Stories />
