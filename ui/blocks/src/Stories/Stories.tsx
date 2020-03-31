@@ -4,6 +4,7 @@ import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
+import { getStoryTitle } from '../utils';
 import { Playground, PlaygroundProps } from '../Playground';
 import { Story as StoryComponent } from '../Story';
 
@@ -24,19 +25,26 @@ export const Stories: FC<StoriesProps> = props => (
       }
       return (
         <div>
-          {stories.map((story: Story) => (
-            <Playground
-              transform={{
-                options: {
-                  disabled: true,
-                },
-              }}
-              key={story.id}
-              {...rest}
-            >
-              <StoryComponent id={story.id} title="." collapsible={false} />
-            </Playground>
-          ))}
+          {stories.map((story: Story) => {
+            const storyTitle = story.name;
+            return (
+              <Playground
+                transform={{
+                  options: {
+                    disabled: true,
+                  },
+                }}
+                key={story.id}
+                {...rest}
+              >
+                <StoryComponent
+                  id={story.id}
+                  title={storyTitle}
+                  collapsible={false}
+                />
+              </Playground>
+            );
+          })}
         </div>
       );
     }}
