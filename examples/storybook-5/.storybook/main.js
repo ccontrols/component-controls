@@ -45,7 +45,7 @@ module.exports = {
               { name: '@component-controls/react-docgen-typescript-info', test: /\.(ts|tsx)$/}
             ],
             prettier: {
-              tabWidth: 4,
+              tabWidth: 2,
             },
             components: {
               storeSourceFile: true, //false

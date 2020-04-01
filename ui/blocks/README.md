@@ -49,6 +49,7 @@ _ComponentsBlockContainer [source code](https:/github.com/ccontrols/component-co
 | `title`       | _string_                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`     | _SystemStyleObject_                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 
 ## <ins>StoryBlockContainer</ins>
 
@@ -56,12 +57,13 @@ _StoryBlockContainer [source code](https:/github.com/ccontrols/component-control
 
 ### properties
 
-| Name          | Type      | Description                                                                 |
-| ------------- | --------- | --------------------------------------------------------------------------- |
-| `id`          | _string_  | id of the story                                                             |
-| `name`        | _string_  | alternatively you can use the name of a story to load from an external file |
-| `title`       | _string_  | optional section title for the block.                                       |
-| `collapsible` | _boolean_ | if false, will nothave a collapsible frame.                                 |
+| Name          | Type                | Description                                                                 |
+| ------------- | ------------------- | --------------------------------------------------------------------------- |
+| `id`          | _string_            | id of the story                                                             |
+| `name`        | _string_            | alternatively you can use the name of a story to load from an external file |
+| `title`       | _string_            | optional section title for the block.                                       |
+| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                 |
+| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                       |
 
 ## <ins>ComponentSource</ins>
 
@@ -79,6 +81,7 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `id`          | _string_                                                           | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`     | _SystemStyleObject_                                                | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                                                                                                                                         |
 | `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                                                                                                                                          |
 | `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                                                                                                                                              |
@@ -131,12 +134,13 @@ _Playground [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name        | Type                         | Description                                               |
-| ----------- | ---------------------------- | --------------------------------------------------------- |
-| `transform` | _PlaygroundTransformOptions_ |                                                           |
-| `openTab`   | _any_                        | by default, which tab to have open.                       |
-| `actions`   | _ActionItem\[]_              | optional actions provided to the component                |
-| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children |
+| Name        | Type                         | Description                                                   |
+| ----------- | ---------------------------- | ------------------------------------------------------------- |
+| `transform` | _PlaygroundTransformOptions_ |                                                               |
+| `openTab`   | _any_                        | by default, which tab to have open.                           |
+| `dark`      | _boolean_                    | whether to use the dark theme for the story source component. |
+| `actions`   | _ActionItem\[]_              | optional actions provided to the component                    |
+| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children     |
 
 ## <ins>PropsTable</ins>
 
@@ -152,6 +156,7 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `title`         | _string_                                                                                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `id`            | _string_                                                                                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible`   | _boolean_                                                                                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`       | _SystemStyleObject_                                                                                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
 | `header`        | _boolean_                                                                                                                      | show or hide the header element.                                                                                                                                                                                                                                                                   |
 | `sorting`       | _boolean_                                                                                                                      | enable.disable sorting.                                                                                                                                                                                                                                                                            |
 | `filtering`     | _boolean_                                                                                                                      | enable/disable filtering.                                                                                                                                                                                                                                                                          |
@@ -162,16 +167,19 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 ## <ins>Stories</ins>
 
+displays multiple stories in ther own Playground components
+
 _Stories [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Stories/Stories.tsx)_
 
 ### properties
 
-| Name        | Type                         | Description                                               |
-| ----------- | ---------------------------- | --------------------------------------------------------- |
-| `transform` | _PlaygroundTransformOptions_ |                                                           |
-| `openTab`   | _any_                        | by default, which tab to have open.                       |
-| `actions`   | _ActionItem\[]_              | optional actions provided to the component                |
-| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children |
+| Name        | Type                         | Description                                                                                                                |
+| ----------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `dark`      | _boolean_                    | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
+| `transform` | _PlaygroundTransformOptions_ |                                                                                                                            |
+| `openTab`   | _any_                        | by default, which tab to have open.                                                                                        |
+| `actions`   | _ActionItem\[]_              | optional actions provided to the component                                                                                 |
+| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children                                                                  |
 
 ## <ins>Story</ins>
 

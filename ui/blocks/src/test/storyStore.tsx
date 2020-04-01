@@ -406,5 +406,12 @@ and a [link](https://google.com)
 );
 `,
     },
+    'id-no-component': {
+      renderFn: () => <Heading>Components</Heading>,
+      id: 'id-no-component',
+      kind: 'Story',
+      name: 'no component',
+      source: "() => 'hello'",
+    },
   },
 };

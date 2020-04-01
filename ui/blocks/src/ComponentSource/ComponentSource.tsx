@@ -42,7 +42,6 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
               ? `import { ${componentName} } from '${importFrom}';`
               : `import ${componentName} from '${importFrom}';`;
         }
-
         if (!source) {
           return null;
         }

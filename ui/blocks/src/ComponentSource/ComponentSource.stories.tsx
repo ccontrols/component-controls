@@ -35,3 +35,8 @@ export const notCollapsible = () => (
     <ComponentSource title="." collapsible={false} />
   </MockContext>
 );
+export const noComponent = () => (
+  <MockContext storyId="id-no-component">
+    <ComponentSource title="Component" id="." />
+  </MockContext>
+);

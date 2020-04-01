@@ -25,6 +25,10 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   const [title, setTitle] = React.useState<string | undefined>();
   const { components } = useComponentsContext({ of });
   const componentNames = Object.keys(components);
+  if (!componentNames.length) {
+    //no components to display
+    return null;
+  }
   React.useEffect(() => {
     setTitle(
       userTitle === CURRENT_STORY && componentNames.length
