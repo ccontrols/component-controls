@@ -19,16 +19,12 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   id,
   of,
   children,
-  sx,
+  sxStyle,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
   const { components } = useComponentsContext({ of });
   const componentNames = Object.keys(components);
-  if (!componentNames.length) {
-    //no components to display
-    return null;
-  }
   React.useEffect(() => {
     setTitle(
       userTitle === CURRENT_STORY && componentNames.length
@@ -36,6 +32,10 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
         : userTitle,
     );
   }, [userTitle]);
+  if (!componentNames.length) {
+    //no components to display
+    return null;
+  }
   const block = (
     <ComponentsContainer
       of={of}
@@ -48,7 +48,12 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     </ComponentsContainer>
   );
   return (
-    <BlockContainer title={title} collapsible={collapsible} id={id} sx={sx}>
+    <BlockContainer
+      title={title}
+      collapsible={collapsible}
+      id={id}
+      sxStyle={sxStyle}
+    >
       {block}
     </BlockContainer>
   );
