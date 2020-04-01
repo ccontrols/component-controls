@@ -7,17 +7,19 @@ import {
   Tabs,
   TabList,
   TabPanel,
-} from '@component-controls/components';
-
-import { Button } from 'theme-ui';
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
-import {
   getSortedPanels,
   ActionItems,
   ActionItem,
   ActionContainer,
   ActionContainerProps,
 } from '@component-controls/components';
+
+import { Button } from 'theme-ui';
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
+import {
+  StoryBlockContainer,
+  StoryBlockContainerProps,
+} from '../BlockContainer';
 import { StorySource } from '../StorySource';
 
 export interface TransformOptions {
@@ -72,9 +74,14 @@ export interface PlaygroundOwnProps {
   openTab?: React.ReactNode;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
+  Omit<StoryBlockContainerProps, 'children'> &
   Omit<ActionContainerProps, 'paddingTop'>;
 
 export const Playground: FC<PlaygroundProps> = ({
+  title,
+  id,
+  name,
+  collapsible,
   transform,
   actions: userActions = [],
   children,
@@ -165,12 +172,21 @@ export const Playground: FC<PlaygroundProps> = ({
     </Collapsible>
   );
   return !zoomEnabled ? (
-    <ActionContainer actions={panelActions}>
-      {children}
-      {panelsElement}
-    </ActionContainer>
+    <StoryBlockContainer
+      name={name}
+      title={title}
+      id={id}
+      collapsible={collapsible}
+    >
+      {() => (
+        <ActionContainer actions={panelActions}>
+          {children}
+          {panelsElement}
+        </ActionContainer>
+      )}
+    </StoryBlockContainer>
   ) : (
-    <ActionContainer>
+    <div>
       <Global
         styles={css`
           .react-transform-component,
@@ -221,14 +237,23 @@ export const Playground: FC<PlaygroundProps> = ({
             ? [...zoomActions, ...actions]
             : actions;
           return (
-            <ActionContainer plain={true} actions={actionsItems}>
-              <TransformComponent>{childStories}</TransformComponent>
-            </ActionContainer>
+            <StoryBlockContainer
+              name={name}
+              title={title}
+              id={id}
+              collapsible={collapsible}
+            >
+              {() => (
+                <ActionContainer plain={true} actions={actionsItems}>
+                  <TransformComponent>{childStories}</TransformComponent>
+                </ActionContainer>
+              )}
+            </StoryBlockContainer>
           );
         }}
       </TransformWrapper>
       {panelsElement}
-    </ActionContainer>
+    </div>
   );
 };
 

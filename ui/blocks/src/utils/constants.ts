@@ -22,3 +22,14 @@ export const getStoryTitle = (
   }
   return undefined;
 };
+
+export const getStoryBlockTitle = ({
+  kind,
+  component,
+  title,
+}: {
+  kind?: StoriesKind;
+  component?: StoryComponent;
+  title?: string;
+}): string | undefined =>
+  title == CURRENT_STORY ? getStoryTitle(kind, component) : title;

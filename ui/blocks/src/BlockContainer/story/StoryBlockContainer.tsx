@@ -8,7 +8,7 @@ import {
   StoryInputProps,
   StoryContextProps,
 } from '../../context';
-import { CURRENT_STORY, getStoryTitle } from '../../utils';
+import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
 
 export type StoryBlockContainerProps = {
   children: (
@@ -32,8 +32,11 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     name,
   });
   const { component, kind, story } = context;
-  const title =
-    userTitle == CURRENT_STORY ? getStoryTitle(kind, component) : userTitle;
+  const title = getStoryBlockTitle({
+    kind,
+    component,
+    title: userTitle,
+  });
   const block = children(context, rest);
   return (
     <BlockContainer

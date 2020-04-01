@@ -41,6 +41,11 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   const [isOpen, setIsOpen] = React.useState(true);
   const blockId =
     id || (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
+  const BlockTitle: FC = () => (
+    <Subtitle color="text" css={{ fontWeight: 400, paddingRight: 10 }}>
+      {title}
+    </Subtitle>
+  );
   //workaround for storybook iframe url
   const url =
     (window.location != window.parent.location
@@ -85,7 +90,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               <Octicon icon={LinkIcon} />
             </Link>
           )}
-          {title && collapsible ? (
+          {title && collapsible && (
             <Link
               aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
               css={{
@@ -94,13 +99,12 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               onClick={() => setIsOpen(!isOpen)}
             >
               <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Subtitle css={{ paddingRight: 10 }}>{title}</Subtitle>
+                <BlockTitle />
                 <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
               </Flex>
             </Link>
-          ) : (
-            <Subtitle css={{ paddingRight: 10 }}>{title}</Subtitle>
           )}
+          {title && !collapsible && <BlockTitle />}
         </Flex>
       )}
       {collapsible && children ? (

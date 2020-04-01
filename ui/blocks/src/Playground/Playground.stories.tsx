@@ -63,7 +63,7 @@ export const customTitle = () => (
 );
 export const notCollapsible = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
-    <Playground title="." collapsible={false}>
+    <Playground title="." collapsible={false} id=".">
       <Story id="." />
     </Playground>
   </MockContext>
@@ -80,6 +80,24 @@ export const extraPanel = () => (
       ]}
     >
       <Story id="." />
+    </Playground>
+  </MockContext>
+);
+
+export const child = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground title="My donut example ">
+      <Donut value={1 / 2} />
+    </Playground>
+  </MockContext>
+);
+
+export const multiChild = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground title="Multiple donuts">
+      <Donut value={1 / 2} />
+      <Donut value={1 / 2} />
+      <Donut value={1 / 2} />
     </Playground>
   </MockContext>
 );

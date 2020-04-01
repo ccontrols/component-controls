@@ -33,14 +33,12 @@ export const Stories: FC<StoriesProps> = props => (
                     disabled: true,
                   },
                 }}
+                title={storyTitle}
+                collapsible={false}
                 key={`playground-${story.id}`}
                 {...rest}
               >
-                <StoryComponent
-                  id={story.id}
-                  title={storyTitle}
-                  collapsible={false}
-                />
+                <StoryComponent id={story.id} />
               </Playground>
             );
           })}
