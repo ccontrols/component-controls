@@ -105,41 +105,35 @@ export const grouping = () => {
 };
 
 export const editing = () => {
-  const [value, setValue] = React.useState('example');
+  const [data, setData] = React.useState([{ value: 'example' }]);
   const [skipPageReset, setSkipPageReset] = React.useState(false);
   React.useEffect(() => {
     setSkipPageReset(false);
-  }, [value]);
+  }, [data]);
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'Value',
+        accessor: 'value',
+        Cell: ({ cell: { value } }: any) => {
+          return (
+            <input
+              value={value}
+              onChange={e => {
+                setSkipPageReset(true);
+                setData([{ value: e.target.value }]);
+              }}
+            />
+          );
+        },
+      },
+    ],
+    [],
+  );
+
   return (
     <ThemeProvider>
-      <Table
-        skipPageReset={skipPageReset}
-        columns={[
-          {
-            Header: 'Value',
-            accessor: 'value',
-            Cell: ({
-              row: {
-                original: { value: cellValue },
-              },
-            }: any) => (
-              <input
-                value={cellValue}
-                onChange={e => {
-                  setSkipPageReset(true);
-                  setValue(e.target.value);
-                }}
-              />
-            ),
-          },
-        ]}
-        data={[
-          {
-            value,
-          },
-          ,
-        ]}
-      />
+      <Table skipPageReset={skipPageReset} columns={columns} data={data} />
     </ThemeProvider>
   );
 };

@@ -146,7 +146,6 @@ export const Table: FC<TableProps> = ({
   if (sorting) {
     plugins.push();
   }
-  console.log(options);
   const tableOptions = useTable(options, ...plugins) as any;
   const {
     getTableProps,

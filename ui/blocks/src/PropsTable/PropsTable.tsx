@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled } from 'theme-ui';
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table, TableProps, Markdown } from '@component-controls/components';
 import { Column } from 'react-table';
@@ -60,110 +60,115 @@ export const PropsTable: FC<PropsTableProps> = ({
         }
         /*
          */
-        const columns: Column[] = [
-          {
-            Header: 'Parent',
-            accessor: 'prop.parentName',
-          },
-          {
-            Header: 'Name',
-            accessor: 'name',
-            Cell: ({ row: { original } }: any) => {
-              if (!original) {
-                return null;
-              }
-              const {
-                name,
-                prop: {
-                  type: { required },
-                },
-              } = original;
+        const columns = useMemo(
+          () => [
+            {
+              Header: 'Parent',
+              accessor: 'prop.parentName',
+            },
+            {
+              Header: 'Name',
+              accessor: 'name',
+              Cell: ({ row: { original } }: any) => {
+                if (!original) {
+                  return null;
+                }
+                const {
+                  name,
+                  prop: {
+                    type: { required },
+                  },
+                } = original;
 
-              return (
-                <Text
-                  sx={{
-                    fontWeight: 'bold',
-                    color: required ? 'red' : undefined,
-                    textOverflow: 'ellipsis',
-                  }}
-                >
-                  {name}
-                  {required ? '*' : ''}
-                </Text>
-              );
+                return (
+                  <Text
+                    sx={{
+                      fontWeight: 'bold',
+                      color: required ? 'red' : undefined,
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {name}
+                    {required ? '*' : ''}
+                  </Text>
+                );
+              },
             },
-          },
-          {
-            Header: 'Description',
-            accessor: 'prop.description',
-            width: '60%',
-            Cell: ({ row: { original } }: any) => {
-              if (!original) {
-                return null;
-              }
-              const {
-                prop: {
-                  description,
-                  type: { raw, name },
-                },
-              } = original;
-              return (
-                <Flex
-                  sx={{
-                    flexDirection: 'column',
-                  }}
-                >
-                  {description && <Markdown>{description}</Markdown>}
-                  {(raw ?? name) && (
-                    <Styled.pre
-                      sx={{
-                        color: 'fadedText',
-                        letterSpacing: '0.10em',
-                        whiteSpace: 'pre-wrap',
-                        margin: 0,
-                      }}
-                    >
-                      {raw ?? name}
-                    </Styled.pre>
-                  )}
-                </Flex>
-              );
+            {
+              Header: 'Description',
+              accessor: 'prop.description',
+              width: '60%',
+              Cell: ({ row: { original } }: any) => {
+                if (!original) {
+                  return null;
+                }
+                const {
+                  prop: {
+                    description,
+                    type: { raw, name },
+                  },
+                } = original;
+                return (
+                  <Flex
+                    sx={{
+                      flexDirection: 'column',
+                    }}
+                  >
+                    {description && <Markdown>{description}</Markdown>}
+                    {(raw ?? name) && (
+                      <Styled.pre
+                        sx={{
+                          color: 'fadedText',
+                          letterSpacing: '0.10em',
+                          whiteSpace: 'pre-wrap',
+                          margin: 0,
+                        }}
+                      >
+                        {raw ?? name}
+                      </Styled.pre>
+                    )}
+                  </Flex>
+                );
+              },
             },
-          },
-          {
-            Header: 'Default',
-            accessor: 'prop.defaultValue',
-            width: '40%',
-            Cell: ({ row: { original } }: any) => {
-              if (!original) {
-                return null;
-              }
-              const {
-                prop: { defaultValue },
-              } = original;
-              let value = null;
-              switch (typeof defaultValue) {
-                case 'object':
-                  value = JSON.stringify(defaultValue, null, 2);
-                  break;
-                case 'undefined':
-                  value = '-';
-                  break;
-                default:
-                  value = defaultValue.toString();
-              }
-              return (
-                <Styled.pre
-                  sx={{
-                    whiteSpace: 'pre-wrap',
-                  }}
-                >
-                  {value}
-                </Styled.pre>
-              );
+            {
+              Header: 'Default',
+              accessor: 'prop.defaultValue',
+              width: '40%',
+              Cell: ({ row: { original } }: any) => {
+                if (!original) {
+                  return null;
+                }
+                const {
+                  prop: { defaultValue },
+                } = original;
+                let value = null;
+                switch (typeof defaultValue) {
+                  case 'object':
+                    value = JSON.stringify(defaultValue, null, 2);
+                    break;
+                  case 'undefined':
+                    value = '-';
+                    break;
+                  default:
+                    value = defaultValue.toString();
+                }
+                return (
+                  <Styled.pre
+                    sx={{
+                      whiteSpace: 'pre-wrap',
+                    }}
+                  >
+                    {value}
+                  </Styled.pre>
+                );
+              },
             },
-          },
-        ];
+            ...extraColumns,
+            ,
+          ],
+          [extraColumns],
+        );
         const { controls } = story || {};
         // check if we should display controls in the PrpsTable
         // at least one control's name should exist as a property name
@@ -216,12 +221,7 @@ export const PropsTable: FC<PropsTableProps> = ({
         }
 
         return (
-          <Table
-            {...groupProps}
-            {...rest}
-            columns={[...columns, ...extraColumns]}
-            data={rows}
-          />
+          <Table {...groupProps} {...rest} columns={columns} data={rows} />
         );
       }}
     </ComponentsBlockContainer>

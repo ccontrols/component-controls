@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import {
   SetControlValueFn,
   ClickControlFn,
-  ComponentControls,
 } from '@component-controls/specification';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table } from '@component-controls/components';
@@ -14,7 +13,7 @@ export interface SingleControlsTableProps {
   /**
    * component controls to display in the table.
    */
-  controls?: ComponentControls;
+  data?: any[];
   /**
    * storyId, will be used to update the values of the controls
    */
@@ -35,114 +34,73 @@ export interface SingleControlsTableProps {
  * The controls and storyId are already set in priops;
  */
 export const SingleControlsTable: FC<SingleControlsTableProps> = ({
-  controls,
+  data,
   storyId,
   setControlValue,
   clickControl,
 }) => {
-  const data = controls
-    ? Object.keys(controls)
-        .map((key, index) => ({
-          name: key,
-          control: {
-            ...controls[key],
-            order:
-              controls[key].order === undefined ? index : controls[key].order,
-          },
-        }))
-        .sort((a, b) => {
-          const aOrder = a.control.order || 0;
-          const bOrder = b.control.order || 0;
-          return aOrder - bOrder;
-        })
-    : undefined;
-  /*
-  return (
-    <>
-      {data?.map(({ control, name }) => {
-        const InputType: PropertyEditor =
-          getPropertyEditor(control.type) || InvalidType;
-        const onChange = (propName: string, value: any) => {
-          if (setControlValue && storyId) {
-            setControlValue(storyId, propName, value);
-          }
-        };
-        const onClick = () => {
-          if (clickControl && storyId) {
-            clickControl(storyId, name);
-          }
-        };
+  const [skipPageReset, setSkipPageReset] = React.useState(false);
+  React.useEffect(() => {
+    setSkipPageReset(false);
+  }, [data]);
 
-        return (
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              alignItems: 'left',
-              flexBasis: '100%',
-            }}
-          >
-            <InputType
-              prop={control}
-              name={name}
-              onChange={onChange}
-              onClick={onClick}
-            />
-          </Flex>
-        );
-      })}
-    </>
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'Name',
+        accessor: 'name',
+      },
+      {
+        Header: 'Editor',
+        accessor: 'control',
+        Cell: ({
+          row: {
+            original: { control, name },
+          },
+        }: any) => {
+          const InputType: PropertyEditor =
+            getPropertyEditor(control.type) || InvalidType;
+          const onChange = (propName: string, value: any) => {
+            if (setControlValue && storyId) {
+              setSkipPageReset(true);
+              setControlValue(storyId, propName, value);
+            }
+          };
+          const onClick = () => {
+            if (clickControl && storyId) {
+              clickControl(storyId, name);
+            }
+          };
+
+          return (
+            <Flex
+              sx={{
+                flexDirection: 'column',
+                alignItems: 'left',
+                flexBasis: '100%',
+              }}
+            >
+              <InputType
+                prop={control}
+                name={name}
+                onChange={onChange}
+                onClick={onClick}
+              />
+            </Flex>
+          );
+        },
+      },
+    ],
+    [],
   );
-  */
+
   return (
     <Table
+      skipPageReset={skipPageReset}
       key={data?.reduce((acc: string, { name }) => `${acc}-${name}}`, '')}
       className="component-controls-table"
       header={false}
-      columns={[
-        {
-          Header: 'Name',
-          accessor: 'name',
-        },
-        {
-          Header: 'Editor',
-          accessor: 'control',
-          Cell: ({
-            row: {
-              original: { control, name },
-            },
-          }: any) => {
-            const InputType: PropertyEditor =
-              getPropertyEditor(control.type) || InvalidType;
-            const onChange = (propName: string, value: any) => {
-              if (setControlValue && storyId) {
-                setControlValue(storyId, propName, value);
-              }
-            };
-            const onClick = () => {
-              if (clickControl && storyId) {
-                clickControl(storyId, name);
-              }
-            };
-
-            return (
-              <Flex
-                sx={{
-                  flexDirection: 'column',
-                  alignItems: 'left',
-                  flexBasis: '100%',
-                }}
-              >
-                <InputType
-                  prop={control}
-                  name={name}
-                  onChange={onChange}
-                  onClick={onClick}
-                />
-              </Flex>
-            );
-          },
-        },
-      ]}
+      columns={columns}
       data={data}
     />
   );

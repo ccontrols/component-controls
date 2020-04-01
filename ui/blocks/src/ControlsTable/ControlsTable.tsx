@@ -4,6 +4,7 @@ import React, { FC, MouseEvent } from 'react';
 import { window, document } from 'global';
 import qs from 'qs';
 import copy from 'copy-to-clipboard';
+import { ComponentControls } from '@component-controls/specification';
 import {
   resetControlValues,
   getControlValues,
@@ -34,6 +35,23 @@ interface GroupedControlsType {
   [key: string]: LoadedComponentControls;
 }
 
+const createData = (controls: ComponentControls): any[] | undefined =>
+  controls
+    ? Object.keys(controls)
+        .map((key, index) => ({
+          name: key,
+          control: {
+            ...controls[key],
+            order:
+              controls[key].order === undefined ? index : controls[key].order,
+          },
+        }))
+        .sort((a, b) => {
+          const aOrder = a.control.order || 0;
+          const bOrder = b.control.order || 0;
+          return aOrder - bOrder;
+        })
+    : undefined;
 /**
  * Table component to display a story's controls and their editors.
  * Can adapt to multiple groups of controls, displaying them in their own tabs.
@@ -135,7 +153,7 @@ export const ControlsTable: FC<ControlsTableProps> = (
                     setControlValue={setControlValue}
                     clickControl={clickControl}
                     storyId={storyId}
-                    controls={groupedItems[0].controls}
+                    data={createData(groupedItems[0].controls)}
                   />
                 ) : (
                   <Tabs>
@@ -151,7 +169,7 @@ export const ControlsTable: FC<ControlsTableProps> = (
                           setControlValue={setControlValue}
                           clickControl={clickControl}
                           storyId={storyId}
-                          controls={item.controls}
+                          data={createData(item.controls)}
                         />
                       </TabPanel>
                     ))}
