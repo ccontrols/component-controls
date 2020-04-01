@@ -55,7 +55,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
     <Box
       sx={{
         position: 'relative',
-        mt: 3,
+        mt: 4,
         mb: 4,
         width: '100%',
       }}
@@ -66,7 +66,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
           sx={{
             flexDirection: 'row',
             alignItems: 'center',
-            pb: 2,
+            pb: title ? 2 : 0,
             ':hover': {
               a: {
                 visibility: 'visible',

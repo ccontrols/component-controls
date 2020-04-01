@@ -1,4 +1,6 @@
-import React, { createElement, FC } from 'react';
+/** @jsx jsx */
+import { createElement, FC } from 'react';
+import { jsx, Box } from 'theme-ui';
 import { getControlValues } from '@component-controls/core';
 import {
   StoryBlockContainer,
@@ -21,9 +23,9 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
             story.renderFn(values, { context }),
           );
           return (
-            <div id={story.id} {...rest}>
+            <Box id={story.id} sx={{ px: 3 }} {...rest}>
               {children}
-            </div>
+            </Box>
           );
         } catch (e) {
           console.error(e);

@@ -40,13 +40,10 @@ export const ActionContainer: FC<ActionContainerProps> = ({
         <Box
           sx={{
             borderRadius: 4,
-            boxShadow: `${transparentize(
+            border: `1px solid ${transparentize(
               0.9,
               theme.colors?.text as string,
-            )} 0 1px 3px 1px, ${transparentize(
-              0.9,
-              theme.colors?.text as string,
-            )} 0 0 0 1px`,
+            )}`,
             'div:first-child, svg:first-child': {
               paddingTop,
             },

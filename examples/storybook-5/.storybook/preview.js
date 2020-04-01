@@ -20,7 +20,7 @@ export const DocsPage = () => {
         <Subtitle />
         <Description />
         <ComponentSource id="." title='Component source' />
-        <Playground openTab="source">
+        <Playground openTab="source" title=".">
           <Story id="." />
         </Playground>  
         <ControlsTable id="." />

@@ -244,7 +244,7 @@ export const Playground: FC<PlaygroundProps> = ({
               collapsible={collapsible}
             >
               {() => (
-                <ActionContainer plain={true} actions={actionsItems}>
+                <ActionContainer plain={false} actions={actionsItems}>
                   <TransformComponent>{childStories}</TransformComponent>
                 </ActionContainer>
               )}
