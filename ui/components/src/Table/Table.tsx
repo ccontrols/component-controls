@@ -16,6 +16,12 @@ import {
   PluginHook,
   TableOptions,
   UseFiltersOptions,
+  UseExpandedOptions,
+  UsePaginationOptions,
+  UseRowSelectOptions,
+  UseSortByOptions,
+  UseRowStateOptions,
+  UseGroupByOptions,
   UseGroupByCellProps,
   UseGroupByRowProps,
   UseExpandedState,
@@ -70,6 +76,11 @@ interface TableOwnProps {
   expanded?: {
     [key: string]: boolean;
   };
+
+  /**
+   * reset state update while update table data
+   */
+  skipPageReset?: boolean;
 }
 
 export type TableProps = TableOwnProps & BoxProps;
@@ -88,6 +99,7 @@ export const Table: FC<TableProps> = ({
   groupBy,
   expanded,
   hiddenColumns,
+  skipPageReset,
   ...rest
 }) => {
   const plugins: PluginHook<any>[] = [
@@ -110,16 +122,31 @@ export const Table: FC<TableProps> = ({
   if (typeof expanded === 'object') {
     initialState.expanded = expanded;
   }
-  const options: TableOptions<{}> & UseFiltersOptions<{}> = {
+  const options: TableOptions<{}> &
+    UseFiltersOptions<{}> &
+    UseExpandedOptions<{}> &
+    UsePaginationOptions<{}> &
+    UseGroupByOptions<{}> &
+    UseRowSelectOptions<{}> &
+    UseSortByOptions<{}> &
+    UseRowStateOptions<{}> = {
     columns,
     data,
     defaultColumn: defaultColumn() as Column,
     initialState,
+    autoResetPage: !skipPageReset,
+    autoResetExpanded: !skipPageReset,
+    autoResetGroupBy: !skipPageReset,
+    autoResetSelectedRows: !skipPageReset,
+    autoResetSortBy: !skipPageReset,
+    autoResetFilters: !skipPageReset,
+    autoResetRowState: !skipPageReset,
   };
 
   if (sorting) {
     plugins.push();
   }
+  console.log(options);
   const tableOptions = useTable(options, ...plugins) as any;
   const {
     getTableProps,

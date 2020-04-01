@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react';
 import faker from 'faker';
 import { Table } from './Table';
@@ -98,6 +99,46 @@ export const grouping = () => {
         groupBy={['age']}
         columns={columns}
         data={data}
+      />
+    </ThemeProvider>
+  );
+};
+
+export const editing = () => {
+  const [value, setValue] = React.useState('example');
+  const [skipPageReset, setSkipPageReset] = React.useState(false);
+  React.useEffect(() => {
+    setSkipPageReset(false);
+  }, [value]);
+  return (
+    <ThemeProvider>
+      <Table
+        skipPageReset={skipPageReset}
+        columns={[
+          {
+            Header: 'Value',
+            accessor: 'value',
+            Cell: ({
+              row: {
+                original: { value: cellValue },
+              },
+            }: any) => (
+              <input
+                value={cellValue}
+                onChange={e => {
+                  setSkipPageReset(true);
+                  setValue(e.target.value);
+                }}
+              />
+            ),
+          },
+        ]}
+        data={[
+          {
+            value,
+          },
+          ,
+        ]}
       />
     </ThemeProvider>
   );
