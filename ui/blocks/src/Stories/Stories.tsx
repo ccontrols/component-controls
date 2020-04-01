@@ -7,9 +7,20 @@ import {
 import { Playground, PlaygroundProps } from '../Playground';
 import { Story as StoryComponent } from '../Story';
 
-export type StoriesProps = Omit<StoryBlockContainerProps, 'children'> &
+export interface StoriesOwnProps {
+  /**
+   * whether to display the dark theme storysource code component
+   */
+  dark?: boolean;
+}
+export type StoriesProps = StoriesOwnProps &
+  Omit<StoryBlockContainerProps, 'children'> &
   PlaygroundProps;
 
+/**
+ * displays multiple stories in ther own Playground components
+ *
+ */
 export const Stories: FC<StoriesProps> = props => (
   <StoryBlockContainer {...props}>
     {(context, rest) => {

@@ -22,3 +22,9 @@ export const notCollapsible = () => (
     <Stories collapsible={false} />
   </MockContext>
 );
+
+export const darkTheme = () => (
+  <MockContext storyId="id-of-story">
+    <Stories dark={true} />
+  </MockContext>
+);

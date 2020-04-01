@@ -101,3 +101,11 @@ export const multiChild = () => (
     </Playground>
   </MockContext>
 );
+
+export const darkTheme = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground dark={true}>
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);

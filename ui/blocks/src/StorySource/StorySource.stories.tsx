@@ -66,8 +66,15 @@ export const customTitle = () => (
     <StorySource title="Story source" />
   </MockContext>
 );
+
 export const notCollapsible = () => (
   <MockContext storyId="id-of-story">
     <StorySource title="." collapsible={false} />
+  </MockContext>
+);
+
+export const noMargin = () => (
+  <MockContext storyId="id-of-story">
+    <StorySource sxStyle={{ mt: 0, mb: 0 }} />
   </MockContext>
 );

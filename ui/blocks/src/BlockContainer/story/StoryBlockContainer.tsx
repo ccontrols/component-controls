@@ -3,6 +3,7 @@ import {
   BlockContainer,
   BlockContainerProps,
 } from '@component-controls/components';
+
 import {
   useStoryContext,
   StoryInputProps,
@@ -24,6 +25,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
   name,
   collapsible,
   title: userTitle,
+  sxStyle,
   children,
   ...rest
 }) => {
@@ -43,6 +45,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
       title={title}
       collapsible={collapsible}
       id={userTitle == CURRENT_STORY && story ? story.id : undefined}
+      sxStyle={sxStyle}
     >
       {block}
     </BlockContainer>

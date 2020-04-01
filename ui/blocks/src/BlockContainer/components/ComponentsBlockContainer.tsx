@@ -19,6 +19,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   id,
   of,
   children,
+  sx,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
@@ -43,7 +44,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     </ComponentsContainer>
   );
   return (
-    <BlockContainer title={title} collapsible={collapsible} id={id}>
+    <BlockContainer title={title} collapsible={collapsible} id={id} sx={sx}>
       {block}
     </BlockContainer>
   );

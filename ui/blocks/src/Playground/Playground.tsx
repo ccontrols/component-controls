@@ -72,6 +72,11 @@ export interface PlaygroundOwnProps {
    * by default, which tab to have open.
    */
   openTab?: React.ReactNode;
+
+  /**
+   * whether to use the dark theme for the story source component.
+   */
+  dark?: boolean;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
   Omit<StoryBlockContainerProps, 'children'> &
@@ -82,6 +87,7 @@ export const Playground: FC<PlaygroundProps> = ({
   id,
   name,
   collapsible,
+  dark,
   transform,
   actions: userActions = [],
   children,
@@ -103,7 +109,9 @@ export const Playground: FC<PlaygroundProps> = ({
       title: 'source',
       id: 'source',
       'aria-label': 'display story source code',
-      panel: <StorySource id={storyId} />,
+      panel: (
+        <StorySource dark={dark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+      ),
     });
   }
   const panels: ActionItems = getSortedPanels(userActions);
@@ -171,89 +179,82 @@ export const Playground: FC<PlaygroundProps> = ({
       )}
     </Collapsible>
   );
-  return !zoomEnabled ? (
+  return (
     <StoryBlockContainer
       name={name}
       title={title}
       id={id}
       collapsible={collapsible}
     >
-      {() => (
-        <ActionContainer actions={panelActions}>
-          {children}
-          {panelsElement}
-        </ActionContainer>
-      )}
+      {() =>
+        !zoomEnabled ? (
+          <ActionContainer actions={panelActions}>
+            {children}
+            {panelsElement}
+          </ActionContainer>
+        ) : (
+          <div>
+            <Global
+              styles={css`
+                .react-transform-component,
+                .react-transform-element {
+                  width: 100%;
+                }
+              `}
+            />
+            <TransformWrapper {...transform}>
+              {({ zoomIn, zoomOut, resetTransform }: any) => {
+                const zoomActions = [
+                  {
+                    title: (
+                      <Button onClick={resetTransform} aria-label="reset zoom">
+                        <Octicon icon={Sync} />
+                      </Button>
+                    ),
+                    id: 'zoomreset',
+                    group: 'zoom',
+                  },
+                  {
+                    title: (
+                      <Button onClick={zoomOut} aria-label="zoom out">
+                        <Octicon icon={Dash} />
+                      </Button>
+                    ),
+                    id: 'zoomout',
+                    group: 'zoom',
+                  },
+                  {
+                    title: (
+                      <Button
+                        onClick={e => {
+                          zoomIn(e);
+                        }}
+                        aria-label="zoom in"
+                      >
+                        <Octicon icon={Plus} />
+                      </Button>
+                    ),
+                    id: 'zoomin',
+                    group: 'zoom',
+                  },
+                ];
+                const actions: ActionItem[] = [];
+                actions.push.apply(actions, panelActions);
+                const actionsItems = zoomEnabled
+                  ? [...zoomActions, ...actions]
+                  : actions;
+                return (
+                  <ActionContainer plain={false} actions={actionsItems}>
+                    <TransformComponent>{childStories}</TransformComponent>
+                  </ActionContainer>
+                );
+              }}
+            </TransformWrapper>
+            {panelsElement}
+          </div>
+        )
+      }
     </StoryBlockContainer>
-  ) : (
-    <div>
-      <Global
-        styles={css`
-          .react-transform-component,
-          .react-transform-element {
-            width: 100%;
-          }
-        `}
-      />
-      <TransformWrapper {...transform}>
-        {({ zoomIn, zoomOut, resetTransform }: any) => {
-          const zoomActions = [
-            {
-              title: (
-                <Button onClick={resetTransform} aria-label="reset zoom">
-                  <Octicon icon={Sync} />
-                </Button>
-              ),
-              id: 'zoomreset',
-              group: 'zoom',
-            },
-            {
-              title: (
-                <Button onClick={zoomOut} aria-label="zoom out">
-                  <Octicon icon={Dash} />
-                </Button>
-              ),
-              id: 'zoomout',
-              group: 'zoom',
-            },
-            {
-              title: (
-                <Button
-                  onClick={e => {
-                    zoomIn(e);
-                  }}
-                  aria-label="zoom in"
-                >
-                  <Octicon icon={Plus} />
-                </Button>
-              ),
-              id: 'zoomin',
-              group: 'zoom',
-            },
-          ];
-          const actions: ActionItem[] = [];
-          actions.push.apply(actions, panelActions);
-          const actionsItems = zoomEnabled
-            ? [...zoomActions, ...actions]
-            : actions;
-          return (
-            <StoryBlockContainer
-              name={name}
-              title={title}
-              id={id}
-              collapsible={collapsible}
-            >
-              {() => (
-                <ActionContainer plain={false} actions={actionsItems}>
-                  <TransformComponent>{childStories}</TransformComponent>
-                </ActionContainer>
-              )}
-            </StoryBlockContainer>
-          );
-        }}
-      </TransformWrapper>
-      {panelsElement}
-    </div>
   );
 };
 

@@ -25,7 +25,7 @@ export const DocsPage = () => {
         </Playground>  
         <ControlsTable id="." />
         <PropsTable of="." />
-        <Stories />
+        <Stories dark={true}/>
       </BlockContextProvider>  
     </ThemeProvider>  
   );

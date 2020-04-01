@@ -112,20 +112,20 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ### properties
 
-| Name            | Type                                                   | Description                                                                                 |
-| --------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| `arguments`     | [StoryArguments](#storyarguments)                      | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
-| `component`     | string \| object                                       | id for component associated with the story                                                  |
-| `controls`      | [ComponentControls](#componentcontrols)                | object of key/value pairs specifying the controls for the story                             |
-| `id`            | string                                                 | csf id of the story                                                                         |
-| `kind`          | string                                                 | title of the file/group of stories                                                          |
-| `loc`           | [CodeLocation](#codelocation)                          | location in the source file of the story definition                                         |
-| `name*`         | string                                                 | name of the Story.                                                                          |
-| `parameters`    | [StoryParameters](#storyparameters)                    | configuration parameters passed to the story - either CSF or MDX                            |
-| `renderFn`      | **function** (`controls`\*: \[key: string]: any): any; | render function for the story                                                               |
-| `source`        | string                                                 | the source code of the story, extracted byt the AST instrumenting loaders                   |
-| `subcomponents` | \[key: string]: string \| object                       | multiple components option                                                                  |
-| `subtitle`      | string                                                 | optional story subtitle property                                                            |
+| Name            | Type                                                                        | Description                                                                                 |
+| --------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `arguments`     | [StoryArguments](#storyarguments)                                           | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
+| `component`     | string \| object                                                            | id for component associated with the story                                                  |
+| `controls`      | [ComponentControls](#componentcontrols)                                     | object of key/value pairs specifying the controls for the story                             |
+| `id`            | string                                                                      | csf id of the story                                                                         |
+| `kind`          | string                                                                      | title of the file/group of stories                                                          |
+| `loc`           | [CodeLocation](#codelocation)                                               | location in the source file of the story definition                                         |
+| `name*`         | string                                                                      | name of the Story.                                                                          |
+| `parameters`    | [StoryParameters](#storyparameters)                                         | configuration parameters passed to the story - either CSF or MDX                            |
+| `renderFn`      | **function** (`controlValues`\*: \[key: string]: any, `context`: any): any; | render function for the story                                                               |
+| `source`        | string                                                                      | the source code of the story, extracted byt the AST instrumenting loaders                   |
+| `subcomponents` | \[key: string]: string \| object                                            | multiple components option                                                                  |
+| `subtitle`      | string                                                                      | optional story subtitle property                                                            |
 
 ## StoryParameters
 

@@ -2,19 +2,22 @@
 
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
-    -   [<ins>BlockComponentSource</ins>](#insblockcomponentsourceins)
+    -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
+    -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
-    -   [<ins>BlockControlsTable</ins>](#insblockcontrolstableins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
     -   [<ins>Description</ins>](#insdescriptionins)
-    -   [<ins>BlockPropsTable</ins>](#insblockpropstableins)
+    -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
-    -   [<ins>BlockStorySource</ins>](#insblockstorysourceins)
+    -   [<ins>Stories</ins>](#insstoriesins)
+    -   [<ins>Story</ins>](#insstoryins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
+    -   [<ins>getComponentName</ins>](#insgetcomponentnameins)
+    -   [<ins>getStoryBlockTitle</ins>](#insgetstoryblocktitleins)
 
 # Overview
 
@@ -33,81 +36,71 @@ Some of the guiding design goals for this library:
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
-## <ins>BlockComponentSource</ins>
+## <ins>ComponentsBlockContainer</ins>
 
-Displays import statement for a component as well as the component file source code
-Optionally also displays some repository information from the component's package.json
-
-_BlockComponentSource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentSource/block/BlockComponentSource.tsx)_
+_ComponentsBlockContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/BlockContainer/components/ComponentsBlockContainer.tsx)_
 
 ### properties
 
-| Name       | Type                                                               | Description                                                                                                                                                                                                                                                                                        |
-| ---------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `of`       | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `actions`  | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                                                                                                                                         |
-| `theme`    | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                                                                                                                                              |
-| `language` | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                                                                                                                                             |
-| `renderFn` | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                                                                                                                                         |
-| `dark`     | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used.                                                                                                                   |
-| `style`    | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
-| `as`       | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
-| `title`    | _string_                                                           | optional section title for the block                                                                                                                                                                                                                                                               |
+| Name          | Type                                                           | Description                                                                                                                                                                                                                                                                                        |
+| ------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `of`          | _any_                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `title`       | _string_                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible` | _boolean_                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+
+## <ins>StoryBlockContainer</ins>
+
+_StoryBlockContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/BlockContainer/story/StoryBlockContainer.tsx)_
+
+### properties
+
+| Name          | Type      | Description                                                                 |
+| ------------- | --------- | --------------------------------------------------------------------------- |
+| `id`          | _string_  | id of the story                                                             |
+| `name`        | _string_  | alternatively you can use the name of a story to load from an external file |
+| `title`       | _string_  | optional section title for the block.                                       |
+| `collapsible` | _boolean_ | if false, will nothave a collapsible frame.                                 |
 
 ## <ins>ComponentSource</ins>
 
 Displays import statement for a component as well as the component file source code
 Optionally also displays some repository information from the component's package.json
 
-_ComponentSource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentSource/plain/ComponentSource.tsx)_
+_ComponentSource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentSource/ComponentSource.tsx)_
 
 ### properties
 
-| Name       | Type                                                               | Description                                                                                                                                                                                                                                                                                        |
-| ---------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `of`       | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `actions`  | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                                                                                                                                         |
-| `theme`    | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                                                                                                                                              |
-| `language` | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                                                                                                                                             |
-| `renderFn` | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                                                                                                                                         |
-| `dark`     | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used.                                                                                                                   |
-| `style`    | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
-| `as`       | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
-
-## <ins>BlockControlsTable</ins>
-
-Table block component to display a story's controls and their editors
-
-_BlockControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/block/BlockControlsTable.tsx)_
-
-### properties
-
-| Name    | Type     | Description                                                                  |
-| ------- | -------- | ---------------------------------------------------------------------------- |
-| `id`    | _string_ | id of the story                                                              |
-| `name`  | _string_ | or - name of the story if in an external file will be used to find the story |
-| `title` | _string_ | optional section title for the block                                         |
+| Name          | Type                                                               | Description                                                                                                                                                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_     | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `of`          | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `title`       | _string_                                                           | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `id`          | _string_                                                           | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                                                                                                                                         |
+| `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                                                                                                                                          |
+| `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                                                                                                                                              |
+| `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                                                                                                                                             |
+| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                                                                                                                                         |
+| `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used.                                                                                                                   |
+| `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
+| `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
 
 ## <ins>ControlsTable</ins>
 
 Table component to display a story's controls and their editors.
 Can adapt to multiple groups of controls, displaying them in their own tabs.
 
-_ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/plain/ControlsTable.tsx)_
-
-### properties
-
-| Name   | Type     | Description                                                                  |
-| ------ | -------- | ---------------------------------------------------------------------------- |
-| `id`   | _string_ | id of the story                                                              |
-| `name` | _string_ | or - name of the story if in an external file will be used to find the story |
+_ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/ControlsTable.tsx)_
 
 ## <ins>SingleControlsTable</ins>
 
 Single table of controls, without specific handliong of groups.
 The controls and storyId are already set in priops;
 
-_SingleControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/plain/SingleControlsTable.tsx)_
+_SingleControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/SingleControlsTable.tsx)_
 
 ### properties
 
@@ -132,61 +125,57 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.                                                                                                                                                                                                                                                      |
 | `of`         | _any_                                                                                                                                                                                                                    | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 
-## <ins>BlockPropsTable</ins>
+## <ins>Playground</ins>
 
-_BlockPropsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/block/BlockPropsTable.tsx)_
+_Playground [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/Playground.tsx)_
 
 ### properties
 
-| Name            | Type                           | Description                                                                                                                                                                                                                                                                                        |
-| --------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extraColumns`  | _Column&lt;{}>\[]_             | extra custom columns passed to the PropsTable.                                                                                                                                                                                                                                                     |
-| `of`            | _any_                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `header`        | _boolean_                      | show or hide the header element.                                                                                                                                                                                                                                                                   |
-| `sorting`       | _boolean_                      | enable.disable sorting.                                                                                                                                                                                                                                                                            |
-| `filtering`     | _boolean_                      | enable/disable filtering.                                                                                                                                                                                                                                                                          |
-| `itemsLabel`    | _string_                       | string label for 'items' - used in the filter placeholder and grouping header.                                                                                                                                                                                                                     |
-| `groupBy`       | _string\[]_                    | field to be grouped by.                                                                                                                                                                                                                                                                            |
-| `hiddenColumns` | _string\[]_                    | list of columns to hide.                                                                                                                                                                                                                                                                           |
-| `expanded`      | _{ \[key: string]: boolean; }_ | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
-| `actions`       | _ActionItem\[]_                | optional actions provided to the component                                                                                                                                                                                                                                                         |
+| Name        | Type                         | Description                                               |
+| ----------- | ---------------------------- | --------------------------------------------------------- |
+| `transform` | _PlaygroundTransformOptions_ |                                                           |
+| `openTab`   | _any_                        | by default, which tab to have open.                       |
+| `actions`   | _ActionItem\[]_              | optional actions provided to the component                |
+| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children |
 
 ## <ins>PropsTable</ins>
 
-_PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/plain/PropsTable.tsx)_
+_PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/PropsTable.tsx)_
 
 ### properties
 
-| Name            | Type                           | Description                                                                                                                                                                                                                                                                                        |
-| --------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extraColumns`  | _Column&lt;{}>\[]_             | extra custom columns passed to the PropsTable.                                                                                                                                                                                                                                                     |
-| `of`            | _any_                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `header`        | _boolean_                      | show or hide the header element.                                                                                                                                                                                                                                                                   |
-| `sorting`       | _boolean_                      | enable.disable sorting.                                                                                                                                                                                                                                                                            |
-| `filtering`     | _boolean_                      | enable/disable filtering.                                                                                                                                                                                                                                                                          |
-| `itemsLabel`    | _string_                       | string label for 'items' - used in the filter placeholder and grouping header.                                                                                                                                                                                                                     |
-| `groupBy`       | _string\[]_                    | field to be grouped by.                                                                                                                                                                                                                                                                            |
-| `hiddenColumns` | _string\[]_                    | list of columns to hide.                                                                                                                                                                                                                                                                           |
-| `expanded`      | _{ \[key: string]: boolean; }_ | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
+| Name            | Type                                                                                                                           | Description                                                                                                                                                                                                                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `extraColumns`  | _Column&lt;{}>\[]_                                                                                                             | extra custom columns passed to the PropsTable.                                                                                                                                                                                                                                                     |
+| `onSelect`      | _((name: string, component: StoryComponent) => boolean \| void) & ((event: SyntheticEvent&lt;HTMLDivElement, Event>) => void)_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `of`            | _any_                                                                                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `title`         | _string_                                                                                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `id`            | _string_                                                                                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible`   | _boolean_                                                                                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `header`        | _boolean_                                                                                                                      | show or hide the header element.                                                                                                                                                                                                                                                                   |
+| `sorting`       | _boolean_                                                                                                                      | enable.disable sorting.                                                                                                                                                                                                                                                                            |
+| `filtering`     | _boolean_                                                                                                                      | enable/disable filtering.                                                                                                                                                                                                                                                                          |
+| `itemsLabel`    | _string_                                                                                                                       | string label for 'items' - used in the filter placeholder and grouping header.                                                                                                                                                                                                                     |
+| `groupBy`       | _string\[]_                                                                                                                    | field to be grouped by.                                                                                                                                                                                                                                                                            |
+| `hiddenColumns` | _string\[]_                                                                                                                    | list of columns to hide.                                                                                                                                                                                                                                                                           |
+| `expanded`      | _{ \[key: string]: boolean; }_                                                                                                 | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
 
-## <ins>BlockStorySource</ins>
+## <ins>Stories</ins>
 
-_BlockStorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/block/BlockStorySource.tsx)_
+_Stories [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Stories/Stories.tsx)_
 
 ### properties
 
-| Name       | Type                                                               | Description                                                                                                                                                                      |
-| ---------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`       | _string_                                                           | id of the story                                                                                                                                                                  |
-| `name`     | _string_                                                           | or - name of the story if in an external file will be used to find the story                                                                                                     |
-| `actions`  | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
-| `theme`    | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `language` | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn` | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
-| `dark`     | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`    | _any_                                                              | css styles for the container.                                                                                                                                                    |
-| `as`       | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-| `title`    | _string_                                                           | optional section title for the block                                                                                                                                             |
+| Name        | Type                         | Description                                               |
+| ----------- | ---------------------------- | --------------------------------------------------------- |
+| `transform` | _PlaygroundTransformOptions_ |                                                           |
+| `openTab`   | _any_                        | by default, which tab to have open.                       |
+| `actions`   | _ActionItem\[]_              | optional actions provided to the component                |
+| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children |
+
+## <ins>Story</ins>
+
+_Story [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Story/Story.tsx)_
 
 ## <ins>StorySource</ins>
 
@@ -194,7 +183,7 @@ Display source code of a story.
 If controls are used, all story arguments will be highlighted.
 Additional commands are made available if the repository data of the story is available.
 
-_StorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/plain/StorySource.tsx)_
+_StorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/StorySource.tsx)_
 
 ## <ins>Subtitle</ins>
 
@@ -206,12 +195,13 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| `id`       | _string_                                                                                                                                                                                                                                                                             | id of the story                                                              |
-| `name`     | _string_                                                                                                                                                                                                                                                                             | or - name of the story if in an external file will be used to find the story |
-| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                       |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                              |
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `id`       | _string_                                                                                                                                                                                                                                                                             | id of the story                                                             |
+| `name`     | _string_                                                                                                                                                                                                                                                                             | alternatively you can use the name of a story to load from an external file |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                      |
+| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                                                                                                                                                                                                                               | DOM node type to render as. By default h3.                                  |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                             |
 
 ## <ins>Title</ins>
 
@@ -221,17 +211,33 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 
 ### properties
 
-| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| `id`       | _string_                                                                                                                                                                                                                                                                             | id of the story                                                              |
-| `name`     | _string_                                                                                                                                                                                                                                                                             | or - name of the story if in an external file will be used to find the story |
-| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                       |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                              |
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `id`       | _string_                                                                                                                                                                                                                                                                             | id of the story                                                             |
+| `name`     | _string_                                                                                                                                                                                                                                                                             | alternatively you can use the name of a story to load from an external file |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                      |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                             |
 
 ## <ins>InvalidType</ins>
 
 error message when the control type is not found.
 
 _InvalidType [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/notifications/InvalidType.tsx)_
+
+## <ins>getComponentName</ins>
+
+_getComponentName [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/utils/constants.ts)_
+
+## <ins>getStoryBlockTitle</ins>
+
+_getStoryBlockTitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/utils/constants.ts)_
+
+### properties
+
+| Name        | Type             | Description |
+| ----------- | ---------------- | ----------- |
+| `kind`      | _StoriesKind_    |             |
+| `component` | _StoryComponent_ |             |
+| `title`     | _string_         |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

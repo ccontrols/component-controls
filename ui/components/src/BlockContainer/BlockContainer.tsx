@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider, Box } from 'theme-ui';
+import { jsx, Flex, Link, Divider, Box, SxStyleProp } from 'theme-ui';
 import Octicon, {
   Link as LinkIcon,
   ChevronRight,
@@ -26,6 +26,11 @@ export interface BlockContainerProps {
    * if false, will nothave a collapsible frame.
    */
   collapsible?: boolean;
+
+  /**
+   * theme-ui styling object for Block Box
+   */
+  sxStyle?: SxStyleProp;
 }
 
 /**
@@ -37,6 +42,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   title,
   id,
   collapsible = true,
+  sxStyle,
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
   const blockId =
@@ -62,6 +68,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
         mt: 4,
         mb: 4,
         width: '100%',
+        ...sxStyle,
       }}
       id={blockId}
     >

@@ -7,7 +7,6 @@
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
-    -   [<ins>FlexContainer</ins>](#insflexcontainerins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
     -   [<ins>Popover</ins>](#inspopoverins)
     -   [<ins>Source</ins>](#inssourceins)
@@ -57,9 +56,9 @@ _ActionBar [source code](https:/github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name      | Type            | Description |
-| --------- | --------------- | ----------- |
-| `actions` | _ActionItem\[]_ |             |
+| Name      | Type          | Description                |
+| --------- | ------------- | -------------------------- |
+| `actions` | _ActionItems_ | collection of action items |
 
 ## <ins>ActionContainer</ins>
 
@@ -73,6 +72,7 @@ _ActionContainer [source code](https:/github.com/ccontrols/component-controls/tr
 | ------------ | ------------------ | ------------------------------------------------------------------------- |
 | `actions`    | _ActionItem\[]_    | optional actions provided to the component                                |
 | `paddingTop` | _string \| number_ | padding at the top, to account for the absolute position of the ActionBar |
+| `plain`      | _boolean_          | if plain, skip the border and spacing around the children                 |
 
 ## <ins>BlockContainer</ins>
 
@@ -82,9 +82,12 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/tre
 
 ### properties
 
-| Name    | Type     | Description                          |
-| ------- | -------- | ------------------------------------ |
-| `title` | _string_ | optional section title for the block |
+| Name          | Type                | Description                                                                                                     |
+| ------------- | ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `title`       | _string_            | optional section title for the block.                                                                           |
+| `id`          | _string_            | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                     |
+| `sx`          | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                           |
 
 ## <ins>Collapsible</ins>
 
@@ -127,16 +130,6 @@ _ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/
 | `type`           | _string_                                                                                                  | specifies the media type of the linked document.                                  |
 | `referrerPolicy` | _"no-referrer" \| "no-referrer-when-downgrade" \| "origin" \| "origin-when-cross-origin" \| "unsafe-url"_ | specifies which referrer to send.                                                 |
 
-## <ins>FlexContainer</ins>
-
-_FlexContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/FlexContainer/FlexContainer.tsx)_
-
-### properties
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `align` | _string_ |             |
-
 ## <ins>Markdown</ins>
 
 Markdown display component to compile and display markdown at run-time.
@@ -169,6 +162,7 @@ _Source [source code](https:/github.com/ccontrols/component-controls/tree/master
 | Name       | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `actions`  | _ActionItem\[]_                                                                                                                                                                                                                                                                      | optional actions provided to the component                                                                                                                                       |
+| `plain`    | _boolean_                                                                                                                                                                                                                                                                            | if plain, skip the border and spacing around the children                                                                                                                        |
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
 | `theme`    | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
 | `language` | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
@@ -185,10 +179,11 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name       | Type                                                                                                                                                                                                                                                                                 | Description                            |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
-| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.     |
+| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                                                                                                                                                                                                                               | DOM node type to render as. By default h3. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                            |
 
 ## <ins>SyntaxHighlighter</ins>
 
