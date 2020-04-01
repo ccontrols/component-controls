@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronRight, ChevronDown } from '@primer/octicons-react';
 
 import { Toggle } from './Toggle';
 
