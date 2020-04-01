@@ -12,3 +12,4 @@ export * from './Tabs';
 export * from './ThemeContext';
 export * from './Title';
 export * from './Toggle';
+export * from './Zoom';

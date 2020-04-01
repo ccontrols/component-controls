@@ -1,6 +1,5 @@
 import React, { FC, MouseEvent } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
-import { Global, css } from '@emotion/core';
 import {
   Collapsible,
   Tab,
@@ -12,62 +11,21 @@ import {
   ActionItem,
   ActionContainer,
   ActionContainerProps,
+  Zoom,
 } from '@component-controls/components';
 
 import { Button } from 'theme-ui';
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer';
 import { StorySource } from '../StorySource';
 
-export interface TransformOptions {
-  limitToBounds?: boolean;
-  transformEnabled?: boolean;
-  disabled?: boolean;
-  limitToWrapper?: boolean;
-}
-
-export interface PanOptions {
-  disabled?: boolean;
-  lockAxisX?: boolean;
-  lockAxisY?: boolean;
-  velocityEqualToMove?: boolean;
-  velocity?: boolean;
-}
-
-export interface PinchOptions {
-  disabled?: boolean;
-}
-export interface DoubleClickOptions {
-  disabled?: boolean;
-}
-
-export interface WheelOptions {
-  wheelEnabled?: boolean;
-  touchPadEnabled?: boolean;
-  limitsOnWheel?: boolean;
-}
-export interface PlaygroundZoomProps {
-  zoomPanEnabled?: boolean;
-
-  pinchEnabled?: boolean;
-  dbClickEnabled?: boolean;
-  enableWheel?: boolean;
-  enableTouchPadPinch?: boolean;
-  limitsOnWheel?: boolean;
-}
-
-export interface PlaygroundTransformOptions {
-  options?: TransformOptions;
-  pan?: PanOptions;
-  pinch?: PinchOptions;
-  doubleClick?: DoubleClickOptions;
-  wheel?: WheelOptions;
-}
 export interface PlaygroundOwnProps {
-  transform?: PlaygroundTransformOptions;
+  /**
+   * whether to enable the zoom functionality in playground.
+   */
+  zoomEnabled?: boolean;
   /**
    * by default, which tab to have open.
    */
@@ -88,17 +46,15 @@ export const Playground: FC<PlaygroundProps> = ({
   name,
   collapsible,
   dark,
-  transform,
   actions: userActions = [],
   children,
   openTab,
+  zoomEnabled = true,
 }) => {
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
     undefined,
   );
-
-  const childStories = <>{children}</>;
-  const zoomEnabled = !transform?.options?.disabled;
+  const [scale, setScale] = React.useState(1);
 
   let storyId: string;
   const childArr = React.Children.toArray(children);
@@ -152,33 +108,39 @@ export const Playground: FC<PlaygroundProps> = ({
       : panel;
   });
 
-  const panelsElement = (
-    <Collapsible isOpen={tabsIndex !== undefined}>
-      {panels.length === 1 ? (
-        panels[0].panel
-      ) : (
-        <Tabs
-          selectedIndex={tabsIndex || 0}
-          onSelect={(index: number) => setTabsIndex(index)}
-        >
-          <TabList
-            style={{
-              textAlign: 'right',
-            }}
-          >
-            {panels.map((panel: ActionItem) => (
-              <Tab key={`playground_tab_${panel.title}`}>{panel.title}</Tab>
-            ))}
-          </TabList>
-          {panels.map((panel: ActionItem) => (
-            <TabPanel key={`playground_panel_${panel.title}`}>
-              {panel.panel}
-            </TabPanel>
-          ))}
-        </Tabs>
-      )}
-    </Collapsible>
-  );
+  const zoomActions = [
+    {
+      title: (
+        <Button onClick={() => setScale(1)} aria-label="reset zoom">
+          <Octicon icon={Sync} />
+        </Button>
+      ),
+      id: 'zoomreset',
+      group: 'zoom',
+    },
+    {
+      title: (
+        <Button onClick={() => setScale(scale / 2)} aria-label="zoom out">
+          <Octicon icon={Dash} />
+        </Button>
+      ),
+      id: 'zoomout',
+      group: 'zoom',
+    },
+    {
+      title: (
+        <Button onClick={() => setScale(scale * 2)} aria-label="zoom in">
+          <Octicon icon={Plus} />
+        </Button>
+      ),
+      id: 'zoomin',
+      group: 'zoom',
+    },
+  ];
+  const actions: ActionItem[] = [];
+  actions.push.apply(actions, panelActions);
+
+  const actionsItems = zoomEnabled ? [...zoomActions, ...actions] : actions;
   return (
     <StoryBlockContainer
       name={name}
@@ -186,103 +148,38 @@ export const Playground: FC<PlaygroundProps> = ({
       id={id}
       collapsible={collapsible}
     >
-      {() =>
-        !zoomEnabled ? (
-          <ActionContainer actions={panelActions}>
-            {children}
-            {panelsElement}
-          </ActionContainer>
-        ) : (
-          <div>
-            <Global
-              styles={css`
-                .react-transform-component,
-                .react-transform-element {
-                  width: 100%;
-                }
-              `}
-            />
-            <TransformWrapper {...transform}>
-              {({ zoomIn, zoomOut, resetTransform }: any) => {
-                const zoomActions = [
-                  {
-                    title: (
-                      <Button onClick={resetTransform} aria-label="reset zoom">
-                        <Octicon icon={Sync} />
-                      </Button>
-                    ),
-                    id: 'zoomreset',
-                    group: 'zoom',
-                  },
-                  {
-                    title: (
-                      <Button onClick={zoomOut} aria-label="zoom out">
-                        <Octicon icon={Dash} />
-                      </Button>
-                    ),
-                    id: 'zoomout',
-                    group: 'zoom',
-                  },
-                  {
-                    title: (
-                      <Button
-                        onClick={e => {
-                          zoomIn(e);
-                        }}
-                        aria-label="zoom in"
-                      >
-                        <Octicon icon={Plus} />
-                      </Button>
-                    ),
-                    id: 'zoomin',
-                    group: 'zoom',
-                  },
-                ];
-                const actions: ActionItem[] = [];
-                actions.push.apply(actions, panelActions);
-                const actionsItems = zoomEnabled
-                  ? [...zoomActions, ...actions]
-                  : actions;
-                return (
-                  <ActionContainer plain={false} actions={actionsItems}>
-                    <TransformComponent>{childStories}</TransformComponent>
-                  </ActionContainer>
-                );
-              }}
-            </TransformWrapper>
-            {panelsElement}
-          </div>
-        )
-      }
+      {() => (
+        <ActionContainer plain={false} actions={actionsItems}>
+          <Zoom scale={scale}>{children}</Zoom>
+          <Collapsible isOpen={tabsIndex !== undefined}>
+            {panels.length === 1 ? (
+              panels[0].panel
+            ) : (
+              <Tabs
+                selectedIndex={tabsIndex || 0}
+                onSelect={(index: number) => setTabsIndex(index)}
+              >
+                <TabList
+                  style={{
+                    textAlign: 'right',
+                  }}
+                >
+                  {panels.map((panel: ActionItem) => (
+                    <Tab key={`playground_tab_${panel.title}`}>
+                      {panel.title}
+                    </Tab>
+                  ))}
+                </TabList>
+                {panels.map((panel: ActionItem) => (
+                  <TabPanel key={`playground_panel_${panel.title}`}>
+                    {panel.panel}
+                  </TabPanel>
+                ))}
+              </Tabs>
+            )}
+          </Collapsible>
+        </ActionContainer>
+      )}
     </StoryBlockContainer>
   );
-};
-
-Playground.defaultProps = {
-  transform: {
-    options: {
-      limitToBounds: true,
-      transformEnabled: true,
-      disabled: false,
-      limitToWrapper: false,
-    },
-    pan: {
-      disabled: false,
-      lockAxisX: false,
-      lockAxisY: false,
-      velocityEqualToMove: true,
-      velocity: true,
-    },
-    pinch: {
-      disabled: false,
-    },
-    doubleClick: {
-      disabled: false,
-    },
-    wheel: {
-      wheelEnabled: true,
-      touchPadEnabled: true,
-      limitsOnWheel: false,
-    },
-  },
 };
