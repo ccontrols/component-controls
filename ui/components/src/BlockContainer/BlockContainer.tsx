@@ -42,7 +42,11 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   const blockId =
     id || (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
   const BlockTitle: FC = () => (
-    <Subtitle color="text" css={{ fontWeight: 400, paddingRight: 10 }}>
+    <Subtitle
+      color="text"
+      as={collapsible ? 'h2' : 'h3'}
+      css={{ fontWeight: 400, paddingRight: 10 }}
+    >
       {title}
     </Subtitle>
   );

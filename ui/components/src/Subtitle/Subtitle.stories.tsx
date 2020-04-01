@@ -18,3 +18,7 @@ overview.story = {
     children: { type: 'text', value: 'Subtitle text' },
   },
 };
+
+export const as = () => {
+  return <Subtitle as="h2">Subtitle text</Subtitle>;
+};

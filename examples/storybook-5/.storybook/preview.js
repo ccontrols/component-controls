@@ -19,7 +19,7 @@ export const DocsPage = () => {
         <Title />
         <Subtitle />
         <Description />
-        <ComponentSource id="." title='Component source' />
+        <ComponentSource id="." title='Component' />
         <Playground openTab="source" title=".">
           <Story id="." />
         </Playground>  
