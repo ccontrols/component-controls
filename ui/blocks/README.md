@@ -32,7 +32,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -109,7 +109,7 @@ _SingleControlsTable [source code](https:/github.com/ccontrols/component-control
 
 | Name              | Type                | Description                                                         |
 | ----------------- | ------------------- | ------------------------------------------------------------------- |
-| `controls`        | _ComponentControls_ | component controls to display in the table.                         |
+| `data`            | _any\[]_            | component controls to display in the table.                         |
 | `storyId`         | _string_            | storyId, will be used to update the values of the controls          |
 | `setControlValue` | _SetControlValueFn_ | generic function to update the values of component controls.        |
 | `clickControl`    | _ClickControlFn_    | generic function to propagate a click event for component controls. |
@@ -134,13 +134,13 @@ _Playground [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name        | Type                         | Description                                                   |
-| ----------- | ---------------------------- | ------------------------------------------------------------- |
-| `transform` | _PlaygroundTransformOptions_ |                                                               |
-| `openTab`   | _any_                        | by default, which tab to have open.                           |
-| `dark`      | _boolean_                    | whether to use the dark theme for the story source component. |
-| `actions`   | _ActionItem\[]_              | optional actions provided to the component                    |
-| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children     |
+| Name      | Type            | Description                                                                                  |
+| --------- | --------------- | -------------------------------------------------------------------------------------------- |
+| `scale`   | _number_        | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled. |
+| `openTab` | _any_           | by default, which tab to have open.                                                          |
+| `dark`    | _boolean_       | whether to use the dark theme for the story source component.                                |
+| `actions` | _ActionItem\[]_ | optional actions provided to the component                                                   |
+| `plain`   | _boolean_       | if plain, skip the border and spacing around the children                                    |
 
 ## <ins>PropsTable</ins>
 
@@ -164,6 +164,7 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `groupBy`       | _string\[]_                                                                                                                    | field to be grouped by.                                                                                                                                                                                                                                                                            |
 | `hiddenColumns` | _string\[]_                                                                                                                    | list of columns to hide.                                                                                                                                                                                                                                                                           |
 | `expanded`      | _{ \[key: string]: boolean; }_                                                                                                 | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
+| `skipPageReset` | _boolean_                                                                                                                      | reset state update while update table data                                                                                                                                                                                                                                                         |
 
 ## <ins>Stories</ins>
 
@@ -173,13 +174,13 @@ _Stories [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name        | Type                         | Description                                                                                                                |
-| ----------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `dark`      | _boolean_                    | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
-| `transform` | _PlaygroundTransformOptions_ |                                                                                                                            |
-| `openTab`   | _any_                        | by default, which tab to have open.                                                                                        |
-| `actions`   | _ActionItem\[]_              | optional actions provided to the component                                                                                 |
-| `plain`     | _boolean_                    | if plain, skip the border and spacing around the children                                                                  |
+| Name      | Type            | Description                                                                                                                |
+| --------- | --------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `dark`    | _boolean_       | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
+| `scale`   | _number_        | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
+| `openTab` | _any_           | by default, which tab to have open.                                                                                        |
+| `actions` | _ActionItem\[]_ | optional actions provided to the component                                                                                 |
+| `plain`   | _boolean_       | if plain, skip the border and spacing around the children                                                                  |
 
 ## <ins>Story</ins>
 

@@ -109,3 +109,19 @@ export const darkTheme = () => (
     </Playground>
   </MockContext>
 );
+
+export const scale = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground scale={2}>
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);
+
+export const zoomDisabled = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground scale={0}>
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);

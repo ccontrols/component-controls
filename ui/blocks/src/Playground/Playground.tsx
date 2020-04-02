@@ -23,9 +23,9 @@ import { StorySource } from '../StorySource';
 
 export interface PlaygroundOwnProps {
   /**
-   * whether to enable the zoom functionality in playground.
+   * default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.
    */
-  zoomEnabled?: boolean;
+  scale?: number;
   /**
    * by default, which tab to have open.
    */
@@ -49,13 +49,13 @@ export const Playground: FC<PlaygroundProps> = ({
   actions: userActions = [],
   children,
   openTab,
-  zoomEnabled = true,
+  scale: userScale = 1,
 }) => {
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
     undefined,
   );
-  const [scale, setScale] = React.useState(1);
-
+  const [scale, setScale] = React.useState(userScale);
+  React.useEffect(() => setScale(userScale), [userScale]);
   let storyId: string;
   const childArr = React.Children.toArray(children);
   if (childArr.length === 1) {
@@ -140,7 +140,7 @@ export const Playground: FC<PlaygroundProps> = ({
   const actions: ActionItem[] = [];
   actions.push.apply(actions, panelActions);
 
-  const actionsItems = zoomEnabled ? [...zoomActions, ...actions] : actions;
+  const actionsItems = userScale ? [...zoomActions, ...actions] : actions;
   return (
     <StoryBlockContainer
       name={name}
@@ -150,7 +150,7 @@ export const Playground: FC<PlaygroundProps> = ({
     >
       {() => (
         <ActionContainer plain={false} actions={actionsItems}>
-          <Zoom scale={scale}>{children}</Zoom>
+          <Zoom scale={scale || 1}>{children}</Zoom>
           <Collapsible isOpen={tabsIndex !== undefined}>
             {panels.length === 1 ? (
               panels[0].panel

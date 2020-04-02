@@ -19,6 +19,7 @@
     -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>Toggle</ins>](#instoggleins)
+    -   [<ins>Zoom</ins>](#inszoomins)
 
 # Overview
 
@@ -223,6 +224,7 @@ _Table [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `groupBy`       | _string\[]_                    | field to be grouped by.                                                        |
 | `hiddenColumns` | _string\[]_                    | list of columns to hide.                                                       |
 | `expanded`      | _{ \[key: string]: boolean; }_ | object listing the initially expanded rows.                                    |
+| `skipPageReset` | _boolean_                      | reset state update while update table data                                     |
 
 ## <ins>Tab</ins>
 
@@ -270,5 +272,17 @@ _Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master
 | Name    | Type     | Description                                         |
 | ------- | -------- | --------------------------------------------------- |
 | `label` | _string_ | optional label to be displayed alongside the toggle |
+
+## <ins>Zoom</ins>
+
+zooming transform component
+
+_Zoom [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Zoom/Zoom.tsx)_
+
+### properties
+
+| Name    | Type     | Description   |
+| ------- | -------- | ------------- |
+| `scale` | _number_ | default scale |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
