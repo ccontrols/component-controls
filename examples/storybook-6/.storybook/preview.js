@@ -1,12 +1,11 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider, BlockContextProvider } from '@component-controls/storybook';
-import { ControlsTable, Title, Subtitle, Story, Playground, Stories, Description, StorySource, ComponentSource, PropsTable } from '@component-controls/blocks';
+import { ControlsTable, Title, Subtitle, Story, Playground, Stories, Description, ComponentSource, PropsTable } from '@component-controls/blocks';
 
 addDecorator((story, ctx ) => {
   return (
     <ThemeProvider>
-      {console.log(ctx)}
       {story(ctx)}
     </ThemeProvider>
   );

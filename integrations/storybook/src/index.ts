@@ -1,3 +1,2 @@
-export { ThemeProvider } from './context/ThemeProvider';
-export * from './context/BlockContext';
+export * from './context';
 export * from './blocks';

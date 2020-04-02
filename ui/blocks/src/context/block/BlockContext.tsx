@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import storyFn from '@component-controls/loader/story-store-data';
 import {
   StoriesStore,
@@ -7,6 +8,7 @@ import {
   ComponentControlButton,
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
+import { postControlsMsg } from './channel';
 
 export interface BlockContextInputProps {
   /**
@@ -17,6 +19,15 @@ export interface BlockContextInputProps {
    * store mockup when running tests
    */
   mockStore?: StoriesStore;
+  /**
+   * optional cllabel to invoke when the story data are changed
+   * for example when controls values are updated
+   */
+  onRefresh: () => void;
+  /**
+   * when set to true, the BlockCOntext will broadcast a message for changed controls values
+   */
+  postMessage?: boolean;
 }
 
 export interface BlockContextProps {
@@ -45,17 +56,28 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   currentId,
   mockStore,
+  onRefresh,
+  postMessage,
 }) => {
-  const [store, setStore] = React.useState<StoriesStore>(
+  const [store, setStore] = useState<StoriesStore>(
     mockStore || {
       components: {},
       stories: {},
       kinds: {},
     },
   );
-  React.useEffect(() => {
+  useEffect(() => {
     if (mockStore === undefined) {
-      setStore(storyFn());
+      const store = storyFn();
+      if (postMessage) {
+        Object.keys(store.stories).forEach(id => {
+          postControlsMsg({ id, controls: store.stories[id].controls });
+        });
+        if (onRefresh) {
+          onRefresh();
+        }
+      }
+      setStore(store);
     }
   }, []);
   const setControlValue: SetControlValueFn = (
@@ -67,6 +89,9 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
       store && store.stories[storyId] && store.stories[storyId].controls;
     if (controls) {
       const newValues = mergeControlValues(controls, propName, propValue);
+      if (postMessage) {
+        postControlsMsg({ id: storyId, controls: newValues });
+      }
       setStore({
         ...store,
         stories: {
@@ -74,6 +99,9 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
           [storyId]: { ...store.stories[storyId], controls: newValues },
         },
       });
+      if (onRefresh) {
+        onRefresh();
+      }
     }
   };
   const clickControl: ClickControlFn = (storyId: string, propName: string) => {
