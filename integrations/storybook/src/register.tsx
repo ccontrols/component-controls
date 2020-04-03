@@ -21,17 +21,8 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id, api }) => {
       'storybook-preview-iframe',
     ) as HTMLIFrameElement;
     const wrapper = document.getElementById('storybook-preview-wrapper');
-    if (wrapper && iframe && iframe.contentDocument) {
+    if (iframe && iframe.contentDocument) {
       const updateDOM = () => {
-        const root = iframe.contentDocument?.getElementById('root');
-        if (root) {
-          if (active) {
-            root.style.setProperty('display', 'none');
-          } else {
-            root.style.removeProperty('display');
-          }
-        }
-
         const story = api.getCurrentStoryData();
         channel.postMessage({ id: id, active, storyId: story?.id });
         if (wrapper) {
