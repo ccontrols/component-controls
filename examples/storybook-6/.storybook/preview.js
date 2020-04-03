@@ -31,7 +31,7 @@ export const DocsPage = () => {
 };
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
-  docs: { page: DocsPage },
+  docs_xxx: { page: DocsPage },
   dependencies: { hideEmpty: true },
   options: {
     storySort: (a, b) => {

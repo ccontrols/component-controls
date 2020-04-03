@@ -15,23 +15,34 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id }) => {
     [],
   );
   React.useEffect(() => {
-    var iframe = document.getElementById(
+    const iframe = document.getElementById(
       'storybook-preview-iframe',
     ) as HTMLIFrameElement;
-    if (iframe && iframe.contentWindow) {
-      var node = iframe.contentWindow.document.getElementById(id);
-      if (!node) {
-        node = iframe.contentWindow.document.createElement('div');
-        node.setAttribute('id', id);
-        iframe.contentWindow.document.body.appendChild(node);
-      }
-      if (active) {
-        node.removeAttribute('hidden');
+    const wrapper = document.getElementById('storybook-preview-wrapper');
+    if (wrapper && iframe && iframe.contentDocument) {
+      const updateDOM = () => {
+        const root = iframe.contentDocument?.getElementById('root');
+        if (root) {
+          if (active) {
+            root.style.setProperty('display', 'none');
+          } else {
+            root.style.removeProperty('display');
+          }
+        }
+
+        channel.postMessage({ id: id, active });
+        if (wrapper) {
+          wrapper.removeAttribute('hidden');
+        }
+      };
+
+      if (!iframe.contentDocument.getElementById('root')) {
+        iframe.onload = () => {
+          updateDOM();
+        };
       } else {
-        node.setAttribute('hidden', 'true');
+        updateDOM();
       }
-      node.setAttribute('id', id);
-      channel.postMessage({ id: id, active });
     }
   }, [active]);
   return null;
