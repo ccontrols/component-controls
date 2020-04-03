@@ -14,7 +14,7 @@ export interface BlockContextInputProps {
   /**
    * current story id
    */
-  currentId: string;
+  storyId: string;
   /**
    * store mockup when running tests
    */
@@ -23,7 +23,7 @@ export interface BlockContextInputProps {
    * optional cllabel to invoke when the story data are changed
    * for example when controls values are updated
    */
-  onRefresh: () => void;
+  onRefresh?: () => void;
   /**
    * when set to true, the BlockCOntext will broadcast a message for changed controls values
    */
@@ -34,7 +34,7 @@ export interface BlockContextProps {
   /**
    * current story id
    */
-  currentId?: string;
+  storyId?: string;
   /**
    * generic function to update the values of component controls.
    */
@@ -54,7 +54,7 @@ export const BlockContext = React.createContext<BlockContextProps>({});
 
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
-  currentId,
+  storyId,
   mockStore,
   onRefresh,
   postMessage,
@@ -119,7 +119,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   return (
     <BlockContext.Provider
       value={{
-        currentId,
+        storyId,
         setControlValue,
         clickControl,
         store,

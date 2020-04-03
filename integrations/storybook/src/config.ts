@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/client-api';
 import { makeDecorator } from '@storybook/addons';
 import { controlsMessages } from './context/BroadcastMessage';
-// import './context/RenderDocsPages';
+import './context/RenderDocsPages';
 
 addDecorator(
   makeDecorator({

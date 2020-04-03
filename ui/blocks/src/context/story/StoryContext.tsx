@@ -69,7 +69,7 @@ export const useStoryContext = ({
   id,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { currentId, store } = React.useContext(BlockContext);
+  const { storyId: currentId, store } = React.useContext(BlockContext);
   const inputId = id === CURRENT_STORY ? currentId : id;
   const storyId = store
     ? inputId || (name && storyIdFromName(store, name)) || currentId

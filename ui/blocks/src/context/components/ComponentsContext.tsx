@@ -33,14 +33,14 @@ export interface ComponentContextProps {
 export const useComponentsContext = ({
   of = CURRENT_STORY,
 }: ComponentInputProps): ComponentContextProps => {
-  const { currentId, store } = React.useContext(BlockContext);
-  if (!currentId) {
+  const { storyId, store } = React.useContext(BlockContext);
+  if (!storyId) {
     return {
       components: {},
     };
   }
   const story: Story | undefined =
-    store && store.stories && store.stories[currentId];
+    store && store.stories && store.stories[storyId];
   const kind =
     store && story && story.kind ? store.kinds[story.kind] : undefined;
   let cmp: any;
