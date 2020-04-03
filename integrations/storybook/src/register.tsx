@@ -1,15 +1,17 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import { BroadcastChannel } from 'broadcast-channel';
+import { API } from '@storybook/api';
 import { addons, types } from '@storybook/addons';
 import { ADDON_ID, PANEL_ID } from './page/constants';
 
 interface AddonPanelProps {
   active?: boolean;
   id: string;
+  api: API;
 }
 
-const AddonPanel: React.FC<AddonPanelProps> = ({ active, id }) => {
+const AddonPanel: React.FC<AddonPanelProps> = ({ active, id, api }) => {
   const channel = React.useMemo(
     () => new BroadcastChannel('attach_docs_page'),
     [],
@@ -30,7 +32,8 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id }) => {
           }
         }
 
-        channel.postMessage({ id: id, active });
+        const story = api.getCurrentStoryData();
+        channel.postMessage({ id: id, active, storyId: story?.id });
         if (wrapper) {
           wrapper.removeAttribute('hidden');
         }
@@ -47,7 +50,7 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id }) => {
   }, [active]);
   return null;
 };
-addons.register(ADDON_ID, () => {
+addons.register(ADDON_ID, api => {
   const title = 'Page';
   const key = title.toLowerCase();
   addons.add(PANEL_ID, {
@@ -56,7 +59,7 @@ addons.register(ADDON_ID, () => {
     route: ({ storyId }) => `/${key}/${storyId}`,
     match: ({ viewMode }) => viewMode === key,
     render: ({ active }) => (
-      <AddonPanel active={active} id={`controls-docs-page-${key}`} />
+      <AddonPanel active={active} id={`controls-docs-page-${key}`} api={api} />
     ),
   });
 });

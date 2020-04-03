@@ -10,8 +10,9 @@ const channel = new BroadcastChannel(ATTACH_DOCS_PAGE);
 interface MessageProps {
   id: string;
   active: boolean;
+  storyId: string;
 }
-channel.onmessage = ({ id, active }: MessageProps) => {
+channel.onmessage = ({ id, active, storyId }: MessageProps) => {
   var node = document.getElementById(id);
   if (!node) {
     node = document.createElement('div');
@@ -19,13 +20,13 @@ channel.onmessage = ({ id, active }: MessageProps) => {
     document.body.appendChild(node);
   }
   if (active) {
+    node.removeAttribute('hidden');
     ReactDOM.render(
-      <PageContainer active={active}>
+      <PageContainer active={active} storyId={storyId}>
         <DocsPage />
       </PageContainer>,
       document.getElementById(id),
     );
-    node.removeAttribute('hidden');
   } else {
     node.setAttribute('hidden', 'true');
     ReactDOM.unmountComponentAtNode(node);
