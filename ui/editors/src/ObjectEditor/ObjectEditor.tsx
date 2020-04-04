@@ -73,7 +73,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       trigger="click"
       placement="bottom"
       tooltipShown={isOpen}
-      onVisibilityChange={isVisible => {
+      onVisibilityChange={(isVisible: boolean) => {
         setIsOpen(isVisible);
       }}
       tooltip={() => (

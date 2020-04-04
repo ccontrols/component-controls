@@ -47,6 +47,6 @@ export const extractImports = (
   const results: ImportTypes = {};
   const ast = parser.parse(source, parserOptions);
 
-  traverse(ast, traverseImports(results));
+  traverse(ast as any, traverseImports(results));
   return results;
 };

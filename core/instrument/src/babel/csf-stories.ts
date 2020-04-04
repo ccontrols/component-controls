@@ -40,7 +40,7 @@ export const extractCSFStories = (ast: File): StoriesStore => {
     kinds: {},
     components: {},
   };
-  traverse(ast, {
+  traverse(ast as any, {
     ExportDefaultDeclaration: (path: any) => {
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);

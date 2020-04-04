@@ -176,7 +176,7 @@ export const parseStories = async (
   const { test, ...otherMDXOptions } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
     const mdxParsed = await mdx(source, otherMDXOptions);
-    const ast = parser.parse(mdxParsed, mergedOptions.parser);
+    const ast = parser.parse(mdxParsed, mergedOptions.parser) as any;
     traverse(ast, removeMDXAttributes());
     ({ code } = generate(ast, {
       retainFunctionParens: true,

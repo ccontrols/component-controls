@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
-    "dev": "yarn cross-env NODE_ENV=development yarn build -w",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -34,8 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/blocks": "^0.6.0",
-    "@component-controls/components": "^0.6.0",
-    "@component-controls/editors": "^0.6.0",
+    "@component-controls/core": "^0.6.0",
     "@component-controls/loader": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
     "broadcast-channel": "^3.1.0",

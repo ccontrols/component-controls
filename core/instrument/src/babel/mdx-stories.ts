@@ -18,7 +18,7 @@ export const extractMDXStories = (ast: File): StoriesStore => {
     kinds: {},
     components: {},
   };
-  traverse(ast, {
+  traverse(ast as any, {
     JSXElement: (path: any) => {
       const node = path.node.openingElement;
       if (
