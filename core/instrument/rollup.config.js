@@ -1,4 +1,4 @@
-import { config } from 'docz-rollup';
+import { config } from '../../rollup-config';
 import resolve from '@rollup/plugin-node-resolve';
 
 export default config({
