@@ -74,7 +74,7 @@
     "prettier": "^1.18.2",
     "remark": "^11.0.2",
     "remark-toc": "^7.0.0",
-    "rollup": "^1.17.0",
+    "rollup": "^2.3.2",
     "rollup-plugin-typescript2": "^0.27.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
