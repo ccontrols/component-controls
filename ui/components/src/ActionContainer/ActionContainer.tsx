@@ -42,7 +42,7 @@ export const ActionContainer: FC<ActionContainerProps> = ({
             borderRadius: 4,
             border: `1px solid ${transparentize(
               0.9,
-              theme.colors ? theme.colors.text : 'black',
+              theme.colors?.text as string,
             )}`,
             'div:first-child, svg:first-child': {
               paddingTop,

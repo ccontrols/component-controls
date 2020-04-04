@@ -1,15 +1,7 @@
 /** @jsx jsx */
 import { FunctionComponent } from 'react';
 import { transparentize } from 'polished';
-import {
-  Theme,
-  Box,
-  Flex,
-  Button,
-  jsx,
-  useThemeUI,
-  SxStyleProp,
-} from 'theme-ui';
+import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
 
 export interface ActionBarProps {
@@ -25,32 +17,24 @@ const ActionColors = ({
 }: {
   theme: Theme;
   disabled: boolean | undefined;
-}) => {
-  const styles: SxStyleProp = {
-    color: disabled ? '#ddd' : 'background',
-    cursor: disabled ? 'not-allowed' : undefined,
-    px: 2,
-    py: 1,
-    lineHeight: 1,
-    borderRadius: 1,
-    display: 'inline-block',
-  };
-  if (theme.colors) {
-    styles.backgroundColor = transparentize(
-      0.15,
-      theme.colors['highlight'] as string,
-    );
-    styles.boxShadow = `${transparentize(
-      0.9,
-      theme.colors.text as string,
-    )} 0 1px 3px 1px, ${transparentize(
-      0.35,
-      theme.colors.text as string,
-    )} 0 0 0 1px`;
-    styles.border = `1px solid ${theme.colors['highlight'] as string}`;
-  }
-  return styles;
-};
+}) => ({
+  backgroundColor: transparentize(0.15, theme.colors?.['highlight'] as string),
+  color: disabled ? '#ddd' : 'background',
+  cursor: disabled ? 'not-allowed' : undefined,
+  px: 2,
+  py: 1,
+  lineHeight: 1,
+  borderRadius: 1,
+  display: 'inline-block',
+  boxShadow: `${transparentize(
+    0.9,
+    theme.colors?.text as string,
+  )} 0 1px 3px 1px, ${transparentize(
+    0.35,
+    theme.colors?.text as string,
+  )} 0 0 0 1px`,
+  border: `1px solid ${theme.colors?.['highlight'] as string}`,
+});
 
 /**
  * a strip of actions to be attached to a container

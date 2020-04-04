@@ -57,7 +57,7 @@ export const getSortedActions = (actions: ActionItems): ActionItems =>
     .filter(({ hidden }) => !hidden)
     .reduce((acc: ActionItem[], item: ActionItem) => {
       const accIndex = acc.findIndex(
-        accItem => (accItem.id || accItem.title) === (item.id || item.title),
+        accItem => (accItem.id ?? accItem.title) === (item.id ?? item.title),
       );
       if (accIndex > -1) {
         acc[accIndex] = { ...acc[accIndex], ...item };
@@ -70,7 +70,7 @@ export const getSortedActions = (actions: ActionItems): ActionItems =>
       ({ order, ...item }, index) =>
         ({
           ...item,
-          order: order === undefined ? index : order,
+          order: order ?? index,
         } as ActionItem),
     )
     .sort((a: ActionItem, b: ActionItem) => {

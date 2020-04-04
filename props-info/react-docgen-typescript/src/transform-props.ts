@@ -20,10 +20,7 @@ export const transformProps = (props: Props): PropTypes => {
       prop.parentName = rdProp.parent?.name;
     }
     if (rdProp.defaultValue !== null && rdProp.defaultValue !== undefined) {
-      prop.defaultValue =
-        rdProp.defaultValue.value !== undefined
-          ? rdProp.defaultValue.value
-          : rdProp.defaultValue;
+      prop.defaultValue = rdProp.defaultValue.value ?? rdProp.defaultValue;
     }
     const typeName = rdProp.type.name || '';
     let propType: Partial<TypeInformation> = {};
