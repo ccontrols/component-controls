@@ -1,7 +1,7 @@
 import typescript from 'rollup-plugin-typescript2';
-import json from 'rollup-plugin-json';
-import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
+import json from '@rollup/plugin-json';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 
 const defaultExternal = id =>
   !id.startsWith('\0') &&
@@ -13,9 +13,10 @@ const createOutput = (dir = 'dist', defaultOpts) => {
   const { external, output, plugins = [], filename } = defaultOpts;
 
   const defaultPlugins = [
-    nodeResolve({
+    resolve({
       mainFields: ['module', 'main'],
       browser: true,
+      preferBuiltins: false,
     }),
     commonjs({
       include: /\/node_modules\//,
