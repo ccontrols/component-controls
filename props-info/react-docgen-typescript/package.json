@@ -43,7 +43,7 @@
     "eslint": "^6.5.1",
     "eslint-config-docz-ts": "^2.1.0",
     "jest": "^24.9.0",
-    "typescript": "3.5.3"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "@component-controls/specification":  "*",

@@ -63,7 +63,7 @@ export const controlFromProps = (
       }
       value = cleanQuotes(value);
       const isColor = name.toLowerCase().includes('color');
-      if (!value && propDef.required) {
+      if (!value && propDef.type.required) {
         value = isColor ? 'red' : 'example';
       }
       return {

@@ -43,7 +43,7 @@
     "hosted-git-info": "^3.0.4",
     "resolve": "^1.15.1",
     "prettier": "^1.19.1",
-    "typescript": "3.5.3"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@babel/types": "^7.9.0",

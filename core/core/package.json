@@ -32,7 +32,7 @@
     "@component-controls/specification": "^0.6.0",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
-    "typescript": "3.5.3"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/faker": "^4.1.9",
