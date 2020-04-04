@@ -6,7 +6,6 @@ describe('csf-components', () => {
       stories: { storeSourceFile: false, package: false },
       components: { storeSourceFile: false, package: false },
     },
-    'csf',
-    'components',
+    ['csf', 'components'],
   );
 });

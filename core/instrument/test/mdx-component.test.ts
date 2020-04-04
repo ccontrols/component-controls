@@ -6,7 +6,6 @@ describe('mdx-component', () => {
       stories: { storeSourceFile: false, package: false },
       components: { storeSourceFile: false, package: false },
     },
-    'mdx',
-    'component',
+    ['mdx', 'component'],
   );
 });

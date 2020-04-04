@@ -42,17 +42,6 @@ describe('extract-props-info', () => {
   );
   loadTestFiles(
     'PropsTable',
-    path.resolve(
-      __dirname,
-      '../../../ui/blocks/src/PropsTable/block/BlockPropsTable.tsx',
-    ),
-  );
-
-  loadTestFiles(
-    'Button',
-    path.resolve(
-      __dirname,
-      '../../../node_modules/@theme-ui/components/src/Button.js',
-    ),
+    path.resolve(__dirname, '../../../ui/blocks/src/PropsTable/PropsTable.tsx'),
   );
 });

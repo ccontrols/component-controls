@@ -1,17 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`extract-props-info Button 1`] = `
-Object {
-  "description": "",
-  "displayName": "Button",
-  "methods": Array [],
-}
-`;
-
 exports[`extract-props-info PropsTable 1`] = `
 Object {
   "description": "",
-  "displayName": "BlockPropsTable",
+  "displayName": "PropsTable",
   "methods": Array [],
   "props": Object {
     "about": Object {
@@ -26,19 +18,6 @@ Object {
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "actions": Object {
-      "description": "optional actions provided to the component",
-      "parentName": "ActionContainerProps",
-      "type": Object {
-        "name": "array",
-        "raw": "ActionItem[]",
-        "value": Array [
-          Object {
-            "name": "ActionItem",
-          },
-        ],
       },
     },
     "aria-activedescendant": Object {
@@ -747,6 +726,14 @@ Array values are converted into responsive values.
         "raw": "string",
       },
     },
+    "collapsible": Object {
+      "description": "if false, will nothave a collapsible frame.",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
     "color": Object {
       "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
 By default the raw value of the prop is returned.
@@ -851,6 +838,20 @@ Array values are converted into responsive values.
         "raw": "{ [key: string]: boolean; }",
       },
     },
+    "extraColumns": Object {
+      "defaultValue": "[]",
+      "description": "extra custom columns passed to the PropsTable.",
+      "parentName": "PropsTableOwnProps",
+      "type": Object {
+        "name": "array",
+        "raw": "Column<{}>[]",
+        "value": Array [
+          Object {
+            "name": "Column<{}>",
+          },
+        ],
+      },
+    },
     "filtering": Object {
       "description": "enable/disable filtering.",
       "parentName": "TableOwnProps",
@@ -901,7 +902,10 @@ Array values are converted into responsive values.
       },
     },
     "id": Object {
-      "parentName": "HTMLAttributes",
+      "description": "optional id to be used for the block
+if no id is provided, one will be calculated automatically
+from the title.",
+      "parentName": "BlockContainerProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -2238,10 +2242,11 @@ If an array of components is specified, each component will be displayed in a se
       },
     },
     "onSelect": Object {
-      "parentName": "DOMAttributes",
+      "description": "callback to be called when the tab changes
+if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "(event: SyntheticEvent<HTMLDivElement, Event>) => void",
+        "raw": "((name: string, component: StoryComponent) => boolean | void) & ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {
@@ -2526,12 +2531,22 @@ behind an element is visible.
       },
     },
     "paddingTop": Object {
-      "description": "Padding on top
-padding at the top, to account for the absolute position of the ActionBar",
+      "description": "Padding on top",
       "parentName": "SpaceProps",
       "type": Object {
-        "name": "function",
-        "raw": "string | number | ((string | number | symbol)[] & string) | ((string | number | symbol)[] & number) | ({ [x: string]: string | number | symbol; [x: number]: string | number | symbol; } & string) | ({ ...; } & number)",
+        "name": "union",
+        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
+        "value": Array [
+          Object {
+            "name": "ResponsiveValue<string",
+          },
+          Object {
+            "name": "number",
+          },
+          Object {
+            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
+          },
+        ],
       },
     },
     "paddingX": Object {
@@ -2749,6 +2764,14 @@ padding at the top, to account for the absolute position of the ActionBar",
         "raw": "string",
       },
     },
+    "skipPageReset": Object {
+      "description": "reset state update while update table data",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
     "slot": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2808,6 +2831,14 @@ import { jsx } from 'theme-ui'
         "raw": "SystemStyleObject",
       },
     },
+    "sxStyle": Object {
+      "description": "theme-ui styling object for Block Box",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "SystemStyleObject",
+        "raw": "SystemStyleObject",
+      },
+    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2816,8 +2847,8 @@ import { jsx } from 'theme-ui'
       },
     },
     "title": Object {
-      "description": "optional section title for the block",
-      "parentName": "HTMLAttributes",
+      "description": "optional section title for the block.",
+      "parentName": "BlockContainerProps",
       "type": Object {
         "name": "string",
         "raw": "string",

@@ -13,6 +13,12 @@
     -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
     -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
 
+# Motivation
+
+The `component-controls` package aims to facilitate designing, developing and testing of components
+
+- 
+
 # Core packages
 
 <package-section file="./core/specification/README.md" section="overview" />

@@ -7,11 +7,15 @@ import {
 import { followImports } from '../src/babel/follow-imports';
 
 describe('follow-imports', () => {
-  loadTestFiles(async (fileName: string) => {
-    return followImports('Button', require.resolve(fileName), undefined, {
-      parser: defaultParserOptions,
-      resolver: defaultResolveOptions,
-      components: { ...defaultComponentOptions, storeSourceFile: false },
-    });
-  }, 'follow-imports');
+  loadTestFiles(
+    async (fileName: string) => {
+      return followImports('Button', require.resolve(fileName), undefined, {
+        parser: defaultParserOptions,
+        resolver: defaultResolveOptions,
+        components: { ...defaultComponentOptions, storeSourceFile: false },
+      });
+    },
+    ['follow-imports'],
+    // ['button-from-node-nodules.js'],
+  );
 });
