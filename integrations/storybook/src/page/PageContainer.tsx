@@ -18,7 +18,6 @@ export const PageContextContainer: FC<PageContainerProps> = ({
   const channel = React.useMemo(() => addons.getChannel(), []);
   React.useEffect(() => {
     const onStoryChange = (id: string) => {
-      console.log('set story', id);
       setStoryId(id);
     };
 

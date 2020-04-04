@@ -3,7 +3,7 @@ import React from 'react';
 import { BroadcastChannel } from 'broadcast-channel';
 import { API } from '@storybook/api';
 import { addons, types } from '@storybook/addons';
-import { ADDON_ID, PANEL_ID } from './page/constants';
+import { ADDON_ID } from './page/constants';
 
 interface AddonPanelProps {
   active?: boolean;
@@ -44,7 +44,7 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id, api }) => {
 addons.register(ADDON_ID, api => {
   const title = 'Page';
   const key = title.toLowerCase();
-  addons.add(PANEL_ID, {
+  addons.add(`${ADDON_ID}/${key}`, {
     type: types.TAB,
     title,
     route: ({ storyId }) => `/${key}/${storyId}`,

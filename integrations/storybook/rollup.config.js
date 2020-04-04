@@ -6,5 +6,6 @@ export default config({
     './src/preset.ts',
     './src/config.ts',
     './src/register.tsx',
+    './src/register-panel.tsx',
   ],
 });

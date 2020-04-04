@@ -1,0 +1,14 @@
+/* eslint-disable react/display-name */
+import * as React from 'react';
+import addons from '@storybook/addons';
+import { ControlsTable } from './blocks/ControlsTable';
+import { ADDON_ID, PANEL_ID } from './panel/constants';
+
+addons.register(ADDON_ID, api => {
+  addons.addPanel(PANEL_ID, {
+    title: 'Controls',
+    render: ({ active, key }) => (
+      <ControlsTable id="." api={api} key={key} active={active} />
+    ),
+  });
+});
