@@ -82,6 +82,7 @@ export const traverseExports = (results: ExportTypes) => {
           //check if it was a named export
           if (!results.named[name]) {
             const namedExport = extractExportVariable(declaration);
+
             if (namedExport && namedExport.name) {
               localExports[namedExport.name] = namedExport;
             }
@@ -110,7 +111,8 @@ export const traverseExports = (results: ExportTypes) => {
         node.left.object.name === 'exports'
       ) {
         const exportedName = node.left.property.name;
-        const localName = node.right.name;
+
+        const localName = node.right.name || node.right.object?.name;
         const namedExport = localExports[localName];
         if (namedExport) {
           namedExport.internalName = namedExport.name;
@@ -201,6 +203,6 @@ export const extractExports = (
   };
   const ast = parser.parse(source, parserOptions);
 
-  traverse(ast, traverseExports(results));
+  traverse(ast as any, traverseExports(results));
   return results;
 };

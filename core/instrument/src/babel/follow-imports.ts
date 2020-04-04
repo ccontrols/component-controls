@@ -42,14 +42,13 @@ export const followImports = (
     return undefined;
   }
   const source = fileSource || fs.readFileSync(fileName, 'utf8');
-  const ast = initialAST || parser.parse(source, parserOptions);
+  const ast: any = initialAST || parser.parse(source, parserOptions);
   const baseImportedName = importName.split('.')[0];
 
   const exports: ExportTypes = {
     named: {},
   };
   traverse(ast, traverseExports(exports));
-
   const folderName = path.dirname(fileName);
   const findExport =
     baseImportedName === 'default' || baseImportedName === 'namespace'
