@@ -3,7 +3,7 @@ import jsStringEscape from 'js-string-escape';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
-import store from './store';
+import { store } from './store';
 
 class StoriesInjectPlugin {
   public static pluginName = 'stories-inject-plugin';

@@ -1,8 +1,7 @@
 import { StoriesStore } from '@component-controls/specification';
 
-const stores: StoriesStore[] = [];
+export const store: StoriesStore[] = [];
 
 export const addStoriesKind = async (added: StoriesStore) => {
-  stores.push(added);
+  store.push(added);
 };
-export default stores;
