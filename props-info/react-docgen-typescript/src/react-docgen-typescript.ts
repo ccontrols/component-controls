@@ -19,7 +19,7 @@ export const extractDocgenTypescriptInfo = (
     },
     componentNameResolver = computeComponentName,
     shouldExtractLiteralValuesFromEnum = true,
-    savePropValueAsString,
+    savePropValueAsString = undefined,
   } = reactDocGenTypescriptOptions || {};
 
   const parserOptions: ParserOptions = {
