@@ -5,9 +5,9 @@
     "outDir": "dist",
     "rootDir": "src",
     "declaration": true,
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "webpack-env"],
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*", "src/typings.d.ts", "test"],
+  "include": ["src/**/*", "src/typings.d.ts"],
   "exclude": ["node_modules/**"]
 }

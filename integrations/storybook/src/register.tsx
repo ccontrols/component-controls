@@ -3,6 +3,7 @@ import React from 'react';
 import { BroadcastChannel } from 'broadcast-channel';
 import { API } from '@storybook/api';
 import { addons, types } from '@storybook/addons';
+import '@component-controls/store';
 import { ADDON_ID } from './page/constants';
 
 interface AddonPanelProps {
@@ -20,13 +21,20 @@ const AddonPanel: React.FC<AddonPanelProps> = ({ active, id, api }) => {
     const iframe = document.getElementById(
       'storybook-preview-iframe',
     ) as HTMLIFrameElement;
+
     const wrapper = document.getElementById('storybook-preview-wrapper');
     if (iframe && iframe.contentDocument) {
       const updateDOM = () => {
         const story = api.getCurrentStoryData();
         channel.postMessage({ id: id, active, storyId: story?.id });
-        if (wrapper) {
-          wrapper.removeAttribute('hidden');
+        const root = iframe?.contentDocument?.getElementById('root');
+        if (wrapper && root) {
+          if (active) {
+            root.style.setProperty('display', 'none');
+            wrapper.removeAttribute('hidden');
+          } else {
+            root.style.removeProperty('display');
+          }
         }
       };
 

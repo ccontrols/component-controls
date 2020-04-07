@@ -9,7 +9,7 @@ import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
 } from '../BlockContainer/components/ComponentsBlockContainer';
-import { useBlockContext } from '../context';
+import { useBlockContext, BlockContextProps } from '../context';
 import { InvalidType } from '../notifications';
 
 export interface PropsTableOwnProps {
@@ -30,7 +30,10 @@ export const PropsTable: FC<PropsTableProps> = ({
   extraColumns = [],
   ...props
 }) => {
-  const { setControlValue, clickControl } = useBlockContext();
+  const {
+    setControlValue,
+    clickControl,
+  } = useBlockContext() as BlockContextProps;
 
   return (
     <ComponentsBlockContainer {...props}>

@@ -59,6 +59,7 @@ class StoriesInjectPlugin {
     const source = compilation.assets[file];
     const placeholderPos = source.source().indexOf(placeholder);
     if (placeholderPos > -1) {
+      store.hash = this.compilationHash;
       const newContent = jsStringEscape(JSON.stringify(store));
       const source = compilation.assets[file];
       const newSource = new ReplaceSource(source, file);

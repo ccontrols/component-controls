@@ -60,7 +60,14 @@ export type StoryArguments = StoryArgument[];
 export interface StoryParameters {
   [name: string]: any;
 }
-
+/**
+ * story render function
+ *
+ */
+export type StoryRenderFn = (
+  controlValues: { [key: string]: any },
+  context?: any,
+) => any;
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */
@@ -83,7 +90,7 @@ export interface Story {
   /**
    * render function for the story
    */
-  renderFn?: (controlValues: { [key: string]: any }, context?: any) => any;
+  renderFn?: StoryRenderFn;
   /**
    * arguments pass to a CSF story
    * eg `export const story = props => <Story {...props} />;`
@@ -213,9 +220,13 @@ export interface StoriesKind {
 }
 
 /**
- * store of stories information in memory afte the loader is applied
+ * store of stories information in memory after the loader is applied
  */
 export interface StoriesStore {
+  /**
+   * unique has for a store
+   */
+  hash?: string;
   kinds: {
     [title: string]: StoriesKind;
   };

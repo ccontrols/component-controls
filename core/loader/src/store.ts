@@ -1,7 +1,15 @@
 import { StoriesStore } from '@component-controls/specification';
 
-export const store: StoriesStore[] = [];
+export const store: {
+  /**
+   * unique has for a store
+   */
+  hash?: string;
+  stores: StoriesStore[];
+} = {
+  stores: [],
+};
 
 export const addStoriesKind = async (added: StoriesStore) => {
-  store.push(added);
+  store.stores.push(added);
 };

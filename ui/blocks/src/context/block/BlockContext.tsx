@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-
-import storyFn from '@component-controls/loader/story-store-data';
+import { toId, storyNameFromExport } from '@storybook/csf';
+import { store as storyStore } from '@component-controls/store';
 import {
+  Story,
+  StoryComponent,
+  StoriesKind,
   StoriesStore,
   SetControlValueFn,
   ClickControlFn,
   ComponentControlButton,
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
-import { postControlsMsg } from './channel';
+import { getComponentName } from '../../utils';
 
 export interface BlockContextInputProps {
   /**
@@ -24,17 +27,17 @@ export interface BlockContextInputProps {
    * for example when controls values are updated
    */
   onRefresh?: () => void;
-  /**
-   * when set to true, the BlockCOntext will broadcast a message for changed controls values
-   */
-  postMessage?: boolean;
+}
+
+export interface Components {
+  [label: string]: StoryComponent;
 }
 
 export interface BlockContextProps {
   /**
-   * current story id
+   * current story
    */
-  storyId?: string;
+  story?: Story;
   /**
    * generic function to update the values of component controls.
    */
@@ -45,11 +48,32 @@ export interface BlockContextProps {
    */
   clickControl?: ClickControlFn;
   /**
-   * store of stories global access
+   * returns a story, given a story id
    */
-  store?: StoriesStore;
-}
+  getStory: (storyId?: string) => Story | undefined;
 
+  /**
+   * returns a story and its associated objects (kind, component), given a story id
+   */
+  getStoryData: (
+    storyId?: string,
+  ) => { story?: Story; kind?: StoriesKind; component?: StoryComponent };
+
+  /**
+   * given an object of components, resolves to name => StoryComponent
+   */
+  getComponents: (
+    components: { [key: string]: any },
+    kind: StoriesKind,
+  ) => Components;
+  /**
+   *
+   * find a story id from a story 'name'
+   * will navigate through the store kinds and look for a matching story id
+   */
+  storyIdFromName: (name: string) => string | undefined;
+}
+//@ts-ignore
 export const BlockContext = React.createContext<BlockContextProps>({});
 
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
@@ -57,29 +81,80 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   storyId,
   mockStore,
   onRefresh,
-  postMessage,
 }) => {
-  const [store, setStore] = useState<StoriesStore>(
-    mockStore || {
-      components: {},
-      stories: {},
-      kinds: {},
-    },
+  const store = mockStore || storyStore.getStore();
+  const [story, setStory] = useState<Story | undefined>(
+    store ? store.stories[storyId] : undefined,
   );
+
+  const refreshData = () => {
+    setStory(store ? { ...store.stories[storyId] } : undefined);
+  };
   useEffect(() => {
-    if (mockStore === undefined) {
-      const store = storyFn();
-      if (postMessage) {
-        Object.keys(store.stories).forEach(id => {
-          postControlsMsg({ id, controls: store.stories[id].controls });
-        });
-        if (onRefresh) {
-          onRefresh();
+    const onChange = () => refreshData();
+    storyStore.addObserver(onChange);
+    return () => {
+      storyStore.removeObserver(onChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    refreshData();
+  }, [storyId, store]);
+
+  /**
+   * returns a story and its file, given a story id
+   */
+  const getStoryData = (id?: string) => {
+    const story: Story | undefined =
+      store && store.stories && store.stories[id || storyId];
+
+    const kind =
+      store && story && story.kind ? store.kinds[story.kind] : undefined;
+    const storyComponent: any =
+      story && kind ? story.component || kind.component : undefined;
+    const componentName = getComponentName(storyComponent);
+
+    const component =
+      store && componentName && kind && kind.components[componentName]
+        ? store.components[kind.components[componentName]]
+        : undefined;
+    return { story, kind, component };
+  };
+  const getStory = (id?: string) =>
+    store && store.stories && store.stories[id || storyId];
+
+  const getComponents = (
+    components: { [key: string]: any },
+    kind: StoriesKind,
+  ) =>
+    store && kind && components
+      ? Object.keys(components).reduce((acc, key) => {
+          const name = getComponentName(components[key]);
+          const component =
+            name &&
+            kind?.components[name] &&
+            store?.components[kind.components[name]];
+          if (component) {
+            return { ...acc, [key]: component };
+          } else {
+            return acc;
+          }
+        }, {})
+      : {};
+
+  const storyIdFromName = (name: string): string | undefined => {
+    if (store) {
+      for (const title in store.kinds) {
+        const kind = store.kinds[title];
+        const storyId = toId(title, storyNameFromExport(name));
+        if (kind.stories && kind.stories.indexOf(storyId) > -1) {
+          return storyId;
         }
       }
-      setStore(store);
     }
-  }, []);
+    return undefined;
+  };
   const setControlValue: SetControlValueFn = (
     storyId: string,
     propName: string | undefined,
@@ -87,18 +162,10 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   ) => {
     const controls =
       store && store.stories[storyId] && store.stories[storyId].controls;
-    if (controls) {
+    if (store && controls) {
       const newValues = mergeControlValues(controls, propName, propValue);
-      if (postMessage) {
-        postControlsMsg({ id: storyId, controls: newValues });
-      }
-      setStore({
-        ...store,
-        stories: {
-          ...store.stories,
-          [storyId]: { ...store.stories[storyId], controls: newValues },
-        },
-      });
+      storyStore.updateStoryProp(storyId, 'controls', newValues);
+      refreshData();
       if (onRefresh) {
         onRefresh();
       }
@@ -119,10 +186,13 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   return (
     <BlockContext.Provider
       value={{
-        storyId,
+        story,
         setControlValue,
         clickControl,
-        store,
+        getStory,
+        getStoryData,
+        storyIdFromName,
+        getComponents,
       }}
     >
       {children}
@@ -130,4 +200,5 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   );
 };
 
-export const useBlockContext = () => React.useContext(BlockContext);
+export const useBlockContext: () => BlockContextProps = () =>
+  React.useContext(BlockContext);

@@ -15,9 +15,27 @@
 
 # Motivation
 
-The `component-controls` package aims to facilitate designing, developing and testing of components
+The `component-controls` package aims to facilitate designing, developing and testing of components. 
 
 - 
+
+# Inspiration
+
+> If I have seen further than others, it is by standing upon the shoulders of giants.
+
+
+There are many developments that have contribiuted to the creation of `component-controls`, and here we will list but a few of them:
+
+- [storybook](https://storybook.js.org) is the original system that helps teams to design, develop and test components. The strong support for testing and the creation of an open [Component Story Format](https://github.com/storybookjs/csf) were an inspiration, as well as the [Storybook Addon Knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) for providing configurable component properties.
+
+- [docz](https://www.docz.site) has a beautiful architecture and introduced open [gatsby](https://www.gatsbyjs.org) builds. This monorepo was heavily influenced by the `docz` project structure.
+
+- [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) advancements have been greatly responsible for making possible the parsing and analysis features of this library.
+
+- [blocks-ui](https://blocks-ui.com) is taking `AST` to a new level by generating and reverse-sing AST to create [react](https://reactjs.org) applications and has been an inspiraton for pushing the enveloppe on our own `AST` work.
+
+- [theme-ui](https://theme-ui.com) is the driving force for standardizing `react` theming and design systems. `theme-ui` is used by our project as the theming and components founding block.
+
 
 # Core packages
 

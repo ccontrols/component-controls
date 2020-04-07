@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  Story,
-  StoriesKind,
-  StoriesStore,
-  StoryComponent,
-} from '@component-controls/specification';
+import { Story, StoriesKind } from '@component-controls/specification';
 
-import { BlockContext } from '../block';
+import { BlockContext, Components } from '../block';
 import { getComponentName, CURRENT_STORY } from '../../utils';
 
 export interface ComponentInputProps {
@@ -19,62 +14,43 @@ export interface ComponentInputProps {
 }
 
 export interface ComponentContextProps {
-  components: {
-    [label: string]: StoryComponent;
-  };
+  components: Components;
   kind?: StoriesKind;
   story?: Story;
-  /**
-   * store of stories global access
-   */
-  store?: StoriesStore;
 }
 
 export const useComponentsContext = ({
   of = CURRENT_STORY,
 }: ComponentInputProps): ComponentContextProps => {
-  const { storyId, store } = React.useContext(BlockContext);
-  if (!storyId) {
+  const { getStoryData, getComponents } = React.useContext(BlockContext);
+  const { story, kind, component } = getStoryData();
+  if (!story) {
     return {
       components: {},
     };
   }
-  const story: Story | undefined =
-    store && store.stories && store.stories[storyId];
-  const kind =
-    store && story && story.kind ? store.kinds[story.kind] : undefined;
-  let cmp: any;
+
+  let components: Components = {};
   if (of === CURRENT_STORY) {
-    cmp = story && story.component ? story.component : kind?.component;
+    if (component) {
+      const name = getComponentName(component);
+      if (name) {
+        components = {
+          [name]: component,
+          ...getComponents(story.subcomponents, kind),
+        };
+      } else {
+        components = getComponents(story.subcomponents, kind);
+      }
+    } else {
+      components = getComponents(story.subcomponents, kind);
+    }
   } else {
-    cmp = of;
+    components = getComponents({ of }, kind);
   }
-  const subcomponents = story && story.subcomponents;
-  const subComponents = subcomponents
-    ? Object.keys(subcomponents).reduce((acc, key) => {
-        const name = getComponentName(subcomponents[key]);
-        const component =
-          name &&
-          kind?.components[name] &&
-          store?.components[kind.components[name]];
-        if (component) {
-          return { ...acc, [key]: component };
-        } else {
-          return acc;
-        }
-      }, {})
-    : undefined;
-  const componentName = getComponentName(cmp);
-
-  const components = componentName &&
-  kind && { [componentName]: kind.components[componentName] }
-    ? { [componentName]: store?.components[kind.components[componentName]] }
-    : {};
-
   return {
-    components: { ...components, ...subComponents },
+    components,
     kind,
     story,
-    store,
   };
 };

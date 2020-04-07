@@ -1,8 +1,7 @@
 {
-  "name": "@component-controls/loader",
+  "name": "@component-controls/store",
   "version": "0.6.0",
-  "private": true,
-  "description": "Webpack loader for component controls instrumentation",
+  "description": "Component controls shared storage store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -14,11 +13,11 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-node  -O '{\"module\": \"commonjs\" }' ../../scripts/docs.ts",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest --passWithNoTests"
+    "test": "yarn jest"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -27,32 +26,23 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "core/loader"
+    "directory": "core/store"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^0.6.0",
+    "@component-controls/loader": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
     "@storybook/csf": "^0.0.1",
-    "crypto": "^1.0.1",
-    "js-string-escape": "^1.0.1",
-    "loader-utils": "^1.2.3",
-    "typescript": "^3.8.3",
-    "webpack": "^4.41.6",
-    "webpack-sources": "^1.4.3"
+    "broadcast-channel": "^3.1.0",
+    "deepmerge": "^4.2.2",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
-    "@types/loader-utils": "^1.1.3",
+    "@types/webpack-env": "^1.15.1",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "roots": [
-      "."
-    ]
   },
   "publishConfig": {
     "access": "public"

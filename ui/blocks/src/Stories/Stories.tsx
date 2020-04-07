@@ -24,18 +24,18 @@ export type StoriesProps = StoriesOwnProps &
 export const Stories: FC<StoriesProps> = props => (
   <StoryBlockContainer {...props}>
     {(context, rest) => {
-      const { story: selected, store, kind } = context;
-      const stories =
-        store &&
-        kind?.stories
-          ?.map((id: string) => store.stories[id])
-          .filter((story: Story) => !selected || selected.id !== story.id);
+      const { story: selected, kind, getStory } = context;
+      const stories = kind?.stories
+        ?.map((id: string) => getStory(id))
+        .filter(
+          (story?: Story) => !selected || (story && selected.id !== story.id),
+        );
       if (!stories || !stories.length) {
         return null;
       }
       return (
         <>
-          {stories.map((story: Story) => {
+          {(stories as Story[]).map((story: Story) => {
             const storyTitle = story.name;
             return (
               <Playground

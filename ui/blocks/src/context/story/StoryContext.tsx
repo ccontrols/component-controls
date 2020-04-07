@@ -1,33 +1,12 @@
 import React, { FC } from 'react';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import {
   Story,
-  StoriesStore,
   StoriesKind,
   StoryComponent,
 } from '@component-controls/specification';
 
 import { BlockContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
-
-/**
- *
- * find a story id from a story 'name'
- * will navigate through the store kinds and look for a matching story id
- */
-export const storyIdFromName = (
-  store: StoriesStore,
-  name: string,
-): string | undefined => {
-  for (const title in store.kinds) {
-    const kind = store.kinds[title];
-    const storyId = toId(title, storyNameFromExport(name));
-    if (kind.stories && kind.stories.indexOf(storyId) > -1) {
-      return storyId;
-    }
-  }
-  return undefined;
-};
 
 export interface StoryInputProps {
   /** id of the story */
@@ -55,10 +34,11 @@ export interface StoryContextProps {
    * current story's/document's component
    */
   component?: StoryComponent;
+
   /**
-   * store of stories global access
+   * returns a story, given a story id
    */
-  store?: StoriesStore;
+  getStory: (storyId?: string) => Story | undefined;
 }
 
 /**
@@ -69,35 +49,25 @@ export const useStoryContext = ({
   id,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { storyId: currentId, store } = React.useContext(BlockContext);
+  const {
+    story: currentStory,
+    getStoryData,
+    getStory,
+    storyIdFromName,
+  } = React.useContext(BlockContext);
+  const currentId = currentStory ? currentStory.id : undefined;
   const inputId = id === CURRENT_STORY ? currentId : id;
-  const storyId = store
-    ? inputId || (name && storyIdFromName(store, name)) || currentId
-    : undefined;
-
+  const storyId = inputId || (name && storyIdFromName(name)) || currentId;
   if (!storyId) {
-    return {};
+    return { getStory };
   }
-  const story: Story | undefined =
-    store && store.stories && store.stories[storyId];
-  const kind =
-    store && story && story.kind ? store.kinds[story.kind] : undefined;
-  const storyComponent: any = story ? story.component : undefined;
-  const componentName = storyComponent
-    ? typeof storyComponent === 'string'
-      ? storyComponent
-      : storyComponent.name || storyComponent.displayName
-    : undefined;
-  const component =
-    store && componentName && kind && kind.components[componentName]
-      ? store.components[kind.components[componentName]]
-      : undefined;
+  const { story, kind, component } = getStoryData(storyId);
   return {
     id: storyId,
     kind,
     story,
     component,
-    store,
+    getStory,
   };
 };
 

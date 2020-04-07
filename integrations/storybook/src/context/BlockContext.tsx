@@ -22,11 +22,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
   const onRefresh = () => channel.emit(FORCE_RE_RENDER);
   // this._channel.emit(Events.FORCE_RE_RENDER);
   return (
-    <BlocksContextProvider
-      storyId={storyId}
-      onRefresh={onRefresh}
-      postMessage={true}
-    >
+    <BlocksContextProvider storyId={storyId} onRefresh={onRefresh}>
       {children}
     </BlocksContextProvider>
   );

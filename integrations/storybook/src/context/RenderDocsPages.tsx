@@ -19,11 +19,7 @@ channel.onmessage = ({ id, active, storyId }: MessageProps) => {
     node.setAttribute('id', id);
     document.body.appendChild(node);
   }
-  const root = document.getElementById('root');
   if (active) {
-    if (root) {
-      root.style.setProperty('display', 'none');
-    }
     node.removeAttribute('hidden');
     ReactDOM.render(
       <PageContainer active={active} storyId={storyId}>
@@ -33,9 +29,6 @@ channel.onmessage = ({ id, active, storyId }: MessageProps) => {
     );
   } else {
     node.setAttribute('hidden', 'true');
-    if (root) {
-      root.style.removeProperty('display');
-    }
     ReactDOM.unmountComponentAtNode(node);
   }
 };
