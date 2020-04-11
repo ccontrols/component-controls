@@ -1,8 +1,12 @@
 import React from 'react';
-import { Story, StoriesKind } from '@component-controls/specification';
+import {
+  Story,
+  StoriesKind,
+  getComponentName,
+} from '@component-controls/specification';
 
 import { BlockContext, Components } from '../block';
-import { getComponentName, CURRENT_STORY } from '../../utils';
+import { CURRENT_STORY } from '../../utils';
 
 export interface ComponentInputProps {
   /**

@@ -9,9 +9,9 @@ import {
   SetControlValueFn,
   ClickControlFn,
   ComponentControlButton,
+  getComponentName,
 } from '@component-controls/specification';
 import { mergeControlValues } from '@component-controls/core';
-import { getComponentName } from '../../utils';
 
 export interface BlockContextInputProps {
   /**

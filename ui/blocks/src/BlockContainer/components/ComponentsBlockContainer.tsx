@@ -3,7 +3,8 @@ import {
   BlockContainer,
   BlockContainerProps,
 } from '@component-controls/components';
-import { CURRENT_STORY, getComponentName } from '../../utils';
+import { getComponentName } from '@component-controls/specification';
+import { CURRENT_STORY } from '../../utils';
 import {
   ComponentsContainer,
   ComponentsContainerProps,

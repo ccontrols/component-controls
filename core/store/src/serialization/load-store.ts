@@ -4,6 +4,7 @@ import { StoriesStore, Story } from '@component-controls/specification';
 const deepMerge = require('deepmerge');
 import { toId, storyNameFromExport } from '@storybook/csf';
 import getInjectedStore from '@component-controls/loader/story-store-data';
+import { addSmartControls } from './smart-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
 
@@ -74,6 +75,18 @@ export const loadStoryStore = (): StoriesStore | undefined => {
                   ...rest
                 } = kind;
                 Object.assign(story, deepMerge(rest, story));
+                const smartControls = addSmartControls(
+                  story,
+                  kind,
+                  store.components,
+                );
+                if (smartControls) {
+                  story.controls = deepMerge(
+                    smartControls,
+                    story.controls || {},
+                  );
+                }
+
                 if (kind.title && story.name) {
                   const id = toId(kind.title, storyNameFromExport(story.name));
                   if (!kind.stories) {

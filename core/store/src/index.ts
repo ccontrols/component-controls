@@ -37,13 +37,6 @@ class Store implements StoryStore {
     this.observers = [];
     this.channel.onmessage = ({ storyId, moduleId }: MessageType) => {
       if (storyId && moduleId) {
-        console.log(
-          'ON MESSAGE',
-          this.moduleId,
-          moduleId,
-          storyId,
-          this.moduleId !== moduleId,
-        );
         if (this.moduleId !== moduleId) {
           this.readData(storyId);
           this.notifyObservers(storyId);
@@ -63,7 +56,6 @@ class Store implements StoryStore {
   };
 
   setStore = (store?: StoriesStore) => {
-    console.log('SET STORE');
     this.loadedStore = store;
     this.notifyObservers();
   };

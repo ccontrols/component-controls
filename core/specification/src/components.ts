@@ -135,3 +135,14 @@ export interface StoryComponent {
    */
   info?: ComponentInfo;
 }
+/**
+ * given a component, return its name
+ * @param component a string component name, or a component class, with a name or displayName static property
+ */
+export const getComponentName = (component: any): string | undefined => {
+  return component
+    ? typeof component === 'string'
+      ? component
+      : component.name || component.displayName
+    : undefined;
+};

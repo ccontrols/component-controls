@@ -2,14 +2,6 @@ import { StoriesKind, StoryComponent } from '@component-controls/specification';
 
 export const CURRENT_STORY = '.';
 
-export const getComponentName = (component: any): string | undefined => {
-  return component
-    ? typeof component === 'string'
-      ? component
-      : component.name || component.displayName
-    : undefined;
-};
-
 export const getStoryTitle = (
   kind: StoriesKind | undefined,
   component: StoryComponent | undefined,

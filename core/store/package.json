@@ -30,6 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/core": "^0.6.0",
     "@component-controls/loader": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
     "@storybook/csf": "^0.0.1",
