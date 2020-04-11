@@ -21,6 +21,10 @@ export interface StoryStore {
 const UPDATE_STORY_MSG = 'component_controls_update_story';
 const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
 
+interface MessageType {
+  storyId: string;
+  moduleId: number;
+}
 class Store implements StoryStore {
   loadedStore: StoriesStore | undefined;
   channel: BroadcastChannel;
@@ -29,9 +33,9 @@ class Store implements StoryStore {
   constructor(store?: StoriesStore) {
     this.moduleId = Math.random();
     this.loadedStore = store;
-    this.channel = new BroadcastChannel(UPDATE_STORY_MSG);
+    this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG);
     this.observers = [];
-    this.channel.onmessage = ({ storyId, moduleId }) => {
+    this.channel.onmessage = ({ storyId, moduleId }: MessageType) => {
       if (storyId && moduleId) {
         console.log(
           'ON MESSAGE',
@@ -59,6 +63,7 @@ class Store implements StoryStore {
   };
 
   setStore = (store?: StoriesStore) => {
+    console.log('SET STORE');
     this.loadedStore = store;
     this.notifyObservers();
   };
@@ -67,16 +72,15 @@ class Store implements StoryStore {
     if (data) {
       try {
         const newStore = JSON.parse(data) as StoriesStore;
+
         if (this.loadedStore && storyId) {
           this.loadedStore.stories[storyId] = {
-            ...newStore.stories[storyId],
-            renderFn: this.loadedStore.stories[storyId].renderFn,
+            ...this.loadedStore.stories[storyId],
+            controls: { ...newStore.stories[storyId].controls },
           };
         } else {
-          console.log('OVERRIDE DATA');
           this.loadedStore = newStore;
         }
-        this.loadedStore = newStore;
       } catch (e) {}
     }
   };
@@ -105,8 +109,7 @@ class Store implements StoryStore {
         COMPONENT_CONTROLS_STORAGE,
         JSON.stringify(this.loadedStore),
       );
-      const message = { storyId, moduleId: this.moduleId };
-      console.log('POST MESSAGE', message);
+      const message: MessageType = { storyId, moduleId: this.moduleId };
       this.channel.postMessage(message);
     }
     return this.loadedStore;

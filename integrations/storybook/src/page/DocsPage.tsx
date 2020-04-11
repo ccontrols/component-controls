@@ -5,7 +5,7 @@ import {
   Subtitle,
   Story,
   Playground,
-  Stories,
+  // Stories,
   Description,
   ComponentSource,
   PropsTable,
@@ -23,7 +23,7 @@ export const DocsPage: FC = () => {
       </Playground>
       <ControlsTable id="." />
       <PropsTable of="." />
-      <Stories dark={true} />
+      {/* <Stories dark={true} /> */}
     </>
   );
 };

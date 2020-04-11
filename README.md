@@ -15,14 +15,16 @@
 
 # Motivation
 
-The `component-controls` package aims to facilitate designing, developing and testing of components. 
+This library is initially created by the technical co-founder of [AutomatedQA](http://automatedqa.com) (remnamed to SmartBear), creator of [AQtime](https://smartbear.com/product/aqtime-pro/overview/), [TestComplete](https://smartbear.com/product/testcomplete/overview/), with 20+ years experience creating software development lifecyle products. So it is to be expected the library will have a heavy testing/QA bias.
 
-- 
+- Create a components development environment, with testing as a first-class feature.
+- Decouple the user interface from loading of the 'stories' = modular design.
+- Do not modify the source files at instrumentation time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
+- Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
+- Ability to integrate with various user-interface shells - [storybook](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org), standalone.
+- Create a community where being 'nice' is the norm and credit is given to all contributors.
 
 # Inspiration
-
-> If I have seen further than others, it is by standing upon the shoulders of giants.
-
 
 There are many developments that have contribiuted to the creation of `component-controls`, and here we will list but a few of them:
 

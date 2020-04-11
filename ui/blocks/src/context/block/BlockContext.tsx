@@ -22,11 +22,6 @@ export interface BlockContextInputProps {
    * store mockup when running tests
    */
   mockStore?: StoriesStore;
-  /**
-   * optional cllabel to invoke when the story data are changed
-   * for example when controls values are updated
-   */
-  onRefresh?: () => void;
 }
 
 export interface Components {
@@ -80,18 +75,25 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   storyId,
   mockStore,
-  onRefresh,
 }) => {
   const store = mockStore || storyStore.getStore();
-  const [story, setStory] = useState<Story | undefined>(
-    store ? store.stories[storyId] : undefined,
-  );
+  const [story, setStory] = useState<{ story?: Story; id: string }>({
+    story: store ? store.stories[storyId] : undefined,
+    id: storyId,
+  });
 
   const refreshData = () => {
-    setStory(store ? { ...store.stories[storyId] } : undefined);
+    setStory({
+      story: store ? { ...store.stories[storyId] } : undefined,
+      id: storyId,
+    });
   };
   useEffect(() => {
-    const onChange = () => refreshData();
+    const onChange = (id?: string) => {
+      if (id === undefined || storyId === id) {
+        refreshData();
+      }
+    };
     storyStore.addObserver(onChange);
     return () => {
       storyStore.removeObserver(onChange);
@@ -99,7 +101,9 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   }, []);
 
   useEffect(() => {
-    refreshData();
+    if (story.id !== storyId) {
+      refreshData();
+    }
   }, [storyId, store]);
 
   /**
@@ -166,9 +170,6 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
       const newValues = mergeControlValues(controls, propName, propValue);
       storyStore.updateStoryProp(storyId, 'controls', newValues);
       refreshData();
-      if (onRefresh) {
-        onRefresh();
-      }
     }
   };
   const clickControl: ClickControlFn = (storyId: string, propName: string) => {
@@ -186,7 +187,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   return (
     <BlockContext.Provider
       value={{
-        story,
+        story: story.story,
         setControlValue,
         clickControl,
         getStory,
