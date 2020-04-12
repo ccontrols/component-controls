@@ -3,34 +3,48 @@ import { lighten } from 'polished';
 
 interface ButtonProps {
   /** Boolean indicating whether the button should render as disabled */
-  disabled?: boolean,
+  disabled?: boolean;
   /** button label. */
-  label?: string,
+  label?: string;
   /** onClick handler */
-  onClick: () => void,
+  onClick: () => void;
   /** Custom styles */
-  style: object,
+  style: object;
 
   /** Background color */
-  backgroundColor: string,
+  backgroundColor: string;
 
   /** Text color, default black */
-  color: string,
+  color: string;
 
   /** Button type */
-  type: 'button' | 'reset' | 'submit',
+  type: 'button' | 'reset' | 'submit';
 
   /** Numeric  field type */
-  padding: number,
-};
+  padding: number;
+}
 
 /** Button with react Typescript properties */
-export const Button: FC<ButtonProps> = ({ disabled, label, onClick, style, backgroundColor, color, type, padding }) => (
+export const Button: FC<ButtonProps> = ({
+  disabled,
+  label,
+  onClick,
+  style,
+  backgroundColor,
+  color,
+  type,
+  padding,
+}) => (
   <button
     type={type}
     disabled={disabled}
     onClick={onClick}
-    style={{ ...style, backgroundColor, color: lighten(disabled ? 0.4 : 0, color), padding }}
+    style={{
+      ...style,
+      backgroundColor,
+      color: lighten(disabled ? 0.4 : 0, color),
+      padding,
+    }}
   >
     {label}
   </button>
@@ -46,4 +60,3 @@ Button.defaultProps = {
   type: 'button',
   padding: 5,
 };
-
