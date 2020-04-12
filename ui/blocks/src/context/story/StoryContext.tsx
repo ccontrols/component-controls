@@ -40,6 +40,7 @@ export interface StoryContextProps {
  *
  * Context to be used by components that will display 'story' information
  */
+
 export const useStoryContext = ({
   id = CURRENT_STORY,
   name,
@@ -57,33 +58,31 @@ export const useStoryContext = ({
     component?: StoryComponent;
   }>(getStoryData(storyId));
 
-  const updateData = () => {
-    const { story, kind, component } = getStoryData(storyId);
-    setData({ story, kind, component });
+  const updateData = (updateId?: string) => {
+    if (!updateId || updateId === storyId) {
+      const { story, kind, component } = getStoryData(storyId);
+      setData({ story, kind, component });
+    }
   };
-  useEffect(() => {
-    const onChange = (id?: string) => {
-      if (storyId === id) {
-        updateData();
-      }
-    };
-    storeProvider.addObserver(onChange);
-
-    return () => {
-      storeProvider.removeObserver(onChange);
-    };
-  }, []);
 
   useEffect(() => {
     const { story } = data;
-    if (!story || story.id !== storyId) {
-      updateData();
+    if (story?.id !== storyId) {
+      updateData(storyId);
     }
+    const onChange = (id?: string) => {
+      updateData(id);
+    };
+    storeProvider.addObserver(onChange);
+    return () => {
+      storeProvider.removeObserver(onChange);
+    };
   }, [storyId]);
-
   return {
     id: storyId,
-    ...data,
+    story: data.story,
+    kind: data.kind,
+    component: data.component,
   };
 };
 

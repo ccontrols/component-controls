@@ -47,6 +47,37 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
 }) => {
   const { theme } = useThemeUI();
   const sortedItems = getSortedActions(actions);
+  const items = sortedItems.map(
+    ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+      const nextGroup =
+        index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
+      return (
+        <Box
+          key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+          sx={{
+            mt: 1,
+            mr: index === 0 ? 1 : 0,
+            ml: nextGroup != group || group === undefined ? 2 : 1,
+            fontSize: 1,
+            a: ActionColors({ theme, disabled }),
+            button: ActionColors({ theme, disabled }),
+          }}
+        >
+          {typeof title === 'string' ? (
+            <Button
+              onClick={onClick}
+              disabled={disabled}
+              aria-label={ariaLabel}
+            >
+              {title}
+            </Button>
+          ) : (
+            title
+          )}
+        </Box>
+      );
+    },
+  );
 
   return (
     <div
@@ -68,42 +99,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             marginLeft: 'auto',
           }}
         >
-          {sortedItems.map(
-            (
-              { title, onClick, disabled, 'aria-label': ariaLabel, group },
-              index,
-            ) => {
-              const nextGroup =
-                index < sortedItems.length - 1
-                  ? sortedItems[index + 1].group
-                  : group;
-              return (
-                <Box
-                  key={`${typeof title === 'string' ? title : 'item'}_${index}`}
-                  sx={{
-                    mt: 1,
-                    mr: index === 0 ? 1 : 0,
-                    ml: nextGroup != group || group === undefined ? 2 : 1,
-                    fontSize: 1,
-                    a: ActionColors({ theme, disabled }),
-                    button: ActionColors({ theme, disabled }),
-                  }}
-                >
-                  {typeof title === 'string' ? (
-                    <Button
-                      onClick={onClick}
-                      disabled={disabled}
-                      aria-label={ariaLabel}
-                    >
-                      {title}
-                    </Button>
-                  ) : (
-                    title
-                  )}
-                </Box>
-              );
-            },
-          )}
+          {items}
         </div>
       </Flex>
     </div>

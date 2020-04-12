@@ -13,7 +13,6 @@ import {
   Column,
   Cell,
   Row,
-  PluginHook,
   TableOptions,
   UseFiltersOptions,
   UseExpandedOptions,
@@ -35,6 +34,7 @@ import { useTableLayout } from './useTableLayout';
 
 const defaultColumn = memoize(() => ({
   subRows: undefined,
+  accessor: '',
 }));
 
 interface TableOwnProps {
@@ -102,7 +102,7 @@ export const Table: FC<TableProps> = ({
   skipPageReset,
   ...rest
 }) => {
-  const plugins: PluginHook<any>[] = [
+  const plugins = [
     useTableLayout,
     useGlobalFilter,
     useGroupBy,

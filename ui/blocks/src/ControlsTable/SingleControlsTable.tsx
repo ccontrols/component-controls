@@ -91,9 +91,8 @@ export const SingleControlsTable: FC<SingleControlsTableProps> = ({
         },
       },
     ],
-    [],
+    [storyId],
   );
-
   return (
     <Table
       skipPageReset={skipPageReset}

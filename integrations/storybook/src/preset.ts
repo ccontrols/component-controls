@@ -8,10 +8,6 @@ module.exports = {
   managerEntries: (entry: any[] = [], options: any = {}) => {
     const result = [...entry];
     result.push(require.resolve('./register'));
-    const { addonPanel = true } = options;
-    if (addonPanel) {
-      result.push(require.resolve('./register-panel'));
-    }  
     return result;
   },
 };

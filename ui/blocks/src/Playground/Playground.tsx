@@ -76,71 +76,77 @@ export const Playground: FC<PlaygroundProps> = ({
     const index = panels.findIndex((p: ActionItem) => p.title === openTab);
     setTabsIndex(index > -1 ? index : undefined);
   }, [openTab]);
-  const panelActions = userActions.map((panel: ActionItem) => {
-    return panel.panel
-      ? {
-          ...panel,
-          onClick: (e: MouseEvent<HTMLButtonElement>) => {
-            const index = panels.findIndex(
-              (p: ActionItem) => p.title === panel.title,
-            );
-            if (index < 0) {
-              return undefined;
-            }
-            if (tabsIndex === index) {
-              setTabsIndex(undefined);
-            } else {
-              if (panel.onClick) {
-                const ret = panel.onClick(e);
-                if (ret === true) {
-                  setTabsIndex(index);
-                  return ret;
-                } else if (ret === false) {
-                  setTabsIndex(undefined);
-                  return ret;
+  const panelActions = React.useMemo(
+    () =>
+      userActions.map((panel: ActionItem) => {
+        return panel.panel
+          ? {
+              ...panel,
+              onClick: (e: MouseEvent<HTMLButtonElement>) => {
+                const index = panels.findIndex(
+                  (p: ActionItem) => p.title === panel.title,
+                );
+                if (index < 0) {
+                  return undefined;
                 }
-              }
-              setTabsIndex(index);
+                if (tabsIndex === index) {
+                  setTabsIndex(undefined);
+                } else {
+                  if (panel.onClick) {
+                    const ret = panel.onClick(e);
+                    if (ret === true) {
+                      setTabsIndex(index);
+                      return ret;
+                    } else if (ret === false) {
+                      setTabsIndex(undefined);
+                      return ret;
+                    }
+                  }
+                  setTabsIndex(index);
+                }
+                return undefined;
+              },
             }
-            return undefined;
-          },
-        }
-      : panel;
-  });
+          : panel;
+      }),
+    [userActions],
+  );
 
-  const zoomActions = [
-    {
-      title: (
-        <Button onClick={() => setScale(1)} aria-label="reset zoom">
-          <Octicon icon={Sync} />
-        </Button>
-      ),
-      id: 'zoomreset',
-      group: 'zoom',
-    },
-    {
-      title: (
-        <Button onClick={() => setScale(scale / 2)} aria-label="zoom out">
-          <Octicon icon={Dash} />
-        </Button>
-      ),
-      id: 'zoomout',
-      group: 'zoom',
-    },
-    {
-      title: (
-        <Button onClick={() => setScale(scale * 2)} aria-label="zoom in">
-          <Octicon icon={Plus} />
-        </Button>
-      ),
-      id: 'zoomin',
-      group: 'zoom',
-    },
-  ];
-  const actions: ActionItem[] = [];
-  actions.push.apply(actions, panelActions);
-
-  const actionsItems = userScale ? [...zoomActions, ...actions] : actions;
+  const zoomActions = React.useMemo(
+    () => [
+      {
+        title: (
+          <Button onClick={() => setScale(1)} aria-label="reset zoom">
+            <Octicon icon={Sync} />
+          </Button>
+        ),
+        id: 'zoomreset',
+        group: 'zoom',
+      },
+      {
+        title: (
+          <Button onClick={() => setScale(scale / 2)} aria-label="zoom out">
+            <Octicon icon={Dash} />
+          </Button>
+        ),
+        id: 'zoomout',
+        group: 'zoom',
+      },
+      {
+        title: (
+          <Button onClick={() => setScale(scale * 2)} aria-label="zoom in">
+            <Octicon icon={Plus} />
+          </Button>
+        ),
+        id: 'zoomin',
+        group: 'zoom',
+      },
+    ],
+    [],
+  );
+  const actionsItems = userScale
+    ? [...zoomActions, ...panelActions]
+    : panelActions;
   return (
     <StoryBlockContainer
       name={name}
