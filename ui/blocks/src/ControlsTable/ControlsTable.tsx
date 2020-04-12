@@ -24,7 +24,7 @@ import {
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
 
-import { useBlockContext, BlockContextProps } from '../context';
+import { BlockControlsContext } from '../context';
 import { SingleControlsTable } from './SingleControlsTable';
 
 export type ControlsTableProps = Omit<StoryBlockContainerProps, 'children'>;
@@ -60,10 +60,9 @@ export const ControlsTable: FC<ControlsTableProps> = (
   props: ControlsTableProps,
 ) => {
   const [copied, setCopied] = React.useState(false);
-  const {
-    setControlValue,
-    clickControl,
-  } = useBlockContext() as BlockContextProps;
+  const { setControlValue, clickControl } = React.useContext(
+    BlockControlsContext,
+  );
   return (
     <StoryBlockContainer {...props}>
       {(context, rest) => {

@@ -2,10 +2,11 @@ import React from 'react';
 import {
   Story,
   StoriesKind,
+  StoryComponents,
   getComponentName,
 } from '@component-controls/specification';
 
-import { BlockContext, Components } from '../block';
+import { BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
 
 export interface ComponentInputProps {
@@ -18,7 +19,7 @@ export interface ComponentInputProps {
 }
 
 export interface ComponentContextProps {
-  components: Components;
+  components: StoryComponents;
   kind?: StoriesKind;
   story?: Story;
 }
@@ -26,7 +27,7 @@ export interface ComponentContextProps {
 export const useComponentsContext = ({
   of = CURRENT_STORY,
 }: ComponentInputProps): ComponentContextProps => {
-  const { getStoryData, getComponents } = React.useContext(BlockContext);
+  const { getStoryData, getComponents } = React.useContext(BlockDataContext);
   const { story, kind, component } = getStoryData();
   if (!story) {
     return {
@@ -34,7 +35,7 @@ export const useComponentsContext = ({
     };
   }
 
-  let components: Components = {};
+  let components: StoryComponents = {};
   if (of === CURRENT_STORY) {
     if (component) {
       const name = getComponentName(component);

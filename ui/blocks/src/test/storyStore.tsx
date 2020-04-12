@@ -1,9 +1,10 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { StoryStore, Store } from '@component-controls/store';
 import { StoriesStore, ControlTypes } from '@component-controls/specification';
 import { Donut, Button, Heading } from 'theme-ui';
 
-export const storyStore: StoriesStore = {
+const store: StoriesStore = {
   components: {
     '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js': {
       from: '../../components/button-default-arrow-func',
@@ -415,3 +416,4 @@ and a [link](https://google.com)
     },
   },
 };
+export const storyStore = new Store({ store, updateLocalStorage: false });

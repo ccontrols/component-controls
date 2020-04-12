@@ -25,14 +25,20 @@ interface MessageType {
   storyId: string;
   moduleId: number;
 }
-class Store implements StoryStore {
+export class Store implements StoryStore {
   loadedStore: StoriesStore | undefined;
+  updateLocalStorage: boolean = true;
   channel: BroadcastChannel;
   observers: StoreObserver[];
   moduleId: number;
-  constructor(store?: StoriesStore) {
+  constructor(options?: {
+    store?: StoriesStore;
+    updateLocalStorage?: boolean;
+  }) {
+    const { store, updateLocalStorage = true } = options || {};
     this.moduleId = Math.random();
     this.loadedStore = store;
+    this.updateLocalStorage = updateLocalStorage;
     this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG);
     this.observers = [];
     this.channel.onmessage = ({ storyId, moduleId }: MessageType) => {
@@ -97,12 +103,15 @@ class Store implements StoryStore {
         ...this.loadedStore.stories[storyId],
         [propName]: newVal,
       };
-      localStorage.setItem(
-        COMPONENT_CONTROLS_STORAGE,
-        JSON.stringify(this.loadedStore),
-      );
-      const message: MessageType = { storyId, moduleId: this.moduleId };
-      this.channel.postMessage(message);
+      if (this.updateLocalStorage) {
+        localStorage.setItem(
+          COMPONENT_CONTROLS_STORAGE,
+          JSON.stringify(this.loadedStore),
+        );
+        const message: MessageType = { storyId, moduleId: this.moduleId };
+        this.channel.postMessage(message);
+      }
+      this.notifyObservers(storyId);
     }
     return this.loadedStore;
   };

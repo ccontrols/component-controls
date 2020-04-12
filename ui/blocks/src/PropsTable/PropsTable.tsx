@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled } from 'theme-ui';
-import { FC, useMemo } from 'react';
+import { FC, useMemo, useContext } from 'react';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table, TableProps, Markdown } from '@component-controls/components';
 import { Column } from 'react-table';
@@ -9,7 +9,7 @@ import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
 } from '../BlockContainer/components/ComponentsBlockContainer';
-import { useBlockContext, BlockContextProps } from '../context';
+import { BlockControlsContext } from '../context';
 import { InvalidType } from '../notifications';
 
 export interface PropsTableOwnProps {
@@ -30,10 +30,7 @@ export const PropsTable: FC<PropsTableProps> = ({
   extraColumns = [],
   ...props
 }) => {
-  const {
-    setControlValue,
-    clickControl,
-  } = useBlockContext() as BlockContextProps;
+  const { setControlValue, clickControl } = useContext(BlockControlsContext);
 
   return (
     <ComponentsBlockContainer {...props}>

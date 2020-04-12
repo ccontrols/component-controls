@@ -5,7 +5,7 @@ import {
   StoryComponent,
 } from '@component-controls/specification';
 
-import { BlockContext } from '../block';
+import { BlockContext, BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
 
 export interface StoryInputProps {
@@ -49,12 +49,10 @@ export const useStoryContext = ({
   id,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const {
-    story: currentStory,
-    getStoryData,
-    getStory,
-    storyIdFromName,
-  } = React.useContext(BlockContext);
+  const { story: currentStory } = React.useContext(BlockContext);
+  const { getStoryData, getStory, storyIdFromName } = React.useContext(
+    BlockDataContext,
+  );
   const currentId = currentStory ? currentStory.id : undefined;
   const inputId = id === CURRENT_STORY ? currentId : id;
   const storyId = inputId || (name && storyIdFromName(name)) || currentId;

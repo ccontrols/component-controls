@@ -220,20 +220,45 @@ export interface StoriesKind {
 }
 
 /**
+ * list of components used in stories
+ */
+
+export interface StoryComponents {
+  [fileName: string]: StoryComponent;
+}
+
+/**
+ * list of story files, or groups
+ */
+export interface StoryKinds {
+  [title: string]: StoriesKind;
+}
+
+/**
+ * list of stories
+ */
+export interface StoryStories {
+  [id: string]: Story;
+}
+
+/**
  * store of stories information in memory after the loader is applied
  */
 export interface StoriesStore {
   /**
-   * unique has for a store
+   * unique hash for a store
    */
   hash?: string;
-  kinds: {
-    [title: string]: StoriesKind;
-  };
-  stories: {
-    [id: string]: Story;
-  };
-  components: {
-    [fileName: string]: StoryComponent;
-  };
+  /**
+   * list of story files, or groups
+   */
+  kinds: StoryKinds;
+  /**
+   * list of stories
+   */
+  stories: StoryStories;
+  /**
+   * list of components used in stories
+   */
+  components: StoryComponents;
 }

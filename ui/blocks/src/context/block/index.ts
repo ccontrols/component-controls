@@ -1,2 +1,3 @@
 export * from './BlockContext';
-export * from './consts';
+export * from './BlockDataContext';
+export * from './BlockControlsContext';
