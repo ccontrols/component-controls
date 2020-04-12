@@ -40,7 +40,6 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     title: userTitle,
   });
   const block = children(context, rest);
-
   return (
     <BlockContainer
       title={title}

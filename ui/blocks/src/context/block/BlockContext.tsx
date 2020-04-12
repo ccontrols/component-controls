@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { store as storyStore, StoryStore } from '@component-controls/store';
-import { Story } from '@component-controls/specification';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { BlockControlsContextProvider } from './BlockControlsContext';
 
@@ -19,7 +18,11 @@ export interface BlockContextProps {
   /**
    * current story
    */
-  story?: Story;
+  storyId: string;
+  /**
+   * store interface
+   */
+  storeProvider: StoryStore;
 }
 //@ts-ignore
 export const BlockContext = React.createContext<BlockContextProps>({});
@@ -30,43 +33,14 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   mockStore,
 }) => {
   const storeProvider = mockStore || storyStore;
-  const store = storeProvider.getStore();
-  const [story, setStory] = useState<{ story?: Story; id: string }>({
-    story: store ? store.stories[storyId] : undefined,
-    id: storyId,
-  });
-
-  const refreshData = () => {
-    setStory({
-      story: store ? { ...store.stories[storyId] } : undefined,
-      id: storyId,
-    });
-  };
-  useEffect(() => {
-    const onChange = (id?: string) => {
-      if (id === undefined || storyId === id) {
-        refreshData();
-      }
-    };
-    storyStore.addObserver(onChange);
-    return () => {
-      storyStore.removeObserver(onChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (story.id !== storyId) {
-      refreshData();
-    }
-  }, [storyId, store]);
-
   return (
     <BlockContext.Provider
       value={{
-        story: story.story,
+        storyId,
+        storeProvider,
       }}
     >
-      <BlockDataContextProvider store={store}>
+      <BlockDataContextProvider store={storeProvider}>
         <BlockControlsContextProvider store={storeProvider}>
           {children}
         </BlockControlsContextProvider>

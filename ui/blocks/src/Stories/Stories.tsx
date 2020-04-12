@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Story } from '@component-controls/specification';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -24,19 +23,16 @@ export type StoriesProps = StoriesOwnProps &
 export const Stories: FC<StoriesProps> = props => (
   <StoryBlockContainer {...props}>
     {(context, rest) => {
-      const { story: selected, kind, getStory } = context;
+      const { story: selected, kind } = context;
       const stories = kind?.stories
-        ?.map((id: string) => getStory(id))
-        .filter(
-          (story?: Story) => !selected || (story && selected.id !== story.id),
-        );
+        ? kind.stories.filter((id: string) => !selected || selected.id !== id)
+        : [];
       if (!stories || !stories.length) {
         return null;
       }
       return (
         <>
-          {(stories as Story[]).map((story: Story) => {
-            const storyTitle = story.name;
+          {stories.map((id: string) => {
             return (
               <Playground
                 transform={{
@@ -44,12 +40,12 @@ export const Stories: FC<StoriesProps> = props => (
                     disabled: true,
                   },
                 }}
-                title={storyTitle}
+                title="."
                 collapsible={false}
-                key={`playground-${story.id}`}
+                key={`playground-${id}`}
                 {...rest}
               >
-                <StoryComponent id={story.id} />
+                <StoryComponent id={id} />
               </Playground>
             );
           })}

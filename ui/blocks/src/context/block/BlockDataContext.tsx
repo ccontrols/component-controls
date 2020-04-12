@@ -1,21 +1,16 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
+import { StoryStore } from '@component-controls/store';
 import {
   Story,
+  StoriesStore,
   StoryComponent,
   StoryComponents,
   StoriesKind,
   getComponentName,
-  StoriesStore,
 } from '@component-controls/specification';
 
 export interface BlockDataContextProps {
-  /**
-  /**
-   * returns a story, given a story id
-   */
-  getStory: (storyId?: string) => Story | undefined;
-
   /**
    * returns a story and its associated objects (kind, component), given a story id
    */
@@ -41,16 +36,15 @@ export interface BlockDataContextProps {
 export const BlockDataContext = React.createContext<BlockDataContextProps>({});
 
 export interface BlockDataContextInoutProps {
-  store?: StoriesStore;
+  store: StoryStore;
 }
 
 export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   children,
-  store,
+  store: storeProvider,
 }) => {
-  /**
-   * returns a story and its file, given a story id
-   */
+  const store: StoriesStore | undefined = storeProvider.getStore();
+
   const getStoryData = (id?: string) => {
     const story: Story | undefined =
       store && store.stories && id ? store.stories[id] : undefined;
@@ -67,8 +61,6 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         : undefined;
     return { story, kind, component };
   };
-  const getStory = (id?: string) =>
-    store && store.stories && id && store.stories[id];
 
   const getComponents = (
     components: { [key: string]: any },
@@ -104,7 +96,6 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   return (
     <BlockDataContext.Provider
       value={{
-        getStory,
         getStoryData,
         storyIdFromName,
         getComponents,

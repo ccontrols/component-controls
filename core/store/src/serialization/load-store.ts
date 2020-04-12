@@ -86,7 +86,6 @@ export const loadStoryStore = (): StoriesStore | undefined => {
                     story.controls || {},
                   );
                 }
-
                 if (kind.title && story.name) {
                   const id = toId(kind.title, storyNameFromExport(story.name));
                   if (!kind.stories) {

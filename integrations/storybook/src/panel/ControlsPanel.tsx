@@ -12,7 +12,7 @@ export const ControlsPanel: React.FC<ControlsPanelProps> = ({
   active,
   api,
 }) => {
-  const [storyId, setStoryId] = React.useState('');
+  const [storyId, setStoryId] = React.useState<string | undefined>();
   const channel = React.useMemo(() => api.getChannel(), []);
   React.useEffect(() => {
     const onChangeStory = (props: any) => {
@@ -22,7 +22,7 @@ export const ControlsPanel: React.FC<ControlsPanelProps> = ({
     return () => channel.off(SET_CURRENT_STORY, onChangeStory);
   });
 
-  return active ? (
+  return active && storyId ? (
     <BlockContextProvider storyId={storyId}>
       <ControlsTable id="." />
     </BlockContextProvider>
