@@ -87,26 +87,36 @@ export interface ControlValues {
   [name: string]: any;
 }
 
+export const getControlValue = (
+  controls: LoadedComponentControls,
+  propName: string,
+): any => {
+  const control: ComponentControl = controls[propName];
+  if (control) {
+    const { value } = control;
+    if (
+      control.type === ControlTypes.TEXT &&
+      control.escapeValue &&
+      typeof value === 'string'
+    ) {
+      return escape(value);
+    } else if (
+      control.type === ControlTypes.OBJECT &&
+      typeof value === 'object'
+    ) {
+      return getControlValues(value as LoadedComponentControls);
+    }
+    return value;
+  }
+  return undefined;
+};
+
 export const getControlValues = (
   controls: LoadedComponentControls,
 ): ControlValues =>
   controls
     ? Object.keys(controls).reduce((acc, key) => {
-        const control: ComponentControl = controls[key];
-        let { value } = control;
-        if (control.type === ControlTypes.TEXT && control.escapeValue) {
-          if (typeof value === 'string') {
-            value = escape(value);
-          }
-        } else if (
-          control.type === ControlTypes.OBJECT &&
-          typeof value === 'object'
-        ) {
-          return {
-            ...acc,
-            [key]: getControlValues(value as LoadedComponentControls),
-          };
-        }
+        const value = getControlValue(controls, key);
         return { ...acc, [key]: value };
       }, {})
     : {};

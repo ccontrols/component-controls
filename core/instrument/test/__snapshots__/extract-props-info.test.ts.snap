@@ -2203,14 +2203,14 @@ If an array of components is specified, each component will be displayed in a se
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {
@@ -5254,14 +5254,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLLIElement>) => void",
+        "raw": "(event: UIEvent<HTMLLIElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLLIElement>) => void",
+        "raw": "(event: UIEvent<HTMLLIElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {
@@ -8268,14 +8268,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLUListElement>) => void",
+        "raw": "(event: UIEvent<HTMLUListElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLUListElement>) => void",
+        "raw": "(event: UIEvent<HTMLUListElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {
@@ -11282,14 +11282,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {
@@ -14331,14 +14331,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLDivElement>) => void",
+        "raw": "(event: UIEvent<HTMLDivElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {

@@ -2,10 +2,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import React from 'react';
-import {
-  StoryArguments,
-  CodeLocation,
-} from '@component-controls/specification';
+import { getControlValue } from '@component-controls/core';
 import { Styled } from 'theme-ui';
 import { transparentize } from 'polished';
 import {
@@ -15,37 +12,15 @@ import {
   ActionItem,
 } from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
-import { mergeControlValues } from './argument-utils';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
-
-interface ArgumentLocations {
-  name: string;
-  locs: CodeLocation[];
-}
-const getArgumentsLocations = (args: StoryArguments): ArgumentLocations[] => {
-  return args.reduce((acc: any, a) => {
-    if (Array.isArray(a.value)) {
-      return [...acc, ...getArgumentsLocations(a.value)];
-    }
-    const locs = [];
-    if (a.loc) {
-      locs.push(a.loc);
-    }
-    if (a.usage) {
-      locs.push(...a.usage.map(u => u.loc));
-    }
-    return [
-      ...acc,
-      {
-        name: a.value,
-        locs,
-      },
-    ];
-  }, []);
-};
+import {
+  getArgumentsLocations,
+  getTagColor,
+  findTagLocation,
+} from './arg-values';
 
 export type StorySourceProps = Omit<StoryBlockContainerProps, 'children'> &
   Omit<SourceProps, 'children'>;
@@ -68,6 +43,7 @@ export const StorySource: React.FC<StorySourceProps> = (
 ) => {
   const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+
   return (
     <StoryBlockContainer {...props}>
       {(context, { actions, ...rest }: SourceProps) => {
@@ -89,7 +65,8 @@ export const StorySource: React.FC<StorySourceProps> = (
           });
         }
         const args = story?.arguments;
-        if (args && args.length) {
+        const tags = getArgumentsLocations(args);
+        if (args && args.length && !showFileSource) {
           allActions.push({
             title: ViewStyleNext[viewStyle],
             onClick: onMergeValues,
@@ -100,18 +77,10 @@ export const StorySource: React.FC<StorySourceProps> = (
         }
         let source: string;
         if (!showFileSource) {
-          if (viewStyle === 'values' && args && controls) {
-            source = mergeControlValues(story?.source || '', args, controls);
-          } else {
-            source = story?.source || '';
-          }
+          source = story?.source || '';
         } else {
           source = kind?.source || '';
         }
-
-        const tags:
-          | (ArgumentLocations & { color?: string })[]
-          | undefined = args ? getArgumentsLocations(args) : undefined;
         return (
           <Source
             actions={allActions}
@@ -121,15 +90,6 @@ export const StorySource: React.FC<StorySourceProps> = (
               { className, style, tokens, getLineProps, getTokenProps }: any,
               { theme }: any,
             ) => {
-              if (tags) {
-                tags.forEach((tag, index) => {
-                  let color: string;
-                  const colorIdx = index % (theme.styles.length - 1);
-                  const style = theme.styles[colorIdx];
-                  color = style.style.color || theme.plain.color || '#fff';
-                  tag.color = color;
-                });
-              }
               return (
                 <Styled.pre
                   className={`${className}`}
@@ -142,22 +102,12 @@ export const StorySource: React.FC<StorySourceProps> = (
                         return line.map((token: any, key: string) => {
                           const tokenTrim = token.content.trim();
                           const param = tags
-                            ? tags.find(tag => {
-                                if (tag.name === tokenTrim) {
-                                  return tag.locs.find(
-                                    loc =>
-                                      loc.start.line === i &&
-                                      loc.start.column >= column &&
-                                      loc.start.column <=
-                                        column + token.content.length,
-                                  );
-                                }
-                                return false;
-                              })
+                            ? findTagLocation(tags, tokenTrim, i, column)
                             : null;
 
                           column += token.content.length;
                           if (param) {
+                            const color = getTagColor(param, theme);
                             const splitToken = getTokenProps({
                               token,
                               key,
@@ -170,17 +120,18 @@ export const StorySource: React.FC<StorySourceProps> = (
                                   sx={{
                                     display: 'inline-block',
                                     //@ts-ignore
-                                    backgroundColor: transparentize(
-                                      0.8,
-                                      param.color || 'white',
-                                    ),
+                                    backgroundColor: transparentize(0.8, color),
                                     paddingLeft: 1,
                                     paddingRight: 1,
                                     //@ts-ignore
-                                    border: `1px solid ${param.color}`,
+                                    border: `1px solid ${color}`,
                                   }}
                                 >
-                                  {s}
+                                  {controls &&
+                                  viewStyle === 'values' &&
+                                  param.type === 'usage'
+                                    ? getControlValue(controls, s) || s
+                                    : s}
                                 </span>
                               ) : (
                                 s

@@ -68,15 +68,8 @@ export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
         addArgumentUsage(story, args, path.node.argument);
       }
     },
-    JSXExpressionContainer: (path: any) => {
-      if (path.node.expression.type === 'Identifier') {
-        addArgumentUsage(story, args, path.node.expression);
-      }
-    },
-    ArrowFunctionExpression: (path: any) => {
-      if (path.node.body.type === 'Identifier') {
-        addArgumentUsage(story, args, path.node.body);
-      }
+    Identifier: (path: any) => {
+      addArgumentUsage(story, args, path.node);
     },
     Property: (path: any) => {
       const node = path.node;

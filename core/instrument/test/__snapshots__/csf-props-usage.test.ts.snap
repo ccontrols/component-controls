@@ -595,6 +595,81 @@ Object {
 }
 `;
 
+exports[`csf-props-usage select-prop.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {},
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 17,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 15,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "showOptional",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 19,
+                      "line": 4,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 4,
+                    },
+                  },
+                },
+              ],
+              "value": "showOptional",
+            },
+          ],
+        },
+      ],
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 10,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 3,
+        },
+      },
+      "name": "story",
+      "source": "({ showOptional }) => {
+  return (
+    <>
+      <div>I must be here</div>
+      {showOptional === 'yes' ? <div>Optional, I can disappear</div> : null}
+    </>
+  );
+}",
+    },
+  },
+}
+`;
+
 exports[`csf-props-usage string-template.js 1`] = `
 Object {
   "components": Object {},
