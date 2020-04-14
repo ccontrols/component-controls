@@ -10,8 +10,12 @@
     -   [StoriesStore](#storiesstore)
     -   [Story](#story)
     -   [StoryArgument](#storyargument)
+    -   [StoryComponents](#storycomponents)
+    -   [StoryKinds](#storykinds)
     -   [StoryParameters](#storyparameters)
+    -   [StoryStories](#storystories)
     -   [StoryArguments](#storyarguments)
+    -   [StoryRenderFn](#storyrenderfn)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -35,11 +39,13 @@
     -   [StoryComponent](#storycomponent)
     -   [TypeInformation](#typeinformation)
     -   [TypeValue](#typevalue)
+    -   [getComponentName](#getcomponentname)
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
     -   [Repository](#repository)
     -   [StoryArguments](#storyarguments-1)
+    -   [StoryRenderFn](#storyrenderfn-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
 
@@ -101,7 +107,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 map of stories. The id is compatible with CSF story ids
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L132)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L139)_
 
 `id`\*: string: [Story](#story)
 
@@ -111,7 +117,7 @@ a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
 in the case of MDX stories, the kind is crated using a &lt;Meta /> tag
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L141)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L148)_
 
 `name`\*: string: any
 
@@ -119,6 +125,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 | Name             | Type                                    | Description                                                                                                                                |
 | ---------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `MDXPage`        | any                                     | for MDX pages, this is an MDXContent function, to be rendered inside a MDXProvider                                                         |
 | `component`      | string \| object                        | id for component associated with the stories file                                                                                          |
 | `components*`    | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx' |
 | `controls`       | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                      |
@@ -134,44 +141,45 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ## StoriesStore
 
-store of stories information in memory afte the loader is applied
+store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L218)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L252)_
 
 
 
 ### properties
 
-| Name          | Type                                                   | Description |
-| ------------- | ------------------------------------------------------ | ----------- |
-| `components*` | \[fileName: string]: [StoryComponent](#storycomponent) |             |
-| `kinds*`      | \[title: string]: [StoriesKind](#storieskind)          |             |
-| `stories*`    | \[id: string]: [Story](#story)                         |             |
+| Name          | Type                                | Description                        |
+| ------------- | ----------------------------------- | ---------------------------------- |
+| `components*` | [StoryComponents](#storycomponents) | list of components used in stories |
+| `hash`        | string                              | unique hash for a store            |
+| `kinds*`      | [StoryKinds](#storykinds)           | list of story files, or groups     |
+| `stories*`    | [StoryStories](#storystories)       | list of stories                    |
 
 ## Story
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L74)_
 
 
 
 ### properties
 
-| Name            | Type                                                                        | Description                                                                                 |
-| --------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `arguments`     | [StoryArguments](#storyarguments)                                           | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
-| `component`     | string \| object                                                            | id for component associated with the story                                                  |
-| `controls`      | [ComponentControls](#componentcontrols)                                     | object of key/value pairs specifying the controls for the story                             |
-| `id`            | string                                                                      | csf id of the story                                                                         |
-| `kind`          | string                                                                      | title of the file/group of stories                                                          |
-| `loc`           | [CodeLocation](#codelocation)                                               | location in the source file of the story definition                                         |
-| `name*`         | string                                                                      | name of the Story.                                                                          |
-| `parameters`    | [StoryParameters](#storyparameters)                                         | configuration parameters passed to the story - either CSF or MDX                            |
-| `renderFn`      | **function** (`controlValues`\*: \[key: string]: any, `context`: any): any; | render function for the story                                                               |
-| `source`        | string                                                                      | the source code of the story, extracted byt the AST instrumenting loaders                   |
-| `subcomponents` | \[key: string]: string \| object                                            | multiple components option                                                                  |
-| `subtitle`      | string                                                                      | optional story subtitle property                                                            |
+| Name            | Type                                    | Description                                                                                 |
+| --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `arguments`     | [StoryArguments](#storyarguments)       | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
+| `component`     | string \| object                        | id for component associated with the story                                                  |
+| `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                             |
+| `id`            | string                                  | csf id of the story                                                                         |
+| `kind`          | string                                  | title of the file/group of stories                                                          |
+| `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                         |
+| `name*`         | string                                  | name of the Story.                                                                          |
+| `parameters`    | [StoryParameters](#storyparameters)     | configuration parameters passed to the story - either CSF or MDX                            |
+| `renderFn`      | [StoryRenderFn](#storyrenderfn)         | render function for the story                                                               |
+| `source`        | string                                  | the source code of the story, extracted byt the AST instrumenting loaders                   |
+| `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                  |
+| `subtitle`      | string                                  | optional story subtitle property                                                            |
 
 ## StoryArgument
 
@@ -190,6 +198,22 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `usage`  | [ArgUsageLocation](#argusagelocation)\[]    | list of locations where the argument is used in the body of the story                      |
 | `value*` | string \| [StoryArguments](#storyarguments) | either the name used (or a variable alias), or an array of sub-arguments ({ name: alias }) |
 
+## StoryComponents
+
+list of components used in stories
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L231)_
+
+`fileName`\*: string: [StoryComponent](#storycomponent)
+
+## StoryKinds
+
+list of story files, or groups
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L238)_
+
+`title`\*: string: [StoriesKind](#storieskind)
+
 ## StoryParameters
 
 list of configuration parameters for stories and 'kinds'
@@ -199,6 +223,14 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 `name`\*: string: any
 
+## StoryStories
+
+list of stories
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L245)_
+
+`id`\*: string: [Story](#story)
+
 ## StoryArguments
 
 list of story arguments. Each argument can be a deconstructed argument of itself
@@ -207,6 +239,22 @@ the first argument are the control 'values'
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L54)_
 
 [StoryArgument](#storyargument)\[]
+
+## StoryRenderFn
+
+story render function
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
+
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+
+### parameters
+
+| Name             | Type                | Description |
+| ---------------- | ------------------- | ----------- |
+| `controlValues*` | \[key: string]: any |             |
+| `context`        | any                 |             |
+| `returns`        | any                 |             |
 
 ## ControlTypes
 
@@ -598,6 +646,21 @@ _defined in [@component-controls/specification/src/components.ts](https://github
 
 'any' | 'boolean' | 'number' | 'string' | 'array' | 'object' | 'enum' | 'union' | 'literal' | 'symbol' | 'function' | string
 
+## getComponentName
+
+given a component, return its name
+
+_defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L142)_
+
+**function** getComponentName(`component`\*: any): string | undefined;
+
+### parameters
+
+| Name         | Type                | Description                                                                                |
+| ------------ | ------------------- | ------------------------------------------------------------------------------------------ |
+| `component*` | any                 | a string component name, or a component class, with a name or displayName static property  |
+| `returns`    | string \| undefined |                                                                                            |
+
 ## PropsInfoExtractorFunction
 
 callback function to extract props info table  - ie docgen type libraries
@@ -673,6 +736,22 @@ the first argument are the control 'values'
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L54)_
 
 [StoryArgument](#storyargument)\[]
+
+## StoryRenderFn
+
+story render function
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
+
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+
+### parameters
+
+| Name             | Type                | Description |
+| ---------------- | ------------------- | ----------- |
+| `controlValues*` | \[key: string]: any |             |
+| `context`        | any                 |             |
+| `returns`        | any                 |             |
 
 ## ComponentControl
 

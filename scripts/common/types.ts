@@ -14,11 +14,15 @@ export interface AttrsArg {
   section: Node;
   tagName: string;
   node: Node;
-} 
+}
 
 export interface SectionArg {
   attrs: AttrsArg;
   attributes?: string[][];
 }
 
-export type TraverseCallback = (name: string, fileName: string, repoFolder: string) => void;
+export type TraverseCallback = (
+  name: string,
+  fileName: string,
+  repoFolder: string,
+) => void;

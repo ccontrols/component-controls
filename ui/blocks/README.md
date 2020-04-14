@@ -8,15 +8,16 @@
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
     -   [<ins>Description</ins>](#insdescriptionins)
+    -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
+    -   [<ins>getArgumentsLocations</ins>](#insgetargumentslocationsins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
-    -   [<ins>getComponentName</ins>](#insgetcomponentnameins)
     -   [<ins>getStoryBlockTitle</ins>](#insgetstoryblocktitleins)
 
 # Overview
@@ -128,6 +129,22 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.                                                                                                                                                                                                                                                      |
 | `of`         | _any_                                                                                                                                                                                                                    | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 
+## <ins>PageContainer</ins>
+
+Page container.
+if an MDX page, will display the MDX components
+otherwise, the page elemenst are passed as children
+
+_PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PageContainer/PageContainer.tsx)_
+
+### properties
+
+| Name         | Type      | Description                                   |
+| ------------ | --------- | --------------------------------------------- |
+| `storyId`    | _string_  | story to display in the page                  |
+| `dark`       | _boolean_ | dark/light theme for the page                 |
+| `components` | _any_     | components to customize the markdown display. |
+
 ## <ins>Playground</ins>
 
 _Playground [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/Playground.tsx)_
@@ -194,6 +211,10 @@ Additional commands are made available if the repository data of the story is av
 
 _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/StorySource.tsx)_
 
+## <ins>getArgumentsLocations</ins>
+
+_getArgumentsLocations [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/arg-values.ts)_
+
 ## <ins>Subtitle</ins>
 
 displays a subtitle as assigned to the story parameters:
@@ -232,10 +253,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 error message when the control type is not found.
 
 _InvalidType [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/notifications/InvalidType.tsx)_
-
-## <ins>getComponentName</ins>
-
-_getComponentName [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/utils/constants.ts)_
 
 ## <ins>getStoryBlockTitle</ins>
 
