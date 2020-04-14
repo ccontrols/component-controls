@@ -20,6 +20,12 @@ Object {
     },
   },
   "stories": Object {},
+  "transformed": "import Button from '../../components/button-default-arrow-func';
+export default {
+  title: 'Story',
+  component: Button,
+};
+",
 }
 `;
 
@@ -52,6 +58,7 @@ Object {
     "story": Object {
       "arguments": Array [],
       "component": "ArrowButton",
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 34,
@@ -63,12 +70,27 @@ Object {
         },
       },
       "name": "story",
-      "source": "() => 'hello'",
+      "source": "() => 'hello';
+",
       "subcomponents": Object {
         "My Button Tab": "Button",
       },
     },
   },
+  "transformed": "import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+export default {
+  title: 'Story',
+};
+
+export const story = () => 'hello';
+
+story.story = {
+  component: ArrowButton,
+  subcomponents: { 'My Button Tab': Button },
+};
+",
 }
 `;
 
@@ -102,5 +124,14 @@ Object {
     },
   },
   "stories": Object {},
+  "transformed": "import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+export default {
+  title: 'Story',
+  component: ArrowButton,
+  subcomponents: { Button },
+};
+",
 }
 `;

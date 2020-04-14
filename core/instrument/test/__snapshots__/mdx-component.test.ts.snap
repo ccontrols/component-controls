@@ -20,6 +20,11 @@ Object {
     },
   },
   "stories": Object {},
+  "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
+import { Button } from '../../components/button-named-arrow-func';
+
+<Meta title=\\"Storybook/MDX\\" component={Button} />
+",
 }
 `;
 
@@ -43,28 +48,29 @@ Object {
     },
   },
   "stories": Object {},
+  "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
+import { Btn as Button } from '../../components/button-named-class';
+<Meta title=\\"Storybook/MDX\\" component={Button} />",
 }
 `;
 
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
-  "components": Object {
-    "dc262d21cd7820523c7e0bacca461e87": Object {
-      "from": "../../components/button-default-arrow-func",
-      "importedName": "default",
-      "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-    },
-  },
+  "components": Object {},
   "kinds": Object {
     "Story": Object {
-      "components": Object {
-        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
-      },
+      "components": Object {},
       "title": "Story",
     },
   },
   "stories": Object {},
+  "transformed": "import { Meta, PropsTable } from '@storybook/addon-docs/blocks';
+import ArrowButton from '../../components/button-default-arrow-func';
+
+<Meta title=\\"Story\\" />
+
+<PropsTable of={ArrowButton} />
+",
 }
 `;
 
@@ -95,8 +101,9 @@ Object {
     },
   },
   "stories": Object {
-    "my-story": Object {
+    "myStory": Object {
       "component": "Toggle",
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 50,
@@ -108,9 +115,17 @@ Object {
         },
       },
       "name": "my-story",
-      "source": "<Story name=\\"my-story\\" component={Toggle} />",
+      "source": "<Story name=\\"my-story\\" component={Toggle} />;
+",
     },
   },
+  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { Btn as Button } from './Button';
+import { Toggle } from './Toggle';
+
+<Meta title=\\"Storybook/MDX\\" component={Button} />
+
+<Story name=\\"my-story\\" component={Toggle} />",
 }
 `;
 
@@ -142,6 +157,7 @@ Object {
   "stories": Object {
     "story": Object {
       "component": "ArrowButton",
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 8,
@@ -154,17 +170,26 @@ Object {
       },
       "name": "story",
       "source": "<Story
-        name=\\"story\\"
-        component={ArrowButton}
-        subcomponents={{
-          'My Button Tab': Button,
-        }}
-      />",
+  name=\\"story\\"
+  component={ArrowButton}
+  subcomponents={{
+    'My Button Tab': Button,
+  }}
+/>;
+",
       "subcomponents": Object {
         "My Button Tab": "Button",
       },
     },
   },
+  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+<Meta title=\\"Story\\" />
+
+<Story name=\\"story\\" component={ArrowButton} subcomponents={{ 'My Button Tab': Button }} />
+",
 }
 `;
 
@@ -198,5 +223,11 @@ Object {
     },
   },
   "stories": Object {},
+  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+<Meta title=\\"Story\\" component={ArrowButton} subcomponents={{ Button }} />
+",
 }
 `;

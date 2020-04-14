@@ -4,7 +4,7 @@ exports[`follow-imports button-default-export.js 1`] = `undefined`;
 
 exports[`follow-imports button-from-node-nodules.js 1`] = `
 Object {
-  "exportedAs": "ControlsTable",
+  "exportedAs": "ThemeProvider",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "@component-controls/storybook",
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -50,7 +50,7 @@ Object {
 
 exports[`follow-imports import-node-modules.js 1`] = `
 Object {
-  "exportedAs": "ControlsTable",
+  "exportedAs": "ThemeProvider",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "./button-from-node-nodules",
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",

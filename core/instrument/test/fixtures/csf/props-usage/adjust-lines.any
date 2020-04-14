@@ -1,5 +1,5 @@
 export default {
-  name: 'Hello',
+  title: 'Story',
 }
 
 export const myStory = props => (

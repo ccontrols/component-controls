@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { propsInfo } from '../src/misc/propsInfo';
+import { propsInfo } from '../src/misc/props-info';
 
 describe('extract-props-info', () => {
   const loadTestFiles = (componentName: string, fileName: string) => {

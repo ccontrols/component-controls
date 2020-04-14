@@ -40,6 +40,15 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {},
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story>
+  <Button />
+</Story>",
 }
 `;
 
@@ -84,7 +93,7 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {
-    "story-with-props": Object {
+    "storyWithProps": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -101,6 +110,7 @@ import Button from '../components/BaseButton';
           "value": "props",
         },
       ],
+      "id": "storyWithProps",
       "loc": Object {
         "end": Object {
           "column": 57,
@@ -112,9 +122,20 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "source": "props => <Button />",
+      "source": "props => <Button />;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {props => <Button />}
+</Story>
+",
 }
 `;
 
@@ -179,7 +200,8 @@ import Button from '../../components/button-default-arrow-func';
     },
   },
   "stories": Object {
-    "smart story": Object {
+    "smartStory": Object {
+      "id": "smartStory",
       "loc": Object {
         "end": Object {
           "column": 14,
@@ -192,10 +214,21 @@ import Button from '../../components/button-default-arrow-func';
       },
       "name": "smart story",
       "source": "<Story name=\\"smart story\\">
-        <Button />
-      </Story>",
+  <Button />
+</Story>;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../../components/button-default-arrow-func';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"smart story\\">
+  <Button />
+</Story>
+",
 }
 `;
 
@@ -240,7 +273,7 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {
-    "story-with-props": Object {
+    "storyWithProps": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -315,6 +348,7 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "id": "storyWithProps",
       "loc": Object {
         "end": Object {
           "column": 24,
@@ -327,12 +361,23 @@ import Button from '../components/BaseButton';
       },
       "name": "story-with-props",
       "source": "({
-          name: { first, last },
+  name: { first, last },
 
-          age,
-        }) => <Button />",
+  age,
+}) => <Button />;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name: { first, last }, age }) => <Button />}
+</Story>
+",
 }
 `;
 
@@ -376,7 +421,7 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {
-    "story-with-props": Object {
+    "storyWithProps": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -422,6 +467,7 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "id": "storyWithProps",
       "loc": Object {
         "end": Object {
           "column": 67,
@@ -433,9 +479,19 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "source": "({ name, age }) => <Button />",
+      "source": "({ name, age }) => <Button />;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name, age }) => <Button />}
+</Story>",
 }
 `;
 
@@ -479,7 +535,7 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {
-    "story-with-props": Object {
+    "storyWithProps": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -510,6 +566,7 @@ import Button from '../components/BaseButton';
           "value": "context",
         },
       ],
+      "id": "storyWithProps",
       "loc": Object {
         "end": Object {
           "column": 68,
@@ -521,9 +578,19 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "source": "(props, context) => <Button />",
+      "source": "(props, context) => <Button />;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {(props, context) => <Button />}
+</Story>",
 }
 `;
 
@@ -567,7 +634,7 @@ import Button from '../components/BaseButton';
     },
   },
   "stories": Object {
-    "story-with-props": Object {
+    "storyWithProps": Object {
       "arguments": Array [
         Object {
           "loc": Object {
@@ -613,6 +680,7 @@ import Button from '../components/BaseButton';
           ],
         },
       ],
+      "id": "storyWithProps",
       "loc": Object {
         "end": Object {
           "column": 46,
@@ -624,8 +692,18 @@ import Button from '../components/BaseButton';
         },
       },
       "name": "story-with-props",
-      "source": "({ name: MyName, age }) => <Button />",
+      "source": "({ name: MyName, age }) => <Button />;
+",
     },
   },
+  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+import Button from '../components/BaseButton';
+
+
+<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+
+<Story name=\\"story-with-props\\">
+  {({ name: MyName, age }) => <Button />}
+</Story>",
 }
 `;

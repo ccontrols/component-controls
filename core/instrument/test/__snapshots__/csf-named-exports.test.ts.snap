@@ -3,55 +3,116 @@
 exports[`csf-named-exports export-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/export-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "exportedStory": Object {
       "arguments": Array [],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 1,
+          "line": 2,
         },
         "start": Object {
           "column": 16,
-          "line": 1,
+          "line": 2,
         },
       },
       "name": "myStory",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default { title: 'Story' };
+const myStory = () => {};
+myStory.story = {
+  name: 'Custom story name',
+};
+
+export { myStory as exportedStory };
+",
 }
 `;
 
 exports[`csf-named-exports property-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/property-name.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 1,
+          "line": 2,
         },
         "start": Object {
           "column": 16,
-          "line": 1,
+          "line": 2,
         },
       },
       "name": "myStory",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default { title: 'Story' };
+const myStory = () => {};
+myStory.story = {
+  name: 'Custom story name',
+};
+
+export { myStory };
+",
 }
 `;
 
 exports[`csf-named-exports re-export-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/re-export-name.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {},
+  "transformed": "import { myStory } from 'stories.tsx';
+export default { title: 'Story' };
+myStory.story = {
+  name: 'Custom story name',
+};
+
+export { myStory };
+",
 }
 `;

@@ -22,6 +22,7 @@ Object {
   "stories": Object {
     "story3": Object {
       "arguments": Array [],
+      "id": "story3",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -33,9 +34,19 @@ Object {
         },
       },
       "name": "story3",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default {
+  title: 'Storybook/Blocks/EXCLUDEStoryArray',
+  excludeStories: ['story1', 'story2'],
+};
+
+export const story1 = () => {};
+export const story2 = () => {};
+export const story3 = () => {};
+",
 }
 `;
 
@@ -58,6 +69,7 @@ Object {
   "stories": Object {
     "story1": Object {
       "arguments": Array [],
+      "id": "story1",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -69,9 +81,19 @@ Object {
         },
       },
       "name": "story1",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default {
+  title: 'Storybook/Blocks/ExcludeStoryRegex',
+  excludeStories: /story(2|3)/,
+};
+
+export const story1 = () => {};
+export const story2 = () => {};
+export const story3 = () => {};
+",
 }
 `;
 
@@ -97,6 +119,7 @@ Object {
   "stories": Object {
     "story1": Object {
       "arguments": Array [],
+      "id": "story1",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -108,10 +131,12 @@ Object {
         },
       },
       "name": "story1",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
     "story2": Object {
       "arguments": Array [],
+      "id": "story2",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -123,9 +148,19 @@ Object {
         },
       },
       "name": "story2",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default {
+  title: 'Storybook/Blocks/IncludeStoryArray',
+  includeStories: ['story1', 'story2'],
+};
+
+export const story1 = () => {};
+export const story2 = () => {};
+export const story3 = () => {};
+",
 }
 `;
 
@@ -148,6 +183,7 @@ Object {
   "stories": Object {
     "story2": Object {
       "arguments": Array [],
+      "id": "story2",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -159,10 +195,12 @@ Object {
         },
       },
       "name": "story2",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
     "story3": Object {
       "arguments": Array [],
+      "id": "story3",
       "loc": Object {
         "end": Object {
           "column": 30,
@@ -174,8 +212,18 @@ Object {
         },
       },
       "name": "story3",
-      "source": "() => {}",
+      "source": "() => {};
+",
     },
   },
+  "transformed": "export default {
+  title: 'Storybook/Blocks/IncludeStoryRegex',
+  includeStories: /story(2|3)/,
+};
+
+export const story1 = () => {};
+export const story2 = () => {};
+export const story3 = () => {};
+",
 }
 `;

@@ -3,7 +3,18 @@
 exports[`csf-props-usage adjust-lines.any 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/adjust-lines.any",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -36,6 +47,7 @@ Object {
           "value": "props",
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 52,
@@ -47,16 +59,38 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />",
+      "source": "props => <Story {...props} />;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+}
+
+export const myStory = props => (
+  <Story
+   {...props}
+  />
+);
+",
 }
 `;
 
 exports[`csf-props-usage age-and-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/age-and-name.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "story": Object {
       "arguments": Array [
@@ -118,29 +152,49 @@ Object {
           ],
         },
       ],
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 3,
+          "line": 6,
         },
         "start": Object {
           "column": 21,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "story",
       "source": "({ name, age }) => (
   <h2>{\`Hello, my name is \${name}, and I am \\\\\${age} years old.\`}</h2>
-)",
+);
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const story = ({ name, age }) => (
+  <h2>{\`Hello, my name is \${name}, and I am \\\\\${age} years old.\`}</h2>
+);
+",
 }
 `;
 
 exports[`csf-props-usage empty-body.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/empty-body.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "story": Object {
       "arguments": Array [
@@ -188,27 +242,45 @@ Object {
           ],
         },
       ],
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 39,
-          "line": 1,
+          "line": 4,
         },
         "start": Object {
           "column": 21,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "story",
-      "source": "({ name }) => name",
+      "source": "({ name }) => name;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const story = ({ name }) => name;
+",
 }
 `;
 
 exports[`csf-props-usage expression.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/expression.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "selectProp": Object {
       "arguments": Array [
@@ -269,29 +341,48 @@ Object {
           ],
         },
       ],
+      "id": "selectProp",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 3,
+          "line": 7,
         },
         "start": Object {
           "column": 26,
-          "line": 1,
+          "line": 5,
         },
       },
       "name": "selectProp",
-      "source": "({ value }) => (
-  <div>{JSON.stringify({ value }, null, 2)}</div>
-)",
+      "source": "({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+
+export const selectProp = ({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+);
+",
 }
 `;
 
 exports[`csf-props-usage multiple-usage.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/multiple-usage.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -351,14 +442,15 @@ Object {
           ],
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 6,
+          "line": 10,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 5,
         },
       },
       "name": "myStory",
@@ -367,16 +459,39 @@ Object {
     <Story name={name} age={age} />
     <Age value={age} />
   </>
-)",
+);
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+
+export const myStory = ({ age }) => (
+  <>
+    <Story name={name} age={age} />
+    <Age value={age} />
+  </>
+);
+",
 }
 `;
 
 exports[`csf-props-usage nested-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/nested-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "story": Object {
       "arguments": Array [
@@ -523,29 +638,49 @@ Object {
           ],
         },
       ],
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 3,
+          "line": 6,
         },
         "start": Object {
           "column": 21,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "story",
       "source": "({ height, weight, style: { border, color } }) => (
   <div height={height} weight={weight} border={border} color={color} />
-)",
+);
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const story = ({ height, weight, style: { border, color } }) => (
+  <div height={height} weight={weight} border={border} color={color} />
+);
+",
 }
 `;
 
 exports[`csf-props-usage props.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/props.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -578,27 +713,45 @@ Object {
           "value": "props",
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 52,
-          "line": 1,
+          "line": 4,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />",
+      "source": "props => <Story {...props} />;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = props => <Story {...props} />;
+",
 }
 `;
 
 exports[`csf-props-usage select-prop.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/select-prop.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "story": Object {
       "arguments": Array [
@@ -646,14 +799,15 @@ Object {
           ],
         },
       ],
+      "id": "story",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 10,
+          "line": 12,
         },
         "start": Object {
           "column": 21,
-          "line": 3,
+          "line": 5,
         },
       },
       "name": "story",
@@ -664,16 +818,41 @@ Object {
       {showOptional === 'yes' ? <div>Optional, I can disappear</div> : null}
     </>
   );
-}",
+};
+",
     },
   },
+  "transformed": "import React from 'react';
+export default {
+  title: 'Story',
+};
+export const story = ({ showOptional }) => {
+  return (
+    <>
+      <div>I must be here</div>
+      {showOptional === 'yes' ? <div>Optional, I can disappear</div> : null}
+    </>
+  );
+};
+",
 }
 `;
 
 exports[`csf-props-usage string-template.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/string-template.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -746,27 +925,45 @@ Object {
           ],
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 46,
-          "line": 1,
+          "line": 4,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
-      "source": "({ text }) => \`\${text}\`",
+      "source": "({ text }) => \`\${text}\`;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = ({ text }) => \`\${text}\`;
+",
 }
 `;
 
 exports[`csf-props-usage three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/three-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -885,14 +1082,15 @@ Object {
           ],
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 6,
+          "line": 9,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
@@ -901,16 +1099,38 @@ Object {
     <Story first={first} last={last} />
     <Age value={age} />
   </>
-)",
+);
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = ({ name: { first, last }, age }) => (
+  <>
+    <Story first={first} last={last} />
+    <Age value={age} />
+  </>
+);
+",
 }
 `;
 
 exports[`csf-props-usage two-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/two-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -957,27 +1177,45 @@ Object {
           "value": "context",
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 63,
-          "line": 1,
+          "line": 4,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
-      "source": "(props, context) => <Story {...props} />",
+      "source": "(props, context) => <Story {...props} />;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = (props, context) => <Story {...props} />;
+",
 }
 `;
 
 exports[`csf-props-usage two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/two-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -1053,29 +1291,47 @@ Object {
           ],
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 3,
+          "line": 6,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
-      "source": "({ name: MyName, age }) => (
-  <Story name={MyName} age={age} />
-)",
+      "source": "({ name: MyName, age }) => <Story name={MyName} age={age} />;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = ({ name: MyName, age }) => (
+  <Story name={MyName} age={age} />
+);
+",
 }
 `;
 
 exports[`csf-props-usage two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/two-levels-sub-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [
@@ -1151,19 +1407,26 @@ Object {
           ],
         },
       ],
+      "id": "myStory",
       "loc": Object {
         "end": Object {
           "column": 73,
-          "line": 1,
+          "line": 4,
         },
         "start": Object {
           "column": 23,
-          "line": 1,
+          "line": 4,
         },
       },
       "name": "myStory",
-      "source": "({ name, age }) => <Story name={name} age={age} />",
+      "source": "({ name, age }) => <Story name={name} age={age} />;
+",
     },
   },
+  "transformed": "export default {
+  title: 'Story',
+};
+export const myStory = ({ name, age }) => <Story name={name} age={age} />;
+",
 }
 `;
