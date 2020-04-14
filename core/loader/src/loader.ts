@@ -10,10 +10,16 @@ import { addStoriesKind } from './store';
 
 module.exports.default = async function(source: string) {
   const options: InstrumentOptions = getOptions(this) || {};
+  const callback = this.async();
   const context = this as loader.LoaderContext;
   const filePath = context.resourcePath;
-
-  const store: StoriesStore = await parseStories(source, filePath, options);
+  let transformed: string;
+  let store: StoriesStore;
+  try {
+    ({ transformed, ...store } = await parseStories(source, filePath, options));
+  } catch (err) {
+    return callback(err);
+  }
   if (store) {
     const relPath = path.relative(context.rootContext, context.resourcePath);
     const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
@@ -36,5 +42,5 @@ module.exports.default = async function(source: string) {
       ),
     });
   }
-  return source;
+  return callback(null, transformed);
 };

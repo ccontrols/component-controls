@@ -21,7 +21,7 @@ export const Collapsible: FC<CollapsibleProps> = ({
 }) => {
   return (
     <AnimateHeight {...rest} height={isOpen ? 'auto' : 0}>
-      {isOpen ? children : null}
+      {isOpen ? children : ''}
     </AnimateHeight>
   );
 };

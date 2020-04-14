@@ -1,14 +1,16 @@
 import traverse from '@babel/traverse';
+import generate from '@babel/generator';
 import {
   Story,
   CodeLocation,
   StoryArguments,
 } from '@component-controls/specification';
-import { adjustSourceLocation } from './utils';
+import { adjustSourceLocation } from '../misc/source-location';
 import {
   extractArgumentsUsage,
   addArgumentUsage,
 } from './extract-arguments-usage';
+import { ExportType } from '../types';
 
 interface KeyType {
   name: string;
@@ -21,11 +23,21 @@ interface ASTPropNode {
   value?: ASTPropNode;
   left?: ASTPropNode;
 }
-export const extractFunctionParameters = (story: Story) => ({
+export const extractFunctionParameters = (
+  story: Story,
+  exports?: ExportType,
+) => ({
   ArrowFunctionExpression: (path: any) => {
     const node = path.node;
     if (!story.arguments) {
       story.arguments = [];
+    }
+    if (exports) {
+      const { code } = generate(node, {
+        retainFunctionParens: true,
+        retainLines: true,
+      });
+      exports.render = code.trim();
     }
     story.loc = {
       start: {
@@ -97,6 +109,21 @@ export const extractFunctionParameters = (story: Story) => ({
           path,
         );
       }
+    }
+    path.skip();
+  },
+  JSXElement: (path: any) => {
+    if (exports && path.parent.children) {
+      const children = path.parent.children
+        .map((child: any) => {
+          const { code } = generate(child, {
+            retainFunctionParens: true,
+            retainLines: true,
+          });
+          return code.trim();
+        })
+        .join('\n');
+      exports.render = `() => (<>\n${children}\n</>)`;
     }
     path.skip();
   },

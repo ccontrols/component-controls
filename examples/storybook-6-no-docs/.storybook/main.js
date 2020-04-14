@@ -4,12 +4,6 @@ const storyStorePlugin = require('@component-controls/loader/plugin');
 module.exports = {
   presets:[
     {
-      name: require.resolve('webpack-react-docgen-typescript/preset'),
-      options: {
-        fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
-      },
-    },  
-    {
       name: path.resolve(path.dirname(require.resolve('@component-controls/storybook')), 'preset.js'),
       options: {
         legacy: true,
@@ -23,22 +17,66 @@ module.exports = {
     '../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)',
     '../../stories/src/**/*.stories.(js|tsx|mdx)',
   ],
-  addons: [
-    '@storybook/addon-docs',
-  ],
   webpackFinal: async (config, { configType }) => {
     return {
     ...config,
     module: {
       ...config.module,
       rules: [
-        ...config.module.rules, 
+        ...config.module.rules,
+        {
+          test: /\.js$/,
+          include: new RegExp(`node_modules\\${path.sep}acorn-jsx`),
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [[require.resolve('@babel/preset-env'), { modules: 'commonjs' }]],
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(stories|story).mdx$/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [[require.resolve('@babel/preset-env'), { modules: 'commonjs' }], require.resolve('@babel/preset-react')],
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(ts|tsx)$/,
+          use: [{
+            loader: require.resolve('babel-loader'),
+            options: {
+              presets: [['react-app', { flow: false, typescript: true }]]
+            }
+          }]
+        },
+        {
+          test: /\.mdx$/,
+          exclude: /\.(stories|story).mdx$/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [[require.resolve('@babel/preset-env'), { modules: 'commonjs' }]],
+              },
+            },
+          ],
+        },
         {
           test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/,
           loader: "@component-controls/loader/loader",
           exclude: [/node_modules/],
           enforce: 'pre',
           options: {
+            mdx: {
+              transformMDX: true,
+            },  
             propsLoaders: [
               { name: '@component-controls/react-docgen-info', test: /\.(js|jsx)$/},
               { name: '@component-controls/react-docgen-typescript-info', test: /\.(ts|tsx)$/}

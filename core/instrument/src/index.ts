@@ -17,7 +17,8 @@ import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractStoreComponent } from './babel/extract-component';
-import { packageInfo } from './misc/packageInfo';
+import { packageInfo } from './misc/package-info';
+import { mdxFunctionExport, mdxPropertiesExport } from './misc/mdx-exports';
 import {
   InstrumentOptions,
   ParserOptions,
@@ -30,16 +31,16 @@ import {
   defaultStoriesOptions,
   MDXOptions,
   defaultMDXOptions,
+  ParseStorieReturnType,
 } from './types';
 
 export * from './types';
 
-type ParseType = 'mdx' | 'csf';
-type TraverseFn = (ast: File) => StoriesStore;
+type TraverseFn = (
+  ast: File,
+  options: Required<InstrumentOptions>,
+) => ParseStorieReturnType;
 
-const TraverseFunctions: {
-  [key in ParseType]: TraverseFn;
-} = { csf: extractCSFStories, mdx: extractMDXStories };
 /**
  * Instrument a source file, with options
  * @param code The source code
@@ -50,11 +51,11 @@ const TraverseFunctions: {
  */
 const parseSource = async (
   code: string,
-  parseType: ParseType,
+  traverseFn: TraverseFn,
   originalSource: string,
   filePath: string,
   options: Required<InstrumentOptions>,
-): Promise<StoriesStore> => {
+): Promise<ParseStorieReturnType> => {
   const prettify = async (c: string): Promise<string> => {
     if (options.prettier !== false) {
       const { resolveConfigOptions, ...otherOptions } = options.prettier || {};
@@ -81,7 +82,7 @@ const parseSource = async (
   const source = await prettify(code);
   const ast = parser.parse(source, options.parser);
 
-  const store = TraverseFunctions[parseType](ast);
+  const store = traverseFn(ast, options);
   if (Object.keys(store.kinds).length > 0) {
     const kind = store.kinds[Object.keys(store.kinds)[0]];
     if (options.stories.storeSourceFile) {
@@ -137,6 +138,7 @@ const parseSource = async (
   return store;
 };
 
+export type ParseStoriesReturnType = { transformed: string } & StoriesStore;
 /**
  * Parse and instrument a javascript, typescript or MDX file of stories
  * @param source Source of the file to be instrumented
@@ -148,7 +150,7 @@ export const parseStories = async (
   source: string,
   filePath: string,
   options?: InstrumentOptions,
-): Promise<StoriesStore> => {
+): Promise<ParseStoriesReturnType> => {
   const {
     parser: parserOptions = {},
     prettier: prettierOptions = {},
@@ -172,21 +174,78 @@ export const parseStories = async (
     propsLoaders: propsLoaders || [],
   };
   let code: string;
-  let type: ParseType;
-  const { test, ...otherMDXOptions } = mergedOptions.mdx;
+  const {
+    test,
+    renderer,
+    transformMDX,
+    ...otherMDXOptions
+  } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
-    const mdxParsed = await mdx(source, otherMDXOptions);
+    const mdxParsed = await mdx(source, {
+      filepath: filePath,
+      ...otherMDXOptions,
+    });
     const ast = parser.parse(mdxParsed, mergedOptions.parser) as any;
     traverse(ast, removeMDXAttributes());
     ({ code } = generate(ast, {
       retainFunctionParens: true,
       retainLines: true,
     }));
-    type = 'mdx';
-  } else {
-    code = source;
-    type = 'csf';
-  }
+    const store = await parseSource(
+      code,
+      extractMDXStories,
+      source,
+      filePath,
+      mergedOptions,
+    );
+    const { stories, kinds, components, exports } = store;
+    let transformed = source;
+    if (transformMDX && exports) {
+      let defaultExportCode = '';
+      if (exports.default && exports.default.story) {
+        const expCode = mdxPropertiesExport(exports.default);
+        if (expCode) {
+          defaultExportCode = `export default { ${expCode} };`;
+        }
+      }
 
-  return await parseSource(code, type, source, filePath, mergedOptions);
+      let storiesExports: string[] = [];
+      const expStories = Object.keys(exports).filter(id => id !== 'default');
+      if (expStories.length) {
+        for (const exportStory of expStories) {
+          const expFn = mdxFunctionExport(exportStory, exports[exportStory]);
+          if (expFn) {
+            storiesExports.push(expFn);
+          }
+          const expCode = mdxPropertiesExport(exports[exportStory]);
+          if (expCode) {
+            storiesExports.push(`${exportStory}.story = {
+                ${expCode}
+             }`);
+          }
+        }
+      }
+      transformed = `${renderer}\n${code}\n${defaultExportCode}\n${storiesExports.join(
+        '\n',
+      )}`;
+    }
+    return {
+      transformed,
+      stories,
+      kinds,
+      components,
+    };
+  } else {
+    const store = await parseSource(
+      source,
+      extractCSFStories,
+      source,
+      filePath,
+      mergedOptions,
+    );
+    return {
+      transformed: source,
+      ...store,
+    };
+  }
 };

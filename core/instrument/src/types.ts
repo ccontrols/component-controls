@@ -1,4 +1,5 @@
 import { ParserOptions } from '@babel/parser';
+import { StoriesStore } from '@component-controls/specification';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
@@ -19,8 +20,18 @@ export const defaultParserOptions: ParserOptions = {
   plugins: ['jsx', 'typescript'],
 };
 
+/**
+ * default renderer imports.
+ * from https://github.com/mdx-js/mdx/blob/6251c5bb35aec5b6de85262a6a46fa1db496dd23/packages/loader/index.js#L4
+ */
+export const DEFAULT_MDX_RENDERER = `
+import React from 'react'
+import { mdx } from '@mdx-js/react'
+`;
+
 export const defaultMDXOptions: MDXOptions = {
   test: /\.mdx$/,
+  renderer: DEFAULT_MDX_RENDERER,
 };
 
 /**
@@ -165,6 +176,20 @@ export interface MDXOptions {
    * regex for blocks, defaults to ['[a-z\\.]+(\\.){0,1}[a-z\\.]']
    */
   blocks?: string[];
+
+  /**
+   * if true, will return the transformed MDX -< JSX, ready to be loaded by babel
+   */
+  transformMDX?: boolean;
+  /**
+   * ability to configure the mdx files imports. Works with transformMDX: true
+   * by default this is the string
+   * ```
+   * import React from 'react'
+   * import { mdx } from '@mdx-js/react'
+   * ```
+   */
+  renderer?: string;
 }
 
 /**
@@ -208,3 +233,15 @@ export interface InstrumentOptions {
    */
   mdx?: MDXOptions;
 }
+
+export interface ExportType {
+  render?: string;
+  story?: {
+    [key: string]: string;
+  };
+}
+export type ParseStorieReturnType = {
+  exports?: {
+    [key: string]: ExportType;
+  };
+} & StoriesStore;

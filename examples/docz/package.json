@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "0.6.0",
-  "name": "component-controls-docz-example",
+  "name": "component-controls-docz",
   "license": "MIT",
   "scripts": {
     "dev": "docz dev",

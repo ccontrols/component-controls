@@ -4,7 +4,7 @@ import {
   StoryArgument,
   ArgUsageLocation,
 } from '@component-controls/specification';
-import { adjustSourceLocation } from './utils';
+import { adjustSourceLocation } from '../misc/source-location';
 
 const findArguments = (
   args: StoryArguments,

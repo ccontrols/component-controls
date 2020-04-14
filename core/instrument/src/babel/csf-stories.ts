@@ -6,12 +6,16 @@ import {
 } from '@component-controls/specification';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
-import { extractFunctionParameters } from './get-function-parameters';
+import { extractFunctionParameters } from './extract-function-parameters';
 import { extractAttributes } from './extract-attributes';
-import { componentsFromParams } from '../misc/componentAttributes';
-import { sourceLocation } from './utils';
+import { componentsFromParams } from '../misc/component-attributes';
+import { sourceLocation } from '../misc/source-location';
+import { ParseStorieReturnType, InstrumentOptions } from '../types';
 
-export const extractCSFStories = (ast: File): StoriesStore => {
+export const extractCSFStories = (
+  ast: File,
+  _options: InstrumentOptions,
+): ParseStorieReturnType => {
   const globals: Stories = {};
   const localStories: Stories = {};
 
@@ -28,6 +32,7 @@ export const extractCSFStories = (ast: File): StoriesStore => {
       const story: Story = {
         loc: sourceLocation(el.loc),
         name,
+        id: name,
       };
       traverse(path.node, extractFunctionParameters(story), path.scope, path);
       return story;
@@ -148,6 +153,8 @@ export const extractCSFStories = (ast: File): StoriesStore => {
   if (Object.keys(store.kinds).length === 1) {
     //@ts-ignore
     store.kinds[Object.keys(store.kinds)[0]].components = components;
+  } else {
+    throw new Error(`CSF stories should have one default export`);
   }
   return store;
 };

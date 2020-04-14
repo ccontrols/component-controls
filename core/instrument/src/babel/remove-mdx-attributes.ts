@@ -6,5 +6,8 @@ export const removeMDXAttributes = () => {
         path.remove();
       }
     },
+    ExportDefaultDeclaration: (path: any) => {
+      path.replaceWith(path.node.declaration);
+    },
   };
 };

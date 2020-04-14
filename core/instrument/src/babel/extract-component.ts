@@ -6,8 +6,8 @@ import {
 } from '@component-controls/specification';
 import { createHash } from 'crypto';
 import { followImports } from './follow-imports';
-import { packageInfo } from '../misc/packageInfo';
-import { propsInfo } from '../misc/propsInfo';
+import { packageInfo } from '../misc/package-info';
+import { propsInfo } from '../misc/props-info';
 import { InstrumentOptions } from '../types';
 
 const globalCache: {
