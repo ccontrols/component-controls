@@ -18,7 +18,7 @@ import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
-import { mdxFunctionExport, mdxPropertiesExport } from './misc/mdx-exports';
+import { extractStoryExports } from './misc/mdx-exports';
 import {
   InstrumentOptions,
   ParserOptions,
@@ -199,35 +199,10 @@ export const parseStories = async (
       mergedOptions,
     );
     const { stories, kinds, components, exports } = store;
+    const exportsSource = extractStoryExports(exports);
     let transformed = source;
-    if (transformMDX && exports) {
-      let defaultExportCode = '';
-      if (exports.default && exports.default.story) {
-        const expCode = mdxPropertiesExport(exports.default);
-        if (expCode) {
-          defaultExportCode = `export default { ${expCode} };`;
-        }
-      }
-
-      let storiesExports: string[] = [];
-      const expStories = Object.keys(exports).filter(id => id !== 'default');
-      if (expStories.length) {
-        for (const exportStory of expStories) {
-          const expFn = mdxFunctionExport(exportStory, exports[exportStory]);
-          if (expFn) {
-            storiesExports.push(expFn);
-          }
-          const expCode = mdxPropertiesExport(exports[exportStory]);
-          if (expCode) {
-            storiesExports.push(`${exportStory}.story = {
-                ${expCode}
-             }`);
-          }
-        }
-      }
-      transformed = `${renderer}\n${code}\n${defaultExportCode}\n${storiesExports.join(
-        '\n',
-      )}`;
+    if (transformMDX && exportsSource) {
+      transformed = `${renderer}\n${code}\n${exportsSource}`;
     }
     return {
       transformed,

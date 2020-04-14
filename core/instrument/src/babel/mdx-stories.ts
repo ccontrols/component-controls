@@ -110,7 +110,7 @@ export const extractMDXStories = (
                 path.scope,
                 path,
               );
-              store.stories[name] = story;
+              store.stories[id] = story;
               if (exports) {
                 store.exports[id] = exports;
               }

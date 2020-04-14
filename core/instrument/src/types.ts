@@ -240,8 +240,9 @@ export interface ExportType {
     [key: string]: string;
   };
 }
+export interface ExportTypes {
+  [key: string]: ExportType;
+}
 export type ParseStorieReturnType = {
-  exports?: {
-    [key: string]: ExportType;
-  };
+  exports?: ExportTypes;
 } & StoriesStore;
