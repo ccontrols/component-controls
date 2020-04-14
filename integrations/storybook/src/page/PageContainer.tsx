@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { STORY_CHANGED } from '@storybook/core-events';
+import { getLuminance } from 'polished';
+import { ThemeContext, Theme } from '@storybook/theming';
 import { addons } from '@storybook/addons';
-import { ThemeProvider, BlockContextProvider } from '../context';
-
-interface PageContainerProps {
-  active?: boolean;
-  storyId: string;
-}
+import { STORY_CHANGED } from '@storybook/core-events';
+import {
+  PageContainer as BlockPageContainer,
+  PageContainerProps,
+} from '@component-controls/blocks';
 
 export const PageContextContainer: FC<PageContainerProps> = ({
   children,
@@ -16,6 +16,10 @@ export const PageContextContainer: FC<PageContainerProps> = ({
     defaultStoryId,
   );
   const channel = React.useMemo(() => addons.getChannel(), []);
+  const { background: { content = '#ffffff' } = {} } = React.useContext<Theme>(
+    ThemeContext as any,
+  );
+
   React.useEffect(() => {
     const onStoryChange = (id: string) => {
       setStoryId(id);
@@ -27,24 +31,13 @@ export const PageContextContainer: FC<PageContainerProps> = ({
     };
   }, []);
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        padding: '4rem 20px',
-      }}
-    >
-      <div style={{ maxWidth: '1000px', width: '100%' }}>
-        {' '}
-        <ThemeProvider>
-          <BlockContextProvider id={storyId}>{children}</BlockContextProvider>
-        </ThemeProvider>
-      </div>
-    </div>
+    <BlockPageContainer dark={getLuminance(content) < 0.5} storyId={storyId}>
+      {children}
+    </BlockPageContainer>
   );
 };
 
-export const PageContainer: FC<PageContainerProps> = ({
+export const PageContainer: FC<PageContainerProps & { active: boolean }> = ({
   children,
   active,
   storyId,

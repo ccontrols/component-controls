@@ -1,6 +1,7 @@
 export * from './ComponentSource';
 export * from './ControlsTable';
 export * from './Description';
+export * from './Meta';
 export * from './Playground';
 export * from './PropsTable';
 export * from './Stories';

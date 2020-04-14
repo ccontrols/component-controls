@@ -216,6 +216,11 @@ export interface StoriesKind {
    */
   controls?: ComponentControls;
 
+  /**
+   * for MDX pages, this is an MDXContent function, to be rendered inside a MDXProvider
+   */
+  MDXPage?: any;
+
   [name: string]: any;
 }
 

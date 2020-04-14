@@ -1,42 +1,31 @@
-import {
-  Story,
-  Preview,
-  Props,
-  Source as DocsSource,
-  Meta,  
-} from '@storybook/addon-docs/blocks';
-import { BlockContextProvider, ControlsTable, ComponentSource, StorySource } from '@component-controls/storybook';
+import { Meta, PropsTable, Playground, Story, BlockContextProvider, ControlsTable, ComponentSource, StorySource } from '@component-controls/storybook';
 import { Button } from '../components/Button';
 
 
 <Meta title="Storybook/MDX" parameters={{component: Button}} />
 
 # Smart controls
-<BlockContextProvider>
-  <ComponentSource of={Button} title='Component source' />
-</BlockContextProvider>  
+<ComponentSource of={Button} title='Component source' />
 
 <Story id="." />
 
-<BlockContextProvider>
-  <StorySource id="." />
-</BlockContextProvider>
+<StorySource id="." />
 
-<Props of={Button} />
+<PropsTable of={Button} />
 
 
-<Preview>
+<Playground>
   <Story name="smart story">
     {(props) => (
       <Button label="default" {...props}/>
     )}  
   </Story>
-</Preview>
+</Playground>
 
 
 # Small story with custom controls
 
-<Preview>
+<Playground>
   <Story name="small story" 
     controls={{
       text: {type: 'text', value: 'Hello'},
@@ -46,17 +35,15 @@ import { Button } from '../components/Button';
       <Button label={text}/>
     )}  
   </Story>
-</Preview>
+</Playground>
 
-<BlockContextProvider>
-  <ControlsTable name="small story" />
-</BlockContextProvider>  
 
+<ControlsTable name="small story" />
 # Story with no parameters == no smart controls
 
-<Preview>
+<Playground>
   <Story name="no controls">
       <Button label="Hello"/>
       <Button label="Second button"/>
   </Story>
-</Preview>
+</Playground>

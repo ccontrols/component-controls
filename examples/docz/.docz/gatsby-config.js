@@ -19,7 +19,7 @@ const config = {
   pathPrefix: '/',
 
   siteMetadata: {
-    title: 'Component Controls Docz Example',
+    title: 'Component Controls Docz',
     description: 'My awesome app using docz',
   },
   plugins: [
@@ -65,7 +65,7 @@ const config = {
         eb: 'master',
         'edit-branch': 'master',
         config: '',
-        title: 'Component Controls Docz Example',
+        title: 'Component Controls Docz',
         description: 'My awesome app using docz',
         host: 'localhost',
         port: 3000,

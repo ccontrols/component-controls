@@ -87,8 +87,9 @@ export const useStoryContext = ({
 };
 
 export interface StoryContextConsumer {
-  children: (context: StoryContextProps) => React.ReactElement;
+  children: (context: StoryContextProps) => React.ReactNode;
 }
+///@ts-ignore
 export const StoryContextConsumer: FC<StoryContextConsumer &
   StoryInputProps> = ({ children, ...rest }) => {
   const context = useStoryContext(rest);

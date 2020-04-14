@@ -26,7 +26,7 @@ export const extractStoryExports = (exports?: ExportTypes): string => {
       if (exports.default && exports.default.story) {
         const expCode = mdxPropertiesExport(exports.default);
         if (expCode) {
-          defaultExportCode = `export default { ${expCode} };`;
+          defaultExportCode = `export default { ${expCode}, MDXPage: () => <MDXContent /> };`;
         }
       }
 

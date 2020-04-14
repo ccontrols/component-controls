@@ -56,8 +56,8 @@ const parseSource = async (
   filePath: string,
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType> => {
-  const prettify = async (c: string): Promise<string> => {
-    if (options.prettier !== false) {
+  const prettify = async (c?: string): Promise<string> => {
+    if (c && options.prettier !== false) {
       const { resolveConfigOptions, ...otherOptions } = options.prettier || {};
       let allPrettierOptions:
         | prettier.Options
@@ -76,7 +76,7 @@ const parseSource = async (
         ...allPrettierOptions,
       });
     } else {
-      return c;
+      return c || '';
     }
   };
   const source = await prettify(code);
@@ -131,10 +131,10 @@ const parseSource = async (
       kind.repository = repository;
     }
   }
-  Object.keys(store.stories).forEach((key: string) => {
+  for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];
-    story.source = getASTSource(source, story.loc);
-  });
+    story.source = await prettify(getASTSource(source, story.loc));
+  }
   return store;
 };
 
@@ -202,6 +202,7 @@ export const parseStories = async (
     const exportsSource = extractStoryExports(exports);
     let transformed = source;
     if (transformMDX && exportsSource) {
+      debugger;
       transformed = `${renderer}\n${code}\n${exportsSource}`;
     }
     return {
