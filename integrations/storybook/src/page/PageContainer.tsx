@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import { getLuminance } from 'polished';
-import { ThemeContext, Theme } from '@storybook/theming';
 import { addons } from '@storybook/addons';
 import { STORY_CHANGED } from '@storybook/core-events';
 import {
   PageContainer as BlockPageContainer,
   PageContainerProps,
 } from '@component-controls/blocks';
+import { useIsDark } from '../context/useIsDark';
 
 export const PageContextContainer: FC<PageContainerProps> = ({
   children,
@@ -15,10 +14,8 @@ export const PageContextContainer: FC<PageContainerProps> = ({
   const [storyId, setStoryId] = React.useState<string | undefined>(
     defaultStoryId,
   );
+  const isDark = useIsDark();
   const channel = React.useMemo(() => addons.getChannel(), []);
-  const { background: { content = '#ffffff' } = {} } = React.useContext<Theme>(
-    ThemeContext as any,
-  );
 
   React.useEffect(() => {
     const onStoryChange = (id: string) => {
@@ -31,7 +28,7 @@ export const PageContextContainer: FC<PageContainerProps> = ({
     };
   }, []);
   return (
-    <BlockPageContainer dark={getLuminance(content) < 0.5} storyId={storyId}>
+    <BlockPageContainer dark={isDark} storyId={storyId}>
       {children}
     </BlockPageContainer>
   );

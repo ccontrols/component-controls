@@ -1,37 +1,18 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider, BlockContextProvider } from '@component-controls/storybook';
-import { ControlsTable, Title, Subtitle, Story, Playground, Stories, Description, ComponentSource, PropsTable } from '@component-controls/blocks';
+import { ThemeProvider, useIsDark } from '@component-controls/storybook';
 
 addDecorator((story, ctx ) => {
+  const isDark = useIsDark();
   return (
-    <ThemeProvider>
+    <ThemeProvider dark={isDark}>
       {story(ctx)}
     </ThemeProvider>
   );
 })
 
-export const DocsPage = () => {
-  return (
-    <ThemeProvider>
-      <BlockContextProvider>
-        <Title />
-        <Subtitle />
-        <Description />
-        <ComponentSource id="." title='Component' />
-        <Playground openTab="source" title=".">
-          <Story id="." />
-        </Playground>  
-        <ControlsTable id="." />
-        <PropsTable of="." />
-        <Stories dark={true}/>
-      </BlockContextProvider>  
-    </ThemeProvider>  
-  );
-};
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
-  docs_xxx: { page: DocsPage },
   dependencies: { hideEmpty: true },
   options: {
     storySort: (a, b) => {

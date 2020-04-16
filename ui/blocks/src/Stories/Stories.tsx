@@ -41,6 +41,7 @@ export const Stories: FC<StoriesProps> = props => (
                   },
                 }}
                 title="."
+                id={id}
                 collapsible={false}
                 key={`playground-${id}`}
                 {...rest}

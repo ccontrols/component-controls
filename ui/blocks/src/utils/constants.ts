@@ -1,4 +1,8 @@
-import { StoriesKind, StoryComponent } from '@component-controls/specification';
+import {
+  StoriesKind,
+  StoryComponent,
+  Story,
+} from '@component-controls/specification';
 
 export const CURRENT_STORY = '.';
 
@@ -16,12 +20,9 @@ export const getStoryTitle = (
 };
 
 export const getStoryBlockTitle = ({
-  kind,
-  component,
+  story,
   title,
 }: {
-  kind?: StoriesKind;
-  component?: StoryComponent;
+  story?: Story;
   title?: string;
-}): string | undefined =>
-  title == CURRENT_STORY ? getStoryTitle(kind, component) : title;
+}): string | undefined => (title == CURRENT_STORY ? story?.name : title);

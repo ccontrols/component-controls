@@ -14,7 +14,7 @@ import {
   Zoom,
 } from '@component-controls/components';
 
-import { Button } from 'theme-ui';
+import { Button, useThemeUI } from 'theme-ui';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -54,10 +54,13 @@ export const Playground: FC<PlaygroundProps> = ({
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
     undefined,
   );
+  const { theme } = useThemeUI();
   const [scale, setScale] = React.useState(userScale);
   React.useEffect(() => setScale(userScale), [userScale]);
   let storyId: string;
   const childArr = React.Children.toArray(children);
+  const isDark =
+    dark === undefined ? theme.initialColorModeName === 'dark' : dark;
   if (childArr.length === 1) {
     //@ts-ignore
     storyId = childArr[0].props.id;
@@ -66,7 +69,7 @@ export const Playground: FC<PlaygroundProps> = ({
       id: 'source',
       'aria-label': 'display story source code',
       panel: (
-        <StorySource dark={dark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+        <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
       ),
     });
   }

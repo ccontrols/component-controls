@@ -1,8 +1,9 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { StoryStore, Store } from '@component-controls/store';
+import { Store } from '@component-controls/store';
 import { StoriesStore, ControlTypes } from '@component-controls/specification';
 import { Donut, Button, Heading } from 'theme-ui';
+import { MDXContent } from './MDXStory';
 
 const store: StoriesStore = {
   components: {
@@ -243,6 +244,13 @@ and a [link](https://google.com)
         'blocks-core-story-plain--controls',
       ],
     },
+    mdxStory: {
+      name: 'MDX Story',
+      title: 'MDX Story',
+      components: {},
+      MDXPage: () => <MDXContent components={{}} />,
+      stories: ['mdx-story'],
+    },
   },
   stories: {
     'id-of-story': {
@@ -412,6 +420,13 @@ and a [link](https://google.com)
       id: 'id-no-component',
       kind: 'Story',
       name: 'no component',
+      source: "() => 'hello'",
+    },
+    'mdx-story': {
+      renderFn: () => <Heading>mdx story</Heading>,
+      id: 'mdx-story',
+      kind: 'mdxStory',
+      name: 'mdx story',
       source: "() => 'hello'",
     },
   },

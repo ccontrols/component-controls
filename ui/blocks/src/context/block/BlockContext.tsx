@@ -34,18 +34,18 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
 }) => {
   const storeProvider = mockStore || storyStore;
   return (
-    <BlockDataContextProvider store={storeProvider}>
-      <BlockControlsContextProvider store={storeProvider}>
-        <BlockContext.Provider
-          value={{
-            storyId,
-            storeProvider,
-          }}
-        >
+    <BlockContext.Provider
+      value={{
+        storyId,
+        storeProvider,
+      }}
+    >
+      <BlockDataContextProvider store={storeProvider} storyId={storyId}>
+        <BlockControlsContextProvider store={storeProvider}>
           {children}
-        </BlockContext.Provider>
-      </BlockControlsContextProvider>
-    </BlockDataContextProvider>
+        </BlockControlsContextProvider>
+      </BlockDataContextProvider>
+    </BlockContext.Provider>
   );
 };
 

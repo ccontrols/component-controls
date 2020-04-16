@@ -203,6 +203,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                         flexDirection: 'column',
                         alignItems: 'left',
                         flexBasis: '100%',
+                        minWidth: 200,
                       }}
                     >
                       <InputType

@@ -1,5 +1,14 @@
-import React, { FC } from 'react';
-import { ThemeProvider } from '@component-controls/components';
+/* eslint-disable react/display-name */
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, Box, Theme } from 'theme-ui';
+import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
+import { StoryStore } from '@component-controls/store';
+
+import {
+  ThemeProvider,
+  markdownComponents,
+} from '@component-controls/components';
 import { BlockContextProvider, StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
@@ -14,40 +23,63 @@ export interface PageContainerProps {
   /**
    * components to customize the markdown display.
    */
-  components?: any;
+  components?: MDXProviderComponents;
+
+  /**
+   * optional custom theme
+   */
+  theme?: Theme;
+
+  /**
+   * mock store for tests
+   */
+  mockStore?: StoryStore;
 }
 
 /**
  *
- * Page container.
- * if an MDX page, will display the MDX components
- * otherwise, the page elemenst are passed as children
+ * If the page is an MDX page, will display the MDX components.
+ * Otherwise, the page elements are passed as children
  */
 export const PageContainer: FC<PageContainerProps> = ({
   children,
   dark,
   storyId,
+  mockStore,
+  theme,
+  components = {},
 }) => {
   return storyId ? (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        padding: '4rem 20px',
-      }}
-    >
-      <div style={{ maxWidth: '1000px', width: '100%' }}>
-        <ThemeProvider dark={dark}>
-          <BlockContextProvider storyId={storyId}>
+    <ThemeProvider theme={theme} dark={dark}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          padding: '4rem 20px',
+          bg: 'background',
+          color: 'text',
+          fontFamily: 'body',
+        }}
+      >
+        <Box sx={{ maxWidth: '1000px', width: '100%' }}>
+          <BlockContextProvider storyId={storyId} mockStore={mockStore}>
             <StoryContextConsumer id={storyId}>
               {({ kind }) => {
                 const { MDXPage } = kind || {};
-                return MDXPage ? <MDXPage /> : children;
+                return MDXPage ? (
+                  <MDXProvider
+                    components={{ ...markdownComponents, ...components }}
+                  >
+                    <MDXPage />
+                  </MDXProvider>
+                ) : (
+                  children
+                );
               }}
             </StoryContextConsumer>
           </BlockContextProvider>
-        </ThemeProvider>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </ThemeProvider>
   ) : null;
 };

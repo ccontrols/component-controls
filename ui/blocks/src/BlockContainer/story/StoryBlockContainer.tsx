@@ -33,10 +33,9 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     id,
     name,
   });
-  const { component, kind, story } = context;
+  const { story } = context;
   const title = getStoryBlockTitle({
-    kind,
-    component,
+    story,
     title: userTitle,
   });
   const block = children(context, rest);

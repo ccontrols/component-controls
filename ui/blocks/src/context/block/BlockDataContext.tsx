@@ -37,18 +37,19 @@ export const BlockDataContext = React.createContext<BlockDataContextProps>({});
 
 export interface BlockDataContextInoutProps {
   store: StoryStore;
+  storyId: string;
 }
 
 export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   children,
+  storyId,
   store: storeProvider,
 }) => {
   const store: StoriesStore | undefined = storeProvider.getStore();
 
-  const getStoryData = (id?: string) => {
+  const getStoryData = (id: string = storyId) => {
     const story: Story | undefined =
       store && store.stories && id ? store.stories[id] : undefined;
-
     const kind =
       store && story && story.kind ? store.kinds[story.kind] : undefined;
     const storyComponent: any =

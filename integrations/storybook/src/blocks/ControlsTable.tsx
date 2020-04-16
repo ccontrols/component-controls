@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import {
-  ControlsTable as BaseControlsTable,
+  ControlsTable as BlockControlsTable,
   ControlsTableProps,
   useStoryContext,
 } from '@component-controls/blocks';
@@ -24,7 +24,7 @@ export const ControlsTable: FC<ControlsTableProps> = ({
 
   return id ? (
     <ThemeProvider>
-      <BaseControlsTable id={id} {...rest} />
+      <BlockControlsTable id={id} {...rest} />
     </ThemeProvider>
   ) : null;
 };

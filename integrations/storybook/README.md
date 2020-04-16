@@ -1,7 +1,3 @@
-```diff
-- WARNING - THIS ADDON CAN NOT YET BE USED AS SOME OF THE STORYBOOK FEATURES IT REQUIRES ARE NOT YET MERGED
-```
-
 ## Table of contents
 
   * [Storybook](#storybook)
@@ -32,7 +28,7 @@
 
 ## Storybook
 
-The Storybook integration of the component-controls (aka "Addon Controls") allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
+The Storybook integration of component-controls allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
 
 
 The definitions of the control properties can be found [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts): 

@@ -1,31 +1,27 @@
-import { Meta, PropsTable, Playground, Story, BlockContextProvider, ControlsTable, ComponentSource, StorySource } from '@component-controls/storybook';
-import { Button } from '../components/Button';
-
+import { Meta, PropsTable, Playground as Preview, Story, BlockContextProvider, ControlsTable, ComponentSource, StorySource } from '@component-controls/storybook';
+import { Button } from '../../stories/src/components/Button';
 
 <Meta title="Storybook/MDX" parameters={{component: Button}} />
+
 
 # Smart controls
 <ComponentSource of={Button} title='Component source' />
 
-<Story id="." />
-
-<StorySource id="." />
-
 <PropsTable of={Button} />
 
 
-<Playground>
+<Preview>
   <Story name="smart story">
     {(props) => (
       <Button label="default" {...props}/>
     )}  
   </Story>
-</Playground>
+</Preview>
 
 
 # Small story with custom controls
 
-<Playground>
+<Preview>
   <Story name="small story" 
     controls={{
       text: {type: 'text', value: 'Hello'},
@@ -35,15 +31,15 @@ import { Button } from '../components/Button';
       <Button label={text}/>
     )}  
   </Story>
-</Playground>
+</Preview>
 
 
 <ControlsTable name="small story" />
 # Story with no parameters == no smart controls
 
-<Playground>
+<Preview>
   <Story name="no controls">
       <Button label="Hello"/>
       <Button label="Second button"/>
   </Story>
-</Playground>
+</Preview>

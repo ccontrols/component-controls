@@ -22,6 +22,7 @@ module.exports = {
     '../../../ui/components/src/**/*.stories.(js|tsx|mdx)',
     '../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)',
     '../../stories/src/**/*.stories.(js|tsx|mdx)',
+    '../stories/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-docs',

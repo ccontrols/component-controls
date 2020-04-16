@@ -48,8 +48,8 @@ const TabsContainer = styled.div`
       color: ${theme?.colors?.fadedText};
     }
     .react-tabs__tab--selected {
-      border-bottom: 3px solid ${theme?.colors?.accent};
-      color: ${theme?.colors?.accent};
+      border-bottom: 3px solid ${theme?.colors?.selected};
+      color: ${theme?.colors?.selected};
     }
     .react-tabs__tab--disabled {
       color: GrayText;

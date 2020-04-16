@@ -35,6 +35,7 @@
     "@component-controls/editors": "^0.6.0",
     "@component-controls/specification": "^0.6.0",
     "@component-controls/store": "^0.6.0",
+    "@mdx-js/react": "^1.5.8",
     "@storybook/csf": "^0.0.1",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
@@ -47,7 +48,9 @@
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
+    "@theme-ui/presets": "^0.3.0",
     "@types/jest": "^25.1.2",
+    "@types/mdx-js__react":"^1.5.1",
     "@types/theme-ui": "^0.3.0",
     "@types/qs": "^6.9.1",
     "cross-env": "^5.2.1",
