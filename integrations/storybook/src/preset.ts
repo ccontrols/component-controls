@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+const storyStorePlugin = require('@component-controls/loader/plugin');
+
 module.exports = {
   config: (entry: any[] = [], options: any = {}) => {
     const result = [...entry];
@@ -13,6 +15,7 @@ module.exports = {
   webpack: (webpackConfig: any = {}, options: any = {}) => {
     const result = {
       ...webpackConfig,
+      plugins: [new storyStorePlugin(), ...webpackConfig.plugins],
     };
     return result;
   },

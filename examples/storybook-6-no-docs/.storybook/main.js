@@ -1,5 +1,4 @@
 const path = require('path');
-const storyStorePlugin = require('@component-controls/loader/plugin');
 
 module.exports = {
   presets:[
@@ -109,10 +108,6 @@ module.exports = {
     resolve: {
       ...config.resolve,
       extensions: [...(config.resolve.extensions || []), '.ts', '.tsx'],
-    },
-    plugins: [
-      new storyStorePlugin(),
-      ...config.plugins,
-    ]
+    },    
   }},
 };
