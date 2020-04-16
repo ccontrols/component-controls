@@ -1,15 +1,5 @@
-import React from 'react'
-import { addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider, useIsDark } from '@component-controls/storybook';
+import { addParameters } from '@storybook/react';
 
-addDecorator((story, ctx ) => {
-  const isDark = useIsDark();
-  return (
-    <ThemeProvider dark={isDark}>
-      {story(ctx)}
-    </ThemeProvider>
-  );
-})
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
   dependencies: { hideEmpty: true },

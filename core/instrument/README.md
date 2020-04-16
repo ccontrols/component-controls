@@ -1,3 +1,5 @@
+# Table of contents
+
 # Overview
 
 Parsing a source file will generate the following information:

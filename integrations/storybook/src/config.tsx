@@ -1,9 +1,12 @@
+/* eslint-disable react/display-name */
+import React from 'react';
 import { addDecorator } from '@storybook/client-api';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 
 import { store } from '@component-controls/store';
 import { getControlValues } from '@component-controls/core';
+import { ThemeProvider } from './context/ThemeProvider';
 import './context/RenderDocsPages';
 
 store.addObserver(() => {
@@ -16,11 +19,11 @@ addDecorator(
     parameterName: 'controls',
     wrapper: (storyFn, context) => {
       const story = store.getStory(context.id);
-
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;
       //@ts-ignore
-      return values ? storyFn(values, context) : storyFn(context);
+      const render = values ? storyFn(values, context) : storyFn(context);
+      return <ThemeProvider>{render}</ThemeProvider>;
     },
   }),
 );

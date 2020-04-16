@@ -10,4 +10,10 @@ module.exports = {
     result.push(require.resolve('./register'));
     return result;
   },
+  webpack: (webpackConfig: any = {}, options: any = {}) => {
+    const result = {
+      ...webpackConfig,
+    };
+    return result;
+  },
 };

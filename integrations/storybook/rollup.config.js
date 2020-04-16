@@ -4,7 +4,7 @@ export default config({
   input: [
     './src/index.ts',
     './src/preset.ts',
-    './src/config.ts',
+    './src/config.tsx',
     './src/register.tsx',
     './src/register-panel.tsx',
   ],
