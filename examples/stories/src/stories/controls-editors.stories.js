@@ -13,7 +13,9 @@ textDefaultProp.story = {
   },
 };
 
-export const selectProp = ({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;
+export const selectProp = ({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+);
 
 selectProp.propTypes = {
   value: PropTypes.string,
@@ -54,13 +56,19 @@ export const tweaksStaticValues = ({
   const intro = `My name is ${userName}, I'm ${age} years old, and my favorite fruit is ${fruit}. I also enjoy ${otherFruit}, and hanging out with my dog ${dog.label}`;
   const style = { backgroundColor, color, ...otherStyles };
   const salutation = nice ? 'Nice to meet you!' : 'Leave me alone!';
-  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
+  const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  };
 
   return (
     <div style={style}>
       <p>{intro}</p>
       <p>
-        My birthday is: {new Date(birthday).toLocaleDateString('en-US', dateOptions)} at:
+        My birthday is:{' '}
+        {new Date(birthday).toLocaleDateString('en-US', dateOptions)} at:
         {new Date(birthday).toLocaleTimeString()}
       </p>
       <p>I live in NY for {years} years.</p>
@@ -146,8 +154,18 @@ tweaksStaticValues.story = {
       step: 0.01,
       groupId: GROUP_IDS.GENERAL,
     },
-    years: { type: ControlTypes.NUMBER, label: 'Years in NY', value: 9, groupId: GROUP_IDS.GENERAL },
-    nice: { type: ControlTypes.BOOLEAN, label: 'Nice', value: true, groupId: GROUP_IDS.FAVORITES },
+    years: {
+      type: ControlTypes.NUMBER,
+      label: 'Years in NY',
+      value: 9,
+      groupId: GROUP_IDS.GENERAL,
+    },
+    nice: {
+      type: ControlTypes.BOOLEAN,
+      label: 'Nice',
+      value: true,
+      groupId: GROUP_IDS.FAVORITES,
+    },
     items: {
       type: ControlTypes.ARRAY,
       label: 'Items',
@@ -420,7 +438,10 @@ export const triggersActionsViaButton = () => {
   };
   return (
     <>
-      <p>Hit the knob button and it will toggle the items list into multiple states.</p>
+      <p>
+        Hit the knob button and it will toggle the items list into multiple
+        states.
+      </p>
       <ItemLoader {...loaderProps} />
     </>
   );
@@ -537,9 +558,24 @@ const generalGroupId = 'general info';
 
 groupedControls.story = {
   controls: {
-    name: { type: ControlTypes.TEXT, label: 'Name', value: 'James', groupId: personalGroupId },
-    age: { type: ControlTypes.NUMBER, label: 'Age', value: 35, groupId: personalGroupId },
-    message: { type: ControlTypes.TEXT, label: 'Mesage', value: 'Hello!', groupId: generalGroupId },
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'James',
+      groupId: personalGroupId,
+    },
+    age: {
+      type: ControlTypes.NUMBER,
+      label: 'Age',
+      value: 35,
+      groupId: personalGroupId,
+    },
+    message: {
+      type: ControlTypes.TEXT,
+      label: 'Mesage',
+      value: 'Hello!',
+      groupId: generalGroupId,
+    },
   },
 };
 
