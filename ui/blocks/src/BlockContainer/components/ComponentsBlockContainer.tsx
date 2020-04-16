@@ -48,7 +48,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
       {(component, props, otherProps) => children(component, props, otherProps)}
     </ComponentsContainer>
   );
-  return (
+  return block ? (
     <BlockContainer
       title={title}
       collapsible={collapsible}
@@ -57,5 +57,5 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     >
       {block}
     </BlockContainer>
-  );
+  ) : null;
 };

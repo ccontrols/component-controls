@@ -39,7 +39,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     title: userTitle,
   });
   const block = children(context, rest);
-  return (
+  return block ? (
     <BlockContainer
       title={title}
       collapsible={collapsible}
@@ -48,5 +48,5 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     >
       {block}
     </BlockContainer>
-  );
+  ) : null;
 };

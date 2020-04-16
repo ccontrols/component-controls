@@ -39,8 +39,12 @@ export const PropsTable: FC<PropsTableProps> = ({
         if (!info) {
           return null;
         }
+        const keys = Object.keys(info.props);
+        if (!keys.length) {
+          return null;
+        }
         const parents = new Set();
-        const rows = Object.keys(info.props).map(key => {
+        const rows = keys.map(key => {
           const prop = info.props[key];
           const parentName = prop.parentName ?? '-';
           parents.add(parentName);
