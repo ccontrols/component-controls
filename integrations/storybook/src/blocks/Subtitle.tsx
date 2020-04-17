@@ -3,12 +3,12 @@ import {
   Subtitle as BaseSubtitle,
   SubtitleProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const Subtitle: FC<SubtitleProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BaseSubtitle {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

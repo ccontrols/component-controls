@@ -3,12 +3,12 @@ import {
   PropsTable as BasePropsTable,
   PropsTableProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const PropsTable: FC<PropsTableProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BasePropsTable {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

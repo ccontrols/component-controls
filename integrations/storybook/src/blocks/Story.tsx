@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { Story as BlockStory, StoryProps } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export { StoryProps };
 
 export const Story: FC<StoryProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BlockStory {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

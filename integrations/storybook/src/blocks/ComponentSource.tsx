@@ -3,12 +3,12 @@ import {
   ComponentSource as BaseComponentSource,
   ComponentSourceProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const ComponentSource: FC<ComponentSourceProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BaseComponentSource {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

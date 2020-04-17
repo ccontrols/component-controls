@@ -3,12 +3,12 @@ import {
   StorySource as BaseStorySource,
   StorySourceProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const StorySource: FC<StorySourceProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BaseStorySource {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

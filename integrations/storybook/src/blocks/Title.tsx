@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { Title as BaseTitle, TitleProps } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const Title: FC<TitleProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BaseTitle {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

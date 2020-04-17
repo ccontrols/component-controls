@@ -5,7 +5,7 @@ import {
   useStoryContext,
 } from '@component-controls/blocks';
 
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const ControlsTable: FC<ControlsTableProps> = ({
   id: propId,
@@ -23,8 +23,8 @@ export const ControlsTable: FC<ControlsTableProps> = ({
   }
 
   return id ? (
-    <ThemeProvider>
+    <ControlsProvider>
       <BlockControlsTable id={id} {...rest} />
-    </ThemeProvider>
+    </ControlsProvider>
   ) : null;
 };

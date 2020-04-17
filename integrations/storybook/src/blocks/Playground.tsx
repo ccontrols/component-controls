@@ -3,14 +3,14 @@ import {
   Playground as BlockPlayground,
   PlaygroundProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export { PlaygroundProps };
 
 export const Playground: FC<PlaygroundProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BlockPlayground {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

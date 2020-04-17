@@ -3,12 +3,12 @@ import {
   Description as BaseDescription,
   DescriptionProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export const Description: FC<DescriptionProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BaseDescription {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };

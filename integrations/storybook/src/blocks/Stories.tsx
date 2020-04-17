@@ -3,14 +3,14 @@ import {
   Stories as BlockStories,
   StoriesProps,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '../context/ThemeProvider';
+import { ControlsProvider } from '../context/ControlsProvider';
 
 export { StoriesProps };
 
 export const Stories: FC<StoriesProps> = props => {
   return (
-    <ThemeProvider>
+    <ControlsProvider>
       <BlockStories {...props} />
-    </ThemeProvider>
+    </ControlsProvider>
   );
 };
