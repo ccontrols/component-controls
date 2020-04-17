@@ -1,5 +1,6 @@
 # Table of contents
 
+-   [In action](#in-action)
 -   [Overview](#overview)
 -   [Getting Started](#getting-started)
     -   [Install](#install)
@@ -12,7 +13,7 @@
     -   [**getContext**](#getcontext)
     -   [**useStoryId**](#usestoryid)
 
-# In action    
+# In action
 
 You can create entirely new documentation pages with your own blocks of information, or you can use storybook docs blocks, component-controls blocks and even mix it all.
 
