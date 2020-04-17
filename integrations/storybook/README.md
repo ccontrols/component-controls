@@ -34,20 +34,19 @@
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
-    -   [<ins>DocsPage</ins>](#insdocspageins)
+    -   [<ins>ControlsPage</ins>](#inscontrolspageins)
     -   [<ins>PageContextContainer</ins>](#inspagecontextcontainerins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
 
 # Overview
 
-The Storybook](https://storybook.js.org) integration of component-controls is the first publicly available integration. 
+The Storybook](<https://storybook.js.org>) integration of component-controls is the first publicly available integration. 
 
-- Storybook is the most used system for developing components with a focus on design systems
-- The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. The CSF format is one of the founding blocks upon which componnet-controls expands.
-- The Storybook MDX format is a bit of a letdown - it uses a proprietary format that we aim to replace with the portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) format to add metadata.
-- The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. However the architecture suffers from a few issues listed below.
-- We wanted to allow component-controls to function both as a full replacement to the addon docs, and also alongside the addon docs. 
-
+-   Storybook is the most used system for developing components with a focus on design systems
+-   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. The CSF format is one of the founding blocks upon which componnet-controls expands.
+-   The Storybook MDX format is a bit of a letdown - it uses a proprietary format that we aim to replace with the portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) format to add metadata.
+-   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. However the architecture suffers from a few issues listed below.
+-   We wanted to allow component-controls to function both as a full replacement to the addon docs, and also alongside the addon docs. 
 
 # Storybook
 
@@ -149,8 +148,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 By default, Addon Controls enables the smart-controls option for your storybook  site, but there are 2 basic requirements for a story to use smart controls: 
-1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
-2\. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
+1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
+2. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -524,13 +523,13 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                      |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                             |
 
-## <ins>DocsPage</ins>
+## <ins>ControlsPage</ins>
 
-_DocsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/page/DocsPage.tsx)_
+_ControlsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/ControlsPage.tsx)_
 
 ## <ins>PageContextContainer</ins>
 
-_PageContextContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/page/PageContainer.tsx)_
+_PageContextContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/PageContainer.tsx)_
 
 ### properties
 
@@ -544,7 +543,7 @@ _PageContextContainer [source code](https:/github.com/ccontrols/component-contro
 
 ## <ins>PageContainer</ins>
 
-_PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/page/PageContainer.tsx)_
+_PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/PageContainer.tsx)_
 
 ### properties
 

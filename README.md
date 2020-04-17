@@ -7,6 +7,7 @@
     -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
+    -   [@component-controls/store](#component-controlsstore)
 -   [UI packages](#ui-packages)
     -   [@component-controls/components](#component-controlscomponents)
     -   [@component-controls/editors](#component-controlseditors)
@@ -14,12 +15,14 @@
 -   [Props info](#props-info)
     -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
     -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
+-   [Miscellaneous](#miscellaneous)
+    -   [@component-controls/storybook-custom-docs](#component-controlsstorybook-custom-docs)
 
 # Motivation
 
 This library is initially created by the technical co-founder of [AutomatedQA](http://automatedqa.com) (remnamed to SmartBear), creator of [AQtime](https://smartbear.com/product/aqtime-pro/overview/), [TestComplete](https://smartbear.com/product/testcomplete/overview/), with 20+ years experience creating software development lifecyle products. So it is to be expected the library will have a heavy testing/QA bias.
 
--   Create a components development environment, with testing as a first-class feature.
+-   Create a components development environment with testing as a first-class feature.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files at instrumentation time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
 -   Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
@@ -106,6 +109,16 @@ Parsing a source file will generate the following information:
 Webpack loader for component controls instrumentation
 
 Webpack loader that injects the data collected by [@component-controls/instrument](https://github.com/ccontrols/component-controls/tree/master/core/instrument).
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/store/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/store](https://github.com/ccontrols/component-controls/blob/master/core/store)
+
+Component controls shared storage store
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -206,5 +219,24 @@ Component controls react-docgen-typescript props info loader
 Extract props info from react typescript components:
 
 -   Uses [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
+
+<!-- END-PACKAGE-SECTION -->
+
+# Miscellaneous
+
+<package-section file="./misc/storybook-custom-docs/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/storybook-custom-docs](https://github.com/ccontrols/component-controls/blob/master/misc/storybook-custom-docs)
+
+Storybook custom docs pages
+
+`@component-controls/storybook-custom-docs` gives the possibility to add custom `docs` pages to storybook by solving the following challenges:
+
+The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great start to display documentation in Storybook, but the early versions (5.x and 6.x) have a few shortcomings that this addon tries to address.
+
+-   Circumvent the hard-coded [docs render](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/client/preview/StoryRenderer.tsx#L168): docs pages need to reside in the `preview` part of Storybok (in order to render stories since that's where the stories are), while the `TAB` addons resides in the `manager` part of storybook. 
+-   Circumvent the hard-coded [DOM tags](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/server/templates/index.ejs#L31): docs pages need to reside inside the preview `iframe` (in order to render stories in any custom `docs` pages), while `TAB` addons are rendered outside the `iframe`. 
 
 <!-- END-PACKAGE-SECTION -->

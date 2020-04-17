@@ -18,6 +18,7 @@
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
+    -   [<ins>MDXContent</ins>](#insmdxcontentins)
     -   [<ins>getStoryBlockTitle</ins>](#insgetstoryblocktitleins)
 
 # Overview
@@ -131,19 +132,20 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 ## <ins>PageContainer</ins>
 
-Page container.
-if an MDX page, will display the MDX components
-otherwise, the page elemenst are passed as children
+If the page is an MDX page, will display the MDX components.
+Otherwise, the page elements are passed as children
 
 _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PageContainer/PageContainer.tsx)_
 
 ### properties
 
-| Name         | Type      | Description                                   |
-| ------------ | --------- | --------------------------------------------- |
-| `storyId`    | _string_  | story to display in the page                  |
-| `dark`       | _boolean_ | dark/light theme for the page                 |
-| `components` | _any_     | components to customize the markdown display. |
+| Name         | Type                    | Description                                   |
+| ------------ | ----------------------- | --------------------------------------------- |
+| `storyId`    | _string_                | story to display in the page                  |
+| `dark`       | _boolean_               | dark/light theme for the page                 |
+| `components` | _MDXProviderComponents_ | components to customize the markdown display. |
+| `theme`      | _Theme_                 | optional custom theme                         |
+| `mockStore`  | _StoryStore_            | mock store for tests                          |
 
 ## <ins>Playground</ins>
 
@@ -254,16 +256,25 @@ error message when the control type is not found.
 
 _InvalidType [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/notifications/InvalidType.tsx)_
 
+## <ins>MDXContent</ins>
+
+_MDXContent [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/test/MDXStory.tsx)_
+
+### properties
+
+| Name          | Type  | Description |
+| ------------- | ----- | ----------- |
+| `components*` | _any_ |             |
+
 ## <ins>getStoryBlockTitle</ins>
 
 _getStoryBlockTitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/utils/constants.ts)_
 
 ### properties
 
-| Name        | Type             | Description |
-| ----------- | ---------------- | ----------- |
-| `kind`      | _StoriesKind_    |             |
-| `component` | _StoryComponent_ |             |
-| `title`     | _string_         |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `story` | _Story_  |             |
+| `title` | _string_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

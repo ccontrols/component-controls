@@ -1,5 +1,37 @@
 # Table of contents
 
+-   [Overview](#overview)
+-   [Installation](#installation)
+-   [API](#api)
+    -   [Functions](#functions)
+        -   [parseStories](#parsestories)
+    -   [Default options](#default-options)
+        -   [**defaultParserOptions**: _ParserOptions_](#defaultparseroptions-parseroptions)
+        -   [**defaultResolveOptions**: _ResolverOptions_](#defaultresolveoptions-resolveroptions)
+        -   [**defaultComponentOptions**: _ComponentOptions_](#defaultcomponentoptions-componentoptions)
+        -   [**defaultStoriesOptions**: _StoriesOptions_](#defaultstoriesoptions-storiesoptions)
+-   [Interfaces](#interfaces)
+    -   [InstrumentOptions](#instrumentoptions)
+        -   [Properties](#properties)
+    -   [InstrumentOptionsMDX](#instrumentoptionsmdx)
+        -   [Properties](#properties-1)
+    -   [ComponentOptions](#componentoptions)
+        -   [Properties](#properties-2)
+    -   [StoriesOptions](#storiesoptions)
+        -   [Properties](#properties-3)
+-   [ParserOptions](#parseroptions)
+    -   -   [Properties](#properties-4)
+-   [PrettierOptions](#prettieroptions)
+    -   -   [Properties](#properties-5)
+-   [ResolvePrettierConfigOptions](#resolveprettierconfigoptions)
+    -   -   [Properties](#properties-6)
+-   [ResolverOptions](#resolveroptions)
+-   [MDXOptions](#mdxoptions)
+    -   [PackageInfoOptions](#packageinfooptions)
+        -   [Properties](#properties-7)
+    -   [PropsInfoExtractor](#propsinfoextractor)
+        -   [Arguments](#arguments)
+
 # Overview
 
 Parsing a source file will generate the following information:

@@ -1,15 +1,25 @@
 # Table of contents
 
+-   [Overview](#overview)
+-   [Getting Started](#getting-started)
+    -   [Install](#install)
+    -   [Configure](#configure)
+    -   [Pages format](#pages-format)
+    -   [Examples](#examples)
+        -   [Simple page](#simple-page)
+        -   [Render story](#render-story)
+-   [API](#api)
+    -   [**getContext**](#getcontext)
+    -   [**useStoryId**](#usestoryid)
 
 # Overview
 
-The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great feature in Storybook, but unfortunately it is not extensibe with core parts being hard-coded.
-
 `@component-controls/storybook-custom-docs` gives the possibility to add custom `docs` pages to storybook by solving the following challenges:
 
-- Custom docs pages need to reside in the `preview` part of Storybok (in order to render stories since that's where the stories are), while the TABS addons resides in the `manager` part of storybook
-- Custom docs pages need to reside inside the preview `iframe` (also in order to render stories in the custom `docs` pages), while addons are rendered outside the  `iframe`.
+The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great start to display documentation in Storybook, but the early versions (5.x and 6.x) have a few shortcomings that this addon tries to address.
 
+-   Circumvent the hard-coded [docs render](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/client/preview/StoryRenderer.tsx#L168): docs pages need to reside in the `preview` part of Storybok (in order to render stories since that's where the stories are), while the `TAB` addons resides in the `manager` part of storybook. 
+-   Circumvent the hard-coded [DOM tags](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/server/templates/index.ejs#L31): docs pages need to reside inside the preview `iframe` (in order to render stories in any custom `docs` pages), while `TAB` addons are rendered outside the `iframe`. 
 
 # Getting Started
 
@@ -20,6 +30,7 @@ yarn add @component-controls/storybook-custom-docs --dev
 ```
 
 ## Configure
+
 within `.storybook/main.js`:
 
 ```js
@@ -42,7 +53,8 @@ module.exports = {
 ## Pages format
 
 The page definition files need to have a default export with the following fields
-```js 
+
+```js
 import React from 'react';
 export default {
   // key used for navigation
@@ -59,7 +71,7 @@ export default {
 
 ## Examples
 
-### Very simple page: 
+### Simple page
 
 ```js
 import React from 'react';
@@ -71,7 +83,7 @@ export default {
 }
 ```
 
-### Custom page rendering current story
+### Render story
 
 ```js
 import React from 'react';
@@ -95,6 +107,12 @@ export default {
 
 # API
 
+example usage
+
+```js
+import { getContext, useStoryId } from '@component-controls/storybook-custom-docs';
+```
+
 ## **getContext**
 
 Returns a context similar (but not identical) that can be used as an input attribute to `<DocsContainer />`
@@ -102,4 +120,3 @@ Returns a context similar (but not identical) that can be used as an input attri
 ## **useStoryId**
 
 A hook that tracks the changes to the current story and returns it's id
-
