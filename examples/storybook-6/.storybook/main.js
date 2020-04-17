@@ -19,17 +19,7 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-docs',
-    {
-      name: '@component-controls/storybook',
-      options: {
-        legacy: true,
-        addonPanel: true,
-        pages: [
-          require.resolve('./custom-page'),
-          require.resolve('./custom-page-docs')
-        ],
-      },
-    },
+    '@component-controls/storybook',
   ],
   webpackFinal: async (config, { configType }) => {
     return {

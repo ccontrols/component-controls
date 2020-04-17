@@ -2,15 +2,7 @@ const path = require('path');
 
 module.exports = {
   
-  addons: [
-    {
-      name: '@component-controls/storybook',
-      options: {
-        legacy: true,
-        addonPanel: true,
-      },
-    },  
-  ],
+  addons: ['@component-controls/storybook'],
   stories: [
     '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|tsx|mdx)',

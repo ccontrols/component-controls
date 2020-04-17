@@ -10,11 +10,11 @@ export const getStoryTitle = (
   kind: StoriesKind | undefined,
   component: StoryComponent | undefined,
 ): string | undefined => {
-  if (component && component.info && component.info.displayName) {
-    return component.info.displayName;
-  } else if (kind) {
+  if (kind) {
     const titleParts = kind.title.split('/').filter(k => k);
     return titleParts[titleParts.length - 1];
+  } else if (component && component.info && component.info.displayName) {
+    return component.info.displayName;
   }
   return undefined;
 };

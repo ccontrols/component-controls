@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { PageContainer } from './PageContainer';
+import { DocsContainer } from './DocsContainer';
 import { ControlsPage } from './ControlsPage';
 
 export default {
@@ -8,9 +8,9 @@ export default {
   title: 'Page',
   render: ({ active, storyId }: { active: boolean; storyId: string }) => {
     return (
-      <PageContainer active={active} storyId={storyId}>
+      <DocsContainer active={active} storyId={storyId}>
         <ControlsPage />
-      </PageContainer>
+      </DocsContainer>
     );
   },
 };

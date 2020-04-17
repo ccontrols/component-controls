@@ -8,16 +8,21 @@ module.exports = {
     return result;
   },
   addons: (entry: any = {}) => {
-    const { pages = [] } = entry;
-    debugger;
-    return [
-      {
-        name: '@component-controls/storybook-custom-docs',
-        options: {
-          pages: [require.resolve('./full-page'), ...pages],
+    const { pages: customPages = [], docsPage = true } = entry;
+    const pages = docsPage
+      ? [require.resolve('./full-page'), ...customPages]
+      : customPages;
+    if (pages.length) {
+      return [
+        {
+          name: '@component-controls/storybook-custom-docs',
+          options: {
+            pages,
+          },
         },
-      },
-    ];
+      ];
+    }
+    return [];
   },
   managerEntries: (entry: any[] = [], options: any = {}) => {
     const result = [...entry];

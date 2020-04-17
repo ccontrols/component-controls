@@ -12,6 +12,14 @@
     -   [**getContext**](#getcontext)
     -   [**useStoryId**](#usestoryid)
 
+# In action    
+
+You can create entirely new documentation pages with your own blocks of information, or you can use storybook docs blocks, component-controls blocks and even mix it all.
+
+<p align="center">
+  <img src="./images/custom-docs-pages.gif" alt="introduction to using controls" width="738">
+</p>
+
 # Overview
 
 `@component-controls/storybook-custom-docs` gives the possibility to add custom `docs` pages to storybook by solving the following challenges:
