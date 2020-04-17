@@ -15,9 +15,9 @@
     "url": "https://github.com/ccontrols/component-controls.git"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "docs": "lerna run docs && ts-node -O '{\"module\": \"commonjs\"}' ./scripts/docs.ts",
-    "bootstrap": "lerna bootstrap",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",
     "lint": "lerna run --parallel lint",
@@ -33,7 +33,7 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "watch": "lerna run --parallel dev"
+    "dev": "lerna run --parallel dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
@@ -90,6 +90,7 @@
     "packages": [
       "core/*",
       "integrations/*",
+      "misc/*",
       "props-info/*",
       "ui/*",
       "examples/*"

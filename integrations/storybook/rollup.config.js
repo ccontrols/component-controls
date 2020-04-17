@@ -5,7 +5,7 @@ export default config({
     './src/index.ts',
     './src/preset.ts',
     './src/config.tsx',
-    './src/register.tsx',
     './src/register-panel.tsx',
+    './src//docs-page/full-page.tsx',
   ],
 });

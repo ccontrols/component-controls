@@ -8,13 +8,7 @@ module.exports = {
         fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
       },
     },  
-    {
-      name: path.resolve(path.dirname(require.resolve('@component-controls/storybook')), 'preset.js'),
-      options: {
-        legacy: true,
-        addonPanel: true,
-      },
-    },  
+    
   ],
   stories: [
     '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
@@ -25,6 +19,17 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-docs',
+    {
+      name: '@component-controls/storybook',
+      options: {
+        legacy: true,
+        addonPanel: true,
+        pages: [
+          require.resolve('./custom-page'),
+          require.resolve('./custom-page-docs')
+        ],
+      },
+    },
   ],
   webpackFinal: async (config, { configType }) => {
     return {
@@ -62,7 +67,6 @@ module.exports = {
             stories: {
               storeSourceFile: true, //false
             },
-
           },
         },
       ],

@@ -11,7 +11,7 @@ import {
   PropsTable,
 } from '@component-controls/blocks';
 
-export const DocsPage: FC = () => {
+export const ControlsPage: FC = () => {
   return (
     <>
       <Title />

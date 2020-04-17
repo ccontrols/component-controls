@@ -12,6 +12,7 @@
     "@component-controls/react-docgen-info": "^0.6.0",
     "@component-controls/react-docgen-typescript-info": "^0.6.0",
     "@component-controls/storybook": "^0.6.0",
+    "@component-controls/storybook-custom-docs": "^0.6.0",
     "@storybook/addon-docs": "next",
     "@storybook/addon-storysource": "next",
     "@storybook/react": "next",

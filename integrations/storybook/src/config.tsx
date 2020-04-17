@@ -7,7 +7,6 @@ import { FORCE_RE_RENDER } from '@storybook/core-events';
 import { store } from '@component-controls/store';
 import { getControlValues } from '@component-controls/core';
 import { ThemeProvider } from './context/ThemeProvider';
-import './context/RenderDocsPages';
 
 store.addObserver(() => {
   addons.getChannel().emit(FORCE_RE_RENDER);

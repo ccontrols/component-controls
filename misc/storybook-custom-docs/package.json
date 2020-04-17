@@ -1,7 +1,7 @@
 {
-  "name": "@component-controls/storybook",
+  "name": "@component-controls/storybook-custom-docs",
   "version": "0.6.0",
-  "description": "Storybook Addon For live editing of component controls",
+  "description": "Storybook custom docs pages",
   "keywords": [
     "addon",
     "storybook"
@@ -30,39 +30,30 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "integrations/storybook"
+    "directory": "third-party/storybook-custom-docs"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^0.6.0",
-    "@component-controls/core": "^0.6.0",
-    "@component-controls/loader": "^0.6.0",
-    "@component-controls/specification": "^0.6.0",
-    "@component-controls/store": "^0.6.0",
-    "@component-controls/storybook-custom-docs": "^0.6.0",
     "broadcast-channel": "^3.1.0",
     "core-js": "^3.0.1",
-    "global": "^4.3.2",
-    "polished": "^3.4.4",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "next",
     "@storybook/addons": "next",
     "@storybook/api": "next",
     "@storybook/client-api": "next",
-    "@types/node": "^13.7.0",
-    "babel-loader": "^8.0.6",
-    "babel-preset-react-app": "^9.0.0"
+    "@storybook/core-events": "next"
+    
   },
   "peerDependencies": {
-    "@storybook/addon-docs": "*",
     "@storybook/addons": "*",
     "@storybook/api": "*",
     "@storybook/client-api": "*",
-    "polished": "*",
-    "react": "*"
+    "@storybook/core-events":"*",
+    "react": "*",
+    "react-dom": "*"
   },
   "publishConfig": {
     "access": "public"

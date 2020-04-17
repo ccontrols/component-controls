@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  presets:[
+  
+  addons: [
     {
-      name: path.resolve(path.dirname(require.resolve('@component-controls/storybook')), 'preset.js'),
+      name: '@component-controls/storybook',
       options: {
         legacy: true,
         addonPanel: true,
