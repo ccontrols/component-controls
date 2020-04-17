@@ -25,12 +25,20 @@ interface MessageType {
   storyId: string;
   moduleId: number;
 }
+
+/**
+ * Store class used to query the stories and exchange information between processes
+ */
 export class Store implements StoryStore {
   loadedStore: StoriesStore | undefined;
   updateLocalStorage: boolean = true;
   channel: BroadcastChannel;
   observers: StoreObserver[];
   moduleId: number;
+
+  /**
+   * create a store with options
+   */
   constructor(options?: {
     store?: StoriesStore;
     updateLocalStorage?: boolean;
@@ -116,7 +124,9 @@ export class Store implements StoryStore {
     return this.loadedStore;
   };
 }
-
+/**
+ * global store variable.
+ */
 export const store = new Store();
 
 const stores = loadStoryStore();

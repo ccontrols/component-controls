@@ -21,7 +21,7 @@ export const PageContextContainer: FC<PageContainerProps> = ({
 
 export const DocsContainer: FC<PageContainerProps & { active: boolean }> = ({
   children,
-  active,
+  active = true,
   storyId,
 }) =>
   active ? (

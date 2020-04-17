@@ -15,9 +15,9 @@ const Page = ({ storyId: id }) => {
         </Preview>  
         <Props of='.' />
       </SBDocsContainer>  
-      <DocsContainer active={true} storyId={storyId}>
+      <DocsContainer storyId={storyId}>
         <Title />
-        <Playground openTab="source" title=".">
+        <Playground openTab="source" title="." dark={true}>
           <Story id="." />
         </Playground>
         <PropsTable of="." />
