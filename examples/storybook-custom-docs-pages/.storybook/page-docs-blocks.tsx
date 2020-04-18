@@ -1,6 +1,7 @@
 import React from 'react';
 import { DocsContainer, Primary, Title } from '@storybook/addon-docs/blocks';
 import { getContext } from '@component-controls/storybook-custom-docs';
+import { CustomPageDef } from '@component-controls/storybook-custom-docs';
 
 const Page = () => {
   return (
@@ -10,10 +11,12 @@ const Page = () => {
     </DocsContainer>
   )
 }
-export default {
+const page: CustomPageDef = {
   key: 'docs-page',
   title: 'Docs blocks',
   render: ({ active, storyId }) => {
-    return active ? <Page storyId={storyId} /> : null;  
+    return active ? <Page /> : null;  
   } 
 }
+
+export default page;

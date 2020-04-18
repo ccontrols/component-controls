@@ -1,6 +1,8 @@
 import React from 'react';
 import { DocsContainer } from '@component-controls/storybook';
 import { Story, Title, ControlsTable, Playground  } from '@component-controls/blocks';
+import { CustomPageDef } from '@component-controls/storybook-custom-docs';
+
 
 const Page = ({ active, storyId }) => {
   return (
@@ -13,10 +15,12 @@ const Page = ({ active, storyId }) => {
     </DocsContainer>
   )
 }
-export default {
+const page: CustomPageDef = {
   key: 'component-page',
   title: 'Controls blocks',
   render: ({ active, storyId }) => {
     return <Page storyId={storyId} active={active} />;  
   } 
 }
+
+export default page;

@@ -39,22 +39,22 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 
 ### properties
 
-| Name                  | Type                                                                                                                                  | Description                               |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| `constructor*`        | **function** constructor                                                                                                              | constructor - create a store with options |
-| `channel*`            | [BroadcastChannel](#broadcastchannel)                                                                                                 |                                           |
-| `loadedStore*`        | [StoriesStore](#storiesstore) \| undefined                                                                                            |                                           |
-| `moduleId*`           | number                                                                                                                                |                                           |
-| `observers*`          | [StoreObserver](#storeobserver)\[]                                                                                                    |                                           |
-| `updateLocalStorage*` | boolean                                                                                                                               |                                           |
-| `addObserver*`        | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                      |                                           |
-| `getStore*`           | **function** getStore(): [StoriesStore](#storiesstore);                                                                               |                                           |
-| `getStory*`           | **function** getStory(`storyId`\*: string): [Story](#story);                                                                          |                                           |
-| `notifyObservers*`    | **function** notifyObservers(`storyId`: string): void;                                                                                |                                           |
-| `readData*`           | **function** readData(`storyId`: string): void;                                                                                       |                                           |
-| `removeObserver*`     | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string): void;\[];               |                                           |
-| `setStore*`           | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                  |                                           |
-| `updateStoryProp*`    | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newVal`\*: any): [StoriesStore](#storiesstore) \| undefined; |                                           |
+| Name                  | Type                                                                                                                                  | Description                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `constructor*`        | **function** constructor                                                                                                              | create a store with options |
+| `channel*`            | [BroadcastChannel](#broadcastchannel)                                                                                                 |                             |
+| `loadedStore*`        | [StoriesStore](#storiesstore) \| undefined                                                                                            |                             |
+| `moduleId*`           | number                                                                                                                                |                             |
+| `observers*`          | [StoreObserver](#storeobserver)\[]                                                                                                    |                             |
+| `updateLocalStorage*` | boolean                                                                                                                               |                             |
+| `addObserver*`        | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                      |                             |
+| `getStore*`           | **function** getStore(): [StoriesStore](#storiesstore);                                                                               |                             |
+| `getStory*`           | **function** getStory(`storyId`\*: string): [Story](#story);                                                                          |                             |
+| `notifyObservers*`    | **function** notifyObservers(`storyId`: string): void;                                                                                |                             |
+| `readData*`           | **function** readData(`storyId`: string): void;                                                                                       |                             |
+| `removeObserver*`     | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string): void;\[];               |                             |
+| `setStore*`           | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                  |                             |
+| `updateStoryProp*`    | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newVal`\*: any): [StoriesStore](#storiesstore) \| undefined; |                             |
 
 ## MessageType
 
@@ -114,13 +114,13 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 
 global store variable.
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L132)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L130)_
 
 
 
 ## stores
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L134)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L132)_
 
 
 

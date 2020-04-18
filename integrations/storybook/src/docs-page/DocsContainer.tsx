@@ -19,7 +19,7 @@ export const PageContextContainer: FC<PageContainerProps> = ({
   );
 };
 
-export const DocsContainer: FC<PageContainerProps & { active: boolean }> = ({
+export const DocsContainer: FC<PageContainerProps & { active?: boolean }> = ({
   children,
   active = true,
   storyId,

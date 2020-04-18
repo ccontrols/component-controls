@@ -43,6 +43,7 @@
     "@storybook/api": "next",
     "@storybook/client-api": "next",
     "@storybook/core-events": "next",
+    "@types/react": "^16.9.34",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {

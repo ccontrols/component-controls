@@ -10,25 +10,28 @@
         -   [Simple page](#simple-page)
         -   [Render story](#render-story)
 -   [API](#api)
-    -   [**getContext**](#getcontext)
-    -   [**useStoryId**](#usestoryid)
+    -   [CustomPageDef](#custompagedef)
+    -   [CustomPageRenderFn](#custompagerenderfn)
+    -   [CustomPageRenderFnParams](#custompagerenderfnparams)
+    -   [getContext](#getcontext)
+    -   [useStoryId](#usestoryid)
 
 # In action
 
 You can create entirely new documentation pages with your own blocks of information, or you can use storybook docs blocks, component-controls blocks and even mix it all.
 
 <p align="center">
-  <img src="./images/custom-docs-pages.gif" alt="introduction to using controls" width="738">
+  <img src="./images/custom-docs-pages.gif" alt="create custom storybooks documentation pages" width="738">
 </p>
 
 # Overview
 
-`@component-controls/storybook-custom-docs` gives the possibility to add custom `docs` pages to storybook by solving the following challenges:
+The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great start to display documentation in Storybook, but the early versions (currently 5.x and 6.x) have a few shortcomings.
 
-The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great start to display documentation in Storybook, but the early versions (5.x and 6.x) have a few shortcomings that this addon tries to address.
+`@component-controls/storybook-custom-docs` gives the possibility to add custom documentation (aka `docs`) pages to storybook by solving the following challenges:
 
--   Circumvent the hard-coded [docs render](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/client/preview/StoryRenderer.tsx#L168): docs pages need to reside in the `preview` part of Storybok (in order to render stories since that's where the stories are), while the `TAB` addons resides in the `manager` part of storybook. 
--   Circumvent the hard-coded [DOM tags](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/server/templates/index.ejs#L31): docs pages need to reside inside the preview `iframe` (in order to render stories in any custom `docs` pages), while `TAB` addons are rendered outside the `iframe`. 
+-   Circumvent the hard-coded [docs render](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/client/preview/StoryRenderer.tsx#L168): docs pages need to reside in the `preview` part of Storybok in order to render stories since that's where the stories are, while the `TAB` addons are placed in the `manager` part of storybook. 
+-   Circumvent the hard-coded [DOM tags](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/server/templates/index.ejs#L31): docs pages need to reside inside the preview `iframe` in order to render stories in a custom `docs` page and prevent css styles leaking into the story functions, while `TAB` addons are rendered outside the `iframe`. 
 
 # Getting Started
 
@@ -116,16 +119,49 @@ export default {
 
 # API
 
-example usage
+<tsdoc-typescript files="./src/types.ts" entry="./src/index.tsx"/>
 
-```js
-import { getContext, useStoryId } from '@component-controls/storybook-custom-docs';
-```
+<!-- START-TSDOC-TYPESCRIPT -->
 
-## **getContext**
+## CustomPageDef
 
-Returns a context similar (but not identical) that can be used as an input attribute to `<DocsContainer />`
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#Lundefined)_
 
-## **useStoryId**
 
-A hook that tracks the changes to the current story and returns it's id
+
+## CustomPageRenderFn
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#Lundefined)_
+
+
+
+## CustomPageRenderFnParams
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#Lundefined)_
+
+
+
+## getContext
+
+Returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L10)_
+
+**function** getContext(): any;
+
+## useStoryId
+
+React hook hook that tracks the changes to the current story and returns it's id
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
+
+**function** useStoryId(`defaultId`\*: string): string;
+
+### parameters
+
+| Name         | Type   | Description                                                                     |
+| ------------ | ------ | ------------------------------------------------------------------------------- |
+| `defaultId*` | string | initial story value, if not provided will return the current story              |
+| `returns`    | string | a story id as a React hook, when the the current story changes, will call back  |
+
+<!-- END-TSDOC-TYPESCRIPT -->

@@ -30,10 +30,10 @@ module.exports = {
       name: '@component-controls/storybook-custom-docs',
       options: {
         pages: [
-          require.resolve('./page-simple'),
-          require.resolve('./page-docs-blocks'),
-          require.resolve('./page-component-blocks'),
-          require.resolve('./page-mixed-blocks')
+          require.resolve('./page-simple.tsx'),
+          require.resolve('./page-docs-blocks.tsx'),
+          require.resolve('./page-component-blocks.tsx'),
+          require.resolve('./page-mixed-blocks.tsx')
         ]
       },
     }

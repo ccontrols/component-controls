@@ -148,8 +148,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 By default, Addon Controls enables the smart-controls option for your storybook  site, but there are 2 basic requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
-2. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
+2\. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -554,6 +554,6 @@ _DocsContainer [source code](https:/github.com/ccontrols/component-controls/tree
 | `components` | _MDXProviderComponents_ | components to customize the markdown display. |
 | `theme`      | _Theme_                 | optional custom theme                         |
 | `mockStore`  | _StoryStore_            | mock store for tests                          |
-| `active*`    | _boolean_               |                                               |
+| `active`     | _boolean_               |                                               |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
