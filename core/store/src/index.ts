@@ -1,48 +1,42 @@
-import { StoriesStore, Story } from '@component-controls/specification';
+import { StoriesStore } from '@component-controls/specification';
 
 import { BroadcastChannel } from 'broadcast-channel';
 export { BroadcastChannel };
 import { loadStoryStore } from './serialization/load-store';
+import {
+  StoreObserver,
+  StoryStore,
+  MessageType,
+  UPDATE_STORY_MSG,
+  COMPONENT_CONTROLS_STORAGE,
+} from './types';
 
-export type StoreObserver = (storyId?: string) => void;
+export { StoreObserver, StoryStore };
 
-export interface StoryStore {
-  getStore: () => StoriesStore | undefined;
-  getStory: (storyId: string) => Story | undefined;
-  updateStoryProp: (
-    storyId: string,
-    propName: string,
-    newVal: any,
-  ) => StoriesStore | undefined;
-  addObserver: (observer: StoreObserver) => void;
-  removeObserver: (observer: StoreObserver) => void;
+export interface StoreOptions {
+  /**
+   * optional store initializer
+   */
+  store?: StoriesStore;
+  /**
+   * set to false to prevent the Store from updating localStorage values
+   */
+  updateLocalStorage?: boolean;
 }
-
-const UPDATE_STORY_MSG = 'component_controls_update_story';
-const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
-
-interface MessageType {
-  storyId: string;
-  moduleId: number;
-}
-
 /**
  * Store class used to query the stories and exchange information between processes
  */
 export class Store implements StoryStore {
-  loadedStore: StoriesStore | undefined;
-  updateLocalStorage: boolean = true;
-  channel: BroadcastChannel;
-  observers: StoreObserver[];
-  moduleId: number;
+  private loadedStore: StoriesStore | undefined;
+  private updateLocalStorage: boolean = true;
+  private channel: BroadcastChannel;
+  private observers: StoreObserver[];
+  private moduleId: number;
 
   /**
    * create a store with options
    */
-  constructor(options?: {
-    store?: StoriesStore;
-    updateLocalStorage?: boolean;
-  }) {
+  constructor(options?: StoreOptions) {
     const { store, updateLocalStorage = true } = options || {};
     this.moduleId = Math.random();
     this.loadedStore = store;
@@ -58,22 +52,31 @@ export class Store implements StoryStore {
       }
     };
   }
+  /**
+   * add observer callback function
+   */
   addObserver = (observer: StoreObserver) => this.observers.push(observer);
 
+  /**
+   * remove installed observer callback function
+   */
   removeObserver = (observer: StoreObserver) =>
     (this.observers = this.observers.filter(o => o !== observer));
 
-  notifyObservers = (storyId?: string) => {
+  private notifyObservers = (storyId?: string) => {
     if (this.observers.length > 0) {
       this.observers.forEach(observer => observer(storyId));
     }
   };
 
+  /**
+   * internal set store, use for testing with mockup store.
+   */
   setStore = (store?: StoriesStore) => {
     this.loadedStore = store;
     this.notifyObservers();
   };
-  readData = (storyId?: string) => {
+  private readData = (storyId?: string) => {
     const data = localStorage.getItem(COMPONENT_CONTROLS_STORAGE);
     if (data) {
       try {
@@ -90,6 +93,9 @@ export class Store implements StoryStore {
       } catch (e) {}
     }
   };
+  /**
+   * returns an instance of the store
+   */
   getStore = () => {
     if (this.loadedStore) {
       return this.loadedStore;
@@ -97,10 +103,20 @@ export class Store implements StoryStore {
     this.readData();
     return this.loadedStore;
   };
+
+  /**
+   * given a story id return a story from the store
+   */
+
   getStory = (storyId: string) => {
     const store = this.getStore();
     return store ? store.stories[storyId] : undefined;
   };
+
+  /**
+   * modify story properties, for example controls values.
+   * will notify all installed store observers of the changed story.
+   */
   updateStoryProp = (
     storyId: string,
     propName: string,
@@ -125,10 +141,13 @@ export class Store implements StoryStore {
   };
 }
 /**
- * global store variable.
+ * store variable, automatically filled with stories.
  */
 export const store = new Store();
 
+/**
+ * @ignore
+ */
 const stores = loadStoryStore();
 if (stores) {
   store.setStore(stores);

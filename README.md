@@ -120,6 +120,8 @@ Webpack loader that injects the data collected by [@component-controls/instrumen
 
 Component controls shared storage store
 
+Utility class to abstract loading the stories store from the webpack loader and provides an interface to access the store. Will also share the store accross bundles using localStorage and broadcastig messages.
+
 <!-- END-PACKAGE-SECTION -->
 
 # UI packages
