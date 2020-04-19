@@ -17,8 +17,6 @@ export const propsInfo = async (
 ): Promise<ComponentInfo | undefined> => {
   const cacheFolder =
     findCacheDir({ name: 'component-controls-props-info' }) || os.tmpdir();
-
-  //create cache folder if it doesnt exist
   if (!fs.existsSync(cacheFolder)) {
     fs.mkdirSync(cacheFolder, { recursive: true });
   }

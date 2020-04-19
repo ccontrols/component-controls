@@ -4,8 +4,8 @@ import { run } from '../src/index';
 
 export type LoadTestCallbackFn = (fileName: string) => any;
 
-export const loadTestFiles = (...args: string[]) => {
-  const folderName = path.join(__dirname, 'fixtures', ...args);
+export const loadTestFiles = (folders: string[]) => {
+  const folderName = path.join(__dirname, 'fixtures', ...folders);
   const fileNames = fs.readdirSync(folderName);
   //.filter(name => name === 'string-template.js');
 

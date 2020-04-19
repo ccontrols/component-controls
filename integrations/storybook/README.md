@@ -1,6 +1,8 @@
 # Table of contents
 
 -   [Overview](#overview)
+    -   [Motivation](#motivation)
+    -   [Limitations](#limitations)
 -   [Storybook](#storybook)
 -   [Introduction](#introduction)
     -   [Introduction writing custom controls](#introduction-writing-custom-controls)
@@ -40,25 +42,27 @@
 
 # Overview
 
-The Storybook](<https://storybook.js.org>) integration of component-controls is the first publicly available integration. 
+The Storybook](<https://storybook.js.org>) integration of component-controls.
+
+## Motivation
 
 -   Storybook is the most used system for developing components with a focus on design systems
--   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. The CSF format is one of the founding blocks upon which componnet-controls expands.
--   The Storybook MDX format is a bit of a letdown - it uses a proprietary format that we aim to replace with the portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) format to add metadata.
--   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. However the architecture suffers from a few issues listed below.
--   We wanted to allow component-controls to function both as a full replacement to the addon docs, and also alongside the addon docs. 
+-   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. Component-controls builds on the CSF and vastly extends it, for more information take a look at the `@component-controls/specification` package.
+-   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. 
+-   We wanted to allow component-controls to function both as a full replacement to the addon docs, as well as alongside the addon docs.
+-   Componnet-controls uses it's own instrumenters and loaders for both CSF and MDX formats and usually provides more meta information to the componnets ()
+
+## Limitations
+
+-   Initial version handles only react apps. This will be improvedin further versions. 
+-   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currenlt no plans to support it.
+-   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that we will replace in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 # Storybook
 
 The Storybook integration of component-controls allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
 
-The definitions of the control properties can be found [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts): 
-
-Additional functionality out of the box with Addon Controls are the "smart controls" - using the story's component property table to automatically create editable controls for the stories.
-
-Another unique facet of Addon Controls is the one-click generation of random data, using under the hood [faker.js](https://github.com/marak/Faker.js/).
-
-The Storybook integration started as a successor of [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) and we have attempted to keep some level of compatibility where possible.
+The Storybook integration started as a successor of [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) and we have attempted to keep some level of compatibility where possible. 
 
 # Introduction
 
@@ -148,8 +152,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 By default, Addon Controls enables the smart-controls option for your storybook  site, but there are 2 basic requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
-2. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
+2\. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 

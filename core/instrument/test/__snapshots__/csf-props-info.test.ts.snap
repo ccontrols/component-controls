@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-props-info resolve-node-modules.jsx 1`] = `
+Object {
+  "components": Object {
+    "d71f3883f05f82c67d06210306b47220": Object {
+      "from": "@component-controls/blocks",
+      "importedName": "ControlsTable",
+      "info": Object {
+        "description": "Table component to display a story's controls and their editors.
+Can adapt to multiple groups of controls, displaying them in their own tabs.",
+        "displayName": "ControlsTable",
+        "methods": Array [],
+        "props": Object {
+          "collapsible": Object {
+            "description": "if false, will nothave a collapsible frame.",
+            "parentName": "BlockContainerProps",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "id": Object {
+            "description": "id of the story
+optional id to be used for the block
+if no id is provided, one will be calculated automatically
+from the title.",
+            "parentName": "StoryInputProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "name": Object {
+            "description": "alternatively you can use the name of a story to load from an external file",
+            "parentName": "StoryInputProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "sxStyle": Object {
+            "description": "theme-ui styling object for Block Box",
+            "parentName": "BlockContainerProps",
+            "type": Object {
+              "name": "SystemStyleObject",
+              "raw": "SystemStyleObject",
+            },
+          },
+          "title": Object {
+            "description": "optional section title for the block.",
+            "parentName": "BlockContainerProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+        },
+      },
+      "name": "ControlsTable",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/blocks/dist/index.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/blocks",
+      },
+      "request": "/Users/atanasster/component-controls/ui/blocks/src/ControlsTable/ControlsTable.tsx",
+    },
+  },
+  "kinds": Object {
+    "Storybook/Blocks/ControlsTable": Object {
+      "component": "ControlsTable",
+      "components": Object {
+        "ControlsTable": "d71f3883f05f82c67d06210306b47220",
+      },
+      "parameters": Object {
+        "component": "ControlsTable",
+      },
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-info/resolve-node-modules.jsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Storybook/Blocks/ControlsTable",
+    },
+  },
+  "stories": Object {},
+  "transformed": "import { ControlsTable } from '@component-controls/blocks';
+
+export default {
+  title: 'Storybook/Blocks/ControlsTable',
+  parameters: {
+    component: ControlsTable,
+  },
+};
+",
+}
+`;
