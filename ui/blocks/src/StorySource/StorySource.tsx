@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
-import React from 'react';
+import { FC, useState, useContext } from 'react';
 import { getControlValue } from '@component-controls/core';
 import { Styled } from 'theme-ui';
 import { transparentize } from 'polished';
@@ -22,10 +22,17 @@ import {
   findTagLocation,
 } from './arg-values';
 
-export type StorySourceProps = Omit<StoryBlockContainerProps, 'children'> &
-  Omit<SourceProps, 'children'>;
-
 type ViewStyle = 'tags' | 'values';
+
+export interface StorySourceOwnProps {
+  /**
+   * initial view mode
+   */
+  viewStype?: ViewStyle;
+}
+export type StorySourceProps = StorySourceOwnProps &
+  StoryBlockContainerProps &
+  SourceProps;
 
 const ViewStyleNext: {
   [key in ViewStyle]: ViewStyle;
@@ -38,11 +45,12 @@ const ViewStyleNext: {
  * If controls are used, all story arguments will be highlighted.
  * Additional commands are made available if the repository data of the story is available.
  */
-export const StorySource: React.FC<StorySourceProps> = (
-  props: StorySourceProps,
-) => {
-  const [viewStyle, setViewStyle] = React.useState<ViewStyle>('tags');
-  const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+export const StorySource: FC<StorySourceProps> = ({
+  viewStype = 'tags',
+  ...props
+}) => {
+  const [viewStyle, setViewStyle] = useState<ViewStyle>(viewStype);
+  const [showFileSource, setShowFileSource] = useState<boolean>(false);
 
   return (
     <StoryBlockContainer {...props}>
@@ -52,7 +60,7 @@ export const StorySource: React.FC<StorySourceProps> = (
 
         const { story, kind } = context;
         const { controls } = story || {};
-        const { dark } = React.useContext(ThemeContext);
+        const { dark } = useContext(ThemeContext);
         const allActions: ActionItem[] = [];
         const repositoryItems = kind && repositoryActions(kind?.repository);
         if (repositoryItems) {

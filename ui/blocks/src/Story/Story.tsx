@@ -7,7 +7,7 @@ import {
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
 
-export type StoryProps = Omit<StoryBlockContainerProps, 'children'>;
+export type StoryProps = StoryBlockContainerProps;
 
 interface RenderStoryProps {
   renderFn: (controlValues: { [key: string]: any }, context: any) => any;

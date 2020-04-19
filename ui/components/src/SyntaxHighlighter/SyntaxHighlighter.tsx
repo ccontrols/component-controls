@@ -17,7 +17,7 @@ export interface SyntaxHighlighterProps {
   /**
    * source code to be displayed.
    */
-  children: string;
+  children?: string;
   /**
    * optional `PrismTheme` theme provided to the component. Themes can be imported from `prism-react-renderer/themes`.
    */

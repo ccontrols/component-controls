@@ -12,7 +12,7 @@ import {
 import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
 
 export type StoryBlockContainerProps = {
-  children: (
+  children?: (
     context: StoryContextProps,
     props: any,
   ) => React.ReactElement | null;
@@ -38,7 +38,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
     story,
     title: userTitle,
   });
-  const block = children(context, rest);
+  const block = children && children(context, rest);
   return block ? (
     <BlockContainer
       title={title}

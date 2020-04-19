@@ -27,7 +27,7 @@ import {
 import { BlockControlsContext } from '../context';
 import { SingleControlsTable } from './SingleControlsTable';
 
-export type ControlsTableProps = Omit<StoryBlockContainerProps, 'children'>;
+export type ControlsTableProps = StoryBlockContainerProps;
 
 const DEFAULT_GROUP_ID = 'Other';
 

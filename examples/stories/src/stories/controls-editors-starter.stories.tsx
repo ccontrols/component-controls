@@ -1,22 +1,16 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { ControlsTable } from '@component-controls/storybook';
 
 export default {
-  title: 'Storybook/Blocks/ControlsTable',
-  parameters: {
-    component: ControlsTable,
-    addonControls: {
-      smart: false,
-    },
-  },
+  title: 'Storybook/Starter',
 };
 
 interface DocsControlsTable {
   name: string;
   age: number;
 }
-export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
+
+export const overview = ({ name, age }: DocsControlsTable) => {
   return (
     <>
       <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>
@@ -24,7 +18,7 @@ export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
   );
 };
 
-docsControlsTable.story = {
+overview.story = {
   controls: {
     name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
     age: {

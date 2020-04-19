@@ -37,8 +37,8 @@ export interface PlaygroundOwnProps {
   dark?: boolean;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
-  Omit<StoryBlockContainerProps, 'children'> &
-  Omit<ActionContainerProps, 'paddingTop'>;
+  StoryBlockContainerProps &
+  ActionContainerProps;
 
 export const Playground: FC<PlaygroundProps> = ({
   title,

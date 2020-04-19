@@ -9,8 +9,7 @@ import {
 } from '../SyntaxHighlighter';
 import { ActionContainer, ActionContainerProps } from '../ActionContainer';
 
-export type SourceProps = Omit<ActionContainerProps, 'paddingTop'> &
-  SyntaxHighlighterProps;
+export type SourceProps = ActionContainerProps & SyntaxHighlighterProps;
 /**
  * Syntax highliting source code component. Uses [prism](https://prismjs.com) for the actual source display.
  *
