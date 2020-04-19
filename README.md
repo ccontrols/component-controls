@@ -2,6 +2,11 @@
 
 -   [Motivation](#motivation)
 -   [Inspiration](#inspiration)
+-   [Roadmap](#roadmap)
+-   [Integrations](#integrations)
+    -   [@component-controls/storybook](#component-controlsstorybook)
+        -   [Motivation](#motivation-1)
+        -   [Limitations](#limitations)
 -   [Core packages](#core-packages)
     -   [@component-controls/specification](#component-controlsspecification)
     -   [@component-controls/core](#component-controlscore)
@@ -20,14 +25,14 @@
 
 # Motivation
 
-This library is initially created by the technical co-founder of [AutomatedQA](http://automatedqa.com) (remnamed to SmartBear), creator of [AQtime](https://smartbear.com/product/aqtime-pro/overview/), [TestComplete](https://smartbear.com/product/testcomplete/overview/), with 20+ years experience creating software development lifecyle products. So it is to be expected the library will have a heavy testing/QA bias.
+This library is created by the technical co-founder of [AutomatedQA](http://automatedqa.com)/[SmartBear](https://smartbear.com), creator of [AQtime](https://smartbear.com/product/aqtime-pro/overview/), [TestComplete](https://smartbear.com/product/testcomplete/overview/), with 20+ years experience creating software development lifecyle products. It is to be expected the library will have a heavy testing/QA bias.
 
 -   Create a components development environment with testing as a first-class feature.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files at instrumentation time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
 -   Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
--   Ability to integrate with various user-interface shells - [storybook](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org), standalone.
--   Create a community where being 'nice' is the norm and credit is given to all contributors.
+-   Ability to integrate with various user-interface shells - [storybook](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org).
+-   Create and support open declarative story formats.
 
 # Inspiration
 
@@ -42,6 +47,51 @@ There are many developments that have contribiuted to the creation of `component
 -   [blocks-ui](https://blocks-ui.com) is taking `AST` to a new level by generating and reverse-sing AST to create [react](https://reactjs.org) applications and has been an inspiraton for pushing the enveloppe on our own `AST` work.
 
 -   [theme-ui](https://theme-ui.com) is the driving force for standardizing `react` theming and design systems. `theme-ui` is used by our project as the theming and components founding block.
+
+# Roadmap
+
+-   [x] Core packages
+-   [x] Support CSF and MDX stories format
+-   [x] Instrumentation packages
+-   [x] UI Libraries
+-   [x] Storybook integration with addon-docs
+-   [x] Storybook integration without addon-docs (replace all storybook loaders)
+-   [ ] HMR
+-   [ ] Integrated testing facilites
+-   [ ] Coverage and perfoamnce profiling instrumentation
+-   [ ] Replace MDX with frontmatter format
+-   [ ] Docz integration
+-   [ ] Multiple frameworks support (Vue, Angular, tbd)
+-   [ ] Gatsby standalone app/static app builder
+-   [ ] Nextjs standalone app/static app builder
+
+# Integrations
+
+<package-section file="./integrations/storybook/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/storybook](https://github.com/ccontrols/component-controls/blob/master/integrations/storybook)
+
+Storybook Addon For live editing of component controls
+
+The Storybook](<https://storybook.js.org>) integration of component-controls.
+
+### Motivation
+
+-   Storybook is the most used system for developing components with a focus on design systems
+-   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. Component-controls builds on the CSF and vastly extends it, for more information take a look at the `@component-controls/specification` package.
+-   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. 
+-   We wanted to allow component-controls to function both as a full replacement to the addon docs, as well as alongside the addon docs.
+-   Componnet-controls uses it's own instrumenters and loaders for both CSF and MDX formats and usually provides more meta information to the componnets ()
+
+### Limitations
+
+-   Initial version handles only react apps. This will be improvedin further versions. 
+-   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currenlt no plans to support it.
+-   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that we will replace in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+
+<!-- END-PACKAGE-SECTION -->
 
 # Core packages
 

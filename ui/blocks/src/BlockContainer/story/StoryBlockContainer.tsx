@@ -12,15 +12,18 @@ import {
 import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
 
 export type StoryBlockContainerProps = {
-  children?: (
-    context: StoryContextProps,
-    props: any,
-  ) => React.ReactElement | null;
   [key: string]: any;
 } & StoryInputProps &
   Omit<BlockContainerProps, 'id'>;
 
-export const StoryBlockContainer: FC<StoryBlockContainerProps> = ({
+export type StoryBlockContainerAllProps = {
+  children?: (
+    context: StoryContextProps,
+    props: any,
+  ) => React.ReactElement | null;
+} & StoryBlockContainerProps;
+
+export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   id,
   name,
   collapsible,

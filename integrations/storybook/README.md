@@ -1,15 +1,15 @@
 # Table of contents
 
 -   [Overview](#overview)
-    -   [Motivation](#motivation)
-    -   [Limitations](#limitations)
+    -   -   [Motivation](#motivation)
+        -   [Limitations](#limitations)
 -   [Storybook](#storybook)
 -   [Introduction](#introduction)
-    -   [Introduction writing custom controls](#introduction-writing-custom-controls)
-    -   [Intro using smart-controls](#intro-using-smart-controls)
 -   [Getting Started](#getting-started)
-    -   [CSF](#csf)
-        -   [MDX](#mdx)
+    -   [Install](#install)
+    -   [Configure](#configure)
+-   [Creating stories](#creating-stories)
+    -   -   [MDX](#mdx)
 -   [Available Controls](#available-controls)
 -   [Smart Controls](#smart-controls)
     -   [Smart Controls Examples](#smart-controls-examples)
@@ -44,7 +44,7 @@
 
 The Storybook](<https://storybook.js.org>) integration of component-controls.
 
-## Motivation
+### Motivation
 
 -   Storybook is the most used system for developing components with a focus on design systems
 -   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. Component-controls builds on the CSF and vastly extends it, for more information take a look at the `@component-controls/specification` package.
@@ -52,11 +52,11 @@ The Storybook](<https://storybook.js.org>) integration of component-controls.
 -   We wanted to allow component-controls to function both as a full replacement to the addon docs, as well as alongside the addon docs.
 -   Componnet-controls uses it's own instrumenters and loaders for both CSF and MDX formats and usually provides more meta information to the componnets ()
 
-## Limitations
+### Limitations
 
--   Initial version handles only react apps. This will be improvedin further versions. 
--   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currenlt no plans to support it.
--   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that we will replace in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+-   Initial version is only for `react` apps. More frameworks are on the roadmap. 
+-   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
+-   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 # Storybook
 
@@ -66,25 +66,19 @@ The Storybook integration started as a successor of [addon-knobs](https://github
 
 # Introduction
 
-## Introduction writing custom controls
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/controls-react-starter.gif" alt="introduction to using controls" width="738">
-</p>
-
-## Intro using smart-controls
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
 </p>
 
 # Getting Started
 
-First of all, you need to install Addon Controls into your project as a dev dependency.
+## Install
 
 ```sh
 yarn add @component-controls/storybook --dev
 ```
+
+## Configure
 
 within `.storybook/main.js`:
 
@@ -94,9 +88,7 @@ module.exports = {
 }
 ```
 
-That's it, you can now use controls inside your stories
-
-## CSF
+# Creating stories
 
 ```js
 import React from "react";
@@ -122,12 +114,12 @@ controlsStory.story = {
 ### MDX
 
 ```md
-import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
-import { ControlsTable } from '@component-controls/storybook';
+import { Meta} from '@component-controls/storybook';
+import { Playground, Story, ControlsTable } from '@component-controls/blocks';
 
 <Meta title="Storybook controls" />
 
-<Preview>
+<Playground>
   <Story name="controlsStory" 
     controls={{
       disabled: { type: 'boolean', value: false },
@@ -140,20 +132,20 @@ import { ControlsTable } from '@component-controls/storybook';
       </button>
     )}  
   </Story>
-</Preview>
+</Playground>
 ```
 
 # Available Controls
 
-The list of available controls and their documented properties is available [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/types.ts)
+The list of available controls and their documented properties is available [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/controls.ts)
 
 # Smart Controls
 
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 By default, Addon Controls enables the smart-controls option for your storybook  site, but there are 2 basic requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
-2. The story needs to accept "some" parameters / internally detected by Addon Controls within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
+2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -522,24 +514,24 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name          | Type                                                                                                                                                                                                                                                                                                                                            | Description                                                                                                                                                                      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStype`   | _ViewStyle_                                                                                                                                                                                                                                                                                                                                     | initial view mode                                                                                                                                                                |
-| `children`    | _(((context: StoryContextProps, props: any) => any) & string) \| (((context: StoryContextProps, props: any) => any) & string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;...>) \| (new (props: any) => Component&lt;...>)>) \| (((context: StoryContextProps, props: any) => any) & ... 1 more ... & ReactNodeArray) ..._ | source code to be displayed.                                                                                                                                                     |
-| `id`          | _string_                                                                                                                                                                                                                                                                                                                                        | id of the story                                                                                                                                                                  |
-| `name`        | _string_                                                                                                                                                                                                                                                                                                                                        | alternatively you can use the name of a story to load from an external file                                                                                                      |
-| `title`       | _string_                                                                                                                                                                                                                                                                                                                                        | optional section title for the block.                                                                                                                                            |
-| `collapsible` | _boolean_                                                                                                                                                                                                                                                                                                                                       | if false, will nothave a collapsible frame.                                                                                                                                      |
-| `sxStyle`     | _SystemStyleObject_                                                                                                                                                                                                                                                                                                                             | theme-ui styling object for Block Box                                                                                                                                            |
-| `actions`     | _ActionItem\[]_                                                                                                                                                                                                                                                                                                                                 | optional actions provided to the component                                                                                                                                       |
-| `paddingTop`  | _string \| number_                                                                                                                                                                                                                                                                                                                              | padding at the top, to account for the absolute position of the ActionBar                                                                                                        |
-| `plain`       | _boolean_                                                                                                                                                                                                                                                                                                                                       | if plain, skip the border and spacing around the children                                                                                                                        |
-| `theme`       | _PrismTheme_                                                                                                                                                                                                                                                                                                                                    | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `language`    | _Language_                                                                                                                                                                                                                                                                                                                                      | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                                                                              | custom function to render the source code.                                                                                                                                       |
-| `dark`        | _boolean_                                                                                                                                                                                                                                                                                                                                       | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`       | _any_                                                                                                                                                                                                                                                                                                                                           | css styles for the container.                                                                                                                                                    |
-| `as`          | _any_                                                                                                                                                                                                                                                                                                                                           | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| Name          | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `viewStype`   | _ViewStyle_                                                                                                                                                                                                                                                                          | initial view mode                                                                                                                                                                |
+| `id`          | _string_                                                                                                                                                                                                                                                                             | id of the story                                                                                                                                                                  |
+| `name`        | _string_                                                                                                                                                                                                                                                                             | alternatively you can use the name of a story to load from an external file                                                                                                      |
+| `title`       | _string_                                                                                                                                                                                                                                                                             | optional section title for the block.                                                                                                                                            |
+| `collapsible` | _boolean_                                                                                                                                                                                                                                                                            | if false, will nothave a collapsible frame.                                                                                                                                      |
+| `sxStyle`     | _SystemStyleObject_                                                                                                                                                                                                                                                                  | theme-ui styling object for Block Box                                                                                                                                            |
+| `actions`     | _ActionItem\[]_                                                                                                                                                                                                                                                                      | optional actions provided to the component                                                                                                                                       |
+| `paddingTop`  | _string \| number_                                                                                                                                                                                                                                                                   | padding at the top, to account for the absolute position of the ActionBar                                                                                                        |
+| `plain`       | _boolean_                                                                                                                                                                                                                                                                            | if plain, skip the border and spacing around the children                                                                                                                        |
+| `children`    | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
+| `theme`       | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `language`    | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                   | custom function to render the source code.                                                                                                                                       |
+| `dark`        | _boolean_                                                                                                                                                                                                                                                                            | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`       | _any_                                                                                                                                                                                                                                                                                | css styles for the container.                                                                                                                                                    |
+| `as`          | _any_                                                                                                                                                                                                                                                                                | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
 ## <ins>Subtitle</ins>
 

@@ -21,8 +21,8 @@ export const ControlsPage: FC = () => {
       <Playground openTab="source" title=".">
         <Story id="." />
       </Playground>
-      <ControlsTable id="." />
-      <PropsTable of="." />
+      <ControlsTable id="." title="Controls" />
+      <PropsTable of="." title="Props" />
       <Stories dark={true} />
     </>
   );
