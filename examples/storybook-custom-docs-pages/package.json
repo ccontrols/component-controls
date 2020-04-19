@@ -6,7 +6,7 @@
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9017 -c .storybook",
     "storybook": "start-storybook -p 9017 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o ../../docs"
+    "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
     "@component-controls/react-docgen-info": "^0.6.0",
