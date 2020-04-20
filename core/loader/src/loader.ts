@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import * as path from 'path';
 import { getOptions } from 'loader-utils';
 import { loader } from 'webpack';
@@ -5,27 +6,22 @@ import {
   InstrumentOptions,
   parseStories,
 } from '@component-controls/instrument';
-import { StoriesStore } from '@component-controls/specification';
+
 import { addStoriesKind } from './store';
 
-module.exports.default = async function(source: string) {
+module.exports.pitch = async function(
+  remRequest: string,
+  precRequest: string,
+  data: any,
+) {
   const options: InstrumentOptions = getOptions(this) || {};
-  const callback = this.async();
   const context = this as loader.LoaderContext;
-  const filePath = context.resourcePath;
-  let transformed: string;
-  let store: StoriesStore;
-  try {
-    ({ transformed, ...store } = await parseStories(source, filePath, options));
-  } catch (err) {
-    return callback(err);
-  }
+  const filePath = this.resource;
+  const source = fs.readFileSync(filePath, 'utf8');
+  const { transformed, ...store } = await parseStories(source, filePath, options);
   if (store) {
-    const relPath = path.relative(context.rootContext, context.resourcePath);
+    const relPath = path.relative(context.rootContext, filePath);
     const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
-    // const time = new Date();
-    const fileName = path.join(__dirname, 'story-store-data.js');
-    // fs.utimesSync(fileName, time, time);
     addStoriesKind({
       stories: store.stories,
       components: store.components,
@@ -34,7 +30,7 @@ module.exports.default = async function(source: string) {
           ...acc,
           [key]: {
             ...store.kinds[key],
-            fileName,
+            fileName: filePath,
             moduleId: moduleId,
           },
         }),
@@ -42,5 +38,5 @@ module.exports.default = async function(source: string) {
       ),
     });
   }
-  return callback(null, transformed);
+  return transformed;
 };

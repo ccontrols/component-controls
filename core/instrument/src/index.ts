@@ -202,7 +202,6 @@ export const parseStories = async (
     const exportsSource = extractStoryExports(exports);
     let transformed = source;
     if (transformMDX && exportsSource) {
-      debugger;
       transformed = `${renderer}\n${code}\n${exportsSource}`;
     }
     return {

@@ -6,6 +6,7 @@
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9015 -c .storybook",
     "storybook": "start-storybook -p 9015 -c .storybook",
+    "debug-build": "NODE_OPTIONS=--inspect-brk build-storybook -c .storybook -o ./docs",
     "build-storybook": "build-storybook -c .storybook -o ../../docs"
   },
   "dependencies": {

@@ -251,10 +251,6 @@ export interface StoryStories {
  */
 export interface StoriesStore {
   /**
-   * unique hash for a store
-   */
-  hash?: string;
-  /**
    * list of story files, or groups
    */
   kinds: StoryKinds;

@@ -3,7 +3,7 @@
 import { StoriesStore, Story } from '@component-controls/specification';
 const deepMerge = require('deepmerge');
 import { toId, storyNameFromExport } from '@storybook/csf';
-import getInjectedStore from '@component-controls/loader/story-store-data';
+import store from '@component-controls/loader/story-store-data';
 import { addSmartControls } from './smart-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
@@ -12,18 +12,15 @@ export const loadStoryStore = (): StoriesStore | undefined => {
   if (storyStore) {
     return storyStore;
   }
-  const injectedStories = getInjectedStore();
-  if (injectedStories) {
+  if (store) {
     try {
       const {
         stores,
-        hash,
-      }: { stores: StoriesStore[]; hash: string } = JSON.parse(injectedStories);
+      }: { stores: StoriesStore[] } = store;
 
       if (stores) {
         const globalStore: StoriesStore = {
           kinds: {},
-          hash,
           stories: {},
           components: {},
         };
@@ -31,7 +28,6 @@ export const loadStoryStore = (): StoriesStore | undefined => {
           if (Object.keys(store.kinds).length > 0) {
             Object.keys(store.kinds).forEach(kindName => {
               const kind = store.kinds[kindName];
-
               if (kind.moduleId && __webpack_require__) {
                 try {
                   // './src/stories/smart-prop-type.stories.js'

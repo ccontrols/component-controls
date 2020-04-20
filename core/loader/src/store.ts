@@ -4,7 +4,6 @@ export const store: {
   /**
    * unique has for a store
    */
-  hash?: string;
   stores: StoriesStore[];
 } = {
   stores: [],
