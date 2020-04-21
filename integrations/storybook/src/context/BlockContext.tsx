@@ -9,7 +9,7 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
   children,
   id,
 }) => {
-  const defaultStoyId = useStoryId(id);
+  const defaultStoyId = useStoryId();
   const storyId = id ? id : defaultStoyId;
   return (
     <BlocksContextProvider storyId={storyId}>{children}</BlocksContextProvider>

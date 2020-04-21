@@ -11,19 +11,15 @@ import * as React from 'react';
 export default {
   key: 'custom',
   title: 'Simple Page',
-  render: ({ active, storyId }) => active ? <div><h1>Simple docs page</h1><p>{storyId}</p></div> : null,
+  render: ({ active }) => active ? <div><h1>Simple docs page</h1></div> : null,
 }```
  */
 
 export interface CustomPageRenderFnParams {
   /**
-   * is gthe page active (visible) or not (hidden)
+   * is the page active (visible) or not (hidden)
    */
   active: boolean;
-  /**
-   * initial sgtory id.
-   */
-  storyId: string;
 }
 
 export type CustomPageRenderFn = (
@@ -48,7 +44,6 @@ export interface CustomPageDef {
    */
   //
   // active boolean - if the tab custom page is active
-  // storyId as a string
   // Return an object that can be rendered from ReactDOM.render
   render: CustomPageRenderFn;
 }

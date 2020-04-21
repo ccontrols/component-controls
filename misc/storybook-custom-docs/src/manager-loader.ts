@@ -30,12 +30,12 @@ module.exports.default = async function() {
           route: ({ storyId }) => \`/\${key}/\${storyId}\`,
           match: ({ viewMode }) => viewMode === key,
           render: ({ active }) => {
-            return React.createElement(ManagerContainer, {
+            const props = {
               active,
-              title,
-              id:\`controls-docs-page-\${key}\`,
+              route: key,
               api,
-            });
+            };
+            return React.createElement(ManagerContainer, props);
           },
         });
       });

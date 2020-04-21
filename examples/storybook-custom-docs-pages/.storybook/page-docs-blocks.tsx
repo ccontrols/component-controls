@@ -14,7 +14,7 @@ const Page = () => {
 const page: CustomPageDef = {
   key: 'docs-page',
   title: 'Docs blocks',
-  render: ({ active, storyId }) => {
+  render: ({ active }) => {
     return active ? <Page /> : null;  
   } 
 }

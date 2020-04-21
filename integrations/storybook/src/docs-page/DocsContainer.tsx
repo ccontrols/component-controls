@@ -6,11 +6,8 @@ import {
 import { useStoryId } from '@component-controls/storybook-custom-docs';
 import { useIsDark } from '../context/useIsDark';
 
-export const PageContextContainer: FC<PageContainerProps> = ({
-  children,
-  storyId: defaultStoryId,
-}) => {
-  const storyId = useStoryId(defaultStoryId);
+export const PageContextContainer: FC<PageContainerProps> = ({ children }) => {
+  const storyId = useStoryId();
   const isDark = useIsDark();
   return (
     <BlockPageContainer dark={isDark} storyId={storyId}>
@@ -22,8 +19,4 @@ export const PageContextContainer: FC<PageContainerProps> = ({
 export const DocsContainer: FC<PageContainerProps & { active?: boolean }> = ({
   children,
   active = true,
-  storyId,
-}) =>
-  active ? (
-    <PageContextContainer storyId={storyId}>{children}</PageContextContainer>
-  ) : null;
+}) => (active ? <PageContextContainer>{children}</PageContextContainer> : null);

@@ -4,9 +4,9 @@ import { Story, Title, ControlsTable, Playground  } from '@component-controls/bl
 import { CustomPageDef } from '@component-controls/storybook-custom-docs';
 
 
-const Page = ({ active, storyId }) => {
+const Page = ({ active }) => {
   return (
-    <DocsContainer active={active} storyId={storyId}>
+    <DocsContainer active={active} >
       <Title>Component controls blocks</Title>
       <Playground openTab="source" title=".">
         <Story id="." />
@@ -18,8 +18,8 @@ const Page = ({ active, storyId }) => {
 const page: CustomPageDef = {
   key: 'component-page',
   title: 'Controls blocks',
-  render: ({ active, storyId }) => {
-    return <Page storyId={storyId} active={active} />;  
+  render: ({ active }) => {
+    return <Page active={active} />;  
   } 
 }
 

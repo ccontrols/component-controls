@@ -6,8 +6,8 @@ import { Story, Title, Playground, PropsTable  } from '@component-controls/block
 import { CustomPageDef } from '@component-controls/storybook-custom-docs';
 
 
-const Page = ({ storyId: id }) => {
-  const storyId = useStoryId(id);
+const Page = () => {
+  const storyId = useStoryId();
   return (
     <>
       <SBDocsContainer context={getContext()}>
@@ -30,8 +30,8 @@ const Page = ({ storyId: id }) => {
 const page: CustomPageDef = {
   key: 'mixed-page',
   title: 'Mixed blocks',
-  render: ({ active, storyId }) => {
-    return active ? <Page storyId={storyId} /> : null;  
+  render: ({ active }) => {
+    return active ? <Page /> : null;  
   } 
 }
 

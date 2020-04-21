@@ -35,20 +35,36 @@ export const getContext = () => {
     parameters,
   };
 };
+
+/**
+ * function returning the current story id
+ */
+export const getCurrentStoryId = (): string | undefined => {
+  const selection =
+    window &&
+    //@ts-ignore
+    window.__STORYBOOK_CLIENT_API__ &&
+    //@ts-ignore
+    window.__STORYBOOK_CLIENT_API__.store().getSelection();
+  return selection ? selection.storyId : undefined;
+};
+
 /**
  * React hook hook that tracks the changes to the current story and returns it's id
  * @param defaultId initial story value, if not provided will return the current story
  * @returns a story id as a React hook, when the the current story changes, will call back
  */
-export const useStoryId = (defaultId: string = '.') => {
-  const [storyId, setStoryId] = React.useState<string>(defaultId);
+export const useStoryId = () => {
+  const [storyId, setStoryId] = React.useState<string>(
+    getCurrentStoryId() || '.',
+  );
   const channel = React.useMemo(() => addons.getChannel(), []);
   React.useEffect(() => {
     const onStoryChange = (id: string) => {
       setStoryId(id);
     };
-
     channel.on(STORY_CHANGED, onStoryChange);
+
     return () => {
       channel.off(STORY_CHANGED, onStoryChange);
     };
