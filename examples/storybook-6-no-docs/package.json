@@ -12,7 +12,7 @@
     "@component-controls/react-docgen-info": "^0.6.0",
     "@component-controls/react-docgen-typescript-info": "^0.6.0",
     "@component-controls/storybook": "^0.6.0",
-    "@storybook/react": "next",
+    "@storybook/react": "6.0.0-alpha.28",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
     "cross-env": "^5.2.0",

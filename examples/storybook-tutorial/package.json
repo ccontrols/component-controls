@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "version": "0.6.0",
+  "name": "component-controls-storybook-tutorial",
+  "license": "MIT",
+  "scripts": {
+    "debug-docs-only": "NODE_OPTIONS=--inspect-brk start-storybook -p 9018 -c .docs-only",
+    "docs-only": "start-storybook -p 9018 -c .docs-only",
+    "debug-build-docs-only": "NODE_OPTIONS=--inspect-brk build-storybook -c .docs-only -o ./docs",
+    "build-docs-only": "build-storybook -c .docs-only -o ./docs"
+  },
+  "dependencies": {
+    "@component-controls/react-docgen-info": "^0.6.0",
+    "@component-controls/react-docgen-typescript-info": "^0.6.0",
+    "@component-controls/storybook": "^0.6.0",
+    "@storybook/addon-docs": "6.0.0-alpha.28",
+    "@storybook/preset-typescript": "*",
+    "@storybook/react": "6.0.0-alpha.28",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.0.0",
+    "cross-env": "^5.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "typescript": "^3.8.3",
+    "webpack-react-docgen-typescript": "^0.9.5"
+  }
+}

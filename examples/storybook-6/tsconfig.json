@@ -6,10 +6,10 @@
     "resolveJsonModule": true,
     "sourceMap": false,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "../stories",
     "baseUrl": "./",
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*"],
+  "include": ["../stories/src/**/*"],
   "exclude": ["node_modules/**"]
 }
