@@ -1,15 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  presets:[
-    {
-      name: require.resolve('webpack-react-docgen-typescript/preset'),
-      options: {
-        fileNameResolver: ({ resourcePath, cacheFolder }) => path.join(cacheFolder, resourcePath.replace(/[^a-z0-9]/gi, '_')),
-      },
-    },  
-    
-  ],
   stories: [
     '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|tsx|mdx)',
@@ -18,7 +9,20 @@ module.exports = {
     '../stories/**/*.stories.(js|tsx|mdx)',
   ],
   addons: [
-    '@storybook/addon-docs',
+    {
+      name: '@storybook/preset-typescript',
+      options: {
+        tsLoaderOptions: {
+          configFile: path.resolve(__dirname, '../tsconfig.json'),
+        },
+      },
+    },
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+      },
+    },
     {
       name: '@component-controls/storybook',
       options: {
