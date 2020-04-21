@@ -41,7 +41,9 @@ export class Store implements StoryStore {
     this.moduleId = Math.random();
     this.loadedStore = store;
     this.updateLocalStorage = updateLocalStorage;
-    this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG);
+    this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
+      type: 'localstorage',
+    });
     this.observers = [];
     this.channel.onmessage = ({ storyId, moduleId }: MessageType) => {
       if (storyId && moduleId) {
@@ -145,9 +147,6 @@ export class Store implements StoryStore {
  */
 export const store = new Store();
 
-/**
- * @ignore
- */
 const stores = loadStoryStore();
 if (stores) {
   store.setStore(stores);

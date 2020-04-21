@@ -1,51 +1,58 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import { future } from '@theme-ui/presets';
-import { PageContainer } from '.';
+import { Store } from '@component-controls/store';
+import { PageContainer, PageContainerProps } from '.';
 import { Title } from '../Title';
 import { PropsTable } from '../PropsTable';
 import { Playground } from '../Playground';
 import { Story } from '../Story';
 
-import { storyStore } from '../test/storyStore';
+import { store } from '../test/storyStore';
 
 export default {
   title: 'Blocks/PageContainer',
   component: PageContainer,
 };
 
+const MockPageContainer: React.FC<PageContainerProps> = props => {
+  const storyStore = React.useMemo(
+    () => new Store({ store, updateLocalStorage: false }),
+    [],
+  );
+  return <PageContainer mockStore={storyStore} {...props} />;
+};
 export const overview = () => (
-  <PageContainer mockStore={storyStore} storyId="id-of-story">
+  <MockPageContainer storyId="id-of-story">
     <Title />
-  </PageContainer>
+  </MockPageContainer>
 );
 
 export const dark = () => (
-  <PageContainer dark={true} mockStore={storyStore} storyId="id-of-story">
+  <MockPageContainer dark={true} storyId="id-of-story">
     <Title />
     <Playground title="Custom playground title" openTab="source">
       <Story id="." />
     </Playground>
     <PropsTable />
-  </PageContainer>
+  </MockPageContainer>
 );
 
 export const theme = () => (
-  <PageContainer theme={future} mockStore={storyStore} storyId="id-of-story">
+  <MockPageContainer theme={future} storyId="id-of-story">
     <Title />
     <Playground title="Custom playground title" openTab="source">
       <Story id="." />
     </Playground>
     <PropsTable />
-  </PageContainer>
+  </MockPageContainer>
 );
 
 export const components = () => (
-  <PageContainer
-    mockStore={storyStore}
+  <MockPageContainer
     storyId="mdx-story"
     components={{ h1: props => <div {...props} /> }}
   >
     <Title />
-  </PageContainer>
+  </MockPageContainer>
 );

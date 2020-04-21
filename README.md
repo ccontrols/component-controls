@@ -25,26 +25,24 @@
 
 # Motivation
 
-This library is created by the technical co-founder of [AutomatedQA](http://automatedqa.com)/[SmartBear](https://smartbear.com), creator of [AQtime](https://smartbear.com/product/aqtime-pro/overview/), [TestComplete](https://smartbear.com/product/testcomplete/overview/), with 20+ years experience creating software development lifecyle products. It is to be expected the library will have a heavy testing/QA bias.
-
 -   Create a components development environment with testing as a first-class feature.
 -   Decouple the user interface from loading of the 'stories' = modular design.
--   Do not modify the source files at instrumentation time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
+-   Do not modify the source files (both story and component files) at instrumentation-time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
 -   Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
--   Ability to integrate with various user-interface shells - [storybook](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org).
+-   Ability to integrate with various build engines - [storybookjs](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org).
 -   Create and support open declarative story formats.
 
 # Inspiration
 
-There are many developments that have contribiuted to the creation of `component-controls`, and here we will list but a few of them:
+There are many developments that have contributed to the creation of `component-controls`, a few of them are:
 
--   [storybook](https://storybook.js.org) is the original system that helps teams to design, develop and test components. The strong support for testing and the creation of an open [Component Story Format](https://github.com/storybookjs/csf) were an inspiration, as well as the [Storybook Addon Knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) for providing configurable component properties.
+-   [storybook](https://storybook.js.org) is the original component development system that helps teams to design, develop and test components. The strong support for testing and the creation of an open [Component Story Format](https://github.com/storybookjs/csf) were an inspiration, as well as the [Storybook Addon Knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) for providing configurable component properties.
 
--   [docz](https://www.docz.site) has a beautiful architecture and introduced open [gatsby](https://www.gatsbyjs.org) builds. This monorepo was heavily influenced by the `docz` project structure.
+-   [docz](https://www.docz.site) has a beautiful architecture and introduced non-proprietary [gatsby](https://www.gatsbyjs.org) build engine. This monorepo was also heavily influenced by the `docz` project repository structure.
 
 -   [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) advancements have been greatly responsible for making possible the parsing and analysis features of this library.
 
--   [blocks-ui](https://blocks-ui.com) is taking `AST` to a new level by generating and reverse-sing AST to create [react](https://reactjs.org) applications and has been an inspiraton for pushing the enveloppe on our own `AST` work.
+-   [blocks-ui](https://blocks-ui.com) is taking `AST` to a new level by generating and reversing AST to create [react](https://reactjs.org) applications and has been an inspiraton for pushing the enveloppe on our own `AST` work.
 
 -   [theme-ui](https://theme-ui.com) is the driving force for standardizing `react` theming and design systems. `theme-ui` is used by our project as the theming and components founding block.
 
@@ -79,17 +77,19 @@ The Storybook](<https://storybook.js.org>) integration of component-controls.
 
 ### Motivation
 
--   Storybook is the most used system for developing components with a focus on design systems
--   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. Component-controls builds on the CSF and vastly extends it, for more information take a look at the `@component-controls/specification` package.
--   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. 
--   We wanted to allow component-controls to function both as a full replacement to the addon docs, as well as alongside the addon docs.
--   Componnet-controls uses it's own instrumenters and loaders for both CSF and MDX formats and usually provides more meta information to the componnets ()
+-   Allow adding component-controls in storybook DocsPage.
+-   Allow adding storybook docs blocks in component-controls documentation pages.
+-   Allow standalone component-controls documentation pages.
+-   Allow an unlimited number of documentation pages.
+-   Fully replace and extend the Storybook addon-docs block components.
+-   Fully replace Storybook's modx-compiler and source-loader.
+-   Provide and extensible framework of components, blocks and pages.
 
 ### Limitations
 
--   Initial version handles only react apps. This will be improvedin further versions. 
--   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currenlt no plans to support it.
--   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that we will replace in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+-   Initial version is only for `react` apps. More frameworks are on the roadmap. 
+-   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
+-   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 <!-- END-PACKAGE-SECTION -->
 

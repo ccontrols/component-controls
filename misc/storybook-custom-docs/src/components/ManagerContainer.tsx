@@ -16,7 +16,10 @@ export const ManagerContainer: React.FC<ManagerContainerProps> = ({
   title,
 }) => {
   const channel = React.useMemo(
-    () => new BroadcastChannel(`attach_docs_page_${title}`),
+    () =>
+      new BroadcastChannel(`attach_docs_page_${title}`, {
+        type: 'localstorage',
+      }),
     [],
   );
   React.useEffect(() => {

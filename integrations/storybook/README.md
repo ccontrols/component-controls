@@ -9,11 +9,12 @@
     -   [Install](#install)
     -   [Configure](#configure)
 -   [Creating stories](#creating-stories)
-    -   -   [MDX](#mdx)
+    -   -   [CSF](#csf)
+        -   [MDX](#mdx)
 -   [Available Controls](#available-controls)
 -   [Smart Controls](#smart-controls)
-    -   [Smart Controls Examples](#smart-controls-examples)
-        -   [Smart Controls React](#smart-controls-react)
+    -   [Examples](#examples)
+        -   [React](#react)
         -   [Smart Controls MDX](#smart-controls-mdx)
         -   [Smart Controls Options](#smart-controls-options)
 -   [Testing with random data generators](#testing-with-random-data-generators)
@@ -46,17 +47,19 @@ The Storybook](<https://storybook.js.org>) integration of component-controls.
 
 ### Motivation
 
--   Storybook is the most used system for developing components with a focus on design systems
--   The Storybook [CSF](https://storybook.js.org/docs/formats/component-story-format/) format introduced in v5.2 was a leap forward and allows for open interoperability. Component-controls builds on the CSF and vastly extends it, for more information take a look at the `@component-controls/specification` package.
--   The Storybook [docs addon](https://github.com/storybookjs/storybook/tree/next/addons/docs) added the ability to view documentation from CSF and MDX formats. 
--   We wanted to allow component-controls to function both as a full replacement to the addon docs, as well as alongside the addon docs.
--   Componnet-controls uses it's own instrumenters and loaders for both CSF and MDX formats and usually provides more meta information to the componnets ()
+-   Allow adding component-controls in storybook DocsPage.
+-   Allow adding storybook docs blocks in component-controls documentation pages.
+-   Allow standalone component-controls documentation pages.
+-   Allow an unlimited number of documentation pages.
+-   Fully replace and extend the Storybook addon-docs block components.
+-   Fully replace Storybook's modx-compiler and source-loader.
+-   Provide and extensible framework of components, blocks and pages.
 
 ### Limitations
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX format is a bit of a letdown as it uses a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+-   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 # Storybook
 
@@ -89,6 +92,8 @@ module.exports = {
 ```
 
 # Creating stories
+
+### CSF
 
 ```js
 import React from "react";
@@ -143,8 +148,8 @@ The list of available controls and their documented properties is available [her
 
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
-By default, Addon Controls enables the smart-controls option for your storybook  site, but there are 2 basic requirements for a story to use smart controls: 
-1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by Storybook).
+There are 2 requirements for a story to use smart controls: 
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
 2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
@@ -153,9 +158,9 @@ A screenshot of smart controls in action.
   <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/smart-controls.jpg" alt="control groups" width="428">
 </p>
 
-## Smart Controls Examples
+## Examples
 
-### Smart Controls React
+### React
 
 ```js
 import React from 'react';

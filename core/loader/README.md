@@ -3,8 +3,6 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [injectedStories](#injectedstories)
-    -   [getInjectedStore](#getinjectedstore)
 
 # Overview
 
@@ -23,17 +21,5 @@ $ npm install @component-controls/loader --save-dev
 <tsdoc-typescript files="../specification/src/stories.ts" entry="./src/story-store-data.ts,./src/loader.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
-
-## injectedStories
-
-_defined in [@component-controls/loader/src/story-store-data.ts](https://github.com/ccontrols/component-controls/tree/master/core/loader/src/story-store-data.ts#L1)_
-
-
-
-## getInjectedStore
-
-_defined in [@component-controls/loader/src/story-store-data.ts](https://github.com/ccontrols/component-controls/tree/master/core/loader/src/story-store-data.ts#L3)_
-
-**function** getInjectedStore(): string | undefined;
 
 <!-- END-TSDOC-TYPESCRIPT -->

@@ -152,7 +152,6 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | Name          | Type                                | Description                        |
 | ------------- | ----------------------------------- | ---------------------------------- |
 | `components*` | [StoryComponents](#storycomponents) | list of components used in stories |
-| `hash`        | string                              | unique hash for a store            |
 | `kinds*`      | [StoryKinds](#storykinds)           | list of story files, or groups     |
 | `stories*`    | [StoryStories](#storystories)       | list of stories                    |
 

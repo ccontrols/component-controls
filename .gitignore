@@ -1,6 +1,7 @@
 node_modules/
 .eslintcache
 dist
+docs
 .cache
 .rpt2_cache
 *.log

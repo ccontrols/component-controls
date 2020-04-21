@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/camelcase */
 import { StoriesStore, Story } from '@component-controls/specification';
-const deepMerge = require('deepmerge');
 import { toId, storyNameFromExport } from '@storybook/csf';
 import store from '@component-controls/loader/story-store-data';
 import { addSmartControls } from './smart-controls';
+import { deepMerge } from './deepMerge';
 
 let storyStore: StoriesStore | undefined = undefined;
 
@@ -14,9 +14,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
   }
   if (store) {
     try {
-      const {
-        stores,
-      }: { stores: StoriesStore[] } = store;
+      const { stores }: { stores: StoriesStore[] } = store;
 
       if (stores) {
         const globalStore: StoriesStore = {
@@ -28,33 +26,6 @@ export const loadStoryStore = (): StoriesStore | undefined => {
           if (Object.keys(store.kinds).length > 0) {
             Object.keys(store.kinds).forEach(kindName => {
               const kind = store.kinds[kindName];
-              if (kind.moduleId && __webpack_require__) {
-                try {
-                  // './src/stories/smart-prop-type.stories.js'
-                  const exports = __webpack_require__(kind.moduleId);
-                  Object.keys(exports).forEach(key => {
-                    const exported = exports[key];
-                    if (exported) {
-                      if (key === 'default') {
-                        const { storySource, ...rest } = exported;
-                        Object.assign(kind, rest);
-                      } else {
-                        const story = store.stories[key];
-                        if (story) {
-                          story.renderFn = exported;
-                          if (exported.story) {
-                            Object.assign(story, exported.story);
-                          }
-                        }
-                      }
-                    }
-                  });
-                } catch (e) {
-                  console.error(`unable to load module ${kind.moduleId}`, e);
-                }
-                // clean-up
-                delete kind.moduleId;
-              }
               globalStore.kinds[kindName] = kind;
               Object.keys(store.stories).forEach(storyName => {
                 const story: Story = store.stories[storyName];

@@ -18,7 +18,9 @@ const { BroadcastChannel } = require('broadcast-channel');
 const attachPage = (pageConfig) => {
 
   const ATTACH_DOCS_PAGE = \`attach_docs_page_\${pageConfig.title}\`;
-  const channel = new BroadcastChannel(ATTACH_DOCS_PAGE);
+  const channel = new BroadcastChannel(ATTACH_DOCS_PAGE, {
+    type: 'localstorage',
+  });
   
   channel.onmessage = ({ id, active, storyId }) => {
     var node = document.getElementById(id);
