@@ -11,7 +11,6 @@ interface ManagerContainerProps {
 export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
   const { active, api, route } = props;
   const ATTACH_DOCS_PAGE = `attach_docs_page_${route}`;
-  const REQUEST_DOCS_PAGE = `request_docs_page_${route}`;
   const channel = React.useMemo(() => api.getChannel(), []);
   const sendMessage = () => {
     const story = api.getCurrentStoryData();
@@ -20,10 +19,6 @@ export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
 
   React.useEffect(() => {
     const wrapper = document.getElementById('storybook-preview-wrapper');
-    const onRequestPage = () => {
-      sendMessage();
-    };
-    channel.on(REQUEST_DOCS_PAGE, onRequestPage);
     const updateDOM = () => {
       sendMessage();
       if (wrapper) {
@@ -31,9 +26,6 @@ export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
       }
     };
     updateDOM();
-    return () => {
-      channel.off(REQUEST_DOCS_PAGE, onRequestPage);
-    };
   }, [active]);
   return null;
 };

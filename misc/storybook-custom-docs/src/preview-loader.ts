@@ -20,11 +20,10 @@ const channel = addons.getChannel();
 
 const activePages: string[] = [];
 
-const attachPage = (pageConfig) => {
+const attachPage = (pageConfig, viewMode) => {
 
   const ATTACH_DOCS_PAGE = \`attach_docs_page_\${pageConfig.key}\`;
-
-  channel.on(ATTACH_DOCS_PAGE, ({ active, storyId }) => {
+  const updatePage = (active: boolean) => {
     const id = \`controls-docs-page-\${pageConfig.key}\`;
     var node = document.getElementById(id);
     if (!node) {
@@ -53,7 +52,11 @@ const attachPage = (pageConfig) => {
         }
       }
     }
+  }  
+  channel.on(ATTACH_DOCS_PAGE, ({ active }) => {
+    updatePage(active);
   });
+  updatePage(viewMode === pageConfig.key);
 };
 const pageConfigs = [];
 ${pages
@@ -63,12 +66,17 @@ ${pages
   )
   .join('\n')}
 
-pageConfigs.forEach(p => {
-  attachPage(p);
-  const REQUEST_DOCS_PAGE = \`request_docs_page_\${p.key}\`;
-  channel.emit(REQUEST_DOCS_PAGE);
-});
+const selection =
+  window &&
+  //@ts-ignore
+  window.__STORYBOOK_CLIENT_API__ &&
+  //@ts-ignore
+  window.__STORYBOOK_CLIENT_API__.store().getSelection();
+const viewMode = selection ? selection.viewMode : undefined;
 
+pageConfigs.forEach(p => {
+  attachPage(p, viewMode);
+});
 `;
   return callback(null, code);
 };

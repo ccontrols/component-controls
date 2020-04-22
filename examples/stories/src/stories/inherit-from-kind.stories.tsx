@@ -1,10 +1,8 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { ControlsTable } from '@component-controls/storybook';
 
 export default {
   title: 'Storybook/Kind',
-  component: ControlsTable,
   controls: {
     name: {
       type: ControlTypes.TEXT,
