@@ -20,11 +20,6 @@
 -   [Testing with random data generators](#testing-with-random-data-generators)
 -   [Categories](#categories)
 -   [Storybook Docs Block](#storybook-docs-block)
--   [Options](#options)
-    -   [**smart** option](#smart-option)
-    -   [**addonPanel** option](#addonpanel-option)
-    -   [**docsPreview** option](#docspreview-option)
-    -   [**docsProps** option](#docsprops-option)
 -   [Configuration options](#configuration-options)
     -   [PresetOptions](#presetoptions)
 -   [List of components](#list-of-components)
@@ -72,7 +67,7 @@ The Storybook integration started as a successor of [addon-knobs](https://github
 # Introduction
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/intro-smart-controls.gif" alt="introduction to using smart-controls" width="738">
+  <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
 </p>
 
 # Getting Started
@@ -157,7 +152,7 @@ There are 2 requirements for a story to use smart controls:
 A screenshot of smart controls in action.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/smart-controls.jpg" alt="control groups" width="428">
+  <img src="./images/smart-controls.jpg" alt="smart groups" width="428">
 </p>
 
 ## Examples
@@ -279,7 +274,7 @@ groupedControls.story = {
 You can see Controls in separate tabs as shown below.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/grouped-controls.jpg" alt="control groups" width="428">
+  <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
 # Storybook Docs Block
@@ -377,10 +372,12 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ### properties
 
-| Name         | Type                                                                   | Description                                      |
-| ------------ | ---------------------------------------------------------------------- | ------------------------------------------------ |
-| `addonPanel` | boolean                                                                | whether to display the addon panel in storybook  |
-| `instrument` | [InstrumentOptions](../../core/instrument/README.md#instrumentoptions) | options that will be passed to the instrumenter. |
+| Name         | Type                                                                   | Description                                                                     |
+| ------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `addonPanel` | boolean                                                                | whether to display the addon panel in storybook                                 |
+| `docsPage`   | boolean                                                                | whether to add a Page documentation page with a classic componnet-controls page |
+| `instrument` | [InstrumentOptions](../../core/instrument/README.md#instrumentoptions) | options that will be passed to the instrumenter.                                |
+| `pages`      | string\[]                                                              | additional custom documentation pages                                           |
 
 <!-- END-TSDOC-TYPESCRIPT -->
 
