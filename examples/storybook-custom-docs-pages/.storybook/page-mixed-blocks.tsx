@@ -10,6 +10,7 @@ const Page = () => {
   const storyId = useStoryId();
   return (
     <>
+      <h1>Mixing storybook docs blocks and component-controls blocks</h1>
       <SBDocsContainer context={getContext()}>
         <SBTitle />
         <Preview >

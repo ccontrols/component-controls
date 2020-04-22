@@ -24,30 +24,6 @@ module.exports = {
         configureJSX: true,
       },
     },
-    { 
-      name: '@component-controls/storybook',
-      options: {
-        loader: {
-          components: {
-            storeSourceFile: true, //false
-            resolveFile: (componentName, filePath) => {
-              if (filePath.includes('/theme-ui/dist')) {
-                return `${
-                  filePath.split('/theme-ui/dist')[0]
-                }/@theme-ui/components/src/${componentName}.js`;
-              } else if (
-                filePath.includes('@component-controls/storybook/dist')
-              ) {
-                return path.resolve(
-                  path.dirname(filePath),
-                  `../src/blocks/${componentName}.tsx`,
-                );
-              }
-              return filePath;
-            },
-          },
-        }
-      }
-    }
+    '@component-controls/storybook'
   ],
 };

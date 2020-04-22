@@ -16,7 +16,7 @@ const page: CustomPageDef = {
   title: 'Docs blocks',
   render: ({ active }) => {
     return active ? <Page /> : null;  
-  } 
+  }
 }
 
 export default page;

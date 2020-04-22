@@ -511,35 +511,36 @@ export const extractTSDoc = (
       const source = node.sources && node.sources.length && node.sources[0];
       const { line }: { fileName?: string; line?: number; character?: number } =
         source || {};
-      let sourceLocation = fileName.includes('node_modules')
-        ? repo
-        : `${repo}/${relativePath}#L${line}`;
-      result.push({
-        type: 'paragraph',
-        children: [
-          {
-            type: 'emphasis',
-            children: [
-              {
-                type: 'text',
-                value: 'defined in ',
-              },
-              {
-                type: 'link',
-                url: sourceLocation,
-                children: [
-                  {
-                    type: 'text',
-                    value: `${packageName}/${relativePath}`,
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      });
+      if (line) {
+        let sourceLocation = fileName.includes('node_modules')
+          ? repo
+          : `${repo}/${relativePath}#L${line}`;
+        result.push({
+          type: 'paragraph',
+          children: [
+            {
+              type: 'emphasis',
+              children: [
+                {
+                  type: 'text',
+                  value: 'defined in ',
+                },
+                {
+                  type: 'link',
+                  url: sourceLocation,
+                  children: [
+                    {
+                      type: 'text',
+                      value: `${packageName}/${relativePath}`,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        });
+      }
     }
-
     switch (node.kindString) {
       case 'Type alias':
         result.push.apply(result, extractPropType(node.type, true));
@@ -577,8 +578,10 @@ export const extractTSDoc = (
           content.children.find((child: any) => child.originalName === entry);
         if (main && main.children) {
           main.children.forEach((child: any) => {
-            const nodes = extractTSType(child, main.originalName);
-            result.push.apply(result, nodes);
+            if (child.sources) {
+              const nodes = extractTSType(child, main.originalName);
+              result.push.apply(result, nodes);
+            }
           });
         }
       }
@@ -597,8 +600,10 @@ export const extractTSDoc = (
             }
           }
           if (propNode) {
-            const nodes = extractTSType(propNode, fileName);
-            result.push.apply(result, nodes);
+            if (propNode.sources) {
+              const nodes = extractTSType(propNode, fileName);
+              result.push.apply(result, nodes);
+            }
           } else {
             console.log('could not find external reference: ', propName);
           }

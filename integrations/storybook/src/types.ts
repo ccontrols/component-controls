@@ -1,4 +1,4 @@
-import { InstrumentOptions } from '@component-controls/instrument';
+import { RuleTypes } from '@component-controls/webpack-rules';
 
 export interface PresetOptions {
   /**
@@ -16,5 +16,7 @@ export interface PresetOptions {
   /**
    * options that will be passed to the instrumenter.
    */
-  instrument?: InstrumentOptions;
+  webpackRules?: RuleTypes;
 }
+
+export const defaultRules = ['react-props'];

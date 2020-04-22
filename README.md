@@ -12,6 +12,7 @@
     -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
+    -   [@component-controls/webpack-rules](#component-controlswebpack-rules)
     -   [@component-controls/store](#component-controlsstore)
 -   [UI packages](#ui-packages)
     -   [@component-controls/components](#component-controlscomponents)
@@ -159,6 +160,18 @@ Parsing a source file will generate the following information:
 Webpack loader for component controls instrumentation
 
 Webpack loader that injects the data collected by [@component-controls/instrument](https://github.com/ccontrols/component-controls/tree/master/core/instrument).
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/webpack-rules/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/webpack-rules](https://github.com/ccontrols/component-controls/blob/master/core/webpack-rules)
+
+Webpack preset configurations
+
+Collection of standard webpack rules for [@component-controls/instrument](https://github.com/ccontrols/component-controls/tree/master/core/instrument).
 
 <!-- END-PACKAGE-SECTION -->
 

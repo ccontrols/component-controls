@@ -22,6 +22,7 @@
 -   [Storybook Docs Block](#storybook-docs-block)
 -   [Configuration options](#configuration-options)
     -   [PresetOptions](#presetoptions)
+    -   [defaultRules](#defaultrules)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
@@ -372,12 +373,18 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ### properties
 
-| Name         | Type                                                                   | Description                                                                     |
-| ------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `addonPanel` | boolean                                                                | whether to display the addon panel in storybook                                 |
-| `docsPage`   | boolean                                                                | whether to add a Page documentation page with a classic componnet-controls page |
-| `instrument` | [InstrumentOptions](../../core/instrument/README.md#instrumentoptions) | options that will be passed to the instrumenter.                                |
-| `pages`      | string\[]                                                              | additional custom documentation pages                                           |
+| Name           | Type                    | Description                                                                     |
+| -------------- | ----------------------- | ------------------------------------------------------------------------------- |
+| `addonPanel`   | boolean                 | whether to display the addon panel in storybook                                 |
+| `docsPage`     | boolean                 | whether to add a Page documentation page with a classic componnet-controls page |
+| `pages`        | string\[]               | additional custom documentation pages                                           |
+| `webpackRules` | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                                |
+
+## defaultRules
+
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L22)_
+
+
 
 <!-- END-TSDOC-TYPESCRIPT -->
 

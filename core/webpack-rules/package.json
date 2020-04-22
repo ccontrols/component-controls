@@ -1,0 +1,57 @@
+{
+  "name": "@component-controls/webpack-rules",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Webpack preset configurations",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\" }' ../../scripts/docs.ts",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "core/webpack-rules"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/instrument": "^0.6.0",
+    "deepmerge": "^4.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "."
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ]
+}

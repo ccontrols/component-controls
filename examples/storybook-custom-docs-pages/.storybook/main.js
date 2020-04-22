@@ -23,11 +23,20 @@ module.exports = {
         configureJSX: true,
       },
     },
+    {
+      name: '@component-controls/storybook',
+      options: {
+        docsPage: false,
+      }
+    },
     { 
       name: '@component-controls/storybook-custom-docs',
       options: {
         pages: [
           require.resolve('./page-simple.tsx'),
+          require.resolve('./page-docs-blocks.tsx'),
+          require.resolve('./page-component-blocks.tsx'),
+          require.resolve('./page-mixed-blocks.tsx'),
         ]
       },
     }

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const storyStorePlugin = require('@component-controls/loader/plugin');
-const merge = require('deepmerge');
-import { PresetOptions } from './types';
+const { getRules } = require('@component-controls/webpack-rules');
+import { PresetOptions, defaultRules } from './types';
 
 module.exports = {
   config: (entry: any[] = [], options: PresetOptions = {}) => {
@@ -35,35 +35,12 @@ module.exports = {
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
+    const rules = getRules(options?.webpackRules || defaultRules);
     const result = {
       ...config,
       module: {
         ...config.module,
-        rules: [
-          ...config.module.rules,
-          {
-            test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/,
-            loader: '@component-controls/loader/loader',
-            exclude: [/node_modules/],
-            enforce: 'pre',
-            options: merge(
-              {
-                propsLoaders: [
-                  {
-                    name: '@component-controls/react-docgen-info',
-                    test: /\.(js|jsx)$/,
-                  },
-                  {
-                    name: '@component-controls/react-docgen-typescript-info',
-                    test: /\.(ts|tsx)$/,
-                  },
-                  ,
-                ],
-              },
-              options?.instrument || {},
-            ),
-          },
-        ],
+        rules: [...config.module.rules, ...rules],
       },
       plugins: [new storyStorePlugin(), ...config.plugins],
     };
