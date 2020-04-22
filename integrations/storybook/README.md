@@ -25,6 +25,8 @@
     -   [**addonPanel** option](#addonpanel-option)
     -   [**docsPreview** option](#docspreview-option)
     -   [**docsProps** option](#docsprops-option)
+-   [Configuration options](#configuration-options)
+    -   [PresetOptions](#presetoptions)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
@@ -325,11 +327,11 @@ import { ControlsTable } from '@component-controls/storybook';
 
 ```
 
-# Options
+# Configuration options
 
-Addon Controls accepts several option parameters to customize the default functionality. By default, all the following options are enabled, so you only need a custom configuration if you need to disable a feature:
+The storybook controls addon accepts several option parameters to customize the default functionality.
 
-within `.storybook/main.js`:
+Example `.storybook/main.js`:
 
 ```js
   addons: [
@@ -338,41 +340,49 @@ within `.storybook/main.js`:
       name: '@component-controls/storybook',
       options: {
         addonPanel: false,
-        docsPreview: false,
-        docsProps: false,
-        smart: false,        
+        instrument: {
+          //instrumentation options
+          prettier: {
+            tabWidth: 2,
+          },
+          components: {
+            storeSourceFile: true, //false
+            resolveFile: (componentName, filePath) => {
+              if (filePath.includes('/theme-ui/dist')) {
+                return `${
+                  filePath.split('/theme-ui/dist')[0]
+                }/@theme-ui/components/src/${componentName}.js`;
+              }
+              return filePath;
+            },
+          },
+          stories: {
+            storeSourceFile: true, //false
+          },
+        }
       },
     },
   ],
 ```
 
-## **smart** option
+<tsdoc-typescript entry="./src/types.ts" map="InstrumentOptions|../../core/instrument/README.md#instrumentoptions"/>
 
-Setting this option to `false` will disable auto-generating of controls for stories with a component assigned.
+<!-- START-TSDOC-TYPESCRIPT -->
 
-## **addonPanel** option
+## PresetOptions
 
-Setting this option to `false` will disable showing the Controls panel in the addons section within the Storybook Canvas page:
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L3)_
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-addonPanel.jpg" alt="addon panel" width="428">
-</p>
 
-## **docsPreview** option
 
-Setting this option to `false` will disable showing an additional tab and panel with Controls in the `<Preview />` component within the Storybopok DocsPage:
+### properties
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-docsPreview.jpg" alt="docs preview addon" width="428">
-</p>
+| Name         | Type                                                                   | Description                                      |
+| ------------ | ---------------------------------------------------------------------- | ------------------------------------------------ |
+| `addonPanel` | boolean                                                                | whether to display the addon panel in storybook  |
+| `instrument` | [InstrumentOptions](../../core/instrument/README.md#instrumentoptions) | options that will be passed to the instrumenter. |
 
-## **docsProps** option
-
-Setting this option to `false` will disable showing an additional columns with Controls in the `<Props />` component within the Storybopok DocsPage:
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/docs/option-docsProps.jpg" alt="docs preview addon" width="428">
-</p>
+<!-- END-TSDOC-TYPESCRIPT -->
 
 # List of components
 

@@ -8,54 +8,75 @@ import {
 } from 'react-docgen-typescript';
 import { PropItem, createPropsTable } from '../blocks/props-table';
 import { Settings, Node } from '../common/types';
-import { extractCustomTag, inlineNewContent, traverseDirs }from '../common/utils';
+import {
+  extractCustomTag,
+  inlineNewContent,
+  traverseDirs,
+} from '../common/utils';
 
 const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
   const nodes: Node[] = [];
-  nodes.push({ type: 'heading', depth: 2, children: [
-    { type: 'html', value: '<ins>' },
-    { type: 'text', value: propTable.displayName },
-    { type: 'html', value: '</ins>' },
-  ]});
-  
-  remark()
-      .use(() => (node: Node) => {
-        if (node.children) {
-          nodes.push.apply(nodes, [...node.children]);
-        }  
-      })
-      .process(propTable.description);
-  
-  nodes.push({ type: 'paragraph', children: [
-    { type: 'emphasis', children: [
+  nodes.push({
+    type: 'heading',
+    depth: 2,
+    children: [
+      { type: 'html', value: '<ins>' },
       { type: 'text', value: propTable.displayName },
-      { type: 'text', value: ' ' },
-      { type: 'link', url: repoFileName, 
-        children: [
-          { type: 'text', value: 'source code'}
-        ]
+      { type: 'html', value: '</ins>' },
+    ],
+  });
+
+  remark()
+    .use(() => (node: Node) => {
+      if (node.children) {
+        nodes.push.apply(nodes, [...node.children]);
       }
-    ]}    
-  ]
-});
-  if (Object.keys(propTable.props).length) {  
+    })
+    .process(propTable.description);
+
+  nodes.push({
+    type: 'paragraph',
+    children: [
+      {
+        type: 'emphasis',
+        children: [
+          { type: 'text', value: propTable.displayName },
+          { type: 'text', value: ' ' },
+          {
+            type: 'link',
+            url: repoFileName,
+            children: [{ type: 'text', value: 'source code' }],
+          },
+        ],
+      },
+    ],
+  });
+  if (Object.keys(propTable.props).length) {
     const props: PropItem[] = Object.keys(propTable.props).map(propName => {
       const prop = propTable.props[propName];
       return {
         name: propName,
         isOptional: !prop.required,
-        type: [{ type: 'emphasis', children: [{ type: 'text', value: prop.type.raw ||  prop.type.name }]}],
+        type: [
+          {
+            type: 'emphasis',
+            children: [
+              { type: 'text', value: prop.type.raw || prop.type.name },
+            ],
+          },
+        ],
         description: prop.description,
-      }
-      
+      };
     });
     const { propsTable } = createPropsTable('properties', props);
     nodes.push.apply(nodes, propsTable);
-  }  
+  }
   return nodes;
-}
-export const insertReactDocgenTypescript = (settings: Settings = { path: './src' }) =>{
-  return  (node: Node ) => {
+};
+export const insertReactDocgenTypescript = (
+  settings: Settings = { path: './src' },
+) => {
+  return (node: Node) => {
     const {
       propFilter = (prop: RDPropItem) => {
         // Currently not working, prop.parent is always null.
@@ -69,7 +90,7 @@ export const insertReactDocgenTypescript = (settings: Settings = { path: './src'
       shouldExtractLiteralValuesFromEnum = true,
       savePropValueAsString,
     } = settings as ParserOptions;
-  
+
     const parserOptions: ParserOptions = {
       propFilter,
       componentNameResolver,
@@ -80,20 +101,22 @@ export const insertReactDocgenTypescript = (settings: Settings = { path: './src'
 
     const sections = extractCustomTag(node, 'react-docgen-typescript');
     if (sections) {
-      sections.forEach(({ attrs, attributes}) => {
+      sections.forEach(({ attrs, attributes }) => {
         const newNodes: Node[] = [];
-        traverseDirs(attributes, ( name, fileName, repoFolder ) => {
+        traverseDirs(attributes, (name, fileName, repoFolder) => {
           const propTables = parser.parse(fileName);
           if (propTables && propTables.length > 0) {
             propTables.forEach(propTable => {
-              const propNodes = propsToMDNodes(propTable, path.join(repoFolder,name ));
+              const propNodes = propsToMDNodes(
+                propTable,
+                path.join(repoFolder, name),
+              );
               newNodes.push.apply(newNodes, propNodes);
-            })
-          }  
-  
-        })
+            });
+          }
+        });
         inlineNewContent(attrs, newNodes);
-      });  
-    }  
-  }
-}  
+      });
+    }
+  };
+};

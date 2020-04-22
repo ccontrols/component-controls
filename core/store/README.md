@@ -6,6 +6,7 @@
     -   [Store](#store)
     -   [StoreOptions](#storeoptions)
     -   [store](#store-1)
+    -   [stores](#stores)
     -   [StoreObserver](#storeobserver)
 
 # Overview
@@ -63,7 +64,13 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 
 store variable, automatically filled with stories.
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L146)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L148)_
+
+
+
+## stores
+
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L150)_
 
 
 

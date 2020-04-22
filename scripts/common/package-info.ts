@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-
 export const traverseFolder = (
   filePath: string,
   levels: number = 10,
@@ -15,14 +14,12 @@ export const traverseFolder = (
   if (pckg) {
     return path.resolve(filePath, pckg);
   }
-  return traverseFolder(
-    path.resolve(filePath, '..'),
-    levels - 1,
-    fileName,
-  );
+  return traverseFolder(path.resolve(filePath, '..'), levels - 1, fileName);
 };
 
-export const getRepoPath = (initialPath = './'): { repo?: string, filePath?: string }  => {
+export const getRepoPath = (
+  initialPath = './',
+): { repo?: string; filePath?: string } => {
   const packageFileName = traverseFolder(initialPath);
   if (packageFileName) {
     const packageJSON = JSON.parse(fs.readFileSync(packageFileName, 'utf8'));
@@ -30,9 +27,15 @@ export const getRepoPath = (initialPath = './'): { repo?: string, filePath?: str
     const url = typeof repository === 'string' ? repository : repository.url;
     const { directory } = repository;
     if (url) {
-      const baseName = url.split('.').slice(0, -1).join('.')
-      return { repo: `${baseName}${directory ? `/tree/master/${directory}` : ''}`, filePath: packageFileName};
-    }  
-  }  
+      const baseName = url
+        .split('.')
+        .slice(0, -1)
+        .join('.');
+      return {
+        repo: `${baseName}${directory ? `/tree/master/${directory}` : ''}`,
+        filePath: packageFileName,
+      };
+    }
+  }
   return {};
-}
+};

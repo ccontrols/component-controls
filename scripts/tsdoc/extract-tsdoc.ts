@@ -25,6 +25,7 @@ app.bootstrap({
 export const extractTSDoc = (
   files: string[],
   entries: string[],
+  linkMaps: { [key: string]: string },
 ): Node[] | undefined => {
   const unresolvedTypeNames: string[] = [];
   const addedTypeNames: string[] = [];
@@ -298,7 +299,7 @@ export const extractTSDoc = (
         return [
           {
             type: 'link',
-            url: `#${p.name.toLowerCase()}`,
+            url: linkMaps[p.name] || `#${p.name.toLowerCase()}`,
             children: [
               {
                 type: 'text',

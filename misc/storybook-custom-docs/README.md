@@ -14,6 +14,7 @@
     -   [CustomPageRenderFn](#custompagerenderfn)
     -   [CustomPageRenderFnParams](#custompagerenderfnparams)
     -   [getContext](#getcontext)
+    -   [getCurrentStoryId](#getcurrentstoryid)
     -   [useStoryId](#usestoryid)
 
 # In action
@@ -149,19 +150,20 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 **function** getContext(): any;
 
+## getCurrentStoryId
+
+function returning the current story id
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L42)_
+
+**function** getCurrentStoryId(): string | undefined;
+
 ## useStoryId
 
 React hook hook that tracks the changes to the current story and returns it's id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L57)_
 
-**function** useStoryId(`defaultId`\*: string): string;
-
-### parameters
-
-| Name         | Type   | Description                                                                     |
-| ------------ | ------ | ------------------------------------------------------------------------------- |
-| `defaultId*` | string | initial story value, if not provided will return the current story              |
-| `returns`    | string | a story id as a React hook, when the the current story changes, will call back  |
+**function** useStoryId(): string;
 
 <!-- END-TSDOC-TYPESCRIPT -->

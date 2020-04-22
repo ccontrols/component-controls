@@ -19,7 +19,7 @@ class StoriesInjectPlugin {
       },
     );
     nmrp.apply(compiler);
-  }  
+  }
 }
 
 module.exports = StoriesInjectPlugin;
