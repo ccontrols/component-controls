@@ -189,7 +189,7 @@ There are 2 requirements for a story to use smart controls:
 A screenshot of smart controls in action.
 
 <p align="center">
-  <img src="./images/smart-controls.jpg" alt="smart groups" width="428">
+  <img src="https://github.com/ccontrols/component-controls/blob/master/integrations/storybook/images/smart-controls.jpg" alt="smart groups" width="428">
 </p>
 
 ## Examples
@@ -311,7 +311,7 @@ groupedControls.story = {
 You can see Controls in separate tabs as shown below.
 
 <p align="center">
-  <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
 # Advanced configuration options
