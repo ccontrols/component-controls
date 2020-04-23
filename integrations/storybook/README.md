@@ -411,9 +411,6 @@ You can turn on and off various panels:
         }
       }  
 
-<p align="center">
-  <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
-</p>
 
 # Custom documentation pages
 

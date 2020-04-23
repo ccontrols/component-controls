@@ -22,7 +22,7 @@
 You can create entirely new documentation pages with your own blocks of information, or you can use storybook docs blocks, component-controls blocks and even mix it all.
 
 <p align="center">
-  <img src="./images/custom-docs-pages.gif" alt="create custom storybooks documentation pages" width="738">
+  <img src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/custom-docs-pages.gif" alt="create custom storybooks documentation pages" width="738">
 </p>
 
 # Overview
