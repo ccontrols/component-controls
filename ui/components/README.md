@@ -28,7 +28,7 @@ Some of the guiding design goals for this library:
 -   Use theme-ui/system-ui as an foundation for a react UI library.
 -   As much as possible possible, avoid using components with css dependencies.
 
-Third-libraries used in no particular order:
+Third-party libraries used in no particular order:
 
 -   [theme-ui](https://theme-ui.com) as the theming and components foundation.
 -   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).

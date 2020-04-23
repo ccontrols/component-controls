@@ -411,7 +411,6 @@ You can turn on and off various panels:
         }
       }  
 
-
 # Custom documentation pages
 
 `component-controls` installs a default Page with some standard documentation boocks, however you can replace the deafult page and add new pages.

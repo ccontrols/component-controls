@@ -54,11 +54,11 @@
 Typescript definitions of the component-controls specification.
 Includes definitions for:
 
--   [Story](#story)
--   [Stories](#stories)
--   [ControlTypes](#controltypes)
--   [ComponentControl](#componentcontrol-1)
--   [PropTypes](#proptypes)
+-   [Story](https://github.com/ccontrols/component-controls/tree/master/core/specification#story)
+-   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/specification#stories)
+-   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#controltypes)
+-   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/specification#componentcontrol)
+-   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#proptypes)
 -   and more...
 
 # Installation
