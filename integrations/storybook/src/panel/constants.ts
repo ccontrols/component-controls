@@ -1,2 +1,2 @@
-export const ADDON_ID = 'controls/panel';
-export const PANEL_ID = 'controls/panel/panel';
+export const CONTROLS_PANEL_ID = 'controls/panels/controls';
+export const PROPS_PANEL_ID = 'controls/panels/props';

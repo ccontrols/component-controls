@@ -1,6 +1,6 @@
 import * as React from 'react';
 import addons from '@storybook/addons';
-import { STORY_CHANGED } from '@storybook/core-events';
+import { SET_CURRENT_STORY } from '@storybook/core-events';
 import { ConfigApi } from '@storybook/client-api';
 export * from './types';
 
@@ -60,13 +60,13 @@ export const useStoryId = () => {
   );
   const channel = React.useMemo(() => addons.getChannel(), []);
   React.useEffect(() => {
-    const onStoryChange = (id: string) => {
+    const onStoryChange = ({ storyId: id }: { storyId: string }) => {
       setStoryId(id);
     };
-    channel.on(STORY_CHANGED, onStoryChange);
+    channel.on(SET_CURRENT_STORY, onStoryChange);
 
     return () => {
-      channel.off(STORY_CHANGED, onStoryChange);
+      channel.off(SET_CURRENT_STORY, onStoryChange);
     };
   }, []);
   return storyId;

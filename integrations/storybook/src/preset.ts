@@ -10,10 +10,8 @@ module.exports = {
     return result;
   },
   addons: (entry: any = {}) => {
-    const { pages: customPages = [], docsPage = true } = entry;
-    const pages = docsPage
-      ? [require.resolve('./full-page'), ...customPages]
-      : customPages;
+    const { pages: customPages } = entry;
+    const pages = customPages || [require.resolve('./full-page')];
     if (pages.length) {
       return [
         {
@@ -28,10 +26,14 @@ module.exports = {
   },
   managerEntries: (entry: any[] = [], options: PresetOptions = {}) => {
     const result = [...entry];
-    const { addonPanel = true } = options;
-    if (addonPanel) {
-      result.push(require.resolve('./register-panel'));
+    const { controlsPanel = true, propsPanel = false } = options;
+    if (controlsPanel) {
+      result.push(require.resolve('./register-controls-panel'));
     }
+    if (propsPanel) {
+      result.push(require.resolve('./register-props-panel'));
+    }
+
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {

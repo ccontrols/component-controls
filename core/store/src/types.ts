@@ -5,7 +5,7 @@ import { StoriesStore, Story } from '@component-controls/specification';
  * when updateStoryProp is called on the store, the store observers will be notified
  * so they can re-load the stories
  */
-export type StoreObserver = (storyId?: string) => void;
+export type StoreObserver = (storyId?: string, propName?: string) => void;
 
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
@@ -25,4 +25,5 @@ export const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
 export interface MessageType {
   storyId: string;
   moduleId: number;
+  propName: string;
 }

@@ -54,8 +54,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
       store && story && story.kind ? store.kinds[story.kind] : undefined;
     const storyComponent: any =
       story && kind ? story.component || kind.component : undefined;
-    const componentName = getComponentName(storyComponent);
 
+    const componentName = getComponentName(storyComponent);
     const component =
       store && componentName && kind && kind.components[componentName]
         ? store.components[kind.components[componentName]]

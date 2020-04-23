@@ -5,6 +5,7 @@
 -   [Roadmap](#roadmap)
 -   [Integrations](#integrations)
     -   [@component-controls/storybook](#component-controlsstorybook)
+        -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
         -   [Motivation](#motivation-1)
         -   [Limitations](#limitations)
 -   [Core packages](#core-packages)
@@ -74,7 +75,11 @@ There are many developments that have contributed to the creation of `component-
 
 Storybook Addon For live editing of component controls
 
-The Storybook](<https://storybook.js.org>) integration of component-controls.
+### [storybook](https://storybook.js.org) integration of component-controls.
+
+<p align="center">
+  <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
+</p>
 
 ### Motivation
 

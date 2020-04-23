@@ -8,8 +8,12 @@ import {
   StoryStore,
   MessageType,
   UPDATE_STORY_MSG,
-  COMPONENT_CONTROLS_STORAGE,
 } from './types';
+import {
+  saveStore,
+  readStore,
+  updateStory,
+} from './serialization/StoreStorage';
 
 export { StoreObserver, StoryStore };
 
@@ -45,11 +49,11 @@ export class Store implements StoryStore {
       type: 'localstorage',
     });
     this.observers = [];
-    this.channel.onmessage = ({ storyId, moduleId }: MessageType) => {
+    this.channel.onmessage = ({ storyId, moduleId, propName }: MessageType) => {
       if (storyId && moduleId) {
         if (this.moduleId !== moduleId) {
-          this.readData(storyId);
-          this.notifyObservers(storyId);
+          this.readData(storyId, propName);
+          this.notifyObservers(storyId, propName);
         }
       }
     };
@@ -65,9 +69,9 @@ export class Store implements StoryStore {
   removeObserver = (observer: StoreObserver) =>
     (this.observers = this.observers.filter(o => o !== observer));
 
-  private notifyObservers = (storyId?: string) => {
+  private notifyObservers = (storyId?: string, propName?: string) => {
     if (this.observers.length > 0) {
-      this.observers.forEach(observer => observer(storyId));
+      this.observers.forEach(observer => observer(storyId, propName));
     }
   };
 
@@ -78,23 +82,10 @@ export class Store implements StoryStore {
     this.loadedStore = store;
     this.notifyObservers();
   };
-  private readData = (storyId?: string) => {
-    const data = localStorage.getItem(COMPONENT_CONTROLS_STORAGE);
-    if (data) {
-      try {
-        const newStore = JSON.parse(data) as StoriesStore;
-
-        if (this.loadedStore && storyId) {
-          this.loadedStore.stories[storyId] = {
-            ...this.loadedStore.stories[storyId],
-            controls: { ...newStore.stories[storyId].controls },
-          };
-        } else {
-          this.loadedStore = newStore;
-        }
-      } catch (e) {}
-    }
+  private readData = (storyId?: string, propName?: string) => {
+    this.loadedStore = readStore(this.loadedStore, storyId, propName);
   };
+
   /**
    * returns an instance of the store
    */
@@ -122,22 +113,25 @@ export class Store implements StoryStore {
   updateStoryProp = (
     storyId: string,
     propName: string,
-    newVal: any,
+    newValue: any,
   ): StoriesStore | undefined => {
+    this.loadedStore = updateStory(
+      this.loadedStore,
+      storyId,
+      propName,
+      newValue,
+      this.updateLocalStorage,
+    );
     if (this.loadedStore) {
-      this.loadedStore.stories[storyId] = {
-        ...this.loadedStore.stories[storyId],
-        [propName]: newVal,
-      };
       if (this.updateLocalStorage) {
-        localStorage.setItem(
-          COMPONENT_CONTROLS_STORAGE,
-          JSON.stringify(this.loadedStore),
-        );
-        const message: MessageType = { storyId, moduleId: this.moduleId };
+        const message: MessageType = {
+          storyId,
+          moduleId: this.moduleId,
+          propName,
+        };
         this.channel.postMessage(message);
       }
-      this.notifyObservers(storyId);
+      this.notifyObservers(storyId, propName);
     }
     return this.loadedStore;
   };
@@ -150,10 +144,5 @@ export const store = new Store();
 const stores = loadStoryStore();
 if (stores) {
   store.setStore(stores);
-  for (var key in localStorage) {
-    if (key.indexOf(COMPONENT_CONTROLS_STORAGE) == 0) {
-      localStorage.removeItem(key);
-    }
-  }
-  localStorage.setItem(COMPONENT_CONTROLS_STORAGE, JSON.stringify(stores));
+  saveStore(stores);
 }

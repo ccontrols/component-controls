@@ -2,13 +2,16 @@ import { RuleTypes } from '@component-controls/webpack-rules';
 
 export interface PresetOptions {
   /**
-   * whether to display the addon panel in storybook
+   * whether to display the controls table as an addon panel in storybook
+   * @defaultValue true
    */
-  addonPanel?: boolean;
+  controlsPanel?: boolean;
+
   /**
-   * whether to add a Page documentation page with a classic componnet-controls page
+   * whether to display the props table as an addon panel in storybook
    */
-  docsPage?: boolean;
+  propsPanel?: boolean;
+
   /**
    * additional custom documentation pages
    */

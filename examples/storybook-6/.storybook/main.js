@@ -24,6 +24,12 @@ module.exports = {
         configureJSX: true,
       },
     },
-    '@component-controls/storybook',
+    {
+      name: '@component-controls/storybook',
+      options: {
+        controlsPanel: true,
+        propsPanel: true,
+      }
+    }  
   ],
 };

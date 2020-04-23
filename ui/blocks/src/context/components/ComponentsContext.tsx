@@ -15,7 +15,7 @@ export interface ComponentInputProps {
    * The default, a value of `"."` will indicate to display information for the current component (associated with the current Story).
    * If an array of components is specified, each component will be displayed in a separate tab.
    */
-  of?: '.' | any;
+  of?: typeof CURRENT_STORY | any;
 }
 
 export interface ComponentContextProps {
@@ -29,6 +29,7 @@ export const useComponentsContext = ({
 }: ComponentInputProps): ComponentContextProps => {
   const { getStoryData, getComponents } = React.useContext(BlockDataContext);
   const { story, kind, component } = getStoryData();
+
   if (!story) {
     return {
       components: {},

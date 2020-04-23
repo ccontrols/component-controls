@@ -8,6 +8,7 @@
     -   [getRules](#getrules)
     -   [ruleMerge](#rulemerge)
     -   [rulesFactory](#rulesfactory)
+    -   [RuleOptions](#ruleoptions)
     -   [RuleType](#ruletype)
     -   [RuleTypes](#ruletypes)
     -   [WebpackRule](#webpackrule)
@@ -55,7 +56,7 @@ _defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/
 
 expands the rules into webpack rules
 
-_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L31)_
+_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L33)_
 
 **function** getRules(`rules`\*: [RuleType](#ruletype)\[]): [WebpackRules](#webpackrules);
 
@@ -94,15 +95,28 @@ _defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/
 | `react-docgen*`            | [RuleSetRule](#rulesetrule)\[] |             |
 | `react-docgen-typescript*` | [RuleSetRule](#rulesetrule)\[] |             |
 
-## RuleType
+## RuleOptions
 
 _defined in [@component-controls/webpack-rules/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/types.ts#L6)_
 
-[WebpackRule](#webpackrule) | string | **options**: [WebpackRules](#webpackrules)**rules**: [RuleTypes](#ruletypes)
+
+
+### properties
+
+| Name     | Type                          | Description |
+| -------- | ----------------------------- | ----------- |
+| `name*`  | string                        |             |
+| `rules*` | [WebpackRules](#webpackrules) |             |
+
+## RuleType
+
+_defined in [@component-controls/webpack-rules/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/types.ts#L10)_
+
+[WebpackRule](#webpackrule) | string | [RuleOptions](#ruleoptions)
 
 ## RuleTypes
 
-_defined in [@component-controls/webpack-rules/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/types.ts#L14)_
+_defined in [@component-controls/webpack-rules/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/types.ts#L12)_
 
 [RuleType](#ruletype)\[]
 

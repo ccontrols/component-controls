@@ -2,10 +2,10 @@
 import * as React from 'react';
 import addons from '@storybook/addons';
 import { ControlsPanel } from './panel/ControlsPanel';
-import { ADDON_ID, PANEL_ID } from './panel/constants';
+import { CONTROLS_PANEL_ID } from './panel/constants';
 
-addons.register(ADDON_ID, api => {
-  addons.addPanel(PANEL_ID, {
+addons.register(CONTROLS_PANEL_ID, api => {
+  addons.addPanel(`${CONTROLS_PANEL_ID}_panel`, {
     title: 'Controls',
     render: ({ active, key }) => (
       <ControlsPanel key={key} active={active} api={api} />

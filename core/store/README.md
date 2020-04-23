@@ -31,25 +31,25 @@ $ npm install @component-controls/store --save-dev
 
 Store class used to query the stories and exchange information between processes
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L29)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L33)_
 
 
 
 ### properties
 
-| Name               | Type                                                                                                                                  | Description                                                                                                           |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `constructor*`     | **function** constructor                                                                                                              | create a store with options                                                                                           |
-| `addObserver*`     | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                      | add observer callback function                                                                                        |
-| `getStore*`        | **function** getStore(): [StoriesStore](#storiesstore);                                                                               | returns an instance of the store                                                                                      |
-| `getStory*`        | **function** getStory(`storyId`\*: string): [Story](#story);                                                                          | given a story id return a story from the store                                                                        |
-| `removeObserver*`  | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string): void;\[];               | remove installed observer callback function                                                                           |
-| `setStore*`        | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                  | internal set store, use for testing with mockup store.                                                                |
-| `updateStoryProp*` | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newVal`\*: any): [StoriesStore](#storiesstore) \| undefined; | modify story properties, for example controls values. will notify all installed store observers of the changed story. |
+| Name               | Type                                                                                                                                        | Description                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `constructor*`     | **function** constructor                                                                                                                    | create a store with options                                                                                           |
+| `addObserver*`     | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                            | add observer callback function                                                                                        |
+| `getStore*`        | **function** getStore(): [StoriesStore](#storiesstore);                                                                                     | returns an instance of the store                                                                                      |
+| `getStory*`        | **function** getStory(`storyId`\*: string): [Story](#story);                                                                                | given a story id return a story from the store                                                                        |
+| `removeObserver*`  | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string, `propName`: string): void;\[]; | remove installed observer callback function                                                                           |
+| `setStore*`        | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                        | internal set store, use for testing with mockup store.                                                                |
+| `updateStoryProp*` | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newValue`\*: any): [StoriesStore](#storiesstore) \| undefined;     | modify story properties, for example controls values. will notify all installed store observers of the changed story. |
 
 ## StoreOptions
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L16)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L20)_
 
 
 
@@ -64,13 +64,13 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 
 store variable, automatically filled with stories.
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L148)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L142)_
 
 
 
 ## stores
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L150)_
+_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L144)_
 
 
 
@@ -82,13 +82,14 @@ so they can re-load the stories
 
 _defined in [@component-controls/store/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/types.ts#L8)_
 
-**function** (`storyId`: string): void;
+**function** (`storyId`: string, `propName`: string): void;
 
 ### parameters
 
-| Name      | Type   | Description |
-| --------- | ------ | ----------- |
-| `storyId` | string |             |
-| `returns` | void   |             |
+| Name       | Type   | Description |
+| ---------- | ------ | ----------- |
+| `storyId`  | string |             |
+| `propName` | string |             |
+| `returns`  | void   |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

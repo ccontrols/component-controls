@@ -1,10 +1,9 @@
 # Table of contents
 
 -   [Overview](#overview)
-    -   -   [Motivation](#motivation)
+    -   -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
+        -   [Motivation](#motivation)
         -   [Limitations](#limitations)
--   [Storybook](#storybook)
--   [Introduction](#introduction)
 -   [Getting Started](#getting-started)
     -   [Install](#install)
     -   [Configure](#configure)
@@ -19,10 +18,11 @@
         -   [Smart Controls Options](#smart-controls-options)
 -   [Testing with random data generators](#testing-with-random-data-generators)
 -   [Categories](#categories)
--   [Storybook Docs Block](#storybook-docs-block)
--   [Configuration options](#configuration-options)
+-   [Advanced configuration options](#advanced-configuration-options)
+    -   [Custom loader options](#custom-loader-options)
     -   [PresetOptions](#presetoptions)
     -   [defaultRules](#defaultrules)
+    -   [Storybook addon panels](#storybook-addon-panels)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
@@ -41,13 +41,11 @@
 
 # Overview
 
-### [storybook](<https://storybook.js.org>) integration of component-controls.
+### [storybook](https://storybook.js.org) integration of component-controls.
 
 <p align="center">
   <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
 </p>
-
-
 
 ### Motivation
 
@@ -64,7 +62,6 @@
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
 -   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
-
 
 # Getting Started
 
@@ -273,7 +270,6 @@ You can see Controls in separate tabs as shown below.
   <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
-
 # Advanced configuration options
 
 The storybook addon controls comes with pre-configured options that you can use for quick start, but you can also customise the options.
@@ -281,6 +277,7 @@ The storybook addon controls comes with pre-configured options that you can use 
 ## Custom loader options
 
 `.storybook/main.js`:
+
 ```js
   addons: [
     ...
@@ -288,7 +285,7 @@ The storybook addon controls comes with pre-configured options that you can use 
       name: '@component-controls/storybook',
         
       options: {
-        addonPanel: false,
+        controlsPanel: false,
         webpackRules: [{
           name: 'react-docgen-typescript',
           rules: [{
@@ -319,6 +316,7 @@ The storybook addon controls comes with pre-configured options that you can use 
     },
   }],
 ```
+
 For more information on [InstrumentOptions](../../core/instrument/README.md#instrumentoptions)
 
 <tsdoc-typescript entry="./src/types.ts" />
@@ -333,20 +331,38 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ### properties
 
-| Name           | Type                    | Description                                                                     |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------- |
-| `addonPanel`   | boolean                 | whether to display the addon panel in storybook                                 |
-| `docsPage`     | boolean                 | whether to add a Page documentation page with a classic componnet-controls page |
-| `pages`        | string\[]               | additional custom documentation pages                                           |
-| `webpackRules` | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                                |
+| Name            | Type                    | Description                                                          |
+| --------------- | ----------------------- | -------------------------------------------------------------------- |
+| `controlsPanel` | boolean                 | whether to display the controls table as an addon panel in storybook |
+| `pages`         | string\[]               | additional custom documentation pages                                |
+| `propsPanel`    | boolean                 | whether to display the props table as an addon panel in storybook    |
+| `webpackRules`  | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                     |
 
 ## defaultRules
 
-_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L22)_
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L25)_
 
 
 
 <!-- END-TSDOC-TYPESCRIPT -->
+
+## Storybook addon panels
+
+The `component-controls` block components ahev been designed from the ground up to be able to be placed either on documentation pages or in addon tabs. 
+
+You can turn on and off various panels:
+
+      {
+        name: '@component-controls/storybook',
+        options: {
+          controlsPanel: true,
+          propsPanel: true,
+        }
+      }  
+
+<p align="center">
+  <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
+</p>
 
 # List of components
 
