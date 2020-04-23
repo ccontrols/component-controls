@@ -1,2 +1,2 @@
 export * from './DocsContainer';
-export * from './ControlsPage';
+export const FullPage = require.resolve('./full-page');

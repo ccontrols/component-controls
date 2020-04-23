@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { ClassicPage } from '@component-controls/pages';
 import { DocsContainer } from './DocsContainer';
-import { ControlsPage } from './ControlsPage';
 
 export default {
   key: 'page',
@@ -9,7 +9,7 @@ export default {
   render: ({ active }: { active: boolean }) => {
     return (
       <DocsContainer active={active}>
-        <ControlsPage />
+        <ClassicPage />
       </DocsContainer>
     );
   },

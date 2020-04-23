@@ -26,7 +26,7 @@ module.exports = {
     {
       name: '@component-controls/storybook',
       options: {
-        docsPage: false,
+        pages: [],
       }
     },
     { 
@@ -37,6 +37,7 @@ module.exports = {
           require.resolve('./page-docs-blocks.tsx'),
           require.resolve('./page-component-blocks.tsx'),
           require.resolve('./page-mixed-blocks.tsx'),
+          require.resolve('./canvas-page.tsx'),
         ]
       },
     }

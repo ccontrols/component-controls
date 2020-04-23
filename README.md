@@ -16,9 +16,10 @@
     -   [@component-controls/webpack-configs](#component-controlswebpack-configs)
     -   [@component-controls/store](#component-controlsstore)
 -   [UI packages](#ui-packages)
+    -   [@component-controls/pages](#component-controlspages)
+    -   [@component-controls/blocks](#component-controlsblocks)
     -   [@component-controls/components](#component-controlscomponents)
     -   [@component-controls/editors](#component-controlseditors)
-    -   [@component-controls/blocks](#component-controlsblocks)
 -   [Props info](#props-info)
     -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
     -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
@@ -196,6 +197,40 @@ Utility class to abstract loading the stories store from the webpack loader and 
 
 The UI libraries are built around [theme-ui](https://theme-ui.com) and are designed to abstract the user interface level of components.
 
+<package-section file="./ui/pages/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/pages](https://github.com/ccontrols/component-controls/blob/master/ui/pages)
+
+Component controls pre-built documentation page templates.
+
+A collection of pre-built documentation page templates.
+
+-   The only requirement is that the pages are wrapped in a `<BlockContext />` react context.
+-   The templates can be used in any environment (storybook, standalone, gatsby)
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./ui/blocks/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/blocks](https://github.com/ccontrols/component-controls/blob/master/ui/blocks)
+
+Component controls core documentation blocks.
+
+Some of the guiding design goals for this library:
+
+-   Most components should have a 'plain' and a 'block' version, where the block version adds a collapsible Box with a title.
+-   There are two main categories of components: 
+    -   that display story data (i.e. story source, story render)
+    -   that display component(s) data (i.e. prop tables, component sources)
+-   Components accept a list of custom ActionItems to be extended. 
+-   Compnents that deal with source code (story or component source) display actions to browse their respective repositories.
+
+<!-- END-PACKAGE-SECTION -->
+
 <package-section file="./ui/components/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
@@ -236,25 +271,6 @@ Some of the guiding design goals for this library:
 
 -   Extensible using `addPropertyEditor`, so you can replace or add new editors.
 -   All editors offer a consistent interface through the `getPropertyEditor` factory.
-
-<!-- END-PACKAGE-SECTION -->
-
-<package-section file="./ui/blocks/README.md" section="overview" />
-
-<!-- START-PACKAGE-SECTION -->
-
-## [@component-controls/blocks](https://github.com/ccontrols/component-controls/blob/master/ui/blocks)
-
-Component controls core documentation blocks.
-
-Some of the guiding design goals for this library:
-
--   Most components should have a 'plain' and a 'block' version, where the block version adds a collapsible Box with a title.
--   There are two main categories of components: 
-    -   that display story data (i.e. story source, story render)
-    -   that display component(s) data (i.e. prop tables, component sources)
--   Components accept a list of custom ActionItems to be extended. 
--   Compnents that deal with source code (story or component source) display actions to browse their respective repositories.
 
 <!-- END-PACKAGE-SECTION -->
 

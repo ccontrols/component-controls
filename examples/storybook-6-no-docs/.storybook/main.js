@@ -4,8 +4,7 @@ module.exports = {
   addons: [{
     name: '@component-controls/storybook',
     options: {
-      webpack: [
-        'instrument','react-docgen-typescript'],
+      webpack: ['instrument','react-docgen-typescript'],
     }
   }],    
   stories: [

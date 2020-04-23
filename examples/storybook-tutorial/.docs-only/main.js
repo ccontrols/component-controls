@@ -21,11 +21,4 @@ module.exports = {
       },
     },
   ],
-  webpackFinal: async (config, { configType }) => {
-    return {
-    ...config,
-    module: {
-      ...config.module,
-    },
-  }},
 };

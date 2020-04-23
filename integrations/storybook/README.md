@@ -26,6 +26,10 @@
     -   [PresetOptions](#presetoptions)
     -   [defaultRules](#defaultrules)
     -   [Storybook addon panels](#storybook-addon-panels)
+-   [Custom documentation pages](#custom-documentation-pages)
+    -   [Hide storybookjs Canvas](#hide-storybookjs-canvas)
+    -   [Create custom Canvas page](#create-custom-canvas-page)
+    -   [Configure '@component-controls/storybook' to load out custom page only](#configure-component-controlsstorybook-to-load-out-custom-page-only)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
@@ -38,7 +42,6 @@
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
-    -   [<ins>ControlsPage</ins>](#inscontrolspageins)
     -   [<ins>PageContextContainer</ins>](#inspagecontextcontainerins)
     -   [<ins>DocsContainer</ins>](#insdocscontainerins)
 
@@ -180,8 +183,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 There are 2 requirements for a story to use smart controls: 
-1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -412,6 +415,72 @@ You can turn on and off various panels:
   <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
+# Custom documentation pages
+
+`component-controls` installs a default Page with some standard documentation boocks, however you can replace the deafult page and add new pages.
+
+Here is an example that will completely hide the storybook `Canvas` tab and replace it with our custom documentation page
+
+## Hide storybookjs Canvas
+
+`.storybook/manager.js`
+
+```js
+import { addons } from '@storybook/addons';
+addons.setConfig({
+  previewTabs: {
+    canvas: {
+      //hide storybooks Canvas tab
+      hidden: true,
+    },
+    'CUSTOM_PAGE_ADDON/canvas': {
+      //place our custom Canvas page first in order of tabs
+      index: 0,
+    },
+
+  },
+});
+```
+
+## Create custom Canvas page
+
+`.storybook/canvas-page.tsx`
+
+```js
+import React from 'react';
+import { CanvasPage } from '@component-controls/pages';
+import { DocsContainer } from '@component-controls/storybook';
+
+export default {
+  key: 'canvas',
+  title: 'Canvas',
+  render: ({ active }: { active: boolean }) => (
+    <DocsContainer active={active}>
+      <CanvasPage />
+    </DocsContainer>
+  ),
+};
+```
+
+## Configure '@component-controls/storybook' to load out custom page only
+
+`.storybook/main.tsx`
+
+```js
+module.exports = {
+  addons: [
+    '@storybook/addon-docs',
+    {
+      name: '@component-controls/storybook',
+      options: {
+        pages: [require.resolve('./canvas-page.tsx')],
+      }
+    },
+  ],
+};
+
+```
+
 # List of components
 
 <react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts" />
@@ -602,10 +671,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `name`     | _string_                                                                                                                                                                                                                                                                             | alternatively you can use the name of a story to load from an external file |
 | `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.                                      |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                                                             |
-
-## <ins>ControlsPage</ins>
-
-_ControlsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/ControlsPage.tsx)_
 
 ## <ins>PageContextContainer</ins>
 
