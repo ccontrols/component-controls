@@ -1,4 +1,4 @@
-import { RuleTypes } from '@component-controls/webpack-rules';
+import { RuleTypes } from '@component-controls/webpack-configs';
 
 export interface PresetOptions {
   /**
@@ -19,7 +19,7 @@ export interface PresetOptions {
   /**
    * options that will be passed to the instrumenter.
    */
-  webpackRules?: RuleTypes;
+  webpack?: RuleTypes;
 }
 
 export const defaultRules = ['react-docgen-typescript'];

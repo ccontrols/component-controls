@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const storyStorePlugin = require('@component-controls/loader/plugin');
-const { getRules } = require('@component-controls/webpack-rules');
+const { mergeWebpackConfig } = require('@component-controls/webpack-configs');
 import { PresetOptions, defaultRules } from './types';
 
 module.exports = {
@@ -37,16 +37,14 @@ module.exports = {
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
-    const rules = getRules(options?.webpackRules || defaultRules);
+    const mergedConfig = mergeWebpackConfig(
+      config,
+      options?.webpack || defaultRules,
+    );
     debugger;
-    const result = {
-      ...config,
-      module: {
-        ...config.module,
-        rules: [...config.module.rules, ...rules],
-      },
-      plugins: [new storyStorePlugin(), ...config.plugins],
+    return {
+      ...mergedConfig,
+      plugins: [new storyStorePlugin(), ...mergedConfig.plugins],
     };
-    return result;
   },
 };

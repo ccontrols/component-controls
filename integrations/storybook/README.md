@@ -7,6 +7,9 @@
 -   [Getting Started](#getting-started)
     -   [Install](#install)
     -   [Configure](#configure)
+        -   [Default options](#default-options)
+        -   [Use only `react-docgen` (even for typescript)](#use-only-react-docgen-even-for-typescript)
+        -   [Use built-in instrument for everything (not use storybook `addon-docs` at all)](#use-built-in-instrument-for-everything-not-use-storybook-addon-docs-at-all)
 -   [Creating stories](#creating-stories)
     -   -   [CSF](#csf)
         -   [MDX](#mdx)
@@ -73,12 +76,50 @@ yarn add @component-controls/storybook --dev
 
 ## Configure
 
-within `.storybook/main.js`:
+### Default options
+
+the default options will configure `componnet-controls` to work with react apps,  with `reac-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+
+in `main.js`:
 
 ```js
 module.exports = {
   addons: ['@component-controls/storybook']
 }
+```
+
+### Use only `react-docgen` (even for typescript)
+
+Currently this is not recommended as the typescript support in `react-docgen` is a bit lagging.
+
+in `main.js`:
+
+```js
+module.exports = {
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      webpack: ['react-docgen'],
+    }
+  }]
+}
+```
+
+### Use built-in instrument for everything (not use storybook `addon-docs` at all)
+
+The following options will bypass the loaders installed by `addon-docs` and will rely only on the instrumenting loaders from `component-controls`
+
+in `main.js`:
+
+```js
+module.exports = {
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      webpack: ['instrument', 'react-docgen-typescript'],
+    }
+  }]
+}  
 ```
 
 # Creating stories
@@ -272,9 +313,11 @@ You can see Controls in separate tabs as shown below.
 
 # Advanced configuration options
 
-The storybook addon controls comes with pre-configured options that you can use for quick start, but you can also customise the options.
+The storybook addon controls comes with pre-configured options that you can use for a quick start, but you can also customise the options.
 
 ## Custom loader options
+
+You can customize the preset webpack configuration settings, using a pre-existing config and only adding you custom choices.
 
 `.storybook/main.js`:
 
@@ -283,37 +326,42 @@ The storybook addon controls comes with pre-configured options that you can use 
     ...
     {
       name: '@component-controls/storybook',
-        
       options: {
-        controlsPanel: false,
-        webpackRules: [{
+        controlsPanel: true,
+        propsPanel: true,
+        webpack: [{
           name: 'react-docgen-typescript',
-          rules: [{
-            loader: '@component-controls/loader/loader',
-            options: {
-              //instrumentation options
-              prettier: {
-                tabWidth: 4,
-              },
-              components: {
-                storeSourceFile: true, //or false
-                resolveFile: (componentName, filePath) => {
-                  if (filePath.includes('/theme-ui/dist')) {
-                    return `${
-                      filePath.split('/theme-ui/dist')[0]
-                    }/@theme-ui/components/src/${componentName}.js`;
-                  }
-                  return filePath;
+          config: {
+            module: {
+              rules: [
+                {
+                  loader: '@component-controls/loader/loader',
+                  options: {
+                    //instrumentation options
+                    prettier: {
+                      tabWidth: 4,
+                    },
+                    components: {
+                    storeSourceFile: true, //or false
+                    resolveFile: (componentName, filePath) => {
+                      if (filePath.includes('/theme-ui/dist')) {
+                        return `${
+                          filePath.split('/theme-ui/dist')[0]
+                        }/@theme-ui/components/src/${componentName}.js`;
+                      }
+                      return filePath;
+                    },
+                  },
+                  stories: {
+                    storeSourceFile: true, //or false
+                  },
                 },
-              },
-              stories: {
-                storeSourceFile: true, //or false
-              },
+              ],
             }
-          }],  
-        }  
-      ],
-    },
+          }    
+        }],
+      }
+    }  
   }],
 ```
 
@@ -336,7 +384,7 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 | `controlsPanel` | boolean                 | whether to display the controls table as an addon panel in storybook |
 | `pages`         | string\[]               | additional custom documentation pages                                |
 | `propsPanel`    | boolean                 | whether to display the props table as an addon panel in storybook    |
-| `webpackRules`  | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                     |
+| `webpack`       | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                     |
 
 ## defaultRules
 

@@ -20,22 +20,6 @@ export const propsInfo = async (
   if (!fs.existsSync(cacheFolder)) {
     fs.mkdirSync(cacheFolder, { recursive: true });
   }
-  const cachedFileName = path.join(
-    cacheFolder,
-    createHash('md5')
-      .update(`${filePath}-${componentName}`)
-      .digest('hex'),
-  );
-  if (fs.existsSync(cachedFileName)) {
-    const cacheStats = fs.statSync(cachedFileName);
-    const fileStats = fs.statSync(filePath);
-    if (cacheStats.mtime.getTime() >= fileStats.mtime.getTime()) {
-      const fileData = fs.readFileSync(cachedFileName, 'utf8');
-      const json = JSON.parse(fileData);
-      return Object.keys(json).length ? json : undefined;
-    }
-  }
-  let result: ComponentInfo | undefined = undefined;
   const loaders = options.filter(loader => {
     const include = Array.isArray(loader.test)
       ? loader.test
@@ -58,6 +42,27 @@ export const propsInfo = async (
     console.error(`Multiple propsloaders found for file ${filePath}`);
   }
   const propsLoaderName = loaders.length === 1 ? loaders[0] : undefined;
+  const cachedFileName = path.join(
+    cacheFolder,
+    createHash('md5')
+      .update(
+        `${filePath}-${componentName}-${
+          propsLoaderName ? propsLoaderName.name : ''
+        }`,
+      )
+      .digest('hex'),
+  );
+  if (fs.existsSync(cachedFileName)) {
+    const cacheStats = fs.statSync(cachedFileName);
+    const fileStats = fs.statSync(filePath);
+    if (cacheStats.mtime.getTime() >= fileStats.mtime.getTime()) {
+      const fileData = fs.readFileSync(cachedFileName, 'utf8');
+      const json = JSON.parse(fileData);
+      return Object.keys(json).length ? json : undefined;
+    }
+  }
+  let result: ComponentInfo | undefined = undefined;
+
   if (propsLoaderName) {
     const { run } = require(propsLoaderName.name);
     if (run) {

@@ -1,5 +1,5 @@
 {
-  "name": "@component-controls/webpack-rules",
+  "name": "@component-controls/webpack-configs",
   "version": "0.6.0",
   "private": true,
   "description": "Webpack preset configurations",
@@ -27,7 +27,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "core/webpack-rules"
+    "directory": "core/webpack-configs"
   },
   "license": "MIT",
   "dependencies": {

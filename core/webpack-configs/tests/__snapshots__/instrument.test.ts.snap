@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merge instrument and react-docgen-typescript get config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "include": /node_modules\\\\/acorn-jsx/,
+        "test": /\\\\\\.js\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+                "/Users/atanasster/component-controls/node_modules/@babel/preset-react/lib/index.js",
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "react-app",
+                  Object {
+                    "flow": false,
+                    "typescript": true,
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "exclude": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "test": /\\\\\\.mdx\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "enforce": "pre",
+        "exclude": Array [
+          /node_modules/,
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
+          "mdx": Object {
+            "transformMDX": true,
+          },
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+      },
+    ],
+  },
+  "resolve": Object {
+    "extensions": Array [
+      ".ts",
+      ".tsx",
+    ],
+  },
+}
+`;
+
+exports[`merge instrument and react-docgen-typescript merge options 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "include": /node_modules\\\\/acorn-jsx/,
+        "test": /\\\\\\.js\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+                "/Users/atanasster/component-controls/node_modules/@babel/preset-react/lib/index.js",
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "react-app",
+                  Object {
+                    "flow": false,
+                    "typescript": true,
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "exclude": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "test": /\\\\\\.mdx\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "enforce": "pre",
+        "exclude": Array [
+          /node_modules/,
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
+          "mdx": Object {
+            "transformMDX": true,
+          },
+          "prettier": Object {
+            "tabWidth": 4,
+          },
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+      },
+    ],
+  },
+  "resolve": Object {
+    "extensions": Array [
+      ".ts",
+      ".tsx",
+    ],
+  },
+}
+`;

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-docgen-typescript get config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": "pre",
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+      },
+    ],
+  },
+}
+`;
+
+exports[`react-docgen-typescript merge options 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": "pre",
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
+          "prettier": Object {
+            "tabWidth": 4,
+          },
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+      },
+    ],
+  },
+}
+`;

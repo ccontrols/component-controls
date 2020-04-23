@@ -13,7 +13,7 @@
     -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
-    -   [@component-controls/webpack-rules](#component-controlswebpack-rules)
+    -   [@component-controls/webpack-configs](#component-controlswebpack-configs)
     -   [@component-controls/store](#component-controlsstore)
 -   [UI packages](#ui-packages)
     -   [@component-controls/components](#component-controlscomponents)
@@ -168,11 +168,11 @@ Webpack loader that injects the data collected by [@component-controls/instrumen
 
 <!-- END-PACKAGE-SECTION -->
 
-<package-section file="./core/webpack-rules/README.md" section="overview" />
+<package-section file="./core/webpack-configs/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/webpack-rules](https://github.com/ccontrols/component-controls/blob/master/core/webpack-rules)
+## [@component-controls/webpack-configs](https://github.com/ccontrols/component-controls/blob/master/core/webpack-configs)
 
 Webpack preset configurations
 
