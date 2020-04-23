@@ -21,7 +21,6 @@ describe('csf-props-info', () => {
               path.dirname(filePath),
               `../../../../ui/blocks/src/${componentName}/${componentName}.tsx`,
             );
-            console.log('resolved', resolved);
             return resolved;
           }
           return filePath;

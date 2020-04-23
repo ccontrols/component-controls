@@ -1852,14 +1852,14 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLButtonElement>) => void",
+        "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
       },
     },
     "onScrollCapture": Object {
       "parentName": "DOMAttributes",
       "type": Object {
         "name": "function",
-        "raw": "(event: UIEvent<HTMLButtonElement>) => void",
+        "raw": "(event: UIEvent<HTMLButtonElement, UIEvent>) => void",
       },
     },
     "onSeeked": Object {
