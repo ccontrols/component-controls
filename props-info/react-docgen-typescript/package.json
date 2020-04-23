@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/react-docgen-typescript-info",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Component controls react-docgen-typescript props info loader",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/specification": "^0.6.0",
+    "@component-controls/specification": "^0.7.0",
     "react": "^16.12.0",
     "react-docgen-typescript": "^1.16.1"
   },
@@ -44,7 +44,7 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@component-controls/specification":  "*",
+    "@component-controls/specification": "*",
     "react": "*"
   },
   "jest": {

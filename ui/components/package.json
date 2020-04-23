@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@primer/octicons-react": "^9.5.0",
+    "@theme-ui/presets": "^0.3.0",
     "copy-to-clipboard": "^3.2.1",
     "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
@@ -42,8 +43,7 @@
     "react-switch": "^5.0.1",
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
-    "theme-ui": "^0.3.1",
-    "@theme-ui/presets": "^0.3.0"
+    "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",

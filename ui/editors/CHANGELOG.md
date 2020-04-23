@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/ccontrols/component-controls/compare/v0.6.0...v0.7.0) (2020-04-23)
+
+
+### Features
+
+* add docs for other ui packages ([6e87f65](https://github.com/ccontrols/component-controls/commit/6e87f65e4254932cf554dafb4e7270e7e50250c5))
+* add repo source link for typedoc ([ddba93e](https://github.com/ccontrols/component-controls/commit/ddba93ee609399cd7edaedc392991254cb8d4bd5))
+* automatically get the package name and description ([e335483](https://github.com/ccontrols/component-controls/commit/e335483c5eef75b7a0ba91cdd73c0dd5191fc9b1))
+* extract docgentypescript props into readme ([fb7b1a8](https://github.com/ccontrols/component-controls/commit/fb7b1a8daafd46c62ec68099bea52250bc9282c3))
+* initial checkin typedoc for api ([47064cb](https://github.com/ccontrols/component-controls/commit/47064cb97e650ad89d7ed6029d4b9b0e7d90f834))
+* update react-docgen-typescript to use props table bock ([8c783f4](https://github.com/ccontrols/component-controls/commit/8c783f48df15b3a9dd8edd7b03ccde34db4b1ae9))
+
+
+### Reverts
+
+* Revert "chore: update infrastructure" ([f475d86](https://github.com/ccontrols/component-controls/commit/f475d86a4e4ac5ba1ce11467d9ae45f24a518f79))
+
+
+
+
+
 # [0.6.0](https://github.com/ccontrols/component-controls/compare/v0.5.1...v0.6.0) (2020-02-14)
 
 

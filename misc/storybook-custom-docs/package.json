@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook-custom-docs",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Storybook custom docs pages",
   "keywords": [
     "addon",
@@ -49,7 +49,7 @@
     "@storybook/addons": "*",
     "@storybook/api": "*",
     "@storybook/client-api": "*",
-    "@storybook/core-events":"*",
+    "@storybook/core-events": "*",
     "react": "*",
     "react-dom": "*"
   },

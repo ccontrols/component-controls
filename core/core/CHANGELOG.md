@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/ccontrols/component-controls/compare/v0.6.0...v0.7.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* accept false for data: ([1ec10ba](https://github.com/ccontrols/component-controls/commit/1ec10ba72e5da3aca9a7bc594d2de6e287a912f2))
+* ts number and proptypes enum ([4eebe4f](https://github.com/ccontrols/component-controls/commit/4eebe4fd1cb4b62d2c78a45368cb5ab93515fc71))
+
+
+### Features
+
+* add description block ([7fabe82](https://github.com/ccontrols/component-controls/commit/7fabe824b31fb73b3656c7d3bc2b058f379f40d7))
+* replace values in Source ([1a90295](https://github.com/ccontrols/component-controls/commit/1a902953992509496f9ae773ccea561a0b228dff))
+
+
+### Reverts
+
+* Revert "chore: update infrastructure" ([f475d86](https://github.com/ccontrols/component-controls/commit/f475d86a4e4ac5ba1ce11467d9ae45f24a518f79))
+
+
+
+
+
 # [0.6.0](https://github.com/ccontrols/component-controls/compare/v0.5.1...v0.6.0) (2020-02-14)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^0.6.0",
+    "@component-controls/instrument": "^0.7.0",
     "deepmerge": "^4.2.2",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0"

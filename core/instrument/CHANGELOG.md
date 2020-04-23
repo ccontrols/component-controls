@@ -3,6 +3,84 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/ccontrols/component-controls/compare/v0.6.0...v0.7.0) (2020-04-23)
+
+
+### Bug Fixes
+
+* args usage in empty body ([2c277e1](https://github.com/ccontrols/component-controls/commit/2c277e1b89b84d114f9adda6352226e5d6a60f5b))
+* correct import StoriesKind ([812b515](https://github.com/ccontrols/component-controls/commit/812b5155c91968bc016eeb6a394dcbf5b99852ce))
+* exports object name ([8936f21](https://github.com/ccontrols/component-controls/commit/8936f21e68ec13a2541707a2cca64500967ce86d))
+* fix for component extraction from parameters ([b266ff6](https://github.com/ccontrols/component-controls/commit/b266ff6740e10337ebdc95f85a26cf660d2e5de9))
+* fix literal attributes key ([93ef00c](https://github.com/ccontrols/component-controls/commit/93ef00cd4f0526d06574672909eff865b88c71b2))
+* fix tests for new instrument format ([fc742c9](https://github.com/ccontrols/component-controls/commit/fc742c968c052d5782095b6b4b3df02e5510f6b4))
+* import mdx stories by id and mdx exports refactor ([af8abf0](https://github.com/ccontrols/component-controls/commit/af8abf0186a94ee3996e9f59a2729640c00f66b6))
+* prevent parsing MDX files from filesystem ([5fb3c47](https://github.com/ccontrols/component-controls/commit/5fb3c471a4772458cf4afb73810df5c60f3f1e82))
+* remove duplicate story source extraction ([7b2d215](https://github.com/ccontrols/component-controls/commit/7b2d215c3535cdeefb67f4a38fb6d1d84a31b1ad))
+* remove mdx attributes for source ([c9dccdc](https://github.com/ccontrols/component-controls/commit/c9dccdc3bd62f050b36e7194dfc2e2c336801050))
+* resolve components in store ([0e69643](https://github.com/ccontrols/component-controls/commit/0e69643df02266f1fd4039d2df8ad7384e9f3274))
+* source tags fixes ([f455cd8](https://github.com/ccontrols/component-controls/commit/f455cd8ae4bff0587daea36f83891e290231e835))
+* support for arg usage with assignment ([34149aa](https://github.com/ccontrols/component-controls/commit/34149aa97dd75584615a69dbc748efc8a1ad7385))
+* tests with updated components ([c827be8](https://github.com/ccontrols/component-controls/commit/c827be8897ac248bc458f73ea79f98db576e51dd))
+* typescript fixes ([3cf5964](https://github.com/ccontrols/component-controls/commit/3cf59643320d672cfc53a5213168629e71a869dc))
+* usage of story props fixes ([6c3516d](https://github.com/ccontrols/component-controls/commit/6c3516dec801ade745791989ed4fe525c071dee9))
+
+
+### Features
+
+* add ControlsTable description ([53b6ff4](https://github.com/ccontrols/component-controls/commit/53b6ff4366f67c8d6c541a9e57a57a4f2eb087a7))
+* add description block ([7fabe82](https://github.com/ccontrols/component-controls/commit/7fabe824b31fb73b3656c7d3bc2b058f379f40d7))
+* add docs for other ui packages ([6e87f65](https://github.com/ccontrols/component-controls/commit/6e87f65e4254932cf554dafb4e7270e7e50250c5))
+* add filtering to table ([2711667](https://github.com/ccontrols/component-controls/commit/2711667bcdf1375819aa27e5ec085347855adffd))
+* add props-info react-docgen and react-docgen-typescript ([8159202](https://github.com/ccontrols/component-controls/commit/81592029746fc037b7605a417f71f219089b153c))
+* add stories loader ([bc5b391](https://github.com/ccontrols/component-controls/commit/bc5b391b2680740a1ff20cfab1d75b2f2d9058f3))
+* add Subtitle block ([6486d6c](https://github.com/ccontrols/component-controls/commit/6486d6ce496f780e51c5196b6c049bfefc087032))
+* add theme config to config preset ([d37520e](https://github.com/ccontrols/component-controls/commit/d37520edcd8fdc7dd88a35c94eed2091c5856dcf))
+* added PropsTable ([2c5a560](https://github.com/ccontrols/component-controls/commit/2c5a560958a9d1fcad6a0c57334808c8a5baf47a))
+* automatically get the package name and description ([e335483](https://github.com/ccontrols/component-controls/commit/e335483c5eef75b7a0ba91cdd73c0dd5191fc9b1))
+* caching of props-info parsing ([be24d25](https://github.com/ccontrols/component-controls/commit/be24d25dce2a321bc71dff798888b695ba6e6ae3))
+* cjs named exports ([1007306](https://github.com/ccontrols/component-controls/commit/1007306802d79f1ffea56965b8e976d3185209d7))
+* component import code moved to block ([2c9828c](https://github.com/ccontrols/component-controls/commit/2c9828c54a31412964bbcc303ff06b5a29eeb351))
+* extract component get filename ([3949702](https://github.com/ccontrols/component-controls/commit/39497026313d56fea3c01aaac527a0bbf5bb092d))
+* extract components props info ([051341d](https://github.com/ccontrols/component-controls/commit/051341d09303fd646a64dce051435d526751f8c4))
+* extract docgentypescript props into readme ([fb7b1a8](https://github.com/ccontrols/component-controls/commit/fb7b1a8daafd46c62ec68099bea52250bc9282c3))
+* extract exports - class ([55bdb30](https://github.com/ccontrols/component-controls/commit/55bdb30822fa27b3837c1aaa01fbe618a42f59ee))
+* extract imports ([eb441be](https://github.com/ccontrols/component-controls/commit/eb441bef53850ea8926d4ddae2ab6018cf4632dd))
+* extract package name and se for ComponentSource ([71d6f13](https://github.com/ccontrols/component-controls/commit/71d6f13029ed765cec6b85d5f40244612f864851))
+* extract-exports ([bc6c9f6](https://github.com/ccontrols/component-controls/commit/bc6c9f65fcefd79a4fc3180d9bd11a919e85b0e5))
+* follow imports to source file ([280ab9d](https://github.com/ccontrols/component-controls/commit/280ab9d017439701bfd2dcb9cd3093493a28a4a3))
+* handling of 'of' attribute for components ([e5af752](https://github.com/ccontrols/component-controls/commit/e5af752a76e5b0569ce3c51207845d2345a5e951))
+* import comonent source block ([3d69fe1](https://github.com/ccontrols/component-controls/commit/3d69fe19eacc1d9de834de762697efb6792fc703))
+* initial checkin typedoc for api ([47064cb](https://github.com/ccontrols/component-controls/commit/47064cb97e650ad89d7ed6029d4b9b0e7d90f834))
+* initial props-info packages integration ([cb2ee07](https://github.com/ccontrols/component-controls/commit/cb2ee07defb97c12d6d1779523ea417d7aa5ea2b))
+* initial subcomponents support ([496524f](https://github.com/ccontrols/component-controls/commit/496524feab270b2c005e2a82527236d86f27ba14))
+* instrument options what to collect ([4998ed6](https://github.com/ccontrols/component-controls/commit/4998ed6de1d384bf0dba9fb3fd17094dbb11ebd9))
+* load test files from examples ([a683c04](https://github.com/ccontrols/component-controls/commit/a683c042c08d7853e301b93d959c6e8dec9fb9be))
+* mdx and csf ast parsers ([6da1762](https://github.com/ccontrols/component-controls/commit/6da176293dd7b94b6a92f7391eab8a776d9b964e))
+* mdx docs page ([f7512b5](https://github.com/ccontrols/component-controls/commit/f7512b59793df33c86759bc5ac3320628ef5141c))
+* move store resolution to loader ([7caf7d5](https://github.com/ccontrols/component-controls/commit/7caf7d503738a4d1009453a83a9d379922302b80))
+* new package core-blocks ([45ea08b](https://github.com/ccontrols/component-controls/commit/45ea08b1a7511d8e7d6728b3957e0e5316999c31))
+* parse component import into stories ([04c986a](https://github.com/ccontrols/component-controls/commit/04c986a9bf62577c5da3b1082fd3a30e0c7cc7bf))
+* re-exports from imported file ([6220d59](https://github.com/ccontrols/component-controls/commit/6220d59b8eb068f28dc30195765d0e51fdce5b05))
+* refactor webpck loader to pitch ([839ae3e](https://github.com/ccontrols/component-controls/commit/839ae3e2b3e7a233ef189cc3001b105798778612))
+* replace values in Source ([1a90295](https://github.com/ccontrols/component-controls/commit/1a902953992509496f9ae773ccea561a0b228dff))
+* show full file source ([881ff32](https://github.com/ccontrols/component-controls/commit/881ff3244c85a075775ed5697396adbe08dd932c))
+* source code loader from instrument ([d0a39c8](https://github.com/ccontrols/component-controls/commit/d0a39c8a9090f465af547f5c0965bd5c2a6c1353))
+* storybook without docs addon ([8174079](https://github.com/ccontrols/component-controls/commit/8174079971534c25c17ceee3ffcd764083fb03d9))
+* supportof for include.exclude stories on kind ([3645c68](https://github.com/ccontrols/component-controls/commit/3645c68673544856e5508ceef750beb6e779ee37))
+* use prettier options in loaders ([b17ba66](https://github.com/ccontrols/component-controls/commit/b17ba66988bfd50f5e9df303caa6e5307776fedf))
+* user-configurable path to component source ([93bc1f4](https://github.com/ccontrols/component-controls/commit/93bc1f4b55652dd8e45eabada7def35435020a60))
+* webpack configs full configuration object ([2504568](https://github.com/ccontrols/component-controls/commit/25045686f484dc45707c9b931e9530c350be5fc4))
+
+
+### Reverts
+
+* Revert "chore: update infrastructure" ([f475d86](https://github.com/ccontrols/component-controls/commit/f475d86a4e4ac5ba1ce11467d9ae45f24a518f79))
+
+
+
+
+
 # [0.6.0](https://github.com/ccontrols/component-controls/compare/v0.5.1...v0.6.0) (2020-02-14)
 
 
