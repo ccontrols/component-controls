@@ -50,7 +50,7 @@
 ### [storybook](https://storybook.js.org) integration of component-controls.
 
 <p align="center">
-  <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
+  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif" alt="introduction to using component-controls" width="738">
 </p>
 
 ### Motivation
