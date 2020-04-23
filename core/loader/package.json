@@ -1,7 +1,6 @@
 {
   "name": "@component-controls/loader",
   "version": "0.7.0",
-  "private": true,
   "description": "Webpack loader for component controls instrumentation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

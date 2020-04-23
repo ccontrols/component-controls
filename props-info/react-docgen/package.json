@@ -1,7 +1,6 @@
 {
   "name": "@component-controls/react-docgen-info",
   "version": "0.7.0",
-  "private": true,
   "description": "Component controls react-docgen props info loader",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
