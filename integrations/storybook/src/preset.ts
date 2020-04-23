@@ -36,6 +36,7 @@ module.exports = {
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
     const rules = getRules(options?.webpackRules || defaultRules);
+    debugger;
     const result = {
       ...config,
       module: {

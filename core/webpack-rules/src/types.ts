@@ -3,12 +3,10 @@ import { RuleSetRule } from 'webpack';
 export type WebpackRule = RuleSetRule;
 export type WebpackRules = WebpackRule[];
 
-export type RuleType =
-  | WebpackRule
-  | string
-  | {
-      rules: RuleTypes;
-      options: WebpackRules;
-    };
+export interface RuleOptions {
+  name: string;
+  rules: WebpackRules;
+}
+export type RuleType = WebpackRule | string | RuleOptions;
 
 export type RuleTypes = RuleType[];

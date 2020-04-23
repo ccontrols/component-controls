@@ -24,6 +24,6 @@ module.exports = {
         configureJSX: true,
       },
     },
-    '@component-controls/storybook'
+    '@component-controls/storybook',
   ],
 };

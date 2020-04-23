@@ -19,4 +19,4 @@ export interface PresetOptions {
   webpackRules?: RuleTypes;
 }
 
-export const defaultRules = ['react-props'];
+export const defaultRules = ['react-docgen-typescript'];

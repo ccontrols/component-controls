@@ -4,6 +4,7 @@
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [API](#api)
+    -   [merge](#merge)
     -   [getRules](#getrules)
     -   [ruleMerge](#rulemerge)
     -   [rulesFactory](#rulesfactory)
@@ -32,7 +33,7 @@ addons: [
     { 
       name: '@component-controls/storybook',
       options: {
-        webpackRules: ['instrument', 'react-props', 'react-typescript']
+        webpackRules: ['instrument', 'react-docgen-typescript']
       }
     }
   ],
@@ -44,11 +45,17 @@ addons: [
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
+## merge
+
+_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L1)_
+
+
+
 ## getRules
 
 expands the rules into webpack rules
 
-_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L29)_
+_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L31)_
 
 **function** getRules(`rules`\*: [RuleType](#ruletype)\[]): [WebpackRules](#webpackrules);
 
@@ -61,30 +68,31 @@ _defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/
 
 ## ruleMerge
 
-_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L14)_
+_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L16)_
 
-**function** ruleMerge(`dest`\*: [WebpackRules](#webpackrules), `src`\*: [WebpackRules](#webpackrules)): [RuleSetRule](#rulesetrule)\[];
+**function** ruleMerge(`dest`\*: [WebpackRules](#webpackrules), `src`\*: [WebpackRules](#webpackrules)): any\[];
 
 ### parameters
 
-| Name      | Type                           | Description |
-| --------- | ------------------------------ | ----------- |
-| `dest*`   | [WebpackRules](#webpackrules)  |             |
-| `src*`    | [WebpackRules](#webpackrules)  |             |
-| `returns` | [RuleSetRule](#rulesetrule)\[] |             |
+| Name      | Type                          | Description |
+| --------- | ----------------------------- | ----------- |
+| `dest*`   | [WebpackRules](#webpackrules) |             |
+| `src*`    | [WebpackRules](#webpackrules) |             |
+| `returns` | any\[]                        |             |
 
 ## rulesFactory
 
-_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L7)_
+_defined in [@component-controls/webpack-rules/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-rules/src/index.ts#L8)_
 
 
 
 ### properties
 
-| Name           | Type                           | Description |
-| -------------- | ------------------------------ | ----------- |
-| `instrument*`  | [RuleSetRule](#rulesetrule)\[] |             |
-| `react-props*` | [RuleSetRule](#rulesetrule)\[] |             |
+| Name                       | Type                           | Description |
+| -------------------------- | ------------------------------ | ----------- |
+| `instrument*`              | [RuleSetRule](#rulesetrule)\[] |             |
+| `react-docgen*`            | [RuleSetRule](#rulesetrule)\[] |             |
+| `react-docgen-typescript*` | [RuleSetRule](#rulesetrule)\[] |             |
 
 ## RuleType
 

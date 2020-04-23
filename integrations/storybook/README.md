@@ -41,7 +41,13 @@
 
 # Overview
 
-The Storybook](<https://storybook.js.org>) integration of component-controls.
+### [storybook](<https://storybook.js.org>) integration of component-controls.
+
+<p align="center">
+  <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
+</p>
+
+
 
 ### Motivation
 
@@ -59,17 +65,6 @@ The Storybook](<https://storybook.js.org>) integration of component-controls.
 -   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
 -   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
-# Storybook
-
-The Storybook integration of component-controls allows you to define and then edit story properties dynamically in the [Storybook](https://storybook.js.org) UI with a set of property editors. 
-
-The Storybook integration started as a successor of [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) and we have attempted to keep some level of compatibility where possible. 
-
-# Introduction
-
-<p align="center">
-  <img src="./images/component-controls.gif" alt="introduction to using component-controls" width="738">
-</p>
 
 # Getting Started
 
@@ -278,90 +273,55 @@ You can see Controls in separate tabs as shown below.
   <img src="./images/grouped-controls.jpg" alt="control groups" width="428">
 </p>
 
-# Storybook Docs Block
 
-By default, Addon Controls integrates in the addon panels, in the `<Props />` table on the StoryBook DocsPage and well as in the `<Preview />` component on the DocsPage. You can also add a specifc docs block with story controls by either changing the default DocsPage or directly in your `mdx` stories:
+# Advanced configuration options
 
-```js
-import { Title, Subtitle, Description, Story, Props, Stories } from '@storybook/addon-docs/blocks';
-import { ControlsTable } from '@component-controls/storybook';
+The storybook addon controls comes with pre-configured options that you can use for quick start, but you can also customise the options.
 
+## Custom loader options
 
-export default {
-  title: 'Addons/Controls/controls',
-  parameters: {
-    docs: {
-      page: () => (
-        <>
-          <Title />
-          <Subtitle />
-          <Description />
-          <Story id="." />
-          <ControlsTable id="." />
-          <Props />
-          <Stories />
-        </>
-      ),
-    },
-  },
-```
-
-```md
-import { Story, Meta } from '@storybook/addon-docs/blocks';
-import { ControlsTable } from '@component-controls/storybook';
-
-<Meta title="Storybook controls" parameters={{component: Button}} />
-
-
-<Story name="small story">
-  {props => (
-    <Button {...props} />
-  )}  
-</Story>
-
-<ControlsTable name="small story" />
-
-```
-
-# Configuration options
-
-The storybook controls addon accepts several option parameters to customize the default functionality.
-
-Example `.storybook/main.js`:
-
+`.storybook/main.js`:
 ```js
   addons: [
     ...
     {
       name: '@component-controls/storybook',
+        
       options: {
         addonPanel: false,
-        instrument: {
-          //instrumentation options
-          prettier: {
-            tabWidth: 2,
-          },
-          components: {
-            storeSourceFile: true, //false
-            resolveFile: (componentName, filePath) => {
-              if (filePath.includes('/theme-ui/dist')) {
-                return `${
-                  filePath.split('/theme-ui/dist')[0]
-                }/@theme-ui/components/src/${componentName}.js`;
-              }
-              return filePath;
-            },
-          },
-          stories: {
-            storeSourceFile: true, //false
-          },
-        }
-      },
+        webpackRules: [{
+          name: 'react-docgen-typescript',
+          rules: [{
+            loader: '@component-controls/loader/loader',
+            options: {
+              //instrumentation options
+              prettier: {
+                tabWidth: 4,
+              },
+              components: {
+                storeSourceFile: true, //or false
+                resolveFile: (componentName, filePath) => {
+                  if (filePath.includes('/theme-ui/dist')) {
+                    return `${
+                      filePath.split('/theme-ui/dist')[0]
+                    }/@theme-ui/components/src/${componentName}.js`;
+                  }
+                  return filePath;
+                },
+              },
+              stories: {
+                storeSourceFile: true, //or false
+              },
+            }
+          }],  
+        }  
+      ],
     },
-  ],
+  }],
 ```
+For more information on [InstrumentOptions](../../core/instrument/README.md#instrumentoptions)
 
-<tsdoc-typescript entry="./src/types.ts" map="InstrumentOptions|../../core/instrument/README.md#instrumentoptions"/>
+<tsdoc-typescript entry="./src/types.ts" />
 
 <!-- START-TSDOC-TYPESCRIPT -->
 

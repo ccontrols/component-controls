@@ -1,8 +1,10 @@
 import React from 'react';
+import { Button } from 'theme-ui';
 import { ControlTypes } from '@component-controls/specification';
 
 export default {
   title: 'Storybook/Starter',
+  component: Button,
 };
 
 interface DocsControlsTable {
