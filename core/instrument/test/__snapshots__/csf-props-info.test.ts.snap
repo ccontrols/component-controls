@@ -21,10 +21,7 @@ Can adapt to multiple groups of controls, displaying them in their own tabs.",
             },
           },
           "id": Object {
-            "description": "id of the story
-optional id to be used for the block
-if no id is provided, one will be calculated automatically
-from the title.",
+            "description": "id of the story",
             "parentName": "StoryInputProps",
             "type": Object {
               "name": "string",
