@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.7.0",
+  "version": "0.7.1",
   "name": "component-controls-storybook-custom-docs-pages",
   "license": "MIT",
   "scripts": {
@@ -9,10 +9,10 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/react-docgen-info": "^0.7.0",
-    "@component-controls/react-docgen-typescript-info": "^0.7.0",
-    "@component-controls/storybook": "^0.7.0",
-    "@component-controls/storybook-custom-docs": "^0.7.0",
+    "@component-controls/react-docgen-info": "^0.7.1",
+    "@component-controls/react-docgen-typescript-info": "^0.7.1",
+    "@component-controls/storybook": "^0.7.1",
+    "@component-controls/storybook-custom-docs": "^0.7.1",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "6.0.0-alpha.28",
