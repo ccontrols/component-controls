@@ -5,7 +5,7 @@ interface DocsOptions {
 }
 
 module.exports.default = async function() {
-  const options: DocsOptions = (getOptions(this) as DocsOptions) || {};
+  const options: DocsOptions = (getOptions(this) as DocsOptions) || { pages: []};
   const { pages } = options;
   const callback = this.async();
   const code = ` 
@@ -18,12 +18,12 @@ ${pages
 
 const channel = addons.getChannel();
 
-const activePages: string[] = [];
+const activePages = [];
 
 const attachPage = (pageConfig, viewMode) => {
 
   const ATTACH_DOCS_PAGE = \`attach_docs_page_\${pageConfig.key}\`;
-  const updatePage = (active: boolean) => {
+  const updatePage = (active) => {
     const id = \`controls-docs-page-\${pageConfig.key}\`;
     var node = document.getElementById(id);
     if (!node) {
