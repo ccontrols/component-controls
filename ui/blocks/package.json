@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/blocks",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Component controls core documentation blocks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -34,7 +34,7 @@
     "@component-controls/core": "^0.7.1",
     "@component-controls/editors": "^0.7.1",
     "@component-controls/specification": "^0.7.1",
-    "@component-controls/store": "^0.7.4",
+    "@component-controls/store": "^0.7.5",
     "@mdx-js/react": "^1.5.8",
     "@primer/octicons-react": "^9.6.0",
     "@storybook/csf": "^0.0.1",

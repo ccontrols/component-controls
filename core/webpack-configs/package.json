@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-configs",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Webpack preset configurations",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/instrument": "^0.7.4",
+    "@component-controls/instrument": "^0.7.5",
     "deepmerge": "^4.2.2",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0"

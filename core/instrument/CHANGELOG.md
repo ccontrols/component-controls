@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/ccontrols/component-controls/compare/v0.7.4...v0.7.5) (2020-04-24)
+
+
+### Bug Fixes
+
+* enable classProperties plugin ([acabbaf](https://github.com/ccontrols/component-controls/commit/acabbaf65689d19e7fc2541e3b3c32ee0e10b64c))
+
+
+
+
+
 ## [0.7.4](https://github.com/ccontrols/component-controls/compare/v0.7.3...v0.7.4) (2020-04-24)
 
 
