@@ -46,7 +46,7 @@
     "@component-controls/storybook-custom-docs": "^0.7.8",
     "@component-controls/webpack-configs": "^0.7.5",
     "broadcast-channel": "^3.1.0",
-    "core-js": "^3.0.1",
+    "core-js": "^3.6.5",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
