@@ -9,6 +9,7 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
+    "@component-controls/specification": "^0.7.1",
     "@component-controls/storybook": "^0.7.8",
     "@component-controls/storybook-custom-docs": "^0.7.8",
     "@storybook/addon-docs": "6.0.0-alpha.28",
