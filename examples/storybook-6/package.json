@@ -10,13 +10,13 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@babel/core": "^7.9.0",
     "@component-controls/storybook": "^0.7.8",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "6.0.0-alpha.28",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
+    "core-js": "^3.6.5",
     "cross-env": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
