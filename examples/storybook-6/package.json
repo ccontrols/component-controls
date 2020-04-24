@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.7.1",
+  "version": "0.7.2",
   "name": "component-controls-storybook-6",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "@component-controls/react-docgen-info": "^0.7.1",
     "@component-controls/react-docgen-typescript-info": "^0.7.1",
-    "@component-controls/storybook": "^0.7.1",
+    "@component-controls/storybook": "^0.7.2",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "6.0.0-alpha.28",

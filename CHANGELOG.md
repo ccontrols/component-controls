@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/ccontrols/component-controls/compare/v0.7.1...v0.7.2) (2020-04-24)
+
+
+### Bug Fixes
+
+* export root files ([9659a34](https://github.com/ccontrols/component-controls/commit/9659a34fd5c6a64ed26cf9b9c0fc0259a5c968ac))
+* update folder ([3078f29](https://github.com/ccontrols/component-controls/commit/3078f29635c22b7f2905cab33c1bc7d019d5fe15))
+
+
+
+
+
 ## [0.7.1](https://github.com/ccontrols/component-controls/compare/v0.7.0...v0.7.1) (2020-04-23)
 
 **Note:** Version bump only for package component-controls
