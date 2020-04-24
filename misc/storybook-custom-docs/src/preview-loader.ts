@@ -5,7 +5,9 @@ interface DocsOptions {
 }
 
 module.exports.default = async function() {
-  const options: DocsOptions = (getOptions(this) as DocsOptions) || { pages: []};
+  const options: DocsOptions = (getOptions(this) as DocsOptions) || {
+    pages: [],
+  };
   const { pages } = options;
   const callback = this.async();
   const code = ` 
