@@ -10,7 +10,7 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.9.2",
+    "@babel/core": "^7.9.0",
     "@component-controls/storybook": "^0.7.8",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",
