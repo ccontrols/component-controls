@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.9](https://github.com/atanasster/component-controls/compare/v0.7.8...v0.7.9) (2020-04-24)
+
+
+### Bug Fixes
+
+* add "@component-controls/specification": ([3884eac](https://github.com/atanasster/component-controls/commit/3884eacb0c5502b2ce1f6556bdcfe8ff9031aa73))
+
+
+
+
+
 ## [0.7.8](https://github.com/atanasster/component-controls/compare/v0.7.7...v0.7.8) (2020-04-24)
 
 
