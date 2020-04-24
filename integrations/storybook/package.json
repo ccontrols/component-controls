@@ -13,8 +13,7 @@
     "dist/",
     "package.json",
     "README.md",
-    "preset.js",
-    "register.js"
+    "preset.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

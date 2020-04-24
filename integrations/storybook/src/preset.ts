@@ -41,7 +41,6 @@ module.exports = {
       config,
       options?.webpack || defaultRules,
     );
-    debugger;
     return {
       ...mergedConfig,
       plugins: [new storyStorePlugin(), ...mergedConfig.plugins],
