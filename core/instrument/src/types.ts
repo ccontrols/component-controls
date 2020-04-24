@@ -17,7 +17,7 @@ export const defaultResolveOptions: ResolveOptions = {
 
 export const defaultParserOptions: ParserOptions = {
   sourceType: 'module',
-  plugins: ['jsx', 'typescript'],
+  plugins: ['jsx', 'typescript', 'classProperties'],
 };
 
 /**

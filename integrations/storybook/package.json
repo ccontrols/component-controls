@@ -53,6 +53,8 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@component-controls/react-docgen-typescript-info": "^0.7.1",
+    "@component-controls/react-docgen-info": "^0.7.1",
     "@storybook/addons": "6.0.0-alpha.28",
     "@storybook/api": "6.0.0-alpha.28",
     "@storybook/client-api": "6.0.0-alpha.28",
