@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://github.com/atanasster/component-controls/compare/v0.7.7...v0.7.8) (2020-04-24)
+
+
+### Bug Fixes
+
+* props-info deps handled by storybook pckg ([115135e](https://github.com/atanasster/component-controls/commit/115135eda07f47f13c1be42b5efabe99d486b4fc))
+
+
+
+
+
 ## [0.7.7](https://github.com/atanasster/component-controls/compare/v0.7.6...v0.7.7) (2020-04-24)
 
 **Note:** Version bump only for package component-controls-storybook-custom-docs-pages

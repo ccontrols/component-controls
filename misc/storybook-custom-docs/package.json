@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook-custom-docs",
-  "version": "0.7.1",
+  "version": "0.7.8",
   "description": "Storybook custom docs pages",
   "keywords": [
     "addon",

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
@@ -43,7 +43,7 @@
     "@component-controls/react-docgen-typescript-info": "^0.7.1",
     "@component-controls/specification": "^0.7.1",
     "@component-controls/store": "^0.7.5",
-    "@component-controls/storybook-custom-docs": "^0.7.1",
+    "@component-controls/storybook-custom-docs": "^0.7.8",
     "@component-controls/webpack-configs": "^0.7.5",
     "broadcast-channel": "^3.1.0",
     "core-js": "^3.0.1",

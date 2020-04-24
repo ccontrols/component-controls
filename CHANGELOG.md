@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://github.com/ccontrols/component-controls/compare/v0.7.7...v0.7.8) (2020-04-24)
+
+
+### Bug Fixes
+
+* linting ([82da2a2](https://github.com/ccontrols/component-controls/commit/82da2a26775f7fbf0f5c2f4d64bf1c71d3ecb9ea))
+* props-info deps handled by storybook pckg ([115135e](https://github.com/ccontrols/component-controls/commit/115135eda07f47f13c1be42b5efabe99d486b4fc))
+* publish preset.js file ([e44a850](https://github.com/ccontrols/component-controls/commit/e44a8507c3a524020c6489b0d854695b11be050f))
+
+
+
+
+
 ## [0.7.7](https://github.com/ccontrols/component-controls/compare/v0.7.6...v0.7.7) (2020-04-24)
 
 
