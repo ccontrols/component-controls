@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.7.5",
+  "version": "0.7.6",
   "name": "component-controls-storybook-custom-docs-pages",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "@component-controls/react-docgen-info": "^0.7.1",
     "@component-controls/react-docgen-typescript-info": "^0.7.1",
-    "@component-controls/storybook": "^0.7.5",
+    "@component-controls/storybook": "^0.7.6",
     "@component-controls/storybook-custom-docs": "^0.7.1",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",

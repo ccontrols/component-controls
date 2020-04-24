@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/ccontrols/component-controls/compare/v0.7.5...v0.7.6) (2020-04-24)
+
+
+### Bug Fixes
+
+* deps added ([a28f376](https://github.com/ccontrols/component-controls/commit/a28f3768b9b362cd10dd897db6ecfbee59d45c80))
+
+
+
+
+
 ## [0.7.5](https://github.com/ccontrols/component-controls/compare/v0.7.4...v0.7.5) (2020-04-24)
 
 
