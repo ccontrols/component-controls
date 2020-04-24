@@ -9,8 +9,6 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/react-docgen-info": "^0.7.1",
-    "@component-controls/react-docgen-typescript-info": "^0.7.1",
     "@component-controls/storybook": "^0.7.7",
     "@storybook/react": "6.0.0-alpha.28",
     "babel-loader": "^8.0.6",

@@ -9,8 +9,6 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/react-docgen-info": "^0.7.1",
-    "@component-controls/react-docgen-typescript-info": "^0.7.1",
     "@component-controls/storybook": "^0.7.7",
     "@component-controls/storybook-custom-docs": "^0.7.1",
     "@storybook/addon-docs": "6.0.0-alpha.28",
