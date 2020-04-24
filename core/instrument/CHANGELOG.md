@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/ccontrols/component-controls/compare/v0.7.3...v0.7.4) (2020-04-24)
+
+
+### Bug Fixes
+
+* add read-package-json dep ([6b63831](https://github.com/ccontrols/component-controls/commit/6b638316a5de9870d933b31f1323fd1232f1b76a))
+
+
+
+
+
 ## [0.7.1](https://github.com/ccontrols/component-controls/compare/v0.7.0...v0.7.1) (2020-04-23)
 
 **Note:** Version bump only for package @component-controls/instrument
