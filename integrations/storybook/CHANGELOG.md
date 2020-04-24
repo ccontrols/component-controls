@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/ccontrols/component-controls/compare/v0.7.6...v0.7.7) (2020-04-24)
+
+
+### Bug Fixes
+
+* unneeded register root entry ([238784e](https://github.com/ccontrols/component-controls/commit/238784e3f4ad3fa2b5d459c9f20c0acc080cde7e))
+
+
+
+
+
 ## [0.7.6](https://github.com/ccontrols/component-controls/compare/v0.7.5...v0.7.6) (2020-04-24)
 
 
