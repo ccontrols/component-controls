@@ -9,12 +9,9 @@
     "dist/",
     "package.json",
     "README.md",
+    "plugin.js",
     "loader.js",
-    "loader.d.ts",
-    "story-store-data.js",
-    "story-store-data.d.ts",
-    "store.js",
-    "store.d.ts"
+    "story-store-data.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
