@@ -39,6 +39,7 @@ export const PropsTable: FC<PropsTableProps> = ({
         if (!info) {
           return null;
         }
+        const { controls } = story || {};
         const keys = Object.keys(info.props);
         if (!keys.length) {
           return null;
@@ -51,6 +52,7 @@ export const PropsTable: FC<PropsTableProps> = ({
           return {
             name: key,
             prop: { ...prop, parentName },
+            control: controls ? controls[key] : undefined,
           };
         });
         const groupProps: GroupingProps = {};
@@ -62,10 +64,17 @@ export const PropsTable: FC<PropsTableProps> = ({
         } else {
           groupProps.hiddenColumns = ['prop.parentName'];
         }
-        /*
-         */
-        const columns = useMemo(
-          () => [
+
+        // check if we should display controls in the PrpsTable
+        // at least one control's name should exist as a property name
+        const hasControls =
+          controls &&
+          Object.keys(controls).some(key => {
+            return rows.some(({ name }) => name === key);
+          });
+
+        const columns = useMemo(() => {
+          const cachedColumns = [
             {
               Header: 'Parent',
               accessor: 'prop.parentName',
@@ -170,24 +179,14 @@ export const PropsTable: FC<PropsTableProps> = ({
             },
             ...extraColumns,
             ,
-          ],
-          [extraColumns],
-        );
-        const { controls } = story || {};
-        // check if we should display controls in the PrpsTable
-        // at least one control's name should exist as a property name
-        const hasControls =
-          controls &&
-          Object.keys(controls).some(key => {
-            return rows.some(({ name }) => name === key);
-          });
-        if (hasControls) {
-          columns.push({
-            Header: 'Controls',
-            width: '30%',
-            Cell: ({ row: { original } }: any) => {
-              if (controls) {
-                const control = controls[original.name];
+          ];
+          if (hasControls) {
+            cachedColumns.push({
+              Header: 'Controls',
+              accessor: 'control',
+              width: '30%',
+              Cell: ({ row: { original } }: any) => {
+                const { control } = original;
                 if (control && story) {
                   const InputType: PropertyEditor =
                     getPropertyEditor(control.type) || InvalidType;
@@ -219,12 +218,12 @@ export const PropsTable: FC<PropsTableProps> = ({
                     </Flex>
                   );
                 }
-              }
-              return null;
-            },
-          });
-        }
-
+                return null;
+              },
+            });
+          }
+          return cachedColumns;
+        }, [extraColumns, hasControls]);
         return (
           <Table {...groupProps} {...rest} columns={columns} data={rows} />
         );

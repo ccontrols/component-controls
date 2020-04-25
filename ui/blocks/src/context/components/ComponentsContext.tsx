@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Story,
   StoriesKind,
@@ -27,8 +27,13 @@ export interface ComponentContextProps {
 export const useComponentsContext = ({
   of = CURRENT_STORY,
 }: ComponentInputProps): ComponentContextProps => {
-  const { getStoryData, getComponents } = React.useContext(BlockDataContext);
-  const { story, kind, component } = getStoryData();
+  const {
+    getStoryData,
+    getComponents,
+    addObserver,
+    removeObserver,
+  } = React.useContext(BlockDataContext);
+  const [{ story, kind, component }, setStoryData] = useState(getStoryData());
 
   if (!story) {
     return {
@@ -36,6 +41,16 @@ export const useComponentsContext = ({
     };
   }
 
+  useEffect(() => {
+    const onChange = () => {
+      //force refresh of context
+      setStoryData(getStoryData());
+    };
+    addObserver(onChange);
+    return () => {
+      removeObserver(onChange);
+    };
+  }, []);
   let components: StoryComponents = {};
   if (of === CURRENT_STORY) {
     if (component) {

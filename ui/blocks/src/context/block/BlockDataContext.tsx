@@ -1,6 +1,7 @@
 import React from 'react';
 import { toId, storyNameFromExport } from '@storybook/csf';
-import { StoryStore } from '@component-controls/store';
+import { StoryStore, StoreObserver } from '@component-controls/store';
+
 import {
   Story,
   StoriesStore,
@@ -31,6 +32,15 @@ export interface BlockDataContextProps {
    * will navigate through the store kinds and look for a matching story id
    */
   storyIdFromName: (name: string) => string | undefined;
+
+  /**
+   * add an observer for onChange events
+   */
+  addObserver: (observer: StoreObserver) => void;
+  /**
+   * add an observer for onChange events
+   */
+  removeObserver: (observer: StoreObserver) => void;
 }
 //@ts-ignore
 export const BlockDataContext = React.createContext<BlockDataContextProps>({});
@@ -100,6 +110,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         getStoryData,
         storyIdFromName,
         getComponents,
+        addObserver: storeProvider.addObserver,
+        removeObserver: storeProvider.removeObserver,
       }}
     >
       {children}
