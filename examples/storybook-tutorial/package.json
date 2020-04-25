@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.8.0",
+  "version": "0.8.1",
   "name": "component-controls-storybook-tutorial",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@component-controls/specification": "^0.8.0",
-    "@component-controls/storybook": "^0.8.0",
+    "@component-controls/storybook": "^0.8.1",
     "@storybook/addon-docs": "6.0.0-alpha.28",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "6.0.0-alpha.28",

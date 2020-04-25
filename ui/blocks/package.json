@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/blocks",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Component controls core documentation blocks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

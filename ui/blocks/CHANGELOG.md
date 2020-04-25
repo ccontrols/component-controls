@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/ccontrols/component-controls/compare/v0.8.0...v0.8.1) (2020-04-25)
+
+
+### Bug Fixes
+
+* decorator wrappers ([e2172c8](https://github.com/ccontrols/component-controls/commit/e2172c8da431f0a06fd7351f9731f686c2d512ac))
+
+
+
+
+
 # [0.8.0](https://github.com/ccontrols/component-controls/compare/v0.7.9...v0.8.0) (2020-04-25)
 
 

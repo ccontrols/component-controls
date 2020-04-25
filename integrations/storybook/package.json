@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
@@ -35,10 +35,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^0.8.0",
+    "@component-controls/blocks": "^0.8.1",
     "@component-controls/core": "^0.8.0",
     "@component-controls/loader": "^0.8.0",
-    "@component-controls/pages": "^0.8.0",
+    "@component-controls/pages": "^0.8.1",
     "@component-controls/react-docgen-info": "^0.8.0",
     "@component-controls/react-docgen-typescript-info": "^0.8.0",
     "@component-controls/specification": "^0.8.0",
