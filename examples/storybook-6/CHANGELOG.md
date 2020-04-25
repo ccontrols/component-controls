@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/atanasster/component-controls/compare/v0.7.9...v0.8.0) (2020-04-25)
+
+
+### Features
+
+* support for decaorators ([686564f](https://github.com/atanasster/component-controls/commit/686564f2801bbd33ed4034c2e058d19ef4981094))
+
+
+
+
+
 ## [0.7.9](https://github.com/atanasster/component-controls/compare/v0.7.8...v0.7.9) (2020-04-24)
 
 
