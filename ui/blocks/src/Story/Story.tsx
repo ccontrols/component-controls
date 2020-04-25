@@ -17,7 +17,7 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
       if (story && story.renderFn) {
         try {
           const values = story.controls ? getControlValues(story.controls) : {};
-          const { decorators_XXX: globalDecorators = [] } = options;
+          const { decorators: globalDecorators = [] } = options;
           const { decorators: storyDecorators = [] } = story;
           const decorators = deepMerge(globalDecorators, storyDecorators);
           const renderFn = decorators.reduce(
@@ -28,9 +28,7 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
           );
           return (
             <Box id={story.id} sx={{ px: 3 }} {...rest}>
-              <div style={{ all: 'unset' }}>
-                {createElement('div', null, renderFn())}
-              </div>
+              <div style={{ all: 'unset' }}>{createElement(renderFn)}</div>
             </Box>
           );
         } catch (e) {

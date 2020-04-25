@@ -3,7 +3,7 @@ import { addParameters, addDecorator } from '@storybook/react';
 import { ThemeProvider } from '@component-controls/storybook';
 
 addDecorator(story => (
-  <ThemeProvider><div id='my-story-wrapper'>{story()}</div></ThemeProvider>
+  <ThemeProvider>{story()}</ThemeProvider>
 ));
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
