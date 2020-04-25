@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/ccontrols/component-controls/compare/v0.8.1...v0.8.2) (2020-04-25)
+
+
+### Bug Fixes
+
+* smart controls numbers values ([851a872](https://github.com/ccontrols/component-controls/commit/851a87238aebc414faed45f1b0e5e32b2b5a5673))
+
+
+
+
+
 # [0.8.0](https://github.com/ccontrols/component-controls/compare/v0.7.9...v0.8.0) (2020-04-25)
 
 **Note:** Version bump only for package @component-controls/core

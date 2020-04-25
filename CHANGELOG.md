@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/ccontrols/component-controls/compare/v0.8.1...v0.8.2) (2020-04-25)
+
+
+### Bug Fixes
+
+* color button position relative ([9ae9cf3](https://github.com/ccontrols/component-controls/commit/9ae9cf3161c17fb2dde6821a4cf9bf92659e14c5))
+* force refresh props table on story change ([fa09d0e](https://github.com/ccontrols/component-controls/commit/fa09d0efb3ff6d20549f34ff333771eb80bf2a9f))
+* smart controls numbers values ([851a872](https://github.com/ccontrols/component-controls/commit/851a87238aebc414faed45f1b0e5e32b2b5a5673))
+
+
+
+
+
 ## [0.8.1](https://github.com/ccontrols/component-controls/compare/v0.8.0...v0.8.1) (2020-04-25)
 
 

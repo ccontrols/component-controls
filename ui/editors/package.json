@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "Component controls editors for component control values.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/components": "^0.8.0",
-    "@component-controls/core": "^0.8.0",
+    "@component-controls/core": "^0.8.2",
     "@component-controls/specification": "^0.8.0",
     "global": "^4.3.2",
     "polished": "^3.4.4",

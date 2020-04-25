@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/ccontrols/component-controls/compare/v0.8.1...v0.8.2) (2020-04-25)
+
+
+### Bug Fixes
+
+* color button position relative ([9ae9cf3](https://github.com/ccontrols/component-controls/commit/9ae9cf3161c17fb2dde6821a4cf9bf92659e14c5))
+
+
+
+
+
 # [0.8.0](https://github.com/ccontrols/component-controls/compare/v0.7.9...v0.8.0) (2020-04-25)
 
 **Note:** Version bump only for package @component-controls/editors
