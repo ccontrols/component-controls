@@ -53,7 +53,7 @@ export const controlFromProps = (
     console.info(`${name}: `, arguments);
   }
   const defaultValue = propDef.defaultValue
-    ? propDef.defaultValue.value
+    ? propDef.defaultValue.value ?? propDef.defaultValue
     : undefined;
   switch (type) {
     case 'string': {
