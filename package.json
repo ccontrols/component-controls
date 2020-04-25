@@ -33,7 +33,8 @@
     "commit": "git-cz",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "dev": "lerna run --parallel dev"
+    "dev": "lerna run --parallel dev",
+    "examples:storybook-6": "cd examples/stprybook-6 && yarn build-storybook && cd ../.."
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [
