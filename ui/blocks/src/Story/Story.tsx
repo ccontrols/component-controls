@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { createElement, FC } from 'react';
+import { FC, createElement } from 'react';
 import { jsx, Box } from 'theme-ui';
+import { deepMerge, StoryRenderFn } from '@component-controls/specification';
 import { getControlValues } from '@component-controls/core';
 import {
   StoryBlockContainer,
@@ -9,29 +10,27 @@ import {
 
 export type StoryProps = StoryBlockContainerProps;
 
-interface RenderStoryProps {
-  renderFn: (controlValues: { [key: string]: any }, context: any) => any;
-  values: { [key: string]: any };
-  context: any;
-}
-
-const RenderStory: FC<RenderStoryProps> = ({ renderFn, values, context }) =>
-  createElement('div', null, renderFn(values, { context }));
-
 export const Story: FC<StoryProps> = (props: StoryProps) => (
   <StoryBlockContainer {...props}>
     {(context, rest) => {
-      const { story } = context;
-      if (story?.renderFn) {
+      const { story, options = {} } = context;
+      if (story && story.renderFn) {
         try {
           const values = story.controls ? getControlValues(story.controls) : {};
+          const { decorators_XXX: globalDecorators = [] } = options;
+          const { decorators: storyDecorators = [] } = story;
+          const decorators = deepMerge(globalDecorators, storyDecorators);
+          const renderFn = decorators.reduce(
+            (acc: StoryRenderFn, item: StoryRenderFn) => () =>
+              item(acc, { context }),
+            //@ts-ignore
+            () => story.renderFn(values, { context }),
+          );
           return (
             <Box id={story.id} sx={{ px: 3 }} {...rest}>
-              <RenderStory
-                renderFn={story.renderFn}
-                values={values}
-                context={context}
-              />
+              <div style={{ all: 'unset' }}>
+                {createElement('div', null, renderFn())}
+              </div>
             </Box>
           );
         } catch (e) {

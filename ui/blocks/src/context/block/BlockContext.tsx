@@ -12,6 +12,11 @@ export interface BlockContextInputProps {
    * store mockup when running tests
    */
   mockStore?: StoryStore;
+  /**
+   * global options passed from container
+   * those are global parameters as well as decorators
+   */
+  options?: any;
 }
 
 export interface BlockContextProps {
@@ -23,6 +28,11 @@ export interface BlockContextProps {
    * store interface
    */
   storeProvider: StoryStore;
+  /**
+   * global options passed from container
+   * those are global parameters as well as decorators
+   */
+  options?: any;
 }
 //@ts-ignore
 export const BlockContext = React.createContext<BlockContextProps>({});
@@ -31,6 +41,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   storyId,
   mockStore,
+  options,
 }) => {
   const storeProvider = mockStore || storyStore;
   return (
@@ -38,6 +49,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
       value={{
         storyId,
         storeProvider,
+        options,
       }}
     >
       <BlockDataContextProvider store={storeProvider} storyId={storyId}>

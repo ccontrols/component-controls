@@ -1,5 +1,10 @@
-import { addParameters } from '@storybook/react';
+import React from 'react';
+import { addParameters, addDecorator } from '@storybook/react';
+import { ThemeProvider } from '@component-controls/storybook';
 
+addDecorator(story => (
+  <ThemeProvider>{story()}</ThemeProvider>
+));
 const categories = ['Storybook', 'Blocks', 'Editors', 'Components']
 addParameters({
   dependencies: { hideEmpty: true },

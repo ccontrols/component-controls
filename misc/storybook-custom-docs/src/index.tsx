@@ -37,15 +37,33 @@ export const getContext = () => {
 };
 
 /**
- * function returning the current story id
+ * function returning the global options
+ * parameters and decorators
  */
-export const getCurrentStoryId = (): string | undefined => {
-  const selection =
+export const getGlobalOptions = (): any => {
+  const store =
     window &&
     //@ts-ignore
     window.__STORYBOOK_CLIENT_API__ &&
     //@ts-ignore
-    window.__STORYBOOK_CLIENT_API__.store().getSelection();
+    window.__STORYBOOK_CLIENT_API__.store();
+  //@ts-ignore
+  return store._globalMetadata;
+};
+
+/**
+ * function returning the current story id
+ */
+export const getCurrentStoryId = (): string | undefined => {
+  const store =
+    window &&
+    //@ts-ignore
+    window.__STORYBOOK_CLIENT_API__ &&
+    //@ts-ignore
+    window.__STORYBOOK_CLIENT_API__.store();
+
+  const selection = store.getSelection();
+  //@ts-ignore
   return selection ? selection.storyId : undefined;
 };
 

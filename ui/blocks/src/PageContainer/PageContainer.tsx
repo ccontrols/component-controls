@@ -20,6 +20,13 @@ export interface PageContainerProps {
    * dark/light theme for the page
    */
   dark?: boolean;
+
+  /**
+   * global options passed from container
+   * those are global parameters as well as decorators
+   */
+  options?: any;
+
   /**
    * components to customize the markdown display.
    */
@@ -47,6 +54,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   storyId,
   mockStore,
   theme,
+  options,
   components = {},
 }) => {
   return storyId ? (
@@ -62,7 +70,11 @@ export const PageContainer: FC<PageContainerProps> = ({
         }}
       >
         <Box sx={{ maxWidth: '1000px', width: '100%' }}>
-          <BlockContextProvider storyId={storyId} mockStore={mockStore}>
+          <BlockContextProvider
+            storyId={storyId}
+            mockStore={mockStore}
+            options={options}
+          >
             <StoryContextConsumer id={storyId}>
               {({ kind }) => {
                 const { MDXPage } = kind || {};

@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/camelcase */
-import { StoriesStore, Story } from '@component-controls/specification';
+import {
+  StoriesStore,
+  Story,
+  deepMerge,
+} from '@component-controls/specification';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import store from '@component-controls/loader/story-store-data';
 import { addSmartControls } from './smart-controls';
-import { deepMerge } from './deepMerge';
 
 let storyStore: StoriesStore | undefined = undefined;
 

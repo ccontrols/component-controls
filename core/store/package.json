@@ -35,7 +35,6 @@
     "@component-controls/specification": "^0.7.1",
     "@storybook/csf": "^0.0.1",
     "broadcast-channel": "^3.1.0",
-    "deepmerge": "^4.2.2",
     "typescript": "^3.8.3"
   },
   "devDependencies": {

@@ -131,6 +131,11 @@ export interface Story {
    * object of key/value pairs specifying the controls for the story
    */
   controls?: ComponentControls;
+
+  /**
+   * story decorators (or wrappers)
+   */
+  decorators?: StoryRenderFn[];
 }
 
 /**
@@ -177,6 +182,11 @@ export interface StoriesKind {
    * multiple components option
    */
   subcomponents?: string[] | object[];
+
+  /**
+   * story decorators (or wrappers)
+   */
+  decorators?: StoryRenderFn[];
 
   /**
    * file name of the file of stories

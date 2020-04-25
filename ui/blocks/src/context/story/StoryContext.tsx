@@ -34,6 +34,11 @@ export interface StoryContextProps {
    * current story's/document's component
    */
   component?: StoryComponent;
+  /**
+   * global options passed from container
+   * those are global parameters as well as decorators
+   */
+  options?: any;
 }
 
 /**
@@ -45,7 +50,9 @@ export const useStoryContext = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { storyId: currentId, storeProvider } = React.useContext(BlockContext);
+  const { storyId: currentId, storeProvider, options } = React.useContext(
+    BlockContext,
+  );
   const { getStoryData, storyIdFromName } = React.useContext(BlockDataContext);
   const storyId = name
     ? storyIdFromName(name)
@@ -83,6 +90,7 @@ export const useStoryContext = ({
     story: data.story,
     kind: data.kind,
     component: data.component,
+    options,
   };
 };
 
