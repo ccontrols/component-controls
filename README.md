@@ -3,6 +3,7 @@
 -   [Motivation](#motivation)
 -   [Inspiration](#inspiration)
 -   [Roadmap](#roadmap)
+-   [Showcase sites](#showcase-sites)
 -   [Integrations](#integrations)
     -   [@component-controls/storybook](#component-controlsstorybook)
         -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
@@ -65,6 +66,14 @@ There are many developments that have contributed to the creation of `component-
 -   [ ] Multiple frameworks support (Vue, Angular, tbd)
 -   [ ] Gatsby standalone app/static app builder
 -   [ ] Nextjs standalone app/static app builder
+
+# Showcase sites
+
+-   [Storybook 6](https://components-storybook-6.netlify.app/)
+
+-   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
+
+-   [Custom docs pages](https://components-storybook-custom-pages.netlify.app)
 
 # Integrations
 

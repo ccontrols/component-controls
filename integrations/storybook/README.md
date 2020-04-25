@@ -1,5 +1,6 @@
 # Table of contents
 
+-   [Shocase sites](#shocase-sites)
 -   [Overview](#overview)
     -   -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
         -   [Motivation](#motivation)
@@ -44,6 +45,11 @@
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>PageContextContainer</ins>](#inspagecontextcontainerins)
     -   [<ins>DocsContainer</ins>](#insdocscontainerins)
+
+# Shocase sites
+
+-   [Storybook 6](https://components-storybook-6.netlify.app/)
+-   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
 # Overview
 
@@ -183,8 +189,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 There are 2 requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 

@@ -19,6 +19,8 @@
 
 # In action
 
+[Example site](https://components-storybook-custom-pages.netlify.app)
+
 You can create entirely new documentation pages with your own blocks of information, or you can use storybook docs blocks, component-controls blocks and even mix it all.
 
 <p align="center">
