@@ -34,12 +34,12 @@ export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
       name={name}
       onClick={() => setDisplayColorPicker(!displayColorPicker)}
       css={{
-        zIndex: 'unset',
         paddingLeft: '10px',
         minHeight: '36px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
+        position: 'relative',
       }}
     >
       <Box
