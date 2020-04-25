@@ -29,6 +29,7 @@ module.exports = {
       options: {
         controlsPanel: true,
         propsPanel: true,
+        storySourcePanel: true,
       }
     }  
   ],

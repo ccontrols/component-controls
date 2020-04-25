@@ -13,6 +13,11 @@ export interface PresetOptions {
   propsPanel?: boolean;
 
   /**
+   * whether to display the StorySource block as an addon panel in storybook
+   */
+  storySourcePanel?: boolean;
+
+  /**
    * additional custom documentation pages
    */
   pages?: string[];

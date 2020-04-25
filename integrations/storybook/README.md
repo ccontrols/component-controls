@@ -189,8 +189,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 There are 2 requirements for a story to use smart controls: 
-1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -388,16 +388,17 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ### properties
 
-| Name            | Type                    | Description                                                          |
-| --------------- | ----------------------- | -------------------------------------------------------------------- |
-| `controlsPanel` | boolean                 | whether to display the controls table as an addon panel in storybook |
-| `pages`         | string\[]               | additional custom documentation pages                                |
-| `propsPanel`    | boolean                 | whether to display the props table as an addon panel in storybook    |
-| `webpack`       | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                     |
+| Name               | Type                    | Description                                                             |
+| ------------------ | ----------------------- | ----------------------------------------------------------------------- |
+| `controlsPanel`    | boolean                 | whether to display the controls table as an addon panel in storybook    |
+| `pages`            | string\[]               | additional custom documentation pages                                   |
+| `propsPanel`       | boolean                 | whether to display the props table as an addon panel in storybook       |
+| `storySourcePanel` | boolean                 | whether to display the StorySource block as an addon panel in storybook |
+| `webpack`          | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                        |
 
 ## defaultRules
 
-_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L25)_
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L30)_
 
 
 
@@ -407,13 +408,14 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 The `component-controls` block components ahev been designed from the ground up to be able to be placed either on documentation pages or in addon tabs. 
 
-You can turn on and off various panels:
+You can turn on and off the available panels:
 
       {
         name: '@component-controls/storybook',
         options: {
           controlsPanel: true,
           propsPanel: true,
+          storySourcePanel: true,
         }
       }  
 
@@ -680,13 +682,14 @@ _PageContextContainer [source code](https:/github.com/ccontrols/component-contro
 
 ### properties
 
-| Name         | Type                    | Description                                   |
-| ------------ | ----------------------- | --------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                  |
-| `dark`       | _boolean_               | dark/light theme for the page                 |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display. |
-| `theme`      | _Theme_                 | optional custom theme                         |
-| `mockStore`  | _StoryStore_            | mock store for tests                          |
+| Name         | Type                    | Description                                                                            |
+| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `storyId`    | _string_                | story to display in the page                                                           |
+| `dark`       | _boolean_               | dark/light theme for the page                                                          |
+| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
+| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
+| `theme`      | _Theme_                 | optional custom theme                                                                  |
+| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
 
 ## <ins>DocsContainer</ins>
 
@@ -694,13 +697,14 @@ _DocsContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                   |
-| ------------ | ----------------------- | --------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                  |
-| `dark`       | _boolean_               | dark/light theme for the page                 |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display. |
-| `theme`      | _Theme_                 | optional custom theme                         |
-| `mockStore`  | _StoryStore_            | mock store for tests                          |
-| `active`     | _boolean_               |                                               |
+| Name         | Type                    | Description                                                                            |
+| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `storyId`    | _string_                | story to display in the page                                                           |
+| `dark`       | _boolean_               | dark/light theme for the page                                                          |
+| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
+| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
+| `theme`      | _Theme_                 | optional custom theme                                                                  |
+| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
+| `active`     | _boolean_               |                                                                                        |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

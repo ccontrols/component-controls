@@ -12,6 +12,7 @@
 -   [API](#api)
     -   [getContext](#getcontext)
     -   [getCurrentStoryId](#getcurrentstoryid)
+    -   [getGlobalOptions](#getglobaloptions)
     -   [useStoryId](#usestoryid)
     -   [CustomPageDef](#custompagedef)
     -   [CustomPageRenderFnParams](#custompagerenderfnparams)
@@ -138,15 +139,24 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 function returning the current story id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L42)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L57)_
 
 **function** getCurrentStoryId(): string | undefined;
+
+## getGlobalOptions
+
+function returning the global options
+parameters and decorators
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
+
+**function** getGlobalOptions(): any;
 
 ## useStoryId
 
 React hook hook that tracks the changes to the current story and returns it's id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L57)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L75)_
 
 **function** useStoryId(): string;
 

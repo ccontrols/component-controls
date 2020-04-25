@@ -7,6 +7,7 @@ export default config({
     './src/config.tsx',
     './src/register-controls-panel.tsx',
     './src/register-props-panel.tsx',
+    './src/register-storysource-panel.tsx',
     './src//docs-page/full-page.tsx',
   ],
 });

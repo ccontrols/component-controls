@@ -150,13 +150,14 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                   |
-| ------------ | ----------------------- | --------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                  |
-| `dark`       | _boolean_               | dark/light theme for the page                 |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display. |
-| `theme`      | _Theme_                 | optional custom theme                         |
-| `mockStore`  | _StoryStore_            | mock store for tests                          |
+| Name         | Type                    | Description                                                                            |
+| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `storyId`    | _string_                | story to display in the page                                                           |
+| `dark`       | _boolean_               | dark/light theme for the page                                                          |
+| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
+| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
+| `theme`      | _Theme_                 | optional custom theme                                                                  |
+| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
 
 ## <ins>Playground</ins>
 

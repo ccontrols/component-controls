@@ -26,14 +26,20 @@ module.exports = {
   },
   managerEntries: (entry: any[] = [], options: PresetOptions = {}) => {
     const result = [...entry];
-    const { controlsPanel = true, propsPanel = false } = options;
+    const {
+      controlsPanel = true,
+      propsPanel = false,
+      storySourcePanel = false,
+    } = options;
     if (controlsPanel) {
       result.push(require.resolve('./register-controls-panel'));
     }
     if (propsPanel) {
       result.push(require.resolve('./register-props-panel'));
     }
-
+    if (storySourcePanel) {
+      result.push(require.resolve('./register-storysource-panel'));
+    }
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
