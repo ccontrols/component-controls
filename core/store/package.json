@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/store",
-  "version": "0.9.0",
+  "version": "1.0.1",
   "description": "Component controls shared storage store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,9 +30,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^0.9.0",
-    "@component-controls/loader": "^0.9.0",
-    "@component-controls/specification": "^0.9.0",
+    "@component-controls/core": "^1.0.1",
+    "@component-controls/loader": "^1.0.1",
+    "@component-controls/specification": "^1.0.1",
     "@storybook/csf": "^0.0.1",
     "broadcast-channel": "^3.1.0",
     "typescript": "^3.8.3"
