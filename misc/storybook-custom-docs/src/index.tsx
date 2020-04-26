@@ -12,8 +12,11 @@ export const getContext = () => {
   //@ts-ignore
   const clientApi = window.__STORYBOOK_CLIENT_API__;
   const storyStore = clientApi._storyStore;
+  //@ts-ignore
   const configApi = new ConfigApi({
     storyStore,
+    //@ts-ignore
+    channel: addons.getChannel(),
   });
   const context = {
     configApi,
