@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/atanasster/component-controls/compare/v0.8.2...v0.9.0) (2020-04-26)
+
+
+### Features
+
+* added StorySource addon panel ([7087bb6](https://github.com/atanasster/component-controls/commit/7087bb6275e70b8f5b191b563af6e4a70b0af82d))
+
+
+
+
+
 ## [0.8.2](https://github.com/atanasster/component-controls/compare/v0.8.1...v0.8.2) (2020-04-25)
 
 **Note:** Version bump only for package component-controls-storybook-6
