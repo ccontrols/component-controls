@@ -11,7 +11,6 @@ module.exports.default = async function() {
   /* eslint-disable react/display-name */
   const React = require('react');
   const { addons, types } = require('@storybook/addons');
-  import { BroadcastChannel } from 'broadcast-channel';
   ${pages
     .map((file, index) => `const pageConfig_${index} = require("${file}");`)
     .join('\n')}
