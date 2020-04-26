@@ -71,7 +71,7 @@ ${pages
   )
   .join('\n')}
 
-  window.onload = () => {
+  window.addEventListener('load', (event) => {
     const selection =
     window &&
     //@ts-ignore
@@ -80,7 +80,7 @@ ${pages
     window.__STORYBOOK_CLIENT_API__.store().getSelection();
     const viewMode = selection ? selection.viewMode : undefined;
     attachPages(pageConfigs, viewMode);
-  }  
+  });
 `;
   return callback(null, code);
 };
