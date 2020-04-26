@@ -3,7 +3,7 @@ import { Person } from '../components/Person';
 
 export default {
   title: 'Stories/Person',
-  component: Person
-}
+  component: Person,
+};
 
-export const main = props => <Person {...props} />
+export const main = props => <Person {...props} />;
