@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/atanasster/component-controls/compare/v1.0.1...v1.0.2) (2020-04-27)
+
+
+### Bug Fixes
+
+* timing issue with ploader plugin ([d623be7](https://github.com/atanasster/component-controls/commit/d623be7a009d42c1399c7e67ec9d995026f6c2c6))
+
+
+
+
+
 ## [1.0.1](https://github.com/atanasster/component-controls/compare/v0.9.0...v1.0.1) (2020-04-26)
 
 
