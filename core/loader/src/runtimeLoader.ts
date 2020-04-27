@@ -46,6 +46,5 @@ ${storeConst}
 ${loadStories}
 ${exports}
 `;
-  debugger;
   return newContent;
 };

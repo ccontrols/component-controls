@@ -5,7 +5,6 @@ import {
   deepMerge,
 } from '@component-controls/specification';
 import { toId, storyNameFromExport } from '@storybook/csf';
-import store from '@component-controls/loader/story-store-data';
 import { addSmartControls } from './smart-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
@@ -14,6 +13,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
   if (storyStore) {
     return storyStore;
   }
+  const store = require('@component-controls/loader/story-store-data.js');
   if (store) {
     try {
       const { stores }: { stores: StoriesStore[] } = store;

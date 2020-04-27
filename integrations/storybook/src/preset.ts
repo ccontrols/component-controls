@@ -51,7 +51,6 @@ module.exports = {
       module: {
         ...mergedConfig.module,
         rules: [
-          ...mergedConfig.module.rules,
           {
             test: /story-store-data\.js$/,
             loader: require.resolve(
@@ -59,6 +58,7 @@ module.exports = {
             ),
             enforce: 'post',
           },
+          ...mergedConfig.module.rules,
         ],
       },
     };

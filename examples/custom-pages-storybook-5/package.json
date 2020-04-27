@@ -1,13 +1,13 @@
 {
-  "name": "custom-pages-storybook-6",
+  "name": "custom-pages-storybook-5",
   "private": true,
   "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9017 -c .storybook",
+    "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9018 -c .storybook",
     "start": "webpack-dev-server --open --mode development",
-    "storybook": "start-storybook -p 9017 -c .storybook",
+    "storybook": "start-storybook -p 9018 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
@@ -16,8 +16,8 @@
     "@babel/preset-react": "^7.9.4",
     "@component-controls/storybook": "^1.0.2",
     "@component-controls/storybook-custom-docs": "^1.0.2",
-    "@storybook/addon-docs": "6.0.0-alpha.28",
-    "@storybook/react": "6.0.0-alpha.28",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
     "prop-types": "^15.7.2",

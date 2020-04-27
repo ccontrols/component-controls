@@ -6,6 +6,5 @@ export default config({
     './src/store.ts',
     './src/loader.ts',
     './src/runtimeLoader.ts',
-    './src/story-store-data.ts',
   ],
 });

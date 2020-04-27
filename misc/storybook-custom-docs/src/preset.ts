@@ -12,13 +12,11 @@ module.exports = {
         ...config.module,
         rules: [
           ...config.module.rules,
-          ...[
-            {
-              test: require.resolve('./preview'),
-              loader: require.resolve('./preview-loader'),
-              options,
-            },
-          ],
+          {
+            test: require.resolve('./preview'),
+            loader: require.resolve('./preview-loader'),
+            options,
+          },
         ],
       },
     };
@@ -30,13 +28,11 @@ module.exports = {
         ...config.module,
         rules: [
           ...config.module.rules,
-          ...[
-            {
-              test: require.resolve('./manager'),
-              loader: require.resolve('./manager-loader'),
-              options,
-            },
-          ],
+          {
+            test: require.resolve('./manager'),
+            loader: require.resolve('./manager-loader'),
+            options,
+          },
         ],
       },
     };

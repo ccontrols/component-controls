@@ -1,1 +1,1 @@
-module.exports = require('./dist/story-store-data');
+export default null;
