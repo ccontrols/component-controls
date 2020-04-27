@@ -73,7 +73,7 @@ There are many developments that have contributed to the creation of `component-
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
--   [Custom docs pages](https://components-storybook-custom-pages.netlify.app)
+-   [Custom docs pages](https://custom-pages-storybook-6.netlify.app)
 
 # Integrations
 
