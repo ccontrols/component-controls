@@ -1,7 +1,6 @@
 import React from 'react';
 import { DocsContainer } from '@component-controls/storybook';
 import { Story, Title, ControlsTable, Playground  } from '@component-controls/blocks';
-import { CustomPageDef } from '@component-controls/storybook-custom-docs';
 
 
 const Page = ({ active }) => {
@@ -15,7 +14,7 @@ const Page = ({ active }) => {
     </DocsContainer>
   )
 }
-const page: CustomPageDef = {
+const page = {
   key: 'component-page',
   title: 'Controls blocks',
   render: ({ active }) => {

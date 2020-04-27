@@ -71,7 +71,7 @@ ${pages
   )
   .join('\n')}
 
-  window.addEventListener('load', (event) => {
+  window.addEventListener('load', () => {
     const selection =
     window &&
     //@ts-ignore

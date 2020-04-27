@@ -38,14 +38,14 @@ module.exports = function() {
       }
     }
   }
-
 `;
-  const exports = `export default store;\n`;
+  const exports = `module.exports = store;\n`;
   const newContent = `
 ${imports}
 ${storeConst}
 ${loadStories}
 ${exports}
 `;
+  debugger;
   return newContent;
 };

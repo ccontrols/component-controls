@@ -49,7 +49,37 @@
         "<node_internals>/**"
       ]
     },
-
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "custom-pages-storybook-5",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/examples/custom-pages-storybook-5",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "port": 9229,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "custom-pages-storybook-6",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/examples/custom-pages-storybook-6",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "port": 9229,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    
     {
       "type": "node",
       "request": "launch",
