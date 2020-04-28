@@ -14,12 +14,16 @@ import {
   Zoom,
 } from '@component-controls/components';
 
-import { Button, useThemeUI } from 'theme-ui';
+import { Button, ButtonProps, useThemeUI } from 'theme-ui';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer';
 import { StorySource } from '../StorySource';
+
+const IconButton = (props: ButtonProps) => (
+  <Button style={{ paddingTop: '3px', paddingBottom: '3px' }} {...props} />
+);
 
 export interface PlaygroundOwnProps {
   /**
@@ -118,33 +122,33 @@ export const Playground: FC<PlaygroundProps> = ({
     () => [
       {
         title: (
-          <Button onClick={() => setScale(1)} aria-label="reset zoom">
+          <IconButton onClick={() => setScale(1)} aria-label="reset zoom">
             <Octicon icon={Sync} />
-          </Button>
+          </IconButton>
         ),
         id: 'zoomreset',
         group: 'zoom',
       },
       {
         title: (
-          <Button
+          <IconButton
             onClick={() => setScale(Math.max(0.5, scale - 0.2))}
             aria-label="zoom out"
           >
             <Octicon icon={Dash} />
-          </Button>
+          </IconButton>
         ),
         id: 'zoomout',
         group: 'zoom',
       },
       {
         title: (
-          <Button
+          <IconButton
             onClick={() => setScale(Math.min(3, scale + 0.2))}
             aria-label="zoom in"
           >
             <Octicon icon={Plus} />
-          </Button>
+          </IconButton>
         ),
         id: 'zoomin',
         group: 'zoom',
