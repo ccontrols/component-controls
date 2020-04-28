@@ -10,6 +10,11 @@
     "storybook": "start-storybook -p 9018 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "examples/custom-pages-storybook-5"
+  },
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
