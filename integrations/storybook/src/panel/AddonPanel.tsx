@@ -1,4 +1,5 @@
 import React from 'react';
+import { store } from '@component-controls/store/static_store';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { API } from '@storybook/api';
 import { SET_CURRENT_STORY } from '@storybook/core-events';
@@ -28,7 +29,9 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
 
   return active && storyId ? (
     <ThemeProvider>
-      <BlockContextProvider storyId={storyId}>{children}</BlockContextProvider>
+      <BlockContextProvider store={store} storyId={storyId}>
+        {children}
+      </BlockContextProvider>
     </ThemeProvider>
   ) : null;
 };

@@ -10,9 +10,9 @@
         -   [Simple page](#simple-page)
         -   [Render story](#render-story)
 -   [API](#api)
-    -   [getContext](#getcontext)
     -   [getCurrentStoryId](#getcurrentstoryid)
     -   [getGlobalOptions](#getglobaloptions)
+    -   [useContext](#usecontext)
     -   [useStoryId](#usestoryid)
     -   [CustomPageDef](#custompagedef)
     -   [CustomPageRenderFnParams](#custompagerenderfnparams)
@@ -104,12 +104,12 @@ export default {
 ```js
 import React from 'react';
 import { DocsContainer, Story} from '@storybook/addon-docs/blocks';
-import { getContext, useStoryId } from '@component-controls/storybook-custom-docs';
+import { useContext, } from '@component-controls/storybook-custom-docs';
 
 const Page = () => {
-  const storyId = useStoryId();
+  const context = useContext();
   return (
-    <DocsContainer context={getContext()}><Story id={storyId}/></DocsContainer>
+    <DocsContainer context={context}><Story id={storyId}/></DocsContainer>
   )
 }
 export default {
@@ -127,19 +127,11 @@ export default {
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## getContext
-
-Returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
-
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L10)_
-
-**function** getContext(): any;
-
 ## getCurrentStoryId
 
 function returning the current story id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L57)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L25)_
 
 **function** getCurrentStoryId(): string | undefined;
 
@@ -148,15 +140,23 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 function returning the global options
 parameters and decorators
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L11)_
 
 **function** getGlobalOptions(): any;
+
+## useContext
+
+React hook - returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L64)_
+
+**function** useContext(): any;
 
 ## useStoryId
 
 React hook hook that tracks the changes to the current story and returns it's id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L75)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
 
 **function** useStoryId(): string;
 

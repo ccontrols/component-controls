@@ -18,7 +18,7 @@ export const MockContext: React.FC<MockContexProps> = ({
     [],
   );
   return (
-    <BlockContextProvider storyId={storyId} mockStore={storyStore}>
+    <BlockContextProvider storyId={storyId} store={storyStore}>
       {children}
     </BlockContextProvider>
   );

@@ -5,8 +5,6 @@
 -   [API](#api)
     -   [Store](#store)
     -   [StoreOptions](#storeoptions)
-    -   [store](#store-1)
-    -   [stores](#stores)
     -   [StoreObserver](#storeobserver)
 
 # Overview
@@ -23,7 +21,7 @@ $ npm install @component-controls/store --save-dev
 
 # API
 
-<tsdoc-typescript files="./src/types.ts" entry="./src/index.ts"/>
+<tsdoc-typescript files="./src/types.ts" entry="./src/Store/Store.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
@@ -31,7 +29,7 @@ $ npm install @component-controls/store --save-dev
 
 Store class used to query the stories and exchange information between processes
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L33)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L28)_
 
 
 
@@ -49,7 +47,7 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 
 ## StoreOptions
 
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L20)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L15)_
 
 
 
@@ -59,20 +57,6 @@ _defined in [@component-controls/store/src/index.ts](https://github.com/ccontrol
 | -------------------- | ----------------------------- | ------------------------------------------------------------------- |
 | `store`              | [StoriesStore](#storiesstore) | optional store initializer                                          |
 | `updateLocalStorage` | boolean                       | set to false to prevent the Store from updating localStorage values |
-
-## store
-
-store variable, automatically filled with stories.
-
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L142)_
-
-
-
-## stores
-
-_defined in [@component-controls/store/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/index.ts#L144)_
-
-
 
 ## StoreObserver
 

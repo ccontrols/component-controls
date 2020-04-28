@@ -3,7 +3,7 @@ import { addDecorator } from '@storybook/client-api';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 
-import { store } from '@component-controls/store';
+import { store } from '@component-controls/store/static_store';
 import { getControlValues } from '@component-controls/core';
 
 store.addObserver(() => {

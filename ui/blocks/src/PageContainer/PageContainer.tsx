@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { jsx, Box, Theme } from 'theme-ui';
 import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import { StoryStore } from '@component-controls/store';
+import { store } from '@component-controls/store/live_store';
 
 import {
   ThemeProvider,
@@ -38,9 +39,9 @@ export interface PageContainerProps {
   theme?: Theme;
 
   /**
-   * mock store for tests
+   * store object
    */
-  mockStore?: StoryStore;
+  store?: StoryStore;
 }
 
 /**
@@ -52,7 +53,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   children,
   dark,
   storyId,
-  mockStore,
+  store: mockStore,
   theme,
   options,
   components = {},
@@ -72,7 +73,7 @@ export const PageContainer: FC<PageContainerProps> = ({
         <Box sx={{ maxWidth: '1000px', width: '100%' }}>
           <BlockContextProvider
             storyId={storyId}
-            mockStore={mockStore}
+            store={mockStore || store}
             options={options}
           >
             <StoryContextConsumer id={storyId}>

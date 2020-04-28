@@ -8,7 +8,11 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "live_store.js",
+    "live_store.d.ts",
+    "static_store.js",
+    "static_store.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

@@ -5,41 +5,6 @@ import { ConfigApi } from '@storybook/client-api';
 export * from './types';
 
 /**
- * Returns a context similar (but not identical) that can be used as an input attribute to `<DocsContainer />`
- */
-export const getContext = () => {
-  const channel = addons.getChannel();
-  //@ts-ignore
-  const clientApi = window.__STORYBOOK_CLIENT_API__;
-  const storyStore = clientApi._storyStore;
-  //@ts-ignore
-  const configApi = new ConfigApi({
-    storyStore,
-    //@ts-ignore
-    channel: addons.getChannel(),
-  });
-  const context = {
-    configApi,
-    storyStore,
-    channel,
-    clientApi,
-  };
-  const { storyId } = storyStore.getSelection();
-
-  const data = storyStore.fromId(storyId);
-
-  const { kind, name, parameters = {} } = data || {};
-
-  return {
-    ...context,
-    ...data,
-    selectedKind: kind,
-    selectedStory: name,
-    parameters,
-  };
-};
-
-/**
  * function returning the global options
  * parameters and decorators
  */
@@ -91,4 +56,40 @@ export const useStoryId = () => {
     };
   }, []);
   return storyId;
+};
+
+/**
+ * React hook - returns a context similar (but not identical) that can be used as an input attribute to `<DocsContainer />`
+ */
+export const useContext = () => {
+  const channel = addons.getChannel();
+  const storyId = useStoryId();
+  //@ts-ignore
+  const clientApi = window.__STORYBOOK_CLIENT_API__;
+  const storyStore = clientApi._storyStore;
+  //@ts-ignore
+  const configApi = new ConfigApi({
+    storyStore,
+    //@ts-ignore
+    channel: addons.getChannel(),
+  });
+  const context = {
+    configApi,
+    storyStore,
+    channel,
+    clientApi,
+  };
+
+  const data = storyStore.fromId(storyId);
+
+  const { kind, name, parameters = {} } = data || {};
+
+  return {
+    ...context,
+    ...data,
+    selectedKind: kind,
+    selectedStory: name,
+    parameters,
+    storyId,
+  };
 };

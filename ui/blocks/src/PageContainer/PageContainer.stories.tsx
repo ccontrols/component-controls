@@ -15,12 +15,15 @@ export default {
   component: PageContainer,
 };
 
-const MockPageContainer: React.FC<PageContainerProps> = props => {
+const MockPageContainer: React.FC<Omit<
+  PageContainerProps,
+  'store'
+>> = props => {
   const storyStore = React.useMemo(
     () => new Store({ store, updateLocalStorage: false }),
     [],
   );
-  return <PageContainer mockStore={storyStore} {...props} />;
+  return <PageContainer store={storyStore} {...props} />;
 };
 export const overview = () => (
   <MockPageContainer storyId="id-of-story">

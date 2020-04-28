@@ -157,7 +157,7 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 | `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
 | `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
 | `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
+| `store`      | _StoryStore_            | store object                                                                           |
 
 ## <ins>Playground</ins>
 

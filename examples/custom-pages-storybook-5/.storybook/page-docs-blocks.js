@@ -1,11 +1,11 @@
 import React from 'react';
 import { DocsContainer, Story, Preview, Source, Title } from '@storybook/addon-docs/blocks';
-import { getContext, useStoryId } from '@component-controls/storybook-custom-docs';
+import { useContext } from '@component-controls/storybook-custom-docs';
 
 const Page = () => {
-  useStoryId();
+  const context = useContext();
   return (
-    <DocsContainer context={getContext()}>
+    <DocsContainer context={context}>
       <Title>Using storybook docs page blocks</Title>
       <Preview>
         <Story id="." />
@@ -17,9 +17,7 @@ const Page = () => {
 const page = {
   key: 'docs-page',
   title: 'Docs blocks',
-  render: ({ active }) => {
-    return active ? <Page /> : null;  
-  }
+  render: ({ active }) => active ? <Page /> : null
 }
 
 export default page;

@@ -189,8 +189,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 There are 2 requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -689,7 +689,7 @@ _PageContextContainer [source code](https:/github.com/ccontrols/component-contro
 | `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
 | `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
 | `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
+| `store`      | _StoryStore_            | store object                                                                           |
 
 ## <ins>DocsContainer</ins>
 
@@ -704,7 +704,7 @@ _DocsContainer [source code](https:/github.com/ccontrols/component-controls/tree
 | `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
 | `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
 | `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `mockStore`  | _StoryStore_            | mock store for tests                                                                   |
+| `store`      | _StoryStore_            | store object                                                                           |
 | `active`     | _boolean_               |                                                                                        |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

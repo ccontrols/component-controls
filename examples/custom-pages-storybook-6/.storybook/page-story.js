@@ -1,13 +1,12 @@
 import React, { createElement }  from 'react';
-import { useStoryId, getContext } from '@component-controls/storybook-custom-docs';
+import { useContext } from '@component-controls/storybook-custom-docs';
 
 const CustomPage = () => {
-  //useStoryId so the function is refreshed on story change
-  useStoryId();
+  const context = useContext();
   return (
     <div>
       <h1>Simple docs page</h1>
-      {createElement(getContext().storyFn)}
+      {createElement(context.storyFn)}
     </div>
   );  
 }

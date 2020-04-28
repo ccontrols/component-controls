@@ -16,6 +16,7 @@ module.exports = {
       name: '@component-controls/storybook-custom-docs',
       options: {
         pages: [
+          require.resolve('./page-classic.js'),
           require.resolve('./page-story.js'),
           require.resolve('./page-docs-blocks.js'),
           require.resolve('./page-component-blocks.js'),

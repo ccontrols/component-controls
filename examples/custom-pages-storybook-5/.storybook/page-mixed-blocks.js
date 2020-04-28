@@ -1,23 +1,23 @@
 import React from 'react';
 import { DocsContainer as SBDocsContainer, Preview, Story as SBStory, Title as SBTitle, Props} from '@storybook/addon-docs/blocks';
-import { getContext, useStoryId } from '@component-controls/storybook-custom-docs';
+import { useContext, useStoryId } from '@component-controls/storybook-custom-docs';
 import { DocsContainer } from '@component-controls/storybook';
 import { Story, Title, Playground, PropsTable  } from '@component-controls/blocks';
 
 
 const Page = () => {
-  const storyId = useStoryId();
+  const context = useContext();
   return (
     <>
       <h1>Mixing storybook docs blocks and component-controls blocks</h1>
-      <SBDocsContainer context={getContext()}>
+      <SBDocsContainer context={context}>
         <SBTitle />
         <Preview >
-          <SBStory id={storyId} />
+          <SBStory id={context.storyId} />
         </Preview>  
         <Props of='.' />
       </SBDocsContainer>  
-      <DocsContainer storyId={storyId}>
+      <DocsContainer storyId={context.storyId}>
         <Title />
         <Playground openTab="source" title="." dark={true}>
           <Story id="." />
@@ -30,9 +30,7 @@ const Page = () => {
 const page = {
   key: 'mixed-page',
   title: 'Mixed blocks',
-  render: ({ active }) => {
-    return active ? <Page /> : null;  
-  } 
+  render: ({ active }) => active ? <Page /> : null
 }
 
 export default page;
