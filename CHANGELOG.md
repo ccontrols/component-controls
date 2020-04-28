@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/ccontrols/component-controls/compare/v1.0.2...v1.0.3) (2020-04-28)
+
+
+### Bug Fixes
+
+* add repostory fields to examples ([340083f](https://github.com/ccontrols/component-controls/commit/340083fa848595515ec7593516b7b446270c2a21))
+* icon buttons reduced padding ([7bb9522](https://github.com/ccontrols/component-controls/commit/7bb9522acbbf7a85019387beb269b04b0fb0b512))
+* zoom scales smoothen ([36ff168](https://github.com/ccontrols/component-controls/commit/36ff16819e83113652257901cdea044c845d3e43))
+
+
+
+
+
 ## [1.0.2](https://github.com/ccontrols/component-controls/compare/v1.0.1...v1.0.2) (2020-04-27)
 
 
