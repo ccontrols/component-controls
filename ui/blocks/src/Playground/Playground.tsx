@@ -114,7 +114,6 @@ export const Playground: FC<PlaygroundProps> = ({
       }),
     [userActions],
   );
-
   const zoomActions = React.useMemo(
     () => [
       {
@@ -128,7 +127,10 @@ export const Playground: FC<PlaygroundProps> = ({
       },
       {
         title: (
-          <Button onClick={() => setScale(scale / 2)} aria-label="zoom out">
+          <Button
+            onClick={() => setScale(Math.max(0.5, scale - 0.2))}
+            aria-label="zoom out"
+          >
             <Octicon icon={Dash} />
           </Button>
         ),
@@ -137,7 +139,10 @@ export const Playground: FC<PlaygroundProps> = ({
       },
       {
         title: (
-          <Button onClick={() => setScale(scale * 2)} aria-label="zoom in">
+          <Button
+            onClick={() => setScale(Math.min(3, scale + 0.2))}
+            aria-label="zoom in"
+          >
             <Octicon icon={Plus} />
           </Button>
         ),
@@ -145,7 +150,7 @@ export const Playground: FC<PlaygroundProps> = ({
         group: 'zoom',
       },
     ],
-    [],
+    [scale],
   );
   const actionsItems = userScale
     ? [...zoomActions, ...panelActions]
