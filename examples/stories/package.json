@@ -2,5 +2,11 @@
   "private": true,
   "version": "1.0.1",
   "name": "component-controls-stories",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "examples/stories"
+  }
+
 }

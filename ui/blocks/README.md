@@ -8,6 +8,7 @@
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
     -   [<ins>Description</ins>](#insdescriptionins)
+    -   [<ins>EditPage</ins>](#inseditpageins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
@@ -60,14 +61,15 @@ _StoryBlockContainer [source code](https:/github.com/ccontrols/component-control
 
 ### properties
 
-| Name          | Type                | Description                                                                 |
-| ------------- | ------------------- | --------------------------------------------------------------------------- |
-| `id`          | _string_            | id of the story                                                             |
-| `name`        | _string_            | alternatively you can use the name of a story to load from an external file |
-| `title`       | _string_            | optional section title for the block.                                       |
-| `description` | _string_            | optional markdown description.                                              |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                 |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                       |
+| Name                  | Type                | Description                                                                 |
+| --------------------- | ------------------- | --------------------------------------------------------------------------- |
+| `useStoryDescription` | _boolean_           |                                                                             |
+| `id`                  | _string_            | id of the story                                                             |
+| `name`                | _string_            | alternatively you can use the name of a story to load from an external file |
+| `title`               | _string_            | optional section title for the block.                                       |
+| `description`         | _string_            | optional markdown description.                                              |
+| `collapsible`         | _boolean_           | if false, will nothave a collapsible frame.                                 |
+| `sxStyle`             | _SystemStyleObject_ | theme-ui styling object for Block Box                                       |
 
 ## <ins>ComponentSource</ins>
 
@@ -144,6 +146,13 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.                                                                                                                                                                                                                                                      |
 | `of`         | _any_                                                                                                                                                                                                                    | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+
+## <ins>EditPage</ins>
+
+Display a Edit this page link at the top of the page.
+In order for this to work, you need to set up the `repository` field in `package.json`.
+
+_EditPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/EditPage/EditPage.tsx)_
 
 ## <ins>PageContainer</ins>
 

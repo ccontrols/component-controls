@@ -105,8 +105,8 @@ Storybook Addon For live editing of component controls
 ### Limitations
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
--   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+-   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
+-   The Storybook MDX (`<Meta />` tag) is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 <!-- END-PACKAGE-SECTION -->
 

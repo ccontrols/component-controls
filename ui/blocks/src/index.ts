@@ -3,6 +3,7 @@ export * from './context';
 export * from './ComponentSource';
 export * from './ControlsTable';
 export * from './Description';
+export * from './EditPage';
 export * from './PageContainer';
 export * from './Playground';
 export * from './PropsTable';

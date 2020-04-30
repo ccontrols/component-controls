@@ -19,5 +19,10 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "examples/storybook-6-no-docs"
   }
 }

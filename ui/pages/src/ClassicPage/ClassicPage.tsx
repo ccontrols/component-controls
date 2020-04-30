@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import {
+  EditPage,
   ControlsTable,
   Title,
   Subtitle,
@@ -14,6 +15,7 @@ import {
 export const ClassicPage: FC = () => {
   return (
     <>
+      <EditPage />
       <Title />
       <Subtitle />
       <Description />
