@@ -46,7 +46,10 @@ export const BlockContainer: FC<BlockContainerProps> = ({
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
   const blockId =
-    id || (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
+    id !== '.'
+      ? id
+      : undefined ||
+        (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
   const BlockTitle: FC = () => (
     <Subtitle
       color="text"

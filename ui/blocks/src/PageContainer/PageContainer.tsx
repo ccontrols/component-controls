@@ -58,7 +58,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   options,
   components = {},
 }) => {
-  return storyId ? (
+  return (
     <ThemeProvider theme={theme} dark={dark}>
       <Box
         sx={{
@@ -71,28 +71,30 @@ export const PageContainer: FC<PageContainerProps> = ({
         }}
       >
         <Box sx={{ maxWidth: '1000px', width: '100%' }}>
-          <BlockContextProvider
-            storyId={storyId}
-            store={mockStore || store}
-            options={options}
-          >
-            <StoryContextConsumer id={storyId}>
-              {({ kind }) => {
-                const { MDXPage } = kind || {};
-                return MDXPage ? (
-                  <MDXProvider
-                    components={{ ...markdownComponents, ...components }}
-                  >
-                    <MDXPage />
-                  </MDXProvider>
-                ) : (
-                  children
-                );
-              }}
-            </StoryContextConsumer>
-          </BlockContextProvider>
+          {storyId && (
+            <BlockContextProvider
+              storyId={storyId}
+              store={mockStore || store}
+              options={options}
+            >
+              <StoryContextConsumer id={storyId}>
+                {({ kind }) => {
+                  const { MDXPage } = kind || {};
+                  return MDXPage ? (
+                    <MDXProvider
+                      components={{ ...markdownComponents, ...components }}
+                    >
+                      <MDXPage />
+                    </MDXProvider>
+                  ) : (
+                    children
+                  );
+                }}
+              </StoryContextConsumer>
+            </BlockContextProvider>
+          )}
         </Box>
       </Box>
     </ThemeProvider>
-  ) : null;
+  );
 };
