@@ -84,11 +84,16 @@ export interface Story {
    * render function for the story
    */
   renderFn?: StoryRenderFn;
+
+  /**
+   * story extended description. can use markdown.
+   */
+  description?: string;
+
   /**
    * arguments pass to a CSF story
    * eg `export const story = props => <Story {...props} />;`
    */
-
   arguments?: StoryArguments;
   /**
    * configuration parameters passed to the story - either CSF or MDX

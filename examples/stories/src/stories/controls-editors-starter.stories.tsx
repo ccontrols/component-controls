@@ -21,6 +21,9 @@ export const overview = ({ name, age }: DocsControlsTable) => {
 };
 
 overview.story = {
+  description:
+    'Story with two dynamic control values: `name` and `age`. You can use the controls to edit the story properties at run-time.',
+
   controls: {
     name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
     age: {

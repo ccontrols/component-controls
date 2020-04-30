@@ -86,6 +86,7 @@ _BlockContainer [source code](https:/github.com/ccontrols/component-controls/tre
 | Name          | Type                | Description                                                                                                     |
 | ------------- | ------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `title`       | _string_            | optional section title for the block.                                                                           |
+| `description` | _string_            | optional markdown description.                                                                                  |
 | `id`          | _string_            | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                           |

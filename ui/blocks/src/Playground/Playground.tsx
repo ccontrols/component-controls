@@ -161,6 +161,7 @@ export const Playground: FC<PlaygroundProps> = ({
     : panelActions;
   return (
     <StoryBlockContainer
+      useStoryDescription={true}
       name={name}
       title={title}
       id={id}

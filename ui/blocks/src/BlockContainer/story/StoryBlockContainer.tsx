@@ -21,6 +21,7 @@ export type StoryBlockContainerAllProps = {
     context: StoryContextProps,
     props: any,
   ) => React.ReactElement | null;
+  useStoryDescription?: boolean;
 } & StoryBlockContainerProps;
 
 export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
@@ -30,6 +31,8 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   title: userTitle,
   sxStyle,
   children,
+  useStoryDescription,
+  description: userDescription,
   ...rest
 }) => {
   const context = useStoryContext({
@@ -42,12 +45,15 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
     title: userTitle,
   });
   const block = children && children(context, rest);
+  const description =
+    userDescription || (useStoryDescription ? story?.description : undefined);
   return block ? (
     <BlockContainer
       title={title}
       collapsible={collapsible}
       id={userTitle == CURRENT_STORY && story ? story.id : undefined}
       sxStyle={sxStyle}
+      description={description}
     >
       {block}
     </BlockContainer>

@@ -72,8 +72,8 @@
 ### Limitations
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
--   Only handles the CSF and MDX stories format. The storeisOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
+-   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
+-   The Storybook MDX (`<Meta />` tag) is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 # Getting Started
 
@@ -189,8 +189,8 @@ The list of available controls and their documented properties is available [her
 Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
 
 There are 2 requirements for a story to use smart controls: 
-1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+1\. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+2\. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 
@@ -502,6 +502,7 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_     | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`          | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description` | _string_                                                           | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`          | _string_                                                           | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`     | _SystemStyleObject_                                                | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
@@ -526,6 +527,7 @@ _ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree
 | `id`          | _string_            | id of the story                                                             |
 | `name`        | _string_            | alternatively you can use the name of a story to load from an external file |
 | `title`       | _string_            | optional section title for the block.                                       |
+| `description` | _string_            | optional markdown description.                                              |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                 |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                       |
 
@@ -560,6 +562,7 @@ _Playground [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `id`          | _string_            | id of the story                                                                              |
 | `name`        | _string_            | alternatively you can use the name of a story to load from an external file                  |
 | `title`       | _string_            | optional section title for the block.                                                        |
+| `description` | _string_            | optional markdown description.                                                               |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                  |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                        |
 | `actions`     | _ActionItem\[]_     | optional actions provided to the component                                                   |
@@ -578,6 +581,7 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `onSelect`      | _((name: string, component: StoryComponent) => boolean \| void) & ((event: SyntheticEvent&lt;HTMLDivElement, Event>) => void)_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`            | _any_                                                                                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 | `title`         | _string_                                                                                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description`   | _string_                                                                                                                       | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`            | _string_                                                                                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible`   | _boolean_                                                                                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`       | _SystemStyleObject_                                                                                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
@@ -604,6 +608,7 @@ _Stories [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `id`          | _string_            | id of the story                                                                                                            |
 | `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                |
 | `title`       | _string_            | optional section title for the block.                                                                                      |
+| `description` | _string_            | optional markdown description.                                                                                             |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                      |
 | `actions`     | _ActionItem\[]_     | optional actions provided to the component                                                                                 |
@@ -621,6 +626,7 @@ _Story [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`          | _string_            | id of the story                                                             |
 | `name`        | _string_            | alternatively you can use the name of a story to load from an external file |
 | `title`       | _string_            | optional section title for the block.                                       |
+| `description` | _string_            | optional markdown description.                                              |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                 |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                       |
 
@@ -636,6 +642,7 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `id`          | _string_                                                                                                                                                                                                                                                                             | id of the story                                                                                                                                                                  |
 | `name`        | _string_                                                                                                                                                                                                                                                                             | alternatively you can use the name of a story to load from an external file                                                                                                      |
 | `title`       | _string_                                                                                                                                                                                                                                                                             | optional section title for the block.                                                                                                                                            |
+| `description` | _string_                                                                                                                                                                                                                                                                             | optional markdown description.                                                                                                                                                   |
 | `collapsible` | _boolean_                                                                                                                                                                                                                                                                            | if false, will nothave a collapsible frame.                                                                                                                                      |
 | `sxStyle`     | _SystemStyleObject_                                                                                                                                                                                                                                                                  | theme-ui styling object for Block Box                                                                                                                                            |
 | `actions`     | _ActionItem\[]_                                                                                                                                                                                                                                                                      | optional actions provided to the component                                                                                                                                       |

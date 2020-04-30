@@ -1,5 +1,6 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
+import { ThemeProvider } from '../ThemeContext';
 import { BlockContainer, BlockContainerProps } from './BlockContainer';
 
 export default {
@@ -34,5 +35,23 @@ export const customId = () => {
     <BlockContainer title="BlockContainer" id="custom-id">
       <Donut value={1 / 2} />
     </BlockContainer>
+  );
+};
+
+export const description = () => {
+  return (
+    <ThemeProvider>
+      <BlockContainer
+        description={`
+### H3 title
+
+*Markdown*
+
+[google](https://www.google.com)
+`}
+      >
+        <Donut value={1 / 2} />
+      </BlockContainer>
+    </ThemeProvider>
   );
 };

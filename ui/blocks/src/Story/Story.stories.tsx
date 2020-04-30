@@ -28,3 +28,9 @@ export const notCollapsible = () => (
     <Story title="." collapsible={false} />
   </MockContext>
 );
+
+export const description = () => (
+  <MockContext storyId="id-of-story">
+    <Story id="." />
+  </MockContext>
+);

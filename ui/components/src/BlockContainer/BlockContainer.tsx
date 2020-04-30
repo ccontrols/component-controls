@@ -6,6 +6,7 @@ import Octicon, {
   ChevronRight,
   ChevronDown,
 } from '@primer/octicons-react';
+import { Markdown } from '../Markdown';
 import { Subtitle } from '../Subtitle';
 import { Collapsible } from '../Collapsible';
 
@@ -14,6 +15,11 @@ export interface BlockContainerProps {
    * optional section title for the block.
    */
   title?: string;
+
+  /**
+   * optional markdown description.
+   */
+  description?: string;
 
   /**
    * optional id to be used for the block
@@ -41,6 +47,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   children,
   title,
   id,
+  description,
   collapsible = true,
   sxStyle,
 }) => {
@@ -121,6 +128,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
           {title && !collapsible && <BlockTitle />}
         </Flex>
       )}
+      {description && <Markdown>{description}</Markdown>}
       {collapsible && children ? (
         <Collapsible isOpen={isOpen}>{children}</Collapsible>
       ) : (

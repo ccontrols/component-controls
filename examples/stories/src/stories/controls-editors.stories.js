@@ -8,6 +8,7 @@ export default {
 
 export const textDefaultProp = ({ text }) => text;
 textDefaultProp.story = {
+  description: 'A simple story that just returns the text parameter',
   controls: {
     text: { type: ControlTypes.TEXT, value: 'Hello' },
   },
@@ -26,6 +27,8 @@ selectProp.defaultProps = {
 };
 
 selectProp.story = {
+  description:
+    'Story that shocases the `ControlTypes.OPTIONS` setting, using a `<Select />` component',
   controls: {
     value: {
       type: ControlTypes.OPTIONS,
@@ -122,6 +125,7 @@ const GROUP_IDS = {
 };
 
 tweaksStaticValues.story = {
+  description: 'Complex story with a variety of control types.',
   controls: {
     userName: {
       type: ControlTypes.TEXT,
@@ -253,6 +257,7 @@ dynamicProps.propTypes = {
 };
 
 dynamicProps.story = {
+  description: 'Dynamic control values checked in the story.',
   controls: {
     showOptional: {
       type: ControlTypes.OPTIONS,
@@ -275,6 +280,8 @@ export const complexSelect = ({ m }) => {
 };
 
 complexSelect.story = {
+  description:
+    '`ControlTypes.OPTIONS` control type where the options can have different data-types.',
   controls: {
     m: {
       type: ControlTypes.OPTIONS,
@@ -336,6 +343,8 @@ optionsProperties.propTypes = {
 };
 
 optionsProperties.story = {
+  description:
+    'Showcase `ControlTypes.OPTIONS` controls of types `radio`, `inline-radio`, `select`, `multi-select`, `check` and `inline-check`.',
   controls: {
     optionRadio: {
       type: ControlTypes.OPTIONS,
@@ -405,69 +414,10 @@ optionsProperties.story = {
   },
 };
 
-let injectedItems = [];
-let injectedIsLoading = false;
-
-const ItemLoader = ({ isLoading, items }) => {
-  if (isLoading) {
-    return <p>Loading data</p>;
-  }
-  if (!items.length) {
-    return <p>No items loaded</p>;
-  }
-  return (
-    <ul>
-      {items.map(i => (
-        <li key={i}>{i}</li>
-      ))}
-    </ul>
-  );
-};
-
-ItemLoader.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
-
-export const triggersActionsViaButton = () => {
-  // Needed to enforce @babel/transform-react-constant-elements deoptimization
-  // See https://github.com/babel/babel/issues/10522
-  const loaderProps = {
-    isLoading: injectedIsLoading,
-    items: injectedItems,
-  };
-  return (
-    <>
-      <p>
-        Hit the knob button and it will toggle the items list into multiple
-        states.
-      </p>
-      <ItemLoader {...loaderProps} />
-    </>
-  );
-};
-
-triggersActionsViaButton.story = {
-  controls: {
-    button: {
-      type: ControlTypes.BUTTON,
-      onClick: () => {
-        if (!injectedIsLoading && injectedItems.length === 0) {
-          injectedIsLoading = true;
-        } else if (injectedIsLoading && injectedItems.length === 0) {
-          injectedIsLoading = false;
-          injectedItems = ['pencil', 'pen', 'eraser'];
-        } else if (injectedItems.length > 0) {
-          injectedItems = [];
-        }
-      },
-    },
-  },
-};
-
 export const radioEnum = ({ radio }) => radio;
 
 radioEnum.story = {
+  description: '`ControlTypes.OPTIONS` display: `radio`.',
   controls: {
     radio: {
       type: ControlTypes.OPTIONS,
@@ -480,14 +430,6 @@ radioEnum.story = {
         Wednesday: 'Wednesday',
       },
     },
-  },
-};
-
-export const reservedKeyword = ({ name }) => name;
-
-reservedKeyword.story = {
-  controls: {
-    name: { type: ControlTypes.TEXT, label: 'Text', value: 'Hello' },
   },
 };
 
@@ -519,6 +461,8 @@ XssSafety.story = {
 export const generateRandomData = ({ street }) => street;
 
 generateRandomData.story = {
+  description:
+    'Story using the `data` field of `controls` to generate **streetAddress** random data.',
   controls: {
     street: {
       type: ControlTypes.TEXT,
@@ -533,6 +477,8 @@ generateRandomData.story = {
 export const randomNumber = ({ number }) => number;
 
 randomNumber.story = {
+  description:
+    'Story using the `data` field of `controls` to generate random **number** with **min/max** parameters.',
   controls: {
     number: {
       type: ControlTypes.NUMBER,
@@ -557,6 +503,7 @@ const personalGroupId = 'personal info';
 const generalGroupId = 'general info';
 
 groupedControls.story = {
+  description: 'Controls grouped in multiple tabs.',
   controls: {
     name: {
       type: ControlTypes.TEXT,

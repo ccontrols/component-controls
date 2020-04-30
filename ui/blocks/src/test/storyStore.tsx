@@ -257,6 +257,7 @@ and a [link](https://google.com)
       id: 'id-of-story',
       kind: 'Story',
       component: 'ArrowButton',
+      description: 'description of story',
       loc: {
         end: {
           column: 34,

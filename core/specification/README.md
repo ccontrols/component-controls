@@ -108,7 +108,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 map of stories. The id is compatible with CSF story ids
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L137)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L142)_
 
 `id`\*: string: [Story](#story)
 
@@ -118,7 +118,7 @@ a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
 in the case of MDX stories, the kind is crated using a &lt;Meta /> tag
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L146)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L151)_
 
 `name`\*: string: any
 
@@ -145,7 +145,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L255)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L260)_
 
 
 
@@ -173,6 +173,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `component`     | string \| object                        | id for component associated with the story                                                  |
 | `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                             |
 | `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                              |
+| `description`   | string                                  | story extended description. can use markdown.                                               |
 | `id`            | string                                  | csf id of the story                                                                         |
 | `kind`          | string                                  | title of the file/group of stories                                                          |
 | `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                         |
@@ -204,7 +205,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of components used in stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L234)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L239)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -212,7 +213,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of story files, or groups
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L241)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L246)_
 
 `title`\*: string: [StoriesKind](#storieskind)
 
@@ -229,7 +230,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L248)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L253)_
 
 `id`\*: string: [Story](#story)
 

@@ -51,7 +51,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L56)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L53)_
 
 **function** extractStories(`__namedParameters`\*: **config**: [Configuration](#configuration)**configPath**: string): string\[] | undefined;
 
