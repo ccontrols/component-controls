@@ -42,3 +42,13 @@ export interface Repository {
    */
   issues?: string;
 }
+
+/**
+ * story render function
+ * @param controlValues props values passed by controls
+ * @param context context parameters passed as second parameter
+ */
+export type StoryRenderFn = (
+  controlValues: { [key: string]: any },
+  context?: any,
+) => any;

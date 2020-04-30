@@ -16,6 +16,7 @@
     -   [@component-controls/loader](#component-controlsloader)
     -   [@component-controls/webpack-configs](#component-controlswebpack-configs)
     -   [@component-controls/store](#component-controlsstore)
+    -   [@component-controls/config](#component-controlsconfig)
 -   [UI packages](#ui-packages)
     -   [@component-controls/pages](#component-controlspages)
     -   [@component-controls/blocks](#component-controlsblocks)
@@ -199,6 +200,18 @@ Collection of standard webpack rules for [@component-controls/instrument](https:
 Component controls shared storage store
 
 Utility class to abstract loading the stories store from the webpack loader and provides an interface to access the store. Will also share the store accross bundles using localStorage and broadcastig messages.
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/config/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/config](https://github.com/ccontrols/component-controls/blob/master/core/config)
+
+Component controls configuration reading utilities
+
+Configration file utilities. Uses the [glob](https://www.npmjs.com/package/glob) package to locate story files from the configuration
 
 <!-- END-PACKAGE-SECTION -->
 

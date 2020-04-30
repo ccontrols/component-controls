@@ -1,4 +1,5 @@
 export * from './components';
+export * from './configuration';
 export * from './controls';
 export * from './deepMerge';
 export * from './propsInfo';

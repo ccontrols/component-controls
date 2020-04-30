@@ -15,7 +15,6 @@
     -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
     -   [StoryArguments](#storyarguments)
-    -   [StoryRenderFn](#storyrenderfn)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -44,6 +43,8 @@
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
     -   [Repository](#repository)
+    -   [StoryRenderFn](#storyrenderfn)
+    -   [Configuration](#configuration)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [StoryArguments](#storyarguments-1)
     -   [ComponentControl](#componentcontrol-1)
@@ -71,7 +72,7 @@ $ npm install @component-controls/specification --save-dev
 
 # API
 
-<tsdoc-typescript entry="./src/stories.ts,./src/controls.ts,./src/components.ts,./src/propsInfo.ts,./src/utility.ts"/>
+<tsdoc-typescript entry="./src/stories.ts,./src/controls.ts,./src/components.ts,./src/propsInfo.ts,./src/utility.ts,./src/configuration.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
@@ -107,7 +108,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 map of stories. The id is compatible with CSF story ids
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L144)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L137)_
 
 `id`\*: string: [Story](#story)
 
@@ -117,7 +118,7 @@ a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
 in the case of MDX stories, the kind is crated using a &lt;Meta /> tag
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L153)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L146)_
 
 `name`\*: string: any
 
@@ -144,7 +145,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L262)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L255)_
 
 
 
@@ -160,7 +161,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L74)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
 
 
 
@@ -203,7 +204,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of components used in stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L241)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L234)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -211,7 +212,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of story files, or groups
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L248)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L241)_
 
 `title`\*: string: [StoriesKind](#storieskind)
 
@@ -228,7 +229,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L255)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L248)_
 
 `id`\*: string: [Story](#story)
 
@@ -240,22 +241,6 @@ the first argument are the control 'values'
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L54)_
 
 [StoryArgument](#storyargument)\[]
-
-## StoryRenderFn
-
-story render function
-
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
-
-**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
-
-### parameters
-
-| Name             | Type                | Description |
-| ---------------- | ------------------- | ----------- |
-| `controlValues*` | \[key: string]: any |             |
-| `context`        | any                 |             |
-| `returns`        | any                 |             |
 
 ## ControlTypes
 
@@ -733,7 +718,39 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 
 story render function
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L51)_
+
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+
+### parameters
+
+| Name             | Type                | Description |
+| ---------------- | ------------------- | ----------- |
+| `controlValues*` | \[key: string]: any |             |
+| `context`        | any                 |             |
+| `returns`        | any                 |             |
+
+## Configuration
+
+global configuration
+stored in a file named main.js/main.ts
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L7)_
+
+
+
+### properties
+
+| Name         | Type                               | Description                                                                                                                                    |
+| ------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `decorators` | [StoryRenderFn](#storyrenderfn)\[] | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
+| `stories*`   | string\[]                          | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+
+## StoryRenderFn
+
+story render function
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L51)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 

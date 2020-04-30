@@ -35,6 +35,7 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
           console.error(e);
         }
       }
+      console.error('Story function not found', props, story);
       return null;
     }}
   </StoryBlockContainer>

@@ -1,4 +1,4 @@
-import { CodeLocation, Repository } from './utility';
+import { CodeLocation, Repository, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
 
@@ -60,14 +60,7 @@ export type StoryArguments = StoryArgument[];
 export interface StoryParameters {
   [name: string]: any;
 }
-/**
- * story render function
- *
- */
-export type StoryRenderFn = (
-  controlValues: { [key: string]: any },
-  context?: any,
-) => any;
+
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */

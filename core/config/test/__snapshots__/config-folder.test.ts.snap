@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`config-folder config file long option 1`] = `
+Object {
+  "config": Object {
+    "addons": Array [
+      Object {
+        "name": "@component-controls/storybook",
+        "options": Object {
+          "webpack": Array [
+            "instrument",
+            "react-docgen-typescript",
+          ],
+        },
+      },
+    ],
+    "stories": Array [
+      "../../../../ui/editors/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../ui/components/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../examples/stories/src/**/*.stories.(js|tsx|mdx)",
+    ],
+  },
+  "configPath": "/Users/atanasster/component-controls/core/config/test/fixtures",
+}
+`;
+
+exports[`config-folder config file short option 1`] = `
+Object {
+  "config": Object {
+    "addons": Array [
+      Object {
+        "name": "@component-controls/storybook",
+        "options": Object {
+          "webpack": Array [
+            "instrument",
+            "react-docgen-typescript",
+          ],
+        },
+      },
+    ],
+    "stories": Array [
+      "../../../../ui/editors/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../ui/components/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)",
+      "../../../../examples/stories/src/**/*.stories.(js|tsx|mdx)",
+    ],
+  },
+  "configPath": "/Users/atanasster/component-controls/core/config/test/fixtures",
+}
+`;
