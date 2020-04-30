@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { jsx, Box, Theme } from 'theme-ui';
 import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import { StoryStore } from '@component-controls/store';
@@ -58,6 +58,32 @@ export const PageContainer: FC<PageContainerProps> = ({
   options,
   components = {},
 }) => {
+  let scrollId: string | undefined;
+  try {
+    const pageURL =
+      (window.location != window.parent.location && window.parent.location
+        ? window.parent.location.href
+        : document.location.href) || '';
+    const url = new URL(pageURL);
+    scrollId = url.hash ? url.hash.substring(1) : undefined;
+  } catch (err) {}
+
+  useEffect(() => {
+    console.log(scrollId);
+    if (scrollId) {
+      const element = document.getElementById(scrollId);
+      if (element) {
+        // Introducing a delay to ensure scrolling works when it's a full refresh.
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }, 100);
+      }
+    }
+  }, [scrollId]);
   return (
     <ThemeProvider theme={theme} dark={dark}>
       <Box
