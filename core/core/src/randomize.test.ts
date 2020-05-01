@@ -1,4 +1,4 @@
-import faker from 'faker';
+const faker = require('faker/locale/en_US');
 import { LoadedComponentControls, LoadedComponentControl } from './utils';
 import { ControlTypes } from '@component-controls/specification';
 import { randomizeData } from '@component-controls/core/src/randomizeData';

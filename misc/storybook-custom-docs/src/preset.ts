@@ -5,7 +5,7 @@ module.exports = {
   managerEntries: (entry: any[] = []) => {
     return [...entry, require.resolve('./manager')];
   },
-  webpack: (config: any = {}, options: any = {}) => {
+  webpackFinal: (config: any = {}, options: any = {}) => {
     return {
       ...config,
       module: {

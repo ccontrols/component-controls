@@ -17,13 +17,14 @@
     "@storybook/react": "6.0.0-alpha.28",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
-    "core-js": "^3.6.5",
     "cross-env": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "typescript": "^3.8.3",
-    "webpack-react-docgen-typescript": "^0.9.5"
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.7.0"
   },
   "repository": {
     "type": "git",

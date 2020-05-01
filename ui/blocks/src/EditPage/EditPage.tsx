@@ -12,9 +12,8 @@ import { useStoryContext } from '../context';
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
 export const EditPage: FC = () => {
-  const { kind, ...rest } = useStoryContext({ id: '.', name });
+  const { kind } = useStoryContext({ id: '.', name });
   const { repository } = kind || {};
-  console.log(rest, kind, repository);
   return repository && repository.browse ? (
     <Box
       sx={{

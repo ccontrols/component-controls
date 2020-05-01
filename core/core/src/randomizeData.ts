@@ -3,9 +3,9 @@ import {
   ComponentControlNumber,
   ComponentControlOptions,
 } from '@component-controls/specification';
-import { LoadedComponentControls } from './utils';
+const faker = require('faker/locale/en_US');
 
-import faker from 'faker';
+import { LoadedComponentControls } from './utils';
 
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];

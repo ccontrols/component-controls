@@ -69,7 +69,6 @@ export const PageContainer: FC<PageContainerProps> = ({
   } catch (err) {}
 
   useEffect(() => {
-    console.log(scrollId);
     if (scrollId) {
       const element = document.getElementById(scrollId);
       if (element) {
