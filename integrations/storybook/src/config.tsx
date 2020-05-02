@@ -18,6 +18,13 @@ addDecorator(
       const story = store.getStory(context.id);
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;
+
+      if (context.args !== undefined) {
+        //storybook-6 beta fake args
+        //@ts-ignore
+        return storyFn({ ...context, args: values });
+      }
+      //storybook 5 and 6 alphas
       //@ts-ignore
       return values ? storyFn(values, context) : storyFn(context);
     },

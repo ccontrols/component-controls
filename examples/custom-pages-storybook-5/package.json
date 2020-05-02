@@ -22,9 +22,10 @@
     "@component-controls/storybook": "^1.0.3",
     "@component-controls/storybook-custom-docs": "^1.0.3",
     "@storybook/addon-docs": "^5.3.18",
+    "@storybook/api": "^5.3.18",
+    "@storybook/client-api": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "babel-loader": "^8.1.0",
-    "core-js": "^3.6.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

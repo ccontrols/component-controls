@@ -46,7 +46,6 @@
     "@component-controls/storybook-custom-docs": "^1.0.3",
     "@component-controls/webpack-configs": "^1.0.1",
     "broadcast-channel": "^3.1.0",
-    "core-js": "^3.6.5",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
@@ -54,9 +53,9 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@storybook/addons": "6.0.0-alpha.28",
-    "@storybook/api": "6.0.0-alpha.28",
-    "@storybook/client-api": "6.0.0-alpha.28",
+    "@storybook/addons": "next",
+    "@storybook/api": "next",
+    "@storybook/client-api": "next",
     "@types/node": "^13.7.0",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0"

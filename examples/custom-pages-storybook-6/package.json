@@ -16,15 +16,15 @@
     "directory": "examples/custom-pages-storybook-6"
   },
   "dependencies": {
+    "@component-controls/storybook": "^1.0.3",
+    "@component-controls/storybook-custom-docs": "^1.0.3",
+    "@storybook/client-api": "next",
+    "@storybook/addon-docs": "next",
+    "@storybook/react": "next",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-    "@component-controls/storybook": "^1.0.3",
-    "@component-controls/storybook-custom-docs": "^1.0.3",
-    "@storybook/addon-docs": "6.0.0-alpha.28",
-    "@storybook/react": "6.0.0-alpha.28",
     "babel-loader": "^8.1.0",
-    "core-js": "^3.6.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

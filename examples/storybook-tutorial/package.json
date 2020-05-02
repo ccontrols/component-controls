@@ -12,9 +12,9 @@
   "dependencies": {
     "@component-controls/specification": "^1.0.1",
     "@component-controls/storybook": "^1.0.3",
-    "@storybook/addon-docs": "6.0.0-alpha.28",
+    "@storybook/addon-docs": "next",
     "@storybook/preset-typescript": "*",
-    "@storybook/react": "6.0.0-alpha.28",
+    "@storybook/react": "next",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
     "cross-env": "^5.2.0",
