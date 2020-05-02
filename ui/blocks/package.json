@@ -39,6 +39,7 @@
     "@primer/octicons-react": "^9.6.0",
     "@storybook/csf": "^0.0.1",
     "copy-to-clipboard": "^3.2.1",
+    "core-js": "^3.6.5",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
     "qs": "^6.9.1",
