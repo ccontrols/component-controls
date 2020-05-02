@@ -41,6 +41,11 @@ export interface BlockDataContextProps {
    * add an observer for onChange events
    */
   removeObserver: (observer: StoreObserver) => void;
+
+  /**
+   * current story id
+   */
+  storyId: string;
 }
 //@ts-ignore
 export const BlockDataContext = React.createContext<BlockDataContextProps>({});
@@ -107,6 +112,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   return (
     <BlockDataContext.Provider
       value={{
+        storyId,
         getStoryData,
         storyIdFromName,
         getComponents,
