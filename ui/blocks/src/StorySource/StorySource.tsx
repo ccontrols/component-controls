@@ -4,12 +4,12 @@ import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
 import { getControlValue } from '@component-controls/core';
 import { Styled } from 'theme-ui';
-import { transparentize } from 'polished';
 import {
   ThemeContext,
   Source,
   SourceProps,
   ActionItem,
+  Tag,
 } from '@component-controls/components';
 import { repositoryActions } from '../utils/repositoryActions';
 import {
@@ -123,24 +123,16 @@ export const StorySource: FC<StorySourceProps> = ({
 
                             return splitToken.map((s: string) =>
                               s.trim().length ? (
-                                <span
+                                <Tag
                                   {...getTokenProps({ token, key })}
-                                  sx={{
-                                    display: 'inline-block',
-                                    //@ts-ignore
-                                    backgroundColor: transparentize(0.8, color),
-                                    paddingLeft: 1,
-                                    paddingRight: 1,
-                                    //@ts-ignore
-                                    border: `1px solid ${color}`,
-                                  }}
+                                  color={color}
                                 >
                                   {controls &&
                                   viewStyle === 'values' &&
                                   param.type === 'usage'
                                     ? getControlValue(controls, s) || s
                                     : s}
-                                </span>
+                                </Tag>
                               ) : (
                                 s
                               ),

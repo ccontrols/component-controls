@@ -9,6 +9,7 @@ export * from './Source';
 export * from './Subtitle';
 export * from './Table';
 export * from './Tabs';
+export * from './Tag';
 export * from './ThemeContext';
 export * from './Title';
 export * from './Toggle';
