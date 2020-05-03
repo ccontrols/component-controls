@@ -9,6 +9,7 @@ import {
   TableProps,
   Markdown,
   ActionContainer,
+  Tag,
 } from '@component-controls/components';
 import { Column } from 'react-table';
 import {
@@ -126,18 +127,26 @@ export const PropsTable: FC<PropsTableProps> = ({
                     type: { required },
                   },
                 } = original;
-
-                return (
+                const text = (
                   <Text
                     sx={{
                       fontWeight: 'bold',
-                      color: required ? 'red' : undefined,
                       textOverflow: 'ellipsis',
                     }}
                   >
                     {name}
-                    {required ? '*' : ''}
                   </Text>
+                );
+                return required ? (
+                  <Tag
+                    color="red"
+                    transparentAmount={0.95}
+                    sxStyle={{ borderRadius: 4 }}
+                  >
+                    {text}
+                  </Tag>
+                ) : (
+                  text
                 );
               },
             },
@@ -150,9 +159,10 @@ export const PropsTable: FC<PropsTableProps> = ({
                   return null;
                 }
                 const {
+                  name,
                   prop: {
                     description,
-                    type: { raw, name },
+                    type: { raw, name: typeName, value },
                   },
                 } = original;
                 return (
@@ -162,7 +172,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                     }}
                   >
                     {description && <Markdown>{description}</Markdown>}
-                    {(raw ?? name) && (
+                    {(raw ?? typeName) && (
                       <Styled.pre
                         sx={{
                           color: 'fadedText',
@@ -171,7 +181,20 @@ export const PropsTable: FC<PropsTableProps> = ({
                           margin: 0,
                         }}
                       >
-                        {raw ?? name}
+                        {Array.isArray(value) && value.length > 1
+                          ? value.map(({ name: typeName }) => (
+                              <Tag
+                                key={`${name}_${typeName}`}
+                                color="grey"
+                                transparentAmount={0.9}
+                                sxStyle={{
+                                  mr: 1,
+                                }}
+                              >
+                                {typeName}
+                              </Tag>
+                            ))
+                          : raw ?? typeName}
                       </Styled.pre>
                     )}
                   </Flex>
