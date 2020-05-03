@@ -17,6 +17,7 @@
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
     -   [<ins>Tabs</ins>](#instabsins)
+    -   [<ins>Tag</ins>](#instagins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>Toggle</ins>](#instoggleins)
     -   [<ins>Zoom</ins>](#inszoomins)
@@ -249,6 +250,19 @@ _TabPanel [source code](https:/github.com/ccontrols/component-controls/tree/mast
 Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
 
 _Tabs [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+
+## <ins>Tag</ins>
+
+A copntainer component to display text in a colored box.
+
+_Tag [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tag/Tag.tsx)_
+
+### properties
+
+| Name                | Type     | Description                                                                                                            |
+| ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `color*`            | _string_ | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
+| `transparentAmount` | _number_ | transparent amount - 0 to 1                                                                                            |
 
 ## <ins>Title</ins>
 
