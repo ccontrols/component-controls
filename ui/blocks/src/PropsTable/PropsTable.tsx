@@ -182,16 +182,16 @@ export const PropsTable: FC<PropsTableProps> = ({
                         }}
                       >
                         {Array.isArray(value) && value.length > 1
-                          ? value.map(({ name: typeName }) => (
+                          ? value.map(({ name: typeName, value }) => (
                               <Tag
-                                key={`${name}_${typeName}`}
+                                key={`${name}_${value || typeName}`}
                                 color="grey"
                                 transparentAmount={0.9}
                                 sxStyle={{
                                   mr: 1,
                                 }}
                               >
-                                {typeName}
+                                {value || typeName}
                               </Tag>
                             ))
                           : raw ?? typeName}
