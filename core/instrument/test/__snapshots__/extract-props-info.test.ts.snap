@@ -816,6 +816,14 @@ Array values are converted into responsive values.
         ],
       },
     },
+    "description": Object {
+      "description": "optional markdown description.",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "string",
+        "raw": "string",
+      },
+    },
     "dir": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2246,7 +2254,7 @@ If an array of components is specified, each component will be displayed in a se
 if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "((name: string, component: StoryComponent) => boolean | void) & ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void) | ((name: string, component: StoryComponent) => boolean | void)",
       },
     },
     "onSelectCapture": Object {
@@ -2900,6 +2908,13 @@ import { jsx } from 'theme-ui'
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "visibleOnControlsOnly": Object {
+      "description": "set to true if you need the blockto be visible even if only controls are available",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
       },
     },
     "vocab": Object {

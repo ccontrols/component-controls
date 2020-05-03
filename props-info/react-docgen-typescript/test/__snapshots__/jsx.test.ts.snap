@@ -2198,7 +2198,6 @@ import { jsx } from 'theme-ui'
       "type": Object {
         "name": "string",
         "raw": "string",
-        "required": true,
       },
     },
     "translate": Object {

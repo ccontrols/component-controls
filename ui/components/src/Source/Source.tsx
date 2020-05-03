@@ -39,12 +39,12 @@ export const Source: FC<SourceProps> = ({
   ];
 
   return (
-    <ActionContainer actions={actionsItems} paddingTop="20px">
+    <ActionContainer actions={actionsItems}>
       <SyntaxHighlighter
         as={as}
         {...props}
         style={{
-          padding: '0 10px 10px',
+          padding: '25px 10px 10px',
           display: 'block',
         }}
       >

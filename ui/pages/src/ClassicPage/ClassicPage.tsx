@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import {
   EditPage,
-  ControlsTable,
   Title,
   Subtitle,
   Story,
@@ -23,8 +22,7 @@ export const ClassicPage: FC = () => {
       <Playground openTab="source" title=".">
         <Story id="." />
       </Playground>
-      <ControlsTable id="." title="Controls" />
-      <PropsTable of="." title="Props" />
+      <PropsTable of="." title="Properties" />
       <Stories dark={true} />
     </>
   );

@@ -8,7 +8,7 @@ export interface ActionBarProps {
   /**
    * collection of action items
    */
-  actions: ActionItems;
+  actions?: ActionItems;
 }
 
 const ActionColors = ({

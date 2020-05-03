@@ -149,9 +149,27 @@ export interface ComponentControlBase<T> {
   value?: T;
 
   /**
+   * default value is usually set at run-time, from the value
+   */
+  defaultValue?: T;
+
+  /**
+   * reset value - this is automatically saved as the initial 'value'
+   * used when user wants to click rest and go back to the initial values
+   */
+  resetValue?: T;
+
+  /**
    * hide the label from the property editor
    */
   hideLabel?: boolean;
+
+  /**
+   * full text property description.
+   * can use markdown.
+   */
+  description?: string;
+
   /**
    * hide the property editor for this property
    * will only use the value

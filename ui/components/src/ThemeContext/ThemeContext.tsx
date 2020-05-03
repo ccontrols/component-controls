@@ -5,7 +5,7 @@ import { merge } from '@theme-ui/core';
 
 import { ThemeProvider as ThemeUIProvider, Theme } from 'theme-ui';
 
-import { lighten } from 'polished';
+import { lighten, transparentize } from 'polished';
 
 export interface ThemeContextProps {
   theme?: Theme;
@@ -96,6 +96,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
           highlight: '#339793',
           selected: '#1EA7FD',
           fadedText: lighten(0.25, defTheme.colors.text),
+          shadow: transparentize(0.9, defTheme.colors.text),
           modes: {
             dark: {
               ...(defTheme.colors.modes ? defTheme.colors.modes.dark : {}),
@@ -103,6 +104,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
               text: '#d3d4db',
               header: '#111111',
               fadedText: '#b3b4ba',
+              shadow: transparentize(0.9, '#d3d4db'),
             },
           },
         },

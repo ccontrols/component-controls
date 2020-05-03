@@ -1,19 +1,22 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { transparentize } from 'polished';
-import { jsx, Box, useThemeUI } from 'theme-ui';
+import styled from '@emotion/styled';
+import { jsx, Box, Theme } from 'theme-ui';
 import { ActionBar, ActionItem } from '../ActionBar';
+
+const StyledContainer = styled(Box)`
+  ${({ theme }: { theme: Theme }) => `
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px ${theme.colors?.shadow};
+    border: 1px solid  ${theme.colors?.shadow};
+  `}
+`;
 
 export interface ActionContainerProps {
   /**
    * optional actions provided to the component
    */
   actions?: ActionItem[];
-
-  /**
-   * padding at the top, to account for the absolute position of the ActionBar
-   */
-  paddingTop?: string | number;
 
   /**
    * if plain, skip the border and spacing around the children
@@ -27,31 +30,13 @@ export interface ActionContainerProps {
 export const ActionContainer: FC<ActionContainerProps> = ({
   children,
   actions,
-  paddingTop,
   plain,
 }) => {
-  const { theme } = useThemeUI();
+  const hasActions = actions && !!actions.length;
   return (
     <div>
-      {actions && <ActionBar actions={actions} />}
-      {plain ? (
-        children
-      ) : (
-        <Box
-          sx={{
-            borderRadius: 4,
-            border: `1px solid ${transparentize(
-              0.9,
-              theme.colors?.text as string,
-            )}`,
-            'div:first-child, svg:first-child': {
-              paddingTop,
-            },
-          }}
-        >
-          {children}
-        </Box>
-      )}
+      {hasActions && <ActionBar actions={actions} />}
+      {plain ? children : <StyledContainer>{children}</StyledContainer>}
     </div>
   );
 };

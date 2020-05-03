@@ -1,9 +1,15 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { jsx, Text, Flex, Styled } from 'theme-ui';
+import { jsx, Text, Flex, Styled, Box } from 'theme-ui';
 import { FC, useMemo, useContext } from 'react';
+import { ComponentControl, PropType } from '@component-controls/specification';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
-import { Table, TableProps, Markdown } from '@component-controls/components';
+import {
+  Table,
+  TableProps,
+  Markdown,
+  ActionContainer,
+} from '@component-controls/components';
 import { Column } from 'react-table';
 import {
   ComponentsBlockContainer,
@@ -11,7 +17,7 @@ import {
 } from '../BlockContainer/components/ComponentsBlockContainer';
 import { BlockControlsContext } from '../context';
 import { InvalidType } from '../notifications';
-
+import { useControlsActions } from '../ControlsTable/controlsActions';
 export interface PropsTableOwnProps {
   /**
    * extra custom columns passed to the PropsTable.
@@ -26,6 +32,11 @@ type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 
+interface PropRow {
+  name: string;
+  prop: PropType;
+  control: ComponentControl;
+}
 export const PropsTable: FC<PropsTableProps> = ({
   extraColumns = [],
   ...props
@@ -33,45 +44,68 @@ export const PropsTable: FC<PropsTableProps> = ({
   const { setControlValue, clickControl } = useContext(BlockControlsContext);
 
   return (
-    <ComponentsBlockContainer {...props}>
+    <ComponentsBlockContainer visibleOnControlsOnly={true} {...props}>
       {(component, { story }, rest) => {
-        const { info } = component || {};
-        if (!info) {
-          return null;
-        }
-        const { controls } = story || {};
-        const keys = Object.keys(info.props);
-        if (!keys.length) {
-          return null;
-        }
-        const parents = new Set();
-        const rows = keys.map(key => {
-          const prop = info.props[key];
-          const parentName = prop.parentName ?? '-';
-          parents.add(parentName);
-          return {
-            name: key,
-            prop: { ...prop, parentName },
-            control: controls ? controls[key] : undefined,
-          };
-        });
-        const groupProps: GroupingProps = {};
-        if (parents.size > 1) {
-          groupProps.expanded = {
-            [`prop.parentName:${parents.values().next().value}`]: true,
-          };
-          groupProps.groupBy = ['prop.parentName'];
-        } else {
-          groupProps.hiddenColumns = ['prop.parentName'];
-        }
-
-        // check if we should display controls in the PrpsTable
-        // at least one control's name should exist as a property name
-        const hasControls =
-          controls &&
-          Object.keys(controls).some(key => {
-            return rows.some(({ name }) => name === key);
+        const { info = { props: undefined } } = component || {};
+        const { controls = {} } = story || {};
+        const propControls = { ...controls };
+        const { rows, hasControls, groupProps } = useMemo(() => {
+          // check if we should display controls in the PrpsTable
+          // at least one control's name should exist as a property name
+          const hasControls = !!Object.keys(propControls).length;
+          const keys = info.props ? Object.keys(info.props) : [];
+          const parents = new Set();
+          let rows: PropRow[] = keys.map(key => {
+            //@ts-ignore
+            const prop = info.props[key];
+            const control = propControls[key];
+            const parentName = prop.parentName || control?.groupId || '-';
+            const { description, label } = control || {};
+            if (control) {
+              delete propControls[key];
+            }
+            parents.add(parentName);
+            return {
+              name: key,
+              prop: { ...prop, description, label, parentName },
+              control,
+            };
           });
+          if (propControls) {
+            const controlsRows: PropRow[] = [];
+            Object.keys(propControls).forEach(key => {
+              const control = propControls[key];
+              if (!control.hidden) {
+                const parentName = control.groupId || '-';
+                parents.add(parentName);
+                controlsRows.push({
+                  name: key,
+                  prop: {
+                    description: control.description,
+                    parentName,
+                    defaultValue: control.defaultValue,
+                    type: {
+                      name: control.type,
+                    },
+                  },
+                  control,
+                });
+              }
+            });
+            rows = [...controlsRows, ...rows];
+          }
+          const groupProps: GroupingProps = {};
+          if (parents.size > 1) {
+            groupProps.expanded = {
+              [`prop.parentName:${parents.values().next().value}`]: true,
+            };
+            groupProps.groupBy = ['prop.parentName'];
+          } else {
+            groupProps.hiddenColumns = ['prop.parentName'];
+          }
+
+          return { hasControls, rows, groupProps };
+        }, [story?.id, controls]);
 
         const columns = useMemo(() => {
           const cachedColumns = [
@@ -223,9 +257,28 @@ export const PropsTable: FC<PropsTableProps> = ({
             });
           }
           return cachedColumns;
-        }, [extraColumns, hasControls]);
-        return (
+        }, [story?.id, extraColumns, hasControls]);
+        const table = (
           <Table {...groupProps} {...rest} columns={columns} data={rows} />
+        );
+        if (!hasControls) {
+          return table;
+        }
+        const controlsActions = useControlsActions({
+          controls,
+          setControlValue,
+          storyId: story?.id,
+        });
+        return (
+          <ActionContainer actions={controlsActions}>
+            <Box
+              sx={{
+                pt: 4,
+              }}
+            >
+              <Table {...groupProps} {...rest} columns={columns} data={rows} />
+            </Box>
+          </ActionContainer>
         );
       }}
     </ComponentsBlockContainer>

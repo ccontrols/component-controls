@@ -10,40 +10,48 @@ Object {
       "description": "if false, will nothave a collapsible frame.",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
+        "name": "any",
+        "raw": "any",
+      },
+    },
+    "description": Object {
+      "description": "optional markdown description.",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "any",
+        "raw": "any",
       },
     },
     "id": Object {
       "description": "id of the story",
       "parentName": "StoryInputProps",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "any",
+        "raw": "any",
       },
     },
     "name": Object {
       "description": "alternatively you can use the name of a story to load from an external file",
       "parentName": "StoryInputProps",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "any",
+        "raw": "any",
       },
     },
     "sxStyle": Object {
       "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "any",
+        "raw": "any",
       },
     },
     "title": Object {
       "description": "optional section title for the block.",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "string",
-        "raw": "string",
+        "name": "any",
+        "raw": "any",
       },
     },
   },

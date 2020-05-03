@@ -21,10 +21,11 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   of,
   children,
   sxStyle,
+  visibleOnControlsOnly,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
-  const { components } = useComponentsContext({ of });
+  const { components, story } = useComponentsContext({ of });
   const componentNames = Object.keys(components);
   React.useEffect(() => {
     setTitle(
@@ -33,7 +34,11 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
         : userTitle,
     );
   }, [userTitle]);
-  if (!componentNames.length) {
+
+  if (
+    !componentNames.length &&
+    (visibleOnControlsOnly !== true || !story?.controls)
+  ) {
     //no components to display
     return null;
   }
@@ -43,6 +48,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }
+      visibleOnControlsOnly={visibleOnControlsOnly}
       {...rest}
     >
       {(component, props, otherProps) => children(component, props, otherProps)}

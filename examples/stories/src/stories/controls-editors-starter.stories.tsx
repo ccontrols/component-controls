@@ -25,11 +25,26 @@ overview.story = {
     'Story with two dynamic control values: `name` and `age`. You can use the controls to edit the story properties at run-time.',
 
   controls: {
-    name: { type: ControlTypes.TEXT, label: 'Name', value: 'Mark' },
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'Mark',
+      description: `
+## name of the person
+
+any text is allowed
+`,
+    },
     age: {
       type: ControlTypes.NUMBER,
+      description: `
+## age of the person
+
+numeric, values between 10 and 75 allowed
+`,
       label: 'Age',
       value: 19,
+      defaultValue: null,
       min: 10,
       max: 75,
     },

@@ -1,17 +1,10 @@
 /** @jsx jsx */
 import { jsx, Box } from 'theme-ui';
-import React, { FC, MouseEvent } from 'react';
-import { window, document } from 'global';
-import qs from 'qs';
-import copy from 'copy-to-clipboard';
-import { ComponentControls } from '@component-controls/specification';
+import React, { FC } from 'react';
 import {
-  resetControlValues,
-  getControlValues,
-  LoadedComponentControls,
-  LoadedComponentControl,
-  randomizeData,
-} from '@component-controls/core';
+  ComponentControls,
+  ComponentControl,
+} from '@component-controls/specification';
 import {
   ActionContainer,
   Tab,
@@ -23,6 +16,7 @@ import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
+import { useControlsActions } from './controlsActions';
 
 import { BlockControlsContext } from '../context';
 import { SingleControlsTable } from './SingleControlsTable';
@@ -32,7 +26,7 @@ export type ControlsTableProps = StoryBlockContainerProps;
 const DEFAULT_GROUP_ID = 'Other';
 
 interface GroupedControlsType {
-  [key: string]: LoadedComponentControls;
+  [key: string]: ComponentControls;
 }
 
 const createData = (controls: ComponentControls): any[] | undefined =>
@@ -59,7 +53,6 @@ const createData = (controls: ComponentControls): any[] | undefined =>
 export const ControlsTable: FC<ControlsTableProps> = (
   props: ControlsTableProps,
 ) => {
-  const [copied, setCopied] = React.useState(false);
   const { setControlValue, clickControl } = React.useContext(
     BlockControlsContext,
   );
@@ -68,36 +61,15 @@ export const ControlsTable: FC<ControlsTableProps> = (
       {(context, rest) => {
         const { story, id: storyId } = context;
         const { controls } = story || {};
+        const controlsActions = useControlsActions({
+          controls,
+          storyId,
+          setControlValue,
+        });
         if (controls && Object.keys(controls).length) {
-          const onReset = (e: MouseEvent<HTMLButtonElement>) => {
-            e.preventDefault();
-            if (setControlValue && storyId) {
-              const values = resetControlValues(controls);
-              setControlValue(storyId, undefined, values);
-            }
-          };
-          const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
-            e.preventDefault();
-            setCopied(true);
-            const { location } = document;
-            const query = qs.parse(location.search, {
-              ignoreQueryPrefix: true,
-            });
-            const values = getControlValues(controls);
-            Object.keys(values).forEach(key => {
-              query[`controls-${key}`] = values[key];
-            });
-
-            copy(
-              `${location.origin + location.pathname}?${qs.stringify(query, {
-                encode: false,
-              })}`,
-            );
-            window.setTimeout(() => setCopied(false), 1500);
-          };
           const groupped: GroupedControlsType = Object.keys(controls)
             .filter(k => {
-              const p: LoadedComponentControl = controls[k];
+              const p: ComponentControl = controls[k];
               return p.type && !p.hidden;
             })
             .reduce((acc: GroupedControlsType, k: string) => {
@@ -118,32 +90,9 @@ export const ControlsTable: FC<ControlsTableProps> = (
           if (groupedItems.length === 0) {
             return null;
           }
-          const actionItems = [
-            {
-              title: copied ? 'copied' : 'copy',
-              onClick: onCopy,
-              id: 'copy',
-              'aria-label': 'copy control values',
-            },
-            {
-              title: 'reset',
-              onClick: onReset,
-              id: 'reset',
-              'aria-label': 'reset control values to their initial value',
-            },
-            {
-              title: 'randomize',
-              onClick: () => {
-                if (setControlValue && controls && storyId) {
-                  setControlValue(storyId, undefined, randomizeData(controls));
-                }
-              },
-              id: 'randomize',
-              'aria-label': 'generate random values for the component controls',
-            },
-          ];
+
           return (
-            <ActionContainer actions={actionItems}>
+            <ActionContainer actions={controlsActions}>
               <Box
                 sx={{
                   pt: 4,

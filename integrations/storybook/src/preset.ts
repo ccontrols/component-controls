@@ -10,7 +10,10 @@ module.exports = {
   },
   addons: (entry: any = {}) => {
     const { pages: customPages } = entry;
-    const pages = customPages || [require.resolve('./full-page')];
+    const pages = customPages || [
+      require.resolve('./full-page'),
+      require.resolve('./testing-page'),
+    ];
     if (pages.length) {
       return [
         {

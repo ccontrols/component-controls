@@ -101,7 +101,7 @@ export const StorySource: FC<StorySourceProps> = ({
               return (
                 <Styled.pre
                   className={`${className}`}
-                  style={{ ...style, padding: '0 10px 10px', margin: 0 }}
+                  style={{ ...style, padding: '25px 10px 10px', margin: 0 }}
                 >
                   {tokens.map((line: any, i: number) => (
                     <div {...getLineProps({ line, key: i })}>
@@ -162,7 +162,7 @@ export const StorySource: FC<StorySourceProps> = ({
               );
             }}
           >
-            {source}
+            {source.trim()}
           </Source>
         );
       }}

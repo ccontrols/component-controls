@@ -6,7 +6,7 @@ import { ComponentInputProps, useComponentsContext } from './ComponentsContext';
 
 export type ComponentsContainerProps = {
   children: (
-    component: StoryComponent,
+    component: StoryComponent | undefined,
     props: {
       story?: Story;
       tabName: string;
@@ -18,27 +18,32 @@ export type ComponentsContainerProps = {
    * if the function returns false, it can stop chabging to the new tab
    */
   onSelect?: (name: string, component: StoryComponent) => boolean | void;
+  /**
+   * set to true if you need the blockto be visible even if only controls are available
+   */
+  visibleOnControlsOnly?: boolean;
 } & ComponentInputProps;
 
 export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
   of,
   children,
   onSelect,
+  visibleOnControlsOnly,
   ...rest
 }) => {
   const { components, story } = useComponentsContext({
     of,
   });
-  if (!components) {
-    return null;
+  const keys = components ? Object.keys(components) : [];
+  if (keys.length === 0 && visibleOnControlsOnly === true && story?.controls) {
+    keys.push('Controls');
   }
-  const keys = Object.keys(components);
   if (keys.length === 0) {
     return null;
   }
   if (keys.length === 1) {
     return children(
-      components[keys[0]],
+      components ? components[keys[0]] : undefined,
       {
         story,
         tabName: keys[0],

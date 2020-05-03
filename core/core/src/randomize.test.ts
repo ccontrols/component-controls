@@ -1,30 +1,33 @@
 const faker = require('faker/locale/en_US');
-import { LoadedComponentControls, LoadedComponentControl } from './utils';
-import { ControlTypes } from '@component-controls/specification';
+import {
+  ControlTypes,
+  ComponentControls,
+  ComponentControl,
+} from '@component-controls/specification';
 import { randomizeData } from '@component-controls/core/src/randomizeData';
 
 describe('Options utility functions', () => {
-  const name: LoadedComponentControl = {
+  const name: ComponentControl = {
     type: ControlTypes.TEXT,
     value: 'Tom',
     defaultValue: 'Tom',
   };
-  const lastName: LoadedComponentControl = {
+  const lastName: ComponentControl = {
     type: ControlTypes.TEXT,
     value: 'Mark',
     defaultValue: 'Mark',
   };
-  const age: LoadedComponentControl = {
+  const age: ComponentControl = {
     type: ControlTypes.NUMBER,
     value: 19,
     defaultValue: 19,
   };
-  const male: LoadedComponentControl = {
+  const male: ComponentControl = {
     type: ControlTypes.BOOLEAN,
     value: true,
     defaultValue: true,
   };
-  const object: LoadedComponentControl = {
+  const object: ComponentControl = {
     type: ControlTypes.OBJECT,
     value: {
       name,
@@ -39,7 +42,7 @@ describe('Options utility functions', () => {
       male,
     },
   };
-  const controls: LoadedComponentControls = {
+  const controls: ComponentControl = {
     name,
     lastName,
     age,

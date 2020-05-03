@@ -2,10 +2,9 @@ import {
   ControlTypes,
   ComponentControlNumber,
   ComponentControlOptions,
+  ComponentControls,
 } from '@component-controls/specification';
 const faker = require('faker/locale/en_US');
-
-import { LoadedComponentControls } from './utils';
 
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];
@@ -32,9 +31,7 @@ interface RandomizedData {
   [key: string]: any;
 }
 
-export const randomizeData = (
-  controls: LoadedComponentControls,
-): RandomizedData => {
+export const randomizeData = (controls: ComponentControls): RandomizedData => {
   return Object.keys(controls)
     .map(name => {
       const control = controls[name];
@@ -109,7 +106,7 @@ export const randomizeData = (
             return {
               name,
               value: {
-                ...randomizeData(control.value as LoadedComponentControls),
+                ...randomizeData(control.value as ComponentControls),
               },
             };
           }

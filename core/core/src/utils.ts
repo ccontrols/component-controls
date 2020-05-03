@@ -6,31 +6,12 @@ import {
   ControlTypes,
 } from '@component-controls/specification';
 
-/**
- * once controls are loaded, the value is saved into
- * defaultValue, an additional field in Loaded...
- */
-
-export type LoadedComponentControl = ComponentControl & { defaultValue?: any };
-export interface LoadedComponentControls {
-  [name: string]: LoadedComponentControl;
-}
-
-// save default value for 'reset'
-export const loadControls = (
-  controls: ComponentControls,
-): LoadedComponentControls =>
-  Object.keys(controls).reduce((v, key) => {
-    const prop = controls[key];
-    return { ...v, [key]: { ...prop, defaultValue: prop.value } };
-  }, {});
-
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {
     return {
       ...control,
       value: mergeControlValues(
-        control.value as LoadedComponentControls,
+        control.value as ComponentControls,
         undefined,
         value,
       ),
@@ -39,18 +20,16 @@ const mergeValue = (control: ComponentControl, value: any): any => {
   return {
     ...control,
     value,
-    defaultValue:
-      (control as LoadedComponentControl).defaultValue === undefined
-        ? control.value
-        : (control as LoadedComponentControl).defaultValue,
+    resetValue:
+      control.resetValue === undefined ? control.value : control.resetValue,
   };
 };
 
 export const mergeControlValues = (
-  controls: LoadedComponentControls,
+  controls: ComponentControls,
   controlName: string | undefined,
   value: any,
-): LoadedComponentControls => {
+): ComponentControls => {
   return controlName
     ? {
         ...controls,
@@ -69,15 +48,15 @@ export const mergeControlValues = (
 };
 
 export const resetControlValues = (
-  controls: LoadedComponentControls,
+  controls: ComponentControls,
   controlName?: string,
 ) => {
   return controlName
-    ? controls[controlName].defaultValue
+    ? controls[controlName].resetValue
     : Object.keys(controls).reduce(
         (acc, key) => ({
           ...acc,
-          [key]: controls[key].defaultValue,
+          [key]: controls[key].resetValue,
         }),
         {},
       );
@@ -88,7 +67,7 @@ export interface ControlValues {
 }
 
 export const getControlValue = (
-  controls: LoadedComponentControls,
+  controls: ComponentControls,
   propName: string,
 ): any => {
   const control: ComponentControl = controls[propName];
@@ -104,16 +83,14 @@ export const getControlValue = (
       control.type === ControlTypes.OBJECT &&
       typeof value === 'object'
     ) {
-      return getControlValues(value as LoadedComponentControls);
+      return getControlValues(value as ComponentControls);
     }
     return value;
   }
   return undefined;
 };
 
-export const getControlValues = (
-  controls: LoadedComponentControls,
-): ControlValues =>
+export const getControlValues = (controls: ComponentControls): ControlValues =>
   controls
     ? Object.keys(controls).reduce((acc, key) => {
         const value = getControlValue(controls, key);

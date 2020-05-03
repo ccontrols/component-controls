@@ -1,20 +1,22 @@
-import { ControlTypes } from '@component-controls/specification';
+import {
+  ControlTypes,
+  ComponentControls,
+} from '@component-controls/specification';
 
 import {
   mergeControlValues,
   resetControlValues,
   getControlValues,
-  LoadedComponentControls,
 } from './index';
 
 describe('Controls utils', () => {
-  const controls: LoadedComponentControls = {
-    name: { type: ControlTypes.TEXT, value: 'hello', defaultValue: 'hello' },
-    age: { type: ControlTypes.NUMBER, value: 19, defaultValue: 19 },
+  const controls: ComponentControls = {
+    name: { type: ControlTypes.TEXT, value: 'hello', resetValue: 'hello' },
+    age: { type: ControlTypes.NUMBER, value: 19, resetValue: 19 },
   };
-  const modifiedControls: LoadedComponentControls = {
-    name: { type: ControlTypes.TEXT, value: 'today', defaultValue: 'hello' },
-    age: { type: ControlTypes.NUMBER, value: 19, defaultValue: 19 },
+  const modifiedControls: ComponentControls = {
+    name: { type: ControlTypes.TEXT, value: 'today', resetValue: 'hello' },
+    age: { type: ControlTypes.NUMBER, value: 19, resetValue: 19 },
   };
 
   it('Should merge property value', () => {
