@@ -22,7 +22,7 @@ addDecorator(
       if (context.args !== undefined) {
         //storybook-6 beta fake args
         //@ts-ignore
-        return storyFn({ ...context, args: values });
+        return storyFn({ ...context, args: { ...context.args, ...values } });
       }
       //storybook 5 and 6 alphas
       //@ts-ignore
