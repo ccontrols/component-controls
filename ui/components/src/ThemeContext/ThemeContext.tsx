@@ -112,7 +112,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       dark,
     );
   }, [dark, customTheme]);
-  console.log(theme);
   return (
     <ThemeContext.Provider
       value={{
