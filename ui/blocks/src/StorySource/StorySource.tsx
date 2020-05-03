@@ -2,7 +2,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
-import { getControlValue } from '@component-controls/core';
+import { getControlValue, getControlValues } from '@component-controls/core';
 import { Styled } from 'theme-ui';
 import {
   ThemeContext,
@@ -74,11 +74,17 @@ export const StorySource: FC<StorySourceProps> = ({
         }
         const args = story?.arguments;
         const tags = getArgumentsLocations(args);
-        if (args && args.length && !showFileSource) {
-          allActions.push({
-            title: ViewStyleNext[viewStyle],
-            onClick: onMergeValues,
-          });
+        // if the props are not deconstructed, single variable
+        let propsArgs: string | undefined;
+        if (args && args.length) {
+          propsArgs =
+            typeof args[0].value === 'string' ? args[0].value : undefined;
+          if (!showFileSource) {
+            allActions.push({
+              title: ViewStyleNext[viewStyle],
+              onClick: onMergeValues,
+            });
+          }
         }
         if (actions) {
           allActions.push.apply(allActions, actions);
@@ -130,7 +136,13 @@ export const StorySource: FC<StorySourceProps> = ({
                                   {controls &&
                                   viewStyle === 'values' &&
                                   param.type === 'usage'
-                                    ? getControlValue(controls, s) || s
+                                    ? propsArgs === s
+                                      ? JSON.stringify(
+                                          getControlValues(controls),
+                                          null,
+                                          2,
+                                        )
+                                      : getControlValue(controls, s) || s
                                     : s}
                                 </Tag>
                               ) : (
