@@ -11,10 +11,7 @@ import {
 } from '../../context';
 import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
 
-export type StoryBlockContainerProps = {
-  [key: string]: any;
-} & StoryInputProps &
-  Omit<BlockContainerProps, 'id'>;
+export type StoryBlockContainerProps = StoryInputProps & BlockContainerProps;
 
 export type StoryBlockContainerAllProps = {
   children?: (

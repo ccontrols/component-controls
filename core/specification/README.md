@@ -269,23 +269,26 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ## ComponentControlArray
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L241)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L259)_
 
 ** extends ComponentControlBase&lt;string\[]>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `separator` | string                                                         | the array items separator, by default comma                                                                                                           |
-| `type*`     | [ARRAY](#array)                                                |                                                                                                                                                       |
-| `value`     | string\[]                                                      | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | string\[]                                                      | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | string\[]                                                      | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `separator`    | string                                                         | the array items separator, by default comma                                                                                                           |
+| `type*`        | [ARRAY](#array)                                                |                                                                                                                                                       |
+| `value`        | string\[]                                                      | a default value for the property                                                                                                                      |
 
 ## ComponentControlBase
 
@@ -298,74 +301,86 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [ControlTypes](#controltypes)                                  |                                                                                                                                                       |
-| `value`     |                                                                | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` |                                                                | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   |                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [ControlTypes](#controltypes)                                  |                                                                                                                                                       |
+| `value`        |                                                                | a default value for the property                                                                                                                      |
 
 ## ComponentControlBoolean
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L208)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L226)_
 
 ** extends ComponentControlBase&lt;boolean>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [BOOLEAN](#boolean)                                            |                                                                                                                                                       |
-| `value`     | boolean                                                        | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | boolean                                                        | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | boolean                                                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [BOOLEAN](#boolean)                                            |                                                                                                                                                       |
+| `value`        | boolean                                                        | a default value for the property                                                                                                                      |
 
 ## ComponentControlButton
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L254)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L272)_
 
 ** extends ComponentControlBase&lt;>**
 
 ### properties
 
-| Name        | Type                                                                              | Description                                                                                                                                           |
-| ----------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false                    | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                                            | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                                           | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                                           | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                                            | label to display next to the field editor by default uses the property name itself                                                                    |
-| `onClick`   | **function** (`prop`\*: [ComponentControlButton](#componentcontrolbutton)): void; | for button type fields, an onClick handler                                                                                                            |
-| `order`     | number                                                                            | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [BUTTON](#button)                                                                 |                                                                                                                                                       |
-| `value`     |                                                                                   | a default value for the property                                                                                                                      |
+| Name           | Type                                                                              | Description                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                    | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` |                                                                                   | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                                            | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                                            | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                                           | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                                           | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                                            | label to display next to the field editor by default uses the property name itself                                                                    |
+| `onClick`      | **function** (`prop`\*: [ComponentControlButton](#componentcontrolbutton)): void; | for button type fields, an onClick handler                                                                                                            |
+| `order`        | number                                                                            | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   |                                                                                   | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [BUTTON](#button)                                                                 |                                                                                                                                                       |
+| `value`        |                                                                                   | a default value for the property                                                                                                                      |
 
 ## ComponentControlColor
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L212)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L230)_
 
 ** extends ComponentControlBase&lt;string>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [COLOR](#color)                                                |                                                                                                                                                       |
-| `value`     | string                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | string                                                         | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [COLOR](#color)                                                |                                                                                                                                                       |
+| `value`        | string                                                         | a default value for the property                                                                                                                      |
 
 ## ComponentControlData
 
@@ -382,86 +397,98 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ## ComponentControlDate
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L216)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L234)_
 
 ** extends ComponentControlBase&lt;[Date](#date)>**
 
 ### properties
 
-| Name         | Type                                                           | Description                                                                                                                                           |
-| ------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`       | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `datePicker` | boolean                                                        | whether to display a date picker (calendar). default: true                                                                                            |
-| `groupId`    | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`     | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`  | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`      | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`      | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `timePicker` | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
-| `type*`      | [DATE](#date)                                                  |                                                                                                                                                       |
-| `value`      | [Date](#date)                                                  | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `datePicker`   | boolean                                                        | whether to display a date picker (calendar). default: true                                                                                            |
+| `defaultValue` | [Date](#date)                                                  | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | [Date](#date)                                                  | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
+| `type*`        | [DATE](#date)                                                  |                                                                                                                                                       |
+| `value`        | [Date](#date)                                                  | a default value for the property                                                                                                                      |
 
 ## ComponentControlFiles
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L232)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L250)_
 
 ** extends ComponentControlBase&lt;string\[]>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `accept`    | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                   |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [FILES](#files)                                                |                                                                                                                                                       |
-| `value`     | string\[]                                                      | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accept`       | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                   |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | string\[]                                                      | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | string\[]                                                      | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [FILES](#files)                                                |                                                                                                                                                       |
+| `value`        | string\[]                                                      | a default value for the property                                                                                                                      |
 
 ## ComponentControlNumber
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L304)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L322)_
 
 ** extends ComponentControlBase&lt;number>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `max`       | number                                                         | maximum allowed value for numeric property                                                                                                            |
-| `min`       | number                                                         | minimum allowed value for numeric property                                                                                                            |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `range`     | boolean                                                        | if true, will display a range type slider editor                                                                                                      |
-| `step`      | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
-| `type*`     | [NUMBER](#number)                                              |                                                                                                                                                       |
-| `value`     | number                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | number                                                         | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `max`          | number                                                         | maximum allowed value for numeric property                                                                                                            |
+| `min`          | number                                                         | minimum allowed value for numeric property                                                                                                            |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `range`        | boolean                                                        | if true, will display a range type slider editor                                                                                                      |
+| `resetValue`   | number                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
+| `type*`        | [NUMBER](#number)                                              |                                                                                                                                                       |
+| `value`        | number                                                         | a default value for the property                                                                                                                      |
 
 ## ComponentControlObject
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L249)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L267)_
 
 ** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
 
 ### properties
 
-| Name        | Type                                                           | Description                                                                                                                                           |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `groupId`   | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`     | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [OBJECT](#object)                                              |                                                                                                                                                       |
-| `value`     | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | [ComponentControls](#componentcontrols)                        | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | [ComponentControls](#componentcontrols)                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [OBJECT](#object)                                              |                                                                                                                                                       |
+| `value`        | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                      |
 
 ## ComponentControlOptions
 
@@ -470,46 +497,52 @@ list of options can be
 2\. array of strings
 3\. array of key-value pair objects
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L285)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L303)_
 
 ** extends ComponentControlBase&lt;OptionsValueType&lt;>>**
 
 ### properties
 
-| Name        | Type                                                                                 | Description                                                                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`      | [ComponentControlData](#componentcontroldata) \| null \| false                       | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `display`   | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                              |
-| `groupId`   | string                                                                               | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`    | boolean                                                                              | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel` | boolean                                                                              | hide the label from the property editor                                                                                                               |
-| `label`     | string                                                                               | label to display next to the field editor by default uses the property name itself                                                                    |
-| `options*`  | OptionsListType&lt;>                                                                 |                                                                                                                                                       |
-| `order`     | number                                                                               | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `type*`     | [OPTIONS](#options)                                                                  |                                                                                                                                                       |
-| `value`     | OptionsValueType&lt;>                                                                | a default value for the property                                                                                                                      |
+| Name           | Type                                                                                 | Description                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                       | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | OptionsValueType&lt;>                                                                | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                                               | full text property description. can use markdown.                                                                                                     |
+| `display`      | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                              |
+| `groupId`      | string                                                                               | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                                              | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                                              | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                                               | label to display next to the field editor by default uses the property name itself                                                                    |
+| `options*`     | OptionsListType&lt;>                                                                 |                                                                                                                                                       |
+| `order`        | number                                                                               | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `resetValue`   | OptionsValueType&lt;>                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `type*`        | [OPTIONS](#options)                                                                  |                                                                                                                                                       |
+| `value`        | OptionsValueType&lt;>                                                                | a default value for the property                                                                                                                      |
 
 ## ComponentControlText
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L183)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L201)_
 
 ** extends ComponentControlBase&lt;string>**
 
 ### properties
 
-| Name          | Type                                                           | Description                                                                                                                                           |
-| ------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`        | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `escapeValue` | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                |
-| `groupId`     | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`      | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`   | boolean                                                        | hide the label from the property editor                                                                                                               |
-| `label`       | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`       | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `placeholder` | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                              |
-| `rows`        | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
-| `type*`       | [TEXT](#text)                                                  |                                                                                                                                                       |
-| `value`       | string                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
+| `defaultValue` | string                                                         | default value is usually set at run-time, from the value                                                                                              |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `escapeValue`  | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `placeholder`  | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                              |
+| `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
+| `type*`        | [TEXT](#text)                                                  |                                                                                                                                                       |
+| `value`        | string                                                         | a default value for the property                                                                                                                      |
 
 ## ComponentControls
 
@@ -517,7 +550,7 @@ ComponentControls are defined in key value pairs
 the name of the property is the key
 and the value is the ComponentControl
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L357)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L375)_
 
 `name`\*: string: [ComponentControl](#componentcontrol)
 
@@ -529,7 +562,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L340)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L358)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -537,13 +570,13 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 value/label pairs or array of OptionsValueType
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L274)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L292)_
 
 \[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L264)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L282)_
 
  | number | string\[] \| number\[] \| **label**: string**value**: any
 
@@ -780,7 +813,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L340)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L358)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
