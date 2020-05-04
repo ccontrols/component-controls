@@ -115,8 +115,7 @@ Object {
         },
       },
       "name": "my-story",
-      "source": "<Story name=\\"my-story\\" component={Toggle} />;
-",
+      "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },
   "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
@@ -170,13 +169,12 @@ Object {
       },
       "name": "story",
       "source": "<Story
-  name=\\"story\\"
-  component={ArrowButton}
-  subcomponents={{
-    'My Button Tab': Button,
-  }}
-/>;
-",
+        name=\\"story\\"
+        component={ArrowButton}
+        subcomponents={{
+          'My Button Tab': Button,
+        }}
+      />",
       "subcomponents": Object {
         "My Button Tab": "Button",
       },

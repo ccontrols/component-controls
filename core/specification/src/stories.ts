@@ -22,6 +22,12 @@ export interface ArgUsageLocation {
    * in this example the name will be 'age'
    */
   name?: SourceIdentifier;
+
+  /** true ,f the property is a 'shorthand' value and name the same
+   * example { prop: value } - not a shorthand
+   * example { prop } - is a shorthand
+   */
+  shorthand?: boolean;
 }
 
 /**

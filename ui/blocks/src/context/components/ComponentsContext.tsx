@@ -45,17 +45,15 @@ export const useComponentsContext = ({
   }
   useEffect(() => {
     setStoryData(getStoryData(storyId));
-  }, [storyId]);
-  useEffect(() => {
     const onChange = () => {
       //force refresh of context
-      setStoryData(getStoryData());
+      setStoryData(getStoryData(storyId));
     };
     addObserver(onChange);
     return () => {
       removeObserver(onChange);
     };
-  }, []);
+  }, [storyId]);
   let components: StoryComponents = {};
   if (of === CURRENT_STORY) {
     if (component) {

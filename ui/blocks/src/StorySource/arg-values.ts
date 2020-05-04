@@ -1,29 +1,42 @@
 import {
   StoryArguments,
   CodeLocation,
+  ComponentControls,
 } from '@component-controls/specification';
+import { getControlValue, getControlValues } from '@component-controls/core';
+import stringifyObject from 'stringify-object';
 import { PrismTheme } from 'prism-react-renderer';
 
 type ArgType = 'loc' | 'usage';
-type ArgumentLocs = { type: ArgType } & CodeLocation;
+type ArgumentLocs = { type: ArgType; shorthand?: boolean } & CodeLocation;
 interface ArgumentLocations {
   name: string;
   index: number;
   locs: ArgumentLocs[];
+  controls: ComponentControls;
 }
 
 interface ArgLocation {
   name: string;
   index: number;
   type: ArgType;
+  controls: ComponentControls;
+  shorthand?: boolean;
 }
 export const getArgumentsLocations = (
+  controls: ComponentControls = {},
   args?: StoryArguments,
 ): ArgumentLocations[] =>
   args
     ? args.reduce((acc: any, a, index) => {
         if (Array.isArray(a.value)) {
-          return [...acc, ...getArgumentsLocations(a.value)];
+          return [
+            ...acc,
+            ...getArgumentsLocations(
+              a.name ? (controls[a.name].value as ComponentControls) : controls,
+              a.value,
+            ),
+          ];
         }
         const locs: ArgumentLocs[] = [];
         if (a.loc) {
@@ -36,6 +49,7 @@ export const getArgumentsLocations = (
           const usageLocs: ArgumentLocs[] = a.usage.map(u => ({
             type: 'usage',
             ...u.loc,
+            shorthand: u.shorthand,
           }));
           locs.push(...usageLocs);
         }
@@ -44,6 +58,7 @@ export const getArgumentsLocations = (
           ...acc,
           {
             name: a.value,
+            controls,
             index,
             locs,
           },
@@ -77,11 +92,29 @@ export const findTagLocation = (
           return {
             name: tag.name,
             index: tag.index,
+            controls: tag.controls,
             type: loc.type,
+            shorthand: loc.shorthand,
           };
         }
       }
     }
   }
   return undefined;
+};
+
+export const tagToValue = (param: ArgLocation, name: string) => {
+  const value =
+    getControlValue(param.controls, name) ?? getControlValues(param.controls);
+  let retValue: string;
+  if (Array.isArray(value) || typeof value === 'object') {
+    retValue = stringifyObject(value, {
+      indent: '  ',
+      inlineCharacterLimit: 80,
+    });
+  } else {
+    retValue = value || name;
+    retValue = typeof retValue === 'string' ? `"${retValue}"` : retValue;
+  }
+  return param.shorthand ? `${param.name}: ${retValue}` : retValue;
 };

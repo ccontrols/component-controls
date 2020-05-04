@@ -133,7 +133,7 @@ const parseSource = async (
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];
-    story.source = await prettify(getASTSource(source, story.loc));
+    story.source = getASTSource(source, story.loc);
   }
   return store;
 };

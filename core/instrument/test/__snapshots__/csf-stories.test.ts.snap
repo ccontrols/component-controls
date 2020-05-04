@@ -62,8 +62,7 @@ export const myStory = () => {};
         },
       },
       "name": "myStory",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -145,8 +144,7 @@ export const myStory = props => {};
         },
       },
       "name": "myStory",
-      "source": "props => {};
-",
+      "source": "props => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -261,8 +259,7 @@ export const myStory = ({ name: { first, last }, age }) => {};
         },
       },
       "name": "myStory",
-      "source": "({ name: { first, last }, age }) => {};
-",
+      "source": "({ name: { first, last }, age }) => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -333,8 +330,7 @@ export const myStory = (props, context) => {};
         },
       },
       "name": "myStory",
-      "source": "(props, context) => {};
-",
+      "source": "(props, context) => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -420,8 +416,7 @@ export const myStory = ({ name: MyNam, age }) => {};
         },
       },
       "name": "myStory",
-      "source": "({ name: MyNam, age }) => {};
-",
+      "source": "({ name: MyNam, age }) => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -507,8 +502,7 @@ export const myStory = ({ name, age }) => {};
         },
       },
       "name": "myStory",
-      "source": "({ name, age }) => {};
-",
+      "source": "({ name, age }) => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -565,8 +559,7 @@ export const myStory = (props: Properties) => {};
         },
       },
       "name": "myStory",
-      "source": "(props: Properties) => {};
-",
+      "source": "(props: Properties) => {}",
     },
   },
   "transformed": "export default { title: 'Story' };

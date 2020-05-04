@@ -93,7 +93,7 @@ export const extractFunctionParameters = (
     if (story.arguments.length) {
       const params = story.arguments[0];
       if (node.body.type === 'Identifier') {
-        addArgumentUsage(story, [params], node.body);
+        addArgumentUsage(story, [params], node.body, node.shorthand);
       } else if (node.body.type === 'TemplateLiteral') {
         traverse(
           node,

@@ -16,48 +16,51 @@ Can adapt to multiple groups of controls, displaying them in their own tabs.",
             "description": "if false, will nothave a collapsible frame.",
             "parentName": "BlockContainerProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "boolean",
+              "raw": "boolean",
             },
           },
           "description": Object {
             "description": "optional markdown description.",
             "parentName": "BlockContainerProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "string",
+              "raw": "string",
             },
           },
           "id": Object {
-            "description": "id of the story",
+            "description": "id of the story
+optional id to be used for the block
+if no id is provided, one will be calculated automatically
+from the title.",
             "parentName": "StoryInputProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "string",
+              "raw": "string",
             },
           },
           "name": Object {
             "description": "alternatively you can use the name of a story to load from an external file",
             "parentName": "StoryInputProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "string",
+              "raw": "string",
             },
           },
           "sxStyle": Object {
             "description": "theme-ui styling object for Block Box",
             "parentName": "BlockContainerProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "SystemStyleObject",
+              "raw": "SystemStyleObject",
             },
           },
           "title": Object {
             "description": "optional section title for the block.",
             "parentName": "BlockContainerProps",
             "type": Object {
-              "name": "any",
-              "raw": "any",
+              "name": "string",
+              "raw": "string",
             },
           },
         },

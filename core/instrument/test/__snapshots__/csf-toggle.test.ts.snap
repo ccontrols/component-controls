@@ -61,8 +61,7 @@ Object {
       <br />
     </div>
   );
-};
-",
+}",
     },
   },
   "transformed": "import React from 'react';

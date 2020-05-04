@@ -43,8 +43,7 @@ Object {
         },
         "component": "ControlsTable",
       },
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -105,8 +104,7 @@ Object {
           },
         },
       },
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default { title: 'Story' };
@@ -161,8 +159,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default { title: 'Story' };

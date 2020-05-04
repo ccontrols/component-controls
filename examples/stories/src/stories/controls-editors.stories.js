@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from '@theme-ui/components';
 import { ControlTypes } from '@component-controls/specification';
 
 export default {
@@ -14,33 +15,7 @@ textDefaultProp.story = {
   },
 };
 
-export const selectProp = ({ value }) => (
-  <div>{JSON.stringify({ value }, null, 2)}</div>
-);
-
-selectProp.propTypes = {
-  value: PropTypes.string,
-};
-
-selectProp.defaultProps = {
-  value: undefined,
-};
-
-selectProp.story = {
-  description:
-    'Story that shocases the `ControlTypes.OPTIONS` setting, using a `<Select />` component',
-  controls: {
-    value: {
-      type: ControlTypes.OPTIONS,
-      label: 'Select',
-      value: 1,
-      options: [1, 2, 3, undefined, null],
-      display: 'select',
-    },
-  },
-};
-
-export const tweaksStaticValues = ({
+export const kitchenSink = ({
   userName,
   age,
   fruit,
@@ -86,7 +61,7 @@ export const tweaksStaticValues = ({
   );
 };
 
-tweaksStaticValues.propTypes = {
+kitchenSink.propTypes = {
   userName: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
   fruit: PropTypes.string.isRequired,
@@ -124,7 +99,7 @@ const GROUP_IDS = {
   FAVORITES: 'Favorites',
 };
 
-tweaksStaticValues.story = {
+kitchenSink.story = {
   description: 'Complex story with a variety of control types.',
   controls: {
     userName: {
@@ -240,6 +215,32 @@ tweaksStaticValues.story = {
     },
 
     hidden: { type: ControlTypes.TEXT, hidden: true },
+  },
+};
+
+export const selectProp = ({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+);
+
+selectProp.propTypes = {
+  value: PropTypes.string,
+};
+
+selectProp.defaultProps = {
+  value: undefined,
+};
+
+selectProp.story = {
+  description:
+    'Story that shocases the `ControlTypes.OPTIONS` setting, using a `<Select />` component',
+  controls: {
+    value: {
+      type: ControlTypes.OPTIONS,
+      label: 'Select',
+      value: 1,
+      options: [1, 2, 3, undefined, null],
+      display: 'select',
+    },
   },
 };
 
@@ -530,4 +531,50 @@ groupedControls.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
   message: PropTypes.string.isRequired,
+};
+
+export const objectSimple = ({ text, background: { color } }) => {
+  return <Button css={{ backgroundColor: color }}>{text}</Button>;
+};
+
+objectSimple.story = {
+  controls: {
+    text: { type: ControlTypes.TEXT, value: 'Button' },
+    background: {
+      type: ControlTypes.OBJECT,
+      value: {
+        color: { type: ControlTypes.COLOR, value: 'red' },
+      },
+    },
+  },
+};
+
+export const objectNested = ({
+  text,
+  style: {
+    padding,
+    background: { color },
+  },
+}) => {
+  return (
+    <Button css={{ backgroundColor: color, padding: padding }}>{text}</Button>
+  );
+};
+
+objectNested.story = {
+  controls: {
+    text: { type: ControlTypes.TEXT, value: 'Button' },
+    style: {
+      type: ControlTypes.OBJECT,
+      value: {
+        padding: { type: ControlTypes.NUMBER, value: 5 },
+        background: {
+          type: ControlTypes.OBJECT,
+          value: {
+            color: { type: ControlTypes.COLOR, value: 'red' },
+          },
+        },
+      },
+    },
+  },
 };

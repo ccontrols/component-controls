@@ -2,8 +2,8 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
-import { getControlValue, getControlValues } from '@component-controls/core';
 import { Styled } from 'theme-ui';
+
 import {
   ThemeContext,
   Source,
@@ -20,6 +20,7 @@ import {
   getArgumentsLocations,
   getTagColor,
   findTagLocation,
+  tagToValue,
 } from './arg-values';
 
 type ViewStyle = 'tags' | 'values';
@@ -73,12 +74,8 @@ export const StorySource: FC<StorySourceProps> = ({
           });
         }
         const args = story?.arguments;
-        const tags = getArgumentsLocations(args);
-        // if the props are not deconstructed, single variable
-        let propsArgs: string | undefined;
+        const tags = getArgumentsLocations(controls, args);
         if (args && args.length) {
-          propsArgs =
-            typeof args[0].value === 'string' ? args[0].value : undefined;
           if (!showFileSource) {
             allActions.push({
               title: ViewStyleNext[viewStyle],
@@ -127,26 +124,19 @@ export const StorySource: FC<StorySourceProps> = ({
                               key,
                             }).children.split(/(\s+)/);
 
-                            return splitToken.map((s: string) =>
-                              s.trim().length ? (
+                            return splitToken.map((tokenName: string) =>
+                              tokenName.trim().length ? (
                                 <Tag
                                   {...getTokenProps({ token, key })}
                                   color={color}
                                 >
-                                  {controls &&
-                                  viewStyle === 'values' &&
+                                  {viewStyle === 'values' &&
                                   param.type === 'usage'
-                                    ? propsArgs === s
-                                      ? JSON.stringify(
-                                          getControlValues(controls),
-                                          null,
-                                          2,
-                                        )
-                                      : getControlValue(controls, s) || s
-                                    : s}
+                                    ? tagToValue(param, tokenName)
+                                    : tokenName}
                                 </Tag>
                               ) : (
-                                s
+                                tokenName
                               ),
                             );
                           }

@@ -31,6 +31,7 @@ export const addArgumentUsage = (
   story: Story,
   args: StoryArguments,
   node: any,
+  shorthand: boolean,
 ): ArgUsageLocation | undefined => {
   const param = findArguments(args, node.name);
 
@@ -46,7 +47,7 @@ export const addArgumentUsage = (
         p.loc.end.line === loc.end.line &&
         p.loc.end.column === loc.end.column,
     );
-    const usage: ArgUsageLocation = { loc };
+    const usage: ArgUsageLocation = { loc, shorthand };
     if (!existing) {
       param.usage.push(usage);
       return usage;
@@ -59,22 +60,22 @@ export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
     TemplateLiteral: (path: any) => {
       path.node.expressions.forEach((expression: any) => {
         if (expression.type === 'Identifier') {
-          addArgumentUsage(story, args, expression);
+          addArgumentUsage(story, args, expression, expression.shorthand);
         }
       });
     },
     JSXSpreadAttribute: (path: any) => {
       if (path.node.argument.type === 'Identifier') {
-        addArgumentUsage(story, args, path.node.argument);
+        addArgumentUsage(story, args, path.node.argument, path.node.shorthand);
       }
     },
     Identifier: (path: any) => {
-      addArgumentUsage(story, args, path.node);
+      addArgumentUsage(story, args, path.node, path.node.shorthand);
     },
     Property: (path: any) => {
       const node = path.node;
       if (node.value.type === 'Identifier' && node.key.type === 'Identifier') {
-        const usage = addArgumentUsage(story, args, node.value);
+        const usage = addArgumentUsage(story, args, node.value, node.shorthand);
         if (usage) {
           usage.name = {
             loc: adjustSourceLocation(story, node.key.loc),

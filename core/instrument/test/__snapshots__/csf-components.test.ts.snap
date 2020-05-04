@@ -70,8 +70,7 @@ Object {
         },
       },
       "name": "story",
-      "source": "() => 'hello';
-",
+      "source": "() => 'hello'",
       "subcomponents": Object {
         "My Button Tab": "Button",
       },

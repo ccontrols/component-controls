@@ -42,6 +42,7 @@ Object {
                   "line": 0,
                 },
               },
+              "shorthand": undefined,
             },
           ],
           "value": "props",
@@ -59,8 +60,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />;
-",
+      "source": "props => <Story {...props} />",
     },
   },
   "transformed": "export default {
@@ -131,6 +131,7 @@ Object {
                       "line": 1,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "name",
@@ -166,8 +167,7 @@ Object {
       "name": "story",
       "source": "({ name, age }) => (
   <h2>{\`Hello, my name is \${name}, and I am \\\\\${age} years old.\`}</h2>
-);
-",
+)",
     },
   },
   "transformed": "export default {
@@ -235,6 +235,7 @@ Object {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "name",
@@ -254,8 +255,7 @@ Object {
         },
       },
       "name": "story",
-      "source": "({ name }) => name;
-",
+      "source": "({ name }) => name",
     },
   },
   "transformed": "export default {
@@ -334,6 +334,7 @@ Object {
                     },
                     "name": "value",
                   },
+                  "shorthand": true,
                 },
               ],
               "value": "value",
@@ -353,8 +354,9 @@ Object {
         },
       },
       "name": "selectProp",
-      "source": "({ value }) => <div>{JSON.stringify({ value }, null, 2)}</div>;
-",
+      "source": "({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+)",
     },
   },
   "transformed": "export default {
@@ -423,6 +425,7 @@ Object {
                       "line": 2,
                     },
                   },
+                  "shorthand": undefined,
                 },
                 Object {
                   "loc": Object {
@@ -435,6 +438,7 @@ Object {
                       "line": 3,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "age",
@@ -459,8 +463,7 @@ Object {
     <Story name={name} age={age} />
     <Age value={age} />
   </>
-);
-",
+)",
     },
   },
   "transformed": "export default {
@@ -532,6 +535,7 @@ Object {
                       "line": 1,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "height",
@@ -560,6 +564,7 @@ Object {
                       "line": 1,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "weight",
@@ -601,6 +606,7 @@ Object {
                           "line": 1,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "border",
@@ -629,6 +635,7 @@ Object {
                           "line": 1,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "color",
@@ -652,8 +659,7 @@ Object {
       "name": "story",
       "source": "({ height, weight, style: { border, color } }) => (
   <div height={height} weight={weight} border={border} color={color} />
-);
-",
+)",
     },
   },
   "transformed": "export default {
@@ -708,6 +714,7 @@ Object {
                   "line": 0,
                 },
               },
+              "shorthand": undefined,
             },
           ],
           "value": "props",
@@ -725,8 +732,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "props => <Story {...props} />;
-",
+      "source": "props => <Story {...props} />",
     },
   },
   "transformed": "export default {
@@ -792,6 +798,7 @@ Object {
                       "line": 4,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "showOptional",
@@ -818,8 +825,7 @@ Object {
       {showOptional === 'yes' ? <div>Optional, I can disappear</div> : null}
     </>
   );
-};
-",
+}",
     },
   },
   "transformed": "import React from 'react';
@@ -834,6 +840,110 @@ export const story = ({ showOptional }) => {
     </>
   );
 };
+",
+}
+`;
+
+exports[`csf-props-usage shorthand.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-usage/shorthand.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+        "name": "@component-controls/instrument",
+      },
+      "title": "Story",
+    },
+  },
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 10,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 8,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "value",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 30,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 25,
+                      "line": 1,
+                    },
+                  },
+                  "name": Object {
+                    "loc": Object {
+                      "end": Object {
+                        "column": 30,
+                        "line": 1,
+                      },
+                      "start": Object {
+                        "column": 25,
+                        "line": 1,
+                      },
+                    },
+                    "name": "value",
+                  },
+                  "shorthand": true,
+                },
+              ],
+              "value": "value",
+            },
+          ],
+        },
+      ],
+      "id": "story",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 5,
+        },
+      },
+      "name": "story",
+      "source": "({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+)",
+    },
+  },
+  "transformed": "export default {
+  title: 'Story',
+};
+
+export const story = ({ value }) => (
+  <div>{JSON.stringify({ value }, null, 2)}</div>
+);
 ",
 }
 `;
@@ -906,6 +1016,7 @@ Object {
                     },
                     "name": "text",
                   },
+                  "shorthand": true,
                 },
                 Object {
                   "loc": Object {
@@ -918,6 +1029,7 @@ Object {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "text",
@@ -937,8 +1049,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ text }) => \`\${text}\`;
-",
+      "source": "({ text }) => \`\${text}\`",
     },
   },
   "transformed": "export default {
@@ -1017,6 +1128,7 @@ Object {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "first",
@@ -1045,6 +1157,7 @@ Object {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "last",
@@ -1075,6 +1188,7 @@ Object {
                       "line": 3,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "age",
@@ -1099,8 +1213,7 @@ Object {
     <Story first={first} last={last} />
     <Age value={age} />
   </>
-);
-",
+)",
     },
   },
   "transformed": "export default {
@@ -1158,6 +1271,7 @@ Object {
                   "line": 0,
                 },
               },
+              "shorthand": undefined,
             },
           ],
           "value": "props",
@@ -1189,8 +1303,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "(props, context) => <Story {...props} />;
-",
+      "source": "(props, context) => <Story {...props} />",
     },
   },
   "transformed": "export default {
@@ -1256,6 +1369,7 @@ Object {
                       "line": 1,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "MyName",
@@ -1284,6 +1398,7 @@ Object {
                       "line": 1,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "age",
@@ -1303,8 +1418,9 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name: MyName, age }) => <Story name={MyName} age={age} />;
-",
+      "source": "({ name: MyName, age }) => (
+  <Story name={MyName} age={age} />
+)",
     },
   },
   "transformed": "export default {
@@ -1372,6 +1488,7 @@ Object {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "name",
@@ -1400,6 +1517,7 @@ Object {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "age",
@@ -1419,8 +1537,7 @@ Object {
         },
       },
       "name": "myStory",
-      "source": "({ name, age }) => <Story name={name} age={age} />;
-",
+      "source": "({ name, age }) => <Story name={name} age={age} />",
     },
   },
   "transformed": "export default {

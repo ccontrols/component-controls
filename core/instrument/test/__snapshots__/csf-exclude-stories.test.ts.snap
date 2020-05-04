@@ -34,8 +34,7 @@ Object {
         },
       },
       "name": "story3",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default {
@@ -81,8 +80,7 @@ Object {
         },
       },
       "name": "story1",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default {
@@ -131,8 +129,7 @@ Object {
         },
       },
       "name": "story1",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
     "story2": Object {
       "arguments": Array [],
@@ -148,8 +145,7 @@ Object {
         },
       },
       "name": "story2",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default {
@@ -195,8 +191,7 @@ Object {
         },
       },
       "name": "story2",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
     "story3": Object {
       "arguments": Array [],
@@ -212,8 +207,7 @@ Object {
         },
       },
       "name": "story3",
-      "source": "() => {};
-",
+      "source": "() => {}",
     },
   },
   "transformed": "export default {

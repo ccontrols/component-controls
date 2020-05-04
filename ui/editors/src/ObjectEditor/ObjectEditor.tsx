@@ -96,7 +96,7 @@ export const ObjectEditor: PropertyEditor = ({ name }) => {
         </ChildContainer>
       )}
     >
-      <Button>
+      <Button aria-label="edit the properties of the object">
         Edit object
         <Box />
       </Button>

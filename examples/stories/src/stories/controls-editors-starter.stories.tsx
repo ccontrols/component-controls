@@ -12,13 +12,9 @@ interface DocsControlsTable {
   age: number;
 }
 
-export const overview = ({ name, age }: DocsControlsTable) => {
-  return (
-    <>
-      <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>
-    </>
-  );
-};
+export const overview = ({ name, age }: DocsControlsTable) => (
+  <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>
+);
 
 overview.story = {
   description:
