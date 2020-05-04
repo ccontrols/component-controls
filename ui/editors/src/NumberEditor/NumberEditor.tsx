@@ -1,14 +1,8 @@
 import React, { FC, ChangeEvent } from 'react';
-import { ComponentControlNumber } from '@component-controls/specification';
 import { Input, Box, BoxProps } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-export interface NumberEditorProps extends PropertyControlProps {
-  /**
-   * the number property that is being edited.
-   */
-  prop: ComponentControlNumber;
-}
+import { ComponentControlNumber } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 const RangeLabel: FC<BoxProps> = props => (
   <Box
@@ -38,11 +32,10 @@ const RangeWrapper: FC<BoxProps> = props => (
 /**
  * Number control editor.
  */
-export const NumberEditor: PropertyEditor<NumberEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const NumberEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlNumber>({
+    name,
+  });
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
@@ -55,9 +48,9 @@ export const NumberEditor: PropertyEditor<NumberEditorProps> = ({
     onChange(name, parsedValue);
   };
 
-  return prop.range ? (
+  return control.range ? (
     <RangeWrapper>
-      <RangeLabel>{prop.min}</RangeLabel>
+      <RangeLabel>{control.min}</RangeLabel>
       <Input
         css={{
           boxSizing: 'border-box',
@@ -71,24 +64,24 @@ export const NumberEditor: PropertyEditor<NumberEditorProps> = ({
           display: 'table-cell',
           flexGrow: 1,
         }}
-        value={prop.value}
+        value={control.value}
         type="range"
         name={name}
-        min={prop.min}
-        max={prop.max}
-        step={prop.step}
+        min={control.min}
+        max={control.max}
+        step={control.step}
         onChange={handleChange}
       />
-      <RangeLabel>{`${prop.value} / ${prop.max}`}</RangeLabel>
+      <RangeLabel>{`${control.value} / ${control.max}`}</RangeLabel>
     </RangeWrapper>
   ) : (
     <Input
-      value={prop.value}
+      value={control.value}
       type="number"
       name={name}
-      min={prop.min}
-      max={prop.max}
-      step={prop.step}
+      min={control.min}
+      max={control.max}
+      step={control.step}
       onChange={handleChange}
     />
   );

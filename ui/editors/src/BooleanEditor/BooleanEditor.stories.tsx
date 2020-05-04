@@ -1,5 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ConrolsContextProvider } from '../context';
 import { BooleanEditor } from './BooleanEditor';
 
 export default {
@@ -10,10 +11,13 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState(false);
   return (
-    <BooleanEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.BOOLEAN, value: state }}
-    />
+      controls={{
+        prop: { type: ControlTypes.BOOLEAN, value: state },
+      }}
+    >
+      <BooleanEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };

@@ -1,8 +1,9 @@
 import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
-import { ComponentControlFiles } from '@component-controls/specification';
 import { Input } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { ComponentControlFiles } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 function fileReaderPromise(file: File) {
   return new Promise<string>(resolve => {
@@ -13,33 +14,27 @@ function fileReaderPromise(file: File) {
   });
 }
 
-export interface FilesEditorProps extends PropertyControlProps {
-  /**
-   * the files property that is being edited.
-   */
-  prop: ComponentControlFiles;
-}
-
 /**
  * Files control editor.
  */
 
-export const FilesEditor: PropertyEditor<FilesEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => (
-  <Input
-    type="file"
-    name={name}
-    multiple
-    onChange={(e: ChangeEvent<HTMLInputElement>) => {
-      if (e.target.files) {
-        Promise.all(
-          Array.from(e.target.files).map(fileReaderPromise),
-        ).then(files => onChange(name, files));
-      }
-    }}
-    accept={prop.accept}
-  />
-);
+export const FilesEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlFiles>({
+    name,
+  });
+  return (
+    <Input
+      type="file"
+      name={name}
+      multiple
+      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files) {
+          Promise.all(
+            Array.from(e.target.files).map(fileReaderPromise),
+          ).then(files => onChange(name, files));
+        }
+      }}
+      accept={control.accept}
+    />
+  );
+};

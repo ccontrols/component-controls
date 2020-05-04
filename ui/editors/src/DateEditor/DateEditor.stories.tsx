@@ -1,5 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ConrolsContextProvider } from '../context';
 import { DateEditor } from './DateEditor';
 
 export default {
@@ -10,32 +11,41 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState(new Date());
   return (
-    <DateEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.DATE, value: state }}
-    />
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };
 
 export const onlyDatePicker = () => {
   const [state, setState] = React.useState(new Date());
   return (
-    <DateEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.DATE, value: state, timePicker: false }}
-    />
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state, timePicker: false },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };
 
 export const onlyTimePicker = () => {
   const [state, setState] = React.useState(new Date());
   return (
-    <DateEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.DATE, value: state, datePicker: false }}
-    />
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state, datePicker: false },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };

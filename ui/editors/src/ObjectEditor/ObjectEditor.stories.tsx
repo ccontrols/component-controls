@@ -3,6 +3,7 @@ import {
   ControlTypes,
   ComponentControls,
 } from '@component-controls/specification';
+import { ConrolsContextProvider } from '../context';
 import { ObjectEditor } from './ObjectEditor';
 
 export default {
@@ -18,10 +19,13 @@ export const overview = () => {
   });
 
   return (
-    <ObjectEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(_name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.OBJECT, value: state }}
-    />
+      controls={{
+        prop: { type: ControlTypes.OBJECT, value: state },
+      }}
+    >
+      <ObjectEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };

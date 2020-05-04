@@ -1,7 +1,8 @@
 import React, { ChangeEvent, RefObject } from 'react';
-import { ComponentControlDate } from '@component-controls/specification';
 import { Input, Box } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
+import { ComponentControlDate } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 const formatDate = (date: Date | undefined) => {
   if (date) {
@@ -24,40 +25,32 @@ const formatTime = (date: Date | undefined) => {
   return '';
 };
 
-export interface DateEditorProps extends PropertyControlProps {
-  /**
-   * the date property that is being edited.
-   */
-  prop: ComponentControlDate;
-}
-
 /**
  * Date control editor.
  */
-export const DateEditor: PropertyEditor<DateEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const DateEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlDate>({
+    name,
+  });
   const [valid, setValid] = React.useState(true);
   const dateInputRef = React.useRef<HTMLInputElement>();
   const timeInputRef = React.useRef<HTMLInputElement>();
   React.useEffect(() => {
     if (valid !== false) {
       if (dateInputRef && dateInputRef.current) {
-        dateInputRef.current.value = formatDate(prop.value);
+        dateInputRef.current.value = formatDate(control.value);
       }
       if (timeInputRef && timeInputRef.current) {
-        timeInputRef.current.value = formatTime(prop.value);
+        timeInputRef.current.value = formatTime(control.value);
       }
     }
-  }, [prop.value]);
+  }, [control.value]);
 
   const onDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     let isValid = false;
     const [year, month, day] = e.target.value.split('-');
-    if (prop.value) {
-      const result = new Date(prop.value);
+    if (control.value) {
+      const result = new Date(control.value);
       if (result.getTime()) {
         result.setFullYear(parseInt(year, 10));
         result.setMonth(parseInt(month, 10) - 1);
@@ -76,8 +69,8 @@ export const DateEditor: PropertyEditor<DateEditorProps> = ({
   const onTimeChange = (e: ChangeEvent<HTMLInputElement>) => {
     let isValid = false;
     const [hours, minutes] = e.target.value.split(':');
-    if (prop.value) {
-      const result = new Date(prop.value);
+    if (control.value) {
+      const result = new Date(control.value);
       if (result.getTime()) {
         result.setHours(parseInt(hours, 10));
         result.setMinutes(parseInt(minutes, 10));
@@ -91,7 +84,7 @@ export const DateEditor: PropertyEditor<DateEditorProps> = ({
       setValid(isValid);
     }
   };
-  const { datePicker = true, timePicker = true } = prop;
+  const { datePicker = true, timePicker = true } = control;
   return name ? (
     <Box css={{ display: 'flex' }}>
       {datePicker && (

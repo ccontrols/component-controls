@@ -1,9 +1,5 @@
 /* eslint-disable react/display-name */
 import React, { FC } from 'react';
-import {
-  SetControlValueFn,
-  ClickControlFn,
-} from '@component-controls/specification';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Table } from '@component-controls/components';
 import { Flex } from 'theme-ui';
@@ -18,15 +14,6 @@ export interface SingleControlsTableProps {
    * storyId, will be used to update the values of the controls
    */
   storyId?: string;
-  /**
-   * generic function to update the values of component controls.
-   */
-  setControlValue?: SetControlValueFn;
-
-  /**
-   * generic function to propagate a click event for component controls.
-   */
-  clickControl?: ClickControlFn;
 }
 
 /**
@@ -36,8 +23,6 @@ export interface SingleControlsTableProps {
 export const SingleControlsTable: FC<SingleControlsTableProps> = ({
   data,
   storyId,
-  setControlValue,
-  clickControl,
 }) => {
   const [skipPageReset, setSkipPageReset] = React.useState(false);
   React.useEffect(() => {
@@ -60,17 +45,6 @@ export const SingleControlsTable: FC<SingleControlsTableProps> = ({
         }: any) => {
           const InputType: PropertyEditor =
             getPropertyEditor(control.type) || InvalidType;
-          const onChange = (propName: string, value: any) => {
-            if (setControlValue && storyId) {
-              setSkipPageReset(true);
-              setControlValue(storyId, propName, value);
-            }
-          };
-          const onClick = () => {
-            if (clickControl && storyId) {
-              clickControl(storyId, name);
-            }
-          };
 
           return (
             <Flex
@@ -80,12 +54,7 @@ export const SingleControlsTable: FC<SingleControlsTableProps> = ({
                 flexBasis: '100%',
               }}
             >
-              <InputType
-                prop={control}
-                name={name}
-                onChange={onChange}
-                onClick={onClick}
-              />
+              <InputType name={name} />
             </Flex>
           );
         },

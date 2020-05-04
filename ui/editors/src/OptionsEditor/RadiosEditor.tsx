@@ -2,11 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions, NormalizedOption } from './utils';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-interface RadiosEditorProps extends PropertyControlProps {
-  prop: ComponentControlOptions;
-}
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 const RadiosWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
   isInline
@@ -27,11 +24,10 @@ const RadioLabel = styled.label({
   display: 'inline-block',
 });
 
-export const RadiosEditor: PropertyEditor<RadiosEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const RadiosEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlOptions>({
+    name,
+  });
   const renderRadioButton = (entry: NormalizedOption) => {
     const id = `${entry.label}-${entry.value}`;
     return (
@@ -43,9 +39,9 @@ export const RadiosEditor: PropertyEditor<RadiosEditorProps> = ({
           value={entry.value}
           onChange={e => onChange(name, e.target.value)}
           checked={
-            entry.value === prop.value ||
+            entry.value === control.value ||
             (typeof entry.value.toString === 'function' &&
-              entry.value.toString() === prop.value)
+              entry.value.toString() === control.value)
           }
         />
         <RadioLabel htmlFor={id}>{entry.label}</RadioLabel>
@@ -53,11 +49,11 @@ export const RadiosEditor: PropertyEditor<RadiosEditorProps> = ({
     );
   };
   const renderRadioButtonList = () => {
-    const { options, value } = prop;
+    const { options, value } = control;
     const { entries } = normalizeOptions(options, value);
     return entries.map(entry => renderRadioButton(entry));
   };
-  const isInline = prop.display === 'inline-radio';
+  const isInline = control.display === 'inline-radio';
   return (
     <RadiosWrapper isInline={isInline}>{renderRadioButtonList()}</RadiosWrapper>
   );

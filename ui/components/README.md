@@ -259,10 +259,11 @@ _Tag [source code](https:/github.com/ccontrols/component-controls/tree/master/ui
 
 ### properties
 
-| Name                | Type     | Description                                                                                                            |
-| ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `color*`            | _string_ | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
-| `transparentAmount` | _number_ | transparent amount - 0 to 1                                                                                            |
+| Name                | Type                | Description                                                                                                            |
+| ------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `color*`            | _string_            | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
+| `transparentAmount` | _number_            | transparent amount - 0 to 1                                                                                            |
+| `sxStyle`           | _SystemStyleObject_ | theme-ui styling object for the container                                                                              |
 
 ## <ins>Title</ins>
 

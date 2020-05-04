@@ -7,16 +7,9 @@ import {
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
 import { Popover } from '@component-controls/components';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
+import { PropertyEditor } from '../types';
+import { useControlContext, ConrolsContextProvider } from '../context';
 import { PropertyEditors } from '../PropertyEditors';
-
-export interface ObjectEditorProps extends PropertyControlProps {
-  /**
-   * the object property that is being edited.
-   */
-  prop: ComponentControlObject;
-}
 
 const ChildContainer: FC = props => (
   <Box
@@ -34,16 +27,17 @@ const ChildContainer: FC = props => (
  * Object control editor.
  */
 
-export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const ObjectEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange, onClick } = useControlContext<
+    ComponentControlObject
+  >({ name });
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (childName: string, value: any) => {
     onChange(
       name,
-      getControlValues(mergeControlValues(prop.value as any, childName, value)),
+      getControlValues(
+        mergeControlValues(control.value as any, childName, value),
+      ),
     );
   };
   let children: ({
@@ -51,11 +45,11 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
     prop: ComponentControl;
     node: PropertyEditor;
   } | null)[];
-  if (typeof prop.value === 'object') {
-    children = Object.keys(prop.value)
+  if (typeof control.value === 'object') {
+    children = Object.keys(control.value)
       .map(key => {
-        const childProp: ComponentControl = prop.value
-          ? (prop.value[key] as any)
+        const childProp: ComponentControl = control.value
+          ? (control.value[key] as any)
           : null;
         if (!childProp) {
           return null;
@@ -78,25 +72,27 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       }}
       tooltip={() => (
         <ChildContainer>
-          <table>
-            <tbody>
-              {children &&
-                children.map(child =>
-                  child ? (
-                    <tr key={`editor_${child.name}`}>
-                      <td>{child.prop.label || child.name}</td>
-                      <td>
-                        <child.node
-                          name={child.name}
-                          prop={child.prop}
-                          onChange={handleChange}
-                        />
-                      </td>
-                    </tr>
-                  ) : null,
-                )}
-            </tbody>
-          </table>
+          <ConrolsContextProvider
+            controls={control.value || {}}
+            onChange={handleChange}
+            onClick={onClick}
+          >
+            <table>
+              <tbody>
+                {children &&
+                  children.map(child =>
+                    child ? (
+                      <tr key={`editor_${child.name}`}>
+                        <td>{child.prop.label || child.name}</td>
+                        <td>
+                          <child.node name={child.name} />
+                        </td>
+                      </tr>
+                    ) : null,
+                  )}
+              </tbody>
+            </table>
+          </ConrolsContextProvider>
         </ChildContainer>
       )}
     >

@@ -3,7 +3,11 @@
 import { jsx, Text, Flex, Styled, Box } from 'theme-ui';
 import { FC, useMemo, useContext } from 'react';
 import { ComponentControl, PropType } from '@component-controls/specification';
-import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
+import {
+  getPropertyEditor,
+  PropertyEditor,
+  ConrolsContextProvider,
+} from '@component-controls/editors';
 import {
   Table,
   TableProps,
@@ -247,16 +251,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                 if (control && story) {
                   const InputType: PropertyEditor =
                     getPropertyEditor(control.type) || InvalidType;
-                  const onChange = (propName: string, value: any) => {
-                    if (setControlValue && story.id) {
-                      setControlValue(story.id, propName, value);
-                    }
-                  };
-                  const onClick = () => {
-                    if (clickControl && story.id) {
-                      clickControl(story.id, name);
-                    }
-                  };
+
                   return (
                     <Flex
                       sx={{
@@ -266,12 +261,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                         minWidth: 200,
                       }}
                     >
-                      <InputType
-                        prop={control}
-                        name={original.name}
-                        onChange={onChange}
-                        onClick={onClick}
-                      />
+                      <InputType name={original.name} />
                     </Flex>
                   );
                 }
@@ -281,8 +271,24 @@ export const PropsTable: FC<PropsTableProps> = ({
           }
           return cachedColumns;
         }, [story?.id, extraColumns, hasControls]);
+        const onChange = (propName: string, value: any) => {
+          if (setControlValue && story) {
+            setControlValue(story.id || '', propName, value);
+          }
+        };
+        const onClick = () => {
+          if (clickControl && story) {
+            clickControl(story.id || '', name);
+          }
+        };
         const table = (
-          <Table {...groupProps} {...rest} columns={columns} data={rows} />
+          <ConrolsContextProvider
+            controls={controls}
+            onChange={onChange}
+            onClick={onClick}
+          >
+            <Table {...groupProps} {...rest} columns={columns} data={rows} />
+          </ConrolsContextProvider>
         );
         if (!hasControls) {
           return table;
@@ -299,7 +305,7 @@ export const PropsTable: FC<PropsTableProps> = ({
                 pt: 4,
               }}
             >
-              <Table {...groupProps} {...rest} columns={columns} data={rows} />
+              {table}
             </Box>
           </ActionContainer>
         );

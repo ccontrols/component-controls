@@ -1,5 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ConrolsContextProvider } from '../context';
 import { ColorEditor } from './ColorEditor';
 
 export default {
@@ -10,21 +11,27 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState('#dedede');
   return (
-    <ColorEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.COLOR, value: state }}
-    />
+      controls={{
+        prop: { type: ControlTypes.COLOR, value: state },
+      }}
+    >
+      <ColorEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };
 
 export const rgb = () => {
   const [state, setState] = React.useState('rgb(192,0,0)');
   return (
-    <ColorEditor
-      name="prop"
+    <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
-      prop={{ type: ControlTypes.COLOR, value: state }}
-    />
+      controls={{
+        prop: { type: ControlTypes.COLOR, value: state },
+      }}
+    >
+      <ColorEditor name="prop" />
+    </ConrolsContextProvider>
   );
 };

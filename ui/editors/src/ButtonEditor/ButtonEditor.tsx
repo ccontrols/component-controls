@@ -1,33 +1,19 @@
 import React from 'react';
-import { ComponentControlButton } from '@component-controls/specification';
 import { Button } from 'theme-ui';
-import {
-  PropertyControlProps,
-  PropertyEditor,
-  PropertyOnClick,
-} from '../types';
-
-export interface ButtonEditorProps extends PropertyControlProps {
-  /**
-   * the button property that is being edited.
-   */
-  prop: ComponentControlButton;
-  /**
-   * the onClick event handler for the button
-   */
-
-  onClick: PropertyOnClick;
-}
+import { ComponentControlButton } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 /**
  * Button control editor.
  */
-export const ButtonEditor: PropertyEditor<ButtonEditorProps> = ({
-  prop,
-  name,
-  onClick,
-}) => (
-  <Button name={name} onClick={() => onClick(prop)}>
-    {name}
-  </Button>
-);
+export const ButtonEditor: PropertyEditor = ({ name }) => {
+  const { control, onClick } = useControlContext<ComponentControlButton>({
+    name,
+  });
+  return (
+    <Button name={name} onClick={() => (onClick ? onClick(control) : {})}>
+      {name}
+    </Button>
+  );
+};

@@ -2,11 +2,8 @@ import React, { ChangeEvent } from 'react';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions, NormalizedOption } from './utils';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-interface CheckboxEditorProps extends PropertyControlProps {
-  prop: ComponentControlOptions;
-}
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 const CheckboxesWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
   isInline
@@ -33,12 +30,11 @@ const CheckboxLabel = styled.label({
   display: 'inline-block',
 });
 
-export const CheckboxEditor: PropertyEditor<CheckboxEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
-  const { options, value } = prop;
+export const CheckboxEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlOptions>({
+    name,
+  });
+  const { options, value } = control;
   const { entries, selected } = normalizeOptions(options, value);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const currentValue = (e.target as HTMLInputElement).value;
@@ -76,7 +72,7 @@ export const CheckboxEditor: PropertyEditor<CheckboxEditorProps> = ({
       </div>
     );
   };
-  const isInline = prop.display === 'inline-check';
+  const isInline = control.display === 'inline-check';
   return (
     <CheckboxFieldset>
       <CheckboxesWrapper isInline={isInline}>

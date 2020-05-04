@@ -1,14 +1,8 @@
 import React, { ChangeEvent } from 'react';
-import { ComponentControlArray } from '@component-controls/specification';
 import { Textarea } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-export interface ArrayEditorProps extends PropertyControlProps {
-  /**
-   * the array property that is being edited.
-   */
-  prop: ComponentControlArray;
-}
+import { ComponentControlArray } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 const formatArray = (value: string, separator: string) => {
   if (value === '') {
@@ -28,18 +22,18 @@ const deserialize = (value: string[]) => {
  * Array control editor.
  *
  */
-export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const ArrayEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlArray>({
+    name,
+  });
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     const { value } = e.target as HTMLTextAreaElement;
-    const newVal = formatArray(value, prop.separator || ',');
+    const newVal = formatArray(value, control.separator || ',');
     onChange(name, newVal);
   };
 
-  const value = prop.value && deserialize(prop.value).join(prop.separator);
+  const value =
+    control.value && deserialize(control.value).join(control.separator);
 
   return (
     <>

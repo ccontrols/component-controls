@@ -3,8 +3,8 @@ import ReactSelect from 'react-select';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/specification';
 import { normalizeOptions } from './utils';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
 
@@ -22,27 +22,22 @@ interface OptionsSelectValueItem {
   label: string;
 }
 
-export interface OptionsEditorProps extends PropertyControlProps {
-  /**
-   * the options property that is being edited.
-   */
-  prop: ComponentControlOptions;
-}
-
 /**
  * Options control editor.
  */
 
-export const OptionsEditor: PropertyEditor<OptionsEditorProps> = props => {
-  const { prop, name, onChange } = props;
-  const { display, options, value } = prop;
+export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
+  const { control, onChange } = useControlContext<ComponentControlOptions>({
+    name,
+  });
+  const { display, options, value } = control;
 
   if (display === 'check' || display === 'inline-check') {
-    return <CheckboxEditor {...props} />;
+    return <CheckboxEditor name={name} {...rest} />;
   }
 
   if (display === 'radio' || display === 'inline-radio') {
-    return <RadiosEditor {...props} />;
+    return <RadiosEditor name={name} {...rest} />;
   }
 
   if (

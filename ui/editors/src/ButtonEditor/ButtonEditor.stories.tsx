@@ -1,5 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ConrolsContextProvider } from '../context';
 import { ButtonEditor } from './ButtonEditor';
 
 export default {
@@ -8,10 +9,13 @@ export default {
 };
 
 export const overview = () => (
-  <ButtonEditor
-    name="Check in console"
+  <ConrolsContextProvider
     onClick={() => console.log('clicked')}
     onChange={() => {}}
-    prop={{ type: ControlTypes.BUTTON }}
-  />
+    controls={{
+      prop: { type: ControlTypes.BUTTON },
+    }}
+  >
+    <ButtonEditor name="Check in console" />
+  </ConrolsContextProvider>
 );

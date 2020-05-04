@@ -128,12 +128,10 @@ _SingleControlsTable [source code](https:/github.com/ccontrols/component-control
 
 ### properties
 
-| Name              | Type                | Description                                                         |
-| ----------------- | ------------------- | ------------------------------------------------------------------- |
-| `data`            | _any\[]_            | component controls to display in the table.                         |
-| `storyId`         | _string_            | storyId, will be used to update the values of the controls          |
-| `setControlValue` | _SetControlValueFn_ | generic function to update the values of component controls.        |
-| `clickControl`    | _ClickControlFn_    | generic function to propagate a click event for component controls. |
+| Name      | Type     | Description                                                |
+| --------- | -------- | ---------------------------------------------------------- |
+| `data`    | _any\[]_ | component controls to display in the table.                |
+| `storyId` | _string_ | storyId, will be used to update the values of the controls |
 
 ## <ins>useControlsActions</ins>
 

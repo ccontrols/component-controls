@@ -12,6 +12,7 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
+import { ConrolsContextProvider } from '@component-controls/editors';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -90,44 +91,57 @@ export const ControlsTable: FC<ControlsTableProps> = (
           if (groupedItems.length === 0) {
             return null;
           }
-
+          const onChange = (propName: string, value: any) => {
+            if (setControlValue && storyId) {
+              setControlValue(storyId, propName, value);
+            }
+          };
+          const onClick = () => {
+            if (clickControl && storyId) {
+              clickControl(storyId, name);
+            }
+          };
           return (
-            <ActionContainer actions={controlsActions}>
-              <Box
-                sx={{
-                  pt: 4,
-                }}
-              >
-                {groupedItems.length === 1 ? (
-                  <SingleControlsTable
-                    {...rest}
-                    setControlValue={setControlValue}
-                    clickControl={clickControl}
-                    storyId={storyId}
-                    data={createData(groupedItems[0].controls)}
-                  />
-                ) : (
-                  <Tabs>
-                    <TabList>
+            <ConrolsContextProvider
+              controls={controls}
+              onChange={onChange}
+              onClick={onClick}
+            >
+              <ActionContainer actions={controlsActions}>
+                <Box
+                  sx={{
+                    pt: 4,
+                  }}
+                >
+                  {groupedItems.length === 1 ? (
+                    <SingleControlsTable
+                      {...rest}
+                      setControlValue={setControlValue}
+                      clickControl={clickControl}
+                      storyId={storyId}
+                      data={createData(groupedItems[0].controls)}
+                    />
+                  ) : (
+                    <Tabs>
+                      <TabList>
+                        {groupedItems.map(item => (
+                          <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                        ))}
+                      </TabList>
                       {groupedItems.map(item => (
-                        <Tab key={`tab_${item.label}`}>{item.label}</Tab>
+                        <TabPanel key={`tab_panel_${item.label}`}>
+                          <SingleControlsTable
+                            {...rest}
+                            storyId={storyId}
+                            data={createData(item.controls)}
+                          />
+                        </TabPanel>
                       ))}
-                    </TabList>
-                    {groupedItems.map(item => (
-                      <TabPanel key={`tab_panel_${item.label}`}>
-                        <SingleControlsTable
-                          {...rest}
-                          setControlValue={setControlValue}
-                          clickControl={clickControl}
-                          storyId={storyId}
-                          data={createData(item.controls)}
-                        />
-                      </TabPanel>
-                    ))}
-                  </Tabs>
-                )}
-              </Box>
-            </ActionContainer>
+                    </Tabs>
+                  )}
+                </Box>
+              </ActionContainer>
+            </ConrolsContextProvider>
           );
         }
         return null;

@@ -1,25 +1,18 @@
 import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
-import { ComponentControlColor } from '@component-controls/specification';
 import { Button, Box } from 'theme-ui';
-import { PropertyControlProps, PropertyEditor } from '../types';
-
-export interface ColorEditorProps extends PropertyControlProps {
-  /**
-   * the color property that is being edited.
-   */
-  prop: ComponentControlColor;
-}
+import { ComponentControlColor } from '@component-controls/specification';
+import { PropertyEditor } from '../types';
+import { useControlContext } from '../context';
 
 /**
  * Color control editor.
  */
 
-export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
-  prop,
-  name,
-  onChange,
-}) => {
+export const ColorEditor: PropertyEditor = ({ name }) => {
+  const { control, onChange } = useControlContext<ComponentControlColor>({
+    name,
+  });
   const [displayColorPicker, setDisplayColorPicker] = React.useState(false);
 
   const handleChange = (color: ColorResult) => {
@@ -48,11 +41,11 @@ export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
           width: 16,
           height: 16,
           marginRight: 10,
-          backgroundColor: prop.value,
+          backgroundColor: control.value,
           borderRadius: '1rem',
         }}
       />
-      {prop.value && prop.value.toUpperCase()}
+      {control.value && control.value.toUpperCase()}
       {displayColorPicker ? (
         <Box
           css={{
@@ -71,7 +64,7 @@ export const ColorEditor: PropertyEditor<ColorEditorProps> = ({
             }}
             onClick={() => setDisplayColorPicker(false)}
           />
-          <SketchPicker color={prop.value} onChange={handleChange} />
+          <SketchPicker color={control.value} onChange={handleChange} />
         </Box>
       ) : null}
     </Button>
