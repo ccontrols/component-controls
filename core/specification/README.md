@@ -84,10 +84,11 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ### properties
 
-| Name   | Type                                  | Description                                                                                                                                                          |
-| ------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `loc*` | [CodeLocation](#codelocation)         | where in the story source code is the argument used code location is relative to the start of the story                                                              |
-| `name` | [SourceIdentifier](#sourceidentifier) | optional name for the usage of the argument example: export const story = ({ value }) => &lt;Story value={{ age: value }} />; in this example the name will be 'age' |
+| Name        | Type                                  | Description                                                                                                                                                          |
+| ----------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `loc*`      | [CodeLocation](#codelocation)         | where in the story source code is the argument used code location is relative to the start of the story                                                              |
+| `name`      | [SourceIdentifier](#sourceidentifier) | optional name for the usage of the argument example: export const story = ({ value }) => &lt;Story value={{ age: value }} />; in this example the name will be 'age' |
+| `shorthand` | boolean                               | true if the property is a 'shorthand'. { prop: value } - not a shorthand. { prop } - a shorthand.                                                                    |
 
 ## SourceIdentifier
 
@@ -108,7 +109,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 map of stories. The id is compatible with CSF story ids
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L142)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L148)_
 
 `id`\*: string: [Story](#story)
 
@@ -118,7 +119,7 @@ a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
 in the case of MDX stories, the kind is crated using a &lt;Meta /> tag
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L151)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L157)_
 
 `name`\*: string: any
 
@@ -145,7 +146,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L260)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L266)_
 
 
 
@@ -161,7 +162,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L67)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L73)_
 
 
 
@@ -188,7 +189,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 arguments passed to the 'story' function, extracted by an AST loader
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L30)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L36)_
 
 
 
@@ -205,7 +206,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of components used in stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L239)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L245)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -213,7 +214,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of story files, or groups
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L246)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L252)_
 
 `title`\*: string: [StoriesKind](#storieskind)
 
@@ -222,7 +223,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 list of configuration parameters for stories and 'kinds'
 can be specified either through CSF or MDX tags
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L60)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L66)_
 
 `name`\*: string: any
 
@@ -230,7 +231,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L253)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L259)_
 
 `id`\*: string: [Story](#story)
 
@@ -239,7 +240,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L54)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L60)_
 
 [StoryArgument](#storyargument)\[]
 
@@ -801,7 +802,7 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L54)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L60)_
 
 [StoryArgument](#storyargument)\[]
 

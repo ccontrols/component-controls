@@ -16,7 +16,6 @@
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
-    -   [<ins>getArgumentsLocations</ins>](#insgetargumentslocationsins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
@@ -36,7 +35,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,SinglePropsTable.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -295,10 +294,6 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
 | `style`       | _any_                                                              | css styles for the container.                                                                                                                                                    |
 | `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-
-## <ins>getArgumentsLocations</ins>
-
-_getArgumentsLocations [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/StorySource/arg-values.ts)_
 
 ## <ins>Subtitle</ins>
 
