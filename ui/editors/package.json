@@ -33,6 +33,7 @@
     "@component-controls/components": "^1.0.1",
     "@component-controls/core": "^1.0.1",
     "@component-controls/specification": "^1.0.1",
+    "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
     "react": "^16.8.3",

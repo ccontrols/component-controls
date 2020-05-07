@@ -1,9 +1,13 @@
 import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { Button, Box } from 'theme-ui';
-import { ComponentControlColor } from '@component-controls/specification';
+import {
+  ComponentControlColor,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Color control editor.
@@ -70,3 +74,5 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
     </Button>
   );
 };
+
+addPropertyEditor(ControlTypes.COLOR, ColorEditor);

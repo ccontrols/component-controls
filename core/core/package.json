@@ -30,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/specification": "^1.0.1",
+    "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
     "typescript": "^3.8.3"

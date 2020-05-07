@@ -1,8 +1,15 @@
 import React, { ChangeEvent, RefObject } from 'react';
 import { Input, Box } from 'theme-ui';
-import { ComponentControlDate } from '@component-controls/specification';
+import {
+  ComponentControlDate,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
+
+const toDate = (date?: string | Date): Date | undefined =>
+  typeof date === 'string' ? new Date(date) : date;
 
 const formatDate = (date: Date | undefined) => {
   if (date) {
@@ -38,10 +45,10 @@ export const DateEditor: PropertyEditor = ({ name }) => {
   React.useEffect(() => {
     if (valid !== false) {
       if (dateInputRef && dateInputRef.current) {
-        dateInputRef.current.value = formatDate(control.value);
+        dateInputRef.current.value = formatDate(toDate(control.value));
       }
       if (timeInputRef && timeInputRef.current) {
-        timeInputRef.current.value = formatTime(control.value);
+        timeInputRef.current.value = formatTime(toDate(control.value));
       }
     }
   }, [control.value]);
@@ -112,7 +119,8 @@ export const DateEditor: PropertyEditor = ({ name }) => {
           onChange={onTimeChange}
         />
       )}
-      {!valid ? <div>invalid</div> : null}
     </Box>
   ) : null;
 };
+
+addPropertyEditor(ControlTypes.DATE, DateEditor);

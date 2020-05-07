@@ -86,9 +86,10 @@ _ArrayEditor [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
+| Name        | Type     | Description                   |
+| ----------- | -------- | ----------------------------- |
+| `editLabel` | _string_ | label for the editor button.  |
+| `name*`     | _string_ | name of the property control. |
 
 ## <ins>BooleanEditor</ins>
 
@@ -170,9 +171,10 @@ _ObjectEditor [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
+| Name        | Type     | Description                   |
+| ----------- | -------- | ----------------------------- |
+| `editLabel` | _string_ | label for the editor button.  |
+| `name*`     | _string_ | name of the property control. |
 
 ## <ins>OptionsEditor</ins>
 

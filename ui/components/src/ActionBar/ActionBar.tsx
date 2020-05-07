@@ -95,7 +95,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
           style={{
             display: 'flex',
             flexDirection: 'row-reverse',
-            zIndex: 1,
             marginLeft: 'auto',
           }}
         >

@@ -1,7 +1,7 @@
 import { ControlTypes } from '@component-controls/specification';
 import { PropertyEditor } from './types';
 
-import { AllPropertyEditors } from './ObjectEditor';
+const PropertyEditors: { [key: string]: PropertyEditor } = {};
 
 /**
  *
@@ -12,7 +12,7 @@ import { AllPropertyEditors } from './ObjectEditor';
  * @returns a Property Editor class.
  */
 export const getPropertyEditor = (type: ControlTypes): PropertyEditor =>
-  AllPropertyEditors[type];
+  PropertyEditors[type];
 
 /**
  *
@@ -23,5 +23,5 @@ export const addPropertyEditor = (
   type: ControlTypes,
   editor: PropertyEditor,
 ): void => {
-  AllPropertyEditors[type] = editor;
+  PropertyEditors[type] = editor;
 };

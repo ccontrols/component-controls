@@ -6,7 +6,7 @@
 export enum ControlTypes {
   /**
    * userName: {
-   *   type: csf.ControlTypes.TEXT,
+   *   type: ControlTypes.TEXT,
    *   label: 'Name',
    *   value: 'Storyteller',
    * },
@@ -15,7 +15,7 @@ export enum ControlTypes {
 
   /**
    *  age: {
-   *   type: csf.ControlTypes.NUMBER,
+   *   type: ControlTypes.NUMBER,
    *   label: 'Age',
    *   value: 78,
    *   range: true,
@@ -28,7 +28,7 @@ export enum ControlTypes {
 
   /**
    * nice: {
-   *  type: csf.ControlTypes.BOOLEAN,
+   *  type: ControlTypes.BOOLEAN,
    *  label: 'Nice',
    *  value: true,
    * },
@@ -37,7 +37,7 @@ export enum ControlTypes {
 
   /**
    * fruit: {
-   *   type: csf.ControlTypes.OPTIONS,
+   *   type: ControlTypes.OPTIONS,
    *   label: 'Fruit',
    *   value: 'apple',
    *   options: {
@@ -51,7 +51,7 @@ export enum ControlTypes {
 
   /**
    *  birthday: {
-   *   type: csf.ControlTypes.DATE,
+   *   type: ControlTypes.DATE,
    *   label: 'Birthday',
    *   value: new Date(),
    *  },
@@ -68,7 +68,7 @@ export enum ControlTypes {
 
   /**
    * button: {
-   *  type: csf.ControlTypes.BUTTON,
+   *  type: ControlTypes.BUTTON,
    *   onClick: () => {
    *    ... code to modify some variables
    *  }
@@ -77,30 +77,34 @@ export enum ControlTypes {
   BUTTON = 'button',
 
   /**
-   * otherStyles: {
-   *   type: csf.ControlTypes.OBJECT,
-   *   label: 'Styles',
-   *   value: {
-   *     border: '2px dashed silver',
-   *     borderRadius: 10,
-   *     padding: 10,
-   *   },
-   * },
+   *  style: {
+   *    type: ControlTypes.OBJECT,
+   *    label: 'Styles',
+   *    value: {
+   *      // do not randomize the border style
+   *      border: { type: ControlTypes.TEXT, value: '2px dashed silver', data: null },
+   *      borderRadius: { type: ControlTypes.NUMBER, value: 10 },
+   *      padding: { type: ControlTypes.NUMBER, value: 10 },
+   *    },
+   *  }
    */
   OBJECT = 'object',
 
   /**
-   * items: {
-   *   type: csf.ControlTypes.ARRAY,
+   * arrayItems: {
+   *   type: ControlTypes.ARRAY,
    *   label: 'Items',
-   *   value: ['Laptop', 'Book', 'Whiskey'],
+   *   rowType: {
+   *     name: { type: ControlTypes.TEXT },
+   *   },
+   *   value: [{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }],
    * },
    */
   ARRAY = 'array',
 
   /**
    * images: {
-   *   type: csf.ControlTypes.FILES,
+   *   type: ControlTypes.FILES,
    *   label: 'Happy Picture',
    *   accept: 'image/*',
    *   value: [
@@ -160,9 +164,9 @@ export interface ComponentControlBase<T> {
   resetValue?: T;
 
   /**
-   * hide the label from the property editor
+   * visually display the control property as required
    */
-  hideLabel?: boolean;
+  required?: boolean;
 
   /**
    * full text property description.
@@ -256,17 +260,26 @@ export interface ComponentControlFiles extends ComponentControlBase<string[]> {
   accept?: string;
 }
 
-export interface ComponentControlArray extends ComponentControlBase<string[]> {
+export interface ComponentControlArray
+  extends ComponentControlBase<{ [key: string]: any }[]> {
   type: ControlTypes.ARRAY;
   /**
-   * the array items separator, by default comma
+   * type of the items in each row of the array
    */
-  separator?: string;
+  rowType: ComponentControls;
+  /**
+   * the label for the editor button
+   */
+  editLabel?: string;
 }
 
 export interface ComponentControlObject
   extends ComponentControlBase<ComponentControls> {
   type: ControlTypes.OBJECT;
+  /**
+   * the label for the editor button
+   */
+  editLabel?: string;
 }
 
 export interface ComponentControlButton<ClickEvent = () => void>

@@ -106,7 +106,7 @@ export const findTagLocation = (
 export const tagToValue = (param: ArgLocation, name: string) => {
   const value =
     getControlValue(param.controls, name) ?? getControlValues(param.controls);
-  let retValue: string;
+  let retValue: any;
   if (Array.isArray(value) || typeof value === 'object') {
     retValue = stringifyObject(value, {
       indent: '  ',
@@ -114,7 +114,12 @@ export const tagToValue = (param: ArgLocation, name: string) => {
     });
   } else {
     retValue = value || name;
-    retValue = typeof retValue === 'string' ? `"${retValue}"` : retValue;
+    retValue =
+      typeof retValue === 'string'
+        ? `"${retValue}"`
+        : retValue.toString
+        ? retValue.toString()
+        : retValue;
   }
   return param.shorthand ? `${param.name}: ${retValue}` : retValue;
 };

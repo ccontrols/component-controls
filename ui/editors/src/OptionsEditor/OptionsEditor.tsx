@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactSelect from 'react-select';
 import styled from '@emotion/styled';
-import { ComponentControlOptions } from '@component-controls/specification';
+import {
+  ComponentControlOptions,
+  ControlTypes,
+} from '@component-controls/specification';
 import { normalizeOptions } from './utils';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
+import { addPropertyEditor } from '../prop-factory';
 
 const OptionsSelect = styled(ReactSelect)({
   color: 'black',
@@ -70,3 +74,5 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
 
   return null;
 };
+
+addPropertyEditor(ControlTypes.OPTIONS, OptionsEditor);

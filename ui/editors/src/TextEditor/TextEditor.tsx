@@ -1,8 +1,12 @@
 import React, { ChangeEvent } from 'react';
 import { Input, Textarea } from 'theme-ui';
-import { ComponentControlText } from '@component-controls/specification';
+import {
+  ComponentControlText,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Text control editor.
@@ -38,3 +42,4 @@ export const TextEditor: PropertyEditor = ({ name }) => {
     />
   );
 };
+addPropertyEditor(ControlTypes.TEXT, TextEditor);

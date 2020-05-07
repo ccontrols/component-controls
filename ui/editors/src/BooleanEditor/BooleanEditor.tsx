@@ -1,8 +1,12 @@
 import React from 'react';
 import { Toggle } from '@component-controls/components';
-import { ComponentControlBoolean } from '@component-controls/specification';
+import {
+  ComponentControlBoolean,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Boolean control editor. Uses the Toggle component.
@@ -20,3 +24,5 @@ export const BooleanEditor: PropertyEditor = ({ name }) => {
     />
   );
 };
+
+addPropertyEditor(ControlTypes.BOOLEAN, BooleanEditor);

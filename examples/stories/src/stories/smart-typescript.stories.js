@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../components/Button';
 
 export default {
-  title: 'Storybook/Smart Typescript',
+  title: 'Introduction/Smart Typescript',
   parameters: {
     component: Button,
   },

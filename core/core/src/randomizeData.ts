@@ -2,8 +2,11 @@ import {
   ControlTypes,
   ComponentControlNumber,
   ComponentControlOptions,
+  ComponentControl,
   ComponentControls,
+  ComponentControlArray,
 } from '@component-controls/specification';
+import deepmerge from 'deepmerge';
 const faker = require('faker/locale/en_US');
 
 const arrayElements = (arr: any[], c?: number) => {
@@ -109,6 +112,53 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
                 ...randomizeData(control.value as ComponentControls),
               },
             };
+          }
+          return null;
+        }
+        case ControlTypes.ARRAY: {
+          const arrControl = control as ComponentControlArray;
+          if (Array.isArray(arrControl.value) && arrControl.rowType) {
+            const randomValues = {
+              name,
+              value: arrControl.value.map(row => {
+                const values = Object.keys(arrControl.rowType).reduce(
+                  (acc, key) => {
+                    const valueType = arrControl.rowType[key];
+                    if (valueType) {
+                      const mockControlType =
+                        valueType.type === ControlTypes.OBJECT
+                          ? deepmerge<ComponentControl>(valueType, {
+                              value: row[key]
+                                ? Object.keys(row[key]).reduce(
+                                    (a, k) => ({
+                                      ...a,
+                                      [k]: { value: row[key][k] },
+                                    }),
+                                    {},
+                                  )
+                                : undefined,
+                            })
+                          : deepmerge<ComponentControl>(valueType, {
+                              value: row[key],
+                            });
+                      const randValue = randomizeData({
+                        [key]: mockControlType,
+                      });
+                      if (randValue) {
+                        return {
+                          ...acc,
+                          [key]: randValue[key],
+                        };
+                      }
+                    }
+                    return acc;
+                  },
+                  {},
+                );
+                return values;
+              }),
+            };
+            return randomValues;
           }
           return null;
         }

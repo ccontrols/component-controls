@@ -3,7 +3,7 @@ import { addDecorator } from '@storybook/client-api';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 
-import { store } from '@component-controls/store/static_store';
+import { store } from '@component-controls/store/live_store';
 import { getControlValues } from '@component-controls/core';
 
 store.addObserver(() => {
@@ -18,8 +18,7 @@ addDecorator(
       const story = store.getStory(context.id);
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;
-
-      if (context.args !== undefined) {
+      if (context.hasOwnProperty('args')) {
         //storybook-6 beta fake args
         //@ts-ignore
         return storyFn({ ...context, args: values });

@@ -1,8 +1,12 @@
 import React, { FC, ChangeEvent } from 'react';
 import { Input, Box, BoxProps } from 'theme-ui';
-import { ComponentControlNumber } from '@component-controls/specification';
+import {
+  ComponentControlNumber,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 const RangeLabel: FC<BoxProps> = props => (
   <Box
@@ -86,3 +90,5 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
     />
   );
 };
+
+addPropertyEditor(ControlTypes.NUMBER, NumberEditor);

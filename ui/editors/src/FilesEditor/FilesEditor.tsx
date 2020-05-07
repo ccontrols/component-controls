@@ -1,9 +1,13 @@
 import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
 import { Input } from 'theme-ui';
-import { ComponentControlFiles } from '@component-controls/specification';
+import {
+  ComponentControlFiles,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 function fileReaderPromise(file: File) {
   return new Promise<string>(resolve => {
@@ -38,3 +42,5 @@ export const FilesEditor: PropertyEditor = ({ name }) => {
     />
   );
 };
+
+addPropertyEditor(ControlTypes.FILES, FilesEditor);

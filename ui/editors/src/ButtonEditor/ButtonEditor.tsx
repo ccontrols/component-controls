@@ -1,8 +1,12 @@
 import React from 'react';
 import { Button } from 'theme-ui';
-import { ComponentControlButton } from '@component-controls/specification';
+import {
+  ComponentControlButton,
+  ControlTypes,
+} from '@component-controls/specification';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
+import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Button control editor.
@@ -17,3 +21,5 @@ export const ButtonEditor: PropertyEditor = ({ name }) => {
     </Button>
   );
 };
+
+addPropertyEditor(ControlTypes.BUTTON, ButtonEditor);

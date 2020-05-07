@@ -190,9 +190,9 @@ Smart Controls use a story component's properties table type information to gene
 
 There are 2 requirements for a story to use smart controls: 
 
-  1. The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
+1.  The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
 
-  2. The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
+2.  The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
 
 A screenshot of smart controls in action.
 

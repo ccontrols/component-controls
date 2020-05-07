@@ -7,9 +7,9 @@ import {
 } from '@component-controls/specification';
 import { mergeControlValues, getControlValues } from '@component-controls/core';
 import { Popover } from '@component-controls/components';
-import { PropertyEditor } from '../types';
+import { PropertyEditor, PropertyControlProps } from '../types';
 import { useControlContext, ConrolsContextProvider } from '../context';
-import { PropertyEditors } from '../PropertyEditors';
+import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
   <Box
@@ -23,14 +23,24 @@ const ChildContainer: FC = props => (
   />
 );
 
+export interface ObjectEditorProps extends PropertyControlProps {
+  /**
+   * label for the editor button.
+   */
+  editLabel?: string;
+}
 /**
  * Object control editor.
  */
 
-export const ObjectEditor: PropertyEditor = ({ name }) => {
+export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
+  name,
+  editLabel = 'edit...',
+}) => {
   const { control, onChange, onClick } = useControlContext<
     ComponentControlObject
   >({ name });
+  const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (childName: string, value: any) => {
     onChange(
@@ -57,7 +67,7 @@ export const ObjectEditor: PropertyEditor = ({ name }) => {
         return {
           name: key,
           prop: childProp,
-          node: AllPropertyEditors[childProp.type],
+          node: getPropertyEditor(childProp.type),
         };
       })
       .filter(p => p && p.node);
@@ -97,17 +107,11 @@ export const ObjectEditor: PropertyEditor = ({ name }) => {
       )}
     >
       <Button aria-label="edit the properties of the object">
-        Edit object
+        {controlEditLabel || editLabel}
         <Box />
       </Button>
     </Popover>
   );
 };
 
-// avoid circular reference problem
-export const AllPropertyEditors: {
-  [name in ControlTypes]: PropertyEditor;
-} = {
-  ...PropertyEditors,
-  [ControlTypes.OBJECT]: ObjectEditor,
-};
+addPropertyEditor(ControlTypes.OBJECT, ObjectEditor);

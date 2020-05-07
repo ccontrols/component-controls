@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../components/PropTypesButton';
 
 export default {
-  title: 'Storybook/Smart PropTypes',
+  title: 'Introduction/Smart PropTypes',
   parameters: {
     component: Button,
   },

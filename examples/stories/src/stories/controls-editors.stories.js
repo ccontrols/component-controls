@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@theme-ui/components';
 import { ControlTypes } from '@component-controls/specification';
 
 export default {
-  title: 'Storybook/Controls',
+  title: 'Introduction/Controls',
 };
 
 export const textDefaultProp = ({ text }) => text;
@@ -52,7 +51,9 @@ export const kitchenSink = ({
       <p>I live in NY for {years} years.</p>
       <p>My wallet contains: ${dollars.toFixed(2)}</p>
       <p>In my backpack, I have:</p>
-      <ul>{items && items.map(item => <li key={item}>{item}</li>)}</ul>
+      <ul>
+        {items && items.map(item => <li key={item.name}>{item.name}</li>)}
+      </ul>
       <p>{salutation}</p>
       <p>
         When I am happy I look like this: <img src={images[0]} alt="happy" />
@@ -148,7 +149,10 @@ kitchenSink.story = {
     items: {
       type: ControlTypes.ARRAY,
       label: 'Items',
-      value: ['Laptop', 'Book', 'Whiskey'],
+      rowType: {
+        name: { type: ControlTypes.TEXT },
+      },
+      value: [{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }],
       groupId: GROUP_IDS.FAVORITES,
     },
 
@@ -215,222 +219,6 @@ kitchenSink.story = {
     },
 
     hidden: { type: ControlTypes.TEXT, hidden: true },
-  },
-};
-
-export const selectProp = ({ value }) => (
-  <div>{JSON.stringify({ value }, null, 2)}</div>
-);
-
-selectProp.propTypes = {
-  value: PropTypes.string,
-};
-
-selectProp.defaultProps = {
-  value: undefined,
-};
-
-selectProp.story = {
-  description:
-    'Story that shocases the `ControlTypes.OPTIONS` setting, using a `<Select />` component',
-  controls: {
-    value: {
-      type: ControlTypes.OPTIONS,
-      label: 'Select',
-      value: 1,
-      options: [1, 2, 3, undefined, null],
-      display: 'select',
-    },
-  },
-};
-
-export const dynamicProps = ({ showOptional }) => {
-  return (
-    <>
-      <div>I must be here</div>
-      {showOptional === 'yes' ? <div>Optional, I can disappear</div> : null}
-    </>
-  );
-};
-
-dynamicProps.propTypes = {
-  showOptional: PropTypes.string.isRequired,
-};
-
-dynamicProps.story = {
-  description: 'Dynamic control values checked in the story.',
-  controls: {
-    showOptional: {
-      type: ControlTypes.OPTIONS,
-      label: 'Show optional',
-      value: 'yes',
-      options: ['yes', 'no'],
-      display: 'select',
-    },
-  },
-};
-
-export const complexSelect = ({ m }) => {
-  const value = m.toString();
-  const type = Array.isArray(m) ? 'array' : typeof m;
-  return (
-    <pre>
-      the type of {JSON.stringify(value, null, 2)} = {type}
-    </pre>
-  );
-};
-
-complexSelect.story = {
-  description:
-    '`ControlTypes.OPTIONS` control type where the options can have different data-types.',
-  controls: {
-    m: {
-      type: ControlTypes.OPTIONS,
-      label: 'complex',
-      options: {
-        number: 1,
-        string: 'string',
-        object: {},
-        array: [1, 2, 3],
-        function: () => {},
-      },
-      value: 'string',
-    },
-  },
-};
-
-export const optionsProperties = ({
-  optionRadio,
-  optionInlineRadio,
-  optionSelect,
-  optionsMultiSelect,
-  optionsCheck,
-  optionsInlineCheck,
-}) => {
-  return (
-    <div>
-      <p>Weekday: {optionRadio}</p>
-      <p>Weekend: {optionInlineRadio}</p>
-      <p>Month: {optionSelect}</p>
-      <p>Fruit:</p>
-      <ul>
-        {optionsMultiSelect.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <p>Vegetables:</p>
-      <ul>
-        {optionsCheck.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <p>Dairy:</p>
-      <ul>
-        {optionsInlineCheck.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-optionsProperties.propTypes = {
-  optionRadio: PropTypes.string.isRequired,
-  optionInlineRadio: PropTypes.string.isRequired,
-  optionSelect: PropTypes.string.isRequired,
-  optionsMultiSelect: PropTypes.arrayOf(PropTypes.string).isRequired,
-  optionsCheck: PropTypes.arrayOf(PropTypes.string).isRequired,
-  optionsInlineCheck: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
-
-optionsProperties.story = {
-  description:
-    'Showcase `ControlTypes.OPTIONS` controls of types `radio`, `inline-radio`, `select`, `multi-select`, `check` and `inline-check`.',
-  controls: {
-    optionRadio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Radio',
-      options: {
-        Monday: 'Monday',
-        Tuesday: 'Tuesday',
-        Wednesday: 'Wednesday',
-      },
-      value: 'Tuesday',
-      display: 'radio',
-    },
-    optionInlineRadio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Inline Radio',
-      options: {
-        Saturday: 'Saturday',
-        Sunday: 'Sunday',
-      },
-      value: 'Saturday',
-      display: 'inline-radio',
-    },
-    optionSelect: {
-      type: ControlTypes.OPTIONS,
-      label: 'Select',
-      options: {
-        January: 'January',
-        February: 'February',
-        March: 'March',
-      },
-      value: 'January',
-      display: 'select',
-    },
-    optionsMultiSelect: {
-      type: ControlTypes.OPTIONS,
-      label: 'Multi Select',
-      options: {
-        Apple: 'apple',
-        Banana: 'banana',
-        Cherry: 'cherry',
-      },
-      value: ['apple'],
-      display: 'multi-select',
-    },
-    optionsCheck: {
-      type: ControlTypes.OPTIONS,
-      label: 'Check',
-      options: {
-        Corn: 'corn',
-        Carrot: 'carrot',
-        Cucumber: 'cucumber',
-      },
-      value: ['carrot'],
-      display: 'check',
-    },
-    optionsInlineCheck: {
-      type: ControlTypes.OPTIONS,
-      label: 'Inline Check',
-      options: {
-        Milk: 'milk',
-        Cheese: 'cheese',
-        Butter: 'butter',
-      },
-      value: ['milk'],
-      display: 'inline-check',
-    },
-  },
-};
-
-export const radioEnum = ({ radio }) => radio;
-
-radioEnum.story = {
-  description: '`ControlTypes.OPTIONS` display: `radio`.',
-  controls: {
-    radio: {
-      type: ControlTypes.OPTIONS,
-      label: 'Radio',
-      value: 'Monday',
-      display: 'radio',
-      options: {
-        Monday: 'Monday',
-        Tuesday: 'Tuesday',
-        Wednesday: 'Wednesday',
-      },
-    },
   },
 };
 
@@ -533,48 +321,40 @@ groupedControls.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-export const objectSimple = ({ text, background: { color } }) => {
-  return <Button css={{ backgroundColor: color }}>{text}</Button>;
+export const orderControls = ({ age, name, message }) => {
+  const content = `
+    I am ${name} and I'm ${age} years old.
+    ${message}
+  `;
+
+  return <div>{content}</div>;
 };
 
-objectSimple.story = {
+orderControls.story = {
+  description: 'Controls grouped in multiple tabs.',
   controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    background: {
-      type: ControlTypes.OBJECT,
-      value: {
-        color: { type: ControlTypes.COLOR, value: 'red' },
-      },
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'James',
+      order: 3,
+    },
+    age: {
+      type: ControlTypes.NUMBER,
+      label: 'Age',
+      value: 35,
+    },
+    message: {
+      type: ControlTypes.TEXT,
+      label: 'Mesage',
+      value: 'Hello!',
+      order: 0,
     },
   },
 };
 
-export const objectNested = ({
-  text,
-  style: {
-    padding,
-    background: { color },
-  },
-}) => {
-  return (
-    <Button css={{ backgroundColor: color, padding: padding }}>{text}</Button>
-  );
-};
-
-objectNested.story = {
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Button' },
-    style: {
-      type: ControlTypes.OBJECT,
-      value: {
-        padding: { type: ControlTypes.NUMBER, value: 5 },
-        background: {
-          type: ControlTypes.OBJECT,
-          value: {
-            color: { type: ControlTypes.COLOR, value: 'red' },
-          },
-        },
-      },
-    },
-  },
+groupedControls.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  message: PropTypes.string.isRequired,
 };

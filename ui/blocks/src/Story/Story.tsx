@@ -16,7 +16,7 @@ export const Story: FC<StoryProps> = (props: StoryProps) => (
       const { story, options = {} } = context;
       if (story && story.renderFn) {
         try {
-          const values = story.controls ? getControlValues(story.controls) : {};
+          const values = getControlValues(story.controls);
           const { decorators: globalDecorators = [] } = options;
           const { decorators: storyDecorators = [] } = story;
           const decorators = deepMerge(globalDecorators, storyDecorators);

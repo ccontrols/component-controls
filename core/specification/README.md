@@ -255,48 +255,49 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ### properties
 
-| Name       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ARRAY*`   | **function** ARRAY   | items: {   type: csf.ControlTypes.ARRAY,   label: 'Items',   value: \['Laptop', 'Book', 'Whiskey'], },                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `BOOLEAN*` | **function** BOOLEAN | nice: {  type: csf.ControlTypes.BOOLEAN,  label: 'Nice',  value: true, },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `BUTTON*`  | **function** BUTTON  | button: {  type: csf.ControlTypes.BUTTON,   onClick: () => {    ... code to modify some variables  } },                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `COLOR*`   | **function** COLOR   | color: {   type: 'color',   value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `DATE*`    | **function** DATE    |  birthday: {   type: csf.ControlTypes.DATE,   label: 'Birthday',   value: new Date(),  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `FILES*`   | **function** FILES   | images: {   type: csf.ControlTypes.FILES,   label: 'Happy Picture',   accept: 'image/\*',   value: \[     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',   ], }, |
-| `NUMBER*`  | **function** NUMBER  |  age: {   type: csf.ControlTypes.NUMBER,   label: 'Age',   value: 78,   range: true,   min: 0,   max: 90,   step: 5, },                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `OBJECT*`  | **function** OBJECT  | otherStyles: {   type: csf.ControlTypes.OBJECT,   label: 'Styles',   value: {     border: '2px dashed silver',     borderRadius: 10,     padding: 10,   }, },                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `OPTIONS*` | **function** OPTIONS | fruit: {   type: csf.ControlTypes.OPTIONS,   label: 'Fruit',   value: 'apple',   options: {     Apple: 'apple',     Banana: 'banana',     Cherry: 'cherry',   }, },                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `TEXT*`    | **function** TEXT    | userName: {   type: csf.ControlTypes.TEXT,   label: 'Name',   value: 'Storyteller', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Name       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ARRAY*`   | **function** ARRAY   | arrayItems: {   type: ControlTypes.ARRAY,   label: 'Items',   rowType: {     name: { type: ControlTypes.TEXT },   },   value: \[{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }], },                                                                                                                                                                                                                                                                                                                                                                          |
+| `BOOLEAN*` | **function** BOOLEAN | nice: {  type: ControlTypes.BOOLEAN,  label: 'Nice',  value: true, },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `BUTTON*`  | **function** BUTTON  | button: {  type: ControlTypes.BUTTON,   onClick: () => {    ... code to modify some variables  } },                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `COLOR*`   | **function** COLOR   | color: {   type: 'color',   value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `DATE*`    | **function** DATE    |  birthday: {   type: ControlTypes.DATE,   label: 'Birthday',   value: new Date(),  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `FILES*`   | **function** FILES   | images: {   type: ControlTypes.FILES,   label: 'Happy Picture',   accept: 'image/\*',   value: \[     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',   ], }, |
+| `NUMBER*`  | **function** NUMBER  |  age: {   type: ControlTypes.NUMBER,   label: 'Age',   value: 78,   range: true,   min: 0,   max: 90,   step: 5, },                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `OBJECT*`  | **function** OBJECT  |  style: {    type: ControlTypes.OBJECT,    label: 'Styles',    value: {      // do not randomize the border style      border: { type: ControlTypes.TEXT, value: '2px dashed silver', data: null },      borderRadius: { type: ControlTypes.NUMBER, value: 10 },      padding: { type: ControlTypes.NUMBER, value: 10 },    },  }                                                                                                                                                                                                                                       |
+| `OPTIONS*` | **function** OPTIONS | fruit: {   type: ControlTypes.OPTIONS,   label: 'Fruit',   value: 'apple',   options: {     Apple: 'apple',     Banana: 'banana',     Cherry: 'cherry',   }, },                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `TEXT*`    | **function** TEXT    | userName: {   type: ControlTypes.TEXT,   label: 'Name',   value: 'Storyteller', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## ComponentControlArray
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L259)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L263)_
 
-** extends ComponentControlBase&lt;string\[]>**
+** extends ComponentControlBase&lt;\[key: string]: any\[]>**
 
 ### properties
 
 | Name           | Type                                                           | Description                                                                                                                                           |
 | -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | string\[]                                                      | default value is usually set at run-time, from the value                                                                                              |
+| `defaultValue` | \[key: string]: any\[]                                         | default value is usually set at run-time, from the value                                                                                              |
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `resetValue`   | string\[]                                                      | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `separator`    | string                                                         | the array items separator, by default comma                                                                                                           |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
+| `resetValue`   | \[key: string]: any\[]                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
+| `rowType*`     | [ComponentControls](#componentcontrols)                        | type of the items in each row of the array                                                                                                            |
 | `type*`        | [ARRAY](#array)                                                |                                                                                                                                                       |
-| `value`        | string\[]                                                      | a default value for the property                                                                                                                      |
+| `value`        | \[key: string]: any\[]                                         | a default value for the property                                                                                                                      |
 
 ## ComponentControlBase
 
 Base inteface for creating control types
 All new property typs should extend this interface and support
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L136)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L140)_
 
 
 
@@ -309,16 +310,16 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   |                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [ControlTypes](#controltypes)                                  |                                                                                                                                                       |
 | `value`        |                                                                | a default value for the property                                                                                                                      |
 
 ## ComponentControlBoolean
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L226)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L230)_
 
 ** extends ComponentControlBase&lt;boolean>**
 
@@ -331,16 +332,16 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | boolean                                                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [BOOLEAN](#boolean)                                            |                                                                                                                                                       |
 | `value`        | boolean                                                        | a default value for the property                                                                                                                      |
 
 ## ComponentControlButton
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L272)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L285)_
 
 ** extends ComponentControlBase&lt;>**
 
@@ -353,17 +354,17 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                                            | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                                            | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                                           | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                                           | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                                            | label to display next to the field editor by default uses the property name itself                                                                    |
 | `onClick`      | **function** (`prop`\*: [ComponentControlButton](#componentcontrolbutton)): void; | for button type fields, an onClick handler                                                                                                            |
 | `order`        | number                                                                            | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                                           | visually display the control property as required                                                                                                     |
 | `resetValue`   |                                                                                   | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [BUTTON](#button)                                                                 |                                                                                                                                                       |
 | `value`        |                                                                                   | a default value for the property                                                                                                                      |
 
 ## ComponentControlColor
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L230)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L234)_
 
 ** extends ComponentControlBase&lt;string>**
 
@@ -376,16 +377,16 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [COLOR](#color)                                                |                                                                                                                                                       |
 | `value`        | string                                                         | a default value for the property                                                                                                                      |
 
 ## ComponentControlData
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L114)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L118)_
 
 
 
@@ -398,7 +399,7 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ## ComponentControlDate
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L234)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L238)_
 
 ** extends ComponentControlBase&lt;[Date](#date)>**
 
@@ -412,9 +413,9 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | [Date](#date)                                                  | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
 | `type*`        | [DATE](#date)                                                  |                                                                                                                                                       |
@@ -422,7 +423,7 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ## ComponentControlFiles
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L250)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L254)_
 
 ** extends ComponentControlBase&lt;string\[]>**
 
@@ -436,16 +437,16 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | string\[]                                                      | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [FILES](#files)                                                |                                                                                                                                                       |
 | `value`        | string\[]                                                      | a default value for the property                                                                                                                      |
 
 ## ComponentControlNumber
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L322)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L335)_
 
 ** extends ComponentControlBase&lt;number>**
 
@@ -458,12 +459,12 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `max`          | number                                                         | maximum allowed value for numeric property                                                                                                            |
 | `min`          | number                                                         | minimum allowed value for numeric property                                                                                                            |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
 | `range`        | boolean                                                        | if true, will display a range type slider editor                                                                                                      |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | number                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
 | `type*`        | [NUMBER](#number)                                              |                                                                                                                                                       |
@@ -471,7 +472,7 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 ## ComponentControlObject
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L267)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L276)_
 
 ** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
 
@@ -482,11 +483,12 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
 | `defaultValue` | [ComponentControls](#componentcontrols)                        | default value is usually set at run-time, from the value                                                                                              |
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | [ComponentControls](#componentcontrols)                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [OBJECT](#object)                                              |                                                                                                                                                       |
 | `value`        | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                      |
@@ -498,7 +500,7 @@ list of options can be
 2\. array of strings
 3\. array of key-value pair objects
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L303)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L316)_
 
 ** extends ComponentControlBase&lt;OptionsValueType&lt;>>**
 
@@ -512,17 +514,17 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `display`      | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                              |
 | `groupId`      | string                                                                               | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                                              | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                                              | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                                               | label to display next to the field editor by default uses the property name itself                                                                    |
 | `options*`     | OptionsListType&lt;>                                                                 |                                                                                                                                                       |
 | `order`        | number                                                                               | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                                              | visually display the control property as required                                                                                                     |
 | `resetValue`   | OptionsValueType&lt;>                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `type*`        | [OPTIONS](#options)                                                                  |                                                                                                                                                       |
 | `value`        | OptionsValueType&lt;>                                                                | a default value for the property                                                                                                                      |
 
 ## ComponentControlText
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L201)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L205)_
 
 ** extends ComponentControlBase&lt;string>**
 
@@ -536,10 +538,10 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 | `escapeValue`  | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `hideLabel`    | boolean                                                        | hide the label from the property editor                                                                                                               |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
 | `placeholder`  | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
 | `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
 | `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
 | `type*`        | [TEXT](#text)                                                  |                                                                                                                                                       |
@@ -551,7 +553,7 @@ ComponentControls are defined in key value pairs
 the name of the property is the key
 and the value is the ComponentControl
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L375)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L388)_
 
 `name`\*: string: [ComponentControl](#componentcontrol)
 
@@ -563,7 +565,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L358)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L371)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -571,13 +573,13 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 
 value/label pairs or array of OptionsValueType
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L292)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L305)_
 
 \[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L282)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L295)_
 
  | number | string\[] \| number\[] \| **label**: string**value**: any
 
@@ -814,7 +816,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L358)_
+_defined in [@component-controls/specification/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/controls.ts#L371)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 

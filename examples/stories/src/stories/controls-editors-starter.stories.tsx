@@ -3,7 +3,7 @@ import { Button } from 'theme-ui';
 import { ControlTypes } from '@component-controls/specification';
 
 export default {
-  title: 'Storybook/Starter',
+  title: 'Introduction/Starter',
   component: Button,
 };
 

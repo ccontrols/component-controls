@@ -9,16 +9,26 @@ export default {
 };
 
 export const overview = () => {
-  const [state, setState] = React.useState(['Laptop', 'Book', 'Whiskey']);
+  const [state, setState] = React.useState([
+    { name: 'Laptop' },
+    { name: 'Book' },
+    { name: 'Whiskey' },
+  ]);
   return (
     <ConrolsContextProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
-        prop: { type: ControlTypes.ARRAY, value: state },
+        prop: {
+          type: ControlTypes.ARRAY,
+          rowType: { name: { type: ControlTypes.TEXT } },
+          value: state,
+        },
       }}
     >
       <ArrayEditor name="prop" />
-      <ul>{state && state.map(item => <li key={item}>{item}</li>)}</ul>
+      <ul>
+        {state && state.map(item => <li key={item.name}>{item.name}</li>)}
+      </ul>
     </ConrolsContextProvider>
   );
 };
