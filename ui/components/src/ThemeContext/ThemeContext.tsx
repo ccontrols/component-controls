@@ -68,12 +68,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
             borderBottom: 0,
           },
           tdgroup: {
-            fontWeight: 400,
             lineHeight: '24px',
-            color: 'rgba(51,51,51,0.6)',
             background: '#fafbfc',
             whiteSpace: 'nowrap',
             padding: '16px 20px',
+            fontWeight: 700,
+            fontFamily: 'monospace',
           },
           tr: {
             borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
