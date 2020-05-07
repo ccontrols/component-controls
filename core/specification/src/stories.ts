@@ -1,4 +1,4 @@
-import { CodeLocation, Repository, StoryRenderFn } from './utility';
+import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
 
@@ -198,9 +198,9 @@ export interface StoriesKind {
   fileName?: string;
 
   /**
-   * project repository information
+   * lookup into the global store of PackageInfo package.json
    */
-  repository?: Repository;
+  package?: string;
 
   /**
    * lookup into the global store.components
@@ -261,6 +261,13 @@ export interface StoryStories {
 }
 
 /**
+ * list of repositories
+ */
+export interface StoryPackages {
+  [id: string]: PackageInfo;
+}
+
+/**
  * store of stories information in memory after the loader is applied
  */
 export interface StoriesStore {
@@ -276,4 +283,10 @@ export interface StoriesStore {
    * list of components used in stories
    */
   components: StoryComponents;
+
+  /**
+   * list of package.json files and their data
+   * used by the components and the stories of the project
+   */
+  packages: StoryPackages;
 }

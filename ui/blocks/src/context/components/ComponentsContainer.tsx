@@ -1,5 +1,9 @@
 import React from 'react';
-import { Story, StoryComponent } from '@component-controls/specification';
+import {
+  Story,
+  StoryComponent,
+  PackageInfo,
+} from '@component-controls/specification';
 
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 import { ComponentInputProps, useComponentsContext } from './ComponentsContext';
@@ -9,6 +13,7 @@ export type ComponentsContainerProps = {
     component: StoryComponent | undefined,
     props: {
       story?: Story;
+      componentPackage?: PackageInfo;
       tabName: string;
     },
     rest: any,
@@ -31,9 +36,10 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
   visibleOnControlsOnly,
   ...rest
 }) => {
-  const { components, story } = useComponentsContext({
+  const { components, story, componentPackage } = useComponentsContext({
     of,
   });
+
   const keys = components ? Object.keys(components) : [];
   if (keys.length === 0 && visibleOnControlsOnly === true && story?.controls) {
     keys.push('Controls');
@@ -47,6 +53,7 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
       {
         story,
         tabName: keys[0],
+        componentPackage,
       },
       rest,
     );
@@ -68,7 +75,11 @@ export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
       </TabList>
       {keys.map(key => (
         <TabPanel key={`component_panel_${key}`}>
-          {children(components[key], { story, tabName: key }, rest)}
+          {children(
+            components[key],
+            { story, tabName: key, componentPackage },
+            rest,
+          )}
         </TabPanel>
       ))}
     </Tabs>

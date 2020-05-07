@@ -1,12 +1,12 @@
 import React from 'react';
-import { Repository } from '@component-controls/specification';
+import { PackageInfo } from '@component-controls/specification';
 import { ActionItem, ExternalLink } from '@component-controls/components';
 
 export const repositoryActions = (
-  repository?: Repository,
+  packageInfo?: PackageInfo,
 ): ActionItem[] | undefined => {
-  if (repository) {
-    const { browse, docs, issues } = repository;
+  if (packageInfo) {
+    const { browse, docs, issues } = packageInfo.repository || {};
     if (browse || docs || issues) {
       const actions: ActionItem[] = [];
       if (browse) {

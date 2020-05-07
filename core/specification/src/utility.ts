@@ -19,28 +19,51 @@ export interface CodeLocation {
 }
 
 /**
+ * package.json
  * information about the repository of the stories and components
  *
  */
-export interface Repository {
+export interface PackageInfo {
+  /**
+   * file name hash of package.json
+   */
+  fileHash: string;
   /**
    * package name
    */
   name?: string;
-  /**
-   * link for browsing the file
-   */
-  browse?: string;
 
   /**
-   * link for project readme
+   * package version
    */
-  docs?: string;
+  version?: string;
 
   /**
-   * link for filing issues with the project
+   * repository information extracted from the "repository" field in package.json.
+   *  example:
+   * "repository": {
+   *   "type": "git",
+   *   "url": "https://github.com/ccontrols/component-controls.git",
+   *   "directory": "core/specification"
+   * },
+
    */
-  issues?: string;
+  repository: {
+    /**
+     * link for browsing the file
+     */
+    browse?: string;
+
+    /**
+     * link for project readme
+     */
+    docs?: string;
+
+    /**
+     * link for filing issues with the project
+     */
+    issues?: string;
+  };
 }
 
 /**

@@ -1,4 +1,4 @@
-import { CodeLocation, Repository } from './utility';
+import { CodeLocation } from './utility';
 
 export type TypeValue =
   | 'any'
@@ -123,9 +123,10 @@ export interface StoryComponent {
   loc?: CodeLocation;
 
   /**
-   * component project repository information
+   * lookup into the global store of PackageInfo package.json
    */
-  repository?: Repository;
+  package?: string;
+
   /**
    * the source code of the component file, extracted byt the AST instrumenting loaders
    */

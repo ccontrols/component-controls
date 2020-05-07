@@ -62,12 +62,13 @@ export const extractMDXStories = (
 
   const store: Required<Pick<
     ParseStorieReturnType,
-    'stories' | 'kinds' | 'components' | 'exports'
+    'stories' | 'kinds' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
     kinds: {},
     components: {},
     exports: {},
+    packages: {},
   };
   const { transformMDX } = _options.mdx;
   traverse(ast as any, {

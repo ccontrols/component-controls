@@ -3,6 +3,7 @@ import {
   Story,
   StoriesKind,
   StoryComponent,
+  PackageInfo,
 } from '@component-controls/specification';
 
 import { BlockContext, BlockDataContext } from '../block';
@@ -39,6 +40,10 @@ export interface StoryContextProps {
    * those are global parameters as well as decorators
    */
   options?: any;
+  /**
+   * package.json info
+   */
+  storyPackage?: PackageInfo;
 }
 
 /**
@@ -63,12 +68,13 @@ export const useStoryContext = ({
     story?: Story;
     kind?: StoriesKind;
     component?: StoryComponent;
+    storyPackage?: PackageInfo;
   }>(getStoryData(storyId));
 
   const updateData = (updateId?: string) => {
     if (!updateId || updateId === storyId) {
-      const { story, kind, component } = getStoryData(storyId);
-      setData({ story, kind, component });
+      const { story, kind, component, storyPackage } = getStoryData(storyId);
+      setData({ story, kind, component, storyPackage });
     }
   };
 
@@ -90,6 +96,7 @@ export const useStoryContext = ({
     story: data.story,
     kind: data.kind,
     component: data.component,
+    storyPackage: data.storyPackage,
     options,
   };
 };

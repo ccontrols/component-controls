@@ -12,9 +12,10 @@ import { useStoryContext } from '../context';
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
 export const EditPage: FC = () => {
-  const { kind } = useStoryContext({ id: '.', name });
-  const { repository } = kind || {};
-  return repository && repository.browse ? (
+  const { storyPackage } = useStoryContext({ id: '.', name });
+  return storyPackage &&
+    storyPackage.repository &&
+    storyPackage.repository.browse ? (
     <Box
       sx={{
         position: 'absolute',
@@ -23,7 +24,10 @@ export const EditPage: FC = () => {
         p: 2,
       }}
     >
-      <ExternalLink href={repository.browse} aria-label="edit this page">
+      <ExternalLink
+        href={storyPackage.repository.browse}
+        aria-label="edit this page"
+      >
         <Box
           sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
         >

@@ -126,9 +126,10 @@ const parseSource = async (
         }
       }
     }
-    const repository = await packageInfo(filePath, options.stories.package);
-    if (repository) {
-      kind.repository = repository;
+    const storyPackage = await packageInfo(filePath, options.stories.package);
+    if (storyPackage) {
+      store.packages[storyPackage.fileHash] = storyPackage;
+      kind.package = storyPackage.fileHash;
     }
   }
   for (const key of Object.keys(store.stories)) {
@@ -198,7 +199,7 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
-    const { stories, kinds, components, exports } = store;
+    const { stories, kinds, components, exports, packages } = store;
     const exportsSource = extractStoryExports(exports);
     let transformed = source;
     if (transformMDX && exportsSource) {
@@ -209,6 +210,7 @@ export const parseStories = async (
       stories,
       kinds,
       components,
+      packages,
     };
   } else {
     const store = await parseSource(

@@ -5,7 +5,8 @@ import readJson from 'read-package-json';
 import hostedGitInfo from 'hosted-git-info';
 //@ts-ignore
 import parseRepositoryURL from '@hutson/parse-repository-url';
-import { Repository } from '@component-controls/specification';
+import { PackageInfo } from '@component-controls/specification';
+import { hashStoreId } from './hashStore';
 import { PackageInfoOptions } from '../types';
 
 const traverseFolder = (
@@ -66,7 +67,7 @@ export interface PackageInfoReturnType {
 export const packageInfo = async (
   filePath?: string,
   opts?: PackageInfoOptions | false,
-): Promise<Repository | undefined> => {
+): Promise<PackageInfo | undefined> => {
   if (filePath) {
     const { fileName, packageJSON } =
       (await getPackageJson(filePath, opts)) || {};
@@ -99,24 +100,22 @@ export const packageInfo = async (
             )
             .replace('{committish}', templates.committish || 'master');
         };
-        const result: Repository = {};
-        const {
-          storeBrowseLink,
-          storeDocsLink,
-          storeIssuesLink,
-          storePackageName,
-        } = opts || {};
+        const { name, version } = packageJSON;
+        const result: PackageInfo = {
+          fileHash: hashStoreId(fileName),
+          name,
+          version,
+          repository: {},
+        };
+        const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
         if (storeBrowseLink) {
-          result.browse = fillTemplate(templates.browsefiletemplate);
+          result.repository.browse = fillTemplate(templates.browsefiletemplate);
         }
         if (storeDocsLink) {
-          result.docs = fillTemplate(templates.docstemplate);
+          result.repository.docs = fillTemplate(templates.docstemplate);
         }
         if (storeIssuesLink) {
-          result.issues = fillTemplate(templates.bugstemplate);
-        }
-        if (storePackageName) {
-          result.name = packageJSON.name;
+          result.repository.issues = fillTemplate(templates.bugstemplate);
         }
         return result;
       }

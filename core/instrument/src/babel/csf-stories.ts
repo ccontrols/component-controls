@@ -44,6 +44,7 @@ export const extractCSFStories = (
     stories: {},
     kinds: {},
     components: {},
+    packages: {},
   };
   traverse(ast as any, {
     ExportDefaultDeclaration: (path: any) => {

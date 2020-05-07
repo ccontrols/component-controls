@@ -23,6 +23,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
           kinds: {},
           stories: {},
           components: {},
+          packages: {},
         };
         stores.forEach(store => {
           if (Object.keys(store.kinds).length > 0) {
@@ -71,6 +72,9 @@ export const loadStoryStore = (): StoriesStore | undefined => {
               });
               Object.keys(store.components).forEach(key => {
                 globalStore.components[key] = store.components[key];
+              });
+              Object.keys(store.packages).forEach(key => {
+                globalStore.packages[key] = store.packages[key];
               });
             });
           }

@@ -4,6 +4,7 @@ import {
   StoriesKind,
   StoryComponents,
   getComponentName,
+  PackageInfo,
 } from '@component-controls/specification';
 
 import { BlockDataContext } from '../block';
@@ -22,6 +23,7 @@ export interface ComponentContextProps {
   components: StoryComponents;
   kind?: StoriesKind;
   story?: Story;
+  componentPackage?: PackageInfo;
 }
 
 export const useComponentsContext = ({
@@ -34,7 +36,7 @@ export const useComponentsContext = ({
     addObserver,
     removeObserver,
   } = React.useContext(BlockDataContext);
-  const [{ story, kind, component }, setStoryData] = useState(
+  const [{ story, kind, component, componentPackage }, setStoryData] = useState(
     getStoryData(storyId),
   );
 
@@ -76,5 +78,6 @@ export const useComponentsContext = ({
     components,
     kind,
     story,
+    componentPackage,
   };
 };

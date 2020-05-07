@@ -25,6 +25,7 @@ module.exports.pitch = async function() {
     addStoriesKind({
       stories: store.stories,
       components: store.components,
+      packages: store.packages,
       kinds: Object.keys(store.kinds).reduce(
         (acc, key) => ({
           ...acc,

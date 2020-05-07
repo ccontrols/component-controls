@@ -32,10 +32,12 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
     <ComponentsBlockContainer {...rest}>
       {(component, props, sourceProps) => {
         let source;
-        const { from, importedName, name: componentName, repository } =
-          component || {};
+        const { componentPackage } = props;
+        const { from, importedName, name: componentName } = component || {};
         const importFrom =
-          repository && repository.name ? repository.name : from;
+          componentPackage && componentPackage.name
+            ? componentPackage.name
+            : from;
         if (importFrom) {
           source =
             importedName !== 'default' && importedName !== 'namespace'
@@ -56,7 +58,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
           });
         }
         const repositoryItems =
-          component && repositoryActions(component?.repository);
+          component && repositoryActions(componentPackage);
         if (repositoryItems) {
           allActions.push.apply(allActions, repositoryItems);
         }

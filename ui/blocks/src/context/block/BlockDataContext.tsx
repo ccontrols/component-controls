@@ -9,6 +9,7 @@ import {
   StoryComponents,
   StoriesKind,
   getComponentName,
+  PackageInfo,
 } from '@component-controls/specification';
 
 export interface BlockDataContextProps {
@@ -17,7 +18,13 @@ export interface BlockDataContextProps {
    */
   getStoryData: (
     storyId?: string,
-  ) => { story?: Story; kind?: StoriesKind; component?: StoryComponent };
+  ) => {
+    story?: Story;
+    kind?: StoriesKind;
+    component?: StoryComponent;
+    storyPackage?: PackageInfo;
+    componentPackage?: PackageInfo;
+  };
 
   /**
    * given an object of components, resolves to name => StoryComponent
@@ -63,19 +70,27 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   const store: StoriesStore | undefined = storeProvider.getStore();
 
   const getStoryData = (id: string = storyId) => {
-    const story: Story | undefined =
-      store && store.stories && id ? store.stories[id] : undefined;
-    const kind =
-      store && story && story.kind ? store.kinds[story.kind] : undefined;
-    const storyComponent: any =
-      story && kind ? story.component || kind.component : undefined;
+    if (store) {
+      const story: Story | undefined =
+        store.stories && id ? store.stories[id] : undefined;
+      const kind = story && story.kind ? store.kinds[story.kind] : undefined;
+      const storyComponent: any =
+        story && kind ? story.component || kind.component : undefined;
 
-    const componentName = getComponentName(storyComponent);
-    const component =
-      store && componentName && kind && kind.components[componentName]
-        ? store.components[kind.components[componentName]]
-        : undefined;
-    return { story, kind, component };
+      const componentName = getComponentName(storyComponent);
+      const component =
+        componentName && kind && kind.components[componentName]
+          ? store.components[kind.components[componentName]]
+          : undefined;
+      const storyPackage =
+        kind && kind.package ? store.packages[kind.package] : undefined;
+      const componentPackage =
+        component && component.package
+          ? store.packages[component.package]
+          : undefined;
+      return { story, kind, component, storyPackage, componentPackage };
+    }
+    return {};
   };
 
   const getComponents = (

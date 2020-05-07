@@ -3,15 +3,20 @@ import {
   StoriesStore,
   StoryComponent,
   StoriesKind,
+  PackageInfo,
 } from '@component-controls/specification';
-import { createHash } from 'crypto';
+import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
 import { propsInfo } from '../misc/props-info';
 import { InstrumentOptions } from '../types';
 
+interface ComponentParseData {
+  component?: StoryComponent;
+  componentPackage?: PackageInfo;
+}
 const globalCache: {
-  [filePath: string]: StoryComponent;
+  [filePath: string]: ComponentParseData;
 } = {};
 export const extractComponent = async (
   componentName: string,
@@ -19,7 +24,7 @@ export const extractComponent = async (
   source?: string,
   options?: InstrumentOptions,
   initialAST?: File,
-): Promise<StoryComponent | undefined> => {
+): Promise<ComponentParseData> => {
   const cacheKey = `${filePath}-${componentName}`;
   if (globalCache[cacheKey]) {
     return globalCache[cacheKey];
@@ -33,6 +38,7 @@ export const extractComponent = async (
   );
   const { components } = options || {};
   let component: StoryComponent;
+  let componentPackage: PackageInfo | undefined;
   if (follow) {
     component = {
       name: componentName,
@@ -45,13 +51,10 @@ export const extractComponent = async (
       component.source = follow.source;
       component.loc = follow.loc;
     }
-    const repository = await packageInfo(
+    componentPackage = await packageInfo(
       follow.originalFilePath,
       options?.components?.package,
     );
-    if (repository !== undefined) {
-      component.repository = repository;
-    }
   } else {
     component = {
       name: componentName,
@@ -69,8 +72,8 @@ export const extractComponent = async (
       component.info = info;
     }
   }
-  globalCache[filePath] = component;
-  return component;
+  globalCache[filePath] = { component, componentPackage };
+  return globalCache[filePath];
 };
 
 export const extractStoreComponent = async (
@@ -86,7 +89,7 @@ export const extractStoreComponent = async (
     const componentNames = Object.keys(kind.components);
     if (componentNames) {
       for (const componentName of componentNames) {
-        const component = await extractComponent(
+        const { component, componentPackage } = await extractComponent(
           componentName,
           filePath,
           source,
@@ -94,9 +97,13 @@ export const extractStoreComponent = async (
           initialAST,
         );
         if (component) {
-          const componentKey = createHash('md5')
-            .update(`${component.request ?? filePath}-${componentName}`)
-            .digest('hex');
+          if (componentPackage) {
+            store.packages[componentPackage.fileHash] = componentPackage;
+            component.package = componentPackage.fileHash;
+          }
+          const componentKey = hashStoreId(
+            `${component.request ?? filePath}-${componentName}`,
+          );
           store.components[componentKey] = component;
           kind.components[componentName] = componentKey;
         }
