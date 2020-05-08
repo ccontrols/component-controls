@@ -5,7 +5,7 @@ import {
 } from '@component-controls/components';
 
 import { getComponentName } from '@component-controls/specification';
-import { visibleControls } from '@component-controls/core';
+import { hasControls } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 import {
   ComponentsContainer,
@@ -39,8 +39,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
 
   if (
     !componentNames.length &&
-    (visibleOnControlsOnly !== true ||
-      !Object.keys(visibleControls(story?.controls)).length)
+    (visibleOnControlsOnly !== true || !hasControls(story?.controls))
   ) {
     //no components to display
     return null;
