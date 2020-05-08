@@ -1,7 +1,6 @@
 const faker = require('faker/locale/en_US');
 import {
   ControlTypes,
-  ComponentControls,
   ComponentControl,
 } from '@component-controls/specification';
 import { randomizeData } from '@component-controls/core/src/randomizeData';
