@@ -681,6 +681,7 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`       | _string_                                                                       | id of the story                                                             |
 | `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
+| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                                                     |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
 
 ## <ins>PageContextContainer</ins>

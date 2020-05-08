@@ -10,6 +10,7 @@
     -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>EditPage</ins>](#inseditpageins)
+    -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
@@ -164,6 +165,13 @@ Display a Edit this page link at the top of the page.
 In order for this to work, you need to set up the `repository` field in `package.json`.
 
 _EditPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/EditPage/EditPage.tsx)_
+
+## <ins>PackageVersion</ins>
+
+Display a label with the component's package version.
+extracted from package.json
+
+_PackageVersion [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PackageVersion/PackageVersion.tsx)_
 
 ## <ins>PageContainer</ins>
 
@@ -326,6 +334,7 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`       | _string_                                                                       | id of the story                                                             |
 | `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
+| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                                                     |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
 
 ## <ins>InvalidType</ins>

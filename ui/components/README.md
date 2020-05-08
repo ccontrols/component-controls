@@ -274,6 +274,7 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | Name       | Type                                                                           | Description                            |
 | ---------- | ------------------------------------------------------------------------------ | -------------------------------------- |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component. |
+| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
 
 ## <ins>Toggle</ins>

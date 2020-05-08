@@ -12,6 +12,7 @@
     -   [StoryArgument](#storyargument)
     -   [StoryComponents](#storycomponents)
     -   [StoryKinds](#storykinds)
+    -   [StoryPackages](#storypackages)
     -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
     -   [StoryArguments](#storyarguments)
@@ -42,7 +43,8 @@
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
-    -   [Repository](#repository)
+    -   [PackageInfo](#packageinfo)
+    -   [PackageRepository](#packagerepository)
     -   [StoryRenderFn](#storyrenderfn)
     -   [Configuration](#configuration)
     -   [StoryRenderFn](#storyrenderfn-1)
@@ -135,8 +137,8 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `excludeStories` | string\[] \| [RegExp](#regexp)          | list of stories to exclude from the stories file can also use regexp match                                                                 |
 | `fileName`       | string                                  | file name of the file of stories                                                                                                           |
 | `includeStories` | string\[] \| [RegExp](#regexp)          | list of stories to include in the stories file can also use regexp match                                                                   |
+| `package`        | string                                  | lookup into the global store of PackageInfo package.json                                                                                   |
 | `parameters`     | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                         |
-| `repository`     | [Repository](#repository)               | project repository information                                                                                                             |
 | `source`         | string                                  | source code of the entire file of stories                                                                                                  |
 | `stories`        | string\[]                               | list of stories contained in the file/groups                                                                                               |
 | `subcomponents`  | string\[] \| object\[]                  | multiple components option                                                                                                                 |
@@ -146,17 +148,18 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L266)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L273)_
 
 
 
 ### properties
 
-| Name          | Type                                | Description                        |
-| ------------- | ----------------------------------- | ---------------------------------- |
-| `components*` | [StoryComponents](#storycomponents) | list of components used in stories |
-| `kinds*`      | [StoryKinds](#storykinds)           | list of story files, or groups     |
-| `stories*`    | [StoryStories](#storystories)       | list of stories                    |
+| Name          | Type                                | Description                                                                                     |
+| ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `components*` | [StoryComponents](#storycomponents) | list of components used in stories                                                              |
+| `kinds*`      | [StoryKinds](#storykinds)           | list of story files, or groups                                                                  |
+| `packages*`   | [StoryPackages](#storypackages)     | list of package.json files and their data used by the components and the stories of the project |
+| `stories*`    | [StoryStories](#storystories)       | list of stories                                                                                 |
 
 ## Story
 
@@ -217,6 +220,14 @@ list of story files, or groups
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L252)_
 
 `title`\*: string: [StoriesKind](#storieskind)
+
+## StoryPackages
+
+list of repositories
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L266)_
+
+`id`\*: string: [PackageInfo](#packageinfo)
 
 ## StoryParameters
 
@@ -643,7 +654,7 @@ _defined in [@component-controls/specification/src/components.ts](https://github
 | `info`         | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
 | `loc`          | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
 | `name*`        | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
-| `repository`   | [Repository](#repository)          | component project repository information                                                                                                                                                                                                   |
+| `package`      | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
 | `request`      | string                             | resolved import request                                                                                                                                                                                                                    |
 | `source`       | string                             | the source code of the component file, extracted byt the AST instrumenting loaders                                                                                                                                                         |
 
@@ -673,7 +684,7 @@ _defined in [@component-controls/specification/src/components.ts](https://github
 
 given a component, return its name
 
-_defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L142)_
+_defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L143)_
 
 **function** getComponentName(`component`\*: any): string | undefined;
 
@@ -734,11 +745,29 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `column*` | number |             |
 | `line*`   | number |             |
 
-## Repository
+## PackageInfo
 
+package.json
 information about the repository of the stories and components
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L25)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L46)_
+
+
+
+### properties
+
+| Name          | Type                                    | Description                                                                   |
+| ------------- | --------------------------------------- | ----------------------------------------------------------------------------- |
+| `fileHash*`   | string                                  | file name hash of package.json                                                |
+| `name`        | string                                  | package name                                                                  |
+| `repository*` | [PackageRepository](#packagerepository) | repository information extracted from the "repository" field in package.json. |
+| `version`     | string                                  | package version                                                               |
+
+## PackageRepository
+
+repository information from package.json
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L24)_
 
 
 
@@ -749,13 +778,12 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `browse` | string | link for browsing the file              |
 | `docs`   | string | link for project readme                 |
 | `issues` | string | link for filing issues with the project |
-| `name`   | string | package name                            |
 
 ## StoryRenderFn
 
 story render function
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L51)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L72)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -787,7 +815,7 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 story render function
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L51)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L72)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
