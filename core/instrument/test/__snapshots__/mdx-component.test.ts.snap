@@ -19,6 +19,7 @@ Object {
       "title": "Storybook/MDX",
     },
   },
+  "packages": Object {},
   "stories": Object {},
   "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
 import { Button } from '../../components/button-named-arrow-func';
@@ -47,6 +48,7 @@ Object {
       "title": "Storybook/MDX",
     },
   },
+  "packages": Object {},
   "stories": Object {},
   "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
 import { Btn as Button } from '../../components/button-named-class';
@@ -63,6 +65,7 @@ Object {
       "title": "Story",
     },
   },
+  "packages": Object {},
   "stories": Object {},
   "transformed": "import { Meta, PropsTable } from '@storybook/addon-docs/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
@@ -100,6 +103,7 @@ Object {
       "title": "Storybook/MDX",
     },
   },
+  "packages": Object {},
   "stories": Object {
     "myStory": Object {
       "component": "Toggle",
@@ -153,6 +157,7 @@ Object {
       "title": "Story",
     },
   },
+  "packages": Object {},
   "stories": Object {
     "story": Object {
       "component": "ArrowButton",
@@ -220,6 +225,7 @@ Object {
       "title": "Story",
     },
   },
+  "packages": Object {},
   "stories": Object {},
   "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';

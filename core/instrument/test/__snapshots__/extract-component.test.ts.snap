@@ -2,122 +2,180 @@
 
 exports[`extract-component default-alias-import.js 1`] = `
 Object {
-  "from": "../components/button-default-class-export",
-  "importedName": "namespace",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-class-export.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "../components/button-default-class-export",
+    "importedName": "namespace",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-class-export.js",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-class-export.js",
+  "componentPackage": Object {
+    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "name": "@component-controls/instrument",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-class-export.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;
 
 exports[`extract-component default-import.js 1`] = `
 Object {
-  "from": "../components/button-default-arrow-func",
-  "importedName": "default",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "../components/button-default-arrow-func",
+    "importedName": "default",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+  "componentPackage": Object {
+    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "name": "@component-controls/instrument",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;
 
 exports[`extract-component kind-component.js 1`] = `
 Object {
-  "name": "Button",
+  "component": Object {
+    "name": "Button",
+  },
+  "componentPackage": undefined,
 }
 `;
 
 exports[`extract-component named-alias-import.js 1`] = `
 Object {
-  "from": "../components/button-named-arrow-func",
-  "importedName": "Btn",
-  "name": "Button",
-  "request": undefined,
+  "component": Object {
+    "from": "../components/button-named-arrow-func",
+    "importedName": "Btn",
+    "name": "Button",
+    "request": undefined,
+  },
+  "componentPackage": undefined,
 }
 `;
 
 exports[`extract-component named-import.js 1`] = `
 Object {
-  "from": "../components/button-named-class",
-  "importedName": "Button",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "../components/button-named-class",
+    "importedName": "Button",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
+  "componentPackage": Object {
+    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "name": "@component-controls/instrument",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;
 
 exports[`extract-component node-modules.js 1`] = `
 Object {
-  "from": "theme-ui",
-  "importedName": "Button",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
-    "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
-    "issues": "https://github.com/system-ui/theme-ui/issues",
+  "component": Object {
+    "from": "theme-ui",
+    "importedName": "Button",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/src/Button.js",
   },
-  "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/src/Button.js",
+  "componentPackage": Object {
+    "fileHash": "ade35980d05b8705deb9ac0e4c3de258",
+    "name": "theme-ui",
+    "repository": Object {
+      "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
+      "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
+      "issues": "https://github.com/system-ui/theme-ui/issues",
+    },
+    "version": "0.3.1",
+  },
 }
 `;
 
 exports[`extract-component node-modules-source.js 1`] = `
 Object {
-  "from": "@component-controls/components",
-  "importedName": "Subtitle",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/dist/index.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "@component-controls/components",
+    "importedName": "Subtitle",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/node_modules/@component-controls/components/dist/index.js",
   },
-  "request": "/Users/atanasster/component-controls/node_modules/@component-controls/components/dist/index.js",
+  "componentPackage": Object {
+    "fileHash": "49ba564d8e0c1c87fefc93b7f2550939",
+    "name": "@component-controls/components",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/dist/index.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;
 
 exports[`extract-component non-existing-file.js 1`] = `
 Object {
-  "from": "./Button",
-  "importedName": "Btn",
-  "name": "Button",
-  "request": undefined,
+  "component": Object {
+    "from": "./Button",
+    "importedName": "Btn",
+    "name": "Button",
+    "request": undefined,
+  },
+  "componentPackage": undefined,
 }
 `;
 
 exports[`extract-component parameters-component.js 1`] = `
 Object {
-  "from": "../components/button-named-arrow-func",
-  "importedName": "Button",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "../components/button-named-arrow-func",
+    "importedName": "Button",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+  "componentPackage": Object {
+    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "name": "@component-controls/instrument",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;
 
 exports[`extract-component story-component.js 1`] = `
 Object {
-  "from": "../components/button-named-class",
-  "importedName": "Button",
-  "name": "Button",
-  "repository": Object {
-    "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
-    "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-    "issues": "https://github.com/ccontrols/component-controls/issues",
+  "component": Object {
+    "from": "../components/button-named-class",
+    "importedName": "Button",
+    "name": "Button",
+    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
   },
-  "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
+  "componentPackage": Object {
+    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "name": "@component-controls/instrument",
+    "repository": Object {
+      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
+      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+      "issues": "https://github.com/ccontrols/component-controls/issues",
+    },
+    "version": "1.0.1",
+  },
 }
 `;

@@ -6,18 +6,25 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/named-object-export.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = {
   i: 1,
 };
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/named-object-export.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -35,16 +42,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-arguments.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = () => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -77,16 +91,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-story.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 const i = 1;
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-story.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -102,16 +123,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/props-argument.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = props => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/props-argument.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -159,16 +187,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/three-levels-alias.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = ({ name: { first, last }, age }) => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/three-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -274,16 +309,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-arguments.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = (props, context) => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -345,16 +387,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-alias.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = ({ name: MyNam, age }) => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -431,16 +480,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-sub-arguments.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = ({ name, age }) => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-sub-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -517,16 +573,23 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/typescript.ts",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "source": "export default { title: 'Story' };
 export const myStory = (props: Properties) => {};
 ",
       "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/typescript.ts",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {

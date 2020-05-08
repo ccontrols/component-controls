@@ -6,14 +6,21 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "test": 1,
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/no-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "test": 1,
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -38,19 +45,26 @@ Object {
       "components": Object {
         "ControlsTable": "21455c8d3b1413b6aaaa56c7ca6e1dde",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "addonControls": Object {
           "smart": false,
         },
         "component": "ControlsTable",
       },
+      "title": "Storybook/Blocks/ControlsTable",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/ControlsTable",
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -80,6 +94,7 @@ Object {
       "components": Object {
         "ControlsTable": "dec877e66c549940695c423429a5d00b",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "controls": Object {
           "name": Object {
@@ -90,13 +105,19 @@ Object {
           },
         },
       },
+      "title": "Storybook/Kind",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Kind",
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -124,13 +145,20 @@ Object {
   "kinds": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Storybook/Blocks/ControlsTable",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/with-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/ControlsTable",
+      "version": "1.0.1",
     },
   },
   "stories": Object {},

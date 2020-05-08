@@ -18,14 +18,9 @@ Object {
       "components": Object {
         "Button": "2855216c2faa4ab43ed978e3ff6743e4",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -37,6 +32,18 @@ import Button from '../components/BaseButton';
   <Button />
 </Story>",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/no-name.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
@@ -70,14 +77,9 @@ Object {
       "components": Object {
         "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -90,6 +92,18 @@ import Button from '../components/BaseButton';
 </Story>
 ",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/props-argument.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -155,12 +169,7 @@ Object {
         },
       },
       "name": "Button",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
-      },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
       "source": "import React from 'react';
 
@@ -176,14 +185,9 @@ export default Button;
       "components": Object {
         "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/story.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../../components/button-default-arrow-func';
@@ -196,6 +200,18 @@ import Button from '../../components/button-default-arrow-func';
 </Story>
 ",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/story.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -248,14 +264,9 @@ Object {
       "components": Object {
         "Button": "c63d685efb0c65f18ffc63184e852ef4",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -268,6 +279,18 @@ import Button from '../components/BaseButton';
 </Story>
 ",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/three-levels-alias.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -396,14 +419,9 @@ Object {
       "components": Object {
         "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -415,6 +433,18 @@ import Button from '../components/BaseButton';
   {({ name, age }) => <Button />}
 </Story>",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/tw0-levels-sub-arguments.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -509,14 +539,9 @@ Object {
       "components": Object {
         "Button": "fe664c2ffbbcacffdac896ace94db697",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -528,6 +553,18 @@ import Button from '../components/BaseButton';
   {(props, context) => <Button />}
 </Story>",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-arguments.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -607,14 +644,9 @@ Object {
       "components": Object {
         "Button": "0a73df5cffa26ca62ec534813a77384f",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
       "parameters": Object {
         "component": "Button",
-      },
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
       "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
 import Button from '../components/BaseButton';
@@ -626,6 +658,18 @@ import Button from '../components/BaseButton';
   {({ name: MyName, age }) => <Button />}
 </Story>",
       "title": "Storybook/MDX",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/mdx/stories/two-levels-alias.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.0.1",
     },
   },
   "stories": Object {

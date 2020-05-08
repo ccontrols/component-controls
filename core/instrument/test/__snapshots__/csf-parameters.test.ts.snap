@@ -12,13 +12,20 @@ Object {
       "components": Object {
         "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
       },
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/parameters/name-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -67,13 +74,20 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/parameters/name-parameters-and-controls.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -135,13 +149,20 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/parameters/story-property-name.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {

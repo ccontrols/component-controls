@@ -10,13 +10,20 @@ Object {
         "story1",
         "story2",
       ],
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Storybook/Blocks/EXCLUDEStoryArray",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-array.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/EXCLUDEStoryArray",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -56,13 +63,20 @@ Object {
     "Storybook/Blocks/ExcludeStoryRegex": Object {
       "components": Object {},
       "excludeStories": "story(2|3)",
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Storybook/Blocks/ExcludeStoryRegex",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/exclude-stories-regex.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/ExcludeStoryRegex",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -105,13 +119,20 @@ Object {
         "story1",
         "story2",
       ],
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Storybook/Blocks/IncludeStoryArray",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-array.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/IncludeStoryArray",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -167,13 +188,20 @@ Object {
     "Storybook/Blocks/IncludeStoryRegex": Object {
       "components": Object {},
       "includeStories": "story(2|3)",
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Storybook/Blocks/IncludeStoryRegex",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/exclude-stories/include-stories-regex.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Storybook/Blocks/IncludeStoryRegex",
+      "version": "1.0.1",
     },
   },
   "stories": Object {

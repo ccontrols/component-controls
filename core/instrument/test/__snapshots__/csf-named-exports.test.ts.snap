@@ -6,13 +6,20 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/export-alias.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -50,13 +57,20 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/property-name.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {
@@ -94,13 +108,20 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
+      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "title": "Story",
+    },
+  },
+  "packages": Object {
+    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "name": "@component-controls/instrument",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/named-exports/re-export-name.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
-        "name": "@component-controls/instrument",
       },
-      "title": "Story",
+      "version": "1.0.1",
     },
   },
   "stories": Object {},
