@@ -1,5 +1,6 @@
 export * from './BlockContainer';
 export * from './context';
+export * from './ComponentDeps';
 export * from './ComponentSource';
 export * from './ControlsTable';
 export * from './Description';

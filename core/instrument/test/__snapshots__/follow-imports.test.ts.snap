@@ -7,6 +7,7 @@ Object {
   "exportedAs": "ControlsTable",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "@component-controls/storybook",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
 }
 `;
@@ -16,6 +17,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
 }
 `;
@@ -26,6 +28,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
   "from": "../exports/cjs-named-export",
   "importedName": "Button",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
 }
 `;
@@ -35,6 +38,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
   "from": "",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
 }
 `;
@@ -44,6 +48,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
 }
 `;
@@ -53,6 +58,7 @@ Object {
   "exportedAs": "ControlsTable",
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "./button-from-node-nodules",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
 }
 `;
@@ -62,6 +68,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
 }
 `;
@@ -72,6 +79,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "default",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
 }
 `;
@@ -81,6 +89,7 @@ Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
 }
 `;
@@ -91,6 +100,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./",
   "importedName": "Button",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
 }
 `;
@@ -101,6 +111,7 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
   "from": "./button-default-export",
   "importedName": "namespace",
+  "imports": Object {},
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
 }
 `;

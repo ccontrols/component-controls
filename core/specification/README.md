@@ -43,14 +43,20 @@
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
+    -   [ImportName](#importname)
+    -   [Imports](#imports)
+    -   [PackageDependencies](#packagedependencies)
     -   [PackageInfo](#packageinfo)
     -   [PackageRepository](#packagerepository)
+    -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
+    -   [defaultExportName](#defaultexportname)
     -   [Configuration](#configuration)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [StoryArguments](#storyarguments-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
+    -   [PackageDependency](#packagedependency-1)
 
 # Overview
 
@@ -651,6 +657,7 @@ _defined in [@component-controls/specification/src/components.ts](https://github
 | -------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `from`         | string                             | imported from                                                                                                                                                                                                                              |
 | `importedName` | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
+| `imports`      | [Imports](#imports)                | list of external imports                                                                                                                                                                                                                   |
 | `info`         | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
 | `loc`          | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
 | `name*`        | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
@@ -684,7 +691,7 @@ _defined in [@component-controls/specification/src/components.ts](https://github
 
 given a component, return its name
 
-_defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L143)_
+_defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L147)_
 
 **function** getComponentName(`component`\*: any): string | undefined;
 
@@ -745,23 +752,57 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `column*` | number |             |
 | `line*`   | number |             |
 
-## PackageInfo
+## ImportName
 
-package.json
-information about the repository of the stories and components
+an import name
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L46)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L107)_
 
 
 
 ### properties
 
-| Name          | Type                                    | Description                                                                   |
-| ------------- | --------------------------------------- | ----------------------------------------------------------------------------- |
-| `fileHash*`   | string                                  | file name hash of package.json                                                |
-| `name`        | string                                  | package name                                                                  |
-| `repository*` | [PackageRepository](#packagerepository) | repository information extracted from the "repository" field in package.json. |
-| `version`     | string                                  | package version                                                               |
+| Name            | Type   | Description                                                           |
+| --------------- | ------ | --------------------------------------------------------------------- |
+| `importedName*` | string | alias imported as. If a default import, the string 'default' is here. |
+| `name*`         | string | the imported name from the import file                                |
+
+## Imports
+
+imports - library/file as key and the imported names as an array
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L121)_
+
+`key`\*: string: [ImportName](#importname)\[]
+
+## PackageDependencies
+
+list of dependencies - package name as the key and the version as the value
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L49)_
+
+`name`\*: string: [PackageDependency](#packagedependency)
+
+## PackageInfo
+
+package.json
+information about the repository of the stories and components
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L57)_
+
+
+
+### properties
+
+| Name               | Type                                        | Description                                                                   |
+| ------------------ | ------------------------------------------- | ----------------------------------------------------------------------------- |
+| `dependencies`     | [PackageDependencies](#packagedependencies) | extracted package.json 'dependencies' section                                 |
+| `devDependencies`  | [PackageDependencies](#packagedependencies) | extracted package.json 'devDependencies' section                              |
+| `fileHash*`        | string                                      | file name hash of package.json                                                |
+| `name`             | string                                      | package name                                                                  |
+| `peerDependencies` | [PackageDependencies](#packagedependencies) | extracted package.json 'peerDependencies' section                             |
+| `repository*`      | [PackageRepository](#packagerepository)     | repository information extracted from the "repository" field in package.json. |
+| `version`          | string                                      | package version                                                               |
 
 ## PackageRepository
 
@@ -779,11 +820,19 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `docs`   | string | link for project readme                 |
 | `issues` | string | link for filing issues with the project |
 
+## PackageDependency
+
+dependecy string - the package version number
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L44)_
+
+string
+
 ## StoryRenderFn
 
 story render function
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L72)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L98)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -794,6 +843,12 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `controlValues*` | \[key: string]: any |             |
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
+
+## defaultExportName
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L103)_
+
+
 
 ## Configuration
 
@@ -815,7 +870,7 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 story render function
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L72)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L98)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -853,5 +908,13 @@ _defined in [@component-controls/specification/src/controls.ts](https://github.c
 _defined in [@component-controls/specification/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/components.ts#L3)_
 
 'any' | 'boolean' | 'number' | 'string' | 'array' | 'object' | 'enum' | 'union' | 'literal' | 'symbol' | 'function' | string
+
+## PackageDependency
+
+dependecy string - the package version number
+
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L44)_
+
+string
 
 <!-- END-TSDOC-TYPESCRIPT -->

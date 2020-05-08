@@ -44,7 +44,7 @@ export const extractComponent = async (
       name: componentName,
       from: follow.from,
       request: follow.filePath,
-
+      imports: follow.imports,
       importedName: follow.importedName,
     };
     if (components?.storeSourceFile) {

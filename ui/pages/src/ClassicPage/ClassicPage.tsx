@@ -9,6 +9,7 @@ import {
   Playground,
   Stories,
   Description,
+  ComponentDeps,
   ComponentSource,
   PropsTable,
   PackageVersion,
@@ -18,7 +19,7 @@ export const ClassicPage: FC = () => {
   return (
     <div>
       <EditPage />
-      <Title sxStyle={{ paddingBottom: 0 }} />
+      <Title sxStyle={{ paddingBottom: 1 }} />
       <Subtitle />
       <PackageVersion />
       <Box
@@ -32,6 +33,7 @@ export const ClassicPage: FC = () => {
         <Story id="." />
       </Playground>
       <PropsTable of="." title="Properties" />
+      <ComponentDeps id="." title="External dependencies" />
       <Stories dark={true} />
     </div>
   );

@@ -6,6 +6,14 @@ Object {
     "ceea0565a65f75c8c7b6b355d6d335ac": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
@@ -36,12 +44,28 @@ Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
     "dc262d21cd7820523c7e0bacca461e87": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
@@ -101,12 +125,28 @@ Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
       "name": "Button",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
     "dc262d21cd7820523c7e0bacca461e87": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
       "name": "ArrowButton",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },

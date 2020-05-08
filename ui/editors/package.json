@@ -36,6 +36,7 @@
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
+    "@primer/octicons-react": "^9.6.0",
     "react": "^16.8.3",
     "react-color": "^2.17.0",
     "react-dom": "^16.8.3",
@@ -52,6 +53,7 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
+    "@primer/octicons-react": "*",
     "react": "*",
     "react-dom": "*"
   },

@@ -4,7 +4,7 @@ import * as parser from '@babel/parser';
 import * as path from 'path';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
-import { CodeLocation } from '@component-controls/specification';
+import { CodeLocation, Imports } from '@component-controls/specification';
 import { ImportTypes, traverseImports } from './extract-imports';
 import {
   traverseExports,
@@ -23,6 +23,7 @@ export interface FollowImportType {
   loc?: CodeLocation;
   source?: string;
   imported?: string;
+  imports?: Imports;
 }
 
 export const followImports = (
@@ -45,6 +46,9 @@ export const followImports = (
   const ast: any = initialAST || parser.parse(source, parserOptions);
   const baseImportedName = importName.split('.')[0];
 
+  const imports: ImportTypes = {};
+  traverse(ast, traverseImports(imports));
+
   const exports: ExportTypes = {
     named: {},
   };
@@ -66,6 +70,30 @@ export const followImports = (
         result.loc = findExport.loc;
         result.source = source ? source : undefined;
       }
+      const externalImports = Object.keys(imports)
+        .filter(key => !imports[key].from.startsWith('.'))
+        .reduce(
+          (
+            acc: {
+              [key: string]: {
+                name: string;
+                importedName: string;
+              }[];
+            },
+            key,
+          ) => {
+            const { name, from, importedName } = imports[key];
+            if (acc[from]) {
+              return {
+                ...acc,
+                [from]: [...acc[from], { name, importedName }],
+              };
+            }
+            return { ...acc, [from]: [{ name, importedName }] };
+          },
+          {},
+        );
+      result.imports = externalImports;
       return result;
     } else {
       const resolvedFilePath = resolve.sync(findExport.from, {
@@ -106,8 +134,6 @@ export const followImports = (
   if (foundInExportAll) {
     return foundInExportAll;
   }
-  const imports: ImportTypes = {};
-  traverse(ast, traverseImports(imports));
 
   const findImport = imports[baseImportedName];
   if (findImport) {
@@ -122,17 +148,18 @@ export const followImports = (
         undefined,
         options,
       );
-      return imported
-        ? {
-            ...imported,
-            importedName: findImport.importedName,
-            from: findImport.from,
-          }
-        : {
-            exportedAs: findImport.importedName,
-            importedName: findImport.importedName,
-            from: findImport.from,
-          };
+      if (imported) {
+        return {
+          ...imported,
+          importedName: findImport.importedName,
+          from: findImport.from,
+        };
+      }
+      return {
+        exportedAs: findImport.importedName,
+        importedName: findImport.importedName,
+        from: findImport.from,
+      };
     } catch (e) {
       //non-existing file
       return {

@@ -39,6 +39,17 @@ export interface PackageRepository {
 }
 
 /**
+ * dependecy string - the package version number
+ */
+export type PackageDependency = string;
+
+/**
+ * list of dependencies - package name as the key and the version as the value
+ */
+export interface PackageDependencies {
+  [name: string]: PackageDependency;
+}
+/**
  * package.json
  * information about the repository of the stories and components
  *
@@ -59,6 +70,21 @@ export interface PackageInfo {
   version?: string;
 
   /**
+   * extracted package.json 'dependencies' section
+   */
+  dependencies?: PackageDependencies;
+
+  /**
+   * extracted package.json 'devDependencies' section
+   */
+  devDependencies?: PackageDependencies;
+
+  /**
+   * extracted package.json 'peerDependencies' section
+   */
+  peerDependencies?: PackageDependencies;
+
+  /**
    * repository information extracted from the "repository" field in package.json.
    */
   repository: PackageRepository;
@@ -73,3 +99,25 @@ export type StoryRenderFn = (
   controlValues: { [key: string]: any },
   context?: any,
 ) => any;
+
+export const defaultExportName = 'default';
+/**
+ * an import name
+ */
+export interface ImportName {
+  /**
+   * the imported name from the import file
+   */
+  name: string;
+  /**
+   * alias imported as. If a default import, the string 'default' is here.
+   */
+  importedName: string;
+}
+
+/**
+ * imports - library/file as key and the imported names as an array
+ */
+export interface Imports {
+  [key: string]: ImportName[];
+}

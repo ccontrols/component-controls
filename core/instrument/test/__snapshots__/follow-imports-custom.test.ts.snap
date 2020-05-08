@@ -6,6 +6,30 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/editors/src/BooleanEditor/BooleanEditor.tsx",
   "from": "./BooleanEditor",
   "importedName": "BooleanEditor",
+  "imports": Object {
+    "@component-controls/components": Array [
+      Object {
+        "importedName": "Toggle",
+        "name": "Toggle",
+      },
+    ],
+    "@component-controls/specification": Array [
+      Object {
+        "importedName": "ComponentControlBoolean",
+        "name": "ComponentControlBoolean",
+      },
+      Object {
+        "importedName": "ControlTypes",
+        "name": "ControlTypes",
+      },
+    ],
+    "react": Array [
+      Object {
+        "importedName": "default",
+        "name": "React",
+      },
+    ],
+  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/editors/src/BooleanEditor/BooleanEditor.tsx",
 }
 `;
@@ -16,6 +40,30 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.tsx",
   "from": "./Markdown",
   "importedName": "Markdown",
+  "imports": Object {
+    "markdown-to-jsx": Array [
+      Object {
+        "importedName": "default",
+        "name": "MarkdownToJSX",
+      },
+      Object {
+        "importedName": "MarkdownOptions",
+        "name": "MarkdownOptions",
+      },
+    ],
+    "react": Array [
+      Object {
+        "importedName": "FC",
+        "name": "FC",
+      },
+    ],
+    "theme-ui": Array [
+      Object {
+        "importedName": "jsx",
+        "name": "jsx",
+      },
+    ],
+  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.tsx",
 }
 `;
@@ -26,6 +74,28 @@ Object {
   "filePath": "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.tsx",
   "from": "./",
   "importedName": "Title",
+  "imports": Object {
+    "@component-controls/components": Array [
+      Object {
+        "importedName": "Title",
+        "name": "TitleBlock",
+      },
+      Object {
+        "importedName": "TitleProps",
+        "name": "TitlePropsBase",
+      },
+    ],
+    "react": Array [
+      Object {
+        "importedName": "default",
+        "name": "React",
+      },
+      Object {
+        "importedName": "FC",
+        "name": "FC",
+      },
+    ],
+  },
   "originalFilePath": "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.tsx",
 }
 `;

@@ -4,6 +4,8 @@
 -   [List of components](#list-of-components)
     -   [<ins>ComponentsBlockContainer</ins>](#inscomponentsblockcontainerins)
     -   [<ins>StoryBlockContainer</ins>](#insstoryblockcontainerins)
+    -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
+    -   [<ins>Dependencies</ins>](#insdependenciesins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
@@ -72,6 +74,37 @@ _StoryBlockContainer [source code](https:/github.com/ccontrols/component-control
 | `description`         | _string_            | optional markdown description.                                                                                                  |
 | `collapsible`         | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`             | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+
+## <ins>ComponentDeps</ins>
+
+Displays external dependencies for a component
+
+_ComponentDeps [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/ComponentDeps.tsx)_
+
+### properties
+
+| Name                    | Type                                                           | Description                                                                                                                                                                                                                                                                                        |
+| ----------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`              | _(name: string, component: StoryComponent) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `visibleOnControlsOnly` | _boolean_                                                      | set to true if you need the blockto be visible even if only controls are available                                                                                                                                                                                                                 |
+| `of`                    | _any_                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `title`                 | _string_                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description`           | _string_                                                       | optional markdown description.                                                                                                                                                                                                                                                                     |
+| `id`                    | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible`           | _boolean_                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`               | _SystemStyleObject_                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+
+## <ins>Dependencies</ins>
+
+table component to display a list of dependencies
+
+_Dependencies [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ComponentDeps/Dependencies.tsx)_
+
+### properties
+
+| Name            | Type            | Description                     |
+| --------------- | --------------- | ------------------------------- |
+| `dependencies*` | _Dependency\[]_ | list of dependencies to display |
 
 ## <ins>ComponentSource</ins>
 

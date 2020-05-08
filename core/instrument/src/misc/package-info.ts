@@ -100,12 +100,21 @@ export const packageInfo = async (
             )
             .replace('{committish}', templates.committish || 'master');
         };
-        const { name, version } = packageJSON;
+        const {
+          name,
+          version,
+          dependencies,
+          devDependencies,
+          peerDependencies,
+        } = packageJSON;
         const result: PackageInfo = {
           fileHash: hashStoreId(fileName),
           name,
           version,
           repository: {},
+          dependencies,
+          devDependencies,
+          peerDependencies,
         };
         const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
         if (storeBrowseLink) {

@@ -5,6 +5,55 @@ import { Donut, Button, Heading } from 'theme-ui';
 import { MDXContent } from './MDXStory';
 
 export const store: StoriesStore = {
+  packages: {
+    'test-package': {
+      fileHash: '28feb04b2447384a0bd648387e62bbc7',
+      name: '@component-controls/blocks',
+      version: '1.0.3',
+      repository: {
+        browse:
+          'https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx',
+        docs:
+          'https://github.com/ccontrols/component-controls/tree/master#readme',
+        issues: 'https://github.com/ccontrols/component-controls/issues',
+      },
+      dependencies: {
+        '@component-controls/components': '^1.0.1',
+        '@component-controls/core': '^1.0.1',
+        '@component-controls/editors': '^1.0.1',
+        '@component-controls/specification': '^1.0.1',
+        '@component-controls/store': '^1.0.3',
+        '@mdx-js/react': '^1.5.8',
+        '@primer/octicons-react': '^9.6.0',
+        '@storybook/csf': '^0.0.1',
+        'copy-to-clipboard': '^3.2.1',
+        global: '^4.3.2',
+        'js-string-escape': '^1.0.1',
+        react: '^16.8.3',
+        'react-dom': '^16.8.3',
+        'react-table': '^7.0.0',
+        'stringify-object': '^3.3.0',
+        'theme-ui': '^0.3.1',
+      },
+      devDependencies: {
+        '@theme-ui/presets': '^0.3.0',
+        '@types/jest': '^25.1.2',
+        '@types/mdx-js__react': '^1.5.1',
+        '@types/stringify-object': '^3.2.0',
+        '@types/theme-ui': '^0.3.0',
+        'cross-env': '^5.2.1',
+        eslint: '^6.5.1',
+        jest: '^24.9.0',
+      },
+      peerDependencies: {
+        '@primer/octicons-react': '*',
+        react: '*',
+        'react-dom': '*',
+        'react-table': '*',
+        'theme-ui': '*',
+      },
+    },
+  },
   components: {
     '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js': {
       from: '../../components/button-default-arrow-func',
@@ -12,6 +61,25 @@ export const store: StoriesStore = {
       name: 'ArrowButton',
       request:
         '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
+      imports: {
+        react: [
+          {
+            name: 'React',
+            importedName: 'default',
+          },
+          {
+            name: 'FC',
+            importedName: 'FC',
+          },
+        ],
+        '@component-controls/components': [
+          {
+            name: 'Table',
+            importedName: 'Table',
+          },
+        ],
+      },
+      package: 'test-package',
     },
     '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js': {
       from: '../../components/button-named-arrow-func',

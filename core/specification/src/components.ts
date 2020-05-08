@@ -1,4 +1,4 @@
-import { CodeLocation } from './utility';
+import { CodeLocation, Imports } from './utility';
 
 export type TypeValue =
   | 'any'
@@ -135,6 +135,10 @@ export interface StoryComponent {
    * docgen generated component info
    */
   info?: ComponentInfo;
+  /**
+   * list of external imports
+   */
+  imports?: Imports;
 }
 /**
  * given a component, return its name
