@@ -23,7 +23,12 @@ export const Subtitle: FC<SubtitleProps> = ({
   as = 'h3',
   ...rest
 }) => (
-  <Heading as={as} color="fadedText" css={{ fontWeight: 400 }} {...rest}>
+  <Heading
+    as={as}
+    color="fadedText"
+    css={{ fontWeight: 400, paddingBottom: 2 }}
+    {...rest}
+  >
     {children}
   </Heading>
 );

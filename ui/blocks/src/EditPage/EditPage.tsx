@@ -12,7 +12,7 @@ import { useStoryContext } from '../context';
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
 export const EditPage: FC = () => {
-  const { storyPackage } = useStoryContext({ id: '.', name });
+  const { storyPackage } = useStoryContext({ id: '.' });
   return storyPackage &&
     storyPackage.repository &&
     storyPackage.repository.browse ? (
