@@ -10,7 +10,7 @@ import {
   ComponentsBlockContainerProps,
 } from '../BlockContainer/components/ComponentsBlockContainer';
 
-import { SinglePropsTable } from './SinglePropsTable';
+import { BasePropsTable } from './BasePropsTable';
 
 export interface PropsTableOwnProps {
   /**
@@ -29,7 +29,7 @@ export const PropsTable: FC<PropsTableProps> = ({
   return (
     <ComponentsBlockContainer visibleOnControlsOnly={true} {...props}>
       {(component, { story }, tableProps) => (
-        <SinglePropsTable
+        <BasePropsTable
           component={component}
           story={story}
           extraColumns={extraColumns}

@@ -1,11 +1,13 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled, Box } from 'theme-ui';
-import { FC, useContext, useMemo } from 'react';
+import { FC, useContext, useMemo, MouseEvent, useState } from 'react';
+import { window } from 'global';
+import jsStringEscape from 'js-string-escape';
+import copy from 'copy-to-clipboard';
 import {
   Story,
   StoryComponent,
-  ComponentControls,
   ComponentControl,
   PropType,
 } from '@component-controls/specification';
@@ -17,6 +19,7 @@ import {
   Markdown,
   ActionContainer,
   Tag,
+  ActionItems,
 } from '@component-controls/components';
 import {
   getPropertyEditor,
@@ -34,7 +37,7 @@ interface PropRow {
   control: ComponentControl;
 }
 
-export interface SinglePropsTableProps {
+export interface BasePropsTableProps {
   story?: Story;
   component?: StoryComponent;
   extraColumns: Column[];
@@ -44,7 +47,7 @@ export interface SinglePropsTableProps {
 type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
-export const SinglePropsTable: FC<SinglePropsTableProps> = ({
+export const BasePropsTable: FC<BasePropsTableProps> = ({
   story,
   component,
   extraColumns,
@@ -52,11 +55,12 @@ export const SinglePropsTable: FC<SinglePropsTableProps> = ({
 }) => {
   const { setControlValue, clickControl } = useContext(BlockControlsContext);
   const { info = { props: undefined } } = component || {};
-  const { controls = {} } = story || {};
-  const propControls: ComponentControls = visibleControls(controls);
+  const { controls: storyControls = {} } = story || {};
+  const controls = visibleControls(storyControls);
   // check if we should display controls in the PrpsTable
   // at least one control's name should exist as a property name
-  const hasControls = !!Object.keys(propControls).length;
+  const hasControls = !!Object.keys(controls).length;
+  const propControls = { ...controls };
   const { columns, rows, groupProps } = useMemo(() => {
     const parents = new Set();
     const keys = info.props ? Object.keys(info.props) : [];
@@ -72,7 +76,16 @@ export const SinglePropsTable: FC<SinglePropsTableProps> = ({
       parents.add(parentName);
       return {
         name: key,
-        prop: { ...prop, description, label, parentName, required },
+        prop: {
+          ...prop,
+          type: {
+            label,
+            required,
+            ...prop.type,
+          },
+          description: description ?? prop.description,
+          parentName,
+        },
         control,
       };
     });
@@ -287,16 +300,51 @@ export const SinglePropsTable: FC<SinglePropsTableProps> = ({
       <Table {...groupProps} {...tableProps} columns={columns} data={rows} />
     </ConrolsContextProvider>
   );
-  const controlsActions = useControlsActions({
-    controls,
-    setControlValue,
-    storyId: story?.id,
+  const actions: ActionItems = [];
+  const [copied, setCopied] = useState(false);
+  const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
+    const quotedValue = (value: string) => `"${jsStringEscape(value)}"`;
+    e.preventDefault();
+    const csvRows = rows
+      .map(row => {
+        const r = [
+          quotedValue(row.name),
+          quotedValue(row.prop.type.raw ?? row.prop.type.name),
+          quotedValue(row.prop.defaultValue ?? ''),
+          quotedValue(row.prop.description ?? ''),
+        ];
+        if (hasControls) {
+          const value = row.control?.value;
+          if (Array.isArray(value) || typeof value === 'object') {
+            r.push(quotedValue(JSON.stringify(value)));
+          } else {
+            r.push(quotedValue((value as string) ?? ''));
+          }
+        }
+        return r.join(',');
+      })
+      .join('\n');
+    setCopied(true);
+    copy(csvRows);
+    window.setTimeout(() => setCopied(false), 1500);
+  };
+  actions.push({
+    title: copied ? 'copied' : 'copy table',
+    onClick: onCopy,
+    id: 'copy_table',
+    'aria-label': 'copy table as csv',
   });
-  if (!hasControls) {
-    return table;
-  }
+
+  actions.push.apply(
+    actions,
+    useControlsActions({
+      controls,
+      setControlValue,
+      storyId: story?.id,
+    }),
+  );
   return (
-    <ActionContainer actions={controlsActions}>
+    <ActionContainer actions={actions}>
       <Box
         sx={{
           pt: 4,

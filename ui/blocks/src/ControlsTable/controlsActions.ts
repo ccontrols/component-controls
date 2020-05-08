@@ -40,19 +40,22 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
   };
   return [
     {
-      title: copied ? 'copied' : 'copy',
+      title: copied ? 'values copied' : 'copy values',
       onClick: onCopy,
-      id: 'copy',
+      group: 'controls',
+      id: 'copy_controls',
       'aria-label': 'copy control values',
     },
     {
       title: 'reset',
       onClick: onReset,
+      group: 'controls',
       id: 'reset',
       'aria-label': 'reset control values to their initial value',
     },
     {
       title: 'randomize',
+      group: 'controls',
       onClick: () => {
         if (setControlValue && controls && storyId) {
           setControlValue(storyId, undefined, randomizeData(controls));

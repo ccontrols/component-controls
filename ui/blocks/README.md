@@ -36,7 +36,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,SinglePropsTable.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 

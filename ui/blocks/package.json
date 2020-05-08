@@ -40,6 +40,7 @@
     "@storybook/csf": "^0.0.1",
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
+    "js-string-escape": "^1.0.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-table": "^7.0.0",
