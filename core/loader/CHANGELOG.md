@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
+
+
+### Features
+
+* copy table added to props table ([6b91c0a](https://github.com/ccontrols/component-controls/commit/6b91c0a7113ba12bf5f15db6164b7a8179dd4b4e))
+
+
+
+
+
 ## [1.0.3](https://github.com/ccontrols/component-controls/compare/v1.0.2...v1.0.3) (2020-04-28)
 
 **Note:** Version bump only for package @component-controls/loader

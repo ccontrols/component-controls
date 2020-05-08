@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.0.1",
+  "version": "1.1.0",
   "name": "component-controls-stories",
   "license": "MIT",
   "repository": {
@@ -8,5 +8,4 @@
     "url": "https://github.com/ccontrols/component-controls.git",
     "directory": "examples/stories"
   }
-
 }

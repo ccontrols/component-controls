@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
+
+
+### Features
+
+* add external dependencies block ([86f09a5](https://github.com/ccontrols/component-controls/commit/86f09a5f103a8df1b02503be8641eb0671a23e24))
+* add per story description, supports markdown ([578d820](https://github.com/ccontrols/component-controls/commit/578d8204c192947e5b286992b41aa667652a5e83))
+* array structured control editor ([1608bb7](https://github.com/ccontrols/component-controls/commit/1608bb7f9e82a713c755ea4dfff86e8ed3d9b2f1))
+* config package to read configuration files ([bbd06f7](https://github.com/ccontrols/component-controls/commit/bbd06f7fa9f73b17303a204896d0eeaf6feab1a7))
+* enhance object controls handling, merging ([62366e4](https://github.com/ccontrols/component-controls/commit/62366e405fc254b30d293fd68d24ee6adb9e0858))
+* props table featured controls with actions ([fc9a8f7](https://github.com/ccontrols/component-controls/commit/fc9a8f7d83e400d534305c978247a93a2d73174d))
+
+
+
+
+
 ## [1.0.1](https://github.com/ccontrols/component-controls/compare/v0.9.0...v1.0.1) (2020-04-26)
 
 **Note:** Version bump only for package @component-controls/specification

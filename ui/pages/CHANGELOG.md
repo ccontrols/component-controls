@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
+
+
+### Features
+
+* add external dependencies block ([86f09a5](https://github.com/ccontrols/component-controls/commit/86f09a5f103a8df1b02503be8641eb0671a23e24))
+* edit this page block, add to classic page ([4865e70](https://github.com/ccontrols/component-controls/commit/4865e70d68e9d64248da7c0442feb8d7336c234e))
+* package version block ([3bbe093](https://github.com/ccontrols/component-controls/commit/3bbe093b343c2a4d0cc61e5c21a6dbd1aa2bb077))
+* props table featured controls with actions ([fc9a8f7](https://github.com/ccontrols/component-controls/commit/fc9a8f7d83e400d534305c978247a93a2d73174d))
+
+
+
+
+
 ## [1.0.3](https://github.com/ccontrols/component-controls/compare/v1.0.2...v1.0.3) (2020-04-28)
 
 **Note:** Version bump only for package @component-controls/pages

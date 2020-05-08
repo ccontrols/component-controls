@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
+
+
+### Bug Fixes
+
+* block container id when using '.' for id ([8cb87bf](https://github.com/ccontrols/component-controls/commit/8cb87bfb0c5b685af9ee49f81d634d23e63e421e))
+* remove .log ([9efcd6a](https://github.com/ccontrols/component-controls/commit/9efcd6abc4bb4eb3c72786a080b24c17bee9e222))
+* table group row css adjustments ([b567c32](https://github.com/ccontrols/component-controls/commit/b567c32bba154452d75587d52842320824b23fe4))
+
+
+### Features
+
+* add per story description, supports markdown ([578d820](https://github.com/ccontrols/component-controls/commit/578d8204c192947e5b286992b41aa667652a5e83))
+* added Tag component ([e9c6691](https://github.com/ccontrols/component-controls/commit/e9c66919dd84a74472d0065fc044df24af09a69b))
+* array structured control editor ([1608bb7](https://github.com/ccontrols/component-controls/commit/1608bb7f9e82a713c755ea4dfff86e8ed3d9b2f1))
+* package version block ([3bbe093](https://github.com/ccontrols/component-controls/commit/3bbe093b343c2a4d0cc61e5c21a6dbd1aa2bb077))
+* props table featured controls with actions ([fc9a8f7](https://github.com/ccontrols/component-controls/commit/fc9a8f7d83e400d534305c978247a93a2d73174d))
+* use tags in PropsTable ([737aac6](https://github.com/ccontrols/component-controls/commit/737aac65d45f9b978204f1087a762c543a9c9f3e))
+
+
+
+
+
 ## [1.0.1](https://github.com/ccontrols/component-controls/compare/v0.9.0...v1.0.1) (2020-04-26)
 
 **Note:** Version bump only for package @component-controls/components
