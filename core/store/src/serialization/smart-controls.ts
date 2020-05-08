@@ -2,7 +2,7 @@ import {
   ComponentControls,
   Story,
   StoriesKind,
-  StoryComponent,
+  StoryComponents,
   getComponentName,
 } from '@component-controls/specification';
 import { controlsFromProps } from '@component-controls/core';
@@ -10,7 +10,7 @@ import { controlsFromProps } from '@component-controls/core';
 export const addSmartControls = (
   story: Story,
   kind: StoriesKind,
-  components: { [key: string]: StoryComponent },
+  components: StoryComponents,
 ): ComponentControls | null => {
   if (!story.arguments || story.arguments.length < 1) {
     //story has no arguments

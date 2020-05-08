@@ -1,14 +1,37 @@
-import { StoriesStore } from '@component-controls/specification';
+import {
+  StoriesStore,
+  StoryComponents,
+  StoryPackages,
+} from '@component-controls/specification';
 
-export const store: {
+export interface LoadingStore {
   /**
-   * unique has for a store
+   * global store of packages
    */
-  stores: StoriesStore[];
-} = {
+  packages: StoryPackages;
+  /**
+   * global store of components
+   */
+  components: StoryComponents;
+  /**
+   * stores, loaded from each .stories.* file
+   */
+  stores: Pick<StoriesStore, 'stories' | 'kinds'>[];
+}
+export const store: LoadingStore = {
   stores: [],
+  components: {},
+  packages: {},
 };
 
 export const addStoriesKind = async (added: StoriesStore) => {
-  store.stores.push(added);
+  const { components, packages, stories, kinds } = added;
+  Object.keys(components).forEach(key => {
+    store.components[key] = components[key];
+  });
+  Object.keys(packages).forEach(key => {
+    store.packages[key] = packages[key];
+  });
+
+  store.stores.push({ stories, kinds });
 };

@@ -3,6 +3,8 @@ import {
   StoriesStore,
   Story,
   deepMerge,
+  StoryComponents,
+  StoryPackages,
 } from '@component-controls/specification';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { addSmartControls } from './smart-controls';
@@ -16,7 +18,15 @@ export const loadStoryStore = (): StoriesStore | undefined => {
   const store = require('@component-controls/loader/story-store-data.js');
   if (store) {
     try {
-      const { stores }: { stores: StoriesStore[] } = store;
+      const {
+        stores,
+        packages: loadedPackages,
+        components: loadedComponents,
+      }: {
+        stores: Pick<StoriesStore, 'stories' | 'kinds'>[];
+        packages: StoryPackages;
+        components: StoryComponents;
+      } = store;
 
       if (stores) {
         const globalStore: StoriesStore = {
@@ -48,7 +58,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
                 const smartControls = addSmartControls(
                   story,
                   kind,
-                  store.components,
+                  loadedComponents,
                 );
                 if (smartControls) {
                   story.controls = deepMerge(
@@ -70,16 +80,12 @@ export const loadStoryStore = (): StoriesStore | undefined => {
                   };
                 }
               });
-              Object.keys(store.components).forEach(key => {
-                globalStore.components[key] = store.components[key];
-              });
-              Object.keys(store.packages).forEach(key => {
-                globalStore.packages[key] = store.packages[key];
-              });
             });
           }
         });
         storyStore = globalStore;
+        storyStore.packages = loadedPackages;
+        storyStore.components = loadedComponents;
       }
     } catch (e) {
       console.error(e);

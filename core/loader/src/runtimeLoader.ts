@@ -46,5 +46,6 @@ ${storeConst}
 ${loadStories}
 ${exports}
 `;
+
   return newContent;
 };
