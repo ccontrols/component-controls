@@ -41,16 +41,29 @@ export const StoryConfig: FC<StoryConfigProps> = props => {
             onClick: onShowFileSource,
           });
         }
-        const { loc, renderFn, source, arguments: storyArgs, ...other } =
-          story || {};
-        return Object.keys(other).length ? (
+        const {
+          loc,
+          renderFn,
+          source,
+          //@ts-ignore
+          moduleId,
+          arguments: storyArgs,
+          parameters,
+          ...restStory
+        } = story || {};
+        const { storySource, ...restParameters } = parameters || {};
+        if (restParameters && Object.keys(restParameters).length) {
+          //@ts-ignore
+          restStory.parameters = restParameters;
+        }
+        return Object.keys(restStory).length ? (
           <Source
             dark={dark}
             language="json"
             {...sourceProps}
             actions={allActions}
           >
-            {JSON.stringify(other, null, 2)}
+            {JSON.stringify(restStory, null, 2)}
           </Source>
         ) : null;
       }}
