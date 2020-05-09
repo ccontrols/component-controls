@@ -9,7 +9,6 @@ module.exports = {
       name: '@component-controls/storybook',
       options: {
         pages: [],
-        controlsPanel: false,
       }
     },
     {
