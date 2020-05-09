@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
-import { Flex } from 'theme-ui';
+import { Flex, Box } from 'theme-ui';
 import { ImportName } from '@component-controls/specification';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
@@ -48,15 +48,16 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
             original: { name, packageName, version },
           },
         }: any) => {
+          const el = <Box css={{ whiteSpace: 'nowrap' }}>{name}</Box>;
           if (!packageName) {
-            return name;
+            return el;
           }
           const baseVersion = version.replace(/[\^=~]/, '');
           return (
             <ExternalLink
               href={`https://npmjs.com/package/${packageName}/v/${baseVersion}`}
             >
-              {name}
+              {el}
             </ExternalLink>
           );
         },
