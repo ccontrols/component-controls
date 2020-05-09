@@ -1,10 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
 import { Flex } from 'theme-ui';
-import {
-  ImportName,
-  defaultExportName,
-} from '@component-controls/specification';
+import { ImportName, defaultExport } from '@component-controls/specification';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
 export interface Dependency {
@@ -75,9 +72,9 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
           >
             {value
               .sort((a, b) => {
-                if (a.importedName === defaultExportName) {
+                if (a.importedName === defaultExport) {
                   return -1;
-                } else if (b.importedName === defaultExportName) {
+                } else if (b.importedName === defaultExport) {
                   return 1;
                 }
                 if (a.importedName > b.importedName) {
@@ -91,16 +88,14 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
                 <Tag
                   key={`${v.name}`}
                   color={
-                    v.importedName === defaultExportName ? 'green' : 'lightgrey'
+                    v.importedName === defaultExport ? 'green' : 'lightgrey'
                   }
                   sxStyle={{
                     mr: 1,
                     mb: 1,
                   }}
                 >
-                  {v.importedName === defaultExportName
-                    ? v.name
-                    : v.importedName}
+                  {v.importedName === defaultExport ? v.name : v.importedName}
                 </Tag>
               ))}
           </Flex>

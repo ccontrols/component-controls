@@ -7,7 +7,7 @@ import {
   ComponentControlArray,
 } from '@component-controls/specification';
 import deepmerge from 'deepmerge';
-const faker = require('faker/locale/en_US');
+import { faker } from './faker';
 
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];

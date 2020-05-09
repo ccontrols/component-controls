@@ -20,7 +20,7 @@ module.exports = {
       ...config,
       plugins: [
         ...config.plugins,
-        // new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' })
+        new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' })
       ]
     };
   },

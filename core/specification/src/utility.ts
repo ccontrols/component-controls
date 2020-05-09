@@ -100,7 +100,7 @@ export type StoryRenderFn = (
   context?: any,
 ) => any;
 
-export const defaultExportName = 'default';
+export const defaultExport = 'default';
 /**
  * an import name
  */

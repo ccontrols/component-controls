@@ -50,7 +50,7 @@
     -   [PackageRepository](#packagerepository)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
-    -   [defaultExportName](#defaultexportname)
+    -   [defaultExport](#defaultexport)
     -   [Configuration](#configuration)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [StoryArguments](#storyarguments-1)
@@ -844,7 +844,7 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
 
-## defaultExportName
+## defaultExport
 
 _defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L103)_
 

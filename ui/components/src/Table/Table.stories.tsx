@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@component-controls/core';
 import { Table } from './Table';
 import { ThemeProvider } from '../ThemeContext';
 
