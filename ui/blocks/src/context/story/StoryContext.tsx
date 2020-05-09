@@ -43,7 +43,7 @@ export interface StoryContextProps {
   /**
    * package.json info
    */
-  storyPackage?: PackageInfo;
+  kindPackage?: PackageInfo;
 }
 
 /**
@@ -68,13 +68,13 @@ export const useStoryContext = ({
     story?: Story;
     kind?: StoriesKind;
     component?: StoryComponent;
-    storyPackage?: PackageInfo;
+    kindPackage?: PackageInfo;
   }>(getStoryData(storyId));
 
   const updateData = (updateId?: string) => {
     if (!updateId || updateId === storyId) {
-      const { story, kind, component, storyPackage } = getStoryData(storyId);
-      setData({ story, kind, component, storyPackage });
+      const { story, kind, component, kindPackage } = getStoryData(storyId);
+      setData({ story, kind, component, kindPackage });
     }
   };
 
@@ -96,7 +96,7 @@ export const useStoryContext = ({
     story: data.story,
     kind: data.kind,
     component: data.component,
-    storyPackage: data.storyPackage,
+    kindPackage: data.kindPackage,
     options,
   };
 };

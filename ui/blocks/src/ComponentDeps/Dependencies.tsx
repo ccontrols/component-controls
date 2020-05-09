@@ -1,9 +1,10 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
 import { Flex } from 'theme-ui';
-import { ImportName, defaultExport } from '@component-controls/specification';
+import { ImportName } from '@component-controls/specification';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
+const defaultExport = 'default';
 export interface Dependency {
   /**
    * import name (can include /dist/ folders)

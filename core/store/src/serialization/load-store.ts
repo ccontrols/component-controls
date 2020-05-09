@@ -52,6 +52,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
                   components,
                   excludeStories,
                   includeStories,
+                  package: kindPackage,
                   ...rest
                 } = kind;
                 Object.assign(story, deepMerge(rest, story));

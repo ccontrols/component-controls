@@ -59,11 +59,11 @@ export const StorySource: FC<StorySourceProps> = ({
         const onMergeValues = () => setViewStyle(ViewStyleNext[viewStyle]);
         const onShowFileSource = () => setShowFileSource(!showFileSource);
 
-        const { story, kind, storyPackage } = context;
+        const { story, kind, kindPackage } = context;
         const { controls } = story || {};
         const { dark } = useContext(ThemeContext);
         const allActions: ActionItem[] = [];
-        const repositoryItems = repositoryActions(storyPackage);
+        const repositoryItems = repositoryActions(kindPackage);
         if (repositoryItems) {
           allActions.push.apply(allActions, repositoryItems);
         }

@@ -22,7 +22,7 @@ export interface BlockDataContextProps {
     story?: Story;
     kind?: StoriesKind;
     component?: StoryComponent;
-    storyPackage?: PackageInfo;
+    kindPackage?: PackageInfo;
     componentPackage?: PackageInfo;
   };
 
@@ -82,13 +82,13 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         componentName && kind && kind.components[componentName]
           ? store.components[kind.components[componentName]]
           : undefined;
-      const storyPackage =
+      const kindPackage =
         kind && kind.package ? store.packages[kind.package] : undefined;
       const componentPackage =
         component && component.package
           ? store.packages[component.package]
           : undefined;
-      return { story, kind, component, storyPackage, componentPackage };
+      return { story, kind, component, kindPackage, componentPackage };
     }
     return {};
   };

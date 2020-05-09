@@ -107,7 +107,7 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 ### **defaultStoriesOptions**: _[StoriesOptions](#storiesoptions)_
 
-• **storeSourceFile**: _boolean_ = true;
+• **storeSourceFile**: _boolean_ = false;
 
 * * *
 

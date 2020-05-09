@@ -50,7 +50,6 @@
     -   [PackageRepository](#packagerepository)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
-    -   [defaultExport](#defaultexport)
     -   [Configuration](#configuration)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [StoryArguments](#storyarguments-1)
@@ -756,7 +755,7 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 
 an import name
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L107)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L106)_
 
 
 
@@ -771,7 +770,7 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 
 imports - library/file as key and the imported names as an array
 
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L121)_
+_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L120)_
 
 `key`\*: string: [ImportName](#importname)\[]
 
@@ -843,12 +842,6 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `controlValues*` | \[key: string]: any |             |
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
-
-## defaultExport
-
-_defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L103)_
-
-
 
 ## Configuration
 

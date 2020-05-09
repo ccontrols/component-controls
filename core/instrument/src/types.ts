@@ -74,7 +74,7 @@ export const defaultComponentOptions: ComponentOptions = {
 };
 
 export const defaultStoriesOptions: StoriesOptions = {
-  storeSourceFile: true,
+  storeSourceFile: false,
   package: defaultPackageOptions,
 };
 

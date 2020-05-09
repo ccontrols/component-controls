@@ -335,24 +335,25 @@ You can customize the preset webpack configuration settings, using a pre-existin
 ```js
   addons: [
     ...
-    {
-      name: '@component-controls/storybook',
-      options: {
-        controlsPanel: true,
-        propsPanel: true,
-        webpack: [{
-          name: 'react-docgen-typescript',
-          config: {
-            module: {
-              rules: [
-                {
-                  loader: '@component-controls/loader/loader',
-                  options: {
-                    //instrumentation options
-                    prettier: {
-                      tabWidth: 4,
-                    },
-                    components: {
+  {
+    name: '@component-controls/storybook',
+    options: {
+      controlsPanel: true,
+      propsPanel: true,
+      webpack: ['instrument',
+      {
+        name: 'react-docgen-typescript', 
+        config: {
+          module: {
+            rules: [
+              {
+                loader: '@component-controls/loader/loader',
+                options: {
+                  //instrumentation options
+                  prettier: {
+                    tabWidth: 4,
+                  },
+                  components: {
                     storeSourceFile: true, //or false
                     resolveFile: (componentName, filePath) => {
                       if (filePath.includes('/theme-ui/dist')) {
@@ -365,15 +366,15 @@ You can customize the preset webpack configuration settings, using a pre-existin
                   },
                   stories: {
                     storeSourceFile: true, //or false
-                  },
-                },
-              ],
-            }
-          }    
-        }],
-      }
-    }  
-  }],
+                  }, 
+                },  
+              },
+            ],
+          }
+        },  
+      }],
+    }
+  }],  
 ```
 
 For more information on [InstrumentOptions](../../core/instrument/README.md#instrumentoptions)

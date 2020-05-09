@@ -5,7 +5,24 @@ module.exports = {
   addons: [{
     name: '@component-controls/storybook',
     options: {
-      webpack: ['instrument','react-docgen-typescript'],
+      webpack: ['instrument',
+      {
+        name: 'react-docgen-typescript', 
+        config: {
+          module: {
+            rules: [
+              {
+                loader: '@component-controls/loader/loader',
+                options: {
+                  stories: {
+                    storeSourceFile: false, //or false
+                  },
+                },  
+              },
+            ],
+          }
+        },  
+      }],
     }
   }],    
   stories: [

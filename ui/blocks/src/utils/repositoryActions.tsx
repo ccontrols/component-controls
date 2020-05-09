@@ -16,6 +16,7 @@ export const repositoryActions = (
               browse
             </ExternalLink>
           ),
+          group: 'repository',
           id: 'browse',
         });
       }
@@ -26,6 +27,7 @@ export const repositoryActions = (
               docs
             </ExternalLink>
           ),
+          group: 'repository',
           id: 'docs',
         });
       }
@@ -36,6 +38,7 @@ export const repositoryActions = (
               issues
             </ExternalLink>
           ),
+          group: 'repository',
           id: 'issues',
         });
       }
