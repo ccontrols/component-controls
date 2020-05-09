@@ -28,7 +28,6 @@ module.exports = {
     {
       name: '@component-controls/storybook',
       options: {
-        controlsPanel: true,
         propsPanel: true,
         storySourcePanel: true,
       }

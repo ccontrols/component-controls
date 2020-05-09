@@ -29,7 +29,7 @@ module.exports = {
   managerEntries: (entry: any[] = [], options: PresetOptions = {}) => {
     const result = [...entry];
     const {
-      controlsPanel = true,
+      controlsPanel = false,
       propsPanel = false,
       storySourcePanel = false,
     } = options;
