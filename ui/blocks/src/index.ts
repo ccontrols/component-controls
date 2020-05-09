@@ -11,6 +11,7 @@ export * from './Playground';
 export * from './PropsTable';
 export * from './Stories';
 export * from './Story';
+export * from './StoryConfig';
 export * from './StorySource';
 export * from './Subtitle';
 export * from './Title';

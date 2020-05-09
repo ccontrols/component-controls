@@ -19,6 +19,7 @@ import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer';
+import { StoryConfig } from '../StoryConfig';
 import { StorySource } from '../StorySource';
 
 const IconButton = (props: ButtonProps) => (
@@ -74,6 +75,14 @@ export const Playground: FC<PlaygroundProps> = ({
       'aria-label': 'display story source code',
       panel: (
         <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+      ),
+    });
+    userActions.push({
+      title: 'config',
+      id: 'config',
+      'aria-label': 'display story configuration object',
+      panel: (
+        <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
       ),
     });
   }
