@@ -30,6 +30,7 @@ module.exports = {
       options: {
         propsPanel: true,
         storySourcePanel: true,
+        storyConfigPanel: true,
       }
     }  
   ],

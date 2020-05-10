@@ -32,6 +32,7 @@ module.exports = {
       controlsPanel = false,
       propsPanel = false,
       storySourcePanel = false,
+      storyConfigPanel = false,
     } = options;
     if (controlsPanel) {
       result.push(require.resolve('./register-controls-panel'));
@@ -42,6 +43,10 @@ module.exports = {
     if (storySourcePanel) {
       result.push(require.resolve('./register-storysource-panel'));
     }
+    if (storyConfigPanel) {
+      result.push(require.resolve('./register-storyconfig-panel'));
+    }
+
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
