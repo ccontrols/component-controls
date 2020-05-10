@@ -236,6 +236,7 @@ _Playground [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `scale`       | _number_            | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                                    |
 | `openTab`     | _any_               | by default, which tab to have open.                                                                                             |
 | `dark`        | _boolean_           | whether to use the dark theme for the story source component.                                                                   |
+| `visibleTabs` | _boolean_           | if true, the tabs on story panels will be visible                                                                               |
 | `id`          | _string_            | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
 | `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                     |
 | `title`       | _string_            | optional section title for the block.                                                                                           |
@@ -290,6 +291,7 @@ _Stories [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
 | `scale`       | _number_            | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                                    |
 | `openTab`     | _any_               | by default, which tab to have open.                                                                                             |
+| `visibleTabs` | _boolean_           | if true, the tabs on story panels will be visible                                                                               |
 | `actions`     | _ActionItem\[]_     | optional actions provided to the component                                                                                      |
 | `plain`       | _boolean_           | if plain, skip the border and spacing around the children                                                                       |
 

@@ -26,13 +26,7 @@ export const defaultOpenSource = () => (
 
 export const disableZoomPan = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
-    <Playground
-      transform={{
-        options: {
-          disabled: true,
-        },
-      }}
-    >
+    <Playground scale={0}>
       <Story id="." />
     </Playground>
   </MockContext>
@@ -121,6 +115,14 @@ export const scale = () => (
 export const zoomDisabled = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
     <Playground scale={0}>
+      <Story id="." />
+    </Playground>
+  </MockContext>
+);
+
+export const visibleTabs = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Playground visibleTabs={true}>
       <Story id="." />
     </Playground>
   </MockContext>

@@ -40,6 +40,11 @@ export interface PlaygroundOwnProps {
    * whether to use the dark theme for the story source component.
    */
   dark?: boolean;
+
+  /**
+   * if true, the tabs on story panels will be visible
+   */
+  visibleTabs?: boolean;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
   StoryBlockContainerProps &
@@ -54,6 +59,7 @@ export const Playground: FC<PlaygroundProps> = ({
   actions: userActions = [],
   children,
   openTab,
+  visibleTabs = false,
   scale: userScale = 1,
 }) => {
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
@@ -89,19 +95,20 @@ export const Playground: FC<PlaygroundProps> = ({
   const panels: ActionItems = getSortedPanels(userActions);
 
   React.useEffect(() => {
-    const index = panels.findIndex((p: ActionItem) => p.title === openTab);
+    const index = panels.findIndex(
+      (p: ActionItem) => (p.id || p.title) === openTab,
+    );
     setTabsIndex(index > -1 ? index : undefined);
   }, [openTab]);
   const panelActions = React.useMemo(
     () =>
       userActions.map((panel: ActionItem) => {
+        const index = panels.findIndex((p: ActionItem) => p.id === panel.id);
         return panel.panel
           ? {
               ...panel,
+              title: `${tabsIndex === index ? 'close' : 'open'} ${panel.title}`,
               onClick: (e: MouseEvent<HTMLButtonElement>) => {
-                const index = panels.findIndex(
-                  (p: ActionItem) => p.title === panel.title,
-                );
                 if (index < 0) {
                   return undefined;
                 }
@@ -188,6 +195,7 @@ export const Playground: FC<PlaygroundProps> = ({
                 onSelect={(index: number) => setTabsIndex(index)}
               >
                 <TabList
+                  hidden={!visibleTabs}
                   style={{
                     textAlign: 'right',
                   }}
