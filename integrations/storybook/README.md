@@ -33,7 +33,6 @@
     -   [Configure '@component-controls/storybook' to load out custom page only](#configure-component-controlsstorybook-to-load-out-custom-page-only)
 -   [List of components](#list-of-components)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
-    -   [<ins>ControlsTable</ins>](#inscontrolstableins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>Meta</ins>](#insmetains)
     -   [<ins>Playground</ins>](#insplaygroundins)
@@ -161,7 +160,7 @@ controlsStory.story = {
 
 ```md
 import { Meta} from '@component-controls/storybook';
-import { Playground, Story, ControlsTable } from '@component-controls/blocks';
+import { Playground, Story } from '@component-controls/blocks';
 
 <Meta title="Storybook controls" />
 
@@ -394,7 +393,6 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 | Name               | Type                    | Description                                                             |
 | ------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| `controlsPanel`    | boolean                 | whether to display the controls table as an addon panel in storybook    |
 | `pages`            | string\[]               | additional custom documentation pages                                   |
 | `propsPanel`       | boolean                 | whether to display the props table as an addon panel in storybook       |
 | `storyConfigPanel` | boolean                 | whether to display the StoryConfig block as an addon panel in storybook |
@@ -403,7 +401,7 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ## defaultRules
 
-_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L34)_
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L28)_
 
 
 
@@ -520,21 +518,6 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used.                                                                                                                   |
 | `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
 | `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
-
-## <ins>ControlsTable</ins>
-
-_ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/blocks/ControlsTable.tsx)_
-
-### properties
-
-| Name          | Type                | Description                                                                                                                     |
-| ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | _string_            | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_            | optional section title for the block.                                                                                           |
-| `description` | _string_            | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
 
 ## <ins>Description</ins>
 

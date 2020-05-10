@@ -28,9 +28,10 @@ import {
   ConrolsContextProvider,
 } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { BlockControlsContext, ComponentVisibility } from '../context';
+import { BlockControlsContext } from '../context';
+import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
-import { useControlsActions } from '../ControlsTable/controlsActions';
+import { useControlsActions } from './controlsActions';
 
 interface PropRow {
   name: string;
@@ -58,43 +59,45 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
 }) => {
   const { setControlValue, clickControl } = useContext(BlockControlsContext);
   const [copied, setCopied] = useState(false);
-  const info: Partial<ComponentInfo> =
-    visibility !== 'controls' ? component.info || {} : {};
+  const info: Partial<ComponentInfo> = component.info || {};
   const storyControls = visibility !== 'info' ? story.controls || {} : {};
   const controls = visibleControls(storyControls);
   const infoKeys = info && info.props ? Object.keys(info.props) : [];
-  const hasInfo = !!infoKeys.length;
   // check if we should display controls in the PrpsTable
   // at least one control's name should exist as a property name
   const hasControls = !!Object.keys(controls).length;
   const propControls = { ...controls };
   const { columns, rows, groupProps } = useMemo(() => {
     const parents = new Set();
-    const rows: PropRow[] = infoKeys.map(key => {
-      //@ts-ignore
-      const prop = info.props[key];
-      const control = propControls[key];
-      const parentName = prop.parentName || control?.groupId || '-';
-      const { description, label, required } = control || {};
-      if (control) {
-        delete propControls[key];
-      }
-      parents.add(parentName);
-      return {
-        name: key,
-        prop: {
-          ...prop,
-          type: {
-            label,
-            required,
-            ...prop.type,
+    const rows: (PropRow | null)[] = infoKeys
+      .map(key => {
+        //@ts-ignore
+        const prop = info.props[key];
+        const control = propControls[key];
+        const parentName = prop.parentName || control?.groupId || '-';
+        const { description, label, required } = control || {};
+        if (control) {
+          delete propControls[key];
+        } else if (visibility === 'controls') {
+          return null;
+        }
+        parents.add(parentName);
+        return {
+          name: key,
+          prop: {
+            ...prop,
+            type: {
+              label,
+              required,
+              ...prop.type,
+            },
+            description: description ?? prop.description,
+            parentName,
           },
-          description: description ?? prop.description,
-          parentName,
-        },
-        control,
-      };
-    });
+          control,
+        };
+      })
+      .filter(p => p);
     if (propControls) {
       const controlsRows: PropRow[] = [];
       Object.keys(propControls).forEach(key => {
@@ -311,7 +314,8 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     const quotedValue = (value: string) => `"${jsStringEscape(value)}"`;
     e.preventDefault();
     const csvRows = rows
-      .map(row => {
+      //@ts-ignore
+      .map((row: PropRow) => {
         const r = [
           quotedValue(row.name),
           quotedValue(row.prop.type.raw ?? row.prop.type.name),
@@ -348,9 +352,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       storyId: story?.id,
     }),
   );
-  if (!hasInfo && !hasControls) {
-    return null;
-  }
   return (
     <ActionContainer actions={actions}>
       <Box

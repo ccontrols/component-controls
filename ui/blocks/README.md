@@ -7,15 +7,13 @@
     -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
     -   [<ins>Dependencies</ins>](#insdependenciesins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
-    -   [<ins>ControlsTable</ins>](#inscontrolstableins)
-    -   [<ins>SingleControlsTable</ins>](#inssinglecontrolstableins)
-    -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>EditPage</ins>](#inseditpageins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
+    -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
     -   [<ins>StoryConfig</ins>](#insstoryconfigins)
@@ -135,50 +133,6 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
 | `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
 
-## <ins>ControlsTable</ins>
-
-Table component to display a story's controls and their editors.
-Can adapt to multiple groups of controls, displaying them in their own tabs.
-
-_ControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/ControlsTable.tsx)_
-
-### properties
-
-| Name          | Type                | Description                                                                                                                     |
-| ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | _string_            | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_            | optional section title for the block.                                                                                           |
-| `description` | _string_            | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
-
-## <ins>SingleControlsTable</ins>
-
-Single table of controls, without specific handliong of groups.
-The controls and storyId are already set in priops;
-
-_SingleControlsTable [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/SingleControlsTable.tsx)_
-
-### properties
-
-| Name      | Type     | Description                                                |
-| --------- | -------- | ---------------------------------------------------------- |
-| `data`    | _any\[]_ | component controls to display in the table.                |
-| `storyId` | _string_ | storyId, will be used to update the values of the controls |
-
-## <ins>useControlsActions</ins>
-
-_useControlsActions [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ControlsTable/controlsActions.ts)_
-
-### properties
-
-| Name              | Type                | Description |
-| ----------------- | ------------------- | ----------- |
-| `controls`        | _ComponentControls_ |             |
-| `storyId`         | _string_            |             |
-| `setControlValue` | _SetControlValueFn_ |             |
-
 ## <ins>Description</ins>
 
 Description component with markdown.
@@ -271,6 +225,18 @@ _PropsTable [source code](https:/github.com/ccontrols/component-controls/tree/ma
 | `hiddenColumns` | _string\[]_                                                                                                                     | list of columns to hide.                                                                                                                                                                                                                                                                           |
 | `expanded`      | _{ \[key: string]: boolean; }_                                                                                                  | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
 | `skipPageReset` | _boolean_                                                                                                                       | reset state update while update table data                                                                                                                                                                                                                                                         |
+
+## <ins>useControlsActions</ins>
+
+_useControlsActions [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/controlsActions.ts)_
+
+### properties
+
+| Name              | Type                | Description |
+| ----------------- | ------------------- | ----------- |
+| `controls`        | _ComponentControls_ |             |
+| `storyId`         | _string_            |             |
+| `setControlValue` | _SetControlValueFn_ |             |
 
 ## <ins>Stories</ins>
 
