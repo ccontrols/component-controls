@@ -1,8 +1,8 @@
-import { ControlsTable } from '@component-controls/blocks';
+import { PropsTable } from '@component-controls/blocks';
 
 export default {
-  title: 'Storybook/Blocks/ControlsTable',
+  title: 'Storybook/Blocks/PropsTable',
   parameters: {
-    component: ControlsTable,
+    component: PropsTable,
   },
 };

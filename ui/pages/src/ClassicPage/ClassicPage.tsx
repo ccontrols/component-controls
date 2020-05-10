@@ -32,7 +32,7 @@ export const ClassicPage: FC = () => {
       <Playground openTab="source" title=".">
         <Story id="." />
       </Playground>
-      <PropsTable of="." title="Properties" />
+      <PropsTable of="." title="Properties" visibility="info" />
       <ComponentDeps id="." title="External dependencies" />
       <Stories dark={true} />
     </div>

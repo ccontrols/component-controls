@@ -1,3 +1,3 @@
-import { ControlsTable } from '@component-controls/storybook';
+import { PropsTable } from '@component-controls/storybook';
 
-export { ControlsTable as Button };
+export { PropsTable as Button };

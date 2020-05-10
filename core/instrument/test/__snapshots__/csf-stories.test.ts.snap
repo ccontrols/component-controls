@@ -6,23 +6,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = {
-  i: 1,
-};
-",
+      "package": "023d0d8cf3e4a1a38f08775068d9729d",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "023d0d8cf3e4a1a38f08775068d9729d": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -44,7 +39,7 @@ export const myStory = {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "023d0d8cf3e4a1a38f08775068d9729d",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -52,7 +47,7 @@ export const myStory = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {},
@@ -70,21 +65,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = () => {};
-",
+      "package": "2bf18b76a1b9e90d723ba13b6a10fc58",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "2bf18b76a1b9e90d723ba13b6a10fc58": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -106,7 +98,7 @@ export const myStory = () => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "2bf18b76a1b9e90d723ba13b6a10fc58",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -114,7 +106,7 @@ export const myStory = () => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -147,21 +139,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-const i = 1;
-",
+      "package": "77d49f77a8b5ff73e715da87e9ab3277",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "77d49f77a8b5ff73e715da87e9ab3277": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -183,7 +172,7 @@ const i = 1;
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "77d49f77a8b5ff73e715da87e9ab3277",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -191,7 +180,7 @@ const i = 1;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {},
@@ -207,21 +196,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = props => {};
-",
+      "package": "d8b5c54145ef8f8db3e19289e1c19f95",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "d8b5c54145ef8f8db3e19289e1c19f95": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -243,7 +229,7 @@ export const myStory = props => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "d8b5c54145ef8f8db3e19289e1c19f95",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -251,7 +237,7 @@ export const myStory = props => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -299,21 +285,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = ({ name: { first, last }, age }) => {};
-",
+      "package": "83b0676f45ac751b689864159d82ed31",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "83b0676f45ac751b689864159d82ed31": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -335,7 +318,7 @@ export const myStory = ({ name: { first, last }, age }) => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "83b0676f45ac751b689864159d82ed31",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -343,7 +326,7 @@ export const myStory = ({ name: { first, last }, age }) => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -449,21 +432,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = (props, context) => {};
-",
+      "package": "28503fc854679acdc04bb4eccfeacbb3",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "28503fc854679acdc04bb4eccfeacbb3": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -485,7 +465,7 @@ export const myStory = (props, context) => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "28503fc854679acdc04bb4eccfeacbb3",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -493,7 +473,7 @@ export const myStory = (props, context) => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -555,21 +535,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = ({ name: MyNam, age }) => {};
-",
+      "package": "937b0fd35d556a5e5cfcb7fb25a785c8",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "937b0fd35d556a5e5cfcb7fb25a785c8": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -591,7 +568,7 @@ export const myStory = ({ name: MyNam, age }) => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "937b0fd35d556a5e5cfcb7fb25a785c8",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -599,7 +576,7 @@ export const myStory = ({ name: MyNam, age }) => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -676,21 +653,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = ({ name, age }) => {};
-",
+      "package": "6fe1b3bd8baa1d5965b447e926972dab",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "6fe1b3bd8baa1d5965b447e926972dab": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -712,7 +686,7 @@ export const myStory = ({ name, age }) => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "6fe1b3bd8baa1d5965b447e926972dab",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -720,7 +694,7 @@ export const myStory = ({ name, age }) => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -797,21 +771,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
-      "source": "export default { title: 'Story' };
-export const myStory = (props: Properties) => {};
-",
+      "package": "b683a7b765d6b542242ea58703bc8138",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "b683a7b765d6b542242ea58703bc8138": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -833,7 +804,7 @@ export const myStory = (props: Properties) => {};
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "b683a7b765d6b542242ea58703bc8138",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -841,7 +812,7 @@ export const myStory = (props: Properties) => {};
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {

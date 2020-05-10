@@ -10,6 +10,7 @@ import {
   StoryComponent,
   ComponentControl,
   PropType,
+  ComponentInfo,
 } from '@component-controls/specification';
 import { visibleControls } from '@component-controls/core';
 
@@ -27,7 +28,7 @@ import {
   ConrolsContextProvider,
 } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { BlockControlsContext } from '../context';
+import { BlockControlsContext, ComponentVisibility } from '../context';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from '../ControlsTable/controlsActions';
 
@@ -42,29 +43,34 @@ export interface BasePropsTableProps {
   component?: StoryComponent;
   extraColumns: Column[];
   tableProps: any;
+  visibility?: ComponentVisibility;
 }
 
 type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 export const BasePropsTable: FC<BasePropsTableProps> = ({
-  story,
-  component,
+  story = {},
+  component = {},
   extraColumns,
   tableProps,
+  visibility,
 }) => {
   const { setControlValue, clickControl } = useContext(BlockControlsContext);
-  const { info = { props: undefined } } = component || {};
-  const { controls: storyControls = {} } = story || {};
+  const [copied, setCopied] = useState(false);
+  const info: Partial<ComponentInfo> =
+    visibility !== 'controls' ? component.info || {} : {};
+  const storyControls = visibility !== 'info' ? story.controls || {} : {};
   const controls = visibleControls(storyControls);
+  const infoKeys = info && info.props ? Object.keys(info.props) : [];
+  const hasInfo = !!infoKeys.length;
   // check if we should display controls in the PrpsTable
   // at least one control's name should exist as a property name
   const hasControls = !!Object.keys(controls).length;
   const propControls = { ...controls };
   const { columns, rows, groupProps } = useMemo(() => {
     const parents = new Set();
-    const keys = info.props ? Object.keys(info.props) : [];
-    const rows: PropRow[] = keys.map(key => {
+    const rows: PropRow[] = infoKeys.map(key => {
       //@ts-ignore
       const prop = info.props[key];
       const control = propControls[key];
@@ -301,7 +307,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     </ConrolsContextProvider>
   );
   const actions: ActionItems = [];
-  const [copied, setCopied] = useState(false);
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     const quotedValue = (value: string) => `"${jsStringEscape(value)}"`;
     e.preventDefault();
@@ -343,6 +348,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       storyId: story?.id,
     }),
   );
+  if (!hasInfo && !hasControls) {
+    return null;
+  }
   return (
     <ActionContainer actions={actions}>
       <Box

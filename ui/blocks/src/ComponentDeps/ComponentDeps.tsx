@@ -16,7 +16,7 @@ export type ComponentDepsProps = Omit<
 
 export const ComponentDeps: FC<ComponentDepsProps> = ({ ...rest }) => {
   return (
-    <ComponentsBlockContainer {...rest}>
+    <ComponentsBlockContainer visibility="info" {...rest}>
       {(component, props) => {
         const { componentPackage } = props;
         const {

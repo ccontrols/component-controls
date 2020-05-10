@@ -13,7 +13,18 @@ import {
   useComponentsContext,
 } from '../../context';
 
-export type ComponentsBlockContainerProps = ComponentsContainerProps &
+/**
+ * component level visibility
+ */
+export type ComponentVisibility = 'controls' | 'info' | 'all';
+
+export type ComponentsBlockContainerProps = {
+  /**
+   * by default will show both controls and props tables
+   * user setting can display only props table or only controls
+   */
+  visibility?: ComponentVisibility;
+} & ComponentsContainerProps &
   BlockContainerProps;
 
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
@@ -23,7 +34,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   of,
   children,
   sxStyle,
-  visibleOnControlsOnly,
+  visibility,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
@@ -37,26 +48,36 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     );
   }, [userTitle]);
 
+  const keys =
+    components && visibility !== 'controls' ? Object.keys(components) : [];
   if (
-    !componentNames.length &&
-    (visibleOnControlsOnly !== true || !hasControls(story?.controls))
+    keys.length === 0 &&
+    visibility !== 'info' &&
+    hasControls(story?.controls)
   ) {
-    //no components to display
+    keys.push('Controls');
+  }
+
+  if (keys.length === 0) {
     return null;
   }
+
   const block = (
     <ComponentsContainer
       of={of}
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }
-      visibleOnControlsOnly={visibleOnControlsOnly}
       {...rest}
     >
-      {(component, props, otherProps) => children(component, props, otherProps)}
+      {(component, props, otherProps) => {
+        const child = children(component, props, otherProps);
+        return child;
+      }}
     </ComponentsContainer>
   );
-  return block ? (
+  console.log(visibility, React.Children.count(block));
+  return (
     <BlockContainer
       title={title}
       collapsible={collapsible}
@@ -65,5 +86,5 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     >
       {block}
     </BlockContainer>
-  ) : null;
+  );
 };

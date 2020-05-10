@@ -24,14 +24,16 @@ export type PropsTableProps = PropsTableOwnProps &
 
 export const PropsTable: FC<PropsTableProps> = ({
   extraColumns = [],
+  visibility = 'all',
   ...props
 }) => {
   return (
-    <ComponentsBlockContainer visibleOnControlsOnly={true} {...props}>
+    <ComponentsBlockContainer visibility={visibility} {...props}>
       {(component, { story }, tableProps) => (
         <BasePropsTable
           component={component}
           story={story}
+          visibility={visibility}
           extraColumns={extraColumns}
           tableProps={tableProps}
         />

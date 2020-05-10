@@ -6,18 +6,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "c071cdabd810d210aa3df2ee281eb1e2",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "c071cdabd810d210aa3df2ee281eb1e2": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -39,7 +39,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "c071cdabd810d210aa3df2ee281eb1e2",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -47,7 +47,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -85,18 +85,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "35c5b6349c3b5c253bb5b98e0b2119fb",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "35c5b6349c3b5c253bb5b98e0b2119fb": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -118,7 +118,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "35c5b6349c3b5c253bb5b98e0b2119fb",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -126,7 +126,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -164,18 +164,18 @@ Object {
   "kinds": Object {
     "Story": Object {
       "components": Object {},
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "b27d69ca04362a47a347cdfb49a31bf6",
       "title": "Story",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "b27d69ca04362a47a347cdfb49a31bf6": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -197,7 +197,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "b27d69ca04362a47a347cdfb49a31bf6",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -205,7 +205,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {},

@@ -29,14 +29,10 @@ module.exports = {
   managerEntries: (entry: any[] = [], options: PresetOptions = {}) => {
     const result = [...entry];
     const {
-      controlsPanel = false,
       propsPanel = false,
       storySourcePanel = false,
       storyConfigPanel = false,
     } = options;
-    if (controlsPanel) {
-      result.push(require.resolve('./register-controls-panel'));
-    }
     if (propsPanel) {
       result.push(require.resolve('./register-props-panel'));
     }

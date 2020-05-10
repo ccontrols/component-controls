@@ -19,18 +19,18 @@ Object {
       "components": Object {
         "Toggle": "a7e5ad523f225128d8b53302689e5a27",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "907f6c0f914114634c0f7069bb74b196",
       "title": "Components/Toggle",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "907f6c0f914114634c0f7069bb74b196": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -52,7 +52,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "907f6c0f914114634c0f7069bb74b196",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -60,7 +60,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {

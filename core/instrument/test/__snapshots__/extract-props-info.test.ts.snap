@@ -2910,11 +2910,27 @@ import { jsx } from 'theme-ui'
         "raw": "string",
       },
     },
-    "visibleOnControlsOnly": Object {
-      "description": "set to true if you need the blockto be visible even if only controls are available",
+    "visibility": Object {
+      "defaultValue": "all",
+      "description": "by default will show both controls and props tables
+user setting can display only props table or only controls",
       "type": Object {
-        "name": "boolean",
-        "raw": "boolean",
+        "name": "enum",
+        "raw": "ComponentVisibility",
+        "value": Array [
+          Object {
+            "name": "string",
+            "value": "all",
+          },
+          Object {
+            "name": "string",
+            "value": "controls",
+          },
+          Object {
+            "name": "string",
+            "value": "info",
+          },
+        ],
       },
     },
     "vocab": Object {

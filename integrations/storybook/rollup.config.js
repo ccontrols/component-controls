@@ -5,7 +5,6 @@ export default config({
     './src/index.ts',
     './src/preset.ts',
     './src/config.tsx',
-    './src/register-controls-panel.tsx',
     './src/register-props-panel.tsx',
     './src/register-storysource-panel.tsx',
     './src/register-storyconfig-panel.tsx',

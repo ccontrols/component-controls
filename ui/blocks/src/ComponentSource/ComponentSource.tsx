@@ -29,7 +29,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
   const { dark } = React.useContext(ThemeContext);
   return (
-    <ComponentsBlockContainer {...rest}>
+    <ComponentsBlockContainer visibility="info" {...rest}>
       {(component, props, sourceProps) => {
         let source;
         const { componentPackage } = props;

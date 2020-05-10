@@ -21,8 +21,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.0.1",
-      "@component-controls/specification": "^1.0.1",
+      "@component-controls/core": "^1.1.0",
+      "@component-controls/specification": "^1.1.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -44,7 +44,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "fileHash": "c4da3ef5ae7dc15865c9b8aa98f719dc",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {
@@ -52,7 +52,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;
@@ -78,8 +78,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.0.1",
-      "@component-controls/specification": "^1.0.1",
+      "@component-controls/core": "^1.1.0",
+      "@component-controls/specification": "^1.1.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -101,7 +101,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "fileHash": "305b7edffa5cab1bfaf0c86ebde067bd",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {
@@ -109,7 +109,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;
@@ -157,8 +157,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.0.1",
-      "@component-controls/specification": "^1.0.1",
+      "@component-controls/core": "^1.1.0",
+      "@component-controls/specification": "^1.1.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -180,7 +180,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {
@@ -188,7 +188,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;
@@ -219,7 +219,7 @@ Object {
       "@theme-ui/theme-provider": "^0.3.1",
     },
     "devDependencies": undefined,
-    "fileHash": "ade35980d05b8705deb9ac0e4c3de258",
+    "fileHash": "55edc55c779e57609b549bd94f835be5",
     "name": "theme-ui",
     "peerDependencies": undefined,
     "repository": Object {
@@ -268,7 +268,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "49ba564d8e0c1c87fefc93b7f2550939",
+    "fileHash": "8b5cf5032e762d2f38ffd0462e3feea5",
     "name": "@component-controls/components",
     "peerDependencies": Object {
       "react": "*",
@@ -280,7 +280,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;
@@ -319,8 +319,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.0.1",
-      "@component-controls/specification": "^1.0.1",
+      "@component-controls/core": "^1.1.0",
+      "@component-controls/specification": "^1.1.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -342,7 +342,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "fileHash": "d817f3a58ea487eda1317bcff4199751",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {
@@ -350,7 +350,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;
@@ -376,8 +376,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.0.1",
-      "@component-controls/specification": "^1.0.1",
+      "@component-controls/core": "^1.1.0",
+      "@component-controls/specification": "^1.1.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -399,7 +399,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^24.9.0",
     },
-    "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+    "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {
@@ -407,7 +407,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
   },
 }
 `;

@@ -1,5 +1,4 @@
 export * from './ComponentSource';
-export * from './ControlsTable';
 export * from './Description';
 export * from './Meta';
 export * from './Playground';

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import {
   EditPage,
-  ControlsTable,
+  PropsTable,
   Title,
   Subtitle,
   Story,
@@ -16,7 +16,7 @@ export const TestingPage: FC = () => {
       <Subtitle />
       <Description />
       <Story id="." />
-      <ControlsTable />
+      <PropsTable of="." title="Controls" visibility="controls" />
     </>
   );
 };

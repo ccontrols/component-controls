@@ -19,30 +19,21 @@ Object {
       "components": Object {
         "Button": "2855216c2faa4ab43ed978e3ff6743e4",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "8c5cf9d9fa1d5bc7742765b451f2a255",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story>
-  <Button />
-</Story>",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "8c5cf9d9fa1d5bc7742765b451f2a255": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -64,7 +55,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "8c5cf9d9fa1d5bc7742765b451f2a255",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -72,7 +63,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {},
@@ -107,31 +98,21 @@ Object {
       "components": Object {
         "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "5025d10bd14c417a3985dd520bbc8ce0",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"story-with-props\\">
-  {props => <Button />}
-</Story>
-",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "5025d10bd14c417a3985dd520bbc8ce0": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -153,7 +134,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "5025d10bd14c417a3985dd520bbc8ce0",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -161,7 +142,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -235,7 +216,7 @@ Object {
         },
       },
       "name": "Button",
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "305b7edffa5cab1bfaf0c86ebde067bd",
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
       "source": "import React from 'react';
 
@@ -251,31 +232,21 @@ export default Button;
       "components": Object {
         "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "9d6345a2d09c05cff0ad7c86fe40c4f9",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../../components/button-default-arrow-func';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"smart story\\">
-  <Button />
-</Story>
-",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "305b7edffa5cab1bfaf0c86ebde067bd": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -297,7 +268,45 @@ import Button from '../../components/button-default-arrow-func';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "305b7edffa5cab1bfaf0c86ebde067bd",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.1.0",
+    },
+    "9d6345a2d09c05cff0ad7c86fe40c4f9": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "hosted-git-info": "^3.0.4",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "9d6345a2d09c05cff0ad7c86fe40c4f9",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -305,7 +314,7 @@ import Button from '../../components/button-default-arrow-func';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -359,31 +368,21 @@ Object {
       "components": Object {
         "Button": "c63d685efb0c65f18ffc63184e852ef4",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "c151e21eacb60e5b077423daed2d02e2",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"story-with-props\\">
-  {({ name: { first, last }, age }) => <Button />}
-</Story>
-",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "c151e21eacb60e5b077423daed2d02e2": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -405,7 +404,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "c151e21eacb60e5b077423daed2d02e2",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -413,7 +412,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -543,30 +542,21 @@ Object {
       "components": Object {
         "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "9c0d66b95cdae13733bdeb986761ca47",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"story-with-props\\">
-  {({ name, age }) => <Button />}
-</Story>",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "9c0d66b95cdae13733bdeb986761ca47": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -588,7 +578,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "9c0d66b95cdae13733bdeb986761ca47",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -596,7 +586,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -692,30 +682,21 @@ Object {
       "components": Object {
         "Button": "fe664c2ffbbcacffdac896ace94db697",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "82864065f08bddd8e5586424d90a51f0",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"story-with-props\\">
-  {(props, context) => <Button />}
-</Story>",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "82864065f08bddd8e5586424d90a51f0": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -737,7 +718,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "82864065f08bddd8e5586424d90a51f0",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -745,7 +726,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
@@ -826,30 +807,21 @@ Object {
       "components": Object {
         "Button": "0a73df5cffa26ca62ec534813a77384f",
       },
-      "package": "7b45564d8ad9cf0f6da12c3360f96029",
+      "package": "fea8eb808fd320237df6714339cbe69b",
       "parameters": Object {
         "component": "Button",
       },
-      "source": "import { Story, Meta } from '@storybook/addon-docs/blocks';
-import Button from '../components/BaseButton';
-
-
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
-
-<Story name=\\"story-with-props\\">
-  {({ name: MyName, age }) => <Button />}
-</Story>",
       "title": "Storybook/MDX",
     },
   },
   "packages": Object {
-    "7b45564d8ad9cf0f6da12c3360f96029": Object {
+    "fea8eb808fd320237df6714339cbe69b": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.0.1",
-        "@component-controls/specification": "^1.0.1",
+        "@component-controls/core": "^1.1.0",
+        "@component-controls/specification": "^1.1.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "camelcase": "^6.0.0",
@@ -871,7 +843,7 @@ import Button from '../components/BaseButton';
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "7b45564d8ad9cf0f6da12c3360f96029",
+      "fileHash": "fea8eb808fd320237df6714339cbe69b",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -879,7 +851,7 @@ import Button from '../components/BaseButton';
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.0.1",
+      "version": "1.1.0",
     },
   },
   "stories": Object {
