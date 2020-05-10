@@ -40,6 +40,7 @@
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
+    -   [<ins>StoryConfig</ins>](#insstoryconfigins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>Title</ins>](#institleins)
@@ -396,12 +397,13 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 | `controlsPanel`    | boolean                 | whether to display the controls table as an addon panel in storybook    |
 | `pages`            | string\[]               | additional custom documentation pages                                   |
 | `propsPanel`       | boolean                 | whether to display the props table as an addon panel in storybook       |
+| `storyConfigPanel` | boolean                 | whether to display the StoryConfig block as an addon panel in storybook |
 | `storySourcePanel` | boolean                 | whether to display the StorySource block as an addon panel in storybook |
 | `webpack`          | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                        |
 
 ## defaultRules
 
-_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L30)_
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L34)_
 
 
 
@@ -633,6 +635,30 @@ _Story [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `description` | _string_            | optional markdown description.                                                                                                  |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+
+## <ins>StoryConfig</ins>
+
+_StoryConfig [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/blocks/StoryConfig.tsx)_
+
+### properties
+
+| Name          | Type                                                               | Description                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
+| `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
+| `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
+| `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
+| `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
+| `sxStyle`     | _SystemStyleObject_                                                | theme-ui styling object for Block Box                                                                                                                                            |
+| `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
+| `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
+| `children`    | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
+| `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
+| `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`       | _any_                                                              | css styles for the container.                                                                                                                                                    |
+| `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
 ## <ins>StorySource</ins>
 

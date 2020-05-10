@@ -5,7 +5,7 @@ import {
 } from '@component-controls/blocks';
 import { ControlsProvider } from '../context/ControlsProvider';
 
-export const StorySource: FC<StoryConfigProps> = props => {
+export const StoryConfig: FC<StoryConfigProps> = props => {
   return (
     <ControlsProvider>
       <BaseStoryConfig {...props} />
