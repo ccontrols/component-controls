@@ -9,6 +9,8 @@ const StyledContainer = styled(Box)`
     border-radius: 4px;
     box-shadow: 0px 1px 3px 0px ${theme.colors?.shadow};
     border: 1px solid  ${theme.colors?.shadow};
+    display: flex;
+    flex-direction: column;
   `}
 `;
 
@@ -33,6 +35,7 @@ export const ActionContainer: FC<ActionContainerProps> = ({
   plain,
 }) => {
   const hasActions = actions && !!actions.length;
+
   return (
     <div>
       {hasActions && <ActionBar actions={actions} />}

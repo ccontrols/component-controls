@@ -1,20 +1,15 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
+import { useThemeUI } from 'theme-ui';
 import {
-  Collapsible,
-  Tab,
-  Tabs,
-  TabList,
-  TabPanel,
-  getSortedPanels,
-  ActionItems,
-  ActionItem,
-  ActionContainer,
-  ActionContainerProps,
+  BackgroundType,
+  DirectionType,
+  PanelContainer,
+  PanelContainerProps,
+  IconButton,
   Zoom,
 } from '@component-controls/components';
 
-import { Button, ButtonProps, useThemeUI } from 'theme-ui';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -22,33 +17,20 @@ import {
 import { StoryConfig } from '../StoryConfig';
 import { StorySource } from '../StorySource';
 
-const IconButton = (props: ButtonProps) => (
-  <Button style={{ paddingTop: '3px', paddingBottom: '3px' }} {...props} />
-);
-
 export interface PlaygroundOwnProps {
   /**
    * default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.
    */
   scale?: number;
-  /**
-   * by default, which tab to have open.
-   */
-  openTab?: React.ReactNode;
 
   /**
    * whether to use the dark theme for the story source component.
    */
   dark?: boolean;
-
-  /**
-   * if true, the tabs on story panels will be visible
-   */
-  visibleTabs?: boolean;
 }
 export type PlaygroundProps = PlaygroundOwnProps &
   StoryBlockContainerProps &
-  ActionContainerProps;
+  PanelContainerProps;
 
 export const Playground: FC<PlaygroundProps> = ({
   title,
@@ -62,11 +44,12 @@ export const Playground: FC<PlaygroundProps> = ({
   visibleTabs = false,
   scale: userScale = 1,
 }) => {
-  const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
-    undefined,
-  );
   const { theme } = useThemeUI();
+
   const [scale, setScale] = React.useState(userScale);
+  const [background, setBackground] = React.useState<BackgroundType>('light');
+  const [direction, setDirection] = React.useState<DirectionType>('ltr');
+
   React.useEffect(() => setScale(userScale), [userScale]);
   let storyId: string;
   const childArr = React.Children.toArray(children);
@@ -78,6 +61,7 @@ export const Playground: FC<PlaygroundProps> = ({
     userActions.push({
       title: 'source',
       id: 'source',
+      group: 'panels',
       'aria-label': 'display story source code',
       panel: (
         <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
@@ -86,54 +70,13 @@ export const Playground: FC<PlaygroundProps> = ({
     userActions.push({
       title: 'config',
       id: 'config',
+      group: 'panels',
       'aria-label': 'display story configuration object',
       panel: (
         <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
       ),
     });
   }
-  const panels: ActionItems = getSortedPanels(userActions);
-
-  React.useEffect(() => {
-    const index = panels.findIndex(
-      (p: ActionItem) => (p.id || p.title) === openTab,
-    );
-    setTabsIndex(index > -1 ? index : undefined);
-  }, [openTab]);
-  const panelActions = React.useMemo(
-    () =>
-      userActions.map((panel: ActionItem) => {
-        const index = panels.findIndex((p: ActionItem) => p.id === panel.id);
-        return panel.panel
-          ? {
-              ...panel,
-              title: `${tabsIndex === index ? 'close' : 'open'} ${panel.title}`,
-              onClick: (e: MouseEvent<HTMLButtonElement>) => {
-                if (index < 0) {
-                  return undefined;
-                }
-                if (tabsIndex === index) {
-                  setTabsIndex(undefined);
-                } else {
-                  if (panel.onClick) {
-                    const ret = panel.onClick(e);
-                    if (ret === true) {
-                      setTabsIndex(index);
-                      return ret;
-                    } else if (ret === false) {
-                      setTabsIndex(undefined);
-                      return ret;
-                    }
-                  }
-                  setTabsIndex(index);
-                }
-                return undefined;
-              },
-            }
-          : panel;
-      }),
-    [userActions],
-  );
   const zoomActions = React.useMemo(
     () => [
       {
@@ -172,9 +115,23 @@ export const Playground: FC<PlaygroundProps> = ({
     ],
     [scale],
   );
+  const storyActions = [
+    {
+      title: background === 'light' ? 'dark' : 'light',
+      id: 'background',
+      group: 'story',
+      onClick: () => setBackground(background === 'light' ? 'dark' : 'light'),
+    },
+    {
+      title: direction === 'rtl' ? 'LTR' : 'RTL',
+      id: 'direction',
+      group: 'story',
+      onClick: () => setDirection(direction === 'rtl' ? 'ltr' : 'rtl'),
+    },
+  ];
   const actionsItems = userScale
-    ? [...zoomActions, ...panelActions]
-    : panelActions;
+    ? [...storyActions, ...zoomActions, ...userActions]
+    : [...storyActions, ...userActions];
   return (
     <StoryBlockContainer
       useStoryDescription={true}
@@ -184,37 +141,16 @@ export const Playground: FC<PlaygroundProps> = ({
       collapsible={collapsible}
     >
       {() => (
-        <ActionContainer plain={false} actions={actionsItems}>
+        <PanelContainer
+          plain={false}
+          actions={actionsItems}
+          openTab={openTab}
+          visibleTabs={visibleTabs}
+          background={background}
+          direction={direction}
+        >
           <Zoom scale={scale || 1}>{children}</Zoom>
-          <Collapsible isOpen={tabsIndex !== undefined}>
-            {panels.length === 1 ? (
-              panels[0].panel
-            ) : (
-              <Tabs
-                selectedIndex={tabsIndex || 0}
-                onSelect={(index: number) => setTabsIndex(index)}
-              >
-                <TabList
-                  hidden={!visibleTabs}
-                  style={{
-                    textAlign: 'right',
-                  }}
-                >
-                  {panels.map((panel: ActionItem) => (
-                    <Tab key={`playground_tab_${panel.title}`}>
-                      {panel.title}
-                    </Tab>
-                  ))}
-                </TabList>
-                {panels.map((panel: ActionItem) => (
-                  <TabPanel key={`playground_panel_${panel.title}`}>
-                    {panel.panel}
-                  </TabPanel>
-                ))}
-              </Tabs>
-            )}
-          </Collapsible>
-        </ActionContainer>
+        </PanelContainer>
       )}
     </StoryBlockContainer>
   );

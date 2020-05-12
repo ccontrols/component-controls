@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, Fragment, ReactNode } from 'react';
 import { Box, BoxProps, Flex, useThemeUI, jsx } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import memoize from 'fast-memoize';
@@ -39,7 +39,7 @@ const defaultColumn = memoize(() => ({
 
 interface TableOwnProps {
   /**
-   * the colmns object as an array.
+   * the columns object as an array.
    */
   columns: Column[];
   /**
@@ -81,6 +81,8 @@ interface TableOwnProps {
    * reset state update while update table data
    */
   skipPageReset?: boolean;
+
+  renderRowSubComponent?: (props: { row: Row }) => ReactNode;
 }
 
 export type TableProps = TableOwnProps & BoxProps;
@@ -100,6 +102,7 @@ export const Table: FC<TableProps> = ({
   expanded,
   hiddenColumns,
   skipPageReset,
+  renderRowSubComponent,
   ...rest
 }) => {
   const plugins = [
@@ -143,9 +146,6 @@ export const Table: FC<TableProps> = ({
     autoResetRowState: !skipPageReset,
   };
 
-  if (sorting) {
-    plugins.push();
-  }
   const tableOptions = useTable(options, ...plugins) as any;
   const {
     getTableProps,
@@ -216,28 +216,42 @@ export const Table: FC<TableProps> = ({
         </Box>
       )}
       <Box as="tbody" {...getTableBodyProps()} css={get(theme, 'styles.tbody')}>
-        {rows.map((row: Row & UseGroupByRowProps<{}>) => {
-          prepareRow(row);
-          return (
-            <Box as="tr" {...row.getRowProps()} css={get(theme, 'styles.tr')}>
-              {row.isGrouped
-                ? row.cells[0].render('Aggregated')
-                : row.cells.map(
-                    (cell: Cell & Partial<UseGroupByCellProps<{}>>) => {
-                      return (
-                        <Box
-                          as="td"
-                          {...cell.getCellProps()}
-                          css={get(theme, 'styles.td')}
-                        >
-                          {cell.render('Cell')}
-                        </Box>
-                      );
-                    },
-                  )}
-            </Box>
-          );
-        })}
+        {rows.map(
+          (row: Row & UseGroupByRowProps<{}> & { isExpanded?: boolean }) => {
+            prepareRow(row);
+            const { key, ...rowProps } = row.getRowProps();
+            return (
+              <Fragment key={key}>
+                <Box as="tr" {...rowProps} css={get(theme, 'styles.tr')}>
+                  {row.isGrouped
+                    ? row.cells[0].render('Aggregated')
+                    : row.cells.map(
+                        (cell: Cell & Partial<UseGroupByCellProps<{}>>) => {
+                          return (
+                            <Box
+                              as="td"
+                              {...cell.getCellProps()}
+                              css={get(theme, 'styles.td')}
+                            >
+                              {cell.render('Cell')}
+                            </Box>
+                          );
+                        },
+                      )}
+                </Box>
+                {row.isExpanded && (
+                  <tr>
+                    <td colSpan={visibleColumns.length}>
+                      {renderRowSubComponent
+                        ? renderRowSubComponent({ row })
+                        : null}
+                    </td>
+                  </tr>
+                )}
+              </Fragment>
+            );
+          },
+        )}
       </Box>
     </Box>
   );

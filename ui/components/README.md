@@ -8,6 +8,8 @@
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
+    -   [<ins>IconButton</ins>](#insiconbuttonins)
+    -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
     -   [<ins>Source</ins>](#inssourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
@@ -146,6 +148,33 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/tree/mast
 | `children`   | _ReactNode_                                                                                                                                                                                                              | the markdown source code is passed as a children pro. |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.         |
 
+## <ins>IconButton</ins>
+
+_IconButton [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
+
+### properties
+
+| Name  | Type                                                                         | Description |
+| ----- | ---------------------------------------------------------------------------- | ----------- |
+| `ref` | _((instance: HTMLButtonElement) => void) \| RefObject&lt;HTMLButtonElement>_ |             |
+
+## <ins>PanelContainer</ins>
+
+an action container with built-in collapsible panels
+
+_PanelContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
+
+### properties
+
+| Name          | Type             | Description                                               |
+| ------------- | ---------------- | --------------------------------------------------------- |
+| `openTab`     | _any_            | by default, which tab to have open.                       |
+| `visibleTabs` | _boolean_        | if true, the tabs on the panels will be visible           |
+| `background`  | _BackgroundType_ | background pattern type                                   |
+| `direction`   | _DirectionType_  | direction type                                            |
+| `actions`     | _ActionItem\[]_  | optional actions provided to the component                |
+| `plain`       | _boolean_        | if plain, skip the border and spacing around the children |
+
 ## <ins>Popover</ins>
 
 A Popover container that is triggered by a click/hover event.
@@ -214,18 +243,19 @@ _Table [source code](https:/github.com/ccontrols/component-controls/tree/master/
 
 ### properties
 
-| Name            | Type                           | Description                                                                    |
-| --------------- | ------------------------------ | ------------------------------------------------------------------------------ |
-| `columns*`      | _Column&lt;{}>\[]_             | the colmns object as an array.                                                 |
-| `data`          | _any\[]_                       | array of data rows.                                                            |
-| `header`        | _boolean_                      | show or hide the header element.                                               |
-| `sorting`       | _boolean_                      | enable.disable sorting.                                                        |
-| `filtering`     | _boolean_                      | enable/disable filtering.                                                      |
-| `itemsLabel`    | _string_                       | string label for 'items' - used in the filter placeholder and grouping header. |
-| `groupBy`       | _string\[]_                    | field to be grouped by.                                                        |
-| `hiddenColumns` | _string\[]_                    | list of columns to hide.                                                       |
-| `expanded`      | _{ \[key: string]: boolean; }_ | object listing the initially expanded rows.                                    |
-| `skipPageReset` | _boolean_                      | reset state update while update table data                                     |
+| Name                    | Type                                         | Description                                                                    |
+| ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------ |
+| `columns*`              | _Column&lt;{}>\[]_                           | the columns object as an array.                                                |
+| `data`                  | _any\[]_                                     | array of data rows.                                                            |
+| `header`                | _boolean_                                    | show or hide the header element.                                               |
+| `sorting`               | _boolean_                                    | enable.disable sorting.                                                        |
+| `filtering`             | _boolean_                                    | enable/disable filtering.                                                      |
+| `itemsLabel`            | _string_                                     | string label for 'items' - used in the filter placeholder and grouping header. |
+| `groupBy`               | _string\[]_                                  | field to be grouped by.                                                        |
+| `hiddenColumns`         | _string\[]_                                  | list of columns to hide.                                                       |
+| `expanded`              | _{ \[key: string]: boolean; }_               | object listing the initially expanded rows.                                    |
+| `skipPageReset`         | _boolean_                                    | reset state update while update table data                                     |
+| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_ |                                                                                |
 
 ## <ins>Tab</ins>
 

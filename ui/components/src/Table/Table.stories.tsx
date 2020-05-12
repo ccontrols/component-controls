@@ -81,7 +81,7 @@ export const sortable = () => {
   );
 };
 
-export const filteravle = () => {
+export const filterable = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>

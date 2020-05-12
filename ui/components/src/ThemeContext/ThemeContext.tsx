@@ -93,7 +93,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         colors: {
           ...polaris.colors,
           header: '#edebe8',
-          highlight: '#339793',
+          highlight: '#3B817D',
           selected: '#1EA7FD',
           fadedText: lighten(0.25, defTheme.colors.text),
           shadow: transparentize(0.9, defTheme.colors.text),

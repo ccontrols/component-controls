@@ -34,7 +34,7 @@ const attachPages = (pageConfigs, viewMode) => {
         node.setAttribute('id', id);
         document.body.appendChild(node);
       }
-      const root = document.getElementById('storybook-root') || document.getElementById('root');
+      const root = document.getElementById('story-root') || document.getElementById('root');
       const pageIndex = activePages.indexOf(id);
       if (active) {
         if (pageIndex < 0) {

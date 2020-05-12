@@ -18,7 +18,7 @@ const ActionColors = ({
   theme: Theme;
   disabled: boolean | undefined;
 }) => ({
-  backgroundColor: transparentize(0.15, theme.colors?.['highlight'] as string),
+  backgroundColor: theme.colors?.['highlight'],
   color: disabled ? '#ddd' : 'background',
   cursor: disabled ? 'not-allowed' : undefined,
   px: 2,
@@ -81,12 +81,12 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
 
   return (
     <div
-      style={{
+      css={{
         position: 'relative',
       }}
     >
       <Flex
-        sx={{
+        css={{
           position: 'absolute',
           width: '100%',
         }}

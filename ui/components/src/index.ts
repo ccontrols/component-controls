@@ -4,6 +4,7 @@ export * from './BlockContainer';
 export * from './Collapsible';
 export * from './ExternalLink';
 export * from './Markdown';
+export * from './PanelContainer';
 export * from './Popover';
 export * from './Source';
 export * from './Subtitle';

@@ -76,7 +76,6 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
       }}
     </ComponentsContainer>
   );
-  console.log(visibility, React.Children.count(block));
   return (
     <BlockContainer
       title={title}
