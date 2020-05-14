@@ -1,22 +1,25 @@
 import React, { FC } from 'react';
 import {
   EditPage,
+  Playground,
   PropsTable,
   Title,
   Subtitle,
   Story,
   Description,
 } from '@component-controls/blocks';
-
-export const TestingPage: FC = () => {
-  return (
-    <>
-      <EditPage />
-      <Title />
-      <Subtitle />
-      <Description />
+import { AxeAllyBlock } from '@component-controls/axe-plugin';
+export const TestingPage: FC = () => (
+  <>
+    <EditPage />
+    <Title />
+    <Subtitle />
+    <Description />
+    <Playground title=".">
       <Story id="." />
-      <PropsTable of="." title="Controls" visibility="controls" />
-    </>
-  );
-};
+    </Playground>
+
+    <PropsTable of="." title="Controls" visibility="controls" />
+    <AxeAllyBlock title="A11y tests" />
+  </>
+);

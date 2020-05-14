@@ -42,7 +42,7 @@ export const useControlContext = <T extends ComponentControlBase<any>>({
   name: string;
 }): Omit<ControlsContextProps, 'controls'> & { control: T } => {
   const { controls, onChange, onClick } = useContext(ControlsContext);
-  const control = controls[name];
+  const control = controls[name] as T;
   return { control, onChange, onClick };
 };
 

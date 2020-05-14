@@ -38,7 +38,11 @@ export const Story: FC<StoryProps> = forwardRef(
                 }}
                 {...rest}
               >
-                <div style={{ all: 'unset' }} ref={ref}>
+                <div
+                  className="story-render-container"
+                  style={{ all: 'unset' }}
+                  ref={ref}
+                >
                   {createElement(renderFn)}
                 </div>
               </Box>

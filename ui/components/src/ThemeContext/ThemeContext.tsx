@@ -5,7 +5,7 @@ import { merge } from '@theme-ui/core';
 
 import { ThemeProvider as ThemeUIProvider, Theme } from 'theme-ui';
 
-import { lighten, transparentize } from 'polished';
+import { transparentize } from 'polished';
 
 export interface ThemeContextProps {
   theme?: Theme;
@@ -38,6 +38,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       {
         ...defTheme,
         initialColorModeName: dark ? 'dark' : 'default',
+        forms: {
+          checkbox: {
+            cursor: 'pointer',
+            border: (t: Theme) => `1px solid ${t?.colors?.text}`,
+            '&:focus': {
+              backgroundColor: 'transarent',
+              boxShadow: (t: Theme) => `0 0 0 2px ${t?.colors?.primary}`,
+              outline: 'none',
+            },
+          },
+        },
         styles: {
           ...defTheme.styles,
           table: {
@@ -87,15 +98,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
             boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset',
           },
           secondary: {
-            bg: 'highlight',
+            bg: 'action',
           },
         },
         colors: {
           ...polaris.colors,
+          gray: '#f6f6f6',
           header: '#edebe8',
-          highlight: '#3B817D',
-          selected: '#1EA7FD',
-          fadedText: lighten(0.25, defTheme.colors.text),
+          highlight: '#b3e6e4',
+          action: '#3B817D',
+          selected: '#027AC5',
+          fadedText: '#69768C',
           shadow: transparentize(0.9, defTheme.colors.text),
           modes: {
             dark: {

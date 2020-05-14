@@ -137,3 +137,12 @@ export const editing = () => {
     </ThemeProvider>
   );
 };
+
+export const rowSelect = () => {
+  const data = React.useMemo(mockData, []);
+  return (
+    <ThemeProvider>
+      <Table rowSelect={true} columns={columns} data={data} />
+    </ThemeProvider>
+  );
+};

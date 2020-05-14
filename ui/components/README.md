@@ -15,6 +15,7 @@
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
+    -   [<ins>useRowSelectionColumn</ins>](#insuserowselectioncolumnins)
     -   [<ins>Tab</ins>](#instabins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
@@ -243,19 +244,26 @@ _Table [source code](https:/github.com/ccontrols/component-controls/tree/master/
 
 ### properties
 
-| Name                    | Type                                         | Description                                                                    |
-| ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------ |
-| `columns*`              | _Column&lt;{}>\[]_                           | the columns object as an array.                                                |
-| `data`                  | _any\[]_                                     | array of data rows.                                                            |
-| `header`                | _boolean_                                    | show or hide the header element.                                               |
-| `sorting`               | _boolean_                                    | enable.disable sorting.                                                        |
-| `filtering`             | _boolean_                                    | enable/disable filtering.                                                      |
-| `itemsLabel`            | _string_                                     | string label for 'items' - used in the filter placeholder and grouping header. |
-| `groupBy`               | _string\[]_                                  | field to be grouped by.                                                        |
-| `hiddenColumns`         | _string\[]_                                  | list of columns to hide.                                                       |
-| `expanded`              | _{ \[key: string]: boolean; }_               | object listing the initially expanded rows.                                    |
-| `skipPageReset`         | _boolean_                                    | reset state update while update table data                                     |
-| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_ |                                                                                |
+| Name                    | Type                                             | Description                                                                    |
+| ----------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `columns*`              | _Column&lt;{}>\[]_                               | the columns object as an array.                                                |
+| `data`                  | _any\[]_                                         | array of data rows.                                                            |
+| `header`                | _boolean_                                        | show or hide the header element.                                               |
+| `sorting`               | _boolean_                                        | enable.disable sorting.                                                        |
+| `filtering`             | _boolean_                                        | enable/disable filtering.                                                      |
+| `itemsLabel`            | _string_                                         | string label for 'items' - used in the filter placeholder and grouping header. |
+| `groupBy`               | _string\[]_                                      | field to be grouped by.                                                        |
+| `hiddenColumns`         | _string\[]_                                      | list of columns to hide.                                                       |
+| `rowSelect`             | _boolean_                                        | if true, will enable row selection                                             |
+| `initialSelected`       | _Record&lt;number, boolean>_                     | initially selected rows                                                        |
+| `onSelectRowsChange`    | _(selected: Record&lt;number, boolean>) => void_ | callback when selected rows change                                             |
+| `expanded`              | _{ \[key: string]: boolean; }_                   | object listing the initially expanded rows.                                    |
+| `skipPageReset`         | _boolean_                                        | reset state update while update table data                                     |
+| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_     | callback to render a SubComponent row                                          |
+
+## <ins>useRowSelectionColumn</ins>
+
+_useRowSelectionColumn [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/TableRowSelection.tsx)_
 
 ## <ins>Tab</ins>
 
@@ -315,9 +323,10 @@ _Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name    | Type     | Description                                         |
-| ------- | -------- | --------------------------------------------------- |
-| `label` | _string_ | optional label to be displayed alongside the toggle |
+| Name    | Type                  | Description                                         |
+| ------- | --------------------- | --------------------------------------------------- |
+| `label` | _string_              | optional label to be displayed alongside the toggle |
+| `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
 
 ## <ins>Zoom</ins>
 

@@ -25,6 +25,8 @@
 -   [Props info](#props-info)
     -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
     -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
+-   [Plugins](#plugins)
+    -   [@component-controls/axe-plugin](#component-controlsaxe-plugin)
 -   [Miscellaneous](#miscellaneous)
     -   [@component-controls/storybook-custom-docs](#component-controlsstorybook-custom-docs)
 
@@ -327,6 +329,32 @@ Component controls react-docgen-typescript props info loader
 Extract props info from react typescript components:
 
 -   Uses [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
+
+<!-- END-PACKAGE-SECTION -->
+
+# Plugins
+
+<package-section file="./misc/axe-plugin/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/axe-plugin](https://github.com/ccontrols/component-controls/blob/master/misc/axe-plugin)
+
+Axe ally plugin for component-contols
+
+Accessibility testing plugin using the [axe-core](https://github.com/dequelabs/axe-core) library from [deque](https://www.deque.com/axe/)
+
+Some of the design goals:
+
+-   Test at the component-level.
+-   Provide a dashboard view to quickly see the errors and tests for the compnnt.
+-   Ability to select and outline the sub-elements generating the errors.
+-   Ability to see details from the errors and passed rules.
+-   Ability to review the rendered story right next to the testing panels.
+
+<p align="center">
+  <img src="https://github.com/ccontrols/component-controls/raw/master/misc/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
+</p>
 
 <!-- END-PACKAGE-SECTION -->
 

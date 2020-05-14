@@ -18,7 +18,7 @@ const ActionColors = ({
   theme: Theme;
   disabled: boolean | undefined;
 }) => ({
-  backgroundColor: theme.colors?.['highlight'],
+  backgroundColor: theme.colors?.['action'],
   color: disabled ? '#ddd' : 'background',
   cursor: disabled ? 'not-allowed' : undefined,
   px: 2,
@@ -33,7 +33,7 @@ const ActionColors = ({
     0.35,
     theme.colors?.text as string,
   )} 0 0 0 1px`,
-  border: `1px solid ${theme.colors?.['highlight'] as string}`,
+  border: `1px solid ${theme.colors?.['action'] as string}`,
 });
 
 /**

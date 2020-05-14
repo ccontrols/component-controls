@@ -8,6 +8,7 @@ export * from './PanelContainer';
 export * from './Popover';
 export * from './Source';
 export * from './Subtitle';
+export * from './SyntaxHighlighter';
 export * from './Table';
 export * from './Tabs';
 export * from './Tag';

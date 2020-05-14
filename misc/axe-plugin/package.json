@@ -1,0 +1,62 @@
+{
+  "name": "@component-controls/axe-plugin",
+  "version": "1.1.0",
+  "description": "Axe ally plugin for component-contols",
+  "keywords": [
+    "addon",
+    "storybook"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "preset.js"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "misc/axe-plugin"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/blocks": "^1.1.0",
+    "@component-controls/components": "^1.1.0",
+    "@primer/octicons-react": "^9.6.0",
+    "axe-core": "^3.5.3",
+    "react": "^16.12.0",
+    "react-google-charts": "^3.0.15",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@component-controls/blocks": "*",
+    "react": "*",
+    "theme-ui": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+}

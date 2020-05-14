@@ -30,8 +30,8 @@ export interface BlockDataContextProps {
    * given an object of components, resolves to name => StoryComponent
    */
   getComponents: (
-    components: { [key: string]: any },
-    kind: StoriesKind,
+    components: { [key: string]: any } | undefined,
+    kind: StoriesKind | undefined,
   ) => StoryComponents;
   /**
    *
@@ -94,9 +94,9 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   };
 
   const getComponents = (
-    components: { [key: string]: any },
-    kind: StoriesKind,
-  ) =>
+    components: { [key: string]: any } | undefined,
+    kind: StoriesKind | undefined,
+  ): StoryComponents =>
     store && kind && components
       ? Object.keys(components).reduce((acc, key) => {
           const name = getComponentName(components[key]);

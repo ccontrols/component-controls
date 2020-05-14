@@ -15,26 +15,24 @@ import {
   PackageVersion,
 } from '@component-controls/blocks';
 
-export const ClassicPage: FC = () => {
-  return (
-    <div>
-      <EditPage />
-      <Title sxStyle={{ paddingBottom: 1 }} />
-      <Subtitle />
-      <PackageVersion />
-      <Box
-        sx={{
-          paddingBottom: 4,
-        }}
-      />
-      <Description />
-      <ComponentSource id="." title="Component" />
-      <Playground openTab="source" title=".">
-        <Story id="." />
-      </Playground>
-      <PropsTable of="." title="Properties" visibility="info" />
-      <ComponentDeps id="." title="External dependencies" />
-      <Stories dark={true} />
-    </div>
-  );
-};
+export const ClassicPage: FC = () => (
+  <div>
+    <EditPage />
+    <Title sxStyle={{ paddingBottom: 1 }} />
+    <Subtitle />
+    <PackageVersion />
+    <Box
+      sx={{
+        paddingBottom: 4,
+      }}
+    />
+    <Description />
+    <ComponentSource id="." title="Component" />
+    <Playground openTab="source" title=".">
+      <Story id="." />
+    </Playground>
+    <PropsTable of="." title="Properties" visibility="info" />
+    <ComponentDeps id="." title="External dependencies" />
+    <Stories dark={true} />
+  </div>
+);

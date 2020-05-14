@@ -77,8 +77,9 @@ export const extractCSFStories = (
         node.right.type === 'ObjectExpression'
       ) {
         const storyName = node.left.object.name;
-        const attributes = extractAttributes(node.right);
-        const { name = storyName } = attributes;
+        const { name = storyName, ...attributes } = extractAttributes(
+          node.right,
+        );
         globals[storyName] = {
           ...attributes,
           name,
@@ -92,8 +93,8 @@ export const extractCSFStories = (
           );
           const story: Story = {
             ...attributes,
-            name,
             ...store.stories[storyName],
+            name,
           };
           if (attrComponents.length > 0) {
             story.component = attrComponents[0];

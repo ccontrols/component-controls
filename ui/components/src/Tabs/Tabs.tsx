@@ -10,8 +10,10 @@ import {
   TabListProps,
   TabPanel as OriginalTabPanel,
   TabPanelProps,
+  resetIdCounter,
 } from 'react-tabs';
 
+export { resetIdCounter as resetTabCounter };
 /**
  * Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
  */
@@ -83,8 +85,10 @@ type OwnTabsProps = Omit<TabsProps, 'ref'>;
  * Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
  *
  */
-export const Tabs: FC<OwnTabsProps> = props => (
-  <TabsContainer>
-    <OriginalTabs {...props} />
-  </TabsContainer>
-);
+export const Tabs: FC<OwnTabsProps> = props => {
+  return (
+    <TabsContainer>
+      <OriginalTabs {...props} />
+    </TabsContainer>
+  );
+};

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
-import { FC, Fragment, ReactNode } from 'react';
+import { FC, Fragment, ReactNode, useEffect } from 'react';
 import { Box, BoxProps, Flex, useThemeUI, jsx } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import memoize from 'fast-memoize';
@@ -10,6 +10,7 @@ import {
   useGlobalFilter,
   useGroupBy,
   useExpanded,
+  useRowSelect,
   Column,
   Cell,
   Row,
@@ -24,12 +25,14 @@ import {
   UseGroupByCellProps,
   UseGroupByRowProps,
   UseExpandedState,
+  UseRowSelectState,
   UseGroupByState,
   TableState,
 } from 'react-table';
 import Octicon, { TriangleUp, TriangleDown } from '@primer/octicons-react';
 import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
+import { useRowSelectionColumn } from './TableRowSelection';
 import { useTableLayout } from './useTableLayout';
 
 const defaultColumn = memoize(() => ({
@@ -37,6 +40,7 @@ const defaultColumn = memoize(() => ({
   accessor: '',
 }));
 
+export type SelectedRowIds = Record<number, boolean>;
 interface TableOwnProps {
   /**
    * the columns object as an array.
@@ -70,6 +74,22 @@ interface TableOwnProps {
    * list of columns to hide.
    */
   hiddenColumns?: string[];
+
+  /**
+   * if true, will enable row selection
+   */
+  rowSelect?: boolean;
+
+  /**
+   * initially selected rows
+   */
+  initialSelected?: SelectedRowIds;
+
+  /**
+   * callback when selected rows change
+   */
+  onSelectRowsChange?: (selected: SelectedRowIds) => void;
+
   /**
    * object listing the initially expanded rows.
    */
@@ -81,7 +101,9 @@ interface TableOwnProps {
    * reset state update while update table data
    */
   skipPageReset?: boolean;
-
+  /**
+   * callback to render a SubComponent row
+   */
   renderRowSubComponent?: (props: { row: Row }) => ReactNode;
 }
 
@@ -103,6 +125,9 @@ export const Table: FC<TableProps> = ({
   hiddenColumns,
   skipPageReset,
   renderRowSubComponent,
+  initialSelected = {},
+  onSelectRowsChange,
+  rowSelect,
   ...rest
 }) => {
   const plugins = [
@@ -111,11 +136,16 @@ export const Table: FC<TableProps> = ({
     useGroupBy,
     useSortBy,
     useExpanded,
+    useRowSelect,
     useExpanderColumn(itemsLabel),
   ];
+  if (rowSelect) {
+    plugins.push(useRowSelectionColumn);
+  }
   const initialState: Partial<TableState<{}>> &
     Partial<UseExpandedState<{}>> &
-    Partial<UseGroupByState<{}>> = {};
+    Partial<UseGroupByState<{}>> &
+    Partial<UseRowSelectState<{}>> = {};
   if (Array.isArray(groupBy)) {
     initialState.groupBy = groupBy;
     initialState.hiddenColumns = hiddenColumns || groupBy;
@@ -125,6 +155,7 @@ export const Table: FC<TableProps> = ({
   if (typeof expanded === 'object') {
     initialState.expanded = expanded;
   }
+  // initialState.selectedRowIds = initialSelected;
   const options: TableOptions<{}> &
     UseFiltersOptions<{}> &
     UseExpandedOptions<{}> &
@@ -158,6 +189,12 @@ export const Table: FC<TableProps> = ({
     setGlobalFilter,
     state,
   } = tableOptions;
+  const { selectedRowIds } = state;
+  useEffect(() => {
+    if (onSelectRowsChange) {
+      onSelectRowsChange(selectedRowIds as SelectedRowIds);
+    }
+  }, [selectedRowIds, onSelectRowsChange]);
   const { theme } = useThemeUI();
   return (
     <Box

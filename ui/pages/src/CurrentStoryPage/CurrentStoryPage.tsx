@@ -9,17 +9,15 @@ import {
   PropsTable,
 } from '@component-controls/blocks';
 
-export const CurrentStoryPage: FC = () => {
-  return (
-    <>
-      <Title />
-      <Subtitle />
-      <Description />
-      <ComponentSource id="." title="Component" />
-      <Playground openTab="source" title=".">
-        <Story id="." />
-      </Playground>
-      <PropsTable of="." title="Props" />
-    </>
-  );
-};
+export const CurrentStoryPage: FC = () => (
+  <>
+    <Title />
+    <Subtitle />
+    <Description />
+    <ComponentSource id="." title="Component" />
+    <Playground openTab="source" title=".">
+      <Story id="." />
+    </Playground>
+    <PropsTable of="." title="Props" />
+  </>
+);
