@@ -22,7 +22,6 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
   axeOptions,
   ...props
 }) => {
-  console.log('here');
   return (
     <StoryBlockContainer {...props}>
       {({ story }) => (
