@@ -20,6 +20,8 @@ const ActionColors = ({
 }) => ({
   backgroundColor: theme.colors?.['action'],
   color: disabled ? '#ddd' : 'background',
+  //safari fix:
+  '-webkit-text-fill-color': 'initial',
   cursor: disabled ? 'not-allowed' : undefined,
   px: 2,
   py: 1,
@@ -81,25 +83,24 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
 
   return (
     <div
-      css={{
+      sx={{
         position: 'relative',
       }}
     >
       <Flex
-        css={{
+        sx={{
           position: 'absolute',
           width: '100%',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
+        <Flex
+          sx={{
             flexDirection: 'row-reverse',
             marginLeft: 'auto',
           }}
         >
           {items}
-        </div>
+        </Flex>
       </Flex>
     </div>
   );
