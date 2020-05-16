@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { BooleanControl } from './components/BooleanControl';
 
 export default {
   title: 'Controls/BOOLEAN',
+  component: BooleanControl,
 };
 
 export const overview = ({ bool }) => <div>{bool ? 'YES' : 'NO'}</div>;

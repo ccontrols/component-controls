@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { FilesControl } from './components/FilesControl';
 
 export default {
   title: 'Controls/FILES',
+  component: FilesControl,
 };
 
 export const overview = ({ images }) => (

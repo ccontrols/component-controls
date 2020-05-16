@@ -21,7 +21,7 @@ const ActionColors = ({
   backgroundColor: theme.colors?.['action'],
   color: disabled ? '#ddd' : 'background',
   //safari fix:
-  '-webkit-text-fill-color': 'initial',
+  WebkitTextFillColor: 'initial',
   cursor: disabled ? 'not-allowed' : undefined,
   px: 2,
   py: 1,

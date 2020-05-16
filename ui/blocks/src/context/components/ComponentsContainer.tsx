@@ -13,7 +13,7 @@ export type ComponentsContainerProps = {
     props: {
       story?: Story;
       componentPackage?: PackageInfo;
-      tabName: string;
+      tabName?: string;
     },
     rest: any,
   ) => React.ReactElement | null;

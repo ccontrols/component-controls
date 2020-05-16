@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { NumberControl } from './components/NumberControl';
 
 export default {
   title: 'Controls/NUMBER',
+  component: NumberControl,
 };
 
 export const overview = ({ value }) => <div>{value}</div>;

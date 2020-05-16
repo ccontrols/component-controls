@@ -61,7 +61,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   if (keys.length === 0) {
     return null;
   }
-
+  let child: React.ReactElement | null = null;
   const block = (
     <ComponentsContainer
       of={of}
@@ -71,11 +71,12 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
       {...rest}
     >
       {(component, props, otherProps) => {
-        const child = children(component, props, otherProps);
+        child = children(component, props, otherProps);
         return child;
       }}
     </ComponentsContainer>
   );
+  // console.log(child);
   return (
     <BlockContainer
       title={title}

@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { DateControl } from './components/DateControl';
 
 export default {
   title: 'Controls/DATE',
+  component: DateControl,
 };
 
 export const overview = ({ date }) => <div>{date.toLocaleString()}</div>;

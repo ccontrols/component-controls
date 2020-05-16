@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ArrayControl } from './components/ArrayControl';
 
 export default {
   title: 'Controls/ARRAY',
+  component: ArrayControl,
 };
 
 export const overview = ({ text, buttons }) => (

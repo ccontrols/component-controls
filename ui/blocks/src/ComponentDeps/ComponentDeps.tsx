@@ -1,10 +1,10 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC } from 'react';
 
 import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
 } from '../BlockContainer/components/ComponentsBlockContainer';
-import { Dependencies } from './Dependencies';
+import { BaseComponentDeps } from './BaseComponentDeps';
 
 export type ComponentDepsProps = Omit<
   ComponentsBlockContainerProps,
@@ -17,50 +17,12 @@ export type ComponentDepsProps = Omit<
 export const ComponentDeps: FC<ComponentDepsProps> = ({ ...rest }) => {
   return (
     <ComponentsBlockContainer visibility="info" {...rest}>
-      {(component, props) => {
-        const { componentPackage } = props;
-        const {
-          dependencies = {},
-          devDependencies = {},
-          peerDependencies = {},
-        } = componentPackage || {};
-        const { imports } = component || {};
-        if (!imports) {
-          return null;
-        }
-        const rows = useMemo(() => {
-          const dependenciesKeys = Object.keys(dependencies);
-          const devDependenciesKeys = Object.keys(devDependencies);
-          const peerDependenciesKeys =
-            peerDependencies && Object.keys(peerDependencies);
-
-          return Object.keys(imports)
-            .map(name => {
-              const packageName: string | undefined =
-                (dependenciesKeys &&
-                  dependenciesKeys.find(packageName =>
-                    name.startsWith(packageName),
-                  )) ||
-                (devDependenciesKeys &&
-                  devDependenciesKeys.find(packageName =>
-                    name.startsWith(packageName),
-                  ));
-              return {
-                name,
-                imports: imports[name],
-                packageName,
-                peer: packageName
-                  ? peerDependenciesKeys.includes(packageName)
-                  : false,
-                version: packageName
-                  ? dependencies[packageName] || devDependencies[packageName]
-                  : undefined,
-              };
-            })
-            .sort((a, b) => a.name.localeCompare(b.name));
-        }, [component]);
-        return <Dependencies dependencies={rows} />;
-      }}
+      {(component, { componentPackage }) => (
+        <BaseComponentDeps
+          component={component}
+          componentPackage={componentPackage}
+        />
+      )}
     </ComponentsBlockContainer>
   );
 };

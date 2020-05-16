@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { TextControl } from './components/TextControl';
 
 export default {
   title: 'Controls/TEXT',
+  component: TextControl,
 };
 
 export const overview = ({ text }) => <div>{text}</div>;

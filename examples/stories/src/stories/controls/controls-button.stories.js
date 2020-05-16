@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from '@theme-ui/components';
 import { ControlTypes } from '@component-controls/specification';
+import { ButtonControl } from './components/ButtonControl';
 
 export default {
   title: 'Controls/BUTTON',
+  component: ButtonControl,
 };
 
 export const overview = ({ onClick }) => (

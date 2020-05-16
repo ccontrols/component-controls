@@ -1,8 +1,10 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
+import { ColorControl } from './components/ColorControl';
 
 export default {
   title: 'Controls/COLOR',
+  component: ColorControl,
 };
 
 export const overview = ({ color }) => (

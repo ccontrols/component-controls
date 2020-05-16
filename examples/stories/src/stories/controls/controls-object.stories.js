@@ -1,9 +1,11 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
 import { Button } from '@theme-ui/components';
+import { ObjectControl } from './components/ObjectControl';
 
 export default {
   title: 'Controls/OBJECT',
+  component: ObjectControl,
 };
 
 export const overview = ({ text, background: { color } }) => {
