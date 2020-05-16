@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from 'react';
+
 /* @jsx mdx */
+//@ts-ignore
+import { mdx } from '@mdx-js/react';
 
 const layoutProps = {};
 
