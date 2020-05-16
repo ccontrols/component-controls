@@ -12,6 +12,9 @@ export type StoryProps = StoryBlockContainerProps & {
   ref?: React.Ref<HTMLDivElement>;
 };
 
+/**
+ * block component to render story function with decorators
+ */
 export const Story: FC<StoryProps> = forwardRef(
   (props: StoryProps, ref: React.Ref<HTMLDivElement>) => (
     <StoryBlockContainer {...props}>

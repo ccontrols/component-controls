@@ -4,6 +4,7 @@
     "core/**/*",
     "misc/**/*",
     "integrations/**/*",
+    "plugins/**/*",
     "props-info/**/*",
     "ui/**/*"
   ],

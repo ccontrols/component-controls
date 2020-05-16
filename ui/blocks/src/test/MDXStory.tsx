@@ -2,7 +2,6 @@
 
 import React from 'react';
 /* @jsx mdx */
-import { mdx } from '@mdx-js/react';
 
 const layoutProps = {};
 

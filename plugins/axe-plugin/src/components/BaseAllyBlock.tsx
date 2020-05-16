@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { FC, useState, useEffect, useRef, useMemo } from 'react';
+import React, { FC, useState, useRef, useEffect, useMemo } from 'react';
 import {
   run as runAxe,
   configure as configureAxe,
@@ -43,18 +43,15 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
     passes: [],
     incomplete: [],
   });
-  useEffect(() => {
+  const runTests = async () => {
     resetTabCounter();
     reset();
     configureAxe(options);
     const el = storyRef.current?.firstChild;
-    runAxe(el ?? undefined)
-      .then((r: AxeResults) => {
-        setResults(r);
-      })
-      .catch((err: any) => {
-        console.error('Axe ally testing:', err.message);
-      });
+    setResults(await runAxe(el ?? undefined));
+  };
+  useEffect(() => {
+    runTests();
   }, [storyId, storyRef.current]);
   const actions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
@@ -96,6 +93,8 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
       panel: <ResultsTable results={results.incomplete} />,
     });
   }
+  // console.log(results);
+
   return (
     <SelectionContextProvider results={results}>
       <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>

@@ -92,6 +92,7 @@
       "core/*",
       "integrations/*",
       "misc/*",
+      "plugins/*",
       "props-info/*",
       "ui/*",
       "examples/*"

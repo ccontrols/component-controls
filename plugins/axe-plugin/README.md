@@ -13,7 +13,7 @@
 
 # In action
 
-[Example site](https://components-storybook-6-no-docs.netlify.app)
+[Example site](https://components-storybook-6-no-docs.netlify.app/?path=/test/components-actioncontainer--overview)
 
 # Overview
 
@@ -25,10 +25,9 @@ Some of the design goals:
 -   Provide a dashboard view to quickly see the errors and tests for the compnnt.
 -   Ability to select and outline the sub-elements generating the errors.
 -   Ability to see details from the errors and passed rules.
--   Ability to review the rendered story right next to the testing panels.
 
 <p align="center">
-  <img src="https://github.com/ccontrols/component-controls/raw/master/misc/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
+  <img src="https://github.com/ccontrols/component-controls/raw/master/plugins/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
 </p>
 
 # Getting Started

@@ -15,4 +15,5 @@ export * from './StorySource';
 export * from './Subtitle';
 export * from './Title';
 export * from './notifications';
+export * from './test';
 export * from './utils';
