@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
-import React, { FC, useState, useRef, useEffect, useMemo } from 'react';
+import React, { FC, useRef, useEffect, useMemo } from 'react';
+import { useRecoilState } from 'recoil';
 import {
   run as runAxe,
   cleanup as cleanupAxe,
   configure as configureAxe,
   reset,
-  AxeResults,
   Spec,
 } from 'axe-core';
 
@@ -16,9 +16,9 @@ import {
   ActionItems,
   resetTabCounter,
 } from '@component-controls/components';
-import { ResultsTable } from './ResultsTable';
+import { ViolationsTable, PassesTable, IncompleteTable } from './ResultsTable';
 import { HighlightSelector } from './HighlightSelector';
-import { SelectionContextProvider } from './SelectionContext';
+import { axeResults } from './SelectionContext';
 import { AllyDashboard } from './AllyDashboard';
 
 /**
@@ -38,22 +38,28 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
 }) => {
   const storyRef = useRef<HTMLDivElement>(null);
   const isMounted = useRef(false);
-  const [results, setResults] = useState<
-    Pick<AxeResults, 'violations' | 'passes' | 'incomplete'>
-  >({
-    violations: [],
-    passes: [],
-    incomplete: [],
-  });
+  const isRunning = useRef(false);
+  const [results, setResults] = useRecoilState(axeResults);
   useEffect(() => {
     resetTabCounter();
     reset();
     configureAxe(options);
     isMounted.current = true;
-    const el = storyRef.current?.firstChild;
-    runAxe(el ?? undefined)
-      .then(r => isMounted.current && setResults(r))
-      .catch(e => console.error(e));
+    if (isRunning.current === false) {
+      isRunning.current = true;
+      const el = storyRef.current?.firstChild;
+      runAxe(el ?? undefined)
+        .then(r => {
+          isRunning.current = false;
+          if (isMounted.current) {
+            setResults(r);
+          }
+        })
+        .catch(e => {
+          isRunning.current = false;
+          console.error(e);
+        });
+    }
     return () => {
       isMounted.current = false;
       cleanupAxe();
@@ -65,7 +71,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
         title: `dashboard`,
         id: 'dashboard',
         'aria-label': 'display the accessibility overview dashboard',
-        panel: <AllyDashboard results={results} />,
+        panel: <AllyDashboard />,
       },
     ];
     if (results?.violations?.length) {
@@ -74,7 +80,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
         id: 'errors',
         group: 'results',
         'aria-label': 'display the accessibility violations',
-        panel: <ResultsTable results={results.violations} />,
+        panel: <ViolationsTable />,
       });
     }
     if (results?.passes?.length) {
@@ -83,9 +89,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
         id: 'passed',
         group: 'results',
         'aria-label': 'display the accessibility successfully passed tests',
-        panel: (
-          <ResultsTable results={results.passes} hideErrorColumns={true} />
-        ),
+        panel: <PassesTable />,
       });
     }
     return actions;
@@ -96,18 +100,16 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
       id: 'incomplete',
       group: 'results',
       'aria-label': 'display the incomplete accessibility tests',
-      panel: <ResultsTable results={results.incomplete} />,
+      panel: <IncompleteTable />,
     });
   }
   // console.log(results);
 
   return (
-    <SelectionContextProvider results={results}>
-      <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>
-        <HighlightSelector>
-          <Story key={storyId} id={storyId} ref={storyRef} />
-        </HighlightSelector>
-      </PanelContainer>
-    </SelectionContextProvider>
+    <PanelContainer actions={actions} openTab="dashboard" visibleTabs={true}>
+      <HighlightSelector>
+        <Story key={storyId} id={storyId} ref={storyRef} />
+      </HighlightSelector>
+    </PanelContainer>
   );
 };

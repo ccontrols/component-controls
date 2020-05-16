@@ -1,83 +1,86 @@
-import React, { useState, useEffect, createContext, FC } from 'react';
-import { AxeResults, Result } from 'axe-core';
+import { atom, selector } from 'recoil';
+import { Result } from 'axe-core';
 
 export type Selection = string[];
-export interface SelectionContextProps {
-  selection: Selection;
-  isSelected: (selector: string[]) => boolean;
-  isTagSelected: (tag: string) => boolean;
-  toggleSelection: (selector: string[]) => void;
-  toggleTagSelected: (tag: string) => void;
-}
-//@ts-ignore
-export const SelectionContext = createContext<SelectionContextProps>({});
 
-interface SelectionContextProviderProps {
-  results: Pick<AxeResults, 'violations' | 'passes' | 'incomplete'>;
-}
-export const SelectionContextProvider: FC<SelectionContextProviderProps> = ({
-  children,
-  results,
-}) => {
-  const [selection, setSelection] = useState<Selection>([]);
-  const [tagged, setTagged] = useState<{
-    [tag: string]: string[];
-  }>({});
-  useEffect(() => {
-    setTagged(
-      results.violations.reduce(
-        (acc: { [tag: string]: string[] }, result: Result) => {
-          result.tags.forEach(tag => {
-            if (acc[tag] === undefined) {
-              acc[tag] = [];
-            }
-            result.nodes.forEach(node => {
-              node.target.forEach(target => {
-                if (!acc[tag].includes(target)) {
-                  acc[tag].push(target);
-                }
-              });
+export const axeResults = atom({
+  key: 'axeResults',
+  default: {
+    violations: [],
+    passes: [],
+    incomplete: [],
+  },
+});
+
+export const axeViolations = selector({
+  key: 'axeViolations',
+  get: ({ get }: any) => {
+    const { violations } = get(axeResults);
+    console.log(violations);
+    return violations;
+  },
+});
+
+export const axePasses = selector({
+  key: 'axePasses',
+  get: ({ get }: any) => {
+    const { passes } = get(axeResults);
+    return passes;
+  },
+});
+
+export const axeIncomplete = selector({
+  key: 'axeIncomplete',
+  get: ({ get }: any) => {
+    const { incomplete } = get(axeResults);
+    return incomplete;
+  },
+});
+
+export const taggedList = selector({
+  key: 'taggedList',
+  get: ({ get }: any) => {
+    const violations = get(axeViolations);
+    return violations.reduce(
+      (acc: { [tag: string]: string[] }, result: Result) => {
+        result.tags.forEach(tag => {
+          if (acc[tag] === undefined) {
+            acc[tag] = [];
+          }
+          result.nodes.forEach(node => {
+            node.target.forEach(target => {
+              if (!acc[tag].includes(target)) {
+                acc[tag].push(target);
+              }
             });
           });
-          return acc;
-        },
-        {},
-      ),
+        });
+        return acc;
+      },
+      {},
     );
-    setSelection([]);
-  }, [results]);
-  const isSelected = (selector: string[]) =>
-    selector.some(s => selection.includes(s));
+  },
+});
 
-  const toggleSelection = (selector: string[]) => {
-    if (isSelected(selector)) {
-      setSelection(selection.filter(e => !selector.includes(e)));
-    } else {
-      setSelection([...selection, ...selector]);
-    }
-  };
-  const isTagSelected = (tag: string) =>
-    tagged[tag] ? isSelected(tagged[tag]) : false;
-  const toggleTagSelected = (tag: string) => {
-    if (tagged[tag]) {
-      const wasSelected = isSelected(tagged[tag]);
-      setSelection(selection.filter(e => !tagged[tag].includes(e)));
-      if (!wasSelected) {
-        setSelection([...selection, ...tagged[tag]]);
-      }
-    }
-  };
-  return (
-    <SelectionContext.Provider
-      value={{
-        selection,
-        isSelected,
-        toggleSelection,
-        isTagSelected,
-        toggleTagSelected,
-      }}
-    >
-      {children}
-    </SelectionContext.Provider>
-  );
-};
+export const selectionList = atom({
+  key: 'selectionList',
+  default: [],
+});
+
+export const isSelected = (selectionList: Selection) =>
+  selector({
+    key: `isSelected_${selectionList.join('_')}`,
+    get: ({ get }: any) => {
+      const selection = get(selectionList);
+      return selectionList.some((s: string) => selection.includes(s));
+    },
+  });
+
+export const isTagSelected = (tag: string) =>
+  selector({
+    key: `isTagSelected_${tag}`,
+    get: ({ get }: any) => {
+      const tagged = get(taggedList);
+      return tagged[tag] ? isSelected(tagged[tag]) : false;
+    },
+  });

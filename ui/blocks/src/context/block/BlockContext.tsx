@@ -1,4 +1,5 @@
 import React from 'react';
+import { RecoilRoot } from 'recoil';
 import { StoryStore } from '@component-controls/store';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { BlockControlsContextProvider } from './BlockControlsContext';
@@ -45,19 +46,21 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   options,
 }) => {
   return (
-    <BlockContext.Provider
-      value={{
-        storyId,
-        storeProvider: store,
-        options,
-      }}
-    >
-      <BlockDataContextProvider store={store} storyId={storyId}>
-        <BlockControlsContextProvider store={store}>
-          {children}
-        </BlockControlsContextProvider>
-      </BlockDataContextProvider>
-    </BlockContext.Provider>
+    <RecoilRoot>
+      <BlockContext.Provider
+        value={{
+          storyId,
+          storeProvider: store,
+          options,
+        }}
+      >
+        <BlockDataContextProvider store={store} storyId={storyId}>
+          <BlockControlsContextProvider store={store}>
+            {children}
+          </BlockControlsContextProvider>
+        </BlockDataContextProvider>
+      </BlockContext.Provider>
+    </RecoilRoot>
   );
 };
 

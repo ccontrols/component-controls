@@ -1,18 +1,33 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { AxeResults } from 'axe-core';
 import { Chart } from 'react-google-charts';
 import { Flex, Heading, Grid, Label, Checkbox } from 'theme-ui';
-import { SelectionContext } from './SelectionContext';
-
-export interface AllyDashboardProps {
-  results: Pick<AxeResults, 'violations' | 'passes'>;
-}
+import {
+  axeResults,
+  isTagSelected,
+  selectionList,
+  taggedList,
+} from './SelectionContext';
 
 type StatsStatus = 'passes' | 'violations';
 
 const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
-  const { toggleTagSelected, isTagSelected } = useContext(SelectionContext);
-  const isSelected = isTagSelected(tag);
+  const isSelected = tag ? useRecoilValue(isTagSelected(tag)) : false;
+  const tagged = useRecoilValue(taggedList);
+  const [selection, setSelection] = useRecoilState(selectionList);
+  const toggleTagSelected = (tag: string) => {
+    if (tagged[tag]) {
+      const wasSelected = tagged[tag].some((s: string) =>
+        selection.includes(s),
+      );
+      setSelection(selection.filter((e: string) => !tagged[tag].includes(e)));
+      if (!wasSelected) {
+        setSelection([...selection, ...tagged[tag]]);
+      }
+    }
+  };
+
   return (
     <Flex
       css={{
@@ -56,7 +71,8 @@ const collectStats = (
   }, initial);
   return success;
 };
-export const AllyDashboard: FC<AllyDashboardProps> = ({ results }) => {
+export const AllyDashboard: FC = () => {
+  const results = useRecoilValue(axeResults);
   const stats = collectStats(
     results,
     'violations',

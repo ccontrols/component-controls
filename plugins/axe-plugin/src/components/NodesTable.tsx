@@ -1,12 +1,12 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useMemo, useContext } from 'react';
+import { FC, useMemo } from 'react';
+import { useRecoilValue, useRecoilState } from 'recoil';
 import { jsx, Flex, Box, Label, Checkbox } from 'theme-ui';
 import { Column } from 'react-table';
 import { NodeResult } from 'axe-core';
 import { SyntaxHighlighter, Table, Tag } from '@component-controls/components';
-
-import { SelectionContext } from './SelectionContext';
+import { isSelected, selectionList } from './SelectionContext';
 
 export interface NodesTableProps {
   /**
@@ -20,13 +20,18 @@ export interface NodesTableProps {
 }
 
 const SelectionCheckbox: FC<{ target: string[] }> = ({ target }) => {
-  const { toggleSelection, isSelected } = useContext(SelectionContext);
+  const checked = useRecoilValue(isSelected(target));
+  const [selection, setSelection] = useRecoilState(selectionList);
+  const toggleSelection = (selector: string[]) => {
+    if (selector.some(s => selection.includes(s))) {
+      setSelection(selection.filter((e: string) => !selector.includes(e)));
+    } else {
+      setSelection([...selection, ...selector]);
+    }
+  };
   return (
     <Label>
-      <Checkbox
-        onChange={() => toggleSelection(target)}
-        checked={isSelected(target)}
-      />
+      <Checkbox onChange={() => toggleSelection(target)} checked={checked} />
     </Label>
   );
 };
