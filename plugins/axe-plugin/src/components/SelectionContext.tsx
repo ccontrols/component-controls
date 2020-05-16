@@ -16,7 +16,6 @@ export const axeViolations = selector({
   key: 'axeViolations',
   get: ({ get }: any) => {
     const { violations } = get(axeResults);
-    console.log(violations);
     return violations;
   },
 });
