@@ -109,7 +109,7 @@ export const NodesTable: FC<NodesTableProps> = ({
         data={nodes}
         columns={columns}
         hiddenColumns={
-          hideErrorColumns ? ['failureSummary', 'target'] : ['target']
+          hideErrorColumns ? ['failureSummary', 'targets'] : ['targets']
         }
       />
     </Box>

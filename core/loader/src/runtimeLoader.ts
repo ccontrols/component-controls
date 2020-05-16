@@ -1,7 +1,7 @@
 import { store } from './store';
 
 module.exports = function() {
-  let imports = 'const imports = {};';
+  let imports = 'const imports = {};\n';
   store.stores.forEach((store, storeIdx) => {
     imports = `${imports} ${Object.keys(store.kinds).map(
       (key, kindIdx) =>

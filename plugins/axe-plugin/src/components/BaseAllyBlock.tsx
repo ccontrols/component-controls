@@ -2,6 +2,7 @@
 import React, { FC, useState, useRef, useEffect, useMemo } from 'react';
 import {
   run as runAxe,
+  cleanup as cleanupAxe,
   configure as configureAxe,
   reset,
   AxeResults,
@@ -36,6 +37,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
   options = {},
 }) => {
   const storyRef = useRef<HTMLDivElement>(null);
+  const isMounted = useRef(false);
   const [results, setResults] = useState<
     Pick<AxeResults, 'violations' | 'passes' | 'incomplete'>
   >({
@@ -43,15 +45,19 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({
     passes: [],
     incomplete: [],
   });
-  const runTests = async () => {
+  useEffect(() => {
     resetTabCounter();
     reset();
     configureAxe(options);
+    isMounted.current = true;
     const el = storyRef.current?.firstChild;
-    setResults(await runAxe(el ?? undefined));
-  };
-  useEffect(() => {
-    runTests();
+    runAxe(el ?? undefined)
+      .then(r => isMounted.current && setResults(r))
+      .catch(e => console.error(e));
+    return () => {
+      isMounted.current = false;
+      cleanupAxe();
+    };
   }, [storyId, storyRef.current]);
   const actions: ActionItems = useMemo(() => {
     const actions: ActionItems = [

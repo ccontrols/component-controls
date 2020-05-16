@@ -14,10 +14,10 @@ export default {
 };
 
 interface DocsControlsTable {
-  name: string;
-  age: number;
+  name?: string;
+  age?: number;
 }
-export const docsControlsTable = ({ name, age }: DocsControlsTable) => {
+export const docsControlsTable = ({ name, age }: DocsControlsTable = {}) => {
   return (
     <>
       <h2>{`Hello, my name is ${name}, and I am ${age} years old.`}</h2>

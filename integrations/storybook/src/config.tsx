@@ -12,7 +12,7 @@ store.addObserver(() => {
 
 addDecorator(
   makeDecorator({
-    name: 'componnet-controls',
+    name: 'component-controls',
     parameterName: 'controls',
     wrapper: (storyFn, context) => {
       const story = store.getStory(context.id);
