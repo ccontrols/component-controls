@@ -35,6 +35,7 @@
 -   Create a components development environment with testing as a first-class feature.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files (both story and component files) at instrumentation-time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
+-   Ability to document "external" component libraries, living in a separate package from the "stories" package.
 -   Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
 -   Ability to integrate with various build engines - [storybookjs](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org).
 -   Create and support open declarative story formats.

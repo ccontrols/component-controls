@@ -37,7 +37,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -270,6 +270,8 @@ _Stories [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `plain`       | _boolean_           | if plain, skip the border and spacing around the children                                                                       |
 
 ## <ins>Story</ins>
+
+block component to render story function with decorators
 
 _Story [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Story/Story.tsx)_
 

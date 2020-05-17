@@ -117,7 +117,7 @@ export default {
 
 Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
 
-_AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/master/misc/axe-plugin/src/index.tsx)_
+_AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
 
 ### properties
 
