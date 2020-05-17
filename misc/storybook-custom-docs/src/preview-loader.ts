@@ -72,13 +72,15 @@ ${pages
   .join('\n')}
 
   window.addEventListener('load', () => {
+    
     const selection =
     window &&
     //@ts-ignore
     window.__STORYBOOK_CLIENT_API__ &&
     //@ts-ignore
     window.__STORYBOOK_CLIENT_API__.store().getSelection();
-    const viewMode = selection ? selection.viewMode : undefined;
+    const urlParams = new URLSearchParams(window.location.search);
+    const viewMode = urlParams.get('viewMode') || (selection ? selection.viewMode : undefined);
     attachPages(pageConfigs, viewMode);
   });
 `;
