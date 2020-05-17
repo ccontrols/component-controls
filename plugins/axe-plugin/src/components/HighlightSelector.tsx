@@ -27,8 +27,8 @@ const HighlightNode = styled.div<StyledContainerProps>`
     }
     const styles = `${selectors.join(', \n')}
       {
-        outline: 4px dotted red;
-        outline-offset: 4px;
+        outline: 2px dotted red;
+        outline-offset: 2px;
       };
       `;
     return styles;

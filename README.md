@@ -335,13 +335,13 @@ Extract props info from react typescript components:
 
 # Plugins
 
-<package-section file="./misc/axe-plugin/README.md" section="overview" />
+<package-section file="./plugins/axe-plugin/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/axe-plugin](https://github.com/ccontrols/component-controls/blob/master/misc/axe-plugin)
+## [@component-controls/axe-plugin](https://github.com/ccontrols/component-controls/blob/master/plugins/axe-plugin)
 
-Axe ally plugin for component-contols
+Axe ally testing plugin
 
 Accessibility testing plugin using the [axe-core](https://github.com/dequelabs/axe-core) library from [deque](https://www.deque.com/axe/)
 
@@ -351,10 +351,9 @@ Some of the design goals:
 -   Provide a dashboard view to quickly see the errors and tests for the compnnt.
 -   Ability to select and outline the sub-elements generating the errors.
 -   Ability to see details from the errors and passed rules.
--   Ability to review the rendered story right next to the testing panels.
 
 <p align="center">
-  <img src="https://github.com/ccontrols/component-controls/raw/master/misc/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
+  <img src="https://github.com/ccontrols/component-controls/raw/master/plugins/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
 </p>
 
 <!-- END-PACKAGE-SECTION -->
