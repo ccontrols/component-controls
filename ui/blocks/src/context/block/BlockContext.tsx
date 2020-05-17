@@ -3,6 +3,7 @@ import { RecoilRoot } from 'recoil';
 import { StoryStore } from '@component-controls/store';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { BlockControlsContextProvider } from './BlockControlsContext';
+import { ErrorBoundary } from './ErrorBoundary';
 
 export interface BlockContextInputProps {
   /**
@@ -46,21 +47,23 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   options,
 }) => {
   return (
-    <RecoilRoot>
-      <BlockContext.Provider
-        value={{
-          storyId,
-          storeProvider: store,
-          options,
-        }}
-      >
-        <BlockDataContextProvider store={store} storyId={storyId}>
-          <BlockControlsContextProvider store={store}>
-            {children}
-          </BlockControlsContextProvider>
-        </BlockDataContextProvider>
-      </BlockContext.Provider>
-    </RecoilRoot>
+    <ErrorBoundary>
+      <RecoilRoot>
+        <BlockContext.Provider
+          value={{
+            storyId,
+            storeProvider: store,
+            options,
+          }}
+        >
+          <BlockDataContextProvider store={store} storyId={storyId}>
+            <BlockControlsContextProvider store={store}>
+              {children}
+            </BlockControlsContextProvider>
+          </BlockDataContextProvider>
+        </BlockContext.Provider>
+      </RecoilRoot>
+    </ErrorBoundary>
   );
 };
 

@@ -4,7 +4,8 @@ import { AxeResults } from 'axe-core';
 import { Chart } from 'react-google-charts';
 import { Flex, Heading, Grid, Label, Checkbox } from 'theme-ui';
 import {
-  axeResults,
+  axePasses,
+  axeViolations,
   isTagSelected,
   selectionList,
   taggedList,
@@ -13,7 +14,7 @@ import {
 type StatsStatus = 'passes' | 'violations';
 
 const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
-  const isSelected = tag ? useRecoilValue(isTagSelected(tag)) : false;
+  const isSelected = useRecoilValue(isTagSelected(tag));
   const tagged = useRecoilValue(taggedList);
   const [selection, setSelection] = useRecoilState(selectionList);
   const toggleTagSelected = (tag: string) => {
@@ -72,7 +73,12 @@ const collectStats = (
   return success;
 };
 export const AllyDashboard: FC = () => {
-  const results = useRecoilValue(axeResults);
+  const passes = useRecoilValue(axePasses);
+  const violations = useRecoilValue(axeViolations);
+  const results = {
+    violations,
+    passes,
+  };
   const stats = collectStats(
     results,
     'violations',

@@ -66,20 +66,25 @@ export const selectionList = atom({
   default: [],
 });
 
-export const isSelected = (selectionList: Selection) =>
+export const isSelected = (targets?: Selection) =>
   selector({
-    key: `isSelected_${selectionList.join('_')}`,
+    key: `isSelected_${targets ? targets.join('_') : 'none'}`,
     get: ({ get }: any) => {
       const selection = get(selectionList);
-      return selectionList.some((s: string) => selection.includes(s));
+      return targets
+        ? targets.some((s: string) => selection.includes(s))
+        : false;
     },
   });
 
-export const isTagSelected = (tag: string) =>
+export const isTagSelected = (tag: string = '') =>
   selector({
     key: `isTagSelected_${tag}`,
     get: ({ get }: any) => {
       const tagged = get(taggedList);
-      return tagged[tag] ? isSelected(tagged[tag]) : false;
+      const selection = get(selectionList);
+      return tagged[tag]
+        ? tagged[tag].some((s: string) => selection.includes(s))
+        : false;
     },
   });
