@@ -6,7 +6,7 @@ import { jsx, Flex, Box, Label, Checkbox } from 'theme-ui';
 import { Column } from 'react-table';
 import { NodeResult } from 'axe-core';
 import { SyntaxHighlighter, Table, Tag } from '@component-controls/components';
-import { isSelected, selectionList } from './SelectionContext';
+import { isSelected, selectionList } from './RecoilContext';
 
 export interface NodesTableProps {
   /**

@@ -11,7 +11,7 @@ import {
 import { Spec } from 'axe-core';
 
 import { BaseAllyBlock } from './components/BaseAllyBlock';
-import { axeResults } from './components/SelectionContext';
+import { axeResults } from './components/RecoilContext';
 
 interface AxeAllyBlockOwmProps {
   axeOptions?: Spec;

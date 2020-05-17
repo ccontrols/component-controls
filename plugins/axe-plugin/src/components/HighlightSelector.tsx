@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useRecoilValue } from 'recoil';
 import styled from '@emotion/styled';
-import { selectionList, Selection } from './SelectionContext';
+import { selectionList, Selection } from './RecoilContext';
 
 export interface StyledContainerProps {
   selection: Selection;

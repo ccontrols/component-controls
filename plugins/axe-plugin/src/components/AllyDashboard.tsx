@@ -9,7 +9,7 @@ import {
   isTagSelected,
   selectionList,
   taggedList,
-} from './SelectionContext';
+} from './RecoilContext';
 
 type StatsStatus = 'passes' | 'violations';
 

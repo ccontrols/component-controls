@@ -6,7 +6,7 @@ import { Spec, cleanup } from 'axe-core';
 import { PanelContainer, ActionItems } from '@component-controls/components';
 import { ViolationsTable, PassesTable, IncompleteTable } from './ResultsTable';
 import { HighlightSelector } from './HighlightSelector';
-import { axeResults } from './SelectionContext';
+import { axeResults } from './RecoilContext';
 import { AllyDashboard } from './AllyDashboard';
 
 /**

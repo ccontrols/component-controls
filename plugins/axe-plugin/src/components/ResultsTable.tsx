@@ -17,7 +17,7 @@ import Octicon, {
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
 import { Table, ExternalLink, Tag } from '@component-controls/components';
-import { axeViolations, axePasses, axeIncomplete } from './SelectionContext';
+import { axeViolations, axePasses, axeIncomplete } from './RecoilContext';
 import { NodesTable } from './NodesTable';
 
 const impactColors: {
