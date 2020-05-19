@@ -39,12 +39,6 @@ export const useComponentsContext = ({
   const [{ story, kind, component, componentPackage }, setStoryData] = useState(
     getStoryData(storyId),
   );
-
-  if (!story) {
-    return {
-      components: {},
-    };
-  }
   useEffect(() => {
     setStoryData(getStoryData(storyId));
     const onChange = () => {
@@ -56,6 +50,12 @@ export const useComponentsContext = ({
       removeObserver(onChange);
     };
   }, [storyId]);
+
+  if (!story) {
+    return {
+      components: {},
+    };
+  }
   let components: StoryComponents = {};
   if (of === CURRENT_STORY) {
     if (component) {

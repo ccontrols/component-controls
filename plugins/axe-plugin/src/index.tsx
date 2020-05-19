@@ -38,6 +38,7 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
       resetTabCounter();
       runAxe(canvas)
         .then(results => {
+          console.log(results);
           setResults(results);
           isRunning.current = false;
         })
@@ -48,7 +49,9 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
     }
   };
   const onRender = () => {
-    collectResults();
+    try {
+      collectResults();
+    } catch (e) {}
   };
 
   return (
@@ -57,9 +60,12 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
         <>
           <React.Suspense fallback={<div>testing...</div>}>
             <BaseAllyBlock options={axeOptions}>
-              <React.Profiler id="axe-plugin-scan" onRender={onRender}>
-                <Story key={storyId} id={storyId} ref={storyRef} />
-              </React.Profiler>
+              <Story
+                key={storyId}
+                id={storyId}
+                ref={storyRef}
+                onRender={onRender}
+              />
             </BaseAllyBlock>
           </React.Suspense>
         </>

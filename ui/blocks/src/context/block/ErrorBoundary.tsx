@@ -13,7 +13,8 @@ export class ErrorBoundary extends Component {
     const { error } = this.state;
 
     if (error) {
-      return <h1>Error caught.</h1>;
+      console.log(error);
+      return <h1>Unexpected error.</h1>;
     }
 
     return children;
