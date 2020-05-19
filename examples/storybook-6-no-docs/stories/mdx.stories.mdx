@@ -6,57 +6,57 @@ import { customStory as customStoryDeconstructedProps } from '../../stories/src/
 
 <Meta title="Introduction/MDX"  />
 
-<Playground>
-  <Story name="simple" description="story with jsx child">
+<Playground description="story with jsx child">
+  <Story name="simple">
     <div>test</div>
   </Story>
 </Playground>
 
-<Playground>
-  <Story name="multiple-children" description="story with two jsx children">
+<Playground description="story with two jsx children">
+  <Story name="multiple-children" >
     <button>button 1</button>
     <button>button 2</button>
   </Story>
 </Playground>
 
-<Playground>
-  <Story name='mdx-story-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story with props">
+<Playground description="story with props">
+  <Story name='mdx-story-props' controls={{ text: { type: 'text', value: 'hello'}}}>
     {props => (
       <div>{props.text}</div>
     )}
   </Story>
 </Playground>  
 
-<Playground>
-  <Story name='mdx-story-desconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story with deconstructed props">
+<Playground description="story with deconstructed props">
+  <Story name='mdx-story-desconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}}>
     {({ text }) => (
       <div>{text}</div>
     )}
   </Story>
 </Playground>
 
-<Playground>
-  <Story name='mdx-external-story' description="story from external file">
+<Playground description="story from external file">
+  <Story name='mdx-external-story'>
     {customStory()}
   </Story>
 </Playground>
 
 
-<Playground>
-  <Story name='mdx-external-story' description="story from external file">
+<Playground description="story from external file">
+  <Story name='mdx-external-story'>
     {customStory()}
   </Story>
 </Playground>
 
 
-<Playground>
-  <Story name='mdx-external-story-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story from external file with props">
+<Playground description="story from external file with props">
+  <Story name='mdx-external-story-props' controls={{ text: { type: 'text', value: 'hello'}}} >
     {props => customStoryProps(props)}
   </Story>
 </Playground>
 
-<Playground>
-  <Story name='mdx-external-story-deconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story from external file with deconstructed props">
+<Playground description="story from external file with deconstructed props">
+  <Story name='mdx-external-story-deconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}}>
     {props => customStoryDeconstructedProps(props)}
   </Story>
 </Playground>

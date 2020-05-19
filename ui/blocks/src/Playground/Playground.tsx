@@ -43,6 +43,7 @@ export const Playground: FC<PlaygroundProps> = ({
   children,
   openTab,
   visibleTabs = false,
+  description,
   scale: userScale = 1,
 }) => {
   const { theme } = useThemeUI();
@@ -137,6 +138,7 @@ export const Playground: FC<PlaygroundProps> = ({
     : [...storyActions, ...userActions];
   return (
     <StoryBlockContainer
+      description={description}
       useStoryDescription={true}
       name={name}
       title={title}
