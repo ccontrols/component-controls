@@ -38,7 +38,7 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
       resetTabCounter();
       runAxe(canvas)
         .then(results => {
-          console.log(results);
+          // console.log(results);
           setResults(results);
           isRunning.current = false;
         })
