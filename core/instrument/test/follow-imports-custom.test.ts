@@ -13,13 +13,20 @@ describe('follow-imports-custom', () => {
     source?: string,
   ) => {
     it(componentName, async () => {
-      expect(
-        await followImports(componentName, fileName, source, {
-          parser: defaultParserOptions,
-          resolver: defaultResolveOptions,
-          components: { ...defaultComponentOptions, storeSourceFile: false },
-        }),
-      ).toMatchSnapshot();
+      expect(async () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { node, path, ...rest } = await followImports(
+          componentName,
+          fileName,
+          source,
+          {
+            parser: defaultParserOptions,
+            resolver: defaultResolveOptions,
+            components: { ...defaultComponentOptions, storeSourceFile: false },
+          },
+        );
+        return rest;
+      }).toMatchSnapshot();
     });
   };
   loadTestFiles(

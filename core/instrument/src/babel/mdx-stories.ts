@@ -3,24 +3,32 @@ import {
   Story,
   StoriesKind,
   StoryParameters,
+  CodeLocation,
 } from '@component-controls/specification';
+import { getASTSource } from '@component-controls/core';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
+import { followStoryImport } from './follow-imports';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
-import { ParseStorieReturnType, InstrumentOptions, ExportType } from '../types';
+import {
+  ParseStorieReturnType,
+  InstrumentOptions,
+  MDXExportType,
+} from '../types';
 
 import { componentsFromParams } from '../misc/component-attributes';
 
 export const extractMDXStories = (
   ast: File,
   _options: Required<InstrumentOptions>,
+  { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
   const collectAttributes = (
     node: any,
-    exports?: ExportType,
+    exports?: MDXExportType,
   ): StoryParameters => {
     return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
       if (exports) {
@@ -92,21 +100,73 @@ export const extractMDXStories = (
             const { name } = attributes;
             if (typeof name === 'string') {
               if (store.stories[name]) {
-                throw new Error(`Dusplaicated story name ${name}`);
+                throw new Error(`Duplicated story name ${name}`);
               }
               const id = camelCase(name);
-              const story: Story = {
+              const expression =
+                Array.isArray(path.node.children) &&
+                path.node.children.find(
+                  (child: any) => child.type === 'JSXExpressionContainer',
+                );
+              let story: Story = {
                 ...attributes,
                 name,
                 id,
-                loc: sourceLocation(path.node.loc),
               };
+              if (
+                expression &&
+                (expression.expression.type === 'CallExpression' ||
+                  (expression.expression.type === 'ArrowFunctionExpression' &&
+                    expression.expression.body &&
+                    expression.expression.body.callee))
+              ) {
+                const importedName =
+                  expression.expression.type === 'CallExpression'
+                    ? expression.expression.callee.name
+                    : expression.expression.body.callee.name;
+                const followStory = followStoryImport(
+                  name,
+                  importedName,
+                  filePath,
+                  source,
+                  _options,
+                  ast,
+                  exports,
+                );
+                story = { ...followStory, ...story };
+              } else {
+                const loc: CodeLocation = path.node.children.length
+                  ? expression
+                    ? expression.expression.loc
+                    : {
+                        start: path.node.children[0].loc.start,
+                        end:
+                          path.node.children[path.node.children.length - 1].loc
+                            .end,
+                      }
+                  : path.node.loc;
+                // adjust for source code wraping issues
+                const storySource = getASTSource(source, loc);
+                const storyLines = storySource?.split('\n');
+                //remove as many spaces as there are in the first non-empty line
+                const firstLine = storyLines?.find(
+                  line => line.trim().length > 0,
+                );
+                const whiteSpaces = firstLine ? firstLine.search(/\S/) : 0;
+                story.loc = sourceLocation(loc);
+                story.source = storyLines
+                  ? storyLines
+                      .map(line => line.substr(whiteSpaces))
+                      .join('\n')
+                      .trim()
+                  : storySource;
+              }
               const component = collectComponent(attributes);
               if (component) {
                 story.component = component;
               }
               traverse(
-                path.node,
+                expression || path.node,
                 extractFunctionParameters(story, exports),
                 path.scope,
                 path,

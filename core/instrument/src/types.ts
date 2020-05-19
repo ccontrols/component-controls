@@ -228,15 +228,15 @@ export interface InstrumentOptions {
   mdx?: MDXOptions;
 }
 
-export interface ExportType {
+export interface MDXExportType {
   render?: string;
   story?: {
     [key: string]: string;
   };
 }
-export interface ExportTypes {
-  [key: string]: ExportType;
+export interface MDXExportTypes {
+  [key: string]: MDXExportType;
 }
 export type ParseStorieReturnType = {
-  exports?: ExportTypes;
+  exports?: MDXExportTypes;
 } & StoriesStore;

@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csf-story-source external-source.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "title": "Story",
+    },
+  },
+  "packages": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 48,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "myStory",
+      "source": "() => <div>test</div>",
+    },
+  },
+  "transformed": "import { customStory } from '../../components/external-story';
+export default { title: 'Story' };
+
+export const myStory = customStory;
+",
+}
+`;
+
+exports[`csf-story-source external-source-deconstructed-props.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "title": "Story",
+    },
+  },
+  "packages": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 9,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "text",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 24,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 20,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "text",
+            },
+          ],
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 58,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "myStory",
+      "source": "({ text }) => <div>{text}</div>",
+    },
+  },
+  "transformed": "import { customStory } from '../../components/external-story-deconstructed-props';
+export default { title: 'Story' };
+
+export const myStory = customStory;
+",
+}
+`;
+
+exports[`csf-story-source external-source-props.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "title": "Story",
+    },
+  },
+  "packages": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 15,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 59,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "myStory",
+      "source": "props => <div>{props.text}</div>",
+    },
+  },
+  "transformed": "import { customStory } from '../../components/external-story-props';
+export default { title: 'Story' };
+
+export const myStory = customStory;
+",
+}
+`;
+
+exports[`csf-story-source simple-source.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "title": "Story",
+    },
+  },
+  "packages": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 44,
+          "line": 4,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 4,
+        },
+      },
+      "name": "myStory",
+      "source": "() => <div>test</div>",
+    },
+  },
+  "transformed": "import React from 'react';
+export default { title: 'Story' };
+
+export const myStory = () => <div>test</div>;
+",
+}
+`;
+
+exports[`csf-story-source simple-source-props.js 1`] = `
+Object {
+  "components": Object {},
+  "kinds": Object {
+    "Story": Object {
+      "components": Object {},
+      "title": "Story",
+    },
+  },
+  "packages": Object {},
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 15,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 55,
+          "line": 4,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 4,
+        },
+      },
+      "name": "myStory",
+      "source": "props => <div>{props.text}</div>",
+    },
+  },
+  "transformed": "import React from 'react';
+export default { title: 'Story' };
+
+export const myStory = props => <div>{props.text}</div>;
+",
+}
+`;

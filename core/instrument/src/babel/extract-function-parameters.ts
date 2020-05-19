@@ -10,7 +10,7 @@ import {
   extractArgumentsUsage,
   addArgumentUsage,
 } from './extract-arguments-usage';
-import { ExportType } from '../types';
+import { MDXExportType } from '../types';
 
 interface KeyType {
   name: string;
@@ -25,7 +25,7 @@ interface ASTPropNode {
 }
 export const extractFunctionParameters = (
   story: Story,
-  exports?: ExportType,
+  exports?: MDXExportType,
 ) => ({
   ArrowFunctionExpression: (path: any) => {
     const node = path.node;

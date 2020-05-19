@@ -1,6 +1,6 @@
-import { ExportType, ExportTypes } from '../types';
+import { MDXExportType, MDXExportTypes } from '../types';
 
-const mdxPropertiesExport = (exportType: ExportType): string | undefined => {
+const mdxPropertiesExport = (exportType: MDXExportType): string | undefined => {
   return exportType && exportType.story
     ? `${Object.keys(exportType.story)
         //@ts-ignore
@@ -11,14 +11,14 @@ const mdxPropertiesExport = (exportType: ExportType): string | undefined => {
 
 const mdxFunctionExport = (
   name: string,
-  exportType: ExportType,
+  exportType: MDXExportType,
 ): string | undefined => {
   return exportType && exportType.render
     ? `export const ${name} = ${exportType.render}`
     : undefined;
 };
 
-export const extractStoryExports = (exports?: ExportTypes): string => {
+export const extractStoryExports = (exports?: MDXExportTypes): string => {
   if (exports) {
     const exportNames = Object.keys(exports);
     if (exportNames.length) {

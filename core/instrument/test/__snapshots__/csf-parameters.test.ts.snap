@@ -71,7 +71,7 @@ Object {
           "line": 2,
         },
       },
-      "name": "myStory",
+      "name": "Custom story name",
       "parameters": Object {
         "addonControls": Object {
           "smart": false,
@@ -160,7 +160,7 @@ Object {
           "line": 2,
         },
       },
-      "name": "myStory",
+      "name": "Custom story name",
       "parameters": Object {
         "addonControls": Object {
           "smart": false,
@@ -263,7 +263,7 @@ Object {
           "line": 2,
         },
       },
-      "name": "myStory",
+      "name": "Custom story name",
       "source": "() => {}",
     },
   },

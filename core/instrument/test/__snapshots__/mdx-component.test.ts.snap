@@ -29,7 +29,7 @@ Object {
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta } from '@component-controls/blocks';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Storybook/MDX\\" component={Button} />
@@ -59,7 +59,7 @@ Object {
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta } from '@component-controls/blocks';
 import { Btn as Button } from '../../components/button-named-class';
 <Meta title=\\"Storybook/MDX\\" component={Button} />",
 }
@@ -76,7 +76,7 @@ Object {
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta, PropsTable } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta, PropsTable } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 
 <Meta title=\\"Story\\" />
@@ -133,7 +133,7 @@ Object {
       "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },
-  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import { Btn as Button } from './Button';
 import { Toggle } from './Toggle';
 
@@ -212,7 +212,7 @@ Object {
       },
     },
   },
-  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 
@@ -270,7 +270,7 @@ Object {
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta, Story } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 

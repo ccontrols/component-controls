@@ -12,6 +12,8 @@ export interface ExportType {
    * specifies the import from statememnt
    */
   from?: string;
+  node?: any;
+  path?: any;
 }
 
 export const EXPORT_ALL = '*';
@@ -28,12 +30,18 @@ export const traverseExports = (results: ExportTypes) => {
   const globals: NamedExportTypes = {};
   const localExports: NamedExportTypes = {};
 
-  const extractExportVariable = (declaration: any): ExportType | undefined => {
+  const extractExportVariable = (
+    path: any,
+    declaration: any,
+  ): ExportType | undefined => {
     if (declaration.init && declaration.id.name) {
       const name = declaration.id.name;
       const exportType: ExportType = {
+        node: declaration,
+        path,
         loc: sourceLocation(
-          declaration.init.body
+          declaration.init.body &&
+            declaration.init.type !== 'ArrowFunctionExpression'
             ? declaration.init.body.loc
             : declaration.init.loc,
         ),
@@ -81,7 +89,7 @@ export const traverseExports = (results: ExportTypes) => {
           const name = declaration.id.name;
           //check if it was a named export
           if (!results.named[name]) {
-            const namedExport = extractExportVariable(declaration);
+            const namedExport = extractExportVariable(path, declaration);
 
             if (namedExport && namedExport.name) {
               localExports[namedExport.name] = namedExport;
@@ -142,7 +150,7 @@ export const traverseExports = (results: ExportTypes) => {
         const { declarations } = declaration;
         if (Array.isArray(declarations)) {
           declarations.forEach(declaration => {
-            const namedExport = extractExportVariable(declaration);
+            const namedExport = extractExportVariable(path, declaration);
             if (namedExport) {
               const name = namedExport.name || '';
               const global = globals[name];
@@ -150,6 +158,7 @@ export const traverseExports = (results: ExportTypes) => {
                 namedExport.internalName = global.name;
                 namedExport.name = global.name;
                 namedExport.loc = global.loc;
+                namedExport.node = global.node;
               }
               results.named[name] = namedExport;
             }

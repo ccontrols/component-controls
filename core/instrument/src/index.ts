@@ -3,9 +3,7 @@ import mdx from '@mdx-js/mdx';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import prettier from 'prettier';
 import deepMerge from 'deepmerge';
-import parserBabel from 'prettier/parser-babylon';
 import {
   StoriesStore,
   Story,
@@ -19,6 +17,7 @@ import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
+import { prettify } from './misc/prettify';
 import {
   InstrumentOptions,
   ParserOptions,
@@ -39,6 +38,7 @@ export * from './types';
 type TraverseFn = (
   ast: File,
   options: Required<InstrumentOptions>,
+  more: { source: string; filePath: string },
 ) => ParseStorieReturnType;
 
 /**
@@ -56,33 +56,10 @@ const parseSource = async (
   filePath: string,
   options: Required<InstrumentOptions>,
 ): Promise<ParseStorieReturnType> => {
-  const prettify = async (c?: string): Promise<string> => {
-    if (c && options.prettier !== false) {
-      const { resolveConfigOptions, ...otherOptions } = options.prettier || {};
-      let allPrettierOptions:
-        | prettier.Options
-        | undefined = otherOptions as any;
-      if (filePath) {
-        const userOptions = await prettier.resolveConfig(
-          filePath,
-          resolveConfigOptions,
-        );
-        allPrettierOptions = { ...userOptions, ...allPrettierOptions };
-      }
-
-      return prettier.format(c, {
-        parser: 'typescript',
-        plugins: [parserBabel],
-        ...allPrettierOptions,
-      });
-    } else {
-      return c || '';
-    }
-  };
-  const source = await prettify(code);
+  const source = await prettify(code, filePath, options.prettier);
   const ast = parser.parse(source, options.parser);
 
-  const store = traverseFn(ast, options);
+  const store = traverseFn(ast, options, { source, filePath });
   if (Object.keys(store.kinds).length > 0) {
     const kind = store.kinds[Object.keys(store.kinds)[0]];
     if (options.stories.storeSourceFile) {
@@ -134,7 +111,9 @@ const parseSource = async (
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];
-    story.source = getASTSource(source, story.loc);
+    if (!story.source) {
+      story.source = getASTSource(source, story.loc);
+    }
   }
   return store;
 };

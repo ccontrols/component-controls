@@ -4,15 +4,23 @@ import * as parser from '@babel/parser';
 import * as path from 'path';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
-import { CodeLocation, Imports } from '@component-controls/specification';
+import {
+  CodeLocation,
+  Imports,
+  Story,
+} from '@component-controls/specification';
+import { getASTSource } from '@component-controls/core';
+import { extractFunctionParameters } from './extract-function-parameters';
+import { sourceLocation } from '../misc/source-location';
 import { ImportTypes, traverseImports } from './extract-imports';
+
 import {
   traverseExports,
   ExportTypes,
   ExportType,
   EXPORT_ALL,
 } from './extract-exports';
-import { InstrumentOptions } from '../types';
+import { InstrumentOptions, MDXExportType } from '../types';
 
 export interface FollowImportType {
   exportedAs: string;
@@ -24,6 +32,8 @@ export interface FollowImportType {
   source?: string;
   imported?: string;
   imports?: Imports;
+  node?: any;
+  path?: any;
 }
 
 export const followImports = (
@@ -66,10 +76,10 @@ export const followImports = (
         exportedAs: findExport.name,
         from: '',
       };
-      if (components?.storeSourceFile) {
-        result.loc = findExport.loc;
-        result.source = source ? source : undefined;
-      }
+      result.loc = findExport.loc;
+      result.source = source ? source : undefined;
+      result.node = findExport.node;
+      result.path = findExport.path;
       const externalImports = Object.keys(imports)
         .filter(key => !imports[key].from.startsWith('.'))
         .reduce(
@@ -168,6 +178,33 @@ export const followImports = (
         from: findImport.from,
       };
     }
+  }
+  return undefined;
+};
+
+export const followStoryImport = (
+  storyName: string,
+  importedName: string,
+  filePath: string,
+  source: string,
+  options: InstrumentOptions,
+  ast: File,
+  exports?: MDXExportType,
+): Story | undefined => {
+  const follow = followImports(importedName, filePath, source, options, ast);
+  if (follow) {
+    const story: Story = { name: storyName, id: storyName };
+    if (follow.loc) {
+      const loc = sourceLocation(follow.loc);
+      story.loc = loc;
+      story.source = getASTSource(follow.source, loc);
+      traverse(
+        follow.node,
+        extractFunctionParameters(story, exports),
+        follow.path.scope,
+      );
+    }
+    return story;
   }
   return undefined;
 };

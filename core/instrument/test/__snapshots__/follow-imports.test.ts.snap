@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`follow-imports button-default-export.js 1`] = `undefined`;
+exports[`follow-imports button-default-export.js 1`] = `Object {}`;
 
 exports[`follow-imports button-from-node-nodules.js 1`] = `
 Object {
@@ -8,7 +8,117 @@ Object {
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "@component-controls/storybook",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 51,
+    },
+    "start": Object {
+      "column": 19,
+      "line": 48,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
+  "source": "'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+var blocks = require('@component-controls/blocks');
+require('@component-controls/components');
+var useIsDark = require('./useIsDark.js');
+var ThemeProvider = require('./ThemeProvider.js');
+var live_store = require('@component-controls/store/live_store');
+var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
+var DocsContainer = require('./DocsContainer.js');
+
+const BlockContextProvider = ({ children, id, }) => {
+    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const storyId = id ? id : defaultStoyId;
+    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId }, children));
+};
+
+const ControlsProvider = ({ children }) => {
+    return (React__default.createElement(ThemeProvider.ThemeProvider, null,
+        React__default.createElement(BlockContextProvider, null, children)));
+};
+
+const ComponentSource = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.ComponentSource, Object.assign({}, props))));
+};
+
+const Description = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Description, Object.assign({}, props))));
+};
+
+/**
+ * empty component for storybook addon-docs compatibility
+ */
+const Meta = () => null;
+
+const Playground = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Playground, Object.assign({}, props))));
+};
+
+const PropsTable = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.PropsTable, Object.assign({}, props))));
+};
+
+const Stories = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Stories, Object.assign({}, props))));
+};
+
+const Story = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Story, Object.assign({}, props))));
+};
+
+const StoryConfig = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.StoryConfig, Object.assign({}, props))));
+};
+
+const StorySource = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.StorySource, Object.assign({}, props))));
+};
+
+const Subtitle = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Subtitle, Object.assign({}, props))));
+};
+
+const Title = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Title, Object.assign({}, props))));
+};
+
+exports.useIsDark = useIsDark.useIsDark;
+exports.ThemeProvider = ThemeProvider.ThemeProvider;
+exports.DocsContainer = DocsContainer.DocsContainer;
+exports.PageContextContainer = DocsContainer.PageContextContainer;
+exports.BlockContextProvider = BlockContextProvider;
+exports.ComponentSource = ComponentSource;
+exports.ControlsProvider = ControlsProvider;
+exports.Description = Description;
+exports.Meta = Meta;
+exports.Playground = Playground;
+exports.PropsTable = PropsTable;
+exports.Stories = Stories;
+exports.Story = Story;
+exports.StoryConfig = StoryConfig;
+exports.StorySource = StorySource;
+exports.Subtitle = Subtitle;
+exports.Title = Title;
+",
 }
 `;
 
@@ -18,7 +128,19 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -29,7 +151,20 @@ Object {
   "from": "../exports/cjs-named-export",
   "importedName": "Button",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 23,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 15,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/exports/cjs-named-export.js",
+  "source": "const Button = () => {};
+exports.Button = Button;
+",
 }
 `;
 
@@ -39,7 +174,19 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
   "from": "",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -49,7 +196,19 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -59,7 +218,117 @@ Object {
   "filePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
   "from": "./button-from-node-nodules",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 1,
+      "line": 51,
+    },
+    "start": Object {
+      "column": 19,
+      "line": 48,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
+  "source": "'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+var blocks = require('@component-controls/blocks');
+require('@component-controls/components');
+var useIsDark = require('./useIsDark.js');
+var ThemeProvider = require('./ThemeProvider.js');
+var live_store = require('@component-controls/store/live_store');
+var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
+var DocsContainer = require('./DocsContainer.js');
+
+const BlockContextProvider = ({ children, id, }) => {
+    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const storyId = id ? id : defaultStoyId;
+    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId }, children));
+};
+
+const ControlsProvider = ({ children }) => {
+    return (React__default.createElement(ThemeProvider.ThemeProvider, null,
+        React__default.createElement(BlockContextProvider, null, children)));
+};
+
+const ComponentSource = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.ComponentSource, Object.assign({}, props))));
+};
+
+const Description = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Description, Object.assign({}, props))));
+};
+
+/**
+ * empty component for storybook addon-docs compatibility
+ */
+const Meta = () => null;
+
+const Playground = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Playground, Object.assign({}, props))));
+};
+
+const PropsTable = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.PropsTable, Object.assign({}, props))));
+};
+
+const Stories = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Stories, Object.assign({}, props))));
+};
+
+const Story = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Story, Object.assign({}, props))));
+};
+
+const StoryConfig = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.StoryConfig, Object.assign({}, props))));
+};
+
+const StorySource = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.StorySource, Object.assign({}, props))));
+};
+
+const Subtitle = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Subtitle, Object.assign({}, props))));
+};
+
+const Title = props => {
+    return (React__default.createElement(ControlsProvider, null,
+        React__default.createElement(blocks.Title, Object.assign({}, props))));
+};
+
+exports.useIsDark = useIsDark.useIsDark;
+exports.ThemeProvider = ThemeProvider.ThemeProvider;
+exports.DocsContainer = DocsContainer.DocsContainer;
+exports.PageContextContainer = DocsContainer.PageContextContainer;
+exports.BlockContextProvider = BlockContextProvider;
+exports.ComponentSource = ComponentSource;
+exports.ControlsProvider = ControlsProvider;
+exports.Description = Description;
+exports.Meta = Meta;
+exports.Playground = Playground;
+exports.PropsTable = PropsTable;
+exports.Stories = Stories;
+exports.Story = Story;
+exports.StoryConfig = StoryConfig;
+exports.StorySource = StorySource;
+exports.Subtitle = Subtitle;
+exports.Title = Title;
+",
 }
 `;
 
@@ -69,7 +338,19 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -80,7 +361,19 @@ Object {
   "from": "./button-default-export",
   "importedName": "default",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 24,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 0,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
+  "source": "export default () => {};
+",
 }
 `;
 
@@ -90,7 +383,19 @@ Object {
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
   "from": "./button-named-export",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -101,7 +406,19 @@ Object {
   "from": "./",
   "importedName": "Button",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 30,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 22,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
+  "source": "export const Button = () => {};
+",
 }
 `;
 
@@ -112,6 +429,18 @@ Object {
   "from": "./button-default-export",
   "importedName": "namespace",
   "imports": Object {},
+  "loc": Object {
+    "end": Object {
+      "column": 24,
+      "line": 1,
+    },
+    "start": Object {
+      "column": 0,
+      "line": 1,
+    },
+  },
   "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
+  "source": "export default () => {};
+",
 }
 `;

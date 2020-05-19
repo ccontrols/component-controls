@@ -1,0 +1,63 @@
+import { Meta} from '@component-controls/storybook';
+import { Playground, Story  } from '@component-controls/blocks';
+import { customStory } from '../../stories/src/stories/external/external-story';
+import { customStory as customStoryProps } from '../../stories/src/stories/external/external-story-props';
+import { customStory as customStoryDeconstructedProps } from '../../stories/src/stories/external/external-story-deconstructed-props';
+
+<Meta title="Introduction/MDX"  />
+
+<Playground>
+  <Story name="simple" description="story with jsx child">
+    <div>test</div>
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name="multiple-children" description="story with two jsx children">
+    <button>button 1</button>
+    <button>button 2</button>
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name='mdx-story-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story with props">
+    {props => (
+      <div>{props.text}</div>
+    )}
+  </Story>
+</Playground>  
+
+<Playground>
+  <Story name='mdx-story-desconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story with deconstructed props">
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name='mdx-external-story' description="story from external file">
+    {customStory()}
+  </Story>
+</Playground>
+
+
+<Playground>
+  <Story name='mdx-external-story' description="story from external file">
+    {customStory()}
+  </Story>
+</Playground>
+
+
+<Playground>
+  <Story name='mdx-external-story-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story from external file with props">
+    {props => customStoryProps(props)}
+  </Story>
+</Playground>
+
+<Playground>
+  <Story name='mdx-external-story-deconstructed-props' controls={{ text: { type: 'text', value: 'hello'}}} description="story from external file with deconstructed props">
+    {props => customStoryDeconstructedProps(props)}
+  </Story>
+</Playground>
+

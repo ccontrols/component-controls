@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
 import { useThemeUI } from 'theme-ui';
 import {
@@ -9,6 +9,7 @@ import {
   IconButton,
   Zoom,
 } from '@component-controls/components';
+import { BlockDataContext } from '../context';
 
 import {
   StoryBlockContainer,
@@ -49,33 +50,35 @@ export const Playground: FC<PlaygroundProps> = ({
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
   const [direction, setDirection] = React.useState<DirectionType>('ltr');
-
+  const { storyIdFromName } = useContext(BlockDataContext);
   React.useEffect(() => setScale(userScale), [userScale]);
-  let storyId: string;
   const childArr = React.Children.toArray(children);
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
   if (childArr.length === 1) {
     //@ts-ignore
-    storyId = childArr[0].props.id;
-    userActions.push({
-      title: 'source',
-      id: 'source',
-      group: 'panels',
-      'aria-label': 'display story source code',
-      panel: (
-        <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
-      ),
-    });
-    userActions.push({
-      title: 'config',
-      id: 'config',
-      group: 'panels',
-      'aria-label': 'display story configuration object',
-      panel: (
-        <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
-      ),
-    });
+    const childProps = childArr[0].props;
+    const storyId = childProps.name ? storyIdFromName(childProps.name) : id;
+    if (storyId) {
+      userActions.push({
+        title: 'source',
+        id: 'source',
+        group: 'panels',
+        'aria-label': 'display story source code',
+        panel: (
+          <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+        ),
+      });
+      userActions.push({
+        title: 'config',
+        id: 'config',
+        group: 'panels',
+        'aria-label': 'display story configuration object',
+        panel: (
+          <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+        ),
+      });
+    }
   }
   const zoomActions = React.useMemo(
     () => [

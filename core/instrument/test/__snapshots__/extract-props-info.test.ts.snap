@@ -42,15 +42,11 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"both\\" | \\"inline\\" | \\"list\\"",
+        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
         "value": Array [
           Object {
             "name": "string",
             "value": "none",
-          },
-          Object {
-            "name": "string",
-            "value": "both",
           },
           Object {
             "name": "string",
@@ -59,6 +55,10 @@ presented if they are made.",
           Object {
             "name": "string",
             "value": "list",
+          },
+          Object {
+            "name": "string",
+            "value": "both",
           },
         ],
       },
@@ -78,19 +78,19 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"mixed\\" | \\"true\\" | \\"false\\"",
+        "raw": "boolean | \\"true\\" | \\"false\\" | \\"mixed\\"",
         "value": Array [
           Object {
             "name": "boolean",
-          },
-          Object {
-            "name": "mixed",
           },
           Object {
             "name": "true",
           },
           Object {
             "name": "false",
+          },
+          Object {
+            "name": "mixed",
           },
         ],
       },
@@ -138,7 +138,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"time\\" | \\"page\\" | \\"true\\" | \\"false\\" | \\"step\\" | \\"location\\" | \\"date\\"",
+        "raw": "boolean | \\"time\\" | \\"true\\" | \\"false\\" | \\"page\\" | \\"step\\" | \\"location\\" | \\"date\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -147,13 +147,13 @@ presented if they are made.",
             "name": "time",
           },
           Object {
-            "name": "page",
-          },
-          Object {
             "name": "true",
           },
           Object {
             "name": "false",
+          },
+          Object {
+            "name": "page",
           },
           Object {
             "name": "step",
@@ -201,7 +201,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"move\\" | \\"execute\\" | \\"popup\\"",
+        "raw": "\\"link\\" | \\"none\\" | \\"copy\\" | \\"execute\\" | \\"move\\" | \\"popup\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -217,11 +217,11 @@ presented if they are made.",
           },
           Object {
             "name": "string",
-            "value": "move",
+            "value": "execute",
           },
           Object {
             "name": "string",
-            "value": "execute",
+            "value": "move",
           },
           Object {
             "name": "string",
@@ -271,7 +271,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"grid\\" | \\"listbox\\" | \\"true\\" | \\"false\\" | \\"tree\\"",
+        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"grid\\" | \\"true\\" | \\"false\\" | \\"listbox\\" | \\"tree\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -286,13 +286,13 @@ allows assistive technology to override the general default of reading in docume
             "name": "grid",
           },
           Object {
-            "name": "listbox",
-          },
-          Object {
             "name": "true",
           },
           Object {
             "name": "false",
+          },
+          Object {
+            "name": "listbox",
           },
           Object {
             "name": "tree",
@@ -468,19 +468,19 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"mixed\\" | \\"true\\" | \\"false\\"",
+        "raw": "boolean | \\"true\\" | \\"false\\" | \\"mixed\\"",
         "value": Array [
           Object {
             "name": "boolean",
-          },
-          Object {
-            "name": "mixed",
           },
           Object {
             "name": "true",
           },
           Object {
             "name": "false",
+          },
+          Object {
+            "name": "mixed",
           },
         ],
       },
@@ -917,6 +917,14 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "initialSelected": Object {
+      "description": "initially selected rows",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "Record<number, boolean>",
+        "raw": "Record<number, boolean>",
       },
     },
     "inlist": Object {
@@ -2254,7 +2262,7 @@ If an array of components is specified, each component will be displayed in a se
 if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "((event: SyntheticEvent<HTMLDivElement, Event>) => void) | ((name: string, component: StoryComponent) => boolean | void)",
+        "raw": "((name: string, component: StoryComponent) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {
@@ -2262,6 +2270,14 @@ if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
         "raw": "(event: SyntheticEvent<HTMLDivElement, Event>) => void",
+      },
+    },
+    "onSelectRowsChange": Object {
+      "description": "callback when selected rows change",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "function",
+        "raw": "(selected: Record<number, boolean>) => void",
       },
     },
     "onStalled": Object {
@@ -2744,6 +2760,14 @@ behind an element is visible.
         "raw": "LegacyRef<HTMLDivElement>",
       },
     },
+    "renderRowSubComponent": Object {
+      "description": "callback to render a SubComponent row",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "function",
+        "raw": "(props: { row: Row<{}>; }) => ReactNode",
+      },
+    },
     "resource": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2763,6 +2787,14 @@ behind an element is visible.
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "rowSelect": Object {
+      "description": "if true, will enable row selection",
+      "parentName": "TableOwnProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
       },
     },
     "security": Object {
@@ -3708,31 +3740,15 @@ A hint could be a sample value or a brief description of the expected format.",
     "cellPadding": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "cellSpacing": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "challenge": Object {
@@ -4009,16 +4025,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "frameBorder": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "headers": Object {
@@ -4031,16 +4039,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "height": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "hidden": Object {
@@ -4196,16 +4196,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "keyParams": Object {
@@ -4288,16 +4280,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "max": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "maxLength": Object {
@@ -4331,16 +4315,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "min": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "minLength": Object {
@@ -5781,16 +5757,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "step": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "style": Object {
@@ -5935,16 +5903,8 @@ import { jsx } from 'theme-ui'
     "width": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "wmode": Object {
@@ -6729,31 +6689,15 @@ A hint could be a sample value or a brief description of the expected format.",
     "cellPadding": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "cellSpacing": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "challenge": Object {
@@ -7023,16 +6967,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "frameBorder": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "headers": Object {
@@ -7045,16 +6981,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "height": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "hidden": Object {
@@ -7210,16 +7138,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "keyParams": Object {
@@ -7302,16 +7222,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "max": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "maxLength": Object {
@@ -7345,16 +7257,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "min": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "minLength": Object {
@@ -8788,16 +8692,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "step": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "style": Object {
@@ -8942,16 +8838,8 @@ import { jsx } from 'theme-ui'
     "width": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "wmode": Object {
@@ -9736,31 +9624,15 @@ A hint could be a sample value or a brief description of the expected format.",
     "cellPadding": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "cellSpacing": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "challenge": Object {
@@ -10037,16 +9909,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "frameBorder": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "headers": Object {
@@ -10059,16 +9923,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "height": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "hidden": Object {
@@ -10224,16 +10080,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "keyParams": Object {
@@ -10316,16 +10164,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "max": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "maxLength": Object {
@@ -10359,16 +10199,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "min": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "minLength": Object {
@@ -11809,16 +11641,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "step": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "style": Object {
@@ -11963,16 +11787,8 @@ import { jsx } from 'theme-ui'
     "width": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "wmode": Object {
@@ -12757,31 +12573,15 @@ A hint could be a sample value or a brief description of the expected format.",
     "cellPadding": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "cellSpacing": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "challenge": Object {
@@ -13086,16 +12886,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "frameBorder": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "headers": Object {
@@ -13108,16 +12900,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "height": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "hidden": Object {
@@ -13273,16 +13057,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "keyParams": Object {
@@ -13365,16 +13141,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "max": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "maxLength": Object {
@@ -13408,16 +13176,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "min": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "minLength": Object {
@@ -14865,16 +14625,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "step": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "style": Object {
@@ -15019,16 +14771,8 @@ import { jsx } from 'theme-ui'
     "width": Object {
       "parentName": "AllHTMLAttributes",
       "type": Object {
-        "name": "union",
-        "raw": "string | number",
-        "value": Array [
-          Object {
-            "name": "string",
-          },
-          Object {
-            "name": "number",
-          },
-        ],
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "wmode": Object {

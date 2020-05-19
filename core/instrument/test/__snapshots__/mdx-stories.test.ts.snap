@@ -67,7 +67,7 @@ Object {
     },
   },
   "stories": Object {},
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -178,7 +178,7 @@ Object {
       "source": "props => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -211,7 +211,7 @@ Object {
           "line": 3,
         },
         "start": Object {
-          "column": 24,
+          "column": 15,
           "line": 3,
         },
       },
@@ -322,21 +322,19 @@ export default Button;
       "id": "smartStory",
       "loc": Object {
         "end": Object {
-          "column": 14,
+          "column": 6,
           "line": 30,
         },
         "start": Object {
-          "column": 6,
+          "column": 32,
           "line": 28,
         },
       },
       "name": "smart story",
-      "source": "<Story name=\\"smart story\\">
-        <Button />
-      </Story>",
+      "source": "<Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../../components/button-default-arrow-func';
 
 
@@ -510,7 +508,7 @@ Object {
         }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -651,7 +649,7 @@ Object {
       "source": "({ name, age }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -776,7 +774,7 @@ Object {
       "source": "(props, context) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -916,7 +914,7 @@ Object {
       "source": "({ name: MyName, age }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@storybook/addon-docs/blocks';
+  "transformed": "import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 

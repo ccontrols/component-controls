@@ -8,6 +8,7 @@ import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
 import { extractAttributes } from './extract-attributes';
+import { followStoryImport } from './follow-imports';
 import { componentsFromParams } from '../misc/component-attributes';
 import { sourceLocation } from '../misc/source-location';
 import { ParseStorieReturnType, InstrumentOptions } from '../types';
@@ -15,6 +16,7 @@ import { ParseStorieReturnType, InstrumentOptions } from '../types';
 export const extractCSFStories = (
   ast: File,
   _options: InstrumentOptions,
+  { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
   const globals: Stories = {};
   const localStories: Stories = {};
@@ -23,19 +25,30 @@ export const extractCSFStories = (
     path: any,
     declaration: any,
   ): Story | undefined => {
-    if (
-      declaration.init &&
-      declaration.init.type === 'ArrowFunctionExpression'
-    ) {
-      const el = declaration.init.body;
-      const name = declaration.id.name;
-      const story: Story = {
-        loc: sourceLocation(el.loc),
-        name,
-        id: name,
-      };
-      traverse(path.node, extractFunctionParameters(story), path.scope, path);
-      return story;
+    if (declaration.init) {
+      switch (declaration.init.type) {
+        case 'ArrowFunctionExpression': {
+          const el = declaration.init.body;
+          const name = declaration.id.name;
+          const story: Story = {
+            loc: sourceLocation(el.loc),
+            name,
+            id: name,
+          };
+          traverse(path.node, extractFunctionParameters(story), path.scope);
+          return story;
+        }
+        case 'Identifier': {
+          return followStoryImport(
+            declaration.id.name,
+            declaration.init.name,
+            filePath,
+            source,
+            _options,
+            ast,
+          );
+        }
+      }
     }
     return undefined;
   };
@@ -105,6 +118,7 @@ export const extractCSFStories = (
     },
     VariableDeclaration: (path: any) => {
       const { declarations } = path.node;
+
       if (Array.isArray(declarations) && declarations.length > 0) {
         const declaration = declarations[0];
         if (declaration) {
