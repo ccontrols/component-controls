@@ -51,38 +51,8 @@ export const Playground: FC<PlaygroundProps> = ({
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
   const [direction, setDirection] = React.useState<DirectionType>('ltr');
-  const { storyIdFromName } = useContext(BlockDataContext);
+  const { storyIdFromName, getStoryData } = useContext(BlockDataContext);
   React.useEffect(() => setScale(userScale), [userScale]);
-  const childArr = React.Children.toArray(children);
-  const isDark =
-    dark === undefined ? theme.initialColorModeName === 'dark' : dark;
-  if (childArr.length === 1) {
-    //@ts-ignore
-    const childProps = childArr[0].props;
-    const storyId = childProps.name
-      ? storyIdFromName(childProps.name)
-      : id || childProps.id;
-    if (storyId) {
-      userActions.push({
-        title: 'source',
-        id: 'source',
-        group: 'panels',
-        'aria-label': 'display story source code',
-        panel: (
-          <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
-        ),
-      });
-      userActions.push({
-        title: 'config',
-        id: 'config',
-        group: 'panels',
-        'aria-label': 'display story configuration object',
-        panel: (
-          <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
-        ),
-      });
-    }
-  }
   const zoomActions = React.useMemo(
     () => [
       {
@@ -121,6 +91,42 @@ export const Playground: FC<PlaygroundProps> = ({
     ],
     [scale],
   );
+  const childArr = React.Children.toArray(children);
+  const isDark =
+    dark === undefined ? theme.initialColorModeName === 'dark' : dark;
+
+  if (childArr.length === 1) {
+    //@ts-ignore
+    const childProps = childArr[0].props;
+    if (childProps) {
+      const storyId = childProps.name
+        ? storyIdFromName(childProps.name)
+        : id || childProps.id;
+      const { story } = getStoryData(storyId);
+      if (!story) {
+        return null;
+      }
+      userActions.push({
+        title: 'source',
+        id: 'source',
+        group: 'panels',
+        'aria-label': 'display story source code',
+        panel: (
+          <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+        ),
+      });
+      userActions.push({
+        title: 'config',
+        id: 'config',
+        group: 'panels',
+        'aria-label': 'display story configuration object',
+        panel: (
+          <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+        ),
+      });
+    }
+  }
+
   const storyActions = [
     {
       title: background === 'light' ? 'dark' : 'light',
