@@ -59,7 +59,9 @@ export const Playground: FC<PlaygroundProps> = ({
   if (childArr.length === 1) {
     //@ts-ignore
     const childProps = childArr[0].props;
-    const storyId = childProps.name ? storyIdFromName(childProps.name) : id;
+    const storyId = childProps.name
+      ? storyIdFromName(childProps.name)
+      : id || childProps.id;
     if (storyId) {
       userActions.push({
         title: 'source',
