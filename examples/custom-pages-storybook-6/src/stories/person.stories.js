@@ -3,9 +3,9 @@ import { Person } from '../components/Person';
 
 export default {
   title: 'Stories/Person',
-  component: Person
-}
+  component: Person,
+};
 
-export const main = () => <Person />
+export const main = () => <Person />;
 
-export const custom = () => <Person age={55} name="Peter" />
+export const custom = () => <Person age={55} name="Peter" />;
