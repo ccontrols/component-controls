@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const { mergeWebpackConfig } = require('@component-controls/webpack-configs');
+const LoaderPlugin = require('@component-controls/loader/plugin');
 import { PresetOptions, defaultRules } from './types';
 
 module.exports = {
@@ -52,19 +53,7 @@ module.exports = {
     );
     return {
       ...mergedConfig,
-      module: {
-        ...mergedConfig.module,
-        rules: [
-          {
-            test: /story-store-data\.js$/,
-            loader: require.resolve(
-              '@component-controls/loader/dist/runtimeLoader.js',
-            ),
-            enforce: 'post',
-          },
-          ...mergedConfig.module.rules,
-        ],
-      },
+      plugins: [...mergedConfig.plugins, new LoaderPlugin()],
     };
   },
 };

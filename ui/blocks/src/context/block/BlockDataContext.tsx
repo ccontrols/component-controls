@@ -11,6 +11,7 @@ import {
   getComponentName,
   PackageInfo,
 } from '@component-controls/specification';
+import { CURRENT_STORY } from '../../utils';
 
 export interface BlockDataContextProps {
   /**
@@ -69,10 +70,12 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 }) => {
   const store: StoriesStore | undefined = storeProvider.getStore();
 
-  const getStoryData = (id: string = storyId) => {
+  const getStoryData = (id?: string) => {
     if (store) {
-      const story: Story | undefined =
-        store.stories && id ? store.stories[id] : undefined;
+      const actualId = !id || id === CURRENT_STORY ? storyId : id;
+      const story: Story | undefined = store.stories
+        ? store.stories[actualId]
+        : undefined;
       const kind = story && story.kind ? store.kinds[story.kind] : undefined;
       const storyComponent: any =
         story && kind ? story.component || kind.component : undefined;

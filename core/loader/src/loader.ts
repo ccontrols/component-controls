@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
+
 import { getOptions } from 'loader-utils';
 import { loader } from 'webpack';
 import {
