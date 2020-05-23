@@ -155,7 +155,7 @@ export const Table: FC<TableProps> = ({
   if (typeof expanded === 'object') {
     initialState.expanded = expanded;
   }
-  // initialState.selectedRowIds = initialSelected;
+  initialState.selectedRowIds = initialSelected;
   const options: TableOptions<{}> &
     UseFiltersOptions<{}> &
     UseExpandedOptions<{}> &
