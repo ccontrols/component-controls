@@ -33,11 +33,11 @@
 # Motivation
 
 -   Create a components development environment with testing as a first-class feature.
+-   Use smart "super-bundlers" (gatsby, nextjs) to build compact and fast documentation sites.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files (both story and component files) at instrumentation-time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
 -   Ability to document "external" component libraries, living in a separate package from the "stories" package.
 -   Built-in [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) instrumentation module.
--   Ability to integrate with various build engines - [storybookjs](https://storybook.js.org), [gatsby](https://www.gatsbyjs.org), [nextjs](https://nextjs.org).
 -   Create and support open declarative story formats.
 
 # Inspiration
@@ -63,13 +63,12 @@ There are many developments that have contributed to the creation of `component-
 -   [x] Storybook integration with addon-docs
 -   [x] Storybook integration without addon-docs (replace all storybook loaders)
 -   [ ] HMR
+-   [ ] Gatsby standalone app/static app builder
+-   [ ] Nextjs standalone app/static app builder
 -   [ ] Integrated testing facilites
 -   [ ] Coverage and perfoamnce profiling instrumentation
 -   [ ] Replace MDX with frontmatter format
--   [ ] Docz integration
 -   [ ] Multiple frameworks support (Vue, Angular, tbd)
--   [ ] Gatsby standalone app/static app builder
--   [ ] Nextjs standalone app/static app builder
 
 # Showcase sites
 
