@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* re-enable controls for classic page ([7f6aeb2](https://github.com/ccontrols/component-controls/commit/7f6aeb244c01497df41c4903e1ca897faba39594))
+
+
+### Features
+
+* deque's axe-core ally testing plugin ([e05e65f](https://github.com/ccontrols/component-controls/commit/e05e65f414538896d5670feb447ee6cfb6b49040))
+* props table selectively display props, controls or both ([0ac5038](https://github.com/ccontrols/component-controls/commit/0ac5038d49d9604c10728adddd54596383aa8370))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Performance Improvements
+
+* optimize bundle, keep only en faker ([8e11fbe](https://github.com/ccontrols/component-controls/commit/8e11fbe0ccb655d091acad9ffea4729993da2ed9))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

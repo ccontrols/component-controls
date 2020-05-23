@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* tests update ([9a6c569](https://github.com/ccontrols/component-controls/commit/9a6c5692d33575accfe1248556f4581c77f10bf9))
+
+
+### Features
+
+* props table selectively display props, controls or both ([0ac5038](https://github.com/ccontrols/component-controls/commit/0ac5038d49d9604c10728adddd54596383aa8370))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

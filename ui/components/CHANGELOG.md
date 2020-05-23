@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* cleanups ([4668e13](https://github.com/ccontrols/component-controls/commit/4668e136273426785b96ed86251518deaba76964))
+* safari action button color fix ([b5e76dc](https://github.com/ccontrols/component-controls/commit/b5e76dc9c8bcb0889d6c15fa867f72d529cf6bad))
+
+
+### Features
+
+* background and direction modes to playground ([58bf9f3](https://github.com/ccontrols/component-controls/commit/58bf9f3bd9be1e0ec0dbc30572a0ec44c276d856))
+* deque's axe-core ally testing plugin ([e05e65f](https://github.com/ccontrols/component-controls/commit/e05e65f414538896d5670feb447ee6cfb6b49040))
+
+
+### Performance Improvements
+
+* optimize bundle, keep only en faker ([8e11fbe](https://github.com/ccontrols/component-controls/commit/8e11fbe0ccb655d091acad9ffea4729993da2ed9))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

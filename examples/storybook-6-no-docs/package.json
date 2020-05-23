@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "component-controls-storybook-6-no-docs",
   "license": "MIT",
   "scripts": {
@@ -9,8 +9,8 @@
     "build-storybook": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/specification": "^1.1.0",
-    "@component-controls/storybook": "^1.1.0",
+    "@component-controls/specification": "^1.2.0",
+    "@component-controls/storybook": "^1.2.0",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",

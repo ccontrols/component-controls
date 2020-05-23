@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* move description to Playground from Story ([6acd915](https://github.com/ccontrols/component-controls/commit/6acd915245e0da2935d7510d1eb4cdef90683e05))
+
+
+### Features
+
+* add axe-plugin stories ([fc985e7](https://github.com/ccontrols/component-controls/commit/fc985e7889992f0ed6ea1d3065edbc012f951842))
+* external stories with full source code ([f4ca871](https://github.com/ccontrols/component-controls/commit/f4ca871202f39c2a1ac9cd7a24375a29abe9a8d3))
+* props table selectively display props, controls or both ([0ac5038](https://github.com/ccontrols/component-controls/commit/0ac5038d49d9604c10728adddd54596383aa8370))
+
+
+### Performance Improvements
+
+* optimize bundle, keep only en faker ([8e11fbe](https://github.com/ccontrols/component-controls/commit/8e11fbe0ccb655d091acad9ffea4729993da2ed9))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

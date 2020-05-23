@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Bug Fixes
+
+* ally story context ([81d6ffb](https://github.com/ccontrols/component-controls/commit/81d6ffb625ca618970b8db3f75773bdc7966de21))
+* cleanup axe-plugin ([7262b7f](https://github.com/ccontrols/component-controls/commit/7262b7faf76c370220a51c9b16e7741f47eb182f))
+* cleanups ([4668e13](https://github.com/ccontrols/component-controls/commit/4668e136273426785b96ed86251518deaba76964))
+* fix for wrong story selection ([829da6a](https://github.com/ccontrols/component-controls/commit/829da6ac74f465d1759775f9bccc8d85951648df))
+* mdx var re-added ([8d2139f](https://github.com/ccontrols/component-controls/commit/8d2139fb6f13536220879de094512f4460f72e8c))
+* move description to Playground from Story ([6acd915](https://github.com/ccontrols/component-controls/commit/6acd915245e0da2935d7510d1eb4cdef90683e05))
+* package name white space no wrap ([848feb3](https://github.com/ccontrols/component-controls/commit/848feb344719c5df8753f1d9261effa7280b47ef))
+* re-enable controls for classic page ([7f6aeb2](https://github.com/ccontrols/component-controls/commit/7f6aeb244c01497df41c4903e1ca897faba39594))
+* remove console.log ([ad1f8c9](https://github.com/ccontrols/component-controls/commit/ad1f8c988e38691157a2bb5cb1f27911406f775d))
+* remove console.log ([f406158](https://github.com/ccontrols/component-controls/commit/f406158a8e2e26ff5f4d8189568125866790da0e))
+* replace onRender effect ([9269694](https://github.com/ccontrols/component-controls/commit/92696942adf3062605ff8ca8c11edb4584f75357))
+* safari action button color fix ([b5e76dc](https://github.com/ccontrols/component-controls/commit/b5e76dc9c8bcb0889d6c15fa867f72d529cf6bad))
+* story config remove some sys fields ([3184ae5](https://github.com/ccontrols/component-controls/commit/3184ae5ee5afea8fa17c935bdf1fd642f4d74f20))
+* story id from child props ([b02a0d8](https://github.com/ccontrols/component-controls/commit/b02a0d803315628c3965a5d31748a5e061c650d7))
+* tests update ([9a6c569](https://github.com/ccontrols/component-controls/commit/9a6c5692d33575accfe1248556f4581c77f10bf9))
+
+
+### Features
+
+* add axe-plugin stories ([fc985e7](https://github.com/ccontrols/component-controls/commit/fc985e7889992f0ed6ea1d3065edbc012f951842))
+* add story config block ([6f69648](https://github.com/ccontrols/component-controls/commit/6f69648f097f39a874548b25c8054b37fed3ce9c))
+* background and direction modes to playground ([58bf9f3](https://github.com/ccontrols/component-controls/commit/58bf9f3bd9be1e0ec0dbc30572a0ec44c276d856))
+* deque's axe-core ally testing plugin ([e05e65f](https://github.com/ccontrols/component-controls/commit/e05e65f414538896d5670feb447ee6cfb6b49040))
+* external stories with full source code ([f4ca871](https://github.com/ccontrols/component-controls/commit/f4ca871202f39c2a1ac9cd7a24375a29abe9a8d3))
+* loader webpack plugin ([409fdec](https://github.com/ccontrols/component-controls/commit/409fdec5f70b1bcc33989c3cfcef07836a5b98f4))
+* props table selectively display props, controls or both ([0ac5038](https://github.com/ccontrols/component-controls/commit/0ac5038d49d9604c10728adddd54596383aa8370))
+* storyconfig as addon panel ([4330133](https://github.com/ccontrols/component-controls/commit/43301330a35aea079517c62331a95f943110a52b))
+* use React.Profiler to render story ([656ea5b](https://github.com/ccontrols/component-controls/commit/656ea5b5c454a1adb5397de0163c9f82391985bc))
+* visibleTabs prop for Playground ([842a72d](https://github.com/ccontrols/component-controls/commit/842a72d89a56ece9199e7ff8059aebef600c1a8b))
+
+
+### Performance Improvements
+
+* optimize bundle, keep only en faker ([8e11fbe](https://github.com/ccontrols/component-controls/commit/8e11fbe0ccb655d091acad9ffea4729993da2ed9))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 

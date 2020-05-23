@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
+
+
+### Features
+
+* background and direction modes to playground ([58bf9f3](https://github.com/ccontrols/component-controls/commit/58bf9f3bd9be1e0ec0dbc30572a0ec44c276d856))
+* deque's axe-core ally testing plugin ([e05e65f](https://github.com/ccontrols/component-controls/commit/e05e65f414538896d5670feb447ee6cfb6b49040))
+* loader webpack plugin ([409fdec](https://github.com/ccontrols/component-controls/commit/409fdec5f70b1bcc33989c3cfcef07836a5b98f4))
+* props table selectively display props, controls or both ([0ac5038](https://github.com/ccontrols/component-controls/commit/0ac5038d49d9604c10728adddd54596383aa8370))
+* storyconfig as addon panel ([4330133](https://github.com/ccontrols/component-controls/commit/43301330a35aea079517c62331a95f943110a52b))
+* visibleTabs prop for Playground ([842a72d](https://github.com/ccontrols/component-controls/commit/842a72d89a56ece9199e7ff8059aebef600c1a8b))
+
+
+
+
+
 # [1.1.0](https://github.com/ccontrols/component-controls/compare/v1.0.3...v1.1.0) (2020-05-08)
 
 
