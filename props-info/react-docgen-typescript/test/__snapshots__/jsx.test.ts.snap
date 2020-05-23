@@ -934,8 +934,8 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "Key",
-        "raw": "Key",
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "lang": Object {

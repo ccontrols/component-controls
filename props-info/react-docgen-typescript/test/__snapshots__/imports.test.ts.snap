@@ -2,7 +2,7 @@
 
 exports[`imports ../../../ui/blocks/src/Story/Story.tsx 1`] = `
 Object {
-  "description": "",
+  "description": "block component to render story function with decorators",
   "displayName": "Story",
   "methods": Array [],
   "props": Object {
@@ -39,6 +39,18 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "onRender": Object {
+      "type": Object {
+        "name": "() => void",
+        "raw": "() => void",
+      },
+    },
+    "ref": Object {
+      "type": Object {
+        "name": "Ref<HTMLDivElement>",
+        "raw": "Ref<HTMLDivElement>",
       },
     },
     "sxStyle": Object {
