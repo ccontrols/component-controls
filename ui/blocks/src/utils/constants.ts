@@ -25,4 +25,4 @@ export const getStoryBlockTitle = ({
 }: {
   story?: Story;
   title?: string;
-}): string | undefined => (title == CURRENT_STORY ? story?.name : title);
+}): string | undefined => (title === CURRENT_STORY ? story?.name : title);

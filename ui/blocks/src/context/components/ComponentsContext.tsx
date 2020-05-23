@@ -49,7 +49,7 @@ export const useComponentsContext = ({
     return () => {
       removeObserver(onChange);
     };
-  }, [storyId]);
+  }, [storyId, addObserver, getStoryData, removeObserver]);
 
   if (!story) {
     return {

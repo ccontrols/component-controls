@@ -61,7 +61,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   let scrollId: string | undefined;
   try {
     const pageURL =
-      (window.location != window.parent.location && window.parent.location
+      (window.location !== window.parent.location && window.parent.location
         ? window.parent.location.href
         : document.location.href) || '';
     const url = new URL(pageURL);

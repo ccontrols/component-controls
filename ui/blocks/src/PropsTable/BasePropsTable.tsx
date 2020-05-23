@@ -288,7 +288,15 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       });
     }
     return { columns, rows, groupProps };
-  }, [story?.id, extraColumns, hasControls]);
+  }, [
+    extraColumns,
+    hasControls,
+    info.props,
+    infoKeys,
+    propControls,
+    story,
+    visibility,
+  ]);
 
   const onChange = (propName: string, value: any) => {
     if (setControlValue && story) {

@@ -1,0 +1,51 @@
+{
+  "name": "@component-controls/gatsby-plugin-stories",
+  "version": "1.1.0",
+  "description": "Gatsby plugin to collect story files",
+  "keywords": [
+    "story",
+    "gatsby"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "integrations/gatsby-source-stories"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/loader": "^1.1.0",
+    "@component-controls/store": "^1.1.0",
+    "@component-controls/webpack-configs": "^1.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+}

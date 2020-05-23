@@ -71,14 +71,13 @@ export const useStoryContext = ({
     kindPackage?: PackageInfo;
   }>(getStoryData(storyId));
 
-  const updateData = (updateId?: string) => {
-    if (!updateId || updateId === storyId) {
-      const { story, kind, component, kindPackage } = getStoryData(storyId);
-      setData({ story, kind, component, kindPackage });
-    }
-  };
-
   useEffect(() => {
+    const updateData = (updateId?: string) => {
+      if (!updateId || updateId === storyId) {
+        const { story, kind, component, kindPackage } = getStoryData(storyId);
+        setData({ story, kind, component, kindPackage });
+      }
+    };
     const { story } = data;
     if (story?.id !== storyId) {
       updateData(storyId);
@@ -90,7 +89,7 @@ export const useStoryContext = ({
     return () => {
       storeProvider.removeObserver(onChange);
     };
-  }, [storyId]);
+  }, [storyId, data, storeProvider, getStoryData]);
   return {
     id: storyId,
     story: data.story,

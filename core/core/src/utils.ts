@@ -132,6 +132,8 @@ export const getControlValue = (
         }
         break;
       }
+      default:
+        return value;
     }
     return value;
   }
@@ -149,7 +151,7 @@ export const getControlValues = (controls?: ComponentControls): ControlValues =>
 export const visibleControls = (
   controls?: ComponentControls,
 ): ComponentControls =>
-  controls && typeof controls == 'object'
+  controls && typeof controls === 'object'
     ? Object.keys(controls)
         .filter(key => !controls[key].hidden)
         .map((key, index) => ({
@@ -175,7 +177,7 @@ export const visibleControls = (
     : {};
 
 export const hasControls = (controls?: ComponentControls): boolean =>
-  controls && typeof controls == 'object'
+  controls && typeof controls === 'object'
     ? !!Object.keys(controls).filter(key => !controls[key].hidden).length
     : false;
 export const newControlValues = (
@@ -249,7 +251,10 @@ export const newControlValues = (
           break;
         }
         default:
-          break;
+          return {
+            name,
+            value: control.defaultValue,
+          };
       }
       return {
         name,

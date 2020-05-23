@@ -156,7 +156,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         hideErrorColumns={hideErrorColumns}
       />
     ),
-    [],
+    [hideErrorColumns],
   );
   return (
     <Table

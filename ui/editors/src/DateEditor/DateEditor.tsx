@@ -51,7 +51,7 @@ export const DateEditor: PropertyEditor = ({ name }) => {
         timeInputRef.current.value = formatTime(toDate(control.value));
       }
     }
-  }, [control.value]);
+  }, [control.value, valid]);
 
   const onDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     let isValid = false;

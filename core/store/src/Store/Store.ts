@@ -1,7 +1,5 @@
 import { StoriesStore } from '@component-controls/specification';
-
 import { BroadcastChannel } from 'broadcast-channel';
-export { BroadcastChannel };
 import {
   StoreObserver,
   StoryStore,
@@ -10,6 +8,7 @@ import {
 } from '../types';
 import { readStore, updateStory } from '../serialization/StoreStorage';
 
+export { BroadcastChannel };
 export { StoreObserver, StoryStore };
 
 export interface StoreOptions {
@@ -28,7 +27,7 @@ export interface StoreOptions {
 export class Store implements StoryStore {
   private loadedStore: StoriesStore | undefined;
   private updateLocalStorage: boolean = true;
-  private channel: BroadcastChannel;
+  private channel: BroadcastChannel | undefined;
   private observers: StoreObserver[];
   private moduleId: number;
 
@@ -40,18 +39,24 @@ export class Store implements StoryStore {
     this.moduleId = Math.random();
     this.loadedStore = store;
     this.updateLocalStorage = updateLocalStorage;
-    this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
-      type: 'localstorage',
-    });
     this.observers = [];
-    this.channel.onmessage = ({ storyId, moduleId, propName }: MessageType) => {
-      if (storyId && moduleId) {
-        if (this.moduleId !== moduleId) {
-          this.readData(storyId, propName);
-          this.notifyObservers(storyId, propName);
+    if (updateLocalStorage) {
+      this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
+        type: 'localstorage',
+      });
+      this.channel.onmessage = ({
+        storyId,
+        moduleId,
+        propName,
+      }: MessageType) => {
+        if (storyId && moduleId) {
+          if (this.moduleId !== moduleId) {
+            this.readData(storyId, propName);
+            this.notifyObservers(storyId, propName);
+          }
         }
-      }
-    };
+      };
+    }
   }
   /**
    * add observer callback function
@@ -118,7 +123,7 @@ export class Store implements StoryStore {
       this.updateLocalStorage,
     );
     if (this.loadedStore) {
-      if (this.updateLocalStorage) {
+      if (this.channel) {
         const message: MessageType = {
           storyId,
           moduleId: this.moduleId,

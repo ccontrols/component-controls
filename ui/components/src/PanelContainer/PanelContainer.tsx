@@ -61,7 +61,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
       (p: ActionItem) => p.id === openTab || p.title === openTab,
     );
     setTabsIndex(index > -1 ? index : undefined);
-  }, [openTab, actions]);
+  }, [openTab, actions, panels]);
   const panelActions = React.useMemo(
     () =>
       actions.map((panel: ActionItem) => {
@@ -94,7 +94,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
             }
           : panel;
       }),
-    [actions, tabsIndex],
+    [actions, tabsIndex, panels],
   );
 
   const style: React.CSSProperties = {

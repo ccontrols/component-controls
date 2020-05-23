@@ -4,15 +4,22 @@ import * as webpack from 'webpack';
 import { createHash } from 'crypto';
 import { store } from './store';
 
+export interface LoaderPluginOptions {
+  config?: string;
+}
 class LoaderPlugin {
   public static pluginName = 'component-controls-loader-plugin';
   private readonly compilationHash: string;
+  private readonly options: LoaderPluginOptions;
 
-  constructor() {
+  constructor(options: LoaderPluginOptions) {
     const hash = createHash('md5')
       .update(new Date().getTime().toString())
       .digest('hex');
     this.compilationHash = `__${hash.substr(0, 6)}__`;
+    this.options = {
+      ...options,
+    };
   }
 
   apply(compiler: webpack.Compiler) {
@@ -40,7 +47,10 @@ class LoaderPlugin {
         if (resource.resource) {
           resource.loaders.push({
             loader: path.join(__dirname, 'runtimeLoader.js'),
-            options: JSON.stringify({ compilationHash: this.compilationHash }),
+            options: JSON.stringify({
+              compilationHash: this.compilationHash,
+              ...this.options,
+            }),
           });
         }
       },

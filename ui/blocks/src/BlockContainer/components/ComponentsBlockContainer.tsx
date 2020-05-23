@@ -39,14 +39,15 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
   const { components, story } = useComponentsContext({ of });
-  const componentNames = Object.keys(components);
+
   React.useEffect(() => {
+    const componentNames = Object.keys(components);
     setTitle(
       userTitle === CURRENT_STORY && componentNames.length
         ? getComponentName(components[componentNames[0]])
         : userTitle,
     );
-  }, [userTitle]);
+  }, [userTitle, components]);
 
   const keys =
     components && visibility !== 'controls' ? Object.keys(components) : [];

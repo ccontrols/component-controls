@@ -10,7 +10,7 @@ export default {
 export const overview = ({ images }) => (
   <div>
     {images.map((image, index) => (
-      <img src={image} key={`image_${index}`} />
+      <img src={image} key={`image_${index}`} alt={`run time control`} />
     ))}
   </div>
 );

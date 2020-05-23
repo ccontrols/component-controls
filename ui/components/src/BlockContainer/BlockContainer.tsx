@@ -68,7 +68,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   );
   //workaround for storybook iframe url
   const url =
-    (window.location != window.parent.location
+    (window.location !== window.parent.location
       ? document.referrer
       : document.location.href) || '';
   return (

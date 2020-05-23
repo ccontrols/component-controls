@@ -4,22 +4,26 @@ import { sync as globSync } from 'glob';
 import yargs from 'yargs';
 import { Configuration } from '@component-controls/specification';
 
-export const configFileNames = ['main.js', 'main.json', 'main.ts'];
+export const configFileNames = [
+  'main.js',
+  'main.json',
+  'main.ts',
+  'controls.js',
+];
 
 export interface ConfigrationResult {
   config: Configuration;
   configPath: string;
 }
 /**
- * return the configration object
+ * return the configration folder from command-line parameters
  * command line accepts -c/ -config parameter for config path
  * the config file is assumed named main.js/main.ts
- * @param baseFolder project folder to start the searh with
+ * @param baseFolder project folder to start the search with
  */
-export const getConfiguration = (
-  baseFolder: string,
+export const getConfigurationArg = (
   args: string[] = process.argv,
-): ConfigrationResult | undefined => {
+): string | undefined => {
   const argv = yargs(args)
     .option('config', {
       alias: 'c',
@@ -28,10 +32,23 @@ export const getConfiguration = (
     })
     .help()
     .alias('help', 'h').argv;
+  return argv.config;
+};
 
-  const configPath = argv.config
-    ? path.resolve(baseFolder, argv.config)
-    : baseFolder;
+/**
+ *  given a base project folder and a configuration folder, returns the configuration file
+ *
+ * @param baseFolder project folder to start the search with
+ * @param configFolder folder where the configuration file is located
+ * @param args optional arguments
+ */
+export const loadConfiguration = (
+  baseFolder: string,
+  configFolder?: string,
+  args?: string[],
+): ConfigrationResult | undefined => {
+  const folder = configFolder ?? getConfigurationArg(args);
+  const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
   const configFiles = fs.readdirSync(configPath);
   const configFile = configFiles.find(file =>
     configFileNames.includes(file.toLowerCase()),

@@ -59,7 +59,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
           sx={{
             mt: 1,
             mr: index === 0 ? 1 : 0,
-            ml: nextGroup != group || group === undefined ? 2 : 1,
+            ml: nextGroup !== group || group === undefined ? 2 : 1,
             fontSize: 1,
             a: ActionColors({ theme, disabled }),
             button: ActionColors({ theme, disabled }),

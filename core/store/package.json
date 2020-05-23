@@ -12,7 +12,9 @@
     "live_store.js",
     "live_store.d.ts",
     "static_store.js",
-    "static_store.d.ts"
+    "static_store.d.ts",
+    "singleton_store.js",
+    "singleton_store.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

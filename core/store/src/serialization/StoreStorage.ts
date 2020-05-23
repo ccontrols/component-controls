@@ -18,7 +18,7 @@ const encodeFn = (name: string, val: any) => {
 };
 export const saveStore = (store: StoriesStore) => {
   for (var key in localStorage) {
-    if (key.indexOf(COMPONENT_CONTROLS_STORAGE) == 0) {
+    if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
       localStorage.removeItem(key);
     }
   }

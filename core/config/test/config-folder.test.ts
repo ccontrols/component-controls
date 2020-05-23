@@ -1,14 +1,24 @@
-import { getConfiguration } from '../src/index';
+import { loadConfiguration } from '../src/index';
 
 describe('config-folder', () => {
   it('config file short option', () => {
     expect(
-      getConfiguration(__dirname, ['file', 'name', '-c', 'fixtures']),
+      loadConfiguration(__dirname, undefined, [
+        'file',
+        'name',
+        '-c',
+        'fixtures',
+      ]),
     ).toMatchSnapshot();
   });
   it('config file long option', () => {
     expect(
-      getConfiguration(__dirname, ['file', 'name', '--config', 'fixtures']),
+      loadConfiguration(__dirname, undefined, [
+        'file',
+        'name',
+        '--config',
+        'fixtures',
+      ]),
     ).toMatchSnapshot();
   });
 });
