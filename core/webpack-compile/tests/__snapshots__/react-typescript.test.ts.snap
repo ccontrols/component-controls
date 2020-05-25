@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test typescript react settings compile 1`] = `
+Object {
+  "components": Object {
+    "fded7dbaa855ea6869a794f877eab680": Object {
+      "from": "./ActionBar",
+      "importedName": "ActionBar",
+      "imports": Object {
+        "polished": Array [
+          Object {
+            "importedName": "transparentize",
+            "name": "transparentize",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "FunctionComponent",
+            "name": "FunctionComponent",
+          },
+        ],
+        "theme-ui": Array [
+          Object {
+            "importedName": "Theme",
+            "name": "Theme",
+          },
+          Object {
+            "importedName": "Box",
+            "name": "Box",
+          },
+          Object {
+            "importedName": "Flex",
+            "name": "Flex",
+          },
+          Object {
+            "importedName": "Button",
+            "name": "Button",
+          },
+          Object {
+            "importedName": "jsx",
+            "name": "jsx",
+          },
+          Object {
+            "importedName": "useThemeUI",
+            "name": "useThemeUI",
+          },
+        ],
+      },
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 107,
+        },
+        "start": Object {
+          "column": 60,
+          "line": 47,
+        },
+      },
+      "name": "ActionBar",
+      "package": "30938aa5d7bae6c78434e15f2a2723b5",
+      "request": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.tsx",
+      "source": "/** @jsx jsx */
+import { FunctionComponent } from 'react';
+import { transparentize } from 'polished';
+import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
+import { getSortedActions, ActionItems } from './utils';
+
+export interface ActionBarProps {
+  /**
+   * collection of action items
+   */
+  actions?: ActionItems;
+}
+
+const ActionColors = ({
+  theme,
+  disabled,
+}: {
+  theme: Theme;
+  disabled: boolean | undefined;
+}) => ({
+  backgroundColor: theme.colors?.['action'],
+  color: disabled ? '#ddd' : 'background',
+  //safari fix:
+  WebkitTextFillColor: 'initial',
+  cursor: disabled ? 'not-allowed' : undefined,
+  px: 2,
+  py: 1,
+  lineHeight: 1,
+  borderRadius: 1,
+  display: 'inline-block',
+  boxShadow: \`\${transparentize(
+    0.9,
+    theme.colors?.text as string,
+  )} 0 1px 3px 1px, \${transparentize(
+    0.35,
+    theme.colors?.text as string,
+  )} 0 0 0 1px\`,
+  border: \`1px solid \${theme.colors?.['action'] as string}\`,
+});
+
+/**
+ * a strip of actions to be attached to a container
+ * the action items contain the labels and click event handler
+ * actions can accept an order prop, and can also be superimposed
+ *
+ */
+export const ActionBar: FunctionComponent<ActionBarProps> = ({
+  actions = [],
+}) => {
+  const { theme } = useThemeUI();
+  const sortedItems = getSortedActions(actions);
+  const items = sortedItems.map(
+    ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+      const nextGroup =
+        index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
+      return (
+        <Box
+          key={\`\${typeof title === 'string' ? title : 'item'}_\${index}\`}
+          sx={{
+            mt: 1,
+            mr: index === 0 ? 1 : 0,
+            ml: nextGroup != group || group === undefined ? 2 : 1,
+            fontSize: 1,
+            a: ActionColors({ theme, disabled }),
+            button: ActionColors({ theme, disabled }),
+          }}
+        >
+          {typeof title === 'string' ? (
+            <Button
+              onClick={onClick}
+              disabled={disabled}
+              aria-label={ariaLabel}
+            >
+              {title}
+            </Button>
+          ) : (
+            title
+          )}
+        </Box>
+      );
+    },
+  );
+
+  return (
+    <div
+      sx={{
+        position: 'relative',
+      }}
+    >
+      <Flex
+        sx={{
+          position: 'absolute',
+          width: '100%',
+        }}
+      >
+        <Flex
+          sx={{
+            flexDirection: 'row-reverse',
+            marginLeft: 'auto',
+          }}
+        >
+          {items}
+        </Flex>
+      </Flex>
+    </div>
+  );
+};
+",
+    },
+  },
+  "packages": Object {
+    "30938aa5d7bae6c78434e15f2a2723b5": Object {
+      "dependencies": Object {
+        "@primer/octicons-react": "^9.5.0",
+        "@theme-ui/presets": "^0.3.0",
+        "copy-to-clipboard": "^3.2.1",
+        "fast-memoize": "^2.5.2",
+        "markdown-to-jsx": "^6.11.0",
+        "prism-react-renderer": "^1.0.2",
+        "react": "^16.8.3",
+        "react-animate-height": "^2.0.20",
+        "react-dom": "^16.8.3",
+        "react-popper-tooltip": "^2.10.1",
+        "react-switch": "^5.0.1",
+        "react-table": "^7.0.0",
+        "react-tabs": "^3.1.0",
+        "theme-ui": "^0.3.1",
+      },
+      "devDependencies": Object {
+        "@types/jest": "^25.1.2",
+        "@types/markdown-to-jsx": "^6.11.0",
+        "@types/react-table": "^7.0.10",
+        "@types/react-tabs": "^2.3.1",
+        "@types/theme-ui": "^0.3.0",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "30938aa5d7bae6c78434e15f2a2723b5",
+      "name": "@component-controls/components",
+      "peerDependencies": Object {
+        "react": "*",
+        "react-dom": "*",
+        "theme-ui": "*",
+      },
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2": Object {
+      "dependencies": Object {
+        "@primer/octicons-react": "^9.5.0",
+        "@theme-ui/presets": "^0.3.0",
+        "copy-to-clipboard": "^3.2.1",
+        "fast-memoize": "^2.5.2",
+        "markdown-to-jsx": "^6.11.0",
+        "prism-react-renderer": "^1.0.2",
+        "react": "^16.8.3",
+        "react-animate-height": "^2.0.20",
+        "react-dom": "^16.8.3",
+        "react-popper-tooltip": "^2.10.1",
+        "react-switch": "^5.0.1",
+        "react-table": "^7.0.0",
+        "react-tabs": "^3.1.0",
+        "theme-ui": "^0.3.1",
+      },
+      "devDependencies": Object {
+        "@types/jest": "^25.1.2",
+        "@types/markdown-to-jsx": "^6.11.0",
+        "@types/react-table": "^7.0.10",
+        "@types/react-tabs": "^2.3.1",
+        "@types/theme-ui": "^0.3.0",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
+      "name": "@component-controls/components",
+      "peerDependencies": Object {
+        "react": "*",
+        "react-dom": "*",
+        "theme-ui": "*",
+      },
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+  },
+  "stores": Array [
+    Object {
+      "kinds": Object {
+        "Components/ActionBar": Object {
+          "component": [Function],
+          "components": Object {
+            "ActionBar": "fded7dbaa855ea6869a794f877eab680",
+          },
+          "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
+          "moduleId": "../../ui/components/src/ActionBar/ActionBar.stories.tsx",
+          "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
+          "title": "Components/ActionBar",
+        },
+      },
+      "stories": Object {
+        "disabled": Object {
+          "arguments": Array [],
+          "id": "disabled",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 53,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 41,
+            },
+          },
+          "name": "disabled",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'click action',
+          onClick: () => console.log('clicked'),
+          disabled: true,
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "groupEnd": Object {
+          "arguments": Array [],
+          "id": "groupEnd",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 126,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 108,
+            },
+          },
+          "name": "groupEnd",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'item 1',
+        },
+        {
+          title: 'item 2',
+          group: '1',
+        },
+        {
+          title: 'item 3',
+          group: '1',
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "groupStart": Object {
+          "arguments": Array [],
+          "id": "groupStart",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 146,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 128,
+            },
+          },
+          "name": "groupStart",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'item 1',
+          group: '1',
+        },
+        {
+          title: 'item 2',
+          group: '1',
+        },
+        {
+          title: 'item 3',
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "link": Object {
+          "arguments": Array [],
+          "id": "link",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 65,
+            },
+            "start": Object {
+              "column": 20,
+              "line": 55,
+            },
+          },
+          "name": "link",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "order": Object {
+          "arguments": Array [],
+          "id": "order",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 84,
+            },
+            "start": Object {
+              "column": 21,
+              "line": 67,
+            },
+          },
+          "name": "order",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'action 1',
+          onClick: () => console.log('clicked'),
+          order: 1,
+        },
+        {
+          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          onClick: () => console.log('clicked'),
+          order: 0,
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "override": Object {
+          "arguments": Array [],
+          "id": "override",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 106,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 86,
+            },
+          },
+          "name": "override",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'action 1',
+          onClick: () => console.log('clicked'),
+          id: 'copy',
+        },
+        {
+          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          onClick: () => console.log('clicked'),
+        },
+        {
+          title: 'Copy',
+          id: 'copy',
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+        "overview": Object {
+          "arguments": Array [],
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 24,
+            },
+          },
+          "name": "overview",
+          "renderFn": [Function],
+          "source": "() => (
+  <Container>
+    <ActionBar
+      actions={[
+        {
+          title: 'action 1',
+          onClick: () => console.log('clicked'),
+        },
+        {
+          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          onClick: () => console.log('clicked'),
+        },
+      ]}
+    />
+  </Container>
+)",
+        },
+      },
+    },
+  ],
+}
+`;

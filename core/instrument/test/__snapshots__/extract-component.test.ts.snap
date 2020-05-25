@@ -21,8 +21,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.1.0",
-      "@component-controls/specification": "^1.1.0",
+      "@component-controls/core": "^1.2.0",
+      "@component-controls/specification": "^1.2.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -52,7 +52,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;
@@ -78,8 +78,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.1.0",
-      "@component-controls/specification": "^1.1.0",
+      "@component-controls/core": "^1.2.0",
+      "@component-controls/specification": "^1.2.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -109,7 +109,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;
@@ -157,8 +157,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.1.0",
-      "@component-controls/specification": "^1.1.0",
+      "@component-controls/core": "^1.2.0",
+      "@component-controls/specification": "^1.2.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -188,7 +188,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;
@@ -280,7 +280,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;
@@ -319,8 +319,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.1.0",
-      "@component-controls/specification": "^1.1.0",
+      "@component-controls/core": "^1.2.0",
+      "@component-controls/specification": "^1.2.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -350,7 +350,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;
@@ -376,8 +376,8 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.1.0",
-      "@component-controls/specification": "^1.1.0",
+      "@component-controls/core": "^1.2.0",
+      "@component-controls/specification": "^1.2.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "camelcase": "^6.0.0",
@@ -407,7 +407,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.1.0",
+    "version": "1.2.0",
   },
 }
 `;

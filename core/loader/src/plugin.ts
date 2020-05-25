@@ -2,12 +2,14 @@ import { ReplaceSource } from 'webpack-sources';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
+import jsStringEscape from 'js-string-escape';
 import { store } from './store';
 
 export interface LoaderPluginOptions {
   config?: string;
+  escapeOutput?: boolean;
 }
-class LoaderPlugin {
+export class LoaderPlugin {
   public static pluginName = 'component-controls-loader-plugin';
   private readonly compilationHash: string;
   private readonly options: LoaderPluginOptions;
@@ -66,7 +68,9 @@ class LoaderPlugin {
     const source = compilation.assets[file];
     const placeholderPos = source.source().indexOf(placeholder);
     if (placeholderPos > -1) {
-      const newContent = JSON.stringify(store);
+      const newContent = this.options.escapeOutput
+        ? jsStringEscape(JSON.stringify(store))
+        : JSON.stringify(store);
       const newSource = new ReplaceSource(source, file);
       newSource.replace(
         placeholderPos,

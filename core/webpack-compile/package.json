@@ -1,18 +1,15 @@
 {
-  "name": "@component-controls/loader",
+  "name": "@component-controls/webpack-compile",
   "version": "1.2.0",
-  "description": "Webpack loader for component controls instrumentation",
+  "description": "Webpack compile api",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
+  "browser": "dist/bundle.js",
   "files": [
     "dist/",
     "package.json",
-    "README.md",
-    "plugin.js",
-    "loader.js",
-    "story-store-data.js",
-    "loader.d.ts"
+    "README.md"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -30,22 +27,19 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "core/loader"
+    "directory": "core/webpack-compile"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/config": "^1.2.0",
-    "@component-controls/instrument": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
-    "@storybook/csf": "^0.0.1",
-    "js-string-escape": "^1.0.1",
-    "loader-utils": "^1.2.3",
+    "@component-controls/loader": "^1.2.0",
+    "@component-controls/webpack-configs": "^1.2.0",
+    "memory-fs": "^0.5.0",
     "typescript": "^3.8.3",
-    "webpack": "^4.41.6"
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
-    "@types/loader-utils": "^1.1.3",
+    "@types/memory-fs": "^0.3.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0"

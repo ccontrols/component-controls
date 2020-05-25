@@ -1,8 +1,22 @@
 import { Configuration } from 'webpack';
 
-export const instrument: Configuration = {
+export const react: Configuration = {
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
+                require.resolve('@babel/preset-react'),
+              ],
+            },
+          },
+        ],
+      },
       {
         test: /\.(ts|tsx)$/,
         use: [

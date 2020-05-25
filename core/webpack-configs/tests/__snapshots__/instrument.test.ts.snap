@@ -5,17 +5,17 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "include": /node_modules\\\\/acorn-jsx/,
-        "test": /\\\\\\.js\\$/,
+        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
         "use": Array [
           Object {
-            "loader": "babel-loader",
+            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
             "options": Object {
               "presets": Array [
                 Array [
-                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  "react-app",
                   Object {
-                    "modules": "commonjs",
+                    "flow": false,
+                    "typescript": true,
                   },
                 ],
               ],
@@ -37,25 +37,6 @@ Object {
                   },
                 ],
                 "/Users/atanasster/component-controls/node_modules/@babel/preset-react/lib/index.js",
-              ],
-            },
-          },
-        ],
-      },
-      Object {
-        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
-        "use": Array [
-          Object {
-            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
-            "options": Object {
-              "presets": Array [
-                Array [
-                  "react-app",
-                  Object {
-                    "flow": false,
-                    "typescript": true,
-                  },
-                ],
               ],
             },
           },
@@ -110,6 +91,8 @@ Object {
     "extensions": Array [
       ".ts",
       ".tsx",
+      ".js",
+      ".jsx",
     ],
   },
 }
@@ -120,17 +103,17 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "include": /node_modules\\\\/acorn-jsx/,
-        "test": /\\\\\\.js\\$/,
+        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
         "use": Array [
           Object {
-            "loader": "babel-loader",
+            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
             "options": Object {
               "presets": Array [
                 Array [
-                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
+                  "react-app",
                   Object {
-                    "modules": "commonjs",
+                    "flow": false,
+                    "typescript": true,
                   },
                 ],
               ],
@@ -152,25 +135,6 @@ Object {
                   },
                 ],
                 "/Users/atanasster/component-controls/node_modules/@babel/preset-react/lib/index.js",
-              ],
-            },
-          },
-        ],
-      },
-      Object {
-        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
-        "use": Array [
-          Object {
-            "loader": "/Users/atanasster/component-controls/node_modules/babel-loader/lib/index.js",
-            "options": Object {
-              "presets": Array [
-                Array [
-                  "react-app",
-                  Object {
-                    "flow": false,
-                    "typescript": true,
-                  },
-                ],
               ],
             },
           },
@@ -228,6 +192,8 @@ Object {
     "extensions": Array [
       ".ts",
       ".tsx",
+      ".js",
+      ".jsx",
     ],
   },
 }

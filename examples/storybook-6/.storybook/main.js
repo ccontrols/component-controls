@@ -3,13 +3,13 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = {
   stories: [
-    '../../../core/specification/src/stories/**/*.stories.(js|tsx|mdx)',
-    '../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
-    '../../../ui/components/src/**/*.stories.(js|tsx|mdx)',
-    '../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)',
-    '../../../plugins/axe-plugin/src/stories/**/*.stories.(js|tsx|mdx)',
-    '../../stories/src/**/*.stories.(js|tsx|mdx)',
-    '../stories/**/*.stories.(js|tsx|mdx)',
+    '../../../core/specification/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/editors/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/blocks/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../plugins/axe-plugin/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../stories/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../stories/**/*.stories.(js|jsx|tsx|mdx)',
   ],
   addons: [
     {

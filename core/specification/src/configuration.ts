@@ -8,7 +8,7 @@ export interface Configuration {
   /**
    * wild card search string for the stories
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
-   * example: "./stories/**/ /*.stories.(js|tsx|mdx)"
+   * example: "./stories/**/ /*.stories.(js|jsx|tsx|mdx)"
    */
   stories: string[];
 

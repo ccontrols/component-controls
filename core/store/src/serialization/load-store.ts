@@ -4,9 +4,8 @@ import {
   StoriesStore,
   Story,
   deepMerge,
-  StoryComponents,
-  StoryPackages,
 } from '@component-controls/specification';
+import { LoadingStore } from '@component-controls/loader';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { addSmartControls } from './smart-controls';
 
@@ -23,11 +22,7 @@ export const loadStoryStore = (): StoriesStore | undefined => {
         stores,
         packages: loadedPackages,
         components: loadedComponents,
-      }: {
-        stores: Pick<StoriesStore, 'stories' | 'kinds'>[];
-        packages: StoryPackages;
-        components: StoryComponents;
-      } = store;
+      }: LoadingStore = store;
 
       if (stores) {
         const globalStore: StoriesStore = {
