@@ -14,6 +14,7 @@
     -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
+    -   [@component-controls/webpack-compile](#component-controlswebpack-compile)
     -   [@component-controls/webpack-configs](#component-controlswebpack-configs)
     -   [@component-controls/store](#component-controlsstore)
     -   [@component-controls/config](#component-controlsconfig)
@@ -62,6 +63,7 @@ There are many developments that have contributed to the creation of `component-
 -   [x] UI Libraries
 -   [x] Storybook integration with addon-docs
 -   [x] Storybook integration without addon-docs (replace all storybook loaders)
+-   [x] Standalone webpack compiler API
 -   [ ] HMR
 -   [ ] Gatsby standalone app/static app builder
 -   [ ] Nextjs standalone app/static app builder
@@ -178,6 +180,18 @@ Parsing a source file will generate the following information:
 Webpack loader for component controls instrumentation
 
 Webpack loader that injects the data collected by [@component-controls/instrument](https://github.com/ccontrols/component-controls/tree/master/core/instrument).
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./core/webpack-compile/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/webpack-compile](https://github.com/ccontrols/component-controls/blob/master/core/webpack-compile)
+
+Webpack compile api
+
+Standalone webpack compile/watch API for [@component-controls](https://github.com/ccontrols/component-controls).
 
 <!-- END-PACKAGE-SECTION -->
 

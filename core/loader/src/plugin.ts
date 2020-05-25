@@ -2,17 +2,26 @@ import { ReplaceSource } from 'webpack-sources';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
+import jsStringEscape from 'js-string-escape';
 import { store } from './store';
 
-class LoaderPlugin {
+export interface LoaderPluginOptions {
+  config?: string;
+  escapeOutput?: boolean;
+}
+export class LoaderPlugin {
   public static pluginName = 'component-controls-loader-plugin';
   private readonly compilationHash: string;
+  private readonly options: LoaderPluginOptions;
 
-  constructor() {
+  constructor(options: LoaderPluginOptions) {
     const hash = createHash('md5')
       .update(new Date().getTime().toString())
       .digest('hex');
     this.compilationHash = `__${hash.substr(0, 6)}__`;
+    this.options = {
+      ...options,
+    };
   }
 
   apply(compiler: webpack.Compiler) {
@@ -40,7 +49,10 @@ class LoaderPlugin {
         if (resource.resource) {
           resource.loaders.push({
             loader: path.join(__dirname, 'runtimeLoader.js'),
-            options: JSON.stringify({ compilationHash: this.compilationHash }),
+            options: JSON.stringify({
+              compilationHash: this.compilationHash,
+              ...this.options,
+            }),
           });
         }
       },
@@ -56,7 +68,9 @@ class LoaderPlugin {
     const source = compilation.assets[file];
     const placeholderPos = source.source().indexOf(placeholder);
     if (placeholderPos > -1) {
-      const newContent = JSON.stringify(store);
+      const newContent = this.options.escapeOutput
+        ? jsStringEscape(JSON.stringify(store))
+        : JSON.stringify(store);
       const newSource = new ReplaceSource(source, file);
       newSource.replace(
         placeholderPos,

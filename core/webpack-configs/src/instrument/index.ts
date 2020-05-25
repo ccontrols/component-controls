@@ -1,19 +1,15 @@
-import * as path from 'path';
 import { Configuration } from 'webpack';
 
 export const instrument: Configuration = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: new RegExp(`node_modules\\${path.sep}acorn-jsx`),
+        test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: require.resolve('babel-loader'),
             options: {
-              presets: [
-                [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
-              ],
+              presets: [['react-app', { flow: false, typescript: true }]],
             },
           },
         ],
@@ -28,17 +24,6 @@ export const instrument: Configuration = {
                 [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
                 require.resolve('@babel/preset-react'),
               ],
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(ts|tsx)$/,
-        use: [
-          {
-            loader: require.resolve('babel-loader'),
-            options: {
-              presets: [['react-app', { flow: false, typescript: true }]],
             },
           },
         ],
@@ -71,6 +56,6 @@ export const instrument: Configuration = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 };

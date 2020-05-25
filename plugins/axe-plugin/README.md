@@ -10,6 +10,8 @@
         -   [Simple page](#simple-page)
 -   [API](#api)
     -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
+    -   [<ins>isSelected</ins>](#insisselectedins)
+    -   [<ins>isTagSelected</ins>](#insistagselectedins)
 
 # In action
 
@@ -130,5 +132,13 @@ _AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/
 | `description` | _string_            | optional markdown description.                                                                                                  |
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+
+## <ins>isSelected</ins>
+
+_isSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/components/RecoilContext.tsx)_
+
+## <ins>isTagSelected</ins>
+
+_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/components/RecoilContext.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

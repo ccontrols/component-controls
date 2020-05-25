@@ -122,7 +122,7 @@ kitchenSink.story = {
     birthday: {
       type: ControlTypes.DATE,
       label: 'Birthday',
-      value: new Date(),
+      value: new Date(1990, 1, 1),
       groupId: GROUP_IDS.GENERAL,
     },
     dollars: {

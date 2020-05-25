@@ -627,6 +627,7 @@ _Story [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `collapsible` | _boolean_                | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _SystemStyleObject_      | theme-ui styling object for Block Box                                                                                           |
 | `ref`         | _Ref&lt;HTMLDivElement>_ |                                                                                                                                 |
+| `onRender`    | _() => void_             |                                                                                                                                 |
 
 ## <ins>StoryConfig</ins>
 

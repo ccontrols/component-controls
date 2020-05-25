@@ -8,9 +8,9 @@ module.exports = {
     },
   ],
   stories: [
-    '../../../../ui/editors/src/**/*.stories.(js|tsx|mdx)',
-    '../../../../ui/components/src/**/*.stories.(js|tsx|mdx)',
-    '../../../../ui/blocks/src/**/*.stories.(js|tsx|mdx)',
-    '../../../../examples/stories/src/**/*.stories.(js|tsx|mdx)',
+    '../../../../ui/editors/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../../ui/blocks/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)',
   ],
 };

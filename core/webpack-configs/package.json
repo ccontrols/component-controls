@@ -36,6 +36,7 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
     "@types/jest": "^25.1.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",

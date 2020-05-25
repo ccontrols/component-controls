@@ -9,10 +9,10 @@
     -   [merge](#merge)
     -   [arrayMerge](#arraymerge)
     -   [deepMerge](#deepmerge)
-    -   [deepMergeWithRules](#deepmergewithrules)
+    -   [deepMergeWithPresets](#deepmergewithpresets)
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
-    -   [rulesFactory](#rulesfactory)
+    -   [presetsFactory](#presetsfactory)
     -   [RuleOptions](#ruleoptions)
     -   [RuleType](#ruletype)
     -   [RuleTypes](#ruletypes)
@@ -90,7 +90,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## arrayMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L17)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L19)_
 
 **function** arrayMerge(`dest`\*: any\[], `src`\*: any\[]): any\[];
 
@@ -104,7 +104,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L44)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L46)_
 
 **function** deepMerge(`dest`\*: any, `source`\*: any): any;
 
@@ -116,11 +116,11 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 | `source*` | any  |             |
 | `returns` | any  |             |
 
-## deepMergeWithRules
+## deepMergeWithPresets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L36)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L38)_
 
-**function** deepMergeWithRules(`dest`\*: any, `source`\*: any): any;
+**function** deepMergeWithPresets(`dest`\*: any, `source`\*: any): any;
 
 ### parameters
 
@@ -132,38 +132,38 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## getWebpackConfig
 
-expands the rules into webpack rules
+expands the presets into webpack config
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L55)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L57)_
 
-**function** getWebpackConfig(`custom`\*: [RuleTypes](#ruletypes)): [Configuration](#configuration);
+**function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes)): [Configuration](#configuration);
 
 ### parameters
 
-| Name      | Type                            | Description    |
-| --------- | ------------------------------- | -------------- |
-| `custom*` | [RuleTypes](#ruletypes)         | custom config  |
-| `returns` | [Configuration](#configuration) |                |
+| Name       | Type                            | Description    |
+| ---------- | ------------------------------- | -------------- |
+| `presets*` | [RuleTypes](#ruletypes)         | custom config  |
+| `returns`  | [Configuration](#configuration) |                |
 
 ## mergeWebpackConfig
 
-merge webpack config with custom set of rules
+merge webpack config with custom set of presets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L84)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L86)_
 
-**function** mergeWebpackConfig(`webPack`\*: [Configuration](#configuration), `custom`\*: [RuleTypes](#ruletypes)): [Configuration](#configuration);
+**function** mergeWebpackConfig(`webPack`: [Configuration](#configuration), `presets`: [RuleTypes](#ruletypes)): [Configuration](#configuration);
 
 ### parameters
 
-| Name       | Type                            | Description                        |
-| ---------- | ------------------------------- | ---------------------------------- |
-| `webPack*` | [Configuration](#configuration) | passed configuration to merge with |
-| `custom*`  | [RuleTypes](#ruletypes)         | custom config                      |
-| `returns`  | [Configuration](#configuration) |                                    |
+| Name      | Type                            | Description                        |
+| --------- | ------------------------------- | ---------------------------------- |
+| `webPack` | [Configuration](#configuration) | passed configuration to merge with |
+| `presets` | [RuleTypes](#ruletypes)         | custom config                      |
+| `returns` | [Configuration](#configuration) |                                    |
 
-## rulesFactory
+## presetsFactory
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L9)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L10)_
 
 
 
@@ -172,6 +172,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 | Name                       | Type                            | Description |
 | -------------------------- | ------------------------------- | ----------- |
 | `instrument*`              | [Configuration](#configuration) |             |
+| `react*`                   | [Configuration](#configuration) |             |
 | `react-docgen*`            | [Configuration](#configuration) |             |
 | `react-docgen-typescript*` | [Configuration](#configuration) |             |
 

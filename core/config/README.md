@@ -6,7 +6,8 @@
     -   [ConfigrationResult](#configrationresult)
     -   [configFileNames](#configfilenames)
     -   [extractStories](#extractstories)
-    -   [getConfiguration](#getconfiguration)
+    -   [getConfigurationArg](#getconfigurationarg)
+    -   [loadConfiguration](#loadconfiguration)
     -   [Configuration](#configuration)
 
 # Overview
@@ -29,7 +30,7 @@ $ npm install @component-controls/config --save-dev
 
 ## ConfigrationResult
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L9)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L14)_
 
 
 
@@ -51,7 +52,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L53)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L70)_
 
 **function** extractStories(`__namedParameters`\*: **config**: [Configuration](#configuration)**configPath**: string): string\[] | undefined;
 
@@ -62,23 +63,39 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 | `__namedParameters*` | **config**: [Configuration](#configuration)**configPath**: string |             |
 | `returns`            | string\[] \| undefined                                            |             |
 
-## getConfiguration
+## getConfigurationArg
 
-return the configration object
+return the configration folder from command-line parameters
 command line accepts -c/ -config parameter for config path
 the config file is assumed named main.js/main.ts
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L19)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L24)_
 
-**function** getConfiguration(`baseFolder`\*: string, `args`\*: string\[]): [ConfigrationResult](#configrationresult) | undefined;
+**function** getConfigurationArg(`args`\*: string\[]): string | undefined;
 
 ### parameters
 
-| Name          | Type                                                   | Description                             |
-| ------------- | ------------------------------------------------------ | --------------------------------------- |
-| `baseFolder*` | string                                                 | project folder to start the searh with  |
-| `args*`       | string\[]                                              |                                         |
-| `returns`     | [ConfigrationResult](#configrationresult) \| undefined |                                         |
+| Name      | Type                | Description |
+| --------- | ------------------- | ----------- |
+| `args*`   | string\[]           |             |
+| `returns` | string \| undefined |             |
+
+## loadConfiguration
+
+ given a base project folder and a configuration folder, returns the configuration file
+
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L45)_
+
+**function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigrationResult](#configrationresult) | undefined;
+
+### parameters
+
+| Name           | Type                                                   | Description                                    |
+| -------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| `baseFolder*`  | string                                                 | project folder to start the search with        |
+| `configFolder` | string                                                 | folder where the configuration file is located |
+| `args`         | string\[]                                              | optional arguments                             |
+| `returns`      | [ConfigrationResult](#configrationresult) \| undefined |                                                |
 
 ## Configuration
 
