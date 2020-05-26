@@ -1,7 +1,7 @@
 {
-  "name": "@component-controls/gatsby-plugin-stories",
+  "name": "@component-controls/gatsby-theme-stories",
   "version": "1.1.0",
-  "description": "Gatsby plugin to collect story files",
+  "description": "Gatsby theme to create stories documentation sites",
   "keywords": [
     "story",
     "gatsby"
@@ -12,7 +12,9 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "gatsby-config.js",
+    "gatsby-node.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -30,16 +32,32 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "integrations/gatsby-source-stories"
+    "directory": "integrations/gatsby-theme-stories"
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/components": "^1.1.0",
+    "@component-controls/blocks": "^1.1.0",
     "@component-controls/loader": "^1.1.0",
+    "@component-controls/pages": "^1.1.0",
+    "@component-controls/specification": "^1.1.0",
     "@component-controls/store": "^1.1.0",
-    "@component-controls/webpack-configs": "^1.1.0"
+    "@component-controls/webpack-compile": "^1.1.0",
+    "gatsby": "^2.22.10",
+    "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-plugin-typescript": "^2.4.3",
+    "theme-ui": "^0.3.1",
+    "@theme-ui/sidenav": "^0.3.1",
+    "react": "^16.13.1",
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.22.10",
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"

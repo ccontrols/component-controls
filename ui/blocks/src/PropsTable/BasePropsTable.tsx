@@ -341,9 +341,11 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         return r.join(',');
       })
       .join('\n');
-    setCopied(true);
     copy(csvRows);
-    window.setTimeout(() => setCopied(false), 1500);
+    if (typeof window !== 'undefined') {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    }
   };
   actions.push({
     title: copied ? 'copied' : 'copy table',

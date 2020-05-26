@@ -1,7 +1,6 @@
 import { CompileProps, CompileResults, WatchProps } from './types';
 import { runCompiler } from './utilities';
 export * from './types';
-
 /**
  * compile the stories with webpack
  * returns the stories store object

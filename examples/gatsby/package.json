@@ -14,10 +14,8 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/gatsby-plugin-stories": "^1.1.0",
-    "gatsby": "^2.22.9",
-    "gatsby-plugin-emotion": "^4.3.2",
-    "gatsby-plugin-typescript": "^2.4.3",
+    "@component-controls/gatsby-theme-stories": "^1.1.0",
+    "gatsby": "^2.22.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

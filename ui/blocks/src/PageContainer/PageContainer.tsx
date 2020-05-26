@@ -1,26 +1,23 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { FC, useEffect } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import { StoryStore } from '@component-controls/store';
-import { store } from '@component-controls/store/live_store';
 
-import {
-  ThemeProvider,
-  markdownComponents,
-} from '@component-controls/components';
+import { markdownComponents } from '@component-controls/components';
 import { BlockContextProvider, StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
   /**
+   * store object
+   */
+  store: StoryStore;
+
+  /**
    * story to display in the page
    */
   storyId?: string;
-  /**
-   * dark/light theme for the page
-   */
-  dark?: boolean;
 
   /**
    * global options passed from container
@@ -32,16 +29,6 @@ export interface PageContainerProps {
    * components to customize the markdown display.
    */
   components?: MDXProviderComponents;
-
-  /**
-   * optional custom theme
-   */
-  theme?: Theme;
-
-  /**
-   * store object
-   */
-  store?: StoryStore;
 }
 
 /**
@@ -51,17 +38,17 @@ export interface PageContainerProps {
  */
 export const PageContainer: FC<PageContainerProps> = ({
   children,
-  dark,
   storyId,
-  store: mockStore,
-  theme,
+  store,
   options,
   components = {},
 }) => {
   let scrollId: string | undefined;
   try {
     const pageURL =
-      (window.location !== window.parent.location && window.parent.location
+      (typeof window !== 'undefined' &&
+      window.location !== window.parent.location &&
+      window.parent.location
         ? window.parent.location.href
         : document.location.href) || '';
     const url = new URL(pageURL);
@@ -84,42 +71,40 @@ export const PageContainer: FC<PageContainerProps> = ({
     }
   }, [scrollId]);
   return (
-    <ThemeProvider theme={theme} dark={dark}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '4rem 20px',
-          bg: 'background',
-          color: 'text',
-          fontFamily: 'body',
-        }}
-      >
-        <Box sx={{ maxWidth: '1000px', width: '100%' }}>
-          {storyId && (
-            <BlockContextProvider
-              storyId={storyId}
-              store={mockStore || store}
-              options={options}
-            >
-              <StoryContextConsumer id={storyId}>
-                {({ kind }) => {
-                  const { MDXPage } = kind || {};
-                  return MDXPage ? (
-                    <MDXProvider
-                      components={{ ...markdownComponents, ...components }}
-                    >
-                      <MDXPage />
-                    </MDXProvider>
-                  ) : (
-                    children
-                  );
-                }}
-              </StoryContextConsumer>
-            </BlockContextProvider>
-          )}
-        </Box>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '4rem 20px',
+        bg: 'background',
+        color: 'text',
+        fontFamily: 'body',
+      }}
+    >
+      <Box sx={{ maxWidth: '1000px', width: '100%' }}>
+        {storyId && (
+          <BlockContextProvider
+            storyId={storyId}
+            store={store}
+            options={options}
+          >
+            <StoryContextConsumer id={storyId}>
+              {({ kind }) => {
+                const { MDXPage } = kind || {};
+                return MDXPage ? (
+                  <MDXProvider
+                    components={{ ...markdownComponents, ...components }}
+                  >
+                    <MDXPage />
+                  </MDXProvider>
+                ) : (
+                  children
+                );
+              }}
+            </StoryContextConsumer>
+          </BlockContextProvider>
+        )}
       </Box>
-    </ThemeProvider>
+    </Box>
   );
 };
