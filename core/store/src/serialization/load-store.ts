@@ -11,18 +11,21 @@ import { addSmartControls } from './smart-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
 
-export const loadStoryStore = (): StoriesStore | undefined => {
+export const loadStoryStore = (
+  store?: LoadingStore,
+): StoriesStore | undefined => {
   if (storyStore) {
     return storyStore;
   }
-  const store = require('@component-controls/loader/story-store-data.js');
-  if (store) {
+  const newStore: LoadingStore =
+    store || require('@component-controls/loader/story-store-data.js');
+  if (newStore) {
     try {
       const {
         stores,
         packages: loadedPackages,
         components: loadedComponents,
-      }: LoadingStore = store;
+      } = newStore;
 
       if (stores) {
         const globalStore: StoriesStore = {
@@ -31,13 +34,13 @@ export const loadStoryStore = (): StoriesStore | undefined => {
           components: {},
           packages: {},
         };
-        stores.forEach(store => {
-          if (Object.keys(store.kinds).length > 0) {
-            Object.keys(store.kinds).forEach(kindName => {
-              const kind = store.kinds[kindName];
+        stores.forEach(s => {
+          if (Object.keys(s.kinds).length > 0) {
+            Object.keys(s.kinds).forEach(kindName => {
+              const kind = s.kinds[kindName];
               globalStore.kinds[kindName] = kind;
-              Object.keys(store.stories).forEach(storyName => {
-                const story: Story = store.stories[storyName];
+              Object.keys(s.stories).forEach(storyName => {
+                const story: Story = s.stories[storyName];
                 const {
                   title,
                   stories,

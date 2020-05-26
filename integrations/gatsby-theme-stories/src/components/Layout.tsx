@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { jsx, Container } from 'theme-ui';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
-import { PageContainer, store } from '@component-controls/blocks';
+import { PageContainer } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
 import { Sidebar } from './Sidebar';
@@ -12,14 +12,16 @@ import { Header } from './Header';
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
+  storyStore: Store;
+  storyId: string;
 }
 
-export const Layout: FC<LayoutProps> = ({ children, title }) => {
-  const storyStore = React.useMemo(
-    () => new Store({ store, updateLocalStorage: false }),
-    [],
-  );
-
+export const Layout: FC<LayoutProps> = ({
+  children,
+  title,
+  storyStore,
+  storyId,
+}) => {
   return (
     <ThemeProvider>
       <Global
@@ -43,7 +45,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         <Sidebar />
         <Container>
           <Header title={title} />
-          <PageContainer store={storyStore} storyId="id-of-story">
+          <PageContainer store={storyStore} storyId={storyId}>
             {children}
           </PageContainer>
         </Container>

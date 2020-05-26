@@ -82,7 +82,7 @@ export const PageContainer: FC<PageContainerProps> = ({
       }}
     >
       <Box sx={{ maxWidth: '1000px', width: '100%' }}>
-        {storyId && (
+        {store && storyId ? (
           <BlockContextProvider
             storyId={storyId}
             store={store}
@@ -103,6 +103,8 @@ export const PageContainer: FC<PageContainerProps> = ({
               }}
             </StoryContextConsumer>
           </BlockContextProvider>
+        ) : (
+          children
         )}
       </Box>
     </Box>

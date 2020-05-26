@@ -79,7 +79,18 @@
         "<node_internals>/**"
       ]
     },
-    
+    {
+      "name": "gatsby develop",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+      "cwd": "${workspaceFolder}/examples/gatsby",
+      "args": ["develop"],
+      "stopOnEntry": false,
+      "runtimeArgs": ["--nolazy"],
+      "sourceMaps": false
+    },
     {
       "type": "node",
       "request": "launch",

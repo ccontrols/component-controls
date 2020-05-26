@@ -23,13 +23,22 @@ export const addSmartControls = (
     return null;
   }
   const storyComponent = story.component || params.component;
+
   if (!storyComponent) {
     return null;
   }
-  const componentName = getComponentName(storyComponent);
+  let componentName = getComponentName(storyComponent);
+  if (
+    !componentName ||
+    (!components[kind.components[componentName]] &&
+      typeof kind.component === 'string')
+  ) {
+    componentName = kind.component as string;
+  }
   if (componentName) {
     const component = components[kind.components[componentName]];
-    if (component.info) {
+
+    if (component?.info) {
       const newControls = controlsFromProps(component.info.props);
       const { include, exclude } = smartControls;
       const usedProps: string[] | undefined = Array.isArray(

@@ -2,7 +2,7 @@
 import { Sidenav } from '@theme-ui/sidenav';
 import { jsx, useColorMode } from 'theme-ui';
 import { graphql, useStaticQuery } from 'gatsby';
-import { StoriesKind } from '@component-controls/specification';
+import { Story } from '@component-controls/specification';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 import { ColorMode } from './ColorMode';
 
@@ -17,16 +17,18 @@ export const Sidebar = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allStoryKind {
+      allStory {
         edges {
           node {
-            title
+            id
+            kind
+            name
           }
         }
       }
     }
   `);
-  const kinds = data.allStoryKind.edges;
+  const stories = data.allStory.edges;
   return (
     <div>
       <div
@@ -62,10 +64,10 @@ export const Sidebar = () => {
           width: `initial`,
         }}
       >
-        {kinds.map(({ node: kind }: { node: StoriesKind }) => (
+        {stories.map(({ node: story }: { node: Story }) => (
           //@ts-ignore
-          <li key={kind.title} mdxType="li">
-            <a href={`/${kind.title.toLowerCase()}`}>{kind.title}</a>
+          <li key={story.id} mdxType="li">
+            <a href={`/stories/${story.id}`}>{story.name}</a>
           </li>
         ))}
       </Sidenav>
