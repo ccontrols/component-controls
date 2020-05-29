@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Container } from 'theme-ui';
+import { jsx, Flex, Container } from 'theme-ui';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
+import { SidebarContextProvider } from '@component-controls/app-components';
+
 import { PageContainer } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
@@ -35,21 +37,17 @@ export const Layout: FC<LayoutProps> = ({
         })}
       />
       <SEO title={title} />
-      <div
-        sx={{
-          display: `grid`,
-          gridTemplateColumns: [`200px 1fr`, `200px 1fr`, `250px 1fr`],
-          minHeight: `100vh`,
-        }}
-      >
-        <Sidebar />
-        <Container>
-          <Header title={title} />
-          <PageContainer store={storyStore} storyId={storyId}>
-            {children}
-          </PageContainer>
-        </Container>
-      </div>
+      <SidebarContextProvider>
+        <Flex sx={{ flexDirection: 'row' }}>
+          <Sidebar storyId={storyId} />
+          <Container>
+            <Header title={title} />
+            <PageContainer store={storyStore} storyId={storyId}>
+              {children}
+            </PageContainer>
+          </Container>
+        </Flex>
+      </SidebarContextProvider>
     </ThemeProvider>
   );
 };

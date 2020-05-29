@@ -9,7 +9,13 @@
     -   [Examples](#examples)
         -   [Simple page](#simple-page)
 -   [API](#api)
-    -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
+    -   [<ins>Store</ins>](#insstoreins)
+    -   [<ins>Header</ins>](#insheaderins)
+    -   [<ins>Layout</ins>](#inslayoutins)
+    -   [<ins>SEO</ins>](#insseoins)
+    -   [<ins>Sidebar</ins>](#inssidebarins)
+    -   [<ins>pages</ins>](#inspagesins)
+    -   [<ins>StoryPage</ins>](#insstorypageins)
 
 # In action
 
@@ -113,22 +119,69 @@ export default {
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
-## <ins>AxeAllyBlock</ins>
+## <ins>Store</ins>
 
-Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
+Store class used to query the stories and exchange information between processes
 
-_AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
+_Store [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
+
+## <ins>Header</ins>
+
+_Header [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Header.tsx)_
 
 ### properties
 
-| Name          | Type                | Description                                                                                                                     |
-| ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_              |                                                                                                                                 |
-| `id`          | _string_            | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_            | optional section title for the block.                                                                                           |
-| `description` | _string_            | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `title` | _string_ |             |
+
+## <ins>Layout</ins>
+
+_Layout [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Layout.tsx)_
+
+### properties
+
+| Name          | Type     | Description |
+| ------------- | -------- | ----------- |
+| `title`       | _string_ |             |
+| `storyStore*` | _Store_  |             |
+| `storyId*`    | _string_ |             |
+
+## <ins>SEO</ins>
+
+_SEO [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/SEO.tsx)_
+
+### properties
+
+| Name          | Type     | Description |
+| ------------- | -------- | ----------- |
+| `title`       | _string_ |             |
+| `description` | _string_ |             |
+| `pathname`    | _string_ |             |
+| `image`       | _string_ |             |
+
+## <ins>Sidebar</ins>
+
+_Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Sidebar.tsx)_
+
+### properties
+
+| Name      | Type     | Description |
+| --------- | -------- | ----------- |
+| `storyId` | _string_ |             |
+
+## <ins>pages</ins>
+
+_pages [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/index.tsx)_
+
+## <ins>StoryPage</ins>
+
+_StoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/StoryPage.tsx)_
+
+### properties
+
+| Name           | Type                                                             | Description |
+| -------------- | ---------------------------------------------------------------- | ----------- |
+| `pathContext*` | _{ title: string; loadedStore: StoriesStore; storyId: string; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

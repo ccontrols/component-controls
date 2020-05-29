@@ -29,7 +29,7 @@ $ npm install @component-controls/store --save-dev
 
 Store class used to query the stories and exchange information between processes
 
-_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L28)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L27)_
 
 
 
@@ -47,7 +47,7 @@ _defined in [@component-controls/store/src/Store/Store.ts](https://github.com/cc
 
 ## StoreOptions
 
-_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L15)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L14)_
 
 
 

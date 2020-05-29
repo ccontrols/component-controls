@@ -1,20 +1,14 @@
 {
-  "name": "@component-controls/gatsby-theme-stories",
-  "version": "1.1.0",
-  "description": "Gatsby theme to create stories documentation sites",
-  "keywords": [
-    "story",
-    "gatsby"
-  ],
+  "name": "@component-controls/app-components",
+  "version": "1.2.0",
+  "description": "Standalone application components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
     "package.json",
-    "README.md",
-    "gatsby-config.js",
-    "gatsby-node.js"
+    "README.md"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -32,33 +26,29 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "integrations/gatsby-theme-stories"
+    "directory": "ui/app-components"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app-components": "^1.1.0",
-    "@component-controls/components": "^1.1.0",
-    "@component-controls/blocks": "^1.1.0",
-    "@component-controls/loader": "^1.1.0",
-    "@component-controls/pages": "^1.1.0",
-    "@component-controls/specification": "^1.1.0",
-    "@component-controls/store": "^1.1.0",
-    "@component-controls/webpack-compile": "^1.1.0",
-    "gatsby": "^2.22.10",
-    "gatsby-plugin-react-helmet": "^3.3.2",
-    "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-plugin-typescript": "^2.4.3",
+    "@component-controls/components": "^1.2.0",
+    "@primer/octicons-react": "^9.6.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "theme-ui": "^0.3.1",
-    "@theme-ui/sidenav": "^0.3.1",
-    "react": "^16.13.1",
-    "react-helmet": "^6.0.0"
+    "@theme-ui/match-media": "^0.3.1"
   },
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "@types/jest": "^25.1.2",
+    "@types/theme-ui": "^0.3.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "gatsby": "^2.22.10",
-    "react": "^16.13.1"
+    "@primer/octicons-react": "*",
+    "react": "*",
+    "react-dom": "*",
+    "theme-ui": "*"
   },
   "publishConfig": {
     "access": "public"

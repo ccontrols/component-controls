@@ -37,7 +37,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx,BaseStoryConfig.tsx,BaseStorySource.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -172,12 +172,10 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 | Name         | Type                    | Description                                                                            |
 | ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
+| `store*`     | _StoryStore_            | store object                                                                           |
 | `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
 | `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
 | `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
 
 ## <ins>Playground</ins>
 
@@ -326,7 +324,7 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                                                               | Description                                                                                                                                                                      |
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStype`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
+| `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |

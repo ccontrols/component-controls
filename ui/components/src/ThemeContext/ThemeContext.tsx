@@ -37,6 +37,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     return applyColorMode(
       {
         ...defTheme,
+        defaultBreakpoints: [40, 52, 64].map(n => n + 'em'),
         initialColorModeName: dark ? 'dark' : 'default',
         forms: {
           checkbox: {

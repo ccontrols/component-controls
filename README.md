@@ -23,6 +23,7 @@
     -   [@component-controls/blocks](#component-controlsblocks)
     -   [@component-controls/components](#component-controlscomponents)
     -   [@component-controls/editors](#component-controlseditors)
+    -   [@component-controls/app-components](#component-controlsapp-components)
 -   [Props info](#props-info)
     -   [@component-controls/react-docgen-info](#component-controlsreact-docgen-info)
     -   [@component-controls/react-docgen-typescript-info](#component-controlsreact-docgen-typescript-info)
@@ -309,6 +310,23 @@ Some of the guiding design goals for this library:
 
 -   Extensible using `addPropertyEditor`, so you can replace or add new editors.
 -   All editors offer a consistent interface through the `getPropertyEditor` factory.
+
+<!-- END-PACKAGE-SECTION -->
+
+<package-section file="./ui/app-components/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/app-components](https://github.com/ccontrols/component-controls/blob/master/ui/app-components)
+
+Standalone application components.
+
+Application components to create standaline user interface for component-controls.
+
+Third-party libraries used in no particular order:
+
+-   [theme-ui](https://theme-ui.com) as the theming and components foundation.
+-   [octicons](https://octicons.github.com) for icons used in the components.
 
 <!-- END-PACKAGE-SECTION -->
 

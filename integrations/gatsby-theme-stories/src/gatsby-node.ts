@@ -80,7 +80,7 @@ exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
         path: `stories/${node.id}`,
         component: require.resolve(`../src/templates/StoryPage.tsx`),
         context: {
-          title: node.title,
+          title: node.name,
           storyId: node.id,
           loadedStore,
         },

@@ -40,7 +40,7 @@ $ npm install @component-controls/webpack-compile --save-dev
 compile the stories with webpack
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L9)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L8)_
 
 **function** compile(`__namedParameters`\*: **configPath**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 
@@ -56,7 +56,7 @@ _defined in [@component-controls/webpack-compile/src/index.ts](https://github.co
 compile the stories with webpack and launch watching for changes
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L26)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L25)_
 
 **function** watch(`__namedParameters`\*: **configPath**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 

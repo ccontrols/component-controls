@@ -73,6 +73,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   return (
     <Box
       sx={{
+        position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         padding: '4rem 20px',

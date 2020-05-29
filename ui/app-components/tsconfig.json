@@ -2,14 +2,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
+    "outDir": "dist",
+    "rootDir": "src",
     "declaration": true,
-    "resolveJsonModule": true,
-    "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": "./",
+    "types": ["node", "jest"],
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*", "../../ui/app-components/src/Sidebar/Sidebox.tsx"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules/**"]
 }

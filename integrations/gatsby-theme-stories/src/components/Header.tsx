@@ -1,41 +1,43 @@
 /** @jsx jsx */
-import { FC } from 'react';
-import { jsx, useColorMode, Heading } from 'theme-ui';
+import { FC, useContext } from 'react';
+import { jsx, Heading } from 'theme-ui';
 import { Flex } from '@theme-ui/components';
-import { ColorMode } from './ColorMode';
+import { ColorMode, SidebarContext } from '@component-controls/app-components';
 
 interface HeaderProps {
   title?: string;
 }
 export const Header: FC<HeaderProps> = ({ title }) => {
-  const [colorMode, setColorMode] = useColorMode();
-  const isDark = colorMode === `dark`;
-  const toggleColorMode = (e: any) => {
-    e.preventDefault();
-    setColorMode(isDark ? `light` : `dark`);
-  };
+  const { SidebarToggle } = useContext(SidebarContext);
 
   return (
-    <header sx={{ px: 3, py: 1 }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        <Heading>{title}</Heading>
-        <ColorMode isDark={isDark} toggle={toggleColorMode} />
-      </Flex>
-      <div
+    <header sx={{ px: 3 }}>
+      <Flex
         sx={{
-          boxSizing: `border-box`,
-          display: `flex`,
-          variant: `dividers.bottom`,
+          py: 3,
+          flexDirection: 'row',
           alignItems: `center`,
           justifyContent: `space-between`,
-          mt: 3,
-          color: `secondary`,
-          a: { color: `secondary`, ':hover': { color: `heading` } },
-          flexFlow: `wrap`,
         }}
       >
-        links
-      </div>
+        <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
+          <SidebarToggle />
+          <Heading sx={{ pl: 2 }}>{title}</Heading>
+        </Flex>
+        <Flex
+          sx={{
+            boxSizing: `border-box`,
+            variant: `dividers.bottom`,
+            justifyContent: `space-between`,
+            color: `secondary`,
+            a: { color: `secondary`, ':hover': { color: `accent` } },
+            flexFlow: `wrap`,
+          }}
+        >
+          <a>links</a>
+        </Flex>
+        <ColorMode />
+      </Flex>
     </header>
   );
 };

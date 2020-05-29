@@ -661,7 +661,7 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                                                               | Description                                                                                                                                                                      |
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStype`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
+| `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
@@ -712,14 +712,9 @@ _PageContextContainer [source code](https:/github.com/ccontrols/component-contro
 
 ### properties
 
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
+| Name    | Type    | Description |
+| ------- | ------- | ----------- |
+| `theme` | _Theme_ |             |
 
 ## <ins>DocsContainer</ins>
 
@@ -727,14 +722,9 @@ _DocsContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
-| `active`     | _boolean_               |                                                                                        |
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `theme`  | _Theme_   |             |
+| `active` | _boolean_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
