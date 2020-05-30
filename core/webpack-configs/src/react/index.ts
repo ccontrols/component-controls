@@ -5,6 +5,7 @@ export const react: Configuration = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: 'babel-loader',
@@ -19,6 +20,7 @@ export const react: Configuration = {
       },
       {
         test: /\.(ts|tsx)$/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: require.resolve('babel-loader'),
@@ -30,6 +32,7 @@ export const react: Configuration = {
       },
       {
         test: /\.(stories|story).mdx$/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: 'babel-loader',

@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx, Heading } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { Flex } from '@theme-ui/components';
 import { ColorMode, SidebarContext } from '@component-controls/app-components';
 
 interface HeaderProps {
   title?: string;
 }
-export const Header: FC<HeaderProps> = ({ title }) => {
+export const Header: FC<HeaderProps> = ({ children }) => {
   const { SidebarToggle } = useContext(SidebarContext);
 
   return (
@@ -22,7 +22,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
       >
         <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
           <SidebarToggle />
-          <Heading sx={{ pl: 2 }}>{title}</Heading>
+          {children}
         </Flex>
         <Flex
           sx={{
@@ -34,7 +34,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
             flexFlow: `wrap`,
           }}
         >
-          <a>links</a>
+          link
         </Flex>
         <ColorMode />
       </Flex>

@@ -45,12 +45,14 @@ const TabsContainer = styled.div`
       bottom: -1px;
       position: relative;
       list-style: none;
-      padding: 4px 15px;
+      padding: 4px 10px;
+      margin-left: 4px;
+      margin-right: 4px;
       cursor: pointer;
       color: ${theme?.colors?.fadedText};
     }
     .react-tabs__tab--selected {
-      border-bottom: 3px solid ${theme?.colors?.selected};
+      border-bottom: 2px solid ${theme?.colors?.selected};
       color: ${theme?.colors?.selected};
     }
     .react-tabs__tab--disabled {

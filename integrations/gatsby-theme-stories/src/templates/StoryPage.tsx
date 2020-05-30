@@ -1,9 +1,10 @@
 import React, { FC, useMemo } from 'react';
-import { ClassicPage } from '@component-controls/pages';
 
 import { StoriesStore } from '@component-controls/specification';
 import { Store } from '@component-controls/store';
+
 import { Layout } from '../components/Layout';
+import { pages } from '../config/pages';
 
 interface SitePageProps {
   pathContext: {
@@ -25,9 +26,12 @@ const SitePage: FC<SitePageProps> = ({
     [loadedStore],
   );
   return (
-    <Layout title={title} storyStore={storyStore} storyId={storyId}>
-      <ClassicPage />
-    </Layout>
+    <Layout
+      title={title}
+      storyStore={storyStore}
+      storyId={storyId}
+      pages={pages}
+    />
   );
 };
 

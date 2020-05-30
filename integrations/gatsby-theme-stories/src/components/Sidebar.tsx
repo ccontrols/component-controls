@@ -20,11 +20,11 @@ const Link: FC<LinkProps> = props => (
     sx={{
       color: 'inherit',
       '&.active': {
-        backgroundColor: 'accent',
+        backgroundColor: 'highlight',
         color: 'primary',
       },
       ':hover': {
-        backgroundColor: 'accent',
+        backgroundColor: 'highlight',
       },
     }}
   />

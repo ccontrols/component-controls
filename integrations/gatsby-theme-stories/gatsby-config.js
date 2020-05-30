@@ -1,21 +1,20 @@
-module.exports = {
-  siteMetadata: {
-    siteTitle: `GraphQL Playground`,
-    siteTitleAlt: `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`,
-    siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://gatsby-theme-graphql-playground.netlify.com`,
-    siteDescription: `GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).`,
-    siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
-    graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
-    basePath: options.basePath,
-    docsPath: options.docsPath,
-  },
-
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-theme-ui',
-    'gatsby-plugin-typescript',
-  ],
+module.exports = options => {
+  return {
+    siteMetadata: {
+      siteTitle: `Stories`,
+      siteTitleAlt: `Component controls stories - @lekoarts/gatsby-theme-graphql-playground`,
+      siteHeadline: `Component controls stories - Gatsby Theme from @atanasster`,
+      siteUrl: `https://gatsby-theme-stories.netlify.com`,
+      siteDescription: `Component controls stories. Write your components documentation with MDX and JSX and design, develop, test and review in a single site.`,
+      siteLanguage: `en`,
+      author: `@atanasster`,
+      graphiQLUrl: `https://gatsby-theme-stories.netlify.com/___graphql`,
+      basePath: options.basePath,
+    },
+    plugins: [
+      'gatsby-plugin-react-helmet',
+      'gatsby-plugin-theme-ui',
+      'gatsby-plugin-typescript',
+    ].filter(Boolean),
+  };
 };
