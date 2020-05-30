@@ -107,7 +107,7 @@ export const NodesTable: FC<NodesTableProps> = ({
   return (
     <Box
       sx={{
-        backgroundColor: 'gray',
+        backgroundColor: 'shadow',
       }}
     >
       <Table

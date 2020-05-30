@@ -47,7 +47,12 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   const isCollapsed =
     (collapsible && size <= 1 && collapsed === undefined) || collapsed === true;
   return (
-    <Collapsible isOpen={!isCollapsed} easing="ease-in-out" {...animate}>
+    <Collapsible
+      css={{ display: 'flex', alignItems: 'stretch' }}
+      isOpen={!isCollapsed}
+      easing="ease-in-out"
+      {...animate}
+    >
       <Box
         sx={{ overflowY: 'auto', height: '100%', overflowX: 'hidden', width }}
         {...rest}

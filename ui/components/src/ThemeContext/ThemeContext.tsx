@@ -105,6 +105,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         colors: {
           ...polaris.colors,
           gray: '#f6f6f6',
+          sidebar: '#f6f6f6',
           header: '#edebe8',
           highlight: '#d9f2f1',
           action: '#3B817D',
@@ -115,6 +116,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
             dark: {
               ...(defTheme.colors.modes ? defTheme.colors.modes.dark : {}),
               background: '#38404a',
+              sidebar: '#000',
               text: '#d3d4db',
               header: '#111111',
               fadedText: '#c9cacf',
