@@ -2,7 +2,11 @@
 import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
 import { Flex } from '@theme-ui/components';
-import { ColorMode, SidebarContext } from '@component-controls/app-components';
+import {
+  ColorMode,
+  SidebarContext,
+  Header as AppHeader,
+} from '@component-controls/app-components';
 
 interface HeaderProps {
   title?: string;
@@ -11,7 +15,7 @@ export const Header: FC<HeaderProps> = ({ children }) => {
   const { SidebarToggle } = useContext(SidebarContext);
 
   return (
-    <header sx={{ px: 3 }}>
+    <AppHeader position="sticky">
       <Flex
         sx={{
           py: 3,
@@ -33,11 +37,9 @@ export const Header: FC<HeaderProps> = ({ children }) => {
             a: { color: `secondary`, ':hover': { color: `accent` } },
             flexFlow: `wrap`,
           }}
-        >
-          link
-        </Flex>
+        ></Flex>
         <ColorMode />
       </Flex>
-    </header>
+    </AppHeader>
   );
 };
