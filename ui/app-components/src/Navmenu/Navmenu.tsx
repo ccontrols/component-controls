@@ -286,6 +286,9 @@ export const Navmenu: FC<NavMenuProps> = props => {
               alignItems: 'center',
               position: 'relative',
               ml: 1 + level,
+              '& strong': {
+                color: 'text',
+              },
             }}
           >
             {items && (
@@ -306,7 +309,12 @@ export const Navmenu: FC<NavMenuProps> = props => {
               <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
                 {icon && <Box sx={{ mr: 2 }}>{icon}</Box>}
                 {typeof label === 'string' ? (
-                  <Text sx={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
+                  <Text
+                    sx={{
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
                     {items ? <strong>{label}</strong> : label}
                   </Text>
                 ) : (

@@ -10,7 +10,10 @@ import { Toggle, ToggleProps } from '@component-controls/components';
 /**
  * dark/light mode toggle for theme-ui themes
  */
-export const ColorMode: FC<ToggleProps> = props => {
+export const ColorMode: FC<Omit<
+  ToggleProps,
+  'checked' | 'onChange'
+>> = props => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
   const toggleColorMode = (checked: boolean) => {
