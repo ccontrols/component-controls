@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useState, useMemo } from 'react';
-import { jsx, Input, LinkProps } from 'theme-ui';
+import { jsx, Input, LinkProps, Box } from 'theme-ui';
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
 import { Story } from '@component-controls/specification';
 import {
@@ -20,11 +20,11 @@ const Link: FC<LinkProps> = props => (
     sx={{
       color: 'inherit',
       '&.active': {
-        backgroundColor: 'highlight',
-        color: 'primary',
+        backgroundColor: 'accent',
+        color: 'white',
       },
       ':hover': {
-        backgroundColor: 'highlight',
+        backgroundColor: 'accent',
       },
     }}
   />
@@ -106,11 +106,13 @@ export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
   return (
     <AppSidebar sx={{ px: 1, backgroundColor: 'sidebar' }} width={380}>
       {siteTitle}
-      <Input
-        placeholder="search stories..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
+      <Box sx={{ py: 2 }}>
+        <Input
+          placeholder="search stories..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+        />
+      </Box>
       <Navmenu
         buttonClass={Link}
         activeItem={{ id: storyId }}

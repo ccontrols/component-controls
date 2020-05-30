@@ -32,6 +32,13 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
       <Button
         aria-label={collapsed ? 'Expand side bar' : 'Collapse side bar'}
         onClick={() => setCollapsed(!collapsed)}
+        sx={{
+          background: 'none',
+          p: 2,
+          boxShadow: 'none',
+          cursor: 'pointer',
+          color: 'text',
+        }}
         {...rest}
       >
         {icon || <Octicon icon={ThreeBars} />}

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { FC, useEffect, useState } from 'react';
 import { jsx, Box, Flex, Button, ButtonProps, LinkProps, Text } from 'theme-ui';
-import Octicon, { PlusSmall, Dash } from '@primer/octicons-react';
+import Octicon, { ChevronDown, ChevronUp } from '@primer/octicons-react';
 import {
   Keyboard,
   LEFT_ARROW,
@@ -264,7 +264,7 @@ export const Navmenu: FC<NavMenuProps> = props => {
         <ButtonClass
           sx={{
             width: '100%',
-            px: 2,
+            px: 3,
             py: 1,
             boxShadow: 'none',
             background: 'none',
@@ -285,19 +285,12 @@ export const Navmenu: FC<NavMenuProps> = props => {
               flexDirection: 'row',
               alignItems: 'center',
               position: 'relative',
-              ml: 1 + level,
+              ml: level,
               '& strong': {
                 color: 'text',
               },
             }}
           >
-            {items && (
-              <Octicon
-                sx={{ position: 'absolute', left: -14 }}
-                ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
-                icon={isExpanded ? Dash : PlusSmall}
-              />
-            )}
             <Flex
               sx={{
                 flexDirection: 'row',
@@ -322,7 +315,14 @@ export const Navmenu: FC<NavMenuProps> = props => {
                 )}
               </Flex>
 
-              {widget && <Box sx={{ mr: 2 }}>{widget}</Box>}
+              {widget && <Box>{widget}</Box>}
+              {items && (
+                <Octicon
+                  sx={{ ml: 2 }}
+                  ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
+                  icon={isExpanded ? ChevronUp : ChevronDown}
+                />
+              )}
             </Flex>
           </Flex>
         </ButtonClass>
