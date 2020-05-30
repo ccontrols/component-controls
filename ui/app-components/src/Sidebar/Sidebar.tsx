@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC, Fragment, useContext } from 'react';
+import React, { FC, useContext } from 'react';
 import { jsx, Box, Flex, BoxProps, Heading } from 'theme-ui';
 import { useBreakpointIndex } from '@theme-ui/match-media';
 import { Collapsible, CollapsibleProps } from '@component-controls/components';
@@ -47,26 +47,27 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   const isCollapsed =
     (collapsible && size <= 1 && collapsed === undefined) || collapsed === true;
   return (
-    <Fragment>
-      <Collapsible isOpen={!isCollapsed} easing="ease-in-out" {...animate}>
-        <Box sx={{ width }} {...rest}>
-          <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
-            {title && (
-              <Box as="header">
-                {typeof title === 'string' ? (
-                  <Heading as="h3" sx={{ pl: 2 }}>
-                    {title}
-                  </Heading>
-                ) : (
-                  title
-                )}
-              </Box>
-            )}
-          </Flex>
+    <Collapsible isOpen={!isCollapsed} easing="ease-in-out" {...animate}>
+      <Box
+        sx={{ overflowY: 'auto', height: '100%', overflowX: 'hidden', width }}
+        {...rest}
+      >
+        <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
+          {title && (
+            <Box as="header">
+              {typeof title === 'string' ? (
+                <Heading as="h3" sx={{ pl: 2 }}>
+                  {title}
+                </Heading>
+              ) : (
+                title
+              )}
+            </Box>
+          )}
+        </Flex>
 
-          {children}
-        </Box>
-      </Collapsible>
-    </Fragment>
+        {children}
+      </Box>
+    </Collapsible>
   );
 };

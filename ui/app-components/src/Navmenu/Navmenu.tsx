@@ -350,8 +350,8 @@ export const Navmenu: FC<NavMenuProps> = props => {
   };
   const { filteredItems } = state;
   return (
-    <React.Fragment>
+    <Box as="nav">
       {filteredItems && filteredItems.map(item => renderItem(item, 1))}
-    </React.Fragment>
+    </Box>
   );
 };

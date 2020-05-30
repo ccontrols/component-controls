@@ -43,7 +43,7 @@ export const Layout: FC<LayoutProps> = ({
       />
       <SEO title={title} />
       <SidebarContextProvider>
-        <Flex sx={{ flexDirection: 'row' }}>
+        <Flex sx={{ flexDirection: 'row', alignItems: 'stretch' }}>
           <Sidebar storyId={storyId} />
           <Container>
             <Tabs>

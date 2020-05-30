@@ -104,7 +104,7 @@ export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
-    <AppSidebar sx={{ px: 1 }} width={380}>
+    <AppSidebar sx={{ px: 1, backgroundColor: 'gray' }} width={380}>
       {siteTitle}
       <Input
         placeholder="search stories..."
