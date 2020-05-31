@@ -3,7 +3,11 @@ import { Result } from 'axe-core';
 
 export type Selection = string[];
 
-export const axeResults = atom({
+export const axeResults = atom<{
+  violations: Result[];
+  passes: Result[];
+  incomplete: Result[];
+}>({
   key: 'axeResults',
   default: {
     violations: [],
@@ -12,7 +16,7 @@ export const axeResults = atom({
   },
 });
 
-export const axeViolations = selector({
+export const axeViolations = selector<Result[]>({
   key: 'axeViolations',
   get: ({ get }: any) => {
     const { violations } = get(axeResults);
@@ -20,7 +24,7 @@ export const axeViolations = selector({
   },
 });
 
-export const axePasses = selector({
+export const axePasses = selector<Result[]>({
   key: 'axePasses',
   get: ({ get }: any) => {
     const { passes } = get(axeResults);
@@ -28,7 +32,7 @@ export const axePasses = selector({
   },
 });
 
-export const axeIncomplete = selector({
+export const axeIncomplete = selector<Result[]>({
   key: 'axeIncomplete',
   get: ({ get }: any) => {
     const { incomplete } = get(axeResults);
@@ -36,7 +40,7 @@ export const axeIncomplete = selector({
   },
 });
 
-export const taggedList = selector({
+export const taggedList = selector<{ [tag: string]: string[] }>({
   key: 'taggedList',
   get: ({ get }: any) => {
     const violations = get(axeViolations);
@@ -61,13 +65,13 @@ export const taggedList = selector({
   },
 });
 
-export const selectionList = atom({
+export const selectionList = atom<string[]>({
   key: 'selectionList',
   default: [],
 });
 
 export const isSelected = (targets?: Selection) =>
-  selector({
+  selector<boolean>({
     key: `isSelected_${targets ? targets.join('_') : 'none'}`,
     get: ({ get }: any) => {
       const selection = get(selectionList);
@@ -78,7 +82,7 @@ export const isSelected = (targets?: Selection) =>
   });
 
 export const isTagSelected = (tag: string = '') =>
-  selector({
+  selector<boolean>({
     key: `isTagSelected_${tag}`,
     get: ({ get }: any) => {
       const tagged = get(taggedList);

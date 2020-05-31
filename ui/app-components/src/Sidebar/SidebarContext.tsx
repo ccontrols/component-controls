@@ -27,7 +27,6 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
     undefined,
   );
   const SidebarToggle: FC<SidebarToggleProps> = ({ icon, ...rest }) => {
-    console.log(collapsible);
     return collapsible ? (
       <Button
         aria-label={collapsed ? 'Expand side bar' : 'Collapse side bar'}

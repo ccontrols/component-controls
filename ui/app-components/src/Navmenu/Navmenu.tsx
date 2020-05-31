@@ -10,7 +10,7 @@ import {
   Text,
   Theme,
 } from 'theme-ui';
-import Octicon, { ChevronDown, ChevronUp } from '@primer/octicons-react';
+import Octicon, { ChevronDown, ChevronRight } from '@primer/octicons-react';
 import {
   Keyboard,
   LEFT_ARROW,
@@ -351,7 +351,7 @@ export const Navmenu: FC<NavMenuProps> = ({
                 <Octicon
                   sx={{ ml: 2 }}
                   ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
-                  icon={isExpanded ? ChevronUp : ChevronDown}
+                  icon={isExpanded ? ChevronDown : ChevronRight}
                 />
               )}
             </Flex>

@@ -39,7 +39,8 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
       runAxe(canvas)
         .then(results => {
           // console.log(results);
-          setResults(results);
+          const { passes, violations, incomplete } = results;
+          setResults({ passes, violations, incomplete });
           isRunning.current = false;
         })
         .catch(e => {
