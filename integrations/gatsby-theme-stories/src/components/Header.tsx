@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx } from 'theme-ui';
-import { Flex } from '@theme-ui/components';
+import { jsx, Flex, Text } from 'theme-ui';
+import { Link as GatsbyLink } from 'gatsby';
 import {
   ColorMode,
   SidebarContext,
@@ -11,36 +11,40 @@ import {
 interface HeaderProps {
   title?: string;
 }
-export const Header: FC<HeaderProps> = ({ children }) => {
-  const { SidebarToggle, collapsed } = useContext(SidebarContext);
+export const Header: FC<HeaderProps> = () => {
+  const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
 
   return (
     <AppHeader position="sticky">
       <Flex
         sx={{
-          py: 3,
           flexDirection: 'row',
-          alignItems: `center`,
-          justifyContent: `space-between`,
+          alignItems: 'center',
+          color: `secondary`,
+          a: {
+            color: `secondary`,
+            ':hover': { color: `accent` },
+            fontWeight: '700',
+          },
         }}
       >
-        <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
-          {collapsed && <SidebarToggle />}
-          {children}
-        </Flex>
-
+        {collapsed && <SidebarToggle />}
         <Flex
           sx={{
-            boxSizing: `border-box`,
-            variant: `dividers.bottom`,
-            justifyContent: `space-between`,
-            color: `secondary`,
-            a: { color: `secondary`, ':hover': { color: `accent` } },
-            flexFlow: `wrap`,
+            flexDirection: 'row',
+            alignItems: 'center',
+            py: 3,
           }}
-        ></Flex>
-        <ColorMode />
+        >
+          <GatsbyLink to="/">
+            <Text sx={{ px: 2 }}>Home</Text>
+          </GatsbyLink>
+          <GatsbyLink to="/docs">
+            <Text sx={{ px: 2 }}>Docs</Text>
+          </GatsbyLink>
+        </Flex>
       </Flex>
+      {!responsive && <ColorMode />}
     </AppHeader>
   );
 };

@@ -1,6 +1,6 @@
 import React, { FC, createContext, useEffect } from 'react';
 import { Button, ButtonProps } from 'theme-ui';
-import Octicon, { ThreeBars } from '@primer/octicons-react';
+import Octicon, { ThreeBars, X } from '@primer/octicons-react';
 import { useBreakpointIndex } from '@theme-ui/match-media';
 
 export type SidebarToggleProps = {
@@ -9,13 +9,17 @@ export type SidebarToggleProps = {
 
 export interface SidebarContextProps {
   SidebarToggle: FC<SidebarToggleProps>;
+  SidebarClose: FC<SidebarToggleProps>;
   collapsed?: boolean;
   collapsible?: boolean;
+  responsive: boolean;
   setCollapsed: (value: boolean) => void;
 }
 export const SidebarContext = createContext<SidebarContextProps>({
   SidebarToggle: () => null,
+  SidebarClose: () => null,
   setCollapsed: () => {},
+  responsive: false,
 });
 export interface SidebarContextProviderProps {
   collapsible?: boolean;
@@ -32,7 +36,7 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
     if (collapsible) {
       setCollapsed(size <= 1);
     }
-  }, [size, collapsible, collapsed]);
+  }, [size, collapsible]);
 
   const SidebarToggle: FC<SidebarToggleProps> = ({ icon, ...rest }) => {
     return collapsible ? (
@@ -41,14 +45,31 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
         onClick={() => setCollapsed(!collapsed)}
         sx={{
           background: 'none',
-          p: 2,
           boxShadow: 'none',
           cursor: 'pointer',
           color: 'text',
         }}
         {...rest}
       >
-        {icon || <Octicon icon={ThreeBars} />}
+        {icon || <Octicon size="medium" icon={ThreeBars} />}
+      </Button>
+    ) : null;
+  };
+
+  const SidebarClose: FC<SidebarToggleProps> = ({ icon, ...rest }) => {
+    return collapsible ? (
+      <Button
+        aria-label={collapsed ? 'Expand side bar' : 'Collapse side bar'}
+        onClick={() => setCollapsed(true)}
+        sx={{
+          background: 'none',
+          boxShadow: 'none',
+          cursor: 'pointer',
+          color: 'text',
+        }}
+        {...rest}
+      >
+        {icon || <Octicon size="medium" icon={X} />}
       </Button>
     ) : null;
   };
@@ -58,7 +79,9 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
         collapsed,
         setCollapsed,
         SidebarToggle,
+        SidebarClose,
         collapsible,
+        responsive: size <= 1,
       }}
     >
       {children}

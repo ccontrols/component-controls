@@ -1,13 +1,17 @@
 /** @jsx jsx */
-import { FC, useState, useMemo } from 'react';
+import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, LinkProps, Box, Theme } from 'theme-ui';
+
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
 import { Story } from '@component-controls/specification';
 import {
   Sidebar as AppSidebar,
+  ColorMode,
+  SidebarContext,
   Navmenu,
   MenuItems,
   MenuItem,
+  Header,
 } from '@component-controls/app-components';
 
 import { useSiteMetadata } from '../hooks/use-site-metadata';
@@ -62,7 +66,7 @@ const createMenuItem = (
 };
 export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
   const { siteTitle } = useSiteMetadata();
-
+  const { SidebarClose, responsive } = useContext(SidebarContext);
   const data = useStaticQuery(graphql`
     query {
       allStory {
@@ -105,23 +109,31 @@ export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar
-      sx={{ px: 3, borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}` }}
+      sx={{ borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}` }}
       width={380}
     >
-      {siteTitle}
-      <Box sx={{ py: 2 }}>
-        <Input
-          placeholder="filter stories..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
+      {responsive && (
+        <Header shadow={false}>
+          <SidebarClose />
+          <ColorMode />
+        </Header>
+      )}
+      <Box sx={{ px: 2 }}>
+        {siteTitle}
+        <Box sx={{ py: 2, px: 3 }}>
+          <Input
+            placeholder="filter stories..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </Box>
+        <Navmenu
+          buttonClass={Link}
+          activeItem={{ id: storyId }}
+          search={search}
+          items={menuItems}
         />
       </Box>
-      <Navmenu
-        buttonClass={Link}
-        activeItem={{ id: storyId }}
-        search={search}
-        items={menuItems}
-      />
     </AppSidebar>
   );
 };

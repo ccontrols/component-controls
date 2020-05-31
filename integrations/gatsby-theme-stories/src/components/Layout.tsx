@@ -42,19 +42,19 @@ export const Layout: FC<LayoutProps> = ({
       />
       <SEO title={title} />
       <SidebarContextProvider>
-        <Tabs fontSize={16}>
-          <Header title={title}>
-            {pages && pages.length > 1 && (
-              <TabList>
-                {pages.map(page => (
-                  <Tab key={`tab_${page.key}`}>{page.title}</Tab>
-                ))}
-              </TabList>
-            )}
-          </Header>
-          <Flex sx={{ flexDirection: 'row' }}>
-            <Sidebar storyId={storyId} />
-            <Container>
+        <Header title={title}></Header>
+        <Flex sx={{ flexDirection: 'row' }}>
+          <Sidebar storyId={storyId} />
+          <Container>
+            <Tabs fontSize={16}>
+              {pages && pages.length > 1 && (
+                <TabList>
+                  {pages.map(page => (
+                    <Tab key={`tab_${page.key}`}>{page.title}</Tab>
+                  ))}
+                </TabList>
+              )}
+
               <PageContainer
                 store={storyStore}
                 storyId={storyId}
@@ -67,9 +67,9 @@ export const Layout: FC<LayoutProps> = ({
                     </TabPanel>
                   ))}
               </PageContainer>
-            </Container>
-          </Flex>
-        </Tabs>
+            </Tabs>
+          </Container>
+        </Flex>
       </SidebarContextProvider>
     </ThemeProvider>
   );

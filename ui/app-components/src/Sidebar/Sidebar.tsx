@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { FC, useContext } from 'react';
-import { jsx, Box, Flex, BoxProps, Heading } from 'theme-ui';
+import { jsx, Box, Flex, BoxProps, Heading, SxStyleProp } from 'theme-ui';
 import { SidebarContext } from './SidebarContext';
 
 export interface SidebarProps {
@@ -33,9 +33,26 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   ...rest
 }) => {
   const toggleContext = useContext(SidebarContext);
-  const { collapsed } = toggleContext || {};
+  const { collapsed, responsive } = toggleContext || {};
+  const defaultStyle: SxStyleProp = {
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    width,
+  };
+  const style: SxStyleProp = !responsive
+    ? defaultStyle
+    : {
+        ...defaultStyle,
+        position: 'absolute',
+        width: '100%',
+        minWidth: '100%',
+        zIndex: 9999,
+        backgroundColor: 'background',
+        top: 0,
+        left: 0,
+      };
   return collapsed ? null : (
-    <Box sx={{ overflowY: 'auto', overflowX: 'hidden', width }} {...rest}>
+    <Box sx={style} {...rest}>
       <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
         {title && (
           <Box as="header">

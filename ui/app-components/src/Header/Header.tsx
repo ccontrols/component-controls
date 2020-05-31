@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, BoxProps, Theme } from 'theme-ui';
+import { jsx, Flex, BoxProps, Theme } from 'theme-ui';
 
 export interface HeaderProps {
   /** Position property for the header element */
@@ -8,6 +8,11 @@ export interface HeaderProps {
 
   /** z-index for the header */
   zIndex?: number;
+
+  /**
+   * whether to display a bottom border shadow
+   */
+  shadow?: boolean;
 }
 
 /**
@@ -17,9 +22,10 @@ export const Header: FC<HeaderProps & BoxProps> = ({
   children,
   zIndex = 10,
   position = 'sticky',
+  shadow = true,
   ...rest
 }) => (
-  <Box
+  <Flex
     as="header"
     sx={{
       ...(position === 'fixed' ||
@@ -36,12 +42,15 @@ export const Header: FC<HeaderProps & BoxProps> = ({
       backgroundColor: 'background',
       px: 2,
       mb: 1,
-      justifyItems: 'between',
+      justifyContent: `space-between`,
+      flexDirection: 'row',
       alignItems: 'center',
-      boxShadow: (t: Theme) => `0 1px 3px 1px ${t.colors?.shadow}`,
+      boxShadow: shadow
+        ? (t: Theme) => `0 1px 3px 1px ${t.colors?.shadow}`
+        : undefined,
     }}
     {...rest}
   >
     {children}
-  </Box>
+  </Flex>
 );
