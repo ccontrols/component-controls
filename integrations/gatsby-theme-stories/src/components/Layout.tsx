@@ -21,6 +21,7 @@ interface LayoutProps {
   title?: string;
   storyStore: Store;
   storyId: string;
+  kindPath: string;
   pages: PagesConfig;
 }
 
@@ -29,6 +30,7 @@ export const Layout: FC<LayoutProps> = ({
   title,
   storyStore,
   storyId,
+  kindPath,
 }) => {
   const pages = pagesFn ? pagesFn('') : null;
   return (
@@ -44,7 +46,7 @@ export const Layout: FC<LayoutProps> = ({
       <SidebarContextProvider>
         <Header title={title}></Header>
         <Flex sx={{ flexDirection: 'row' }}>
-          <Sidebar storyId={storyId} />
+          <Sidebar kindPath={kindPath} />
           <Container>
             <Tabs fontSize={16}>
               {pages && pages.length > 1 && (

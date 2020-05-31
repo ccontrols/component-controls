@@ -58,15 +58,13 @@ exports.sourceNodes = async function sourceNodes(
 
 exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const stories = await graphql<{
-    allStory: any;
+    allStoryKind: any;
   }>(`
     query {
-      allStory {
+      allStoryKind {
         edges {
           node {
-            id
-            kind
-            name
+            title
           }
         }
       }
@@ -74,13 +72,12 @@ exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   `);
   const { createPage } = actions;
   if (stories.data) {
-    stories.data.allStory.edges.forEach(({ node }: any) => {
+    stories.data.allStoryKind.edges.forEach(({ node }: any) => {
       createPage({
-        path: `stories/${node.id}`,
+        path: `/docs/${node.title}`,
         component: require.resolve(`../src/templates/StoryPage.tsx`),
         context: {
-          title: node.name,
-          storyId: node.id,
+          kind: node.title,
         },
       });
     });

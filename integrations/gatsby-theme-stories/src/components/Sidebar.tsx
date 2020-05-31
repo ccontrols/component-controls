@@ -3,7 +3,7 @@ import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, LinkProps, Box, Theme } from 'theme-ui';
 
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
-import { Story } from '@component-controls/specification';
+import { StoriesKind } from '@component-controls/specification';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -24,25 +24,22 @@ const Link: FC<LinkProps> = props => (
     sx={{
       color: 'inherit',
       '&.active': {
-        backgroundColor: 'accent',
+        borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
         color: 'white',
       },
       ':hover': {
-        backgroundColor: 'accent',
+        backgroundColor: 'shadow',
       },
     }}
   />
 );
 export interface SidebarProps {
-  storyId?: string;
-}
-
-interface ConsolidateKinds {
-  [kind: string]: Story[];
+  kindPath?: string;
 }
 
 const createMenuItem = (
   levels: string[],
+  allLevels: string[],
   parent?: MenuItems,
   item?: MenuItem,
 ): MenuItem => {
@@ -55,56 +52,49 @@ const createMenuItem = (
   };
   const sibling = parent && parent.find(i => i.id === newItem.id);
   if (parent && !sibling) {
-    newItem.items = [];
+    if (levels.length > 1) {
+      newItem.items = [];
+    } else {
+      newItem.id = allLevels.join('/');
+      //@ts-ignore
+      newItem.to = `/docs/${allLevels.join('/')}`;
+    }
     parent.push(newItem);
   }
   return createMenuItem(
     levels.slice(1),
+    levels,
     sibling ? sibling.items : newItem.items,
     newItem,
   );
 };
-export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
+export const Sidebar: FC<SidebarProps> = ({ kindPath }) => {
   const { siteTitle } = useSiteMetadata();
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const data = useStaticQuery(graphql`
     query {
-      allStory {
+      allStoryKind {
         edges {
           node {
-            id
-            kind
-            name
+            title
           }
         }
       }
     }
   `);
-  const stories = data.allStory.edges;
+  const kinds = data.allStoryKind.edges;
 
   const menuItems = useMemo(() => {
-    const kinds: ConsolidateKinds = stories.reduce(
-      (acc: ConsolidateKinds, { node }: { node: Required<Story> }) => {
-        if (acc[node.kind]) {
-          return { ...acc, [node.kind]: [...acc[node.kind], node] };
-        }
-        return { ...acc, [node.kind]: [node] };
+    const menuItems = kinds.reduce(
+      (acc: MenuItems, { node: kind }: { node: StoriesKind }) => {
+        const levels = kind.title.split('/');
+        createMenuItem(levels, levels, acc);
+        return acc;
       },
-      {},
+      [],
     );
-    const menuItems = Object.keys(kinds).reduce((acc: MenuItems, key) => {
-      const stories = kinds[key];
-      const levels = key.split('/');
-      const kind = createMenuItem(levels, acc);
-      kind.items = stories.map(story => ({
-        id: story.id,
-        label: story.name,
-        to: `/stories/${story.id}`,
-      }));
-      return acc;
-    }, []);
     return menuItems;
-  }, [stories]);
+  }, [kinds]);
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
@@ -129,7 +119,7 @@ export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
         </Box>
         <Navmenu
           buttonClass={Link}
-          activeItem={{ id: storyId }}
+          activeItem={{ id: kindPath }}
           search={search}
           items={menuItems}
         />

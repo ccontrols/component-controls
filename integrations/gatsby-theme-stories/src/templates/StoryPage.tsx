@@ -1,8 +1,6 @@
 import React, { FC, useMemo } from 'react';
-
-import { StoriesStore } from '@component-controls/specification';
 import { loadStoryStore, Store } from '@component-controls/store';
-import * as bundle from '@component-controls/webpack-compile/bundle';
+const bundle = require('@component-controls/webpack-compile/bundle');
 
 import { Layout } from '../components/Layout';
 import { pages } from '../config/pages';
@@ -10,11 +8,11 @@ import { pages } from '../config/pages';
 interface SitePageProps {
   pathContext: {
     title: string;
-    storyId: string;
+    kind: string;
   };
 }
 
-const SitePage: FC<SitePageProps> = ({ pathContext: { title, storyId } }) => {
+const SitePage: FC<SitePageProps> = ({ pathContext: { kind } }) => {
   const storyStore = useMemo(
     () =>
       new Store({
@@ -23,11 +21,13 @@ const SitePage: FC<SitePageProps> = ({ pathContext: { title, storyId } }) => {
       }),
     [],
   );
+  const docFile = storyStore.getStoryKind(kind);
   return (
     <Layout
-      title={title}
+      title={kind}
       storyStore={storyStore}
-      storyId={storyId}
+      kindPath={kind}
+      storyId={docFile?.stories?.[0] || ''}
       pages={pages}
     />
   );

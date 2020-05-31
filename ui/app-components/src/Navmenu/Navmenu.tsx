@@ -274,7 +274,7 @@ export const Navmenu: FC<NavMenuProps> = ({
     if (activeItem && activeItem.id === id) {
       background = 'active';
     }
-    const isActiveParent = items && hasActiveChidlren(item, activeItem);
+    const isActiveParent = hasActiveChidlren(item, activeItem);
     const content = (
       <Flex
         sx={{

@@ -107,6 +107,15 @@ export class Store implements StoryStore {
   };
 
   /**
+   s* given a story file title (kind) return a story kind from the store
+   */
+
+  getStoryKind = (name: string) => {
+    const store = this.getStore();
+    return store ? store.kinds[name] : undefined;
+  };
+
+  /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.
    */
