@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9016 -c .storybook",
-    "storybook": "start-storybook -p 9016 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o ./docs"
+    "start": "start-storybook -p 9016 -c .storybook",
+    "build-sample": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
     "@component-controls/specification": "^1.2.0",

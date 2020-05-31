@@ -12,7 +12,7 @@ interface HeaderProps {
   title?: string;
 }
 export const Header: FC<HeaderProps> = ({ children }) => {
-  const { SidebarToggle } = useContext(SidebarContext);
+  const { SidebarToggle, collapsed } = useContext(SidebarContext);
 
   return (
     <AppHeader position="sticky">
@@ -25,9 +25,10 @@ export const Header: FC<HeaderProps> = ({ children }) => {
         }}
       >
         <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
-          <SidebarToggle />
+          {collapsed && <SidebarToggle />}
           {children}
         </Flex>
+
         <Flex
           sx={{
             boxSizing: `border-box`,

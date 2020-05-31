@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop"
+    "build-sample": "gatsby build",
+    "start": "gatsby develop"
   },
   "repository": {
     "type": "git",

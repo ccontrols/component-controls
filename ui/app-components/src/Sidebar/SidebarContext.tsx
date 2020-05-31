@@ -1,6 +1,7 @@
-import React, { FC, createContext } from 'react';
+import React, { FC, createContext, useEffect } from 'react';
 import { Button, ButtonProps } from 'theme-ui';
 import Octicon, { ThreeBars } from '@primer/octicons-react';
+import { useBreakpointIndex } from '@theme-ui/match-media';
 
 export type SidebarToggleProps = {
   icon?: React.ReactNode;
@@ -26,6 +27,13 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
   const [collapsed, setCollapsed] = React.useState<boolean | undefined>(
     undefined,
   );
+  const size: number = useBreakpointIndex();
+  useEffect(() => {
+    if (collapsible) {
+      setCollapsed(size <= 1);
+    }
+  }, [size, collapsible, collapsed]);
+
   const SidebarToggle: FC<SidebarToggleProps> = ({ icon, ...rest }) => {
     return collapsible ? (
       <Button

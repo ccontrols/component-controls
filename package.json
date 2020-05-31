@@ -34,7 +34,7 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "dev": "lerna run --parallel dev",
-    "examples": "lerna run build-storybook"
+    "examples": "lerna run build-sample"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,mdx}": [

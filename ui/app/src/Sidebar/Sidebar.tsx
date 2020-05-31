@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { FC, useState, useMemo } from 'react';
-import { jsx, Input, LinkProps, Box, Theme } from 'theme-ui';
-import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
+import { jsx, Input, LinkProps, Box } from 'theme-ui';
 import { Story } from '@component-controls/specification';
 import {
   Sidebar as AppSidebar,
@@ -10,25 +9,6 @@ import {
   MenuItem,
 } from '@component-controls/app-components';
 
-import { useSiteMetadata } from '../hooks/use-site-metadata';
-
-const Link: FC<LinkProps> = props => (
-  //@ts-ignore
-  <GatsbyLink
-    {...props}
-    activeClassName="active"
-    sx={{
-      color: 'inherit',
-      '&.active': {
-        backgroundColor: 'accent',
-        color: 'white',
-      },
-      ':hover': {
-        backgroundColor: 'accent',
-      },
-    }}
-  />
-);
 export interface SidebarProps {
   storyId?: string;
 }
@@ -60,22 +40,8 @@ const createMenuItem = (
     newItem,
   );
 };
-export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
-  const { siteTitle } = useSiteMetadata();
 
-  const data = useStaticQuery(graphql`
-    query {
-      allStory {
-        edges {
-          node {
-            id
-            kind
-            name
-          }
-        }
-      }
-    }
-  `);
+export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
   const stories = data.allStory.edges;
 
   const menuItems = useMemo(() => {
@@ -104,14 +70,11 @@ export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
-    <AppSidebar
-      sx={{ px: 3, borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}` }}
-      width={380}
-    >
+    <AppSidebar sx={{ px: 1, backgroundColor: 'sidebar' }}>
       {siteTitle}
       <Box sx={{ py: 2 }}>
         <Input
-          placeholder="filter stories..."
+          placeholder="search stories..."
           value={search}
           onChange={e => setSearch(e.target.value)}
         />

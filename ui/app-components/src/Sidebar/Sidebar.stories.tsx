@@ -15,11 +15,9 @@ export default {
 export const overview = ({
   collapsible,
   width,
-  easing,
 }: {
   collapsible: boolean;
   width: number;
-  easing: CollapsibleProps['easing'];
 }) => (
   <ThemeProvider>
     <SidebarContextProvider collapsible={collapsible}>
@@ -27,7 +25,7 @@ export const overview = ({
         {({ SidebarToggle }) => (
           <Flex css={{ flexDirection: 'row', alignItems: 'start' }}>
             <SidebarToggle />
-            <Sidebar width={width} animate={{ easing }}>
+            <Sidebar width={width}>
               <ul>
                 <li>item 1</li>
                 <li>item 2</li>

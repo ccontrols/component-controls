@@ -79,7 +79,6 @@ export const PageContainer: FC<PageContainerProps> = ({
   return (
     <Box
       sx={{
-        position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         px: 4,
@@ -89,7 +88,7 @@ export const PageContainer: FC<PageContainerProps> = ({
         fontFamily: 'body',
       }}
     >
-      <Box sx={{ maxWidth, width: '100%' }}>
+      <Box sx={{ maxWidth, width: '100%', position: 'relative' }}>
         {store && storyId ? (
           <BlockContextProvider
             storyId={storyId}

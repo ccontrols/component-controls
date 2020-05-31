@@ -1,15 +1,6 @@
 /** @jsx jsx */
 import React, { FC, useEffect, useState } from 'react';
-import {
-  jsx,
-  Box,
-  Flex,
-  Button,
-  ButtonProps,
-  LinkProps,
-  Text,
-  Theme,
-} from 'theme-ui';
+import { jsx, Box, Flex, Button, ButtonProps, LinkProps, Text } from 'theme-ui';
 import Octicon, { ChevronDown, ChevronRight } from '@primer/octicons-react';
 import {
   Keyboard,
@@ -283,7 +274,7 @@ export const Navmenu: FC<NavMenuProps> = ({
     if (activeItem && activeItem.id === id) {
       background = 'active';
     }
-    const isActiveParent = hasActiveChidlren(item, activeItem);
+    const isActiveParent = items && hasActiveChidlren(item, activeItem);
     const content = (
       <Flex
         sx={{
@@ -300,8 +291,6 @@ export const Navmenu: FC<NavMenuProps> = ({
             background: 'none',
             textDecoration: 'none',
             cursor: 'pointer',
-            borderLeft: (t: Theme) =>
-              isActiveParent ? `6px solid ${t.colors?.accent}` : 'none',
           }}
           onClick={() => {
             if (items) {
@@ -317,9 +306,6 @@ export const Navmenu: FC<NavMenuProps> = ({
               flexDirection: 'row',
               alignItems: 'center',
               position: 'relative',
-              '& strong': {
-                color: 'text',
-              },
             }}
           >
             <Flex
@@ -336,6 +322,7 @@ export const Navmenu: FC<NavMenuProps> = ({
                   <Text
                     sx={{
                       whiteSpace: 'nowrap',
+                      color: isActiveParent ? 'primary' : 'text',
                       textOverflow: 'ellipsis',
                     }}
                   >

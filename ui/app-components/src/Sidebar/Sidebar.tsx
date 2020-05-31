@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import React, { FC, useContext } from 'react';
 import { jsx, Box, Flex, BoxProps, Heading } from 'theme-ui';
-import { useBreakpointIndex } from '@theme-ui/match-media';
-
 import { SidebarContext } from './SidebarContext';
 
 export interface SidebarProps {
@@ -35,37 +33,24 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   ...rest
 }) => {
   const toggleContext = useContext(SidebarContext);
-  const { collapsed, collapsible = true } = toggleContext || {};
-  const size: number = useBreakpointIndex();
-  const isCollapsed =
-    (collapsible && size <= 1 && collapsed === undefined) || collapsed === true;
-  return isCollapsed ? null : (
-    <Box
-      sx={{
-        height: '100%',
-        width: '100%',
-      }}
-    >
-      <Box
-        sx={{ overflowY: 'auto', height: '100%', overflowX: 'hidden', width }}
-        {...rest}
-      >
-        <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
-          {title && (
-            <Box as="header">
-              {typeof title === 'string' ? (
-                <Heading as="h3" sx={{ pl: 2 }}>
-                  {title}
-                </Heading>
-              ) : (
-                title
-              )}
-            </Box>
-          )}
-        </Flex>
+  const { collapsed } = toggleContext || {};
+  return collapsed ? null : (
+    <Box sx={{ overflowY: 'auto', overflowX: 'hidden', width }} {...rest}>
+      <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
+        {title && (
+          <Box as="header">
+            {typeof title === 'string' ? (
+              <Heading as="h3" sx={{ pl: 2 }}>
+                {title}
+              </Heading>
+            ) : (
+              title
+            )}
+          </Box>
+        )}
+      </Flex>
 
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 };

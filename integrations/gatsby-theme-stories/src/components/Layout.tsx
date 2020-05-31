@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, { FC, useState } from 'react';
-import { jsx, Container } from 'theme-ui';
+import { FC } from 'react';
+import { jsx, Container, Flex } from 'theme-ui';
 import { Global } from '@emotion/core';
 import {
   ThemeProvider,
@@ -9,11 +9,7 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
-import {
-  SidebarContextProvider,
-  SidebarContext,
-  Resizer,
-} from '@component-controls/app-components';
+import { SidebarContextProvider } from '@component-controls/app-components';
 import { PageContainer } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
@@ -34,7 +30,7 @@ export const Layout: FC<LayoutProps> = ({
   storyStore,
   storyId,
 }) => {
-  const pages = pagesFn('');
+  const pages = pagesFn ? pagesFn('') : null;
   return (
     <ThemeProvider>
       <Global
@@ -46,45 +42,34 @@ export const Layout: FC<LayoutProps> = ({
       />
       <SEO title={title} />
       <SidebarContextProvider>
-        <SidebarContext.Consumer>
-          {({ collapsed }) => {
-            const content = (
-              <Container>
-                <Tabs>
-                  <Header title={title}>
-                    {pages.length > 1 && (
-                      <TabList>
-                        {pages.map(page => (
-                          <Tab key={`tab_${page.key}`}>{page.title}</Tab>
-                        ))}
-                      </TabList>
-                    )}
-                  </Header>
-
-                  <PageContainer store={storyStore} storyId={storyId}>
-                    {pages.map(page => (
-                      <TabPanel key={`panel_${page.key}`}>
-                        {page.render()}
-                      </TabPanel>
-                    ))}
-                  </PageContainer>
-                </Tabs>
-              </Container>
-            );
-            return collapsed ? (
-              content
-            ) : (
-              <Resizer
-                sectionOneProps={{
-                  defaultSize: 300,
-                }}
+        <Tabs fontSize={16}>
+          <Header title={title}>
+            {pages && pages.length > 1 && (
+              <TabList>
+                {pages.map(page => (
+                  <Tab key={`tab_${page.key}`}>{page.title}</Tab>
+                ))}
+              </TabList>
+            )}
+          </Header>
+          <Flex sx={{ flexDirection: 'row' }}>
+            <Sidebar storyId={storyId} />
+            <Container>
+              <PageContainer
+                store={storyStore}
+                storyId={storyId}
+                maxWidth={1200}
               >
-                <Sidebar storyId={storyId} />
-                {content}
-              </Resizer>
-            );
-          }}
-        </SidebarContext.Consumer>
+                {pages &&
+                  pages.map(page => (
+                    <TabPanel key={`panel_${page.key}`}>
+                      {page.render()}
+                    </TabPanel>
+                  ))}
+              </PageContainer>
+            </Container>
+          </Flex>
+        </Tabs>
       </SidebarContextProvider>
     </ThemeProvider>
   );

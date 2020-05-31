@@ -2,14 +2,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
+    "outDir": "dist",
+    "rootDir": "src",
     "declaration": true,
-    "resolveJsonModule": true,
-    "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "../stories",
-    "baseUrl": "./",
+    "types": ["node", "jest"],
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["../stories/src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules/**"]
 }
