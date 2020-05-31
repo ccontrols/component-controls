@@ -6,7 +6,6 @@ import { LoaderOptions } from './types';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-let loadedStore: StoriesStore | undefined;
 exports.sourceNodes = async function sourceNodes(
   { actions, createContentDigest, createNodeId }: NodePluginArgs,
   options: LoaderOptions,
@@ -18,7 +17,7 @@ exports.sourceNodes = async function sourceNodes(
     presets: defaultPresets,
     configPath: options.configPath,
   });
-  loadedStore = loadStoryStore(store);
+  const loadedStore: StoriesStore | undefined = loadStoryStore(store);
 
   if (loadedStore) {
     Object.keys(loadedStore.kinds).forEach(key => {
@@ -82,7 +81,6 @@ exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
         context: {
           title: node.name,
           storyId: node.id,
-          loadedStore,
         },
       });
     });

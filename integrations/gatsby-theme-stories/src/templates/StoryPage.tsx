@@ -1,7 +1,8 @@
 import React, { FC, useMemo } from 'react';
 
 import { StoriesStore } from '@component-controls/specification';
-import { Store } from '@component-controls/store';
+import { loadStoryStore, Store } from '@component-controls/store';
+import * as bundle from '@component-controls/webpack-compile/bundle';
 
 import { Layout } from '../components/Layout';
 import { pages } from '../config/pages';
@@ -9,21 +10,18 @@ import { pages } from '../config/pages';
 interface SitePageProps {
   pathContext: {
     title: string;
-    loadedStore: StoriesStore;
     storyId: string;
   };
 }
 
-const SitePage: FC<SitePageProps> = ({
-  pathContext: { title, loadedStore, storyId },
-}) => {
+const SitePage: FC<SitePageProps> = ({ pathContext: { title, storyId } }) => {
   const storyStore = useMemo(
     () =>
       new Store({
-        store: loadedStore,
+        store: loadStoryStore(bundle),
         updateLocalStorage: false,
       }),
-    [loadedStore],
+    [],
   );
   return (
     <Layout

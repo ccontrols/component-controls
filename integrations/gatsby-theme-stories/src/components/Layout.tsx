@@ -22,7 +22,6 @@ import { Header } from './Header';
 import { PagesConfig } from './types';
 
 interface LayoutProps {
-  children: React.ReactNode;
   title?: string;
   storyStore: Store;
   storyId: string;
