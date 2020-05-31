@@ -1,4 +1,4 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, Children, useContext } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
 import { useThemeUI } from 'theme-ui';
 import {
@@ -91,7 +91,7 @@ export const Playground: FC<PlaygroundProps> = ({
     ],
     [scale],
   );
-  const childArr = React.Children.toArray(children);
+  const childArr = Children.toArray(children);
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
 

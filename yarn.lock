@@ -17074,6 +17074,13 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
+react-simple-resizer@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-simple-resizer/-/react-simple-resizer-2.1.0.tgz#9645d2bc2f1ee043435804619826cad0bf2511d7"
+  integrity sha512-iiPER+vuKsW5+6+HroNnahc2Cah6UpO4w9SeuGw1pf/6p/F/vAD4+4288yJS5fLY4xJpDNEiOiRBk2kLUui6nw==
+  dependencies:
+    rxjs "^6.3.3"
+
 react-sizeme@^2.6.7:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/react-sizeme/-/react-sizeme-2.6.12.tgz#ed207be5476f4a85bf364e92042520499455453e"

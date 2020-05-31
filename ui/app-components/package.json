@@ -34,6 +34,7 @@
     "@primer/octicons-react": "^9.6.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-simple-resizer": "^2.1.0",
     "theme-ui": "^0.3.1",
     "@theme-ui/match-media": "^0.3.1"
   },

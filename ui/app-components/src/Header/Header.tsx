@@ -15,8 +15,8 @@ export interface HeaderProps {
  */
 export const Header: FC<HeaderProps & BoxProps> = ({
   children,
-  zIndex,
-  position,
+  zIndex = 10,
+  position = 'sticky',
   ...rest
 }) => (
   <Box
@@ -32,8 +32,9 @@ export const Header: FC<HeaderProps & BoxProps> = ({
             zIndex,
           }
         : undefined),
-      background: 'primary',
-      p: 2,
+      position,
+      backgroundColor: 'background',
+      px: 2,
       mb: 1,
       justifyItems: 'between',
       alignItems: 'center',
@@ -44,8 +45,3 @@ export const Header: FC<HeaderProps & BoxProps> = ({
     {children}
   </Box>
 );
-
-Header.defaultProps = {
-  position: 'relative',
-  zIndex: 10,
-};

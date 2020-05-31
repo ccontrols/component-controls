@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, { FC } from 'react';
-import { jsx, Flex, Container } from 'theme-ui';
+import React, { FC, useState } from 'react';
+import { jsx, Container } from 'theme-ui';
 import { Global } from '@emotion/core';
 import {
   ThemeProvider,
@@ -9,7 +9,11 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
-import { SidebarContextProvider } from '@component-controls/app-components';
+import {
+  SidebarContextProvider,
+  SidebarContext,
+  Resizer,
+} from '@component-controls/app-components';
 import { PageContainer } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
@@ -43,28 +47,45 @@ export const Layout: FC<LayoutProps> = ({
       />
       <SEO title={title} />
       <SidebarContextProvider>
-        <Flex sx={{ flexDirection: 'row', alignItems: 'stretch' }}>
-          <Sidebar storyId={storyId} />
-          <Container>
-            <Tabs>
-              <Header title={title}>
-                {pages.length > 1 && (
-                  <TabList>
-                    {pages.map(page => (
-                      <Tab key={`tab_${page.key}`}>{page.title}</Tab>
-                    ))}
-                  </TabList>
-                )}
-              </Header>
+        <SidebarContext.Consumer>
+          {({ collapsed }) => {
+            const content = (
+              <Container>
+                <Tabs>
+                  <Header title={title}>
+                    {pages.length > 1 && (
+                      <TabList>
+                        {pages.map(page => (
+                          <Tab key={`tab_${page.key}`}>{page.title}</Tab>
+                        ))}
+                      </TabList>
+                    )}
+                  </Header>
 
-              <PageContainer store={storyStore} storyId={storyId}>
-                {pages.map(page => (
-                  <TabPanel key={`panel_${page.key}`}>{page.render()}</TabPanel>
-                ))}
-              </PageContainer>
-            </Tabs>
-          </Container>
-        </Flex>
+                  <PageContainer store={storyStore} storyId={storyId}>
+                    {pages.map(page => (
+                      <TabPanel key={`panel_${page.key}`}>
+                        {page.render()}
+                      </TabPanel>
+                    ))}
+                  </PageContainer>
+                </Tabs>
+              </Container>
+            );
+            return collapsed ? (
+              content
+            ) : (
+              <Resizer
+                sectionOneProps={{
+                  defaultSize: 300,
+                }}
+              >
+                <Sidebar storyId={storyId} />
+                {content}
+              </Resizer>
+            );
+          }}
+        </SidebarContext.Consumer>
       </SidebarContextProvider>
     </ThemeProvider>
   );

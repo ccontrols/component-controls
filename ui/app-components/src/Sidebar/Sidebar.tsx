@@ -2,7 +2,6 @@
 import React, { FC, useContext } from 'react';
 import { jsx, Box, Flex, BoxProps, Heading } from 'theme-ui';
 import { useBreakpointIndex } from '@theme-ui/match-media';
-import { Collapsible, CollapsibleProps } from '@component-controls/components';
 
 import { SidebarContext } from './SidebarContext';
 
@@ -24,11 +23,6 @@ export interface SidebarProps {
    children content elements to be displayed in Sidebar
    */
   children: React.ReactNode;
-
-  /**
-   * collapsible animate height props
-   */
-  animate?: Omit<CollapsibleProps, 'isOpen' | 'children'>;
 }
 
 /**
@@ -36,9 +30,8 @@ export interface SidebarProps {
  */
 export const Sidebar: FC<SidebarProps & BoxProps> = ({
   title,
-  width,
+  width = '100%',
   children,
-  animate,
   ...rest
 }) => {
   const toggleContext = useContext(SidebarContext);
@@ -46,12 +39,12 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   const size: number = useBreakpointIndex();
   const isCollapsed =
     (collapsible && size <= 1 && collapsed === undefined) || collapsed === true;
-  return (
-    <Collapsible
-      css={{ display: 'flex', alignItems: 'stretch' }}
-      isOpen={!isCollapsed}
-      easing="ease-in-out"
-      {...animate}
+  return isCollapsed ? null : (
+    <Box
+      sx={{
+        height: '100%',
+        width: '100%',
+      }}
     >
       <Box
         sx={{ overflowY: 'auto', height: '100%', overflowX: 'hidden', width }}
@@ -73,6 +66,6 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
 
         {children}
       </Box>
-    </Collapsible>
+    </Box>
   );
 };

@@ -29,6 +29,11 @@ export interface PageContainerProps {
    * components to customize the markdown display.
    */
   components?: MDXProviderComponents;
+
+  /**
+   * limit the max width of the page
+   */
+  maxWidth?: number | string;
 }
 
 /**
@@ -42,6 +47,7 @@ export const PageContainer: FC<PageContainerProps> = ({
   store,
   options,
   components = {},
+  maxWidth,
 }) => {
   let scrollId: string | undefined;
   try {
@@ -76,13 +82,14 @@ export const PageContainer: FC<PageContainerProps> = ({
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
-        padding: '4rem 20px',
+        px: 4,
+        py: 4,
         bg: 'background',
         color: 'text',
         fontFamily: 'body',
       }}
     >
-      <Box sx={{ maxWidth: '1000px', width: '100%' }}>
+      <Box sx={{ maxWidth, width: '100%' }}>
         {store && storyId ? (
           <BlockContextProvider
             storyId={storyId}

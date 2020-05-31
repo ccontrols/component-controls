@@ -16,6 +16,7 @@ Third-party libraries used in no particular order:
 
 -   [theme-ui](https://theme-ui.com) as the theming and components foundation.
 -   [octicons](https://octicons.github.com) for icons used in the components.
+-   [react-simple-resizer](https://github.com/LeetCode-OpenSource/react-simple-resizer) for panels resizing.
 
 # List of components
 

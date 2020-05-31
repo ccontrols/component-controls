@@ -21,7 +21,12 @@ export const PageContextContainer: FC<DocsContainerProps> = ({
   const isDark = useIsDark();
   return (
     <ThemeProvider theme={theme} dark={isDark}>
-      <BlockPageContainer store={store} storyId={storyId} options={options}>
+      <BlockPageContainer
+        maxWidth="1000px"
+        store={store}
+        storyId={storyId}
+        options={options}
+      >
         {children}
       </BlockPageContainer>
     </ThemeProvider>

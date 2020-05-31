@@ -1,6 +1,15 @@
 /** @jsx jsx */
 import React, { FC, useEffect, useState } from 'react';
-import { jsx, Box, Flex, Button, ButtonProps, LinkProps, Text } from 'theme-ui';
+import {
+  jsx,
+  Box,
+  Flex,
+  Button,
+  ButtonProps,
+  LinkProps,
+  Text,
+  Theme,
+} from 'theme-ui';
 import Octicon, { ChevronDown, ChevronUp } from '@primer/octicons-react';
 import {
   Keyboard,
@@ -39,10 +48,8 @@ export interface NavMenuProps {
   /** Array of menu items */
   items: MenuItems;
   /** Initially active menu item */
-  activeItem?: {
-    id?: string;
-    label?: string;
-  };
+  activeItem?: Pick<MenuItem, 'id' | 'label'>;
+
   /** Custom class to use for the button instead of Button */
   buttonClass?: ButtonClassType;
 
@@ -55,22 +62,28 @@ export interface NavMenuProps {
   /** If specified, will filter the items by the search terms */
   search?: string;
 }
-const isActive = (active: MenuItem, item: MenuItem): boolean =>
-  item.id === active.id || item.label === active.label;
+const isActive = (
+  item: MenuItem,
+  active?: Pick<MenuItem, 'id' | 'label'>,
+): boolean =>
+  active ? item.id === active.id || item.label === active.label : false;
 
-const hasActiveChidlren = (active: MenuItem, item: MenuItem): boolean => {
-  if (isActive(active, item)) {
+const hasActiveChidlren = (
+  item: MenuItem,
+  active?: Pick<MenuItem, 'id' | 'label'>,
+): boolean => {
+  if (isActive(item, active)) {
     return true;
   }
   return item.items
-    ? item.items.some(t => hasActiveChidlren(active, t))
+    ? item.items.some(t => hasActiveChidlren(t, active))
     : false;
 };
 
 const getExpandedItems = (children: MenuItems, active?: MenuItem): MenuItems =>
   children.reduce((expandedItems: MenuItems, item: MenuItem) => {
     const { items, expanded } = item;
-    if (expanded || (active && hasActiveChidlren(active, item))) {
+    if (expanded || hasActiveChidlren(item, active)) {
       expandedItems.push(item);
     }
     if (items) {
@@ -156,6 +169,36 @@ const filterItems = (items: MenuItems, search?: string): MenuItems => {
   return items;
 };
 
+const stateFromProps = ({
+  items,
+  expandAll,
+  activeItem,
+  search,
+}: Pick<NavMenuProps, 'items' | 'expandAll' | 'activeItem' | 'search'>) => {
+  const filteredItems = filterItems(items, search);
+  const collapsibleItems = getCollapsibleItems(filteredItems);
+  let expandedItems;
+  if (expandAll || (search && search.length)) {
+    expandedItems = collapsibleItems;
+  } else {
+    expandedItems = getExpandedItems(filteredItems, activeItem);
+  }
+
+  const allExpanded =
+    typeof expandAll !== 'undefined'
+      ? expandAll
+      : collapsibleItems.length === expandedItems.length;
+  return {
+    expandedItems,
+    items,
+    filteredItems,
+    search,
+    collapsibleItems,
+    allExpanded,
+    expandAll,
+    originalExpandAll: expandAll,
+  };
+};
 interface NavMenuState {
   expandedItems?: MenuItems;
   originalExpandAll?: boolean;
@@ -170,50 +213,33 @@ interface NavMenuState {
  * Hierarchical collapsible menu
  */
 
-export const Navmenu: FC<NavMenuProps> = props => {
-  const stateFromProps = ({
-    items,
-    expandAll,
-    activeItem,
-    search,
-  }: Pick<NavMenuProps, 'items' | 'expandAll' | 'activeItem' | 'search'>) => {
-    const filteredItems = filterItems(items, search);
-    const collapsibleItems = getCollapsibleItems(filteredItems);
-    let expandedItems;
-    if (expandAll || (search && search.length)) {
-      expandedItems = collapsibleItems;
-    } else {
-      expandedItems = getExpandedItems(filteredItems, activeItem);
-    }
-
-    const allExpanded =
-      typeof expandAll !== 'undefined'
-        ? expandAll
-        : collapsibleItems.length === expandedItems.length;
-    return {
-      expandedItems,
+export const Navmenu: FC<NavMenuProps> = ({
+  items,
+  expandAll,
+  activeItem,
+  search,
+  onSelect,
+  buttonClass,
+}) => {
+  const [state, setState] = useState<NavMenuState>(
+    stateFromProps({
       items,
-      filteredItems,
-      search,
-      collapsibleItems,
-      allExpanded,
       expandAll,
-      originalExpandAll: expandAll,
-    };
-  };
-
-  const [state, setState] = useState<NavMenuState>(stateFromProps(props));
+      activeItem,
+      search,
+    }),
+  );
 
   useEffect(() => {
     setState(
       stateFromProps({
-        items: props.items,
-        expandAll: props.expandAll,
-        activeItem: props.activeItem,
-        search: props.search,
+        items,
+        expandAll,
+        activeItem,
+        search,
       }),
     );
-  }, [props.items, props.expandAll, props.activeItem, props.search]);
+  }, [items, expandAll, activeItem, search]);
 
   const onMenuChange = (item: MenuItem, expanded: boolean) => {
     const { expandedItems, filteredItems } = state;
@@ -243,7 +269,6 @@ export const Navmenu: FC<NavMenuProps> = props => {
   };
 
   const renderItem = (item: MenuItem, level: number = 1) => {
-    const { activeItem, onSelect, buttonClass } = props;
     const { expandedItems } = state;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { items, id, label, widget, icon, onClick, ...rest } = item;
@@ -258,9 +283,14 @@ export const Navmenu: FC<NavMenuProps> = props => {
     if (activeItem && activeItem.id === id) {
       background = 'active';
     }
-
+    const isActiveParent = hasActiveChidlren(item, activeItem);
     const content = (
-      <Flex sx={{ background }}>
+      <Flex
+        sx={{
+          background,
+          pl: level,
+        }}
+      >
         <ButtonClass
           sx={{
             width: '100%',
@@ -270,6 +300,8 @@ export const Navmenu: FC<NavMenuProps> = props => {
             background: 'none',
             textDecoration: 'none',
             cursor: 'pointer',
+            borderLeft: (t: Theme) =>
+              isActiveParent ? `6px solid ${t.colors?.accent}` : 'none',
           }}
           onClick={() => {
             if (items) {
@@ -285,7 +317,6 @@ export const Navmenu: FC<NavMenuProps> = props => {
               flexDirection: 'row',
               alignItems: 'center',
               position: 'relative',
-              ml: level,
               '& strong': {
                 color: 'text',
               },
