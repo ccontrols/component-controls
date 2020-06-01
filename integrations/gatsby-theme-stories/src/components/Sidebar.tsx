@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, LinkProps, Theme } from 'theme-ui';
-
-import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
-import { StoriesKind } from '@component-controls/specification';
+import { Link as GatsbyLink } from 'gatsby';
 import { Sidebar as AppSidebar } from '@component-controls/app';
 
 import { useSiteMetadata } from '../hooks/use-site-metadata';
@@ -31,27 +29,7 @@ export interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = ({ kindPath }) => {
   const { siteTitle } = useSiteMetadata();
-  const data = useStaticQuery(graphql`
-    query {
-      allStoryKind {
-        edges {
-          node {
-            title
-          }
-        }
-      }
-    }
-  `);
-  const kinds = data.allStoryKind.edges.map(
-    ({ node }: { node: StoriesKind }) => node,
-  );
-
   return (
-    <AppSidebar
-      title={siteTitle}
-      kinds={kinds}
-      kindPath={kindPath}
-      buttonClass={Link}
-    />
+    <AppSidebar title={siteTitle} kindPath={kindPath} buttonClass={Link} />
   );
 };

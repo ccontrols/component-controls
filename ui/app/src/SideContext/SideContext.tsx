@@ -23,7 +23,6 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
     const curItem = items
       ? items.find(el => {
           const itemPos = el.getBoundingClientRect().top - pageScroll + 100;
-          console.log(curScroll, pageScroll, itemPos);
           return itemPos > curScroll;
         })
       : undefined;

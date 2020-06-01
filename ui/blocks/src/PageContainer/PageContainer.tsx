@@ -3,28 +3,11 @@
 import { FC, useEffect, forwardRef } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
-import { StoryStore } from '@component-controls/store';
 
 import { markdownComponents } from '@component-controls/components';
-import { BlockContextProvider, StoryContextConsumer } from '../context';
+import { StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
-  /**
-   * store object
-   */
-  store: StoryStore;
-
-  /**
-   * story to display in the page
-   */
-  storyId?: string;
-
-  /**
-   * global options passed from container
-   * those are global parameters as well as decorators
-   */
-  options?: any;
-
   /**
    * components to customize the markdown display.
    */
@@ -42,15 +25,12 @@ export interface PageContainerProps {
 }
 
 /**
- *
+ * Page container component
  * If the page is an MDX page, will display the MDX components.
  * Otherwise, the page elements are passed as children
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
-  (
-    { children, storyId, store, options, components = {}, maxWidth },
-    ref: React.Ref<HTMLDivElement>,
-  ) => {
+  ({ children, components = {}, maxWidth }, ref: React.Ref<HTMLDivElement>) => {
     let scrollId: string | undefined;
     try {
       const pageURL =
@@ -67,7 +47,6 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
       if (scrollId) {
         const element = document.getElementById(scrollId);
         if (element) {
-          console.log(element);
           // Introducing a delay to ensure scrolling works when it's a full refresh.
           setTimeout(() => {
             element.scrollIntoView({
@@ -92,30 +71,20 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         }}
       >
         <Box sx={{ maxWidth, width: '100%', position: 'relative' }} ref={ref}>
-          {store && storyId ? (
-            <BlockContextProvider
-              storyId={storyId}
-              store={store}
-              options={options}
-            >
-              <StoryContextConsumer id={storyId}>
-                {({ kind }) => {
-                  const { MDXPage } = kind || {};
-                  return MDXPage ? (
-                    <MDXProvider
-                      components={{ ...markdownComponents, ...components }}
-                    >
-                      <MDXPage />
-                    </MDXProvider>
-                  ) : (
-                    children
-                  );
-                }}
-              </StoryContextConsumer>
-            </BlockContextProvider>
-          ) : (
-            children
-          )}
+          <StoryContextConsumer id=".">
+            {({ kind }) => {
+              const { MDXPage } = kind || {};
+              return MDXPage ? (
+                <MDXProvider
+                  components={{ ...markdownComponents, ...components }}
+                >
+                  <MDXPage />
+                </MDXProvider>
+              ) : (
+                children
+              );
+            }}
+          </StoryContextConsumer>
         </Box>
       </Box>
     );

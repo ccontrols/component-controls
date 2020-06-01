@@ -15,6 +15,7 @@ export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryKind: (name: string) => StoryKinds | undefined;
+  getKinds: () => StoryKinds | undefined;
   updateStoryProp: (
     storyId: string,
     propName: string,

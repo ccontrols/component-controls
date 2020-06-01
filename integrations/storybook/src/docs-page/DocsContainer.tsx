@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import { Theme } from 'theme-ui';
-import { PageContainer as BlockPageContainer } from '@component-controls/blocks';
+import {
+  PageContainer as BlockPageContainer,
+  BlockContextProvider,
+} from '@component-controls/blocks';
 import { ThemeProvider } from '@component-controls/components';
 import {
   useStoryId,
@@ -21,14 +24,9 @@ export const PageContextContainer: FC<DocsContainerProps> = ({
   const isDark = useIsDark();
   return (
     <ThemeProvider theme={theme} dark={isDark}>
-      <BlockPageContainer
-        maxWidth="1000px"
-        store={store}
-        storyId={storyId}
-        options={options}
-      >
-        {children}
-      </BlockPageContainer>
+      <BlockContextProvider storyId={storyId} store={store} options={options}>
+        <BlockPageContainer maxWidth="1000px">{children}</BlockPageContainer>
+      </BlockContextProvider>
     </ThemeProvider>
   );
 };

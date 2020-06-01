@@ -11,7 +11,10 @@ import {
 } from '@component-controls/components';
 import { SideContext } from '@component-controls/app';
 import { SidebarContextProvider } from '@component-controls/app-components';
-import { PageContainer } from '@component-controls/blocks';
+import {
+  PageContainer,
+  BlockContextProvider,
+} from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
 import { Sidebar } from './Sidebar';
@@ -48,33 +51,30 @@ export const Layout: FC<LayoutProps> = ({
       <SidebarContextProvider>
         <Header title={title}></Header>
         <Flex sx={{ flexDirection: 'row' }}>
-          <Sidebar kindPath={kindPath} />
-          <Container>
-            <Tabs fontSize={16}>
-              {pages && pages.length > 1 && (
-                <TabList>
-                  {pages.map(page => (
-                    <Tab key={`tab_${page.key}`}>{page.title}</Tab>
-                  ))}
-                </TabList>
-              )}
+          <BlockContextProvider storyId={storyId} store={storyStore}>
+            <Sidebar kindPath={kindPath} />
+            <Container>
+              <Tabs fontSize={16}>
+                {pages && pages.length > 1 && (
+                  <TabList>
+                    {pages.map(page => (
+                      <Tab key={`tab_${page.key}`}>{page.title}</Tab>
+                    ))}
+                  </TabList>
+                )}
 
-              <PageContainer
-                store={storyStore}
-                storyId={storyId}
-                maxWidth={1200}
-                ref={pageRef}
-              >
-                {pages &&
-                  pages.map(page => (
-                    <TabPanel key={`panel_${page.key}`}>
-                      {page.render()}
-                    </TabPanel>
-                  ))}
-              </PageContainer>
-            </Tabs>
-          </Container>
-          <SideContext pageRef={pageRef} />
+                <PageContainer maxWidth={1200} ref={pageRef}>
+                  {pages &&
+                    pages.map(page => (
+                      <TabPanel key={`panel_${page.key}`}>
+                        {page.render()}
+                      </TabPanel>
+                    ))}
+                </PageContainer>
+              </Tabs>
+            </Container>
+            <SideContext pageRef={pageRef} />
+          </BlockContextProvider>
         </Flex>
       </SidebarContextProvider>
     </ThemeProvider>
