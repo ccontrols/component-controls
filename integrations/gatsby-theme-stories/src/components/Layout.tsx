@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { jsx, Container, Flex } from 'theme-ui';
 import { Global } from '@emotion/core';
 import {
@@ -9,6 +9,7 @@ import {
   TabList,
   TabPanel,
 } from '@component-controls/components';
+import { SideContext } from '@component-controls/app';
 import { SidebarContextProvider } from '@component-controls/app-components';
 import { PageContainer } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
@@ -33,6 +34,7 @@ export const Layout: FC<LayoutProps> = ({
   kindPath,
 }) => {
   const pages = pagesFn ? pagesFn('') : null;
+  const pageRef = useRef<HTMLDivElement>(null);
   return (
     <ThemeProvider>
       <Global
@@ -61,6 +63,7 @@ export const Layout: FC<LayoutProps> = ({
                 store={storyStore}
                 storyId={storyId}
                 maxWidth={1200}
+                ref={pageRef}
               >
                 {pages &&
                   pages.map(page => (
@@ -71,6 +74,7 @@ export const Layout: FC<LayoutProps> = ({
               </PageContainer>
             </Tabs>
           </Container>
+          <SideContext pageRef={pageRef} />
         </Flex>
       </SidebarContextProvider>
     </ThemeProvider>

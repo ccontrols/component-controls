@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/app",
   "version": "1.2.0",
-  "description": "Component controls application.",
+  "description": "Component controls standalone application.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

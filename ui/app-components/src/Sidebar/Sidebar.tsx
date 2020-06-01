@@ -38,6 +38,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
     overflowY: 'auto',
     overflowX: 'hidden',
     width,
+    position: 'relative',
   };
   const style: SxStyleProp = !responsive
     ? defaultStyle
@@ -53,21 +54,29 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
       };
   return collapsed ? null : (
     <Box sx={style} {...rest}>
-      <Flex sx={{ pb: 1, flexDirection: 'row', alignItems: 'center' }}>
-        {title && (
-          <Box as="header">
-            {typeof title === 'string' ? (
-              <Heading as="h3" sx={{ pl: 2 }}>
-                {title}
-              </Heading>
-            ) : (
-              title
-            )}
-          </Box>
-        )}
-      </Flex>
+      <div sx={{ position: 'fixed' }}>
+        <Flex
+          sx={{
+            pb: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          {title && (
+            <Box as="header">
+              {typeof title === 'string' ? (
+                <Heading as="h3" sx={{ pl: 2 }}>
+                  {title}
+                </Heading>
+              ) : (
+                title
+              )}
+            </Box>
+          )}
+        </Flex>
 
-      {children}
+        {children}
+      </div>
     </Box>
   );
 };

@@ -107,6 +107,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
                 },
               }}
               href={`${url.split('#')[0]}#${blockId}`}
+              data-title={title}
             >
               <Octicon icon={LinkIcon} />
             </Link>

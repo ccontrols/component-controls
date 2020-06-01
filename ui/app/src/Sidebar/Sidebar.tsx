@@ -1,24 +1,42 @@
 /** @jsx jsx */
-import { FC, useState, useMemo } from 'react';
-import { jsx, Input, LinkProps, Box } from 'theme-ui';
-import { Story } from '@component-controls/specification';
+import { FC, useState, useMemo, useContext } from 'react';
+import { jsx, Input, Box, Theme } from 'theme-ui';
+
+import { StoriesKind } from '@component-controls/specification';
 import {
   Sidebar as AppSidebar,
+  ColorMode,
+  SidebarContext,
   Navmenu,
+  NavMenuProps,
   MenuItems,
   MenuItem,
+  Header,
 } from '@component-controls/app-components';
 
 export interface SidebarProps {
-  storyId?: string;
-}
+  /**
+   * title element
+   */
+  title?: React.ReactNode;
+  /**
+   * current path
+   */
+  kindPath?: string;
+  /**
+   * platform specific link class
+   */
+  buttonClass?: NavMenuProps['buttonClass'];
 
-interface ConsolidateKinds {
-  [kind: string]: Story[];
+  /**
+   * list of documentation files
+   */
+  kinds: StoriesKind[];
 }
 
 const createMenuItem = (
   levels: string[],
+  allLevels: string[],
   parent?: MenuItems,
   item?: MenuItem,
 ): MenuItem => {
@@ -31,60 +49,69 @@ const createMenuItem = (
   };
   const sibling = parent && parent.find(i => i.id === newItem.id);
   if (parent && !sibling) {
-    newItem.items = [];
+    if (levels.length > 1) {
+      newItem.items = [];
+    } else {
+      newItem.id = allLevels.join('/');
+      //@ts-ignore
+      newItem.to = `/docs/${allLevels.join('/')}`;
+    }
     parent.push(newItem);
   }
   return createMenuItem(
     levels.slice(1),
+    levels,
     sibling ? sibling.items : newItem.items,
     newItem,
   );
 };
-
-export const Sidebar: FC<SidebarProps> = ({ storyId }) => {
-  const stories = data.allStory.edges;
+export const Sidebar: FC<SidebarProps> = ({
+  kindPath,
+  buttonClass,
+  title,
+  kinds,
+}) => {
+  const { SidebarClose, responsive } = useContext(SidebarContext);
 
   const menuItems = useMemo(() => {
-    const kinds: ConsolidateKinds = stories.reduce(
-      (acc: ConsolidateKinds, { node }: { node: Required<Story> }) => {
-        if (acc[node.kind]) {
-          return { ...acc, [node.kind]: [...acc[node.kind], node] };
-        }
-        return { ...acc, [node.kind]: [node] };
-      },
-      {},
-    );
-    const menuItems = Object.keys(kinds).reduce((acc: MenuItems, key) => {
-      const stories = kinds[key];
-      const levels = key.split('/');
-      const kind = createMenuItem(levels, acc);
-      kind.items = stories.map(story => ({
-        id: story.id,
-        label: story.name,
-        to: `/stories/${story.id}`,
-      }));
+    const menuItems = kinds.reduce((acc: MenuItems, kind) => {
+      const levels = kind.title.split('/');
+      createMenuItem(levels, levels, acc);
       return acc;
     }, []);
     return menuItems;
-  }, [stories]);
+  }, [kinds]);
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
-    <AppSidebar sx={{ px: 1, backgroundColor: 'sidebar' }}>
-      {siteTitle}
-      <Box sx={{ py: 2 }}>
-        <Input
-          placeholder="search stories..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
+    <AppSidebar
+      sx={{
+        borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+      }}
+      width={380}
+    >
+      {responsive && (
+        <Header shadow={false}>
+          <SidebarClose />
+          <ColorMode />
+        </Header>
+      )}
+      <Box sx={{ px: 2 }}>
+        {title}
+        <Box sx={{ py: 2, px: 3 }}>
+          <Input
+            placeholder="filter stories..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </Box>
+        <Navmenu
+          buttonClass={buttonClass}
+          activeItem={{ id: kindPath }}
+          search={search}
+          items={menuItems}
         />
       </Box>
-      <Navmenu
-        buttonClass={Link}
-        activeItem={{ id: storyId }}
-        search={search}
-        items={menuItems}
-      />
     </AppSidebar>
   );
 };

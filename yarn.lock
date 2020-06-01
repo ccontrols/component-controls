@@ -17081,13 +17081,6 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
-react-simple-resizer@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-simple-resizer/-/react-simple-resizer-2.1.0.tgz#9645d2bc2f1ee043435804619826cad0bf2511d7"
-  integrity sha512-iiPER+vuKsW5+6+HroNnahc2Cah6UpO4w9SeuGw1pf/6p/F/vAD4+4288yJS5fLY4xJpDNEiOiRBk2kLUui6nw==
-  dependencies:
-    rxjs "^6.3.3"
-
 react-sizeme@^2.6.7:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/react-sizeme/-/react-sizeme-2.6.12.tgz#ed207be5476f4a85bf364e92042520499455453e"
@@ -20760,14 +20753,6 @@ webpack-merge@^4.2.2:
   integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
   dependencies:
     lodash "^4.17.15"
-
-webpack-react-docgen-typescript@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/webpack-react-docgen-typescript/-/webpack-react-docgen-typescript-0.9.5.tgz#607835802df47a8b3b93c23bd02f86d22ff1b11e"
-  integrity sha512-XhSYQWmkS22WkvOdj1WS+NYDs27yZU20kfz4uLED9lFW69oH1ImRpidXF70YhvCcdQYER9YH5/C/8arf8HZfJg==
-  dependencies:
-    fs-extra "^8.1.0"
-    react-docgen-typescript "^1.16.1"
 
 webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"
