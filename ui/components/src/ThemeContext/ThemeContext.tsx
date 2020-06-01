@@ -102,6 +102,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
             bg: 'action',
           },
         },
+        links: {
+          nav: {
+            fontWeight: 300,
+            fontSize: '14px',
+            lineHeight: '1.6rem',
+            '&.active': {
+              fontWeight: 700,
+              color: 'primary',
+            },
+          },
+        },
         colors: {
           ...polaris.colors,
           gray: '#f6f6f6',
@@ -130,6 +141,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       dark,
     );
   }, [dark, customTheme]);
+
   return (
     <ThemeContext.Provider
       value={{
