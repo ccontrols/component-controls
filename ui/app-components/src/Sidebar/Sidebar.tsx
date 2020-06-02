@@ -9,8 +9,15 @@ export interface SidebarProps {
    */
   title?: React.ReactNode;
 
-  /** The width of the side bar in pixels */
+  /**
+   * The width of the side bar in pixels
+   */
   width?: number;
+
+  /**
+   * min width for sidebar
+   */
+  minWidth?: number;
 
   /**
    * Whether the sidebar can be collapsed
@@ -29,32 +36,38 @@ export interface SidebarProps {
 export const Sidebar: FC<SidebarProps & BoxProps> = ({
   title,
   width = '100%',
+  minWidth,
   children,
   ...rest
 }) => {
   const toggleContext = useContext(SidebarContext);
-  const { collapsed, responsive } = toggleContext || {};
+  const { collapsed, responsive, setCollapsed } = toggleContext || {};
   const defaultStyle: SxStyleProp = {
     overflowY: 'auto',
     overflowX: 'hidden',
     width,
+    minWidth,
     position: 'relative',
   };
   const style: SxStyleProp = !responsive
     ? defaultStyle
     : {
         ...defaultStyle,
-        position: 'absolute',
+        position: 'fixed',
         width: '100%',
         minWidth: '100%',
         zIndex: 9999,
         backgroundColor: 'background',
         top: 0,
         left: 0,
+        bottom: 0,
       };
   return collapsed ? null : (
     <Box sx={style} {...rest}>
-      <div sx={{ position: 'fixed' }}>
+      <div
+        sx={{ position: !responsive ? 'fixed' : undefined }}
+        onClick={() => responsive && setCollapsed(true)}
+      >
         <Flex
           sx={{
             pb: 1,

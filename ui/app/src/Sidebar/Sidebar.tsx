@@ -83,6 +83,7 @@ export const Sidebar: FC<SidebarProps> = ({ kindPath, buttonClass, title }) => {
         borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
       }}
       width={380}
+      minWidth={300}
     >
       {responsive && (
         <Header shadow={false}>
@@ -97,6 +98,7 @@ export const Sidebar: FC<SidebarProps> = ({ kindPath, buttonClass, title }) => {
             placeholder="filter stories..."
             value={search}
             onChange={e => setSearch(e.target.value)}
+            onClick={e => e.stopPropagation()}
           />
         </Box>
         <Navmenu

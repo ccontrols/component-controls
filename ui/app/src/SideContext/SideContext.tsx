@@ -59,32 +59,44 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
   return (
     <SidebarContextProvider>
       <SidebarContext.Consumer>
-        {({ SidebarClose, responsive }) => (
-          <AppSidebar width={380}>
-            {responsive && (
-              <Header shadow={false}>
-                <SidebarClose />
-              </Header>
+        {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
+          <div>
+            <AppSidebar width={300} minWidth={250}>
+              {responsive && (
+                <Header shadow={false}>
+                  <SidebarClose />
+                </Header>
+              )}
+              <Box
+                sx={{
+                  px: 2,
+                  borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+                }}
+              >
+                <Flex as="nav" sx={{ flexDirection: 'column' }}>
+                  {items?.map((el, index) => (
+                    <NavLink
+                      key={`context_link_${index}`}
+                      href={el.getAttribute('href') || undefined}
+                      className={el === activeItem ? 'active' : undefined}
+                    >
+                      {el.getAttribute('data-title')}
+                    </NavLink>
+                  ))}
+                </Flex>
+              </Box>
+            </AppSidebar>
+            {collapsed && (
+              <SidebarToggle
+                sx={{
+                  position: 'fixed',
+                  right: '1rem',
+                  bottom: '2rem',
+                  backgroundColor: 'gray',
+                }}
+              />
             )}
-            <Box
-              sx={{
-                px: 2,
-                borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
-              }}
-            >
-              <Flex as="nav" sx={{ flexDirection: 'column' }}>
-                {items?.map((el, index) => (
-                  <NavLink
-                    key={`context_link_${index}`}
-                    href={el.getAttribute('href') || undefined}
-                    className={el === activeItem ? 'active' : undefined}
-                  >
-                    {el.getAttribute('data-title')}
-                  </NavLink>
-                ))}
-              </Flex>
-            </Box>
-          </AppSidebar>
+          </div>
         )}
       </SidebarContext.Consumer>
     </SidebarContextProvider>
