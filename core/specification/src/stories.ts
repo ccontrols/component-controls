@@ -60,7 +60,7 @@ export interface StoryArgument {
 export type StoryArguments = StoryArgument[];
 
 /**
- * list of configuration parameters for stories and 'kinds'
+ * list of configuration parameters for indivudual stories and docs files
  * can be specified either through CSF or MDX tags
  */
 export interface StoryParameters {
@@ -84,7 +84,7 @@ export interface Story {
   /**
    * title of the file/group of stories
    */
-  kind?: string;
+  doc?: string;
 
   /**
    * render function for the story
@@ -152,11 +152,11 @@ export interface Stories {
 /**
  * a group of stories. Usually multiple stories are in one  csf file
  * and the 'group' is the default export
- * in the case of MDX stories, the kind is crated using a <Meta /> tag
+ * in the case of MDX stories, the doc is created using a <Meta /> tag
  */
-export interface StoriesKind {
+export interface StoriesDoc {
   /**
-   * title of the groups of stories (or kind). used to generate CSF story ids
+   * title of the groups of stories contained in the doc file. used to generate story ids
    */
   title: string;
 
@@ -249,8 +249,8 @@ export interface StoryComponents {
 /**
  * list of story files, or groups
  */
-export interface StoryKinds {
-  [title: string]: StoriesKind;
+export interface StoryDocs {
+  [title: string]: StoriesDoc;
 }
 
 /**
@@ -274,7 +274,7 @@ export interface StoriesStore {
   /**
    * list of story files, or groups
    */
-  kinds: StoryKinds;
+  docs: StoryDocs;
   /**
    * list of stories
    */

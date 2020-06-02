@@ -16,7 +16,7 @@ export interface LoadingStore {
   /**
    * stores, loaded from each .stories.* file
    */
-  stores: Pick<StoriesStore, 'stories' | 'kinds'>[];
+  stores: Pick<StoriesStore, 'stories' | 'docs'>[];
 }
 export const store: LoadingStore = {
   stores: [],
@@ -24,8 +24,8 @@ export const store: LoadingStore = {
   packages: {},
 };
 
-export const addStoriesKind = async (added: StoriesStore) => {
-  const { components, packages, stories, kinds } = added;
+export const addStoriesDoc = async (added: StoriesStore) => {
+  const { components, packages, stories, docs } = added;
   Object.keys(components).forEach(key => {
     store.components[key] = components[key];
   });
@@ -33,5 +33,5 @@ export const addStoriesKind = async (added: StoriesStore) => {
     store.packages[key] = packages[key];
   });
 
-  store.stores.push({ stories, kinds });
+  store.stores.push({ stories, docs });
 };

@@ -12834,6 +12834,13 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
+    "fontSize": Object {
+      "parentName": "TabsContainerProps",
+      "type": Object {
+        "name": "ReactText",
+        "raw": "ReactText",
+      },
+    },
     "forceRenderTabPanel": Object {
       "parentName": "TabsProps",
       "type": Object {

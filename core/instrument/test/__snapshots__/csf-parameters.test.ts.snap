@@ -7,7 +7,7 @@ Object {
       "name": "ControlsTable",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {
         "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
@@ -99,7 +99,7 @@ myStory.story = {
 exports[`csf-parameters name-parameters-and-controls.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "15ca3a76fad6a8b03adedc0e9e4a590d",
@@ -202,7 +202,7 @@ myStory.story = {
 exports[`csf-parameters story-property-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "49aab458593f62387be9eeaf3b42c623",

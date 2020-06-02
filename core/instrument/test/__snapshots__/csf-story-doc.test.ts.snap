@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-story-kind no-title.js 1`] = `
+exports[`csf-story-doc no-title.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
-      "package": "2f97f282b46c08427abf79e3c3699074",
+      "package": "b9103c46172438afdde76f8345fdfed0",
       "test": 1,
       "title": "Story",
     },
   },
   "packages": Object {
-    "2f97f282b46c08427abf79e3c3699074": Object {
+    "b9103c46172438afdde76f8345fdfed0": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -40,11 +40,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "2f97f282b46c08427abf79e3c3699074",
+      "fileHash": "b9103c46172438afdde76f8345fdfed0",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/no-title.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/doc/no-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -60,20 +60,20 @@ Object {
 }
 `;
 
-exports[`csf-story-kind title-and-parameters.js 1`] = `
+exports[`csf-story-doc title-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "21455c8d3b1413b6aaaa56c7ca6e1dde": Object {
+    "72da0b761debbc67acfdcfe4cc253e29": Object {
       "name": "ControlsTable",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "component": "ControlsTable",
       "components": Object {
-        "ControlsTable": "21455c8d3b1413b6aaaa56c7ca6e1dde",
+        "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
       },
-      "package": "e8764fc7a5e278ee187ee3d546896280",
+      "package": "aef0eeece1e59f4690b7e3f0065cdc41",
       "parameters": Object {
         "addonControls": Object {
           "smart": false,
@@ -84,7 +84,7 @@ Object {
     },
   },
   "packages": Object {
-    "e8764fc7a5e278ee187ee3d546896280": Object {
+    "aef0eeece1e59f4690b7e3f0065cdc41": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -112,11 +112,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "e8764fc7a5e278ee187ee3d546896280",
+      "fileHash": "aef0eeece1e59f4690b7e3f0065cdc41",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-and-parameters.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/doc/title-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -137,20 +137,20 @@ Object {
 }
 `;
 
-exports[`csf-story-kind title-controls-and-parameters.js 1`] = `
+exports[`csf-story-doc title-controls-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "dec877e66c549940695c423429a5d00b": Object {
+    "04b628ec4e86b8383f71524efe46f138": Object {
       "name": "ControlsTable",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Kind": Object {
       "component": "ControlsTable",
       "components": Object {
-        "ControlsTable": "dec877e66c549940695c423429a5d00b",
+        "ControlsTable": "04b628ec4e86b8383f71524efe46f138",
       },
-      "package": "2edbb8908aafc7a0c993dc189a899134",
+      "package": "4dd4688f69a323d0b893ca9c902cc47a",
       "parameters": Object {
         "controls": Object {
           "name": Object {
@@ -165,7 +165,7 @@ Object {
     },
   },
   "packages": Object {
-    "2edbb8908aafc7a0c993dc189a899134": Object {
+    "4dd4688f69a323d0b893ca9c902cc47a": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -193,11 +193,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "2edbb8908aafc7a0c993dc189a899134",
+      "fileHash": "4dd4688f69a323d0b893ca9c902cc47a",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/title-controls-and-parameters.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/doc/title-controls-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -223,18 +223,18 @@ Object {
 }
 `;
 
-exports[`csf-story-kind with-title.js 1`] = `
+exports[`csf-story-doc with-title.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/ControlsTable": Object {
       "components": Object {},
-      "package": "a381fc9b47b2f128ff40a172faed3d04",
+      "package": "44bab54c940e1430b4b259f5bad24b7a",
       "title": "Storybook/Blocks/ControlsTable",
     },
   },
   "packages": Object {
-    "a381fc9b47b2f128ff40a172faed3d04": Object {
+    "44bab54c940e1430b4b259f5bad24b7a": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -262,11 +262,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "a381fc9b47b2f128ff40a172faed3d04",
+      "fileHash": "44bab54c940e1430b4b259f5bad24b7a",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/kind/with-title.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/doc/with-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },

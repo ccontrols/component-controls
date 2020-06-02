@@ -71,8 +71,8 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
       >
         <Box sx={{ maxWidth, width: '100%', position: 'relative' }} ref={ref}>
           <StoryContextConsumer id=".">
-            {({ kind }) => {
-              const { MDXPage } = kind || {};
+            {({ doc }) => {
+              const { MDXPage } = doc || {};
               return MDXPage ? (
                 <MDXProvider
                   components={{ ...markdownComponents, ...components }}

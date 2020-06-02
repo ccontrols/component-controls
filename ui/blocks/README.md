@@ -163,6 +163,7 @@ _PackageVersion [source code](https:/github.com/ccontrols/component-controls/tre
 
 ## <ins>PageContainer</ins>
 
+Page container component
 If the page is an MDX page, will display the MDX components.
 Otherwise, the page elements are passed as children
 
@@ -170,12 +171,11 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `store*`     | _StoryStore_            | store object                                                                           |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
+| Name         | Type                     | Description                                   |
+| ------------ | ------------------------ | --------------------------------------------- |
+| `components` | _MDXProviderComponents_  | components to customize the markdown display. |
+| `maxWidth`   | _ReactText_              | limit the max width of the page               |
+| `ref`        | _Ref&lt;HTMLDivElement>_ | ref to the page container component           |
 
 ## <ins>Playground</ins>
 

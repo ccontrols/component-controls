@@ -8,7 +8,7 @@ import {
   parseStories,
 } from '@component-controls/instrument';
 
-import { addStoriesKind } from './store';
+import { addStoriesDoc } from './store';
 
 module.exports.pitch = async function() {
   const options: InstrumentOptions = getOptions(this) || {};
@@ -23,15 +23,15 @@ module.exports.pitch = async function() {
   if (store) {
     const relPath = path.relative(context.rootContext, filePath);
     const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
-    addStoriesKind({
+    addStoriesDoc({
       stories: store.stories,
       components: store.components,
       packages: store.packages,
-      kinds: Object.keys(store.kinds).reduce(
+      docs: Object.keys(store.docs).reduce(
         (acc, key) => ({
           ...acc,
           [key]: {
-            ...store.kinds[key],
+            ...store.docs[key],
             fileName: filePath,
             moduleId: moduleId,
           },

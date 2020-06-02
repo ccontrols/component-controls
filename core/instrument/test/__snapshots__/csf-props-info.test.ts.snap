@@ -3010,7 +3010,7 @@ user setting can display only props table or only controls",
       "request": "/Users/atanasster/component-controls/ui/blocks/src/PropsTable/PropsTable.tsx",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/PropsTable": Object {
       "component": "PropsTable",
       "components": Object {

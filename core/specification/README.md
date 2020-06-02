@@ -6,12 +6,12 @@
     -   [ArgUsageLocation](#argusagelocation)
     -   [SourceIdentifier](#sourceidentifier)
     -   [Stories](#stories)
-    -   [StoriesKind](#storieskind)
+    -   [StoriesDoc](#storiesdoc)
     -   [StoriesStore](#storiesstore)
     -   [Story](#story)
     -   [StoryArgument](#storyargument)
     -   [StoryComponents](#storycomponents)
-    -   [StoryKinds](#storykinds)
+    -   [StoryDocs](#storydocs)
     -   [StoryPackages](#storypackages)
     -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
@@ -120,11 +120,11 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 `id`\*: string: [Story](#story)
 
-## StoriesKind
+## StoriesDoc
 
 a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
-in the case of MDX stories, the kind is crated using a &lt;Meta /> tag
+in the case of MDX stories, the doc is created using a &lt;Meta /> tag
 
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L157)_
 
@@ -147,7 +147,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `source`         | string                                  | source code of the entire file of stories                                                                                                  |
 | `stories`        | string\[]                               | list of stories contained in the file/groups                                                                                               |
 | `subcomponents`  | string\[] \| object\[]                  | multiple components option                                                                                                                 |
-| `title*`         | string                                  | title of the groups of stories (or kind). used to generate CSF story ids                                                                   |
+| `title*`         | string                                  | title of the groups of stories contained in the doc file. used to generate story ids                                                       |
 
 ## StoriesStore
 
@@ -162,7 +162,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | Name          | Type                                | Description                                                                                     |
 | ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `components*` | [StoryComponents](#storycomponents) | list of components used in stories                                                              |
-| `kinds*`      | [StoryKinds](#storykinds)           | list of story files, or groups                                                                  |
+| `docs*`       | [StoryDocs](#storydocs)             | list of story files, or groups                                                                  |
 | `packages*`   | [StoryPackages](#storypackages)     | list of package.json files and their data used by the components and the stories of the project |
 | `stories*`    | [StoryStories](#storystories)       | list of stories                                                                                 |
 
@@ -183,8 +183,8 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                             |
 | `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                              |
 | `description`   | string                                  | story extended description. can use markdown.                                               |
+| `doc`           | string                                  | title of the file/group of stories                                                          |
 | `id`            | string                                  | csf id of the story                                                                         |
-| `kind`          | string                                  | title of the file/group of stories                                                          |
 | `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                         |
 | `name*`         | string                                  | name of the Story.                                                                          |
 | `parameters`    | [StoryParameters](#storyparameters)     | configuration parameters passed to the story - either CSF or MDX                            |
@@ -218,13 +218,13 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
-## StoryKinds
+## StoryDocs
 
 list of story files, or groups
 
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L252)_
 
-`title`\*: string: [StoriesKind](#storieskind)
+`title`\*: string: [StoriesDoc](#storiesdoc)
 
 ## StoryPackages
 
@@ -236,7 +236,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 ## StoryParameters
 
-list of configuration parameters for stories and 'kinds'
+list of configuration parameters for indivudual stories and docs files
 can be specified either through CSF or MDX tags
 
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L66)_

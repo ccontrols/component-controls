@@ -24,12 +24,10 @@ const Link: FC<LinkProps> = props => (
   />
 );
 export interface SidebarProps {
-  kindPath?: string;
+  docPath?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ kindPath }) => {
+export const Sidebar: FC<SidebarProps> = ({ docPath }) => {
   const { siteTitle } = useSiteMetadata();
-  return (
-    <AppSidebar title={siteTitle} kindPath={kindPath} buttonClass={Link} />
-  );
+  return <AppSidebar title={siteTitle} docPath={docPath} buttonClass={Link} />;
 };

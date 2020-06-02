@@ -1,11 +1,11 @@
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryParameters,
 } from '@component-controls/specification';
 
 export const componentsFromParams = (
-  element: StoriesKind | Story | StoryParameters,
+  element: StoriesDoc | Story | StoryParameters,
 ): string[] => {
   const result = [];
   let { component } = element;

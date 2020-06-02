@@ -26,12 +26,12 @@ export const StorySource: FC<StorySourceProps> = ({ viewStyle, ...props }) => {
   return (
     <StoryBlockContainer {...props}>
       {(context, { actions, ...rest }: SourceProps) => {
-        const { story, kind, kindPackage } = context;
+        const { story, doc, docPackage } = context;
         return (
           <BaseStorySource
             story={story}
-            kind={kind}
-            kindPackage={kindPackage}
+            doc={doc}
+            docPackage={docPackage}
             actions={actions}
             sourceProps={rest}
             viewStyle={viewStyle}

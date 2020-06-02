@@ -1,5 +1,5 @@
 import {
-  StoriesKind,
+  StoriesDoc,
   StoryComponent,
   Story,
 } from '@component-controls/specification';
@@ -7,11 +7,11 @@ import {
 export const CURRENT_STORY = '.';
 
 export const getStoryTitle = (
-  kind: StoriesKind | undefined,
+  doc: StoriesDoc | undefined,
   component: StoryComponent | undefined,
 ): string | undefined => {
-  if (kind) {
-    const titleParts = kind.title.split('/').filter(k => k);
+  if (doc) {
+    const titleParts = doc.title.split('/').filter(k => k);
     return titleParts[titleParts.length - 1];
   } else if (component && component.info && component.info.displayName) {
     return component.info.displayName;

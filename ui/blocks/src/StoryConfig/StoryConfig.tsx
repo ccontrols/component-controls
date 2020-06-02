@@ -20,12 +20,12 @@ export const StoryConfig: FC<StoryConfigProps> = props => {
   return (
     <StoryBlockContainer {...props}>
       {(context, sourceProps: SourceProps) => {
-        const { story, kind, kindPackage } = context;
+        const { story, doc, docPackage } = context;
         return (
           <BaseStoryConfig
             story={story}
-            kind={kind}
-            kindPackage={kindPackage}
+            doc={doc}
+            docPackage={docPackage}
             sourceProps={sourceProps}
           />
         );

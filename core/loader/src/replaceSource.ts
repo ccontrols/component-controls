@@ -14,17 +14,17 @@ ${stories
   let loadStories = `
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
-    const kinds = Object.keys(s.kinds);
-    for (let j=0; j < kinds.length; j += 1) {
-      const kind = s.kinds[kinds[j]];
-      if (imports.hasOwnProperty(kind.fileName)) {
-        const exports = imports[kind.fileName];
+    const docs = Object.keys(s.docs);
+    for (let j=0; j < docs.length; j += 1) {
+      const doc = s.docs[docs[j]];
+      if (imports.hasOwnProperty(doc.fileName)) {
+        const exports = imports[doc.fileName];
         try {
           Object.keys(exports).forEach(key => {
             const exported = exports[key];
             if (key === 'default') {
               const { storySource, ...rest } = exported;
-              Object.assign(kind, rest);
+              Object.assign(doc, rest);
             } else {
               const story = s.stories[key];
               if (story) {
@@ -36,7 +36,7 @@ ${stories
             }
           });
         } catch (e) {
-          console.error(\`unable to load module \${kind.moduleId}\`, e);
+          console.error(\`unable to load module \${doc.moduleId}\`, e);
         }
       }  
     }

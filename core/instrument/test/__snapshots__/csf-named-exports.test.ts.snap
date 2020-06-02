@@ -3,7 +3,7 @@
 exports[`csf-named-exports export-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "c071cdabd810d210aa3df2ee281eb1e2",
@@ -82,7 +82,7 @@ export { myStory as exportedStory };
 exports[`csf-named-exports property-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "35c5b6349c3b5c253bb5b98e0b2119fb",
@@ -161,7 +161,7 @@ export { myStory };
 exports[`csf-named-exports re-export-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "b27d69ca04362a47a347cdfb49a31bf6",

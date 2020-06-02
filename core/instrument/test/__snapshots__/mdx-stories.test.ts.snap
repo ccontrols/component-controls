@@ -13,7 +13,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -92,7 +92,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -226,7 +226,7 @@ export default Button;
 ",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -360,7 +360,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -534,7 +534,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -674,7 +674,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -799,7 +799,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {

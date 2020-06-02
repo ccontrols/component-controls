@@ -289,6 +289,12 @@ Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.
 
 _Tabs [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
+### properties
+
+| Name       | Type        | Description |
+| ---------- | ----------- | ----------- |
+| `fontSize` | _ReactText_ |             |
+
 ## <ins>Tag</ins>
 
 A copntainer component to display text in a colored box.

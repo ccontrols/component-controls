@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryComponents,
   getComponentName,
   PackageInfo,
@@ -21,7 +21,7 @@ export interface ComponentInputProps {
 
 export interface ComponentContextProps {
   components: StoryComponents;
-  kind?: StoriesKind;
+  doc?: StoriesDoc;
   story?: Story;
   componentPackage?: PackageInfo;
 }
@@ -36,7 +36,7 @@ export const useComponentsContext = ({
     addObserver,
     removeObserver,
   } = React.useContext(BlockDataContext);
-  const [{ story, kind, component, componentPackage }, setStoryData] = useState(
+  const [{ story, doc, component, componentPackage }, setStoryData] = useState(
     getStoryData(storyId),
   );
   useEffect(() => {
@@ -63,20 +63,20 @@ export const useComponentsContext = ({
       if (name) {
         components = {
           [name]: component,
-          ...getComponents(story.subcomponents, kind),
+          ...getComponents(story.subcomponents, doc),
         };
       } else {
-        components = getComponents(story.subcomponents, kind);
+        components = getComponents(story.subcomponents, doc);
       }
     } else {
-      components = getComponents(story.subcomponents, kind);
+      components = getComponents(story.subcomponents, doc);
     }
   } else {
-    components = getComponents({ of }, kind);
+    components = getComponents({ of }, doc);
   }
   return {
     components,
-    kind,
+    doc,
     story,
     componentPackage,
   };

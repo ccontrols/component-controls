@@ -20,22 +20,22 @@ exports.sourceNodes = async function sourceNodes(
   const loadedStore: StoriesStore | undefined = loadStoryStore(store);
 
   if (loadedStore) {
-    Object.keys(loadedStore.kinds).forEach(key => {
+    Object.keys(loadedStore.docs).forEach(key => {
       //@ts-ignore
-      const kind = loadedStore.kinds[key];
+      const doc = loadedStore.docs[key];
 
-      const kindMetadata: NodeInput = {
-        id: createNodeId(`storyKind-${key}`),
+      const docMetadata: NodeInput = {
+        id: createNodeId(`storyDoc-${key}`),
         children: [],
         internal: {
-          type: 'storyKind',
-          content: JSON.stringify(kind),
-          contentDigest: createContentDigest(kind),
+          type: 'storyDoc',
+          content: JSON.stringify(doc),
+          contentDigest: createContentDigest(doc),
         },
       };
 
-      const nodeKind = Object.assign({}, kind, kindMetadata);
-      createNode(nodeKind);
+      const nodeDoc = Object.assign({}, doc, docMetadata);
+      createNode(nodeDoc);
     });
     Object.keys(loadedStore.stories).forEach(storyId => {
       //@ts-ignore
@@ -58,10 +58,10 @@ exports.sourceNodes = async function sourceNodes(
 
 exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const stories = await graphql<{
-    allStoryKind: any;
+    allStoryDoc: any;
   }>(`
     query {
-      allStoryKind {
+      allStoryDoc {
         edges {
           node {
             title
@@ -72,12 +72,12 @@ exports.createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   `);
   const { createPage } = actions;
   if (stories.data) {
-    stories.data.allStoryKind.edges.forEach(({ node }: any) => {
+    stories.data.allStoryDoc.edges.forEach(({ node }: any) => {
       createPage({
         path: `/docs/${node.title}`,
         component: require.resolve(`../src/templates/StoryPage.tsx`),
         context: {
-          kind: node.title,
+          doc: node.title,
         },
       });
     });

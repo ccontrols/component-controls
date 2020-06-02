@@ -16,7 +16,7 @@ interface LayoutProps {
   title?: string;
   storyStore: Store;
   storyId: string;
-  kindPath: string;
+  docPath: string;
   pages: PagesConfig;
 }
 
@@ -25,7 +25,7 @@ export const Layout: FC<LayoutProps> = ({
   title,
   storyStore,
   storyId,
-  kindPath,
+  docPath,
 }) => {
   return (
     <ThemeProvider>
@@ -41,7 +41,7 @@ export const Layout: FC<LayoutProps> = ({
         <Header title={title}></Header>
         <Flex sx={{ flexDirection: 'row' }}>
           <BlockContextProvider storyId={storyId} store={storyStore}>
-            <Sidebar kindPath={kindPath} />
+            <Sidebar docPath={docPath} />
             <Page pagesFn={pagesFn} />
           </BlockContextProvider>
         </Flex>

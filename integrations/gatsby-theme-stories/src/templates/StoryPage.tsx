@@ -8,11 +8,11 @@ import { pages } from '../config/pages';
 interface SitePageProps {
   pathContext: {
     title: string;
-    kind: string;
+    doc: string;
   };
 }
 
-const SitePage: FC<SitePageProps> = ({ pathContext: { kind } }) => {
+const SitePage: FC<SitePageProps> = ({ pathContext: { doc } }) => {
   const storyStore = useMemo(
     () =>
       new Store({
@@ -21,12 +21,12 @@ const SitePage: FC<SitePageProps> = ({ pathContext: { kind } }) => {
       }),
     [],
   );
-  const docFile = storyStore.getStoryKind(kind);
+  const docFile = storyStore.getStoryDoc(doc);
   return (
     <Layout
-      title={kind}
+      title={doc}
       storyStore={storyStore}
-      kindPath={kind}
+      docPath={doc}
       storyId={docFile?.stories?.[0] || ''}
       pages={pages}
     />

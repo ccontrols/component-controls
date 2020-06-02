@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Story,
-  StoryKinds,
+  StoryDocs,
 } from '@component-controls/specification';
 
 /**
@@ -14,8 +14,8 @@ export type StoreObserver = (storyId?: string, propName?: string) => void;
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
-  getStoryKind: (name: string) => StoryKinds | undefined;
-  getKinds: () => StoryKinds | undefined;
+  getStoryDoc: (name: string) => StoryDocs | undefined;
+  getDocs: () => StoryDocs | undefined;
   updateStoryProp: (
     storyId: string,
     propName: string,

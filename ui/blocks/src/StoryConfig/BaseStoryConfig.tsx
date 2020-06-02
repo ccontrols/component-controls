@@ -6,7 +6,7 @@ import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   PackageInfo,
 } from '@component-controls/specification';
 import {
@@ -19,15 +19,15 @@ import { repositoryActions } from '../utils/repositoryActions';
 
 export interface BaseStoryConfigProps {
   story?: Story;
-  kind?: StoriesKind;
-  kindPackage?: PackageInfo;
+  doc?: StoriesDoc;
+  docPackage?: PackageInfo;
   sourceProps: SourceProps;
 }
 
 export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
   story,
-  kind,
-  kindPackage,
+  doc,
+  docPackage,
   sourceProps,
 }) => {
   const [showFileSource, setShowFileSource] = useState<boolean>(false);
@@ -35,11 +35,11 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
 
   const { dark } = useContext(ThemeContext);
   const allActions: ActionItem[] = [];
-  const repositoryItems = repositoryActions(kindPackage);
+  const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
     allActions.push.apply(allActions, repositoryItems);
   }
-  if (kind?.source) {
+  if (doc?.source) {
     allActions.push({
       title: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,

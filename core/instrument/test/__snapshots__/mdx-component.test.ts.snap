@@ -18,7 +18,7 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -48,7 +48,7 @@ Object {
       "request": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -68,7 +68,7 @@ import { Btn as Button } from '../../components/button-named-class';
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "title": "Story",
@@ -104,7 +104,7 @@ Object {
       "request": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Storybook/MDX": Object {
       "component": "Button",
       "components": Object {
@@ -175,7 +175,7 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {
         "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
@@ -255,7 +255,7 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "component": "ArrowButton",
       "components": Object {

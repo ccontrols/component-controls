@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryComponent,
   PackageInfo,
 } from '@component-controls/specification';
@@ -30,7 +30,7 @@ export interface StoryContextProps {
   /**
    * the file/document of stories
    */
-  kind?: StoriesKind;
+  doc?: StoriesDoc;
   /**
    * current story's/document's component
    */
@@ -43,7 +43,7 @@ export interface StoryContextProps {
   /**
    * package.json info
    */
-  kindPackage?: PackageInfo;
+  docPackage?: PackageInfo;
 }
 
 /**
@@ -66,16 +66,16 @@ export const useStoryContext = ({
     : id;
   const [data, setData] = useState<{
     story?: Story;
-    kind?: StoriesKind;
+    doc?: StoriesDoc;
     component?: StoryComponent;
-    kindPackage?: PackageInfo;
+    docPackage?: PackageInfo;
   }>(getStoryData(storyId));
 
   useEffect(() => {
     const updateData = (updateId?: string) => {
       if (!updateId || updateId === storyId) {
-        const { story, kind, component, kindPackage } = getStoryData(storyId);
-        setData({ story, kind, component, kindPackage });
+        const { story, doc, component, docPackage } = getStoryData(storyId);
+        setData({ story, doc, component, docPackage });
       }
     };
     const { story } = data;
@@ -93,9 +93,9 @@ export const useStoryContext = ({
   return {
     id: storyId,
     story: data.story,
-    kind: data.kind,
+    doc: data.doc,
     component: data.component,
-    kindPackage: data.kindPackage,
+    docPackage: data.docPackage,
     options,
   };
 };

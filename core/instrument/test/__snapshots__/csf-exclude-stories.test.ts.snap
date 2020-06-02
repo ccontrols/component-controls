@@ -3,7 +3,7 @@
 exports[`csf-exclude-stories exclude-stories-array.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/EXCLUDEStoryArray": Object {
       "components": Object {},
       "excludeStories": Array [
@@ -87,7 +87,7 @@ export const story3 = () => {};
 exports[`csf-exclude-stories exclude-stories-regex.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/ExcludeStoryRegex": Object {
       "components": Object {},
       "excludeStories": "story(2|3)",
@@ -168,7 +168,7 @@ export const story3 = () => {};
 exports[`csf-exclude-stories include-stories-array.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/IncludeStoryArray": Object {
       "components": Object {},
       "includeStories": Array [
@@ -268,7 +268,7 @@ export const story3 = () => {};
 exports[`csf-exclude-stories include-stories-regex.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Storybook/Blocks/IncludeStoryRegex": Object {
       "components": Object {},
       "includeStories": "story(2|3)",

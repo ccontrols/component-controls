@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   PackageInfo,
 } from '@component-controls/specification';
 import { Styled } from 'theme-ui';
@@ -34,8 +34,8 @@ const ViewStyleNext: {
 
 export interface BaseStorySourceProps {
   story?: Story;
-  kind?: StoriesKind;
-  kindPackage?: PackageInfo;
+  doc?: StoriesDoc;
+  docPackage?: PackageInfo;
   viewStyle?: ViewStyle;
   actions?: ActionItem[];
   sourceProps: SourceProps;
@@ -43,8 +43,8 @@ export interface BaseStorySourceProps {
 
 export const BaseStorySource: FC<BaseStorySourceProps> = ({
   story,
-  kind,
-  kindPackage,
+  doc,
+  docPackage,
   sourceProps,
   actions,
   viewStyle: initialViewStyle = 'tags',
@@ -58,11 +58,11 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   const { controls } = story || {};
   const { dark } = useContext(ThemeContext);
   const allActions: ActionItem[] = [];
-  const repositoryItems = repositoryActions(kindPackage);
+  const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
     allActions.push.apply(allActions, repositoryItems);
   }
-  if (kind?.source) {
+  if (doc?.source) {
     allActions.push({
       title: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
@@ -85,7 +85,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   if (!showFileSource) {
     source = story?.source || '';
   } else {
-    source = kind?.source || '';
+    source = doc?.source || '';
   }
   return (
     <Source

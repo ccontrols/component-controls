@@ -13,7 +13,7 @@ Object {
       "source": undefined,
     },
   },
-  "kinds": Object {
+  "docs": Object {
     "Components/Toggle": Object {
       "component": "Toggle",
       "components": Object {

@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Story,
-  StoriesKind,
+  StoriesDoc,
   Stories,
 } from '@component-controls/specification';
 import { File } from '@babel/types';
@@ -55,7 +55,7 @@ export const extractCSFStories = (
   let components: { [key: string]: string | undefined } = {};
   const store: StoriesStore = {
     stories: {},
-    kinds: {},
+    docs: {},
     components: {},
     packages: {},
   };
@@ -71,14 +71,14 @@ export const extractCSFStories = (
           (acc, componentName) => ({ ...acc, [componentName]: undefined }),
           components,
         );
-        const kind: StoriesKind = {
+        const doc: StoriesDoc = {
           ...attributes,
           components: {},
         };
         if (attrComponents.length > 0) {
-          kind.component = attrComponents[0];
+          doc.component = attrComponents[0];
         }
-        store.kinds[title] = kind;
+        store.docs[title] = doc;
       }
     },
     AssignmentExpression: (path: any) => {
@@ -166,11 +166,11 @@ export const extractCSFStories = (
       }
     },
   });
-  if (Object.keys(store.kinds).length === 1) {
+  if (Object.keys(store.docs).length === 1) {
     //@ts-ignore
-    store.kinds[Object.keys(store.kinds)[0]].components = components;
+    store.docs[Object.keys(store.docs)[0]].components = components;
   } else {
-    throw new Error(`CSF stories should have one default export`);
+    throw new Error(`stories should have one default export`);
   }
   return store;
 };

@@ -29,16 +29,16 @@ export const loadStoryStore = (
 
       if (stores) {
         const globalStore: StoriesStore = {
-          kinds: {},
+          docs: {},
           stories: {},
           components: {},
           packages: {},
         };
         stores.forEach(s => {
-          if (Object.keys(s.kinds).length > 0) {
-            Object.keys(s.kinds).forEach(kindName => {
-              const kind = s.kinds[kindName];
-              globalStore.kinds[kindName] = kind;
+          if (Object.keys(s.docs).length > 0) {
+            Object.keys(s.docs).forEach(docName => {
+              const doc = s.docs[docName];
+              globalStore.docs[docName] = doc;
               Object.keys(s.stories).forEach(storyName => {
                 const story: Story = s.stories[storyName];
                 const {
@@ -51,13 +51,13 @@ export const loadStoryStore = (
                   components,
                   excludeStories,
                   includeStories,
-                  package: kindPackage,
+                  package: docPackage,
                   ...rest
-                } = kind;
+                } = doc;
                 Object.assign(story, deepMerge(rest, story));
                 const smartControls = addSmartControls(
                   story,
-                  kind,
+                  doc,
                   loadedComponents,
                 );
                 if (smartControls) {
@@ -66,17 +66,17 @@ export const loadStoryStore = (
                     story.controls || {},
                   );
                 }
-                if (kind.title && story.name) {
-                  const id = toId(kind.title, storyNameFromExport(story.name));
-                  if (!kind.stories) {
-                    kind.stories = [];
+                if (doc.title && story.name) {
+                  const id = toId(doc.title, storyNameFromExport(story.name));
+                  if (!doc.stories) {
+                    doc.stories = [];
                   }
-                  kind.stories.push(id);
+                  doc.stories.push(id);
                   globalStore.stories[id] = {
                     ...story,
                     name: storyNameFromExport(story.name),
                     id,
-                    kind: kind.title,
+                    doc: doc.title,
                   };
                 }
               });

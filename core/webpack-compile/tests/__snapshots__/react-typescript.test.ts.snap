@@ -46,6 +46,24 @@ Object {
           },
         ],
       },
+      "info": Object {
+        "description": "a strip of actions to be attached to a container
+the action items contain the labels and click event handler
+actions can accept an order prop, and can also be superimposed",
+        "displayName": "ActionBar",
+        "methods": Array [],
+        "props": Object {
+          "actions": Object {
+            "defaultValue": "[]",
+            "description": "collection of action items",
+            "parentName": "ActionBarProps",
+            "type": Object {
+              "name": "ActionItems",
+              "raw": "ActionItems",
+            },
+          },
+        },
+      },
       "loc": Object {
         "end": Object {
           "column": 1,
@@ -120,7 +138,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
           sx={{
             mt: 1,
             mr: index === 0 ? 1 : 0,
-            ml: nextGroup != group || group === undefined ? 2 : 1,
+            ml: nextGroup !== group || group === undefined ? 2 : 1,
             fontSize: 1,
             a: ActionColors({ theme, disabled }),
             button: ActionColors({ theme, disabled }),
@@ -255,7 +273,7 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
   },
   "stores": Array [
     Object {
-      "kinds": Object {
+      "docs": Object {
         "Components/ActionBar": Object {
           "component": [Function],
           "components": Object {

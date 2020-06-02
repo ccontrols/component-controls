@@ -7,7 +7,7 @@ import {
   StoriesStore,
   StoryComponent,
   StoryComponents,
-  StoriesKind,
+  StoriesDoc,
   getComponentName,
   PackageInfo,
 } from '@component-controls/specification';
@@ -15,15 +15,15 @@ import { CURRENT_STORY } from '../../utils';
 
 export interface BlockDataContextProps {
   /**
-   * returns a story and its associated objects (kind, component), given a story id
+   * returns a story and its associated objects (doc, component), given a story id
    */
   getStoryData: (
     storyId?: string,
   ) => {
     story?: Story;
-    kind?: StoriesKind;
+    doc?: StoriesDoc;
     component?: StoryComponent;
-    kindPackage?: PackageInfo;
+    docPackage?: PackageInfo;
     componentPackage?: PackageInfo;
   };
 
@@ -32,12 +32,12 @@ export interface BlockDataContextProps {
    */
   getComponents: (
     components: { [key: string]: any } | undefined,
-    kind: StoriesKind | undefined,
+    doc: StoriesDoc | undefined,
   ) => StoryComponents;
   /**
    *
    * find a story id from a story 'name'
-   * will navigate through the store kinds and look for a matching story id
+   * will navigate through the store docs and look for a matching story id
    */
   storyIdFromName: (name: string) => string | undefined;
 
@@ -76,37 +76,37 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
       const story: Story | undefined = store.stories
         ? store.stories[actualId]
         : undefined;
-      const kind = story && story.kind ? store.kinds[story.kind] : undefined;
+      const doc = story && story.doc ? store.docs[story.doc] : undefined;
       const storyComponent: any =
-        story && kind ? story.component || kind.component : undefined;
+        story && doc ? story.component || doc.component : undefined;
 
       const componentName = getComponentName(storyComponent);
       const component =
-        componentName && kind && kind.components[componentName]
-          ? store.components[kind.components[componentName]]
+        componentName && doc && doc.components[componentName]
+          ? store.components[doc.components[componentName]]
           : undefined;
-      const kindPackage =
-        kind && kind.package ? store.packages[kind.package] : undefined;
+      const docPackage =
+        doc && doc.package ? store.packages[doc.package] : undefined;
       const componentPackage =
         component && component.package
           ? store.packages[component.package]
           : undefined;
-      return { story, kind, component, kindPackage, componentPackage };
+      return { story, doc, component, docPackage, componentPackage };
     }
     return {};
   };
 
   const getComponents = (
     components: { [key: string]: any } | undefined,
-    kind: StoriesKind | undefined,
+    doc: StoriesDoc | undefined,
   ): StoryComponents =>
-    store && kind && components
+    store && doc && components
       ? Object.keys(components).reduce((acc, key) => {
           const name = getComponentName(components[key]);
           const component =
             name &&
-            kind?.components[name] &&
-            store?.components[kind.components[name]];
+            doc?.components[name] &&
+            store?.components[doc.components[name]];
           if (component) {
             return { ...acc, [key]: component };
           } else {
@@ -117,10 +117,10 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
   const storyIdFromName = (name: string): string | undefined => {
     if (store) {
-      for (const title in store.kinds) {
-        const kind = store.kinds[title];
+      for (const title in store.docs) {
+        const doc = store.docs[title];
         const storyId = toId(title, storyNameFromExport(name));
-        if (kind.stories && kind.stories.indexOf(storyId) > -1) {
+        if (doc.stories && doc.stories.indexOf(storyId) > -1) {
           return storyId;
         }
       }

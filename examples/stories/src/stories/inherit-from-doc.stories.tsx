@@ -2,7 +2,7 @@ import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
 
 export default {
-  title: 'Introduction/Kind',
+  title: 'Introduction/Doc',
   controls: {
     name: {
       type: ControlTypes.TEXT,

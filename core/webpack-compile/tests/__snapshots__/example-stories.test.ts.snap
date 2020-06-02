@@ -249,16 +249,6 @@ Button.propTypes = {
       },
       "version": "1.2.0",
     },
-    "6b50c2b856bebc9c67846ae47f0b2e66": Object {
-      "fileHash": "6b50c2b856bebc9c67846ae47f0b2e66",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-kind.stories.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.2.0",
-    },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "fileHash": "7661d674db5188cc22e26c1b22bef349",
       "name": "component-controls-stories",
@@ -289,10 +279,20 @@ Button.propTypes = {
       },
       "version": "1.2.0",
     },
+    "d1f03618863bd813182b2668bed6d262": Object {
+      "fileHash": "d1f03618863bd813182b2668bed6d262",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
   },
   "stores": Array [
     Object {
-      "kinds": Object {
+      "docs": Object {
         "Introduction/Controls": Object {
           "components": Object {},
           "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
@@ -1570,8 +1570,8 @@ Button.propTypes = {
       },
     },
     Object {
-      "kinds": Object {
-        "Introduction/Kind": Object {
+      "docs": Object {
+        "Introduction/Doc": Object {
           "components": Object {},
           "controls": Object {
             "name": Object {
@@ -1581,10 +1581,10 @@ Button.propTypes = {
               "value": "Mark",
             },
           },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-kind.stories.tsx",
-          "moduleId": "../../examples/stories/src/stories/inherit-from-kind.stories.tsx",
-          "package": "6b50c2b856bebc9c67846ae47f0b2e66",
-          "title": "Introduction/Kind",
+          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+          "moduleId": "../../examples/stories/src/stories/inherit-from-doc.stories.tsx",
+          "package": "d1f03618863bd813182b2668bed6d262",
+          "title": "Introduction/Doc",
         },
       },
       "stories": Object {
@@ -1695,7 +1695,142 @@ Button.propTypes = {
       },
     },
     Object {
-      "kinds": Object {
+      "docs": Object {
+        "Introduction/Starter": Object {
+          "component": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+          "components": Object {
+            "Button": "ccd158de2e347c69fe7bf00b78db5145",
+          },
+          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+          "moduleId": "../../examples/stories/src/stories/controls-editors-starter.stories.tsx",
+          "package": "7661d674db5188cc22e26c1b22bef349",
+          "title": "Introduction/Starter",
+        },
+      },
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 33,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 32,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 28,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 49,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 46,
+                          "line": 1,
+                        },
+                      },
+                    },
+                  ],
+                  "value": "age",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "defaultValue": null,
+              "description": "
+## age of the person
+
+numeric, values between 10 and 75 allowed
+",
+              "label": "Age",
+              "max": 75,
+              "min": 10,
+              "type": "number",
+              "value": 19,
+            },
+            "name": Object {
+              "description": "
+## name of the person
+
+any text is allowed
+",
+              "label": "Name",
+              "type": "text",
+              "value": "Mark",
+            },
+          },
+          "description": "Story with two dynamic control values: \`name\` and \`age\`. You can use the controls to edit the story properties at run-time.",
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 17,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 15,
+            },
+          },
+          "name": "overview",
+          "renderFn": [Function],
+          "source": "({ name, age }: DocsControlsTable) => (
+  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
+)",
+        },
+      },
+    },
+    Object {
+      "docs": Object {
         "Introduction/CSF": Object {
           "components": Object {},
           "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
@@ -2007,154 +2142,19 @@ Button.propTypes = {
       },
     },
     Object {
-      "kinds": Object {
-        "Introduction/Starter": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          },
-          "components": Object {
-            "Button": "ccd158de2e347c69fe7bf00b78db5145",
-          },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-          "moduleId": "../../examples/stories/src/stories/controls-editors-starter.stories.tsx",
-          "package": "7661d674db5188cc22e26c1b22bef349",
-          "title": "Introduction/Starter",
-        },
-      },
-      "stories": Object {
-        "overview": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 33,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 1,
-                  "line": 0,
-                },
-              },
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 3,
-                      "line": 0,
-                    },
-                  },
-                  "name": "name",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 32,
-                          "line": 1,
-                        },
-                        "start": Object {
-                          "column": 28,
-                          "line": 1,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "name",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 12,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 9,
-                      "line": 0,
-                    },
-                  },
-                  "name": "age",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 49,
-                          "line": 1,
-                        },
-                        "start": Object {
-                          "column": 46,
-                          "line": 1,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "age",
-                },
-              ],
-            },
-          ],
-          "controls": Object {
-            "age": Object {
-              "defaultValue": null,
-              "description": "
-## age of the person
-
-numeric, values between 10 and 75 allowed
-",
-              "label": "Age",
-              "max": 75,
-              "min": 10,
-              "type": "number",
-              "value": 19,
-            },
-            "name": Object {
-              "description": "
-## name of the person
-
-any text is allowed
-",
-              "label": "Name",
-              "type": "text",
-              "value": "Mark",
-            },
-          },
-          "description": "Story with two dynamic control values: \`name\` and \`age\`. You can use the controls to edit the story properties at run-time.",
-          "id": "overview",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 17,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 15,
-            },
-          },
-          "name": "overview",
-          "renderFn": [Function],
-          "source": "({ name, age }: DocsControlsTable) => (
-  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
-)",
-        },
-      },
-    },
-    Object {
-      "kinds": Object {
-        "Introduction/Smart PropTypes": Object {
+      "docs": Object {
+        "Introduction/Smart Typescript": Object {
           "component": "Button",
           "components": Object {
-            "Button": "dd96934cfa10038428b57421ede5ec17",
+            "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
           },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
-          "moduleId": "../../examples/stories/src/stories/smart-prop-type.stories.js",
-          "package": "56bf0298abb3e6152739be8e0540ef47",
+          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+          "moduleId": "../../examples/stories/src/stories/smart-typescript.stories.js",
+          "package": "2971104eea653041fd49648ff7a04be8",
           "parameters": Object {
             "component": [Function],
           },
-          "title": "Introduction/Smart PropTypes",
+          "title": "Introduction/Smart Typescript",
         },
       },
       "stories": Object {
@@ -2336,19 +2336,19 @@ any text is allowed
       },
     },
     Object {
-      "kinds": Object {
-        "Introduction/Smart Typescript": Object {
+      "docs": Object {
+        "Introduction/Smart PropTypes": Object {
           "component": "Button",
           "components": Object {
-            "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
+            "Button": "dd96934cfa10038428b57421ede5ec17",
           },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-          "moduleId": "../../examples/stories/src/stories/smart-typescript.stories.js",
-          "package": "2971104eea653041fd49648ff7a04be8",
+          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+          "moduleId": "../../examples/stories/src/stories/smart-prop-type.stories.js",
+          "package": "56bf0298abb3e6152739be8e0540ef47",
           "parameters": Object {
             "component": [Function],
           },
-          "title": "Introduction/Smart Typescript",
+          "title": "Introduction/Smart PropTypes",
         },
       },
       "stories": Object {

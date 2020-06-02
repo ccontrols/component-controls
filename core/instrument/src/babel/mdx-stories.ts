@@ -1,7 +1,7 @@
 import generate from '@babel/generator';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryParameters,
   CodeLocation,
 } from '@component-controls/specification';
@@ -70,10 +70,10 @@ export const extractMDXStories = (
 
   const store: Required<Pick<
     ParseStorieReturnType,
-    'stories' | 'kinds' | 'components' | 'exports' | 'packages'
+    'stories' | 'docs' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
-    kinds: {},
+    docs: {},
     components: {},
     exports: {},
     packages: {},
@@ -183,7 +183,7 @@ export const extractMDXStories = (
             const attributes = collectAttributes(node, exports);
             const { title } = attributes;
             if (title) {
-              const kind: StoriesKind = {
+              const doc: StoriesDoc = {
                 components: {},
                 ...attributes,
                 title,
@@ -193,9 +193,9 @@ export const extractMDXStories = (
               }
               const component = collectComponent(attributes);
               if (component !== undefined) {
-                kind.component = component;
+                doc.component = component;
               }
-              store.kinds[title] = kind;
+              store.docs[title] = doc;
             }
             break;
           }
@@ -207,9 +207,9 @@ export const extractMDXStories = (
     },
   });
 
-  if (Object.keys(store.kinds).length === 1) {
+  if (Object.keys(store.docs).length === 1) {
     //@ts-ignore
-    store.kinds[Object.keys(store.kinds)[0]].components = components;
+    store.docs[Object.keys(store.docs)[0]].components = components;
   } else {
     throw new Error(`MDX stories should have one <Meta /> component`);
   }

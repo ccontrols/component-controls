@@ -3,7 +3,7 @@
 exports[`csf-props-usage adjust-lines.any 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "ffc4ac3ba43ec1be266cad947b2f86da",
@@ -114,7 +114,7 @@ export const myStory = props => (
 exports[`csf-props-usage age-and-name.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "c5a370511cc0218343bb8737202ef010",
@@ -253,7 +253,7 @@ export const story = ({ name, age }) => (
 exports[`csf-props-usage empty-body.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "4064ec5efd359839029e7b5b1133b093",
@@ -374,7 +374,7 @@ export const story = ({ name }) => name;
 exports[`csf-props-usage expression.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "7b181249391840a51b508d46d7014607",
@@ -513,7 +513,7 @@ export const selectProp = ({ value }) => (
 exports[`csf-props-usage multiple-usage.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "4f1494e57cbb2a4f7c12aed1051981f7",
@@ -658,7 +658,7 @@ export const myStory = ({ age }) => (
 exports[`csf-props-usage nested-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "d6d5de902adc6735a01fb686ce37ae49",
@@ -885,7 +885,7 @@ export const story = ({ height, weight, style: { border, color } }) => (
 exports[`csf-props-usage props.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "9b973e60ccd44eca213366559d66d7f9",
@@ -991,7 +991,7 @@ export const myStory = props => <Story {...props} />;
 exports[`csf-props-usage select-prop.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "69085843bbfbfeca925c27eaa81f4255",
@@ -1127,7 +1127,7 @@ export const story = ({ showOptional }) => {
 exports[`csf-props-usage shorthand.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "021a076b10c39bcebc473be549b1ee37",
@@ -1266,7 +1266,7 @@ export const story = ({ value }) => (
 exports[`csf-props-usage string-template.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "75bf41a934d806dca21a97fd172732b2",
@@ -1413,7 +1413,7 @@ export const myStory = ({ text }) => \`\${text}\`;
 exports[`csf-props-usage three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "f15f16976f949a287047f5150a4e389b",
@@ -1617,7 +1617,7 @@ export const myStory = ({ name: { first, last }, age }) => (
 exports[`csf-props-usage two-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "62f38957c77af20d68bd5801c24f8b59",
@@ -1737,7 +1737,7 @@ export const myStory = (props, context) => <Story {...props} />;
 exports[`csf-props-usage two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "7e3401122fcb7b7f4b3c7e120c34e92e",
@@ -1891,7 +1891,7 @@ export const myStory = ({ name: MyName, age }) => (
 exports[`csf-props-usage two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "bdf69aec7471937b5f9dfb459bcdc942",

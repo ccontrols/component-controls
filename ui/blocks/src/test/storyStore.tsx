@@ -293,7 +293,7 @@ and a [link](https://google.com)
       },
     },
   },
-  kinds: {
+  docs: {
     Story: {
       components: {
         ArrowButton:
@@ -323,7 +323,7 @@ and a [link](https://google.com)
     'id-of-story': {
       renderFn: () => <Heading>Components</Heading>,
       id: 'id-of-story',
-      kind: 'Story',
+      doc: 'Story',
       component: 'ArrowButton',
       description: 'description of story',
       loc: {
@@ -348,7 +348,7 @@ and a [link](https://google.com)
     'id-of-single': {
       id: 'id-of-single',
       renderFn: () => <Heading>Components</Heading>,
-      kind: 'Story',
+      doc: 'Story',
       component: 'ArrowButton',
       loc: {
         end: {
@@ -372,7 +372,7 @@ and a [link](https://google.com)
     'id-of-button-story': {
       id: 'id-of-button-story',
       renderFn: () => <Button>test</Button>,
-      kind: 'Story',
+      doc: 'Story',
       component: 'Button',
       loc: {
         end: {
@@ -390,7 +390,7 @@ and a [link](https://google.com)
     'blocks-core-story-plain--controls': {
       renderFn: () => <Donut value={1 / 2} />,
       id: 'blocks-core-story-plain--controls',
-      kind: 'Story',
+      doc: 'Story',
       name: 'controls',
       component: 'Control',
       controls: {
@@ -486,14 +486,14 @@ and a [link](https://google.com)
     'id-no-component': {
       renderFn: () => <Heading>Components</Heading>,
       id: 'id-no-component',
-      kind: 'Story',
+      doc: 'Story',
       name: 'no component',
       source: "() => 'hello'",
     },
     'mdx-story': {
       renderFn: () => <Heading>mdx story</Heading>,
       id: 'mdx-story',
-      kind: 'mdxStory',
+      doc: 'mdxStory',
       name: 'mdx story',
       source: "() => 'hello'",
     },

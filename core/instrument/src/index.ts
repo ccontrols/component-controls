@@ -7,7 +7,7 @@ import deepMerge from 'deepmerge';
 import {
   StoriesStore,
   Story,
-  StoriesKind,
+  StoriesDoc,
 } from '@component-controls/specification';
 import { getASTSource } from '@component-controls/core';
 
@@ -60,19 +60,19 @@ const parseSource = async (
   const ast = parser.parse(source, options.parser);
 
   const store = traverseFn(ast, options, { source, filePath });
-  if (Object.keys(store.kinds).length > 0) {
-    const kind = store.kinds[Object.keys(store.kinds)[0]];
+  if (Object.keys(store.docs).length > 0) {
+    const doc = store.docs[Object.keys(store.docs)[0]];
     if (options.stories.storeSourceFile) {
-      kind.source = originalSource;
+      doc.source = originalSource;
     }
   }
   await extractStoreComponent(store, filePath, source, options, ast);
-  const kindsNames = Object.keys(store.kinds);
-  for (let i = 0; i < kindsNames.length; i += 1) {
-    const kind: StoriesKind = store.kinds[kindsNames[i]];
+  const docsNames = Object.keys(store.docs);
+  for (let i = 0; i < docsNames.length; i += 1) {
+    const doc: StoriesDoc = store.docs[docsNames[i]];
     if (store.stories) {
       let includedStories = Object.keys(store.stories);
-      const { includeStories, excludeStories } = kind;
+      const { includeStories, excludeStories } = doc;
       if (includeStories) {
         if (Array.isArray(includeStories)) {
           includedStories = includedStories.filter(
@@ -106,7 +106,7 @@ const parseSource = async (
     const storyPackage = await packageInfo(filePath, options.stories.package);
     if (storyPackage) {
       store.packages[storyPackage.fileHash] = storyPackage;
-      kind.package = storyPackage.fileHash;
+      doc.package = storyPackage.fileHash;
     }
   }
   for (const key of Object.keys(store.stories)) {
@@ -178,7 +178,7 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
-    const { stories, kinds, components, exports, packages } = store;
+    const { stories, docs, components, exports, packages } = store;
     const exportsSource = extractStoryExports(exports);
     let transformed = source;
     if (transformMDX && exportsSource) {
@@ -187,7 +187,7 @@ export const parseStories = async (
     return {
       transformed,
       stories,
-      kinds,
+      docs,
       components,
       packages,
     };

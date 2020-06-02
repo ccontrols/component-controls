@@ -3,7 +3,7 @@
 exports[`mdx-story-source external-source.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "MDX": Object {
       "components": Object {},
       "title": "MDX",
@@ -71,7 +71,7 @@ mdxStory.story = {
 exports[`mdx-story-source external-source-deconstructed-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "MDX": Object {
       "components": Object {},
       "title": "MDX",
@@ -184,7 +184,7 @@ mdxStory.story = {
 exports[`mdx-story-source external-source-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "MDX": Object {
       "components": Object {},
       "title": "MDX",
@@ -309,7 +309,7 @@ mdxStory.story = {
 exports[`mdx-story-source simple-source.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "MDX": Object {
       "components": Object {},
       "title": "MDX",
@@ -379,7 +379,7 @@ mdxStory.story = {
 exports[`mdx-story-source simple-source-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "MDX": Object {
       "components": Object {},
       "title": "MDX",

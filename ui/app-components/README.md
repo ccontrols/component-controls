@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>ColorMode</ins>](#inscolormodeins)
+    -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>Keyboard</ins>](#inskeyboardins)
     -   [<ins>Navmenu</ins>](#insnavmenuins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
@@ -36,6 +37,20 @@ _ColorMode [source code](https:/github.com/ccontrols/component-controls/tree/mas
 | `label` | _string_              | optional label to be displayed alongside the toggle |
 | `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
 
+## <ins>Header</ins>
+
+A page header component
+
+_Header [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app-components/src/Header/Header.tsx)_
+
+### properties
+
+| Name       | Type                                                          | Description                               |
+| ---------- | ------------------------------------------------------------- | ----------------------------------------- |
+| `position` | _"fixed" \| "absolute" \| "sticky" \| "static" \| "relative"_ | Position property for the header element  |
+| `zIndex`   | _number_                                                      | z-index for the header                    |
+| `shadow`   | _boolean_                                                     | whether to display a bottom border shadow |
+
 ## <ins>Keyboard</ins>
 
 Componet to monitor keystrokes. Can attach to child, document or window.
@@ -59,14 +74,14 @@ _Navmenu [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name          | Type                               | Description                                                    |
-| ------------- | ---------------------------------- | -------------------------------------------------------------- |
-| `items*`      | _MenuItems_                        | Array of menu items                                            |
-| `activeItem`  | _{ id?: string; label?: string; }_ | Initially active menu item                                     |
-| `buttonClass` | _any_                              | Custom class to use for the button instead of Button           |
-| `expandAll`   | _boolean_                          | If specified, will expand all items with chidren               |
-| `onSelect`    | _(item?: MenuItem) => void_        | Function that will be called when the user selects a menu item |
-| `search`      | _string_                           | If specified, will filter the items by the search terms        |
+| Name          | Type                                 | Description                                                    |
+| ------------- | ------------------------------------ | -------------------------------------------------------------- |
+| `items*`      | _MenuItems_                          | Array of menu items                                            |
+| `activeItem`  | _Pick&lt;MenuItem, "id" \| "label">_ | Initially active menu item                                     |
+| `buttonClass` | _any_                                | Custom class to use for the button instead of Button           |
+| `expandAll`   | _boolean_                            | If specified, will expand all items with chidren               |
+| `onSelect`    | _(item?: MenuItem) => void_          | Function that will be called when the user selects a menu item |
+| `search`      | _string_                             | If specified, will filter the items by the search terms        |
 
 ## <ins>Sidebar</ins>
 
@@ -76,13 +91,13 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name          | Type                                                                                                                                                                                                             | Description                                          |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `title`       | _any_                                                                                                                                                                                                            | Title string or any react node                       |
-| `width`       | _number_                                                                                                                                                                                                         | The width of the side bar in pixels                  |
-| `collapsible` | _boolean_                                                                                                                                                                                                        | Whether the sidebar can be collapsed                 |
-| `children`    | _any_                                                                                                                                                                                                            | children content elements to be displayed in Sidebar |
-| `animate`     | _Pick&lt;CollapsibleProps, "slot" \| "style" \| "title" \| "defaultChecked" \| "defaultValue" \| "suppressContentEditableWarning" \| "suppressHydrationWarning" \| "accessKey" \| ... 254 more ... \| "easing">_ | collapsible animate height props                     |
+| Name          | Type      | Description                                          |
+| ------------- | --------- | ---------------------------------------------------- |
+| `title`       | _any_     | Title string or any react node                       |
+| `width`       | _number_  | The width of the side bar in pixels                  |
+| `minWidth`    | _number_  | min width for sidebar                                |
+| `collapsible` | _boolean_ | Whether the sidebar can be collapsed                 |
+| `children`    | _any_     | children content elements to be displayed in Sidebar |
 
 ## <ins>SidebarContextProvider</ins>
 

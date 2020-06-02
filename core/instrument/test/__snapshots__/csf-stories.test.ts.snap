@@ -3,7 +3,7 @@
 exports[`csf-stories named-object-export.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "023d0d8cf3e4a1a38f08775068d9729d",
@@ -62,7 +62,7 @@ export const myStory = {
 exports[`csf-stories no-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "2bf18b76a1b9e90d723ba13b6a10fc58",
@@ -136,7 +136,7 @@ export const myStory = () => {};
 exports[`csf-stories no-story.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "77d49f77a8b5ff73e715da87e9ab3277",
@@ -193,7 +193,7 @@ const i = 1;
 exports[`csf-stories props-argument.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "d8b5c54145ef8f8db3e19289e1c19f95",
@@ -282,7 +282,7 @@ export const myStory = props => {};
 exports[`csf-stories three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "83b0676f45ac751b689864159d82ed31",
@@ -429,7 +429,7 @@ export const myStory = ({ name: { first, last }, age }) => {};
 exports[`csf-stories two-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "28503fc854679acdc04bb4eccfeacbb3",
@@ -532,7 +532,7 @@ export const myStory = (props, context) => {};
 exports[`csf-stories two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "937b0fd35d556a5e5cfcb7fb25a785c8",
@@ -650,7 +650,7 @@ export const myStory = ({ name: MyNam, age }) => {};
 exports[`csf-stories two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "6fe1b3bd8baa1d5965b447e926972dab",
@@ -768,7 +768,7 @@ export const myStory = ({ name, age }) => {};
 exports[`csf-stories typescript.ts 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
+  "docs": Object {
     "Story": Object {
       "components": Object {},
       "package": "b683a7b765d6b542242ea58703bc8138",

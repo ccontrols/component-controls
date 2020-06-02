@@ -22,7 +22,7 @@ export interface SidebarProps {
   /**
    * current path
    */
-  kindPath?: string;
+  docPath?: string;
   /**
    * platform specific link class
    */
@@ -60,14 +60,14 @@ const createMenuItem = (
     newItem,
   );
 };
-export const Sidebar: FC<SidebarProps> = ({ kindPath, buttonClass, title }) => {
+export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const menuItems = useMemo(() => {
     if (storeProvider) {
-      const kinds: string[] = Object.keys(storeProvider.getKinds() || []);
-      const menuItems = kinds.reduce((acc: MenuItems, kind: string) => {
-        const levels = kind.split('/');
+      const docs: string[] = Object.keys(storeProvider.getDocs() || []);
+      const menuItems = docs.reduce((acc: MenuItems, doc: string) => {
+        const levels = doc.split('/');
         createMenuItem(levels, levels, acc);
         return acc;
       }, []);
@@ -103,7 +103,7 @@ export const Sidebar: FC<SidebarProps> = ({ kindPath, buttonClass, title }) => {
         </Box>
         <Navmenu
           buttonClass={buttonClass}
-          activeItem={{ id: kindPath }}
+          activeItem={{ id: docPath }}
           search={search}
           items={menuItems}
         />
