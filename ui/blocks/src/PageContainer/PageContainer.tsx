@@ -47,12 +47,13 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
       if (scrollId) {
         const element = document.getElementById(scrollId);
         if (element) {
+          const offsetTop =
+            element.getBoundingClientRect().top + window.pageYOffset - 60;
           // Introducing a delay to ensure scrolling works when it's a full refresh.
           setTimeout(() => {
-            element.scrollIntoView({
+            window.scroll({
+              top: offsetTop,
               behavior: 'smooth',
-              block: 'end',
-              inline: 'nearest',
             });
           }, 100);
         }
