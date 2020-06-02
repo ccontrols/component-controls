@@ -35,12 +35,19 @@ export const loadStoryStore = (
           packages: {},
         };
         stores.forEach(s => {
-          if (Object.keys(s.docs).length > 0) {
-            Object.keys(s.docs).forEach(docName => {
-              const doc = s.docs[docName];
+          const storeDocs = s.docs;
+          const storeStories = s.stories;
+          if (
+            storeDocs &&
+            storeStories &&
+            s.stories &&
+            Object.keys(storeDocs).length > 0
+          ) {
+            Object.keys(storeDocs).forEach(docName => {
+              const doc = storeDocs[docName];
               globalStore.docs[docName] = doc;
-              Object.keys(s.stories).forEach(storyName => {
-                const story: Story = s.stories[storyName];
+              Object.keys(storeStories).forEach((storyName: string) => {
+                const story: Story = storeStories[storyName];
                 const {
                   title,
                   stories,

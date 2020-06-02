@@ -37,22 +37,6 @@ exports.sourceNodes = async function sourceNodes(
       const nodeDoc = Object.assign({}, doc, docMetadata);
       createNode(nodeDoc);
     });
-    Object.keys(loadedStore.stories).forEach(storyId => {
-      //@ts-ignore
-      const story = loadedStore.stories[storyId];
-      const storyMetadata: NodeInput = {
-        id: storyId,
-        children: [],
-        internal: {
-          type: 'story',
-          content: JSON.stringify(story),
-          contentDigest: createContentDigest(story),
-        },
-      };
-
-      const nodeStory = Object.assign({}, story, storyMetadata);
-      createNode(nodeStory);
-    });
   }
 };
 
