@@ -38,11 +38,9 @@ export const Page: FC<PageProps> = ({ pagesFn }) => {
             if (key) {
               const params = qs.parse(window.location.search.substring(1));
               params['view'] = key;
-              console.log(window.location);
               const newHREF = `${window.location.origin}${
                 window.location.pathname
               }?${qs.stringify(params)}${window.location.hash}`;
-              console.log(newHREF);
               window.location.href = newHREF;
               return false;
             }
