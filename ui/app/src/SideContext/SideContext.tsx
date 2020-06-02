@@ -56,7 +56,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       window.removeEventListener('scroll', onScroll);
     };
   }, [onScroll]);
-  return (
+  return items && items.length > 1 ? (
     <SidebarContextProvider>
       <SidebarContext.Consumer>
         {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
@@ -69,7 +69,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
               )}
               <Box
                 sx={{
-                  px: 2,
+                  px: 3,
                   borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
                 }}
               >
@@ -100,5 +100,5 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
         )}
       </SidebarContext.Consumer>
     </SidebarContextProvider>
-  );
+  ) : null;
 };

@@ -31,34 +31,32 @@ export interface PageContainerProps {
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
   ({ children, components = {}, maxWidth }, ref: React.Ref<HTMLDivElement>) => {
-    let scrollId: string | undefined;
-    try {
-      const pageURL =
-        (typeof window !== 'undefined' &&
-        window.location !== window.parent.location &&
-        window.parent.location
-          ? window.parent.location.href
-          : document.location.href) || '';
-      const url = new URL(pageURL);
-      scrollId = url.hash ? url.hash.substring(1) : undefined;
-    } catch (err) {}
-
     useEffect(() => {
-      if (scrollId) {
-        const element = document.getElementById(scrollId);
-        if (element) {
-          const offsetTop =
-            element.getBoundingClientRect().top + window.pageYOffset - 60;
-          // Introducing a delay to ensure scrolling works when it's a full refresh.
-          setTimeout(() => {
-            window.scroll({
-              top: offsetTop,
-              behavior: 'smooth',
-            });
-          }, 100);
+      try {
+        const pageURL =
+          (typeof window !== 'undefined' &&
+          window.location !== window.parent.location &&
+          window.parent.location
+            ? window.parent.location.href
+            : document.location.href) || '';
+        const url = new URL(pageURL);
+        const scrollId = url.hash ? url.hash.substring(1) : undefined;
+        if (scrollId) {
+          const element = document.getElementById(scrollId);
+          if (element) {
+            const offsetTop =
+              element.getBoundingClientRect().top + window.pageYOffset - 60;
+            // Introducing a delay to ensure scrolling works when it's a full refresh.
+            setTimeout(() => {
+              window.scroll({
+                top: offsetTop,
+                behavior: 'smooth',
+              });
+            }, 100);
+          }
         }
-      }
-    }, [scrollId]);
+      } catch (err) {}
+    }, []);
     return (
       <Box
         sx={{

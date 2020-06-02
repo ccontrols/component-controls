@@ -1,20 +1,11 @@
 /** @jsx jsx */
-import { FC, useRef } from 'react';
-import { jsx, Container, Flex } from 'theme-ui';
+import { FC } from 'react';
+import { jsx, Flex } from 'theme-ui';
 import { Global } from '@emotion/core';
-import {
-  ThemeProvider,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanel,
-} from '@component-controls/components';
-import { SideContext } from '@component-controls/app';
+import { ThemeProvider } from '@component-controls/components';
+import { Page } from '@component-controls/app';
 import { SidebarContextProvider } from '@component-controls/app-components';
-import {
-  PageContainer,
-  BlockContextProvider,
-} from '@component-controls/blocks';
+import { BlockContextProvider } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { SEO } from './SEO';
 import { Sidebar } from './Sidebar';
@@ -36,8 +27,6 @@ export const Layout: FC<LayoutProps> = ({
   storyId,
   kindPath,
 }) => {
-  const pages = pagesFn ? pagesFn('') : null;
-  const pageRef = useRef<HTMLDivElement>(null);
   return (
     <ThemeProvider>
       <Global
@@ -53,27 +42,7 @@ export const Layout: FC<LayoutProps> = ({
         <Flex sx={{ flexDirection: 'row' }}>
           <BlockContextProvider storyId={storyId} store={storyStore}>
             <Sidebar kindPath={kindPath} />
-            <Container>
-              <Tabs fontSize={16}>
-                {pages && pages.length > 1 && (
-                  <TabList>
-                    {pages.map(page => (
-                      <Tab key={`tab_${page.key}`}>{page.title}</Tab>
-                    ))}
-                  </TabList>
-                )}
-
-                <PageContainer maxWidth={1200} ref={pageRef}>
-                  {pages &&
-                    pages.map(page => (
-                      <TabPanel key={`panel_${page.key}`}>
-                        {page.render()}
-                      </TabPanel>
-                    ))}
-                </PageContainer>
-              </Tabs>
-            </Container>
-            <SideContext pageRef={pageRef} />
+            <Page pagesFn={pagesFn} />
           </BlockContextProvider>
         </Flex>
       </SidebarContextProvider>
