@@ -292,8 +292,9 @@ export const Navmenu: FC<NavMenuProps> = ({
             textDecoration: 'none',
             cursor: 'pointer',
           }}
-          onClick={() => {
+          onClick={(e: any) => {
             if (items) {
+              e.stopPropagation();
               onMenuChange(item, isExpanded);
             } else if (typeof onSelect === 'function') {
               onSelect(item);

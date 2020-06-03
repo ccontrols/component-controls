@@ -65,7 +65,11 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   return collapsed ? null : (
     <Box sx={style} {...rest}>
       <div
-        sx={{ position: !responsive ? 'fixed' : undefined }}
+        sx={{
+          position: !responsive ? 'fixed' : undefined,
+          height: '100%',
+          overflowY: 'auto',
+        }}
         onClick={() => responsive && setCollapsed(true)}
       >
         <Flex

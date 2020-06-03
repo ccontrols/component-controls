@@ -69,7 +69,16 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
 
       const docs: string[] = Object.keys(storeProvider.getDocs() || []);
       const sortedDocs =
-        options && options.storySort ? docs.sort(options.storySort) : docs;
+        options && options.storySort
+          ? docs.sort((a: string, b: string) => {
+              //@ts-ignore
+              const sort = options.storySort(a, b);
+              if (sort !== 0) {
+                return sort;
+              }
+              return docs.indexOf(a) - docs.indexOf(b);
+            })
+          : docs;
       const menuItems = sortedDocs.reduce((acc: MenuItems, doc: string) => {
         const levels = doc.split('/');
         createMenuItem(levels, levels, acc);
