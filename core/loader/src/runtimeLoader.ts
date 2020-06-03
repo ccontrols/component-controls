@@ -14,9 +14,10 @@ module.exports = function(content: string) {
       relPath: stringifyRequest(this, fileName),
     }),
   );
+
   content = replaceSource(
     stories,
-    config?.configFilePath,
+    config?.optionsFilePath,
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
   return content;

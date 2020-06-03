@@ -1,10 +1,20 @@
 import { ParserOptions } from '@babel/parser';
-import { StoriesStore } from '@component-controls/specification';
+import { StoriesDoc, StoriesStore } from '@component-controls/specification';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
 } from 'prettier';
+
+/**
+ * when loading - single doc file store
+ */
+export type LoadingDocStore = {
+  /**
+   * the document itself
+   */
+  doc: StoriesDoc | undefined;
+} & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -239,4 +249,4 @@ export interface MDXExportTypes {
 }
 export type ParseStorieReturnType = {
   exports?: MDXExportTypes;
-} & StoriesStore;
+} & LoadingDocStore;

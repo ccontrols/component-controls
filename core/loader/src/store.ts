@@ -1,10 +1,9 @@
 import {
-  StoriesStore,
   StoryComponents,
   StoryPackages,
   Configuration,
 } from '@component-controls/specification';
-
+import { LoadingDocStore } from '@component-controls/instrument';
 export interface LoadingStore {
   /**
    * global configuration from project config file
@@ -21,7 +20,7 @@ export interface LoadingStore {
   /**
    * stores, loaded from each .stories.* file
    */
-  stores: (Partial<Pick<StoriesStore, 'stories' | 'docs'>> & {
+  stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
 }
@@ -34,8 +33,8 @@ export const store: LoadingStore = {
 export const reserveStoriesDoc = (filePath: string) => {
   store.stores.push({ filePath });
 };
-export const addStoriesDoc = (filePath: string, added: StoriesStore) => {
-  const { components, packages, stories, docs } = added;
+export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
+  const { components, packages, stories, doc } = added;
   Object.keys(components).forEach(key => {
     store.components[key] = components[key];
   });
@@ -45,6 +44,6 @@ export const addStoriesDoc = (filePath: string, added: StoriesStore) => {
   const storeStore = store.stores.find(s => s.filePath === filePath);
   if (storeStore) {
     storeStore.stories = stories;
-    storeStore.docs = docs;
+    storeStore.doc = doc;
   }
 };

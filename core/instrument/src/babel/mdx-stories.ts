@@ -70,10 +70,10 @@ export const extractMDXStories = (
 
   const store: Required<Pick<
     ParseStorieReturnType,
-    'stories' | 'docs' | 'components' | 'exports' | 'packages'
+    'stories' | 'doc' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
-    docs: {},
+    doc: undefined,
     components: {},
     exports: {},
     packages: {},
@@ -195,7 +195,7 @@ export const extractMDXStories = (
               if (component !== undefined) {
                 doc.component = component;
               }
-              store.docs[title] = doc;
+              store.doc = doc;
             }
             break;
           }
@@ -207,9 +207,9 @@ export const extractMDXStories = (
     },
   });
 
-  if (Object.keys(store.docs).length === 1) {
+  if (store.doc) {
     //@ts-ignore
-    store.docs[Object.keys(store.docs)[0]].components = components;
+    store.doc.components = components;
   } else {
     throw new Error(`MDX stories should have one <Meta /> component`);
   }

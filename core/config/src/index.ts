@@ -4,17 +4,19 @@ import { sync as globSync } from 'glob';
 import yargs from 'yargs';
 import { Configuration } from '@component-controls/specification';
 
-export const configFileNames = [
+export const buildConfigFileNames = [
+  'build.js',
+  'build.json',
   'main.js',
   'main.json',
   'main.ts',
-  'controls.js',
 ];
 
+export const optionsFileNames = ['runtime.js', 'options.js'];
 export interface ConfigrationResult {
   config: Configuration;
   configPath: string;
-  configFilePath: string;
+  optionsFilePath?: string;
 }
 /**
  * return the configration folder from command-line parameters
@@ -50,16 +52,20 @@ export const loadConfiguration = (
 ): ConfigrationResult | undefined => {
   const folder = configFolder ?? getConfigurationArg(args);
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
-  const configFiles = fs.readdirSync(configPath);
-  const configFile = configFiles.find(file =>
-    configFileNames.includes(file.toLowerCase()),
+  const allFiles = fs.readdirSync(configPath);
+  const buildConfigFile = allFiles.find(file =>
+    buildConfigFileNames.includes(file.toLowerCase()),
+  );
+  const optionsFile = allFiles.find(file =>
+    optionsFileNames.includes(file.toLowerCase()),
   );
 
-  if (configFile) {
-    const configFilePath = path.resolve(configPath, configFile);
+  if (buildConfigFile) {
     return {
-      config: require(configFilePath),
-      configFilePath,
+      config: require(path.resolve(configPath, buildConfigFile)),
+      optionsFilePath: optionsFile
+        ? path.resolve(configPath, optionsFile)
+        : undefined,
       configPath,
     };
   }

@@ -24,23 +24,19 @@ module.exports.pitch = async function() {
   if (store) {
     const relPath = path.relative(context.rootContext, filePath);
     const moduleId = relPath.startsWith('.') ? relPath : `./${relPath}`;
-    console.log(chalk.bgRgb(244, 147, 66)('@loaded: '), filePath);
-    addStoriesDoc(filePath, {
-      stories: store.stories,
-      components: store.components,
-      packages: store.packages,
-      docs: Object.keys(store.docs).reduce(
-        (acc, key) => ({
-          ...acc,
-          [key]: {
-            ...store.docs[key],
-            fileName: filePath,
-            moduleId: moduleId,
-          },
-        }),
-        {},
-      ),
-    });
+    if (store.doc) {
+      console.log(chalk.bgRgb(244, 147, 66)('@loaded: '), filePath);
+      addStoriesDoc(filePath, {
+        stories: store.stories,
+        components: store.components,
+        packages: store.packages,
+        doc: {
+          ...store.doc,
+          fileName: filePath,
+          moduleId: moduleId,
+        },
+      });
+    }
   }
   return transformed;
 };

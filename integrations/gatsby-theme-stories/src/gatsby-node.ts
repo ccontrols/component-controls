@@ -20,7 +20,7 @@ exports.sourceNodes = async function sourceNodes(
     presets: defaultPresets,
     configPath: options.configPath,
   };
-  const { store } = true ? await watch(config) : await compile(config);
+  const { store } = false ? await watch(config) : await compile(config);
   const loadedStore: StoriesStore | undefined = loadStoryStore(store);
 
   if (loadedStore) {

@@ -1,6 +1,5 @@
 import { File } from '@babel/types';
 import {
-  StoriesStore,
   StoryComponent,
   StoriesDoc,
   PackageInfo,
@@ -9,7 +8,7 @@ import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
 import { propsInfo } from '../misc/props-info';
-import { InstrumentOptions } from '../types';
+import { LoadingDocStore, InstrumentOptions } from '../types';
 
 interface ComponentParseData {
   component?: StoryComponent;
@@ -77,15 +76,14 @@ export const extractComponent = async (
 };
 
 export const extractStoreComponent = async (
-  store: StoriesStore,
+  store: LoadingDocStore,
   filePath: string,
   source: string,
   options?: InstrumentOptions,
   initialAST?: File,
 ) => {
-  const docs = Object.keys(store.docs);
-  if (docs.length > 0) {
-    const doc: StoriesDoc = store.docs[docs[0]];
+  if (store.doc) {
+    const doc: StoriesDoc = store.doc;
     const componentNames = Object.keys(doc.components);
     if (componentNames) {
       for (const componentName of componentNames) {

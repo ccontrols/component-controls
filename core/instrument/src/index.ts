@@ -4,11 +4,7 @@ import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import deepMerge from 'deepmerge';
-import {
-  StoriesStore,
-  Story,
-  StoriesDoc,
-} from '@component-controls/specification';
+import { Story, StoriesDoc } from '@component-controls/specification';
 import { getASTSource } from '@component-controls/core';
 
 import { extractCSFStories } from './babel/csf-stories';
@@ -19,6 +15,7 @@ import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
 import {
+  LoadingDocStore,
   InstrumentOptions,
   ParserOptions,
   defaultParserOptions,
@@ -60,46 +57,43 @@ const parseSource = async (
   const ast = parser.parse(source, options.parser);
 
   const store = traverseFn(ast, options, { source, filePath });
-  if (Object.keys(store.docs).length > 0) {
-    const doc = store.docs[Object.keys(store.docs)[0]];
+  if (store.doc) {
+    const doc = store.doc;
     if (options.stories.storeSourceFile) {
       doc.source = originalSource;
     }
   }
   await extractStoreComponent(store, filePath, source, options, ast);
-  const docsNames = Object.keys(store.docs);
-  for (let i = 0; i < docsNames.length; i += 1) {
-    const doc: StoriesDoc = store.docs[docsNames[i]];
-    if (store.stories) {
-      let includedStories = Object.keys(store.stories);
-      const { includeStories, excludeStories } = doc;
-      if (includeStories) {
-        if (Array.isArray(includeStories)) {
-          includedStories = includedStories.filter(
-            name => includeStories.indexOf(name) > -1,
-          );
-        } else {
-          const match = new RegExp(includeStories);
-          includedStories = includedStories.filter(name => {
-            return name.match(match);
-          });
-        }
+  const doc: StoriesDoc | undefined = store.doc;
+  if (doc && store.stories) {
+    let includedStories = Object.keys(store.stories);
+    const { includeStories, excludeStories } = doc;
+    if (includeStories) {
+      if (Array.isArray(includeStories)) {
+        includedStories = includedStories.filter(
+          name => includeStories.indexOf(name) > -1,
+        );
+      } else {
+        const match = new RegExp(includeStories);
+        includedStories = includedStories.filter(name => {
+          return name.match(match);
+        });
       }
-      if (excludeStories) {
-        if (Array.isArray(excludeStories)) {
-          includedStories = includedStories.filter(
-            name => excludeStories.indexOf(name) === -1,
-          );
-        } else {
-          const match = new RegExp(excludeStories);
-          includedStories = includedStories.filter(name => !name.match(match));
-        }
+    }
+    if (excludeStories) {
+      if (Array.isArray(excludeStories)) {
+        includedStories = includedStories.filter(
+          name => excludeStories.indexOf(name) === -1,
+        );
+      } else {
+        const match = new RegExp(excludeStories);
+        includedStories = includedStories.filter(name => !name.match(match));
       }
-      if (includeStories || excludeStories) {
-        for (var key in store.stories) {
-          if (includedStories.indexOf(key) === -1) {
-            delete store.stories[key];
-          }
+    }
+    if (includeStories || excludeStories) {
+      for (var key in store.stories) {
+        if (includedStories.indexOf(key) === -1) {
+          delete store.stories[key];
         }
       }
     }
@@ -118,7 +112,8 @@ const parseSource = async (
   return store;
 };
 
-export type ParseStoriesReturnType = { transformed: string } & StoriesStore;
+export { LoadingDocStore };
+export type ParseStoriesReturnType = { transformed: string } & LoadingDocStore;
 /**
  * Parse and instrument a javascript, typescript or MDX file of stories
  * @param source Source of the file to be instrumented
@@ -178,7 +173,7 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
-    const { stories, docs, components, exports, packages } = store;
+    const { stories, doc, components, exports, packages } = store;
     const exportsSource = extractStoryExports(exports);
     let transformed = source;
     if (transformMDX && exportsSource) {
@@ -187,7 +182,7 @@ export const parseStories = async (
     return {
       transformed,
       stories,
-      docs,
+      doc,
       components,
       packages,
     };
