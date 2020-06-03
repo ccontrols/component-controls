@@ -12,7 +12,8 @@
     "plugin.js",
     "loader.js",
     "story-store-data.js",
-    "loader.d.ts"
+    "loader.d.ts",
+    "store.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

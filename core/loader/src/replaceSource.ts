@@ -64,7 +64,6 @@ ${stories
 ${imports}
 ${storeConst}
 store.config = configJSON;
-debugger;
 ${loadStories}
 ${hmr}
 ${exports}

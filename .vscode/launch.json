@@ -80,13 +80,13 @@
       ]
     },
     {
-      "name": "gatsby develop",
+      "name": "gatsby start",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
       "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
       "cwd": "${workspaceFolder}/examples/gatsby",
-      "args": ["develop"],
+      "args": ["start"],
       "stopOnEntry": false,
       "runtimeArgs": ["--nolazy"],
       "sourceMaps": false

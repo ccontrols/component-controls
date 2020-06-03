@@ -72,7 +72,7 @@ export const runCompiler = (
         console.error(error);
         return reject(error);
       }
-      const store = require(path.resolve(__dirname, '../dist', 'bundle.js'));
+      const { store } = require('@component-controls/loader/store');
       resolve({ store, stats });
     });
   });

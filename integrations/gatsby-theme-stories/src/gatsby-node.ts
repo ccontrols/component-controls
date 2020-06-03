@@ -4,8 +4,6 @@ import {
   CompileProps,
 } from '@component-controls/webpack-compile';
 import { NodePluginArgs, NodeInput, CreatePagesArgs } from 'gatsby';
-import { StoriesStore } from '@component-controls/specification';
-import { loadStoryStore } from '@component-controls/store';
 import { LoaderOptions } from './types';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
@@ -20,16 +18,15 @@ exports.sourceNodes = async function sourceNodes(
     presets: defaultPresets,
     configPath: options.configPath,
   };
-  const { store } = false ? await watch(config) : await compile(config);
-  const loadedStore: StoriesStore | undefined = loadStoryStore(store);
+  const { store } = true ? await watch(config) : await compile(config);
 
-  if (loadedStore) {
-    Object.keys(loadedStore.docs).forEach(key => {
+  if (store) {
+    store.stores.forEach(s => {
       //@ts-ignore
-      const doc = loadedStore.docs[key];
+      const doc = s.doc;
 
       const docMetadata: NodeInput = {
-        id: createNodeId(`storyDoc-${key}`),
+        id: createNodeId(`storyDoc-${doc?.title}`),
         children: [],
         internal: {
           type: 'storyDoc',
