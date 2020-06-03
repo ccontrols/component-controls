@@ -16,6 +16,7 @@ module.exports = function(content: string) {
   );
   content = replaceSource(
     stories,
+    config?.configFilePath,
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
   return content;

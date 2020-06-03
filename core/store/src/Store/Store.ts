@@ -1,4 +1,4 @@
-import { StoriesStore } from '@component-controls/specification';
+import { StoriesStore, Configuration } from '@component-controls/specification';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
   StoreObserver,
@@ -121,6 +121,10 @@ export class Store implements StoryStore {
     const store = this.getStore();
     return store ? store.docs : undefined;
   };
+
+  get config(): Configuration | undefined {
+    return this.loadedStore?.config;
+  }
   /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.

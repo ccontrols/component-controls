@@ -1,4 +1,8 @@
-import { compile } from '@component-controls/webpack-compile';
+import {
+  compile,
+  watch,
+  CompileProps,
+} from '@component-controls/webpack-compile';
 import { NodePluginArgs, NodeInput, CreatePagesArgs } from 'gatsby';
 import { StoriesStore } from '@component-controls/specification';
 import { loadStoryStore } from '@component-controls/store';
@@ -11,12 +15,12 @@ exports.sourceNodes = async function sourceNodes(
   options: LoaderOptions,
 ) {
   const { createNode } = actions;
-
-  const { store } = await compile({
+  const config: CompileProps = {
     webPack: options.webpack,
     presets: defaultPresets,
     configPath: options.configPath,
-  });
+  };
+  const { store } = true ? await watch(config) : await compile(config);
   const loadedStore: StoriesStore | undefined = loadStoryStore(store);
 
   if (loadedStore) {

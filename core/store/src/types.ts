@@ -2,6 +2,7 @@ import {
   StoriesStore,
   Story,
   StoryDocs,
+  Configuration,
 } from '@component-controls/specification';
 
 /**
@@ -16,6 +17,7 @@ export interface StoryStore {
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => StoryDocs | undefined;
   getDocs: () => StoryDocs | undefined;
+  config: Configuration | undefined;
   updateStoryProp: (
     storyId: string,
     propName: string,

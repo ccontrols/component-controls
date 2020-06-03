@@ -2,9 +2,14 @@ import {
   StoriesStore,
   StoryComponents,
   StoryPackages,
+  Configuration,
 } from '@component-controls/specification';
 
 export interface LoadingStore {
+  /**
+   * global configuration from project config file
+   */
+  config?: Configuration;
   /**
    * global store of packages
    */

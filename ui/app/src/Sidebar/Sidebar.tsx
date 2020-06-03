@@ -65,8 +65,12 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
   const { storeProvider } = useContext(BlockContext);
   const menuItems = useMemo(() => {
     if (storeProvider) {
+      const { options } = storeProvider.config || {};
+
       const docs: string[] = Object.keys(storeProvider.getDocs() || []);
-      const menuItems = docs.reduce((acc: MenuItems, doc: string) => {
+      const sortedDocs =
+        options && options.storySort ? docs.sort(options.storySort) : docs;
+      const menuItems = sortedDocs.reduce((acc: MenuItems, doc: string) => {
         const levels = doc.split('/');
         createMenuItem(levels, levels, acc);
         return acc;

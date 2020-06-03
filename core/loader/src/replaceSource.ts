@@ -3,9 +3,16 @@ export interface StoryPath {
   relPath: string;
 }
 
-export const replaceSource = (stories: StoryPath[], hashKey: string) => {
+export const replaceSource = (
+  stories: StoryPath[],
+  configFilePath: string | undefined,
+  hashKey: string,
+) => {
   const imports = `
 const imports = {};
+const configJSON = ${
+    configFilePath ? `require("${configFilePath}")` : 'undefined'
+  };
 ${stories
   .map(story => `imports['${story.absPath}'] = require(${story.relPath});`)
   .join('\n')}
@@ -59,6 +66,7 @@ ${stories
   const newContent = `
 ${imports}
 ${storeConst}
+store.config = configJSON;
 ${loadStories}
 ${hmr}
 ${exports}

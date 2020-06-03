@@ -25,6 +25,7 @@ export const loadStoryStore = (
         stores,
         packages: loadedPackages,
         components: loadedComponents,
+        config,
       } = newStore;
 
       if (stores) {
@@ -33,6 +34,7 @@ export const loadStoryStore = (
           stories: {},
           components: {},
           packages: {},
+          config,
         };
         stores.forEach(s => {
           const storeDocs = s.docs;

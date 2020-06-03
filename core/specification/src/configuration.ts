@@ -17,4 +17,13 @@ export interface Configuration {
    * example: [story => <ThemeProvider>{story()}</ThemeProvider>]
    */
   decorators?: StoryRenderFn[];
+  /**
+   * global options object
+   */
+  options?: {
+    /**
+     * story sorting function
+     */
+    storySort?: (a: string, b: string) => number;
+  };
 }

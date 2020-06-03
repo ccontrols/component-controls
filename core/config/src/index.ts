@@ -14,6 +14,7 @@ export const configFileNames = [
 export interface ConfigrationResult {
   config: Configuration;
   configPath: string;
+  configFilePath: string;
 }
 /**
  * return the configration folder from command-line parameters
@@ -54,12 +55,15 @@ export const loadConfiguration = (
     configFileNames.includes(file.toLowerCase()),
   );
 
-  return configFile
-    ? {
-        config: require(path.resolve(configPath, configFile)),
-        configPath,
-      }
-    : undefined;
+  if (configFile) {
+    const configFilePath = path.resolve(configPath, configFile);
+    return {
+      config: require(configFilePath),
+      configFilePath,
+      configPath,
+    };
+  }
+  return undefined;
 };
 
 /**
