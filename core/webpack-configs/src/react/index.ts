@@ -1,6 +1,7 @@
 import { Configuration } from 'webpack';
 
 export const react: Configuration = {
+  performance: { hints: false },
   module: {
     rules: [
       {

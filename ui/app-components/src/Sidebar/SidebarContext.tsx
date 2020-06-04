@@ -31,13 +31,12 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
   const [collapsed, setCollapsed] = React.useState<boolean | undefined>(
     undefined,
   );
-  const size: number = useBreakpointIndex();
+  const size: number = useBreakpointIndex({ defaultIndex: 2 });
   useEffect(() => {
     if (collapsible) {
       setCollapsed(size <= 1);
     }
   }, [size, collapsible]);
-
   const SidebarToggle: FC<SidebarToggleProps> = ({ icon, ...rest }) => {
     return collapsible ? (
       <Button

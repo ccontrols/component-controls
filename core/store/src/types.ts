@@ -18,6 +18,7 @@ export interface StoryStore {
   getStoryDoc: (name: string) => StoryDocs | undefined;
   getDocs: () => StoryDocs | undefined;
   config: Configuration | undefined;
+  firstStory: string | undefined;
   updateStoryProp: (
     storyId: string,
     propName: string,

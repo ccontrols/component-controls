@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = () => {
           <GatsbyLink to="/">
             <Text sx={{ px: 2 }}>Home</Text>
           </GatsbyLink>
-          <GatsbyLink to="/docs">
+          <GatsbyLink to="/docs/">
             <Text sx={{ px: 2 }}>Docs</Text>
           </GatsbyLink>
         </Flex>

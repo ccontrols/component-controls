@@ -27,7 +27,7 @@ const SitePage: FC<SitePageProps> = ({ pathContext: { doc } }) => {
       title={doc}
       storyStore={storyStore}
       docPath={doc}
-      storyId={docFile?.stories?.[0] || ''}
+      storyId={docFile?.stories?.[0] || undefined}
       pages={pages}
     />
   );

@@ -17,7 +17,7 @@ export interface PageProps {
   pagesFn: PagesConfig;
 }
 export const Page: FC<PageProps> = ({ pagesFn }) => {
-  const pages = pagesFn('');
+  const pages = typeof pagesFn === 'function' ? pagesFn('') : [];
   const pageRef = useRef<HTMLDivElement>(null);
   const params =
     typeof window !== 'undefined'

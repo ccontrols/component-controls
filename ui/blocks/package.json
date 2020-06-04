@@ -41,8 +41,8 @@
     "copy-to-clipboard": "^3.2.1",
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-table": "^7.0.0",
     "recoil": "^0.0.7",
     "stringify-object": "^3.3.0",
@@ -60,8 +60,8 @@
   },
   "peerDependencies": {
     "@primer/octicons-react": "*",
-    "react": "*",
-    "react-dom": "*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-table": "*",
     "theme-ui": "*"
   },

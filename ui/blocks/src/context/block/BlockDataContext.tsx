@@ -68,7 +68,9 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   storyId,
   store: storeProvider,
 }) => {
-  const store: StoriesStore | undefined = storeProvider.getStore();
+  const store: StoriesStore | undefined = storeProvider
+    ? storeProvider.getStore()
+    : undefined;
 
   const getStoryData = (id?: string) => {
     if (store) {
@@ -134,8 +136,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         getStoryData,
         storyIdFromName,
         getComponents,
-        addObserver: storeProvider.addObserver,
-        removeObserver: storeProvider.removeObserver,
+        addObserver: storeProvider ? storeProvider.addObserver : () => {},
+        removeObserver: storeProvider ? storeProvider.removeObserver : () => {},
       }}
     >
       {children}

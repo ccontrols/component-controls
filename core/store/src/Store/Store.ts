@@ -30,7 +30,7 @@ export class Store implements StoryStore {
   private channel: BroadcastChannel | undefined;
   private observers: StoreObserver[];
   private moduleId: number;
-
+  private _firstStory: string | undefined;
   /**
    * create a store with options
    */
@@ -40,6 +40,7 @@ export class Store implements StoryStore {
     this.loadedStore = store;
     this.updateLocalStorage = updateLocalStorage;
     this.observers = [];
+    this.sortDocs();
     if (updateLocalStorage) {
       this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
         type: 'localstorage',
@@ -58,6 +59,40 @@ export class Store implements StoryStore {
       };
     }
   }
+
+  /**
+   * sort documents if a sortfunction is provided
+   */
+  sortDocs = () => {
+    if (this.loadedStore) {
+      const docs: string[] = Object.keys(this.loadedStore.docs || []);
+      const { options } = this.loadedStore.config || {};
+      if (options && options.storySort) {
+        this.loadedStore.docs = docs
+          .sort((a: string, b: string) => {
+            //@ts-ignore
+            const sort = options.storySort(a, b);
+            if (sort !== 0) {
+              return sort;
+            }
+            return docs.indexOf(a) - docs.indexOf(b);
+          })
+          .reduce(
+            //@ts-ignore
+            (acc, key) => ({ ...acc, [key]: this.loadedStore.docs[key] }),
+            {},
+          );
+      }
+      const sortedDocs = Object.keys(this.loadedStore.docs);
+      if (this.loadedStore.docs && sortedDocs.length > 0) {
+        const firstDoc = this.loadedStore.docs[sortedDocs[0]];
+        if (firstDoc.stories && firstDoc.stories.length) {
+          //point tot first story of first doc
+          this._firstStory = firstDoc.stories[0];
+        }
+      }
+    }
+  };
   /**
    * add observer callback function
    */
@@ -125,6 +160,10 @@ export class Store implements StoryStore {
   get config(): Configuration | undefined {
     return this.loadedStore?.config;
   }
+  get firstStory(): string | undefined {
+    return this._firstStory;
+  }
+
   /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.

@@ -34,8 +34,8 @@
     "@component-controls/blocks": "^1.2.0",
     "@component-controls/specification": "^1.2.0",
     "qs": "^6.9.4",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "theme-ui": "^0.3.1",
     "@theme-ui/match-media": "^0.3.1"
   },
@@ -48,8 +48,8 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "theme-ui": "*"
   },
   "publishConfig": {

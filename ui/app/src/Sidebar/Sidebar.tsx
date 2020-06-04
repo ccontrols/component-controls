@@ -49,7 +49,7 @@ const createMenuItem = (
     } else {
       newItem.id = allLevels.join('/');
       //@ts-ignore
-      newItem.to = `/docs/${allLevels.join('/')}`;
+      newItem.to = `/docs/${allLevels.join('/').toLowerCase()}/`;
     }
     parent.push(newItem);
   }
@@ -65,21 +65,8 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
   const { storeProvider } = useContext(BlockContext);
   const menuItems = useMemo(() => {
     if (storeProvider) {
-      const { options } = storeProvider.config || {};
-
       const docs: string[] = Object.keys(storeProvider.getDocs() || []);
-      const sortedDocs =
-        options && options.storySort
-          ? docs.sort((a: string, b: string) => {
-              //@ts-ignore
-              const sort = options.storySort(a, b);
-              if (sort !== 0) {
-                return sort;
-              }
-              return docs.indexOf(a) - docs.indexOf(b);
-            })
-          : docs;
-      const menuItems = sortedDocs.reduce((acc: MenuItems, doc: string) => {
+      const menuItems = docs.reduce((acc: MenuItems, doc: string) => {
         const levels = doc.split('/');
         createMenuItem(levels, levels, acc);
         return acc;

@@ -32,8 +32,8 @@
   "dependencies": {
     "@component-controls/components": "^1.2.0",
     "@primer/octicons-react": "^9.6.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "theme-ui": "^0.3.1",
     "@theme-ui/match-media": "^0.3.1"
   },
@@ -46,8 +46,8 @@
   },
   "peerDependencies": {
     "@primer/octicons-react": "*",
-    "react": "*",
-    "react-dom": "*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "theme-ui": "*"
   },
   "publishConfig": {
