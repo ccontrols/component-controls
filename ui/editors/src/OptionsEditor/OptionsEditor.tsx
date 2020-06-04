@@ -1,24 +1,31 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import React, { ChangeEvent } from 'react';
+import { Select } from 'theme-ui';
+import styled from '@emotion/styled';
 import {
   ComponentControlOptions,
   ControlTypes,
 } from '@component-controls/specification';
+import { normalizeOptions } from './utils';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
 import { addPropertyEditor } from '../prop-factory';
 
+const OptionsSelect = styled(Select)({
+  color: 'black',
+  flexBasis: '100%',
+});
+
 /**
  * Options control editor.
  */
 
 export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
-  const { control } = useControlContext<ComponentControlOptions>({
+  const { control, onChange } = useControlContext<ComponentControlOptions>({
     name,
   });
-  const { display } = control;
+  const { display, options, value } = control;
 
   if (display === 'check' || display === 'inline-check') {
     return <CheckboxEditor name={name} {...rest} />;
@@ -33,13 +40,20 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
     display === 'select' ||
     display === 'multi-select'
   ) {
+    const { entries, selected } = normalizeOptions(options, value);
+    const handleChange = (e: ChangeEvent<HTMLSelectElement>) =>
+      onChange(name, [e.target.value]);
+
+    const selectValue = entries.filter(op => selected.includes(op.value));
+    const v: string = selectValue.length ? selectValue[0].value : '';
     return (
-      <select
-        sx={{
-          color: 'black',
-          flexBasis: '100%',
-        }}
-      />
+      <OptionsSelect value={v} onChange={handleChange}>
+        {entries.map(entry => (
+          <option key={entry.value} value={entry.value}>
+            {entry.label}
+          </option>
+        ))}
+      </OptionsSelect>
     );
   }
 

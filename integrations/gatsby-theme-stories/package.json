@@ -52,6 +52,7 @@
     "theme-ui": "^0.3.1",
     "@theme-ui/sidenav": "^0.3.1",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
@@ -59,7 +60,8 @@
   },
   "peerDependencies": {
     "gatsby": "^2.22.10",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"
