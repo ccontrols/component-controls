@@ -11,6 +11,7 @@ import { SEO } from './SEO';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { PagesConfig } from './types';
+import { Footer } from './Footer';
 
 interface LayoutProps {
   title?: string;
@@ -39,16 +40,24 @@ export const Layout: FC<LayoutProps> = ({
       />
       <SEO title={title} />
       <SidebarContextProvider>
-        <Header title={title}></Header>
-        <Flex sx={{ flexDirection: 'row' }}>
-          <BlockContextProvider
-            storyId={story}
-            docId={docTitle}
-            store={storyStore}
-          >
-            <Sidebar docPath={docTitle} />
-            <Page pagesFn={pagesFn} />
-          </BlockContextProvider>
+        <Flex
+          sx={{
+            minHeight: '100vh',
+            flexDirection: 'column',
+          }}
+        >
+          <Header title={title}></Header>
+          <Flex sx={{ flexDirection: 'row', flex: 1 }}>
+            <BlockContextProvider
+              storyId={story}
+              docId={docTitle}
+              store={storyStore}
+            >
+              <Sidebar docPath={docTitle} />
+              <Page pagesFn={pagesFn} />
+            </BlockContextProvider>
+          </Flex>
+          <Footer />
         </Flex>
       </SidebarContextProvider>
     </ThemeProvider>

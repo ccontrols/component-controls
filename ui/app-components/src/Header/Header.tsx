@@ -27,6 +27,7 @@ export const Header: FC<HeaderProps & BoxProps> = ({
 }) => (
   <Flex
     as="header"
+    variant="header"
     sx={{
       ...(position === 'fixed' ||
       position === 'absolute' ||
