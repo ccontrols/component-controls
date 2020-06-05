@@ -29,7 +29,7 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
   );
   return (
     <Fragment>
-      <Container>
+      <Container sx={{ flex: 1 }}>
         <Tabs
           fontSize={16}
           selectedIndex={tabIndex}

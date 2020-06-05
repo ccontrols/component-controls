@@ -8,6 +8,7 @@ import {
 import { LoadingStore } from '@component-controls/loader';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { addSmartControls } from './smart-controls';
+import { defaultConfig } from '../types';
 
 let storyStore: StoriesStore | undefined = undefined;
 
@@ -34,7 +35,7 @@ export const loadStoryStore = (
           stories: {},
           components: {},
           packages: {},
-          config,
+          config: deepMerge(config, defaultConfig),
         };
         stores.forEach(s => {
           const storeDoc = s.doc;

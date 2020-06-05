@@ -4,8 +4,6 @@ import { jsx, LinkProps, Theme } from 'theme-ui';
 import { Link as GatsbyLink } from 'gatsby';
 import { Sidebar as AppSidebar } from '@component-controls/app';
 
-import { useSiteMetadata } from '../hooks/use-site-metadata';
-
 const Link: FC<LinkProps> = props => (
   //@ts-ignore
   <GatsbyLink
@@ -28,6 +26,5 @@ export interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = ({ docPath }) => {
-  const { siteTitle } = useSiteMetadata();
-  return <AppSidebar title={siteTitle} docPath={docPath} buttonClass={Link} />;
+  return <AppSidebar docPath={docPath} buttonClass={Link} />;
 };

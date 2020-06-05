@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
-import { jsx, Input, Box, Theme } from 'theme-ui';
+import { jsx, Input, Box, Heading, Flex, Theme } from 'theme-ui';
 
 import { BlockContext, useStoryContext } from '@component-controls/blocks';
 import {
@@ -66,7 +66,7 @@ const createMenuItem = (
 export const SidebarBase: FC<SidebarProps> = ({
   docPath,
   buttonClass,
-  title,
+  title: propsTitle,
 }) => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage) {
@@ -74,6 +74,8 @@ export const SidebarBase: FC<SidebarProps> = ({
   }
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
+  const config = storeProvider.config;
+  const { siteTitle } = config?.options || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: StoryDocs = storeProvider.getDocs() || {};
@@ -97,8 +99,7 @@ export const SidebarBase: FC<SidebarProps> = ({
       sx={{
         borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
       }}
-      width={380}
-      minWidth={290}
+      width={300}
     >
       {responsive && (
         <Header shadow={false}>
@@ -106,8 +107,8 @@ export const SidebarBase: FC<SidebarProps> = ({
           <ColorMode />
         </Header>
       )}
-      <Box sx={{ px: 2 }}>
-        {title}
+      <Flex sx={{ px: 2, flexDirection: 'column', alignItems: 'center' }}>
+        <Heading as="h3">{propsTitle || siteTitle}</Heading>
         <Box sx={{ py: 2, px: 3 }}>
           <Input
             placeholder="filter stories..."
@@ -122,7 +123,7 @@ export const SidebarBase: FC<SidebarProps> = ({
           search={search}
           items={menuItems}
         />
-      </Box>
+      </Flex>
     </AppSidebar>
   );
 };

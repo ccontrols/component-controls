@@ -56,7 +56,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       window.removeEventListener('scroll', onScroll);
     };
   }, [onScroll]);
-  return items && items.length > 1 ? (
+  return (
     <SidebarContextProvider>
       <SidebarContext.Consumer>
         {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
@@ -100,5 +100,5 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
         )}
       </SidebarContext.Consumer>
     </SidebarContextProvider>
-  ) : null;
+  );
 };
