@@ -19,6 +19,7 @@ export interface BlockDataContextProps {
    */
   getStoryData: (
     storyId?: string,
+    docId?: string,
   ) => {
     story?: Story;
     doc?: StoriesDoc;
@@ -53,34 +54,43 @@ export interface BlockDataContextProps {
   /**
    * current story id
    */
-  storyId: string;
+  storyId?: string;
+  /**
+   * current documentation page, if no story is selected
+   */
+  docId?: string;
 }
 //@ts-ignore
 export const BlockDataContext = React.createContext<BlockDataContextProps>({});
 
 export interface BlockDataContextInoutProps {
   store: StoryStore;
-  storyId: string;
+  storyId?: string;
+  docId?: string;
 }
 
 export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   children,
   storyId,
+  docId,
   store: storeProvider,
 }) => {
   const store: StoriesStore | undefined = storeProvider
     ? storeProvider.getStore()
     : undefined;
 
-  const getStoryData = (id?: string) => {
+  const getStoryData = (id?: string, docId?: string) => {
     if (store) {
       const actualId = !id || id === CURRENT_STORY ? storyId : id;
-      const story: Story | undefined = store.stories
-        ? store.stories[actualId]
-        : undefined;
-      const doc = story && story.doc ? store.docs[story.doc] : undefined;
-      const storyComponent: any =
-        story && doc ? story.component || doc.component : undefined;
+      const story: Story | undefined =
+        store.stories && actualId ? store.stories[actualId] : undefined;
+      const doc =
+        story && story.doc
+          ? store.docs[story.doc]
+          : docId
+          ? store.docs[docId]
+          : undefined;
+      const storyComponent: any = story?.component || doc?.component;
 
       const componentName = getComponentName(storyComponent);
       const component =
@@ -133,6 +143,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
     <BlockDataContext.Provider
       value={{
         storyId,
+        docId,
         getStoryData,
         storyIdFromName,
         getComponents,

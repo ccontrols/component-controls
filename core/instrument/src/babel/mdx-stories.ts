@@ -21,7 +21,7 @@ import {
 
 import { componentsFromParams } from '../misc/component-attributes';
 
-export const extractMDXStories = (
+export const extractMDXStories = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
@@ -73,7 +73,7 @@ export const extractMDXStories = (
     'stories' | 'doc' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
-    doc: undefined,
+    doc: props ? { ...props } : undefined,
     components: {},
     exports: {},
     packages: {},
@@ -207,11 +207,11 @@ export const extractMDXStories = (
     },
   });
 
-  if (store.doc) {
+  if (store.doc && store.doc.title) {
     //@ts-ignore
     store.doc.components = components;
   } else {
-    throw new Error(`MDX stories should have one <Meta /> component`);
+    throw new Error(`MDX documenation pages should have at least a title`);
   }
   return store;
 };

@@ -16,7 +16,7 @@ interface LayoutProps {
   title?: string;
   storyStore: Store;
   storyId?: string;
-  docPath: string;
+  docTitle: string;
   pages: PagesConfig;
 }
 
@@ -25,7 +25,7 @@ export const Layout: FC<LayoutProps> = ({
   title,
   storyStore,
   storyId,
-  docPath,
+  docTitle,
 }) => {
   const story = storyId || storyStore?.firstStory;
   return (
@@ -41,8 +41,12 @@ export const Layout: FC<LayoutProps> = ({
       <SidebarContextProvider>
         <Header title={title}></Header>
         <Flex sx={{ flexDirection: 'row' }}>
-          <BlockContextProvider storyId={story} store={storyStore}>
-            <Sidebar docPath={docPath} />
+          <BlockContextProvider
+            storyId={story}
+            docId={docTitle}
+            store={storyStore}
+          >
+            <Sidebar docPath={docTitle} />
             <Page pagesFn={pagesFn} />
           </BlockContextProvider>
         </Flex>

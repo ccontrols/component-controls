@@ -9,7 +9,12 @@ export interface BlockContextInputProps {
   /**
    * current story id
    */
-  storyId: string;
+  storyId?: string;
+  /**
+   * current documentation page, if no story is selected
+   */
+  docId?: string;
+
   /**
    * store object
    */
@@ -26,7 +31,12 @@ export interface BlockContextProps {
   /**
    * current story
    */
-  storyId: string;
+  storyId?: string;
+  /**
+   * current documentation page, if no story is selected
+   */
+  docId?: string;
+
   /**
    * store interface
    */
@@ -43,6 +53,7 @@ export const BlockContext = React.createContext<BlockContextProps>({});
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
   storyId,
+  docId,
   store,
   options,
 }) => {
@@ -52,11 +63,16 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
         <BlockContext.Provider
           value={{
             storyId,
+            docId,
             storeProvider: store,
             options,
           }}
         >
-          <BlockDataContextProvider store={store} storyId={storyId}>
+          <BlockDataContextProvider
+            store={store}
+            storyId={storyId}
+            docId={docId}
+          >
             <BlockControlsContextProvider store={store}>
               {children}
             </BlockControlsContextProvider>

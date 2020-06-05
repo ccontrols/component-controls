@@ -23,27 +23,34 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (store) {
+    const template = require.resolve(`../src/templates/StoryPage.tsx`);
     store.stores.forEach(s => {
       const doc = s.doc;
       if (doc) {
         createPage({
-          path: `/docs/${doc.title.toLowerCase()}`,
-          component: require.resolve(`../src/templates/StoryPage.tsx`),
+          path: doc.route || `/docs/${doc.title.toLowerCase()}`,
+          component: template,
           context: {
             doc: doc.title,
           },
         });
       }
     });
+    const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
-      component: require.resolve(`../src/templates/StoryPage.tsx`),
-      context: {},
+      component: template,
+      context: {
+        doc: homePage?.doc?.title,
+      },
     });
+    const docsPage = store.stores.find(s => s.doc?.route === '/docs');
     createPage({
       path: `/docs/`,
-      component: require.resolve(`../src/templates/StoryPage.tsx`),
-      context: {},
+      component: template,
+      context: {
+        doc: docsPage?.doc?.title,
+      },
     });
   }
 };

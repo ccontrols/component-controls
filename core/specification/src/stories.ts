@@ -166,6 +166,12 @@ export interface StoriesDoc {
   stories?: string[];
 
   /**
+   * if provided, will be used as the route for the page
+   * if not provided, the title in lowercase will be used as the route
+   */
+  route?: string;
+
+  /**
    * configuration parameters passed to the story groups
    * configured either as CSF default export
    * or MDX <Meta /> tag

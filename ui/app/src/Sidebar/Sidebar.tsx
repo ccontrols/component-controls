@@ -13,6 +13,7 @@ import {
   MenuItem,
   Header,
 } from '@component-controls/app-components';
+import { StoryDocs } from '@component-controls/specification';
 
 export interface SidebarProps {
   /**
@@ -32,6 +33,7 @@ export interface SidebarProps {
 const createMenuItem = (
   levels: string[],
   allLevels: string[],
+  route?: string,
   parent?: MenuItems,
   item?: MenuItem,
 ): MenuItem => {
@@ -49,13 +51,14 @@ const createMenuItem = (
     } else {
       newItem.id = allLevels.join('/');
       //@ts-ignore
-      newItem.to = `/docs/${allLevels.join('/').toLowerCase()}/`;
+      newItem.to = route || `/docs/${allLevels.join('/').toLowerCase()}/`;
     }
     parent.push(newItem);
   }
   return createMenuItem(
     levels.slice(1),
     levels,
+    route,
     sibling ? sibling.items : newItem.items,
     newItem,
   );
@@ -65,10 +68,12 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
   const { storeProvider } = useContext(BlockContext);
   const menuItems = useMemo(() => {
     if (storeProvider) {
-      const docs: string[] = Object.keys(storeProvider.getDocs() || []);
-      const menuItems = docs.reduce((acc: MenuItems, doc: string) => {
-        const levels = doc.split('/');
-        createMenuItem(levels, levels, acc);
+      const docs: StoryDocs = storeProvider.getDocs() || {};
+      const docTitles: string[] = Object.keys(docs);
+      const menuItems = docTitles.reduce((acc: MenuItems, title: string) => {
+        const levels = title.split('/');
+        const doc = docs[title];
+        createMenuItem(levels, levels, doc?.route, acc);
         return acc;
       }, []);
       return menuItems;
@@ -83,7 +88,7 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
         borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
       }}
       width={380}
-      minWidth={300}
+      minWidth={290}
     >
       {responsive && (
         <Header shadow={false}>

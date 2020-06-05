@@ -55,9 +55,12 @@ export const useStoryContext = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { storyId: currentId, storeProvider, options } = React.useContext(
-    BlockContext,
-  );
+  const {
+    storyId: currentId,
+    storeProvider,
+    options,
+    docId,
+  } = React.useContext(BlockContext);
   const { getStoryData, storyIdFromName } = React.useContext(BlockDataContext);
   const storyId = name
     ? storyIdFromName(name)
@@ -69,12 +72,15 @@ export const useStoryContext = ({
     doc?: StoriesDoc;
     component?: StoryComponent;
     docPackage?: PackageInfo;
-  }>(getStoryData(storyId));
+  }>(getStoryData(storyId, docId));
 
   useEffect(() => {
     const updateData = (updateId?: string) => {
       if (!updateId || updateId === storyId) {
-        const { story, doc, component, docPackage } = getStoryData(storyId);
+        const { story, doc, component, docPackage } = getStoryData(
+          storyId,
+          docId,
+        );
         setData({ story, doc, component, docPackage });
       }
     };
@@ -89,7 +95,7 @@ export const useStoryContext = ({
     return () => {
       storeProvider.removeObserver(onChange);
     };
-  }, [storyId, data, storeProvider, getStoryData]);
+  }, [docId, storyId, data, storeProvider, getStoryData]);
   return {
     id: storyId,
     story: data.story,

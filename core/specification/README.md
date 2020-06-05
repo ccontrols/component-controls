@@ -144,6 +144,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | `includeStories` | string\[] \| [RegExp](#regexp)          | list of stories to include in the stories file can also use regexp match                                                                   |
 | `package`        | string                                  | lookup into the global store of PackageInfo package.json                                                                                   |
 | `parameters`     | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                         |
+| `route`          | string                                  | if provided, will be used as the route for the page if not provided, the title in lowercase will be used as the route                      |
 | `source`         | string                                  | source code of the entire file of stories                                                                                                  |
 | `stories`        | string\[]                               | list of stories contained in the file/groups                                                                                               |
 | `subcomponents`  | string\[] \| object\[]                  | multiple components option                                                                                                                 |
@@ -153,7 +154,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L273)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L279)_
 
 
 
@@ -162,6 +163,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 | Name          | Type                                | Description                                                                                     |
 | ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `components*` | [StoryComponents](#storycomponents) | list of components used in stories                                                              |
+| `config`      | [Configuration](#configuration)     | global configuration for config file                                                            |
 | `docs*`       | [StoryDocs](#storydocs)             | list of story files, or groups                                                                  |
 | `packages*`   | [StoryPackages](#storypackages)     | list of package.json files and their data used by the components and the stories of the project |
 | `stories*`    | [StoryStories](#storystories)       | list of stories                                                                                 |
@@ -214,7 +216,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of components used in stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L245)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L251)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -222,7 +224,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of story files, or groups
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L252)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L258)_
 
 `title`\*: string: [StoriesDoc](#storiesdoc)
 
@@ -230,7 +232,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of repositories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L266)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L272)_
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
@@ -247,7 +249,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L259)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L265)_
 
 `id`\*: string: [Story](#story)
 
@@ -854,10 +856,11 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ### properties
 
-| Name         | Type                               | Description                                                                                                                                    |
-| ------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `decorators` | [StoryRenderFn](#storyrenderfn)\[] | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
-| `stories*`   | string\[]                          | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| Name         | Type                                                                                      | Description                                                                                                                                    |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `decorators` | [StoryRenderFn](#storyrenderfn)\[]                                                        | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
+| `options`    | story sorting function**storySort**: **function** (`a`\*: string, `b`\*: string): number; | global options object                                                                                                                          |
+| `stories*`   | string\[]                                                                                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 
 ## StoryRenderFn
 

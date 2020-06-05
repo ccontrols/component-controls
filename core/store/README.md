@@ -38,6 +38,8 @@ _defined in [@component-controls/store/src/Store/Store.ts](https://github.com/cc
 | Name               | Type                                                                                                                                        | Description                                                                                                           |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | `constructor*`     | **function** constructor                                                                                                                    | create a store with options                                                                                           |
+| `config*`          | **function** config                                                                                                                         |                                                                                                                       |
+| `firstStory*`      | **function** firstStory                                                                                                                     |                                                                                                                       |
 | `addObserver*`     | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                            | add observer callback function                                                                                        |
 | `getDocs*`         | **function** getDocs(): [StoryDocs](#storydocs);                                                                                            | returns all the documentation files                                                                                   |
 | `getStore*`        | **function** getStore(): [StoriesStore](#storiesstore);                                                                                     | returns an instance of the store                                                                                      |
@@ -45,6 +47,7 @@ _defined in [@component-controls/store/src/Store/Store.ts](https://github.com/cc
 | `getStoryDoc*`     | **function** getStoryDoc(`name`\*: string): [StoriesDoc](#storiesdoc);                                                                      | s\* given a story doc file title, return a story doc file from the store                                              |
 | `removeObserver*`  | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string, `propName`: string): void;\[]; | remove installed observer callback function                                                                           |
 | `setStore*`        | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                        | internal set store, use for testing with mockup store.                                                                |
+| `sortDocs*`        | **function** sortDocs(): void;                                                                                                              | sort documents if a sortfunction is provided                                                                          |
 | `updateStoryProp*` | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newValue`\*: any): [StoriesStore](#storiesstore) \| undefined;     | modify story properties, for example controls values. will notify all installed store observers of the changed story. |
 
 ## StoreOptions
@@ -66,7 +69,7 @@ store on change observer.
 when updateStoryProp is called on the store, the store observers will be notified
 so they can re-load the stories
 
-_defined in [@component-controls/store/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/types.ts#L12)_
+_defined in [@component-controls/store/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/types.ts#L13)_
 
 **function** (`storyId`: string, `propName`: string): void;
 

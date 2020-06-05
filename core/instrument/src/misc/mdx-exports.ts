@@ -49,5 +49,5 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
       return `${defaultExportCode}\n${storiesExports.join('\n')}`;
     }
   }
-  return 'result';
+  return '';
 };

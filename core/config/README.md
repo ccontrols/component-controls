@@ -4,7 +4,8 @@
 -   [Installation](#installation)
 -   [API](#api)
     -   [ConfigrationResult](#configrationresult)
-    -   [configFileNames](#configfilenames)
+    -   [buildConfigFileNames](#buildconfigfilenames)
+    -   [optionsFileNames](#optionsfilenames)
     -   [extractStories](#extractstories)
     -   [getConfigurationArg](#getconfigurationarg)
     -   [loadConfiguration](#loadconfiguration)
@@ -30,20 +31,27 @@ $ npm install @component-controls/config --save-dev
 
 ## ConfigrationResult
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L14)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L16)_
 
 
 
 ### properties
 
-| Name          | Type                            | Description |
-| ------------- | ------------------------------- | ----------- |
-| `config*`     | [Configuration](#configuration) |             |
-| `configPath*` | string                          |             |
+| Name              | Type                            | Description |
+| ----------------- | ------------------------------- | ----------- |
+| `config*`         | [Configuration](#configuration) |             |
+| `configPath*`     | string                          |             |
+| `optionsFilePath` | string                          |             |
 
-## configFileNames
+## buildConfigFileNames
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L7)_
+
+
+
+## optionsFileNames
+
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L15)_
 
 
 
@@ -52,7 +60,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L70)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L80)_
 
 **function** extractStories(`__namedParameters`\*: **config**: [Configuration](#configuration)**configPath**: string): string\[] | undefined;
 
@@ -69,7 +77,7 @@ return the configration folder from command-line parameters
 command line accepts -c/ -config parameter for config path
 the config file is assumed named main.js/main.ts
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L24)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L27)_
 
 **function** getConfigurationArg(`args`\*: string\[]): string | undefined;
 
@@ -84,7 +92,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
  given a base project folder and a configuration folder, returns the configuration file
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L45)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L48)_
 
 **function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigrationResult](#configrationresult) | undefined;
 
@@ -108,9 +116,10 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ### properties
 
-| Name         | Type                               | Description                                                                                                                                    |
-| ------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `decorators` | [StoryRenderFn](#storyrenderfn)\[] | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
-| `stories*`   | string\[]                          | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| Name         | Type                                                                                      | Description                                                                                                                                    |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `decorators` | [StoryRenderFn](#storyrenderfn)\[]                                                        | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
+| `options`    | story sorting function**storySort**: **function** (`a`\*: string, `b`\*: string): number; | global options object                                                                                                                          |
+| `stories*`   | string\[]                                                                                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 
 <!-- END-TSDOC-TYPESCRIPT -->

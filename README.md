@@ -66,11 +66,11 @@ There are many developments that have contributed to the creation of `component-
 -   [x] Storybook integration without addon-docs (replace all storybook loaders)
 -   [x] Standalone webpack compiler API
 -   [ ] HMR
--   [ ] Gatsby standalone app/static app builder
+-   [x] Gatsby standalone app/static app builder
 -   [ ] Nextjs standalone app/static app builder
--   [ ] Integrated testing facilites
+-   [ ] Integrated testing facilites (WIP)
 -   [ ] Coverage and perfoamnce profiling instrumentation
--   [ ] Replace MDX with frontmatter format
+-   [x] Support frontmatter MDX declarations
 -   [ ] Multiple frameworks support (Vue, Angular, tbd)
 
 # Showcase sites
@@ -111,7 +111,6 @@ Storybook Addon For live editing of component controls
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX (`<Meta />` tag) is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 <!-- END-PACKAGE-SECTION -->
 

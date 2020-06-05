@@ -31,25 +31,26 @@ export const useComponentsContext = ({
 }: ComponentInputProps): ComponentContextProps => {
   const {
     storyId,
+    docId,
     getStoryData,
     getComponents,
     addObserver,
     removeObserver,
   } = React.useContext(BlockDataContext);
   const [{ story, doc, component, componentPackage }, setStoryData] = useState(
-    getStoryData(storyId),
+    getStoryData(storyId, docId),
   );
   useEffect(() => {
-    setStoryData(getStoryData(storyId));
+    setStoryData(getStoryData(storyId, docId));
     const onChange = () => {
       //force refresh of context
-      setStoryData(getStoryData(storyId));
+      setStoryData(getStoryData(storyId, docId));
     };
     addObserver(onChange);
     return () => {
       removeObserver(onChange);
     };
-  }, [storyId, addObserver, getStoryData, removeObserver]);
+  }, [docId, storyId, addObserver, getStoryData, removeObserver]);
 
   if (!story) {
     return {

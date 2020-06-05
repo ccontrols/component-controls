@@ -12,7 +12,6 @@
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>pages</ins>](#inspagesins)
-    -   [<ins>pages</ins>](#inspagesins-1)
     -   [<ins>StoryPage</ins>](#insstorypageins)
 
 # In action
@@ -89,8 +88,8 @@ _Layout [source code](https:/github.com/ccontrols/component-controls/tree/master
 | ------------- | ------------- | ----------- |
 | `title`       | _string_      |             |
 | `storyStore*` | _Store_       |             |
-| `storyId*`    | _string_      |             |
-| `docPath*`    | _string_      |             |
+| `storyId`     | _string_      |             |
+| `docTitle*`   | _string_      |             |
 | `pages*`      | _PagesConfig_ |             |
 
 ## <ins>SEO</ins>
@@ -119,10 +118,6 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 ## <ins>pages</ins>
 
 _pages [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/config/pages.tsx)_
-
-## <ins>pages</ins>
-
-_pages [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/index.tsx)_
 
 ## <ins>StoryPage</ins>
 

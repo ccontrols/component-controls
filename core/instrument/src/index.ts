@@ -1,5 +1,6 @@
 import * as parser from '@babel/parser';
 import mdx from '@mdx-js/mdx';
+import matter from 'gray-matter';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
@@ -156,7 +157,8 @@ export const parseStories = async (
     ...otherMDXOptions
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
-    const mdxParsed = await mdx(source, {
+    const { data, content } = matter(source);
+    const mdxParsed = await mdx(content, {
       filepath: filePath,
       ...otherMDXOptions,
     });
@@ -168,15 +170,18 @@ export const parseStories = async (
     }));
     const store = await parseSource(
       code,
-      extractMDXStories,
-      source,
+      extractMDXStories(data),
+      content,
       filePath,
       mergedOptions,
     );
     const { stories, doc, components, exports, packages } = store;
     const exportsSource = extractStoryExports(exports);
-    let transformed = source;
-    if (transformMDX && exportsSource) {
+    let transformed = `
+    
+    ${content}
+`;
+    if (transformMDX) {
       transformed = `${renderer}\n${code}\n${exportsSource}`;
     }
     return {
