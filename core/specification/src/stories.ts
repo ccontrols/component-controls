@@ -241,6 +241,15 @@ export interface StoriesDoc {
    */
   MDXPage?: any;
 
+  /**
+   * if true, will display the documentation page full view
+   */
+  fullPage?: boolean;
+
+  /**
+   * side menu - hide
+   */
+  menu?: boolean | string;
   [name: string]: any;
 }
 

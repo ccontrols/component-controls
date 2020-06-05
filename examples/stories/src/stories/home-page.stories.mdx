@@ -1,8 +1,19 @@
 ---
 title: Home
 route: /
+fullPage: true
+menu: false
 ---
 
-# Home Page
+import { jsx, Flex, Heading, Text } from 'theme-ui';
+
+<Flex sx={{ minHeight: '300px', width: '100%', alignItems: 'center', backgroundColor: 'primary', color: 'white' }}>
+  <Flex sx={{ flexDirection: 'column', alignItems: 'center', width: '100%'}}>
+    <Heading as='h1'>component-controls</Heading>
+    <Text>
+      design -> develop -> test
+    </Text>  
+  </Flex>  
+</Flex>
 
 This is some text

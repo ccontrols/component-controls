@@ -2,7 +2,7 @@
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Theme } from 'theme-ui';
 
-import { BlockContext } from '@component-controls/blocks';
+import { BlockContext, useStoryContext } from '@component-controls/blocks';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -63,7 +63,15 @@ const createMenuItem = (
     newItem,
   );
 };
-export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
+export const SidebarBase: FC<SidebarProps> = ({
+  docPath,
+  buttonClass,
+  title,
+}) => {
+  const { doc } = useStoryContext({ id: '.' });
+  if (doc && doc.fullPage) {
+    return null;
+  }
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const menuItems = useMemo(() => {
@@ -73,7 +81,9 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
       const menuItems = docTitles.reduce((acc: MenuItems, title: string) => {
         const levels = title.split('/');
         const doc = docs[title];
-        createMenuItem(levels, levels, doc?.route, acc);
+        if (doc.menu !== false) {
+          createMenuItem(levels, levels, doc?.route, acc);
+        }
         return acc;
       }, []);
       return menuItems;
@@ -115,4 +125,12 @@ export const Sidebar: FC<SidebarProps> = ({ docPath, buttonClass, title }) => {
       </Box>
     </AppSidebar>
   );
+};
+
+export const Sidebar: FC<SidebarProps> = props => {
+  const { doc } = useStoryContext({ id: '.' });
+  if (doc && doc.fullPage) {
+    return null;
+  }
+  return <SidebarBase {...props} />;
 };

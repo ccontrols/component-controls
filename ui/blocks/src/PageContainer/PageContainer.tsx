@@ -19,6 +19,11 @@ export interface PageContainerProps {
   maxWidth?: number | string;
 
   /**
+   * container padding
+   */
+  padding?: number;
+
+  /**
    * ref to the page container component
    */
   ref?: React.Ref<HTMLDivElement>;
@@ -30,7 +35,10 @@ export interface PageContainerProps {
  * Otherwise, the page elements are passed as children
  */
 export const PageContainer: FC<PageContainerProps> = forwardRef(
-  ({ children, components = {}, maxWidth }, ref: React.Ref<HTMLDivElement>) => {
+  (
+    { children, components = {}, maxWidth, padding = 4 },
+    ref: React.Ref<HTMLDivElement>,
+  ) => {
     useEffect(() => {
       try {
         const pageURL =
@@ -62,14 +70,16 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          px: 4,
-          py: 4,
           bg: 'background',
           color: 'text',
           fontFamily: 'body',
+          width: '100%',
         }}
       >
-        <Box sx={{ maxWidth, width: '100%', position: 'relative' }} ref={ref}>
+        <Box
+          sx={{ maxWidth, width: '100%', p: padding, position: 'relative' }}
+          ref={ref}
+        >
           <StoryContextConsumer id=".">
             {({ doc }) => {
               const { MDXPage } = doc || {};

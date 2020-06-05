@@ -3,7 +3,7 @@ import { FC, ReactNode, Fragment, useRef } from 'react';
 import { jsx, Container } from 'theme-ui';
 import * as qs from 'qs';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
-import { PageContainer } from '@component-controls/blocks';
+import { PageContainer, useStoryContext } from '@component-controls/blocks';
 import { SideContext } from '../SideContext';
 export interface PageConfig {
   key: string;
@@ -16,7 +16,7 @@ export type PagesConfig = (route: string) => PageConfig[];
 export interface PageProps {
   pagesFn: PagesConfig;
 }
-export const Page: FC<PageProps> = ({ pagesFn }) => {
+export const BasePage: FC<PageProps> = ({ pagesFn }) => {
   const pages = typeof pagesFn === 'function' ? pagesFn('') : [];
   const pageRef = useRef<HTMLDivElement>(null);
   const params =
@@ -66,4 +66,12 @@ export const Page: FC<PageProps> = ({ pagesFn }) => {
       <SideContext pageRef={pageRef} />
     </Fragment>
   );
+};
+
+export const Page: FC<PageProps> = props => {
+  const { doc } = useStoryContext({ id: '.' });
+  if (doc && doc.fullPage && doc.MDXPage) {
+    return <PageContainer maxWidth="100%" padding={0} />;
+  }
+  return <BasePage {...props} />;
 };
