@@ -52,19 +52,25 @@ export const BlockContext = React.createContext<BlockContextProps>({});
 
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
-  storyId,
-  docId,
+  storyId: propsStoryId,
+  docId: propsDocId,
   store,
   options,
 }) => {
-  const pageId = storyId || docId ? docId : store.firstDoc;
+  let storyId = propsStoryId;
+  const docId = storyId || propsDocId ? propsDocId : store.firstDoc;
+  if (!storyId && docId) {
+    const doc = store.getStoryDoc(docId);
+    storyId = doc && doc.stories.length ? doc.stories[0] : undefined;
+  }
+
   return (
     <ErrorBoundary>
       <RecoilRoot>
         <BlockContext.Provider
           value={{
             storyId,
-            docId: pageId,
+            docId,
             storeProvider: store,
             options,
           }}
@@ -72,7 +78,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
           <BlockDataContextProvider
             store={store}
             storyId={storyId}
-            docId={pageId}
+            docId={docId}
           >
             <BlockControlsContextProvider store={store}>
               {children}

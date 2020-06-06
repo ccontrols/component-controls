@@ -71,7 +71,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
         bottom: 0,
       };
   return collapsed ? null : (
-    <Box tabIndex={0} sx={style} {...rest}>
+    <Box sx={style} {...rest}>
       <div
         sx={{
           position: !responsive ? 'fixed' : undefined,
