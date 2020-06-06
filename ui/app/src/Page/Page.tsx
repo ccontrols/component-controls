@@ -1,10 +1,12 @@
 /** @jsx jsx */
-import { FC, ReactNode, Fragment, useRef } from 'react';
-import { jsx, Container } from 'theme-ui';
+import { FC, ReactNode, useRef } from 'react';
+import { jsx, Container, Flex } from 'theme-ui';
 import * as qs from 'qs';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
 import { PageContainer, useStoryContext } from '@component-controls/blocks';
+
 import { SideContext } from '../SideContext';
+import { Sidebar } from '../Sidebar';
 export interface PageConfig {
   key: string;
   title: string;
@@ -28,8 +30,9 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
     0,
   );
   return (
-    <Fragment>
-      <Container sx={{ flex: 1 }}>
+    <Flex sx={{ flexDirection: 'row', flex: 1 }}>
+      <Sidebar />
+      <Container sx={{ flex: 1 }} id="content">
         <Tabs
           fontSize={16}
           selectedIndex={tabIndex}
@@ -64,14 +67,14 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
         </Tabs>
       </Container>
       <SideContext pageRef={pageRef} />
-    </Fragment>
+    </Flex>
   );
 };
 
 export const Page: FC<PageProps> = props => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage && doc.MDXPage) {
-    return <PageContainer maxWidth="100%" padding={0} />;
+    return <PageContainer maxWidth="100%" padding={0} id="content" />;
   }
   return <BasePage {...props} />;
 };

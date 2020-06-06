@@ -1,7 +1,13 @@
 /** @jsx jsx */
+import { FC, useContext } from 'react';
 import { Text, Flex, Link, jsx } from 'theme-ui';
+import { BlockContext } from '@component-controls/blocks';
 
-export const Footer = () => {
+export const Footer: FC = () => {
+  const { storeProvider } = useContext(BlockContext);
+  const config = storeProvider.config;
+  const { author, siteUrl, siteDescription } = config?.options || {};
+
   return (
     <Flex
       as="footer"
@@ -20,11 +26,8 @@ export const Footer = () => {
           a: { color: `text` },
         }}
       >
-        <Link
-          aria-label="visit component-controls repository"
-          href="https://github.com/ccontrols/component-controls"
-        >
-          component controls
+        <Link aria-label={siteDescription} href={siteUrl}>
+          {author}
         </Link>
       </Flex>
     </Flex>

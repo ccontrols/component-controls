@@ -61,7 +61,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       <SidebarContext.Consumer>
         {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
           <div>
-            <AppSidebar width={300} minWidth={250}>
+            <AppSidebar width={300} minWidth={250} id="contextbar">
               {responsive && (
                 <Header shadow={false}>
                   <SidebarClose />
@@ -76,6 +76,9 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
                 <Flex as="nav" sx={{ flexDirection: 'column' }}>
                   {items?.map((el, index) => (
                     <NavLink
+                      sx={{
+                        pl: 2,
+                      }}
                       key={`context_link_${index}`}
                       href={el.getAttribute('href') || undefined}
                       className={el === activeItem ? 'active' : undefined}

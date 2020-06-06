@@ -4,3 +4,4 @@ export * from './Keyboard';
 export * from './Link';
 export * from './Navmenu';
 export * from './Sidebar';
+export * from './SkipLinks';

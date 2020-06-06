@@ -1,19 +1,17 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Flex } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
-import { Page, SEO, Header } from '@component-controls/app';
+import { App } from '@component-controls/app';
 import {
   SidebarContextProvider,
   LinkContextProvider,
 } from '@component-controls/app-components';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
-import { Sidebar } from './Sidebar';
 import { GatsbyLink } from './GatsbyLink';
 import { PagesConfig } from './types';
-import { Footer } from './Footer';
 
 interface LayoutProps {
   title?: string;
@@ -41,23 +39,10 @@ export const Layout: FC<LayoutProps> = ({
         })}
       />
       <BlockContextProvider storyId={story} docId={docTitle} store={storyStore}>
-        <SEO title={title} />
         <SidebarContextProvider>
-          <Flex
-            sx={{
-              minHeight: '100vh',
-              flexDirection: 'column',
-            }}
-          >
-            <LinkContextProvider linkClass={GatsbyLink}>
-              <Header title={title}></Header>
-              <Flex sx={{ flexDirection: 'row', flex: 1 }}>
-                <Sidebar docPath={docTitle} />
-                <Page pagesFn={pagesFn} />
-              </Flex>
-              <Footer />
-            </LinkContextProvider>
-          </Flex>
+          <LinkContextProvider linkClass={GatsbyLink}>
+            <App title={title} pagesFn={pagesFn} />
+          </LinkContextProvider>
         </SidebarContextProvider>
       </BlockContextProvider>
     </ThemeProvider>

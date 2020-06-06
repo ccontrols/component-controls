@@ -1,6 +1,14 @@
 /** @jsx jsx */
 import React, { FC, useContext } from 'react';
-import { jsx, Box, Flex, BoxProps, Heading, SxStyleProp } from 'theme-ui';
+import {
+  jsx,
+  Box,
+  Flex,
+  BoxProps,
+  Heading,
+  SxStyleProp,
+  Theme,
+} from 'theme-ui';
 import { SidebarContext } from './SidebarContext';
 
 export interface SidebarProps {
@@ -63,12 +71,20 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
         bottom: 0,
       };
   return collapsed ? null : (
-    <Box sx={style} {...rest}>
+    <Box tabIndex={0} sx={style} {...rest}>
       <div
         sx={{
           position: !responsive ? 'fixed' : undefined,
           height: '100%',
           overflowY: 'auto',
+          a: {
+            '&.active': {
+              borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
+            },
+            ':hover': {
+              backgroundColor: 'shadow',
+            },
+          },
         }}
         onClick={() => responsive && setCollapsed(true)}
       >

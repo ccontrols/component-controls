@@ -19,10 +19,6 @@ export interface SidebarProps {
    * title element
    */
   title?: React.ReactNode;
-  /**
-   * current path
-   */
-  docPath?: string;
 }
 
 const createMenuItem = (
@@ -60,10 +56,7 @@ const createMenuItem = (
     newItem,
   );
 };
-export const SidebarBase: FC<SidebarProps> = ({
-  docPath,
-  title: propsTitle,
-}) => {
+export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage) {
     return null;
@@ -96,6 +89,7 @@ export const SidebarBase: FC<SidebarProps> = ({
         borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
       }}
       width={300}
+      id="sidebar"
     >
       {responsive && (
         <Header shadow={false}>
@@ -114,7 +108,7 @@ export const SidebarBase: FC<SidebarProps> = ({
           />
         </Box>
         <Navmenu
-          activeItem={{ id: docPath }}
+          activeItem={{ id: doc?.title }}
           search={search}
           items={menuItems}
         />

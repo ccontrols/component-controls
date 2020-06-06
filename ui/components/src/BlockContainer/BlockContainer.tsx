@@ -9,6 +9,7 @@ import Octicon, {
 import { Markdown } from '../Markdown';
 import { Subtitle } from '../Subtitle';
 import { Collapsible } from '../Collapsible';
+import { pageLink } from './pageLink';
 
 export interface BlockContainerProps {
   /**
@@ -66,11 +67,6 @@ export const BlockContainer: FC<BlockContainerProps> = ({
       {title}
     </Subtitle>
   );
-  //workaround for storybook iframe url
-  const url =
-    (typeof window !== 'undefined' && window.location !== window.parent.location
-      ? document.referrer
-      : typeof document !== 'undefined' && document.location.href) || '';
   return (
     <Box
       sx={{
@@ -106,7 +102,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
                   visibility: 'visible',
                 },
               }}
-              href={`${url.split('#')[0]}#${blockId}`}
+              href={pageLink(blockId)}
               data-title={title}
             >
               <Octicon icon={LinkIcon} />

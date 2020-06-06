@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { FC, useEffect, forwardRef } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, BoxProps } from 'theme-ui';
 import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 
 import { markdownComponents } from '@component-controls/components';
@@ -34,9 +34,9 @@ export interface PageContainerProps {
  * If the page is an MDX page, will display the MDX components.
  * Otherwise, the page elements are passed as children
  */
-export const PageContainer: FC<PageContainerProps> = forwardRef(
+export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
   (
-    { children, components = {}, maxWidth, padding = 4 },
+    { children, components = {}, maxWidth, padding = 4, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
     useEffect(() => {
@@ -75,6 +75,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
           fontFamily: 'body',
           width: '100%',
         }}
+        {...rest}
       >
         <Box
           sx={{ maxWidth, width: '100%', p: padding, position: 'relative' }}
