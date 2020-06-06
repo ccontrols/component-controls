@@ -61,7 +61,8 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   const docId = storyId || propsDocId ? propsDocId : store.firstDoc;
   if (!storyId && docId) {
     const doc = store.getStoryDoc(docId);
-    storyId = doc && doc.stories.length ? doc.stories[0] : undefined;
+    storyId =
+      doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
   }
 
   return (
