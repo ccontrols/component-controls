@@ -1,7 +1,7 @@
 import { loadConfiguration, extractStories } from '@component-controls/config';
 import { stringifyRequest } from 'loader-utils';
 import { replaceSource, StoryPath } from './replaceSource';
-import { store } from './store';
+import { store, reserveStories } from './store';
 
 module.exports = function(content: string) {
   //@ts-ignore
@@ -11,6 +11,7 @@ module.exports = function(content: string) {
   store.config = config?.optionsFilePath
     ? require(config?.optionsFilePath)
     : undefined;
+
   const stories: StoryPath[] = (config ? extractStories(config) || [] : []).map(
     fileName => ({
       absPath: fileName,
@@ -18,7 +19,7 @@ module.exports = function(content: string) {
       relPath: stringifyRequest(this, fileName),
     }),
   );
-
+  reserveStories(stories.map(story => story.absPath));
   content = replaceSource(
     stories,
     config?.optionsFilePath,

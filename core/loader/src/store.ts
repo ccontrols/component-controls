@@ -30,8 +30,8 @@ export const store: LoadingStore = {
   packages: {},
 };
 
-export const reserveStoriesDoc = (filePath: string) => {
-  store.stores.push({ filePath });
+export const reserveStories = (filePaths: string[]) => {
+  filePaths.forEach(filePath => store.stores.push({ filePath }));
 };
 export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   const { components, packages, stories, doc } = added;

@@ -8,13 +8,12 @@ import {
   parseStories,
 } from '@component-controls/instrument';
 
-import { reserveStoriesDoc, addStoriesDoc } from './store';
+import { addStoriesDoc } from './store';
 
 module.exports.pitch = async function() {
   const options: InstrumentOptions = getOptions(this) || {};
   const context = this as loader.LoaderContext;
   const filePath = this.resource;
-  reserveStoriesDoc(filePath);
   const source = fs.readFileSync(filePath, 'utf8');
   const { transformed, ...store } = await parseStories(
     source,
