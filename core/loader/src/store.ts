@@ -31,7 +31,9 @@ export const store: LoadingStore = {
 };
 
 export const reserveStories = (filePaths: string[]) => {
-  filePaths.forEach(filePath => store.stores.push({ filePath }));
+  if (store.stores.length === 0) {
+    filePaths.forEach(filePath => store.stores.push({ filePath }));
+  }
 };
 export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   const { components, packages, stories, doc } = added;
@@ -45,5 +47,7 @@ export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   if (storeStore) {
     storeStore.stories = stories;
     storeStore.doc = doc;
+  } else {
+    store.stores.push({ filePath, stories, doc });
   }
 };

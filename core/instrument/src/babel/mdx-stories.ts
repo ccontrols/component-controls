@@ -10,6 +10,7 @@ import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
+import jsStringEscape from 'js-string-escape';
 import { followStoryImport } from './follow-imports';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
@@ -78,6 +79,17 @@ export const extractMDXStories = (props: any) => (
     exports: {},
     packages: {},
   };
+  if (props) {
+    store.exports.default = {
+      story: Object.keys(props).reduce((acc: object, key: string) => {
+        const prop = props[key];
+        return {
+          ...acc,
+          [key]: typeof prop === 'string' ? `"${jsStringEscape(prop)}"` : prop,
+        };
+      }, {}),
+    };
+  }
   const { transformMDX } = _options.mdx;
   traverse(ast as any, {
     JSXElement: (path: any) => {

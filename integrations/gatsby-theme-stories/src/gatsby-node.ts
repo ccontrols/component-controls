@@ -24,7 +24,6 @@ exports.createPages = async (
       : await compile(config);
   if (store) {
     const { basePath = '' } = store.config?.options || {};
-    console.log('basePath', basePath);
     const template = require.resolve(`../src/templates/StoryPage.tsx`);
     store.stores.forEach(s => {
       const doc = s.doc;

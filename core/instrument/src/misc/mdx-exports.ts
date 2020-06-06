@@ -23,11 +23,11 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
     const exportNames = Object.keys(exports);
     if (exportNames.length) {
       let defaultExportCode = '';
-      if (exports.default && exports.default.story) {
+      if (exports.default) {
         const expCode = mdxPropertiesExport(exports.default);
-        if (expCode) {
-          defaultExportCode = `export default { ${expCode}, MDXPage: () => <MDXContent /> };`;
-        }
+        defaultExportCode = `export default { ${
+          expCode ? `${expCode},` : ''
+        } MDXPage: () => <MDXContent /> };`;
       }
 
       let storiesExports: string[] = [];
