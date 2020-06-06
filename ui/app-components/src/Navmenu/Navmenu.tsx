@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { FC, useEffect, useState } from 'react';
-import { jsx, Box, Flex, Button, ButtonProps, LinkProps, Text } from 'theme-ui';
+import { jsx, Box, Flex, Text, Button, ButtonProps } from 'theme-ui';
 import Octicon, { ChevronDown, ChevronRight } from '@primer/octicons-react';
 import {
   Keyboard,
@@ -9,6 +9,7 @@ import {
   RIGHT_ARROW,
   DOWN_ARROW,
 } from '../Keyboard';
+import { Link, LinkClassType } from '../Link';
 
 export interface MenuItem {
   /** Unique id */
@@ -31,18 +32,11 @@ export interface MenuItem {
 
 export type MenuItems = MenuItem[];
 
-export type ButtonClassType =
-  | React.FunctionComponent<ButtonProps>
-  | React.FunctionComponent<LinkProps>;
-
 export interface NavMenuProps {
   /** Array of menu items */
   items: MenuItems;
   /** Initially active menu item */
   activeItem?: Pick<MenuItem, 'id' | 'label'>;
-
-  /** Custom class to use for the button instead of Button */
-  buttonClass?: ButtonClassType;
 
   /** If specified, will expand all items with chidren */
   expandAll?: boolean;
@@ -210,7 +204,6 @@ export const Navmenu: FC<NavMenuProps> = ({
   activeItem,
   search,
   onSelect,
-  buttonClass,
 }) => {
   const [state, setState] = useState<NavMenuState>(
     stateFromProps({
@@ -266,8 +259,7 @@ export const Navmenu: FC<NavMenuProps> = ({
     const itemId = id || label;
     const isExpanded: boolean =
       expandedItems && itemId ? expandedItems.includes(item) : false;
-    const ButtonClass: ButtonClassType =
-      (items ? Button : buttonClass) || Button;
+    const LinkClass: LinkClassType | FC<ButtonProps> = items ? Button : Link;
     const itemKey = `item_${itemId}_${level}`;
 
     let background;
@@ -282,7 +274,7 @@ export const Navmenu: FC<NavMenuProps> = ({
           pl: level,
         }}
       >
-        <ButtonClass
+        <LinkClass
           sx={{
             width: '100%',
             px: 3,
@@ -344,7 +336,7 @@ export const Navmenu: FC<NavMenuProps> = ({
               )}
             </Flex>
           </Flex>
-        </ButtonClass>
+        </LinkClass>
       </Flex>
     );
     return (

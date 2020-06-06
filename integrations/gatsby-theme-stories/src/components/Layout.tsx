@@ -3,12 +3,15 @@ import { FC } from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
-import { Page, SEO } from '@component-controls/app';
-import { SidebarContextProvider } from '@component-controls/app-components';
+import { Page, SEO, Header } from '@component-controls/app';
+import {
+  SidebarContextProvider,
+  LinkContextProvider,
+} from '@component-controls/app-components';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { Store } from '@component-controls/store';
 import { Sidebar } from './Sidebar';
-import { Header } from './Header';
+import { GatsbyLink } from './GatsbyLink';
 import { PagesConfig } from './types';
 import { Footer } from './Footer';
 
@@ -46,12 +49,14 @@ export const Layout: FC<LayoutProps> = ({
               flexDirection: 'column',
             }}
           >
-            <Header title={title}></Header>
-            <Flex sx={{ flexDirection: 'row', flex: 1 }}>
-              <Sidebar docPath={docTitle} />
-              <Page pagesFn={pagesFn} />
-            </Flex>
-            <Footer />
+            <LinkContextProvider linkClass={GatsbyLink}>
+              <Header title={title}></Header>
+              <Flex sx={{ flexDirection: 'row', flex: 1 }}>
+                <Sidebar docPath={docTitle} />
+                <Page pagesFn={pagesFn} />
+              </Flex>
+              <Footer />
+            </LinkContextProvider>
           </Flex>
         </SidebarContextProvider>
       </BlockContextProvider>

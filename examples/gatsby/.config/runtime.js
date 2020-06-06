@@ -9,7 +9,7 @@ module.exports = {
     siteDescription: `Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.`,
     siteLanguage: `en`,
     author: `@atanasster`,
-    basePath: 'docs',
+    basePath: 'docs/',
 
     storySort: (a, b) => {
       const aDoc = a.split('/')[0];

@@ -20,12 +20,12 @@
 
 # Overview
 
-Accessibility testing plugin using the [axe-core](https://github.com/dequelabs/axe-core) library from [deque](https://www.deque.com/axe/)
-
-Some of the design goals:
+Gatsby theme for documenting your projects with component controls
 
 -   Gatsby theme quick start.
 -   Full UI configurability with components shadowing.
+
+Special thanks for the inspiration drawn from [Gatsby themes](https://github.com/LekoArts/gatsby-themes).
 
 # Getting Started
 

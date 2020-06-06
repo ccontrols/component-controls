@@ -60,7 +60,7 @@ export interface Configuration {
      */
     siteImage?: string;
     /**
-     * base url path for API documentation pages. Default is "docs"
+     * base url path for API documentation pages. Default is "docs/"
      */
     basePath?: string;
     /**

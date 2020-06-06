@@ -8,7 +8,6 @@ import {
   ColorMode,
   SidebarContext,
   Navmenu,
-  NavMenuProps,
   MenuItems,
   MenuItem,
   Header,
@@ -24,13 +23,10 @@ export interface SidebarProps {
    * current path
    */
   docPath?: string;
-  /**
-   * platform specific link class
-   */
-  buttonClass?: NavMenuProps['buttonClass'];
 }
 
 const createMenuItem = (
+  basePath: string,
   levels: string[],
   allLevels: string[],
   route?: string,
@@ -50,12 +46,13 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = allLevels.join('/');
-      //@ts-ignore
-      newItem.to = route || `/docs/${allLevels.join('/').toLowerCase()}/`;
+      newItem.href =
+        route || `/${basePath}${allLevels.join('/').toLowerCase()}/`;
     }
     parent.push(newItem);
   }
   return createMenuItem(
+    basePath,
     levels.slice(1),
     levels,
     route,
@@ -65,7 +62,6 @@ const createMenuItem = (
 };
 export const SidebarBase: FC<SidebarProps> = ({
   docPath,
-  buttonClass,
   title: propsTitle,
 }) => {
   const { doc } = useStoryContext({ id: '.' });
@@ -75,7 +71,7 @@ export const SidebarBase: FC<SidebarProps> = ({
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { siteTitle } = config?.options || {};
+  const { siteTitle, basePath = '' } = config?.options || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: StoryDocs = storeProvider.getDocs() || {};
@@ -84,14 +80,14 @@ export const SidebarBase: FC<SidebarProps> = ({
         const levels = title.split('/');
         const doc = docs[title];
         if (doc.menu !== false) {
-          createMenuItem(levels, levels, doc?.route, acc);
+          createMenuItem(basePath, levels, levels, doc?.route, acc);
         }
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [storeProvider]);
+  }, [storeProvider, basePath]);
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
@@ -107,7 +103,7 @@ export const SidebarBase: FC<SidebarProps> = ({
           <ColorMode />
         </Header>
       )}
-      <Flex sx={{ px: 2, flexDirection: 'column', alignItems: 'center' }}>
+      <Flex sx={{ px: 2, flexDirection: 'column' }}>
         <Heading as="h3">{propsTitle || siteTitle}</Heading>
         <Box sx={{ py: 2, px: 3 }}>
           <Input
@@ -118,7 +114,6 @@ export const SidebarBase: FC<SidebarProps> = ({
           />
         </Box>
         <Navmenu
-          buttonClass={buttonClass}
           activeItem={{ id: docPath }}
           search={search}
           items={menuItems}

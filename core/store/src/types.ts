@@ -48,6 +48,6 @@ export const defaultConfig: Configuration = {
       'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
     siteLanguage: 'en',
     author: '@component-controls',
-    basePath: 'docs',
+    basePath: 'docs/',
   },
 };

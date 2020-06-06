@@ -23,12 +23,14 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (store) {
+    const { basePath = '' } = store.config?.options || {};
+    console.log('basePath', basePath);
     const template = require.resolve(`../src/templates/StoryPage.tsx`);
     store.stores.forEach(s => {
       const doc = s.doc;
       if (doc) {
         createPage({
-          path: doc.route || `/docs/${doc.title.toLowerCase()}`,
+          path: doc.route || `/${basePath}${doc.title.toLowerCase()}`,
           component: template,
           context: {
             doc: doc.title,
@@ -44,9 +46,9 @@ exports.createPages = async (
         doc: homePage?.doc?.title,
       },
     });
-    const docsPage = store.stores.find(s => s.doc?.route === '/docs');
+    const docsPage = store.stores.find(s => s.doc?.route === `/${basePath}`);
     createPage({
-      path: `/docs/`,
+      path: `/${basePath}`,
       component: template,
       context: {
         doc: docsPage?.doc?.title,

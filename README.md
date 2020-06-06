@@ -35,6 +35,7 @@
 # Motivation
 
 -   Create a components development environment with testing as a first-class feature.
+-   Provide out-of-the-box documentation experience with markdown pages for home page, blogging and general project documentation .
 -   Use smart "super-bundlers" (gatsby, nextjs) to build compact and fast documentation sites.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files (both story and component files) at instrumentation-time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
@@ -49,6 +50,8 @@ There are many developments that have contributed to the creation of `component-
 -   [storybook](https://storybook.js.org) is the original component development system that helps teams to design, develop and test components. The strong support for testing and the creation of an open [Component Story Format](https://github.com/storybookjs/csf) were an inspiration, as well as the [Storybook Addon Knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs) for providing configurable component properties.
 
 -   [docz](https://www.docz.site) has a beautiful architecture and introduced non-proprietary [gatsby](https://www.gatsbyjs.org) build engine. This monorepo was also heavily influenced by the `docz` project repository structure.
+
+-   [docusaurus](https://docusaurus.io) creates very clean and effective UX for documentation websites. Provides excellent options for project blogging, versioning, translation and algolia-powered search.
 
 -   [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) advancements have been greatly responsible for making possible the parsing and analysis features of this library.
 
