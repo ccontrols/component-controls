@@ -16,7 +16,6 @@ import { PagesConfig } from './types';
 interface LayoutProps {
   title?: string;
   storyStore: Store;
-  storyId?: string;
   docTitle: string;
   pages: PagesConfig;
 }
@@ -25,10 +24,8 @@ export const Layout: FC<LayoutProps> = ({
   pages: pagesFn,
   title,
   storyStore,
-  storyId,
   docTitle,
 }) => {
-  const story = storyId || storyStore?.firstStory;
   return (
     <ThemeProvider>
       <Global
@@ -38,7 +35,7 @@ export const Layout: FC<LayoutProps> = ({
           },
         })}
       />
-      <BlockContextProvider storyId={story} docId={docTitle} store={storyStore}>
+      <BlockContextProvider docId={docTitle} store={storyStore}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={GatsbyLink}>
             <App title={title} pagesFn={pagesFn} />

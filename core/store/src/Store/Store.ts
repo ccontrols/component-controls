@@ -31,6 +31,7 @@ export class Store implements StoryStore {
   private observers: StoreObserver[];
   private moduleId: number;
   private _firstStory: string | undefined;
+  private _firstDoc: string | undefined;
   /**
    * create a store with options
    */
@@ -83,13 +84,17 @@ export class Store implements StoryStore {
             {},
           );
       }
+
       const sortedDocs = Object.keys(this.loadedStore.docs);
-      if (this.loadedStore.docs && sortedDocs.length > 0) {
-        const firstDoc = this.loadedStore.docs[sortedDocs[0]];
-        if (firstDoc.stories && firstDoc.stories.length) {
-          //point tot first story of first doc
-          this._firstStory = firstDoc.stories[0];
-        }
+      this._firstDoc = sortedDocs.find(name => {
+        //@ts-ignore
+        const doc = this.loadedStore.docs[name];
+        return doc.stories && doc.stories.length;
+      });
+      if (this._firstDoc) {
+        const doc = this.loadedStore.docs[this._firstDoc];
+        //point to first story of first doc
+        this._firstStory = doc.stories?.[0];
       }
     }
   };
@@ -162,6 +167,9 @@ export class Store implements StoryStore {
   }
   get firstStory(): string | undefined {
     return this._firstStory;
+  }
+  get firstDoc(): string | undefined {
+    return this._firstDoc;
   }
 
   /**

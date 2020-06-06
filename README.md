@@ -78,11 +78,13 @@ There are many developments that have contributed to the creation of `component-
 
 # Showcase sites
 
--   [Storybook 6](https://components-storybook-6.netlify.app/)
+-   [Gatsby](https://component-controls-gatsby.netlify.app)
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
--   [Custom docs pages](https://custom-pages-storybook-6.netlify.app)
+-   [Storybook 6](https://components-storybook-6.netlify.app/)
+
+-   [Storybook custom docs pages](https://custom-pages-storybook-6.netlify.app)
 
 # Integrations
 

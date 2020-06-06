@@ -57,13 +57,14 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   store,
   options,
 }) => {
+  const pageId = storyId || docId ? docId : store.firstDoc;
   return (
     <ErrorBoundary>
       <RecoilRoot>
         <BlockContext.Provider
           value={{
             storyId,
-            docId,
+            docId: pageId,
             storeProvider: store,
             options,
           }}
@@ -71,7 +72,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
           <BlockDataContextProvider
             store={store}
             storyId={storyId}
-            docId={docId}
+            docId={pageId}
           >
             <BlockControlsContextProvider store={store}>
               {children}
