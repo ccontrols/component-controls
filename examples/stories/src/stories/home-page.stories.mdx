@@ -6,15 +6,20 @@ menu: false
 ---
 
 import { jsx, Flex, Heading, Text, Button } from 'theme-ui';
+import { DocsLink, StoryLink, DocLink } from '@component-controls/app';
 
 <Flex sx={{ minHeight: '300px', width: '100%', alignItems: 'center', backgroundColor: 'primary', color: 'white' }}>
   <Flex sx={{ flexDirection: 'column', alignItems: 'center', width: '100%'}}>
     <Heading as='h1'>component-controls</Heading>
-    <Text>
+    <Text sx={{ my: 2 }}>
       design -> develop -> test
     </Text>  
-    <Button>Getting started</Button>
+    <DocsLink sx={{ color: 'white'}}>Getting started</DocsLink>
   </Flex>  
 </Flex>
 
-This is some text
+<StoryLink id='introduction-controls--random-number'>Go to Random Number story</StoryLink>
+
+<br/>
+
+<DocLink id='Introduction/MDX'>Go to MDX doc page</DocLink>

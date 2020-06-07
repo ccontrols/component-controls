@@ -74,7 +74,14 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
 export const Page: FC<PageProps> = props => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage && doc.MDXPage) {
-    return <PageContainer maxWidth="100%" padding={0} id="content" />;
+    return (
+      <PageContainer
+        sx={{ flex: 1 }}
+        maxWidth="100%"
+        padding={0}
+        id="content"
+      />
+    );
   }
   return <BasePage {...props} />;
 };

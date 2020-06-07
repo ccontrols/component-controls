@@ -172,6 +172,24 @@ export class Store implements StoryStore {
     return this._firstDoc;
   }
 
+  getDocPath = (name: string): string => {
+    const doc = this.getStoryDoc(name);
+    const basePath = this.config?.options?.basePath || '';
+    return doc ? doc.route || `/${basePath}${name.toLowerCase()}/` : '';
+  };
+
+  getStoryPath = (storyId: string): string => {
+    const story = this.getStory(storyId);
+    if (!story) {
+      return '';
+    }
+    const doc = this.getStoryDoc(story?.doc || '');
+    const basePath = this.config?.options?.basePath || '';
+    return doc
+      ? doc.route || `/${basePath}${doc.title.toLowerCase()}/#${story.id}`
+      : '';
+  };
+
   /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.

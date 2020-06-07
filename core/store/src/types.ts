@@ -20,6 +20,8 @@ export interface StoryStore {
   config: Configuration | undefined;
   firstStory: string | undefined;
   firstDoc: string | undefined;
+  getDocPath: (name: string) => string;
+  getStoryPath: (storyId: string) => string;
   updateStoryProp: (
     storyId: string,
     propName: string,
