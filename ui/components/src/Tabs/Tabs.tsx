@@ -32,7 +32,13 @@ interface TabsContainerProps {
   fontSize?: number | string;
 }
 const TabsContainer = styled.div`
-  ${({ theme, fontSize = 13 }: { theme?: Theme } & TabsContainerProps) => `
+  ${({
+    theme,
+    _fontSize = 13,
+  }: {
+    theme?: Theme;
+    _fontSize?: number | string;
+  }) => `
     .react-tabs {
       -webkit-tap-highlight-color: transparent;
     }
@@ -41,7 +47,9 @@ const TabsContainer = styled.div`
       padding: 0;
     }
     .react-tabs__tab {
-      font-size: ${typeof fontSize === 'string' ? fontSize : `${fontSize}px`};
+      font-size: ${
+        typeof _fontSize === 'string' ? _fontSize : `${_fontSize}px`
+      };
       font-weight: bold;
       display: inline-block;
       border-bottom: none;
@@ -86,13 +94,14 @@ const TabsContainer = styled.div`
 `;
 
 type OwnTabsProps = TabsContainerProps & Omit<TabsProps, 'ref'>;
+
 /**
  * Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
  *
  */
 export const Tabs: FC<OwnTabsProps> = ({ fontSize, ...props }) => {
   return (
-    <TabsContainer fontSize={fontSize}>
+    <TabsContainer _fontSize={fontSize}>
       <OriginalTabs {...props} />
     </TabsContainer>
   );

@@ -76,6 +76,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
         sx={{
           position: !responsive ? 'fixed' : undefined,
           height: '100%',
+          width: 'inherit',
           overflowY: 'auto',
           a: {
             '&.active': {

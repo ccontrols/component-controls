@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, ReactNode, useRef } from 'react';
-import { jsx, Container, Flex } from 'theme-ui';
+import { jsx, Box, Flex } from 'theme-ui';
 import * as qs from 'qs';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
 import { PageContainer, useStoryContext } from '@component-controls/blocks';
@@ -32,7 +32,7 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
   return (
     <Flex sx={{ flexDirection: 'row', flex: 1 }}>
       <Sidebar />
-      <Container sx={{ flex: 1 }} id="content">
+      <Box sx={{ flex: 1 }} id="content">
         <Tabs
           fontSize={16}
           selectedIndex={tabIndex}
@@ -58,14 +58,14 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
             </TabList>
           )}
 
-          <PageContainer maxWidth={1200} ref={pageRef}>
+          <PageContainer maxWidth="1200px" ref={pageRef}>
             {pages &&
               pages.map(page => (
                 <TabPanel key={`panel_${page.key}`}>{page.render()}</TabPanel>
               ))}
           </PageContainer>
         </Tabs>
-      </Container>
+      </Box>
       <SideContext pageRef={pageRef} />
     </Flex>
   );
