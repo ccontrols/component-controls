@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FunctionComponent } from 'react';
+import { FC } from 'react';
 import { transparentize } from 'polished';
 import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
@@ -44,9 +44,7 @@ const ActionColors = ({
  * actions can accept an order prop, and can also be superimposed
  *
  */
-export const ActionBar: FunctionComponent<ActionBarProps> = ({
-  actions = [],
-}) => {
+export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
   const { theme } = useThemeUI();
   const sortedItems = getSortedActions(actions);
   const items = sortedItems.map(

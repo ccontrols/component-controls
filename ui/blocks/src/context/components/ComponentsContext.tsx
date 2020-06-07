@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import {
   Story,
   StoriesDoc,
@@ -36,10 +36,12 @@ export const useComponentsContext = ({
     getComponents,
     addObserver,
     removeObserver,
-  } = React.useContext(BlockDataContext);
+  } = useContext(BlockDataContext);
+
   const [{ story, doc, component, componentPackage }, setStoryData] = useState(
     getStoryData(storyId, docId),
   );
+
   useEffect(() => {
     setStoryData(getStoryData(storyId, docId));
     const onChange = () => {

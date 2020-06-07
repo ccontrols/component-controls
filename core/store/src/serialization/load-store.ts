@@ -42,23 +42,23 @@ export const loadStoryStore = (
           const storeStories = s.stories;
           if (storeDoc && storeStories && s.stories) {
             const doc = storeDoc;
+            const {
+              title,
+              stories,
+              source,
+              component,
+              fileName,
+              repository,
+              components,
+              excludeStories,
+              includeStories,
+              package: docPackage,
+              ...otherDocProps
+            } = doc;
             globalStore.docs[doc.title] = doc;
             Object.keys(storeStories).forEach((storyName: string) => {
               const story: Story = storeStories[storyName];
-              const {
-                title,
-                stories,
-                source,
-                component,
-                fileName,
-                repository,
-                components,
-                excludeStories,
-                includeStories,
-                package: docPackage,
-                ...rest
-              } = doc;
-              Object.assign(story, deepMerge(rest, story));
+              Object.assign(story, deepMerge(otherDocProps, story));
               const smartControls = addSmartControls(
                 story,
                 doc,

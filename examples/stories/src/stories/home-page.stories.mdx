@@ -6,6 +6,7 @@ menu: false
 ---
 
 import { jsx, Flex, Heading, Text, Button } from 'theme-ui';
+import { SyntaxHighlighter } from '@component-controls/components';
 import { DocsLink, StoryLink, DocLink } from '@component-controls/app';
 
 <Flex sx={{ minHeight: '300px', width: '100%', alignItems: 'center', backgroundColor: 'primary', color: 'white' }}>
@@ -18,8 +19,11 @@ import { DocsLink, StoryLink, DocLink } from '@component-controls/app';
   </Flex>  
 </Flex>
 
-<StoryLink id='introduction-controls--random-number'>Go to Random Number story</StoryLink>
 
+<SyntaxHighlighter dark={true} language="bash">
+yarn add gatsby-theme-stories
+</SyntaxHighlighter>
 <br/>
-
+<StoryLink sx={{ my: 2 }} id='introduction-controls--random-number'>Go to Random Number story</StoryLink>
+<br/>
 <DocLink id='Introduction/MDX'>Go to MDX doc page</DocLink>
