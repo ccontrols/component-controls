@@ -74,6 +74,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
         mt: 4,
         mb: 4,
         width: '100%',
+        scrollMarginTop: '5rem',
         ...sxStyle,
       }}
       id={blockId}

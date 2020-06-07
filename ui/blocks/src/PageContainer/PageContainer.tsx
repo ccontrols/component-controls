@@ -52,15 +52,22 @@ export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
         if (scrollId) {
           const element = document.getElementById(scrollId);
           if (element) {
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+
+            /*
             const offsetTop =
-              element.getBoundingClientRect().top + window.pageYOffset - 60;
+              element.getBoundingClientRect().top + window.pageYOffset - 30;
             // Introducing a delay to ensure scrolling works when it's a full refresh.
+
             setTimeout(() => {
               window.scroll({
                 top: offsetTop,
                 behavior: 'smooth',
               });
             }, 100);
+            */
           }
         }
       } catch (err) {}
