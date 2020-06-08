@@ -3,6 +3,9 @@ import {
   StoryDocs,
   StoriesDoc,
   RunConfiguration,
+  getDocPath,
+  getStoryPath,
+  getBlogPath,
 } from '@component-controls/specification';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -204,20 +207,19 @@ export class Store implements StoryStore {
 
   getDocPath = (name: string): string => {
     const doc = this.getStoryDoc(name);
-    const docsPath = this.config?.docsPath || '';
-    return doc ? doc.route || `/${docsPath}${name.toLowerCase()}/` : '';
+    return getDocPath(doc, this.config);
   };
-
+  getBlogPath = (name: string): string => {
+    const doc = this.getStoryDoc(name);
+    return getBlogPath(doc, this.config);
+  };
   getStoryPath = (storyId: string): string => {
     const story = this.getStory(storyId);
     if (!story) {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    const docsPath = this.config?.docsPath || '';
-    return doc
-      ? doc.route || `/${docsPath}${doc.title.toLowerCase()}/#${story.id}`
-      : '';
+    return getStoryPath(story, doc, this.config);
   };
 
   /**

@@ -22,6 +22,7 @@ export interface StoryStore {
   firstStory: string | undefined;
   firstDoc: string | undefined;
   getDocPath: (name: string) => string;
+  getBlogPath: (name: string) => string;
   getStoryPath: (storyId: string) => string;
   updateStoryProp: (
     storyId: string,

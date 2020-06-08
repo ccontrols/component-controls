@@ -1,3 +1,5 @@
+import { getDocPath, getBlogPath } from '@component-controls/specification';
+
 import {
   compile,
   watch,
@@ -28,7 +30,7 @@ exports.createPages = async (
     const docs = store.getDocs();
     docs.forEach(doc => {
       createPage({
-        path: doc.route || `/${docsPath}${doc.title.toLowerCase()}`,
+        path: getDocPath(doc, store.buildConfig),
         component: docTemplate,
         context: {
           doc: doc.title,
@@ -51,7 +53,7 @@ exports.createPages = async (
 
     blogs.forEach(blog => {
       createPage({
-        path: blog.route || `/${blogsPath}${blog.title.toLowerCase()}`,
+        path: getBlogPath(blog, store.buildConfig),
         component: blogTemplate,
         context: {
           doc: blog.title,

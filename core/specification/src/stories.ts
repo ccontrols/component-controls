@@ -312,3 +312,32 @@ export interface StoriesStore {
    */
   packages: StoryPackages;
 }
+
+export const getDocPath = (
+  doc?: StoriesDoc,
+  config?: RunConfiguration,
+): string => {
+  const { docsPath = '' } = config || {};
+  return doc ? doc.route || `/${docsPath}${doc.title?.toLowerCase()}/` : '';
+};
+
+export const getBlogPath = (
+  doc?: StoriesDoc,
+  config?: RunConfiguration,
+): string => {
+  const { blogsPath = '' } = config || {};
+  return doc ? doc.route || `/${blogsPath}${doc.title?.toLowerCase()}/` : '';
+};
+export const getStoryPath = (
+  story?: Story,
+  doc?: StoriesDoc,
+  config?: RunConfiguration,
+): string => {
+  if (!story) {
+    return '';
+  }
+  const docsPath = config?.docsPath || '';
+  return doc
+    ? doc.route || `/${docsPath}${doc.title?.toLowerCase()}/#${story.id}`
+    : '';
+};
