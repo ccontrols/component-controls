@@ -27,7 +27,7 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
         const expCode = mdxPropertiesExport(exports.default);
         defaultExportCode = `export default { ${
           expCode ? `${expCode},` : ''
-        } MDXPage: () => <MDXContent /> };`;
+        } MDXPage: MDXContent };`;
       }
 
       let storiesExports: string[] = [];

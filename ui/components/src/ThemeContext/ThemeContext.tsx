@@ -75,11 +75,34 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
             },
           },
         },
-        img: {
-          maxWidth: '100%',
+        fonts: {
+          ...defTheme.fonts,
+          serif:
+            'medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif',
         },
+        fontSizes: [12, 14, 16, 20, 24, 32, 42, 64, 96],
         styles: {
           ...defTheme.styles,
+          img: {
+            ...defTheme.styles.img,
+            maxWidth: '100%',
+          },
+          h1: {
+            ...defTheme.styles.h1,
+            fontFamily: 'serif',
+            fontSize: 6,
+          },
+          p: {
+            fontSize: 3,
+            py: 2,
+          },
+          ol: {
+            fontSize: 3,
+          },
+          ul: {
+            fontSize: 3,
+            py: 2,
+          },
           table: {
             margin: 0,
             borderCollapse: 'collapse',
@@ -169,7 +192,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       dark,
     );
   }, [dark, customTheme]);
-
   return (
     <ThemeContext.Provider
       value={{

@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import MarkdownToJSX, { MarkdownOptions } from 'markdown-to-jsx';
-import { markdownComponents } from './MarokdownComponents';
+import { markdownComponents } from './MarkdownComponents';
 
 export interface MarkdownProps {
   /**
