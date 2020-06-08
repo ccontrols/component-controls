@@ -11,6 +11,14 @@ export interface BuildConfiguration {
    * example: "./stories/**/ /*.stories.(js|jsx|tsx|mdx)"
    */
   stories?: string[];
+  /**
+   * base url path for API documentation pages. Default is "docs/"
+   */
+  docsPath?: string;
+  /**
+   * base url path for blogs pages. Default is "blogs/"
+   */
+  blogsPath?: string;
 }
 
 /**
@@ -61,10 +69,6 @@ export interface RunConfiguration {
    * link to site image
    */
   siteImage?: string;
-  /**
-   * base url path for API documentation pages. Default is "docs/"
-   */
-  docsPath?: string;
 
   /**
    * Label for docs menu. Default is Docs
@@ -72,19 +76,25 @@ export interface RunConfiguration {
   docsLabel?: string;
 
   /**
-   * base url path for blogs pages. Default is "blogs/"
-   */
-  blogsPath?: string;
-
-  /**
    * Label for blog menu. Default is Blog
    */
   blogsLabel?: string;
-
   /**
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
+
+  /**
+   * the following used in both run time and build time. Should be set in the build config and 
+   * they will be carried to the run config
+  /**
+   * base url path for API documentation pages. Default is "docs/"
+   */
+  docsPath?: string;
+  /**
+   * base url path for blogs pages. Default is "blogs/"
+   */
+  blogsPath?: string;
 }
 
 export const defaultRunConfig: RunConfiguration = {
@@ -97,8 +107,11 @@ export const defaultRunConfig: RunConfiguration = {
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',
   author: '@component-controls',
-  docsPath: 'docs/',
   docsLabel: 'Docs',
-  blogsPath: 'blogs/',
   blogsLabel: 'Blog',
+};
+
+export const defaultBuildConfig: BuildConfiguration = {
+  docsPath: 'docs/',
+  blogsPath: 'blogs/',
 };

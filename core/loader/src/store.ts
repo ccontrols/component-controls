@@ -1,6 +1,7 @@
 import {
   StoryComponents,
   StoryPackages,
+  BuildConfiguration,
   RunConfiguration,
   StoriesDoc,
 } from '@component-controls/specification';
@@ -10,6 +11,12 @@ export interface LoadingStore {
    * global configuration from project config file
    */
   config?: RunConfiguration;
+
+  /**
+   * global configuration from project config file
+   */
+  buildConfig?: BuildConfiguration;
+
   /**
    * global store of packages
    */
@@ -33,6 +40,7 @@ class Store implements LoadingStore {
   components: LoadingStore['components'] = {};
   packages: LoadingStore['packages'] = {};
   config: LoadingStore['config'] = {};
+  buildConfig: LoadingStore['buildConfig'] = {};
   getDocs = () =>
     this.stores
       .filter(

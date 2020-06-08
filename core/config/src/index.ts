@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { sync as globSync } from 'glob';
 import yargs from 'yargs';
-import { Configuration } from '@component-controls/specification';
+import { BuildConfiguration } from '@component-controls/specification';
 
 export const buildConfigFileNames = [
   'build.js',
@@ -14,7 +14,7 @@ export const buildConfigFileNames = [
 
 export const optionsFileNames = ['runtime.js', 'options.js'];
 export interface ConfigrationResult {
-  config: Configuration;
+  config: BuildConfiguration;
   configPath: string;
   optionsFilePath?: string;
 }

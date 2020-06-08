@@ -1,4 +1,7 @@
-import { deepMerge, defaultRunConfig } from '@component-controls/specification';
+import {
+  deepMerge,
+  defaultBuildConfig,
+} from '@component-controls/specification';
 
 import { loadConfiguration, extractStories } from '@component-controls/config';
 import { stringifyRequest } from 'loader-utils';
@@ -10,10 +13,7 @@ module.exports = function(content: string) {
   const params = JSON.parse(this.query.slice(1));
   //@ts-ignore
   const config = loadConfiguration(this.rootContext, params.config);
-  store.config = deepMerge(
-    defaultRunConfig,
-    config?.optionsFilePath ? require(config?.optionsFilePath) : undefined,
-  );
+  store.buildConfig = deepMerge(defaultBuildConfig, config?.config);
 
   const stories: StoryPath[] = (config ? extractStories(config) || [] : []).map(
     fileName => ({
@@ -26,6 +26,7 @@ module.exports = function(content: string) {
   content = replaceSource(
     stories,
     config?.optionsFilePath,
+    store.buildConfig,
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
   return content;

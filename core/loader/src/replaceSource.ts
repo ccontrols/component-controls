@@ -1,3 +1,5 @@
+import { BuildConfiguration } from '@component-controls/specification';
+
 export interface StoryPath {
   absPath: string;
   relPath: string;
@@ -6,6 +8,7 @@ export interface StoryPath {
 export const replaceSource = (
   stories: StoryPath[],
   configFilePath: string | undefined,
+  config: BuildConfiguration | undefined,
   hashKey: string,
 ) => {
   const imports = `
@@ -13,6 +16,7 @@ const imports = {};
 const configJSON = ${
     configFilePath ? `require("${configFilePath}")` : 'undefined'
   };
+
 ${stories
   .map(story => `imports['${story.absPath}'] = require(${story.relPath});`)
   .join('\n')}
@@ -73,6 +77,7 @@ ${stories
 ${imports}
 ${storeConst}
 store.config = configJSON;
+store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
 ${loadStories}
 ${hmr}
 ${exports}

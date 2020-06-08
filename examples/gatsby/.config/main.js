@@ -5,4 +5,5 @@ module.exports = {
     '../src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
   ],
+  docsPath: 'page/',
 };

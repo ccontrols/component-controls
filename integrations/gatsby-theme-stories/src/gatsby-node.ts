@@ -24,7 +24,7 @@ exports.createPages = async (
       : await compile(config);
   if (store) {
     const docTemplate = require.resolve(`../src/templates/DocPage.tsx`);
-    const { docsPath = '', blogsPath = '' } = store.config || {};
+    const { docsPath = '', blogsPath = '' } = store.buildConfig || {};
     const docs = store.getDocs();
     docs.forEach(doc => {
       createPage({
