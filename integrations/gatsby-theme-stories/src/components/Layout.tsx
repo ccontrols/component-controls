@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
@@ -9,23 +9,24 @@ import {
   LinkContextProvider,
 } from '@component-controls/app-components';
 import { BlockContextProvider } from '@component-controls/blocks';
-import { Store } from '@component-controls/store';
+import { loadStoryStore, Store } from '@component-controls/store';
+const bundle = require('@component-controls/webpack-compile/bundle');
 import { GatsbyLink } from './GatsbyLink';
-import { PagesConfig } from './types';
 
 interface LayoutProps {
-  title?: string;
-  storyStore: Store;
-  docTitle: string;
-  pages: PagesConfig;
+  docId: string;
 }
 
-export const Layout: FC<LayoutProps> = ({
-  pages: pagesFn,
-  title,
-  storyStore,
-  docTitle,
-}) => {
+export const Layout: FC<LayoutProps> = ({ docId, children }) => {
+  const storyStore = useMemo(
+    () =>
+      new Store({
+        store: loadStoryStore(bundle),
+        updateLocalStorage: false,
+      }),
+    [],
+  );
+
   return (
     <ThemeProvider>
       <Global
@@ -35,10 +36,10 @@ export const Layout: FC<LayoutProps> = ({
           },
         })}
       />
-      <BlockContextProvider docId={docTitle} store={storyStore}>
+      <BlockContextProvider docId={docId} store={storyStore}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={GatsbyLink}>
-            <App title={title} pagesFn={pagesFn} />
+            <App title={docId}>{children}</App>
           </LinkContextProvider>
         </SidebarContextProvider>
       </BlockContextProvider>

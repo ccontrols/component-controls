@@ -12,7 +12,8 @@ import {
   MenuItem,
   Header,
 } from '@component-controls/app-components';
-import { StoryDocs } from '@component-controls/specification';
+import { StoryDocs, StoriesDoc } from '@component-controls/specification';
+import { StoryStore } from '@component-controls/store';
 
 export interface SidebarProps {
   /**
@@ -22,10 +23,9 @@ export interface SidebarProps {
 }
 
 const createMenuItem = (
-  basePath: string,
+  storeProvider: StoryStore,
+  doc: StoriesDoc,
   levels: string[],
-  allLevels: string[],
-  route?: string,
   parent?: MenuItems,
   item?: MenuItem,
 ): MenuItem => {
@@ -41,17 +41,15 @@ const createMenuItem = (
     if (levels.length > 1) {
       newItem.items = [];
     } else {
-      newItem.id = allLevels.join('/');
-      newItem.href =
-        route || `/${basePath}${allLevels.join('/').toLowerCase()}/`;
+      newItem.id = doc.title;
+      newItem.href = storeProvider.getDocPath(doc.title);
     }
     parent.push(newItem);
   }
   return createMenuItem(
-    basePath,
+    storeProvider,
+    doc,
     levels.slice(1),
-    levels,
-    route,
     sibling ? sibling.items : newItem.items,
     newItem,
   );
@@ -64,7 +62,7 @@ export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { siteTitle, basePath = '' } = config?.options || {};
+  const { siteTitle } = config?.options || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: StoryDocs = storeProvider.getDocs() || {};
@@ -73,14 +71,14 @@ export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
         const levels = title.split('/');
         const doc = docs[title];
         if (doc.menu !== false) {
-          createMenuItem(basePath, levels, levels, doc?.route, acc);
+          createMenuItem(storeProvider, doc, levels, acc);
         }
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [storeProvider, basePath]);
+  }, [storeProvider]);
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (

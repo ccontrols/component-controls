@@ -15,10 +15,10 @@ export interface PageConfig {
 
 export type PagesConfig = (route: string) => PageConfig[];
 
-export interface PageProps {
+export interface DocPageProps {
   pagesFn: PagesConfig;
 }
-export const BasePage: FC<PageProps> = ({ pagesFn }) => {
+export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
   const pages = typeof pagesFn === 'function' ? pagesFn('') : [];
   const pageRef = useRef<HTMLDivElement>(null);
   const params =
@@ -30,9 +30,9 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
     0,
   );
   return (
-    <Flex sx={{ flexDirection: 'row', flex: 1 }}>
+    <Flex sx={{ flex: '1 0 auto' }}>
       <Sidebar />
-      <Box sx={{ flex: 1 }} id="content">
+      <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs
           fontSize={16}
           selectedIndex={tabIndex}
@@ -71,12 +71,12 @@ export const BasePage: FC<PageProps> = ({ pagesFn }) => {
   );
 };
 
-export const Page: FC<PageProps> = props => {
+export const DocPage: FC<DocPageProps> = props => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage && doc.MDXPage) {
     return (
       <PageContainer
-        sx={{ flex: 1 }}
+        sx={{ flex: '1 0 auto' }}
         maxWidth="100%"
         padding={0}
         id="content"

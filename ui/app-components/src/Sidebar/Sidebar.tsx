@@ -51,7 +51,6 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   const toggleContext = useContext(SidebarContext);
   const { collapsed, responsive, setCollapsed } = toggleContext || {};
   const defaultStyle: SxStyleProp = {
-    overflowY: 'auto',
     overflowX: 'hidden',
     width,
     minWidth,
@@ -75,7 +74,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
       <div
         sx={{
           position: !responsive ? 'fixed' : undefined,
-          height: '100%',
+          height: '100vh',
           width: 'inherit',
           overflowY: 'auto',
           a: {

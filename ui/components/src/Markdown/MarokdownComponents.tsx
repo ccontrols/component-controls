@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { ComponentType } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, Image } from 'theme-ui';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 
 export interface MarkdownComponentType {
@@ -14,4 +14,7 @@ export const markdownComponents: MarkdownComponentType = {
       {children}
     </Box>
   ),
+  img: props => {
+    return <Image {...props} />;
+  },
 };

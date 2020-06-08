@@ -7,12 +7,16 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/app-components';
+import { BlockContext } from '@component-controls/blocks';
 
 interface HeaderProps {
   title?: string;
 }
 export const Header: FC<HeaderProps> = () => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
+  const { storeProvider } = useContext(BlockContext);
+  const config = storeProvider.config;
+  const { docsPath, docsLabel, blogsPath, blogsLabel } = config?.options || {};
 
   return (
     <AppHeader position="sticky">
@@ -39,9 +43,16 @@ export const Header: FC<HeaderProps> = () => {
           <Link href="/">
             <Text sx={{ px: 2 }}>Home</Text>
           </Link>
-          <Link href="/docs/">
-            <Text sx={{ px: 2 }}>Docs</Text>
-          </Link>
+          {Object.keys(storeProvider.getDocs()).length > 0 && (
+            <Link href={`/${docsPath}`}>
+              <Text sx={{ px: 2 }}>{docsLabel}</Text>
+            </Link>
+          )}
+          {Object.keys(storeProvider.getBlogs()).length > 0 && (
+            <Link href={`/${blogsPath}`}>
+              <Text sx={{ px: 2 }}>{blogsLabel}</Text>
+            </Link>
+          )}
         </Flex>
       </Flex>
       {!responsive && <ColorMode />}

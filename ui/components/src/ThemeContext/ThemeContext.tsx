@@ -2,10 +2,30 @@ import React from 'react';
 import { polaris } from '@theme-ui/presets';
 import { get } from '@theme-ui/css';
 import { merge } from '@theme-ui/core';
-
-import { ThemeProvider as ThemeUIProvider, Theme } from 'theme-ui';
-
+import {
+  ThemeProvider as ThemeUIProvider,
+  Theme,
+  IntrinsicSxElements,
+} from 'theme-ui';
 import { transparentize } from 'polished';
+
+import { markdownComponents } from '../Markdown';
+
+type ProvidedComponentsKnownKeys = {
+  [key in keyof IntrinsicSxElements]?: React.ComponentType<any> | string;
+};
+export interface ProvidedComponents extends ProvidedComponentsKnownKeys {
+  [key: string]: React.ComponentType<any> | string | undefined;
+}
+
+export interface ThemeUIProviderProps<Theme> {
+  theme: Partial<Theme> | ((outerTheme: Theme) => Theme);
+  children?: React.ReactNode;
+  components?: ProvidedComponents;
+}
+const ThemeUIProviderExt: <Theme>(
+  props: ThemeUIProviderProps<Theme>,
+) => React.ReactElement = ThemeUIProvider;
 
 export interface ThemeContextProps {
   theme?: Theme;
@@ -14,6 +34,10 @@ export interface ThemeContextProps {
 export const ThemeContext = React.createContext<ThemeContextProps>({});
 
 export interface ThemeProviderProps {
+  /**
+   * components to customize the markdown display.
+   */
+  components?: ProvidedComponents;
   dark?: boolean;
   theme?: Theme;
 }
@@ -31,6 +55,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   theme: customTheme,
   children,
   dark,
+  components = {},
 }) => {
   const theme = React.useMemo(() => {
     const defTheme = customTheme || polaris;
@@ -49,6 +74,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
               outline: 'none',
             },
           },
+        },
+        img: {
+          maxWidth: '100%',
         },
         styles: {
           ...defTheme.styles,
@@ -149,7 +177,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         dark,
       }}
     >
-      <ThemeUIProvider theme={theme}>{children}</ThemeUIProvider>
+      <ThemeUIProviderExt
+        theme={theme}
+        components={{ ...markdownComponents, ...components }}
+      >
+        {children}
+      </ThemeUIProviderExt>
     </ThemeContext.Provider>
   );
 };

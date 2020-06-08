@@ -23,34 +23,58 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (store) {
-    const { basePath = '' } = store.config?.options || {};
-    const template = require.resolve(`../src/templates/StoryPage.tsx`);
-    store.stores.forEach(s => {
-      const doc = s.doc;
-      if (doc) {
-        createPage({
-          path: doc.route || `/${basePath}${doc.title.toLowerCase()}`,
-          component: template,
-          context: {
-            doc: doc.title,
-          },
-        });
-      }
+    const docTemplate = require.resolve(`../src/templates/DocPage.tsx`);
+    const { docsPath = '', blogsPath = '' } = store.config?.options || {};
+    const docs = store.getDocs();
+    docs.forEach(doc => {
+      createPage({
+        path: doc.route || `/${docsPath}${doc.title.toLowerCase()}`,
+        component: docTemplate,
+        context: {
+          doc: doc.title,
+        },
+      });
     });
+    if (docs.length) {
+      const docsPage = docs.find(doc => doc?.route === `/${docsPath}`);
+      createPage({
+        path: `/${docsPath}`,
+        component: docTemplate,
+        context: {
+          doc: docsPage?.title,
+        },
+      });
+    }
+    const blogTemplate = require.resolve(`../src/templates/BlogPage.tsx`);
+
+    const blogs = store.getBlogs();
+
+    blogs.forEach(blog => {
+      createPage({
+        path: blog.route || `/${blogsPath}${blog.title.toLowerCase()}`,
+        component: blogTemplate,
+        context: {
+          doc: blog.title,
+        },
+      });
+    });
+    if (blogs.length) {
+      const blogsPage = blogs.find(blog => blog?.route === `/${blogsPath}`);
+      createPage({
+        path: `/${blogsPath}`,
+        component: blogTemplate,
+        context: {
+          doc: blogsPage?.doc?.title,
+        },
+      });
+    }
+    const pageTemplate = require.resolve(`../src/templates/PagePage.tsx`);
     const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
-      component: template,
+      component: pageTemplate,
       context: {
         doc: homePage?.doc?.title,
-      },
-    });
-    const docsPage = store.stores.find(s => s.doc?.route === `/${basePath}`);
-    createPage({
-      path: `/${basePath}`,
-      component: template,
-      context: {
-        doc: docsPage?.doc?.title,
       },
     });
   }

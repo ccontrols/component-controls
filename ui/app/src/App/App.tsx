@@ -8,14 +8,12 @@ import {
 import { useStoryContext } from '@component-controls/blocks';
 import { SEO } from '../SEO';
 import { Header } from '../Header';
-import { Page, PagesConfig } from '../Page';
 import { Footer } from '../Footer';
 
 export interface AppProps {
   title?: string;
-  pagesFn: PagesConfig;
 }
-export const App: FC<AppProps> = ({ title, pagesFn }) => {
+export const App: FC<AppProps> = ({ title, children }) => {
   const { doc } = useStoryContext({ id: '.' });
   const items: SkiLinksItemProps[] = [
     {
@@ -45,7 +43,7 @@ export const App: FC<AppProps> = ({ title, pagesFn }) => {
         }}
       >
         <Header title={title}></Header>
-        <Page pagesFn={pagesFn} />
+        {children}
         <Footer />
       </Flex>
     </Fragment>

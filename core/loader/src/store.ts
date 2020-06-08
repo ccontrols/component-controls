@@ -2,6 +2,7 @@ import {
   StoryComponents,
   StoryPackages,
   Configuration,
+  StoriesDoc,
 } from '@component-controls/specification';
 import { LoadingDocStore } from '@component-controls/instrument';
 export interface LoadingStore {
@@ -23,12 +24,30 @@ export interface LoadingStore {
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
+  getDocs: () => StoriesDoc[];
+  getBlogs: () => StoriesDoc[];
 }
-export const store: LoadingStore = {
-  stores: [],
-  components: {},
-  packages: {},
-};
+
+class Store implements LoadingStore {
+  stores: LoadingStore['stores'] = [];
+  components: LoadingStore['components'] = {};
+  packages: LoadingStore['packages'] = {};
+  config: LoadingStore['config'] = {};
+  getDocs = () =>
+    this.stores
+      .filter(
+        store =>
+          store?.doc &&
+          (store.doc?.type === undefined || store.doc?.type === 'story'),
+      )
+      .map(store => store.doc as StoriesDoc);
+  getBlogs = () =>
+    this.stores
+      .filter(store => store?.doc && store.doc?.type === 'blog')
+      .map(store => store.doc as StoriesDoc);
+}
+
+export const store = new Store();
 
 export const reserveStories = (filePaths: string[]) => {
   if (store.stores.length === 0) {

@@ -16,7 +16,8 @@ export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => StoryDocs | undefined;
-  getDocs: () => StoryDocs | undefined;
+  getDocs: () => StoryDocs;
+  getBlogs: () => StoryDocs;
   config: Configuration | undefined;
   firstStory: string | undefined;
   firstDoc: string | undefined;
@@ -51,6 +52,9 @@ export const defaultConfig: Configuration = {
       'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
     siteLanguage: 'en',
     author: '@component-controls',
-    basePath: 'docs/',
+    docsPath: 'docs/',
+    docsLabel: 'Docs',
+    blogsPath: 'blogs/',
+    blogsLabel: 'Blog',
   },
 };

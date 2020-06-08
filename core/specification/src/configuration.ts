@@ -62,7 +62,23 @@ export interface Configuration {
     /**
      * base url path for API documentation pages. Default is "docs/"
      */
-    basePath?: string;
+    docsPath?: string;
+
+    /**
+     * Label for docs menu. Default is Docs
+     */
+    docsLabel?: string;
+
+    /**
+     * base url path for blogs pages. Default is "blogs/"
+     */
+    blogsPath?: string;
+
+    /**
+     * Label for blog menu. Default is Blog
+     */
+    blogsLabel?: string;
+
     /**
      * story sorting function
      */

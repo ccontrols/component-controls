@@ -159,7 +159,10 @@ export interface StoriesDoc {
    * title of the groups of stories contained in the doc file. used to generate story ids
    */
   title: string;
-
+  /**
+   * document type - blogs a and stories. By default - storie
+   */
+  type?: 'story' | 'blog' | 'page';
   /**
    * list of stories contained in the file/groups
    */

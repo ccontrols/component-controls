@@ -2,17 +2,9 @@
 /** @jsx jsx */
 import { FC, useEffect, forwardRef } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
-import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
-
-import { markdownComponents } from '@component-controls/components';
 import { StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
-  /**
-   * components to customize the markdown display.
-   */
-  components?: MDXProviderComponents;
-
   /**
    * limit the max width of the page
    */
@@ -36,7 +28,7 @@ export interface PageContainerProps {
  */
 export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
   (
-    { children, components = {}, maxWidth, padding = 4, ...rest },
+    { children, maxWidth, padding = 4, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
     useEffect(() => {
@@ -55,19 +47,6 @@ export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
             setTimeout(() => {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
-
-            /*
-            const offsetTop =
-              element.getBoundingClientRect().top + window.pageYOffset - 30;
-            // Introducing a delay to ensure scrolling works when it's a full refresh.
-
-            setTimeout(() => {
-              window.scroll({
-                top: offsetTop,
-                behavior: 'smooth',
-              });
-            }, 100);
-            */
           }
         }
       } catch (err) {}
@@ -91,15 +70,7 @@ export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
           <StoryContextConsumer id=".">
             {({ doc }) => {
               const { MDXPage } = doc || {};
-              return MDXPage ? (
-                <MDXProvider
-                  components={{ ...markdownComponents, ...components }}
-                >
-                  <MDXPage />
-                </MDXProvider>
-              ) : (
-                children
-              );
+              return MDXPage ? <MDXPage /> : children;
             }}
           </StoryContextConsumer>
         </Box>

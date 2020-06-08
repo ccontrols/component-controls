@@ -113,5 +113,5 @@ export interface StoryContextConsumer {
 export const StoryContextConsumer: FC<StoryContextConsumer &
   StoryInputProps> = ({ children, ...rest }) => {
   const context = useStoryContext(rest);
-  return children ? children(context) : null;
+  return children ? children(context) || null : null;
 };

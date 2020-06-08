@@ -32,7 +32,7 @@ export const react: Configuration = {
         ],
       },
       {
-        test: /\.(stories|story).mdx$/,
+        test: /\.mdx$/,
         exclude: [/node_modules/],
         use: [
           {
@@ -44,27 +44,20 @@ export const react: Configuration = {
               ],
             },
           },
-        ],
-      },
-      {
-        test: /\.mdx$/,
-        exclude: /\.(stories|story).mdx$/,
-        use: [
           {
-            loader: 'babel-loader',
+            loader: '@component-controls/loader/loader',
             options: {
-              presets: [
-                [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
-              ],
+              mdx: {
+                transformMDX: true,
+              },
             },
           },
         ],
       },
       {
-        test: /\.(story|stories).(js|jsx|ts|tsx|mdx)$/,
+        test: /\.(story|stories).(js|jsx|ts|tsx)$/,
         loader: '@component-controls/loader/loader',
         exclude: [/node_modules/],
-        enforce: 'pre',
         options: {
           mdx: {
             transformMDX: true,

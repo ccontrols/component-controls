@@ -1,4 +1,9 @@
-import { StoriesStore, Configuration } from '@component-controls/specification';
+import {
+  StoriesStore,
+  StoryDocs,
+  StoriesDoc,
+  Configuration,
+} from '@component-controls/specification';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
   StoreObserver,
@@ -30,6 +35,9 @@ export class Store implements StoryStore {
   private channel: BroadcastChannel | undefined;
   private observers: StoreObserver[];
   private moduleId: number;
+  private _docs: StoryDocs = {};
+  private _blogs: StoryDocs = {};
+
   private _firstStory: string | undefined;
   private _firstDoc: string | undefined;
   /**
@@ -41,7 +49,7 @@ export class Store implements StoryStore {
     this.loadedStore = store;
     this.updateLocalStorage = updateLocalStorage;
     this.observers = [];
-    this.sortDocs();
+    this.initDocs();
     if (updateLocalStorage) {
       this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
         type: 'localstorage',
@@ -62,9 +70,10 @@ export class Store implements StoryStore {
   }
 
   /**
-   * sort documents if a sortfunction is provided
+   * sort documents if a sortfunction is provided.
+   * separate docs and blogs
    */
-  sortDocs = () => {
+  initDocs = () => {
     if (this.loadedStore) {
       const docs: string[] = Object.keys(this.loadedStore.docs || []);
       const { options } = this.loadedStore.config || {};
@@ -95,6 +104,28 @@ export class Store implements StoryStore {
         const doc = this.loadedStore.docs[this._firstDoc];
         //point to first story of first doc
         this._firstStory = doc.stories?.[0];
+      }
+      if (this.loadedStore.docs) {
+        this._docs = Object.keys(this.loadedStore.docs).reduce(
+          (acc: StoryDocs, key: string) => {
+            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
+            if (doc && (doc.type === undefined || doc.type === 'story')) {
+              return { ...acc, [key]: doc };
+            }
+            return acc;
+          },
+          {},
+        );
+        this._blogs = Object.keys(this.loadedStore.docs).reduce(
+          (acc: StoryDocs, key: string) => {
+            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
+            if (doc && doc.type === 'blog') {
+              return { ...acc, [key]: doc };
+            }
+            return acc;
+          },
+          {},
+        );
       }
     }
   };
@@ -157,10 +188,9 @@ export class Store implements StoryStore {
   /**
    * returns all the documentation files
    */
-  getDocs = () => {
-    const store = this.getStore();
-    return store ? store.docs : undefined;
-  };
+  getDocs = () => this._docs;
+
+  getBlogs = () => this._blogs;
 
   get config(): Configuration | undefined {
     return this.loadedStore?.config;
@@ -174,8 +204,8 @@ export class Store implements StoryStore {
 
   getDocPath = (name: string): string => {
     const doc = this.getStoryDoc(name);
-    const basePath = this.config?.options?.basePath || '';
-    return doc ? doc.route || `/${basePath}${name.toLowerCase()}/` : '';
+    const docsPath = this.config?.options?.docsPath || '';
+    return doc ? doc.route || `/${docsPath}${name.toLowerCase()}/` : '';
   };
 
   getStoryPath = (storyId: string): string => {
@@ -184,9 +214,9 @@ export class Store implements StoryStore {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    const basePath = this.config?.options?.basePath || '';
+    const docsPath = this.config?.options?.docsPath || '';
     return doc
-      ? doc.route || `/${basePath}${doc.title.toLowerCase()}/#${story.id}`
+      ? doc.route || `/${docsPath}${doc.title.toLowerCase()}/#${story.id}`
       : '';
   };
 
