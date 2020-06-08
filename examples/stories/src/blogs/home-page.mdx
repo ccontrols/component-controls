@@ -4,13 +4,18 @@ route: /
 type: page
 ---
 
-import { jsx, Flex, Heading, Text, Button } from 'theme-ui';
-import { SyntaxHighlighter } from '@component-controls/components';
+import { jsx, Flex, Box, Heading, Text, Button, Card } from 'theme-ui';
 import { DocsLink } from '@component-controls/app';
+import { Link } from '@component-controls/app-components';
+import { Subtitle, Title } from '@component-controls/components';
+
+export const BoxItem = props => (
+  <Card sx={{ width: '300px', height: '300px', m: 2, py: 4, justifyContent: 'space-between' }} {...props}/>
+);
 
 <Flex sx={{ minHeight: '300px', width: '100%', alignItems: 'center', backgroundColor: 'primary', color: 'white' }}>
   <Flex sx={{ flexDirection: 'column', alignItems: 'center', width: '100%'}}>
-    <Heading as='h1'>component-controls</Heading>
+    <Title>component-controls</Title>
     <Text sx={{ my: 2 }}>
       design -> develop -> test
     </Text>  
@@ -18,6 +23,19 @@ import { DocsLink } from '@component-controls/app';
   </Flex>  
 </Flex>
 
-<Flex sx={{ flexDirection: 'row', alignContent: 'center', px: 6}}>
-  # Getting started
+<Flex sx={{ flexDirection: 'column', alignItems: 'center', py: 5}}>
+  <Flex sx={{ flexDirection: 'row', alignItems: 'center',  flexWrap: 'wrap', justifyContent: 'space-between', maxWidth: '1000px', width: '100%'}}>
+    <BoxItem>
+      <Subtitle>Start with Gatsby</Subtitle>
+      <Link href='/storybook'>get started...</Link>
+    </BoxItem>
+    <BoxItem>
+      <Subtitle>Start with Vercel</Subtitle>
+      <Link href='/storybook'>get started...</Link>
+    </BoxItem>
+    <BoxItem>
+      <Subtitle>Start with Storybook</Subtitle>
+      <Link href='/storybook'>get started...</Link>
+    </BoxItem>
+  </Flex>
 </Flex>  
