@@ -19,7 +19,7 @@ export const BoxItem = props => (
     <Text sx={{ my: 2 }}>
       design -> develop -> test
     </Text>  
-    <DocsLink sx={{ color: 'white'}}>Getting started</DocsLink>
+    <Button as={DocsLink}>Getting started</Button>
   </Flex>  
 </Flex>
 
@@ -27,15 +27,15 @@ export const BoxItem = props => (
   <Flex sx={{ flexDirection: 'row', alignItems: 'center',  flexWrap: 'wrap', justifyContent: 'space-between', maxWidth: '1000px', width: '100%'}}>
     <BoxItem>
       <Subtitle>Start with Gatsby</Subtitle>
-      <Link href='/storybook'>get started...</Link>
+      <Button as={Link} href='/storybook'>get started...</Button>
     </BoxItem>
     <BoxItem>
       <Subtitle>Start with Vercel</Subtitle>
-      <Link href='/storybook'>get started...</Link>
+      <Button as={Link} href='/storybook'>get started...</Button>
     </BoxItem>
     <BoxItem>
       <Subtitle>Start with Storybook</Subtitle>
-      <Link href='/storybook'>get started...</Link>
+      <Button as={Link} href='/storybook'>get started...</Button>
     </BoxItem>
   </Flex>
 </Flex>  
