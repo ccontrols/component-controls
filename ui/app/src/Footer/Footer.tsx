@@ -6,7 +6,7 @@ import { BlockContext } from '@component-controls/blocks';
 export const Footer: FC = () => {
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { author, siteUrl, siteTitle } = config?.options || {};
+  const { author, siteUrl, siteTitle } = config || {};
 
   return (
     <Flex

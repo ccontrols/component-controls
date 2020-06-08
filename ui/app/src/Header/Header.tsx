@@ -16,7 +16,7 @@ export const Header: FC<HeaderProps> = () => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { docsPath, docsLabel, blogsPath, blogsLabel } = config?.options || {};
+  const { docsPath, docsLabel, blogsPath, blogsLabel } = config || {};
 
   return (
     <AppHeader position="sticky">

@@ -12,7 +12,7 @@ export const DocsLink: FC<Omit<LinkProps, 'href'>> = ({
 }) => {
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { docsPath = '' } = config?.options || {};
+  const { docsPath = '' } = config || {};
 
   return (
     <Link href={docsPath} {...props}>

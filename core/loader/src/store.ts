@@ -1,7 +1,7 @@
 import {
   StoryComponents,
   StoryPackages,
-  Configuration,
+  RunConfiguration,
   StoriesDoc,
 } from '@component-controls/specification';
 import { LoadingDocStore } from '@component-controls/instrument';
@@ -9,7 +9,7 @@ export interface LoadingStore {
   /**
    * global configuration from project config file
    */
-  config?: Configuration;
+  config?: RunConfiguration;
   /**
    * global store of packages
    */

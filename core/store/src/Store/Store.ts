@@ -2,7 +2,7 @@ import {
   StoriesStore,
   StoryDocs,
   StoriesDoc,
-  Configuration,
+  RunConfiguration,
 } from '@component-controls/specification';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -76,12 +76,12 @@ export class Store implements StoryStore {
   initDocs = () => {
     if (this.loadedStore) {
       const docs: string[] = Object.keys(this.loadedStore.docs || []);
-      const { options } = this.loadedStore.config || {};
-      if (options && options.storySort) {
+      const { storySort } = this.loadedStore.config || {};
+      if (storySort) {
         this.loadedStore.docs = docs
           .sort((a: string, b: string) => {
             //@ts-ignore
-            const sort = options.storySort(a, b);
+            const sort = storySort(a, b);
             if (sort !== 0) {
               return sort;
             }
@@ -192,7 +192,7 @@ export class Store implements StoryStore {
 
   getBlogs = () => this._blogs;
 
-  get config(): Configuration | undefined {
+  get config(): RunConfiguration | undefined {
     return this.loadedStore?.config;
   }
   get firstStory(): string | undefined {
@@ -204,7 +204,7 @@ export class Store implements StoryStore {
 
   getDocPath = (name: string): string => {
     const doc = this.getStoryDoc(name);
-    const docsPath = this.config?.options?.docsPath || '';
+    const docsPath = this.config?.docsPath || '';
     return doc ? doc.route || `/${docsPath}${name.toLowerCase()}/` : '';
   };
 
@@ -214,7 +214,7 @@ export class Store implements StoryStore {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    const docsPath = this.config?.options?.docsPath || '';
+    const docsPath = this.config?.docsPath || '';
     return doc
       ? doc.route || `/${docsPath}${doc.title.toLowerCase()}/#${story.id}`
       : '';

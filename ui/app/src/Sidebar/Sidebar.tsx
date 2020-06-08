@@ -62,7 +62,7 @@ export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { siteTitle } = config?.options || {};
+  const { siteTitle } = config || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: StoryDocs = storeProvider.getDocs() || {};

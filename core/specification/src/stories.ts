@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { Configuration } from './configuration';
+import { RunConfiguration } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -292,7 +292,7 @@ export interface StoriesStore {
   /**
    * global configuration for config file
    */
-  config?: Configuration;
+  config?: RunConfiguration;
   /**
    * list of story files, or groups
    */

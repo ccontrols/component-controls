@@ -36,7 +36,7 @@ export const SEO = ({
     siteLanguage,
     siteImage: defaultImage,
     author,
-  } = config?.options || {};
+  } = config || {};
 
   const seo = {
     title: title || defaultTitle,

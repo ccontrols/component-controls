@@ -2,7 +2,7 @@ import {
   StoriesStore,
   Story,
   StoryDocs,
-  Configuration,
+  RunConfiguration,
 } from '@component-controls/specification';
 
 /**
@@ -18,7 +18,7 @@ export interface StoryStore {
   getStoryDoc: (name: string) => StoryDocs | undefined;
   getDocs: () => StoryDocs;
   getBlogs: () => StoryDocs;
-  config: Configuration | undefined;
+  config: RunConfiguration | undefined;
   firstStory: string | undefined;
   firstDoc: string | undefined;
   getDocPath: (name: string) => string;
@@ -40,21 +40,3 @@ export interface MessageType {
   moduleId: number;
   propName: string;
 }
-
-export const defaultConfig: Configuration = {
-  options: {
-    siteTitle: 'Component controls',
-    siteTitleAlt:
-      'Component controls - https://github.com/ccontrols/component-controls',
-    siteHeadline: 'Component controls gatsby',
-    siteUrl: 'https://component-controls-gatsby.netlify.app',
-    siteDescription:
-      'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
-    siteLanguage: 'en',
-    author: '@component-controls',
-    docsPath: 'docs/',
-    docsLabel: 'Docs',
-    blogsPath: 'blogs/',
-    blogsLabel: 'Blog',
-  },
-};
