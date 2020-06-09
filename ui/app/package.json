@@ -32,6 +32,7 @@
   "dependencies": {
     "@component-controls/app-components": "^1.2.0",
     "@component-controls/blocks": "^1.2.0",
+    "@component-controls/components": "^1.2.0",
     "@component-controls/specification": "^1.2.0",
     "qs": "^6.9.4",
     "react": "^16.13.1",

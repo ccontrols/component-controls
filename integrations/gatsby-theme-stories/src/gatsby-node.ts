@@ -1,4 +1,4 @@
-import { getDocPath, getBlogPath } from '@component-controls/specification';
+import { getDocPath, PageType } from '@component-controls/specification';
 
 import {
   compile,
@@ -20,61 +20,53 @@ exports.createPages = async (
     presets: defaultPresets,
     configPath: options.configPath,
   };
+  const pageTemplates: Record<PageType, string> = {
+    story: require.resolve(`../src/templates/DocPage.tsx`),
+    blog: require.resolve(`../src/templates/BlogPage.tsx`),
+    page: require.resolve(`../src/templates/PagePage.tsx`),
+  };
+  const listTemplates: Record<PageType, string> = {
+    story: require.resolve(`../src/templates/DocPage.tsx`),
+    blog: require.resolve(`../src/templates/PageList.tsx`),
+    page: require.resolve(`../src/templates/PagePage.tsx`),
+  };
+
   const { store } =
     process.env.NODE_ENV === 'development'
       ? await watch(config)
       : await compile(config);
   if (store) {
-    const docTemplate = require.resolve(`../src/templates/DocPage.tsx`);
-    const { docsPath = '', blogsPath = '' } = store.buildConfig || {};
-    const docs = store.getDocs();
-    docs.forEach(doc => {
-      createPage({
-        path: getDocPath(doc, store.buildConfig),
-        component: docTemplate,
-        context: {
-          doc: doc.title,
-        },
+    const { pages = {} } = store.buildConfig || {};
+    Object.keys(pages).forEach(type => {
+      const page = pages[type];
+      const pageType = type as PageType;
+      const docs = store.getDocs(pageType);
+      docs.forEach(doc => {
+        createPage({
+          path: getDocPath(pageType, doc, store.buildConfig),
+          component: pageTemplates[pageType],
+          context: {
+            doc: doc.title,
+          },
+        });
       });
+      if (docs.length) {
+        const docsPage = docs.find(doc => doc?.route === `/${page.basePath}`);
+        createPage({
+          path: `/${page.basePath}`,
+          component: listTemplates[pageType],
+          context: {
+            type: pageType,
+            doc: docsPage?.title,
+          },
+        });
+      }
     });
-    if (docs.length) {
-      const docsPage = docs.find(doc => doc?.route === `/${docsPath}`);
-      createPage({
-        path: `/${docsPath}`,
-        component: docTemplate,
-        context: {
-          doc: docsPage?.title,
-        },
-      });
-    }
-    const blogTemplate = require.resolve(`../src/templates/BlogPage.tsx`);
 
-    const blogs = store.getBlogs();
-
-    blogs.forEach(blog => {
-      createPage({
-        path: getBlogPath(blog, store.buildConfig),
-        component: blogTemplate,
-        context: {
-          doc: blog.title,
-        },
-      });
-    });
-    if (blogs.length) {
-      const blogsPage = blogs.find(blog => blog?.route === `/${blogsPath}`);
-      createPage({
-        path: `/${blogsPath}`,
-        component: blogTemplate,
-        context: {
-          doc: blogsPage?.doc?.title,
-        },
-      });
-    }
-    const pageTemplate = require.resolve(`../src/templates/PagePage.tsx`);
     const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
-      component: pageTemplate,
+      component: pageTemplates['page'],
       context: {
         doc: homePage?.doc?.title,
       },

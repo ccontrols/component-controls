@@ -34,6 +34,7 @@ module.exports = {
     '../../../plugins/axe-plugin/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
     '../../stories/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../stories/**/*.stories.(js|jsx|tsx|mdx)',
+    // '../../stories/src/blogs/*.mdx',
   ],
   webpackFinal: (config = {}, options = {}) => {
     return {

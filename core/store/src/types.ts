@@ -1,8 +1,10 @@
 import {
   StoriesStore,
   Story,
-  StoryDocs,
+  StoriesDoc,
+  Pages,
   RunConfiguration,
+  PageType,
 } from '@component-controls/specification';
 
 /**
@@ -15,14 +17,14 @@ export type StoreObserver = (storyId?: string, propName?: string) => void;
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
-  getStoryDoc: (name: string) => StoryDocs | undefined;
-  getDocs: () => StoryDocs;
-  getBlogs: () => StoryDocs;
+  getStoryDoc: (name: string) => StoriesDoc | undefined;
+  getDocs: () => Pages;
+  getBlogs: () => Pages;
+  getPageList: (type: PageType) => Pages;
   config: RunConfiguration | undefined;
   firstStory: string | undefined;
   firstDoc: string | undefined;
-  getDocPath: (name: string) => string;
-  getBlogPath: (name: string) => string;
+  getPagePath: (pageType: PageType, name: string) => string;
   getStoryPath: (storyId: string) => string;
   updateStoryProp: (
     storyId: string,

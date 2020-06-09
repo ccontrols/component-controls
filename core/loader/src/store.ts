@@ -4,6 +4,9 @@ import {
   BuildConfiguration,
   RunConfiguration,
   StoriesDoc,
+  defPageType,
+  Pages,
+  PageType,
 } from '@component-controls/specification';
 import { LoadingDocStore } from '@component-controls/instrument';
 export interface LoadingStore {
@@ -31,8 +34,7 @@ export interface LoadingStore {
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
-  getDocs: () => StoriesDoc[];
-  getBlogs: () => StoriesDoc[];
+  getDocs: (pageType: PageType) => Pages;
 }
 
 class Store implements LoadingStore {
@@ -41,17 +43,15 @@ class Store implements LoadingStore {
   packages: LoadingStore['packages'] = {};
   config: LoadingStore['config'] = {};
   buildConfig: LoadingStore['buildConfig'] = {};
-  getDocs = () =>
+  getDocs = (pageType: PageType) =>
     this.stores
-      .filter(
-        store =>
-          store?.doc &&
-          (store.doc?.type === undefined || store.doc?.type === 'story'),
-      )
-      .map(store => store.doc as StoriesDoc);
-  getBlogs = () =>
-    this.stores
-      .filter(store => store?.doc && store.doc?.type === 'blog')
+      .filter(store => {
+        if (store?.doc) {
+          const { type = defPageType } = store.doc;
+          return type === pageType;
+        }
+        return false;
+      })
       .map(store => store.doc as StoriesDoc);
 }
 

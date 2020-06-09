@@ -1,5 +1,23 @@
 import { StoryRenderFn } from './utility';
 
+export type PageType = 'story' | 'blog' | 'page';
+
+export interface PageConfiguration {
+  /**
+   * base url path for the page
+   */
+  basePath?: string;
+
+  /**
+   * label - used for menu labels
+   */
+  label?: string;
+}
+
+export interface PagesConfiguration {
+  [key: string]: PageConfiguration;
+}
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -14,11 +32,7 @@ export interface BuildConfiguration {
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
-  docsPath?: string;
-  /**
-   * base url path for blogs pages. Default is "blogs/"
-   */
-  blogsPath?: string;
+  pages?: { [key: string]: Pick<PageConfiguration, 'basePath'> };
 }
 
 /**
@@ -70,31 +84,13 @@ export interface RunConfiguration {
    */
   siteImage?: string;
 
-  /**
-   * Label for docs menu. Default is Docs
-   */
-  docsLabel?: string;
+  pages?: PagesConfiguration;
 
-  /**
-   * Label for blog menu. Default is Blog
-   */
   blogsLabel?: string;
   /**
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
-
-  /**
-   * the following used in both run time and build time. Should be set in the build config and 
-   * they will be carried to the run config
-  /**
-   * base url path for API documentation pages. Default is "docs/"
-   */
-  docsPath?: string;
-  /**
-   * base url path for blogs pages. Default is "blogs/"
-   */
-  blogsPath?: string;
 }
 
 export const defaultRunConfig: RunConfiguration = {
@@ -107,11 +103,23 @@ export const defaultRunConfig: RunConfiguration = {
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',
   author: '@component-controls',
-  docsLabel: 'Docs',
-  blogsLabel: 'Blog',
+  pages: {
+    story: {
+      label: 'Docs',
+    },
+    blog: {
+      label: 'Blog',
+    },
+  },
 };
 
 export const defaultBuildConfig: BuildConfiguration = {
-  docsPath: 'docs/',
-  blogsPath: 'blogs/',
+  pages: {
+    story: {
+      basePath: 'docs/',
+    },
+    blog: {
+      basePath: 'blogs/',
+    },
+  },
 };

@@ -5,7 +5,6 @@ import { pages } from '../config/pages';
 
 interface DocPageProps {
   pathContext: {
-    title: string;
     doc: string;
   };
 }

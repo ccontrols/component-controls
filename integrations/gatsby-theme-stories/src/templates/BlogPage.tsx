@@ -4,7 +4,6 @@ import { Layout } from '../components/Layout';
 
 interface BlogPageProps {
   pathContext: {
-    title: string;
     doc: string;
   };
 }

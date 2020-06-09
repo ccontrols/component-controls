@@ -59,6 +59,8 @@ There are many developments that have contributed to the creation of `component-
 
 -   [theme-ui](https://theme-ui.com) is the driving force for standardizing `react` theming and design systems. `theme-ui` is used by our project as the theming and components founding block.
 
+-   [mdx](https://mdxjs.com) is driving the adoption of JSX in Markdown and allows writing rich, interactive documentation pages.
+
 # Roadmap
 
 -   [x] Core packages

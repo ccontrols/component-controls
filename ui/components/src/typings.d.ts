@@ -1,4 +1,4 @@
-declare module '@theme-ui/presets';
+declare module '@theme-ui/preset-polaris';
 declare module '@theme-ui/core';
 declare module '@mdx-js/runtime';
 declare module '@theme-ui/css';

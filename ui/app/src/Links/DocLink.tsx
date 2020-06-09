@@ -15,7 +15,7 @@ export const DocLink: FC<DocLinkProps & Omit<LinkProps, 'href'>> = ({
   ...props
 }) => {
   const { storeProvider } = useContext(BlockContext);
-  const href = storeProvider.getDocPath(id);
+  const href = storeProvider.getPagePath('story', id);
   return (
     <Link href={href} {...props}>
       {children}

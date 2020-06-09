@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Flex, Text } from 'theme-ui';
+import { PageType } from '@component-controls/specification';
+
 import {
   Link,
   ColorMode,
@@ -16,8 +18,7 @@ export const Header: FC<HeaderProps> = () => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { docsPath, docsLabel, blogsPath, blogsLabel } = config || {};
-
+  const { pages = {} } = config || {};
   return (
     <AppHeader position="sticky">
       <Flex
@@ -43,16 +44,18 @@ export const Header: FC<HeaderProps> = () => {
           <Link href="/">
             <Text sx={{ px: 2 }}>Home</Text>
           </Link>
-          {Object.keys(storeProvider.getDocs()).length > 0 && (
-            <Link href={`/${docsPath}`}>
-              <Text sx={{ px: 2 }}>{docsLabel}</Text>
-            </Link>
-          )}
-          {Object.keys(storeProvider.getBlogs()).length > 0 && (
-            <Link href={`/${blogsPath}`}>
-              <Text sx={{ px: 2 }}>{blogsLabel}</Text>
-            </Link>
-          )}
+          {Object.keys(pages).map(type => {
+            const pageType = type as PageType;
+            if (Object.keys(storeProvider.getPageList(pageType)).length > 0) {
+              const page = pages[pageType];
+              return (
+                <Link key={`link_${page.basePath}`} href={`/${page.basePath}`}>
+                  <Text sx={{ px: 2 }}>{page.label}</Text>
+                </Link>
+              );
+            }
+            return null;
+          })}
         </Flex>
       </Flex>
       {!responsive && <ColorMode />}

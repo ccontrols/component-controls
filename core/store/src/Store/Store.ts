@@ -1,11 +1,12 @@
 import {
   StoriesStore,
-  StoryDocs,
+  Pages,
   StoriesDoc,
   RunConfiguration,
   getDocPath,
   getStoryPath,
-  getBlogPath,
+  PageType,
+  defPageType,
 } from '@component-controls/specification';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -38,9 +39,7 @@ export class Store implements StoryStore {
   private channel: BroadcastChannel | undefined;
   private observers: StoreObserver[];
   private moduleId: number;
-  private _docs: StoryDocs = {};
-  private _blogs: StoryDocs = {};
-
+  private _cachedPages: { [key: string]: Pages } = {};
   private _firstStory: string | undefined;
   private _firstDoc: string | undefined;
   /**
@@ -108,28 +107,6 @@ export class Store implements StoryStore {
         //point to first story of first doc
         this._firstStory = doc.stories?.[0];
       }
-      if (this.loadedStore.docs) {
-        this._docs = Object.keys(this.loadedStore.docs).reduce(
-          (acc: StoryDocs, key: string) => {
-            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
-            if (doc && (doc.type === undefined || doc.type === 'story')) {
-              return { ...acc, [key]: doc };
-            }
-            return acc;
-          },
-          {},
-        );
-        this._blogs = Object.keys(this.loadedStore.docs).reduce(
-          (acc: StoryDocs, key: string) => {
-            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
-            if (doc && doc.type === 'blog') {
-              return { ...acc, [key]: doc };
-            }
-            return acc;
-          },
-          {},
-        );
-      }
     }
   };
   /**
@@ -191,9 +168,31 @@ export class Store implements StoryStore {
   /**
    * returns all the documentation files
    */
-  getDocs = () => this._docs;
+  getDocs = (): Pages => this.getPageList('story');
 
-  getBlogs = () => this._blogs;
+  getBlogs = (): Pages => this.getPageList('blog');
+
+  getPageList = (type: PageType = defPageType): Pages => {
+    if (this.loadedStore?.docs) {
+      if (!this._cachedPages[type]) {
+        this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
+          (acc: StoriesDoc[], key: string) => {
+            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
+            if (doc) {
+              const { type: docTYpe = defPageType } = doc;
+              if (docTYpe === type) {
+                return [...acc, doc];
+              }
+            }
+            return acc;
+          },
+          [],
+        );
+      }
+      return this._cachedPages[type];
+    }
+    return [];
+  };
 
   get config(): RunConfiguration | undefined {
     return this.loadedStore?.config;
@@ -205,14 +204,11 @@ export class Store implements StoryStore {
     return this._firstDoc;
   }
 
-  getDocPath = (name: string): string => {
+  getPagePath = (pageType: PageType, name: string): string => {
     const doc = this.getStoryDoc(name);
-    return getDocPath(doc, this.config);
+    return getDocPath(pageType, doc, this.config);
   };
-  getBlogPath = (name: string): string => {
-    const doc = this.getStoryDoc(name);
-    return getBlogPath(doc, this.config);
-  };
+
   getStoryPath = (storyId: string): string => {
     const story = this.getStory(storyId);
     if (!story) {

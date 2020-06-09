@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration } from './configuration';
+import { RunConfiguration, PageType } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -149,6 +149,7 @@ export interface Stories {
   [id: string]: Story;
 }
 
+export const defPageType: PageType = 'story';
 /**
  * a group of stories. Usually multiple stories are in one  csf file
  * and the 'group' is the default export
@@ -162,7 +163,7 @@ export interface StoriesDoc {
   /**
    * document type - blogs a and stories. By default - storie
    */
-  type?: 'story' | 'blog' | 'page';
+  type?: PageType;
   /**
    * list of stories contained in the file/groups
    */
@@ -253,6 +254,22 @@ export interface StoriesDoc {
    * side menu - hide
    */
   menu?: boolean | string;
+
+  /**
+   *  optional date the document was created
+   */
+  date?: string;
+
+  /**
+   *  comma-separated list of document tags, used for search
+   */
+  tags?: string;
+
+  /**
+   * document author
+   */
+  author?: string;
+
   [name: string]: any;
 }
 
@@ -270,6 +287,8 @@ export interface StoryComponents {
 export interface StoryDocs {
   [title: string]: StoriesDoc;
 }
+
+export type Pages = StoriesDoc[];
 
 /**
  * list of stories
@@ -314,20 +333,14 @@ export interface StoriesStore {
 }
 
 export const getDocPath = (
+  pageType: PageType,
   doc?: StoriesDoc,
   config?: RunConfiguration,
 ): string => {
-  const { docsPath = '' } = config || {};
-  return doc ? doc.route || `/${docsPath}${doc.title?.toLowerCase()}/` : '';
+  const { basePath = '' } = config?.pages?.[pageType] || {};
+  return doc ? doc.route || `/${basePath}${doc.title?.toLowerCase()}/` : '';
 };
 
-export const getBlogPath = (
-  doc?: StoriesDoc,
-  config?: RunConfiguration,
-): string => {
-  const { blogsPath = '' } = config || {};
-  return doc ? doc.route || `/${blogsPath}${doc.title?.toLowerCase()}/` : '';
-};
 export const getStoryPath = (
   story?: Story,
   doc?: StoriesDoc,
@@ -336,8 +349,7 @@ export const getStoryPath = (
   if (!story) {
     return '';
   }
-  const docsPath = config?.docsPath || '';
-  return doc
-    ? doc.route || `/${docsPath}${doc.title?.toLowerCase()}/#${story.id}`
-    : '';
+
+  const docsPath = getDocPath('story', doc, config);
+  return `${docsPath}/#${story.id}`;
 };

@@ -12,7 +12,12 @@ import {
   MenuItem,
   Header,
 } from '@component-controls/app-components';
-import { StoryDocs, StoriesDoc } from '@component-controls/specification';
+import {
+  StoriesDoc,
+  PageType,
+  Pages,
+  defPageType,
+} from '@component-controls/specification';
 import { StoryStore } from '@component-controls/store';
 
 export interface SidebarProps {
@@ -20,11 +25,17 @@ export interface SidebarProps {
    * title element
    */
   title?: React.ReactNode;
+
+  /**
+   * page type
+   */
+  type?: PageType;
 }
 
 const createMenuItem = (
   storeProvider: StoryStore,
   doc: StoriesDoc,
+  type: PageType,
   levels: string[],
   parent?: MenuItems,
   item?: MenuItem,
@@ -42,19 +53,23 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
-      newItem.href = storeProvider.getDocPath(doc.title);
+      newItem.href = storeProvider.getPagePath(type, doc.title);
     }
     parent.push(newItem);
   }
   return createMenuItem(
     storeProvider,
     doc,
+    type,
     levels.slice(1),
     sibling ? sibling.items : newItem.items,
     newItem,
   );
 };
-export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
+export const SidebarBase: FC<SidebarProps> = ({
+  title: propsTitle,
+  type = defPageType,
+}) => {
   const { doc } = useStoryContext({ id: '.' });
   if (doc && doc.fullPage) {
     return null;
@@ -65,20 +80,19 @@ export const SidebarBase: FC<SidebarProps> = ({ title: propsTitle }) => {
   const { siteTitle } = config || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
-      const docs: StoryDocs = storeProvider.getDocs() || {};
-      const docTitles: string[] = Object.keys(docs);
-      const menuItems = docTitles.reduce((acc: MenuItems, title: string) => {
+      const docs: Pages = storeProvider.getPageList(type);
+      const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
+        const { title } = doc;
         const levels = title.split('/');
-        const doc = docs[title];
         if (doc.menu !== false) {
-          createMenuItem(storeProvider, doc, levels, acc);
+          createMenuItem(storeProvider, doc, type, levels, acc);
         }
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [storeProvider]);
+  }, [type, storeProvider]);
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (

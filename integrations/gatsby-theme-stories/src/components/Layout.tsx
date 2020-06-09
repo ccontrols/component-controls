@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { Global } from '@emotion/core';
 import { ThemeProvider } from '@component-controls/components';
 import { App } from '@component-controls/app';
 import {
@@ -14,7 +13,7 @@ const bundle = require('@component-controls/webpack-compile/bundle');
 import { GatsbyLink } from './GatsbyLink';
 
 interface LayoutProps {
-  docId: string;
+  docId?: string;
 }
 
 export const Layout: FC<LayoutProps> = ({ docId, children }) => {
@@ -29,13 +28,6 @@ export const Layout: FC<LayoutProps> = ({ docId, children }) => {
 
   return (
     <ThemeProvider>
-      <Global
-        styles={() => ({
-          a: {
-            transition: `all 0.3s ease-in-out`,
-          },
-        })}
-      />
       <BlockContextProvider docId={docId} store={storyStore}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={GatsbyLink}>

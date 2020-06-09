@@ -176,6 +176,7 @@ export const parseStories = async (
       mergedOptions,
     );
     const { stories, doc, components, exports, packages } = store;
+    debugger;
     const exportsSource = extractStoryExports(exports);
     let transformed = `
     

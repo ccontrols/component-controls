@@ -1,7 +1,7 @@
 import React from 'react';
-import { polaris } from '@theme-ui/presets';
+import polaris from '@theme-ui/preset-polaris';
 import { get } from '@theme-ui/css';
-import { merge } from '@theme-ui/core';
+import { merge } from 'theme-ui';
 import {
   ThemeProvider as ThemeUIProvider,
   Theme,
@@ -47,7 +47,7 @@ const applyColorMode = (theme: Theme, dark?: boolean) => {
     return theme;
   }
   const modes = get(theme, 'colors.modes', {});
-  return merge.all({}, theme, {
+  return merge(theme, {
     colors: get(modes, 'dark', {}),
   });
 };
@@ -83,6 +83,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         fontSizes: [12, 14, 16, 20, 24, 32, 42, 64, 96],
         styles: {
           ...defTheme.styles,
+          a: {
+            ...defTheme.styles.a,
+            transition: `all 0.3s ease-in-out`,
+          },
           img: {
             ...defTheme.styles.img,
             maxWidth: '100%',

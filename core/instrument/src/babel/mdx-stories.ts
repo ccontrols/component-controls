@@ -22,6 +22,19 @@ import {
 
 import { componentsFromParams } from '../misc/component-attributes';
 
+const serialzeProp = (prop: any): string => {
+  if (prop instanceof Date) {
+    return `"${prop.toString()}"`;
+  }
+  if (Array.isArray(prop)) {
+    return prop.map(p => serialzeProp(p));
+  }
+  if (typeof prop === 'string') {
+    return `"${jsStringEscape(prop)}"`;
+  }
+  return prop;
+};
+
 export const extractMDXStories = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
@@ -79,13 +92,14 @@ export const extractMDXStories = (props: any) => (
     exports: {},
     packages: {},
   };
+
   if (props) {
     store.exports.default = {
       story: Object.keys(props).reduce((acc: object, key: string) => {
         const prop = props[key];
         return {
           ...acc,
-          [key]: typeof prop === 'string' ? `"${jsStringEscape(prop)}"` : prop,
+          [key]: serialzeProp(prop),
         };
       }, {}),
     };
