@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/specification';
-import { Button } from '@theme-ui/components';
+import { Button } from 'theme-ui';
 import { ObjectControl } from './components/ObjectControl';
 
 export default {
