@@ -77,7 +77,8 @@ export const SidebarBase: FC<SidebarProps> = ({
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { siteTitle } = config || {};
+  const { pages = {} } = config || {};
+  const { label = '' } = pages[type];
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
@@ -110,7 +111,9 @@ export const SidebarBase: FC<SidebarProps> = ({
         </Header>
       )}
       <Flex sx={{ px: 2, flexDirection: 'column' }}>
-        <Heading as="h3">{propsTitle || siteTitle}</Heading>
+        <Heading as="h3" sx={{ textAlign: 'center', py: 2 }}>
+          {propsTitle || label}
+        </Heading>
         <Box sx={{ py: 2, px: 3 }}>
           <Input
             placeholder="filter stories..."
