@@ -19,6 +19,7 @@ export type TitleProps = TitleOwnProps & Omit<HeadingProps, 'children'>;
 export const Title: FC<TitleProps> = ({ children, sxStyle, ...rest }) => (
   <Heading
     as="h1"
+    variant="styles.h1"
     sx={{
       fontWeight: 800,
       paddingBottom: 4,

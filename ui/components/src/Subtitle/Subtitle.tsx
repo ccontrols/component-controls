@@ -20,12 +20,13 @@ export type SubtitleProps = SubtitleOwnProps &
  */
 export const Subtitle: FC<SubtitleProps> = ({
   children,
-  as = 'h3',
+  as = 'h2',
   ...rest
 }) => (
   <Heading
     as={as}
     color="fadedText"
+    variant={`styles.${as}`}
     css={{ fontWeight: 400, paddingBottom: 2 }}
     {...rest}
   >
