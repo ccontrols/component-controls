@@ -27,7 +27,15 @@ const serialzeProp = (prop: any): string => {
     return `"${prop.toString()}"`;
   }
   if (Array.isArray(prop)) {
-    return prop.map(p => serialzeProp(p));
+    return JSON.stringify(prop.map(p => serialzeProp(p)));
+  }
+  if (typeof prop === 'object') {
+    return JSON.stringify(
+      Object.keys(prop).reduce(
+        (acc, key) => ({ ...acc, [key]: serialzeProp(prop[key]) }),
+        {},
+      ),
+    );
   }
   if (typeof prop === 'string') {
     return `"${jsStringEscape(prop)}"`;
