@@ -30,7 +30,7 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
     0,
   );
   return (
-    <Box sx={{ flex: '1 0 auto' }}>
+    <Flex sx={{ flex: '1 0 auto' }}>
       <Sidebar />
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs
@@ -67,7 +67,7 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
         </Tabs>
       </Box>
       <SideContext pageRef={pageRef} />
-    </Box>
+    </Flex>
   );
 };
 

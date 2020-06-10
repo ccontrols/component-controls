@@ -55,6 +55,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
     width,
     minWidth,
     position: 'relative',
+    flexShrink: 0,
   };
   const style: SxStyleProp = !responsive
     ? defaultStyle

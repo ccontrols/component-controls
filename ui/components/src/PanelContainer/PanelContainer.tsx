@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC, MouseEvent, useCallback } from 'react';
 import { Button, ButtonProps, useThemeUI } from 'theme-ui';
 import { Collapsible } from '../Collapsible';
 import { Tab, Tabs, TabList, TabPanel } from '../Tabs';
@@ -52,16 +52,23 @@ export const PanelContainer: FC<PanelContainerProps> = ({
   const [tabsIndex, setTabsIndex] = React.useState<number | undefined>(
     undefined,
   );
+
   const { theme } = useThemeUI();
 
   const panels: ActionItems = getSortedPanels(actions);
 
+  const findPanel = useCallback(
+    (id: PanelContainerOwnProps['openTab']) => {
+      return panels.findIndex((p: ActionItem) => p.id === id || p.title === id);
+    },
+    // do not update on each panel change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
   React.useEffect(() => {
-    const index = panels.findIndex(
-      (p: ActionItem) => p.id === openTab || p.title === openTab,
-    );
+    const index = findPanel(openTab);
     setTabsIndex(index > -1 ? index : undefined);
-  }, [openTab, actions, panels]);
+  }, [openTab, findPanel]);
   const panelActions = React.useMemo(
     () =>
       actions.map((panel: ActionItem) => {
