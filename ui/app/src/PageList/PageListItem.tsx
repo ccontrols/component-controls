@@ -11,7 +11,7 @@ export interface PageListItemProps {
   page: StoriesDoc;
 }
 export const PageListItem: FC<PageListItemProps> = ({ page, link }) => {
-  const { tags = '', date } = page;
+  const { tags = [], date } = page;
   return (
     <Flex sx={{ flexDirection: 'column' }}>
       <Link href={link}>
@@ -19,7 +19,7 @@ export const PageListItem: FC<PageListItemProps> = ({ page, link }) => {
       </Link>
       <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <div>{date ? new Date(date).toDateString() : ''}</div>
-        <TagsList tags={tags.split(',')} />
+        <TagsList tags={tags} />
       </Flex>
     </Flex>
   );

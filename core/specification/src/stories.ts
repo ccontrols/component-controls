@@ -263,7 +263,7 @@ export interface StoriesDoc {
   /**
    *  comma-separated list of document tags, used for search
    */
-  tags?: string;
+  tags?: string[];
 
   /**
    * document author
