@@ -1,10 +1,7 @@
 import React from 'react';
 import Octicon, { Project } from '@primer/octicons-react';
 import { Flex } from 'theme-ui';
-import {
-  ThemeProvider,
-  CollapsibleProps,
-} from '@component-controls/components';
+import { ThemeProvider } from '@component-controls/components';
 import { Sidebar, SidebarContext, SidebarContextProvider } from '.';
 
 export default {
