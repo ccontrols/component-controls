@@ -12,7 +12,6 @@ export interface PageListItemProps {
 }
 export const PageListItem: FC<PageListItemProps> = ({ page, link }) => {
   const { tags = '', date } = page;
-  console.log(tags);
   return (
     <Flex sx={{ flexDirection: 'column' }}>
       <Link href={link}>

@@ -12,7 +12,6 @@ export const store = new Store({
 });
 
 const stores = loadStoryStore();
-console.log('stores', stores);
 if (stores) {
   store.setStore(stores);
   saveStore(stores);

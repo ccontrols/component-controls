@@ -39,7 +39,6 @@ export interface MarkdownComponentType {
 }
 export const markdownComponents: MarkdownComponentType = {
   code: props => {
-    console.log(props);
     return <SyntaxHighlighter {...props} />;
   },
   pre: props => {
