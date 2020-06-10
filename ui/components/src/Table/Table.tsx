@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
 import { FC, Fragment, ReactNode, useEffect } from 'react';
-import { Box, BoxProps, Flex, useThemeUI, jsx } from 'theme-ui';
+import { Box, BoxProps, Flex, jsx } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import memoize from 'fast-memoize';
 import {
@@ -34,7 +34,7 @@ import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
 import { useRowSelectionColumn } from './TableRowSelection';
 import { useTableLayout } from './useTableLayout';
-
+import { useTheme } from '../ThemeContext';
 const defaultColumn = memoize(() => ({
   subRows: undefined,
   accessor: '',
@@ -195,7 +195,7 @@ export const Table: FC<TableProps> = ({
       onSelectRowsChange(selectedRowIds as SelectedRowIds);
     }
   }, [selectedRowIds, onSelectRowsChange]);
-  const { theme } = useThemeUI();
+  const theme = useTheme();
   return (
     <Box
       as="table"

@@ -8,9 +8,10 @@ import {
   UseExpandedRowProps,
   UseTableRowProps,
 } from 'react-table';
-import { Flex, Text, useThemeUI } from 'theme-ui';
+import { Flex, Text } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import Octicon, { ChevronRight, ChevronDown } from '@primer/octicons-react';
+import { useTheme } from '../ThemeContext';
 
 type GroupByState = TableState & Partial<UseGroupByState<{}>>;
 const useControlledState = (state: GroupByState) => {
@@ -49,7 +50,7 @@ export const useExpanderColumn = (itemsLabel: string) => (
               groupByVal: any;
             };
         }) => {
-          const { theme } = useThemeUI();
+          const theme = useTheme();
           if (row.canExpand) {
             return (
               <td colSpan={row.cells.length}>

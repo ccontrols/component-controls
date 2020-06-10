@@ -1,9 +1,10 @@
 import React, { FC, MouseEvent, useCallback } from 'react';
-import { Button, ButtonProps, useThemeUI } from 'theme-ui';
+import { Button, ButtonProps } from 'theme-ui';
 import { Collapsible } from '../Collapsible';
 import { Tab, Tabs, TabList, TabPanel } from '../Tabs';
 import { getSortedPanels, ActionItems, ActionItem } from '../ActionBar';
 import { ActionContainer, ActionContainerProps } from '../ActionContainer';
+import { useTheme } from '../ThemeContext';
 
 export const IconButton = (props: ButtonProps) => (
   <Button style={{ paddingTop: '3px', paddingBottom: '3px' }} {...props} />
@@ -53,7 +54,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
     undefined,
   );
 
-  const { theme } = useThemeUI();
+  const theme = useTheme();
 
   const panels: ActionItems = getSortedPanels(actions);
 

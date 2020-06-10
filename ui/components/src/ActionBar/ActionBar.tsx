@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { transparentize } from 'polished';
-import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
+import { Theme, Box, Flex, Button, jsx } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
+import { useTheme } from '../ThemeContext';
 
 export interface ActionBarProps {
   /**
@@ -45,7 +46,7 @@ const ActionColors = ({
  *
  */
 export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
-  const { theme } = useThemeUI();
+  const theme = useTheme();
   const sortedItems = getSortedActions(actions);
   const items = sortedItems.map(
     ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
