@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { transparentize } from 'polished';
 import { Theme, Box, Flex, Button, jsx } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
@@ -47,38 +47,40 @@ const ActionColors = ({
  */
 export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
   const theme = useTheme();
-  const sortedItems = getSortedActions(actions);
-  const items = sortedItems.map(
-    ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
-      const nextGroup =
-        index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
-      return (
-        <Box
-          key={`${typeof title === 'string' ? title : 'item'}_${index}`}
-          sx={{
-            mt: 1,
-            mr: index === 0 ? 1 : 0,
-            ml: nextGroup !== group || group === undefined ? 2 : 1,
-            fontSize: 1,
-            a: ActionColors({ theme, disabled }),
-            button: ActionColors({ theme, disabled }),
-          }}
-        >
-          {typeof title === 'string' ? (
-            <Button
-              onClick={onClick}
-              disabled={disabled}
-              aria-label={ariaLabel}
-            >
-              {title}
-            </Button>
-          ) : (
-            title
-          )}
-        </Box>
-      );
-    },
-  );
+  const items = useMemo(() => {
+    const sortedItems = getSortedActions(actions);
+    return sortedItems.map(
+      ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+        const nextGroup =
+          index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
+        return (
+          <Box
+            key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+            sx={{
+              mt: 1,
+              mr: index === 0 ? 1 : 0,
+              ml: nextGroup !== group || group === undefined ? 2 : 1,
+              fontSize: 1,
+              a: ActionColors({ theme, disabled }),
+              button: ActionColors({ theme, disabled }),
+            }}
+          >
+            {typeof title === 'string' ? (
+              <Button
+                onClick={onClick}
+                disabled={disabled}
+                aria-label={ariaLabel}
+              >
+                {title}
+              </Button>
+            ) : (
+              title
+            )}
+          </Box>
+        );
+      },
+    );
+  }, [theme, actions]);
 
   return (
     <div
