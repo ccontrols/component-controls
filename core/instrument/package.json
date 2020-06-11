@@ -43,6 +43,7 @@
     "gray-matter": "^4.0.2",
     "hosted-git-info": "^3.0.4",
     "js-string-escape": "^1.0.1",
+    "@mdx-js/react": "^1.6.5",
     "prettier": "^1.19.1",
     "read-package-json": "^2.1.1",
     "resolve": "^1.15.1",

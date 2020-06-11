@@ -71,13 +71,14 @@ const createConfig = ({
         '@component-controls/components': require.resolve(
           '@component-controls/components',
         ),
-
+        'broadcast-channel': require.resolve('broadcast-channel'),
         'theme-ui': require.resolve('theme-ui'),
         '@theme-ui/presets': require.resolve('@theme-ui/presets'),
         '@theme-ui/core': require.resolve('@theme-ui/core'),
         '@theme-ui/css': require.resolve('@theme-ui/css'),
 
         'prism-react-renderer': require.resolve('prism-react-renderer'),
+        'react-helmet': require.resolve('react-helmet'),
         'react-table': require.resolve('react-table'),
         'react-tabs': require.resolve('react-tabs'),
         'react-switch': require.resolve('react-switch'),
@@ -120,7 +121,10 @@ const createConfig = ({
       '@theme-ui/css': '@theme-ui/css',
       polished: 'polished',
       lodash: 'lodash',
+      'broadcast-channel': 'broadcast-channel',
+      'prism-react-renderer/themes': 'prism-react-renderer/themes',
       'prism-react-renderer': 'prism-react-renderer',
+      'react-helmet': 'react-helmet',
       'react-table': 'react-table',
       'react-tabs': 'react-tabs',
       'react-switch': 'react-switch',

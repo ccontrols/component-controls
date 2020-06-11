@@ -35,8 +35,8 @@ export const defaultParserOptions: ParserOptions = {
  * from https://github.com/mdx-js/mdx/blob/6251c5bb35aec5b6de85262a6a46fa1db496dd23/packages/loader/index.js#L4
  */
 export const DEFAULT_MDX_RENDERER = `
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 `;
 
 export const defaultMDXOptions: MDXOptions = {

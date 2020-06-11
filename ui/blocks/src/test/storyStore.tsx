@@ -23,7 +23,7 @@ export const store: StoriesStore = {
         '@component-controls/editors': '^1.0.1',
         '@component-controls/specification': '^1.0.1',
         '@component-controls/store': '^1.0.3',
-        '@mdx-js/react': '^1.5.8',
+        '@mdx-js/react': '^1.6.5',
         '@primer/octicons-react': '^9.6.0',
         '@storybook/csf': '^0.0.1',
         'copy-to-clipboard': '^3.2.1',

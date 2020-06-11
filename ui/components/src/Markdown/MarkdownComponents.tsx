@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { ComponentType } from 'react';
 import { jsx } from 'theme-ui';
+import { Label, Flex, Box, Heading, Button, Card } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 import { Source } from '../Source';
@@ -52,4 +53,13 @@ export const markdownComponents: MarkdownComponentType = {
     const language = mdxLanguageMap[mdxLanguage] || mdxLanguage;
     return <Source language={language}>{children}</Source>;
   },
+  Box: props => {
+    console.log(props);
+    return <Box {...props} />;
+  },
+  Button: props => <Button {...props} />,
+  Card: props => <Card {...props} />,
+  Flex: ({ children, ...props }) => <Flex {...props}>{children}</Flex>,
+  Heading: props => <Heading {...props} />,
+  Label: props => <Label {...props} />,
 };

@@ -19,6 +19,7 @@ exports.createPages = async (
     webPack: options.webpack,
     presets: defaultPresets,
     configPath: options.configPath,
+    // bundleAnalyzer: true,
   };
   const pageTemplates: Record<PageType, string> = {
     story: require.resolve(`../src/templates/DocPage.tsx`),
