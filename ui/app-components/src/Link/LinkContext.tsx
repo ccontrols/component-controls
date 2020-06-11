@@ -3,10 +3,13 @@ import { Link, LinkProps } from 'theme-ui';
 
 export type LinkClassType = React.FC<LinkProps>;
 const LinkContext = createContext<LinkClassType>(Link);
-
-export const LinkContextProvider: FC<{
+export interface LinkContextProviderProps {
   linkClass: LinkClassType;
-}> = ({ linkClass: LinkClass, children }) => {
+}
+export const LinkContextProvider: FC<LinkContextProviderProps> = ({
+  linkClass: LinkClass,
+  children,
+}) => {
   return (
     <LinkContext.Provider value={LinkClass}>{children}</LinkContext.Provider>
   );

@@ -1,4 +1,5 @@
 export * from './App';
+export * from './AppContext';
 export * from './BlogPage';
 export * from './DocPage';
 export * from './Footer';

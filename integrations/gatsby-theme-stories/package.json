@@ -37,13 +37,8 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/app": "^1.1.0",
-    "@component-controls/app-components": "^1.1.0",
-    "@component-controls/components": "^1.1.0",
-    "@component-controls/blocks": "^1.1.0",
-    "@component-controls/loader": "^1.1.0",
     "@component-controls/pages": "^1.1.0",
     "@component-controls/specification": "^1.1.0",
-    "@component-controls/store": "^1.1.0",
     "@component-controls/webpack-compile": "^1.1.0",
     "gatsby": "^2.22.10",
     "gatsby-plugin-react-helmet": "^3.3.2",
