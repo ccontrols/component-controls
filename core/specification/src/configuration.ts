@@ -1,6 +1,6 @@
 import { StoryRenderFn } from './utility';
 
-export type PageType = 'story' | 'blog' | 'page';
+export type PageType = 'story' | 'blog' | 'page' | 'tag' | 'author';
 
 export interface PageConfiguration {
   /**
@@ -14,9 +14,7 @@ export interface PageConfiguration {
   label?: string;
 }
 
-export interface PagesConfiguration {
-  [key: string]: PageConfiguration;
-}
+export type PagesConfiguration = Record<PageType, PageConfiguration>;
 
 /**
  * global configuration used at build time
@@ -32,7 +30,7 @@ export interface BuildConfiguration {
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
-  pages?: { [key: string]: Pick<PageConfiguration, 'basePath'> };
+  pages?: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
 }
 
 /**
@@ -110,6 +108,15 @@ export const defaultRunConfig: RunConfiguration = {
     blog: {
       label: 'Blog',
     },
+    author: {
+      label: 'Author',
+    },
+    page: {
+      label: 'Page',
+    },
+    tag: {
+      label: 'Tag',
+    },
   },
 };
 
@@ -120,6 +127,15 @@ export const defaultBuildConfig: BuildConfiguration = {
     },
     blog: {
       basePath: 'blogs/',
+    },
+    author: {
+      basePath: 'authors/',
+    },
+    page: {
+      basePath: 'pages/',
+    },
+    tag: {
+      basePath: 'tags/',
     },
   },
 };

@@ -1,4 +1,8 @@
-import { getDocPath, PageType } from '@component-controls/specification';
+import {
+  getDocPath,
+  PageType,
+  BuildPageConfig,
+} from '@component-controls/specification';
 
 import {
   compile,
@@ -25,11 +29,15 @@ exports.createPages = async (
     story: require.resolve(`../src/templates/DocPage.tsx`),
     blog: require.resolve(`../src/templates/BlogPage.tsx`),
     page: require.resolve(`../src/templates/PagePage.tsx`),
+    tag: require.resolve(`../src/templates/PagePage.tsx`),
+    author: require.resolve(`../src/templates/PagePage.tsx`),
   };
   const listTemplates: Record<PageType, string> = {
     story: require.resolve(`../src/templates/DocPage.tsx`),
     blog: require.resolve(`../src/templates/PageList.tsx`),
     page: require.resolve(`../src/templates/PagePage.tsx`),
+    tag: require.resolve(`../src/templates/PagePage.tsx`),
+    author: require.resolve(`../src/templates/PagePage.tsx`),
   };
 
   const { store } =
@@ -37,33 +45,34 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (store) {
-    const { pages = {} } = store.buildConfig || {};
-    Object.keys(pages).forEach(type => {
-      const page = pages[type];
-      const pageType = type as PageType;
-      const docs = store.getDocs(pageType);
-      docs.forEach(doc => {
-        createPage({
-          path: getDocPath(pageType, doc, store.buildConfig),
-          component: pageTemplates[pageType],
-          context: {
-            doc: doc.title,
-          },
+    const { pages } = store.buildConfig || {};
+    if (pages) {
+      Object.keys(pages).forEach(type => {
+        const page: BuildPageConfig = pages[type as PageType];
+        const pageType = type as PageType;
+        const docs = store.getDocs(pageType);
+        docs.forEach(doc => {
+          createPage({
+            path: getDocPath(pageType, doc, store.buildConfig),
+            component: pageTemplates[pageType],
+            context: {
+              doc: doc.title,
+            },
+          });
         });
+        if (docs.length) {
+          const docsPage = docs.find(doc => doc?.route === `/${page.basePath}`);
+          createPage({
+            path: `/${page.basePath}`,
+            component: listTemplates[pageType],
+            context: {
+              type: pageType,
+              doc: docsPage?.title,
+            },
+          });
+        }
       });
-      if (docs.length) {
-        const docsPage = docs.find(doc => doc?.route === `/${page.basePath}`);
-        createPage({
-          path: `/${page.basePath}`,
-          component: listTemplates[pageType],
-          context: {
-            type: pageType,
-            doc: docsPage?.title,
-          },
-        });
-      }
-    });
-
+    }
     const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
