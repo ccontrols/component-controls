@@ -26,7 +26,8 @@ export interface PageContainerProps {
  * If the page is an MDX page, will display the MDX components.
  * Otherwise, the page elements are passed as children
  */
-export const PageContainer: FC<PageContainerProps & BoxProps> = forwardRef(
+export const PageContainer: FC<PageContainerProps &
+  Omit<BoxProps, 'sx'>> = forwardRef(
   (
     { children, maxWidth, padding = 4, ...rest },
     ref: React.Ref<HTMLDivElement>,
