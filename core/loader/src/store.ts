@@ -9,6 +9,7 @@ import {
   PageType,
 } from '@component-controls/specification';
 import { LoadingDocStore } from '@component-controls/instrument';
+
 export interface LoadingStore {
   /**
    * global configuration from project config file
@@ -35,6 +36,7 @@ export interface LoadingStore {
     filePath: string;
   })[];
   getDocs: (pageType: PageType) => Pages;
+  getUniquesByField: (field: string) => { [key: string]: number };
 }
 
 class Store implements LoadingStore {
@@ -53,6 +55,23 @@ class Store implements LoadingStore {
         return false;
       })
       .map(store => store.doc as StoriesDoc);
+  getUniquesByField = (field: string) => {
+    return this.stores.reduce((acc: { [key: string]: number }, store) => {
+      if (store?.doc) {
+        const value = store.doc[field];
+        const values = Array.isArray(value) ? value : [value];
+        values.forEach(v => {
+          if (v !== undefined) {
+            if (typeof acc[v] === 'undefined') {
+              acc[v] = 0;
+            }
+            acc[v] = acc[v] = 1;
+          }
+        });
+      }
+      return acc;
+    }, {});
+  };
 }
 
 export const store = new Store();

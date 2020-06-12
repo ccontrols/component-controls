@@ -3,12 +3,10 @@
 exports[`csf-stories named-object-export.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "023d0d8cf3e4a1a38f08775068d9729d",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "023d0d8cf3e4a1a38f08775068d9729d",
+    "title": "Story",
   },
   "packages": Object {
     "023d0d8cf3e4a1a38f08775068d9729d": Object {
@@ -20,10 +18,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -62,12 +63,10 @@ export const myStory = {
 exports[`csf-stories no-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "2bf18b76a1b9e90d723ba13b6a10fc58",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "2bf18b76a1b9e90d723ba13b6a10fc58",
+    "title": "Story",
   },
   "packages": Object {
     "2bf18b76a1b9e90d723ba13b6a10fc58": Object {
@@ -79,10 +78,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -136,12 +138,10 @@ export const myStory = () => {};
 exports[`csf-stories no-story.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "77d49f77a8b5ff73e715da87e9ab3277",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "77d49f77a8b5ff73e715da87e9ab3277",
+    "title": "Story",
   },
   "packages": Object {
     "77d49f77a8b5ff73e715da87e9ab3277": Object {
@@ -153,10 +153,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -193,12 +196,10 @@ const i = 1;
 exports[`csf-stories props-argument.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "d8b5c54145ef8f8db3e19289e1c19f95",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "d8b5c54145ef8f8db3e19289e1c19f95",
+    "title": "Story",
   },
   "packages": Object {
     "d8b5c54145ef8f8db3e19289e1c19f95": Object {
@@ -210,10 +211,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -282,12 +286,10 @@ export const myStory = props => {};
 exports[`csf-stories three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "83b0676f45ac751b689864159d82ed31",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "83b0676f45ac751b689864159d82ed31",
+    "title": "Story",
   },
   "packages": Object {
     "83b0676f45ac751b689864159d82ed31": Object {
@@ -299,10 +301,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -429,12 +434,10 @@ export const myStory = ({ name: { first, last }, age }) => {};
 exports[`csf-stories two-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "28503fc854679acdc04bb4eccfeacbb3",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "28503fc854679acdc04bb4eccfeacbb3",
+    "title": "Story",
   },
   "packages": Object {
     "28503fc854679acdc04bb4eccfeacbb3": Object {
@@ -446,10 +449,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -532,12 +538,10 @@ export const myStory = (props, context) => {};
 exports[`csf-stories two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "937b0fd35d556a5e5cfcb7fb25a785c8",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "937b0fd35d556a5e5cfcb7fb25a785c8",
+    "title": "Story",
   },
   "packages": Object {
     "937b0fd35d556a5e5cfcb7fb25a785c8": Object {
@@ -549,10 +553,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -650,12 +657,10 @@ export const myStory = ({ name: MyNam, age }) => {};
 exports[`csf-stories two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "6fe1b3bd8baa1d5965b447e926972dab",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "6fe1b3bd8baa1d5965b447e926972dab",
+    "title": "Story",
   },
   "packages": Object {
     "6fe1b3bd8baa1d5965b447e926972dab": Object {
@@ -667,10 +672,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -768,12 +776,10 @@ export const myStory = ({ name, age }) => {};
 exports[`csf-stories typescript.ts 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "b683a7b765d6b542242ea58703bc8138",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "b683a7b765d6b542242ea58703bc8138",
+    "title": "Story",
   },
   "packages": Object {
     "b683a7b765d6b542242ea58703bc8138": Object {
@@ -785,10 +791,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",

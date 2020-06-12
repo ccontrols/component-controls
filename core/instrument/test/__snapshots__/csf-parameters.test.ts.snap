@@ -7,14 +7,12 @@ Object {
       "name": "ControlsTable",
     },
   },
-  "docs": Object {
-    "Story": Object {
-      "components": Object {
-        "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
-      },
-      "package": "27309cd065c1624443c9c2cdb62d73ed",
-      "title": "Story",
+  "doc": Object {
+    "components": Object {
+      "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
     },
+    "package": "27309cd065c1624443c9c2cdb62d73ed",
+    "title": "Story",
   },
   "packages": Object {
     "27309cd065c1624443c9c2cdb62d73ed": Object {
@@ -26,10 +24,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -99,12 +100,10 @@ myStory.story = {
 exports[`csf-parameters name-parameters-and-controls.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "15ca3a76fad6a8b03adedc0e9e4a590d",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "15ca3a76fad6a8b03adedc0e9e4a590d",
+    "title": "Story",
   },
   "packages": Object {
     "15ca3a76fad6a8b03adedc0e9e4a590d": Object {
@@ -116,10 +115,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -202,12 +204,10 @@ myStory.story = {
 exports[`csf-parameters story-property-name.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "49aab458593f62387be9eeaf3b42c623",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "49aab458593f62387be9eeaf3b42c623",
+    "title": "Story",
   },
   "packages": Object {
     "49aab458593f62387be9eeaf3b42c623": Object {
@@ -219,10 +219,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",

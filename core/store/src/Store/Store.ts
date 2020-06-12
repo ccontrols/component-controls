@@ -40,6 +40,11 @@ export class Store implements StoryStore {
   private observers: StoreObserver[];
   private moduleId: number;
   private _cachedPages: { [key: string]: Pages } = {};
+  private _categoryItems: {
+    [key: string]: {
+      [key: string]: number;
+    };
+  } = {};
   private _firstStory: string | undefined;
   private _firstDoc: string | undefined;
   /**
@@ -194,6 +199,50 @@ export class Store implements StoryStore {
     return [];
   };
 
+  getPagesByCategory = (category: string, value?: any): Pages => {
+    if (this.loadedStore?.docs) {
+      const docs = this.loadedStore?.docs;
+      return Object.keys(docs)
+        .filter(key => {
+          const doc = docs[key];
+          const cateValue = doc[category];
+          if (value === undefined) {
+            return cateValue !== undefined;
+          }
+          const catValues = Array.isArray(cateValue) ? cateValue : [cateValue];
+          return catValues.some(v => v === value);
+        })
+        .map(key => docs[key]);
+    }
+    return [];
+  };
+  getUniquesByCategory = (category: string): { [key: string]: number } => {
+    if (this.loadedStore?.docs) {
+      const docs = this.loadedStore?.docs;
+      if (!this._categoryItems[category]) {
+        this._categoryItems[category] = Object.keys(docs).reduce(
+          (acc: { [key: string]: number }, key) => {
+            const doc = docs[key];
+            const value = doc[category];
+            const values = Array.isArray(value) ? value : [value];
+            values.forEach(v => {
+              if (v !== undefined) {
+                if (typeof acc[v] === 'undefined') {
+                  acc[v] = 0;
+                }
+                acc[v] = acc[v] = 1;
+              }
+            });
+            return acc;
+          },
+          {},
+        );
+      }
+      return this._categoryItems[category];
+    }
+    return {};
+  };
+
   get config(): RunConfiguration | undefined {
     return this.loadedStore?.config;
   }
@@ -204,9 +253,12 @@ export class Store implements StoryStore {
     return this._firstDoc;
   }
 
-  getPagePath = (pageType: PageType, name: string): string => {
+  getPagePath = (
+    pageType: PageType | undefined = defPageType,
+    name: string,
+  ): string => {
     const doc = this.getStoryDoc(name);
-    return getDocPath(pageType, doc, this.config);
+    return getDocPath(pageType, doc, this.config, name);
   };
 
   getStoryPath = (storyId: string): string => {

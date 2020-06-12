@@ -3,13 +3,11 @@
 exports[`csf-story-doc no-title.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "b9103c46172438afdde76f8345fdfed0",
-      "test": 1,
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "b9103c46172438afdde76f8345fdfed0",
+    "test": 1,
+    "title": "Story",
   },
   "packages": Object {
     "b9103c46172438afdde76f8345fdfed0": Object {
@@ -21,10 +19,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -67,21 +68,19 @@ Object {
       "name": "ControlsTable",
     },
   },
-  "docs": Object {
-    "Storybook/Blocks/ControlsTable": Object {
-      "component": "ControlsTable",
-      "components": Object {
-        "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
-      },
-      "package": "aef0eeece1e59f4690b7e3f0065cdc41",
-      "parameters": Object {
-        "addonControls": Object {
-          "smart": false,
-        },
-        "component": "ControlsTable",
-      },
-      "title": "Storybook/Blocks/ControlsTable",
+  "doc": Object {
+    "component": "ControlsTable",
+    "components": Object {
+      "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
     },
+    "package": "aef0eeece1e59f4690b7e3f0065cdc41",
+    "parameters": Object {
+      "addonControls": Object {
+        "smart": false,
+      },
+      "component": "ControlsTable",
+    },
+    "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
     "aef0eeece1e59f4690b7e3f0065cdc41": Object {
@@ -93,10 +92,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -144,25 +146,23 @@ Object {
       "name": "ControlsTable",
     },
   },
-  "docs": Object {
-    "Storybook/Kind": Object {
-      "component": "ControlsTable",
-      "components": Object {
-        "ControlsTable": "04b628ec4e86b8383f71524efe46f138",
-      },
-      "package": "4dd4688f69a323d0b893ca9c902cc47a",
-      "parameters": Object {
-        "controls": Object {
-          "name": Object {
-            "label": "Name",
-            "order": 9999,
-            "type": "ControlTypes.TEXT",
-            "value": "Mark",
-          },
+  "doc": Object {
+    "component": "ControlsTable",
+    "components": Object {
+      "ControlsTable": "04b628ec4e86b8383f71524efe46f138",
+    },
+    "package": "4dd4688f69a323d0b893ca9c902cc47a",
+    "parameters": Object {
+      "controls": Object {
+        "name": Object {
+          "label": "Name",
+          "order": 9999,
+          "type": "ControlTypes.TEXT",
+          "value": "Mark",
         },
       },
-      "title": "Storybook/Kind",
     },
+    "title": "Storybook/Kind",
   },
   "packages": Object {
     "4dd4688f69a323d0b893ca9c902cc47a": Object {
@@ -174,10 +174,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -226,12 +229,10 @@ Object {
 exports[`csf-story-doc with-title.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Storybook/Blocks/ControlsTable": Object {
-      "components": Object {},
-      "package": "44bab54c940e1430b4b259f5bad24b7a",
-      "title": "Storybook/Blocks/ControlsTable",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "44bab54c940e1430b4b259f5bad24b7a",
+    "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
     "44bab54c940e1430b4b259f5bad24b7a": Object {
@@ -243,10 +244,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",

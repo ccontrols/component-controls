@@ -266,6 +266,11 @@ export interface StoriesDoc {
   tags?: string[];
 
   /**
+   *  documentation file description
+   */
+  description?: string;
+
+  /**
    * document author
    */
   author?: string;
@@ -336,9 +341,12 @@ export const getDocPath = (
   pageType: PageType,
   doc?: StoriesDoc,
   config?: RunConfiguration,
+  name: string = '',
 ): string => {
   const { basePath = '' } = config?.pages?.[pageType] || {};
-  return doc ? doc.route || `/${basePath}${doc.title?.toLowerCase()}/` : '';
+  return doc
+    ? doc.route || `/${basePath}${doc.title?.toLowerCase()}/`
+    : `/${basePath}${name}`;
 };
 
 export const getStoryPath = (

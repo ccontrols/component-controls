@@ -1,6 +1,6 @@
 import { StoryRenderFn } from './utility';
 
-export type PageType = 'story' | 'blog' | 'page' | 'tag' | 'author';
+export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
 
 export interface PageConfiguration {
   /**
@@ -12,6 +12,12 @@ export interface PageConfiguration {
    * label - used for menu labels
    */
   label?: string;
+
+  /**
+   * if true, will create a home page with a top-level menu
+   * by default, only story and blogs have home pages
+   */
+  hasHomePage?: boolean;
 }
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
@@ -104,18 +110,20 @@ export const defaultRunConfig: RunConfiguration = {
   pages: {
     story: {
       label: 'Docs',
+      hasHomePage: true,
     },
     blog: {
       label: 'Blog',
+      hasHomePage: true,
     },
     author: {
-      label: 'Author',
+      label: 'Authors',
     },
     page: {
       label: 'Page',
     },
-    tag: {
-      label: 'Tag',
+    tags: {
+      label: 'Tags',
     },
   },
 };
@@ -134,7 +142,7 @@ export const defaultBuildConfig: BuildConfiguration = {
     page: {
       basePath: 'pages/',
     },
-    tag: {
+    tags: {
       basePath: 'tags/',
     },
   },

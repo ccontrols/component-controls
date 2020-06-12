@@ -13,18 +13,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "2855216c2faa4ab43ed978e3ff6743e4",
-      },
-      "package": "8c5cf9d9fa1d5bc7742765b451f2a255",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "2855216c2faa4ab43ed978e3ff6743e4",
     },
+    "package": "8c5cf9d9fa1d5bc7742765b451f2a255",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "8c5cf9d9fa1d5bc7742765b451f2a255": Object {
@@ -36,10 +34,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -67,7 +68,9 @@ Object {
     },
   },
   "stories": Object {},
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -75,7 +78,8 @@ import Button from '../components/BaseButton';
 
 <Story>
   <Button />
-</Story>",
+</Story>
+",
 }
 `;
 
@@ -92,18 +96,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
-      },
-      "package": "5025d10bd14c417a3985dd520bbc8ce0",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
     },
+    "package": "5025d10bd14c417a3985dd520bbc8ce0",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "5025d10bd14c417a3985dd520bbc8ce0": Object {
@@ -115,10 +117,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -178,7 +183,9 @@ Object {
       "source": "props => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -187,6 +194,7 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {props => <Button />}
 </Story>
+
 ",
 }
 `;
@@ -226,18 +234,16 @@ export default Button;
 ",
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
-      },
-      "package": "9d6345a2d09c05cff0ad7c86fe40c4f9",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
     },
+    "package": "9d6345a2d09c05cff0ad7c86fe40c4f9",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "305b7edffa5cab1bfaf0c86ebde067bd": Object {
@@ -249,10 +255,13 @@ export default Button;
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -287,10 +296,13 @@ export default Button;
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -334,7 +346,9 @@ export default Button;
       "source": "<Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../../components/button-default-arrow-func';
 
 
@@ -343,6 +357,7 @@ import Button from '../../components/button-default-arrow-func';
 <Story name=\\"smart story\\">
   <Button />
 </Story>
+
 ",
 }
 `;
@@ -360,18 +375,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "c63d685efb0c65f18ffc63184e852ef4",
-      },
-      "package": "c151e21eacb60e5b077423daed2d02e2",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "c63d685efb0c65f18ffc63184e852ef4",
     },
+    "package": "c151e21eacb60e5b077423daed2d02e2",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "c151e21eacb60e5b077423daed2d02e2": Object {
@@ -383,10 +396,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -508,7 +524,9 @@ Object {
         }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -517,6 +535,7 @@ import Button from '../components/BaseButton';
 <Story name=\\"story-with-props\\">
   {({ name: { first, last }, age }) => <Button />}
 </Story>
+
 ",
 }
 `;
@@ -534,18 +553,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
-      },
-      "package": "9c0d66b95cdae13733bdeb986761ca47",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
     },
+    "package": "9c0d66b95cdae13733bdeb986761ca47",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "9c0d66b95cdae13733bdeb986761ca47": Object {
@@ -557,10 +574,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -649,7 +669,9 @@ Object {
       "source": "({ name, age }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -657,7 +679,8 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {({ name, age }) => <Button />}
-</Story>",
+</Story>
+",
 }
 `;
 
@@ -674,18 +697,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "fe664c2ffbbcacffdac896ace94db697",
-      },
-      "package": "82864065f08bddd8e5586424d90a51f0",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "fe664c2ffbbcacffdac896ace94db697",
     },
+    "package": "82864065f08bddd8e5586424d90a51f0",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "82864065f08bddd8e5586424d90a51f0": Object {
@@ -697,10 +718,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -774,7 +798,9 @@ Object {
       "source": "(props, context) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -782,7 +808,8 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {(props, context) => <Button />}
-</Story>",
+</Story>
+",
 }
 `;
 
@@ -799,18 +826,16 @@ Object {
       "source": undefined,
     },
   },
-  "docs": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "0a73df5cffa26ca62ec534813a77384f",
-      },
-      "package": "fea8eb808fd320237df6714339cbe69b",
-      "parameters": Object {
-        "component": "Button",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "0a73df5cffa26ca62ec534813a77384f",
     },
+    "package": "fea8eb808fd320237df6714339cbe69b",
+    "parameters": Object {
+      "component": "Button",
+    },
+    "title": "Storybook/MDX",
   },
   "packages": Object {
     "fea8eb808fd320237df6714339cbe69b": Object {
@@ -822,10 +847,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -914,7 +942,9 @@ Object {
       "source": "({ name: MyName, age }) => <Button />",
     },
   },
-  "transformed": "import { Story, Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
@@ -922,6 +952,7 @@ import Button from '../components/BaseButton';
 
 <Story name=\\"story-with-props\\">
   {({ name: MyName, age }) => <Button />}
-</Story>",
+</Story>
+",
 }
 `;

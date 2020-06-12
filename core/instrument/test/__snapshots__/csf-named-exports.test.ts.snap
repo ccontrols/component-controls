@@ -3,12 +3,10 @@
 exports[`csf-named-exports export-alias.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "c071cdabd810d210aa3df2ee281eb1e2",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "c071cdabd810d210aa3df2ee281eb1e2",
+    "title": "Story",
   },
   "packages": Object {
     "c071cdabd810d210aa3df2ee281eb1e2": Object {
@@ -20,10 +18,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -82,12 +83,10 @@ export { myStory as exportedStory };
 exports[`csf-named-exports property-name.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "35c5b6349c3b5c253bb5b98e0b2119fb",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "35c5b6349c3b5c253bb5b98e0b2119fb",
+    "title": "Story",
   },
   "packages": Object {
     "35c5b6349c3b5c253bb5b98e0b2119fb": Object {
@@ -99,10 +98,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -161,12 +163,10 @@ export { myStory };
 exports[`csf-named-exports re-export-name.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "package": "b27d69ca04362a47a347cdfb49a31bf6",
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "package": "b27d69ca04362a47a347cdfb49a31bf6",
+    "title": "Story",
   },
   "packages": Object {
     "b27d69ca04362a47a347cdfb49a31bf6": Object {
@@ -178,10 +178,13 @@ Object {
         "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",

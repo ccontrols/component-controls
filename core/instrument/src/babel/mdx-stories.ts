@@ -1,4 +1,3 @@
-import generate from '@babel/generator';
 import {
   Story,
   StoriesDoc,
@@ -10,70 +9,29 @@ import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
-import jsStringEscape from 'js-string-escape';
 import { followStoryImport } from './follow-imports';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
-import {
-  ParseStorieReturnType,
-  InstrumentOptions,
-  MDXExportType,
-} from '../types';
+import { ParseStorieReturnType, InstrumentOptions } from '../types';
 
 import { componentsFromParams } from '../misc/component-attributes';
-
-const serialzeProp = (prop: any): string => {
-  if (prop instanceof Date) {
-    return `"${prop.toString()}"`;
-  }
-  if (Array.isArray(prop)) {
-    return JSON.stringify(prop.map(p => serialzeProp(p)));
-  }
-  if (typeof prop === 'object') {
-    return JSON.stringify(
-      Object.keys(prop).reduce(
-        (acc, key) => ({ ...acc, [key]: serialzeProp(prop[key]) }),
-        {},
-      ),
-    );
-  }
-  if (typeof prop === 'string') {
-    return `"${jsStringEscape(prop)}"`;
-  }
-  return prop;
-};
 
 export const extractMDXStories = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
-  const collectAttributes = (
-    node: any,
-    exports?: MDXExportType,
-  ): StoryParameters => {
+  const collectAttributes = (node: any): StoryParameters => {
     return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
-      if (exports) {
-        const { code } = generate(
-          attribute.value.expression || attribute.value,
-          {
-            retainFunctionParens: true,
-            retainLines: true,
-          },
-        );
-        const codeTrim = code.trim();
-        if (!exports.story) {
-          exports.story = {};
-        }
-        exports.story[attribute.name?.name] = codeTrim;
-      }
-
       if (attribute.value.type === 'StringLiteral') {
-        return { ...acc, [attribute.name?.name]: attribute.value?.value };
+        return {
+          ...acc,
+          [attribute.name.name]: attribute.value.value,
+        };
       } else if (attribute.value.type === 'JSXExpressionContainer') {
         return {
           ...acc,
-          [attribute.name?.name]: extractAttributes(attribute.value.expression),
+          [attribute.name.name]: extractAttributes(attribute.value.expression),
         };
       }
       return acc;
@@ -103,13 +61,7 @@ export const extractMDXStories = (props: any) => (
 
   if (props) {
     store.exports.default = {
-      story: Object.keys(props).reduce((acc: object, key: string) => {
-        const prop = props[key];
-        return {
-          ...acc,
-          [key]: serialzeProp(prop),
-        };
-      }, {}),
+      story: props,
     };
   }
   const { transformMDX } = _options.mdx;
@@ -129,8 +81,8 @@ export const extractMDXStories = (props: any) => (
       ) {
         switch (node.name.name) {
           case 'Story': {
-            const exports = transformMDX ? {} : undefined;
-            const attributes = collectAttributes(node, exports);
+            const attributes = collectAttributes(node);
+            const exports = transformMDX ? { story: attributes } : undefined;
             const { name } = attributes;
             if (typeof name === 'string') {
               if (store.stories[name]) {
@@ -147,6 +99,7 @@ export const extractMDXStories = (props: any) => (
                 name,
                 id,
               };
+
               if (
                 expression &&
                 (expression.expression.type === 'CallExpression' ||
@@ -213,8 +166,8 @@ export const extractMDXStories = (props: any) => (
             break;
           }
           case 'Meta': {
-            const exports = transformMDX ? {} : undefined;
-            const attributes = collectAttributes(node, exports);
+            const attributes = collectAttributes(node);
+            const exports = transformMDX ? { story: attributes } : undefined;
             const { title } = attributes;
             if (title) {
               const doc: StoriesDoc = {

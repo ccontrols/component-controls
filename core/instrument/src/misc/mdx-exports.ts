@@ -1,12 +1,7 @@
 import { MDXExportType, MDXExportTypes } from '../types';
 
 const mdxPropertiesExport = (exportType: MDXExportType): string | undefined => {
-  return exportType && exportType.story
-    ? `${Object.keys(exportType.story)
-        //@ts-ignore
-        .map(name => `${name}: ${exportType.story[name]}`)
-        .join(',\n')}`
-    : undefined;
+  return exportType ? JSON.stringify(exportType.story, null, 2) : undefined;
 };
 
 const mdxFunctionExport = (
@@ -25,8 +20,10 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
       let defaultExportCode = '';
       if (exports.default) {
         const expCode = mdxPropertiesExport(exports.default);
-        defaultExportCode = `export default { ${
-          expCode ? `${expCode},` : ''
+        defaultExportCode = `
+
+        export default { ${
+          expCode ? `...${expCode},` : ''
         } MDXPage: MDXContent };`;
       }
 
@@ -39,10 +36,10 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
             storiesExports.push(expFn);
           }
           const expCode = mdxPropertiesExport(exports[exportStory]);
+          debugger;
           if (expCode) {
-            storiesExports.push(`${exportStory}.story = {
-                ${expCode}
-             }`);
+            storiesExports.push(`${exportStory}.story = ${expCode}
+             `);
           }
         }
       }

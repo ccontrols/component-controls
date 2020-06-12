@@ -1,8 +1,4 @@
-import {
-  getDocPath,
-  PageType,
-  BuildPageConfig,
-} from '@component-controls/specification';
+import { getDocPath, PageType } from '@component-controls/specification';
 
 import {
   compile,
@@ -29,15 +25,15 @@ exports.createPages = async (
     story: require.resolve(`../src/templates/DocPage.tsx`),
     blog: require.resolve(`../src/templates/BlogPage.tsx`),
     page: require.resolve(`../src/templates/PagePage.tsx`),
-    tag: require.resolve(`../src/templates/PagePage.tsx`),
-    author: require.resolve(`../src/templates/PagePage.tsx`),
+    tags: require.resolve(`../src/templates/CategoryPage.tsx`),
+    author: require.resolve(`../src/templates/CategoryPage.tsx`),
   };
   const listTemplates: Record<PageType, string> = {
     story: require.resolve(`../src/templates/DocPage.tsx`),
     blog: require.resolve(`../src/templates/PageList.tsx`),
     page: require.resolve(`../src/templates/PagePage.tsx`),
-    tag: require.resolve(`../src/templates/PagePage.tsx`),
-    author: require.resolve(`../src/templates/PagePage.tsx`),
+    tags: require.resolve(`../src/templates/CategoryList.tsx`),
+    author: require.resolve(`../src/templates/CategoryList.tsx`),
   };
 
   const { store } =
@@ -48,7 +44,7 @@ exports.createPages = async (
     const { pages } = store.buildConfig || {};
     if (pages) {
       Object.keys(pages).forEach(type => {
-        const page: BuildPageConfig = pages[type as PageType];
+        const page = pages[type as PageType];
         const pageType = type as PageType;
         const docs = store.getDocs(pageType);
         docs.forEach(doc => {
@@ -68,6 +64,35 @@ exports.createPages = async (
             context: {
               type: pageType,
               doc: docsPage?.title,
+            },
+          });
+        }
+      });
+      ['author', 'tags'].forEach(catName => {
+        const cats = store.getUniquesByField(catName);
+        const catPage = pages[catName as PageType];
+        const catKeys = Object.keys(cats);
+        catKeys.forEach(tag => {
+          createPage({
+            path: getDocPath(
+              catName as PageType,
+              undefined,
+              store.buildConfig,
+              tag,
+            ),
+            component: pageTemplates[catName as PageType],
+            context: {
+              type: catName as PageType,
+              category: tag,
+            },
+          });
+        });
+        if (catKeys.length) {
+          createPage({
+            path: `/${catPage.basePath}`,
+            component: listTemplates[catName as PageType],
+            context: {
+              type: catName,
             },
           });
         }

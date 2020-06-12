@@ -1,7 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test typescript react settings compile 1`] = `
-Object {
+Store {
+  "buildConfig": Object {
+    "pages": Object {
+      "author": Object {
+        "basePath": "authors/",
+      },
+      "blog": Object {
+        "basePath": "blogs/",
+      },
+      "page": Object {
+        "basePath": "pages/",
+      },
+      "story": Object {
+        "basePath": "docs/",
+      },
+      "tags": Object {
+        "basePath": "tags/",
+      },
+    },
+    "stories": Array [
+      "../../../../ui/components/src/ActionBar/*.stories.(js|jsx|tsx|mdx)",
+    ],
+  },
   "components": Object {
     "fded7dbaa855ea6869a794f877eab680": Object {
       "from": "./ActionBar",
@@ -15,8 +37,12 @@ Object {
         ],
         "react": Array [
           Object {
-            "importedName": "FunctionComponent",
-            "name": "FunctionComponent",
+            "importedName": "FC",
+            "name": "FC",
+          },
+          Object {
+            "importedName": "useMemo",
+            "name": "useMemo",
           },
         ],
         "theme-ui": Array [
@@ -39,10 +65,6 @@ Object {
           Object {
             "importedName": "jsx",
             "name": "jsx",
-          },
-          Object {
-            "importedName": "useThemeUI",
-            "name": "useThemeUI",
           },
         ],
       },
@@ -67,21 +89,22 @@ actions can accept an order prop, and can also be superimposed",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 107,
+          "line": 108,
         },
         "start": Object {
-          "column": 60,
-          "line": 47,
+          "column": 45,
+          "line": 48,
         },
       },
       "name": "ActionBar",
       "package": "30938aa5d7bae6c78434e15f2a2723b5",
       "request": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.tsx",
       "source": "/** @jsx jsx */
-import { FunctionComponent } from 'react';
+import { FC, useMemo } from 'react';
 import { transparentize } from 'polished';
-import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
+import { Theme, Box, Flex, Button, jsx } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
+import { useTheme } from '../ThemeContext';
 
 export interface ActionBarProps {
   /**
@@ -123,42 +146,42 @@ const ActionColors = ({
  * actions can accept an order prop, and can also be superimposed
  *
  */
-export const ActionBar: FunctionComponent<ActionBarProps> = ({
-  actions = [],
-}) => {
-  const { theme } = useThemeUI();
-  const sortedItems = getSortedActions(actions);
-  const items = sortedItems.map(
-    ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
-      const nextGroup =
-        index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
-      return (
-        <Box
-          key={\`\${typeof title === 'string' ? title : 'item'}_\${index}\`}
-          sx={{
-            mt: 1,
-            mr: index === 0 ? 1 : 0,
-            ml: nextGroup !== group || group === undefined ? 2 : 1,
-            fontSize: 1,
-            a: ActionColors({ theme, disabled }),
-            button: ActionColors({ theme, disabled }),
-          }}
-        >
-          {typeof title === 'string' ? (
-            <Button
-              onClick={onClick}
-              disabled={disabled}
-              aria-label={ariaLabel}
-            >
-              {title}
-            </Button>
-          ) : (
-            title
-          )}
-        </Box>
-      );
-    },
-  );
+export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
+  const theme = useTheme();
+  const items = useMemo(() => {
+    const sortedItems = getSortedActions(actions);
+    return sortedItems.map(
+      ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+        const nextGroup =
+          index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
+        return (
+          <Box
+            key={\`\${typeof title === 'string' ? title : 'item'}_\${index}\`}
+            sx={{
+              mt: 1,
+              mr: index === 0 ? 1 : 0,
+              ml: nextGroup !== group || group === undefined ? 2 : 1,
+              fontSize: 1,
+              a: ActionColors({ theme, disabled }),
+              button: ActionColors({ theme, disabled }),
+            }}
+          >
+            {typeof title === 'string' ? (
+              <Button
+                onClick={onClick}
+                disabled={disabled}
+                aria-label={ariaLabel}
+              >
+                {title}
+              </Button>
+            ) : (
+              title
+            )}
+          </Box>
+        );
+      },
+    );
+  }, [theme, actions]);
 
   return (
     <div
@@ -187,6 +210,9 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
 ",
     },
   },
+  "config": Object {},
+  "getDocs": [Function],
+  "getUniquesByField": [Function],
   "packages": Object {
     "30938aa5d7bae6c78434e15f2a2723b5": Object {
       "dependencies": Object {
@@ -196,9 +222,9 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
         "fast-memoize": "^2.5.2",
         "markdown-to-jsx": "^6.11.0",
         "prism-react-renderer": "^1.0.2",
-        "react": "^16.8.3",
+        "react": "^16.13.1",
         "react-animate-height": "^2.0.20",
-        "react-dom": "^16.8.3",
+        "react-dom": "^16.13.1",
         "react-popper-tooltip": "^2.10.1",
         "react-switch": "^5.0.1",
         "react-table": "^7.0.0",
@@ -218,8 +244,8 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
       "fileHash": "30938aa5d7bae6c78434e15f2a2723b5",
       "name": "@component-controls/components",
       "peerDependencies": Object {
-        "react": "*",
-        "react-dom": "*",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "theme-ui": "*",
       },
       "repository": Object {
@@ -237,9 +263,9 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
         "fast-memoize": "^2.5.2",
         "markdown-to-jsx": "^6.11.0",
         "prism-react-renderer": "^1.0.2",
-        "react": "^16.8.3",
+        "react": "^16.13.1",
         "react-animate-height": "^2.0.20",
-        "react-dom": "^16.8.3",
+        "react-dom": "^16.13.1",
         "react-popper-tooltip": "^2.10.1",
         "react-switch": "^5.0.1",
         "react-table": "^7.0.0",
@@ -259,8 +285,8 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
       "fileHash": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
       "name": "@component-controls/components",
       "peerDependencies": Object {
-        "react": "*",
-        "react-dom": "*",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "theme-ui": "*",
       },
       "repository": Object {
@@ -273,18 +299,17 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
   },
   "stores": Array [
     Object {
-      "docs": Object {
-        "Components/ActionBar": Object {
-          "component": [Function],
-          "components": Object {
-            "ActionBar": "fded7dbaa855ea6869a794f877eab680",
-          },
-          "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
-          "moduleId": "../../ui/components/src/ActionBar/ActionBar.stories.tsx",
-          "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
-          "title": "Components/ActionBar",
+      "doc": Object {
+        "component": "ActionBar",
+        "components": Object {
+          "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
+        "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
+        "moduleId": "../../ui/components/src/ActionBar/ActionBar.stories.tsx",
+        "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
+        "title": "Components/ActionBar",
       },
+      "filePath": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
       "stories": Object {
         "disabled": Object {
           "arguments": Array [],
@@ -300,7 +325,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "disabled",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -329,7 +353,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "groupEnd",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -364,7 +387,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "groupStart",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -399,7 +421,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "link",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -426,7 +447,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "order",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -460,7 +480,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "override",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar
@@ -497,7 +516,6 @@ export const ActionBar: FunctionComponent<ActionBarProps> = ({
             },
           },
           "name": "overview",
-          "renderFn": [Function],
           "source": "() => (
   <Container>
     <ActionBar

@@ -3,11 +3,9 @@
 exports[`csf-story-source external-source.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {
@@ -39,11 +37,9 @@ export const myStory = customStory;
 exports[`csf-story-source external-source-deconstructed-props.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {
@@ -120,11 +116,9 @@ export const myStory = customStory;
 exports[`csf-story-source external-source-props.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {
@@ -186,11 +180,9 @@ export const myStory = customStory;
 exports[`csf-story-source simple-source.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {
@@ -222,11 +214,9 @@ export const myStory = () => <div>test</div>;
 exports[`csf-story-source simple-source-props.js 1`] = `
 Object {
   "components": Object {},
-  "docs": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {

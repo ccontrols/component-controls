@@ -77,8 +77,8 @@ export const SidebarBase: FC<SidebarProps> = ({
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
-  const { pages = {} } = config || {};
-  const { label = '' } = pages[type];
+  const { pages } = config || {};
+  const { label = '' } = pages?.[type] || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);

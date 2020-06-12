@@ -4,19 +4,28 @@ import { jsx } from 'theme-ui';
 import { PageType } from '@component-controls/specification';
 import { Title } from '@component-controls/components';
 import { PageContainer, BlockContext } from '@component-controls/blocks';
-import { DocumentsList } from '../DocumentsList';
+import { CategoryListItem } from './CategoryListItem';
 
-export interface PageListProps {
+export interface CategoryListProps {
   type: PageType;
 }
-export const PageList: FC<PageListProps> = ({ type }) => {
+export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
-  const pages = storeProvider?.getPageList(type) || [];
+  const categories = storeProvider?.getUniquesByCategory(type) || [];
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   return (
     <PageContainer sx={{ flex: '1 0 auto' }} maxWidth="1000px" id="content">
       <Title>{pageConfig.label}</Title>
-      <DocumentsList pages={pages} />
+      <ul>
+        {Object.keys(categories).map(key => (
+          <CategoryListItem
+            key={key}
+            link={storeProvider.getPagePath(type, key)}
+            name={key}
+            count={categories[key]}
+          />
+        ))}
+      </ul>
     </PageContainer>
   );
 };

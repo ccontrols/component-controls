@@ -21,10 +21,12 @@ export interface StoryStore {
   getDocs: () => Pages;
   getBlogs: () => Pages;
   getPageList: (type: PageType) => Pages;
+  getPagesByCategory: (category: string, value?: any) => Pages;
+  getUniquesByCategory: (category: string) => { [key: string]: number };
   config: RunConfiguration | undefined;
   firstStory: string | undefined;
   firstDoc: string | undefined;
-  getPagePath: (pageType: PageType, name: string) => string;
+  getPagePath: (pageType: PageType | undefined, name: string) => string;
   getStoryPath: (storyId: string) => string;
   updateStoryProp: (
     storyId: string,

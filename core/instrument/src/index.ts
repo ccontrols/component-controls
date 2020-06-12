@@ -158,7 +158,6 @@ export const parseStories = async (
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
     const { data, content } = matter(source);
-    debugger;
     const mdxParsed = await mdx(content, {
       filepath: filePath,
       ...otherMDXOptions,
