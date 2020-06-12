@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import {
-  ThemeProvider,
-  ThemeProviderProps,
-} from '@component-controls/components';
+import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
   LinkContextProvider,
@@ -15,19 +12,17 @@ import { LoadingStore } from '@component-controls/loader';
 import { loadStoryStore, Store } from '@component-controls/store';
 import { App } from '../App';
 
-export type AppContextProps = {
+export interface AppContextProps {
   docId?: string;
   store?: LoadingStore;
   linkClass: LinkContextProviderProps['linkClass'];
-} & ThemeProviderProps;
+}
 
 export const AppContext: FC<AppContextProps> = ({
   docId,
   children,
   store,
   linkClass,
-  components,
-  ...themeProps
 }) => {
   const storyStore = useMemo(
     () =>
@@ -39,7 +34,7 @@ export const AppContext: FC<AppContextProps> = ({
   );
 
   return (
-    <ThemeProvider components={components} {...themeProps}>
+    <ThemeProvider theme={storyStore.config?.theme}>
       <BlockContextProvider docId={docId} store={storyStore}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>

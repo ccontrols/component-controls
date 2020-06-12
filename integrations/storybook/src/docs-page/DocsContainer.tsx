@@ -12,18 +12,12 @@ import {
 import { store } from '@component-controls/store/live_store';
 import { useIsDark } from '../context/useIsDark';
 
-interface DocsContainerProps {
-  theme?: Theme;
-}
-export const PageContextContainer: FC<DocsContainerProps> = ({
-  children,
-  theme,
-}) => {
+export const PageContextContainer: FC = ({ children }) => {
   const options = React.useMemo(() => getGlobalOptions(), []);
   const storyId = useStoryId();
   const isDark = useIsDark();
   return (
-    <ThemeProvider theme={theme} dark={isDark}>
+    <ThemeProvider theme={store.config?.theme} dark={isDark}>
       <BlockContextProvider storyId={storyId} store={store} options={options}>
         <BlockPageContainer maxWidth="1000px">{children}</BlockPageContainer>
       </BlockContextProvider>

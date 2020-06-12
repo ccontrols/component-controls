@@ -88,9 +88,16 @@ export interface RunConfiguration {
    */
   siteImage?: string;
 
+  /**
+   * page types configurations
+   */
   pages?: PagesConfiguration;
 
-  blogsLabel?: string;
+  /**
+   * theme-ui theme configuration
+   */
+  theme?: { [key: string]: any };
+
   /**
    * story sorting function
    */
