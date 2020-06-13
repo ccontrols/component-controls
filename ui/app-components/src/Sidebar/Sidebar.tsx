@@ -1,14 +1,6 @@
 /** @jsx jsx */
 import React, { FC, useContext } from 'react';
-import {
-  jsx,
-  Box,
-  Flex,
-  BoxProps,
-  Heading,
-  SxStyleProp,
-  Theme,
-} from 'theme-ui';
+import { jsx, Box, BoxProps, Heading } from 'theme-ui';
 import { SidebarContext } from './SidebarContext';
 
 export interface SidebarProps {
@@ -50,56 +42,34 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
 }) => {
   const toggleContext = useContext(SidebarContext);
   const { collapsed, responsive, setCollapsed } = toggleContext || {};
-  const defaultStyle: SxStyleProp = {
-    overflowX: 'hidden',
-    width,
-    minWidth,
-    position: 'relative',
-    flexShrink: 0,
-  };
-  const style: SxStyleProp = !responsive
-    ? defaultStyle
-    : {
-        ...defaultStyle,
-        position: 'fixed',
-        width: '100%',
-        minWidth: '100%',
-        zIndex: 9999,
-        backgroundColor: 'background',
-        top: 0,
-        left: 0,
-        bottom: 0,
-      };
+
   return collapsed ? null : (
-    <Box sx={style} {...rest}>
-      <div
+    <Box
+      variant={responsive ? 'sidebar.responsive' : 'sidebar.default'}
+      sx={
+        responsive
+          ? undefined
+          : {
+              width,
+              minWidth,
+            }
+      }
+      {...rest}
+    >
+      <Box
+        variant={
+          responsive ? 'sidebar.innerresponsive' : 'sidebar.innerdefault'
+        }
         sx={{
-          position: !responsive ? 'fixed' : undefined,
-          height: responsive ? undefined : '100vh',
           width: responsive ? undefined : width,
-          overflowY: 'auto',
-          a: {
-            '&.active': {
-              borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
-            },
-            ':hover': {
-              backgroundColor: 'shadow',
-            },
-          },
         }}
         onClick={() => responsive && setCollapsed(true)}
       >
-        <Flex
-          sx={{
-            pb: 1,
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}
-        >
+        <Box variant={'sidebar.headercontainer'}>
           {title && (
             <Box as="header">
               {typeof title === 'string' ? (
-                <Heading as="h3" sx={{ pl: 2 }}>
+                <Heading as="h3" variant={'sidebar.heading'}>
                   {title}
                 </Heading>
               ) : (
@@ -107,10 +77,9 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
               )}
             </Box>
           )}
-        </Flex>
-
+        </Box>
         {children}
-      </div>
+      </Box>
     </Box>
   );
 };

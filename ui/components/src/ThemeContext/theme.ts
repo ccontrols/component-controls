@@ -323,6 +323,153 @@ export const theme: Theme = {
     px: 4,
     py: 3,
   },
+  colormode: {
+    container: {},
+    outericon: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+    },
+    innericon: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      height: '100%',
+    },
+  },
+  header: {
+    top: 0,
+    left: 'auto',
+    right: 0,
+    zIndex: 10,
+    position: 'sticky',
+    backgroundColor: 'background',
+    px: 2,
+    mb: 1,
+    justifyContent: `space-between`,
+    flexDirection: 'row',
+    alignItems: 'center',
+    boxShadow: (t: Theme) => `0 1px 3px 1px ${t.colors?.shadow}`,
+  },
+  navmenu: {
+    link: {
+      width: '100%',
+      px: 3,
+      py: 1,
+      background: 'none',
+      textDecoration: 'none',
+      cursor: 'pointer',
+      color: '#333',
+    },
+    itemcontainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      position: 'relative',
+    },
+    iteminner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      width: '100%',
+    },
+    labelcontainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    labelicon: {
+      mr: 2,
+    },
+    labeltext: {
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+    },
+    expandicon: {
+      ml: 2,
+    },
+  },
+  sidebar: {
+    default: {
+      overflowX: 'hidden',
+      position: 'relative',
+      flexShrink: 0,
+    },
+    responsive: {
+      overflowX: 'hidden',
+      flexShrink: 0,
+      position: 'fixed',
+      width: '100%',
+      minWidth: '100%',
+      zIndex: 9999,
+      backgroundColor: 'background',
+      top: 0,
+      left: 0,
+      bottom: 0,
+    },
+    innerdefault: {
+      position: 'fixed',
+      height: '100vh',
+      overflowY: 'auto',
+      a: {
+        '&.active': {
+          borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
+        },
+        ':hover': {
+          backgroundColor: 'shadow',
+        },
+      },
+    },
+    innerresponsive: {
+      overflowY: 'auto',
+      a: {
+        '&.active': {
+          borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
+        },
+        ':hover': {
+          backgroundColor: 'shadow',
+        },
+      },
+    },
+    headercontainer: {
+      pb: 1,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    heading: {
+      pl: 2,
+    },
+  },
+  skiplinks: {
+    container: {
+      display: 'flex',
+      border: (t: Theme) => `1px solid ${t.colors?.primary}`,
+      clip: `react(0 0 0 0)`,
+      width: '0.01em',
+      height: '0.01em',
+      whiteSpace: 'nowrap',
+      padding: 0,
+      overflow: `hidden`,
+      position: `absolute`,
+      flexDirection: 'column',
+      '&:focus-within': {
+        padding: 3,
+        position: `fixed`,
+        top: `50px`,
+        left: `15px`,
+        backgroundColor: `background`,
+        zIndex: 15,
+        width: `auto`,
+        height: `auto`,
+        clip: `auto`,
+        textDecoration: `none`,
+      },
+    },
+    item: {},
+  },
 };
 
 export const useTheme = (): Theme => {

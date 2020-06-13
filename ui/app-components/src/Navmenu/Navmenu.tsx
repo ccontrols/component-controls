@@ -294,29 +294,15 @@ export const Navmenu: FC<NavMenuProps> = ({
           }}
           {...rest}
         >
-          <Flex
-            sx={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              position: 'relative',
-            }}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                width: '100%',
-              }}
-            >
-              <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
-                {icon && <Box sx={{ mr: 2 }}>{icon}</Box>}
+          <Flex variant="navmenu.itemcontainer">
+            <Box variant="navmenu.iteminner">
+              <Box variant="navmenu.labelcontainer">
+                {icon && <Box variant="navmenu.labelicon">{icon}</Box>}
                 {typeof label === 'string' ? (
                   <Text
+                    variant="navmenu.labeltext"
                     sx={{
-                      whiteSpace: 'nowrap',
                       color: isActiveParent ? 'primary' : 'text',
-                      textOverflow: 'ellipsis',
                     }}
                   >
                     {items ? <strong>{label}</strong> : label}
@@ -324,17 +310,18 @@ export const Navmenu: FC<NavMenuProps> = ({
                 ) : (
                   label
                 )}
-              </Flex>
+              </Box>
 
-              {widget && <Box>{widget}</Box>}
+              {widget && <Box variant="navmenu.widget">{widget}</Box>}
               {items && (
-                <Octicon
-                  sx={{ ml: 2 }}
-                  ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
-                  icon={isExpanded ? ChevronDown : ChevronRight}
-                />
+                <Box variant="navmenu.expandicon">
+                  <Octicon
+                    ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
+                    icon={isExpanded ? ChevronDown : ChevronRight}
+                  />
+                </Box>
               )}
-            </Flex>
+            </Box>
           </Flex>
         </LinkClass>
       </Flex>

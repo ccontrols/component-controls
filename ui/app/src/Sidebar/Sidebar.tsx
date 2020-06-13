@@ -105,7 +105,7 @@ export const SidebarBase: FC<SidebarProps> = ({
       id="sidebar"
     >
       {responsive && (
-        <Header shadow={false}>
+        <Header sx={{ boxShadow: 'unset' }}>
           <SidebarClose />
           <ColorMode />
         </Header>

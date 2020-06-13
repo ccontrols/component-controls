@@ -20,7 +20,7 @@ export const Header: FC<HeaderProps> = () => {
   const config = storeProvider.config;
   const { pages } = config || {};
   return (
-    <AppHeader position="sticky">
+    <AppHeader>
       <Flex
         sx={{
           flexDirection: 'row',

@@ -1,30 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Flex, LinkProps, SxStyleProp, Theme } from 'theme-ui';
+import { jsx, Box, LinkProps } from 'theme-ui';
 
-const skipNavStyles: SxStyleProp = {
-  border: (t: Theme) => `1px solid ${t.colors?.primary}`,
-  clip: `react(0 0 0 0)`,
-  width: '0.01em',
-  height: '0.01em',
-  whiteSpace: 'nowrap',
-  padding: 0,
-  overflow: `hidden`,
-  position: `absolute`,
-  flexDirection: 'column',
-  '&:focus-within': {
-    padding: 3,
-    position: `fixed`,
-    top: `50px`,
-    left: `15px`,
-    backgroundColor: `background`,
-    zIndex: 15,
-    width: `auto`,
-    height: `auto`,
-    clip: `auto`,
-    textDecoration: `none`,
-  },
-};
 export interface SkiLinksItemOwnProps {
   /**
    * target's id property, without the # char
@@ -61,13 +38,15 @@ export interface SkipLinksProps {
  */
 
 export const SkipLinks: FC<SkipLinksProps> = ({ items }) => (
-  <Flex
-    sx={{ ...skipNavStyles }}
+  <Box
+    variant="skiplinks.container"
     as="section"
     aria-label="skip tab order to linked items"
   >
     {items.map((item, idx) => (
-      <SkiLinksItem key={`skip_link_${idx}`} {...item} />
+      <Box variant="skiplinks.item" key={`skip_link_${idx}`}>
+        <SkiLinksItem {...item} />
+      </Box>
     ))}
-  </Flex>
+  </Box>
 );
