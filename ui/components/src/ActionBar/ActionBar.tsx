@@ -56,11 +56,10 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         return (
           <Box
             key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+            variant="actionbar.item"
             sx={{
-              mt: 1,
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
-              fontSize: 1,
               a: ActionColors({ theme, disabled }),
               button: ActionColors({ theme, disabled }),
             }}
@@ -81,28 +80,9 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
       },
     );
   }, [theme, actions]);
-
   return (
-    <div
-      sx={{
-        position: 'relative',
-      }}
-    >
-      <Flex
-        sx={{
-          position: 'absolute',
-          width: '100%',
-        }}
-      >
-        <Flex
-          sx={{
-            flexDirection: 'row-reverse',
-            marginLeft: 'auto',
-          }}
-        >
-          {items}
-        </Flex>
-      </Flex>
-    </div>
+    <Box variant="actionbar.container">
+      <Flex variant="actionbar.inner">{items}</Flex>
+    </Box>
   );
 };

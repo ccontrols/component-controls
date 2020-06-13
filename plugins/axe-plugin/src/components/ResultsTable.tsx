@@ -135,7 +135,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
                 <Tag
                   key={`${tag}`}
                   color="lightgrey"
-                  sxStyle={{
+                  sx={{
                     mr: 1,
                     mb: 1,
                   }}

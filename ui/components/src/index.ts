@@ -7,6 +7,7 @@ export * from './Markdown';
 export * from './PanelContainer';
 export * from './Popover';
 export * from './Source';
+export * from './Subheading';
 export * from './Subtitle';
 export * from './SyntaxHighlighter';
 export * from './Table';

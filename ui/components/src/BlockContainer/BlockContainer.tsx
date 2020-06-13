@@ -8,6 +8,7 @@ import Octicon, {
 } from '@primer/octicons-react';
 import { Markdown } from '../Markdown';
 import { Subtitle } from '../Subtitle';
+import { Subheading } from '../Subheading';
 import { Collapsible } from '../Collapsible';
 import { pageLink } from './pageLink';
 
@@ -58,51 +59,19 @@ export const BlockContainer: FC<BlockContainerProps> = ({
       ? id
       : undefined ||
         (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
-  const BlockTitle: FC = () => (
-    <Subtitle
-      color="text"
-      as={collapsible ? 'h2' : 'h3'}
-      css={{ fontWeight: 400, paddingRight: 10 }}
-    >
-      {title}
-    </Subtitle>
-  );
+  const BlockTitle: FC = () =>
+    collapsible ? (
+      <Subtitle>{title}</Subtitle>
+    ) : (
+      <Subheading>{title}</Subheading>
+    );
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        mt: 4,
-        mb: 4,
-        width: '100%',
-        scrollMarginTop: '5rem',
-        ...sxStyle,
-      }}
-      id={blockId}
-    >
+    <Box variant="blockcontainer.container" sx={sxStyle} id={blockId}>
       {(blockId || title || collapsible) && (
-        <Flex
-          sx={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            pb: title ? 2 : 0,
-            ':hover': {
-              a: {
-                visibility: 'visible',
-              },
-            },
-          }}
-        >
+        <Flex variant="blockcontainer.inner">
           {blockId && (
             <Link
-              sx={{
-                position: 'absolute',
-                left: -4,
-                px: 2,
-                visibility: 'hidden',
-                ':hover': {
-                  visibility: 'visible',
-                },
-              }}
+              variant="blockcontainer.link"
               href={pageLink(blockId)}
               data-title={title}
             >
@@ -119,7 +88,10 @@ export const BlockContainer: FC<BlockContainerProps> = ({
             >
               <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
                 <BlockTitle />
-                <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
+                <Octicon
+                  sx={{ ml: 2 }}
+                  icon={isOpen ? ChevronDown : ChevronRight}
+                />
               </Flex>
             </Link>
           )}

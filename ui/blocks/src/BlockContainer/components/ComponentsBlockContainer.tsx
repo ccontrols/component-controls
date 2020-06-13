@@ -33,7 +33,6 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   id,
   of,
   children,
-  sxStyle,
   visibility,
   ...rest
 }) => {
@@ -79,12 +78,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   );
   // console.log(child);
   return (
-    <BlockContainer
-      title={title}
-      collapsible={collapsible}
-      id={id}
-      sxStyle={sxStyle}
-    >
+    <BlockContainer title={title} collapsible={collapsible} id={id}>
       {block}
     </BlockContainer>
   );

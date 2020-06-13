@@ -161,11 +161,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
             </Text>
           );
           return required ? (
-            <Tag
-              color="red"
-              transparentAmount={0.95}
-              sxStyle={{ borderRadius: 4 }}
-            >
+            <Tag color="red" transparentAmount={0.95} sx={{ borderRadius: 4 }}>
               {text}
             </Tag>
           ) : (
@@ -210,7 +206,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                           key={`${name}_${value || typeName}`}
                           color="grey"
                           transparentAmount={0.9}
-                          sxStyle={{
+                          sx={{
                             mr: 1,
                           }}
                         >

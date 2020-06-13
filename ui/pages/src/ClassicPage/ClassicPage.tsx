@@ -18,7 +18,7 @@ import {
 export const ClassicPage: FC = () => (
   <div>
     <EditPage />
-    <Title sxStyle={{ paddingBottom: 1 }} />
+    <Title sx={{ paddingBottom: 1 }} />
     <Subtitle />
     <PackageVersion />
     <Box

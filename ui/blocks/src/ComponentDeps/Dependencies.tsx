@@ -92,7 +92,7 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
                   color={
                     v.importedName === defaultExport ? 'green' : 'lightgrey'
                   }
-                  sxStyle={{
+                  sx={{
                     mr: 1,
                     mb: 1,
                   }}

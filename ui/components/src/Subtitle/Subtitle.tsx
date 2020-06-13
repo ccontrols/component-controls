@@ -16,20 +16,12 @@ export type SubtitleProps = SubtitleOwnProps &
   Omit<HeadingProps, 'children' | 'as'>;
 
 /**
- * `h3` level heading with faded text and font-weight 400.
+ * `h2` level heading with faded text and font-weight 400.
  */
-export const Subtitle: FC<SubtitleProps> = ({
-  children,
-  as = 'h2',
-  ...rest
-}) => (
-  <Heading
-    as={as}
-    color="fadedText"
-    variant={`styles.${as}`}
-    css={{ fontWeight: 400, paddingBottom: 2 }}
-    {...rest}
-  >
-    {children}
-  </Heading>
-);
+export const Subtitle: FC<SubtitleProps> = ({ children, ...rest }) => {
+  return (
+    <Heading as="h2" variant="subtitle" {...rest}>
+      {children}
+    </Heading>
+  );
+};

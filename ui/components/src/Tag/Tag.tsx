@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
-import { jsx, SxStyleProp, Box } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { FC } from 'react';
 import { transparentize } from 'polished';
 
@@ -14,11 +14,6 @@ export interface TagProps {
    * transparent amount - 0 to 1
    */
   transparentAmount?: number;
-
-  /**
-   * theme-ui styling object for the container
-   */
-  sxStyle?: SxStyleProp;
 }
 
 /**
@@ -28,19 +23,16 @@ export const Tag: FC<TagProps> = ({
   children,
   color,
   transparentAmount = 0.8,
-  sxStyle,
   ...rest
 }) => (
   <Box
     as="span"
+    variant="tag"
     {...rest}
     sx={{
-      display: 'inline-block',
       backgroundColor: transparentize(transparentAmount, color),
-      paddingLeft: 1,
-      paddingRight: 1,
+      display: 'inline-block',
       border: `1px solid ${color}`,
-      ...sxStyle,
     }}
   >
     {children}

@@ -205,6 +205,76 @@ export const theme: Theme = {
       borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
   },
+  actionbar: {
+    container: {
+      position: 'relative',
+    },
+    inner: {
+      position: 'absolute',
+      width: '100%',
+      flexDirection: 'row-reverse',
+      marginLeft: 'auto',
+    },
+    item: {
+      mt: 1,
+      fontSize: 1,
+    },
+  },
+  actioncontainer: {
+    borderRadius: '4px',
+    boxShadow: (t: Theme) => `0px 1px 3px 0px ${t.colors?.shadow}`,
+    border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  blockcontainer: {
+    container: {
+      position: 'relative',
+      mt: 4,
+      mb: 4,
+      width: '100%',
+      scrollMarginTop: '5rem',
+    },
+    inner: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      ':hover': {
+        a: {
+          visibility: 'visible',
+        },
+      },
+    },
+    link: {
+      position: 'absolute',
+      left: -4,
+      px: 2,
+      visibility: 'hidden',
+      ':hover': {
+        visibility: 'visible',
+      },
+    },
+  },
+  subtitle: {
+    color: 'fadedText',
+    fontWeight: 400,
+    paddingBottom: 1,
+  },
+  subheading: {
+    fontWeight: 400,
+  },
+  title: {
+    fontWeight: 800,
+    pb: 4,
+  },
+  tag: {
+    display: 'inline-block',
+    px: 1,
+  },
+  zoom: {
+    position: 'relative',
+    transformOrigin: 'top left',
+    transition: 'transform .2s',
+  },
 };
 
 export const useTheme = (): Theme => {

@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Theme } from 'theme-ui';
 import {
   PageContainer as BlockPageContainer,
   BlockContextProvider,
@@ -25,7 +24,7 @@ export const PageContextContainer: FC = ({ children }) => {
   );
 };
 
-export const DocsContainer: FC<DocsContainerProps & {
+export const DocsContainer: FC<{
   active?: boolean;
 }> = ({ children, active = true }) =>
   active ? <PageContextContainer>{children}</PageContextContainer> : null;
