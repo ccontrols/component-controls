@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx, Box, Flex } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { PageType } from '@component-controls/specification';
 import { Title, Subtitle } from '@component-controls/components';
 import { Link } from '@component-controls/app-components';
@@ -16,21 +16,15 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   const pages = storeProvider.getPagesByCategory(type, category);
   return (
-    <PageContainer sx={{ maxWidth: '1000px' }} id="content">
-      <Flex
-        sx={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
+    <PageContainer variant="categoryage.pagecontainer" id="content">
+      <Box variant="categoryage.titlecontainer">
         <Title>{pageConfig.label}</Title>
         <Link
           href={`/${pageConfig.basePath}`}
         >{`All ${pageConfig.label}`}</Link>
-      </Flex>
+      </Box>
       <Subtitle>{`filtered by "${category}"`}</Subtitle>
-      <Box sx={{ my: 3 }}>
+      <Box variant="categoryage.listcontainer">
         <DocumentsList pages={pages} />
       </Box>
     </PageContainer>

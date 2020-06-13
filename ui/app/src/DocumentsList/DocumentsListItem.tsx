@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Flex, Text } from 'theme-ui';
+import { jsx, Box, Text } from 'theme-ui';
 import {
   StoriesDoc,
   getDocPath,
@@ -22,26 +22,22 @@ export const DocumentsListItem: FC<PageListItemProps> = ({
 }) => {
   const { tags = [], date } = page;
   return (
-    <Flex sx={{ flexDirection: 'column' }}>
+    <Box variant="documentlistitem.container">
       <Link href={link}>
         <Subtitle>{page.title}</Subtitle>
       </Link>
       {page.description && <Markdown>{page.description}</Markdown>}
-      <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <Flex
-          sx={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}
-        >
-          {date ? new Date(date).toDateString() : ''}
+      <Box variant="documentlistitem.info.container">
+        <Box variant="documentlistitem.info.inner">
+          {date ? (
+            <Box variant="documentlistitem.info.date">
+              {new Date(date).toDateString()}
+            </Box>
+          ) : (
+            ''
+          )}
           {page.author && (
-            <Flex
-              sx={{
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}
-            >
+            <Box variant="documentlistitem.info.author">
               {date && (
                 <Text
                   sx={{
@@ -61,11 +57,11 @@ export const DocumentsListItem: FC<PageListItemProps> = ({
               <Link href={getDocPath('author', undefined, config, page.author)}>
                 {page.author}
               </Link>
-            </Flex>
+            </Box>
           )}
-        </Flex>
+        </Box>
         <TagsList tags={tags} />
-      </Flex>
-    </Flex>
+      </Box>
+    </Box>
   );
 };

@@ -18,6 +18,16 @@ export interface PageConfiguration {
    * by default, only story and blogs have home pages
    */
   hasHomePage?: boolean;
+
+  /**
+   * whether to take a fullpage theme option
+   */
+  fullPage?: boolean;
+
+  /**
+   * whether to add navigation sidebars to the page
+   */
+  sidebars?: boolean;
 }
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
@@ -118,10 +128,12 @@ export const defaultRunConfig: RunConfiguration = {
     story: {
       label: 'Docs',
       hasHomePage: true,
+      sidebars: true,
     },
     blog: {
       label: 'Blog',
       hasHomePage: true,
+      sidebars: false,
     },
     author: {
       label: 'Authors',

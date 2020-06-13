@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { PageType } from '@component-controls/specification';
 import { Title } from '@component-controls/components';
 import { PageContainer, BlockContext } from '@component-controls/blocks';
@@ -14,18 +14,20 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const categories = storeProvider?.getUniquesByCategory(type) || [];
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   return (
-    <PageContainer sx={{ maxWidth: '1000px' }} id="content">
+    <PageContainer variant="categorylist.pagecontainer" id="content">
       <Title>{pageConfig.label}</Title>
-      <ul>
-        {Object.keys(categories).map(key => (
-          <CategoryListItem
-            key={key}
-            link={storeProvider.getPagePath(type, key)}
-            name={key}
-            count={categories[key]}
-          />
-        ))}
-      </ul>
+      <Box variant="categorylist.list">
+        <ul>
+          {Object.keys(categories).map(key => (
+            <CategoryListItem
+              key={key}
+              link={storeProvider.getPagePath(type, key)}
+              name={key}
+              count={categories[key]}
+            />
+          ))}
+        </ul>
+      </Box>
     </PageContainer>
   );
 };

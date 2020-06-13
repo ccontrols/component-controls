@@ -13,6 +13,11 @@ module.exports = {
       //primary: 'pink',
     }
   },
+  pages: {
+    story: {
+      label: 'API',
+    },
+  },  
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];
     const aIndex = categories.findIndex(c => c === aDoc);

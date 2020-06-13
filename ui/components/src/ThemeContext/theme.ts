@@ -313,6 +313,12 @@ export const theme: Theme = {
     margin: 'auto',
     width: '100%',
     position: 'relative',
+    maxWidth: '1000px',
+    blog: { maxWidth: '1200px' },
+    story: { maxWidth: '1200px' },
+    doc: { maxWidth: '1200px' },
+    page: { maxWidth: '1200px' },
+    full: { maxWidth: 'unset', p: 0 },
   },
   propstable: {
     defaultvalue: {
@@ -469,6 +475,115 @@ export const theme: Theme = {
       },
     },
     item: {},
+  },
+
+  app: {
+    display: 'flex',
+    minHeight: '100vh',
+    flexDirection: 'column',
+  },
+  sidecontext: {
+    container: {
+      px: 3,
+      borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+    },
+    nav: { display: 'flex', flexDirection: 'column' },
+    navlink: {
+      pl: 2,
+    },
+    toggle: {
+      position: 'fixed',
+      right: '1rem',
+      bottom: '2rem',
+      backgroundColor: 'gray',
+    },
+  },
+  appsidebar: {
+    sidebar: {
+      borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+    },
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      px: 2,
+    },
+    heading: { textAlign: 'center', py: 2 },
+    filtercontainer: { py: 2, px: 3 },
+  },
+  appheader: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      color: `secondary`,
+      a: {
+        color: `secondary`,
+        ':hover': { color: `accent` },
+        fontWeight: '700',
+      },
+    },
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      py: 3,
+    },
+    linktext: { px: 2 },
+  },
+  appfooter: {
+    container: {
+      py: 3,
+      px: '320px',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    copyright: {},
+    inner: {
+      alignItems: `center`,
+      color: `text`,
+      fontWeight: `semibold`,
+      a: { color: `text` },
+    },
+  },
+  categorylist: {
+    pagecontainer: { maxWidth: '1000px' },
+    list: {},
+    item: { my: 2 },
+  },
+  categoryage: {
+    pagecontainer: { maxWidth: '1000px' },
+    titlecontainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    listcontainer: { my: 3 },
+  },
+  documentlistitem: {
+    container: { display: 'flex', flexDirection: 'column' },
+    info: {
+      container: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
+      inner: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
+      date: {},
+      author: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
+    },
+  },
+  taglist: {
+    container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
   },
 };
 

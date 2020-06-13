@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { Subtitle } from '@component-controls/components';
 import { Link } from '@component-controls/app-components';
 
@@ -15,10 +15,12 @@ export const CategoryListItem: FC<CategoryListItemProps> = ({
   link,
 }) => {
   return (
-    <li sx={{ my: 2 }}>
-      <Link href={link}>
-        <Subtitle>{`${name} (${count})`}</Subtitle>
-      </Link>
+    <li>
+      <Box variant="categorylist.item">
+        <Link href={link}>
+          <Subtitle>{`${name} (${count})`}</Subtitle>
+        </Link>
+      </Box>
     </li>
   );
 };

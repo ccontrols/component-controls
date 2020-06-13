@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
-import { jsx, Input, Box, Heading, Flex, Theme } from 'theme-ui';
+import { jsx, Input, Box, Heading } from 'theme-ui';
 
 import { BlockContext, useStoryContext } from '@component-controls/blocks';
 import {
@@ -97,26 +97,20 @@ export const SidebarBase: FC<SidebarProps> = ({
 
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
-    <AppSidebar
-      sx={{
-        borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
-      }}
-      width={300}
-      id="sidebar"
-    >
+    <AppSidebar variant="appsidebar.sidebar" width={300} id="sidebar">
       {responsive && (
         <Header sx={{ boxShadow: 'unset' }}>
           <SidebarClose />
           <ColorMode />
         </Header>
       )}
-      <Flex sx={{ px: 2, flexDirection: 'column' }}>
-        <Heading as="h3" sx={{ textAlign: 'center', py: 2 }}>
+      <Box variant="appsidebar.container">
+        <Heading as="h3" variant="appsidebar.heading">
           {propsTitle || label}
         </Heading>
-        <Box sx={{ py: 2, px: 3 }}>
+        <Box variant="appsidebar.filtercontainer">
           <Input
-            placeholder="filter stories..."
+            placeholder="filter..."
             value={search}
             onChange={e => setSearch(e.target.value)}
             onClick={e => e.stopPropagation()}
@@ -127,7 +121,7 @@ export const SidebarBase: FC<SidebarProps> = ({
           search={search}
           items={menuItems}
         />
-      </Flex>
+      </Box>
     </AppSidebar>
   );
 };

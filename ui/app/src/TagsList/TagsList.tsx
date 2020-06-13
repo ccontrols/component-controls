@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx, Flex } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/specification';
 import { Tag } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
@@ -13,7 +13,7 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
   const { storeProvider } = useContext(BlockContext);
 
   return tags ? (
-    <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
+    <Box variant="taglist.container">
       {tags.map(tag => (
         <Link
           key={tag}
@@ -24,6 +24,6 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
           </Tag>
         </Link>
       ))}
-    </Flex>
+    </Box>
   ) : null;
 };

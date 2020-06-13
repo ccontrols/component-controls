@@ -2,6 +2,9 @@
 /** @jsx jsx */
 import { FC, useEffect, forwardRef } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
+import { get } from '@theme-ui/css';
+import { useTheme } from '@component-controls/components';
+
 import { StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
@@ -9,6 +12,10 @@ export interface PageContainerProps {
    * ref to the page container component
    */
   ref?: React.Ref<HTMLDivElement>;
+  /**
+   * theme variant
+   */
+  variant?: string;
 }
 
 /**
@@ -17,8 +24,8 @@ export interface PageContainerProps {
  * Otherwise, the page elements are passed as children
  */
 export const PageContainer: FC<PageContainerProps &
-  Omit<BoxProps, 'sx'>> = forwardRef(
-  ({ children, ...rest }, ref: React.Ref<HTMLDivElement>) => {
+  Omit<BoxProps, 'variant'>> = forwardRef(
+  ({ children, variant, ...rest }, ref: React.Ref<HTMLDivElement>) => {
     useEffect(() => {
       try {
         const pageURL =
@@ -39,8 +46,9 @@ export const PageContainer: FC<PageContainerProps &
         }
       } catch (err) {}
     }, []);
+    const theme = useTheme();
     return (
-      <Box variant="pagecontainer" ref={ref} {...rest}>
+      <Box variant="pagecontainer" sx={get(theme, variant)} ref={ref} {...rest}>
         <StoryContextConsumer id=".">
           {({ doc }) => {
             const { MDXPage } = doc || {};

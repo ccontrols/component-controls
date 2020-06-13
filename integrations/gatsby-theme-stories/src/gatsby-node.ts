@@ -23,15 +23,15 @@ exports.createPages = async (
   };
   const pageTemplates: Record<PageType, string> = {
     story: require.resolve(`../src/templates/DocPage.tsx`),
-    blog: require.resolve(`../src/templates/BlogPage.tsx`),
-    page: require.resolve(`../src/templates/PagePage.tsx`),
+    blog: require.resolve(`../src/templates/DocPage.tsx`),
+    page: require.resolve(`../src/templates/DocPage.tsx`),
     tags: require.resolve(`../src/templates/CategoryPage.tsx`),
     author: require.resolve(`../src/templates/CategoryPage.tsx`),
   };
   const listTemplates: Record<PageType, string> = {
     story: require.resolve(`../src/templates/DocPage.tsx`),
+    page: require.resolve(`../src/templates/DocPage.tsx`),
     blog: require.resolve(`../src/templates/PageList.tsx`),
-    page: require.resolve(`../src/templates/PagePage.tsx`),
     tags: require.resolve(`../src/templates/CategoryList.tsx`),
     author: require.resolve(`../src/templates/CategoryList.tsx`),
   };
@@ -50,8 +50,9 @@ exports.createPages = async (
         docs.forEach(doc => {
           createPage({
             path: getDocPath(pageType, doc, store.buildConfig),
-            component: pageTemplates[pageType],
+            component: pageTemplates[pageType] || pageTemplates['story'],
             context: {
+              type: pageType,
               doc: doc.title,
             },
           });
@@ -60,7 +61,7 @@ exports.createPages = async (
           const docsPage = docs.find(doc => doc?.route === `/${page.basePath}`);
           createPage({
             path: `/${page.basePath}`,
-            component: listTemplates[pageType],
+            component: listTemplates[pageType] || listTemplates['story'],
             context: {
               type: pageType,
               doc: docsPage?.title,
@@ -104,6 +105,7 @@ exports.createPages = async (
       component: pageTemplates['page'],
       context: {
         doc: homePage?.doc?.title,
+        type: homePage?.doc?.type,
       },
     });
   }

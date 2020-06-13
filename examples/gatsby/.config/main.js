@@ -7,7 +7,7 @@ module.exports = {
   ],
   pages: {
     story: {
-      basePath: 'page/',
+      basePath: 'api/',
     },
     blog: {
       basePath: 'blogs/',

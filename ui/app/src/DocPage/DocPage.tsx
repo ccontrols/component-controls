@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { FC, ReactNode, useRef } from 'react';
+import { FC, ReactNode, useRef, useContext } from 'react';
 import { jsx, Box, Flex } from 'theme-ui';
 import * as qs from 'qs';
+import { PageType } from '@component-controls/specification';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
-import { PageContainer, useStoryContext } from '@component-controls/blocks';
+import { PageContainer, BlockContext } from '@component-controls/blocks';
 
 import { SideContext } from '../SideContext';
 import { Sidebar } from '../Sidebar';
@@ -17,8 +18,9 @@ export type PagesConfig = (route: string) => PageConfig[];
 
 export interface DocPageProps {
   pagesFn: PagesConfig;
+  type: PageType;
 }
-export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
+export const BasePage: FC<DocPageProps> = ({ pagesFn, type }) => {
   const pages = typeof pagesFn === 'function' ? pagesFn('') : [];
   const pageRef = useRef<HTMLDivElement>(null);
   const params =
@@ -31,7 +33,7 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
   );
   return (
     <Flex sx={{ flex: '1 0 auto' }}>
-      <Sidebar />
+      <Sidebar type={type} />
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs
           fontSize={16}
@@ -58,7 +60,7 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
             </TabList>
           )}
 
-          <PageContainer sx={{ maxWidth: '1200px' }} ref={pageRef}>
+          <PageContainer variant={`pagecontainer.${type}`} ref={pageRef}>
             {pages &&
               pages.map(page => (
                 <TabPanel key={`panel_${page.key}`}>{page.render()}</TabPanel>
@@ -71,15 +73,23 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
   );
 };
 
-export const DocPage: FC<DocPageProps> = props => {
-  const { doc } = useStoryContext({ id: '.' });
-  if (doc && doc.fullPage && doc.MDXPage) {
+export const DocPage: FC<DocPageProps> = ({ type = 'story', ...props }) => {
+  const { storeProvider, docId } = useContext(BlockContext);
+  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+  const { pages } = storeProvider.config || {};
+  const page = pages ? pages[type] : undefined;
+
+  const hasNoSideBars =
+    (doc && doc.sidebars === false) || (page && page.sidebars === false);
+  const isFullPage =
+    (doc && doc.fullPage === true) || (page && !!page.fullPage);
+  if (hasNoSideBars || isFullPage) {
     return (
       <PageContainer
-        sx={{ flex: '1 0 auto', maxWidth: '100%', p: 0 }}
+        variant={`pagecontainer.${isFullPage ? 'full' : type}`}
         id="content"
       />
     );
   }
-  return <BasePage {...props} />;
+  return <BasePage type={type} {...props} />;
 };

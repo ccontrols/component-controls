@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
-import { jsx, Flex, Text } from 'theme-ui';
+import { jsx, Box, Text } from 'theme-ui';
 import { PageType, PageConfiguration } from '@component-controls/specification';
 
 import {
@@ -21,28 +21,11 @@ export const Header: FC<HeaderProps> = () => {
   const { pages } = config || {};
   return (
     <AppHeader>
-      <Flex
-        sx={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          color: `secondary`,
-          a: {
-            color: `secondary`,
-            ':hover': { color: `accent` },
-            fontWeight: '700',
-          },
-        }}
-      >
+      <Box variant="appheader.container">
         {collapsed && <SidebarToggle />}
-        <Flex
-          sx={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            py: 3,
-          }}
-        >
+        <Box variant="appheader.inner">
           <Link href="/">
-            <Text sx={{ px: 2 }}>Home</Text>
+            <Text variant="appheader.linktext">Home</Text>
           </Link>
           {pages
             ? Object.keys(pages).map(type => {
@@ -57,15 +40,15 @@ export const Header: FC<HeaderProps> = () => {
                       key={`link_${page.basePath}`}
                       href={`/${page.basePath}`}
                     >
-                      <Text sx={{ px: 2 }}>{page.label}</Text>
+                      <Text variant="appheader.linktext">{page.label}</Text>
                     </Link>
                   );
                 }
                 return null;
               })
             : null}
-        </Flex>
-      </Flex>
+        </Box>
+      </Box>
       {!responsive && <ColorMode />}
     </AppHeader>
   );

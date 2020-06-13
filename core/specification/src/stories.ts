@@ -246,14 +246,16 @@ export interface StoriesDoc {
   MDXPage?: any;
 
   /**
-   * if true, will display the documentation page full view
+   * if true, will display the documentation page full size (pagecontainer.full theme variant)
+   * the default value is from the page type configuration
    */
   fullPage?: boolean;
 
   /**
-   * side menu - hide
+   * whether to add navigation sidebars to the page
+   * the default value is from the page type configuration
    */
-  menu?: boolean | string;
+  sidebars?: boolean;
 
   /**
    *  optional date the document was created

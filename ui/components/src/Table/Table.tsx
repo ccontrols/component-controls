@@ -204,7 +204,7 @@ export const Table: FC<TableProps> = ({
       {...rest}
     >
       {header && (
-        <Box as="thead" css={get(theme, 'styles.thead')}>
+        <Box as="thead" sx={get(theme, 'styles.thead')}>
           {headerGroups.map((headerGroup: any) => (
             <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
@@ -252,14 +252,14 @@ export const Table: FC<TableProps> = ({
           )}
         </Box>
       )}
-      <Box as="tbody" {...getTableBodyProps()} css={get(theme, 'styles.tbody')}>
+      <Box as="tbody" {...getTableBodyProps()} sx={get(theme, 'styles.tbody')}>
         {rows.map(
           (row: Row & UseGroupByRowProps<{}> & { isExpanded?: boolean }) => {
             prepareRow(row);
             const { key, ...rowProps } = row.getRowProps();
             return (
               <Fragment key={key}>
-                <Box as="tr" {...rowProps} css={get(theme, 'styles.tr')}>
+                <Box as="tr" {...rowProps} sx={get(theme, 'styles.tr')}>
                   {row.isGrouped
                     ? row.cells[0].render('Aggregated')
                     : row.cells.map(
@@ -268,7 +268,7 @@ export const Table: FC<TableProps> = ({
                             <Box
                               as="td"
                               {...cell.getCellProps()}
-                              css={get(theme, 'styles.td')}
+                              sx={get(theme, 'styles.td')}
                             >
                               {cell.render('Cell')}
                             </Box>

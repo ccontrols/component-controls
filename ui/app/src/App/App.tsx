@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, Fragment } from 'react';
-import { jsx, Flex } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import {
   SkipLinks,
   SkiLinksItemProps,
@@ -36,16 +36,11 @@ export const App: FC<AppProps> = ({ title, children }) => {
     <Fragment>
       <SEO title={title} />
       <SkipLinks items={items} />
-      <Flex
-        sx={{
-          minHeight: '100vh',
-          flexDirection: 'column',
-        }}
-      >
+      <Box variant="app">
         <Header title={title}></Header>
         {children}
         <Footer />
-      </Flex>
+      </Box>
     </Fragment>
   );
 };

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, RefObject, useEffect, useState, useCallback } from 'react';
-import { jsx, Box, NavLink, Flex, Theme } from 'theme-ui';
+import { jsx, Box, NavLink } from 'theme-ui';
 import {
   Sidebar as AppSidebar,
   SidebarContext,
@@ -67,18 +67,11 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
                   <SidebarClose />
                 </Header>
               )}
-              <Box
-                sx={{
-                  px: 3,
-                  borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
-                }}
-              >
-                <Flex as="nav" sx={{ flexDirection: 'column' }}>
+              <Box variant="sidecontext.container">
+                <Box as="nav" variant="sidecontext.nav">
                   {items?.map((el, index) => (
                     <NavLink
-                      sx={{
-                        pl: 2,
-                      }}
+                      variant="sidecontext.navlink"
                       key={`context_link_${index}`}
                       href={el.getAttribute('href') || undefined}
                       className={el === activeItem ? 'active' : undefined}
@@ -86,19 +79,10 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
                       {el.getAttribute('data-title')}
                     </NavLink>
                   ))}
-                </Flex>
+                </Box>
               </Box>
             </AppSidebar>
-            {collapsed && (
-              <SidebarToggle
-                sx={{
-                  position: 'fixed',
-                  right: '1rem',
-                  bottom: '2rem',
-                  backgroundColor: 'gray',
-                }}
-              />
-            )}
+            {collapsed && <SidebarToggle variant="sidecontext.toggle" />}
           </div>
         )}
       </SidebarContext.Consumer>

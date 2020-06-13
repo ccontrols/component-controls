@@ -36,7 +36,7 @@ export const loadStoryStore = (
           stories: {},
           components: {},
           packages: {},
-          config: deepMerge(buildConfig, deepMerge(config, defaultRunConfig)),
+          config: deepMerge(buildConfig, deepMerge(defaultRunConfig, config)),
         };
         stores.forEach(s => {
           const storeDoc = s.doc;

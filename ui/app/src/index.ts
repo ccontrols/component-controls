@@ -1,6 +1,5 @@
 export * from './App';
 export * from './AppContext';
-export * from './BlogPage';
 export * from './CategoryList';
 export * from './CategoryPage';
 export * from './DocPage';
@@ -9,7 +8,6 @@ export * from './Footer';
 export * from './Header';
 export * from './Links';
 export * from './PageList';
-export * from './PagePage';
 export * from './SEO';
 export * from './Sidebar';
 export * from './SideContext';
