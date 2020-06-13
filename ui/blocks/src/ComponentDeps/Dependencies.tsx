@@ -88,14 +88,11 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
               })
               .map(v => (
                 <Tag
+                  variant="tag.rightmargin"
                   key={`${v.name}`}
                   color={
                     v.importedName === defaultExport ? 'green' : 'lightgrey'
                   }
-                  sx={{
-                    mr: 1,
-                    mb: 1,
-                  }}
                 >
                   {v.importedName === defaultExport ? v.name : v.importedName}
                 </Tag>

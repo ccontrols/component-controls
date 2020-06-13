@@ -89,10 +89,7 @@ export const NodesTable: FC<NodesTableProps> = ({
                   <Tag
                     key={`${target}`}
                     color="lightgrey"
-                    sx={{
-                      mr: 1,
-                      mb: 1,
-                    }}
+                    variant="tag.rightmargin"
                   >
                     {target}
                   </Tag>

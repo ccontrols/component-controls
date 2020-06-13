@@ -132,14 +132,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
           >
             {value &&
               value.map(tag => (
-                <Tag
-                  key={`${tag}`}
-                  color="lightgrey"
-                  sx={{
-                    mr: 1,
-                    mb: 1,
-                  }}
-                >
+                <Tag key={`${tag}`} color="lightgrey" variant="tag.rightmargin">
                   {tag}
                 </Tag>
               ))}

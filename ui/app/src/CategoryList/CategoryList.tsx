@@ -14,7 +14,7 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const categories = storeProvider?.getUniquesByCategory(type) || [];
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   return (
-    <PageContainer sx={{ flex: '1 0 auto' }} maxWidth="1000px" id="content">
+    <PageContainer sx={{ maxWidth: '1000px' }} id="content">
       <Title>{pageConfig.label}</Title>
       <ul>
         {Object.keys(categories).map(key => (

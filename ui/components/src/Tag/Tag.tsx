@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, BoxProps } from 'theme-ui';
 import { FC } from 'react';
 import { transparentize } from 'polished';
 
@@ -19,7 +19,7 @@ export interface TagProps {
 /**
  * A copntainer component to display text in a colored box.
  */
-export const Tag: FC<TagProps> = ({
+export const Tag: FC<TagProps & BoxProps> = ({
   children,
   color,
   transparentAmount = 0.8,
@@ -27,7 +27,7 @@ export const Tag: FC<TagProps> = ({
 }) => (
   <Box
     as="span"
-    variant="tag"
+    variant="tag.default"
     {...rest}
     sx={{
       backgroundColor: transparentize(transparentAmount, color),

@@ -6,16 +6,6 @@ import { StoryContextConsumer } from '../context';
 
 export interface PageContainerProps {
   /**
-   * limit the max width of the page
-   */
-  maxWidth?: number | string;
-
-  /**
-   * container padding
-   */
-  padding?: number;
-
-  /**
    * ref to the page container component
    */
   ref?: React.Ref<HTMLDivElement>;
@@ -28,10 +18,7 @@ export interface PageContainerProps {
  */
 export const PageContainer: FC<PageContainerProps &
   Omit<BoxProps, 'sx'>> = forwardRef(
-  (
-    { children, maxWidth, padding = 4, ...rest },
-    ref: React.Ref<HTMLDivElement>,
-  ) => {
+  ({ children, ...rest }, ref: React.Ref<HTMLDivElement>) => {
     useEffect(() => {
       try {
         const pageURL =
@@ -53,28 +40,13 @@ export const PageContainer: FC<PageContainerProps &
       } catch (err) {}
     }, []);
     return (
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          bg: 'background',
-          color: 'text',
-          fontFamily: 'body',
-          width: '100%',
-        }}
-        {...rest}
-      >
-        <Box
-          sx={{ maxWidth, width: '100%', p: padding, position: 'relative' }}
-          ref={ref}
-        >
-          <StoryContextConsumer id=".">
-            {({ doc }) => {
-              const { MDXPage } = doc || {};
-              return MDXPage ? <MDXPage /> : children;
-            }}
-          </StoryContextConsumer>
-        </Box>
+      <Box variant="pagecontainer" ref={ref} {...rest}>
+        <StoryContextConsumer id=".">
+          {({ doc }) => {
+            const { MDXPage } = doc || {};
+            return MDXPage ? <MDXPage /> : children;
+          }}
+        </StoryContextConsumer>
       </Box>
     );
   },

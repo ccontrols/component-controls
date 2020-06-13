@@ -14,29 +14,14 @@ import { useStoryContext } from '../context';
 export const EditPage: FC = () => {
   const { docPackage } = useStoryContext({ id: '.' });
   return docPackage && docPackage.repository && docPackage.repository.browse ? (
-    <Box
-      sx={{
-        position: 'absolute',
-        right: 0,
-        top: 0,
-        p: 2,
-      }}
-    >
+    <Box variant="editpage.container">
       <ExternalLink
         href={docPackage.repository.browse}
         aria-label="edit this page"
       >
-        <Box
-          sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-        >
+        <Box variant="editpage.inner">
           <Octicon icon={MarkGithub} />
-          <Text
-            sx={{
-              pl: 2,
-            }}
-          >
-            Edit this page
-          </Text>
+          <Text variant="editpage.text">Edit this page</Text>
         </Box>
       </ExternalLink>
     </Box>

@@ -58,7 +58,7 @@ export const BasePage: FC<DocPageProps> = ({ pagesFn }) => {
             </TabList>
           )}
 
-          <PageContainer maxWidth="1200px" ref={pageRef}>
+          <PageContainer sx={{ maxWidth: '1200px' }} ref={pageRef}>
             {pages &&
               pages.map(page => (
                 <TabPanel key={`panel_${page.key}`}>{page.render()}</TabPanel>
@@ -76,9 +76,7 @@ export const DocPage: FC<DocPageProps> = props => {
   if (doc && doc.fullPage && doc.MDXPage) {
     return (
       <PageContainer
-        sx={{ flex: '1 0 auto' }}
-        maxWidth="100%"
-        padding={0}
+        sx={{ flex: '1 0 auto', maxWidth: '100%', p: 0 }}
         id="content"
       />
     );

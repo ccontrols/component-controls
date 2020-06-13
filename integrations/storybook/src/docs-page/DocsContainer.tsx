@@ -18,7 +18,9 @@ export const PageContextContainer: FC = ({ children }) => {
   return (
     <ThemeProvider theme={store.config?.theme} dark={isDark}>
       <BlockContextProvider storyId={storyId} store={store} options={options}>
-        <BlockPageContainer maxWidth="1000px">{children}</BlockPageContainer>
+        <BlockPageContainer sx={{ maxWidth: '1000px' }}>
+          {children}
+        </BlockPageContainer>
       </BlockContextProvider>
     </ThemeProvider>
   );

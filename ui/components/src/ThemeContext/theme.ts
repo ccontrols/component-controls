@@ -257,23 +257,71 @@ export const theme: Theme = {
   subtitle: {
     color: 'fadedText',
     fontWeight: 400,
-    paddingBottom: 1,
+    pb: 2,
   },
   subheading: {
     fontWeight: 400,
+    pb: 1,
   },
   title: {
     fontWeight: 800,
     pb: 4,
   },
   tag: {
-    display: 'inline-block',
-    px: 1,
+    default: {
+      display: 'inline-block',
+      px: 1,
+    },
+    rightmargin: {
+      mr: 1,
+      display: 'inline-block',
+      px: 1,
+    },
+    leftmargin: {
+      ml: 1,
+      display: 'inline-block',
+      px: 1,
+    },
   },
   zoom: {
     position: 'relative',
     transformOrigin: 'top left',
     transition: 'transform .2s',
+  },
+  editpage: {
+    container: {
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      p: 2,
+    },
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    text: {
+      pl: 2,
+    },
+  },
+  pagecontainer: {
+    bg: 'background',
+    color: 'text',
+    fontFamily: 'body',
+    flex: '1 0 auto',
+    p: 4,
+    margin: 'auto',
+    width: '100%',
+    position: 'relative',
+  },
+  propstable: {
+    defaultvalue: {
+      whiteSpace: 'pre-wrap',
+    },
+  },
+  story: {
+    px: 4,
+    py: 3,
   },
 };
 

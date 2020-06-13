@@ -36,14 +36,7 @@ export const Story: FC<StoryProps> = forwardRef(
                 () => story.renderFn(values, { context }),
               );
               return (
-                <Box
-                  id={story.id}
-                  sx={{
-                    px: 4,
-                    py: 3,
-                  }}
-                  {...rest}
-                >
+                <Box id={story.id} variant="story" {...rest}>
                   <div
                     className="story-render-container"
                     style={{ all: 'unset' }}

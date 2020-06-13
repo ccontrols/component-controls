@@ -16,7 +16,7 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   const pages = storeProvider.getPagesByCategory(type, category);
   return (
-    <PageContainer sx={{ flex: '1 0 auto' }} maxWidth="1000px" id="content">
+    <PageContainer sx={{ maxWidth: '1000px' }} id="content">
       <Flex
         sx={{
           flexDirection: 'row',

@@ -14,7 +14,7 @@ export const PageList: FC<PageListProps> = ({ type }) => {
   const pages = storeProvider?.getPageList(type) || [];
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   return (
-    <PageContainer sx={{ flex: '1 0 auto' }} maxWidth="1000px" id="content">
+    <PageContainer sx={{ maxWidth: '1000px' }} id="content">
       <Title>{pageConfig.label}</Title>
       <DocumentsList pages={pages} />
     </PageContainer>

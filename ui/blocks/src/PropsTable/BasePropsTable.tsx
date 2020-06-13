@@ -206,9 +206,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                           key={`${name}_${value || typeName}`}
                           color="grey"
                           transparentAmount={0.9}
-                          sx={{
-                            mr: 1,
-                          }}
+                          variant="tag.rightmargin"
                         >
                           {value || typeName}
                         </Tag>
@@ -243,13 +241,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               value = defaultValue.toString();
           }
           return (
-            <Styled.pre
-              sx={{
-                whiteSpace: 'pre-wrap',
-              }}
-            >
-              {value}
-            </Styled.pre>
+            <Box variant="propstable.defaultvalue">
+              <Styled.pre>{value}</Styled.pre>
+            </Box>
           );
         },
       },

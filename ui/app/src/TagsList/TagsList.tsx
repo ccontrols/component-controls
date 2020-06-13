@@ -19,7 +19,7 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
           key={tag}
           href={getDocPath('tags', undefined, storeProvider?.config, tag)}
         >
-          <Tag color="#333333" sx={{ ml: 1 }}>
+          <Tag color="#333333" variant="tag.leftmargin">
             {tag}
           </Tag>
         </Link>

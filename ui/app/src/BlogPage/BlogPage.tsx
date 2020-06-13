@@ -4,7 +4,5 @@ import { jsx } from 'theme-ui';
 import { PageContainer } from '@component-controls/blocks';
 
 export const BlogPage: FC = () => {
-  return (
-    <PageContainer sx={{ flex: '1 0 auto' }} maxWidth="1000px" id="content" />
-  );
+  return <PageContainer sx={{ maxWidth: '1000px' }} id="content" />;
 };
