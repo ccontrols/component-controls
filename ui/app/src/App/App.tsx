@@ -45,7 +45,7 @@ export const App: FC<AppProps> = ({ title, children }) => {
       <SEO title={title} />
       <SkipLinks items={items} />
       <Box variant="app">
-        <Header title={title}></Header>
+        <Header />
         {children}
         <Footer />
       </Box>

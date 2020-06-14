@@ -1,6 +1,9 @@
 /** @jsx jsx */
 import React, { FC, useContext } from 'react';
 import { jsx, Box, BoxProps, Heading } from 'theme-ui';
+import { get } from '@theme-ui/css';
+import { useTheme } from '@component-controls/components';
+
 import { SidebarContext } from './SidebarContext';
 
 export interface SidebarProps {
@@ -8,16 +11,6 @@ export interface SidebarProps {
    * Title string or any react node
    */
   title?: React.ReactNode;
-
-  /**
-   * The width of the side bar in pixels
-   */
-  width?: number;
-
-  /**
-   * min width for sidebar
-   */
-  minWidth?: number;
 
   /**
    * Whether the sidebar can be collapsed
@@ -35,51 +28,34 @@ export interface SidebarProps {
  */
 export const Sidebar: FC<SidebarProps & BoxProps> = ({
   title,
-  width = '100%',
-  minWidth,
   children,
+  variant,
   ...rest
 }) => {
   const toggleContext = useContext(SidebarContext);
   const { collapsed, responsive, setCollapsed } = toggleContext || {};
-
+  const theme = useTheme();
   return collapsed ? null : (
     <Box
       variant={responsive ? 'sidebar.responsive' : 'sidebar.default'}
-      sx={
-        responsive
-          ? undefined
-          : {
-              width,
-              minWidth,
-            }
-      }
+      sx={get(theme, variant)}
+      onClick={() => responsive && setCollapsed(true)}
       {...rest}
     >
-      <Box
-        variant={
-          responsive ? 'sidebar.innerresponsive' : 'sidebar.innerdefault'
-        }
-        sx={{
-          width: responsive ? undefined : width,
-        }}
-        onClick={() => responsive && setCollapsed(true)}
-      >
-        <Box variant={'sidebar.headercontainer'}>
-          {title && (
-            <Box as="header">
-              {typeof title === 'string' ? (
-                <Heading as="h3" variant={'sidebar.heading'}>
-                  {title}
-                </Heading>
-              ) : (
-                title
-              )}
-            </Box>
-          )}
-        </Box>
-        {children}
+      <Box variant={'sidebar.headercontainer'}>
+        {title && (
+          <Box as="header">
+            {typeof title === 'string' ? (
+              <Heading as="h3" variant={'sidebar.heading'}>
+                {title}
+              </Heading>
+            ) : (
+              title
+            )}
+          </Box>
+        )}
       </Box>
+      <Box variant="sidebar.inner">{children}</Box>
     </Box>
   );
 };

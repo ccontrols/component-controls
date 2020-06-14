@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useRef, ReactNode } from 'react';
-import { jsx, Box, Flex } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import * as qs from 'qs';
 import { PageType } from '@component-controls/specification';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
@@ -49,7 +49,7 @@ export const SidebarsPage: FC<DocPageProps> = ({ pagesFn, type }) => {
     0,
   );
   return (
-    <Flex sx={{ flex: '1 0 auto' }}>
+    <Box variant="appsidebarpage.container">
       <Sidebar type={type} />
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs
@@ -86,6 +86,6 @@ export const SidebarsPage: FC<DocPageProps> = ({ pagesFn, type }) => {
         </Tabs>
       </Box>
       <SideContext pageRef={pageRef} />
-    </Flex>
+    </Box>
   );
 };

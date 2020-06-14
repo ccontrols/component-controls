@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
-import { jsx, Box, BoxProps, Text, Theme } from 'theme-ui';
+import { jsx, Box, BoxProps, Text } from 'theme-ui';
 import { FC } from 'react';
 import { transparentize } from 'polished';
 import { get } from '@theme-ui/css';
@@ -39,8 +39,7 @@ export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
       variant="tag.default"
       {...rest}
       sx={{
-        backgroundColor: (t: Theme) =>
-          transparentize(transparentAmount, t.colors?.[color] || color),
+        backgroundColor: transparentize(transparentAmount, color),
         border: `1px solid ${color}`,
         ...get(theme, variant),
       }}

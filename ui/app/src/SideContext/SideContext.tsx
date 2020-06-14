@@ -61,7 +61,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       <SidebarContext.Consumer>
         {({ SidebarClose, SidebarToggle, collapsed, responsive }) => (
           <div>
-            <AppSidebar width={300} id="contextbar">
+            <AppSidebar id="contextbar">
               {responsive && (
                 <Header sx={{ boxShadow: 'unset' }}>
                   <SidebarClose />

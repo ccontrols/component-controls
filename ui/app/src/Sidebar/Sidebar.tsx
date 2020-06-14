@@ -99,7 +99,7 @@ export const Sidebar: FC<SidebarProps> = ({
   }, [type, storeProvider]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
-    <AppSidebar variant="appsidebar.sidebar" width={300} id="sidebar">
+    <AppSidebar variant="appsidebar.sidebar" id="sidebar">
       {responsive && (
         <Header sx={{ boxShadow: 'unset' }}>
           <SidebarClose />

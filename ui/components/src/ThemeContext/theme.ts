@@ -400,36 +400,24 @@ export const theme: Theme = {
   sidebar: {
     default: {
       overflowX: 'hidden',
-      position: 'relative',
-      flexShrink: 0,
+      position: 'sticky',
+      top: 60,
+      maxHeight: '100vh',
+      overflowY: 'auto',
+      backgroundColor: 'background',
     },
     responsive: {
       overflowX: 'hidden',
-      flexShrink: 0,
-      position: 'fixed',
-      width: '100%',
-      minWidth: '100%',
-      zIndex: 9999,
       backgroundColor: 'background',
       top: 0,
       left: 0,
-      bottom: 0,
+      right: 0,
+      height: '100%',
+      width: '100%',
+      zIndex: 9999,
+      position: 'absolute',
     },
-    innerdefault: {
-      position: 'fixed',
-      height: '100vh',
-      overflowY: 'auto',
-      a: {
-        '&.active': {
-          borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
-        },
-        ':hover': {
-          backgroundColor: 'shadow',
-        },
-      },
-    },
-    innerresponsive: {
-      overflowY: 'auto',
+    inner: {
       a: {
         '&.active': {
           borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
@@ -494,7 +482,7 @@ export const theme: Theme = {
     toggle: {
       position: 'fixed',
       right: '1rem',
-      bottom: '2rem',
+      bottom: '3rem',
       backgroundColor: 'gray',
     },
   },
@@ -532,8 +520,7 @@ export const theme: Theme = {
   },
   appfooter: {
     container: {
-      py: 3,
-      px: '320px',
+      p: 3,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
@@ -584,6 +571,16 @@ export const theme: Theme = {
   },
   taglist: {
     container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
+  },
+  appsidebarpage: {
+    container: {
+      display: 'grid',
+      gridGap: '16px',
+      flex: 1,
+      minHeight: '100vh',
+      gridTemplateColumns: '300px 1fr 250px',
+      position: 'relative',
+    },
   },
 };
 
