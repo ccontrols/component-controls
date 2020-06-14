@@ -5,6 +5,8 @@ module.exports = {
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../src/stories/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/app-components/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/app/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
   ],
   pages: {

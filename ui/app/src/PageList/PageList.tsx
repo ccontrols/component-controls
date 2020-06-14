@@ -9,6 +9,10 @@ import { DocumentsList } from '../DocumentsList';
 export interface PageListProps {
   type: PageType;
 }
+
+/**
+ * list of documents for a specific page type
+ */
 export const PageList: FC<PageListProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
   const pages = storeProvider?.getPageList(type) || [];

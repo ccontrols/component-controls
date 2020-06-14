@@ -5,9 +5,6 @@
 -   [Getting Started](#getting-started)
     -   [Install](#install)
     -   [Configure](#configure)
-    -   [Pages format](#pages-format)
-    -   [Examples](#examples)
-        -   [Simple page](#simple-page)
 -   [API](#api)
     -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
     -   [<ins>isSelected</ins>](#insisselectedins)
@@ -65,49 +62,6 @@ export const TestingCustomePage= () => (
   </>
 );
 
-```
-
-## Pages format
-
-The page definition files need to have a default export with the following fields
-
-```js
-import React from 'react';
-export default {
-  // key used for navigation
-  key: string,
-  // title of the tab
-  title: string,
-  // react render function. 
-  // active boolean - if the tab custom page is active
-  // storyId as a string
-  // Return an object that can be rendered from ReactDOM.render
-  render: ({ active, storyId }) => Element,
-}
-```
-
-## Examples
-
-### Simple page
-
-```js
-import React from 'react';
-import { DocsContainer, Story} from '@storybook/addon-docs/blocks';
-import { useContext, } from '@component-controls/storybook-custom-docs';
-
-const Page = () => {
-  const context = useContext();
-  return (
-    <DocsContainer context={context}><Story id={storyId}/></DocsContainer>
-  )
-}
-export default {
-  key: 'docs-page',
-  title: 'Docs Page',
-  render: ({ active, storyId }) => {
-    return active ? <Page storyId={storyId} /> : null;  
-  } 
-}
 ```
 
 # API

@@ -35,7 +35,7 @@ $ npm install @component-controls/config --save-dev
 
 ## ConfigrationResult
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L16)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L10)_
 
 
 
@@ -55,7 +55,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 ## optionsFileNames
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L15)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L9)_
 
 
 
@@ -64,7 +64,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L80)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L74)_
 
 **function** extractStories(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): string\[] | undefined;
 
@@ -81,7 +81,7 @@ return the configration folder from command-line parameters
 command line accepts -c/ -config parameter for config path
 the config file is assumed named main.js/main.ts
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L27)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L21)_
 
 **function** getConfigurationArg(`args`\*: string\[]): string | undefined;
 
@@ -96,7 +96,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
  given a base project folder and a configuration folder, returns the configuration file
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L48)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L42)_
 
 **function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigrationResult](#configrationresult) | undefined;
 

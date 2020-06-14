@@ -5,10 +5,23 @@ import { Subtitle } from '@component-controls/components';
 import { Link } from '@component-controls/app-components';
 
 export interface CategoryListItemProps {
+  /**
+   * link url
+   */
   link: string;
+  /**
+   * category name
+   */
   name: string;
+  /**
+   * how many documents of this category
+   */
   count: number;
 }
+
+/**
+ * category list item displays the unique categories with a link, and the count of docs for each
+ */
 export const CategoryListItem: FC<CategoryListItemProps> = ({
   name,
   count,

@@ -1,10 +1,17 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { StoriesStore, ControlTypes } from '@component-controls/specification';
+import {
+  StoriesStore,
+  ControlTypes,
+  defaultBuildConfig,
+  deepMerge,
+  defaultRunConfig,
+} from '@component-controls/specification';
 import { Donut, Button, Heading } from 'theme-ui';
 import { MDXContent } from './MDXStory';
 
 export const store: StoriesStore = {
+  config: deepMerge(defaultBuildConfig, defaultRunConfig),
   packages: {
     'test-package': {
       fileHash: '28feb04b2447384a0bd648387e62bbc7',
@@ -303,6 +310,7 @@ and a [link](https://google.com)
         Control:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js',
       },
+      author: 'atanasster',
       title: 'Story',
       stories: [
         'id-of-story',
@@ -315,6 +323,7 @@ and a [link](https://google.com)
       name: 'MDX Story',
       title: 'MDX Story',
       components: {},
+      author: 'atanasster',
       MDXPage: () => <MDXContent components={{}} />,
       stories: ['mdx-story'],
     },

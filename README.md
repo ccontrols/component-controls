@@ -19,6 +19,7 @@
     -   [@component-controls/store](#component-controlsstore)
     -   [@component-controls/config](#component-controlsconfig)
 -   [UI packages](#ui-packages)
+    -   [@component-controls/app](#component-controlsapp)
     -   [@component-controls/pages](#component-controlspages)
     -   [@component-controls/blocks](#component-controlsblocks)
     -   [@component-controls/components](#component-controlscomponents)
@@ -241,6 +242,26 @@ Configration file utilities. Uses the [glob](https://www.npmjs.com/package/glob)
 # UI packages
 
 The UI libraries are built around [theme-ui](https://theme-ui.com) and are designed to abstract the user interface level of components.
+
+<package-section file="./ui/app/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/app](https://github.com/ccontrols/component-controls/blob/master/ui/app)
+
+Component controls standalone application.
+
+Components to create `@component-controls` standalone application, that are connected to the store of documents.
+
+Some of the design goals:
+
+-   Portability between different build systems ie - Gatsby, CRA, Vercel.
+-   Create a true CMS-type user-interface, allowing for different document types ie. "stories", "blogs", "articles".
+-   Category pages for "tags", "authors".
+-   Fully customizable Home page.
+-   Responsive user/interface, with sidebars transforming into popouts for small screen resolutions.
+
+<!-- END-PACKAGE-SECTION -->
 
 <package-section file="./ui/pages/README.md" section="overview" />
 

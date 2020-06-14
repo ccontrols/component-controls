@@ -7,8 +7,15 @@ import { PageContainer, BlockContext } from '@component-controls/blocks';
 import { CategoryListItem } from './CategoryListItem';
 
 export interface CategoryListProps {
+  /**
+   * page type
+   */
   type: PageType;
 }
+
+/**
+ * displays page of categories
+ */
 export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
   const categories = storeProvider?.getUniquesByCategory(type) || [];

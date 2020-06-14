@@ -11,10 +11,10 @@ import {
 } from '@component-controls/app-components';
 import { BlockContext } from '@component-controls/blocks';
 
-interface HeaderProps {
-  title?: string;
-}
-export const Header: FC<HeaderProps> = () => {
+/**
+ * application header component
+ */
+export const Header: FC = () => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;

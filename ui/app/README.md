@@ -7,7 +7,6 @@
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryListItem</ins>](#inscategorylistitemins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
-    -   [<ins>BasePage</ins>](#insbasepageins)
     -   [<ins>DocPage</ins>](#insdocpageins)
     -   [<ins>DocumentsList</ins>](#insdocumentslistins)
     -   [<ins>DocumentsListItem</ins>](#insdocumentslistitemins)
@@ -19,13 +18,21 @@
     -   [<ins>PageList</ins>](#inspagelistins)
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
-    -   [<ins>SidebarBase</ins>](#inssidebarbaseins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
+    -   [<ins>SidebarsPage</ins>](#inssidebarspageins)
     -   [<ins>TagsList</ins>](#instagslistins)
 
 # Overview
 
-Component controls standalone application.
+Components to create `@component-controls` standalone application, that are connected to the store of documents.
+
+Some of the design goals:
+
+-   Portability between different build systems ie - Gatsby, CRA, Vercel.
+-   Create a true CMS-type user-interface, allowing for different document types ie. "stories", "blogs", "articles".
+-   Category pages for "tags", "authors".
+-   Fully customizable Home page.
+-   Responsive user/interface, with sidebars transforming into popouts for small screen resolutions.
 
 # List of components
 
@@ -35,13 +42,15 @@ Component controls standalone application.
 
 ## <ins>App</ins>
 
+application container component. adds SEO, SkipLinks, Header and Footer.
+
 _App [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/App/App.tsx)_
 
 ### properties
 
 | Name    | Type     | Description |
 | ------- | -------- | ----------- |
-| `title` | _string_ |             |
+| `title` | _string_ | page title  |
 
 ## <ins>AppContext</ins>
 
@@ -57,25 +66,29 @@ _AppContext [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 ## <ins>CategoryList</ins>
 
+displays page of categories
+
 _CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryList.tsx)_
 
 ### properties
 
 | Name    | Type       | Description |
 | ------- | ---------- | ----------- |
-| `type*` | _PageType_ |             |
+| `type*` | _PageType_ | page type   |
 
 ## <ins>CategoryListItem</ins>
+
+category list item displays the unique categories with a link, and the count of docs for each
 
 _CategoryListItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryListItem.tsx)_
 
 ### properties
 
-| Name     | Type     | Description |
-| -------- | -------- | ----------- |
-| `link*`  | _string_ |             |
-| `name*`  | _string_ |             |
-| `count*` | _number_ |             |
+| Name     | Type     | Description                         |
+| -------- | -------- | ----------------------------------- |
+| `link*`  | _string_ | link url                            |
+| `name*`  | _string_ | category name                       |
+| `count*` | _number_ | how many documents of this category |
 
 ## <ins>CategoryPage</ins>
 
@@ -88,63 +101,57 @@ _CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/
 | `type*`     | _PageType_ |             |
 | `category*` | _any_      |             |
 
-## <ins>BasePage</ins>
-
-_BasePage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocPage/DocPage.tsx)_
-
-### properties
-
-| Name       | Type          | Description |
-| ---------- | ------------- | ----------- |
-| `pagesFn*` | _PagesConfig_ |             |
-| `type`     | _PageType_    |             |
-
 ## <ins>DocPage</ins>
+
+documentation page for current document.
+will check if the page has a layout with sidebars or if the page is standalone.
 
 _DocPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocPage/DocPage.tsx)_
 
 ### properties
 
-| Name       | Type          | Description |
-| ---------- | ------------- | ----------- |
-| `pagesFn*` | _PagesConfig_ |             |
-| `type`     | _PageType_    |             |
+| Name      | Type                                  | Description  |
+| --------- | ------------------------------------- | ------------ |
+| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
+| `type`    | _PageType_                            | page type    |
 
 ## <ins>DocumentsList</ins>
+
+displays a list of the provided document pages
 
 _DocumentsList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsList.tsx)_
 
 ### properties
 
-| Name     | Type    | Description |
-| -------- | ------- | ----------- |
-| `pages*` | _Pages_ |             |
+| Name     | Type    | Description            |
+| -------- | ------- | ---------------------- |
+| `pages*` | _Pages_ | list of document pages |
 
 ## <ins>DocumentsListItem</ins>
+
+displays a single doument item
 
 _DocumentsListItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsListItem.tsx)_
 
 ### properties
 
-| Name     | Type               | Description |
-| -------- | ------------------ | ----------- |
-| `link*`  | _string_           |             |
-| `page*`  | _StoriesDoc_       |             |
-| `config` | _RunConfiguration_ |             |
+| Name     | Type               | Description                |
+| -------- | ------------------ | -------------------------- |
+| `link*`  | _string_           | link to the document       |
+| `page*`  | _StoriesDoc_       | document to be displayed   |
+| `config` | _RunConfiguration_ | store configuration object |
 
 ## <ins>Footer</ins>
+
+application footer component
 
 _Footer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Footer/Footer.tsx)_
 
 ## <ins>Header</ins>
 
+application header component
+
 _Header [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Header/Header.tsx)_
-
-### properties
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `title` | _string_ |             |
 
 ## <ins>DocLink</ins>
 
@@ -186,6 +193,8 @@ _StoryLink [source code](https:/github.com/ccontrols/component-controls/tree/mas
 
 ## <ins>PageList</ins>
 
+list of documents for a specific page type
+
 _PageList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/PageList/PageList.tsx)_
 
 ### properties
@@ -217,18 +226,9 @@ _SideContext [source code](https:/github.com/ccontrols/component-controls/tree/m
 | --------- | ------------------------------ | ----------- |
 | `pageRef` | _RefObject&lt;HTMLDivElement>_ |             |
 
-## <ins>SidebarBase</ins>
-
-_SidebarBase [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Sidebar/Sidebar.tsx)_
-
-### properties
-
-| Name    | Type        | Description   |
-| ------- | ----------- | ------------- |
-| `title` | _ReactNode_ | title element |
-| `type`  | _PageType_  | page type     |
-
 ## <ins>Sidebar</ins>
+
+application sidebar component
 
 _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Sidebar/Sidebar.tsx)_
 
@@ -239,14 +239,29 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `title` | _ReactNode_ | title element |
 | `type`  | _PageType_  | page type     |
 
+## <ins>SidebarsPage</ins>
+
+document page - rendering with sidebars and tabs for multiple document views
+
+_SidebarsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsPage.tsx)_
+
+### properties
+
+| Name      | Type                                  | Description  |
+| --------- | ------------------------------------- | ------------ |
+| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
+| `type*`   | _PageType_                            | page type    |
+
 ## <ins>TagsList</ins>
+
+row of tags with link to their page
 
 _TagsList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/TagsList/TagsList.tsx)_
 
 ### properties
 
-| Name   | Type        | Description |
-| ------ | ----------- | ----------- |
-| `tags` | _string\[]_ |             |
+| Name   | Type        | Description              |
+| ------ | ----------- | ------------------------ |
+| `tags` | _string\[]_ | string list of tag names |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -26,8 +26,8 @@ export const loadStoryStore = (
         stores,
         packages: loadedPackages,
         components: loadedComponents,
-        config,
-        buildConfig,
+        config = {},
+        buildConfig = {},
       } = newStore;
 
       if (stores) {

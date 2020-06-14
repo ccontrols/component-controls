@@ -4,8 +4,15 @@ import { BlockContext } from '@component-controls/blocks';
 import { DocumentsListItem } from './DocumentsListItem';
 
 export interface DocumentsListProps {
+  /**
+   * list of document pages
+   */
   pages: Pages;
 }
+
+/**
+ * displays a list of the provided document pages
+ */
 export const DocumentsList: FC<DocumentsListProps> = ({ pages }) => {
   const { storeProvider } = useContext(BlockContext);
   return (

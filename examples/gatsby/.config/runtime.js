@@ -1,4 +1,4 @@
-const categories = ['Introduction', 'Controls','Blocks', 'Editors', 'Components', 'App components', 'Plugins'];
+const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'App components', 'Plugins']
 
 module.exports = {
   siteTitle: `Component controls`,

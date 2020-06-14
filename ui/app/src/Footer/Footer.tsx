@@ -3,6 +3,9 @@ import { FC, useContext } from 'react';
 import { Text, Flex, Link, jsx } from 'theme-ui';
 import { BlockContext } from '@component-controls/blocks';
 
+/**
+ * application footer component
+ */
 export const Footer: FC = () => {
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;

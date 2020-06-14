@@ -11,8 +11,16 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 
 export interface AppProps {
+  /**
+   * page title
+   */
   title?: string;
 }
+
+/**
+ * application container component. adds SEO, SkipLinks, Header and Footer.
+ *
+ */
 export const App: FC<AppProps> = ({ title, children }) => {
   const { doc } = useStoryContext({ id: '.' });
   const items: SkiLinksItemProps[] = [

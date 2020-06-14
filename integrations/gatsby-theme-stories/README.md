@@ -7,12 +7,13 @@
     -   [Configure](#configure)
 -   [API](#api)
     -   [<ins>Store</ins>](#insstoreins)
-    -   [<ins>Header</ins>](#insheaderins)
+    -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
-    -   [<ins>SEO</ins>](#insseoins)
-    -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>pages</ins>](#inspagesins)
-    -   [<ins>StoryPage</ins>](#insstorypageins)
+    -   [<ins>CategoryList</ins>](#inscategorylistins)
+    -   [<ins>CategoryPage</ins>](#inscategorypageins)
+    -   [<ins>DocPage</ins>](#insdocpageins)
+    -   [<ins>PageList</ins>](#inspagelistins)
 
 # In action
 
@@ -68,15 +69,16 @@ Store class used to query the stories and exchange information between processes
 
 _Store [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
 
-## <ins>Header</ins>
+## <ins>GatsbyLink</ins>
 
-_Header [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Header.tsx)_
+_GatsbyLink [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/GatsbyLink.tsx)_
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `title` | _string_ |             |
+| Name  | Type                                                                         | Description |
+| ----- | ---------------------------------------------------------------------------- | ----------- |
+| `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `to`  | _string_                                                                     |             |
 
 ## <ins>Layout</ins>
 
@@ -84,49 +86,52 @@ _Layout [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name          | Type          | Description |
-| ------------- | ------------- | ----------- |
-| `title`       | _string_      |             |
-| `storyStore*` | _Store_       |             |
-| `storyId`     | _string_      |             |
-| `docTitle*`   | _string_      |             |
-| `pages*`      | _PagesConfig_ |             |
-
-## <ins>SEO</ins>
-
-_SEO [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/SEO.tsx)_
-
-### properties
-
-| Name          | Type     | Description |
-| ------------- | -------- | ----------- |
-| `title`       | _string_ |             |
-| `description` | _string_ |             |
-| `pathname`    | _string_ |             |
-| `image`       | _string_ |             |
-
-## <ins>Sidebar</ins>
-
-_Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Sidebar.tsx)_
-
-### properties
-
-| Name      | Type     | Description |
-| --------- | -------- | ----------- |
-| `docPath` | _string_ |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `docId` | _string_ |             |
 
 ## <ins>pages</ins>
 
 _pages [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/config/pages.tsx)_
 
-## <ins>StoryPage</ins>
+## <ins>CategoryList</ins>
 
-_StoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/StoryPage.tsx)_
+_CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryList.tsx)_
 
 ### properties
 
-| Name           | Type                              | Description |
-| -------------- | --------------------------------- | ----------- |
-| `pathContext*` | _{ title: string; doc: string; }_ |             |
+| Name           | Type                  | Description |
+| -------------- | --------------------- | ----------- |
+| `pathContext*` | _{ type: PageType; }_ |             |
+
+## <ins>CategoryPage</ins>
+
+_CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryPage.tsx)_
+
+### properties
+
+| Name           | Type                                    | Description |
+| -------------- | --------------------------------------- | ----------- |
+| `pathContext*` | _{ type: PageType; category: string; }_ |             |
+
+## <ins>DocPage</ins>
+
+_DocPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocPage.tsx)_
+
+### properties
+
+| Name           | Type                               | Description |
+| -------------- | ---------------------------------- | ----------- |
+| `pathContext*` | _{ doc: string; type: PageType; }_ |             |
+
+## <ins>PageList</ins>
+
+_PageList [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/PageList.tsx)_
+
+### properties
+
+| Name           | Type                  | Description |
+| -------------- | --------------------- | ----------- |
+| `pathContext*` | _{ type: PageType; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

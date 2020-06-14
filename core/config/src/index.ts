@@ -4,13 +4,7 @@ import { sync as globSync } from 'glob';
 import yargs from 'yargs';
 import { BuildConfiguration } from '@component-controls/specification';
 
-export const buildConfigFileNames = [
-  'build.js',
-  'build.json',
-  'main.js',
-  'main.json',
-  'main.ts',
-];
+export const buildConfigFileNames = ['buildtime.js', 'build.js', 'main.js'];
 
 export const optionsFileNames = ['runtime.js', 'options.js'];
 export interface ConfigrationResult {

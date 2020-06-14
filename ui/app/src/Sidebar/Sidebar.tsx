@@ -66,14 +66,16 @@ const createMenuItem = (
     newItem,
   );
 };
-export const SidebarBase: FC<SidebarProps> = ({
+
+/**
+ * application sidebar component
+ */
+
+export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
   type = defPageType,
 }) => {
   const { doc } = useStoryContext({ id: '.' });
-  if (doc && doc.fullPage) {
-    return null;
-  }
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
@@ -82,6 +84,7 @@ export const SidebarBase: FC<SidebarProps> = ({
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
+
       const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
         const { title } = doc;
         const levels = title.split('/');
@@ -94,7 +97,6 @@ export const SidebarBase: FC<SidebarProps> = ({
     }
     return [];
   }, [type, storeProvider]);
-
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" width={300} id="sidebar">
@@ -124,12 +126,4 @@ export const SidebarBase: FC<SidebarProps> = ({
       </Box>
     </AppSidebar>
   );
-};
-
-export const Sidebar: FC<SidebarProps> = props => {
-  const { doc } = useStoryContext({ id: '.' });
-  if (doc && doc.fullPage) {
-    return null;
-  }
-  return <SidebarBase {...props} />;
 };
