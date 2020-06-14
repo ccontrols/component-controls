@@ -36,7 +36,6 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
             storiesExports.push(expFn);
           }
           const expCode = mdxPropertiesExport(exports[exportStory]);
-          debugger;
           if (expCode) {
             storiesExports.push(`${exportStory}.story = ${expCode}
              `);

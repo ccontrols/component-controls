@@ -1,5 +1,5 @@
 const merge = require('deepmerge');
-import { Configuration } from 'webpack';
+import { Configuration as WebpackConfiguration } from 'webpack';
 import { react } from './react';
 import { instrument } from './instrument';
 import { reactDocgen } from './react-docgen';
@@ -7,8 +7,9 @@ import { reactDocgenTypescript } from './react-docgen-typescript';
 import { RuleOptions, RuleTypes, RuleType } from './types';
 export * from './types';
 
+export { WebpackConfiguration };
 export const presetsFactory: {
-  [key: string]: Configuration;
+  [key: string]: WebpackConfiguration;
 } = {
   'react-docgen-typescript': reactDocgenTypescript,
   'react-docgen': reactDocgen,
@@ -54,9 +55,9 @@ const deepMerge = (dest: any, source: any) => {
  * expands the presets into webpack config
  * @param presets custom config
  */
-export const getWebpackConfig = (presets: RuleTypes): Configuration => {
-  const result: Configuration = presets.reduce(
-    (acc: Configuration, config: RuleType) => {
+export const getWebpackConfig = (presets: RuleTypes): WebpackConfiguration => {
+  const result: WebpackConfiguration = presets.reduce(
+    (acc: WebpackConfiguration, config: RuleType) => {
       if (typeof config === 'string') {
         const f = presetsFactory[config];
         return deepMergeWithPresets(acc, f);
@@ -64,9 +65,9 @@ export const getWebpackConfig = (presets: RuleTypes): Configuration => {
       if (config && (config as RuleOptions).name) {
         const name = (config as RuleOptions).name;
         if (presetsFactory[name]) {
-          const r: Configuration = presetsFactory[name];
-          const o: Configuration = (config as RuleOptions).config;
-          const merged: Configuration[] = deepMergeWithPresets(r, o);
+          const r: WebpackConfiguration = presetsFactory[name];
+          const o: WebpackConfiguration = (config as RuleOptions).config;
+          const merged: WebpackConfiguration[] = deepMergeWithPresets(r, o);
           return deepMergeWithPresets(acc, merged);
         }
       }
@@ -78,15 +79,29 @@ export const getWebpackConfig = (presets: RuleTypes): Configuration => {
 };
 
 /**
+ * deep merge two webpack configurations
+ */
+export const deepMergeWebpackConfig = (
+  dest?: WebpackConfiguration,
+  source?: WebpackConfiguration,
+): WebpackConfiguration => {
+  return dest && source
+    ? merge(dest, source, {
+        arrayMerge: arrayMerge,
+      })
+    : source || dest || {};
+};
+
+/**
  * merge webpack config with custom set of presets
  * @param webPack passed configuration to merge with
  * @param presets custom config
  */
 
 export const mergeWebpackConfig = (
-  webPack?: Configuration,
+  webPack?: WebpackConfiguration,
   presets?: RuleTypes,
-): Configuration => {
+): WebpackConfiguration => {
   if (!presets) {
     return {};
   }

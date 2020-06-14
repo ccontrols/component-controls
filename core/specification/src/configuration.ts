@@ -1,3 +1,4 @@
+import { Configuration as WebpackConfiguration } from 'webpack';
 import { StoryRenderFn } from './utility';
 
 export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
@@ -32,6 +33,12 @@ export interface PageConfiguration {
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
 
+type WebpackConfigFn = (
+  config: WebpackConfiguration,
+  options?: any,
+) => WebpackConfiguration;
+type WebpackCOnfig = WebpackConfiguration | WebpackConfigFn;
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -47,6 +54,12 @@ export interface BuildConfiguration {
    * base url path for API documentation pages. Default is "docs/"
    */
   pages?: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
+
+  /**
+   * custom webpack fonfigurations setup. One or the other will be used
+   */
+  webpack?: WebpackCOnfig;
+  finalWebpack?: WebpackCOnfig;
 }
 
 /**

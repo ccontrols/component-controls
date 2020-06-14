@@ -3,7 +3,11 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 import * as path from 'path';
 import LoaderPlugin from '@component-controls/loader/plugin';
-import { mergeWebpackConfig } from '@component-controls/webpack-configs';
+import {
+  mergeWebpackConfig,
+  deepMergeWebpackConfig,
+} from '@component-controls/webpack-configs';
+import { loadConfiguration } from '@component-controls/config';
 import { CompileProps, CompileResults } from './types';
 
 export type CompileRunProps = CompileProps & {
@@ -13,14 +17,9 @@ export type CompileRunProps = CompileProps & {
   mode: webpack.Configuration['mode'];
 };
 
-const createConfig = ({
-  webPack,
-  presets,
-  configPath,
-  mode,
-  bundleAnalyzer,
-}: CompileRunProps): webpack.Configuration => {
-  const webpackConfig = mergeWebpackConfig(
+const createConfig = (options: CompileRunProps): webpack.Configuration => {
+  const { webPack, presets, configPath, mode, bundleAnalyzer } = options;
+  const initialWebpackConfig = mergeWebpackConfig(
     {
       mode,
       ...(webPack || {}),
@@ -42,7 +41,7 @@ const createConfig = ({
     );
   }
 
-  return {
+  const webpackConfig: webpack.Configuration = {
     entry: {
       stories: require.resolve(
         '@component-controls/loader/story-store-data.js',
@@ -52,10 +51,7 @@ const createConfig = ({
     output: {
       path: path.resolve(__dirname, '../dist'),
       filename: 'bundle.js',
-      library: 'store',
       libraryTarget: 'umd',
-      globalObject: 'this',
-      umdNamedDefine: true,
     },
     resolve: {
       alias: {
@@ -141,9 +137,21 @@ const createConfig = ({
       '@component-controls/blocks': '@component-controls/blocks',
       '@component-controls/components': '@component-controls/components',
     },
-    ...webpackConfig,
+    ...initialWebpackConfig,
     plugins,
   };
+  const runConfig = loadConfiguration(process.cwd(), configPath);
+
+  const userWebpackConfig =
+    runConfig?.config &&
+    (runConfig.config.webpack || runConfig.config.finalWebpack);
+
+  if (!userWebpackConfig) {
+    return webpackConfig;
+  }
+  return typeof userWebpackConfig === 'function'
+    ? userWebpackConfig(webpackConfig, options)
+    : deepMergeWebpackConfig(webpackConfig, userWebpackConfig);
 };
 
 export const runCompiler = (

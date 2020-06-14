@@ -21,6 +21,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "webpack-bundle-analyzer": "^3.7.0"
   }  
 }
