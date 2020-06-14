@@ -14,6 +14,7 @@ module.exports = {
     const pages = customPages || [
       require.resolve('./full-page'),
       require.resolve('./testing-page'),
+      require.resolve('./viewport-page'),
     ];
     if (pages.length) {
       return [

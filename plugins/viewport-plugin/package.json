@@ -1,7 +1,12 @@
 {
-  "name": "@component-controls/pages",
+  "name": "@component-controls/viewport-plugin",
   "version": "1.2.0",
-  "description": "Component controls pre-built documentation page templates.",
+  "private": true,
+  "description": "Viewport plugin",
+  "keywords": [
+    "addon",
+    "viewport"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -26,23 +31,24 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ccontrols/component-controls.git",
-    "directory": "ui/pages"
+    "directory": "plugins/viewport-plugin"
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.2.0",
-    "@component-controls/viewport-plugin": "^1.2.0",
     "@component-controls/blocks": "^1.2.0",
-    "react": "^16.8.3"
+    "@component-controls/components": "^1.2.0",
+    "@primer/octicons-react": "^9.6.0",
+    "react": "^16.12.0",
+    "theme-ui": "^0.3.1"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.2",
-    "cross-env": "^5.2.1",
-    "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "@types/react": "^16.9.34",
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "react": "*"
+    "@component-controls/blocks": "*",
+    "react": "*",
+    "theme-ui": "*"
   },
   "publishConfig": {
     "access": "public"
