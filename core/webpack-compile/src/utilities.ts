@@ -52,6 +52,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       path: path.resolve(__dirname, '../dist'),
       filename: 'bundle.js',
       libraryTarget: 'umd',
+      globalObject: 'this',
     },
     resolve: {
       alias: {

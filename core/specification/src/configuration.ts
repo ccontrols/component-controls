@@ -53,8 +53,12 @@ export interface BuildConfiguration {
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
-  pages?: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
+  pages: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
 
+  /**
+   * page types that are considred as categories fields as well
+   */
+  categories: PageType[];
   /**
    * custom webpack fonfigurations setup. One or the other will be used
    */
@@ -161,6 +165,7 @@ export const defaultRunConfig: RunConfiguration = {
 };
 
 export const defaultBuildConfig: BuildConfiguration = {
+  categories: ['author', 'tags'],
   pages: {
     story: {
       basePath: 'docs/',

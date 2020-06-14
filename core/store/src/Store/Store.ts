@@ -170,6 +170,7 @@ export class Store implements StoryStore {
     const store = this.getStore();
     return store ? store.docs[name] : undefined;
   };
+
   /**
    * returns all the documentation files
    */

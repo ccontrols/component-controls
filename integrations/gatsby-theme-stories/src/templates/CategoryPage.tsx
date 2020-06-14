@@ -13,13 +13,10 @@ interface CategoryPageProps {
 
 const CategoryPageTemplate: FC<CategoryPageProps> = ({
   pathContext: { type, category },
-}) => {
-  console.log('HERE');
-  return (
-    <Layout>
-      <CategoryPage type={type} category={category} />
-    </Layout>
-  );
-};
+}) => (
+  <Layout>
+    <CategoryPage type={type} category={category} />
+  </Layout>
+);
 
 export default CategoryPageTemplate;

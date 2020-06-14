@@ -41,35 +41,39 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (store) {
-    const { pages } = store.buildConfig || {};
+    const { pages, categories = [] } = store.buildConfig || {};
     if (pages) {
       Object.keys(pages).forEach(type => {
-        const page = pages[type as PageType];
-        const pageType = type as PageType;
-        const docs = store.getDocs(pageType);
-        docs.forEach(doc => {
-          createPage({
-            path: getDocPath(pageType, doc, store.buildConfig),
-            component: pageTemplates[pageType] || pageTemplates['story'],
-            context: {
-              type: pageType,
-              doc: doc.title,
-            },
+        if (!categories.includes(type as PageType)) {
+          const page = pages[type as PageType];
+          const pageType = type as PageType;
+          const docs = store.getDocs(pageType);
+          docs.forEach(doc => {
+            createPage({
+              path: getDocPath(pageType, doc, store.buildConfig),
+              component: pageTemplates[pageType] || pageTemplates['story'],
+              context: {
+                type: pageType,
+                doc: doc.title,
+              },
+            });
           });
-        });
-        if (docs.length) {
-          const docsPage = docs.find(doc => doc?.route === `/${page.basePath}`);
-          createPage({
-            path: `/${page.basePath}`,
-            component: listTemplates[pageType] || listTemplates['story'],
-            context: {
-              type: pageType,
-              doc: docsPage?.title,
-            },
-          });
+          if (docs.length) {
+            const docsPage = docs.find(
+              doc => doc?.route === `/${page.basePath}`,
+            );
+            createPage({
+              path: `/${page.basePath}`,
+              component: listTemplates[pageType] || listTemplates['story'],
+              context: {
+                type: pageType,
+                doc: docsPage?.title,
+              },
+            });
+          }
         }
       });
-      ['author', 'tags'].forEach(catName => {
+      categories.forEach(catName => {
         const cats = store.getUniquesByField(catName);
         const catPage = pages[catName as PageType];
         const catKeys = Object.keys(cats);
