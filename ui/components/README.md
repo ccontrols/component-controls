@@ -12,6 +12,7 @@
     -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
     -   [<ins>Source</ins>](#inssourceins)
+    -   [<ins>Subheading</ins>](#inssubheadingins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
@@ -203,9 +204,21 @@ _Source [source code](https:/github.com/ccontrols/component-controls/tree/master
 | `style`    | _any_                                                              | css styles for the container.                                                                                                                                                    |
 | `as`       | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
+## <ins>Subheading</ins>
+
+`h3` level headings
+
+_Subheading [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Subheading/Subheading.tsx)_
+
+### properties
+
+| Name  | Type                                                                           | Description |
+| ----- | ------------------------------------------------------------------------------ | ----------- |
+| `ref` | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |             |
+
 ## <ins>Subtitle</ins>
 
-`h3` level heading with faded text and font-weight 400.
+`h2` level heading with faded text and font-weight 400.
 
 _Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Subtitle/Subtitle.tsx)_
 
@@ -303,11 +316,11 @@ _Tag [source code](https:/github.com/ccontrols/component-controls/tree/master/ui
 
 ### properties
 
-| Name                | Type                | Description                                                                                                            |
-| ------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `color*`            | _string_            | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
-| `transparentAmount` | _number_            | transparent amount - 0 to 1                                                                                            |
-| `sxStyle`           | _SystemStyleObject_ | theme-ui styling object for the container                                                                              |
+| Name                | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`             | _string_ | color for the tag. The full color will be applied to the border and a transparentized color will be used as background The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations. By default the raw value of the prop is returned.  Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation. Array values are converted into responsive values.  \[MDN reference](https&#x3A;//developer.mozilla.org/en-US/docs/Web/CSS/color) |
+| `transparentAmount` | _number_ | transparent amount - 0 to 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `variant`           | _string_ | theme variant additional                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## <ins>Title</ins>
 
@@ -318,7 +331,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | Name       | Type                                                                           | Description                            |
 | ---------- | ------------------------------------------------------------------------------ | -------------------------------------- |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component. |
-| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
 
 ## <ins>Toggle</ins>

@@ -15,7 +15,11 @@
     -   [StoryPackages](#storypackages)
     -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
+    -   [Pages](#pages)
     -   [StoryArguments](#storyarguments)
+    -   [defPageType](#defpagetype)
+    -   [getDocPath](#getdocpath)
+    -   [getStoryPath](#getstorypath)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -50,12 +54,25 @@
     -   [PackageRepository](#packagerepository)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
-    -   [Configuration](#configuration)
+    -   [BuildConfiguration](#buildconfiguration)
+    -   [PageConfiguration](#pageconfiguration)
+    -   [RunConfiguration](#runconfiguration)
+    -   [PageType](#pagetype)
+    -   [PagesConfiguration](#pagesconfiguration)
+    -   [WebpackCOnfig](#webpackconfig)
+    -   [WebpackConfigFn](#webpackconfigfn)
+    -   [defaultBuildConfig](#defaultbuildconfig)
+    -   [defaultRunConfig](#defaultrunconfig)
     -   [StoryRenderFn](#storyrenderfn-1)
+    -   [PageType](#pagetype-1)
     -   [StoryArguments](#storyarguments-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
+    -   [WebpackCOnfig](#webpackconfig-1)
+    -   [PagesConfiguration](#pagesconfiguration-1)
+    -   [WebpackConfigFn](#webpackconfigfn-1)
+    -   [PageType](#pagetype-2)
 
 # Overview
 
@@ -126,47 +143,54 @@ a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
 in the case of MDX stories, the doc is created using a &lt;Meta /> tag
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L157)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L158)_
 
 `name`\*: string: any
 
 ### properties
 
-| Name             | Type                                    | Description                                                                                                                                |
-| ---------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `MDXPage`        | any                                     | for MDX pages, this is an MDXContent function, to be rendered inside a MDXProvider                                                         |
-| `component`      | string \| object                        | id for component associated with the stories file                                                                                          |
-| `components*`    | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx' |
-| `controls`       | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                      |
-| `decorators`     | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                             |
-| `excludeStories` | string\[] \| [RegExp](#regexp)          | list of stories to exclude from the stories file can also use regexp match                                                                 |
-| `fileName`       | string                                  | file name of the file of stories                                                                                                           |
-| `includeStories` | string\[] \| [RegExp](#regexp)          | list of stories to include in the stories file can also use regexp match                                                                   |
-| `package`        | string                                  | lookup into the global store of PackageInfo package.json                                                                                   |
-| `parameters`     | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                         |
-| `route`          | string                                  | if provided, will be used as the route for the page if not provided, the title in lowercase will be used as the route                      |
-| `source`         | string                                  | source code of the entire file of stories                                                                                                  |
-| `stories`        | string\[]                               | list of stories contained in the file/groups                                                                                               |
-| `subcomponents`  | string\[] \| object\[]                  | multiple components option                                                                                                                 |
-| `title*`         | string                                  | title of the groups of stories contained in the doc file. used to generate story ids                                                       |
+| Name             | Type                                    | Description                                                                                                                                     |
+| ---------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`        | any                                     | for MDX pages, this is an MDXContent function, to be rendered inside a MDXProvider                                                              |
+| `author`         | string                                  | document author                                                                                                                                 |
+| `component`      | string \| object                        | id for component associated with the stories file                                                                                               |
+| `components*`    | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'      |
+| `controls`       | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                           |
+| `date`           | string                                  |  optional date the document was created                                                                                                         |
+| `decorators`     | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                  |
+| `description`    | string                                  |  documentation file description                                                                                                                 |
+| `excludeStories` | string\[] \| [RegExp](#regexp)          | list of stories to exclude from the stories file can also use regexp match                                                                      |
+| `fileName`       | string                                  | file name of the file of stories                                                                                                                |
+| `fullPage`       | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration |
+| `includeStories` | string\[] \| [RegExp](#regexp)          | list of stories to include in the stories file can also use regexp match                                                                        |
+| `package`        | string                                  | lookup into the global store of PackageInfo package.json                                                                                        |
+| `parameters`     | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                              |
+| `route`          | string                                  | if provided, will be used as the route for the page if not provided, the title in lowercase will be used as the route                           |
+| `sidebars`       | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                            |
+| `source`         | string                                  | source code of the entire file of stories                                                                                                       |
+| `stories`        | string\[]                               | list of stories contained in the file/groups                                                                                                    |
+| `subcomponents`  | string\[] \| object\[]                  | multiple components option                                                                                                                      |
+| `tags`           | string\[]                               |  comma-separated list of document tags, used for search                                                                                         |
+| `title*`         | string                                  | title of the groups of stories contained in the doc file. used to generate story ids                                                            |
+| `type`           | [PageType](#pagetype)                   | document type - blogs a and stories. By default - storie                                                                                        |
 
 ## StoriesStore
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L279)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L317)_
 
 
 
 ### properties
 
-| Name          | Type                                | Description                                                                                     |
-| ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `components*` | [StoryComponents](#storycomponents) | list of components used in stories                                                              |
-| `config`      | [Configuration](#configuration)     | global configuration for config file                                                            |
-| `docs*`       | [StoryDocs](#storydocs)             | list of story files, or groups                                                                  |
-| `packages*`   | [StoryPackages](#storypackages)     | list of package.json files and their data used by the components and the stories of the project |
-| `stories*`    | [StoryStories](#storystories)       | list of stories                                                                                 |
+| Name          | Type                                  | Description                                                                                     |
+| ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `components*` | [StoryComponents](#storycomponents)   | list of components used in stories                                                              |
+| `config`      | [RunConfiguration](#runconfiguration) | global configuration for config file                                                            |
+| `docs*`       | [StoryDocs](#storydocs)               | list of story files, or groups                                                                  |
+| `packages*`   | [StoryPackages](#storypackages)       | list of package.json files and their data used by the components and the stories of the project |
+| `stories*`    | [StoryStories](#storystories)         | list of stories                                                                                 |
 
 ## Story
 
@@ -216,7 +240,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of components used in stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L251)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L287)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -224,7 +248,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of story files, or groups
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L258)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L294)_
 
 `title`\*: string: [StoriesDoc](#storiesdoc)
 
@@ -232,7 +256,7 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of repositories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L272)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L310)_
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
@@ -249,9 +273,15 @@ _defined in [@component-controls/specification/src/stories.ts](https://github.co
 
 list of stories
 
-_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L265)_
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L303)_
 
 `id`\*: string: [Story](#story)
+
+## Pages
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L298)_
+
+[StoriesDoc](#storiesdoc)\[]
 
 ## StoryArguments
 
@@ -261,6 +291,43 @@ the first argument are the control 'values'
 _defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L60)_
 
 [StoryArgument](#storyargument)\[]
+
+## defPageType
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L152)_
+
+
+
+## getDocPath
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L342)_
+
+**function** getDocPath(`pageType`\*: [PageType](#pagetype), `doc`: [StoriesDoc](#storiesdoc), `config`: [RunConfiguration](#runconfiguration), `name`\*: string): string;
+
+### parameters
+
+| Name        | Type                                  | Description |
+| ----------- | ------------------------------------- | ----------- |
+| `pageType*` | [PageType](#pagetype)                 |             |
+| `doc`       | [StoriesDoc](#storiesdoc)             |             |
+| `config`    | [RunConfiguration](#runconfiguration) |             |
+| `name*`     | string                                |             |
+| `returns`   | string                                |             |
+
+## getStoryPath
+
+_defined in [@component-controls/specification/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/stories.ts#L354)_
+
+**function** getStoryPath(`story`: [Story](#story), `doc`: [StoriesDoc](#storiesdoc), `config`: [RunConfiguration](#runconfiguration)): string;
+
+### parameters
+
+| Name      | Type                                  | Description |
+| --------- | ------------------------------------- | ----------- |
+| `story`   | [Story](#story)                       |             |
+| `doc`     | [StoriesDoc](#storiesdoc)             |             |
+| `config`  | [RunConfiguration](#runconfiguration) |             |
+| `returns` | string                                |             |
 
 ## ControlTypes
 
@@ -845,22 +912,136 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
 
-## Configuration
+## BuildConfiguration
 
-global configuration
+global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L7)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L46)_
 
 
 
 ### properties
 
-| Name         | Type                                                                                      | Description                                                                                                                                    |
-| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `decorators` | [StoryRenderFn](#storyrenderfn)\[]                                                        | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
-| `options`    | story sorting function**storySort**: **function** (`a`\*: string, `b`\*: string): number; | global options object                                                                                                                          |
-| `stories*`   | string\[]                                                                                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| Name           | Type                                                                                           | Description                                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `finalWebpack` | [WebpackCOnfig](#webpackconfig)                                                                |                                                                                                                                                |
+| `pages`        | Record&lt;[PageType](#pagetype), Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'>> | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `stories`      | string\[]                                                                                      | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| `webpack`      | [WebpackCOnfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+
+## PageConfiguration
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L6)_
+
+
+
+### properties
+
+| Name          | Type    | Description                                                                                             |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| `basePath`    | string  | base url path for the page                                                                              |
+| `fullPage`    | boolean | whether to take a fullpage theme option                                                                 |
+| `hasHomePage` | boolean | if true, will create a home page with a top-level menu by default, only story and blogs have home pages |
+| `label`       | string  | label - used for menu labels                                                                            |
+| `sidebars`    | boolean | whether to add navigation sidebars to the page                                                          |
+
+## RunConfiguration
+
+global configuration used at build time
+stored in a file named main.js/main.ts
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L69)_
+
+
+
+### properties
+
+| Name              | Type                                                 | Description                                                                                                                                                                          |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
+| `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
+| `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
+| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `siteHeadline`    | string                                               | Site headline. Default is "Component controls gatsby"                                                                                                                                |
+| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
+| `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
+| `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
+| `siteTitleAlt`    | string                                               | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
+| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
+| `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
+| `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
+
+## PageType
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author'
+
+## PagesConfiguration
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L34)_
+
+Record&lt;
+
+[PageType](#pagetype)
+
+, 
+
+[PageConfiguration](#pageconfiguration)
+
+>
+
+## WebpackCOnfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
+
+[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## WebpackConfigFn
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+
+**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
+
+### parameters
+
+| Name      | Type                                          | Description |
+| --------- | --------------------------------------------- | ----------- |
+| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
+| `options` | any                                           |             |
+| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
+
+## defaultBuildConfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L163)_
+
+
+
+### properties
+
+| Name     | Type   | Description |
+| -------- | ------ | ----------- |
+| `pages*` | object |             |
+
+## defaultRunConfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L130)_
+
+
+
+### properties
+
+| Name               | Type   | Description |
+| ------------------ | ------ | ----------- |
+| `author*`          | string |             |
+| `siteDescription*` | string |             |
+| `siteHeadline*`    | string |             |
+| `siteLanguage*`    | string |             |
+| `siteTitle*`       | string |             |
+| `siteTitleAlt*`    | string |             |
+| `siteUrl*`         | string |             |
+| `pages*`           | object |             |
 
 ## StoryRenderFn
 
@@ -877,6 +1058,12 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 | `controlValues*` | \[key: string]: any |             |
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
+
+## PageType
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author'
 
 ## StoryArguments
 
@@ -912,5 +1099,45 @@ dependecy string - the package version number
 _defined in [@component-controls/specification/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/utility.ts#L44)_
 
 string
+
+## WebpackCOnfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
+
+[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## PagesConfiguration
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L34)_
+
+Record&lt;
+
+[PageType](#pagetype)
+
+, 
+
+[PageConfiguration](#pageconfiguration)
+
+>
+
+## WebpackConfigFn
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+
+**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
+
+### parameters
+
+| Name      | Type                                          | Description |
+| --------- | --------------------------------------------- | ----------- |
+| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
+| `options` | any                                           |             |
+| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
+
+## PageType
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author'
 
 <!-- END-TSDOC-TYPESCRIPT -->

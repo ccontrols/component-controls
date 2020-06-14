@@ -9,7 +9,11 @@
     -   [extractStories](#extractstories)
     -   [getConfigurationArg](#getconfigurationarg)
     -   [loadConfiguration](#loadconfiguration)
-    -   [Configuration](#configuration)
+    -   [BuildConfiguration](#buildconfiguration)
+    -   [WebpackCOnfig](#webpackconfig)
+    -   [PageType](#pagetype)
+    -   [PageConfiguration](#pageconfiguration)
+    -   [WebpackConfigFn](#webpackconfigfn)
 
 # Overview
 
@@ -37,11 +41,11 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 ### properties
 
-| Name              | Type                            | Description |
-| ----------------- | ------------------------------- | ----------- |
-| `config*`         | [Configuration](#configuration) |             |
-| `configPath*`     | string                          |             |
-| `optionsFilePath` | string                          |             |
+| Name              | Type                                      | Description |
+| ----------------- | ----------------------------------------- | ----------- |
+| `config*`         | [BuildConfiguration](#buildconfiguration) |             |
+| `configPath*`     | string                                    |             |
+| `optionsFilePath` | string                                    |             |
 
 ## buildConfigFileNames
 
@@ -62,14 +66,14 @@ using glob for the regex file search
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L80)_
 
-**function** extractStories(`__namedParameters`\*: **config**: [Configuration](#configuration)**configPath**: string): string\[] | undefined;
+**function** extractStories(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): string\[] | undefined;
 
 ### parameters
 
-| Name                 | Type                                                              | Description |
-| -------------------- | ----------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **config**: [Configuration](#configuration)**configPath**: string |             |
-| `returns`            | string\[] \| undefined                                            |             |
+| Name                 | Type                                                                        | Description |
+| -------------------- | --------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string |             |
+| `returns`            | string\[] \| undefined                                                      |             |
 
 ## getConfigurationArg
 
@@ -105,21 +109,64 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 | `args`         | string\[]                                              | optional arguments                             |
 | `returns`      | [ConfigrationResult](#configrationresult) \| undefined |                                                |
 
-## Configuration
+## BuildConfiguration
 
-global configuration
+global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L7)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L46)_
 
 
 
 ### properties
 
-| Name         | Type                                                                                      | Description                                                                                                                                    |
-| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `decorators` | [StoryRenderFn](#storyrenderfn)\[]                                                        | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                           |
-| `options`    | story sorting function**storySort**: **function** (`a`\*: string, `b`\*: string): number; | global options object                                                                                                                          |
-| `stories*`   | string\[]                                                                                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| Name           | Type                                                                                           | Description                                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `finalWebpack` | [WebpackCOnfig](#webpackconfig)                                                                |                                                                                                                                                |
+| `pages`        | Record&lt;[PageType](#pagetype), Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'>> | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `stories`      | string\[]                                                                                      | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| `webpack`      | [WebpackCOnfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+
+## WebpackCOnfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
+
+[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## PageType
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author'
+
+## PageConfiguration
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L6)_
+
+
+
+### properties
+
+| Name          | Type    | Description                                                                                             |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| `basePath`    | string  | base url path for the page                                                                              |
+| `fullPage`    | boolean | whether to take a fullpage theme option                                                                 |
+| `hasHomePage` | boolean | if true, will create a home page with a top-level menu by default, only story and blogs have home pages |
+| `label`       | string  | label - used for menu labels                                                                            |
+| `sidebars`    | boolean | whether to add navigation sidebars to the page                                                          |
+
+## WebpackConfigFn
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+
+**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
+
+### parameters
+
+| Name      | Type                                          | Description |
+| --------- | --------------------------------------------- | ----------- |
+| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
+| `options` | any                                           |             |
+| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

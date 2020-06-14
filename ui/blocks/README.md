@@ -171,11 +171,10 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                     | Description                                   |
-| ------------ | ------------------------ | --------------------------------------------- |
-| `components` | _MDXProviderComponents_  | components to customize the markdown display. |
-| `maxWidth`   | _ReactText_              | limit the max width of the page               |
-| `ref`        | _Ref&lt;HTMLDivElement>_ | ref to the page container component           |
+| Name      | Type                           | Description                         |
+| --------- | ------------------------------ | ----------------------------------- |
+| `ref`     | _LegacyRef&lt;HTMLDivElement>_ | ref to the page container component |
+| `variant` | _string_                       | theme variant                       |
 
 ## <ins>Playground</ins>
 
@@ -372,7 +371,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`       | _string_                                                                       | id of the story                                                             |
 | `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
-| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                                                     |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
 
 ## <ins>InvalidType</ins>
