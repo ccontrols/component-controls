@@ -6,24 +6,14 @@
 
 ## Install
 
-First, install yarn globally:
+First, install lerna globally (if you don't have it already) with `npm i -g lerna`
 
-```sh
-npm i -g lerna
-```
+Then, run `yarn bootstrap` followed by `yarn build`
 
-Then, run the following 2:
+`yarn bootstrap` installs the external dependencies of the project and links the publishable packages from the monorepo. `yarn build` will build all the packages from the monorepo.
 
-```sh
-yarn bootstrap
-```
+## Development
 
-```sh
-yarn build
-```
+To run the monorepo, run `yarn dev` in the home directory. This starts a rollup watch service to monitor for any changes in packages.
 
-## Run
-
-To run the monorepo, run `yarn dev` in the home directory:
-
-To run one of the [integrations](https://github.com/ccontrols/component-controls#integrations), navigate to one in the examples folder and run `yarn dev`
+To run one of the examples, navigate to the examples folder i.e. `cd examples/storybook-6-no-docs`, and run `yarn start`
