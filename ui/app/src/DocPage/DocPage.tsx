@@ -2,11 +2,8 @@
 import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
 import { PageContainer, BlockContext } from '@component-controls/blocks';
-import {
-  SidebarsPage,
-  DocPageProps,
-  PageConfig,
-} from '../SidebarsPage/SidebarsPage';
+import { SidebarsPage, DocPageProps, PageConfig } from '../SidebarsPage';
+import { PageType } from '@component-controls/specification';
 
 export type PagesConfig = (route: string) => PageConfig[];
 
@@ -18,7 +15,7 @@ export const DocPage: FC<DocPageProps> = ({ type = 'story', ...props }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
   const { pages } = storeProvider.config || {};
-  const page = pages ? pages[type] : undefined;
+  const page = pages ? pages[type as PageType] : undefined;
 
   const hasNoSideBars =
     (doc && doc.sidebars === false) || (page && page.sidebars === false);

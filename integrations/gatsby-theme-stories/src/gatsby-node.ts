@@ -89,6 +89,7 @@ exports.createPages = async (
             context: {
               type: catName as PageType,
               category: tag,
+              doc: null,
             },
           });
         });
@@ -98,6 +99,7 @@ exports.createPages = async (
             component: listTemplates[catName as PageType],
             context: {
               type: catName,
+              doc: null,
             },
           });
         }

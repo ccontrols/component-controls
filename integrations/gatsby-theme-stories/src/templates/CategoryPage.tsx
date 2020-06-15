@@ -8,13 +8,14 @@ interface CategoryPageProps {
   pathContext: {
     type: PageType;
     category: string;
+    doc: string;
   };
 }
 
 const CategoryPageTemplate: FC<CategoryPageProps> = ({
-  pathContext: { type, category },
+  pathContext: { type, category, doc },
 }) => (
-  <Layout>
+  <Layout type={type} docId={doc}>
     <CategoryPage type={type} category={category} />
   </Layout>
 );

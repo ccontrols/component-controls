@@ -262,15 +262,12 @@ export const Navmenu: FC<NavMenuProps> = ({
     const LinkClass: LinkClassType | FC<ButtonProps> = items ? Button : Link;
     const itemKey = `item_${itemId}_${level}`;
 
-    let background;
-    if (activeItem && activeItem.id === id) {
-      background = 'active';
-    }
+    const isActiveItem = activeItem && activeItem.id === id;
     const isActiveParent = hasActiveChidlren(item, activeItem);
     const content = (
       <Flex
         sx={{
-          background,
+          background: isActiveItem ? 'active' : undefined,
           pl: level,
         }}
       >
@@ -292,6 +289,7 @@ export const Navmenu: FC<NavMenuProps> = ({
               onSelect(item);
             }
           }}
+          className={isActiveParent ? 'active' : undefined}
           {...rest}
         >
           <Flex variant="navmenu.itemcontainer">

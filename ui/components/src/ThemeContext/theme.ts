@@ -3,9 +3,9 @@ const text =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif';
 
 const heading = {
-  fontFamily: 'heading',
-  lineHeight: 'heading',
-  fontWeight: 'heading',
+  fontFamily: 'semibold',
+  lineHeight: 'semibold',
+  fontWeight: 'semibold',
 };
 
 export const theme: Theme = {
@@ -50,8 +50,9 @@ export const theme: Theme = {
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 42, 64, 96],
   fontWeights: {
+    thin: 300,
     body: 400,
-    heading: 600,
+    semibold: 600,
     bold: 700,
   },
   lineHeights: {
@@ -82,11 +83,11 @@ export const theme: Theme = {
   },
   links: {
     nav: {
-      fontWeight: 300,
+      fontWeight: 'thin',
       fontSize: '14px',
       lineHeight: '1.6rem',
       '&.active': {
-        fontWeight: 700,
+        fontWeight: 'bold',
         color: 'primary',
       },
     },
@@ -198,7 +199,7 @@ export const theme: Theme = {
       background: '#fafbfc',
       whiteSpace: 'nowrap',
       padding: '16px 20px',
-      fontWeight: 700,
+      fontWeight: 'bold',
       fontFamily: 'monospace',
     },
     tr: {
@@ -256,15 +257,15 @@ export const theme: Theme = {
   },
   subtitle: {
     color: 'fadedText',
-    fontWeight: 400,
+    fontWeight: 'body',
     pb: 2,
   },
   subheading: {
-    fontWeight: 400,
+    fontWeight: 'body',
     pb: 1,
   },
   title: {
-    fontWeight: 800,
+    fontWeight: 'bold',
     pb: 4,
   },
   tag: {
@@ -495,7 +496,7 @@ export const theme: Theme = {
       flexDirection: 'column',
       px: 2,
     },
-    heading: { textAlign: 'center', py: 2 },
+    heading: { textAlign: 'left', py: 2, px: 3 },
     filtercontainer: { py: 2, px: 3 },
   },
   appheader: {
@@ -507,7 +508,7 @@ export const theme: Theme = {
       a: {
         color: `secondary`,
         ':hover': { color: `accent` },
-        fontWeight: '700',
+        fontWeight: 'bold',
       },
     },
     inner: {
@@ -538,7 +539,7 @@ export const theme: Theme = {
     list: {},
     item: { my: 2 },
   },
-  categoryage: {
+  categorypage: {
     pagecontainer: { maxWidth: '1000px' },
     titlecontainer: {
       display: 'flex',
@@ -547,6 +548,11 @@ export const theme: Theme = {
       justifyContent: 'space-between',
     },
     listcontainer: { my: 3 },
+    mdxcontainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
   documentlistitem: {
     container: { display: 'flex', flexDirection: 'column' },
@@ -573,12 +579,20 @@ export const theme: Theme = {
     container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
   },
   appsidebarpage: {
-    container: {
+    storycontainer: {
       display: 'grid',
       gridGap: '16px',
       flex: 1,
       minHeight: '100vh',
       gridTemplateColumns: '300px 1fr 250px',
+      position: 'relative',
+    },
+    mdxcontainer: {
+      display: 'grid',
+      gridGap: '16px',
+      flex: 1,
+      minHeight: '100vh',
+      gridTemplateColumns: '300px 1fr',
       position: 'relative',
     },
   },

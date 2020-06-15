@@ -4,6 +4,7 @@ module.exports = {
   stories: [
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/authors/*.mdx',
+    '../../stories/src/tutorial/*.mdx',
     '../../stories/src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/app-components/src/**/*.stories.(js|jsx|tsx|mdx)',
@@ -16,6 +17,9 @@ module.exports = {
     },
     blog: {
       basePath: 'blogs/',
+    },
+    tutorial: {
+      basePath: 'tutorial/',
     },
   },
   webpack: (config = {}, options = {}) => {

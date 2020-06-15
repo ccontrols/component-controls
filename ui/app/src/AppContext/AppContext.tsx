@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
+import { PageType, defPageType } from '@component-controls/specification';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
@@ -11,14 +12,17 @@ import { BlockContextProvider } from '@component-controls/blocks';
 import { LoadingStore } from '@component-controls/loader';
 import { loadStoryStore, Store } from '@component-controls/store';
 import { App } from '../App';
+import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
+  type?: PageType;
   docId?: string;
   store?: LoadingStore;
   linkClass: LinkContextProviderProps['linkClass'];
 }
 
 export const AppContext: FC<AppContextProps> = ({
+  type = defPageType,
   docId,
   children,
   store,
@@ -32,10 +36,16 @@ export const AppContext: FC<AppContextProps> = ({
       }),
     [store],
   );
-
+  const { pages } = storyStore.config || {};
+  const page = pages?.[type];
+  const documentId = docId
+    ? docId
+    : docId === undefined && page?.sidebars
+    ? storyStore.getFirstDocument(type)
+    : undefined;
   return (
-    <ThemeProvider theme={storyStore.config?.theme}>
-      <BlockContextProvider docId={docId} store={storyStore}>
+    <ThemeProvider theme={storyStore.config?.theme} components={mdxComponents}>
+      <BlockContextProvider docId={documentId} store={storyStore}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>
             <App title={docId}>{children}</App>

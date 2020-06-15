@@ -17,6 +17,11 @@ module.exports = {
     story: {
       label: 'API',
     },
+    tutorial: {
+      label: 'Tutorial',
+      topMenu: true,
+      sidebars: true,
+    },
   },  
   storySort: (a, b) => {
     const aDoc = a.split('/')[0];

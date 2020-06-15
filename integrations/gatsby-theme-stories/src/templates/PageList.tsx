@@ -14,7 +14,7 @@ const PageListTemplate: FC<PageListProps> = ({
   pathContext: { type = defPageType },
 }) => {
   return (
-    <Layout>
+    <Layout type={type}>
       <PageList type={type} />
     </Layout>
   );

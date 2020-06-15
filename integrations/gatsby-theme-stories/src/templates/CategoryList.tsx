@@ -7,14 +7,16 @@ import { Layout } from '../components/Layout';
 interface CategoryListProps {
   pathContext: {
     type: PageType;
+    doc: string;
   };
 }
 
 const CategroryListTemplate: FC<CategoryListProps> = ({
-  pathContext: { type },
+  pathContext: { type, doc },
 }) => {
+  console.log(doc);
   return (
-    <Layout>
+    <Layout type={type} docId={doc}>
       <CategoryList type={type} />
     </Layout>
   );

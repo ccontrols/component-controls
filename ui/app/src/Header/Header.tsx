@@ -30,11 +30,11 @@ export const Header: FC = () => {
           {pages
             ? Object.keys(pages).map(type => {
                 const pageType = type as PageType;
+                const page: PageConfiguration = pages[pageType];
                 if (
-                  pages[pageType].hasHomePage &&
+                  page.topMenu &&
                   Object.keys(storeProvider.getPageList(pageType)).length > 0
                 ) {
-                  const page: PageConfiguration = pages[pageType];
                   return (
                     <Link
                       key={`link_${page.basePath}`}

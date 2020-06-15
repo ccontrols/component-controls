@@ -19,15 +19,19 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const Page =
     customPage && customPage.type === type ? customPage.MDXPage : undefined;
   return (
-    <PageContainer variant="categoryage.pagecontainer" id="content">
-      <Box variant="categoryage.titlecontainer">
+    <PageContainer variant="categorypage.pagecontainer" id="content">
+      <Box variant="categorypage.titlecontainer">
         <Title>{category}</Title>
         <Link
           href={`/${pageConfig.basePath}`}
         >{`All ${pageConfig.label}`}</Link>
       </Box>
-      {Page && <Page />}
-      <Box variant="categoryage.listcontainer">
+      {Page && (
+        <Box variant="categorypage.mdxcontainer">
+          <Page />
+        </Box>
+      )}
+      <Box variant="categorypage.listcontainer">
         <DocumentsList pages={pages} />
       </Box>
     </PageContainer>

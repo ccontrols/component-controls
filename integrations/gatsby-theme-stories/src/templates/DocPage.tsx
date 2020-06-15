@@ -13,7 +13,7 @@ interface DocPageProps {
 
 const DocPageTemplate: FC<DocPageProps> = ({ pathContext: { doc, type } }) => {
   return (
-    <Layout docId={doc}>
+    <Layout docId={doc} type={type}>
       <DocPage pagesFn={pages} type={type} />
     </Layout>
   );

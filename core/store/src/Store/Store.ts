@@ -45,8 +45,7 @@ export class Store implements StoryStore {
       [key: string]: number;
     };
   } = {};
-  private _firstStory: string | undefined;
-  private _firstDoc: string | undefined;
+  private _firstDocument: { [key: string]: string | undefined } = {};
   /**
    * create a store with options
    */
@@ -102,16 +101,14 @@ export class Store implements StoryStore {
       }
 
       const sortedDocs = Object.keys(this.loadedStore.docs);
-      this._firstDoc = sortedDocs.find(name => {
-        //@ts-ignore
-        const doc = this.loadedStore.docs[name];
-        return doc.stories && doc.stories.length;
+      const { pages = {} } = this.loadedStore?.config || {};
+      Object.keys(pages).forEach(type => {
+        this._firstDocument[type as PageType] = sortedDocs.find(name => {
+          //@ts-ignore
+          const { type: docType = defPageType } = this.loadedStore.docs[name];
+          return docType === type;
+        });
       });
-      if (this._firstDoc) {
-        const doc = this.loadedStore.docs[this._firstDoc];
-        //point to first story of first doc
-        this._firstStory = doc.stories?.[0];
-      }
     }
   };
   /**
@@ -247,11 +244,9 @@ export class Store implements StoryStore {
   get config(): RunConfiguration | undefined {
     return this.loadedStore?.config;
   }
-  get firstStory(): string | undefined {
-    return this._firstStory;
-  }
-  get firstDoc(): string | undefined {
-    return this._firstDoc;
+
+  getFirstDocument(pageType: PageType): string | undefined {
+    return this._firstDocument[pageType];
   }
 
   getPagePath = (

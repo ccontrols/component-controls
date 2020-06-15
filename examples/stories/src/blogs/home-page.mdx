@@ -18,9 +18,9 @@ export const BoxItem = props => (
   <Flex sx={{ flexDirection: 'column', alignItems: 'center', width: '100%'}}>
     <Title>component-controls</Title>
     <Text sx={{ my: 2 }}>
-      design -> develop -> test
+      design -> develop -> document -> test
     </Text>  
-    <Button as={DocsLink}>Getting started</Button>
+    <Button as={Link} href='/tutorial/'>Getting started</Button>
   </Flex>  
 </Flex>
 
@@ -28,15 +28,15 @@ export const BoxItem = props => (
   <Flex sx={{ flexDirection: 'row', alignItems: 'center',  flexWrap: 'wrap', justifyContent: 'space-between', maxWidth: '1000px', width: '100%'}}>
     <BoxItem>
       <Subtitle>Start with Gatsby</Subtitle>
-      <Button as={Link} href='/storybook'>get started...</Button>
+      <Button as={Link} href='/tutorial/getting%20started/gatsby/'>get started...</Button>
     </BoxItem>
     <BoxItem>
       <Subtitle>Start with Vercel</Subtitle>
-      <Button as={Link} href='/storybook'>get started...</Button>
+      <Button as={Link} href='/tutorial/getting%20started/vercel/'>get started...</Button>
     </BoxItem>
     <BoxItem>
       <Subtitle>Start with Storybook</Subtitle>
-      <Button as={Link} href='/storybook'>get started...</Button>
+      <Button as={Link} href='/tutorial/getting%20started/storybook/'>get started...</Button>
     </BoxItem>
   </Flex>
 </Flex>  

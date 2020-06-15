@@ -15,12 +15,6 @@ export interface PageConfiguration {
   label?: string;
 
   /**
-   * if true, will create a home page with a top-level menu
-   * by default, only story and blogs have home pages
-   */
-  hasHomePage?: boolean;
-
-  /**
    * whether to take a fullpage theme option
    */
   fullPage?: boolean;
@@ -29,6 +23,11 @@ export interface PageConfiguration {
    * whether to add navigation sidebars to the page
    */
   sidebars?: boolean;
+
+  /**
+   * whether to add to the top navigation menu
+   */
+  topMenu?: boolean;
 }
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
@@ -53,12 +52,12 @@ export interface BuildConfiguration {
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
-  pages: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
+  pages?: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
 
   /**
    * page types that are considred as categories fields as well
    */
-  categories: PageType[];
+  categories?: PageType[];
   /**
    * custom webpack fonfigurations setup. One or the other will be used
    */
@@ -70,7 +69,7 @@ export interface BuildConfiguration {
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export interface RunConfiguration {
+export interface RunOnlyConfiguration {
   /**
    * story decorator functions - used to wrap stories
    * example: [story => <ThemeProvider>{story()}</ThemeProvider>]
@@ -131,6 +130,9 @@ export interface RunConfiguration {
   storySort?: (a: string, b: string) => number;
 }
 
+export type RunConfiguration = RunOnlyConfiguration &
+  Omit<BuildConfiguration, 'pages'>;
+
 export const defaultRunConfig: RunConfiguration = {
   siteTitle: 'Component controls',
   siteTitleAlt:
@@ -144,13 +146,13 @@ export const defaultRunConfig: RunConfiguration = {
   pages: {
     story: {
       label: 'Docs',
-      hasHomePage: true,
       sidebars: true,
+      topMenu: true,
     },
     blog: {
       label: 'Blog',
-      hasHomePage: true,
       sidebars: false,
+      topMenu: true,
     },
     author: {
       label: 'Authors',
