@@ -10,8 +10,8 @@
     -   [getConfigurationArg](#getconfigurationarg)
     -   [loadConfiguration](#loadconfiguration)
     -   [BuildConfiguration](#buildconfiguration)
-    -   [WebpackCOnfig](#webpackconfig)
     -   [PageType](#pagetype)
+    -   [WebpackConfig](#webpackconfig)
     -   [PageConfiguration](#pageconfiguration)
     -   [WebpackConfigFn](#webpackconfigfn)
 
@@ -114,7 +114,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L46)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L45)_
 
 
 
@@ -122,22 +122,23 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 | Name           | Type                                                                                           | Description                                                                                                                                    |
 | -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `finalWebpack` | [WebpackCOnfig](#webpackconfig)                                                                |                                                                                                                                                |
+| `categories`   | [PageType](#pagetype)\[]                                                                       | page types that are considred as categories fields as well                                                                                     |
+| `finalWebpack` | [WebpackConfig](#webpackconfig)                                                                |                                                                                                                                                |
 | `pages`        | Record&lt;[PageType](#pagetype), Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'>> | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                                                                                      | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackCOnfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
-
-## WebpackCOnfig
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
-
-[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+| `webpack`      | [WebpackConfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
 
 ## PageType
 
 _defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author'
+
+## WebpackConfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L39)_
+
+[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PageConfiguration
 
@@ -147,17 +148,17 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ### properties
 
-| Name          | Type    | Description                                                                                             |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| `basePath`    | string  | base url path for the page                                                                              |
-| `fullPage`    | boolean | whether to take a fullpage theme option                                                                 |
-| `hasHomePage` | boolean | if true, will create a home page with a top-level menu by default, only story and blogs have home pages |
-| `label`       | string  | label - used for menu labels                                                                            |
-| `sidebars`    | boolean | whether to add navigation sidebars to the page                                                          |
+| Name       | Type    | Description                                    |
+| ---------- | ------- | ---------------------------------------------- |
+| `basePath` | string  | base url path for the page                     |
+| `fullPage` | boolean | whether to take a fullpage theme option        |
+| `label`    | string  | label - used for menu labels                   |
+| `sidebars` | boolean | whether to add navigation sidebars to the page |
+| `topMenu`  | boolean | whether to add to the top navigation menu      |
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L35)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 

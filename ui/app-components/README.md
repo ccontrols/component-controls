@@ -8,6 +8,7 @@
     -   [<ins>Link</ins>](#inslinkins)
     -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
     -   [<ins>Navmenu</ins>](#insnavmenuins)
+    -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
     -   [<ins>SkiLinksItem</ins>](#insskilinksitemins)
@@ -98,6 +99,19 @@ _Navmenu [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `onSelect`   | _(item?: MenuItem) => void_          | Function that will be called when the user selects a menu item |
 | `search`     | _string_                             | If specified, will filter the items by the search terms        |
 
+## <ins>Pagination</ins>
+
+A pagination component, navigate previous and next page
+
+_Pagination [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app-components/src/Pagination/Pagination.tsx)_
+
+### properties
+
+| Name   | Type             | Description                     |
+| ------ | ---------------- | ------------------------------- |
+| `prev` | _PaginationPage_ | link and title to previous page |
+| `next` | _PaginationPage_ | link and title to next page     |
+
 ## <ins>Sidebar</ins>
 
 Collapsible side bar component
@@ -109,8 +123,6 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | Name          | Type      | Description                                          |
 | ------------- | --------- | ---------------------------------------------------- |
 | `title`       | _any_     | Title string or any react node                       |
-| `width`       | _number_  | The width of the side bar in pixels                  |
-| `minWidth`    | _number_  | min width for sidebar                                |
 | `collapsible` | _boolean_ | Whether the sidebar can be collapsed                 |
 | `children`    | _any_     | children content elements to be displayed in Sidebar |
 

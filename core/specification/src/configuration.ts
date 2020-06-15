@@ -36,7 +36,7 @@ type WebpackConfigFn = (
   config: WebpackConfiguration,
   options?: any,
 ) => WebpackConfiguration;
-type WebpackCOnfig = WebpackConfiguration | WebpackConfigFn;
+type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 /**
  * global configuration used at build time
@@ -61,8 +61,8 @@ export interface BuildConfiguration {
   /**
    * custom webpack fonfigurations setup. One or the other will be used
    */
-  webpack?: WebpackCOnfig;
-  finalWebpack?: WebpackCOnfig;
+  webpack?: WebpackConfig;
+  finalWebpack?: WebpackConfig;
 }
 
 /**

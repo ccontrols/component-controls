@@ -86,9 +86,10 @@ _Layout [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `docId` | _string_ |             |
+| Name    | Type       | Description |
+| ------- | ---------- | ----------- |
+| `docId` | _string_   |             |
+| `type`  | _PageType_ |             |
 
 ## <ins>pages</ins>
 
@@ -100,9 +101,9 @@ _CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name           | Type                  | Description |
-| -------------- | --------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; }_ |             |
+| Name           | Type                               | Description |
+| -------------- | ---------------------------------- | ----------- |
+| `pathContext*` | _{ type: PageType; doc: string; }_ |             |
 
 ## <ins>CategoryPage</ins>
 
@@ -110,9 +111,9 @@ _CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name           | Type                                    | Description |
-| -------------- | --------------------------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; category: string; }_ |             |
+| Name           | Type                                                 | Description |
+| -------------- | ---------------------------------------------------- | ----------- |
+| `pathContext*` | _{ type: PageType; category: string; doc: string; }_ |             |
 
 ## <ins>DocPage</ins>
 

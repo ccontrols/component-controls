@@ -19,7 +19,9 @@
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
+    -   [<ins>SidebarsMDXPage</ins>](#inssidebarsmdxpageins)
     -   [<ins>SidebarsPage</ins>](#inssidebarspageins)
+    -   [<ins>SidebarsStoryPage</ins>](#inssidebarsstorypageins)
     -   [<ins>TagsList</ins>](#instagslistins)
 
 # Overview
@@ -60,6 +62,7 @@ _AppContext [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 | Name         | Type           | Description |
 | ------------ | -------------- | ----------- |
+| `type`       | _PageType_     |             |
 | `docId`      | _string_       |             |
 | `store`      | _LoadingStore_ |             |
 | `linkClass*` | _any_          |             |
@@ -239,11 +242,34 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 | `title` | _ReactNode_ | title element |
 | `type`  | _PageType_  | page type     |
 
-## <ins>SidebarsPage</ins>
+## <ins>SidebarsMDXPage</ins>
 
 document page - rendering with sidebars and tabs for multiple document views
 
+_SidebarsMDXPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsMDXPage.tsx)_
+
+### properties
+
+| Name    | Type       | Description |
+| ------- | ---------- | ----------- |
+| `type*` | _PageType_ | page type   |
+
+## <ins>SidebarsPage</ins>
+
 _SidebarsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsPage.tsx)_
+
+### properties
+
+| Name      | Type                                  | Description  |
+| --------- | ------------------------------------- | ------------ |
+| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
+| `type*`   | _PageType_                            | page type    |
+
+## <ins>SidebarsStoryPage</ins>
+
+document page - rendering with sidebars and tabs for multiple document views
+
+_SidebarsStoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsStoryPage.tsx)_
 
 ### properties
 

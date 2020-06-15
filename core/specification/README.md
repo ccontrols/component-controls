@@ -56,20 +56,22 @@
     -   [StoryRenderFn](#storyrenderfn)
     -   [BuildConfiguration](#buildconfiguration)
     -   [PageConfiguration](#pageconfiguration)
-    -   [RunConfiguration](#runconfiguration)
+    -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [PageType](#pagetype)
     -   [PagesConfiguration](#pagesconfiguration)
-    -   [WebpackCOnfig](#webpackconfig)
+    -   [RunConfiguration](#runconfiguration)
+    -   [WebpackConfig](#webpackconfig)
     -   [WebpackConfigFn](#webpackconfigfn)
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [PageType](#pagetype-1)
+    -   [RunConfiguration](#runconfiguration-1)
     -   [StoryArguments](#storyarguments-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
-    -   [WebpackCOnfig](#webpackconfig-1)
+    -   [WebpackConfig](#webpackconfig-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [PageType](#pagetype-2)
@@ -917,7 +919,7 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L46)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L45)_
 
 
 
@@ -925,10 +927,11 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 | Name           | Type                                                                                           | Description                                                                                                                                    |
 | -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `finalWebpack` | [WebpackCOnfig](#webpackconfig)                                                                |                                                                                                                                                |
+| `categories`   | [PageType](#pagetype)\[]                                                                       | page types that are considred as categories fields as well                                                                                     |
+| `finalWebpack` | [WebpackConfig](#webpackconfig)                                                                |                                                                                                                                                |
 | `pages`        | Record&lt;[PageType](#pagetype), Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'>> | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                                                                                      | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackCOnfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+| `webpack`      | [WebpackConfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
 
 ## PageConfiguration
 
@@ -938,20 +941,20 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ### properties
 
-| Name          | Type    | Description                                                                                             |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| `basePath`    | string  | base url path for the page                                                                              |
-| `fullPage`    | boolean | whether to take a fullpage theme option                                                                 |
-| `hasHomePage` | boolean | if true, will create a home page with a top-level menu by default, only story and blogs have home pages |
-| `label`       | string  | label - used for menu labels                                                                            |
-| `sidebars`    | boolean | whether to add navigation sidebars to the page                                                          |
+| Name       | Type    | Description                                    |
+| ---------- | ------- | ---------------------------------------------- |
+| `basePath` | string  | base url path for the page                     |
+| `fullPage` | boolean | whether to take a fullpage theme option        |
+| `label`    | string  | label - used for menu labels                   |
+| `sidebars` | boolean | whether to add navigation sidebars to the page |
+| `topMenu`  | boolean | whether to add to the top navigation menu      |
 
-## RunConfiguration
+## RunOnlyConfiguration
 
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L69)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L72)_
 
 
 
@@ -980,7 +983,7 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ## PagesConfiguration
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L34)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L33)_
 
 Record&lt;
 
@@ -992,15 +995,26 @@ Record&lt;
 
 >
 
-## WebpackCOnfig
+## RunConfiguration
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L133)_
+
+### properties
+
+| Name                   | Type                                                        | Description |
+| ---------------------- | ----------------------------------------------------------- | ----------- |
+| `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
+| `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
+
+## WebpackConfig
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L39)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L35)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1014,19 +1028,20 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L163)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L169)_
 
 
 
 ### properties
 
-| Name     | Type   | Description |
-| -------- | ------ | ----------- |
-| `pages*` | object |             |
+| Name          | Type                  | Description |
+| ------------- | --------------------- | ----------- |
+| `categories*` | 'tags' \| 'author'\[] |             |
+| `pages*`      | object                |             |
 
 ## defaultRunConfig
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L130)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L136)_
 
 
 
@@ -1065,6 +1080,17 @@ _defined in [@component-controls/specification/src/configuration.ts](https://git
 
 'story' | 'blog' | 'page' | 'tags' | 'author'
 
+## RunConfiguration
+
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L133)_
+
+### properties
+
+| Name                   | Type                                                        | Description |
+| ---------------------- | ----------------------------------------------------------- | ----------- |
+| `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
+| `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
+
 ## StoryArguments
 
 list of story arguments. Each argument can be a deconstructed argument of itself
@@ -1100,15 +1126,15 @@ _defined in [@component-controls/specification/src/utility.ts](https://github.co
 
 string
 
-## WebpackCOnfig
+## WebpackConfig
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L40)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L39)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesConfiguration
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L34)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L33)_
 
 Record&lt;
 
@@ -1122,7 +1148,7 @@ Record&lt;
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L36)_
+_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L35)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 

@@ -398,6 +398,49 @@ export const theme: Theme = {
       ml: 2,
     },
   },
+  pagination: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      p: 2,
+    },
+    pagecontainer: {},
+    link: {
+      textDecoration: 'none',
+    },
+    prev: {
+      display: 'flex',
+      flexDirection: 'column',
+      py: 2,
+    },
+    next: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      flexDirection: 'column',
+      py: 2,
+    },
+
+    label: {
+      fontSize: 1,
+      color: 'fadedText',
+      pb: 2,
+    },
+    linktitle: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      fontSize: 3,
+      color: 'primary',
+      fontWeight: 'bold',
+    },
+    pagetitle: {
+      px: 3,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      maxWidth: '300px',
+    },
+  },
   sidebar: {
     default: {
       overflowX: 'hidden',
