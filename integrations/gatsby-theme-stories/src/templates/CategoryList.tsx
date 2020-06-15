@@ -14,7 +14,6 @@ interface CategoryListProps {
 const CategroryListTemplate: FC<CategoryListProps> = ({
   pathContext: { type, doc },
 }) => {
-  console.log(doc);
   return (
     <Layout type={type} docId={doc}>
       <CategoryList type={type} />
