@@ -51,7 +51,7 @@ export const Source: FC<SourceProps> = ({
           display: 'block',
         }}
       >
-        {children}
+        {children.trimRight()}
       </SyntaxHighlighter>
     </ActionContainer>
   );
