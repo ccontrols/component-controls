@@ -3,6 +3,7 @@ import { ControlTypes } from '@component-controls/core';
 
 export default {
   title: 'Introduction/Doc',
+  author: 'atanasster',
   controls: {
     name: {
       type: ControlTypes.TEXT,

@@ -186,7 +186,7 @@ export const theme: Theme = {
       },
     },
     thead: {
-      borderBottom: '1px solid #999',
+      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
       backgroundColor: 'header',
       color: 'text',
     },
@@ -203,7 +203,7 @@ export const theme: Theme = {
       fontFamily: 'monospace',
     },
     tr: {
-      borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
     },
   },
   actionbar: {
@@ -618,7 +618,16 @@ export const theme: Theme = {
     },
   },
   documentlistitem: {
-    container: { display: 'flex', flexDirection: 'column' },
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      py: 1,
+      my: 3,
+      p: {
+        my: 0,
+      },
+      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    },
     info: {
       container: {
         display: 'flex',
@@ -662,6 +671,17 @@ export const theme: Theme = {
   container: {
     container: {},
     pagination: { py: 4 },
+  },
+  documentslist: {
+    container: {},
+    sortrow: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      pb: 3,
+    },
+    sortlabel: { width: 'unset', pr: 2 },
+    sortselect: { minWidth: '300px' },
   },
 };
 

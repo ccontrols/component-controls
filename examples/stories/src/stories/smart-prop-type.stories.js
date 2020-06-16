@@ -3,6 +3,7 @@ import { Button } from '../components/PropTypesButton';
 
 export default {
   title: 'Introduction/Smart PropTypes',
+  author: 'atanasster',
   parameters: {
     component: Button,
   },
