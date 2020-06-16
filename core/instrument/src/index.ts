@@ -1,4 +1,5 @@
 import * as parser from '@babel/parser';
+import * as fs from 'fs';
 import mdx from '@mdx-js/mdx';
 import matter from 'gray-matter';
 import { File } from '@babel/types';
@@ -102,6 +103,9 @@ const parseSource = async (
       store.packages[storyPackage.fileHash] = storyPackage;
       doc.package = storyPackage.fileHash;
     }
+    const stats = fs.statSync(filePath);
+    doc.dateModified = doc.dateModified || stats.mtime;
+    doc.date = doc.date || stats.birthtime;
   }
   for (const key of Object.keys(store.stories)) {
     const story: Story = store.stories[key];

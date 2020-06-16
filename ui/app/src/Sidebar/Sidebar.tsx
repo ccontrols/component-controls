@@ -88,9 +88,7 @@ export const Sidebar: FC<SidebarProps> = ({
       const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
         const { title } = doc;
         const levels = title.split('/');
-        if (doc.menu !== false) {
-          createMenuItem(storeProvider, doc, type, levels, acc);
-        }
+        createMenuItem(storeProvider, doc, type, levels, acc);
         return acc;
       }, []);
       return menuItems;

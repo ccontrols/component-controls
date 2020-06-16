@@ -33,6 +33,7 @@
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
+    "react": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
@@ -42,6 +43,9 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "webpack": "^4.43.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"

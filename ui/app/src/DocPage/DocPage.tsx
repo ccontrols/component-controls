@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
-import { PageContainer, BlockContext } from '@component-controls/blocks';
+import { BlockContext } from '@component-controls/blocks';
+import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps, PageConfig } from '../SidebarsPage';
 import { PageType } from '@component-controls/core';
 

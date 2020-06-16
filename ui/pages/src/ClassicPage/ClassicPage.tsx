@@ -2,7 +2,6 @@
 import { jsx, Box } from 'theme-ui';
 import { FC } from 'react';
 import {
-  EditPage,
   Title,
   Subtitle,
   Story,
@@ -17,7 +16,6 @@ import {
 
 export const ClassicPage: FC = () => (
   <div>
-    <EditPage />
     <Title sx={{ paddingBottom: 1 }} />
     <Subtitle />
     <PackageVersion />

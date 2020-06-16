@@ -5,7 +5,7 @@ import {
   StoryComponent,
   PackageInfo,
 } from '@component-controls/core';
-
+import { StoryStore } from '@component-controls/store';
 import { BlockContext, BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
 
@@ -44,6 +44,11 @@ export interface StoryContextProps {
    * package.json info
    */
   docPackage?: PackageInfo;
+
+  /**
+   * store interface
+   */
+  storeProvider: StoryStore;
 }
 
 /**
@@ -103,6 +108,7 @@ export const useStoryContext = ({
     component: data.component,
     docPackage: data.docPackage,
     options,
+    storeProvider,
   };
 };
 

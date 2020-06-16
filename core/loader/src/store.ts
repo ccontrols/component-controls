@@ -58,6 +58,7 @@ class Store implements LoadingStore {
   getUniquesByField = (field: string) => {
     return this.stores.reduce((acc: { [key: string]: number }, store) => {
       if (store?.doc) {
+        //@ts-ignore
         const value = store.doc[field];
         const values = Array.isArray(value) ? value : [value];
         values.forEach(v => {

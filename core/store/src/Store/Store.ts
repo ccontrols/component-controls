@@ -196,6 +196,32 @@ export class Store implements StoryStore {
     }
     return [];
   };
+  getPrevPage = (
+    type: PageType | undefined,
+    docId: string,
+  ): StoriesDoc | undefined => {
+    if (docId) {
+      const pages = this.getPageList(type);
+      const index = pages.findIndex(p => p.title === docId);
+      if (index > 0) {
+        return pages[index - 1];
+      }
+    }
+    return undefined;
+  };
+  getNextPage = (
+    type: PageType | undefined,
+    docId: string,
+  ): StoriesDoc | undefined => {
+    if (docId) {
+      const pages = this.getPageList(type);
+      const index = pages.findIndex(p => p.title === docId);
+      if (index >= 0 && index < pages.length - 1) {
+        return pages[index + 1];
+      }
+    }
+    return undefined;
+  };
 
   getPagesByCategory = (category: string, value?: any): Pages => {
     if (this.loadedStore?.docs) {
@@ -203,6 +229,7 @@ export class Store implements StoryStore {
       return Object.keys(docs)
         .filter(key => {
           const doc = docs[key];
+          //@ts-ignore
           const cateValue = doc[category];
           if (value === undefined) {
             return cateValue !== undefined;
@@ -221,6 +248,7 @@ export class Store implements StoryStore {
         this._categoryItems[category] = Object.keys(docs).reduce(
           (acc: { [key: string]: number }, key) => {
             const doc = docs[key];
+            //@ts-ignore
             const value = doc[category];
             const values = Array.isArray(value) ? value : [value];
             values.forEach(v => {

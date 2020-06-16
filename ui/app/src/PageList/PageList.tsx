@@ -3,7 +3,8 @@ import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
 import { PageType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
-import { PageContainer, BlockContext } from '@component-controls/blocks';
+import { BlockContext } from '@component-controls/blocks';
+import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 
 export interface PageListProps {

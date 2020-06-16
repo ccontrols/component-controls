@@ -258,9 +258,14 @@ export interface StoriesDoc {
   sidebars?: boolean;
 
   /**
-   *  optional date the document was created
+   *  optional date the document was created. If not assigned, the instrumentation process will use birthtime
    */
-  date?: string;
+  date?: Date;
+
+  /**
+   *  optional date the document was last modified. If not assigned, the instrumentation process will use mtime
+   */
+  dateModified?: Date;
 
   /**
    *  comma-separated list of document tags, used for search
@@ -276,10 +281,14 @@ export interface StoriesDoc {
    * document author
    */
   author?: string;
-
-  [name: string]: any;
 }
 
+export const dateToLocalString = (date?: Date): string =>
+  date
+    ? new Date(date).toLocaleDateString('en-US', {
+        timeZone: 'UTC',
+      })
+    : '';
 /**
  * list of components used in stories
  */

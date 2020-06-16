@@ -49,7 +49,6 @@ export const loadStoryStore = (
               source,
               component,
               fileName,
-              repository,
               components,
               excludeStories,
               includeStories,

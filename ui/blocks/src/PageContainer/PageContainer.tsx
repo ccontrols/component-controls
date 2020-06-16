@@ -1,31 +1,40 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useEffect, forwardRef } from 'react';
+import { FC, useEffect, forwardRef, Ref, ComponentType } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '@component-controls/components';
-
+import { Container } from '../Container';
 import { StoryContextConsumer } from '../context';
 
-export interface PageContainerProps {
+export interface PageContainerOwnProps {
   /**
    * ref to the page container component
    */
-  ref?: React.Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
   /**
    * theme variant
    */
   variant?: string;
+
+  /**
+   * inner wrapper container
+   */
+  wrapper?: ComponentType;
 }
 
+export type PageContainerProps = PageContainerOwnProps &
+  Omit<BoxProps, 'variant'>;
 /**
  * Page container component
  * If the page is an MDX page, will display the MDX components.
  * Otherwise, the page elements are passed as children
  */
-export const PageContainer: FC<PageContainerProps &
-  Omit<BoxProps, 'variant'>> = forwardRef(
-  ({ children, variant, ...rest }, ref: React.Ref<HTMLDivElement>) => {
+export const PageContainer: FC<PageContainerProps> = forwardRef(
+  (
+    { children, variant, wrapper: Wrapper = Container, ...rest },
+    ref: React.Ref<HTMLDivElement>,
+  ) => {
     useEffect(() => {
       try {
         const pageURL =
@@ -52,7 +61,8 @@ export const PageContainer: FC<PageContainerProps &
         <StoryContextConsumer id=".">
           {({ doc }) => {
             const { MDXPage } = doc || {};
-            return MDXPage ? <MDXPage /> : children;
+            const node = MDXPage ? <MDXPage /> : children;
+            return Wrapper ? <Wrapper>{node}</Wrapper> : node;
           }}
         </StoryContextConsumer>
       </Box>

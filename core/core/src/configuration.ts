@@ -1,4 +1,5 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
+import { ComponentType } from 'react';
 import { StoryRenderFn } from './utility';
 
 export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
@@ -128,6 +129,11 @@ export interface RunOnlyConfiguration {
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
+
+  /**
+   * page container react component
+   */
+  container?: ComponentType;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &

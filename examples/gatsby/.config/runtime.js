@@ -1,6 +1,8 @@
+import { Container } from "@component-controls/app";
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
 module.exports = {
+  container: Container,
   siteTitle: `Component controls`,
   siteTitleAlt: `Component controls - https://github.com/ccontrols/component-controls`,
   siteHeadline: `Component controls gatsby`,

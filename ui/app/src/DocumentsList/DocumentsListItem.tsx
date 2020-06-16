@@ -6,6 +6,7 @@ import {
   getDocPath,
   defPageType,
   RunConfiguration,
+  dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Tag, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
@@ -60,9 +61,9 @@ export const DocumentsListItem: FC<PageListItemProps> = ({
       <Box variant="documentlistitem.info.container">
         <Box variant="documentlistitem.info.inner">
           {date ? (
-            <Box variant="documentlistitem.info.date">
-              {new Date(date).toDateString()}
-            </Box>
+            <Box variant="documentlistitem.info.date">{`created: ${dateToLocalString(
+              date,
+            )}`}</Box>
           ) : (
             ''
           )}

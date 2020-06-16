@@ -2,8 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { PageType } from '@component-controls/core';
-import { PageContainer } from '@component-controls/blocks';
-
+import { PageContainer } from '../PageContainer';
 import { Sidebar } from '../Sidebar';
 
 export interface SidebarsMDXPageProps {

@@ -255,6 +255,16 @@ export const theme: Theme = {
       },
     },
   },
+  blockpagecontainer: {
+    container: {},
+    editrow: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      mb: 4,
+    },
+  },
   subtitle: {
     color: 'fadedText',
     fontWeight: 'body',
@@ -290,12 +300,7 @@ export const theme: Theme = {
     transition: 'transform .2s',
   },
   editpage: {
-    container: {
-      position: 'absolute',
-      right: 0,
-      top: 0,
-      p: 2,
-    },
+    container: {},
     inner: {
       display: 'flex',
       flexDirection: 'row',
@@ -305,6 +310,19 @@ export const theme: Theme = {
       pl: 2,
     },
   },
+  lastedited: {
+    container: {},
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    text: {
+      pr: 2,
+      color: 'fadedText',
+    },
+  },
+
   pagecontainer: {
     bg: 'background',
     color: 'text',
@@ -393,6 +411,7 @@ export const theme: Theme = {
     labeltext: {
       whiteSpace: 'nowrap',
       textOverflow: 'ellipsis',
+      overflow: 'hidden',
     },
     expandicon: {
       ml: 2,
@@ -438,6 +457,7 @@ export const theme: Theme = {
       px: 3,
       whiteSpace: 'nowrap',
       textOverflow: 'ellipsis',
+      overflow: 'hidden',
       maxWidth: '300px',
     },
   },
@@ -638,6 +658,10 @@ export const theme: Theme = {
       gridTemplateColumns: '300px 1fr',
       position: 'relative',
     },
+  },
+  container: {
+    container: {},
+    pagination: { py: 4 },
   },
 };
 

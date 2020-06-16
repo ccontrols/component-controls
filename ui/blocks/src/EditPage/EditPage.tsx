@@ -8,7 +8,7 @@ import { ExternalLink } from '@component-controls/components';
 import { useStoryContext } from '../context';
 
 /**
- * Display a Edit this page link at the top of the page.
+ * Display a Edit this page link to the page source repository.
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
 export const EditPage: FC = () => {

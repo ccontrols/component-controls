@@ -3,7 +3,8 @@ import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { PageType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
-import { PageContainer, BlockContext } from '@component-controls/blocks';
+import { BlockContext } from '@component-controls/blocks';
+import { PageContainer } from '../PageContainer';
 import { CategoryListItem } from './CategoryListItem';
 
 export interface CategoryListProps {

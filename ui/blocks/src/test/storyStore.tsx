@@ -302,6 +302,9 @@ and a [link](https://google.com)
   },
   docs: {
     Story: {
+      date: new Date('2020-01-01'),
+      dateModified: new Date('2020-03-31'),
+      package: 'test-package',
       components: {
         ArrowButton:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
@@ -320,7 +323,6 @@ and a [link](https://google.com)
       ],
     },
     mdxStory: {
-      name: 'MDX Story',
       title: 'MDX Story',
       components: {},
       author: 'atanasster',
