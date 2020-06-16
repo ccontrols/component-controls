@@ -9,7 +9,7 @@
     "build-sample": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/specification": "^1.2.0",
+    "@component-controls/core": "^1.2.0",
     "@component-controls/storybook": "^1.2.0",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
 import { PageContainer, BlockContext } from '@component-controls/blocks';
 import { CategoryListItem } from './CategoryListItem';

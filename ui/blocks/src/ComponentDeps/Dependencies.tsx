@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
 import { Flex, Box } from 'theme-ui';
-import { ImportName } from '@component-controls/specification';
+import { ImportName } from '@component-controls/core';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
 const defaultExport = 'default';

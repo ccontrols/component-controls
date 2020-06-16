@@ -1,4 +1,4 @@
-import { BuildConfiguration } from '@component-controls/specification';
+import { BuildConfiguration } from '@component-controls/core';
 
 export interface StoryPath {
   absPath: string;

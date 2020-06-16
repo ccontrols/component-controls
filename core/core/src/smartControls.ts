@@ -1,11 +1,6 @@
 /* eslint-disable no-console */
-import {
-  ComponentControl,
-  ComponentControls,
-  ControlTypes,
-  PropType,
-  PropTypes,
-} from '@component-controls/specification';
+import { ComponentControl, ComponentControls, ControlTypes } from './controls';
+import { PropType, PropTypes } from './components';
 
 const cleanQuotes = (txt?: string) => (txt ? txt.replace(/['"]+/g, '') : txt);
 

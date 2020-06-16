@@ -6,7 +6,7 @@ import {
   getDocPath,
   defPageType,
   RunConfiguration,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { Subtitle, Markdown, Tag, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
 

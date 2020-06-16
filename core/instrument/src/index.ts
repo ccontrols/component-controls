@@ -5,8 +5,7 @@ import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import deepMerge from 'deepmerge';
-import { Story, StoriesDoc } from '@component-controls/specification';
-import { getASTSource } from '@component-controls/core';
+import { Story, StoriesDoc, getASTSource } from '@component-controls/core';
 
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';

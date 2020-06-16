@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { CategoryList } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 

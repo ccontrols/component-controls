@@ -2,13 +2,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
-import {
-  Story,
-  StoriesDoc,
-  PackageInfo,
-} from '@component-controls/specification';
 import { Styled } from 'theme-ui';
-
+import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
 import {
   ThemeContext,
   Source,

@@ -1,13 +1,14 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { Donut, Button, Heading } from 'theme-ui';
 import {
   StoriesStore,
   ControlTypes,
   defaultBuildConfig,
   deepMerge,
   defaultRunConfig,
-} from '@component-controls/specification';
-import { Donut, Button, Heading } from 'theme-ui';
+} from '@component-controls/core';
+
 import { MDXContent } from './MDXStory';
 
 export const store: StoriesStore = {
@@ -28,7 +29,6 @@ export const store: StoriesStore = {
         '@component-controls/components': '^1.0.1',
         '@component-controls/core': '^1.0.1',
         '@component-controls/editors': '^1.0.1',
-        '@component-controls/specification': '^1.0.1',
         '@component-controls/store': '^1.0.3',
         '@mdx-js/react': '^1.6.5',
         '@primer/octicons-react': '^9.6.0',

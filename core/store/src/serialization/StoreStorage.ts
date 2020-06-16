@@ -1,7 +1,4 @@
-import {
-  StoriesStore,
-  getComponentName,
-} from '@component-controls/specification';
+import { StoriesStore, getComponentName } from '@component-controls/core';
 
 import { COMPONENT_CONTROLS_STORAGE } from '../types';
 

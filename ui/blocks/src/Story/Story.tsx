@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import { FC, createElement, forwardRef, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { deepMerge, StoryRenderFn } from '@component-controls/specification';
-import { getControlValues } from '@component-controls/core';
+import {
+  deepMerge,
+  StoryRenderFn,
+  getControlValues,
+} from '@component-controls/core';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,

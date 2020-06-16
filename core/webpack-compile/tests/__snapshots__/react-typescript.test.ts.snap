@@ -3,6 +3,10 @@
 exports[`test typescript react settings compile 1`] = `
 Store {
   "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
     "pages": Object {
       "author": Object {
         "basePath": "authors/",
@@ -89,7 +93,7 @@ actions can accept an order prop, and can also be superimposed",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 108,
+          "line": 88,
         },
         "start": Object {
           "column": 45,
@@ -157,11 +161,10 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         return (
           <Box
             key={\`\${typeof title === 'string' ? title : 'item'}_\${index}\`}
+            variant=\\"actionbar.item\\"
             sx={{
-              mt: 1,
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
-              fontSize: 1,
               a: ActionColors({ theme, disabled }),
               button: ActionColors({ theme, disabled }),
             }}
@@ -182,29 +185,10 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
       },
     );
   }, [theme, actions]);
-
   return (
-    <div
-      sx={{
-        position: 'relative',
-      }}
-    >
-      <Flex
-        sx={{
-          position: 'absolute',
-          width: '100%',
-        }}
-      >
-        <Flex
-          sx={{
-            flexDirection: 'row-reverse',
-            marginLeft: 'auto',
-          }}
-        >
-          {items}
-        </Flex>
-      </Flex>
-    </div>
+    <Box variant=\\"actionbar.container\\">
+      <Flex variant=\\"actionbar.inner\\">{items}</Flex>
+    </Box>
   );
 };
 ",

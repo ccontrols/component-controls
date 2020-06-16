@@ -1,4 +1,4 @@
-import { ComponentControlArray } from '@component-controls/specification';
+import { ComponentControlArray } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const ArrayControl: AsReactComponent<ComponentControlArray> = (

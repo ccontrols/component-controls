@@ -1,4 +1,4 @@
-import { Story, CodeLocation } from '@component-controls/specification';
+import { Story, CodeLocation } from '@component-controls/core';
 
 export const adjustSourceLocation = (
   story: Story,

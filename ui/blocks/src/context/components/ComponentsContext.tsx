@@ -5,7 +5,7 @@ import {
   StoryComponents,
   getComponentName,
   PackageInfo,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 import { BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';

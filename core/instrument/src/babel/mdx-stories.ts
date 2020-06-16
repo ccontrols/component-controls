@@ -3,8 +3,8 @@ import {
   StoriesDoc,
   StoryParameters,
   CodeLocation,
-} from '@component-controls/specification';
-import { getASTSource } from '@component-controls/core';
+  getASTSource,
+} from '@component-controls/core';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';

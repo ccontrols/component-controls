@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { sync as globSync } from 'glob';
 import yargs from 'yargs';
-import { BuildConfiguration } from '@component-controls/specification';
+import { BuildConfiguration } from '@component-controls/core';
 
 export const buildConfigFileNames = ['buildtime.js', 'build.js', 'main.js'];
 

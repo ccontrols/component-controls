@@ -1,4 +1,4 @@
-import { ComponentControlObject } from '@component-controls/specification';
+import { ComponentControlObject } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const ObjectControl: AsReactComponent<ComponentControlObject> = (

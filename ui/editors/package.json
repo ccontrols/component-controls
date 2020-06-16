@@ -32,7 +32,6 @@
   "dependencies": {
     "@component-controls/components": "^1.2.0",
     "@component-controls/core": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
     "@primer/octicons-react": "^9.6.0",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",

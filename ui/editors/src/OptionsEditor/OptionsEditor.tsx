@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import {
   ComponentControlOptions,
   ControlTypes,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { normalizeOptions } from './utils';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';

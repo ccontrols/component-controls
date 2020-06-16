@@ -38,7 +38,6 @@
   "dependencies": {
     "@component-controls/core": "^1.2.0",
     "@component-controls/loader": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
     "@storybook/csf": "^0.0.1",
     "broadcast-channel": "^3.1.0",
     "typescript": "^3.8.3"

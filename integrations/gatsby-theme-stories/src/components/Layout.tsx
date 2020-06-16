@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { AppContext } from '@component-controls/app';
 const bundle = require('@component-controls/webpack-compile/bundle');
 

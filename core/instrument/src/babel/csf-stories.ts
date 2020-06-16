@@ -1,4 +1,4 @@
-import { Story, StoriesDoc, Stories } from '@component-controls/specification';
+import { Story, StoriesDoc, Stories } from '@component-controls/core';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';

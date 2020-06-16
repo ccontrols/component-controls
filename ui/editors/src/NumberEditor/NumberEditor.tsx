@@ -1,9 +1,6 @@
 import React, { FC, ChangeEvent } from 'react';
 import { Input, Box, BoxProps } from 'theme-ui';
-import {
-  ComponentControlNumber,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlNumber, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

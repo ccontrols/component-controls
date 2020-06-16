@@ -7,7 +7,7 @@ import {
   getStoryPath,
   PageType,
   defPageType,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
   StoreObserver,

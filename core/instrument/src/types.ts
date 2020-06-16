@@ -1,5 +1,5 @@
 import { ParserOptions } from '@babel/parser';
-import { StoriesDoc, StoriesStore } from '@component-controls/specification';
+import { StoriesDoc, StoriesStore } from '@component-controls/core';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,

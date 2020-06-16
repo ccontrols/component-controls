@@ -1,4 +1,4 @@
-import { ComponentControlBoolean } from '@component-controls/specification';
+import { ComponentControlBoolean } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const BooleanControl: AsReactComponent<ComponentControlBoolean> = (

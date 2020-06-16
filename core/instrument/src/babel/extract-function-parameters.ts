@@ -1,10 +1,6 @@
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import {
-  Story,
-  CodeLocation,
-  StoryArguments,
-} from '@component-controls/specification';
+import { Story, CodeLocation, StoryArguments } from '@component-controls/core';
 import { adjustSourceLocation } from '../misc/source-location';
 import {
   extractArgumentsUsage,

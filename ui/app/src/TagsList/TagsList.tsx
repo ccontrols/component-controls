@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { getDocPath } from '@component-controls/specification';
+import { getDocPath } from '@component-controls/core';
 import { Tag } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { Link } from '@component-controls/components';

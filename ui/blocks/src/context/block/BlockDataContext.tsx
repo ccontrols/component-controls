@@ -10,7 +10,7 @@ import {
   StoriesDoc,
   getComponentName,
   PackageInfo,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 
 export interface BlockDataContextProps {

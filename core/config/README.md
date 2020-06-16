@@ -9,11 +9,6 @@
     -   [extractStories](#extractstories)
     -   [getConfigurationArg](#getconfigurationarg)
     -   [loadConfiguration](#loadconfiguration)
-    -   [BuildConfiguration](#buildconfiguration)
-    -   [PageType](#pagetype)
-    -   [WebpackConfig](#webpackconfig)
-    -   [PageConfiguration](#pageconfiguration)
-    -   [WebpackConfigFn](#webpackconfigfn)
 
 # Overview
 
@@ -108,66 +103,5 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 | `configFolder` | string                                                 | folder where the configuration file is located |
 | `args`         | string\[]                                              | optional arguments                             |
 | `returns`      | [ConfigrationResult](#configrationresult) \| undefined |                                                |
-
-## BuildConfiguration
-
-global configuration used at build time
-stored in a file named main.js/main.ts
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L45)_
-
-
-
-### properties
-
-| Name           | Type                                                                                           | Description                                                                                                                                    |
-| -------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [PageType](#pagetype)\[]                                                                       | page types that are considred as categories fields as well                                                                                     |
-| `finalWebpack` | [WebpackConfig](#webpackconfig)                                                                |                                                                                                                                                |
-| `pages`        | Record&lt;[PageType](#pagetype), Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'>> | base url path for API documentation pages. Default is "docs/"                                                                                  |
-| `stories`      | string\[]                                                                                      | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackConfig](#webpackconfig)                                                                | custom webpack fonfigurations setup. One or the other will be used                                                                             |
-
-## PageType
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L4)_
-
-'story' | 'blog' | 'page' | 'tags' | 'author'
-
-## WebpackConfig
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L39)_
-
-[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
-
-## PageConfiguration
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L6)_
-
-
-
-### properties
-
-| Name       | Type    | Description                                    |
-| ---------- | ------- | ---------------------------------------------- |
-| `basePath` | string  | base url path for the page                     |
-| `fullPage` | boolean | whether to take a fullpage theme option        |
-| `label`    | string  | label - used for menu labels                   |
-| `sidebars` | boolean | whether to add navigation sidebars to the page |
-| `topMenu`  | boolean | whether to add to the top navigation menu      |
-
-## WebpackConfigFn
-
-_defined in [@component-controls/specification/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/configuration.ts#L35)_
-
-**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
-
-### parameters
-
-| Name      | Type                                          | Description |
-| --------- | --------------------------------------------- | ----------- |
-| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
-| `options` | any                                           |             |
-| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

@@ -7,7 +7,7 @@ import {
   defPageType,
   Pages,
   PageType,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
 
 export interface LoadingStore {

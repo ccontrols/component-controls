@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/specification": "^1.2.0",
+    "@component-controls/core": "^1.2.0",
     "react": "^16.12.0",
     "react-docgen-typescript": "^1.16.1"
   },
@@ -43,7 +43,7 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@component-controls/specification": "*",
+    "@component-controls/core": "*",
     "react": "*"
   },
   "jest": {

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { PageType, defPageType } from '@component-controls/specification';
+import { PageType, defPageType } from '@component-controls/core';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,

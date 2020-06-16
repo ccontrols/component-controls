@@ -42,7 +42,6 @@
     "@component-controls/pages": "^1.2.0",
     "@component-controls/react-docgen-info": "^1.2.0",
     "@component-controls/react-docgen-typescript-info": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
     "@component-controls/store": "^1.2.0",
     "@component-controls/storybook-custom-docs": "^1.2.0",
     "@component-controls/webpack-configs": "^1.2.0",

@@ -3,6 +3,10 @@
 exports[`test example stories compile 1`] = `
 Store {
   "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
     "pages": Object {
       "author": Object {
         "basePath": "authors/",

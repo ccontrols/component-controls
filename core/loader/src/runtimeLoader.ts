@@ -1,7 +1,4 @@
-import {
-  deepMerge,
-  defaultBuildConfig,
-} from '@component-controls/specification';
+import { deepMerge, defaultBuildConfig } from '@component-controls/core';
 
 import { loadConfiguration, extractStories } from '@component-controls/config';
 import { stringifyRequest } from 'loader-utils';

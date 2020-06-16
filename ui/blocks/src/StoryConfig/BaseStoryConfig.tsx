@@ -4,11 +4,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import { FC, useState, useContext } from 'react';
-import {
-  Story,
-  StoriesDoc,
-  PackageInfo,
-} from '@component-controls/specification';
+import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
 import {
   ThemeContext,
   Source,

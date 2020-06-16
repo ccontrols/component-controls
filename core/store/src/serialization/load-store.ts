@@ -5,7 +5,7 @@ import {
   Story,
   deepMerge,
   defaultRunConfig,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { addSmartControls } from './smart-controls';

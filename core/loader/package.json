@@ -37,7 +37,7 @@
   "dependencies": {
     "@component-controls/config": "^1.2.0",
     "@component-controls/instrument": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
+    "@component-controls/core": "^1.2.0",
     "@storybook/csf": "^0.0.1",
     "chalk": "^4.0.0",
     "js-string-escape": "^1.0.1",

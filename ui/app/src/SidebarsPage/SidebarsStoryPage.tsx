@@ -2,7 +2,7 @@
 import { FC, useRef, ReactNode } from 'react';
 import { jsx, Box } from 'theme-ui';
 import * as qs from 'qs';
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { Tabs, Tab, TabList, TabPanel } from '@component-controls/components';
 import { PageContainer } from '@component-controls/blocks';
 

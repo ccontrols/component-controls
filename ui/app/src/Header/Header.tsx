@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box, Text } from 'theme-ui';
-import { PageType, PageConfiguration } from '@component-controls/specification';
+import { PageType, PageConfiguration } from '@component-controls/core';
 
 import {
   Link,

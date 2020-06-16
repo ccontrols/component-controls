@@ -1,4 +1,4 @@
-import { ComponentControlFiles } from '@component-controls/specification';
+import { ComponentControlFiles } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const FilesControl: AsReactComponent<ComponentControlFiles> = (

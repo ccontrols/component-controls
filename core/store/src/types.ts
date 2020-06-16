@@ -5,7 +5,7 @@ import {
   Pages,
   RunConfiguration,
   PageType,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 /**
  * store on change observer.

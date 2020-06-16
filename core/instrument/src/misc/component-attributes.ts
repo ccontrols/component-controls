@@ -1,8 +1,4 @@
-import {
-  Story,
-  StoriesDoc,
-  StoryParameters,
-} from '@component-controls/specification';
+import { Story, StoriesDoc, StoryParameters } from '@component-controls/core';
 
 export const componentsFromParams = (
   element: StoriesDoc | Story | StoryParameters,

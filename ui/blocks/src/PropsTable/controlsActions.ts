@@ -5,12 +5,9 @@ import {
   resetControlValues,
   getControlValues,
   randomizeData,
-} from '@component-controls/core';
-
-import {
   ComponentControls,
   SetControlValueFn,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 export interface UseControlsActionsProps {
   controls?: ComponentControls;

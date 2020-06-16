@@ -1,4 +1,4 @@
-import { ComponentControlButton } from '@component-controls/specification';
+import { ComponentControlButton } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const ButtonControl: AsReactComponent<ComponentControlButton> = (

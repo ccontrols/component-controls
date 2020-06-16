@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '@component-controls/core';
 
 export default {
   title: 'Introduction/Controls',

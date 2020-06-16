@@ -1,8 +1,4 @@
-import {
-  StoriesDoc,
-  StoryComponent,
-  Story,
-} from '@component-controls/specification';
+import { StoriesDoc, StoryComponent, Story } from '@component-controls/core';
 
 export const CURRENT_STORY = '.';
 

@@ -3,7 +3,7 @@ import {
   StoryComponent,
   StoriesDoc,
   PackageInfo,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';

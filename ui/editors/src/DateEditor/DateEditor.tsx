@@ -1,9 +1,6 @@
 import React, { ChangeEvent, RefObject } from 'react';
 import { Input, Box } from 'theme-ui';
-import {
-  ComponentControlDate,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlDate, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

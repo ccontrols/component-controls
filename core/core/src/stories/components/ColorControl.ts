@@ -1,4 +1,4 @@
-import { ComponentControlColor } from '@component-controls/specification';
+import { ComponentControlColor } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const ColorControl: AsReactComponent<ComponentControlColor> = (

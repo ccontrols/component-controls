@@ -1,4 +1,4 @@
-import { getDocPath, PageType } from '@component-controls/specification';
+import { getDocPath, PageType } from '@component-controls/core';
 
 import {
   compile,

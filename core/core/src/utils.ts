@@ -5,7 +5,7 @@ import {
   ComponentControls,
   ComponentControlArray,
   ControlTypes,
-} from '@component-controls/specification';
+} from './controls';
 import deepmerge from 'deepmerge';
 
 const mergeValue = (control: ComponentControl, value: any): any => {

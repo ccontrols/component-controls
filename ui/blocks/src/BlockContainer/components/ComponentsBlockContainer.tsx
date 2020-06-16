@@ -4,8 +4,7 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 
-import { getComponentName } from '@component-controls/specification';
-import { hasControls } from '@component-controls/core';
+import { getComponentName, hasControls } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 import {
   ComponentsContainer,

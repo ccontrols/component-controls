@@ -1,5 +1,5 @@
 import React, { FC, useContext } from 'react';
-import { Pages } from '@component-controls/specification';
+import { Pages } from '@component-controls/core';
 import { BlockContext } from '@component-controls/blocks';
 import { DocumentsListItem } from './DocumentsListItem';
 

@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from 'react';
-import { StoryComponent, PackageInfo } from '@component-controls/specification';
+import { StoryComponent, PackageInfo } from '@component-controls/core';
 import { Dependencies } from './Dependencies';
 
 export interface BaseComponentDepsProps {

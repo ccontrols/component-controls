@@ -10,8 +10,8 @@
         -   [Motivation](#motivation-1)
         -   [Limitations](#limitations)
 -   [Core packages](#core-packages)
-    -   [@component-controls/specification](#component-controlsspecification)
     -   [@component-controls/core](#component-controlscore)
+    -   [@component-controls/core](#component-controlscore-1)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
     -   [@component-controls/webpack-compile](#component-controlswebpack-compile)
@@ -123,22 +123,22 @@ Storybook Addon For live editing of component controls
 
 # Core packages
 
-<package-section file="./core/specification/README.md" section="overview" />
+<package-section file="./core/core/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/specification](https://github.com/ccontrols/component-controls/blob/master/core/specification)
+## [@component-controls/core](https://github.com/ccontrols/component-controls/blob/master/core/core)
 
-Component controls specification with typescript definitions
+Component controls core types and utility functions
 
-Typescript definitions of the component-controls specification.
+Type definitions of the component-controls specification and accompanying utility functions.
 Includes definitions for:
 
--   [Story](https://github.com/ccontrols/component-controls/tree/master/core/specification#story)
--   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/specification#stories)
--   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#controltypes)
--   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/specification#componentcontrol)
--   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#proptypes)
+-   [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
+-   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
+-   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
+-   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
+-   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
 -   and more...
 
 <!-- END-PACKAGE-SECTION -->
@@ -149,7 +149,17 @@ Includes definitions for:
 
 ## [@component-controls/core](https://github.com/ccontrols/component-controls/blob/master/core/core)
 
-Component controls core utility routines
+Component controls core types and utility functions
+
+Type definitions of the component-controls specification and accompanying utility functions.
+Includes definitions for:
+
+-   [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
+-   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
+-   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
+-   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
+-   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
+-   and more...
 
 <!-- END-PACKAGE-SECTION -->
 

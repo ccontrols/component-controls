@@ -17,7 +17,7 @@ import {
   PageType,
   Pages,
   defPageType,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 
 export interface SidebarProps {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '../components';
 import { OptionsControl } from './components/OptionsControl';
 
 export default {

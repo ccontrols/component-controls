@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 import { pages } from '../config/pages';

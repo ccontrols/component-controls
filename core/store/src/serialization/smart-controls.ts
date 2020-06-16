@@ -4,8 +4,8 @@ import {
   StoriesDoc,
   StoryComponents,
   getComponentName,
-} from '@component-controls/specification';
-import { controlsFromProps } from '@component-controls/core';
+  controlsFromProps,
+} from '@component-controls/core';
 
 export const addSmartControls = (
   story: Story,

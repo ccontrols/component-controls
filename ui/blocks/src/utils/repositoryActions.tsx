@@ -1,5 +1,5 @@
 import React from 'react';
-import { PackageInfo } from '@component-controls/specification';
+import { PackageInfo } from '@component-controls/core';
 import { ActionItem, ExternalLink } from '@component-controls/components';
 
 export const repositoryActions = (

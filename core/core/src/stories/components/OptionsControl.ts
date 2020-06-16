@@ -1,4 +1,4 @@
-import { ComponentControlOptions } from '@component-controls/specification';
+import { ComponentControlOptions } from '../../controls';
 import { AsReactComponent } from './types';
 
 export const OptionsControl: AsReactComponent<ComponentControlOptions> = (

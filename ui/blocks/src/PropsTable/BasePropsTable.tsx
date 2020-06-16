@@ -11,8 +11,8 @@ import {
   ComponentControl,
   PropType,
   ComponentInfo,
-} from '@component-controls/specification';
-import { visibleControls } from '@component-controls/core';
+  visibleControls,
+} from '@component-controls/core';
 
 import {
   Table,

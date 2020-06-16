@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType } from '@component-controls/specification';
+import { PageType } from '@component-controls/core';
 import { PageContainer } from '@component-controls/blocks';
 
 import { Sidebar } from '../Sidebar';

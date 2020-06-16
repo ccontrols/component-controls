@@ -2,8 +2,9 @@ import {
   StoryArguments,
   CodeLocation,
   ComponentControls,
-} from '@component-controls/specification';
-import { getControlValue, getControlValues } from '@component-controls/core';
+  getControlValue,
+  getControlValues,
+} from '@component-controls/core';
 import stringifyObject from 'stringify-object';
 import { PrismTheme } from 'prism-react-renderer';
 

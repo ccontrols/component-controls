@@ -59,9 +59,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
         '@component-controls/blocks': require.resolve(
           '@component-controls/blocks',
         ),
-        '@component-controls/specification': require.resolve(
-          '@component-controls/specification',
-        ),
+        '@component-controls/core': require.resolve('@component-controls/core'),
         '@component-controls/loader': require.resolve(
           '@component-controls/loader',
         ),
@@ -133,7 +131,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       '@mdx-js/react': '@mdx-js/react',
       'faker/locale/en_US': 'faker/locale/en_US',
       'markdown-to-jsx': 'markdown-to-jsx',
-      '@component-controls/specification': '@component-controls/specification',
+      '@component-controls/core': '@component-controls/core',
       '@component-controls/loader': '@component-controls/loader',
       '@component-controls/blocks': '@component-controls/blocks',
       '@component-controls/components': '@component-controls/components',

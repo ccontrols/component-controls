@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '../components';
 import { ArrayControl } from './components/ArrayControl';
 
 export default {
