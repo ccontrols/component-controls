@@ -2,15 +2,28 @@ import React, { FC, useContext, forwardRef } from 'react';
 import {
   BlockContext,
   PageContainer as BlockPageContainer,
-  PageContainerProps,
+  PageContainerProps as BlockPageContainerProps,
 } from '@component-controls/blocks';
+import { PageType } from '@component-controls/core';
+
 import { Container as DefaultContainer } from '../Container';
 
-export const PageContainer: FC<Omit<
-  PageContainerProps,
-  'wrapper'
->> = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
-  const { storeProvider } = useContext(BlockContext);
-  const { container = DefaultContainer } = storeProvider.config || {};
-  return <BlockPageContainer ref={ref} wrapper={container} {...props} />;
-});
+export type PageContainerProps = {
+  /**
+   * page type
+   */
+  type: PageType;
+} & Omit<BlockPageContainerProps, 'wrapper'>;
+
+/**
+ * page container to enhance the inner page wrapper
+ */
+export const PageContainer: FC<PageContainerProps> = forwardRef(
+  ({ type, ...props }, ref: React.Ref<HTMLDivElement>) => {
+    const { storeProvider } = useContext(BlockContext);
+    const { pages } = storeProvider.config || {};
+    const page = pages ? pages[type] : undefined;
+    const { container = DefaultContainer } = page || {};
+    return <BlockPageContainer ref={ref} wrapper={container} {...props} />;
+  },
+);

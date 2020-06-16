@@ -19,7 +19,11 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const Page =
     customPage && customPage.type === type ? customPage.MDXPage : undefined;
   return (
-    <PageContainer variant="categorypage.pagecontainer" id="content">
+    <PageContainer
+      type={type}
+      variant="categorypage.pagecontainer"
+      id="content"
+    >
       <Box variant="categorypage.titlecontainer">
         <Title>{category}</Title>
         <Link

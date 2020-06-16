@@ -76,7 +76,11 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ pagesFn, type }) => {
             </TabList>
           )}
 
-          <PageContainer variant={`pagecontainer.${type}`} ref={pageRef}>
+          <PageContainer
+            type={type}
+            variant={`pagecontainer.${type}`}
+            ref={pageRef}
+          >
             {pages &&
               pages.map(page => (
                 <TabPanel key={`panel_${page.key}`}>{page.render()}</TabPanel>

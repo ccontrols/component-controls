@@ -22,7 +22,11 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const categories = storeProvider?.getUniquesByCategory(type) || [];
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   return (
-    <PageContainer variant="categorylist.pagecontainer" id="content">
+    <PageContainer
+      type={type}
+      variant="categorylist.pagecontainer"
+      id="content"
+    >
       <Title>{pageConfig.label}</Title>
       <Box variant="categorylist.list">
         <ul>

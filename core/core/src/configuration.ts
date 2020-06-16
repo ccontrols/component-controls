@@ -29,6 +29,11 @@ export interface PageConfiguration {
    * whether to add to the top navigation menu
    */
   topMenu?: boolean;
+
+  /**
+   * page container react component
+   */
+  container?: ComponentType | null;
 }
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
@@ -129,11 +134,6 @@ export interface RunOnlyConfiguration {
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
-
-  /**
-   * page container react component
-   */
-  container?: ComponentType;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &
@@ -165,6 +165,7 @@ export const defaultRunConfig: RunConfiguration = {
     },
     page: {
       label: 'Page',
+      container: null,
     },
     tags: {
       label: 'Tags',

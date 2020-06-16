@@ -602,6 +602,9 @@ export const theme: Theme = {
     list: {},
     item: { my: 2 },
   },
+  pagelist: {
+    container: { maxWidth: '1000px' },
+  },
   categorypage: {
     pagecontainer: { maxWidth: '1000px' },
     titlecontainer: {

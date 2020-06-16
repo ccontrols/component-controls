@@ -20,7 +20,7 @@ export const SidebarsMDXPage: FC<SidebarsMDXPageProps> = ({ type }) => {
     <Box variant="appsidebarpage.mdxcontainer">
       <Sidebar type={type} />
       <Box sx={{ flexGrow: 1 }} id="content">
-        <PageContainer variant={`pagecontainer.${type}`} />
+        <PageContainer type={type} variant={`pagecontainer.${type}`} />
       </Box>
     </Box>
   );

@@ -20,7 +20,7 @@ export interface PageContainerOwnProps {
   /**
    * inner wrapper container
    */
-  wrapper?: ComponentType;
+  wrapper?: ComponentType | null;
 }
 
 export type PageContainerProps = PageContainerOwnProps &

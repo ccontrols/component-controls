@@ -25,6 +25,7 @@ export const DocPage: FC<DocPageProps> = ({ type = 'story', ...props }) => {
   if (hasNoSideBars || isFullPage) {
     return (
       <PageContainer
+        type={type}
         variant={`pagecontainer.${isFullPage ? 'full' : type}`}
         id="content"
       />
