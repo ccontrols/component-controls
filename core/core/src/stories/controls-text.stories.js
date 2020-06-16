@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '../components';
+import { ControlTypes } from '../controls';
 import { TextControl } from './components/TextControl';
 
 export default {

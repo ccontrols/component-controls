@@ -7,7 +7,6 @@ module.exports = {
     '../../stories/src/tutorial/*.mdx',
     '../../stories/src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../src/stories/*.stories.(js|jsx|tsx|mdx)',
-    '../../../ui/app-components/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/app/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
   ],
