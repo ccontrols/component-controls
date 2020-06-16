@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from 'react';
 import { LinkProps } from 'theme-ui';
-import { ExternalLink } from '@component-controls/components';
+import { ExternalLink } from '../ExternalLink';
 import { useGetLinkClass } from './LinkContext';
 export const Link: FC<LinkProps> = props => {
   const { href } = props;

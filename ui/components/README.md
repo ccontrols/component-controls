@@ -6,11 +6,22 @@
     -   [<ins>ActionContainer</ins>](#insactioncontainerins)
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
+    -   [<ins>ColorMode</ins>](#inscolormodeins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
+    -   [<ins>Header</ins>](#insheaderins)
+    -   [<ins>Keyboard</ins>](#inskeyboardins)
+    -   [<ins>Link</ins>](#inslinkins)
+    -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
+    -   [<ins>Navmenu</ins>](#insnavmenuins)
+    -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>IconButton</ins>](#insiconbuttonins)
     -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
+    -   [<ins>Sidebar</ins>](#inssidebarins)
+    -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
+    -   [<ins>SkiLinksItem</ins>](#insskilinksitemins)
+    -   [<ins>SkipLinks</ins>](#insskiplinksins)
     -   [<ins>Source</ins>](#inssourceins)
     -   [<ins>Subheading</ins>](#inssubheadingins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
@@ -117,6 +128,19 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `onAnimationEnd`         | _(props: { newHeight: number; }) => void_ |                       |
 | `onAnimationStart`       | _(props: { newHeight: number; }) => void_ |                       |
 
+## <ins>ColorMode</ins>
+
+dark/light mode toggle for theme-ui themes
+
+_ColorMode [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ColorMode/ColorMode.tsx)_
+
+### properties
+
+| Name    | Type                  | Description                                         |
+| ------- | --------------------- | --------------------------------------------------- |
+| `label` | _string_              | optional label to be displayed alongside the toggle |
+| `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
+
 ## <ins>ExternalLink</ins>
 
 Anchor link to an external url,
@@ -136,6 +160,47 @@ _ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/
 | `type`           | _string_                                                                                                  | specifies the media type of the linked document.                                  |
 | `referrerPolicy` | _"no-referrer" \| "no-referrer-when-downgrade" \| "origin" \| "origin-when-cross-origin" \| "unsafe-url"_ | specifies which referrer to send.                                                 |
 
+## <ins>Header</ins>
+
+A page header component
+
+_Header [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Header/Header.tsx)_
+
+## <ins>Keyboard</ins>
+
+Componet to monitor keystrokes. Can attach to child, document or window.
+
+_Keyboard [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Keyboard/Keyboard.tsx)_
+
+### properties
+
+| Name         | Type                                                                                                                                                                                                                                                                                  | Description                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `keys*`      | _number\[]_                                                                                                                                                                                                                                                                           | array of the keys to be trapped                                                   |
+| `target`     | _"children" \| "document" \| "window"_                                                                                                                                                                                                                                                | to where to attach the event handler                                              |
+| `onKeyDown*` | _KeyboardCallback_                                                                                                                                                                                                                                                                    | callbal on key down                                                               |
+| `children`   | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ReactElement&lt;...>_ | child element to the key event handler will be attached to if target = 'children' |
+
+## <ins>Link</ins>
+
+_Link [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Link/Link.tsx)_
+
+### properties
+
+| Name  | Type                                                                         | Description |
+| ----- | ---------------------------------------------------------------------------- | ----------- |
+| `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+
+## <ins>LinkContextProvider</ins>
+
+_LinkContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Link/LinkContext.tsx)_
+
+### properties
+
+| Name         | Type  | Description |
+| ------------ | ----- | ----------- |
+| `linkClass*` | _any_ |             |
+
 ## <ins>Markdown</ins>
 
 Markdown display component to compile and display markdown at run-time.
@@ -149,6 +214,35 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/tree/mast
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
 | `children`   | _ReactNode_                                                                                                                                                                                                              | the markdown source code is passed as a children pro. |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.         |
+
+## <ins>Navmenu</ins>
+
+Hierarchical collapsible menu
+
+_Navmenu [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Navmenu/Navmenu.tsx)_
+
+### properties
+
+| Name         | Type                                 | Description                                                    |
+| ------------ | ------------------------------------ | -------------------------------------------------------------- |
+| `items*`     | _MenuItems_                          | Array of menu items                                            |
+| `activeItem` | _Pick&lt;MenuItem, "id" \| "label">_ | Initially active menu item                                     |
+| `expandAll`  | _boolean_                            | If specified, will expand all items with chidren               |
+| `onSelect`   | _(item?: MenuItem) => void_          | Function that will be called when the user selects a menu item |
+| `search`     | _string_                             | If specified, will filter the items by the search terms        |
+
+## <ins>Pagination</ins>
+
+A pagination component, navigate previous and next page
+
+_Pagination [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Pagination/Pagination.tsx)_
+
+### properties
+
+| Name   | Type             | Description                     |
+| ------ | ---------------- | ------------------------------- |
+| `prev` | _PaginationPage_ | link and title to previous page |
+| `next` | _PaginationPage_ | link and title to next page     |
 
 ## <ins>IconButton</ins>
 
@@ -183,6 +277,56 @@ A Popover container that is triggered by a click/hover event.
 Used to display enhanced information that could not fit into the main scren.
 
 _Popover [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
+
+## <ins>Sidebar</ins>
+
+Collapsible side bar component
+
+_Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Sidebar/Sidebar.tsx)_
+
+### properties
+
+| Name          | Type      | Description                                          |
+| ------------- | --------- | ---------------------------------------------------- |
+| `title`       | _any_     | Title string or any react node                       |
+| `collapsible` | _boolean_ | Whether the sidebar can be collapsed                 |
+| `children`    | _any_     | children content elements to be displayed in Sidebar |
+
+## <ins>SidebarContextProvider</ins>
+
+_SidebarContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Sidebar/SidebarContext.tsx)_
+
+### properties
+
+| Name          | Type      | Description |
+| ------------- | --------- | ----------- |
+| `collapsible` | _boolean_ |             |
+
+## <ins>SkiLinksItem</ins>
+
+single skip link anchor item
+
+_SkiLinksItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SkipLinks/SkipLinks.tsx)_
+
+### properties
+
+| Name     | Type                                                                         | Description                              |
+| -------- | ---------------------------------------------------------------------------- | ---------------------------------------- |
+| `target` | _string_                                                                     | target's id property, without the # char |
+| `text*`  | _string_                                                                     | text message to be displayed             |
+| `ref`    | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |                                          |
+
+## <ins>SkipLinks</ins>
+
+list of anchor elements to skip to
+
+_SkipLinks [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SkipLinks/SkipLinks.tsx)_
+
+### properties
+
+| Name     | Type                   | Description |
+| -------- | ---------------------- | ----------- |
+| `items*` | _SkiLinksItemProps\[]_ |             |
 
 ## <ins>Source</ins>
 

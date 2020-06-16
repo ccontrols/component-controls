@@ -1,28 +1,22 @@
 import React from 'react';
 import Octicon, { Project } from '@primer/octicons-react';
 import { Flex } from 'theme-ui';
-import { ThemeProvider } from '@component-controls/components';
+import { ThemeProvider } from '../ThemeContext';
 import { Sidebar, SidebarContext, SidebarContextProvider } from '.';
 
 export default {
-  title: 'App components/Sidebar',
+  title: 'Components/Sidebar',
   component: Sidebar,
 };
 
-export const overview = ({
-  collapsible,
-  width,
-}: {
-  collapsible: boolean;
-  width: number;
-}) => (
+export const overview = ({ collapsible }: { collapsible: boolean }) => (
   <ThemeProvider>
     <SidebarContextProvider collapsible={collapsible}>
       <SidebarContext.Consumer>
         {({ SidebarToggle }) => (
           <Flex css={{ flexDirection: 'row', alignItems: 'start' }}>
             <SidebarToggle />
-            <Sidebar width={width}>
+            <Sidebar>
               <ul>
                 <li>item 1</li>
                 <li>item 2</li>
@@ -39,11 +33,6 @@ export const overview = ({
 overview.story = {
   controls: {
     collapsible: { type: 'boolean', value: true },
-    width: { type: 'number', value: undefined },
-    easing: {
-      type: 'options',
-      options: ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'],
-    },
   },
 };
 

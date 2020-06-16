@@ -10,6 +10,6 @@
     "baseUrl": "./",
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
   },
-  "include": ["src/**/*", "../../ui/app-components/src/Sidebar/Sidebox.tsx"],
+  "include": ["src/**/*", "../../ui/components/src/Sidebar/Sidebox.tsx"],
   "exclude": ["node_modules/**"]
 }

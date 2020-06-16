@@ -5,7 +5,7 @@ import Octicon, {
   PrimitiveDot,
   PrimitiveDotStroke,
 } from '@primer/octicons-react';
-import { Toggle, ToggleProps } from '@component-controls/components';
+import { Toggle, ToggleProps } from '../Toggle';
 
 /**
  * dark/light mode toggle for theme-ui themes

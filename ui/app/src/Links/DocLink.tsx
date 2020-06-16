@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react';
 import { LinkProps } from 'theme-ui';
-import { Link } from '@component-controls/app-components';
+import { Link } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 
 export interface DocLinkProps {

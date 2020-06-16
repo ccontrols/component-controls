@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from '.';
 
 export default {
-  title: 'App components/Link',
+  title: 'Components/Link',
   component: Link,
 };
 

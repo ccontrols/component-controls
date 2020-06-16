@@ -1,9 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from '@component-controls/components';
+import { ThemeProvider } from '../ThemeContext';
 import { ColorMode } from '.';
 
 export default {
-  title: 'App components/ColorMode',
+  title: 'Components/ColorMode',
   component: ColorMode,
 };
 

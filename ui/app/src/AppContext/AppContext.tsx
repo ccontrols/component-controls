@@ -7,7 +7,7 @@ import {
   SidebarContextProvider,
   LinkContextProvider,
   LinkContextProviderProps,
-} from '@component-controls/app-components';
+} from '@component-controls/components';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { LoadingStore } from '@component-controls/loader';
 import { loadStoryStore, Store } from '@component-controls/store';

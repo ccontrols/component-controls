@@ -2,7 +2,7 @@
 import React, { FC, useContext } from 'react';
 import { jsx, Box, BoxProps, Heading } from 'theme-ui';
 import { get } from '@theme-ui/css';
-import { useTheme } from '@component-controls/components';
+import { useTheme } from '../ThemeContext';
 
 import { SidebarContext } from './SidebarContext';
 

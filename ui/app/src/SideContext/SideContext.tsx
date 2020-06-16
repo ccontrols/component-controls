@@ -6,7 +6,7 @@ import {
   SidebarContext,
   SidebarContextProvider,
   Header,
-} from '@component-controls/app-components';
+} from '@component-controls/components';
 
 export interface SideContext {
   pageRef?: RefObject<HTMLDivElement>;

@@ -12,7 +12,7 @@ import Octicon, {
 import { Navmenu } from '.';
 
 export default {
-  title: 'App components/Navmenu',
+  title: 'Components/Navmenu',
   component: Navmenu,
 };
 

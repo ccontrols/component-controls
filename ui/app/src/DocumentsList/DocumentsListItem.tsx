@@ -7,8 +7,7 @@ import {
   defPageType,
   RunConfiguration,
 } from '@component-controls/specification';
-import { Subtitle, Markdown, Tag } from '@component-controls/components';
-import { Link } from '@component-controls/app-components';
+import { Subtitle, Markdown, Tag, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
 
 export interface PageListItemProps {

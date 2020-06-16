@@ -4,7 +4,7 @@ import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/specification';
 import { Tag } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
-import { Link } from '@component-controls/app-components';
+import { Link } from '@component-controls/components';
 
 export interface TagsListProps {
   /**

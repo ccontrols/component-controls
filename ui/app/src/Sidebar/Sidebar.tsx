@@ -11,7 +11,7 @@ import {
   MenuItems,
   MenuItem,
   Header,
-} from '@component-controls/app-components';
+} from '@component-controls/components';
 import {
   StoriesDoc,
   PageType,

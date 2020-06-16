@@ -2,8 +2,7 @@
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { PageType } from '@component-controls/specification';
-import { Title } from '@component-controls/components';
-import { Link } from '@component-controls/app-components';
+import { Title, Link } from '@component-controls/components';
 import { PageContainer, BlockContext } from '@component-controls/blocks';
 import { DocumentsList } from '../DocumentsList';
 

@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import { FC, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
-import {
-  SkipLinks,
-  SkiLinksItemProps,
-} from '@component-controls/app-components';
+import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
 import { useStoryContext } from '@component-controls/blocks';
 import { SEO } from '../SEO';
 import { Header } from '../Header';

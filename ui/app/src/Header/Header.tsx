@@ -8,7 +8,7 @@ import {
   ColorMode,
   SidebarContext,
   Header as AppHeader,
-} from '@component-controls/app-components';
+} from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 
 /**

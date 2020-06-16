@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { Subtitle } from '@component-controls/components';
-import { Link } from '@component-controls/app-components';
+import { Subtitle, Link } from '@component-controls/components';
 
 export interface CategoryListItemProps {
   /**
