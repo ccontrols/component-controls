@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "name": "component-controls-storybook-6",
   "license": "MIT",
   "scripts": {
@@ -10,8 +10,8 @@
     "build-sample": "build-storybook -c .storybook -o ./docs"
   },
   "dependencies": {
-    "@component-controls/core": "^1.2.0",
-    "@component-controls/storybook": "^1.2.0",
+    "@component-controls/core": "^1.3.0",
+    "@component-controls/storybook": "^1.3.0",
     "@storybook/addon-docs": "next",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "next",

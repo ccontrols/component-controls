@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* replace react-select not working with SSR ([3f621db](https://github.com/ccontrols/component-controls/commit/3f621db8771f264e1433eca74eb9eae608c247e4))
+
+
+### Features
+
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* image name spelling ([82bddb9](https://github.com/ccontrols/component-controls/commit/82bddb93e39e543c6bb6acc92f039d1a995e4617))
+* preserve component name as string ([c284170](https://github.com/ccontrols/component-controls/commit/c284170bed9d5b6dbc86db93a3da36d231621a79))
+
+
+### Features
+
+* add tutorial document type ([ae99e32](https://github.com/ccontrols/component-controls/commit/ae99e32291b7f570896c3b0ed4ced1dc4c505aa2))
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* categories custom pages- authors, tags ([125f677](https://github.com/ccontrols/component-controls/commit/125f67729040d63a8897d393e111f92ec7228cd8))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* home page for documentation ([84ea2df](https://github.com/ccontrols/component-controls/commit/84ea2df3867c3650b9492ff09856641cdefbd678))
+* home page sections ([a4d7575](https://github.com/ccontrols/component-controls/commit/a4d757586d66e1f4abb3a089ba5fc6e9213a4a39))
+* links as buttons ([e1c65be](https://github.com/ccontrols/component-controls/commit/e1c65bee47cef98faa15077e6c30b7372519c386))
+* links to docs, doc page and story ([892416d](https://github.com/ccontrols/component-controls/commit/892416d3408100e0d6fef4d289901c0fac4d70ee))
+* list pages, date, tags fields ([8dac2f9](https://github.com/ccontrols/component-controls/commit/8dac2f9047705331bff1499c0bc45d5cedc838c9))
+* skip links and app layout ([1508a1c](https://github.com/ccontrols/component-controls/commit/1508a1c494c36d42715768d9d44543815d7d92c3))
+* sort documents list ([7095bf4](https://github.com/ccontrols/component-controls/commit/7095bf4a6c2ba2070e780c6333ec4aaa85460b70))
+* theming of app components ([e059e71](https://github.com/ccontrols/component-controls/commit/e059e71a2b3275bc0d672b3008cb5c53d9ec7ca6))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

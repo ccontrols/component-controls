@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* accomodate for storybook no title ([da26a05](https://github.com/ccontrols/component-controls/commit/da26a056152ade39572a44e18aa44fccbd4da12d))
+* avoid loading run-time components at build ([babab24](https://github.com/ccontrols/component-controls/commit/babab24a3de8d23584273c45ce0888738876a04d))
+* merge build and run time configs for overlapping props ([8db4a10](https://github.com/ccontrols/component-controls/commit/8db4a1065931c9b2cebe4464e29d3d34d6d52533))
+* preserve component name as string ([c284170](https://github.com/ccontrols/component-controls/commit/c284170bed9d5b6dbc86db93a3da36d231621a79))
+* preserve stories order ([e27f047](https://github.com/ccontrols/component-controls/commit/e27f047ee05b56bb92efc880393ba5a2d65a9208))
+
+
+### Features
+
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* category pages - tags, authors ([5ced78b](https://github.com/ccontrols/component-controls/commit/5ced78b515eefe4476618b8951ce11d70b028440))
+* global options, storySort ([3a55929](https://github.com/ccontrols/component-controls/commit/3a55929e7e99daa82e663ed00e942f2ad0b70fd8))
+* header to app component, link context ([24c7476](https://github.com/ccontrols/component-controls/commit/24c7476b2d598d9daf73a58b6ea00a8f587bc5a8))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* list pages, date, tags fields ([8dac2f9](https://github.com/ccontrols/component-controls/commit/8dac2f9047705331bff1499c0bc45d5cedc838c9))
+* loader chalk log ([f3fc436](https://github.com/ccontrols/component-controls/commit/f3fc43692c47ddc4e65eba25c60b9857109ddee2))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

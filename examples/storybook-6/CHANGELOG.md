@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* stories paths ([52d9c8f](https://github.com/ccontrols/component-controls/commit/52d9c8f7cd7c516eff921fd9d645eb0e57a09012))
+
+
+### Features
+
+* app components for standalone ([195b01b](https://github.com/ccontrols/component-controls/commit/195b01beb4aa61f64ce892ba5b8e32938c346859))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 
