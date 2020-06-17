@@ -44,7 +44,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-table": "^7.0.0",
-    "recoil": "^0.0.7",
     "stringify-object": "^3.3.0",
     "theme-ui": "^0.3.1"
   },

@@ -64,7 +64,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
     },
     // do not update on each panel change
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [JSON.stringify(panels.map(p => p.id || p.title))],
   );
   React.useEffect(() => {
     const index = findPanel(openTab);

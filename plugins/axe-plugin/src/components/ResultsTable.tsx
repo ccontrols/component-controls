@@ -1,7 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useMemo, useCallback } from 'react';
-import { useRecoilValue } from 'recoil';
+import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
 import { Column } from 'react-table';
 import Octicon, {
@@ -17,7 +16,7 @@ import Octicon, {
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
 import { Table, ExternalLink, Tag } from '@component-controls/components';
-import { axeViolations, axePasses, axeIncomplete } from './RecoilContext';
+import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
 
 const impactColors: {
@@ -168,16 +167,24 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
 };
 
 export const ViolationsTable: FC = () => {
-  const violations = useRecoilValue(axeViolations);
+  const {
+    results: { violations },
+  } = useContext(AxeContext);
+
   return <ResultsTable results={violations} />;
 };
 
 export const PassesTable: FC = () => {
-  const passes = useRecoilValue(axePasses);
+  const {
+    results: { passes },
+  } = useContext(AxeContext);
   return <ResultsTable results={passes} hideErrorColumns={true} />;
 };
 
 export const IncompleteTable: FC = () => {
-  const incomplete = useRecoilValue(axeIncomplete);
+  const {
+    results: { incomplete },
+  } = useContext(AxeContext);
+
   return <ResultsTable results={incomplete} />;
 };

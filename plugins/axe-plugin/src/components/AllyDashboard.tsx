@@ -1,22 +1,20 @@
-import React, { FC } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import React, { FC, useContext } from 'react';
 import { AxeResults } from 'axe-core';
 import { Chart } from 'react-google-charts';
 import { Flex, Heading, Grid, Label, Checkbox } from 'theme-ui';
 import {
-  axePasses,
-  axeViolations,
+  AxeContext,
+  useTaggedList,
+  SelectionContext,
   isTagSelected,
-  selectionList,
-  taggedList,
-} from './RecoilContext';
+} from '../state/context';
 
 type StatsStatus = 'passes' | 'violations';
 
 const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
-  const isSelected = useRecoilValue(isTagSelected(tag));
-  const tagged = useRecoilValue(taggedList);
-  const [selection, setSelection] = useRecoilState(selectionList);
+  const isSelected = isTagSelected(tag);
+  const { selection, setSelection } = useContext(SelectionContext);
+  const tagged = useTaggedList();
   const toggleTagSelected = (tag: string) => {
     if (tagged[tag]) {
       const wasSelected = tagged[tag].some((s: string) =>
@@ -73,12 +71,7 @@ const collectStats = (
   return success;
 };
 export const AllyDashboard: FC = () => {
-  const passes = useRecoilValue(axePasses);
-  const violations = useRecoilValue(axeViolations);
-  const results = {
-    violations,
-    passes,
-  };
+  const { results } = useContext(AxeContext);
   const stats = collectStats(
     results,
     'violations',
