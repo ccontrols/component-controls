@@ -3,10 +3,8 @@ import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
-import { SidebarsPage, DocPageProps, PageConfig } from '../SidebarsPage';
+import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { PageType } from '@component-controls/core';
-
-export type PagesConfig = (route: string) => PageConfig[];
 
 /**
  * documentation page for current document.

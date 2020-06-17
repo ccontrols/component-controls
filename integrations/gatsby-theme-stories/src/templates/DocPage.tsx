@@ -2,19 +2,21 @@ import React, { FC } from 'react';
 import { PageType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
-import { pages } from '../config/pages';
 
 interface DocPageProps {
   pathContext: {
     doc: string;
     type: PageType;
+    activeTab?: string;
   };
 }
 
-const DocPageTemplate: FC<DocPageProps> = ({ pathContext: { doc, type } }) => {
+const DocPageTemplate: FC<DocPageProps> = ({
+  pathContext: { doc, type, activeTab },
+}) => {
   return (
     <Layout docId={doc} type={type}>
-      <DocPage pagesFn={pages} type={type} />
+      <DocPage activeTab={activeTab} type={type} />
     </Layout>
   );
 };

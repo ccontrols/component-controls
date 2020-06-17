@@ -85,7 +85,14 @@ export const DocumentsListItem: FC<PageListItemProps> = ({
               >
                 by
               </Text>
-              <Link href={getDocPath('author', undefined, config, page.author)}>
+              <Link
+                href={getDocPath(
+                  'author',
+                  undefined,
+                  config?.pages,
+                  page.author,
+                )}
+              >
                 {page.author}
               </Link>
             </Box>

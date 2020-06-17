@@ -30,6 +30,11 @@ export interface SidebarProps {
    * page type
    */
   type?: PageType;
+
+  /**
+   * currently active tab. Use to creae the sidemenu links
+   */
+  activeTab?: string;
 }
 
 const createMenuItem = (
@@ -37,6 +42,7 @@ const createMenuItem = (
   doc: StoriesDoc,
   type: PageType,
   levels: string[],
+  activeTab?: string,
   parent?: MenuItems,
   item?: MenuItem,
 ): MenuItem => {
@@ -53,7 +59,7 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
-      newItem.href = storeProvider.getPagePath(type, doc.title);
+      newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
     }
     parent.push(newItem);
   }
@@ -62,6 +68,7 @@ const createMenuItem = (
     doc,
     type,
     levels.slice(1),
+    activeTab,
     sibling ? sibling.items : newItem.items,
     newItem,
   );
@@ -74,6 +81,7 @@ const createMenuItem = (
 export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
   type = defPageType,
+  activeTab,
 }) => {
   const { doc } = useStoryContext({ id: '.' });
   const { SidebarClose, responsive } = useContext(SidebarContext);
@@ -88,13 +96,13 @@ export const Sidebar: FC<SidebarProps> = ({
       const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
         const { title } = doc;
         const levels = title.split('/');
-        createMenuItem(storeProvider, doc, type, levels, acc);
+        createMenuItem(storeProvider, doc, type, levels, activeTab, acc);
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [type, storeProvider]);
+  }, [type, activeTab, storeProvider]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">

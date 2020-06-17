@@ -1,6 +1,30 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
-import { ComponentType } from 'react';
+import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
+
+/**
+ * story type pages can have multiple tabs with separate page configurations.
+ */
+export interface TabConfiguration {
+  /**
+   * tab route string
+   */
+  route?: string;
+  /**
+   * title will be used as tab caption
+   */
+  title: string;
+  /**
+   * page container type - a key into the component-controls/pages package
+   */
+  type?: string;
+  /**
+   * render function, returns a react component
+   */
+  render?: (props: any) => ReactNode;
+}
+
+export type PageTabs = TabConfiguration[];
 
 export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
 
@@ -34,6 +58,11 @@ export interface PageConfiguration {
    * page container react component
    */
   container?: ComponentType | null;
+
+  /**
+   * tabs configuration for story-type pages
+   */
+  tabs?: PageTabs;
 }
 
 export type PagesConfiguration = Record<PageType, PageConfiguration>;
@@ -44,6 +73,12 @@ type WebpackConfigFn = (
 ) => WebpackConfiguration;
 type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
+export type PagesOnlyRoutes = Record<
+  PageType,
+  Pick<PageConfiguration, 'basePath'> & {
+    tabs?: Pick<TabConfiguration, 'route'>[];
+  }
+>;
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -58,7 +93,7 @@ export interface BuildConfiguration {
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
-  pages?: Record<PageType, Pick<PageConfiguration, 'basePath'>>;
+  pages?: PagesOnlyRoutes;
 
   /**
    * page types that are considred as categories fields as well
@@ -154,6 +189,10 @@ export const defaultRunConfig: RunConfiguration = {
       label: 'Docs',
       sidebars: true,
       topMenu: true,
+      tabs: [
+        { title: 'Documentation', type: 'ClassicPage' },
+        { title: 'Testing', type: 'TestingPage' },
+      ],
     },
     blog: {
       label: 'Blog',
@@ -178,6 +217,7 @@ export const defaultBuildConfig: BuildConfiguration = {
   pages: {
     story: {
       basePath: 'docs/',
+      tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {
       basePath: 'blogs/',

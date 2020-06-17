@@ -24,7 +24,12 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
       {tags.map(tag => (
         <Link
           key={tag}
-          href={getDocPath('tags', undefined, storeProvider?.config, tag)}
+          href={getDocPath(
+            'tags',
+            undefined,
+            storeProvider?.config?.pages,
+            tag,
+          )}
         >
           <Tag transparentAmount={0.5} color="#dddddd" variant="tag.leftmargin">
             {tag}

@@ -121,10 +121,10 @@ _DocPage [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name      | Type                                  | Description  |
-| --------- | ------------------------------------- | ------------ |
-| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
-| `type`    | _PageType_                            | page type    |
+| Name        | Type       | Description     |
+| ----------- | ---------- | --------------- |
+| `type`      | _PageType_ | page type       |
+| `activeTab` | _string_   | active page tab |
 
 ## <ins>DocumentsList</ins>
 
@@ -259,10 +259,11 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name    | Type        | Description   |
-| ------- | ----------- | ------------- |
-| `title` | _ReactNode_ | title element |
-| `type`  | _PageType_  | page type     |
+| Name        | Type        | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `title`     | _ReactNode_ | title element                                         |
+| `type`      | _PageType_  | page type                                             |
+| `activeTab` | _string_    | currently active tab. Use to creae the sidemenu links |
 
 ## <ins>SidebarsMDXPage</ins>
 
@@ -282,10 +283,10 @@ _SidebarsPage [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name      | Type                                  | Description  |
-| --------- | ------------------------------------- | ------------ |
-| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
-| `type*`   | _PageType_                            | page type    |
+| Name        | Type       | Description     |
+| ----------- | ---------- | --------------- |
+| `type*`     | _PageType_ | page type       |
+| `activeTab` | _string_   | active page tab |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -295,10 +296,10 @@ _SidebarsStoryPage [source code](https:/github.com/ccontrols/component-controls/
 
 ### properties
 
-| Name      | Type                                  | Description  |
-| --------- | ------------------------------------- | ------------ |
-| `pagesFn` | _(viewMode: string) => PageConfig\[]_ | custom pages |
-| `type*`   | _PageType_                            | page type    |
+| Name        | Type       | Description     |
+| ----------- | ---------- | --------------- |
+| `type*`     | _PageType_ | page type       |
+| `activeTab` | _string_   | active page tab |
 
 ## <ins>TagsList</ins>
 

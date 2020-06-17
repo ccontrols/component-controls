@@ -298,21 +298,22 @@ export class Store implements StoryStore {
   getPagePath = (
     pageType: PageType | undefined = defPageType,
     name: string,
+    activeTab?: string,
   ): string => {
     const doc = this.getStoryDoc(name);
-    return getDocPath(pageType, doc, this.config, name);
+    return getDocPath(pageType, doc, this.config?.pages, name, activeTab);
   };
 
   /**
    * returns the url path to a story.
    */
-  getStoryPath = (storyId: string): string => {
+  getStoryPath = (storyId: string, activeTab?: string): string => {
     const story = this.getStory(storyId);
     if (!story) {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    return getStoryPath(story, doc, this.config);
+    return getStoryPath(story, doc, this.config?.pages, activeTab);
   };
 
   /**

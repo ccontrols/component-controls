@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, PageType } from './configuration';
+import { RunConfiguration, PagesOnlyRoutes, PageType } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -351,24 +351,29 @@ export interface StoriesStore {
 export const getDocPath = (
   pageType: PageType,
   doc?: StoriesDoc,
-  config?: RunConfiguration,
+  pagesConfig?: PagesOnlyRoutes,
   name: string = '',
+  activeTab?: string,
 ): string => {
-  const { basePath = '' } = config?.pages?.[pageType] || {};
+  const { basePath = '' } = pagesConfig?.[pageType] || {};
   return doc
-    ? doc.route || `/${basePath}${doc.title?.toLowerCase()}/`
-    : `/${basePath}${name}`;
+    ? doc.route ||
+        `/${basePath}${
+          activeTab ? `${activeTab}/` : ''
+        }${doc.title?.toLowerCase()}/`
+    : `/${basePath}${activeTab ? `${activeTab}/` : ''}${name}/`;
 };
 
 export const getStoryPath = (
   story?: Story,
   doc?: StoriesDoc,
-  config?: RunConfiguration,
+  pagesConfig?: PagesOnlyRoutes,
+  activeTab?: string,
 ): string => {
   if (!story) {
     return '';
   }
 
-  const docsPath = getDocPath('story', doc, config);
-  return `${docsPath}/#${story.id}`;
+  const docsPath = getDocPath('story', doc, pagesConfig, undefined, activeTab);
+  return `${docsPath}#${story.id}`;
 };

@@ -9,7 +9,6 @@
     -   [<ins>Store</ins>](#insstoreins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
-    -   [<ins>pages</ins>](#inspagesins)
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
     -   [<ins>DocPage</ins>](#insdocpageins)
@@ -91,10 +90,6 @@ _Layout [source code](https:/github.com/ccontrols/component-controls/tree/master
 | `docId` | _string_   |             |
 | `type`  | _PageType_ |             |
 
-## <ins>pages</ins>
-
-_pages [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/config/pages.tsx)_
-
 ## <ins>CategoryList</ins>
 
 _CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryList.tsx)_
@@ -121,9 +116,9 @@ _DocPage [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name           | Type                               | Description |
-| -------------- | ---------------------------------- | ----------- |
-| `pathContext*` | _{ doc: string; type: PageType; }_ |             |
+| Name           | Type                                                   | Description |
+| -------------- | ------------------------------------------------------ | ----------- |
+| `pathContext*` | _{ doc: string; type: PageType; activeTab?: string; }_ |             |
 
 ## <ins>PageList</ins>
 

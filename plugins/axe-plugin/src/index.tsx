@@ -68,17 +68,13 @@ export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
   return (
     <StoryBlockContainer {...props}>
       {({ story: { id: storyId } = {} }) => (
-        <>
-          <React.Suspense fallback={<div>testing...</div>}>
-            <AxeContextProvider>
-              <SelectionContextProvider>
-                <BaseAllyBlock options={axeOptions}>
-                  <RenderStory storyId={storyId} axeOptions={axeOptions} />
-                </BaseAllyBlock>
-              </SelectionContextProvider>
-            </AxeContextProvider>
-          </React.Suspense>
-        </>
+        <AxeContextProvider>
+          <SelectionContextProvider>
+            <BaseAllyBlock options={axeOptions}>
+              <RenderStory storyId={storyId} axeOptions={axeOptions} />
+            </BaseAllyBlock>
+          </SelectionContextProvider>
+        </AxeContextProvider>
       )}
     </StoryBlockContainer>
   );

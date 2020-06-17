@@ -3,6 +3,7 @@
 import {
   StoriesStore,
   Story,
+  deepMergeArrays,
   deepMerge,
   defaultRunConfig,
 } from '@component-controls/core';
@@ -36,7 +37,10 @@ export const loadStoryStore = (
           stories: {},
           components: {},
           packages: {},
-          config: deepMerge(buildConfig, deepMerge(defaultRunConfig, config)),
+          config: deepMergeArrays(
+            buildConfig,
+            deepMergeArrays(defaultRunConfig, config),
+          ),
         };
         stores.forEach(s => {
           const storeDoc = s.doc;

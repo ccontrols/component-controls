@@ -80,7 +80,7 @@ There are many developments that have contributed to the creation of `component-
 
 # Showcase sites
 
--   [Gatsby](https://component-controls-gatsby.netlify.app)
+-   [Gatsby](https://component-controls.com/)
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 

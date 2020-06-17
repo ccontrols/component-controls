@@ -31,8 +31,12 @@ export interface StoryStore {
   getUniquesByCategory: (category: string) => { [key: string]: number };
   config: RunConfiguration | undefined;
   getFirstDocument: (pageType: PageType) => string | undefined;
-  getPagePath: (pageType: PageType | undefined, name: string) => string;
-  getStoryPath: (storyId: string) => string;
+  getPagePath: (
+    pageType: PageType | undefined,
+    name: string,
+    activeTab?: string,
+  ) => string;
+  getStoryPath: (storyId: string, activeTab?: string) => string;
   updateStoryProp: (
     storyId: string,
     propName: string,

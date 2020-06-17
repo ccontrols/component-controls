@@ -62,6 +62,10 @@ const TabsContainer = styled.div`
       cursor: pointer;
       color: ${theme?.colors?.fadedText};
     }
+    .react-tabs__tab > a {
+      text-decoration: inherit;
+      color: inherit;
+    }
     .react-tabs__tab--selected {
       border-bottom: 3px solid ${theme?.colors?.primary};
       color: ${theme?.colors?.primary};

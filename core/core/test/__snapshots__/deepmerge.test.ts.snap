@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deep merge Should append arrays 1`] = `
+Object {
+  "a": Array [
+    Object {
+      "a": "a",
+      "b": "b",
+    },
+    Object {
+      "c": "c",
+      "d": "d",
+    },
+  ],
+}
+`;
+
+exports[`deep merge Should merge arrays 1`] = `
+Object {
+  "a": Array [
+    Object {
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
+    },
+  ],
+}
+`;
+
+exports[`deep merge Should merge arrays and fields 1`] = `
+Object {
+  "a": Array [
+    Object {
+      "a": "a",
+      "b": "c",
+    },
+  ],
+}
+`;
+
+exports[`deep merge Should merge arrays mistmatched fields 1`] = `
+Object {
+  "a": Array [
+    Object {
+      "b": "c",
+    },
+  ],
+  "b": Array [
+    Object {
+      "a": "a",
+      "b": "b",
+    },
+  ],
+}
+`;

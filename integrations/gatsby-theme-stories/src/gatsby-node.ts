@@ -1,4 +1,8 @@
-import { getDocPath, PageType } from '@component-controls/core';
+import {
+  getDocPath,
+  PageType,
+  TabConfiguration,
+} from '@component-controls/core';
 
 import {
   compile,
@@ -48,14 +52,27 @@ exports.createPages = async (
           const page = pages[type as PageType];
           const pageType = type as PageType;
           const docs = store.getDocs(pageType);
-          docs.forEach(doc => {
-            createPage({
-              path: getDocPath(pageType, doc, store.buildConfig),
-              component: pageTemplates[pageType] || pageTemplates['story'],
-              context: {
-                type: pageType,
-                doc: doc.title,
-              },
+          const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
+            { route: undefined },
+          ];
+          tabs.forEach((tab, tabIndex) => {
+            const route = tabIndex > 0 ? tab.route : undefined;
+            docs.forEach(doc => {
+              createPage({
+                path: getDocPath(
+                  pageType,
+                  doc,
+                  store.buildConfig?.pages,
+                  undefined,
+                  route,
+                ),
+                component: pageTemplates[pageType] || pageTemplates['story'],
+                context: {
+                  type: pageType,
+                  activeTab: route,
+                  doc: doc.title,
+                },
+              });
             });
           });
           if (docs.length) {
@@ -82,7 +99,7 @@ exports.createPages = async (
             path: getDocPath(
               catName as PageType,
               undefined,
-              store.buildConfig,
+              store.buildConfig?.pages,
               tag,
             ),
             component: pageTemplates[catName as PageType],
