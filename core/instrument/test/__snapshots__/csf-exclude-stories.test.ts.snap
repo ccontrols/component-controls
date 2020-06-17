@@ -5,6 +5,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-15T02:44:51.151Z,
+    "dateModified": 2020-03-15T02:45:58.763Z,
     "excludeStories": Array [
       "story1",
       "story2",
@@ -89,6 +91,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-15T02:46:05.885Z,
+    "dateModified": 2020-03-15T02:46:35.035Z,
     "excludeStories": "story(2|3)",
     "package": "ee6d4e5808915deb32b828cdb4d27d49",
     "title": "Storybook/Blocks/ExcludeStoryRegex",
@@ -170,6 +174,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-15T01:51:20.615Z,
+    "dateModified": 2020-03-15T02:44:23.355Z,
     "includeStories": Array [
       "story1",
       "story2",
@@ -270,6 +276,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-15T01:54:06.010Z,
+    "dateModified": 2020-03-15T02:43:50.375Z,
     "includeStories": "story(2|3)",
     "package": "3a231bd136bb90701919c32cb0ed959c",
     "title": "Storybook/Blocks/IncludeStoryRegex",

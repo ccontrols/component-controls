@@ -11,6 +11,8 @@ Object {
     "components": Object {
       "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
     },
+    "date": 2020-03-07T03:52:40.832Z,
+    "dateModified": 2020-04-14T04:57:01.066Z,
     "package": "27309cd065c1624443c9c2cdb62d73ed",
     "title": "Story",
   },
@@ -101,6 +103,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-07T03:53:56.234Z,
+    "dateModified": 2020-04-14T04:57:06.968Z,
     "package": "15ca3a76fad6a8b03adedc0e9e4a590d",
     "title": "Story",
   },
@@ -204,6 +208,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-07T03:51:39.924Z,
+    "dateModified": 2020-04-14T04:57:12.266Z,
     "package": "49aab458593f62387be9eeaf3b42c623",
     "title": "Story",
   },

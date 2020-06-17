@@ -23,6 +23,8 @@ Object {
     "components": Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-07T04:11:13.289Z,
+    "dateModified": 2020-05-18T16:37:44.945Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -54,6 +56,8 @@ Object {
     "components": Object {
       "Button": "dc86c4457416c54c13147e780d972747",
     },
+    "date": 2020-03-07T04:13:53.738Z,
+    "dateModified": 2020-05-18T16:37:49.912Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -72,6 +76,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-03-16T23:49:41.736Z,
+    "dateModified": 2020-05-18T16:37:54.357Z,
     "title": "Story",
   },
   "packages": Object {},
@@ -113,6 +119,8 @@ Object {
       "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
       "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
     },
+    "date": 2020-03-07T04:30:56.209Z,
+    "dateModified": 2020-05-18T16:37:59.320Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -184,6 +192,8 @@ Object {
       "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-16T23:40:58.322Z,
+    "dateModified": 2020-05-18T16:38:03.084Z,
     "title": "Story",
   },
   "packages": Object {},
@@ -266,6 +276,8 @@ Object {
       "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-16T23:40:58.322Z,
+    "dateModified": 2020-05-18T16:38:07.903Z,
     "subcomponents": Object {
       "Button": "Button",
     },

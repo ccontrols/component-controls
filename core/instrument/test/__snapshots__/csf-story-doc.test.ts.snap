@@ -5,6 +5,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-06-17T18:28:16.346Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
     "package": "b9103c46172438afdde76f8345fdfed0",
     "test": 1,
     "title": "Story",
@@ -72,6 +74,8 @@ Object {
     "components": Object {
       "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
     },
+    "date": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
     "package": "aef0eeece1e59f4690b7e3f0065cdc41",
     "parameters": Object {
       "addonControls": Object {
@@ -149,6 +153,8 @@ Object {
     "components": Object {
       "ControlsTable": "04b628ec4e86b8383f71524efe46f138",
     },
+    "date": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
     "package": "4dd4688f69a323d0b893ca9c902cc47a",
     "parameters": Object {
       "controls": Object {
@@ -228,6 +234,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
+    "date": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
     "package": "44bab54c940e1430b4b259f5bad24b7a",
     "title": "Storybook/Blocks/ControlsTable",
   },
