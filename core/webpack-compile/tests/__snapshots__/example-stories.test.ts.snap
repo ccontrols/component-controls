@@ -1,0 +1,2774 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test example stories compile 1`] = `
+Store {
+  "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
+    "pages": Object {
+      "author": Object {
+        "basePath": "authors/",
+      },
+      "blog": Object {
+        "basePath": "blogs/",
+      },
+      "page": Object {
+        "basePath": "pages/",
+      },
+      "story": Object {
+        "basePath": "docs/",
+        "tabs": Array [
+          Object {
+            "route": "page",
+          },
+          Object {
+            "route": "test",
+          },
+        ],
+      },
+      "tags": Object {
+        "basePath": "tags/",
+      },
+    },
+    "stories": Array [
+      "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
+    ],
+  },
+  "components": Object {
+    "b5fffc2a9e710b29374f13f1d7ef028c": Object {
+      "from": "../components/Button",
+      "importedName": "Button",
+      "imports": Object {
+        "polished": Array [
+          Object {
+            "importedName": "lighten",
+            "name": "lighten",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+          Object {
+            "importedName": "FC",
+            "name": "FC",
+          },
+        ],
+      },
+      "info": Object {
+        "description": "Button with react Typescript properties",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "#fefefe",
+            "description": "Background color",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "color": Object {
+            "defaultValue": "black",
+            "description": "Text color, default black",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "disabled": Object {
+            "defaultValue": false,
+            "description": "Boolean indicating whether the button should render as disabled",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "label": Object {
+            "defaultValue": "default",
+            "description": "button label.",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "() => void",
+              "raw": "() => void",
+            },
+          },
+          "padding": Object {
+            "defaultValue": 5,
+            "description": "Numeric  field type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "object",
+              "raw": "object",
+            },
+          },
+          "type": Object {
+            "defaultValue": "button",
+            "description": "Button type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"button\\" | \\"reset\\" | \\"submit\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "button",
+                },
+                Object {
+                  "name": "string",
+                  "value": "reset",
+                },
+                Object {
+                  "name": "string",
+                  "value": "submit",
+                },
+              ],
+            },
+          },
+        },
+      },
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 51,
+        },
+        "start": Object {
+          "column": 39,
+          "line": 28,
+        },
+      },
+      "name": "Button",
+      "package": "999878322b2acba3a7ca83bc6972a800",
+      "request": "/Users/atanasster/component-controls/examples/stories/src/components/Button.tsx",
+      "source": "import React, { FC } from 'react';
+import { lighten } from 'polished';
+
+interface ButtonProps {
+  /** Boolean indicating whether the button should render as disabled */
+  disabled?: boolean;
+  /** button label. */
+  label?: string;
+  /** onClick handler */
+  onClick: () => void;
+  /** Custom styles */
+  style: object;
+
+  /** Background color */
+  backgroundColor: string;
+
+  /** Text color, default black */
+  color: string;
+
+  /** Button type */
+  type: 'button' | 'reset' | 'submit';
+
+  /** Numeric  field type */
+  padding: number;
+}
+
+/** Button with react Typescript properties */
+export const Button: FC<ButtonProps> = ({
+  disabled,
+  label,
+  onClick,
+  style,
+  backgroundColor,
+  color,
+  type,
+  padding,
+}) => (
+  <button
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+    style={{
+      ...style,
+      backgroundColor,
+      color: lighten(disabled ? 0.4 : 0, color),
+      padding,
+    }}
+  >
+    {label}
+  </button>
+);
+
+Button.defaultProps = {
+  disabled: false,
+  label: 'default',
+  onClick: () => {},
+  style: {},
+  backgroundColor: '#fefefe',
+  color: 'black',
+  type: 'button',
+  padding: 5,
+};
+",
+    },
+    "ccd158de2e347c69fe7bf00b78db5145": Object {
+      "from": "theme-ui",
+      "importedName": "Button",
+      "imports": undefined,
+      "loc": undefined,
+      "name": "Button",
+      "request": undefined,
+      "source": undefined,
+    },
+    "dd96934cfa10038428b57421ede5ec17": Object {
+      "from": "../components/PropTypesButton",
+      "importedName": "Button",
+      "imports": Object {
+        "polished": Array [
+          Object {
+            "importedName": "lighten",
+            "name": "lighten",
+          },
+        ],
+        "prop-types": Array [
+          Object {
+            "importedName": "default",
+            "name": "PropTypes",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "info": Object {
+        "description": "Button with react PropTypes",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "'#fefefe'",
+            "description": "Background color",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "color": Object {
+            "defaultValue": "'black'",
+            "description": "Text color, default black",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "disabled": Object {
+            "defaultValue": "false",
+            "description": "Boolean indicating whether the button should render as disabled",
+            "type": Object {
+              "name": "boolean",
+            },
+          },
+          "label": Object {
+            "defaultValue": "'default'",
+            "description": "button label.",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "type": Object {
+              "name": "function",
+              "required": false,
+            },
+          },
+          "padding": Object {
+            "defaultValue": "5",
+            "description": "Numeric  field type",
+            "type": Object {
+              "name": "number",
+              "required": false,
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "type": Object {
+              "name": "object",
+              "value": Array [],
+            },
+          },
+          "type": Object {
+            "defaultValue": "'button'",
+            "description": "Button type",
+            "type": Object {
+              "name": "enum",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "'button'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'reset'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'submit'",
+                },
+              ],
+            },
+          },
+        },
+      },
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Object {
+          "column": 22,
+          "line": 6,
+        },
+      },
+      "name": "Button",
+      "package": "6b1e448146504b441f181f0e3fc41fc9",
+      "request": "/Users/atanasster/component-controls/examples/stories/src/components/PropTypesButton.js",
+      "source": "import React from 'react';
+import { lighten } from 'polished';
+import PropTypes from 'prop-types';
+
+/** Button with react PropTypes */
+export const Button = ({
+  disabled,
+  label,
+  onClick,
+  style,
+  backgroundColor,
+  color,
+  type,
+  padding,
+}) => (
+  <button
+    type={type}
+    disabled={disabled}
+    onClick={onClick}
+    style={{
+      ...style,
+      backgroundColor,
+      color: lighten(disabled ? 0.4 : 0, color),
+      padding,
+    }}
+  >
+    {label}
+  </button>
+);
+
+Button.defaultProps = {
+  disabled: false,
+  label: 'default',
+  onClick: () => {},
+  style: {},
+  backgroundColor: '#fefefe',
+  color: 'black',
+  type: 'button',
+  padding: 5,
+};
+
+Button.propTypes = {
+  /** Boolean indicating whether the button should render as disabled */
+  disabled: PropTypes.bool,
+  /** button label. */
+  label: PropTypes.string,
+  /** onClick handler */
+  onClick: PropTypes.func,
+  /** Custom styles */
+  style: PropTypes.shape({}),
+
+  /** Background color */
+  backgroundColor: PropTypes.string,
+
+  /** Text color, default black */
+  color: PropTypes.string,
+
+  /** Button type */
+  type: PropTypes.oneOf(['button', 'reset', 'submit']),
+
+  /** Numeric  field type */
+  padding: PropTypes.number,
+};
+",
+    },
+  },
+  "config": Object {},
+  "getDocs": [Function],
+  "getUniquesByField": [Function],
+  "packages": Object {
+    "2971104eea653041fd49648ff7a04be8": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "2971104eea653041fd49648ff7a04be8",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "56bf0298abb3e6152739be8e0540ef47": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "56bf0298abb3e6152739be8e0540ef47",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-prop-type.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "684baa68d45c8becd8f39da85795335b": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "684baa68d45c8becd8f39da85795335b",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "6b1e448146504b441f181f0e3fc41fc9": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "6b1e448146504b441f181f0e3fc41fc9",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "7661d674db5188cc22e26c1b22bef349": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "7661d674db5188cc22e26c1b22bef349",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "85a1bf440fe016c4719e372255f5ffcb": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "85a1bf440fe016c4719e372255f5ffcb",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-csf.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "999878322b2acba3a7ca83bc6972a800": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "999878322b2acba3a7ca83bc6972a800",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+    "d1f03618863bd813182b2668bed6d262": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "d1f03618863bd813182b2668bed6d262",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.2.0",
+    },
+  },
+  "stores": Array [
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "ccd158de2e347c69fe7bf00b78db5145",
+        },
+        "date": 2020-06-17T18:28:16.386Z,
+        "dateModified": 2020-06-17T18:28:16.388Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+        "package": "7661d674db5188cc22e26c1b22bef349",
+        "title": "Introduction/Starter",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 33,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 32,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 28,
+                          "line": 1,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 49,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 46,
+                          "line": 1,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "label": "Age",
+              "max": 75,
+              "min": 10,
+              "type": "ControlTypes.NUMBER",
+              "value": 19,
+            },
+            "name": Object {
+              "label": "Name",
+              "type": "ControlTypes.TEXT",
+              "value": "Mark",
+            },
+          },
+          "description": "Story with two dynamic control values: \`name\` and \`age\`. You can use the controls to edit the story properties at run-time.",
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 18,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 16,
+            },
+          },
+          "name": "overview",
+          "source": "({ name, age }: DocsControlsTable) => (
+  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
+)",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "date": 2020-06-17T18:28:16.388Z,
+        "dateModified": 2020-06-17T18:28:16.388Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
+        "package": "684baa68d45c8becd8f39da85795335b",
+        "title": "Introduction/Controls",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
+      "stories": Object {
+        "XssSafety": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 10,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "content",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 21,
+                          "line": 4,
+                        },
+                        "start": Object {
+                          "column": 14,
+                          "line": 4,
+                        },
+                      },
+                      "name": Object {
+                        "loc": Object {
+                          "end": Object {
+                            "column": 12,
+                            "line": 4,
+                          },
+                          "start": Object {
+                            "column": 6,
+                            "line": 4,
+                          },
+                        },
+                        "name": "__html",
+                      },
+                      "shorthand": false,
+                    },
+                  ],
+                  "value": "content",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "content": Object {
+              "escapeValue": true,
+              "label": "Rendered string",
+              "type": "ControlTypes.TEXT",
+              "value": "<img src=\\"x\\" onerror=\\"alert('XSS Attack')\\" >",
+            },
+          },
+          "id": "XssSafety",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 233,
+            },
+            "start": Object {
+              "column": 25,
+              "line": 226,
+            },
+          },
+          "name": "XSS safety",
+          "source": "({ content }) => (
+  <div
+    // eslint-disable-next-line react/no-danger
+    dangerouslySetInnerHTML={{
+      __html: content,
+    }}
+  />
+)",
+        },
+        "generateRandomData": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "street",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 22,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "street",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "street": Object {
+              "data": Object {
+                "name": "address.streetAddress",
+              },
+              "label": "Street",
+              "type": "ControlTypes.TEXT",
+              "value": "30333 Atlantic Ave.",
+            },
+          },
+          "description": "Story using the \`data\` field of \`controls\` to generate **streetAddress** random data.",
+          "id": "generateRandomData",
+          "loc": Object {
+            "end": Object {
+              "column": 56,
+              "line": 251,
+            },
+            "start": Object {
+              "column": 34,
+              "line": 251,
+            },
+          },
+          "name": "generateRandomData",
+          "source": "({ street }) => street",
+        },
+        "groupedControls": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 23,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 30,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 27,
+                          "line": 2,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 8,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 11,
+                          "line": 2,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                  },
+                  "name": "message",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 13,
+                          "line": 3,
+                        },
+                        "start": Object {
+                          "column": 6,
+                          "line": 3,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "message",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "groupId": "personalGroupId",
+              "label": "Age",
+              "type": "ControlTypes.NUMBER",
+              "value": 35,
+            },
+            "message": Object {
+              "groupId": "generalGroupId",
+              "label": "Mesage",
+              "type": "ControlTypes.TEXT",
+              "value": "Hello!",
+            },
+            "name": Object {
+              "groupId": "personalGroupId",
+              "label": "Name",
+              "type": "ControlTypes.TEXT",
+              "value": "James",
+            },
+          },
+          "description": "Controls grouped in multiple tabs.",
+          "id": "groupedControls",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 290,
+            },
+            "start": Object {
+              "column": 31,
+              "line": 283,
+            },
+          },
+          "name": "groupedControls",
+          "source": "({ age, name, message }) => {
+  const content = \`
+    I am \${name} and I'm \${age} years old.
+    \${message}
+  \`;
+
+  return <div>{content}</div>;
+}",
+        },
+        "kitchenSink": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 1,
+                  "line": 15,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 10,
+                      "line": 1,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 1,
+                    },
+                  },
+                  "name": "userName",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 38,
+                          "line": 16,
+                        },
+                        "start": Object {
+                          "column": 30,
+                          "line": 16,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "userName",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 5,
+                      "line": 2,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 2,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 50,
+                          "line": 16,
+                        },
+                        "start": Object {
+                          "column": 47,
+                          "line": 16,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 3,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 3,
+                    },
+                  },
+                  "name": "fruit",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 95,
+                          "line": 16,
+                        },
+                        "start": Object {
+                          "column": 90,
+                          "line": 16,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "fruit",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 4,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 4,
+                    },
+                  },
+                  "name": "otherFruit",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 123,
+                          "line": 16,
+                        },
+                        "start": Object {
+                          "column": 113,
+                          "line": 16,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "otherFruit",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 9,
+                      "line": 5,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 5,
+                    },
+                  },
+                  "name": "dollars",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 38,
+                          "line": 35,
+                        },
+                        "start": Object {
+                          "column": 31,
+                          "line": 35,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "dollars",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 6,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 6,
+                    },
+                  },
+                  "name": "years",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 32,
+                          "line": 34,
+                        },
+                        "start": Object {
+                          "column": 27,
+                          "line": 34,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "years",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 17,
+                      "line": 7,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 7,
+                    },
+                  },
+                  "name": "backgroundColor",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 33,
+                          "line": 17,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 17,
+                        },
+                      },
+                      "name": Object {
+                        "loc": Object {
+                          "end": Object {
+                            "column": 33,
+                            "line": 17,
+                          },
+                          "start": Object {
+                            "column": 18,
+                            "line": 17,
+                          },
+                        },
+                        "name": "backgroundColor",
+                      },
+                      "shorthand": true,
+                    },
+                  ],
+                  "value": "backgroundColor",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 8,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 8,
+                    },
+                  },
+                  "name": "color",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 40,
+                          "line": 17,
+                        },
+                        "start": Object {
+                          "column": 35,
+                          "line": 17,
+                        },
+                      },
+                      "name": Object {
+                        "loc": Object {
+                          "end": Object {
+                            "column": 40,
+                            "line": 17,
+                          },
+                          "start": Object {
+                            "column": 35,
+                            "line": 17,
+                          },
+                        },
+                        "name": "color",
+                      },
+                      "shorthand": true,
+                    },
+                  ],
+                  "value": "color",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 9,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 9,
+                    },
+                  },
+                  "name": "items",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 38,
+                        },
+                        "start": Object {
+                          "column": 9,
+                          "line": 38,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 23,
+                          "line": 38,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 38,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "items",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 13,
+                      "line": 10,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 10,
+                    },
+                  },
+                  "name": "otherStyles",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 56,
+                          "line": 17,
+                        },
+                        "start": Object {
+                          "column": 45,
+                          "line": 17,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "otherStyles",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 6,
+                      "line": 11,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 11,
+                    },
+                  },
+                  "name": "nice",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 25,
+                          "line": 18,
+                        },
+                        "start": Object {
+                          "column": 21,
+                          "line": 18,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "nice",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 8,
+                      "line": 12,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 12,
+                    },
+                  },
+                  "name": "images",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 58,
+                          "line": 42,
+                        },
+                        "start": Object {
+                          "column": 52,
+                          "line": 42,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "images",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 5,
+                      "line": 13,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 13,
+                    },
+                  },
+                  "name": "dog",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 159,
+                          "line": 16,
+                        },
+                        "start": Object {
+                          "column": 156,
+                          "line": 16,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "dog",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 10,
+                      "line": 14,
+                    },
+                    "start": Object {
+                      "column": 2,
+                      "line": 14,
+                    },
+                  },
+                  "name": "birthday",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 26,
+                          "line": 31,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 31,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 26,
+                          "line": 32,
+                        },
+                        "start": Object {
+                          "column": 18,
+                          "line": 32,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "birthday",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "groupId": "GROUP_IDS.GENERAL",
+              "label": "Age",
+              "max": 90,
+              "min": 0,
+              "range": true,
+              "step": 5,
+              "type": "ControlTypes.NUMBER",
+              "value": 78,
+            },
+            "backgroundColor": Object {
+              "groupId": "GROUP_IDS.DISPLAY",
+              "type": "ControlTypes.COLOR",
+              "value": "#dedede",
+            },
+            "birthday": Object {
+              "groupId": "GROUP_IDS.GENERAL",
+              "label": "Birthday",
+              "type": "ControlTypes.DATE",
+            },
+            "color": Object {
+              "groupId": "GROUP_IDS.DISPLAY",
+              "type": "ControlTypes.COLOR",
+              "value": "#000000",
+            },
+            "dog": Object {
+              "groupId": "GROUP_IDS.FAVORITES",
+              "options": "arrayOfObjects",
+              "type": "ControlTypes.OPTIONS",
+              "value": "arrayOfObjects.undefined",
+            },
+            "dollars": Object {
+              "groupId": "GROUP_IDS.GENERAL",
+              "label": "Dollars",
+              "max": 100,
+              "min": 0,
+              "step": 0.01,
+              "type": "ControlTypes.NUMBER",
+              "value": 12.5,
+            },
+            "fruit": Object {
+              "groupId": "GROUP_IDS.FAVORITES",
+              "label": "Fruit",
+              "options": Object {
+                "Apple": "apple",
+                "Banana": "banana",
+                "Cherry": "cherry",
+              },
+              "type": "ControlTypes.OPTIONS",
+              "value": "apple",
+            },
+            "hidden": Object {
+              "hidden": true,
+              "type": "ControlTypes.TEXT",
+            },
+            "images": Object {
+              "accept": "image/*",
+              "groupId": "GROUP_IDS.DISPLAY",
+              "label": "Happy Picture",
+              "type": "ControlTypes.FILES",
+              "value": Array [
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=",
+              ],
+            },
+            "items": Object {
+              "groupId": "GROUP_IDS.FAVORITES",
+              "label": "Items",
+              "rowType": Object {
+                "name": Object {
+                  "type": "ControlTypes.TEXT",
+                },
+              },
+              "type": "ControlTypes.ARRAY",
+              "value": Array [
+                Object {
+                  "name": "Laptop",
+                },
+                Object {
+                  "name": "Book",
+                },
+                Object {
+                  "name": "Whiskey",
+                },
+              ],
+            },
+            "nice": Object {
+              "groupId": "GROUP_IDS.FAVORITES",
+              "label": "Nice",
+              "type": "ControlTypes.BOOLEAN",
+              "value": true,
+            },
+            "otherFruit": Object {
+              "display": "radio",
+              "groupId": "GROUP_IDS.FAVORITES",
+              "label": "Other Fruit",
+              "options": Object {
+                "Guava": "guava",
+                "Kiwi": "kiwi",
+                "Watermelon": "watermelon",
+              },
+              "type": "ControlTypes.OPTIONS",
+              "value": "watermelon",
+            },
+            "otherStyles": Object {
+              "groupId": "GROUP_IDS.DISPLAY",
+              "label": "Styles",
+              "type": "ControlTypes.OBJECT",
+              "value": Object {
+                "border": Object {
+                  "type": "text",
+                  "value": "2px dashed silver",
+                },
+                "borderRadius": Object {
+                  "type": "number",
+                  "value": 10,
+                },
+                "padding": Object {
+                  "type": "number",
+                  "value": 10,
+                },
+              },
+            },
+            "userName": Object {
+              "groupId": "GROUP_IDS.GENERAL",
+              "label": "Name",
+              "type": "ControlTypes.TEXT",
+              "value": "Storyteller",
+            },
+            "years": Object {
+              "groupId": "GROUP_IDS.GENERAL",
+              "label": "Years in NY",
+              "type": "ControlTypes.NUMBER",
+              "value": 9,
+            },
+          },
+          "description": "Complex story with a variety of control types.",
+          "id": "kitchenSink",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 64,
+            },
+            "start": Object {
+              "column": 27,
+              "line": 18,
+            },
+          },
+          "name": "kitchenSink",
+          "source": "({
+  userName,
+  age,
+  fruit,
+  otherFruit,
+  dollars,
+  years,
+  backgroundColor,
+  color,
+  items,
+  otherStyles,
+  nice,
+  images,
+  dog,
+  birthday,
+}) => {
+  const intro = \`My name is \${userName}, I'm \${age} years old, and my favorite fruit is \${fruit}. I also enjoy \${otherFruit}, and hanging out with my dog \${dog.label}\`;
+  const style = { backgroundColor, color, ...otherStyles };
+  const salutation = nice ? 'Nice to meet you!' : 'Leave me alone!';
+  const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  };
+
+  return (
+    <div style={style}>
+      <p>{intro}</p>
+      <p>
+        My birthday is:{' '}
+        {new Date(birthday).toLocaleDateString('en-US', dateOptions)} at:
+        {new Date(birthday).toLocaleTimeString()}
+      </p>
+      <p>I live in NY for {years} years.</p>
+      <p>My wallet contains: \${dollars.toFixed(2)}</p>
+      <p>In my backpack, I have:</p>
+      <ul>
+        {items && items.map(item => <li key={item.name}>{item.name}</li>)}
+      </ul>
+      <p>{salutation}</p>
+      <p>
+        When I am happy I look like this: <img src={images[0]} alt=\\"happy\\" />
+      </p>
+    </div>
+  );
+}",
+        },
+        "orderControls": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 23,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 30,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 27,
+                          "line": 2,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 8,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 2,
+                        },
+                        "start": Object {
+                          "column": 11,
+                          "line": 2,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                  },
+                  "name": "message",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 13,
+                          "line": 3,
+                        },
+                        "start": Object {
+                          "column": 6,
+                          "line": 3,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "message",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "label": "Age",
+              "type": "ControlTypes.NUMBER",
+              "value": 35,
+            },
+            "message": Object {
+              "label": "Mesage",
+              "order": 0,
+              "type": "ControlTypes.TEXT",
+              "value": "Hello!",
+            },
+            "name": Object {
+              "label": "Name",
+              "order": 3,
+              "type": "ControlTypes.TEXT",
+              "value": "James",
+            },
+          },
+          "description": "Controls grouped in multiple tabs.",
+          "id": "orderControls",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 332,
+            },
+            "start": Object {
+              "column": 29,
+              "line": 325,
+            },
+          },
+          "name": "orderControls",
+          "source": "({ age, name, message }) => {
+  const content = \`
+    I am \${name} and I'm \${age} years old.
+    \${message}
+  \`;
+
+  return <div>{content}</div>;
+}",
+        },
+        "randomNumber": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "number",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 22,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "number",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "number": Object {
+              "data": Object {
+                "name": "random.number",
+                "options": Object {
+                  "max": 100,
+                  "min": 50,
+                },
+              },
+              "label": "A number",
+              "type": "ControlTypes.NUMBER",
+              "value": 10,
+            },
+          },
+          "description": "Story using the \`data\` field of \`controls\` to generate random **number** with **min/max** parameters.",
+          "id": "randomNumber",
+          "loc": Object {
+            "end": Object {
+              "column": 50,
+              "line": 267,
+            },
+            "start": Object {
+              "column": 28,
+              "line": 267,
+            },
+          },
+          "name": "randomNumber",
+          "source": "({ number }) => number",
+        },
+        "textDefaultProp": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "text",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 18,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 14,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "text",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "text": Object {
+              "type": "ControlTypes.TEXT",
+              "value": "Hello",
+            },
+          },
+          "description": "A simple story that just returns the text parameter",
+          "id": "textDefaultProp",
+          "loc": Object {
+            "end": Object {
+              "column": 49,
+              "line": 10,
+            },
+            "start": Object {
+              "column": 31,
+              "line": 10,
+            },
+          },
+          "name": "textDefaultProp",
+          "source": "({ text }) => text",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "controls": Object {
+          "name": Object {
+            "label": "Name",
+            "order": 9999,
+            "type": "ControlTypes.TEXT",
+            "value": "Mark",
+          },
+        },
+        "date": 2020-06-17T18:28:16.389Z,
+        "dateModified": 2020-06-17T18:28:16.389Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "package": "d1f03618863bd813182b2668bed6d262",
+        "title": "Introduction/Doc",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+      "stories": Object {
+        "docsControlsTable": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 38,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 36,
+                          "line": 3,
+                        },
+                        "start": Object {
+                          "column": 32,
+                          "line": 3,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 53,
+                          "line": 3,
+                        },
+                        "start": Object {
+                          "column": 50,
+                          "line": 3,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "label": "Age",
+              "max": 75,
+              "min": 10,
+              "step": 5,
+              "type": "ControlTypes.NUMBER",
+              "value": 19,
+            },
+          },
+          "id": "docsControlsTable",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 27,
+            },
+            "start": Object {
+              "column": 33,
+              "line": 21,
+            },
+          },
+          "name": "docsControlsTable",
+          "source": "({ name, age }: DocsControlsTable = {}) => {
+  return (
+    <>
+      <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
+    </>
+  );
+}",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "dd96934cfa10038428b57421ede5ec17",
+        },
+        "date": 2020-06-17T18:28:16.389Z,
+        "dateModified": 2020-06-17T18:28:16.390Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+        "package": "56bf0298abb3e6152739be8e0540ef47",
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Introduction/Smart PropTypes",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+      "stories": Object {
+        "allProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 26,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "allProps",
+          "loc": Object {
+            "end": Object {
+              "column": 54,
+              "line": 12,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 12,
+            },
+          },
+          "name": "allProps",
+          "source": "props => <Button {...props} />",
+        },
+        "noColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "noColors",
+          "loc": Object {
+            "end": Object {
+              "column": 76,
+              "line": 26,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 26,
+            },
+          },
+          "name": "noColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "exclude": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+        "noProps": Object {
+          "arguments": Array [],
+          "id": "noProps",
+          "loc": Object {
+            "end": Object {
+              "column": 61,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 23,
+              "line": 39,
+            },
+          },
+          "name": "noProps",
+          "source": "() => <Button label=\\"No properties\\" />",
+        },
+        "onlyColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "onlyColors",
+          "loc": Object {
+            "end": Object {
+              "column": 78,
+              "line": 14,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 14,
+            },
+          },
+          "name": "onlyColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "include": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
+        },
+        "date": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-17T18:28:16.390Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+        "package": "2971104eea653041fd49648ff7a04be8",
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Introduction/Smart Typescript",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+      "stories": Object {
+        "allProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 26,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "allProps",
+          "loc": Object {
+            "end": Object {
+              "column": 54,
+              "line": 12,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 12,
+            },
+          },
+          "name": "allProps",
+          "source": "props => <Button {...props} />",
+        },
+        "noColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "noColors",
+          "loc": Object {
+            "end": Object {
+              "column": 76,
+              "line": 26,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 26,
+            },
+          },
+          "name": "noColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "exclude": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+        "noProps": Object {
+          "arguments": Array [],
+          "id": "noProps",
+          "loc": Object {
+            "end": Object {
+              "column": 61,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 23,
+              "line": 39,
+            },
+          },
+          "name": "noProps",
+          "source": "() => <Button label=\\"No properties\\" />",
+        },
+        "onlyColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "onlyColors",
+          "loc": Object {
+            "end": Object {
+              "column": 78,
+              "line": 14,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 14,
+            },
+          },
+          "name": "onlyColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "include": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "date": 2020-06-17T18:28:16.391Z,
+        "dateModified": 2020-06-17T18:28:16.391Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+        "package": "85a1bf440fe016c4719e372255f5ffcb",
+        "title": "Introduction/CSF",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+      "stories": Object {
+        "externalStory": Object {
+          "arguments": Array [],
+          "description": "story from external file",
+          "id": "externalStory",
+          "loc": Object {
+            "end": Object {
+              "column": 48,
+              "line": 3,
+            },
+            "start": Object {
+              "column": 27,
+              "line": 3,
+            },
+          },
+          "name": "externalStory",
+          "source": "() => <div>test</div>",
+        },
+        "externalStoryDeconstructedProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "text",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 24,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 20,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "text",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "text": Object {
+              "type": "text",
+              "value": "hello",
+            },
+          },
+          "description": "story from external file with deconstructed props",
+          "id": "externalStoryDeconstructedProps",
+          "loc": Object {
+            "end": Object {
+              "column": 58,
+              "line": 3,
+            },
+            "start": Object {
+              "column": 27,
+              "line": 3,
+            },
+          },
+          "name": "externalStoryDeconstructedProps",
+          "source": "({ text }) => <div>{text}</div>",
+        },
+        "externalStoryProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 20,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 15,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "controls": Object {
+            "text": Object {
+              "type": "text",
+              "value": "hello",
+            },
+          },
+          "description": "story from external file with props",
+          "id": "externalStoryProps",
+          "loc": Object {
+            "end": Object {
+              "column": 59,
+              "line": 3,
+            },
+            "start": Object {
+              "column": 27,
+              "line": 3,
+            },
+          },
+          "name": "externalStoryProps",
+          "source": "props => <div>{props.text}</div>",
+        },
+        "multipleChildren": Object {
+          "arguments": Array [],
+          "description": "story with two jsx children",
+          "id": "multipleChildren",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 22,
+            },
+            "start": Object {
+              "column": 32,
+              "line": 17,
+            },
+          },
+          "name": "multipleChildren",
+          "source": "() => (
+  <>
+    <button>button 1</button>
+    <button>button 2</button>
+  </>
+)",
+        },
+        "simple": Object {
+          "arguments": Array [],
+          "description": "story with jsx child",
+          "id": "simple",
+          "loc": Object {
+            "end": Object {
+              "column": 43,
+              "line": 11,
+            },
+            "start": Object {
+              "column": 22,
+              "line": 11,
+            },
+          },
+          "name": "simple",
+          "source": "() => <div>test</div>",
+        },
+        "storyDesconstructedProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "text",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 24,
+                          "line": 0,
+                        },
+                        "start": Object {
+                          "column": 20,
+                          "line": 0,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "text",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "text": Object {
+              "type": "text",
+              "value": "hello",
+            },
+          },
+          "description": "story with deconstructed props",
+          "id": "storyDesconstructedProps",
+          "loc": Object {
+            "end": Object {
+              "column": 71,
+              "line": 34,
+            },
+            "start": Object {
+              "column": 40,
+              "line": 34,
+            },
+          },
+          "name": "storyDesconstructedProps",
+          "source": "({ text }) => <div>{text}</div>",
+        },
+        "storyProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 20,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 15,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "controls": Object {
+            "text": Object {
+              "type": "text",
+              "value": "hello",
+            },
+          },
+          "description": "story with props",
+          "id": "storyProps",
+          "loc": Object {
+            "end": Object {
+              "column": 58,
+              "line": 28,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 28,
+            },
+          },
+          "name": "storyProps",
+          "source": "props => <div>{props.text}</div>",
+        },
+      },
+    },
+  ],
+}
+`;
