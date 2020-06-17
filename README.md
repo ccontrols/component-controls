@@ -32,6 +32,10 @@
 -   [Miscellaneous](#miscellaneous)
     -   [@component-controls/storybook-custom-docs](#component-controlsstorybook-custom-docs)
 
+# WIP
+
+> :warning: **THIS IS WORK IN PROGRESS**: The API are very likely to change often.
+
 # Motivation
 
 -   Create a components development environment with testing as a first-class feature.
