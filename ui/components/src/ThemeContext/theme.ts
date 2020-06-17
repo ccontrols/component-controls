@@ -485,6 +485,7 @@ export const theme: Theme = {
       a: {
         '&.active': {
           borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
+          fontWeight: 'bold',
         },
         ':hover': {
           backgroundColor: 'shadow',
@@ -542,6 +543,7 @@ export const theme: Theme = {
     nav: { display: 'flex', flexDirection: 'column' },
     navlink: {
       pl: 2,
+      fontWeight: 'body',
     },
     toggle: {
       position: 'fixed',

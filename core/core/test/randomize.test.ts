@@ -1,5 +1,5 @@
 const faker = require('faker/locale/en_US');
-import { ControlTypes, ComponentControl } from '../src';
+import { ControlTypes, ComponentControl, ComponentControls } from '../src';
 import { randomizeData } from '@component-controls/core/src/randomizeData';
 
 describe('Options utility functions', () => {
@@ -38,7 +38,7 @@ describe('Options utility functions', () => {
       male,
     },
   };
-  const controls: ComponentControl = {
+  const controls: ComponentControls = {
     name,
     lastName,
     age,
