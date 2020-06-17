@@ -36,9 +36,9 @@
     "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
     "prism-react-renderer": "^1.0.2",
-    "react": "^16.8.3",
+    "react": "^16.13.1",
     "react-animate-height": "^2.0.20",
-    "react-dom": "^16.8.3",
+    "react-dom": "^16.13.1",
     "react-popper-tooltip": "^2.10.1",
     "react-switch": "^5.0.1",
     "react-table": "^7.0.0",
@@ -56,8 +56,8 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "theme-ui": "*"
   },
   "publishConfig": {

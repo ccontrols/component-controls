@@ -1,0 +1,33 @@
+---
+title: Getting started/Gatsby
+type: tutorial
+---
+
+# Getting started with Gatsby
+
+## Install
+
+```sh
+yarn add gatsby-theme-stories
+```
+
+## Configure
+
+the default options will configure `componnet-controls` to work with react apps,  with `reac-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+
+in `gatsby-config.js`:
+
+```js
+  plugins: [
+    ...
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        //path to the configuration files
+        configPath: '.config',
+      },
+    },
+    ...
+  ],
+
+```

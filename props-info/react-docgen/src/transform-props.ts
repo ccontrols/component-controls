@@ -1,8 +1,4 @@
-import {
-  PropTypes,
-  PropType,
-  TypeInformation,
-} from '@component-controls/specification';
+import { PropTypes, PropType, TypeInformation } from '@component-controls/core';
 
 const rdPropToCCProp = (rdProp: any): PropType => {
   const prop: Partial<PropType> = {};

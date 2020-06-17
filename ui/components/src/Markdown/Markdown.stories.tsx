@@ -22,3 +22,12 @@ some text
 `}</Markdown>
   </ThemeProvider>
 );
+
+export const image = () => (
+  <ThemeProvider>
+    <Markdown>
+      ![integrated in
+      storybook](https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif)
+    </Markdown>
+  </ThemeProvider>
+);

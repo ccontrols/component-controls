@@ -1,15 +1,14 @@
 import { File } from '@babel/types';
 import {
-  StoriesStore,
   StoryComponent,
-  StoriesKind,
+  StoriesDoc,
   PackageInfo,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
 import { propsInfo } from '../misc/props-info';
-import { InstrumentOptions } from '../types';
+import { LoadingDocStore, InstrumentOptions } from '../types';
 
 interface ComponentParseData {
   component?: StoryComponent;
@@ -77,16 +76,15 @@ export const extractComponent = async (
 };
 
 export const extractStoreComponent = async (
-  store: StoriesStore,
+  store: LoadingDocStore,
   filePath: string,
   source: string,
   options?: InstrumentOptions,
   initialAST?: File,
 ) => {
-  const kinds = Object.keys(store.kinds);
-  if (kinds.length > 0) {
-    const kind: StoriesKind = store.kinds[kinds[0]];
-    const componentNames = Object.keys(kind.components);
+  if (store.doc) {
+    const doc: StoriesDoc = store.doc;
+    const componentNames = Object.keys(doc.components);
     if (componentNames) {
       for (const componentName of componentNames) {
         const { component, componentPackage } = await extractComponent(
@@ -105,7 +103,7 @@ export const extractStoreComponent = async (
             `${component.request ?? filePath}-${componentName}`,
           );
           store.components[componentKey] = component;
-          kind.components[componentName] = componentKey;
+          doc.components[componentName] = componentKey;
         }
       }
     }

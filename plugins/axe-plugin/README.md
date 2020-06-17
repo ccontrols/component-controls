@@ -5,13 +5,14 @@
 -   [Getting Started](#getting-started)
     -   [Install](#install)
     -   [Configure](#configure)
-    -   [Pages format](#pages-format)
-    -   [Examples](#examples)
-        -   [Simple page](#simple-page)
 -   [API](#api)
     -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
-    -   [<ins>isSelected</ins>](#insisselectedins)
+    -   [<ins>AxeContextProvider</ins>](#insaxecontextproviderins)
+    -   [<ins>SelectionContextProvider</ins>](#insselectioncontextproviderins)
     -   [<ins>isTagSelected</ins>](#insistagselectedins)
+    -   [<ins>isSelected</ins>](#insisselectedins)
+    -   [<ins>isTagSelected</ins>](#insistagselectedins-1)
+    -   [<ins>overview</ins>](#insoverviewins)
 
 # In action
 
@@ -66,49 +67,6 @@ export const TestingCustomePage= () => (
 
 ```
 
-## Pages format
-
-The page definition files need to have a default export with the following fields
-
-```js
-import React from 'react';
-export default {
-  // key used for navigation
-  key: string,
-  // title of the tab
-  title: string,
-  // react render function. 
-  // active boolean - if the tab custom page is active
-  // storyId as a string
-  // Return an object that can be rendered from ReactDOM.render
-  render: ({ active, storyId }) => Element,
-}
-```
-
-## Examples
-
-### Simple page
-
-```js
-import React from 'react';
-import { DocsContainer, Story} from '@storybook/addon-docs/blocks';
-import { useContext, } from '@component-controls/storybook-custom-docs';
-
-const Page = () => {
-  const context = useContext();
-  return (
-    <DocsContainer context={context}><Story id={storyId}/></DocsContainer>
-  )
-}
-export default {
-  key: 'docs-page',
-  title: 'Docs Page',
-  render: ({ active, storyId }) => {
-    return active ? <Page storyId={storyId} /> : null;  
-  } 
-}
-```
-
 # API
 
 <react-docgen-typescript path="./src" exclude="AllyDashboard.tsx,BaseAllyBlock.tsx,HighlightSelector.tsx,NodesTable.tsx,ResultsTable.tsx,SelectionContext.tsx" />
@@ -133,12 +91,28 @@ _AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/
 | `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
 
-## <ins>isSelected</ins>
+## <ins>AxeContextProvider</ins>
 
-_isSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/components/RecoilContext.tsx)_
+_AxeContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+
+## <ins>SelectionContextProvider</ins>
+
+_SelectionContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
 ## <ins>isTagSelected</ins>
 
-_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/components/RecoilContext.tsx)_
+_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+
+## <ins>isSelected</ins>
+
+_isSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
+
+## <ins>isTagSelected</ins>
+
+_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
+
+## <ins>overview</ins>
+
+_overview [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/stories/AllyBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -1,7 +1,4 @@
-import {
-  OptionsListType,
-  OptionsValueType,
-} from '@component-controls/specification';
+import { OptionsListType, OptionsValueType } from '@component-controls/core';
 
 export interface NormalizedOption {
   label: string;

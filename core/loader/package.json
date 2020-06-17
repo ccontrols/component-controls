@@ -12,7 +12,8 @@
     "plugin.js",
     "loader.js",
     "story-store-data.js",
-    "loader.d.ts"
+    "loader.d.ts",
+    "store.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -36,8 +37,9 @@
   "dependencies": {
     "@component-controls/config": "^1.2.0",
     "@component-controls/instrument": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
+    "@component-controls/core": "^1.2.0",
     "@storybook/csf": "^0.0.1",
+    "chalk": "^4.0.0",
     "js-string-escape": "^1.0.1",
     "loader-utils": "^1.2.3",
     "typescript": "^3.8.3",

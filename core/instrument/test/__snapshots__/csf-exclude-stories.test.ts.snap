@@ -3,16 +3,14 @@
 exports[`csf-exclude-stories exclude-stories-array.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "Storybook/Blocks/EXCLUDEStoryArray": Object {
-      "components": Object {},
-      "excludeStories": Array [
-        "story1",
-        "story2",
-      ],
-      "package": "76c2c8e1f9093de2093c4071b70d6c6d",
-      "title": "Storybook/Blocks/EXCLUDEStoryArray",
-    },
+  "doc": Object {
+    "components": Object {},
+    "excludeStories": Array [
+      "story1",
+      "story2",
+    ],
+    "package": "76c2c8e1f9093de2093c4071b70d6c6d",
+    "title": "Storybook/Blocks/EXCLUDEStoryArray",
   },
   "packages": Object {
     "76c2c8e1f9093de2093c4071b70d6c6d": Object {
@@ -21,13 +19,15 @@ Object {
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
         "@component-controls/core": "^1.2.0",
-        "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -87,13 +87,11 @@ export const story3 = () => {};
 exports[`csf-exclude-stories exclude-stories-regex.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "Storybook/Blocks/ExcludeStoryRegex": Object {
-      "components": Object {},
-      "excludeStories": "story(2|3)",
-      "package": "ee6d4e5808915deb32b828cdb4d27d49",
-      "title": "Storybook/Blocks/ExcludeStoryRegex",
-    },
+  "doc": Object {
+    "components": Object {},
+    "excludeStories": "story(2|3)",
+    "package": "ee6d4e5808915deb32b828cdb4d27d49",
+    "title": "Storybook/Blocks/ExcludeStoryRegex",
   },
   "packages": Object {
     "ee6d4e5808915deb32b828cdb4d27d49": Object {
@@ -102,13 +100,15 @@ Object {
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
         "@component-controls/core": "^1.2.0",
-        "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -168,16 +168,14 @@ export const story3 = () => {};
 exports[`csf-exclude-stories include-stories-array.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "Storybook/Blocks/IncludeStoryArray": Object {
-      "components": Object {},
-      "includeStories": Array [
-        "story1",
-        "story2",
-      ],
-      "package": "92f51e3abe9588702080ee898d79e849",
-      "title": "Storybook/Blocks/IncludeStoryArray",
-    },
+  "doc": Object {
+    "components": Object {},
+    "includeStories": Array [
+      "story1",
+      "story2",
+    ],
+    "package": "92f51e3abe9588702080ee898d79e849",
+    "title": "Storybook/Blocks/IncludeStoryArray",
   },
   "packages": Object {
     "92f51e3abe9588702080ee898d79e849": Object {
@@ -186,13 +184,15 @@ Object {
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
         "@component-controls/core": "^1.2.0",
-        "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",
@@ -268,13 +268,11 @@ export const story3 = () => {};
 exports[`csf-exclude-stories include-stories-regex.js 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "Storybook/Blocks/IncludeStoryRegex": Object {
-      "components": Object {},
-      "includeStories": "story(2|3)",
-      "package": "3a231bd136bb90701919c32cb0ed959c",
-      "title": "Storybook/Blocks/IncludeStoryRegex",
-    },
+  "doc": Object {
+    "components": Object {},
+    "includeStories": "story(2|3)",
+    "package": "3a231bd136bb90701919c32cb0ed959c",
+    "title": "Storybook/Blocks/IncludeStoryRegex",
   },
   "packages": Object {
     "3a231bd136bb90701919c32cb0ed959c": Object {
@@ -283,13 +281,15 @@ Object {
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
         "@component-controls/core": "^1.2.0",
-        "@component-controls/specification": "^1.2.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
         "camelcase": "^6.0.0",
         "deepmerge": "^4.2.2",
         "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
         "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
         "prettier": "^1.19.1",
         "read-package-json": "^2.1.1",
         "resolve": "^1.15.1",

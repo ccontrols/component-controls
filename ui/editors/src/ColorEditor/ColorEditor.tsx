@@ -1,10 +1,7 @@
 import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { Button, Box } from 'theme-ui';
-import {
-  ComponentControlColor,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

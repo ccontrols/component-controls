@@ -4,8 +4,7 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 
-import { getComponentName } from '@component-controls/specification';
-import { hasControls } from '@component-controls/core';
+import { getComponentName, hasControls } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 import {
   ComponentsContainer,
@@ -33,20 +32,20 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   id,
   of,
   children,
-  sxStyle,
   visibility,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
   const { components, story } = useComponentsContext({ of });
-  const componentNames = Object.keys(components);
+
   React.useEffect(() => {
+    const componentNames = Object.keys(components);
     setTitle(
       userTitle === CURRENT_STORY && componentNames.length
         ? getComponentName(components[componentNames[0]])
         : userTitle,
     );
-  }, [userTitle]);
+  }, [userTitle, components]);
 
   const keys =
     components && visibility !== 'controls' ? Object.keys(components) : [];
@@ -78,12 +77,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   );
   // console.log(child);
   return (
-    <BlockContainer
-      title={title}
-      collapsible={collapsible}
-      id={id}
-      sxStyle={sxStyle}
-    >
+    <BlockContainer title={title} collapsible={collapsible} id={id}>
       {block}
     </BlockContainer>
   );

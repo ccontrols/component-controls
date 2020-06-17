@@ -37,7 +37,7 @@ describe('follow-imports-custom', () => {
     ),
     `
     import React from 'react';
-    import { ControlTypes } from '@component-controls/specification';
+    import { ControlTypes } from '@component-controls/core';
     import { BooleanEditor } from './BooleanEditor';
     
     export default {

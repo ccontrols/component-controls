@@ -4,8 +4,9 @@ import {
   ControlTypes,
   ComponentControl,
   ComponentControlObject,
-} from '@component-controls/specification';
-import { mergeControlValues, getControlValues } from '@component-controls/core';
+  mergeControlValues,
+  getControlValues,
+} from '@component-controls/core';
 import { Popover } from '@component-controls/components';
 import { PropertyEditor, PropertyControlProps } from '../types';
 import { useControlContext, ConrolsContextProvider } from '../context';

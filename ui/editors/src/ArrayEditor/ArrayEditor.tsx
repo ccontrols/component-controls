@@ -6,8 +6,8 @@ import {
   ComponentControl,
   ComponentControlArray,
   ControlTypes,
-} from '@component-controls/specification';
-import { newControlValues } from '@component-controls/core';
+  newControlValues,
+} from '@component-controls/core';
 
 import { Popover } from '@component-controls/components';
 import { PropertyEditor, PropertyControlProps } from '../types';

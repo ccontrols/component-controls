@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactSelect from 'react-select';
+import React, { ChangeEvent } from 'react';
+import { Select } from 'theme-ui';
 import styled from '@emotion/styled';
 import {
   ComponentControlOptions,
   ControlTypes,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { normalizeOptions } from './utils';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
@@ -12,19 +12,10 @@ import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
 import { addPropertyEditor } from '../prop-factory';
 
-const OptionsSelect = styled(ReactSelect)({
+const OptionsSelect = styled(Select)({
   color: 'black',
   flexBasis: '100%',
 });
-
-type ReactSelectOnChangeFn =
-  | { (v: OptionsSelectValueItem): void }
-  | { (v: OptionsSelectValueItem[]): void };
-
-interface OptionsSelectValueItem {
-  value: any;
-  label: string;
-}
 
 /**
  * Options control editor.
@@ -50,25 +41,19 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
     display === 'multi-select'
   ) {
     const { entries, selected } = normalizeOptions(options, value);
-    const isMulti = display === 'multi-select';
-    let handleChange: ReactSelectOnChangeFn = (e: OptionsSelectValueItem) =>
-      onChange(name, e.value);
+    const handleChange = (e: ChangeEvent<HTMLSelectElement>) =>
+      onChange(name, [e.target.value]);
 
-    if (isMulti) {
-      handleChange = (values: OptionsSelectValueItem[]) =>
-        onChange(
-          name,
-          values.map(item => item.value),
-        );
-    }
     const selectValue = entries.filter(op => selected.includes(op.value));
+    const v: string = selectValue.length ? selectValue[0].value : '';
     return (
-      <OptionsSelect
-        value={selectValue}
-        options={entries}
-        isMulti={isMulti}
-        onChange={handleChange}
-      />
+      <OptionsSelect value={v} onChange={handleChange}>
+        {entries.map(entry => (
+          <option key={entry.value} value={entry.value}>
+            {entry.label}
+          </option>
+        ))}
+      </OptionsSelect>
     );
   }
 

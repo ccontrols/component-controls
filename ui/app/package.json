@@ -1,0 +1,63 @@
+{
+  "name": "@component-controls/app",
+  "version": "1.2.0",
+  "description": "Component controls standalone application.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "ui/app"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/blocks": "^1.2.0",
+    "@component-controls/components": "^1.2.0",
+    "@component-controls/core": "^1.2.0",
+    "@component-controls/pages": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "theme-ui": "^0.3.1",
+    "@theme-ui/match-media": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "@types/theme-ui": "^0.3.0",
+    "@types/react-helmet": "^6.0.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "theme-ui": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+}

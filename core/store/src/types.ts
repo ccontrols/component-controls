@@ -1,4 +1,11 @@
-import { StoriesStore, Story } from '@component-controls/specification';
+import {
+  StoriesStore,
+  Story,
+  StoriesDoc,
+  Pages,
+  RunConfiguration,
+  PageType,
+} from '@component-controls/core';
 
 /**
  * store on change observer.
@@ -10,6 +17,26 @@ export type StoreObserver = (storyId?: string, propName?: string) => void;
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
+  getStoryDoc: (name: string) => StoriesDoc | undefined;
+  getPageList: (type: PageType) => Pages;
+  getPrevPage: (
+    type: PageType | undefined,
+    docId: string,
+  ) => StoriesDoc | undefined;
+  getNextPage: (
+    type: PageType | undefined,
+    docId: string,
+  ) => StoriesDoc | undefined;
+  getPagesByCategory: (category: string, value?: any) => Pages;
+  getUniquesByCategory: (category: string) => { [key: string]: number };
+  config: RunConfiguration | undefined;
+  getFirstDocument: (pageType: PageType) => string | undefined;
+  getPagePath: (
+    pageType: PageType | undefined,
+    name: string,
+    activeTab?: string,
+  ) => string;
+  getStoryPath: (storyId: string, activeTab?: string) => string;
   updateStoryProp: (
     storyId: string,
     propName: string,

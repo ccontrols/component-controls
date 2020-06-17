@@ -1,12 +1,11 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useMemo } from 'react';
-import { useRecoilValue, useRecoilState } from 'recoil';
+import { FC, useMemo, useContext } from 'react';
 import { jsx, Flex, Box, Label, Checkbox } from 'theme-ui';
 import { Column } from 'react-table';
 import { NodeResult } from 'axe-core';
 import { SyntaxHighlighter, Table, Tag } from '@component-controls/components';
-import { isSelected, selectionList } from './RecoilContext';
+import { SelectionContext } from '../state/context';
 
 export interface NodesTableProps {
   /**
@@ -20,8 +19,8 @@ export interface NodesTableProps {
 }
 
 const SelectionCheckbox: FC<{ target: string[] }> = ({ target }) => {
-  const checked = useRecoilValue(isSelected(target));
-  const [selection, setSelection] = useRecoilState(selectionList);
+  const { isSelected, selection, setSelection } = useContext(SelectionContext);
+  const checked = isSelected(target);
   const toggleSelection = (selector: string[]) => {
     if (selector.some(s => selection.includes(s))) {
       setSelection(selection.filter((e: string) => !selector.includes(e)));
@@ -89,10 +88,7 @@ export const NodesTable: FC<NodesTableProps> = ({
                   <Tag
                     key={`${target}`}
                     color="lightgrey"
-                    sxStyle={{
-                      mr: 1,
-                      mb: 1,
-                    }}
+                    variant="tag.rightmargin"
                   >
                     {target}
                   </Tag>
@@ -107,7 +103,7 @@ export const NodesTable: FC<NodesTableProps> = ({
   return (
     <Box
       sx={{
-        backgroundColor: 'gray',
+        backgroundColor: 'shadow',
       }}
     >
       <Table

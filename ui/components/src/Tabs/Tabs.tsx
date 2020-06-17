@@ -28,8 +28,17 @@ export const TabList: ComponentClass<TabListProps> = OriginalTabList;
  */
 export const TabPanel: ComponentClass<TabPanelProps> = OriginalTabPanel;
 
+interface TabsContainerProps {
+  fontSize?: number | string;
+}
 const TabsContainer = styled.div`
-  ${({ theme }: { theme?: Theme }) => `
+  ${({
+    theme,
+    _fontSize = 13,
+  }: {
+    theme?: Theme;
+    _fontSize?: number | string;
+  }) => `
     .react-tabs {
       -webkit-tap-highlight-color: transparent;
     }
@@ -38,20 +47,28 @@ const TabsContainer = styled.div`
       padding: 0;
     }
     .react-tabs__tab {
-      font-size: 13px;
+      font-size: ${
+        typeof _fontSize === 'string' ? _fontSize : `${_fontSize}px`
+      };
       font-weight: bold;
       display: inline-block;
       border-bottom: none;
       bottom: -1px;
       position: relative;
       list-style: none;
-      padding: 4px 15px;
+      padding: 4px 10px;
+      margin-left: 4px;
+      margin-right: 4px;
       cursor: pointer;
       color: ${theme?.colors?.fadedText};
     }
+    .react-tabs__tab > a {
+      text-decoration: inherit;
+      color: inherit;
+    }
     .react-tabs__tab--selected {
-      border-bottom: 3px solid ${theme?.colors?.selected};
-      color: ${theme?.colors?.selected};
+      border-bottom: 3px solid ${theme?.colors?.primary};
+      color: ${theme?.colors?.primary};
     }
     .react-tabs__tab--disabled {
       color: GrayText;
@@ -80,14 +97,15 @@ const TabsContainer = styled.div`
   `}
 `;
 
-type OwnTabsProps = Omit<TabsProps, 'ref'>;
+type OwnTabsProps = TabsContainerProps & Omit<TabsProps, 'ref'>;
+
 /**
  * Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
  *
  */
-export const Tabs: FC<OwnTabsProps> = props => {
+export const Tabs: FC<OwnTabsProps> = ({ fontSize, ...props }) => {
   return (
-    <TabsContainer>
+    <TabsContainer _fontSize={fontSize}>
       <OriginalTabs {...props} />
     </TabsContainer>
   );

@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/core",
   "version": "1.2.0",
-  "description": "Component controls core utility routines",
+  "description": "Component controls core types and utility functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -13,6 +13,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -29,10 +30,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/specification": "^1.2.0",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
+    "react": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
@@ -40,7 +41,11 @@
     "@types/jest": "^25.1.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "webpack": "^4.43.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"

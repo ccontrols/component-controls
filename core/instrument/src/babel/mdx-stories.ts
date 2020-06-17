@@ -1,11 +1,10 @@
-import generate from '@babel/generator';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryParameters,
   CodeLocation,
-} from '@component-controls/specification';
-import { getASTSource } from '@component-controls/core';
+  getASTSource,
+} from '@component-controls/core';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
@@ -13,45 +12,26 @@ import { extractFunctionParameters } from './extract-function-parameters';
 import { followStoryImport } from './follow-imports';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
-import {
-  ParseStorieReturnType,
-  InstrumentOptions,
-  MDXExportType,
-} from '../types';
+import { ParseStorieReturnType, InstrumentOptions } from '../types';
 
 import { componentsFromParams } from '../misc/component-attributes';
 
-export const extractMDXStories = (
+export const extractMDXStories = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
-  const collectAttributes = (
-    node: any,
-    exports?: MDXExportType,
-  ): StoryParameters => {
+  const collectAttributes = (node: any): StoryParameters => {
     return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
-      if (exports) {
-        const { code } = generate(
-          attribute.value.expression || attribute.value,
-          {
-            retainFunctionParens: true,
-            retainLines: true,
-          },
-        );
-        const codeTrim = code.trim();
-        if (!exports.story) {
-          exports.story = {};
-        }
-        exports.story[attribute.name?.name] = codeTrim;
-      }
-
       if (attribute.value.type === 'StringLiteral') {
-        return { ...acc, [attribute.name?.name]: attribute.value?.value };
+        return {
+          ...acc,
+          [attribute.name.name]: attribute.value.value,
+        };
       } else if (attribute.value.type === 'JSXExpressionContainer') {
         return {
           ...acc,
-          [attribute.name?.name]: extractAttributes(attribute.value.expression),
+          [attribute.name.name]: extractAttributes(attribute.value.expression),
         };
       }
       return acc;
@@ -70,14 +50,20 @@ export const extractMDXStories = (
 
   const store: Required<Pick<
     ParseStorieReturnType,
-    'stories' | 'kinds' | 'components' | 'exports' | 'packages'
+    'stories' | 'doc' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
-    kinds: {},
+    doc: props ? { ...props } : undefined,
     components: {},
     exports: {},
     packages: {},
   };
+
+  if (props) {
+    store.exports.default = {
+      story: props,
+    };
+  }
   const { transformMDX } = _options.mdx;
   traverse(ast as any, {
     JSXElement: (path: any) => {
@@ -95,8 +81,8 @@ export const extractMDXStories = (
       ) {
         switch (node.name.name) {
           case 'Story': {
-            const exports = transformMDX ? {} : undefined;
-            const attributes = collectAttributes(node, exports);
+            const attributes = collectAttributes(node);
+            const exports = transformMDX ? { story: attributes } : undefined;
             const { name } = attributes;
             if (typeof name === 'string') {
               if (store.stories[name]) {
@@ -113,6 +99,7 @@ export const extractMDXStories = (
                 name,
                 id,
               };
+
               if (
                 expression &&
                 (expression.expression.type === 'CallExpression' ||
@@ -179,11 +166,11 @@ export const extractMDXStories = (
             break;
           }
           case 'Meta': {
-            const exports = transformMDX ? {} : undefined;
-            const attributes = collectAttributes(node, exports);
+            const attributes = collectAttributes(node);
+            const exports = transformMDX ? { story: attributes } : undefined;
             const { title } = attributes;
             if (title) {
-              const kind: StoriesKind = {
+              const doc: StoriesDoc = {
                 components: {},
                 ...attributes,
                 title,
@@ -193,9 +180,9 @@ export const extractMDXStories = (
               }
               const component = collectComponent(attributes);
               if (component !== undefined) {
-                kind.component = component;
+                doc.component = component;
               }
-              store.kinds[title] = kind;
+              store.doc = doc;
             }
             break;
           }
@@ -207,11 +194,11 @@ export const extractMDXStories = (
     },
   });
 
-  if (Object.keys(store.kinds).length === 1) {
+  if (store.doc && store.doc.title) {
     //@ts-ignore
-    store.kinds[Object.keys(store.kinds)[0]].components = components;
+    store.doc.components = components;
   } else {
-    throw new Error(`MDX stories should have one <Meta /> component`);
+    throw new Error(`MDX documenation pages should have at least a title`);
   }
   return store;
 };

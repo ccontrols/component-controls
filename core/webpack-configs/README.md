@@ -9,6 +9,7 @@
     -   [merge](#merge)
     -   [arrayMerge](#arraymerge)
     -   [deepMerge](#deepmerge)
+    -   [deepMergeWebpackConfig](#deepmergewebpackconfig)
     -   [deepMergeWithPresets](#deepmergewithpresets)
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
@@ -90,7 +91,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## arrayMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L19)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L20)_
 
 **function** arrayMerge(`dest`\*: any\[], `src`\*: any\[]): any\[];
 
@@ -104,7 +105,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L46)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L47)_
 
 **function** deepMerge(`dest`\*: any, `source`\*: any): any;
 
@@ -116,9 +117,25 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 | `source*` | any  |             |
 | `returns` | any  |             |
 
+## deepMergeWebpackConfig
+
+deep merge two webpack configurations
+
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L84)_
+
+**function** deepMergeWebpackConfig(`dest`: [WebpackConfiguration](#webpackconfiguration), `source`: [WebpackConfiguration](#webpackconfiguration)): [WebpackConfiguration](#webpackconfiguration);
+
+### parameters
+
+| Name      | Type                                          | Description |
+| --------- | --------------------------------------------- | ----------- |
+| `dest`    | [WebpackConfiguration](#webpackconfiguration) |             |
+| `source`  | [WebpackConfiguration](#webpackconfiguration) |             |
+| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
+
 ## deepMergeWithPresets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L38)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L39)_
 
 **function** deepMergeWithPresets(`dest`\*: any, `source`\*: any): any;
 
@@ -134,36 +151,36 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 expands the presets into webpack config
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L57)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L58)_
 
-**function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes)): [Configuration](#configuration);
+**function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes)): [WebpackConfiguration](#webpackconfiguration);
 
 ### parameters
 
-| Name       | Type                            | Description    |
-| ---------- | ------------------------------- | -------------- |
-| `presets*` | [RuleTypes](#ruletypes)         | custom config  |
-| `returns`  | [Configuration](#configuration) |                |
+| Name       | Type                                          | Description    |
+| ---------- | --------------------------------------------- | -------------- |
+| `presets*` | [RuleTypes](#ruletypes)                       | custom config  |
+| `returns`  | [WebpackConfiguration](#webpackconfiguration) |                |
 
 ## mergeWebpackConfig
 
 merge webpack config with custom set of presets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L86)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L101)_
 
-**function** mergeWebpackConfig(`webPack`: [Configuration](#configuration), `presets`: [RuleTypes](#ruletypes)): [Configuration](#configuration);
+**function** mergeWebpackConfig(`webPack`: [WebpackConfiguration](#webpackconfiguration), `presets`: [RuleTypes](#ruletypes)): [WebpackConfiguration](#webpackconfiguration);
 
 ### parameters
 
-| Name      | Type                            | Description                        |
-| --------- | ------------------------------- | ---------------------------------- |
-| `webPack` | [Configuration](#configuration) | passed configuration to merge with |
-| `presets` | [RuleTypes](#ruletypes)         | custom config                      |
-| `returns` | [Configuration](#configuration) |                                    |
+| Name      | Type                                          | Description                        |
+| --------- | --------------------------------------------- | ---------------------------------- |
+| `webPack` | [WebpackConfiguration](#webpackconfiguration) | passed configuration to merge with |
+| `presets` | [RuleTypes](#ruletypes)                       | custom config                      |
+| `returns` | [WebpackConfiguration](#webpackconfiguration) |                                    |
 
 ## presetsFactory
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L10)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L11)_
 
 
 

@@ -1,10 +1,18 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { StoriesStore, ControlTypes } from '@component-controls/specification';
 import { Donut, Button, Heading } from 'theme-ui';
+import {
+  StoriesStore,
+  ControlTypes,
+  defaultBuildConfig,
+  deepMerge,
+  defaultRunConfig,
+} from '@component-controls/core';
+
 import { MDXContent } from './MDXStory';
 
 export const store: StoriesStore = {
+  config: deepMerge(defaultBuildConfig, defaultRunConfig),
   packages: {
     'test-package': {
       fileHash: '28feb04b2447384a0bd648387e62bbc7',
@@ -21,16 +29,15 @@ export const store: StoriesStore = {
         '@component-controls/components': '^1.0.1',
         '@component-controls/core': '^1.0.1',
         '@component-controls/editors': '^1.0.1',
-        '@component-controls/specification': '^1.0.1',
         '@component-controls/store': '^1.0.3',
-        '@mdx-js/react': '^1.5.8',
+        '@mdx-js/react': '^1.6.5',
         '@primer/octicons-react': '^9.6.0',
         '@storybook/csf': '^0.0.1',
         'copy-to-clipboard': '^3.2.1',
         global: '^4.3.2',
         'js-string-escape': '^1.0.1',
-        react: '^16.8.3',
-        'react-dom': '^16.8.3',
+        react: '^16.13.1',
+        'react-dom': '^16.13.1',
         'react-table': '^7.0.0',
         'stringify-object': '^3.3.0',
         'theme-ui': '^0.3.1',
@@ -47,8 +54,8 @@ export const store: StoriesStore = {
       },
       peerDependencies: {
         '@primer/octicons-react': '*',
-        react: '*',
-        'react-dom': '*',
+        react: '^16.13.1',
+        'react-dom': '^16.13.1',
         'react-table': '*',
         'theme-ui': '*',
       },
@@ -293,8 +300,11 @@ and a [link](https://google.com)
       },
     },
   },
-  kinds: {
+  docs: {
     Story: {
+      date: new Date('2020-01-01'),
+      dateModified: new Date('2020-03-31'),
+      package: 'test-package',
       components: {
         ArrowButton:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
@@ -303,6 +313,7 @@ and a [link](https://google.com)
         Control:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/custom-controls.js',
       },
+      author: 'atanasster',
       title: 'Story',
       stories: [
         'id-of-story',
@@ -312,9 +323,9 @@ and a [link](https://google.com)
       ],
     },
     mdxStory: {
-      name: 'MDX Story',
       title: 'MDX Story',
       components: {},
+      author: 'atanasster',
       MDXPage: () => <MDXContent components={{}} />,
       stories: ['mdx-story'],
     },
@@ -323,7 +334,7 @@ and a [link](https://google.com)
     'id-of-story': {
       renderFn: () => <Heading>Components</Heading>,
       id: 'id-of-story',
-      kind: 'Story',
+      doc: 'Story',
       component: 'ArrowButton',
       description: 'description of story',
       loc: {
@@ -348,7 +359,7 @@ and a [link](https://google.com)
     'id-of-single': {
       id: 'id-of-single',
       renderFn: () => <Heading>Components</Heading>,
-      kind: 'Story',
+      doc: 'Story',
       component: 'ArrowButton',
       loc: {
         end: {
@@ -372,7 +383,7 @@ and a [link](https://google.com)
     'id-of-button-story': {
       id: 'id-of-button-story',
       renderFn: () => <Button>test</Button>,
-      kind: 'Story',
+      doc: 'Story',
       component: 'Button',
       loc: {
         end: {
@@ -390,7 +401,7 @@ and a [link](https://google.com)
     'blocks-core-story-plain--controls': {
       renderFn: () => <Donut value={1 / 2} />,
       id: 'blocks-core-story-plain--controls',
-      kind: 'Story',
+      doc: 'Story',
       name: 'controls',
       component: 'Control',
       controls: {
@@ -486,14 +497,14 @@ and a [link](https://google.com)
     'id-no-component': {
       renderFn: () => <Heading>Components</Heading>,
       id: 'id-no-component',
-      kind: 'Story',
+      doc: 'Story',
       name: 'no component',
       source: "() => 'hello'",
     },
     'mdx-story': {
       renderFn: () => <Heading>mdx story</Heading>,
       id: 'mdx-story',
-      kind: 'mdxStory',
+      doc: 'mdxStory',
       name: 'mdx story',
       source: "() => 'hello'",
     },

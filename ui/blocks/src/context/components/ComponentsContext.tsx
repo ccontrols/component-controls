@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryComponents,
   getComponentName,
   PackageInfo,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 import { BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
@@ -21,7 +21,7 @@ export interface ComponentInputProps {
 
 export interface ComponentContextProps {
   components: StoryComponents;
-  kind?: StoriesKind;
+  doc?: StoriesDoc;
   story?: Story;
   componentPackage?: PackageInfo;
 }
@@ -31,25 +31,28 @@ export const useComponentsContext = ({
 }: ComponentInputProps): ComponentContextProps => {
   const {
     storyId,
+    docId,
     getStoryData,
     getComponents,
     addObserver,
     removeObserver,
-  } = React.useContext(BlockDataContext);
-  const [{ story, kind, component, componentPackage }, setStoryData] = useState(
-    getStoryData(storyId),
+  } = useContext(BlockDataContext);
+
+  const [{ story, doc, component, componentPackage }, setStoryData] = useState(
+    getStoryData(storyId, docId),
   );
+
   useEffect(() => {
-    setStoryData(getStoryData(storyId));
+    setStoryData(getStoryData(storyId, docId));
     const onChange = () => {
       //force refresh of context
-      setStoryData(getStoryData(storyId));
+      setStoryData(getStoryData(storyId, docId));
     };
     addObserver(onChange);
     return () => {
       removeObserver(onChange);
     };
-  }, [storyId]);
+  }, [docId, storyId, addObserver, getStoryData, removeObserver]);
 
   if (!story) {
     return {
@@ -63,20 +66,20 @@ export const useComponentsContext = ({
       if (name) {
         components = {
           [name]: component,
-          ...getComponents(story.subcomponents, kind),
+          ...getComponents(story.subcomponents, doc),
         };
       } else {
-        components = getComponents(story.subcomponents, kind);
+        components = getComponents(story.subcomponents, doc);
       }
     } else {
-      components = getComponents(story.subcomponents, kind);
+      components = getComponents(story.subcomponents, doc);
     }
   } else {
-    components = getComponents({ of }, kind);
+    components = getComponents({ of }, doc);
   }
   return {
     components,
-    kind,
+    doc,
     story,
     componentPackage,
   };

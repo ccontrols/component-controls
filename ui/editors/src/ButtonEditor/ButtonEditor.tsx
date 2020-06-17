@@ -1,9 +1,6 @@
 import React from 'react';
 import { Button } from 'theme-ui';
-import {
-  ComponentControlButton,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlButton, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

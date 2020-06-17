@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from './types';
 import { ConrolsContextProvider, useControlContext } from './context';
 import { addPropertyEditor, getPropertyEditor } from './prop-factory';

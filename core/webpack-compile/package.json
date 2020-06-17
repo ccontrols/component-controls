@@ -9,7 +9,8 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "bundle.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -42,7 +43,8 @@
     "@types/memory-fs": "^0.3.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "webpack-bundle-analyzer": "^3.7.0"
   },
   "jest": {
     "testEnvironment": "node",

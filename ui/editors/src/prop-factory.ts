@@ -1,4 +1,4 @@
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from './types';
 
 const PropertyEditors: { [key: string]: PropertyEditor } = {};

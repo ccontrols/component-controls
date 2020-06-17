@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/specification';
+import { ControlTypes } from '@component-controls/core';
 import { ConrolsContextProvider } from '../context';
 import { BooleanEditor } from './BooleanEditor';
 

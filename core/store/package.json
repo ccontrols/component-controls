@@ -12,7 +12,9 @@
     "live_store.js",
     "live_store.d.ts",
     "static_store.js",
-    "static_store.d.ts"
+    "static_store.d.ts",
+    "singleton_store.js",
+    "singleton_store.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -36,7 +38,6 @@
   "dependencies": {
     "@component-controls/core": "^1.2.0",
     "@component-controls/loader": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
     "@storybook/csf": "^0.0.1",
     "broadcast-channel": "^3.1.0",
     "typescript": "^3.8.3"

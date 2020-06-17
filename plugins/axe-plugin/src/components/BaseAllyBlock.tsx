@@ -1,12 +1,11 @@
 /* eslint-disable react/display-name */
-import React, { FC, useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { FC, useEffect, useContext } from 'react';
 import { Spec, cleanup } from 'axe-core';
 
 import { PanelContainer, ActionItems } from '@component-controls/components';
 import { ViolationsTable, PassesTable, IncompleteTable } from './ResultsTable';
 import { HighlightSelector } from './HighlightSelector';
-import { axeResults } from './RecoilContext';
+import { AxeContext } from '../state/context';
 import { AllyDashboard } from './AllyDashboard';
 
 /**
@@ -20,7 +19,9 @@ export interface BaseAllyBlockProps {
  * Displays the [axe](https://github.com/dequelabs/axe-core) ally test results
  */
 export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
-  const [{ violations, passes, incomplete }] = useRecoilState(axeResults);
+  const {
+    results: { violations, passes, incomplete },
+  } = useContext(AxeContext);
 
   useEffect(() => {
     return () => {

@@ -1,6 +1,6 @@
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
-import { CodeLocation } from '@component-controls/specification';
+import { CodeLocation } from '@component-controls/core';
 import { sourceLocation } from '../misc/source-location';
 
 export interface ExportType {

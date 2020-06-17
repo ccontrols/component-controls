@@ -11,8 +11,8 @@ import {
   ComponentControl,
   PropType,
   ComponentInfo,
-} from '@component-controls/specification';
-import { visibleControls } from '@component-controls/core';
+  visibleControls,
+} from '@component-controls/core';
 
 import {
   Table,
@@ -161,11 +161,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
             </Text>
           );
           return required ? (
-            <Tag
-              color="red"
-              transparentAmount={0.95}
-              sxStyle={{ borderRadius: 4 }}
-            >
+            <Tag color="red" transparentAmount={0.95} sx={{ borderRadius: 4 }}>
               {text}
             </Tag>
           ) : (
@@ -210,9 +206,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                           key={`${name}_${value || typeName}`}
                           color="grey"
                           transparentAmount={0.9}
-                          sxStyle={{
-                            mr: 1,
-                          }}
+                          variant="tag.rightmargin"
                         >
                           {value || typeName}
                         </Tag>
@@ -247,13 +241,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               value = defaultValue.toString();
           }
           return (
-            <Styled.pre
-              sx={{
-                whiteSpace: 'pre-wrap',
-              }}
-            >
-              {value}
-            </Styled.pre>
+            <Box variant="propstable.defaultvalue">
+              <Styled.pre>{value}</Styled.pre>
+            </Box>
           );
         },
       },
@@ -288,7 +278,15 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       });
     }
     return { columns, rows, groupProps };
-  }, [story?.id, extraColumns, hasControls]);
+  }, [
+    extraColumns,
+    hasControls,
+    info.props,
+    infoKeys,
+    propControls,
+    story,
+    visibility,
+  ]);
 
   const onChange = (propName: string, value: any) => {
     if (setControlValue && story) {
@@ -333,9 +331,11 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         return r.join(',');
       })
       .join('\n');
-    setCopied(true);
     copy(csvRows);
-    window.setTimeout(() => setCopied(false), 1500);
+    if (typeof window !== 'undefined') {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    }
   };
   actions.push({
     title: copied ? 'copied' : 'copy table',

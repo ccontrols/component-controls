@@ -1,11 +1,11 @@
 import React, { FC, useState, useEffect } from 'react';
 import {
   Story,
-  StoriesKind,
+  StoriesDoc,
   StoryComponent,
   PackageInfo,
-} from '@component-controls/specification';
-
+} from '@component-controls/core';
+import { StoryStore } from '@component-controls/store';
 import { BlockContext, BlockDataContext } from '../block';
 import { CURRENT_STORY } from '../../utils';
 
@@ -30,7 +30,7 @@ export interface StoryContextProps {
   /**
    * the file/document of stories
    */
-  kind?: StoriesKind;
+  doc?: StoriesDoc;
   /**
    * current story's/document's component
    */
@@ -43,7 +43,12 @@ export interface StoryContextProps {
   /**
    * package.json info
    */
-  kindPackage?: PackageInfo;
+  docPackage?: PackageInfo;
+
+  /**
+   * store interface
+   */
+  storeProvider: StoryStore;
 }
 
 /**
@@ -55,9 +60,12 @@ export const useStoryContext = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const { storyId: currentId, storeProvider, options } = React.useContext(
-    BlockContext,
-  );
+  const {
+    storyId: currentId,
+    storeProvider,
+    options,
+    docId,
+  } = React.useContext(BlockContext);
   const { getStoryData, storyIdFromName } = React.useContext(BlockDataContext);
   const storyId = name
     ? storyIdFromName(name)
@@ -66,19 +74,21 @@ export const useStoryContext = ({
     : id;
   const [data, setData] = useState<{
     story?: Story;
-    kind?: StoriesKind;
+    doc?: StoriesDoc;
     component?: StoryComponent;
-    kindPackage?: PackageInfo;
-  }>(getStoryData(storyId));
-
-  const updateData = (updateId?: string) => {
-    if (!updateId || updateId === storyId) {
-      const { story, kind, component, kindPackage } = getStoryData(storyId);
-      setData({ story, kind, component, kindPackage });
-    }
-  };
+    docPackage?: PackageInfo;
+  }>(getStoryData(storyId, docId));
 
   useEffect(() => {
+    const updateData = (updateId?: string) => {
+      if (!updateId || updateId === storyId) {
+        const { story, doc, component, docPackage } = getStoryData(
+          storyId,
+          docId,
+        );
+        setData({ story, doc, component, docPackage });
+      }
+    };
     const { story } = data;
     if (story?.id !== storyId) {
       updateData(storyId);
@@ -90,14 +100,15 @@ export const useStoryContext = ({
     return () => {
       storeProvider.removeObserver(onChange);
     };
-  }, [storyId]);
+  }, [docId, storyId, data, storeProvider, getStoryData]);
   return {
     id: storyId,
     story: data.story,
-    kind: data.kind,
+    doc: data.doc,
     component: data.component,
-    kindPackage: data.kindPackage,
+    docPackage: data.docPackage,
     options,
+    storeProvider,
   };
 };
 
@@ -108,5 +119,5 @@ export interface StoryContextConsumer {
 export const StoryContextConsumer: FC<StoryContextConsumer &
   StoryInputProps> = ({ children, ...rest }) => {
   const context = useStoryContext(rest);
-  return children ? children(context) : null;
+  return children ? children(context) || null : null;
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Store } from '@component-controls/store';
 import { BlockContextProvider, store } from '@component-controls/blocks';
 import { AxeAllyBlock } from '../index';
@@ -8,7 +8,8 @@ export default {
   component: AxeAllyBlock,
 };
 
-export const overview = () => {
+export const overview: FC = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const storyStore = React.useMemo(
     () => new Store({ store, updateLocalStorage: false }),
     [],

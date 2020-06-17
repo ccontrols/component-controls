@@ -1,7 +1,6 @@
 import { CompileProps, CompileResults, WatchProps } from './types';
 import { runCompiler } from './utilities';
 export * from './types';
-
 /**
  * compile the stories with webpack
  * returns the stories store object
@@ -10,12 +9,14 @@ export const compile = ({
   webPack,
   presets,
   configPath,
+  bundleAnalyzer,
 }: CompileProps): Promise<CompileResults> => {
   return runCompiler((compiler, callback) => compiler.run(callback), {
     webPack,
     mode: 'production',
     presets,
     configPath,
+    bundleAnalyzer,
   });
 };
 
@@ -27,6 +28,7 @@ export const watch = ({
   webPack,
   presets,
   configPath,
+  bundleAnalyzer,
   watchOptions,
 }: WatchProps): Promise<CompileResults> => {
   return runCompiler(
@@ -36,6 +38,7 @@ export const watch = ({
       mode: 'development',
       presets,
       configPath,
+      bundleAnalyzer,
     },
   );
 };

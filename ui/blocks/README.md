@@ -7,10 +7,13 @@
     -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
     -   [<ins>Dependencies</ins>](#insdependenciesins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
+    -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>EditPage</ins>](#inseditpageins)
+    -   [<ins>LastEdited</ins>](#inslasteditedins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
+    -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
@@ -37,7 +40,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx,BaseStoryConfig.tsx,BaseStorySource.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -133,6 +136,12 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
 | `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
 
+## <ins>Container</ins>
+
+page inner container. will display a like to edit the page and a last updated date.
+
+_Container [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Container/Container.tsx)_
+
 ## <ins>Description</ins>
 
 Description component with markdown.
@@ -149,10 +158,16 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 ## <ins>EditPage</ins>
 
-Display a Edit this page link at the top of the page.
+Display a Edit this page link to the page source repository.
 In order for this to work, you need to set up the `repository` field in `package.json`.
 
 _EditPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/EditPage/EditPage.tsx)_
+
+## <ins>LastEdited</ins>
+
+Display the date last modified for the current document.
+
+_LastEdited [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/LastEdited/LastEdited.tsx)_
 
 ## <ins>PackageVersion</ins>
 
@@ -163,6 +178,7 @@ _PackageVersion [source code](https:/github.com/ccontrols/component-controls/tre
 
 ## <ins>PageContainer</ins>
 
+Page container component
 If the page is an MDX page, will display the MDX components.
 Otherwise, the page elements are passed as children
 
@@ -170,14 +186,17 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
+| Name      | Type                           | Description                         |
+| --------- | ------------------------------ | ----------------------------------- |
+| `ref`     | _LegacyRef&lt;HTMLDivElement>_ | ref to the page container component |
+| `variant` | _string_                       | theme variant                       |
+| `wrapper` | _ComponentType&lt;{}>_         | inner wrapper container             |
+
+## <ins>Pagination</ins>
+
+displays automatic pagination to the next/previous document of this same type.
+
+_Pagination [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Pagination/Pagination.tsx)_
 
 ## <ins>Playground</ins>
 
@@ -326,7 +345,7 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                                                               | Description                                                                                                                                                                      |
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStype`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
+| `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
@@ -374,7 +393,6 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`       | _string_                                                                       | id of the story                                                             |
 | `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
-| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                                                     |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
 
 ## <ins>InvalidType</ins>

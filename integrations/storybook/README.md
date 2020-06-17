@@ -73,7 +73,6 @@
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX (`<Meta />` tag) is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 # Getting Started
 
@@ -661,7 +660,7 @@ _StorySource [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                                                               | Description                                                                                                                                                                      |
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStype`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
+| `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
 | `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
@@ -703,23 +702,11 @@ _Title [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `id`       | _string_                                                                       | id of the story                                                             |
 | `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
-| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                                                     |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
 
 ## <ins>PageContextContainer</ins>
 
 _PageContextContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/docs-page/DocsContainer.tsx)_
-
-### properties
-
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
 
 ## <ins>DocsContainer</ins>
 
@@ -727,14 +714,8 @@ _DocsContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name         | Type                    | Description                                                                            |
-| ------------ | ----------------------- | -------------------------------------------------------------------------------------- |
-| `storyId`    | _string_                | story to display in the page                                                           |
-| `dark`       | _boolean_               | dark/light theme for the page                                                          |
-| `options`    | _any_                   | global options passed from container those are global parameters as well as decorators |
-| `components` | _MDXProviderComponents_ | components to customize the markdown display.                                          |
-| `theme`      | _Theme_                 | optional custom theme                                                                  |
-| `store`      | _StoryStore_            | store object                                                                           |
-| `active`     | _boolean_               |                                                                                        |
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | _boolean_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

@@ -54,7 +54,7 @@ export const useStoryId = () => {
     return () => {
       channel.off(SET_CURRENT_STORY, onStoryChange);
     };
-  }, []);
+  }, [channel]);
   return storyId;
 };
 

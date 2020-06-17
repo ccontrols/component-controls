@@ -28,11 +28,13 @@ module.exports = {
   stories: [
     '../../../ui/editors/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../ui/app/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/blocks/src/**/*.stories.(js|jsx|tsx|mdx)',
-    '../../../core/specification/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
+    '../../../core/core/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
     '../../../plugins/axe-plugin/src/stories/**/*.stories.(js|jsx|tsx|mdx)',
     '../../stories/src/**/*.stories.(js|jsx|tsx|mdx)',
     '../stories/**/*.stories.(js|jsx|tsx|mdx)',
+    // '../../stories/src/blogs/*.mdx',
   ],
   webpackFinal: (config = {}, options = {}) => {
     return {

@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { FunctionComponent } from 'react';
+import { FC, useMemo } from 'react';
 import { transparentize } from 'polished';
-import { Theme, Box, Flex, Button, jsx, useThemeUI } from 'theme-ui';
+import { Theme, Box, Flex, Button, jsx } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
+import { useTheme } from '../ThemeContext';
 
 export interface ActionBarProps {
   /**
@@ -44,64 +45,44 @@ const ActionColors = ({
  * actions can accept an order prop, and can also be superimposed
  *
  */
-export const ActionBar: FunctionComponent<ActionBarProps> = ({
-  actions = [],
-}) => {
-  const { theme } = useThemeUI();
-  const sortedItems = getSortedActions(actions);
-  const items = sortedItems.map(
-    ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
-      const nextGroup =
-        index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
-      return (
-        <Box
-          key={`${typeof title === 'string' ? title : 'item'}_${index}`}
-          sx={{
-            mt: 1,
-            mr: index === 0 ? 1 : 0,
-            ml: nextGroup != group || group === undefined ? 2 : 1,
-            fontSize: 1,
-            a: ActionColors({ theme, disabled }),
-            button: ActionColors({ theme, disabled }),
-          }}
-        >
-          {typeof title === 'string' ? (
-            <Button
-              onClick={onClick}
-              disabled={disabled}
-              aria-label={ariaLabel}
-            >
-              {title}
-            </Button>
-          ) : (
-            title
-          )}
-        </Box>
-      );
-    },
-  );
-
+export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
+  const theme = useTheme();
+  const items = useMemo(() => {
+    const sortedItems = getSortedActions(actions);
+    return sortedItems.map(
+      ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+        const nextGroup =
+          index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
+        return (
+          <Box
+            key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+            variant="actionbar.item"
+            sx={{
+              mr: index === 0 ? 1 : 0,
+              ml: nextGroup !== group || group === undefined ? 2 : 1,
+              a: ActionColors({ theme, disabled }),
+              button: ActionColors({ theme, disabled }),
+            }}
+          >
+            {typeof title === 'string' ? (
+              <Button
+                onClick={onClick}
+                disabled={disabled}
+                aria-label={ariaLabel}
+              >
+                {title}
+              </Button>
+            ) : (
+              title
+            )}
+          </Box>
+        );
+      },
+    );
+  }, [theme, actions]);
   return (
-    <div
-      sx={{
-        position: 'relative',
-      }}
-    >
-      <Flex
-        sx={{
-          position: 'absolute',
-          width: '100%',
-        }}
-      >
-        <Flex
-          sx={{
-            flexDirection: 'row-reverse',
-            marginLeft: 'auto',
-          }}
-        >
-          {items}
-        </Flex>
-      </Flex>
-    </div>
+    <Box variant="actionbar.container">
+      <Flex variant="actionbar.inner">{items}</Flex>
+    </Box>
   );
 };

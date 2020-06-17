@@ -1,6 +1,5 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, Children, useContext } from 'react';
 import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
-import { useThemeUI } from 'theme-ui';
 import {
   BackgroundType,
   DirectionType,
@@ -8,6 +7,7 @@ import {
   PanelContainerProps,
   IconButton,
   Zoom,
+  useTheme,
 } from '@component-controls/components';
 import { BlockDataContext } from '../context';
 
@@ -46,7 +46,7 @@ export const Playground: FC<PlaygroundProps> = ({
   description,
   scale: userScale = 1,
 }) => {
-  const { theme } = useThemeUI();
+  const theme = useTheme();
 
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
@@ -91,7 +91,7 @@ export const Playground: FC<PlaygroundProps> = ({
     ],
     [scale],
   );
-  const childArr = React.Children.toArray(children);
+  const childArr = Children.toArray(children);
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
 

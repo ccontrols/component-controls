@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ComponentControlOptions } from '@component-controls/specification';
+import { ComponentControlOptions } from '@component-controls/core';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
