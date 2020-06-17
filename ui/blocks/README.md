@@ -7,10 +7,13 @@
     -   [<ins>ComponentDeps</ins>](#inscomponentdepsins)
     -   [<ins>Dependencies</ins>](#insdependenciesins)
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
+    -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>EditPage</ins>](#inseditpageins)
+    -   [<ins>LastEdited</ins>](#inslasteditedins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
+    -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
@@ -133,6 +136,12 @@ _ComponentSource [source code](https:/github.com/ccontrols/component-controls/tr
 | `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
 | `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
 
+## <ins>Container</ins>
+
+page inner container. will display a like to edit the page and a last updated date.
+
+_Container [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Container/Container.tsx)_
+
 ## <ins>Description</ins>
 
 Description component with markdown.
@@ -149,10 +158,16 @@ _Description [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 ## <ins>EditPage</ins>
 
-Display a Edit this page link at the top of the page.
+Display a Edit this page link to the page source repository.
 In order for this to work, you need to set up the `repository` field in `package.json`.
 
 _EditPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/EditPage/EditPage.tsx)_
+
+## <ins>LastEdited</ins>
+
+Display the date last modified for the current document.
+
+_LastEdited [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/LastEdited/LastEdited.tsx)_
 
 ## <ins>PackageVersion</ins>
 
@@ -175,6 +190,13 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 | --------- | ------------------------------ | ----------------------------------- |
 | `ref`     | _LegacyRef&lt;HTMLDivElement>_ | ref to the page container component |
 | `variant` | _string_                       | theme variant                       |
+| `wrapper` | _ComponentType&lt;{}>_         | inner wrapper container             |
+
+## <ins>Pagination</ins>
+
+displays automatic pagination to the next/previous document of this same type.
+
+_Pagination [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Pagination/Pagination.tsx)_
 
 ## <ins>Playground</ins>
 

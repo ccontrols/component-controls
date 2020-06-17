@@ -7,6 +7,7 @@
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryListItem</ins>](#inscategorylistitemins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
+    -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>DocPage</ins>](#insdocpageins)
     -   [<ins>DocumentsList</ins>](#insdocumentslistins)
     -   [<ins>DocumentsListItem</ins>](#insdocumentslistitemins)
@@ -15,6 +16,7 @@
     -   [<ins>DocLink</ins>](#insdoclinkins)
     -   [<ins>DocsLink</ins>](#insdocslinkins)
     -   [<ins>StoryLink</ins>](#insstorylinkins)
+    -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>PageList</ins>](#inspagelistins)
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
@@ -103,6 +105,12 @@ _CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/
 | ----------- | ---------- | ----------- |
 | `type*`     | _PageType_ |             |
 | `category*` | _any_      |             |
+
+## <ins>Container</ins>
+
+application inner container for pages. Adds pagination to the blocks/Container component.
+
+_Container [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Container/Container.tsx)_
 
 ## <ins>DocPage</ins>
 
@@ -193,6 +201,20 @@ _StoryLink [source code](https:/github.com/ccontrols/component-controls/tree/mas
 | ----- | ---------------------------------------------------------------------------- | ----------- |
 | `id`  | _string_                                                                     |             |
 | `ref` | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+
+## <ins>PageContainer</ins>
+
+page container to enhance the inner page wrapper
+
+_PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/PageContainer/PageContainer.tsx)_
+
+### properties
+
+| Name      | Type                                                                                                                                                                                                                                                                                  | Description                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| `type*`   | _PageType_                                                                                                                                                                                                                                                                            | page type                           |
+| `variant` | _string_                                                                                                                                                                                                                                                                              | theme variant                       |
+| `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement> \| (((instance: HTMLDivElement) => void) & string) \| (((instance: HTMLDivElement) => void) & RefObject&lt;...>) \| (RefObject&lt;...> & string) \| (RefObject&lt;...> & ((instance: HTMLDivElement) => void))_ | ref to the page container component |
 
 ## <ins>PageList</ins>
 

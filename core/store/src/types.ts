@@ -18,8 +18,6 @@ export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => StoriesDoc | undefined;
-  getDocs: () => Pages;
-  getBlogs: () => Pages;
   getPageList: (type: PageType) => Pages;
   getPrevPage: (
     type: PageType | undefined,

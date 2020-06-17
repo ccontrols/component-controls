@@ -10,7 +10,7 @@ export default {
 
 const MockList = () => {
   const { storeProvider } = useContext(BlockContext);
-  const pages = storeProvider.getDocs();
+  const pages = storeProvider.getPageList('story');
   return <DocumentsList pages={pages} />;
 };
 

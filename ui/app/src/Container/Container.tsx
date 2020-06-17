@@ -6,6 +6,9 @@ import {
   Container as BlocksContainer,
 } from '@component-controls/blocks';
 
+/**
+ *  application inner container for pages. Adds pagination to the blocks/Container component.
+ */
 export const Container: FC = ({ children }) => {
   return (
     <Box variant="container.container">

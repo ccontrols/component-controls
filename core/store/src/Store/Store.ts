@@ -153,28 +153,22 @@ export class Store implements StoryStore {
   /**
    * given a story id return a story from the store
    */
-
   getStory = (storyId: string) => {
     const store = this.getStore();
     return store ? store.stories[storyId] : undefined;
   };
 
   /**
-   s* given a story doc file title, return a story doc file from the store
+   * given a story doc file title, return a story doc file from the store
    */
-
   getStoryDoc = (name: string) => {
     const store = this.getStore();
     return store ? store.docs[name] : undefined;
   };
 
   /**
-   * returns all the documentation files
+   * returns all the documents/pages of a certain type.
    */
-  getDocs = (): Pages => this.getPageList('story');
-
-  getBlogs = (): Pages => this.getPageList('blog');
-
   getPageList = (type: PageType = defPageType): Pages => {
     if (this.loadedStore?.docs) {
       if (!this._cachedPages[type]) {
@@ -196,6 +190,10 @@ export class Store implements StoryStore {
     }
     return [];
   };
+
+  /**
+   * returns the previous page of the same type.
+   */
   getPrevPage = (
     type: PageType | undefined,
     docId: string,
@@ -209,6 +207,10 @@ export class Store implements StoryStore {
     }
     return undefined;
   };
+
+  /**
+   * returns the next page of the same type.
+   */
   getNextPage = (
     type: PageType | undefined,
     docId: string,
@@ -223,6 +225,9 @@ export class Store implements StoryStore {
     return undefined;
   };
 
+  /**
+   * returns all the documents/pages of a certain category value.
+   */
   getPagesByCategory = (category: string, value?: any): Pages => {
     if (this.loadedStore?.docs) {
       const docs = this.loadedStore?.docs;
@@ -241,6 +246,10 @@ export class Store implements StoryStore {
     }
     return [];
   };
+
+  /**
+   * returns all the unique category values (and their cound) for a category field.
+   */
   getUniquesByCategory = (category: string): { [key: string]: number } => {
     if (this.loadedStore?.docs) {
       const docs = this.loadedStore?.docs;
@@ -269,14 +278,23 @@ export class Store implements StoryStore {
     return {};
   };
 
+  /**
+   * returns the run time configuration object.
+   */
   get config(): RunConfiguration | undefined {
     return this.loadedStore?.config;
   }
 
+  /**
+   * returns the first document of a page type.
+   */
   getFirstDocument(pageType: PageType): string | undefined {
     return this._firstDocument[pageType];
   }
 
+  /**
+   * returns the url path to a document.
+   */
   getPagePath = (
     pageType: PageType | undefined = defPageType,
     name: string,
@@ -285,6 +303,9 @@ export class Store implements StoryStore {
     return getDocPath(pageType, doc, this.config, name);
   };
 
+  /**
+   * returns the url path to a story.
+   */
   getStoryPath = (storyId: string): string => {
     const story = this.getStory(storyId);
     if (!story) {
