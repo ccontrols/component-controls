@@ -304,7 +304,18 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       onChange={onChange}
       onClick={onClick}
     >
-      <Table {...groupProps} {...tableProps} columns={columns} data={rows} />
+      <Table
+        {...groupProps}
+        {...tableProps}
+        columns={columns}
+        data={rows}
+        sx={{
+          th: {
+            //some space for the action bar
+            pt: 4,
+          },
+        }}
+      />
     </ConrolsContextProvider>
   );
   const actions: ActionItems = [];
@@ -352,15 +363,5 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       storyId: story?.id,
     }),
   );
-  return (
-    <ActionContainer actions={actions}>
-      <Box
-        sx={{
-          pt: 4,
-        }}
-      >
-        {table}
-      </Box>
-    </ActionContainer>
-  );
+  return <ActionContainer actions={actions}>{table}</ActionContainer>;
 };
