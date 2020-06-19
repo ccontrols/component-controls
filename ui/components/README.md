@@ -46,6 +46,9 @@ This package is usually installed as part of the @component-controls package, bu
 ```bash
 $ npm install @component-controls/components --save
 ```
+# Documentation
+
+[live documentation site](https://component-controls.com/api/components/actionbar/)
 
 # Overview
 
