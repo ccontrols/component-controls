@@ -676,49 +676,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
-    "backgroundColor": Object {
-      "parentName": "BackgroundColorProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "bg": Object {
-      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
-By default the raw value of the prop is returned.
-
-Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
-Array values are converted into responsive values.
-
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)",
-      "parentName": "BackgroundColorProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
     "className": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -735,13 +692,6 @@ Array values are converted into responsive values.
       },
     },
     "color": Object {
-      "description": "The color utility parses a component's \`color\` and \`bg\` props and converts them into CSS declarations.
-By default the raw value of the prop is returned.
-
-Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
-Array values are converted into responsive values.
-
-[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
@@ -752,19 +702,19 @@ Array values are converted into responsive values.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"inherit\\" | \\"true\\" | \\"false\\"",
+        "raw": "boolean | \\"true\\" | \\"false\\" | \\"inherit\\"",
         "value": Array [
           Object {
             "name": "boolean",
-          },
-          Object {
-            "name": "inherit",
           },
           Object {
             "name": "true",
           },
           Object {
             "name": "false",
+          },
+          Object {
+            "name": "inherit",
           },
         ],
       },
@@ -808,10 +758,10 @@ Array values are converted into responsive values.
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -1032,8 +982,8 @@ from the title.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "TLengthStyledSystem",
-        "raw": "TLengthStyledSystem",
+        "name": "ReactText",
+        "raw": "ReactText",
       },
     },
     "lang": Object {
@@ -1041,272 +991,6 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "m": Object {
-      "description": "Margin on top, left, bottom and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "margin": Object {
-      "description": "Margin on top, left, bottom and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginBottom": Object {
-      "description": "Margin on bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginLeft": Object {
-      "description": "Margin on left",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginRight": Object {
-      "description": "Margin on right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginTop": Object {
-      "description": "Margin on top",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginX": Object {
-      "description": "Margin on left and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "marginY": Object {
-      "description": "Margin on top and bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "mb": Object {
-      "description": "Margin on bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "ml": Object {
-      "description": "Margin on left",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "mr": Object {
-      "description": "Margin on right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "mt": Object {
-      "description": "Margin on top",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "mx": Object {
-      "description": "Margin on left and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "my": Object {
-      "description": "Margin on top and bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
       },
     },
     "of": Object {
@@ -2448,231 +2132,11 @@ if the function returns false, it can stop chabging to the new tab",
         "raw": "(event: WheelEvent<HTMLDivElement>) => void",
       },
     },
-    "opacity": Object {
-      "description": "The opacity CSS property sets the transparency of an element or the degree to which content
-behind an element is visible.
-
-[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)",
-      "parentName": "OpacityProps",
-      "type": Object {
-        "name": "ResponsiveValue<GlobalsNumber, Required<Theme<TLengthStyledSystem>>>",
-        "raw": "ResponsiveValue<GlobalsNumber, Required<Theme<TLengthStyledSystem>>>",
-      },
-    },
-    "p": Object {
-      "description": "Padding on top, left, bottom and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "padding": Object {
-      "description": "Padding on top, left, bottom and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingBottom": Object {
-      "description": "Padding on bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingLeft": Object {
-      "description": "Padding on left",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingRight": Object {
-      "description": "Padding on right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingTop": Object {
-      "description": "Padding on top",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingX": Object {
-      "description": "Padding on left and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "paddingY": Object {
-      "description": "Padding on top and bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "pb": Object {
-      "description": "Padding on bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "pl": Object {
-      "description": "Padding on left",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
     "placeholder": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "pr": Object {
-      "description": "Padding on right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
       },
     },
     "prefix": Object {
@@ -2687,63 +2151,6 @@ behind an element is visible.
       "type": Object {
         "name": "string",
         "raw": "string",
-      },
-    },
-    "pt": Object {
-      "description": "Padding on top",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "px": Object {
-      "description": "Padding on left and right",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
-      },
-    },
-    "py": Object {
-      "description": "Padding on top and bottom",
-      "parentName": "SpaceProps",
-      "type": Object {
-        "name": "union",
-        "raw": "ResponsiveValue<string | number | symbol, Required<Theme<TLengthStyledSystem>>>",
-        "value": Array [
-          Object {
-            "name": "ResponsiveValue<string",
-          },
-          Object {
-            "name": "number",
-          },
-          Object {
-            "name": "symbol, Required<Theme<TLengthStyledSystem>>>",
-          },
-        ],
       },
     },
     "radioGroup": Object {
@@ -2867,16 +2274,16 @@ import { jsx } from 'theme-ui'
 \`\`\`",
       "parentName": "SxProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "sxStyle": Object {
       "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -2952,15 +2359,15 @@ user setting can display only props table or only controls",
         "value": Array [
           Object {
             "name": "string",
-            "value": "all",
-          },
-          Object {
-            "name": "string",
             "value": "controls",
           },
           Object {
             "name": "string",
             "value": "info",
+          },
+          Object {
+            "name": "string",
+            "value": "all",
           },
         ],
       },
@@ -3923,10 +3330,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -5801,8 +5208,8 @@ import { jsx } from 'theme-ui'
 \`\`\`",
       "parentName": "SxProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -5885,10 +5292,10 @@ import { jsx } from 'theme-ui'
       "parentName": "AllHTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -6872,10 +6279,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -8736,8 +8143,8 @@ import { jsx } from 'theme-ui'
 \`\`\`",
       "parentName": "SxProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -8820,10 +8227,10 @@ import { jsx } from 'theme-ui'
       "parentName": "AllHTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -9807,10 +9214,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -11685,8 +11092,8 @@ import { jsx } from 'theme-ui'
 \`\`\`",
       "parentName": "SxProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -11769,10 +11176,10 @@ import { jsx } from 'theme-ui'
       "parentName": "AllHTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -12770,10 +12177,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -12835,7 +12242,8 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "fontSize": Object {
-      "parentName": "TabsContainerProps",
+      "defaultValue": 1,
+      "parentName": "TabsOwnProps",
       "type": Object {
         "name": "ReactText",
         "raw": "ReactText",
@@ -14676,8 +14084,8 @@ import { jsx } from 'theme-ui'
 \`\`\`",
       "parentName": "SxProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "tabIndex": Object {
@@ -14760,10 +14168,10 @@ import { jsx } from 'theme-ui'
       "parentName": "AllHTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },

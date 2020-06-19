@@ -57,8 +57,8 @@ from the title.",
       "description": "theme-ui styling object for Block Box",
       "parentName": "BlockContainerProps",
       "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
+        "name": "ThemeUIStyleObject",
+        "raw": "ThemeUIStyleObject",
       },
     },
     "title": Object {
