@@ -51,7 +51,6 @@
     "@types/jest": "^25.1.2",
     "@types/mdx-js__react": "^1.5.1",
     "@types/stringify-object": "^3.2.0",
-    "@types/theme-ui": "^0.3.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0"

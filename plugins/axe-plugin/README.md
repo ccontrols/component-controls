@@ -77,42 +77,42 @@ export const TestingCustomePage= () => (
 
 Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
 
-_AxeAllyBlock [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
+_AxeAllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
 
 ### properties
 
-| Name          | Type                | Description                                                                                                                     |
-| ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_              |                                                                                                                                 |
-| `id`          | _string_            | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_            | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_            | optional section title for the block.                                                                                           |
-| `description` | _string_            | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+| Name          | Type                 | Description                                                                                                                     |
+| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_               |                                                                                                                                 |
+| `id`          | _string_             | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_             | alternatively you can use the name of a story to load from an external file                                                     |
+| `title`       | _string_             | optional section title for the block.                                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                                  |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
 
 ## <ins>AxeContextProvider</ins>
 
-_AxeContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+_AxeContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
 ## <ins>SelectionContextProvider</ins>
 
-_SelectionContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+_SelectionContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
 ## <ins>isTagSelected</ins>
 
-_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
+_isTagSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
 ## <ins>isSelected</ins>
 
-_isSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
+_isSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
 
 ## <ins>isTagSelected</ins>
 
-_isTagSelected [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
+_isTagSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
 
 ## <ins>overview</ins>
 
-_overview [source code](https:/github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/stories/AllyBlock.stories.tsx)_
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/stories/AllyBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

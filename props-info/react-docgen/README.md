@@ -152,7 +152,7 @@ object
 
 ## ParserOptions
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
 
 
@@ -192,19 +192,19 @@ _defined in [@component-controls/react-docgen-info/src/types.ts](https://github.
 
 ## ParserPlugin
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
-'asyncGenerators' | 'bigInt' | 'classPrivateMethods' | 'classPrivateProperties' | 'classProperties' | 'decorators' | 'decorators-legacy' | 'doExpressions' | 'dynamicImport' | 'estree' | 'exportDefaultFrom' | 'exportNamespaceFrom' | 'flow' | 'flowComments' | 'functionBind' | 'functionSent' | 'importMeta' | 'jsx' | 'logicalAssignment' | 'nullishCoalescingOperator' | 'numericSeparator' | 'objectRestSpread' | 'optionalCatchBinding' | 'optionalChaining' | 'partialApplication' | 'pipelineOperator' | 'placeholders' | 'throwExpressions' | 'topLevelAwait' | 'typescript' | 'v8intrinsic' | [ParserPluginWithOptions](#parserpluginwithoptions)
+'asyncGenerators' | 'bigInt' | 'classPrivateMethods' | 'classPrivateProperties' | 'classProperties' | 'decorators' | 'decorators-legacy' | 'doExpressions' | 'dynamicImport' | 'estree' | 'exportDefaultFrom' | 'exportNamespaceFrom' | 'flow' | 'flowComments' | 'functionBind' | 'functionSent' | 'importMeta' | 'jsx' | 'logicalAssignment' | 'moduleAttributes' | 'nullishCoalescingOperator' | 'numericSeparator' | 'objectRestSpread' | 'optionalCatchBinding' | 'optionalChaining' | 'partialApplication' | 'pipelineOperator' | 'placeholders' | 'privateIn' | 'throwExpressions' | 'topLevelAwait' | 'typescript' | 'v8intrinsic' | [ParserPluginWithOptions](#parserpluginwithoptions)
 
 ## ParserPluginWithOptions
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
 \['decorators', [DecoratorsPluginOptions](#decoratorspluginoptions)] \| \['pipelineOperator', [PipelineOperatorPluginOptions](#pipelineoperatorpluginoptions)] \| \['flow', [FlowPluginOptions](#flowpluginoptions)]
 
 ## DecoratorsPluginOptions
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
 
 
@@ -216,7 +216,7 @@ _defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
 
 ## PipelineOperatorPluginOptions
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
 
 
@@ -228,7 +228,7 @@ _defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
 
 ## FlowPluginOptions
 
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github)_
+_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
 
 

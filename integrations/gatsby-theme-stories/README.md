@@ -66,11 +66,11 @@ in `gatsby-config.js`:
 
 Store class used to query the stories and exchange information between processes
 
-_Store [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
+_Store [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
 
 ## <ins>GatsbyLink</ins>
 
-_GatsbyLink [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/GatsbyLink.tsx)_
+_GatsbyLink [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/GatsbyLink.tsx)_
 
 ### properties
 
@@ -81,7 +81,7 @@ _GatsbyLink [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 ## <ins>Layout</ins>
 
-_Layout [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Layout.tsx)_
+_Layout [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/components/Layout.tsx)_
 
 ### properties
 
@@ -92,7 +92,7 @@ _Layout [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 ## <ins>CategoryList</ins>
 
-_CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryList.tsx)_
+_CategoryList [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryList.tsx)_
 
 ### properties
 
@@ -102,7 +102,7 @@ _CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ## <ins>CategoryPage</ins>
 
-_CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryPage.tsx)_
+_CategoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryPage.tsx)_
 
 ### properties
 
@@ -112,7 +112,7 @@ _CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/
 
 ## <ins>DocPage</ins>
 
-_DocPage [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocPage.tsx)_
+_DocPage [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocPage.tsx)_
 
 ### properties
 
@@ -122,7 +122,7 @@ _DocPage [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 ## <ins>PageList</ins>
 
-_PageList [source code](https:/github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/PageList.tsx)_
+_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/PageList.tsx)_
 
 ### properties
 

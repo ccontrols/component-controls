@@ -76,6 +76,7 @@ export class LoaderPlugin {
         placeholderPos,
         placeholderPos + placeholder.length - 1,
         newContent,
+        file,
       );
       compilation.assets[file] = newSource;
     }

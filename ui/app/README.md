@@ -48,7 +48,7 @@ Some of the design goals:
 
 application container component. adds SEO, SkipLinks, Header and Footer.
 
-_App [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/App/App.tsx)_
+_App [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/App/App.tsx)_
 
 ### properties
 
@@ -58,7 +58,7 @@ _App [source code](https:/github.com/ccontrols/component-controls/tree/master/ui
 
 ## <ins>AppContext</ins>
 
-_AppContext [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/AppContext/AppContext.tsx)_
+_AppContext [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/AppContext/AppContext.tsx)_
 
 ### properties
 
@@ -73,7 +73,7 @@ _AppContext [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 displays page of categories
 
-_CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryList.tsx)_
+_CategoryList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryList.tsx)_
 
 ### properties
 
@@ -85,7 +85,7 @@ _CategoryList [source code](https:/github.com/ccontrols/component-controls/tree/
 
 category list item displays the unique categories with a link, and the count of docs for each
 
-_CategoryListItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryListItem.tsx)_
+_CategoryListItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryList/CategoryListItem.tsx)_
 
 ### properties
 
@@ -97,7 +97,7 @@ _CategoryListItem [source code](https:/github.com/ccontrols/component-controls/t
 
 ## <ins>CategoryPage</ins>
 
-_CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryPage/CategoryPage.tsx)_
+_CategoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/CategoryPage/CategoryPage.tsx)_
 
 ### properties
 
@@ -110,14 +110,14 @@ _CategoryPage [source code](https:/github.com/ccontrols/component-controls/tree/
 
 application inner container for pages. Adds pagination to the blocks/Container component.
 
-_Container [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Container/Container.tsx)_
+_Container [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Container/Container.tsx)_
 
 ## <ins>DocPage</ins>
 
 documentation page for current document.
 will check if the page has a layout with sidebars or if the page is standalone.
 
-_DocPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocPage/DocPage.tsx)_
+_DocPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocPage/DocPage.tsx)_
 
 ### properties
 
@@ -130,7 +130,7 @@ _DocPage [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 displays a list of the provided document pages
 
-_DocumentsList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsList.tsx)_
+_DocumentsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsList.tsx)_
 
 ### properties
 
@@ -142,7 +142,7 @@ _DocumentsList [source code](https:/github.com/ccontrols/component-controls/tree
 
 displays a single doument item
 
-_DocumentsListItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsListItem.tsx)_
+_DocumentsListItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsListItem.tsx)_
 
 ### properties
 
@@ -156,19 +156,19 @@ _DocumentsListItem [source code](https:/github.com/ccontrols/component-controls/
 
 application footer component
 
-_Footer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Footer/Footer.tsx)_
+_Footer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Footer/Footer.tsx)_
 
 ## <ins>Header</ins>
 
 application header component
 
-_Header [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Header/Header.tsx)_
+_Header [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Header/Header.tsx)_
 
 ## <ins>DocLink</ins>
 
 native lonk to a documentation page
 
-_DocLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/DocLink.tsx)_
+_DocLink [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/DocLink.tsx)_
 
 ### properties
 
@@ -181,7 +181,7 @@ _DocLink [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 native lonk to the documentation
 
-_DocsLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/DocsLink.tsx)_
+_DocsLink [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/DocsLink.tsx)_
 
 ### properties
 
@@ -193,7 +193,7 @@ _DocsLink [source code](https:/github.com/ccontrols/component-controls/tree/mast
 
 native lonk to a story
 
-_StoryLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/StoryLink.tsx)_
+_StoryLink [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Links/StoryLink.tsx)_
 
 ### properties
 
@@ -206,7 +206,7 @@ _StoryLink [source code](https:/github.com/ccontrols/component-controls/tree/mas
 
 page container to enhance the inner page wrapper
 
-_PageContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/PageContainer/PageContainer.tsx)_
+_PageContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/PageContainer/PageContainer.tsx)_
 
 ### properties
 
@@ -220,7 +220,7 @@ _PageContainer [source code](https:/github.com/ccontrols/component-controls/tree
 
 list of documents for a specific page type
 
-_PageList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/PageList/PageList.tsx)_
+_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/PageList/PageList.tsx)_
 
 ### properties
 
@@ -230,7 +230,7 @@ _PageList [source code](https:/github.com/ccontrols/component-controls/tree/mast
 
 ## <ins>SEO</ins>
 
-_SEO [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SEO/SEO.tsx)_
+_SEO [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SEO/SEO.tsx)_
 
 ### properties
 
@@ -243,7 +243,7 @@ _SEO [source code](https:/github.com/ccontrols/component-controls/tree/master/ui
 
 ## <ins>SideContext</ins>
 
-_SideContext [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SideContext/SideContext.tsx)_
+_SideContext [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SideContext/SideContext.tsx)_
 
 ### properties
 
@@ -255,7 +255,7 @@ _SideContext [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 application sidebar component
 
-_Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/Sidebar/Sidebar.tsx)_
+_Sidebar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Sidebar/Sidebar.tsx)_
 
 ### properties
 
@@ -269,7 +269,7 @@ _Sidebar [source code](https:/github.com/ccontrols/component-controls/tree/maste
 
 document page - rendering with sidebars and tabs for multiple document views
 
-_SidebarsMDXPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsMDXPage.tsx)_
+_SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsMDXPage.tsx)_
 
 ### properties
 
@@ -279,7 +279,7 @@ _SidebarsMDXPage [source code](https:/github.com/ccontrols/component-controls/tr
 
 ## <ins>SidebarsPage</ins>
 
-_SidebarsPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsPage.tsx)_
+_SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsPage.tsx)_
 
 ### properties
 
@@ -292,7 +292,7 @@ _SidebarsPage [source code](https:/github.com/ccontrols/component-controls/tree/
 
 document page - rendering with sidebars and tabs for multiple document views
 
-_SidebarsStoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsStoryPage.tsx)_
+_SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SidebarsPage/SidebarsStoryPage.tsx)_
 
 ### properties
 
@@ -305,7 +305,7 @@ _SidebarsStoryPage [source code](https:/github.com/ccontrols/component-controls/
 
 row of tags with link to their page
 
-_TagsList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/app/src/TagsList/TagsList.tsx)_
+_TagsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/TagsList/TagsList.tsx)_
 
 ### properties
 

@@ -52,7 +52,6 @@
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/react-table": "^7.0.10",
     "@types/react-tabs": "^2.3.1",
-    "@types/theme-ui": "^0.3.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0"

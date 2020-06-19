@@ -96,6 +96,8 @@ _defined in [react-docgen-typescript/lib/parser.d.ts](https://github.com/stylegu
 | `propFilter`                         | [StaticPropFilter](#staticpropfilter) \| [PropFilter](#propfilter) |             |
 | `savePropValueAsString`              | boolean                                                            |             |
 | `shouldExtractLiteralValuesFromEnum` | boolean                                                            |             |
+| `shouldExtractValuesFromUnion`       | boolean                                                            |             |
+| `shouldRemoveUndefinedFromOptional`  | boolean                                                            |             |
 
 ## Method
 
