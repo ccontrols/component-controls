@@ -1,4 +1,4 @@
-import { Theme, useThemeUI } from 'theme-ui';
+import { Theme, ThemeUIStyleObject, useThemeUI } from 'theme-ui';
 const text =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif';
 
@@ -8,7 +8,44 @@ const heading = {
   fontWeight: 'semibold',
 };
 
-export const theme: Theme = {
+export type ControlsTheme = {
+  actionbar: Record<string, ThemeUIStyleObject>;
+  actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
+  blockcontainer: Record<string, ThemeUIStyleObject>;
+  blockpagecontainer: Record<string, ThemeUIStyleObject>;
+  searchinput: Record<string, ThemeUIStyleObject>;
+  subtitle: ThemeUIStyleObject;
+  subheading: ThemeUIStyleObject;
+  tabs: Record<string, ThemeUIStyleObject>;
+  tag: Record<string, ThemeUIStyleObject>;
+  title: ThemeUIStyleObject;
+  zoom: ThemeUIStyleObject;
+  editpage: Record<string, ThemeUIStyleObject>;
+  lastedited: Record<string, ThemeUIStyleObject>;
+  pagecontainer: ThemeUIStyleObject;
+  propstable: Record<string, ThemeUIStyleObject>;
+  story: ThemeUIStyleObject;
+  colormode: Record<string, ThemeUIStyleObject>;
+  header: ThemeUIStyleObject;
+  navmenu: Record<string, ThemeUIStyleObject>;
+  pagination: Record<string, ThemeUIStyleObject>;
+  sidebar: Record<string, ThemeUIStyleObject>;
+  skiplinks: Record<string, ThemeUIStyleObject>;
+  app: ThemeUIStyleObject;
+  sidecontext: Record<string, ThemeUIStyleObject>;
+  appsidebar: Record<string, ThemeUIStyleObject>;
+  appheader: Record<string, ThemeUIStyleObject>;
+  appfooter: Record<string, ThemeUIStyleObject>;
+  categorylist: Record<string, ThemeUIStyleObject>;
+  pagelist: Record<string, ThemeUIStyleObject>;
+  categorypage: Record<string, ThemeUIStyleObject>;
+  documentlistitem: Record<string, ThemeUIStyleObject>;
+  taglist: Record<string, ThemeUIStyleObject>;
+  appsidebarpage: Record<string, ThemeUIStyleObject>;
+  container: Record<string, ThemeUIStyleObject>;
+  documentslist: Record<string, ThemeUIStyleObject>;
+} & Theme;
+export const theme: ControlsTheme = {
   colors: {
     text: '#454f5b',
     background: '#fff',
@@ -739,15 +776,14 @@ export const theme: Theme = {
   appsidebarpage: {
     storycontainer: {
       display: 'grid',
-      gridGap: '16px',
       flex: 1,
       minHeight: '100vh',
       gridTemplateColumns: '300px 1fr 250px',
       position: 'relative',
     },
+    //@ts-ignore
     mdxcontainer: {
       display: 'grid',
-      gridGap: '16px',
       flex: 1,
       minHeight: '100vh',
       gridTemplateColumns: '300px 1fr',

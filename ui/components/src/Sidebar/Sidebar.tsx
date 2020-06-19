@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { FC, useContext } from 'react';
+import React, { FC, useContext, ReactText } from 'react';
 import { jsx, Box, BoxProps, Heading } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '../ThemeContext';
@@ -38,7 +38,7 @@ export const Sidebar: FC<SidebarProps & BoxProps> = ({
   return collapsed ? null : (
     <Box
       variant={responsive ? 'sidebar.responsive' : 'sidebar.default'}
-      sx={get(theme, variant)}
+      sx={get(theme, variant as ReactText)}
       onClick={() => responsive && setCollapsed(true)}
       {...rest}
     >

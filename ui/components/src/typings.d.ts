@@ -1,7 +1,4 @@
-declare module '@theme-ui/preset-polaris';
-declare module '@theme-ui/core';
 declare module '@mdx-js/runtime';
-declare module '@theme-ui/css';
 declare module '@theme-ui/match-media';
 declare module '@mdx-js/react' {
   import * as React from 'react';

@@ -31,7 +31,8 @@
   "license": "MIT",
   "dependencies": {
     "@primer/octicons-react": "^9.5.0",
-    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/css": "next",
+    "@theme-ui/presets": "next",
     "copy-to-clipboard": "^3.2.1",
     "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
@@ -44,7 +45,7 @@
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
     "scroll-into-view-if-needed": "^2.2.25",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "next"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
@@ -57,6 +58,7 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
+    "@theme-ui/css": "*",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "theme-ui": "*"

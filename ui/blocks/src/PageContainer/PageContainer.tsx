@@ -1,6 +1,13 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useEffect, forwardRef, Ref, ComponentType } from 'react';
+import {
+  FC,
+  useEffect,
+  forwardRef,
+  Ref,
+  ComponentType,
+  ReactText,
+} from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '@component-controls/components';
@@ -57,7 +64,12 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     }, []);
     const theme = useTheme();
     return (
-      <Box variant="pagecontainer" sx={get(theme, variant)} ref={ref} {...rest}>
+      <Box
+        variant="pagecontainer"
+        sx={get(theme, variant as ReactText)}
+        ref={ref}
+        {...rest}
+      >
         <StoryContextConsumer id=".">
           {({ doc }) => {
             const { MDXPage } = doc || {};
