@@ -1,5 +1,7 @@
 # Table of contents
 
+-   [Installation](#installation)
+-   [Documentation](#documentation)
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>ActionBar</ins>](#insactionbarins)
@@ -29,7 +31,6 @@
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
-    -   [<ins>useRowSelectionColumn</ins>](#insuserowselectioncolumnins)
     -   [<ins>Tab</ins>](#instabins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
@@ -46,6 +47,7 @@ This package is usually installed as part of the @component-controls package, bu
 ```bash
 $ npm install @component-controls/components --save
 ```
+
 # Documentation
 
 [live documentation site](https://component-controls.com/api/components/actionbar/)
@@ -68,7 +70,7 @@ Third-party libraries used in no particular order:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude=".ts$,.stories.tsx$,TableGrouping.tsx,TableFilter.tsx,PopoverUtils.tsx" />
+<react-docgen-typescript path="./src" exclude=".ts$,.stories.tsx$,TableGrouping.tsx,TableFilter.tsx,PopoverUtils.tsx,TableRowSelection.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -486,10 +488,6 @@ _Table [source code](https://github.com/ccontrols/component-controls/tree/master
 | `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_     | callback to render a SubComponent row                                          |
 | `as`                    | _ElementType&lt;any>_                            |                                                                                |
 | `variant`               | _string_                                         |                                                                                |
-
-## <ins>useRowSelectionColumn</ins>
-
-_useRowSelectionColumn [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/TableRowSelection.tsx)_
 
 ## <ins>Tab</ins>
 
