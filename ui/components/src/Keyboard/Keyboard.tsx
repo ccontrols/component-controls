@@ -32,6 +32,11 @@ export const LEFT_ARROW = 37;
 export const UP_ARROW = 38;
 export const RIGHT_ARROW = 39;
 export const DOWN_ARROW = 40;
+export const BACKSPACE = 8;
+export const TAB = 9;
+export const RETURN = 13;
+export const ESC = 27;
+export const SPACE = 32;
 
 /**
  * Componet to monitor keystrokes. Can attach to child, document or window.
@@ -47,6 +52,7 @@ export const Keyboard: FC<KeyboardProps> = ({
       const key = event.keyCode ? event.keyCode : event.which;
       if (keys.includes(key)) {
         event.preventDefault();
+        event.stopPropagation();
         onKeyDown(key);
       }
     },

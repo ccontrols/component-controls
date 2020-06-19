@@ -12,6 +12,7 @@ export * from './Navmenu';
 export * from './Pagination';
 export * from './PanelContainer';
 export * from './Popover';
+export * from './SearchInput';
 export * from './Sidebar';
 export * from './SkipLinks';
 export * from './Source';

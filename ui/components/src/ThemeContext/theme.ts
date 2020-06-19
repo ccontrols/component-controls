@@ -249,6 +249,7 @@ export const theme: Theme = {
       position: 'absolute',
       left: -4,
       px: 2,
+      pb: 2,
       visibility: 'hidden',
       ':hover': {
         visibility: 'visible',
@@ -263,6 +264,29 @@ export const theme: Theme = {
       alignItems: 'center',
       justifyContent: 'space-between',
       mb: 4,
+    },
+  },
+  searchinput: {
+    popover: {
+      minWidth: 300,
+      maxHeight: 400,
+      overflowY: 'auto',
+    },
+    list: {
+      listStyle: 'none',
+      pl: 1,
+    },
+    item: {
+      p: 2,
+      cursor: 'pointer',
+      ':hover': {
+        backgroundColor: 'shadow',
+      },
+      '&.active': {
+        fontWeight: 'bold',
+        color: 'primary',
+        border: (t: Theme) => `2px solid ${t?.colors?.primary}`,
+      },
     },
   },
   subtitle: {

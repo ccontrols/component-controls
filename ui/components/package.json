@@ -43,6 +43,7 @@
     "react-switch": "^5.0.1",
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
+    "scroll-into-view-if-needed": "^2.2.25",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {

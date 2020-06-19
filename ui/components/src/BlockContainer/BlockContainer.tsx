@@ -81,7 +81,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
           {title && collapsible && (
             <Link
               aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
-              css={{
+              sx={{
                 cursor: 'pointer',
               }}
               onClick={() => setIsOpen(!isOpen)}
