@@ -60,7 +60,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, activeTab }) => {
     <Box variant="appsidebarpage.storycontainer">
       <Sidebar type={type} activeTab={activeTab} />
       <Box sx={{ flexGrow: 1 }} id="content">
-        <Tabs fontSize={16} defaultIndex={tabIndex}>
+        <Tabs fontSize={2} defaultIndex={tabIndex}>
           {tabs && tabs.length > 1 && (
             <TabList>
               {tabs.map((tab, tabIndex) => (

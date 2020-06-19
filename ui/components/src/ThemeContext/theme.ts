@@ -298,9 +298,60 @@ export const theme: Theme = {
     fontWeight: 'body',
     pb: 1,
   },
-  title: {
-    fontWeight: 'bold',
-    pb: 4,
+  tabs: {
+    '.react-tabs': {
+      WebkitTapHighlightColor: 'transparent',
+    },
+    '.react-tabs__tab-list': {
+      margin: '0 0 10px',
+      padding: 0,
+    },
+    '.react-tabs__tab': {
+      fontSize: 2,
+      fontWeight: 'bold',
+      display: 'inline-block',
+      borderBottom: 'none',
+      bottom: -1,
+      position: 'relative',
+      listStyle: 'none',
+      padding: '4px 10px',
+      ml: 1,
+      mr: 1,
+      cursor: 'pointer',
+      color: 'fadedText',
+      a: {
+        textDecoration: 'inherit',
+        color: 'inherit',
+      },
+      ':focus': {
+        boxShadow: '0 0 5px hsl(208, 99%, 50%)',
+        borderColor: 'hsl(208, 99%, 50%)',
+        outline: 'none',
+        ':after': {
+          content: '""',
+          position: 'absolute',
+          height: '5px',
+          left: '-4px',
+          right: '-4px',
+          bottom: '-5px',
+          background: '#fff',
+        },
+      },
+    },
+    '.react-tabs__tab--selected': {
+      borderBottom: (t: Theme) => `3px solid ${t?.colors?.primary}`,
+      color: 'primary',
+    },
+    '.react-tabs__tab--disabled': {
+      color: 'fadedText',
+      cursor: 'default',
+    },
+    '.react-tabs__tab-panel': {
+      display: 'none',
+    },
+    '.react-tabs__tab-panel--selected': {
+      display: 'block',
+    },
   },
   tag: {
     default: {
@@ -317,6 +368,10 @@ export const theme: Theme = {
       display: 'inline-block',
       px: 1,
     },
+  },
+  title: {
+    fontWeight: 'bold',
+    pb: 4,
   },
   zoom: {
     position: 'relative',

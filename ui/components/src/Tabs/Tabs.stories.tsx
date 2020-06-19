@@ -49,17 +49,30 @@ export const onSelect = () => {
 
 export const direction = () => {
   return (
-    <div dir="rtl">
-      <Tabs onSelect={index => console.log(index)} direction="rtl">
-        <TabList>
-          {Object.keys(tabs).map(key => (
-            <Tab key={`tab_${key}`}>{key}</Tab>
-          ))}
-        </TabList>
+    <Tabs onSelect={index => console.log(index)} dir="rtl">
+      <TabList>
         {Object.keys(tabs).map(key => (
-          <TabPanel key={`panel_${key}`}>{tabs[key]}</TabPanel>
+          <Tab key={`tab_${key}`}>{key}</Tab>
         ))}
-      </Tabs>
-    </div>
+      </TabList>
+      {Object.keys(tabs).map(key => (
+        <TabPanel key={`panel_${key}`}>{tabs[key]}</TabPanel>
+      ))}
+    </Tabs>
+  );
+};
+
+export const fontSize = () => {
+  return (
+    <Tabs fontSize={4}>
+      <TabList>
+        {Object.keys(tabs).map(key => (
+          <Tab key={`tab_${key}`}>{key}</Tab>
+        ))}
+      </TabList>
+      {Object.keys(tabs).map(key => (
+        <TabPanel key={`panel_${key}`}>{tabs[key]}</TabPanel>
+      ))}
+    </Tabs>
   );
 };
