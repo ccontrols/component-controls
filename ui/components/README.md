@@ -18,6 +18,8 @@
     -   [<ins>IconButton</ins>](#insiconbuttonins)
     -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
+    -   [<ins>SearchInputItem</ins>](#inssearchinputitemins)
+    -   [<ins>SearchInput</ins>](#inssearchinputins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
     -   [<ins>SkiLinksItem</ins>](#insskilinksitemins)
@@ -277,6 +279,40 @@ A Popover container that is triggered by a click/hover event.
 Used to display enhanced information that could not fit into the main scren.
 
 _Popover [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
+
+## <ins>SearchInputItem</ins>
+
+display single search input item box
+
+_SearchInputItem [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SearchInput/SearchInput.tsx)_
+
+### properties
+
+| Name          | Type                                                      | Description                                                |
+| ------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| `item*`       | _ItemType_                                                | curent to be rendered                                      |
+| `index*`      | _number_                                                  | item index                                                 |
+| `key`         | _TLengthStyledSystem_                                     | unique key, to be used by react                            |
+| `isOpen*`     | _boolean_                                                 | whether the popover is open                                |
+| `search*`     | _string_                                                  | the search string                                          |
+| `selected`    | _number_                                                  | selected item index                                        |
+| `selectItem*` | _(item: ItemType, index: number, close: boolean) => void_ | select item function to be called when an item is selected |
+
+## <ins>SearchInput</ins>
+
+an input component combined with a popover, can be used for incremental search.
+
+_SearchInput [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SearchInput/SearchInput.tsx)_
+
+### properties
+
+| Name           | Type                                                                                                                                                                                                                                                                                                                    | Description                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                                                                                                                                          | callback on change of search input. user can retrieve items in this callback |
+| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                                                                                                                                              | on select a search item.                                                     |
+| `children`     | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ((props: SearchBoxCallbackProps&lt;...>) => ReactNode)_ | children is a render prop to allow custom rendering of items, one at a time  |
+| `items*`       | _ItemType\[]_                                                                                                                                                                                                                                                                                                           | items array                                                                  |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                         | customize the popover                                                        |
 
 ## <ins>Sidebar</ins>
 

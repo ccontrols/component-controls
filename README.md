@@ -1,5 +1,6 @@
 # Table of contents
 
+-   [WIP](#wip)
 -   [Motivation](#motivation)
 -   [Inspiration](#inspiration)
 -   [Roadmap](#roadmap)

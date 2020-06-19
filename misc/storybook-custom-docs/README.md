@@ -10,6 +10,13 @@
         -   [Simple page](#simple-page)
         -   [Render story](#render-story)
 -   [API](#api)
+    -   [getCurrentStoryId](#getcurrentstoryid)
+    -   [getGlobalOptions](#getglobaloptions)
+    -   [useContext](#usecontext)
+    -   [useStoryId](#usestoryid)
+    -   [CustomPageDef](#custompagedef)
+    -   [CustomPageRenderFnParams](#custompagerenderfnparams)
+    -   [CustomPageRenderFn](#custompagerenderfn)
 
 # In action
 
@@ -119,5 +126,80 @@ export default {
 <tsdoc-typescript entry="./src/index.tsx,./src/types.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
+
+## getCurrentStoryId
+
+function returning the current story id
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L25)_
+
+**function** getCurrentStoryId(): string | undefined;
+
+## getGlobalOptions
+
+function returning the global options
+parameters and decorators
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L11)_
+
+**function** getGlobalOptions(): any;
+
+## useContext
+
+React hook - returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L64)_
+
+**function** useContext(): any;
+
+## useStoryId
+
+React hook hook that tracks the changes to the current story and returns it's id
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L43)_
+
+**function** useStoryId(): string;
+
+## CustomPageDef
+
+_defined in [@component-controls/storybook-custom-docs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/types.ts#L29)_
+
+
+
+### properties
+
+| Name      | Type                                      | Description                    |
+| --------- | ----------------------------------------- | ------------------------------ |
+| `key*`    | string                                    | key used for router navigation |
+| `render*` | [CustomPageRenderFn](#custompagerenderfn) | react render function.         |
+| `title*`  | string                                    | title of the page's tab        |
+
+## CustomPageRenderFnParams
+
+Custom page default export
+example:
+
+_defined in [@component-controls/storybook-custom-docs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/types.ts#L18)_
+
+
+
+### properties
+
+| Name      | Type    | Description                                  |
+| --------- | ------- | -------------------------------------------- |
+| `active*` | boolean | is the page active (visible) or not (hidden) |
+
+## CustomPageRenderFn
+
+_defined in [@component-controls/storybook-custom-docs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/types.ts#L25)_
+
+**function** (`params`\*: [CustomPageRenderFnParams](#custompagerenderfnparams)): [React.ReactNode](#react.reactnode);
+
+### parameters
+
+| Name      | Type                                                  | Description |
+| --------- | ----------------------------------------------------- | ----------- |
+| `params*` | [CustomPageRenderFnParams](#custompagerenderfnparams) |             |
+| `returns` | [React.ReactNode](#react.reactnode)                   |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->
