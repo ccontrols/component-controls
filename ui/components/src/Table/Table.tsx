@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { FC, Fragment, ReactNode, useEffect } from 'react';
 import { Box, BoxProps, Flex, jsx } from 'theme-ui';
-import { get } from '@theme-ui/css';
 import memoize from 'fast-memoize';
 import {
   useTable,
@@ -34,7 +33,6 @@ import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
 import { useRowSelectionColumn } from './TableRowSelection';
 import { useTableLayout } from './useTableLayout';
-import { useTheme } from '../ThemeContext';
 const defaultColumn = memoize(() => ({
   subRows: undefined,
   accessor: '',
@@ -195,25 +193,19 @@ export const Table: FC<TableProps> = ({
       onSelectRowsChange(selectedRowIds as SelectedRowIds);
     }
   }, [selectedRowIds, onSelectRowsChange]);
-  const theme = useTheme();
   return (
-    <Box
-      as="table"
-      {...getTableProps()}
-      css={get(theme, 'styles.table')}
-      {...rest}
-    >
+    <Box as="table" variant="styles.table" {...getTableProps()} {...rest}>
       {header && (
-        <Box as="thead" sx={get(theme, 'styles.thead')}>
+        <Box as="thead" variant="styles.thead">
           {headerGroups.map((headerGroup: any) => (
             <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
                 <Box
                   as="th"
+                  variant="styles.th"
                   {...column.getHeaderProps(
                     sorting ? column.getSortByToggleProps() : undefined,
                   )}
-                  css={get(theme, 'styles.th')}
                 >
                   <Flex
                     sx={{
@@ -233,11 +225,13 @@ export const Table: FC<TableProps> = ({
             </Box>
           ))}
           {filtering && (
-            <Box as="tr">
-              <th
+            <Box as="tr" variant="styles.thead.tr">
+              <Box
+                as="th"
+                variant="styles.th"
+                //@ts-ignore
                 colSpan={visibleColumns.length}
-                style={{
-                  ...get(theme, 'styles.th'),
+                sx={{
                   textAlign: 'left',
                 }}
               >
@@ -247,19 +241,19 @@ export const Table: FC<TableProps> = ({
                   globalFilter={state.globalFilter}
                   setGlobalFilter={setGlobalFilter}
                 />
-              </th>
+              </Box>
             </Box>
           )}
         </Box>
       )}
-      <Box as="tbody" {...getTableBodyProps()} sx={get(theme, 'styles.tbody')}>
+      <Box as="tbody" variant="styles.tbody" {...getTableBodyProps()}>
         {rows.map(
           (row: Row & UseGroupByRowProps<{}> & { isExpanded?: boolean }) => {
             prepareRow(row);
             const { key, ...rowProps } = row.getRowProps();
             return (
               <Fragment key={key}>
-                <Box as="tr" {...rowProps} sx={get(theme, 'styles.tr')}>
+                <Box variant="styles.tr" as="tr" {...rowProps}>
                   {row.isGrouped
                     ? row.cells[0].render('Aggregated')
                     : row.cells.map(
@@ -267,8 +261,8 @@ export const Table: FC<TableProps> = ({
                           return (
                             <Box
                               as="td"
+                              variant="styles.td"
                               {...cell.getCellProps()}
-                              sx={get(theme, 'styles.td')}
                             >
                               {cell.render('Cell')}
                             </Box>

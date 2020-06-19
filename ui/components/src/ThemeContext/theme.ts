@@ -201,6 +201,8 @@ export const theme: Theme = {
       padding: '16px 20px',
       fontWeight: 'bold',
       fontFamily: 'monospace',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     tr: {
       borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
