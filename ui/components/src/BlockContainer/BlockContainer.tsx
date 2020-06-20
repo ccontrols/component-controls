@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider, Box, SxStyleProp } from 'theme-ui';
+import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
 import Octicon, {
   LinkIcon,
   ChevronRightIcon,
@@ -86,12 +86,11 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               }}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Flex variant="blockcontainer.titleblock">
                 <BlockTitle />
-                <Octicon
-                  sx={{ ml: 2 }}
-                  icon={isOpen ? ChevronDownIcon : ChevronRightIcon}
-                />
+                <Text variant="blockcontainer.expandicon">
+                  <Octicon icon={isOpen ? ChevronDownIcon : ChevronRightIcon} />
+                </Text>
               </Flex>
             </Link>
           )}

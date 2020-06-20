@@ -64,7 +64,7 @@ export const theme: ControlsTheme = {
     shadow: 'rgba(0, 0, 0, 0.1)',
     modes: {
       dark: {
-        primary: '#9c6ade',
+        primary: '#d5c0f1',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
         muted: '#e6e6e6',
@@ -294,6 +294,8 @@ export const theme: ControlsTheme = {
         visibility: 'visible',
       },
     },
+    titleblock: { flexDirection: 'row', alignItems: 'center' },
+    expandicon: { ml: 2, pb: 2 },
   },
   blockpagecontainer: {
     container: {},
