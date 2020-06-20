@@ -16,4 +16,4 @@ Then, run `yarn bootstrap` followed by `yarn build`
 
 To run the monorepo, run `yarn dev` in the home directory. This starts a rollup watch service to monitor for any changes in packages.
 
-To run one of the examples, navigate to the examples folder i.e. `cd examples/storybook-6-no-docs`, and run `yarn start`
+To run one of the examples, navigate to the examples folder i.e. `cd examples/storybook-6-no-docs`, and run `yarn storybook`
