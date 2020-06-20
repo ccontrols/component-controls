@@ -4,18 +4,43 @@ import { Box, jsx } from 'theme-ui';
 
 export const ViewportBlock: FC = () => {
   return (
-    <div>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        minHeight: '200px',
+        height: '100%',
+        width: '100%',
+        overflowX: 'auto',
+        overflowY: 'hidden',
+        padding: '3px',
+        background: '#f4f4f4',
+      }}
+    >
       <Box
-        color="black"
-        bg="#e6e5e5"
-        p={40}
         sx={{
-          width: '2000px',
-          height: '300px',
+          height: '100%',
+          minWidth: '250px',
+          margin: '20px',
+          background: 'gray',
         }}
-      >
-        content here
-      </Box>
-    </div>
+      ></Box>
+      <Box
+        sx={{
+          height: '100%',
+          minWidth: '500px',
+          margin: '20px',
+          background: 'gray',
+        }}
+      ></Box>
+      <Box
+        sx={{
+          height: '100%',
+          minWidth: '900px',
+          margin: '20px',
+          background: 'gray',
+        }}
+      ></Box>
+    </Box>
   );
 };
