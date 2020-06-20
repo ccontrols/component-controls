@@ -1,5 +1,5 @@
 import React, { FC, Children, useContext } from 'react';
-import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
+import Octicon, { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
 import {
   BackgroundType,
   DirectionType,
@@ -58,7 +58,7 @@ export const Playground: FC<PlaygroundProps> = ({
       {
         title: (
           <IconButton onClick={() => setScale(1)} aria-label="reset zoom">
-            <Octicon icon={Sync} />
+            <Octicon icon={SyncIcon} />
           </IconButton>
         ),
         id: 'zoomreset',
@@ -70,7 +70,7 @@ export const Playground: FC<PlaygroundProps> = ({
             onClick={() => setScale(Math.max(0.5, scale - 0.2))}
             aria-label="zoom out"
           >
-            <Octicon icon={Dash} />
+            <Octicon icon={DashIcon} />
           </IconButton>
         ),
         id: 'zoomout',
@@ -82,7 +82,7 @@ export const Playground: FC<PlaygroundProps> = ({
             onClick={() => setScale(Math.min(3, scale + 0.2))}
             aria-label="zoom in"
           >
-            <Octicon icon={Plus} />
+            <Octicon icon={PlusIcon} />
           </IconButton>
         ),
         id: 'zoomin',

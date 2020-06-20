@@ -34,7 +34,7 @@
     "@component-controls/core": "^1.3.0",
     "@component-controls/editors": "^1.4.0",
     "@component-controls/store": "^1.4.0",
-    "@primer/octicons-react": "^9.6.0",
+    "@primer/octicons-react": "^10.0.0",
     "@storybook/csf": "^0.0.1",
     "@theme-ui/css": "next",
     "copy-to-clipboard": "^3.2.1",

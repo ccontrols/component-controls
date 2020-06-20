@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Button, Box, Flex } from 'theme-ui';
 import deepmerge from 'deepmerge';
-import Octicon, { Trashcan, PlusSmall } from '@primer/octicons-react';
+import Octicon, { TrashcanIcon, PlusIcon } from '@primer/octicons-react';
 import {
   ComponentControl,
   ComponentControlArray,
@@ -149,7 +149,7 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
                         onClick={() => handleOnDelete(idx)}
                         aria-label="delete row"
                       >
-                        <Octicon icon={Trashcan} />
+                        <Octicon icon={TrashcanIcon} />
                       </Button>
                     </td>
                   </tr>
@@ -157,7 +157,7 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
             </tbody>
           </table>
           <Button onClick={handleOnAdd} aria-label="add new row">
-            <Octicon icon={PlusSmall} />
+            <Octicon icon={PlusIcon} />
             {` `}
             Add row
           </Button>

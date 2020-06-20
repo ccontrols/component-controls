@@ -28,7 +28,10 @@ import {
   UseGroupByState,
   TableState,
 } from 'react-table';
-import Octicon, { TriangleUp, TriangleDown } from '@primer/octicons-react';
+import Octicon, {
+  TriangleUpIcon,
+  TriangleDownIcon,
+} from '@primer/octicons-react';
 import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
 import { useRowSelectionColumn } from './TableRowSelection';
@@ -216,7 +219,11 @@ export const Table: FC<TableProps> = ({
                     <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
                     {sorting && column.isSorted && (
                       <Octicon
-                        icon={column.isSortedDesc ? TriangleDown : TriangleUp}
+                        icon={
+                          column.isSortedDesc
+                            ? TriangleDownIcon
+                            : TriangleUpIcon
+                        }
                       />
                     )}
                   </Flex>

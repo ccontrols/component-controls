@@ -1,7 +1,10 @@
 /** @jsx jsx */
 import React, { FC, useEffect, useState } from 'react';
 import { jsx, Box, Flex, Text, Button, ButtonProps } from 'theme-ui';
-import Octicon, { ChevronDown, ChevronRight } from '@primer/octicons-react';
+import Octicon, {
+  ChevronDownIcon,
+  ChevronRightIcon,
+} from '@primer/octicons-react';
 import {
   Keyboard,
   LEFT_ARROW,
@@ -312,10 +315,12 @@ export const Navmenu: FC<NavMenuProps> = ({
 
               {widget && <Box variant="navmenu.widget">{widget}</Box>}
               {items && (
-                <Box variant="navmenu.expandicon">
+                <Box
+                  aria-label={isExpanded ? 'collapse items' : 'expand items'}
+                  variant="navmenu.expandicon"
+                >
                   <Octicon
-                    ariaLabel={isExpanded ? 'collapse items' : 'expand items'}
-                    icon={isExpanded ? ChevronDown : ChevronRight}
+                    icon={isExpanded ? ChevronDownIcon : ChevronRightIcon}
                   />
                 </Box>
               )}

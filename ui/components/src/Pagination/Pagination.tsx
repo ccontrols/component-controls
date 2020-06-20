@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box, Text } from 'theme-ui';
-import Octicon, { ArrowLeft, ArrowRight } from '@primer/octicons-react';
+import Octicon, { ArrowLeftIcon, ArrowRightIcon } from '@primer/octicons-react';
 
 import { Link } from '../Link';
 
@@ -31,7 +31,7 @@ export const Pagination: FC<PaginationProps> = ({ prev, next }) => (
           <Box variant="pagination.prev">
             <Text variant="pagination.label">Previous</Text>
             <Box variant="pagination.linktitle">
-              <Octicon icon={ArrowLeft} />
+              <Octicon icon={ArrowLeftIcon} />
               <Text variant="pagination.pagetitle">{prev.title}</Text>
             </Box>
           </Box>
@@ -45,7 +45,7 @@ export const Pagination: FC<PaginationProps> = ({ prev, next }) => (
             <Text variant="pagination.label">Next</Text>
             <Box variant="pagination.linktitle">
               <Text variant="pagination.pagetitle">{next.title}</Text>
-              <Octicon icon={ArrowRight} />
+              <Octicon icon={ArrowRightIcon} />
             </Box>
           </Box>
         </Link>

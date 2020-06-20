@@ -4,15 +4,15 @@ import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
 import { Column } from 'react-table';
 import Octicon, {
-  ChevronRight,
-  ChevronDown,
-  TriangleRight,
-  TriangleDown,
-  Alert,
-  Stop,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  TriangleRightIcon,
+  TriangleDownIcon,
+  AlertIcon,
+  StopIcon,
   Icon,
-  Info,
-  IssueOpened,
+  InfoIcon,
+  IssueOpenedIcon,
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
 import { Table, ExternalLink, Tag } from '@component-controls/components';
@@ -27,19 +27,19 @@ const impactColors: {
 } = {
   minor: {
     color: '#2196f3',
-    icon: Info,
+    icon: InfoIcon,
   },
   moderate: {
     color: '#f57c00',
-    icon: IssueOpened,
+    icon: IssueOpenedIcon,
   },
   serious: {
     color: '#e57373',
-    icon: Alert,
+    icon: AlertIcon,
   },
   critical: {
     color: '#dc004e',
-    icon: Stop,
+    icon: StopIcon,
   },
 };
 export interface ResultsTableProps {
@@ -61,7 +61,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         id: 'expander', // Make sure it has an ID
         Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }: any) => (
           <span {...getToggleAllRowsExpandedProps()}>
-            <Octicon icon={isAllRowsExpanded ? TriangleDown : TriangleRight} />
+            <Octicon
+              icon={isAllRowsExpanded ? TriangleDownIcon : TriangleRightIcon}
+            />
           </span>
         ),
         width: 50,
@@ -72,7 +74,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
               pl: 2,
             }}
           >
-            <Octicon icon={row.isExpanded ? ChevronDown : ChevronRight} />{' '}
+            <Octicon
+              icon={row.isExpanded ? ChevronDownIcon : ChevronRightIcon}
+            />{' '}
           </Flex>
         ),
       },

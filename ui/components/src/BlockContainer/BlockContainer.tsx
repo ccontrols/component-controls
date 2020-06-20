@@ -2,9 +2,9 @@
 import React, { FC } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp } from 'theme-ui';
 import Octicon, {
-  Link as LinkIcon,
-  ChevronRight,
-  ChevronDown,
+  LinkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
 } from '@primer/octicons-react';
 import { Markdown } from '../Markdown';
 import { Subtitle } from '../Subtitle';
@@ -90,7 +90,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
                 <BlockTitle />
                 <Octicon
                   sx={{ ml: 2 }}
-                  icon={isOpen ? ChevronDown : ChevronRight}
+                  icon={isOpen ? ChevronDownIcon : ChevronRightIcon}
                 />
               </Flex>
             </Link>
