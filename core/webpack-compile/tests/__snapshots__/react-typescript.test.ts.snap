@@ -247,7 +247,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.4.0",
     },
     "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2": Object {
       "dependencies": Object {
@@ -290,7 +290,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.4.0",
     },
   },
   "stores": Array [
