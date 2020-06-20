@@ -5,12 +5,9 @@ import {
   resetControlValues,
   getControlValues,
   randomizeData,
-} from '@component-controls/core';
-
-import {
   ComponentControls,
   SetControlValueFn,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 export interface UseControlsActionsProps {
   controls?: ComponentControls;
@@ -32,11 +29,14 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
   };
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setCopied(true);
+
     const values = getControlValues(controls);
 
     copy(JSON.stringify(values, null, 2));
-    window.setTimeout(() => setCopied(false), 1500);
+    if (typeof window !== 'undefined') {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    }
   };
   return [
     {

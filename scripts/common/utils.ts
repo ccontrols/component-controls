@@ -118,7 +118,7 @@ export const traverseDirs = (
         getDirectories(
           path.join(folder, entry.name),
           excludeFiles,
-          path.join(repoDir, entry.name),
+          `${repoDir}/${entry.name}`,
           newNodes,
         ),
       );
@@ -126,15 +126,17 @@ export const traverseDirs = (
   if (attributes) {
     const file = attributes.find(attribute => attribute[0] === 'path');
     const sourcePath = file ? file[1] : './src';
-    const { repo = '' } = getRepoPath(sourcePath) || './src';
+    const { repo = '' } = getRepoPath(sourcePath) || {};
+
     const excludeFiles = attributes.find(
       attribute => attribute[0] === 'exclude',
     );
     const newNodes: Node[] = [];
+    const url = new URL(repo);
     getDirectories(
       path.resolve(sourcePath),
       excludeFiles ? excludeFiles[1].split(',') : ['index.ts'],
-      path.join(repo, sourcePath),
+      `${url.origin}${path.join(url.pathname, sourcePath)}`,
       newNodes,
     );
   }

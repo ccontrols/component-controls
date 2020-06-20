@@ -1,14 +1,16 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
-import { jsx, Flex, Link, Divider, Box, SxStyleProp } from 'theme-ui';
+import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
 import Octicon, {
-  Link as LinkIcon,
-  ChevronRight,
-  ChevronDown,
+  LinkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
 } from '@primer/octicons-react';
 import { Markdown } from '../Markdown';
 import { Subtitle } from '../Subtitle';
+import { Subheading } from '../Subheading';
 import { Collapsible } from '../Collapsible';
+import { pageLink } from './pageLink';
 
 export interface BlockContainerProps {
   /**
@@ -57,56 +59,21 @@ export const BlockContainer: FC<BlockContainerProps> = ({
       ? id
       : undefined ||
         (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
-  const BlockTitle: FC = () => (
-    <Subtitle
-      color="text"
-      as={collapsible ? 'h2' : 'h3'}
-      css={{ fontWeight: 400, paddingRight: 10 }}
-    >
-      {title}
-    </Subtitle>
-  );
-  //workaround for storybook iframe url
-  const url =
-    (window.location != window.parent.location
-      ? document.referrer
-      : document.location.href) || '';
+  const BlockTitle: FC = () =>
+    collapsible ? (
+      <Subtitle>{title}</Subtitle>
+    ) : (
+      <Subheading>{title}</Subheading>
+    );
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        mt: 4,
-        mb: 4,
-        width: '100%',
-        ...sxStyle,
-      }}
-      id={blockId}
-    >
+    <Box variant="blockcontainer.container" sx={sxStyle} id={blockId}>
       {(blockId || title || collapsible) && (
-        <Flex
-          sx={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            pb: title ? 2 : 0,
-            ':hover': {
-              a: {
-                visibility: 'visible',
-              },
-            },
-          }}
-        >
+        <Flex variant="blockcontainer.inner">
           {blockId && (
             <Link
-              sx={{
-                position: 'absolute',
-                left: -4,
-                px: 2,
-                visibility: 'hidden',
-                ':hover': {
-                  visibility: 'visible',
-                },
-              }}
-              href={`${url.split('#')[0]}#${blockId}`}
+              variant="blockcontainer.link"
+              href={pageLink(blockId)}
+              data-title={title}
             >
               <Octicon icon={LinkIcon} />
             </Link>
@@ -114,14 +81,16 @@ export const BlockContainer: FC<BlockContainerProps> = ({
           {title && collapsible && (
             <Link
               aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
-              css={{
+              sx={{
                 cursor: 'pointer',
               }}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Flex sx={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Flex variant="blockcontainer.titleblock">
                 <BlockTitle />
-                <Octicon icon={isOpen ? ChevronDown : ChevronRight} />
+                <Text variant="blockcontainer.expandicon">
+                  <Octicon icon={isOpen ? ChevronDownIcon : ChevronRightIcon} />
+                </Text>
               </Flex>
             </Link>
           )}

@@ -23,9 +23,9 @@ export type StoriesProps = StoriesOwnProps &
 export const Stories: FC<StoriesProps> = props => (
   <StoryBlockContainer {...props}>
     {(context, rest) => {
-      const { story: selected, kind } = context;
-      const stories = kind?.stories
-        ? kind.stories.filter((id: string) => !selected || selected.id !== id)
+      const { story: selected, doc } = context;
+      const stories = doc?.stories
+        ? doc.stories.filter((id: string) => !selected || selected.id !== id)
         : [];
       if (!stories || !stories.length) {
         return null;

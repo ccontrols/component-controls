@@ -23,9 +23,12 @@ export const Source: FC<SourceProps> = ({
   const [copied, setCopied] = React.useState(false);
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setCopied(true);
+
     copy(children as string);
-    window.setTimeout(() => setCopied(false), 1500);
+    if (typeof window !== 'undefined') {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    }
   };
 
   const actionsItems = [
@@ -48,7 +51,7 @@ export const Source: FC<SourceProps> = ({
           display: 'block',
         }}
       >
-        {children}
+        {children.trimRight()}
       </SyntaxHighlighter>
     </ActionContainer>
   );

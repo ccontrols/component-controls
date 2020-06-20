@@ -48,7 +48,6 @@ module.exports = {
     return result;
   },
   webpackFinal: (config: any = {}, options: PresetOptions = {}) => {
-    debugger;
     const mergedConfig = mergeWebpackConfig(
       config,
       options?.webpack || defaultRules,

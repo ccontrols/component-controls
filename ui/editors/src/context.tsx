@@ -3,7 +3,7 @@ import {
   ComponentControlBase,
   ComponentControl,
   ComponentControls,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 export type PropertyOnClick = (prop: ComponentControl) => any;
 

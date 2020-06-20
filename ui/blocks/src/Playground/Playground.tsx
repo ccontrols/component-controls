@@ -1,6 +1,5 @@
-import React, { FC, useContext } from 'react';
-import Octicon, { Plus, Dash, Sync } from '@primer/octicons-react';
-import { useThemeUI } from 'theme-ui';
+import React, { FC, Children, useContext } from 'react';
+import Octicon, { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
 import {
   BackgroundType,
   DirectionType,
@@ -8,6 +7,7 @@ import {
   PanelContainerProps,
   IconButton,
   Zoom,
+  useTheme,
 } from '@component-controls/components';
 import { BlockDataContext } from '../context';
 
@@ -46,7 +46,7 @@ export const Playground: FC<PlaygroundProps> = ({
   description,
   scale: userScale = 1,
 }) => {
-  const { theme } = useThemeUI();
+  const theme = useTheme();
 
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
@@ -58,7 +58,7 @@ export const Playground: FC<PlaygroundProps> = ({
       {
         title: (
           <IconButton onClick={() => setScale(1)} aria-label="reset zoom">
-            <Octicon icon={Sync} />
+            <Octicon icon={SyncIcon} />
           </IconButton>
         ),
         id: 'zoomreset',
@@ -70,7 +70,7 @@ export const Playground: FC<PlaygroundProps> = ({
             onClick={() => setScale(Math.max(0.5, scale - 0.2))}
             aria-label="zoom out"
           >
-            <Octicon icon={Dash} />
+            <Octicon icon={DashIcon} />
           </IconButton>
         ),
         id: 'zoomout',
@@ -82,7 +82,7 @@ export const Playground: FC<PlaygroundProps> = ({
             onClick={() => setScale(Math.min(3, scale + 0.2))}
             aria-label="zoom in"
           >
-            <Octicon icon={Plus} />
+            <Octicon icon={PlusIcon} />
           </IconButton>
         ),
         id: 'zoomin',
@@ -91,7 +91,7 @@ export const Playground: FC<PlaygroundProps> = ({
     ],
     [scale],
   );
-  const childArr = React.Children.toArray(children);
+  const childArr = Children.toArray(children);
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
 

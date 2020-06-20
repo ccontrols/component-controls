@@ -8,8 +8,8 @@ import {
   CodeLocation,
   Imports,
   Story,
-} from '@component-controls/specification';
-import { getASTSource } from '@component-controls/core';
+  getASTSource,
+} from '@component-controls/core';
 import { extractFunctionParameters } from './extract-function-parameters';
 import { sourceLocation } from '../misc/source-location';
 import { ImportTypes, traverseImports } from './extract-imports';

@@ -1,0 +1,27 @@
+{
+  "name": "component-controls-gatsby",
+  "private": true,
+  "version": "1.4.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-sample": "gatsby build",
+    "start": "gatsby develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "examples/gatsby"
+  },
+  "dependencies": {
+    "@component-controls/gatsby-theme-stories": "^1.4.0",
+    "@component-controls/pages": "^1.4.0",
+    "gatsby": "^2.22.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.3",
+    "webpack-bundle-analyzer": "^3.7.0"
+  }
+}

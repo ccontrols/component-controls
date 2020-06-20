@@ -1,9 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { Input, Textarea } from 'theme-ui';
-import {
-  ComponentControlText,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlText, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

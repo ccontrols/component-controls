@@ -75,6 +75,6 @@ export const notCollapsible = () => (
 
 export const noMargin = () => (
   <MockContext storyId="id-of-story">
-    <StorySource sxStyle={{ mt: 0, mb: 0 }} />
+    <StorySource sx={{ mt: 0, mb: 0 }} />
   </MockContext>
 );

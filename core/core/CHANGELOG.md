@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* active menuitem font ([df938b3](https://github.com/ccontrols/component-controls/commit/df938b39a09dc4c6931b1daad27ab1bc61207949))
+* container per page type ([ac7b9a2](https://github.com/ccontrols/component-controls/commit/ac7b9a28766fb491519c0d4c30b03738da41d4ad))
+* stories paths ([52d9c8f](https://github.com/ccontrols/component-controls/commit/52d9c8f7cd7c516eff921fd9d645eb0e57a09012))
+
+
+### Features
+
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* tabs configurable ([bd06c05](https://github.com/ccontrols/component-controls/commit/bd06c0514139948a1f10e6434d18ce3530441ea0))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

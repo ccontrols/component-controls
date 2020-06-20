@@ -22,18 +22,18 @@ A collection of pre-built documentation page templates.
 
 ## <ins>CanvasPage</ins>
 
-_CanvasPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/pages/src/CanvasPage/CanvasPage.tsx)_
+_CanvasPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/CanvasPage/CanvasPage.tsx)_
 
 ## <ins>ClassicPage</ins>
 
-_ClassicPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/pages/src/ClassicPage/ClassicPage.tsx)_
+_ClassicPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/ClassicPage/ClassicPage.tsx)_
 
 ## <ins>CurrentStoryPage</ins>
 
-_CurrentStoryPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/pages/src/CurrentStoryPage/CurrentStoryPage.tsx)_
+_CurrentStoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/CurrentStoryPage/CurrentStoryPage.tsx)_
 
 ## <ins>TestingPage</ins>
 
-_TestingPage [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/pages/src/TestingPage/TestingPage.tsx)_
+_TestingPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/TestingPage/TestingPage.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

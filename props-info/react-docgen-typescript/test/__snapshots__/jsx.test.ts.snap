@@ -720,13 +720,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "string",
       },
     },
-    "css": Object {
-      "parentName": "DOMAttributes",
-      "type": Object {
-        "name": "InterpolationWithTheme<any>",
-        "raw": "InterpolationWithTheme<any>",
-      },
-    },
     "dangerouslySetInnerHTML": Object {
       "parentName": "DOMAttributes",
       "type": Object {
@@ -752,10 +745,10 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },
@@ -2170,22 +2163,6 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
-    "sx": Object {
-      "description": "The sx prop lets you style elements inline, using values from your
-theme. To use the sx prop, add the custom pragma as a comment to the
-top of your module and import the jsx function.
-
-\`\`\`ts
-// @jsx jsx
-
-import { jsx } from 'theme-ui'
-\`\`\`",
-      "parentName": "SxProps",
-      "type": Object {
-        "name": "SystemStyleObject",
-        "raw": "SystemStyleObject",
-      },
-    },
     "tabIndex": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -2266,10 +2243,10 @@ import { jsx } from 'theme-ui'
       "parentName": "ButtonHTMLAttributes",
       "type": Object {
         "name": "array",
-        "raw": "string | number | string[]",
+        "raw": "string | number | readonly string[]",
         "value": Array [
           Object {
-            "name": "string | number | string",
+            "name": "string | number | readonly string",
           },
         ],
       },

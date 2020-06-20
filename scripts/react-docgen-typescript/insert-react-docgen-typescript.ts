@@ -1,4 +1,3 @@
-import path from 'path';
 import remark from 'remark';
 import {
   withDefaultConfig,
@@ -109,7 +108,7 @@ export const insertReactDocgenTypescript = (
             propTables.forEach(propTable => {
               const propNodes = propsToMDNodes(
                 propTable,
-                path.join(repoFolder, name),
+                `${repoFolder}/${name}`,
               );
               newNodes.push.apply(newNodes, propNodes);
             });

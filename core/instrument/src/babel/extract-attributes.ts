@@ -1,4 +1,4 @@
-import { StoryParameters } from '@component-controls/specification';
+import { StoryParameters } from '@component-controls/core';
 
 interface StoryAttribute {
   name: string;

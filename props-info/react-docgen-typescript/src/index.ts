@@ -1,7 +1,7 @@
 import {
   ComponentInfo,
   PropsInfoExtractorFunction,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { extractDocgenTypescriptInfo } from './react-docgen-typescript';
 import { RectDocgenTypescriptOptions } from './types';
 import { transformProps } from './transform-props';

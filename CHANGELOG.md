@@ -3,6 +3,114 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+
+### Bug Fixes
+
+* padding for props-table actionbar ([b68ff6c](https://github.com/ccontrols/component-controls/commit/b68ff6c9d446369add553dd42f6cc94e58f512a2))
+* source paths in docs ([322c055](https://github.com/ccontrols/component-controls/commit/322c055ba636c1560e0d3b148864acdb1a058eb0))
+
+
+### Features
+
+* searchinput component ([b69c9b4](https://github.com/ccontrols/component-controls/commit/b69c9b4f2b7210a8dd0bf0d65c3822ae64f85b9e))
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* accomodate for storybook no title ([da26a05](https://github.com/ccontrols/component-controls/commit/da26a056152ade39572a44e18aa44fccbd4da12d))
+* account for docs without stories ([4f30e77](https://github.com/ccontrols/component-controls/commit/4f30e775f5cdcaf1f48114908ee00d765fb976ea))
+* achor smooth scroll into view ([7aa9497](https://github.com/ccontrols/component-controls/commit/7aa9497f08db2ab63586be0086dfe8cd5abcd2a2))
+* active menuitem font ([df938b3](https://github.com/ccontrols/component-controls/commit/df938b39a09dc4c6931b1daad27ab1bc61207949))
+* adjust anchor smooth scrolling ([72bbc3d](https://github.com/ccontrols/component-controls/commit/72bbc3d57637b62f26412ac6e6379c807f6b2c28))
+* autoselect doc page first story if none ([33f5585](https://github.com/ccontrols/component-controls/commit/33f55853d6dbcdb746e7d7b5d0665569cc21e0d8))
+* avoid loading run-time components at build ([babab24](https://github.com/ccontrols/component-controls/commit/babab24a3de8d23584273c45ce0888738876a04d))
+* button from theme-ui imports ([526720b](https://github.com/ccontrols/component-controls/commit/526720babab21b8caf20689a616367233842225a))
+* container per page type ([ac7b9a2](https://github.com/ccontrols/component-controls/commit/ac7b9a28766fb491519c0d4c30b03738da41d4ad))
+* dark mode color schemes ([97bd559](https://github.com/ccontrols/component-controls/commit/97bd559182916ad0cda5961a336c42da9582416b))
+* image name spelling ([82bddb9](https://github.com/ccontrols/component-controls/commit/82bddb93e39e543c6bb6acc92f039d1a995e4617))
+* load stories bundle with render functions ([814719d](https://github.com/ccontrols/component-controls/commit/814719d2ef47c800a811a641e85adf837d483375))
+* local path regex ([a78ef69](https://github.com/ccontrols/component-controls/commit/a78ef698731e2d8623ac8b2e30424659955939de))
+* markdown domponents ([4f8ce12](https://github.com/ccontrols/component-controls/commit/4f8ce12fa5804c0c93413fff4da3e01f2508da99))
+* merge build and run time configs for overlapping props ([8db4a10](https://github.com/ccontrols/component-controls/commit/8db4a1065931c9b2cebe4464e29d3d34d6d52533))
+* name spelling ([f9aeb92](https://github.com/ccontrols/component-controls/commit/f9aeb928592442e712e4cef36962631115707367))
+* navigate to first doc page if none ([acadb8f](https://github.com/ccontrols/component-controls/commit/acadb8f79f2b4cf03e234900fcf2143051aa78e6))
+* panel on change remove referesgh ([4e38c6c](https://github.com/ccontrols/component-controls/commit/4e38c6c6dae8b902e355546ee246a55a92a56721))
+* preserve component name as string ([c284170](https://github.com/ccontrols/component-controls/commit/c284170bed9d5b6dbc86db93a3da36d231621a79))
+* preserve stories order ([e27f047](https://github.com/ccontrols/component-controls/commit/e27f047ee05b56bb92efc880393ba5a2d65a9208))
+* props ([096ebf9](https://github.com/ccontrols/component-controls/commit/096ebf9e66f2c30f9e5f293a280f49ae6659713a))
+* remove console.log ([09d8d08](https://github.com/ccontrols/component-controls/commit/09d8d086903ca7e0d6b8c3040ffe3fcf86e82bdf))
+* replace react-select not working with SSR ([3f621db](https://github.com/ccontrols/component-controls/commit/3f621db8771f264e1433eca74eb9eae608c247e4))
+* serialize arrays and objects ([78730a5](https://github.com/ccontrols/component-controls/commit/78730a5a5994f9dc830a4700ed4373fa0da89953))
+* sidebar collapsed width ([e4b21af](https://github.com/ccontrols/component-controls/commit/e4b21afe3f15683c72d71c6178eba354cfb5bf31))
+* sidebar css issues ([fbfb1d6](https://github.com/ccontrols/component-controls/commit/fbfb1d6d1a43e731f348b1efa47b8122855d6592))
+* sidebar fixed position width ([3672ade](https://github.com/ccontrols/component-controls/commit/3672ade4687f7281db458b5623e89c34e427eb78))
+* sidebar full height ([cb2cdbe](https://github.com/ccontrols/component-controls/commit/cb2cdbe6291e68c5954c3164beaeefbaa259f0ff))
+* sidebar scroll navigation ([1c08913](https://github.com/ccontrols/component-controls/commit/1c08913c320a1fa2178d1b1a39cc53143b1b7b79))
+* sidebar theming ([692acb4](https://github.com/ccontrols/component-controls/commit/692acb487a3a18b712a20423261d5054bce1477a))
+* sidebar width inherit ([05bed2d](https://github.com/ccontrols/component-controls/commit/05bed2daa359ffb99746ecdd6376c2a1c442d10f))
+* stories paths ([52d9c8f](https://github.com/ccontrols/component-controls/commit/52d9c8f7cd7c516eff921fd9d645eb0e57a09012))
+* tags are now loaded as array ([3da790e](https://github.com/ccontrols/component-controls/commit/3da790e08cd0b9758f3ac96302a2243d2d500da0))
+* trim right source code ([2908f29](https://github.com/ccontrols/component-controls/commit/2908f29d864e3f4e7e22e040314f17329ac9e659))
+* unused var ([d00ed47](https://github.com/ccontrols/component-controls/commit/d00ed471a45b8423a05a193c5de9b5b2e94dea07))
+
+
+### Features
+
+* add Header component ([296c70e](https://github.com/ccontrols/component-controls/commit/296c70e02277e22b00de2a061cf272105c7706e0))
+* add tutorial document type ([ae99e32](https://github.com/ccontrols/component-controls/commit/ae99e32291b7f570896c3b0ed4ced1dc4c505aa2))
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* app components for standalone ([195b01b](https://github.com/ccontrols/component-controls/commit/195b01beb4aa61f64ce892ba5b8e32938c346859))
+* appcontext component ([5422dd4](https://github.com/ccontrols/component-controls/commit/5422dd42c235cfe8704d8852fec1efd799d5378b))
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* categories custom pages- authors, tags ([125f677](https://github.com/ccontrols/component-controls/commit/125f67729040d63a8897d393e111f92ec7228cd8))
+* category pages - tags, authors ([5ced78b](https://github.com/ccontrols/component-controls/commit/5ced78b515eefe4476618b8951ce11d70b028440))
+* cleanup theme ([91d2206](https://github.com/ccontrols/component-controls/commit/91d2206e1052d16bb5ac312b34dbb87a65f300ee))
+* components in theme ([c287815](https://github.com/ccontrols/component-controls/commit/c287815309631101b2b0a09a00ff87db550a1a22))
+* configure pages and tabs ([94f7ba4](https://github.com/ccontrols/component-controls/commit/94f7ba43a3f7efc9f4703f904dd18c97027dbc10))
+* display by kind ([c8857e6](https://github.com/ccontrols/component-controls/commit/c8857e638cc52cbb4ea63a311ee29457751707cb))
+* footer ([daaae16](https://github.com/ccontrols/component-controls/commit/daaae168f39436d194cd659d46866e283b8055dc))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* global options, storySort ([3a55929](https://github.com/ccontrols/component-controls/commit/3a55929e7e99daa82e663ed00e942f2ad0b70fd8))
+* header to app component, link context ([24c7476](https://github.com/ccontrols/component-controls/commit/24c7476b2d598d9daf73a58b6ea00a8f587bc5a8))
+* home page for documentation ([84ea2df](https://github.com/ccontrols/component-controls/commit/84ea2df3867c3650b9492ff09856641cdefbd678))
+* home page sections ([a4d7575](https://github.com/ccontrols/component-controls/commit/a4d757586d66e1f4abb3a089ba5fc6e9213a4a39))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* links as buttons ([e1c65be](https://github.com/ccontrols/component-controls/commit/e1c65bee47cef98faa15077e6c30b7372519c386))
+* links to docs, doc page and story ([892416d](https://github.com/ccontrols/component-controls/commit/892416d3408100e0d6fef4d289901c0fac4d70ee))
+* list pages, date, tags fields ([8dac2f9](https://github.com/ccontrols/component-controls/commit/8dac2f9047705331bff1499c0bc45d5cedc838c9))
+* loader chalk log ([f3fc436](https://github.com/ccontrols/component-controls/commit/f3fc43692c47ddc4e65eba25c60b9857109ddee2))
+* merge user webpack config ([6b3dc38](https://github.com/ccontrols/component-controls/commit/6b3dc387b34a2a4f3b640f473a70e43d79179def))
+* new page types for tags and authors ([9718fee](https://github.com/ccontrols/component-controls/commit/9718fee13ebcef27220eb7f6d899d2df631b9a7a))
+* pagination app component ([597dcc0](https://github.com/ccontrols/component-controls/commit/597dcc0d1c666d445c945193957e541c2e83c7a4))
+* responsive context sidebar ([295cdc3](https://github.com/ccontrols/component-controls/commit/295cdc371e9c56e44a32c3fe0a57da85c8ff5fbf))
+* responsive sidebar ([99e0b7e](https://github.com/ccontrols/component-controls/commit/99e0b7e9bf1548a923daa970140650be3a9595e5))
+* screen resizer ([47d94ba](https://github.com/ccontrols/component-controls/commit/47d94bab3620bcea4d1453a8a9c81d6fa49bee05))
+* side context links ([9f8dd0c](https://github.com/ccontrols/component-controls/commit/9f8dd0cc2887bdf10a3897090d6ba448f49127f5))
+* site options and SEO component ([1bed424](https://github.com/ccontrols/component-controls/commit/1bed424f593457cb740b09c9b52e078ace2d73dc))
+* skip links and app layout ([1508a1c](https://github.com/ccontrols/component-controls/commit/1508a1c494c36d42715768d9d44543815d7d92c3))
+* sort documents list ([7095bf4](https://github.com/ccontrols/component-controls/commit/7095bf4a6c2ba2070e780c6333ec4aaa85460b70))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* sync scroll sidebar ([b47edf6](https://github.com/ccontrols/component-controls/commit/b47edf6c704098f0a31f31337b5ee6ba1b7add25))
+* tabs configurable ([bd06c05](https://github.com/ccontrols/component-controls/commit/bd06c0514139948a1f10e6434d18ce3530441ea0))
+* theme in options ([9e4c527](https://github.com/ccontrols/component-controls/commit/9e4c527bec416b969f9a793cf914204f9ddc6b87))
+* theming app-components ([09cadad](https://github.com/ccontrols/component-controls/commit/09cadade02b46d6d8e93a1fe14ef173f952af7ee))
+* theming blocks components ([f97afca](https://github.com/ccontrols/component-controls/commit/f97afcab4af7c67c52207ae34e9efe4a607bfd99))
+* theming of app components ([e059e71](https://github.com/ccontrols/component-controls/commit/e059e71a2b3275bc0d672b3008cb5c53d9ec7ca6))
+* useTheme hook ([182907d](https://github.com/ccontrols/component-controls/commit/182907d529da0cd48b868099c7fa6c2a73fcf139))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

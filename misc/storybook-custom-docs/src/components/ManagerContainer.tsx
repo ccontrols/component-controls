@@ -10,14 +10,16 @@ interface ManagerContainerProps {
 
 export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
   const { active, api, route } = props;
-  const ATTACH_DOCS_PAGE = `attach_docs_page_${route}`;
-  const channel = React.useMemo(() => api.getChannel(), []);
-  const sendMessage = () => {
-    const story = api.getCurrentStoryData();
-    channel.emit(ATTACH_DOCS_PAGE, { active, storyId: story?.id });
-  };
+  const channel = React.useMemo(() => api.getChannel(), [api]);
 
   React.useEffect(() => {
+    const ATTACH_DOCS_PAGE = `attach_docs_page_${route}`;
+
+    const sendMessage = () => {
+      const story = api.getCurrentStoryData();
+      channel.emit(ATTACH_DOCS_PAGE, { active, storyId: story?.id });
+    };
+
     const wrapper = document.getElementById('storybook-preview-wrapper');
     const updateDOM = () => {
       sendMessage();
@@ -26,6 +28,6 @@ export const ManagerContainer: React.FC<ManagerContainerProps> = props => {
       }
     };
     updateDOM();
-  }, [active]);
+  }, [active, api, route, channel]);
   return null;
 };

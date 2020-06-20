@@ -29,25 +29,36 @@ $ npm install @component-controls/store --save-dev
 
 Store class used to query the stories and exchange information between processes
 
-_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L28)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L36)_
 
 
 
 ### properties
 
-| Name               | Type                                                                                                                                        | Description                                                                                                           |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `constructor*`     | **function** constructor                                                                                                                    | create a store with options                                                                                           |
-| `addObserver*`     | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                            | add observer callback function                                                                                        |
-| `getStore*`        | **function** getStore(): [StoriesStore](#storiesstore);                                                                                     | returns an instance of the store                                                                                      |
-| `getStory*`        | **function** getStory(`storyId`\*: string): [Story](#story);                                                                                | given a story id return a story from the store                                                                        |
-| `removeObserver*`  | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string, `propName`: string): void;\[]; | remove installed observer callback function                                                                           |
-| `setStore*`        | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                        | internal set store, use for testing with mockup store.                                                                |
-| `updateStoryProp*` | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newValue`\*: any): [StoriesStore](#storiesstore) \| undefined;     | modify story properties, for example controls values. will notify all installed store observers of the changed story. |
+| Name                    | Type                                                                                                                                        | Description                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `constructor*`          | **function** constructor                                                                                                                    | create a store with options                                                                                           |
+| `config*`               | **function** config                                                                                                                         | returns the run time configuration object.                                                                            |
+| `addObserver*`          | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): number;                                                            | add observer callback function                                                                                        |
+| `getFirstDocument*`     | **function** getFirstDocument(`pageType`\*: [PageType](#pagetype)): string \| undefined;                                                    |                                                                                                                       |
+| `getNextPage*`          | **function** getNextPage(`type`\*: [PageType](#pagetype) \| undefined, `docId`\*: string): [StoriesDoc](#storiesdoc) \| undefined;          | returns the next page of the same type.                                                                               |
+| `getPageList*`          | **function** getPageList(`type`\*: [PageType](#pagetype)): [Pages](#pages);                                                                 | returns all the documents/pages of a certain type.                                                                    |
+| `getPagePath*`          | **function** getPagePath(`pageType`\*: [PageType](#pagetype) \| undefined, `name`\*: string, `activeTab`: string): string;                  | returns the url path to a document.                                                                                   |
+| `getPagesByCategory*`   | **function** getPagesByCategory(`category`\*: string, `value`: any): [Pages](#pages);                                                       | returns all the documents/pages of a certain category value.                                                          |
+| `getPrevPage*`          | **function** getPrevPage(`type`\*: [PageType](#pagetype) \| undefined, `docId`\*: string): [StoriesDoc](#storiesdoc) \| undefined;          | returns the previous page of the same type.                                                                           |
+| `getStore*`             | **function** getStore(): [StoriesStore](#storiesstore);                                                                                     | returns an instance of the store                                                                                      |
+| `getStory*`             | **function** getStory(`storyId`\*: string): [Story](#story);                                                                                | given a story id return a story from the store                                                                        |
+| `getStoryDoc*`          | **function** getStoryDoc(`name`\*: string): [StoriesDoc](#storiesdoc);                                                                      | given a story doc file title, return a story doc file from the store                                                  |
+| `getStoryPath*`         | **function** getStoryPath(`storyId`\*: string, `activeTab`: string): string;                                                                | returns the url path to a story.                                                                                      |
+| `getUniquesByCategory*` | **function** getUniquesByCategory(`category`\*: string): \[key: string]: number;                                                            | returns all the unique category values (and their cound) for a category field.                                        |
+| `initDocs*`             | **function** initDocs(): void;                                                                                                              | sort documents if a sortfunction is provided. separate docs and blogs                                                 |
+| `removeObserver*`       | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): **function** (`storyId`: string, `propName`: string): void;\[]; | remove installed observer callback function                                                                           |
+| `setStore*`             | **function** setStore(`store`: [StoriesStore](#storiesstore)): void;                                                                        | internal set store, use for testing with mockup store.                                                                |
+| `updateStoryProp*`      | **function** updateStoryProp(`storyId`\*: string, `propName`\*: string, `newValue`\*: any): [StoriesStore](#storiesstore) \| undefined;     | modify story properties, for example controls values. will notify all installed store observers of the changed story. |
 
 ## StoreOptions
 
-_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L15)_
+_defined in [@component-controls/store/src/Store/Store.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/Store/Store.ts#L23)_
 
 
 
@@ -64,7 +75,7 @@ store on change observer.
 when updateStoryProp is called on the store, the store observers will be notified
 so they can re-load the stories
 
-_defined in [@component-controls/store/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/types.ts#L8)_
+_defined in [@component-controls/store/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/store/src/types.ts#L15)_
 
 **function** (`storyId`: string, `propName`: string): void;
 

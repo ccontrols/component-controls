@@ -6,7 +6,7 @@ import findCacheDir from 'find-cache-dir';
 import {
   ComponentInfo,
   PropsInfoExtractorFunction,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { PropsLoaderConfig } from '../types';
 
 export const propsInfo = async (

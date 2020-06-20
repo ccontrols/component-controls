@@ -1,10 +1,20 @@
 import { ParserOptions } from '@babel/parser';
-import { StoriesStore } from '@component-controls/specification';
+import { StoriesDoc, StoriesStore } from '@component-controls/core';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
   ResolveConfigOptions as ResolvePrettierConfigOptions,
 } from 'prettier';
+
+/**
+ * when loading - single doc file store
+ */
+export type LoadingDocStore = {
+  /**
+   * the document itself
+   */
+  doc: StoriesDoc | undefined;
+} & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -25,8 +35,8 @@ export const defaultParserOptions: ParserOptions = {
  * from https://github.com/mdx-js/mdx/blob/6251c5bb35aec5b6de85262a6a46fa1db496dd23/packages/loader/index.js#L4
  */
 export const DEFAULT_MDX_RENDERER = `
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 `;
 
 export const defaultMDXOptions: MDXOptions = {
@@ -239,4 +249,4 @@ export interface MDXExportTypes {
 }
 export type ParseStorieReturnType = {
   exports?: MDXExportTypes;
-} & StoriesStore;
+} & LoadingDocStore;

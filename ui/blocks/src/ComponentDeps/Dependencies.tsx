@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
 import { Flex, Box } from 'theme-ui';
-import { ImportName } from '@component-controls/specification';
+import { ImportName } from '@component-controls/core';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
 const defaultExport = 'default';
@@ -88,14 +88,11 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
               })
               .map(v => (
                 <Tag
+                  variant="tag.rightmargin"
                   key={`${v.name}`}
                   color={
                     v.importedName === defaultExport ? 'green' : 'lightgrey'
                   }
-                  sxStyle={{
-                    mr: 1,
-                    mb: 1,
-                  }}
                 >
                   {v.importedName === defaultExport ? v.name : v.importedName}
                 </Tag>

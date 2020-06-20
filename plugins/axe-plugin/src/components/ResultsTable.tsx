@@ -1,23 +1,22 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useMemo, useCallback } from 'react';
-import { useRecoilValue } from 'recoil';
+import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
 import { Column } from 'react-table';
 import Octicon, {
-  ChevronRight,
-  ChevronDown,
-  TriangleRight,
-  TriangleDown,
-  Alert,
-  Stop,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  TriangleRightIcon,
+  TriangleDownIcon,
+  AlertIcon,
+  StopIcon,
   Icon,
-  Info,
-  IssueOpened,
+  InfoIcon,
+  IssueOpenedIcon,
 } from '@primer/octicons-react';
 import { Result, ImpactValue } from 'axe-core';
 import { Table, ExternalLink, Tag } from '@component-controls/components';
-import { axeViolations, axePasses, axeIncomplete } from './RecoilContext';
+import { AxeContext } from '../state/context';
 import { NodesTable } from './NodesTable';
 
 const impactColors: {
@@ -28,19 +27,19 @@ const impactColors: {
 } = {
   minor: {
     color: '#2196f3',
-    icon: Info,
+    icon: InfoIcon,
   },
   moderate: {
     color: '#f57c00',
-    icon: IssueOpened,
+    icon: IssueOpenedIcon,
   },
   serious: {
     color: '#e57373',
-    icon: Alert,
+    icon: AlertIcon,
   },
   critical: {
     color: '#dc004e',
-    icon: Stop,
+    icon: StopIcon,
   },
 };
 export interface ResultsTableProps {
@@ -62,7 +61,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         id: 'expander', // Make sure it has an ID
         Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }: any) => (
           <span {...getToggleAllRowsExpandedProps()}>
-            <Octicon icon={isAllRowsExpanded ? TriangleDown : TriangleRight} />
+            <Octicon
+              icon={isAllRowsExpanded ? TriangleDownIcon : TriangleRightIcon}
+            />
           </span>
         ),
         width: 50,
@@ -73,7 +74,9 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
               pl: 2,
             }}
           >
-            <Octicon icon={row.isExpanded ? ChevronDown : ChevronRight} />{' '}
+            <Octicon
+              icon={row.isExpanded ? ChevronDownIcon : ChevronRightIcon}
+            />{' '}
           </Flex>
         ),
       },
@@ -132,14 +135,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
           >
             {value &&
               value.map(tag => (
-                <Tag
-                  key={`${tag}`}
-                  color="lightgrey"
-                  sxStyle={{
-                    mr: 1,
-                    mb: 1,
-                  }}
-                >
+                <Tag key={`${tag}`} color="lightgrey" variant="tag.rightmargin">
                   {tag}
                 </Tag>
               ))}
@@ -156,7 +152,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         hideErrorColumns={hideErrorColumns}
       />
     ),
-    [],
+    [hideErrorColumns],
   );
   return (
     <Table
@@ -175,16 +171,24 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
 };
 
 export const ViolationsTable: FC = () => {
-  const violations = useRecoilValue(axeViolations);
+  const {
+    results: { violations },
+  } = useContext(AxeContext);
+
   return <ResultsTable results={violations} />;
 };
 
 export const PassesTable: FC = () => {
-  const passes = useRecoilValue(axePasses);
+  const {
+    results: { passes },
+  } = useContext(AxeContext);
   return <ResultsTable results={passes} hideErrorColumns={true} />;
 };
 
 export const IncompleteTable: FC = () => {
-  const incomplete = useRecoilValue(axeIncomplete);
+  const {
+    results: { incomplete },
+  } = useContext(AxeContext);
+
   return <ResultsTable results={incomplete} />;
 };

@@ -18,21 +18,24 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
   },
-  "kinds": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "2f4bd34d15be236674abaf6e894afe6e",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-07T04:11:13.289Z,
+    "dateModified": 2020-05-18T16:37:44.945Z,
+    "title": "Storybook/MDX",
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta } from '@component-controls/blocks';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Storybook/MDX\\" component={Button} />
+
 ",
 }
 `;
@@ -48,40 +51,46 @@ Object {
       "request": undefined,
     },
   },
-  "kinds": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "dc86c4457416c54c13147e780d972747",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "dc86c4457416c54c13147e780d972747",
     },
+    "date": 2020-03-07T04:13:53.738Z,
+    "dateModified": 2020-05-18T16:37:49.912Z,
+    "title": "Storybook/MDX",
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta } from '@component-controls/blocks';
 import { Btn as Button } from '../../components/button-named-class';
-<Meta title=\\"Storybook/MDX\\" component={Button} />",
+<Meta title=\\"Storybook/MDX\\" component={Button} />
+",
 }
 `;
 
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "Story": Object {
-      "components": Object {},
-      "title": "Story",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-03-16T23:49:41.736Z,
+    "dateModified": 2020-05-18T16:37:54.357Z,
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta, PropsTable } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta, PropsTable } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 
 <Meta title=\\"Story\\" />
 
 <PropsTable of={ArrowButton} />
+
 ",
 }
 `;
@@ -104,15 +113,15 @@ Object {
       "request": undefined,
     },
   },
-  "kinds": Object {
-    "Storybook/MDX": Object {
-      "component": "Button",
-      "components": Object {
-        "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
-        "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
-      },
-      "title": "Storybook/MDX",
+  "doc": Object {
+    "component": "Button",
+    "components": Object {
+      "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
+      "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
     },
+    "date": 2020-03-07T04:30:56.209Z,
+    "dateModified": 2020-05-18T16:37:59.320Z,
+    "title": "Storybook/MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -133,13 +142,16 @@ Object {
       "source": "<Story name=\\"my-story\\" component={Toggle} />",
     },
   },
-  "transformed": "import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta, Story } from '@component-controls/blocks';
 import { Btn as Button } from './Button';
 import { Toggle } from './Toggle';
 
 <Meta title=\\"Storybook/MDX\\" component={Button} />
 
-<Story name=\\"my-story\\" component={Toggle} />",
+<Story name=\\"my-story\\" component={Toggle} />
+",
 }
 `;
 
@@ -175,14 +187,14 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
-  "kinds": Object {
-    "Story": Object {
-      "components": Object {
-        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
-        "Button": "2f4bd34d15be236674abaf6e894afe6e",
-      },
-      "title": "Story",
+  "doc": Object {
+    "components": Object {
+      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+      "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-16T23:40:58.322Z,
+    "dateModified": 2020-05-18T16:38:03.084Z,
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {
@@ -212,13 +224,16 @@ Object {
       },
     },
   },
-  "transformed": "import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Story\\" />
 
 <Story name=\\"story\\" component={ArrowButton} subcomponents={{ 'My Button Tab': Button }} />
+
 ",
 }
 `;
@@ -255,26 +270,29 @@ Object {
       "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
-  "kinds": Object {
-    "Story": Object {
-      "component": "ArrowButton",
-      "components": Object {
-        "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
-        "Button": "2f4bd34d15be236674abaf6e894afe6e",
-      },
-      "subcomponents": Object {
-        "Button": "Button",
-      },
-      "title": "Story",
+  "doc": Object {
+    "component": "ArrowButton",
+    "components": Object {
+      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+      "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
+    "date": 2020-03-16T23:40:58.322Z,
+    "dateModified": 2020-05-18T16:38:07.903Z,
+    "subcomponents": Object {
+      "Button": "Button",
+    },
+    "title": "Story",
   },
   "packages": Object {},
   "stories": Object {},
-  "transformed": "import { Meta, Story } from '@component-controls/blocks';
+  "transformed": "
+    
+    import { Meta, Story } from '@component-controls/blocks';
 import ArrowButton from '../../components/button-default-arrow-func';
 import { Button } from '../../components/button-named-arrow-func';
 
 <Meta title=\\"Story\\" component={ArrowButton} subcomponents={{ Button }} />
+
 ",
 }
 `;

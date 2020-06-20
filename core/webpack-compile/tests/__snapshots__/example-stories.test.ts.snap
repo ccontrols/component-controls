@@ -1,7 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test example stories compile 1`] = `
-Object {
+Store {
+  "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
+    "pages": Object {
+      "author": Object {
+        "basePath": "authors/",
+      },
+      "blog": Object {
+        "basePath": "blogs/",
+      },
+      "page": Object {
+        "basePath": "pages/",
+      },
+      "story": Object {
+        "basePath": "docs/",
+        "tabs": Array [
+          Object {
+            "route": "page",
+          },
+          Object {
+            "route": "test",
+          },
+        ],
+      },
+      "tags": Object {
+        "basePath": "tags/",
+      },
+    },
+    "stories": Array [
+      "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
+    ],
+  },
   "components": Object {
     "b5fffc2a9e710b29374f13f1d7ef028c": Object {
       "from": "../components/Button",
@@ -23,6 +57,99 @@ Object {
             "name": "FC",
           },
         ],
+      },
+      "info": Object {
+        "description": "Button with react Typescript properties",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "#fefefe",
+            "description": "Background color",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "color": Object {
+            "defaultValue": "black",
+            "description": "Text color, default black",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "disabled": Object {
+            "defaultValue": false,
+            "description": "Boolean indicating whether the button should render as disabled",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "boolean",
+              "raw": "boolean",
+            },
+          },
+          "label": Object {
+            "defaultValue": "default",
+            "description": "button label.",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "string",
+              "raw": "string",
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "() => void",
+              "raw": "() => void",
+            },
+          },
+          "padding": Object {
+            "defaultValue": 5,
+            "description": "Numeric  field type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "number",
+              "raw": "number",
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "object",
+              "raw": "object",
+            },
+          },
+          "type": Object {
+            "defaultValue": "button",
+            "description": "Button type",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"button\\" | \\"reset\\" | \\"submit\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "button",
+                },
+                Object {
+                  "name": "string",
+                  "value": "reset",
+                },
+                Object {
+                  "name": "string",
+                  "value": "submit",
+                },
+              ],
+            },
+          },
+        },
       },
       "loc": Object {
         "end": Object {
@@ -104,7 +231,11 @@ Button.defaultProps = {
     "ccd158de2e347c69fe7bf00b78db5145": Object {
       "from": "theme-ui",
       "importedName": "Button",
+      "imports": undefined,
+      "loc": undefined,
       "name": "Button",
+      "request": undefined,
+      "source": undefined,
     },
     "dd96934cfa10038428b57421ede5ec17": Object {
       "from": "../components/PropTypesButton",
@@ -128,6 +259,89 @@ Button.defaultProps = {
             "name": "React",
           },
         ],
+      },
+      "info": Object {
+        "description": "Button with react PropTypes",
+        "displayName": "Button",
+        "methods": Array [],
+        "props": Object {
+          "backgroundColor": Object {
+            "defaultValue": "'#fefefe'",
+            "description": "Background color",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "color": Object {
+            "defaultValue": "'black'",
+            "description": "Text color, default black",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "disabled": Object {
+            "defaultValue": "false",
+            "description": "Boolean indicating whether the button should render as disabled",
+            "type": Object {
+              "name": "boolean",
+            },
+          },
+          "label": Object {
+            "defaultValue": "'default'",
+            "description": "button label.",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
+          "onClick": Object {
+            "defaultValue": "() => {}",
+            "description": "onClick handler",
+            "type": Object {
+              "name": "function",
+              "required": false,
+            },
+          },
+          "padding": Object {
+            "defaultValue": "5",
+            "description": "Numeric  field type",
+            "type": Object {
+              "name": "number",
+              "required": false,
+            },
+          },
+          "style": Object {
+            "defaultValue": "{}",
+            "description": "Custom styles",
+            "type": Object {
+              "name": "object",
+              "value": Array [],
+            },
+          },
+          "type": Object {
+            "defaultValue": "'button'",
+            "description": "Button type",
+            "type": Object {
+              "name": "enum",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "'button'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'reset'",
+                },
+                Object {
+                  "name": "string",
+                  "value": "'submit'",
+                },
+              ],
+            },
+          },
+        },
       },
       "loc": Object {
         "end": Object {
@@ -208,99 +422,251 @@ Button.propTypes = {
 ",
     },
   },
+  "config": Object {},
+  "getDocs": [Function],
+  "getUniquesByField": [Function],
   "packages": Object {
     "2971104eea653041fd49648ff7a04be8": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "2971104eea653041fd49648ff7a04be8",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "56bf0298abb3e6152739be8e0540ef47",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-prop-type.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "684baa68d45c8becd8f39da85795335b",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "6b1e448146504b441f181f0e3fc41fc9",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
-    },
-    "6b50c2b856bebc9c67846ae47f0b2e66": Object {
-      "fileHash": "6b50c2b856bebc9c67846ae47f0b2e66",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-kind.stories.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "7661d674db5188cc22e26c1b22bef349",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "85a1bf440fe016c4719e372255f5ffcb": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "85a1bf440fe016c4719e372255f5ffcb",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-csf.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
       "fileHash": "999878322b2acba3a7ca83bc6972a800",
       "name": "component-controls-stories",
+      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.2.0",
+      "version": "1.3.0",
+    },
+    "d1f03618863bd813182b2668bed6d262": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "d1f03618863bd813182b2668bed6d262",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.3.0",
     },
   },
   "stores": Array [
     Object {
-      "kinds": Object {
-        "Introduction/Controls": Object {
-          "components": Object {},
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
-          "moduleId": "../../examples/stories/src/stories/controls-editors.stories.jsx",
-          "package": "684baa68d45c8becd8f39da85795335b",
-          "title": "Introduction/Controls",
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "ccd158de2e347c69fe7bf00b78db5145",
+        },
+        "date": 2020-06-17T18:28:16.386Z,
+        "dateModified": 2020-06-17T18:28:16.388Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+        "package": "7661d674db5188cc22e26c1b22bef349",
+        "title": "Introduction/Starter",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+      "stories": Object {
+        "overview": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 33,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 7,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "name",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 32,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 28,
+                          "line": 1,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "name",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 9,
+                      "line": 0,
+                    },
+                  },
+                  "name": "age",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 49,
+                          "line": 1,
+                        },
+                        "start": Object {
+                          "column": 46,
+                          "line": 1,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "age",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "age": Object {
+              "label": "Age",
+              "max": 75,
+              "min": 10,
+              "type": "ControlTypes.NUMBER",
+              "value": 19,
+            },
+            "name": Object {
+              "label": "Name",
+              "type": "ControlTypes.TEXT",
+              "value": "Mark",
+            },
+          },
+          "description": "Story with two dynamic control values: \`name\` and \`age\`. You can use the controls to edit the story properties at run-time.",
+          "id": "overview",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 18,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 16,
+            },
+          },
+          "name": "overview",
+          "source": "({ name, age }: DocsControlsTable) => (
+  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
+)",
         },
       },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "date": 2020-06-17T18:28:16.388Z,
+        "dateModified": 2020-06-17T18:28:16.388Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
+        "package": "684baa68d45c8becd8f39da85795335b",
+        "title": "Introduction/Controls",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
       "stories": Object {
         "XssSafety": Object {
           "arguments": Array [
@@ -315,6 +681,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -365,7 +732,7 @@ Button.propTypes = {
             "content": Object {
               "escapeValue": true,
               "label": "Rendered string",
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "<img src=\\"x\\" onerror=\\"alert('XSS Attack')\\" >",
             },
           },
@@ -373,15 +740,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 232,
+              "line": 233,
             },
             "start": Object {
               "column": 25,
-              "line": 225,
+              "line": 226,
             },
           },
           "name": "XSS safety",
-          "renderFn": [Function],
           "source": "({ content }) => (
   <div
     // eslint-disable-next-line react/no-danger
@@ -404,6 +770,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -429,6 +796,7 @@ Button.propTypes = {
                           "line": 0,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "street",
@@ -442,7 +810,7 @@ Button.propTypes = {
                 "name": "address.streetAddress",
               },
               "label": "Street",
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "30333 Atlantic Ave.",
             },
           },
@@ -451,15 +819,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 56,
-              "line": 250,
+              "line": 251,
             },
             "start": Object {
               "column": 34,
-              "line": 250,
+              "line": 251,
             },
           },
           "name": "generateRandomData",
-          "renderFn": [Function],
           "source": "({ street }) => street",
         },
         "groupedControls": Object {
@@ -475,6 +842,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -500,6 +868,7 @@ Button.propTypes = {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -528,6 +897,7 @@ Button.propTypes = {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -556,6 +926,7 @@ Button.propTypes = {
                           "line": 3,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "message",
@@ -565,21 +936,21 @@ Button.propTypes = {
           ],
           "controls": Object {
             "age": Object {
-              "groupId": "personal info",
+              "groupId": "personalGroupId",
               "label": "Age",
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 35,
             },
             "message": Object {
-              "groupId": "general info",
+              "groupId": "generalGroupId",
               "label": "Mesage",
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "Hello!",
             },
             "name": Object {
-              "groupId": "personal info",
+              "groupId": "personalGroupId",
               "label": "Name",
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "James",
             },
           },
@@ -588,15 +959,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 289,
+              "line": 290,
             },
             "start": Object {
               "column": 31,
-              "line": 282,
+              "line": 283,
             },
           },
           "name": "groupedControls",
-          "renderFn": [Function],
           "source": "({ age, name, message }) => {
   const content = \`
     I am \${name} and I'm \${age} years old.
@@ -619,6 +989,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -644,6 +1015,7 @@ Button.propTypes = {
                           "line": 16,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "userName",
@@ -672,6 +1044,7 @@ Button.propTypes = {
                           "line": 16,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -700,6 +1073,7 @@ Button.propTypes = {
                           "line": 16,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "fruit",
@@ -728,6 +1102,7 @@ Button.propTypes = {
                           "line": 16,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "otherFruit",
@@ -756,6 +1131,7 @@ Button.propTypes = {
                           "line": 35,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "dollars",
@@ -784,6 +1160,7 @@ Button.propTypes = {
                           "line": 34,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "years",
@@ -896,6 +1273,7 @@ Button.propTypes = {
                           "line": 38,
                         },
                       },
+                      "shorthand": undefined,
                     },
                     Object {
                       "loc": Object {
@@ -908,6 +1286,7 @@ Button.propTypes = {
                           "line": 38,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "items",
@@ -936,6 +1315,7 @@ Button.propTypes = {
                           "line": 17,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "otherStyles",
@@ -964,6 +1344,7 @@ Button.propTypes = {
                           "line": 18,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "nice",
@@ -992,6 +1373,7 @@ Button.propTypes = {
                           "line": 42,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "images",
@@ -1020,6 +1402,7 @@ Button.propTypes = {
                           "line": 16,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "dog",
@@ -1048,6 +1431,7 @@ Button.propTypes = {
                           "line": 31,
                         },
                       },
+                      "shorthand": undefined,
                     },
                     Object {
                       "loc": Object {
@@ -1060,6 +1444,7 @@ Button.propTypes = {
                           "line": 32,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "birthday",
@@ -1069,94 +1454,78 @@ Button.propTypes = {
           ],
           "controls": Object {
             "age": Object {
-              "groupId": "General",
+              "groupId": "GROUP_IDS.GENERAL",
               "label": "Age",
               "max": 90,
               "min": 0,
               "range": true,
               "step": 5,
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 78,
             },
             "backgroundColor": Object {
-              "groupId": "Display",
-              "type": "color",
+              "groupId": "GROUP_IDS.DISPLAY",
+              "type": "ControlTypes.COLOR",
               "value": "#dedede",
             },
             "birthday": Object {
-              "groupId": "General",
+              "groupId": "GROUP_IDS.GENERAL",
               "label": "Birthday",
-              "type": "date",
-              "value": 1990-02-01T05:00:00.000Z,
+              "type": "ControlTypes.DATE",
             },
             "color": Object {
-              "groupId": "Display",
-              "type": "color",
+              "groupId": "GROUP_IDS.DISPLAY",
+              "type": "ControlTypes.COLOR",
               "value": "#000000",
             },
             "dog": Object {
-              "groupId": "Favorites",
-              "options": Array [
-                Object {
-                  "dogParent": "Matthew",
-                  "label": "Sparky",
-                  "location": "Austin",
-                },
-                Object {
-                  "dogParent": "Joshua",
-                  "label": "Juniper",
-                  "location": "Austin",
-                },
-              ],
-              "type": "options",
-              "value": Object {
-                "dogParent": "Matthew",
-                "label": "Sparky",
-                "location": "Austin",
-              },
+              "groupId": "GROUP_IDS.FAVORITES",
+              "options": "arrayOfObjects",
+              "type": "ControlTypes.OPTIONS",
+              "value": "arrayOfObjects.undefined",
             },
             "dollars": Object {
-              "groupId": "General",
+              "groupId": "GROUP_IDS.GENERAL",
               "label": "Dollars",
               "max": 100,
               "min": 0,
               "step": 0.01,
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 12.5,
             },
             "fruit": Object {
-              "groupId": "Favorites",
+              "groupId": "GROUP_IDS.FAVORITES",
               "label": "Fruit",
               "options": Object {
                 "Apple": "apple",
                 "Banana": "banana",
                 "Cherry": "cherry",
               },
-              "type": "options",
+              "type": "ControlTypes.OPTIONS",
               "value": "apple",
             },
             "hidden": Object {
               "hidden": true,
-              "type": "text",
+              "type": "ControlTypes.TEXT",
             },
             "images": Object {
               "accept": "image/*",
-              "groupId": "Display",
+              "groupId": "GROUP_IDS.DISPLAY",
               "label": "Happy Picture",
-              "type": "files",
+              "type": "ControlTypes.FILES",
               "value": Array [
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=",
               ],
             },
             "items": Object {
-              "groupId": "Favorites",
+              "groupId": "GROUP_IDS.FAVORITES",
               "label": "Items",
               "rowType": Object {
                 "name": Object {
-                  "type": "text",
+                  "type": "ControlTypes.TEXT",
                 },
               },
-              "type": "array",
+              "type": "ControlTypes.ARRAY",
               "value": Array [
                 Object {
                   "name": "Laptop",
@@ -1170,30 +1539,29 @@ Button.propTypes = {
               ],
             },
             "nice": Object {
-              "groupId": "Favorites",
+              "groupId": "GROUP_IDS.FAVORITES",
               "label": "Nice",
-              "type": "boolean",
+              "type": "ControlTypes.BOOLEAN",
               "value": true,
             },
             "otherFruit": Object {
               "display": "radio",
-              "groupId": "Favorites",
+              "groupId": "GROUP_IDS.FAVORITES",
               "label": "Other Fruit",
               "options": Object {
                 "Guava": "guava",
                 "Kiwi": "kiwi",
                 "Watermelon": "watermelon",
               },
-              "type": "options",
+              "type": "ControlTypes.OPTIONS",
               "value": "watermelon",
             },
             "otherStyles": Object {
-              "groupId": "Display",
+              "groupId": "GROUP_IDS.DISPLAY",
               "label": "Styles",
-              "type": "object",
+              "type": "ControlTypes.OBJECT",
               "value": Object {
                 "border": Object {
-                  "data": null,
                   "type": "text",
                   "value": "2px dashed silver",
                 },
@@ -1208,15 +1576,15 @@ Button.propTypes = {
               },
             },
             "userName": Object {
-              "groupId": "General",
+              "groupId": "GROUP_IDS.GENERAL",
               "label": "Name",
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "Storyteller",
             },
             "years": Object {
-              "groupId": "General",
+              "groupId": "GROUP_IDS.GENERAL",
               "label": "Years in NY",
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 9,
             },
           },
@@ -1225,15 +1593,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 63,
+              "line": 64,
             },
             "start": Object {
               "column": 27,
-              "line": 17,
+              "line": 18,
             },
           },
           "name": "kitchenSink",
-          "renderFn": [Function],
           "source": "({
   userName,
   age,
@@ -1295,6 +1662,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1320,6 +1688,7 @@ Button.propTypes = {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -1348,6 +1717,7 @@ Button.propTypes = {
                           "line": 2,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -1376,6 +1746,7 @@ Button.propTypes = {
                           "line": 3,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "message",
@@ -1386,19 +1757,19 @@ Button.propTypes = {
           "controls": Object {
             "age": Object {
               "label": "Age",
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 35,
             },
             "message": Object {
               "label": "Mesage",
               "order": 0,
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "Hello!",
             },
             "name": Object {
               "label": "Name",
               "order": 3,
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "James",
             },
           },
@@ -1407,15 +1778,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 331,
+              "line": 332,
             },
             "start": Object {
               "column": 29,
-              "line": 324,
+              "line": 325,
             },
           },
           "name": "orderControls",
-          "renderFn": [Function],
           "source": "({ age, name, message }) => {
   const content = \`
     I am \${name} and I'm \${age} years old.
@@ -1438,6 +1808,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1463,6 +1834,7 @@ Button.propTypes = {
                           "line": 0,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "number",
@@ -1480,7 +1852,7 @@ Button.propTypes = {
                 },
               },
               "label": "A number",
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 10,
             },
           },
@@ -1489,15 +1861,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 50,
-              "line": 266,
+              "line": 267,
             },
             "start": Object {
               "column": 28,
-              "line": 266,
+              "line": 267,
             },
           },
           "name": "randomNumber",
-          "renderFn": [Function],
           "source": "({ number }) => number",
         },
         "textDefaultProp": Object {
@@ -1513,6 +1884,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1538,6 +1910,7 @@ Button.propTypes = {
                           "line": 0,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -1547,7 +1920,7 @@ Button.propTypes = {
           ],
           "controls": Object {
             "text": Object {
-              "type": "text",
+              "type": "ControlTypes.TEXT",
               "value": "Hello",
             },
           },
@@ -1556,37 +1929,37 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 49,
-              "line": 9,
+              "line": 10,
             },
             "start": Object {
               "column": 31,
-              "line": 9,
+              "line": 10,
             },
           },
           "name": "textDefaultProp",
-          "renderFn": [Function],
           "source": "({ text }) => text",
         },
       },
     },
     Object {
-      "kinds": Object {
-        "Introduction/Kind": Object {
-          "components": Object {},
-          "controls": Object {
-            "name": Object {
-              "label": "Name",
-              "order": 9999,
-              "type": "text",
-              "value": "Mark",
-            },
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "controls": Object {
+          "name": Object {
+            "label": "Name",
+            "order": 9999,
+            "type": "ControlTypes.TEXT",
+            "value": "Mark",
           },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-kind.stories.tsx",
-          "moduleId": "../../examples/stories/src/stories/inherit-from-kind.stories.tsx",
-          "package": "6b50c2b856bebc9c67846ae47f0b2e66",
-          "title": "Introduction/Kind",
         },
+        "date": 2020-06-17T18:28:16.389Z,
+        "dateModified": 2020-06-17T18:28:16.389Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "package": "d1f03618863bd813182b2668bed6d262",
+        "title": "Introduction/Doc",
       },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
       "stories": Object {
         "docsControlsTable": Object {
           "arguments": Array [
@@ -1601,6 +1974,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1626,6 +2000,7 @@ Button.propTypes = {
                           "line": 3,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -1654,6 +2029,7 @@ Button.propTypes = {
                           "line": 3,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -1667,7 +2043,7 @@ Button.propTypes = {
               "max": 75,
               "min": 10,
               "step": 5,
-              "type": "number",
+              "type": "ControlTypes.NUMBER",
               "value": 19,
             },
           },
@@ -1675,15 +2051,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 26,
+              "line": 27,
             },
             "start": Object {
               "column": 33,
-              "line": 20,
+              "line": 21,
             },
           },
           "name": "docsControlsTable",
-          "renderFn": [Function],
           "source": "({ name, age }: DocsControlsTable = {}) => {
   return (
     <>
@@ -1695,15 +2070,404 @@ Button.propTypes = {
       },
     },
     Object {
-      "kinds": Object {
-        "Introduction/CSF": Object {
-          "components": Object {},
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
-          "moduleId": "../../examples/stories/src/stories/stories-csf.stories.js",
-          "package": "85a1bf440fe016c4719e372255f5ffcb",
-          "title": "Introduction/CSF",
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "dd96934cfa10038428b57421ede5ec17",
+        },
+        "date": 2020-06-17T18:28:16.389Z,
+        "dateModified": 2020-06-17T18:28:16.390Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+        "package": "56bf0298abb3e6152739be8e0540ef47",
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Introduction/Smart PropTypes",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+      "stories": Object {
+        "allProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 26,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "allProps",
+          "loc": Object {
+            "end": Object {
+              "column": 54,
+              "line": 12,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 12,
+            },
+          },
+          "name": "allProps",
+          "source": "props => <Button {...props} />",
+        },
+        "noColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "noColors",
+          "loc": Object {
+            "end": Object {
+              "column": 76,
+              "line": 26,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 26,
+            },
+          },
+          "name": "noColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "exclude": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+        "noProps": Object {
+          "arguments": Array [],
+          "id": "noProps",
+          "loc": Object {
+            "end": Object {
+              "column": 61,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 23,
+              "line": 39,
+            },
+          },
+          "name": "noProps",
+          "source": "() => <Button label=\\"No properties\\" />",
+        },
+        "onlyColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "onlyColors",
+          "loc": Object {
+            "end": Object {
+              "column": 78,
+              "line": 14,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 14,
+            },
+          },
+          "name": "onlyColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "include": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
       },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "component": "Button",
+        "components": Object {
+          "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
+        },
+        "date": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-17T18:28:16.390Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+        "package": "2971104eea653041fd49648ff7a04be8",
+        "parameters": Object {
+          "component": "Button",
+        },
+        "title": "Introduction/Smart Typescript",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+      "stories": Object {
+        "allProps": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 26,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 21,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "allProps",
+          "loc": Object {
+            "end": Object {
+              "column": 54,
+              "line": 12,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 12,
+            },
+          },
+          "name": "allProps",
+          "source": "props => <Button {...props} />",
+        },
+        "noColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "noColors",
+          "loc": Object {
+            "end": Object {
+              "column": 76,
+              "line": 26,
+            },
+            "start": Object {
+              "column": 24,
+              "line": 26,
+            },
+          },
+          "name": "noColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "exclude": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+        "noProps": Object {
+          "arguments": Array [],
+          "id": "noProps",
+          "loc": Object {
+            "end": Object {
+              "column": 61,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 23,
+              "line": 39,
+            },
+          },
+          "name": "noProps",
+          "source": "() => <Button label=\\"No properties\\" />",
+        },
+        "onlyColors": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 5,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 0,
+                  "line": 0,
+                },
+              },
+              "name": "props",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 48,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 43,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "props",
+            },
+          ],
+          "id": "onlyColors",
+          "loc": Object {
+            "end": Object {
+              "column": 78,
+              "line": 14,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 14,
+            },
+          },
+          "name": "onlyColors",
+          "parameters": Object {
+            "addonControls": Object {
+              "smart": Object {
+                "include": Array [
+                  "color",
+                  "backgroundColor",
+                ],
+              },
+            },
+          },
+          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "date": 2020-06-17T18:28:16.391Z,
+        "dateModified": 2020-06-17T18:28:16.391Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+        "package": "85a1bf440fe016c4719e372255f5ffcb",
+        "title": "Introduction/CSF",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
       "stories": Object {
         "externalStory": Object {
           "arguments": Array [],
@@ -1720,7 +2484,6 @@ Button.propTypes = {
             },
           },
           "name": "externalStory",
-          "renderFn": [Function],
           "source": "() => <div>test</div>",
         },
         "externalStoryDeconstructedProps": Object {
@@ -1736,6 +2499,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1761,6 +2525,7 @@ Button.propTypes = {
                           "line": 0,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -1787,7 +2552,6 @@ Button.propTypes = {
             },
           },
           "name": "externalStoryDeconstructedProps",
-          "renderFn": [Function],
           "source": "({ text }) => <div>{text}</div>",
         },
         "externalStoryProps": Object {
@@ -1816,6 +2580,7 @@ Button.propTypes = {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -1840,7 +2605,6 @@ Button.propTypes = {
             },
           },
           "name": "externalStoryProps",
-          "renderFn": [Function],
           "source": "props => <div>{props.text}</div>",
         },
         "multipleChildren": Object {
@@ -1850,15 +2614,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 21,
+              "line": 22,
             },
             "start": Object {
               "column": 32,
-              "line": 16,
+              "line": 17,
             },
           },
           "name": "multipleChildren",
-          "renderFn": [Function],
           "source": "() => (
   <>
     <button>button 1</button>
@@ -1873,15 +2636,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 43,
-              "line": 10,
+              "line": 11,
             },
             "start": Object {
               "column": 22,
-              "line": 10,
+              "line": 11,
             },
           },
           "name": "simple",
-          "renderFn": [Function],
           "source": "() => <div>test</div>",
         },
         "storyDesconstructedProps": Object {
@@ -1897,6 +2659,7 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
+              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1922,6 +2685,7 @@ Button.propTypes = {
                           "line": 0,
                         },
                       },
+                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -1940,15 +2704,14 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 71,
-              "line": 33,
+              "line": 34,
             },
             "start": Object {
               "column": 40,
-              "line": 33,
+              "line": 34,
             },
           },
           "name": "storyDesconstructedProps",
-          "renderFn": [Function],
           "source": "({ text }) => <div>{text}</div>",
         },
         "storyProps": Object {
@@ -1977,6 +2740,7 @@ Button.propTypes = {
                       "line": 0,
                     },
                   },
+                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -1993,539 +2757,15 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 58,
-              "line": 27,
+              "line": 28,
             },
             "start": Object {
               "column": 26,
-              "line": 27,
+              "line": 28,
             },
           },
           "name": "storyProps",
-          "renderFn": [Function],
           "source": "props => <div>{props.text}</div>",
-        },
-      },
-    },
-    Object {
-      "kinds": Object {
-        "Introduction/Starter": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          },
-          "components": Object {
-            "Button": "ccd158de2e347c69fe7bf00b78db5145",
-          },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-          "moduleId": "../../examples/stories/src/stories/controls-editors-starter.stories.tsx",
-          "package": "7661d674db5188cc22e26c1b22bef349",
-          "title": "Introduction/Starter",
-        },
-      },
-      "stories": Object {
-        "overview": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 33,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 1,
-                  "line": 0,
-                },
-              },
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 7,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 3,
-                      "line": 0,
-                    },
-                  },
-                  "name": "name",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 32,
-                          "line": 1,
-                        },
-                        "start": Object {
-                          "column": 28,
-                          "line": 1,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "name",
-                },
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 12,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 9,
-                      "line": 0,
-                    },
-                  },
-                  "name": "age",
-                  "usage": Array [
-                    Object {
-                      "loc": Object {
-                        "end": Object {
-                          "column": 49,
-                          "line": 1,
-                        },
-                        "start": Object {
-                          "column": 46,
-                          "line": 1,
-                        },
-                      },
-                    },
-                  ],
-                  "value": "age",
-                },
-              ],
-            },
-          ],
-          "controls": Object {
-            "age": Object {
-              "defaultValue": null,
-              "description": "
-## age of the person
-
-numeric, values between 10 and 75 allowed
-",
-              "label": "Age",
-              "max": 75,
-              "min": 10,
-              "type": "number",
-              "value": 19,
-            },
-            "name": Object {
-              "description": "
-## name of the person
-
-any text is allowed
-",
-              "label": "Name",
-              "type": "text",
-              "value": "Mark",
-            },
-          },
-          "description": "Story with two dynamic control values: \`name\` and \`age\`. You can use the controls to edit the story properties at run-time.",
-          "id": "overview",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 17,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 15,
-            },
-          },
-          "name": "overview",
-          "renderFn": [Function],
-          "source": "({ name, age }: DocsControlsTable) => (
-  <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
-)",
-        },
-      },
-    },
-    Object {
-      "kinds": Object {
-        "Introduction/Smart PropTypes": Object {
-          "component": "Button",
-          "components": Object {
-            "Button": "dd96934cfa10038428b57421ede5ec17",
-          },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
-          "moduleId": "../../examples/stories/src/stories/smart-prop-type.stories.js",
-          "package": "56bf0298abb3e6152739be8e0540ef47",
-          "parameters": Object {
-            "component": [Function],
-          },
-          "title": "Introduction/Smart PropTypes",
-        },
-      },
-      "stories": Object {
-        "allProps": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 26,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 21,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "allProps",
-          "loc": Object {
-            "end": Object {
-              "column": 54,
-              "line": 11,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 11,
-            },
-          },
-          "name": "allProps",
-          "renderFn": [Function],
-          "source": "props => <Button {...props} />",
-        },
-        "noColors": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 48,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 43,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "noColors",
-          "loc": Object {
-            "end": Object {
-              "column": 76,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 25,
-            },
-          },
-          "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
-          },
-          "renderFn": [Function],
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
-        },
-        "noProps": Object {
-          "arguments": Array [],
-          "id": "noProps",
-          "loc": Object {
-            "end": Object {
-              "column": 61,
-              "line": 38,
-            },
-            "start": Object {
-              "column": 23,
-              "line": 38,
-            },
-          },
-          "name": "noProps",
-          "renderFn": [Function],
-          "source": "() => <Button label=\\"No properties\\" />",
-        },
-        "onlyColors": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 48,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 43,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "onlyColors",
-          "loc": Object {
-            "end": Object {
-              "column": 78,
-              "line": 13,
-            },
-            "start": Object {
-              "column": 26,
-              "line": 13,
-            },
-          },
-          "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
-          },
-          "renderFn": [Function],
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
-        },
-      },
-    },
-    Object {
-      "kinds": Object {
-        "Introduction/Smart Typescript": Object {
-          "component": "Button",
-          "components": Object {
-            "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
-          },
-          "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-          "moduleId": "../../examples/stories/src/stories/smart-typescript.stories.js",
-          "package": "2971104eea653041fd49648ff7a04be8",
-          "parameters": Object {
-            "component": [Function],
-          },
-          "title": "Introduction/Smart Typescript",
-        },
-      },
-      "stories": Object {
-        "allProps": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 26,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 21,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "allProps",
-          "loc": Object {
-            "end": Object {
-              "column": 54,
-              "line": 11,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 11,
-            },
-          },
-          "name": "allProps",
-          "renderFn": [Function],
-          "source": "props => <Button {...props} />",
-        },
-        "noColors": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 48,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 43,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "noColors",
-          "loc": Object {
-            "end": Object {
-              "column": 76,
-              "line": 25,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 25,
-            },
-          },
-          "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
-          },
-          "renderFn": [Function],
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
-        },
-        "noProps": Object {
-          "arguments": Array [],
-          "id": "noProps",
-          "loc": Object {
-            "end": Object {
-              "column": 61,
-              "line": 38,
-            },
-            "start": Object {
-              "column": 23,
-              "line": 38,
-            },
-          },
-          "name": "noProps",
-          "renderFn": [Function],
-          "source": "() => <Button label=\\"No properties\\" />",
-        },
-        "onlyColors": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 5,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 0,
-                  "line": 0,
-                },
-              },
-              "name": "props",
-              "usage": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 48,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 43,
-                      "line": 0,
-                    },
-                  },
-                },
-              ],
-              "value": "props",
-            },
-          ],
-          "id": "onlyColors",
-          "loc": Object {
-            "end": Object {
-              "column": 78,
-              "line": 13,
-            },
-            "start": Object {
-              "column": 26,
-              "line": 13,
-            },
-          },
-          "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
-          },
-          "renderFn": [Function],
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
       },
     },

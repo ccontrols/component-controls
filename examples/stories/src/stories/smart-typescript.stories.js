@@ -3,6 +3,7 @@ import { Button } from '../components/Button';
 
 export default {
   title: 'Introduction/Smart Typescript',
+  author: 'atanasster',
   parameters: {
     component: Button,
   },

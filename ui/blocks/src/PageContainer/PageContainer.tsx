@@ -1,125 +1,83 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { FC, useEffect } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
-import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
-import { StoryStore } from '@component-controls/store';
-import { store } from '@component-controls/store/live_store';
-
 import {
-  ThemeProvider,
-  markdownComponents,
-} from '@component-controls/components';
-import { BlockContextProvider, StoryContextConsumer } from '../context';
+  FC,
+  useEffect,
+  forwardRef,
+  Ref,
+  ComponentType,
+  ReactText,
+} from 'react';
+import { jsx, Box, BoxProps } from 'theme-ui';
+import { get } from '@theme-ui/css';
+import { useTheme } from '@component-controls/components';
+import { Container } from '../Container';
+import { StoryContextConsumer } from '../context';
 
-export interface PageContainerProps {
+export interface PageContainerOwnProps {
   /**
-   * story to display in the page
+   * ref to the page container component
    */
-  storyId?: string;
+  ref?: Ref<HTMLDivElement>;
   /**
-   * dark/light theme for the page
+   * theme variant
    */
-  dark?: boolean;
-
-  /**
-   * global options passed from container
-   * those are global parameters as well as decorators
-   */
-  options?: any;
-
-  /**
-   * components to customize the markdown display.
-   */
-  components?: MDXProviderComponents;
+  variant?: string;
 
   /**
-   * optional custom theme
+   * inner wrapper container
    */
-  theme?: Theme;
-
-  /**
-   * store object
-   */
-  store?: StoryStore;
+  wrapper?: ComponentType | null;
 }
 
+export type PageContainerProps = PageContainerOwnProps &
+  Omit<BoxProps, 'variant'>;
 /**
- *
+ * Page container component
  * If the page is an MDX page, will display the MDX components.
  * Otherwise, the page elements are passed as children
  */
-export const PageContainer: FC<PageContainerProps> = ({
-  children,
-  dark,
-  storyId,
-  store: mockStore,
-  theme,
-  options,
-  components = {},
-}) => {
-  let scrollId: string | undefined;
-  try {
-    const pageURL =
-      (window.location != window.parent.location && window.parent.location
-        ? window.parent.location.href
-        : document.location.href) || '';
-    const url = new URL(pageURL);
-    scrollId = url.hash ? url.hash.substring(1) : undefined;
-  } catch (err) {}
-
-  useEffect(() => {
-    if (scrollId) {
-      const element = document.getElementById(scrollId);
-      if (element) {
-        // Introducing a delay to ensure scrolling works when it's a full refresh.
-        setTimeout(() => {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest',
-          });
-        }, 100);
-      }
-    }
-  }, [scrollId]);
-  return (
-    <ThemeProvider theme={theme} dark={dark}>
+export const PageContainer: FC<PageContainerProps> = forwardRef(
+  (
+    { children, variant, wrapper: Wrapper = Container, ...rest },
+    ref: React.Ref<HTMLDivElement>,
+  ) => {
+    useEffect(() => {
+      try {
+        const pageURL =
+          (typeof window !== 'undefined' &&
+          window.location !== window.parent.location &&
+          window.parent.location
+            ? window.parent.location.href
+            : document.location.href) || '';
+        const url = new URL(pageURL);
+        const scrollId = url.hash ? url.hash.substring(1) : undefined;
+        if (scrollId) {
+          const element = document.getElementById(scrollId);
+          if (element) {
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        }
+      } catch (err) {}
+    }, []);
+    const theme = useTheme();
+    return (
       <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '4rem 20px',
-          bg: 'background',
-          color: 'text',
-          fontFamily: 'body',
-        }}
+        variant="pagecontainer"
+        sx={get(theme, variant as ReactText)}
+        ref={ref}
+        {...rest}
       >
-        <Box sx={{ maxWidth: '1000px', width: '100%' }}>
-          {storyId && (
-            <BlockContextProvider
-              storyId={storyId}
-              store={mockStore || store}
-              options={options}
-            >
-              <StoryContextConsumer id={storyId}>
-                {({ kind }) => {
-                  const { MDXPage } = kind || {};
-                  return MDXPage ? (
-                    <MDXProvider
-                      components={{ ...markdownComponents, ...components }}
-                    >
-                      <MDXPage />
-                    </MDXProvider>
-                  ) : (
-                    children
-                  );
-                }}
-              </StoryContextConsumer>
-            </BlockContextProvider>
-          )}
-        </Box>
+        <StoryContextConsumer id=".">
+          {({ doc }) => {
+            const { MDXPage } = doc || {};
+            const node = MDXPage ? <MDXPage /> : children;
+            return Wrapper ? <Wrapper>{node}</Wrapper> : node;
+          }}
+        </StoryContextConsumer>
       </Box>
-    </ThemeProvider>
-  );
-};
+    );
+  },
+);

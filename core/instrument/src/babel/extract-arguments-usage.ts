@@ -3,7 +3,7 @@ import {
   StoryArguments,
   StoryArgument,
   ArgUsageLocation,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { adjustSourceLocation } from '../misc/source-location';
 
 const findArguments = (

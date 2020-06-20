@@ -1,10 +1,7 @@
 import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
 import { Input } from 'theme-ui';
-import {
-  ComponentControlFiles,
-  ControlTypes,
-} from '@component-controls/specification';
+import { ComponentControlFiles, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

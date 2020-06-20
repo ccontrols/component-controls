@@ -1,5 +1,6 @@
 # Table of contents
 
+-   [WIP](#wip)
 -   [Motivation](#motivation)
 -   [Inspiration](#inspiration)
 -   [Roadmap](#roadmap)
@@ -10,8 +11,8 @@
         -   [Motivation](#motivation-1)
         -   [Limitations](#limitations)
 -   [Core packages](#core-packages)
-    -   [@component-controls/specification](#component-controlsspecification)
     -   [@component-controls/core](#component-controlscore)
+    -   [@component-controls/core](#component-controlscore-1)
     -   [@component-controls/instrument](#component-controlsinstrument)
     -   [@component-controls/loader](#component-controlsloader)
     -   [@component-controls/webpack-compile](#component-controlswebpack-compile)
@@ -19,6 +20,7 @@
     -   [@component-controls/store](#component-controlsstore)
     -   [@component-controls/config](#component-controlsconfig)
 -   [UI packages](#ui-packages)
+    -   [@component-controls/app](#component-controlsapp)
     -   [@component-controls/pages](#component-controlspages)
     -   [@component-controls/blocks](#component-controlsblocks)
     -   [@component-controls/components](#component-controlscomponents)
@@ -31,9 +33,14 @@
 -   [Miscellaneous](#miscellaneous)
     -   [@component-controls/storybook-custom-docs](#component-controlsstorybook-custom-docs)
 
+# WIP
+
+> :warning: **THIS IS WORK IN PROGRESS**: The API are very likely to change often.
+
 # Motivation
 
 -   Create a components development environment with testing as a first-class feature.
+-   Provide out-of-the-box documentation experience with markdown pages for home page, blogging and general project documentation .
 -   Use smart "super-bundlers" (gatsby, nextjs) to build compact and fast documentation sites.
 -   Decouple the user interface from loading of the 'stories' = modular design.
 -   Do not modify the source files (both story and component files) at instrumentation-time as much as possible to avoid random build/run-time errors. Exception only where absolutely necessary, ie instrumenting coverage or performance profiling probes.
@@ -49,11 +56,15 @@ There are many developments that have contributed to the creation of `component-
 
 -   [docz](https://www.docz.site) has a beautiful architecture and introduced non-proprietary [gatsby](https://www.gatsbyjs.org) build engine. This monorepo was also heavily influenced by the `docz` project repository structure.
 
+-   [docusaurus](https://docusaurus.io) creates very clean and effective UX for documentation websites. Provides excellent options for project blogging, versioning, translation and algolia-powered search.
+
 -   [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) advancements have been greatly responsible for making possible the parsing and analysis features of this library.
 
 -   [blocks-ui](https://blocks-ui.com) is taking `AST` to a new level by generating and reversing AST to create [react](https://reactjs.org) applications and has been an inspiraton for pushing the enveloppe on our own `AST` work.
 
 -   [theme-ui](https://theme-ui.com) is the driving force for standardizing `react` theming and design systems. `theme-ui` is used by our project as the theming and components founding block.
+
+-   [mdx](https://mdxjs.com) is driving the adoption of JSX in Markdown and allows writing rich, interactive documentation pages.
 
 # Roadmap
 
@@ -65,20 +76,22 @@ There are many developments that have contributed to the creation of `component-
 -   [x] Storybook integration without addon-docs (replace all storybook loaders)
 -   [x] Standalone webpack compiler API
 -   [ ] HMR
--   [ ] Gatsby standalone app/static app builder
+-   [x] Gatsby standalone app/static app builder
 -   [ ] Nextjs standalone app/static app builder
--   [ ] Integrated testing facilites
+-   [ ] Integrated testing facilites (WIP)
 -   [ ] Coverage and perfoamnce profiling instrumentation
--   [ ] Replace MDX with frontmatter format
+-   [x] Support frontmatter MDX declarations
 -   [ ] Multiple frameworks support (Vue, Angular, tbd)
 
 # Showcase sites
 
--   [Storybook 6](https://components-storybook-6.netlify.app/)
+-   [Gatsby](https://component-controls.com/)
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
--   [Custom docs pages](https://custom-pages-storybook-6.netlify.app)
+-   [Storybook 6](https://components-storybook-6.netlify.app/)
+
+-   [Storybook custom docs pages](https://custom-pages-storybook-6.netlify.app)
 
 # Integrations
 
@@ -110,28 +123,27 @@ Storybook Addon For live editing of component controls
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
--   The Storybook MDX (`<Meta />` tag) is a proprietary format that will be replaced in due time with a portable [frontmatter](https://www.gatsbyjs.org/docs/mdx/markdown-syntax/#frontmatter--mdx-example) stories format, similar to the CSF format.
 
 <!-- END-PACKAGE-SECTION -->
 
 # Core packages
 
-<package-section file="./core/specification/README.md" section="overview" />
+<package-section file="./core/core/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
 
-## [@component-controls/specification](https://github.com/ccontrols/component-controls/blob/master/core/specification)
+## [@component-controls/core](https://github.com/ccontrols/component-controls/blob/master/core/core)
 
-Component controls specification with typescript definitions
+Component controls core types and utility functions
 
-Typescript definitions of the component-controls specification.
+Type definitions of the component-controls specification and accompanying utility functions.
 Includes definitions for:
 
--   [Story](https://github.com/ccontrols/component-controls/tree/master/core/specification#story)
--   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/specification#stories)
--   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#controltypes)
--   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/specification#componentcontrol)
--   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/specification#proptypes)
+-   [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
+-   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
+-   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
+-   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
+-   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
 -   and more...
 
 <!-- END-PACKAGE-SECTION -->
@@ -142,7 +154,17 @@ Includes definitions for:
 
 ## [@component-controls/core](https://github.com/ccontrols/component-controls/blob/master/core/core)
 
-Component controls core utility routines
+Component controls core types and utility functions
+
+Type definitions of the component-controls specification and accompanying utility functions.
+Includes definitions for:
+
+-   [Story](https://github.com/ccontrols/component-controls/tree/master/core/core#story)
+-   [Stories](https://github.com/ccontrols/component-controls/tree/master/core/core#stories)
+-   [ControlTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#controltypes)
+-   [ComponentControl](https://github.com/ccontrols/component-controls/tree/master/core/core#componentcontrol)
+-   [PropTypes](https://github.com/ccontrols/component-controls/tree/master/core/core#proptypes)
+-   and more...
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -235,6 +257,26 @@ Configration file utilities. Uses the [glob](https://www.npmjs.com/package/glob)
 
 The UI libraries are built around [theme-ui](https://theme-ui.com) and are designed to abstract the user interface level of components.
 
+<package-section file="./ui/app/README.md" section="overview" />
+
+<!-- START-PACKAGE-SECTION -->
+
+## [@component-controls/app](https://github.com/ccontrols/component-controls/blob/master/ui/app)
+
+Component controls standalone application.
+
+Components to create `@component-controls` standalone application, that are connected to the store of documents.
+
+Some of the design goals:
+
+-   Portability between different build systems ie - Gatsby, CRA, Vercel.
+-   Create a true CMS-type user-interface, allowing for different document types ie. "stories", "blogs", "articles".
+-   Category pages for "tags", "authors".
+-   Fully customizable Home page.
+-   Responsive user/interface, with sidebars transforming into popouts for small screen resolutions.
+
+<!-- END-PACKAGE-SECTION -->
+
 <package-section file="./ui/pages/README.md" section="overview" />
 
 <!-- START-PACKAGE-SECTION -->
@@ -277,14 +319,10 @@ Some of the guiding design goals for this library:
 
 Component controls commonly used UI components.
 
-Some of the guiding design goals for this library:
-
--   Use theme-ui/system-ui as an foundation for a react UI library.
--   As much as possible possible, avoid using components with css dependencies.
+An ecclectic collection of [theme-ui](https://theme-ui.com)-based components that are used throughout `component-controls`.
 
 Third-party libraries used in no particular order:
 
--   [theme-ui](https://theme-ui.com) as the theming and components foundation.
 -   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
 -   [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
 -   [react-table](https://github.com/tannerlinsley/react-table) to display tabular data. 

@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+**Note:** Version bump only for package @component-controls/config
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* merge build and run time configs for overlapping props ([8db4a10](https://github.com/ccontrols/component-controls/commit/8db4a1065931c9b2cebe4464e29d3d34d6d52533))
+
+
+### Features
+
+* category pages - tags, authors ([5ced78b](https://github.com/ccontrols/component-controls/commit/5ced78b515eefe4476618b8951ce11d70b028440))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* global options, storySort ([3a55929](https://github.com/ccontrols/component-controls/commit/3a55929e7e99daa82e663ed00e942f2ad0b70fd8))
+* pagination app component ([597dcc0](https://github.com/ccontrols/component-controls/commit/597dcc0d1c666d445c945193957e541c2e83c7a4))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

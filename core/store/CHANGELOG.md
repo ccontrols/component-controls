@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* merge build and run time configs for overlapping props ([8db4a10](https://github.com/ccontrols/component-controls/commit/8db4a1065931c9b2cebe4464e29d3d34d6d52533))
+* navigate to first doc page if none ([acadb8f](https://github.com/ccontrols/component-controls/commit/acadb8f79f2b4cf03e234900fcf2143051aa78e6))
+* preserve component name as string ([c284170](https://github.com/ccontrols/component-controls/commit/c284170bed9d5b6dbc86db93a3da36d231621a79))
+
+
+### Features
+
+* add tutorial document type ([ae99e32](https://github.com/ccontrols/component-controls/commit/ae99e32291b7f570896c3b0ed4ced1dc4c505aa2))
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* app components for standalone ([195b01b](https://github.com/ccontrols/component-controls/commit/195b01beb4aa61f64ce892ba5b8e32938c346859))
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* categories custom pages- authors, tags ([125f677](https://github.com/ccontrols/component-controls/commit/125f67729040d63a8897d393e111f92ec7228cd8))
+* category pages - tags, authors ([5ced78b](https://github.com/ccontrols/component-controls/commit/5ced78b515eefe4476618b8951ce11d70b028440))
+* display by kind ([c8857e6](https://github.com/ccontrols/component-controls/commit/c8857e638cc52cbb4ea63a311ee29457751707cb))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* global options, storySort ([3a55929](https://github.com/ccontrols/component-controls/commit/3a55929e7e99daa82e663ed00e942f2ad0b70fd8))
+* header to app component, link context ([24c7476](https://github.com/ccontrols/component-controls/commit/24c7476b2d598d9daf73a58b6ea00a8f587bc5a8))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* links to docs, doc page and story ([892416d](https://github.com/ccontrols/component-controls/commit/892416d3408100e0d6fef4d289901c0fac4d70ee))
+* list pages, date, tags fields ([8dac2f9](https://github.com/ccontrols/component-controls/commit/8dac2f9047705331bff1499c0bc45d5cedc838c9))
+* loader chalk log ([f3fc436](https://github.com/ccontrols/component-controls/commit/f3fc43692c47ddc4e65eba25c60b9857109ddee2))
+* pagination app component ([597dcc0](https://github.com/ccontrols/component-controls/commit/597dcc0d1c666d445c945193957e541c2e83c7a4))
+* site options and SEO component ([1bed424](https://github.com/ccontrols/component-controls/commit/1bed424f593457cb740b09c9b52e078ace2d73dc))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* tabs configurable ([bd06c05](https://github.com/ccontrols/component-controls/commit/bd06c0514139948a1f10e6434d18ce3530441ea0))
+* theming of app components ([e059e71](https://github.com/ccontrols/component-controls/commit/e059e71a2b3275bc0d672b3008cb5c53d9ec7ca6))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 **Note:** Version bump only for package @component-controls/store

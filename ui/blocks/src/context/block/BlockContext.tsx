@@ -1,5 +1,4 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil';
 import { StoryStore } from '@component-controls/store';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { BlockControlsContextProvider } from './BlockControlsContext';
@@ -9,7 +8,12 @@ export interface BlockContextInputProps {
   /**
    * current story id
    */
-  storyId: string;
+  storyId?: string;
+  /**
+   * current documentation page, if no story is selected
+   */
+  docId?: string;
+
   /**
    * store object
    */
@@ -26,7 +30,12 @@ export interface BlockContextProps {
   /**
    * current story
    */
-  storyId: string;
+  storyId?: string;
+  /**
+   * current documentation page, if no story is selected
+   */
+  docId?: string;
+
   /**
    * store interface
    */
@@ -42,27 +51,35 @@ export const BlockContext = React.createContext<BlockContextProps>({});
 
 export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   children,
-  storyId,
+  storyId: propsStoryId,
+  docId: propsDocId,
   store,
   options,
 }) => {
+  let storyId = propsStoryId;
+  const docId = storyId || propsDocId;
+  if (!storyId && docId) {
+    const doc = store.getStoryDoc(docId);
+    storyId =
+      doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
+  }
+
   return (
     <ErrorBoundary>
-      <RecoilRoot>
-        <BlockContext.Provider
-          value={{
-            storyId,
-            storeProvider: store,
-            options,
-          }}
-        >
-          <BlockDataContextProvider store={store} storyId={storyId}>
-            <BlockControlsContextProvider store={store}>
-              {children}
-            </BlockControlsContextProvider>
-          </BlockDataContextProvider>
-        </BlockContext.Provider>
-      </RecoilRoot>
+      <BlockContext.Provider
+        value={{
+          storyId,
+          docId,
+          storeProvider: store,
+          options,
+        }}
+      >
+        <BlockDataContextProvider store={store} storyId={storyId} docId={docId}>
+          <BlockControlsContextProvider store={store}>
+            {children}
+          </BlockControlsContextProvider>
+        </BlockDataContextProvider>
+      </BlockContext.Provider>
     </ErrorBoundary>
   );
 };

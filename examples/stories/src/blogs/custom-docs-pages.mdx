@@ -1,0 +1,228 @@
+---
+title: Custom documentation pages for storybookjs
+type: blog
+date: 2020-04-27
+author: atanasster
+description: Storybookjs plugin that overcomes some "docs page" storybook architecture flaws to display multiple documentation pages.
+tags:
+  - storybook
+  - stories
+---
+
+
+# Overview
+
+[@component-controls/storybook-custom-docs](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs) makes it possible to add an unlimited number of custom documentation pages to storybook.
+
+![integrated in storybook](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/custom-docs-pages.gif)
+
+## Demo sites
+
+* Storybook6
+  - [Live site](https://custom-pages-storybook-6.netlify.app)
+  - [Source code](https://github.com/ccontrols/component-controls/tree/master/examples/custom-pages-storybook-6)
+
+* Storybook5 (storybook 5 support is wip)
+  - [Live site](https://custom-pages-storybook-5.netlify.app/)
+  - [Source code](https://github.com/ccontrols/component-controls/tree/master/examples/custom-pages-storybook-5)
+
+
+## Background
+
+The Storybook [addon-docs](https://github.com/storybookjs/storybook/tree/next/addons/docs) is a great feature to display documentation in Storybook, unfortunately the early versions (5.x and 6.x as of this writing) have a few limitations, amongst them is that there can be only one 'docs' page.
+
+In order to have multiple, fully functional documentation pages, we had to solve the following challenges:
+
+1. Circumvent the hard-coded [docs render](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/client/preview/StoryRenderer.tsx#L168).
+
+docs pages need to reside in the `preview` part of Storybok in order to render stories (since that's where the stories render functions reside), while the TAB addons are placed in the `manager` part of storybook. Since the manager and the preview reside in different bundles, only JSON-compatible data is available to any code residing in the manager, thus any functions are not available.
+
+2. Circumvent the hard-coded [DOM elements](https://github.com/storybookjs/storybook/blob/855815293b59412eea2b57f20eaa02982fcb5360/lib/core/src/server/templates/index.ejs#L31)
+
+documentation pages that render stories need to reside inside the preview `iframe` in order to render stories in a custom `docs` page and prevent css styles leaking into the story functions, while regular storybook `TAB`-type addons are rendered outside the `iframe`.
+
+## Step by step guide
+
+- Getting started
+
+install the addon:
+
+```bash
+yarn add @component-controls/storybook-custom-docs
+```
+
+in `.storybook/main.js` - enable the plugin and configure the pages options parameter.
+
+```js
+module.exports = {
+ ...
+  addons: [
+    ...
+    {
+      name: '@component-controls/storybook-custom-docs',
+      options: {
+        //configure an array of the pages to display
+        pages: [require.resolve('./page-story.js')]
+      }, 
+    }
+  ],
+};
+```
+
+- Page templates
+the custom page template files must have a default export with the following fields
+
+```js
+{
+  //the url path for the page. e.g: 'page'
+  key: string,
+ 
+  //the tab title.  e.g: 'My Pages'
+  title: string,
+  
+  //render function, return your custom page here.
+  render: ({ active }) => React.ReactNode,
+}
+```
+
+## Examples
+
+1. **From `component-controls/pages`**
+
+Component-controls comes with a handy selection of page templates that you can use as a starting point. The only requirement is to enclose the pages in a `DocsContainer` context from `@component-controls/storybook`
+
+```
+import React from 'react';
+import { ClassicPage } from '@component-controls/pages';
+import { DocsContainer } from '@component-controls/storybook';
+export default {
+  key: 'page',
+  title: 'Page',
+  render: ({ active }) => active ? (
+    <DocsContainer active={active}>
+      <ClassicPage />
+    </DocsContainer>
+  ): null,
+};
+```
+
+![component-controls page](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/custom-page.jpeg)
+
+2. **Custom render the current story**
+
+You can create docs pages from the grounds up and to render the stories, you can use the context.storyFn which is the equivalent of the story decorated CSF export.
+
+```js
+import React, { createElement }  from 'react';
+import { useContext } from '@component-controls/storybook-custom-docs';
+const CustomPage = () => {
+  const context = useContext();
+  return (
+    <div>
+      <h1>Simple docs page</h1>
+      {createElement(context.storyFn)}
+    </div>
+  );
+}
+const page = {
+  key: 'custom',
+  title: 'Simple Page',
+  render: ({ active }) => active ? <CustomPage  /> : null,
+}
+export default page;
+```
+![simple custom page](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg)
+
+3. **Storybook addon-docs blocks**
+
+In order to embed storybook's addon-docs block elements, you need to import them from `@storybook/addon-docs/blocks` and enclose them in a `DocsContainer` container:
+
+```js
+import React from 'react';import { DocsContainer, Story, Preview, Source, Title } from '@storybook/addon-docs/blocks';
+import { useContext } from '@component-controls/storybook-custom-docs';
+const Page = () => {
+  const context = useContext();
+  return (
+    <DocsContainer context={context}>
+      <Title>Using storybook docs page blocks</Title>
+      <Preview>
+      <Story id="." />
+      </Preview>
+      <Source id="." />
+    </DocsContainer>
+  );
+}
+const page = {
+  key: 'docs-page',
+  title: 'Docs blocks',
+  render: ({ active }) => active ? <Page /> : null}
+export default page;
+```
+![storybook docs blocks](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/docs-blocks.jpg)
+
+4. **Component-controls blocks**
+
+In order to embed component-controls own blocks, you need to enclose them in a `DocsContainer` imported from '@component-controls/storybook' and the basic blocks are to be imported from '@component-controls/blocks'
+
+```js
+import React from 'react';
+import { DocsContainer } from '@component-controls/storybook';
+import { Story, Title, Playground  } from '@component-controls/blocks';
+const Page = ({ active }) => (
+  <DocsContainer active={active} >
+    <Title>Component controls blocks</Title>
+    <Playground openTab="source" title=".">
+      <Story id="." />
+    </Playground>
+  </DocsContainer>
+);
+const page = {
+  key: 'component-page',
+  title: 'Controls blocks',
+  render: ({ active }) => active ? <Page /> : null
+}
+export default page;
+```
+![component-controls blocks](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/component-controls-blocks.jpg)
+
+
+5. **Mixed blocks**
+
+You can even create documentation pages with a mix of storybook and component-controls block components:
+```js
+import React from 'react';
+import { DocsContainer as SBDocsContainer, Preview, Story as SBStory, Title as SBTitle, Props} from '@storybook/addon-docs/blocks';
+import { useContext } from '@component-controls/storybook-custom-docs';
+import { DocsContainer } from '@component-controls/storybook';
+import { Story, Title, Playground, PropsTable  } from '@component-controls/blocks';
+const Page = () => {
+  const context = useContext();
+  return (
+  <>
+    <h1>Mixing storybook docs blocks and component-controls blocks</h1>
+    <SBDocsContainer context={context}>
+      <SBTitle />
+      <Preview >
+        <SBStory id={context.storyId} />
+      </Preview>
+      <Props of='.' />
+    </SBDocsContainer>
+    <DocsContainer storyId={context.storyId}>
+      <Title />
+      <Playground openTab="source" title="." dark={true}>
+        <Story id="." />
+      </Playground>
+      <PropsTable of="." />
+    </DocsContainer>
+  </>
+ );
+}
+const page = {
+  key: 'mixed-page',
+  title: 'Mixed blocks',
+  render: ({ active }) => active ? <Page /> : null,
+}
+export default page;
+```
+![mixed blocks](https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/mixed-blocks.jpg)
+

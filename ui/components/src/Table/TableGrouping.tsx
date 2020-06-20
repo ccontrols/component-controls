@@ -8,9 +8,11 @@ import {
   UseExpandedRowProps,
   UseTableRowProps,
 } from 'react-table';
-import { Flex, Text, useThemeUI } from 'theme-ui';
-import { get } from '@theme-ui/css';
-import Octicon, { ChevronRight, ChevronDown } from '@primer/octicons-react';
+import { Flex, Text } from 'theme-ui';
+import Octicon, {
+  ChevronRightIcon,
+  ChevronDownIcon,
+} from '@primer/octicons-react';
 
 type GroupByState = TableState & Partial<UseGroupByState<{}>>;
 const useControlledState = (state: GroupByState) => {
@@ -25,7 +27,7 @@ const useControlledState = (state: GroupByState) => {
       };
     }
     return state;
-  }, [state]);
+  }, [state, state?.groupBy?.length]);
 };
 export const useExpanderColumn = (itemsLabel: string) => (
   hooks: UseTableHooks<{}>,
@@ -49,19 +51,16 @@ export const useExpanderColumn = (itemsLabel: string) => (
               groupByVal: any;
             };
         }) => {
-          const { theme } = useThemeUI();
           if (row.canExpand) {
             return (
               <td colSpan={row.cells.length}>
                 <Flex
+                  variant="styles.tdgroup"
                   {...row.getToggleRowExpandedProps()}
-                  css={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    ...get(theme, 'styles.tdgroup'),
-                  }}
                 >
-                  <Octicon icon={row.isExpanded ? ChevronDown : ChevronRight} />{' '}
+                  <Octicon
+                    icon={row.isExpanded ? ChevronDownIcon : ChevronRightIcon}
+                  />{' '}
                   <Text
                     sx={{
                       mx: 2,

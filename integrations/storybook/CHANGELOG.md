@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+
+### Bug Fixes
+
+* source paths in docs ([322c055](https://github.com/ccontrols/component-controls/commit/322c055ba636c1560e0d3b148864acdb1a058eb0))
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Features
+
+* app components for standalone ([195b01b](https://github.com/ccontrols/component-controls/commit/195b01beb4aa61f64ce892ba5b8e32938c346859))
+* components in theme ([c287815](https://github.com/ccontrols/component-controls/commit/c287815309631101b2b0a09a00ff87db550a1a22))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* global options, storySort ([3a55929](https://github.com/ccontrols/component-controls/commit/3a55929e7e99daa82e663ed00e942f2ad0b70fd8))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* screen resizer ([47d94ba](https://github.com/ccontrols/component-controls/commit/47d94bab3620bcea4d1453a8a9c81d6fa49bee05))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* theme in options ([9e4c527](https://github.com/ccontrols/component-controls/commit/9e4c527bec416b969f9a793cf914204f9ddc6b87))
+* theming blocks components ([f97afca](https://github.com/ccontrols/component-controls/commit/f97afcab4af7c67c52207ae34e9efe4a607bfd99))
+* theming of app components ([e059e71](https://github.com/ccontrols/component-controls/commit/e059e71a2b3275bc0d672b3008cb5c53d9ec7ca6))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

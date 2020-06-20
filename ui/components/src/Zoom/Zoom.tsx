@@ -19,11 +19,9 @@ export const Zoom: FC<ZoomProps> = ({ scale = 1, children }) => {
       }}
     >
       <Box
+        variant="zoom"
         css={{
-          position: 'relative',
           transform: `scale(${scale})`,
-          transformOrigin: 'top left',
-          transition: 'transform .2s',
         }}
       >
         {children}

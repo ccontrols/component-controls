@@ -1,9 +1,4 @@
-import {
-  StoriesStore,
-  Story,
-  StoriesKind,
-  Stories,
-} from '@component-controls/specification';
+import { Story, StoriesDoc, Stories } from '@component-controls/core';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
@@ -11,7 +6,11 @@ import { extractAttributes } from './extract-attributes';
 import { followStoryImport } from './follow-imports';
 import { componentsFromParams } from '../misc/component-attributes';
 import { sourceLocation } from '../misc/source-location';
-import { ParseStorieReturnType, InstrumentOptions } from '../types';
+import {
+  LoadingDocStore,
+  ParseStorieReturnType,
+  InstrumentOptions,
+} from '../types';
 
 export const extractCSFStories = (
   ast: File,
@@ -53,9 +52,9 @@ export const extractCSFStories = (
     return undefined;
   };
   let components: { [key: string]: string | undefined } = {};
-  const store: StoriesStore = {
+  const store: LoadingDocStore = {
     stories: {},
-    kinds: {},
+    doc: undefined,
     components: {},
     packages: {},
   };
@@ -71,14 +70,16 @@ export const extractCSFStories = (
           (acc, componentName) => ({ ...acc, [componentName]: undefined }),
           components,
         );
-        const kind: StoriesKind = {
+        const doc: StoriesDoc = {
           ...attributes,
+          title,
           components: {},
         };
         if (attrComponents.length > 0) {
-          kind.component = attrComponents[0];
+          doc.component = attrComponents[0];
         }
-        store.kinds[title] = kind;
+
+        store.doc = doc;
       }
     },
     AssignmentExpression: (path: any) => {
@@ -166,11 +167,11 @@ export const extractCSFStories = (
       }
     },
   });
-  if (Object.keys(store.kinds).length === 1) {
+  if (store.doc) {
     //@ts-ignore
-    store.kinds[Object.keys(store.kinds)[0]].components = components;
+    store.doc.components = components;
   } else {
-    throw new Error(`CSF stories should have one default export`);
+    throw new Error(`stories should have one default export`);
   }
   return store;
 };

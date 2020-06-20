@@ -5,7 +5,7 @@ import readJson from 'read-package-json';
 import hostedGitInfo from 'hosted-git-info';
 //@ts-ignore
 import parseRepositoryURL from '@hutson/parse-repository-url';
-import { PackageInfo } from '@component-controls/specification';
+import { PackageInfo } from '@component-controls/core';
 import { hashStoreId } from './hashStore';
 import { PackageInfoOptions } from '../types';
 

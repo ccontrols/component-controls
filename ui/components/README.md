@@ -1,21 +1,36 @@
 # Table of contents
 
+-   [Installation](#installation)
+-   [Documentation](#documentation)
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>ActionBar</ins>](#insactionbarins)
     -   [<ins>ActionContainer</ins>](#insactioncontainerins)
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
+    -   [<ins>ColorMode</ins>](#inscolormodeins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
+    -   [<ins>Header</ins>](#insheaderins)
+    -   [<ins>Keyboard</ins>](#inskeyboardins)
+    -   [<ins>Link</ins>](#inslinkins)
+    -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
+    -   [<ins>Navmenu</ins>](#insnavmenuins)
+    -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>IconButton</ins>](#insiconbuttonins)
     -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
+    -   [<ins>SearchInputItem</ins>](#inssearchinputitemins)
+    -   [<ins>SearchInput</ins>](#inssearchinputins)
+    -   [<ins>Sidebar</ins>](#inssidebarins)
+    -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
+    -   [<ins>SkiLinksItem</ins>](#insskilinksitemins)
+    -   [<ins>SkipLinks</ins>](#insskiplinksins)
     -   [<ins>Source</ins>](#inssourceins)
+    -   [<ins>Subheading</ins>](#inssubheadingins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>SyntaxHighlighter</ins>](#inssyntaxhighlighterins)
     -   [<ins>Table</ins>](#instableins)
-    -   [<ins>useRowSelectionColumn</ins>](#insuserowselectioncolumnins)
     -   [<ins>Tab</ins>](#instabins)
     -   [<ins>TabList</ins>](#instablistins)
     -   [<ins>TabPanel</ins>](#instabpanelins)
@@ -25,16 +40,24 @@
     -   [<ins>Toggle</ins>](#instoggleins)
     -   [<ins>Zoom</ins>](#inszoomins)
 
+# Installation
+
+This package is usually installed as part of the @component-controls package, but you can also install it standalone and use the components in your:
+
+```bash
+$ npm install @component-controls/components --save
+```
+
+# Documentation
+
+[live documentation site](https://component-controls.com/api/components/actionbar/)
+
 # Overview
 
-Some of the guiding design goals for this library:
-
--   Use theme-ui/system-ui as an foundation for a react UI library.
--   As much as possible possible, avoid using components with css dependencies.
+An ecclectic collection of [theme-ui](https://theme-ui.com)-based components that are used throughout `component-controls`.
 
 Third-party libraries used in no particular order:
 
--   [theme-ui](https://theme-ui.com) as the theming and components foundation.
 -   [prism](https://prismjs.com) for source code syntax highlighting, rendered with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer).
 -   [markdown-to-jsx](https://probablyup.com/markdown-to-jsx/) to transform markdown to JSX at runtime.
 -   [react-table](https://github.com/tannerlinsley/react-table) to display tabular data. 
@@ -47,7 +70,7 @@ Third-party libraries used in no particular order:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude=".ts$,.stories.tsx$,TableGrouping.tsx,TableFilter.tsx,PopoverUtils.tsx" />
+<react-docgen-typescript path="./src" exclude=".ts$,.stories.tsx$,TableGrouping.tsx,TableFilter.tsx,PopoverUtils.tsx,TableRowSelection.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -57,7 +80,7 @@ a strip of actions to be attached to a container
 the action items contain the labels and click event handler
 actions can accept an order prop, and can also be superimposed
 
-_ActionBar [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx)_
+_ActionBar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx)_
 
 ### properties
 
@@ -69,7 +92,7 @@ _ActionBar [source code](https:/github.com/ccontrols/component-controls/tree/mas
 
 a boxed container with actions.
 
-_ActionContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
+_ActionContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionContainer/ActionContainer.tsx)_
 
 ### properties
 
@@ -82,23 +105,23 @@ _ActionContainer [source code](https:/github.com/ccontrols/component-controls/tr
 
 a collapsible block with a title. The title creates also an attribute id and an octicon for github style navigation.
 
-_BlockContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
+_BlockContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/BlockContainer/BlockContainer.tsx)_
 
 ### properties
 
-| Name          | Type                | Description                                                                                                     |
-| ------------- | ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `title`       | _string_            | optional section title for the block.                                                                           |
-| `description` | _string_            | optional markdown description.                                                                                  |
-| `id`          | _string_            | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `collapsible` | _boolean_           | if false, will nothave a collapsible frame.                                                                     |
-| `sxStyle`     | _SystemStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 
 ## <ins>Collapsible</ins>
 
 Animated expand/collapse container component
 
-_Collapsible [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Collapsible/Collapsible.tsx)_
+_Collapsible [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Collapsible/Collapsible.tsx)_
 
 ### properties
 
@@ -116,12 +139,25 @@ _Collapsible [source code](https:/github.com/ccontrols/component-controls/tree/m
 | `onAnimationEnd`         | _(props: { newHeight: number; }) => void_ |                       |
 | `onAnimationStart`       | _(props: { newHeight: number; }) => void_ |                       |
 
+## <ins>ColorMode</ins>
+
+dark/light mode toggle for theme-ui themes
+
+_ColorMode [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ColorMode/ColorMode.tsx)_
+
+### properties
+
+| Name    | Type                  | Description                                         |
+| ------- | --------------------- | --------------------------------------------------- |
+| `label` | _string_              | optional label to be displayed alongside the toggle |
+| `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
+
 ## <ins>ExternalLink</ins>
 
 Anchor link to an external url,
 adds the default `target="_blank" rel="noopener noreferrer"` props
 
-_ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
+_ExternalLink [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ExternalLink/ExternalLink.tsx)_
 
 ### properties
 
@@ -134,13 +170,66 @@ _ExternalLink [source code](https:/github.com/ccontrols/component-controls/tree/
 | `ping`           | _string_                                                                                                  | specifies a list of URLs to be notified if the user follows the hyperlink.        |
 | `type`           | _string_                                                                                                  | specifies the media type of the linked document.                                  |
 | `referrerPolicy` | _"no-referrer" \| "no-referrer-when-downgrade" \| "origin" \| "origin-when-cross-origin" \| "unsafe-url"_ | specifies which referrer to send.                                                 |
+| `as`             | _ElementType&lt;any>_                                                                                     |                                                                                   |
+| `variant`        | _string_                                                                                                  |                                                                                   |
+| `css`            | _InterpolationWithTheme&lt;any>_                                                                          |                                                                                   |
+
+## <ins>Header</ins>
+
+A page header component
+
+_Header [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Header/Header.tsx)_
+
+### properties
+
+| Name      | Type                  | Description |
+| --------- | --------------------- | ----------- |
+| `as`      | _ElementType&lt;any>_ |             |
+| `variant` | _string_              |             |
+
+## <ins>Keyboard</ins>
+
+Componet to monitor keystrokes. Can attach to child, document or window.
+
+_Keyboard [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Keyboard/Keyboard.tsx)_
+
+### properties
+
+| Name         | Type                                                                                                                                                                                                                                                                                  | Description                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `keys*`      | _number\[]_                                                                                                                                                                                                                                                                           | array of the keys to be trapped                                                   |
+| `target`     | _"children" \| "document" \| "window"_                                                                                                                                                                                                                                                | to where to attach the event handler                                              |
+| `onKeyDown*` | _KeyboardCallback_                                                                                                                                                                                                                                                                    | callbal on key down                                                               |
+| `children`   | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ReactElement&lt;...>_ | child element to the key event handler will be attached to if target = 'children' |
+
+## <ins>Link</ins>
+
+_Link [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Link/Link.tsx)_
+
+### properties
+
+| Name      | Type                                                                         | Description |
+| --------- | ---------------------------------------------------------------------------- | ----------- |
+| `ref`     | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `as`      | _ElementType&lt;any>_                                                        |             |
+| `variant` | _string_                                                                     |             |
+
+## <ins>LinkContextProvider</ins>
+
+_LinkContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Link/LinkContext.tsx)_
+
+### properties
+
+| Name         | Type  | Description |
+| ------------ | ----- | ----------- |
+| `linkClass*` | _any_ |             |
 
 ## <ins>Markdown</ins>
 
 Markdown display component to compile and display markdown at run-time.
 Uses `markdown-to-jsx` to compile the markdown.
 
-_Markdown [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Markdown/Markdown.tsx)_
+_Markdown [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Markdown/Markdown.tsx)_
 
 ### properties
 
@@ -149,21 +238,52 @@ _Markdown [source code](https:/github.com/ccontrols/component-controls/tree/mast
 | `children`   | _ReactNode_                                                                                                                                                                                                              | the markdown source code is passed as a children pro. |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.         |
 
-## <ins>IconButton</ins>
+## <ins>Navmenu</ins>
 
-_IconButton [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
+Hierarchical collapsible menu
+
+_Navmenu [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Navmenu/Navmenu.tsx)_
 
 ### properties
 
-| Name  | Type                                                                         | Description |
-| ----- | ---------------------------------------------------------------------------- | ----------- |
-| `ref` | _((instance: HTMLButtonElement) => void) \| RefObject&lt;HTMLButtonElement>_ |             |
+| Name         | Type                                 | Description                                                    |
+| ------------ | ------------------------------------ | -------------------------------------------------------------- |
+| `items*`     | _MenuItems_                          | Array of menu items                                            |
+| `activeItem` | _Pick&lt;MenuItem, "id" \| "label">_ | Initially active menu item                                     |
+| `expandAll`  | _boolean_                            | If specified, will expand all items with chidren               |
+| `onSelect`   | _(item?: MenuItem) => void_          | Function that will be called when the user selects a menu item |
+| `search`     | _string_                             | If specified, will filter the items by the search terms        |
+
+## <ins>Pagination</ins>
+
+A pagination component, navigate previous and next page
+
+_Pagination [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Pagination/Pagination.tsx)_
+
+### properties
+
+| Name   | Type             | Description                     |
+| ------ | ---------------- | ------------------------------- |
+| `prev` | _PaginationPage_ | link and title to previous page |
+| `next` | _PaginationPage_ | link and title to next page     |
+
+## <ins>IconButton</ins>
+
+_IconButton [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
+
+### properties
+
+| Name      | Type                                                                         | Description |
+| --------- | ---------------------------------------------------------------------------- | ----------- |
+| `ref`     | _((instance: HTMLButtonElement) => void) \| RefObject&lt;HTMLButtonElement>_ |             |
+| `as`      | _ElementType&lt;any>_                                                        |             |
+| `variant` | _string_                                                                     |             |
 
 ## <ins>PanelContainer</ins>
 
 an action container with built-in collapsible panels
 
-_PanelContainer [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
+_PanelContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/PanelContainer/PanelContainer.tsx)_
 
 ### properties
 
@@ -181,13 +301,105 @@ _PanelContainer [source code](https:/github.com/ccontrols/component-controls/tre
 A Popover container that is triggered by a click/hover event.
 Used to display enhanced information that could not fit into the main scren.
 
-_Popover [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
+_Popover [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
+
+## <ins>SearchInputItem</ins>
+
+display single search input item box
+
+_SearchInputItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SearchInput/SearchInput.tsx)_
+
+### properties
+
+| Name          | Type                                                      | Description                                                |
+| ------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| `item*`       | _ItemType_                                                | curent to be rendered                                      |
+| `index*`      | _number_                                                  | item index                                                 |
+| `key`         | _Key_                                                     | unique key, to be used by react                            |
+| `isOpen*`     | _boolean_                                                 | whether the popover is open                                |
+| `search*`     | _string_                                                  | the search string                                          |
+| `selected`    | _number_                                                  | selected item index                                        |
+| `selectItem*` | _(item: ItemType, index: number, close: boolean) => void_ | select item function to be called when an item is selected |
+| `as`          | _ElementType&lt;any>_                                     |                                                            |
+| `variant`     | _string_                                                  |                                                            |
+
+## <ins>SearchInput</ins>
+
+an input component combined with a popover, can be used for incremental search.
+
+_SearchInput [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SearchInput/SearchInput.tsx)_
+
+### properties
+
+| Name           | Type                                                                                                                                                                                                                                                                                                                    | Description                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                                                                                                                                          | callback on change of search input. user can retrieve items in this callback |
+| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                                                                                                                                              | on select a search item.                                                     |
+| `children`     | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ((props: SearchBoxCallbackProps&lt;...>) => ReactNode)_ | children is a render prop to allow custom rendering of items, one at a time  |
+| `items*`       | _ItemType\[]_                                                                                                                                                                                                                                                                                                           | items array                                                                  |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                         | customize the popover                                                        |
+| `as`           | _ElementType&lt;any>_                                                                                                                                                                                                                                                                                                   |                                                                              |
+| `variant`      | _string_                                                                                                                                                                                                                                                                                                                |                                                                              |
+
+## <ins>Sidebar</ins>
+
+Collapsible side bar component
+
+_Sidebar [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Sidebar/Sidebar.tsx)_
+
+### properties
+
+| Name          | Type                  | Description                                          |
+| ------------- | --------------------- | ---------------------------------------------------- |
+| `title`       | _any_                 | Title string or any react node                       |
+| `collapsible` | _boolean_             | Whether the sidebar can be collapsed                 |
+| `children`    | _any_                 | children content elements to be displayed in Sidebar |
+| `as`          | _ElementType&lt;any>_ |                                                      |
+| `variant`     | _string_              |                                                      |
+
+## <ins>SidebarContextProvider</ins>
+
+_SidebarContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Sidebar/SidebarContext.tsx)_
+
+### properties
+
+| Name          | Type      | Description |
+| ------------- | --------- | ----------- |
+| `collapsible` | _boolean_ |             |
+
+## <ins>SkiLinksItem</ins>
+
+single skip link anchor item
+
+_SkiLinksItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SkipLinks/SkipLinks.tsx)_
+
+### properties
+
+| Name      | Type                                                                         | Description                              |
+| --------- | ---------------------------------------------------------------------------- | ---------------------------------------- |
+| `target`  | _string_                                                                     | target's id property, without the # char |
+| `text*`   | _string_                                                                     | text message to be displayed             |
+| `ref`     | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |                                          |
+| `as`      | _ElementType&lt;any>_                                                        |                                          |
+| `variant` | _string_                                                                     |                                          |
+
+## <ins>SkipLinks</ins>
+
+list of anchor elements to skip to
+
+_SkipLinks [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SkipLinks/SkipLinks.tsx)_
+
+### properties
+
+| Name     | Type                   | Description |
+| -------- | ---------------------- | ----------- |
+| `items*` | _SkiLinksItemProps\[]_ |             |
 
 ## <ins>Source</ins>
 
 Syntax highliting source code component. Uses [prism](https://prismjs.com) for the actual source display.
 
-_Source [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Source/Source.tsx)_
+_Source [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Source/Source.tsx)_
 
 ### properties
 
@@ -203,11 +415,24 @@ _Source [source code](https:/github.com/ccontrols/component-controls/tree/master
 | `style`    | _any_                                                              | css styles for the container.                                                                                                                                                    |
 | `as`       | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
 
+## <ins>Subheading</ins>
+
+`h3` level headings
+
+_Subheading [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Subheading/Subheading.tsx)_
+
+### properties
+
+| Name      | Type                                                                           | Description |
+| --------- | ------------------------------------------------------------------------------ | ----------- |
+| `ref`     | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |             |
+| `variant` | _string_                                                                       |             |
+
 ## <ins>Subtitle</ins>
 
-`h3` level heading with faded text and font-weight 400.
+`h2` level heading with faded text and font-weight 400.
 
-_Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Subtitle/Subtitle.tsx)_
+_Subtitle [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Subtitle/Subtitle.tsx)_
 
 ### properties
 
@@ -216,12 +441,13 @@ _Subtitle [source code](https:/github.com/ccontrols/component-controls/tree/mast
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.     |
 | `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                         | DOM node type to render as. By default h3. |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                            |
+| `variant`  | _string_                                                                       |                                            |
 
 ## <ins>SyntaxHighlighter</ins>
 
 Syntax highlighter component. Uses [prism](https://prismjs.com) for the actual source display.
 
-_SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
+_SyntaxHighlighter [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SyntaxHighlighter/SyntaxHighlighter.tsx)_
 
 ### properties
 
@@ -240,7 +466,7 @@ _SyntaxHighlighter [source code](https:/github.com/ccontrols/component-controls/
 Table component. Uses [react-table](https://github.com/tannerlinsley/react-table) to display the data.
 Can be grouped, filtered, sorted. Themed with theme-ui for consistency.
 
-_Table [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/Table.tsx)_
+_Table [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/Table.tsx)_
 
 ### properties
 
@@ -260,66 +486,72 @@ _Table [source code](https:/github.com/ccontrols/component-controls/tree/master/
 | `expanded`              | _{ \[key: string]: boolean; }_                   | object listing the initially expanded rows.                                    |
 | `skipPageReset`         | _boolean_                                        | reset state update while update table data                                     |
 | `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_     | callback to render a SubComponent row                                          |
-
-## <ins>useRowSelectionColumn</ins>
-
-_useRowSelectionColumn [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Table/TableRowSelection.tsx)_
+| `as`                    | _ElementType&lt;any>_                            |                                                                                |
+| `variant`               | _string_                                         |                                                                                |
 
 ## <ins>Tab</ins>
 
 Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
 
-_Tab [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+_Tab [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>TabList</ins>
 
 Container for `<Tab />` headings, to be created inside the `<Tabs />` component. The list of `<Tab />` components should be passed as the children prop.
 
-_TabList [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+_TabList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>TabPanel</ins>
 
 Panel body container, to be created inside the `<Tabs />` component through the children prop.
 
-_TabPanel [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+_TabPanel [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
 
 ## <ins>Tabs</ins>
 
 Create tabs and multi-page ui layouts. Uses [react-tabs](https://reactcommunity.org/react-tabs/) component.
 
-_Tabs [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+_Tabs [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Tabs/Tabs.tsx)_
+
+### properties
+
+| Name       | Type        | Description |
+| ---------- | ----------- | ----------- |
+| `fontSize` | _ReactText_ |             |
 
 ## <ins>Tag</ins>
 
 A copntainer component to display text in a colored box.
 
-_Tag [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Tag/Tag.tsx)_
+_Tag [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Tag/Tag.tsx)_
 
 ### properties
 
-| Name                | Type                | Description                                                                                                            |
-| ------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `color*`            | _string_            | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
-| `transparentAmount` | _number_            | transparent amount - 0 to 1                                                                                            |
-| `sxStyle`           | _SystemStyleObject_ | theme-ui styling object for the container                                                                              |
+| Name                | Type                  | Description                                                                                                            |
+| ------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `color`             | _string_              | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
+| `transparentAmount` | _number_              | transparent amount - 0 to 1                                                                                            |
+| `variant`           | _string_              | theme variant additional                                                                                               |
+| `as`                | _ElementType&lt;any>_ |                                                                                                                        |
 
 ## <ins>Title</ins>
 
-_Title [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Title/Title.tsx)_
+_Title [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Title/Title.tsx)_
 
 ### properties
 
 | Name       | Type                                                                           | Description                            |
 | ---------- | ------------------------------------------------------------------------------ | -------------------------------------- |
 | `children` | _ReactNode_                                                                    | text to be displayed in the component. |
-| `sxStyle`  | _SystemStyleObject_                                                            | theme-ui styling object                |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
+| `as`       | _ElementType&lt;any>_                                                          |                                        |
+| `variant`  | _string_                                                                       |                                        |
 
 ## <ins>Toggle</ins>
 
 Toggle components can be used to edit boolean values. Uses [react-switch](https://github.com/markusenglund/react-switch) component.
 
-_Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Toggle/Toggle.tsx)_
+_Toggle [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Toggle/Toggle.tsx)_
 
 ### properties
 
@@ -332,7 +564,7 @@ _Toggle [source code](https:/github.com/ccontrols/component-controls/tree/master
 
 zooming transform component
 
-_Zoom [source code](https:/github.com/ccontrols/component-controls/tree/master/ui/components/src/Zoom/Zoom.tsx)_
+_Zoom [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Zoom/Zoom.tsx)_
 
 ### properties
 

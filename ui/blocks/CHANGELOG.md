@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+
+### Bug Fixes
+
+* padding for props-table actionbar ([b68ff6c](https://github.com/ccontrols/component-controls/commit/b68ff6c9d446369add553dd42f6cc94e58f512a2))
+* source paths in docs ([322c055](https://github.com/ccontrols/component-controls/commit/322c055ba636c1560e0d3b148864acdb1a058eb0))
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* account for docs without stories ([4f30e77](https://github.com/ccontrols/component-controls/commit/4f30e775f5cdcaf1f48114908ee00d765fb976ea))
+* achor smooth scroll into view ([7aa9497](https://github.com/ccontrols/component-controls/commit/7aa9497f08db2ab63586be0086dfe8cd5abcd2a2))
+* adjust anchor smooth scrolling ([72bbc3d](https://github.com/ccontrols/component-controls/commit/72bbc3d57637b62f26412ac6e6379c807f6b2c28))
+* autoselect doc page first story if none ([33f5585](https://github.com/ccontrols/component-controls/commit/33f55853d6dbcdb746e7d7b5d0665569cc21e0d8))
+* container per page type ([ac7b9a2](https://github.com/ccontrols/component-controls/commit/ac7b9a28766fb491519c0d4c30b03738da41d4ad))
+* markdown domponents ([4f8ce12](https://github.com/ccontrols/component-controls/commit/4f8ce12fa5804c0c93413fff4da3e01f2508da99))
+* navigate to first doc page if none ([acadb8f](https://github.com/ccontrols/component-controls/commit/acadb8f79f2b4cf03e234900fcf2143051aa78e6))
+* preserve component name as string ([c284170](https://github.com/ccontrols/component-controls/commit/c284170bed9d5b6dbc86db93a3da36d231621a79))
+* props ([096ebf9](https://github.com/ccontrols/component-controls/commit/096ebf9e66f2c30f9e5f293a280f49ae6659713a))
+
+
+### Features
+
+* add tutorial document type ([ae99e32](https://github.com/ccontrols/component-controls/commit/ae99e32291b7f570896c3b0ed4ced1dc4c505aa2))
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* app components for standalone ([195b01b](https://github.com/ccontrols/component-controls/commit/195b01beb4aa61f64ce892ba5b8e32938c346859))
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* components in theme ([c287815](https://github.com/ccontrols/component-controls/commit/c287815309631101b2b0a09a00ff87db550a1a22))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* home page for documentation ([84ea2df](https://github.com/ccontrols/component-controls/commit/84ea2df3867c3650b9492ff09856641cdefbd678))
+* initial checkin gatsby bundler ([d7ea3a0](https://github.com/ccontrols/component-controls/commit/d7ea3a0798e8c6b3c52b7a5a36bec1520dd8ffc6))
+* screen resizer ([47d94ba](https://github.com/ccontrols/component-controls/commit/47d94bab3620bcea4d1453a8a9c81d6fa49bee05))
+* side context links ([9f8dd0c](https://github.com/ccontrols/component-controls/commit/9f8dd0cc2887bdf10a3897090d6ba448f49127f5))
+* skip links and app layout ([1508a1c](https://github.com/ccontrols/component-controls/commit/1508a1c494c36d42715768d9d44543815d7d92c3))
+* stories and documentation for ui/app ([6bb4133](https://github.com/ccontrols/component-controls/commit/6bb4133f73d3f12a27a057e79843bbffe00a8ac6))
+* theming blocks components ([f97afca](https://github.com/ccontrols/component-controls/commit/f97afcab4af7c67c52207ae34e9efe4a607bfd99))
+* theming of app components ([e059e71](https://github.com/ccontrols/component-controls/commit/e059e71a2b3275bc0d672b3008cb5c53d9ec7ca6))
+* useTheme hook ([182907d](https://github.com/ccontrols/component-controls/commit/182907d529da0cd48b868099c7fa6c2a73fcf139))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 

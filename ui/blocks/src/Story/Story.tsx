@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import { FC, createElement, forwardRef, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { deepMerge, StoryRenderFn } from '@component-controls/specification';
-import { getControlValues } from '@component-controls/core';
+import {
+  deepMerge,
+  StoryRenderFn,
+  getControlValues,
+} from '@component-controls/core';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -36,14 +39,7 @@ export const Story: FC<StoryProps> = forwardRef(
                 () => story.renderFn(values, { context }),
               );
               return (
-                <Box
-                  id={story.id}
-                  sx={{
-                    px: 4,
-                    py: 3,
-                  }}
-                  {...rest}
-                >
+                <Box id={story.id} variant="story" {...rest}>
                   <div
                     className="story-render-container"
                     style={{ all: 'unset' }}

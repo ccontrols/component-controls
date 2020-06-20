@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  ControlTypes,
-  ComponentControls,
-} from '@component-controls/specification';
+import { ControlTypes, ComponentControls } from '@component-controls/core';
 import { ConrolsContextProvider } from '../context';
 import { ObjectEditor } from './ObjectEditor';
 

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook-custom-docs",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Storybook custom docs pages",
   "keywords": [
     "addon",
@@ -35,8 +35,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@storybook/addons": "next",
@@ -51,8 +51,8 @@
     "@storybook/api": "*",
     "@storybook/client-api": "*",
     "@storybook/core-events": "*",
-    "react": "*",
-    "react-dom": "*"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"

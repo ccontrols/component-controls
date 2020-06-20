@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { useRecoilValue } from 'recoil';
+import React, { FC, useContext } from 'react';
 import styled from '@emotion/styled';
-import { selectionList, Selection } from './RecoilContext';
+import { SelectionContext, Selection } from '../state/context';
 
 export interface StyledContainerProps {
   selection: Selection;
@@ -27,8 +26,8 @@ const HighlightNode = styled.div<StyledContainerProps>`
     }
     const styles = `${selectors.join(', \n')}
       {
-        outline: 2px dotted red;
-        outline-offset: 2px;
+        outline: 3px dotted red;
+        outline-offset: 3px;
       };
       `;
     return styles;
@@ -36,6 +35,6 @@ const HighlightNode = styled.div<StyledContainerProps>`
 `;
 
 export const HighlightSelector: FC = ({ children }) => {
-  const selection = useRecoilValue(selectionList);
+  const { selection } = useContext(SelectionContext);
   return <HighlightNode selection={selection}>{children}</HighlightNode>;
 };

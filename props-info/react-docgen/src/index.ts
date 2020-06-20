@@ -1,7 +1,7 @@
 import {
   ComponentInfo,
   PropsInfoExtractorFunction,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 
 import { extractDocgenInfo } from './react-docgen';
 import { RectDocgenOptions } from './types';

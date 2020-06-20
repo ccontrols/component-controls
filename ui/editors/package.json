@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Component controls editors for component control values.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,32 +30,28 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.2.0",
-    "@component-controls/core": "^1.2.0",
-    "@component-controls/specification": "^1.2.0",
-    "@primer/octicons-react": "^9.6.0",
+    "@component-controls/components": "^1.4.0",
+    "@component-controls/core": "^1.3.0",
+    "@primer/octicons-react": "^10.0.0",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
-    "react": "^16.8.3",
+    "react": "^16.13.1",
     "react-color": "^2.17.0",
-    "react-dom": "^16.8.3",
-    "react-select": "^3.0.8",
-    "theme-ui": "^0.3.1"
+    "react-dom": "^16.13.1",
+    "theme-ui": "next"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
     "@types/react-color": "^3.0.1",
-    "@types/react-select": "^3.0.10",
-    "@types/theme-ui": "^0.3.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0"
   },
   "peerDependencies": {
     "@primer/octicons-react": "*",
-    "react": "*",
-    "react-dom": "*"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"

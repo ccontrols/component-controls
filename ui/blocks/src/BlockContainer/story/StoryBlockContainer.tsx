@@ -48,7 +48,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
     <BlockContainer
       title={title}
       collapsible={collapsible}
-      id={userTitle == CURRENT_STORY && story ? story.id : undefined}
+      id={userTitle === CURRENT_STORY && story ? story.id : undefined}
       sxStyle={sxStyle}
       description={description}
     >

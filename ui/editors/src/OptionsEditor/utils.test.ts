@@ -1,4 +1,4 @@
-import { OptionsListType } from '@component-controls/specification';
+import { OptionsListType } from '@component-controls/core';
 
 import { normalizeOptions, NormalizedOptions } from './utils';
 

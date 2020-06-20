@@ -5,7 +5,7 @@ import { ThemeProvider } from '@component-controls/storybook';
 addDecorator(story => (
   <ThemeProvider>{story()}</ThemeProvider>
 ));
-const categories = ['Introduction', 'Controls','Blocks', 'Editors', 'Components', 'Plugins']
+const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 addParameters({
   dependencies: { hideEmpty: true },
   options: {

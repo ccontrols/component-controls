@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import {
-  EditPage,
   Playground,
   PropsTable,
   Title,
@@ -11,7 +10,6 @@ import {
 import { AxeAllyBlock } from '@component-controls/axe-plugin';
 export const TestingPage: FC = () => (
   <>
-    <EditPage />
     <Title />
     <Subtitle />
     <Description />

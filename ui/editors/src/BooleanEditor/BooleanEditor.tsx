@@ -3,7 +3,7 @@ import { Toggle } from '@component-controls/components';
 import {
   ComponentControlBoolean,
   ControlTypes,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';

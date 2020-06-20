@@ -3,7 +3,7 @@ import {
   PropType,
   TypeInformation,
   TypeValue,
-} from '@component-controls/specification';
+} from '@component-controls/core';
 import { Props, PropItem } from 'react-docgen-typescript';
 
 const cleanQuotes = (txt?: string) =>

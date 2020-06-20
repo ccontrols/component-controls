@@ -1,8 +1,7 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
 import { FC, Fragment, ReactNode, useEffect } from 'react';
-import { Box, BoxProps, Flex, useThemeUI, jsx } from 'theme-ui';
-import { get } from '@theme-ui/css';
+import { Box, BoxProps, Flex, jsx } from 'theme-ui';
 import memoize from 'fast-memoize';
 import {
   useTable,
@@ -29,12 +28,14 @@ import {
   UseGroupByState,
   TableState,
 } from 'react-table';
-import Octicon, { TriangleUp, TriangleDown } from '@primer/octicons-react';
+import Octicon, {
+  TriangleUpIcon,
+  TriangleDownIcon,
+} from '@primer/octicons-react';
 import { GlobalFilter } from './TableFilter';
 import { useExpanderColumn } from './TableGrouping';
 import { useRowSelectionColumn } from './TableRowSelection';
 import { useTableLayout } from './useTableLayout';
-
 const defaultColumn = memoize(() => ({
   subRows: undefined,
   accessor: '',
@@ -195,25 +196,19 @@ export const Table: FC<TableProps> = ({
       onSelectRowsChange(selectedRowIds as SelectedRowIds);
     }
   }, [selectedRowIds, onSelectRowsChange]);
-  const { theme } = useThemeUI();
   return (
-    <Box
-      as="table"
-      {...getTableProps()}
-      css={get(theme, 'styles.table')}
-      {...rest}
-    >
+    <Box as="table" variant="styles.table" {...getTableProps()} {...rest}>
       {header && (
-        <Box as="thead" css={get(theme, 'styles.thead')}>
+        <Box as="thead" variant="styles.thead">
           {headerGroups.map((headerGroup: any) => (
             <Box as="tr" {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column: any) => (
                 <Box
                   as="th"
+                  variant="styles.th"
                   {...column.getHeaderProps(
                     sorting ? column.getSortByToggleProps() : undefined,
                   )}
-                  css={get(theme, 'styles.th')}
                 >
                   <Flex
                     sx={{
@@ -224,7 +219,11 @@ export const Table: FC<TableProps> = ({
                     <Box sx={{ mr: 1 }}>{column.render('Header')}</Box>
                     {sorting && column.isSorted && (
                       <Octicon
-                        icon={column.isSortedDesc ? TriangleDown : TriangleUp}
+                        icon={
+                          column.isSortedDesc
+                            ? TriangleDownIcon
+                            : TriangleUpIcon
+                        }
                       />
                     )}
                   </Flex>
@@ -233,11 +232,13 @@ export const Table: FC<TableProps> = ({
             </Box>
           ))}
           {filtering && (
-            <Box as="tr">
-              <th
+            <Box as="tr" variant="styles.thead.tr">
+              <Box
+                as="th"
+                variant="styles.th"
+                //@ts-ignore
                 colSpan={visibleColumns.length}
-                style={{
-                  ...get(theme, 'styles.th'),
+                sx={{
                   textAlign: 'left',
                 }}
               >
@@ -247,19 +248,19 @@ export const Table: FC<TableProps> = ({
                   globalFilter={state.globalFilter}
                   setGlobalFilter={setGlobalFilter}
                 />
-              </th>
+              </Box>
             </Box>
           )}
         </Box>
       )}
-      <Box as="tbody" {...getTableBodyProps()} css={get(theme, 'styles.tbody')}>
+      <Box as="tbody" variant="styles.tbody" {...getTableBodyProps()}>
         {rows.map(
           (row: Row & UseGroupByRowProps<{}> & { isExpanded?: boolean }) => {
             prepareRow(row);
             const { key, ...rowProps } = row.getRowProps();
             return (
               <Fragment key={key}>
-                <Box as="tr" {...rowProps} css={get(theme, 'styles.tr')}>
+                <Box variant="styles.tr" as="tr" {...rowProps}>
                   {row.isGrouped
                     ? row.cells[0].render('Aggregated')
                     : row.cells.map(
@@ -267,8 +268,8 @@ export const Table: FC<TableProps> = ({
                           return (
                             <Box
                               as="td"
+                              variant="styles.td"
                               {...cell.getCellProps()}
-                              css={get(theme, 'styles.td')}
                             >
                               {cell.render('Cell')}
                             </Box>

@@ -35,13 +35,13 @@ Some of the guiding design goals for this library:
 
 Controls context, provides access to the values and property setters
 
-_ControlsContext [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
+_ControlsContext [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
 
 ## <ins>useControlContext</ins>
 
 controls context hook for a control editor
 
-_useControlContext [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
+_useControlContext [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
 
 ### properties
 
@@ -53,7 +53,7 @@ _useControlContext [source code](https:/github.com/ccontrols/component-controls/
 
 controls context provider
 
-_ConrolsContextProvider [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
+_ConrolsContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
 
 ### properties
 
@@ -69,20 +69,20 @@ Property editors factory. Given a propey type, will return a editor compnent cla
 @param type : specify the type ie 'text'
 @returns a Property Editor class.
 
-_getPropertyEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
+_getPropertyEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
 
 ## <ins>addPropertyEditor</ins>
 
 @param type : specify the type ie 'text'
 @param editor : a Property Editor class.
 
-_addPropertyEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
+_addPropertyEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
 
 ## <ins>ArrayEditor</ins>
 
 Array control editor.
 
-_ArrayEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
+_ArrayEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ArrayEditor/ArrayEditor.tsx)_
 
 ### properties
 
@@ -95,7 +95,7 @@ _ArrayEditor [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 Boolean control editor. Uses the Toggle component.
 
-_BooleanEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
+_BooleanEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/BooleanEditor/BooleanEditor.tsx)_
 
 ### properties
 
@@ -107,7 +107,7 @@ _BooleanEditor [source code](https:/github.com/ccontrols/component-controls/tree
 
 Button control editor.
 
-_ButtonEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
+_ButtonEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ButtonEditor/ButtonEditor.tsx)_
 
 ### properties
 
@@ -119,7 +119,7 @@ _ButtonEditor [source code](https:/github.com/ccontrols/component-controls/tree/
 
 Color control editor.
 
-_ColorEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
+_ColorEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ColorEditor/ColorEditor.tsx)_
 
 ### properties
 
@@ -131,7 +131,7 @@ _ColorEditor [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 Date control editor.
 
-_DateEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/DateEditor/DateEditor.tsx)_
+_DateEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/DateEditor/DateEditor.tsx)_
 
 ### properties
 
@@ -143,7 +143,7 @@ _DateEditor [source code](https:/github.com/ccontrols/component-controls/tree/ma
 
 Files control editor.
 
-_FilesEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
+_FilesEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/FilesEditor/FilesEditor.tsx)_
 
 ### properties
 
@@ -155,7 +155,7 @@ _FilesEditor [source code](https:/github.com/ccontrols/component-controls/tree/m
 
 Number control editor.
 
-_NumberEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
+_NumberEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/NumberEditor/NumberEditor.tsx)_
 
 ### properties
 
@@ -167,7 +167,7 @@ _NumberEditor [source code](https:/github.com/ccontrols/component-controls/tree/
 
 Object control editor.
 
-_ObjectEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
+_ObjectEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/ObjectEditor/ObjectEditor.tsx)_
 
 ### properties
 
@@ -180,7 +180,7 @@ _ObjectEditor [source code](https:/github.com/ccontrols/component-controls/tree/
 
 Options control editor.
 
-_OptionsEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
+_OptionsEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/OptionsEditor/OptionsEditor.tsx)_
 
 ### properties
 
@@ -192,7 +192,7 @@ _OptionsEditor [source code](https:/github.com/ccontrols/component-controls/tree
 
 Text control editor.
 
-_TextEditor [source code](https:/github.com/ccontrols/component-controls/tree/master/core/specification/src/TextEditor/TextEditor.tsx)_
+_TextEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/TextEditor/TextEditor.tsx)_
 
 ### properties
 

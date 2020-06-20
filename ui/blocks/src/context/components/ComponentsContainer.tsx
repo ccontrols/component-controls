@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Story,
-  StoryComponent,
-  PackageInfo,
-} from '@component-controls/specification';
+import { Story, StoryComponent, PackageInfo } from '@component-controls/core';
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 import { ComponentInputProps, useComponentsContext } from './ComponentsContext';
 

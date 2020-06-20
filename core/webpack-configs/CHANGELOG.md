@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Features
+
+* blogging and pages support ([5aa62e5](https://github.com/ccontrols/component-controls/commit/5aa62e5155711e647e852ea66e75abc2145af624))
+* configure pages and tabs ([94f7ba4](https://github.com/ccontrols/component-controls/commit/94f7ba43a3f7efc9f4703f904dd18c97027dbc10))
+* merge user webpack config ([6b3dc38](https://github.com/ccontrols/component-controls/commit/6b3dc387b34a2a4f3b640f473a70e43d79179def))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

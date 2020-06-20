@@ -3,11 +3,11 @@
 exports[`mdx-story-source external-source.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "MDX": Object {
-      "components": Object {},
-      "title": "MDX",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-05-18T16:31:44.953Z,
+    "dateModified": 2020-05-19T04:01:28.289Z,
+    "title": "MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -29,8 +29,8 @@ Object {
     },
   },
   "transformed": "
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 
 /* @jsx mdx */
 import { customStory } from '../../components/external-story';
@@ -60,22 +60,27 @@ function MDXContent({
 
 ;
 MDXContent.isMDXComponent = true;
-export default { title: \\"MDX\\", MDXPage: () => <MDXContent /> };
+
+
+        export default { ...{
+  \\"title\\": \\"MDX\\"
+}, MDXPage: MDXContent };
 export const mdxStory = () => <div>test</div>
 mdxStory.story = {
-                name: \\"mdx-story\\"
-             }",
+  \\"name\\": \\"mdx-story\\"
+}
+             ",
 }
 `;
 
 exports[`mdx-story-source external-source-deconstructed-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "MDX": Object {
-      "components": Object {},
-      "title": "MDX",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-05-18T16:31:44.949Z,
+    "dateModified": 2020-05-19T04:06:48.584Z,
+    "title": "MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -142,8 +147,8 @@ Object {
     },
   },
   "transformed": "
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-deconstructed-props';
@@ -173,22 +178,27 @@ function MDXContent({
 
 ;
 MDXContent.isMDXComponent = true;
-export default { title: \\"MDX\\", MDXPage: () => <MDXContent /> };
+
+
+        export default { ...{
+  \\"title\\": \\"MDX\\"
+}, MDXPage: MDXContent };
 export const mdxStory = ({ text }) => <div>{text}</div>
 mdxStory.story = {
-                name: \\"mdx-story\\"
-             }",
+  \\"name\\": \\"mdx-story\\"
+}
+             ",
 }
 `;
 
 exports[`mdx-story-source external-source-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "MDX": Object {
-      "components": Object {},
-      "title": "MDX",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-05-18T16:31:44.950Z,
+    "dateModified": 2020-05-19T04:35:36.801Z,
+    "title": "MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -267,8 +277,8 @@ Object {
     },
   },
   "transformed": "
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-props';
@@ -298,22 +308,27 @@ function MDXContent({
 
 ;
 MDXContent.isMDXComponent = true;
-export default { title: \\"MDX\\", MDXPage: () => <MDXContent /> };
+
+
+        export default { ...{
+  \\"title\\": \\"MDX\\"
+}, MDXPage: MDXContent };
 export const mdxStory = props => customStory(props)
 mdxStory.story = {
-                name: \\"mdx-story\\"
-             }",
+  \\"name\\": \\"mdx-story\\"
+}
+             ",
 }
 `;
 
 exports[`mdx-story-source simple-source.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "MDX": Object {
-      "components": Object {},
-      "title": "MDX",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-05-18T16:31:44.955Z,
+    "dateModified": 2020-05-19T01:05:17.730Z,
+    "title": "MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -334,8 +349,8 @@ Object {
     },
   },
   "transformed": "
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
@@ -364,26 +379,31 @@ function MDXContent({
 
 ;
 MDXContent.isMDXComponent = true;
-export default { title: \\"MDX\\", MDXPage: () => <MDXContent /> };
+
+
+        export default { ...{
+  \\"title\\": \\"MDX\\"
+}, MDXPage: MDXContent };
 export const mdxStory = () => (<>
 
 <div>test 1</div>
 
 </>)
 mdxStory.story = {
-                name: \\"mdx-story\\"
-             }",
+  \\"name\\": \\"mdx-story\\"
+}
+             ",
 }
 `;
 
 exports[`mdx-story-source simple-source-props.mdx 1`] = `
 Object {
   "components": Object {},
-  "kinds": Object {
-    "MDX": Object {
-      "components": Object {},
-      "title": "MDX",
-    },
+  "doc": Object {
+    "components": Object {},
+    "date": 2020-05-18T16:31:44.954Z,
+    "dateModified": 2020-05-19T04:04:37.100Z,
+    "title": "MDX",
   },
   "packages": Object {},
   "stories": Object {
@@ -435,8 +455,8 @@ Object {
     },
   },
   "transformed": "
-import React from 'react'
-import { mdx } from '@mdx-js/react'
+import React from 'react';
+import { mdx } from '@mdx-js/react';
 
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
@@ -465,10 +485,15 @@ function MDXContent({
 
 ;
 MDXContent.isMDXComponent = true;
-export default { title: \\"MDX\\", MDXPage: () => <MDXContent /> };
+
+
+        export default { ...{
+  \\"title\\": \\"MDX\\"
+}, MDXPage: MDXContent };
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = {
-                name: \\"mdx-story\\"
-             }",
+  \\"name\\": \\"mdx-story\\"
+}
+             ",
 }
 `;

@@ -16,7 +16,7 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
 }) => {
   const [storyId, setStoryId] = React.useState<string | undefined>();
 
-  const channel = React.useMemo(() => api.getChannel(), []);
+  const channel = React.useMemo(() => api.getChannel(), [api]);
   React.useEffect(() => {
     const onChangeStory = (props: any) => {
       setStoryId(props.storyId);
@@ -25,7 +25,7 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
     setStoryId(id);
     channel.on(SET_CURRENT_STORY, onChangeStory);
     return () => channel.off(SET_CURRENT_STORY, onChangeStory);
-  });
+  }, [api, channel]);
 
   return active && storyId ? (
     <ThemeProvider>

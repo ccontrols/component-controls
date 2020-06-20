@@ -1,4 +1,4 @@
-import { CodeLocation } from '@component-controls/specification';
+import { CodeLocation } from './utility';
 
 export const getASTSource = (
   source?: string,

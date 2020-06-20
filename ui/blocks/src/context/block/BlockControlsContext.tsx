@@ -4,8 +4,8 @@ import {
   SetControlValueFn,
   ClickControlFn,
   ComponentControlButton,
-} from '@component-controls/specification';
-import { mergeControlValues } from '@component-controls/core';
+  mergeControlValues,
+} from '@component-controls/core';
 
 export interface BlockControlsContextInputProps {
   /**

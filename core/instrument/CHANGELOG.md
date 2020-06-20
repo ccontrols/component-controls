@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
+
+
+### Bug Fixes
+
+* accomodate for storybook no title ([da26a05](https://github.com/ccontrols/component-controls/commit/da26a056152ade39572a44e18aa44fccbd4da12d))
+* markdown domponents ([4f8ce12](https://github.com/ccontrols/component-controls/commit/4f8ce12fa5804c0c93413fff4da3e01f2508da99))
+* serialize arrays and objects ([78730a5](https://github.com/ccontrols/component-controls/commit/78730a5a5994f9dc830a4700ed4373fa0da89953))
+
+
+### Features
+
+* added page container wrapper, pagination ([1aeeef1](https://github.com/ccontrols/component-controls/commit/1aeeef177bd9806fee7034fd726f569f66150095))
+* category pages - tags, authors ([5ced78b](https://github.com/ccontrols/component-controls/commit/5ced78b515eefe4476618b8951ce11d70b028440))
+* frontmatter format, route doc parameter ([ff9bb39](https://github.com/ccontrols/component-controls/commit/ff9bb39d2bea59ed4059f6df5c16464e0a6840b8))
+* home page for documentation ([84ea2df](https://github.com/ccontrols/component-controls/commit/84ea2df3867c3650b9492ff09856641cdefbd678))
+* list pages, date, tags fields ([8dac2f9](https://github.com/ccontrols/component-controls/commit/8dac2f9047705331bff1499c0bc45d5cedc838c9))
+* merge user webpack config ([6b3dc38](https://github.com/ccontrols/component-controls/commit/6b3dc387b34a2a4f3b640f473a70e43d79179def))
+* webpack-compile - standalone stories ([b6d5e14](https://github.com/ccontrols/component-controls/commit/b6d5e143b08c492e7e7783053d5e1496b78e6bcd))
+
+
+
+
+
 # [1.2.0](https://github.com/ccontrols/component-controls/compare/v1.1.0...v1.2.0) (2020-05-23)
 
 
