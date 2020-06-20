@@ -21,7 +21,7 @@ overview.story = {
   },
 };
 
-export const hidden = ({ text }) => text;
+export const hidden = ({ text }) => <div>{text}</div>;
 
 hidden.story = {
   description: 'Hidden controls in story',
@@ -30,7 +30,7 @@ hidden.story = {
   },
 };
 
-export const placeholder = ({ text }) => text;
+export const placeholder = ({ text }) => <div>{text}</div>;
 
 placeholder.story = {
   description: 'Placeholder text with empty value',
