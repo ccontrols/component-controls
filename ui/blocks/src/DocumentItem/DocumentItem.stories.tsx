@@ -12,9 +12,8 @@ export default {
 export const overview = () => (
   <MockContext storyId="id-of-story">
     <BlockContext.Consumer>
-      {({ storeProvider, docId }) => {
-        const page = storeProvider.getStoryDoc(docId || 'id-of-story');
-        console.log(page, docId, storeProvider);
+      {({ storeProvider }) => {
+        const page = storeProvider.getStoryDoc('Story');
         return page ? (
           <DocumentItem
             config={storeProvider.config}
