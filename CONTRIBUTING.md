@@ -1,4 +1,4 @@
-# Contributong to component-controls
+# Contributing to component-controls
 
 - [Setup](#setup)
 
