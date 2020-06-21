@@ -9,17 +9,17 @@ export const ViewportBlock: FC = () => {
         display: 'flex',
         flexDirection: 'row',
         minHeight: '250px',
-        height: '-webkit-fill-available',
+        height: '400px',
         width: '100%',
         overflow: 'auto',
-        padding: '3px',
-        background: '#f4f4f4',
+        p: 1,
+        bg: 'gray',
       }}
     >
       <Box
         sx={{
           minWidth: '250px',
-          height: '400px',
+          height: '500px',
           margin: '5px',
           background: 'green',
         }}
@@ -27,7 +27,7 @@ export const ViewportBlock: FC = () => {
       <Box
         sx={{
           minWidth: '500px',
-          height: '400px',
+          height: '500px',
           margin: '5px',
           background: 'black',
         }}
@@ -35,7 +35,7 @@ export const ViewportBlock: FC = () => {
       <Box
         sx={{
           minWidth: '900px',
-          height: '400px',
+          height: '500px',
           margin: '5px',
           background: 'gray',
         }}
