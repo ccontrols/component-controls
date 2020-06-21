@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
 import { ActionItem } from '@component-controls/components';
-import {
-  ThemeContext,
-  Source,
-  SourceProps,
-} from '@component-controls/components';
+import { Source, SourceProps } from '@component-controls/components';
 import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
@@ -27,7 +23,6 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
   ...rest
 }) => {
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
-  const { dark } = React.useContext(ThemeContext);
   return (
     <ComponentsBlockContainer visibility="info" {...rest}>
       {(component, props, sourceProps) => {
@@ -66,7 +61,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
           allActions.push.apply(allActions, actions);
         }
         return (
-          <Source dark={dark} {...sourceProps} actions={allActions}>
+          <Source {...sourceProps} actions={allActions}>
             {showFileSource ? component?.source ?? '' : source}
           </Source>
         );

@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-key */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { FC, useState, useContext } from 'react';
+import { FC, useState } from 'react';
 import { Styled } from 'theme-ui';
 import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
 import {
-  ThemeContext,
   Source,
   SourceProps,
   ActionItem,
@@ -51,7 +50,6 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
   const { controls } = story || {};
-  const { dark } = useContext(ThemeContext);
   const allActions: ActionItem[] = [];
   const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
@@ -85,7 +83,6 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   return (
     <Source
       actions={allActions}
-      dark={dark}
       {...sourceProps}
       renderFn={(
         { className, style, tokens, getLineProps, getTokenProps }: any,

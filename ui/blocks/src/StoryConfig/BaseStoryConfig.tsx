@@ -3,10 +3,9 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
-import { FC, useState, useContext } from 'react';
+import { FC, useState } from 'react';
 import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
 import {
-  ThemeContext,
   Source,
   SourceProps,
   ActionItem,
@@ -29,7 +28,6 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
   const [showFileSource, setShowFileSource] = useState<boolean>(false);
   const onShowFileSource = () => setShowFileSource(!showFileSource);
 
-  const { dark } = useContext(ThemeContext);
   const allActions: ActionItem[] = [];
   const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
@@ -57,7 +55,7 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
     restStory.parameters = restParameters;
   }
   return Object.keys(restStory).length ? (
-    <Source dark={dark} language="json" {...sourceProps} actions={allActions}>
+    <Source language="json" {...sourceProps} actions={allActions}>
       {JSON.stringify(restStory, null, 2)}
     </Source>
   ) : null;
