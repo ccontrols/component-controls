@@ -17,6 +17,11 @@ export interface TagProps {
   transparentAmount?: number;
 
   /**
+   * borderSize in pixels
+   */
+  borderSize?: number;
+
+  /**
    * theme variant additional
    */
   variant?: string;
@@ -28,7 +33,8 @@ export interface TagProps {
 export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   children,
   color,
-  transparentAmount = 0.8,
+  borderSize = 2,
+  transparentAmount = 0.85,
   variant,
   ...rest
 }) => {
@@ -40,7 +46,7 @@ export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
       {...rest}
       sx={{
         backgroundColor: transparentize(transparentAmount, color),
-        border: `1px solid ${color}`,
+        border: `${borderSize}px solid ${color}`,
         ...get(theme, variant as ReactText),
       }}
     >

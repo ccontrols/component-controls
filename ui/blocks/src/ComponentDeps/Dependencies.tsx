@@ -90,6 +90,7 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
                 <Tag
                   variant="tag.rightmargin"
                   key={`${v.name}`}
+                  borderSize={1}
                   color={
                     v.importedName === defaultExport ? 'green' : 'lightgrey'
                   }

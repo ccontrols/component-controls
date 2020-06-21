@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import { Box, Text } from 'theme-ui';
-import Octicon, { MarkGithubIcon } from '@primer/octicons-react';
+import { MarkGithubIcon } from '@primer/octicons-react';
 import { ExternalLink } from '@component-controls/components';
 import { useStoryContext } from '../context';
 
@@ -20,7 +20,7 @@ export const EditPage: FC = () => {
         aria-label="edit this page"
       >
         <Box variant="editpage.inner">
-          <Octicon icon={MarkGithubIcon} />
+          <MarkGithubIcon />
           <Text variant="editpage.text">Edit this page</Text>
         </Box>
       </ExternalLink>

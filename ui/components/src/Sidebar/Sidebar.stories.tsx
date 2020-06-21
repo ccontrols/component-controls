@@ -1,5 +1,5 @@
 import React from 'react';
-import Octicon, { Project } from '@primer/octicons-react';
+import { ProjectIcon } from '@primer/octicons-react';
 import { Flex } from 'theme-ui';
 import { ThemeProvider } from '../ThemeContext';
 import { Sidebar, SidebarContext, SidebarContextProvider } from '.';
@@ -67,7 +67,7 @@ export const icon = () => (
         <SidebarContext.Consumer>
           {({ SidebarToggle }) => (
             <Flex css={{ flexDirection: 'row', alignItems: 'start' }}>
-              <SidebarToggle icon={<Octicon icon={Project} />} />
+              <SidebarToggle icon={<ProjectIcon />} />
               <Sidebar title="Title">
                 <ul>
                   <li>item 1</li>

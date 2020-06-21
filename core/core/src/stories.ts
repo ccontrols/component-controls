@@ -356,12 +356,13 @@ export const getDocPath = (
   activeTab?: string,
 ): string => {
   const { basePath = '' } = pagesConfig?.[pageType] || {};
-  return doc
+  const route = doc
     ? doc.route ||
-        `/${basePath}${
-          activeTab ? `${activeTab}/` : ''
-        }${doc.title?.toLowerCase()}/`
+      `/${basePath}${
+        activeTab ? `${activeTab}/` : ''
+      }${doc.title?.toLowerCase()}/`
     : `/${basePath}${activeTab ? `${activeTab}/` : ''}${name}/`;
+  return route;
 };
 
 export const getStoryPath = (

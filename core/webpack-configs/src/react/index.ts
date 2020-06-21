@@ -20,6 +20,15 @@ export const react: Configuration = {
         ],
       },
       {
+        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
+      },
+      {
         test: /\.(ts|tsx)$/,
         exclude: [/node_modules/],
         use: [

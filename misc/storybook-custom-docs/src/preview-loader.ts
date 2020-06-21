@@ -35,12 +35,16 @@ const attachPages = (pageConfigs, viewMode) => {
         document.body.appendChild(node);
       }
       const root = document.getElementById('story-root') || document.getElementById('root');
+      const docsRoot = document.getElementById('docs-root');
       const pageIndex = activePages.indexOf(id);
       if (active) {
         if (pageIndex < 0) {
           activePages.push(id);
         }
         root.style.setProperty('display', 'none');
+        if (docsRoot) {
+          docsRoot.style.setProperty('display', 'none');
+        }
         node.removeAttribute('hidden');
         ReactDOM.render(pageConfig.render({ active }),
           document.getElementById(id),
@@ -52,6 +56,9 @@ const attachPages = (pageConfigs, viewMode) => {
           activePages.splice(pageIndex, 1);
           if (activePages.length === 0) {
             root.style.removeProperty('display');
+            if (docsRoot) {
+              docsRoot.style.removeProperty('display');
+            }
           }
         }
       }

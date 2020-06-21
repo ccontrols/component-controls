@@ -30,6 +30,7 @@ export interface StoryStore {
   getPagesByCategory: (category: string, value?: any) => Pages;
   getUniquesByCategory: (category: string) => { [key: string]: number };
   config: RunConfiguration | undefined;
+  pages: Pages;
   getFirstDocument: (pageType: PageType) => string | undefined;
   getPagePath: (
     pageType: PageType | undefined,

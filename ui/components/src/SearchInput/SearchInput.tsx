@@ -1,8 +1,10 @@
-import React, { useState, ReactNode, useEffect } from 'react';
+/** @jsx jsx */
+import { useState, ReactNode, useEffect } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
-import { Input, Box, InputProps, BoxProps } from 'theme-ui';
+import { SearchIcon } from '@primer/octicons-react';
+import { jsx, Input, Box, InputProps } from 'theme-ui';
 import { Popover, PopoverProps } from '../Popover';
-import { Keyboard, DOWN_ARROW, UP_ARROW, RETURN, ESC } from '../Keyboard';
+import { Keyboard, DOWN_ARROW, UP_ARROW, RETURN, ESC, TAB } from '../Keyboard';
 
 export interface SearchBoxCallbackProps<ItemType> {
   /**
@@ -13,10 +15,6 @@ export interface SearchBoxCallbackProps<ItemType> {
    * item index
    */
   index: number;
-  /**
-   * unique key, to be used by react
-   */
-  key: string;
   /**
    * whether the popover is open
    */
@@ -36,36 +34,8 @@ export interface SearchBoxCallbackProps<ItemType> {
 }
 
 export interface SearchInputItemType {
-  id: number | string;
   [key: string]: any;
 }
-
-/**
- * display single search input item box
- */
-export const SearchInputItem = <ItemType extends SearchInputItemType>({
-  children,
-  selected,
-  index,
-  item,
-  selectItem,
-  ...rest
-}: SearchBoxCallbackProps<ItemType> & BoxProps) => (
-  <Box
-    id={`search_item_${index}`}
-    variant="searchinput.item"
-    as="li"
-    className={selected === index ? 'active' : undefined}
-    onClick={e => {
-      e.preventDefault();
-      e.stopPropagation();
-      selectItem(item, index, true);
-    }}
-    {...rest}
-  >
-    {children}
-  </Box>
-);
 
 export interface SearchBoxProps<ItemType> {
   /**
@@ -133,7 +103,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
   const onKeyPressed = (key: number) => {
     switch (key) {
       case DOWN_ARROW:
-        const downIndex = Math.min((selected || 0) + 1, items.length - 1);
+        const downIndex = Math.min((selected || -1) + 1, items.length - 1);
         if (downIndex >= 0) {
           selectItem(items[downIndex], downIndex, false);
           const itemEl = document.getElementById(`search_item_${downIndex}`);
@@ -143,7 +113,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         }
         break;
       case UP_ARROW:
-        const upIndex = Math.max((selected || 0) - 1, 0);
+        const upIndex = Math.max((selected || items.length) - 1, 0);
         if (upIndex < items.length) {
           selectItem(items[upIndex], upIndex, false);
           const itemEl = document.getElementById(`search_item_${upIndex}`);
@@ -158,6 +128,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
           selectItem(items[selected], selected, true);
         }
         break;
+      case TAB:
       case ESC:
         updateIsOpen(false);
         break;
@@ -166,7 +137,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
 
   return (
     <Keyboard
-      keys={[DOWN_ARROW, UP_ARROW, RETURN, ESC]}
+      keys={[DOWN_ARROW, UP_ARROW, RETURN, ESC, TAB]}
       onKeyDown={onKeyPressed}
     >
       <Popover
@@ -187,14 +158,23 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
                     search,
                     selected,
                     selectItem,
-                    key: `search_item_${item.id || index}`,
                   };
-                  return children ? (
-                    children(props)
-                  ) : (
-                    <SearchInputItem {...props}>
-                      {item.label || item}
-                    </SearchInputItem>
+                  return (
+                    <Box
+                      key={`search_item_${item.id || index}`}
+                      id={`search_item_${index}`}
+                      variant="searchinput.item"
+                      as="li"
+                      className={selected === index ? 'active' : undefined}
+                      onClick={e => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        selectItem(item, index, true);
+                      }}
+                      {...rest}
+                    >
+                      {children ? children(props) : item.label || item}
+                    </Box>
                   );
                 })}
               </Box>
@@ -204,18 +184,25 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         {...popoverProps}
         tooltipShown={isOpen}
       >
-        <Input
-          aria-label="type some text to start searching"
-          value={search}
-          onBlur={() => {
-            setTimeout(() => {
-              updateIsOpen(false);
-            }, 200);
-          }}
-          onClick={() => updateIsOpen(!isOpen)}
-          onChange={e => updateSearch(e.target.value)}
-          {...rest}
-        />
+        <div sx={{ position: 'relative' }}>
+          <Input
+            aria-label="type some text to start searching"
+            value={search}
+            onBlur={() => {
+              setTimeout(() => {
+                updateIsOpen(false);
+              }, 200);
+            }}
+            onClick={() => updateIsOpen(!isOpen)}
+            onChange={e => updateSearch(e.target.value)}
+            sx={{ pl: '32px' }}
+            {...rest}
+          />
+          <Box
+            as={SearchIcon}
+            sx={{ position: 'absolute', left: '10px', top: '15px' }}
+          />
+        </div>
       </Popover>
     </Keyboard>
   );

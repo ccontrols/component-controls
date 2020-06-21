@@ -8,8 +8,9 @@ import {
   RunConfiguration,
   dateToLocalString,
 } from '@component-controls/core';
-import { Subtitle, Markdown, Tag, Link } from '@component-controls/components';
+import { Subtitle, Markdown, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
+import { PageTypeTag } from '../PageTypeTag';
 
 export interface PageListItemProps {
   /**
@@ -30,61 +31,30 @@ export interface PageListItemProps {
 /**
  * displays a single doument item
  */
-export const DocumentsListItem: FC<PageListItemProps> = ({
-  page,
-  link,
-  config,
-}) => {
+export const DocumentItem: FC<PageListItemProps> = ({ page, link, config }) => {
   const { tags = [], date, type = defPageType } = page;
   return (
-    <Box variant="documentlistitem.container">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+    <Box variant="documentitem.container">
+      <Box variant="documentitem.titlerow">
         <Link href={link}>
           <Subtitle>{page.title}</Subtitle>
         </Link>
-        {type && (
-          <Link href={`/${config?.pages?.[type].basePath}`}>
-            <Tag transparentAmount={0.3} color="#f49342">
-              {type}
-            </Tag>
-          </Link>
-        )}
+        <PageTypeTag type={type} />
       </Box>
       {page.description && <Markdown>{page.description}</Markdown>}
-      <Box variant="documentlistitem.info.container">
-        <Box variant="documentlistitem.info.inner">
+      <Box variant="documentitem.info.container">
+        <Box variant="documentitem.info.inner">
           {date ? (
-            <Box variant="documentlistitem.info.date">{`created: ${dateToLocalString(
+            <Box variant="documentitem.info.date">{`created: ${dateToLocalString(
               date,
             )}`}</Box>
           ) : (
             ''
           )}
           {page.author && (
-            <Box variant="documentlistitem.info.author">
-              {date && (
-                <Text
-                  sx={{
-                    mr: 2,
-                  }}
-                >
-                  ,
-                </Text>
-              )}
-              <Text
-                sx={{
-                  mr: 1,
-                }}
-              >
-                by
-              </Text>
+            <Box variant="documentitem.info.author">
+              {date && <Text variant="documentitem.info.comma">,</Text>}
+              <Text variant="documentitem.info.by">by</Text>
               <Link
                 href={getDocPath(
                   'author',

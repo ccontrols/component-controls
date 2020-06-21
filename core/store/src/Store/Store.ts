@@ -286,6 +286,18 @@ export class Store implements StoryStore {
   }
 
   /**
+   * returns all pages(documents) in the store
+   */
+  get pages(): Pages {
+    return this.loadedStore?.docs
+      ? Object.keys(this.loadedStore.docs).map(
+          //@ts-ignore
+          key => this.loadedStore.docs[key],
+        )
+      : [];
+  }
+
+  /**
    * returns the first document of a page type.
    */
   getFirstDocument(pageType: PageType): string | undefined {

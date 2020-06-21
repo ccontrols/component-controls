@@ -9,7 +9,7 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { BlockContext, Search } from '@component-controls/blocks';
 
 /**
  * application header component
@@ -49,7 +49,16 @@ export const Header: FC = () => {
             : null}
         </Box>
       </Box>
-      {!responsive && <ColorMode />}
+      {!responsive && (
+        <Box variant="appheader.righthandrow">
+          <Box variant="appheader.righthanditem">
+            <Search />
+          </Box>
+          <Box variant="appheader.righthanditem">
+            <ColorMode />
+          </Box>
+        </Box>
+      )}
     </AppHeader>
   );
 };

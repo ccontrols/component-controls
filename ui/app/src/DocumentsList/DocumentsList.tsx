@@ -2,8 +2,7 @@
 import { FC, useContext, useState, useMemo } from 'react';
 import { jsx, Select, Label, Box } from 'theme-ui';
 import { Pages } from '@component-controls/core';
-import { BlockContext } from '@component-controls/blocks';
-import { DocumentsListItem } from './DocumentsListItem';
+import { BlockContext, DocumentItem } from '@component-controls/blocks';
 
 export interface DocumentsListProps {
   /**
@@ -51,17 +50,17 @@ export const DocumentsList: FC<DocumentsListProps> = ({ pages }) => {
           <option value="title">By title</option>
         </Select>
       </Box>
-      <ul>
+      <Box as="ul" variant="documentslist.list">
         {sortedPages.map(page => (
-          <li key={page?.title}>
-            <DocumentsListItem
+          <Box as="li" key={page?.title} variant="documentslist.listitem">
+            <DocumentItem
               config={storeProvider.config}
               link={storeProvider.getPagePath(page.type, page.title)}
               page={page}
             />
-          </li>
+          </Box>
         ))}
-      </ul>
+      </Box>
     </Box>
   );
 };

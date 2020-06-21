@@ -3,7 +3,7 @@
 import { FC, useMemo, useCallback, useContext } from 'react';
 import { jsx, Flex, Box, Text } from 'theme-ui';
 import { Column } from 'react-table';
-import Octicon, {
+import {
   ChevronRightIcon,
   ChevronDownIcon,
   TriangleRightIcon,
@@ -61,9 +61,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
         id: 'expander', // Make sure it has an ID
         Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }: any) => (
           <span {...getToggleAllRowsExpandedProps()}>
-            <Octicon
-              icon={isAllRowsExpanded ? TriangleDownIcon : TriangleRightIcon}
-            />
+            {isAllRowsExpanded ? <TriangleDownIcon /> : <TriangleRightIcon />}
           </span>
         ),
         width: 50,
@@ -74,9 +72,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
               pl: 2,
             }}
           >
-            <Octicon
-              icon={row.isExpanded ? ChevronDownIcon : ChevronRightIcon}
-            />{' '}
+            {row.isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}
           </Flex>
         ),
       },
@@ -108,7 +104,7 @@ const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
                 color: impact ? impact.color : undefined,
               }}
             >
-              {impact && <Octicon icon={impact.icon} />}
+              {impact && <impact.icon />}
               <Text
                 sx={{
                   pl: impact ? 2 : 0,

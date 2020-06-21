@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+/** @jsx jsx */
+import { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
 import { TooltipTriggerProps } from 'react-popper-tooltip/dist/types';
-import { Box } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
 
 export type PopoverProps = Omit<Partial<TooltipTriggerProps>, 'children'>;
@@ -43,6 +44,7 @@ export const Popover: FC<PopoverProps> = ({
             hidden={hidden}
             ref={tooltipRef as any}
             {...containerProps}
+            sx={{ backgroundColor: 'background' }}
           >
             <Arrow
               placement={placement}

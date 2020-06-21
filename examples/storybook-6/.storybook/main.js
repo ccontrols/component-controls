@@ -14,15 +14,6 @@ module.exports = {
   ],
   addons: [
     {
-      name: '@storybook/preset-typescript',
-      options: {
-        tsLoaderOptions: {
-          configFile: path.resolve(__dirname, '../tsconfig.json'),
-        },
-        include: [path.resolve('../../stries/src')],
-      },
-    },
-    {
       name: '@storybook/addon-docs',
       options: {
         configureJSX: true,

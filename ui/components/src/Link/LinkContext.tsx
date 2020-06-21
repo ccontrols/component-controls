@@ -1,5 +1,5 @@
 import React, { FC, createContext, useContext } from 'react';
-import { Link, LinkProps } from 'theme-ui';
+import { Link, LinkProps, Box } from 'theme-ui';
 
 export type LinkClassType = React.FC<LinkProps>;
 const LinkContext = createContext<LinkClassType>(Link);
@@ -11,7 +11,12 @@ export const LinkContextProvider: FC<LinkContextProviderProps> = ({
   children,
 }) => {
   return (
-    <LinkContext.Provider value={LinkClass}>{children}</LinkContext.Provider>
+    <LinkContext.Provider
+      //@ts-ignore
+      value={props => <Box variant="styles.a" as={LinkClass} {...props} />}
+    >
+      {children}
+    </LinkContext.Provider>
   );
 };
 export const useGetLinkClass = () => {

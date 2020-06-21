@@ -39,7 +39,7 @@ export type ControlsTheme = {
   categorylist: Record<string, ThemeUIStyleObject>;
   pagelist: Record<string, ThemeUIStyleObject>;
   categorypage: Record<string, ThemeUIStyleObject>;
-  documentlistitem: Record<string, ThemeUIStyleObject>;
+  documentitem: Record<string, ThemeUIStyleObject>;
   taglist: Record<string, ThemeUIStyleObject>;
   appsidebarpage: Record<string, ThemeUIStyleObject>;
   container: Record<string, ThemeUIStyleObject>;
@@ -62,6 +62,19 @@ export const theme: ControlsTheme = {
     selected: '#027AC5',
     fadedText: '#69768C',
     shadow: 'rgba(0, 0, 0, 0.1)',
+    accentPalette0: '#8338ec',
+    accentPalette1: '#fb5607',
+    accentPalette2: '#ff006e',
+    accentPalette3: '#ffbe0b',
+    accentPalette4: '#3a86ff',
+    accentPalette5: '#4ecdc4',
+
+    palette0: '#4caf50',
+    palette1: '#2196f3',
+    palette2: '#ff9800',
+    palette3: '#f44336',
+    palette4: '#dc004e',
+    palette5: '#1976d2',
     modes: {
       dark: {
         primary: '#d5c0f1',
@@ -313,10 +326,7 @@ export const theme: ControlsTheme = {
       maxHeight: 400,
       overflowY: 'auto',
     },
-    list: {
-      listStyle: 'none',
-      pl: 1,
-    },
+    list: { p: 2, listStyle: 'none' },
     item: {
       p: 2,
       cursor: 'pointer',
@@ -324,9 +334,10 @@ export const theme: ControlsTheme = {
         backgroundColor: 'shadow',
       },
       '&.active': {
+        backgroundColor: 'shadow',
         fontWeight: 'bold',
         color: 'primary',
-        border: (t: Theme) => `2px solid ${t?.colors?.primary}`,
+        border: (t: Theme) => `1px solid ${t?.colors?.primary}`,
       },
     },
   },
@@ -398,6 +409,7 @@ export const theme: ControlsTheme = {
     default: {
       display: 'inline-block',
       px: 1,
+      borderRadius: 5,
     },
     rightmargin: {
       mr: 1,
@@ -703,6 +715,12 @@ export const theme: ControlsTheme = {
       py: 3,
     },
     linktext: { px: 2 },
+    righthandrow: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    righthanditem: { px: 2 },
   },
   appfooter: {
     container: {
@@ -742,16 +760,21 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
     },
   },
-  documentlistitem: {
+  documentitem: {
     container: {
       display: 'flex',
       flexDirection: 'column',
-      py: 1,
-      my: 3,
+      py: 2,
       p: {
-        my: 0,
+        mt: 0,
+        mb: 2,
       },
-      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    },
+    titlerow: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     info: {
       container: {
@@ -765,6 +788,8 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
       },
       date: {},
+      comma: { mr: 2 },
+      by: { mr: 1 },
       author: {
         display: 'flex',
         flexDirection: 'row',
@@ -806,6 +831,13 @@ export const theme: ControlsTheme = {
     },
     sortlabel: { width: 'unset', pr: 2 },
     sortselect: { minWidth: '300px' },
+    list: {
+      listStyle: 'none',
+      p: 0,
+    },
+    listitem: {
+      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    },
   },
 };
 
@@ -813,3 +845,13 @@ export const useTheme = (): Theme => {
   const { theme: currentTheme } = useThemeUI();
   return currentTheme || theme;
 };
+
+const paletteColorCount = 6;
+
+export const getPaletteColor = (index: number): string =>
+  //@ts-ignore
+  theme.colors[`palette${index % paletteColorCount}`];
+
+export const getAccentPaletteColor = (index: number): string =>
+  //@ts-ignore
+  theme.colors[`accentPalette${index % paletteColorCount}`];
