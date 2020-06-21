@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Badge, Input } from 'theme-ui';
-import Octicon, {
-  Inbox,
-  Mail,
-  Flame,
-  Star,
-  File,
-  Tag,
-  Trashcan,
+import {
+  InboxIcon,
+  MailIcon,
+  FlameIcon,
+  FileCodeIcon,
+  TagIcon,
+  TrashcanIcon,
+  StarIcon,
 } from '@primer/octicons-react';
 import { Navmenu } from '.';
 
@@ -54,7 +54,7 @@ const navItems = [
   {
     id: 'inbox',
     label: 'Inbox',
-    icon: <Octicon icon={Inbox} />,
+    icon: <InboxIcon />,
     expanded: true,
     items: [
       {
@@ -87,38 +87,38 @@ const navItems = [
     id: 'sent',
     href: '/inbox/sent',
     label: 'Sent',
-    icon: <Octicon icon={Mail} />,
+    icon: <MailIcon />,
   },
   {
     id: 'flagged',
     href: '/inbox/flagged',
     label: 'Flagged',
-    icon: <Octicon icon={Flame} />,
+    icon: <FlameIcon />,
     widget: <Badge variant="accent">3</Badge>,
   },
   {
     id: 'starred',
     href: '/inbox/starred',
     label: 'Starred',
-    icon: <Octicon icon={Star} />,
+    icon: <StarIcon />,
   },
   {
     id: 'drafts',
     href: '/inbox/drafts',
     label: 'Drafts',
-    icon: <Octicon icon={File} />,
+    icon: <FileCodeIcon />,
   },
   {
     id: 'tagged',
     href: '/inbox/tagged',
     label: 'Tagged',
-    icon: <Octicon icon={Tag} />,
+    icon: <TagIcon />,
   },
   {
     id: 'trash',
     href: '/inbox/trash',
     label: 'Trash',
-    icon: <Octicon icon={Trashcan} />,
+    icon: <TrashcanIcon />,
   },
 ];
 

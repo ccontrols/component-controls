@@ -1,6 +1,6 @@
 import React, { FC, createContext, useEffect } from 'react';
 import { Button, ButtonProps } from 'theme-ui';
-import Octicon, { ThreeBarsIcon, XIcon } from '@primer/octicons-react';
+import { ThreeBarsIcon, XIcon } from '@primer/octicons-react';
 import { useBreakpointIndex } from '@theme-ui/match-media';
 
 export type SidebarToggleProps = {
@@ -50,7 +50,7 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
         }}
         {...rest}
       >
-        {icon || <Octicon size="medium" icon={ThreeBarsIcon} />}
+        {icon || <ThreeBarsIcon size="medium" />}
       </Button>
     ) : null;
   };
@@ -68,7 +68,7 @@ export const SidebarContextProvider: FC<SidebarContextProviderProps> = ({
         }}
         {...rest}
       >
-        {icon || <Octicon size="medium" icon={XIcon} />}
+        {icon || <XIcon size="medium" />}
       </Button>
     ) : null;
   };

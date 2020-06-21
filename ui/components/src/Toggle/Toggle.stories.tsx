@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Checkbox, Label } from 'theme-ui';
-import Octicon, { Eye, EyeClosed } from '@primer/octicons-react';
+import { EyeIcon, EyeClosedIcon } from '@primer/octicons-react';
 import { Toggle } from './Toggle';
 
 export default {
@@ -69,7 +69,7 @@ export const octicons = () => {
               color: '#b3b3b3',
             }}
           >
-            <Octicon icon={EyeClosed} />
+            <EyeClosedIcon />
           </Flex>
         </Flex>
       }
@@ -90,7 +90,7 @@ export const octicons = () => {
               color: '#13a063',
             }}
           >
-            <Octicon icon={Eye} />
+            <EyeIcon />
           </Flex>
         </Flex>
       }

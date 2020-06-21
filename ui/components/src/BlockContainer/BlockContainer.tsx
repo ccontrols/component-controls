@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
-import Octicon, {
+import {
   LinkIcon,
   ChevronRightIcon,
   ChevronDownIcon,
@@ -75,7 +75,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               href={pageLink(blockId)}
               data-title={title}
             >
-              <Octicon icon={LinkIcon} />
+              <LinkIcon />
             </Link>
           )}
           {title && collapsible && (
@@ -89,7 +89,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
               <Flex variant="blockcontainer.titleblock">
                 <BlockTitle />
                 <Text variant="blockcontainer.expandicon">
-                  <Octicon icon={isOpen ? ChevronDownIcon : ChevronRightIcon} />
+                  {isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
                 </Text>
               </Flex>
             </Link>

@@ -39,7 +39,7 @@ export type ControlsTheme = {
   categorylist: Record<string, ThemeUIStyleObject>;
   pagelist: Record<string, ThemeUIStyleObject>;
   categorypage: Record<string, ThemeUIStyleObject>;
-  documentlistitem: Record<string, ThemeUIStyleObject>;
+  documentitem: Record<string, ThemeUIStyleObject>;
   taglist: Record<string, ThemeUIStyleObject>;
   appsidebarpage: Record<string, ThemeUIStyleObject>;
   container: Record<string, ThemeUIStyleObject>;
@@ -313,10 +313,7 @@ export const theme: ControlsTheme = {
       maxHeight: 400,
       overflowY: 'auto',
     },
-    list: {
-      listStyle: 'none',
-      pl: 1,
-    },
+    list: { p: 2, listStyle: 'none' },
     item: {
       p: 2,
       cursor: 'pointer',
@@ -324,9 +321,10 @@ export const theme: ControlsTheme = {
         backgroundColor: 'shadow',
       },
       '&.active': {
+        backgroundColor: 'shadow',
         fontWeight: 'bold',
         color: 'primary',
-        border: (t: Theme) => `2px solid ${t?.colors?.primary}`,
+        border: (t: Theme) => `1px solid ${t?.colors?.primary}`,
       },
     },
   },
@@ -703,6 +701,12 @@ export const theme: ControlsTheme = {
       py: 3,
     },
     linktext: { px: 2 },
+    righthandrow: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    righthanditem: { px: 2 },
   },
   appfooter: {
     container: {
@@ -742,16 +746,21 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
     },
   },
-  documentlistitem: {
+  documentitem: {
     container: {
       display: 'flex',
       flexDirection: 'column',
-      py: 1,
-      my: 3,
+      py: 2,
       p: {
-        my: 0,
+        mt: 0,
+        mb: 2,
       },
-      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    },
+    titlerow: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     info: {
       container: {
@@ -765,6 +774,8 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
       },
       date: {},
+      comma: { mr: 2 },
+      by: { mr: 1 },
       author: {
         display: 'flex',
         flexDirection: 'row',
@@ -806,6 +817,13 @@ export const theme: ControlsTheme = {
     },
     sortlabel: { width: 'unset', pr: 2 },
     sortselect: { minWidth: '300px' },
+    list: {
+      listStyle: 'none',
+      p: 0,
+    },
+    listitem: {
+      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    },
   },
 };
 

@@ -4663,6 +4663,11 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.155.tgz#e2b4514f46a261fd11542e47519c20ebce7bc23a"
   integrity sha512-vEcX7S7aPhsBCivxMwAANQburHBtfN9RdyXFk84IJmu2Z4Hkg1tOFgaslRiEqqvoLtbCBi6ika1EMspE+NZ9Lg==
 
+"@types/lunr@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/lunr/-/lunr-2.3.3.tgz#ec985618fd2712c010f8edab4f1ae7784ad7c583"
+  integrity sha512-09sXZZVsB3Ib41U0fC+O1O+4UOZT1bl/e+/QubPxpqDWHNEchvx/DEb1KJMOwq6K3MTNzZFoNSzVdR++o1DVnw==
+
 "@types/markdown-to-jsx@^6.11.0":
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/@types/markdown-to-jsx/-/markdown-to-jsx-6.11.0.tgz#a19e458a9415763859f2c92c4c5b07a80bea8c14"
@@ -15536,6 +15541,11 @@ normalize-url@^4.1.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+
+normalize-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-5.0.0.tgz#f46c9dc20670495e4e18fbd1b4396e41d199f63c"
+  integrity sha512-bAEm2fx8Dq/a35Z6PIRkkBBJvR56BbEJvhpNtvCZ4W9FyORSna77fn+xtYFjqk5JpBS+fMnAOG/wFgkQBmB7hw==
 
 npm-bundled@^1.0.1:
   version "1.1.1"

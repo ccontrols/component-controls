@@ -14,4 +14,3 @@ export * from './SEO';
 export * from './Sidebar';
 export * from './SidebarsPage';
 export * from './SideContext';
-export * from './TagsList';

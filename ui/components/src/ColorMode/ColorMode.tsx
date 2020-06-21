@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, useColorMode, Box } from 'theme-ui';
-import Octicon, { SunIcon, MoonIcon } from '@primer/octicons-react';
+import { SunIcon, MoonIcon } from '@primer/octicons-react';
 
 import { FC } from 'react';
 import { Toggle, ToggleProps } from '../Toggle';
@@ -25,14 +25,14 @@ export const ColorMode: FC<Omit<
         uncheckedIcon={
           <Box variant="colormode.outericon">
             <Box variant="colormode.innericon">
-              <Octicon icon={SunIcon} />
+              <SunIcon />
             </Box>
           </Box>
         }
         checkedIcon={
           <Box variant="colormode.outericon">
             <Box variant="colormode.innericon">
-              <Octicon icon={MoonIcon} />
+              <MoonIcon />
             </Box>
           </Box>
         }

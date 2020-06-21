@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { faker } from '@component-controls/core';
-import { SearchInput, SearchInputItem } from './SearchInput';
+import { SearchInput } from './SearchInput';
 
 export default {
   title: 'Components/SearchInput',
@@ -39,9 +39,7 @@ export const overview = () => {
       items={items}
       onSelect={item => alert(JSON.stringify(item, null, 2))}
     >
-      {props => (
-        <SearchInputItem {...props}>{props.item.label}</SearchInputItem>
-      )}
+      {props => props.item.label}
     </SearchInput>
   );
 };
