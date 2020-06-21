@@ -41,7 +41,6 @@
     "global": "^4.3.2",
     "js-string-escape": "^1.0.1",
     "lunr": "^2.3.8",
-    "normalize-url": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-table": "^7.0.0",

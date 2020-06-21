@@ -2,7 +2,6 @@
 import { jsx, Theme } from 'theme-ui';
 import { useState, useContext, useRef, useEffect } from 'react';
 import lunr, { Index } from 'lunr';
-import normalizeUrl from 'normalize-url';
 import { SearchInput } from '@component-controls/components';
 import {
   PageType,
@@ -65,7 +64,9 @@ export const Search = () => {
       item.type,
       item.title,
     )}`;
-    if (normalizeUrl(window.location.href) !== normalizeUrl(newurl)) {
+    const current = new URL(window.location.href);
+
+    if (current.pathname !== new URL(newurl).pathname) {
       window.location.href = newurl;
     }
   };
