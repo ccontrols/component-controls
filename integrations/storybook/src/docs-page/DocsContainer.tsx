@@ -9,14 +9,12 @@ import {
   getGlobalOptions,
 } from '@component-controls/storybook-custom-docs';
 import { store } from '@component-controls/store/live_store';
-import { useIsDark } from '../context/useIsDark';
 
 export const PageContextContainer: FC = ({ children }) => {
   const options = React.useMemo(() => getGlobalOptions(), []);
   const storyId = useStoryId();
-  const isDark = useIsDark();
   return (
-    <ThemeProvider theme={store.config?.theme} dark={isDark}>
+    <ThemeProvider theme={store.config?.theme}>
       <BlockContextProvider storyId={storyId} store={store} options={options}>
         <BlockPageContainer variant="pagecontainer.storybook">
           {children}
