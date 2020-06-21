@@ -8,8 +8,9 @@ import {
   RunConfiguration,
   dateToLocalString,
 } from '@component-controls/core';
-import { Subtitle, Markdown, Tag, Link } from '@component-controls/components';
+import { Subtitle, Markdown, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
+import { PageTypeTag } from '../PageTypeTag';
 
 export interface PageListItemProps {
   /**
@@ -38,13 +39,7 @@ export const DocumentItem: FC<PageListItemProps> = ({ page, link, config }) => {
         <Link href={link}>
           <Subtitle>{page.title}</Subtitle>
         </Link>
-        {type && (
-          <Link href={`/${config?.pages?.[type].basePath}`}>
-            <Tag transparentAmount={0.3} color="#f49342">
-              {type}
-            </Tag>
-          </Link>
-        )}
+        <PageTypeTag type={type} />
       </Box>
       {page.description && <Markdown>{page.description}</Markdown>}
       <Box variant="documentitem.info.container">

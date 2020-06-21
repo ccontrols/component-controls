@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC, useContext, useState, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
-import { Tag, Link } from '@component-controls/components';
+import { Tag, Link, getPaletteColor } from '@component-controls/components';
 import { BlockContext } from '../context';
 
 export interface TagsListProps {
@@ -17,6 +17,19 @@ export interface TagsListProps {
  */
 export const TagsList: FC<TagsListProps> = ({ tags }) => {
   const { storeProvider } = useContext(BlockContext);
+  const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
+  useEffect(() => {
+    const uniqueTags = storeProvider.getUniquesByCategory('tags');
+    setTagColors(
+      Object.keys(uniqueTags).reduce(
+        (acc, key, index) => ({
+          ...acc,
+          [key]: getPaletteColor(index),
+        }),
+        {},
+      ),
+    );
+  }, [storeProvider]);
 
   return tags ? (
     <Box variant="taglist.container">
@@ -30,7 +43,7 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
             tag,
           )}
         >
-          <Tag transparentAmount={0.5} color="#dddddd" variant="tag.leftmargin">
+          <Tag color={tagColors[tag] || '#dddddd'} variant="tag.leftmargin">
             {tag}
           </Tag>
         </Link>

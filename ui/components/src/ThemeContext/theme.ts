@@ -62,6 +62,19 @@ export const theme: ControlsTheme = {
     selected: '#027AC5',
     fadedText: '#69768C',
     shadow: 'rgba(0, 0, 0, 0.1)',
+    accentPalette0: '#8338ec',
+    accentPalette1: '#fb5607',
+    accentPalette2: '#ff006e',
+    accentPalette3: '#ffbe0b',
+    accentPalette4: '#3a86ff',
+    accentPalette5: '#4ecdc4',
+
+    palette0: '#4caf50',
+    palette1: '#2196f3',
+    palette2: '#ff9800',
+    palette3: '#f44336',
+    palette4: '#dc004e',
+    palette5: '#1976d2',
     modes: {
       dark: {
         primary: '#d5c0f1',
@@ -396,6 +409,7 @@ export const theme: ControlsTheme = {
     default: {
       display: 'inline-block',
       px: 1,
+      borderRadius: 5,
     },
     rightmargin: {
       mr: 1,
@@ -831,3 +845,13 @@ export const useTheme = (): Theme => {
   const { theme: currentTheme } = useThemeUI();
   return currentTheme || theme;
 };
+
+const paletteColorCount = 6;
+
+export const getPaletteColor = (index: number): string =>
+  //@ts-ignore
+  theme.colors[`palette${index % paletteColorCount}`];
+
+export const getAccentPaletteColor = (index: number): string =>
+  //@ts-ignore
+  theme.colors[`accentPalette${index % paletteColorCount}`];

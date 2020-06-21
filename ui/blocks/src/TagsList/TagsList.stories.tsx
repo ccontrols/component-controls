@@ -3,7 +3,7 @@ import { MockContext } from '@component-controls/blocks';
 import { TagsList } from './TagsList';
 
 export default {
-  title: 'Application/TagsList',
+  title: 'Blocks/TagsList',
   component: TagsList,
 };
 

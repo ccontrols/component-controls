@@ -8,6 +8,7 @@ export * from './DocumentItem';
 export * from './EditPage';
 export * from './PackageVersion';
 export * from './PageContainer';
+export * from './PageTypeTag';
 export * from './Pagination';
 export * from './Playground';
 export * from './PropsTable';
