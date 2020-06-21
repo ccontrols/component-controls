@@ -8,36 +8,35 @@ export const ViewportBlock: FC = () => {
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        minHeight: '200px',
-        height: '100%',
+        minHeight: '250px',
+        height: '-webkit-fill-available',
         width: '100%',
-        overflowX: 'auto',
-        overflowY: 'hidden',
+        overflow: 'auto',
         padding: '3px',
         background: '#f4f4f4',
       }}
     >
       <Box
         sx={{
-          height: '100%',
           minWidth: '250px',
-          margin: '20px',
-          background: 'gray',
+          height: '400px',
+          margin: '5px',
+          background: 'green',
         }}
       ></Box>
       <Box
         sx={{
-          height: '100%',
           minWidth: '500px',
-          margin: '20px',
-          background: 'gray',
+          height: '400px',
+          margin: '5px',
+          background: 'black',
         }}
       ></Box>
       <Box
         sx={{
-          height: '100%',
           minWidth: '900px',
-          margin: '20px',
+          height: '400px',
+          margin: '5px',
           background: 'gray',
         }}
       ></Box>
