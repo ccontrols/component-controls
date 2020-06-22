@@ -2,7 +2,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import React, { FC } from 'react';
-import { Styled, Box } from 'theme-ui';
+import { Styled, Box, useColorMode } from 'theme-ui';
 import Highlight, {
   defaultProps,
   PrismTheme,
@@ -63,7 +63,10 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
   style: propStyle,
   as = 'span',
 }) => {
-  const theme = customTheme ? customTheme : dark ? duotoneDark : duotoneLight;
+  const [colorMode] = useColorMode();
+  const isDark = dark === true || colorMode === `dark`;
+  const theme = customTheme ? customTheme : isDark ? duotoneDark : duotoneLight;
+
   const renderProps =
     typeof renderFn === 'function'
       ? (props: RenderProps) => renderFn(props, { theme })

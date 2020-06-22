@@ -47,3 +47,5 @@ export interface CustomPageDef {
   // Return an object that can be rendered from ReactDOM.render
   render: CustomPageRenderFn;
 }
+
+export const UPDATE_STORY_CONTEXT = `update_story_context`;
