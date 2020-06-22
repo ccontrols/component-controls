@@ -57,7 +57,6 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   options,
 }) => {
   let storyId = propsStoryId;
-  console.log(propsStoryId, propsDocId);
   const docId = storyId || propsDocId;
   if (!storyId && docId) {
     const doc = store.getStoryDoc(docId);
