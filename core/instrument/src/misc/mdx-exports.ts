@@ -21,10 +21,15 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
       if (exports.default) {
         const expCode = mdxPropertiesExport(exports.default);
         defaultExportCode = `
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ${
-          expCode ? `...${expCode},` : ''
-        } MDXPage: MDXContent };`;
+        export default ${
+          expCode
+            ? `Object.assign(dmsPageExport, ${expCode});`
+            : 'dmsPageExport;'
+        }
+`;
       }
 
       let storiesExports: string[] = [];
@@ -45,5 +50,9 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
       return `${defaultExportCode}\n${storiesExports.join('\n')}`;
     }
   }
-  return 'export default { MDXPage: () => <MDXContent /> };';
+  return `
+const dmsPageExport = MDXContent;
+dmsPageExport.MDXPage = MDXContent;
+export default  dmsPageExport;
+`;
 };

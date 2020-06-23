@@ -37,7 +37,7 @@ type TraverseFn = (
   ast: File,
   options: Required<InstrumentOptions>,
   more: { source: string; filePath: string },
-) => ParseStorieReturnType;
+) => ParseStorieReturnType | undefined;
 
 /**
  * Instrument a source file, with options
@@ -53,11 +53,14 @@ const parseSource = async (
   originalSource: string,
   filePath: string,
   options: Required<InstrumentOptions>,
-): Promise<ParseStorieReturnType> => {
+): Promise<ParseStorieReturnType | undefined> => {
   const source = await prettify(code, filePath, options.prettier);
   const ast = parser.parse(source, options.parser);
 
   const store = traverseFn(ast, options, { source, filePath });
+  if (!store) {
+    return undefined;
+  }
   if (store.doc) {
     const doc = store.doc;
     if (options.stories.storeSourceFile) {
@@ -117,7 +120,9 @@ const parseSource = async (
 };
 
 export { LoadingDocStore };
-export type ParseStoriesReturnType = { transformed: string } & LoadingDocStore;
+export type ParseStoriesReturnType = { transformed: string } & Partial<
+  LoadingDocStore
+>;
 /**
  * Parse and instrument a javascript, typescript or MDX file of stories
  * @param source Source of the file to be instrumented
@@ -178,7 +183,7 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
-    const { stories, doc, components, exports, packages } = store;
+    const { stories, doc, components, exports, packages } = store || {};
     const exportsSource = extractStoryExports(exports);
     let transformed = `
     

@@ -20,7 +20,7 @@ export const extractMDXStories = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
-): ParseStorieReturnType => {
+): ParseStorieReturnType | undefined => {
   const collectAttributes = (node: any): StoryParameters => {
     return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
       if (attribute.value.type === 'StringLiteral') {
@@ -197,8 +197,8 @@ export const extractMDXStories = (props: any) => (
   if (store.doc && store.doc.title) {
     //@ts-ignore
     store.doc.components = components;
+    return store;
   } else {
-    throw new Error(`MDX documenation pages should have at least a title`);
+    return undefined;
   }
-  return store;
 };

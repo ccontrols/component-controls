@@ -84,26 +84,28 @@ export const extractStoreComponent = async (
 ) => {
   if (store.doc) {
     const doc: StoriesDoc = store.doc;
-    const componentNames = Object.keys(doc.components);
-    if (componentNames) {
-      for (const componentName of componentNames) {
-        const { component, componentPackage } = await extractComponent(
-          componentName,
-          filePath,
-          source,
-          options,
-          initialAST,
-        );
-        if (component) {
-          if (componentPackage) {
-            store.packages[componentPackage.fileHash] = componentPackage;
-            component.package = componentPackage.fileHash;
-          }
-          const componentKey = hashStoreId(
-            `${component.request ?? filePath}-${componentName}`,
+    if (doc.components) {
+      const componentNames = Object.keys(doc.components);
+      if (componentNames) {
+        for (const componentName of componentNames) {
+          const { component, componentPackage } = await extractComponent(
+            componentName,
+            filePath,
+            source,
+            options,
+            initialAST,
           );
-          store.components[componentKey] = component;
-          doc.components[componentName] = componentKey;
+          if (component) {
+            if (componentPackage) {
+              store.packages[componentPackage.fileHash] = componentPackage;
+              component.package = componentPackage.fileHash;
+            }
+            const componentKey = hashStoreId(
+              `${component.request ?? filePath}-${componentName}`,
+            );
+            store.components[componentKey] = component;
+            doc.components[componentName] = componentKey;
+          }
         }
       }
     }
