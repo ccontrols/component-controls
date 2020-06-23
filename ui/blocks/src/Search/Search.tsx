@@ -49,7 +49,11 @@ export const Search = () => {
     }
     const searchResults = lunrRef.current.search(search);
     const newItems: Pages = searchResults
-      .slice(0, 10)
+      .slice(0, 20)
+      .filter(
+        (item: { ref: string }) =>
+          storeProvider.getStoryDoc(item.ref) as StoriesDoc,
+      )
       .map((item: { ref: string }) => {
         const page = storeProvider.getStoryDoc(item.ref) as StoriesDoc;
         return { ...page, id: page.title };
