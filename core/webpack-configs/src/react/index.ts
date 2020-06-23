@@ -41,7 +41,11 @@ export const react: Configuration = {
         ],
       },
       {
-        test: /\.mdx$/,
+        test: /\.txt$/i,
+        use: require.resolve('raw-loader'),
+      },
+      {
+        test: /\.(md|mdx)$/i,
         exclude: [/node_modules/],
         use: [
           {
@@ -64,14 +68,9 @@ export const react: Configuration = {
         ],
       },
       {
-        test: /\.(story|stories).(js|jsx|ts|tsx)$/,
+        test: /\.(story|stories|doc|docs).(js|jsx|ts|tsx)$/,
         loader: '@component-controls/loader/loader',
         exclude: [/node_modules/],
-        options: {
-          mdx: {
-            transformMDX: true,
-          },
-        },
       },
     ],
   },

@@ -40,7 +40,7 @@ import { mdx } from '@mdx-js/react';
 `;
 
 export const defaultMDXOptions: MDXOptions = {
-  test: /\.mdx$/,
+  test: /\.(mdx|md)$/i,
   renderer: DEFAULT_MDX_RENDERER,
 };
 

@@ -21,15 +21,17 @@ module.exports.pitch = async function() {
   if (store) {
     if (store.doc) {
       console.log(chalk.bgRgb(244, 147, 66)('@loaded: '), filePath);
-      addStoriesDoc(filePath, {
-        stories: store.stories,
-        components: store.components,
-        packages: store.packages,
-        doc: {
-          ...store.doc,
-          fileName: filePath,
-        },
-      });
+      if (store.stories && store.components && store.packages) {
+        addStoriesDoc(filePath, {
+          stories: store.stories,
+          components: store.components,
+          packages: store.packages,
+          doc: {
+            ...store.doc,
+            fileName: filePath,
+          },
+        });
+      }
     }
   }
   return transformed;
