@@ -20,6 +20,7 @@
     "docs": "lerna run docs && ts-node -O '{\"module\": \"commonjs\"}' ./scripts/docs.ts",
     "packages": "yarn fix && yarn lint && yarn build && yarn test",
     "fix": "lerna run --parallel fix && echo",
+    "startup": "yarn bootstrap && yarn build && yarn dev",
     "lint": "lerna run --parallel lint",
     "build": "lerna run build",
     "test": "lerna run test --stream",
