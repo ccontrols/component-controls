@@ -24,7 +24,10 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
         "use": Array [
           Object {
             "loader": "babel-loader",
@@ -40,23 +43,12 @@ Object {
               ],
             },
           },
-        ],
-      },
-      Object {
-        "exclude": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
-        "test": /\\\\\\.mdx\\$/,
-        "use": Array [
           Object {
-            "loader": "babel-loader",
+            "loader": "@component-controls/loader/loader",
             "options": Object {
-              "presets": Array [
-                Array [
-                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
-                  Object {
-                    "modules": "commonjs",
-                  },
-                ],
-              ],
+              "mdx": Object {
+                "transformMDX": true,
+              },
             },
           },
         ],
@@ -69,9 +61,6 @@ Object {
         ],
         "loader": "@component-controls/loader/loader",
         "options": Object {
-          "mdx": Object {
-            "transformMDX": true,
-          },
           "propsLoaders": Array [
             Object {
               "name": "@component-controls/react-docgen-info",
@@ -83,7 +72,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\)\\$/,
       },
     ],
   },
@@ -122,7 +111,10 @@ Object {
         ],
       },
       Object {
-        "test": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
         "use": Array [
           Object {
             "loader": "babel-loader",
@@ -138,23 +130,12 @@ Object {
               ],
             },
           },
-        ],
-      },
-      Object {
-        "exclude": /\\\\\\.\\(stories\\|story\\)\\.mdx\\$/,
-        "test": /\\\\\\.mdx\\$/,
-        "use": Array [
           Object {
-            "loader": "babel-loader",
+            "loader": "@component-controls/loader/loader",
             "options": Object {
-              "presets": Array [
-                Array [
-                  "/Users/atanasster/component-controls/node_modules/@babel/preset-env/lib/index.js",
-                  Object {
-                    "modules": "commonjs",
-                  },
-                ],
-              ],
+              "mdx": Object {
+                "transformMDX": true,
+              },
             },
           },
         ],
@@ -167,9 +148,6 @@ Object {
         ],
         "loader": "@component-controls/loader/loader",
         "options": Object {
-          "mdx": Object {
-            "transformMDX": true,
-          },
           "prettier": Object {
             "tabWidth": 4,
           },
@@ -184,7 +162,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\|mdx\\)\\$/,
+        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\)\\$/,
       },
     ],
   },

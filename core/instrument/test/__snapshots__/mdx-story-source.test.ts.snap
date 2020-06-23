@@ -61,10 +61,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ...{
+        export default Object.assign(dmsPageExport, {
   \\"title\\": \\"MDX\\"
-}, MDXPage: MDXContent };
+});
+
 export const mdxStory = () => <div>test</div>
 mdxStory.story = {
   \\"name\\": \\"mdx-story\\"
@@ -179,10 +182,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ...{
+        export default Object.assign(dmsPageExport, {
   \\"title\\": \\"MDX\\"
-}, MDXPage: MDXContent };
+});
+
 export const mdxStory = ({ text }) => <div>{text}</div>
 mdxStory.story = {
   \\"name\\": \\"mdx-story\\"
@@ -309,10 +315,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ...{
+        export default Object.assign(dmsPageExport, {
   \\"title\\": \\"MDX\\"
-}, MDXPage: MDXContent };
+});
+
 export const mdxStory = props => customStory(props)
 mdxStory.story = {
   \\"name\\": \\"mdx-story\\"
@@ -380,10 +389,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ...{
+        export default Object.assign(dmsPageExport, {
   \\"title\\": \\"MDX\\"
-}, MDXPage: MDXContent };
+});
+
 export const mdxStory = () => (<>
 
 <div>test 1</div>
@@ -486,10 +498,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
+        const dmsPageExport = MDXContent;
+        dmsPageExport.MDXPage = MDXContent;
 
-        export default { ...{
+        export default Object.assign(dmsPageExport, {
   \\"title\\": \\"MDX\\"
-}, MDXPage: MDXContent };
+});
+
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = {
   \\"name\\": \\"mdx-story\\"
