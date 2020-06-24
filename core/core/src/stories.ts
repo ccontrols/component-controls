@@ -222,19 +222,6 @@ export interface StoriesDoc {
   };
 
   /**
-   * list of stories to exclude from the stories file
-   * can also use regexp match
-   */
-  excludeStories?: string[] | RegExp;
-
-  /**
-   * list of stories to include in the stories file
-   * can also use regexp match
-   */
-
-  includeStories?: string[] | RegExp;
-
-  /**
    * object of key/value pairs specifying the controls for the stories file
    * this will apply to all the stories in the file
    */
