@@ -94,8 +94,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
       const componentName = getComponentName(storyComponent);
       const component =
-        componentName && doc && doc.components[componentName]
-          ? store.components[doc.components[componentName]]
+        componentName && doc && doc.componentsLookup[componentName]
+          ? store.components[doc.componentsLookup[componentName]]
           : undefined;
       const docPackage =
         doc && doc.package ? store.packages[doc.package] : undefined;
@@ -117,8 +117,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
           const name = getComponentName(components[key]);
           const component =
             name &&
-            doc?.components[name] &&
-            store?.components[doc.components[name]];
+            doc?.componentsLookup[name] &&
+            store?.components[doc.componentsLookup[name]];
           if (component) {
             return { ...acc, [key]: component };
           } else {

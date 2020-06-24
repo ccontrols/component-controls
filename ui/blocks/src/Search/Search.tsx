@@ -46,7 +46,7 @@ export const Search = () => {
             stories: page.stories
               ?.map(story => story.split('-').join(' '))
               .join(' '),
-            component: Object.keys(page.components).join(' '),
+            component: Object.keys(page.componentsLookup).join(' '),
           });
         });
       });

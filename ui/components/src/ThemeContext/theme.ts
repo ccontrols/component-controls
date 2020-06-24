@@ -8,8 +8,24 @@ const heading = {
   fontWeight: 'semibold',
 };
 
+const ActionItemStyle: ThemeUIStyleObject = {
+  color: 'background',
+  backgroundColor: 'action',
+  //safari fix:
+  WebkitTextFillColor: 'initial',
+  px: 2,
+  py: 1,
+  lineHeight: 1,
+  borderRadius: 1,
+  display: 'inline-block',
+  boxShadow: (t: Theme) =>
+    `${t.colors?.shadow} 0 1px 3px 1px, ${t.colors?.shadow} 0 0 0 1px`,
+  border: (t: Theme) => `1px solid ${t.colors?.action}`,
+};
+
 export type ControlsTheme = {
   actionbar: Record<string, ThemeUIStyleObject>;
+  toolbar: Record<string, ThemeUIStyleObject>;
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
@@ -264,6 +280,7 @@ export const theme: ControlsTheme = {
     },
     inner: {
       position: 'absolute',
+      display: 'flex',
       width: '100%',
       flexDirection: 'row-reverse',
       marginLeft: 'auto',
@@ -271,6 +288,15 @@ export const theme: ControlsTheme = {
     item: {
       mt: 1,
       fontSize: 1,
+      a: ActionItemStyle,
+      button: ActionItemStyle,
+    },
+  },
+  toolbar: {
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
     },
   },
   actioncontainer: {
@@ -707,20 +733,8 @@ export const theme: ControlsTheme = {
         ':hover': { color: `accent` },
         fontWeight: 'bold',
       },
-    },
-    inner: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
       py: 3,
     },
-    linktext: { px: 2 },
-    righthandrow: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    righthanditem: { px: 2 },
   },
   appfooter: {
     container: {
@@ -805,7 +819,7 @@ export const theme: ControlsTheme = {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
-      gridTemplateColumns: '300px 1fr 250px',
+      gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
       position: 'relative',
     },
     //@ts-ignore

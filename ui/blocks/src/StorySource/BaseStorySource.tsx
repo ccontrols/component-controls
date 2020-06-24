@@ -57,7 +57,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   }
   if (doc?.source) {
     allActions.push({
-      title: showFileSource ? 'story code' : 'file code',
+      node: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
     });
   }
@@ -66,7 +66,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   if (args && args.length) {
     if (!showFileSource) {
       allActions.push({
-        title: ViewStyleNext[viewStyle],
+        node: ViewStyleNext[viewStyle],
         onClick: onMergeValues,
       });
     }

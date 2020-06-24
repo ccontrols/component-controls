@@ -171,7 +171,7 @@ export const extractMDXStories = (props: any) => (
             const { title } = attributes;
             if (title) {
               const doc: Document = {
-                components: {},
+                componentsLookup: {},
                 ...attributes,
                 title,
               };
@@ -196,7 +196,7 @@ export const extractMDXStories = (props: any) => (
 
   if (store.doc && store.doc.title) {
     //@ts-ignore
-    store.doc.components = components;
+    store.doc.componentsLookup = components;
     return store;
   } else {
     return undefined;
