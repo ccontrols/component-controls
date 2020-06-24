@@ -4,14 +4,14 @@
 -   [Installation](#installation)
 -   [API](#api)
     -   [ArgUsageLocation](#argusagelocation)
+    -   [Document](#document)
+    -   [Documents](#documents)
     -   [SourceIdentifier](#sourceidentifier)
     -   [Stories](#stories)
-    -   [StoriesDoc](#storiesdoc)
     -   [StoriesStore](#storiesstore)
     -   [Story](#story)
     -   [StoryArgument](#storyargument)
     -   [StoryComponents](#storycomponents)
-    -   [StoryDocs](#storydocs)
     -   [StoryPackages](#storypackages)
     -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
@@ -122,30 +122,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `name`      | [SourceIdentifier](#sourceidentifier) | optional name for the usage of the argument example: export const story = ({ value }) => &lt;Story value={{ age: value }} />; in this example the name will be 'age' |
 | `shorthand` | boolean                               | true if the property is a 'shorthand'. { prop: value } - not a shorthand. { prop } - a shorthand.                                                                    |
 
-## SourceIdentifier
-
-an identifier/variable.argument in the source code
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L8)_
-
-
-
-### properties
-
-| Name    | Type                          | Description |
-| ------- | ----------------------------- | ----------- |
-| `loc`   | [CodeLocation](#codelocation) |             |
-| `name*` | string                        |             |
-
-## Stories
-
-map of stories. The id is compatible with CSF story ids
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L148)_
-
-`id`\*: string: [Story](#story)
-
-## StoriesDoc
+## Document
 
 a group of stories. Usually multiple stories are in one  csf file
 and the 'group' is the default export
@@ -181,6 +158,37 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `title*`        | string                                  | title of the groups of stories contained in the doc file. used to generate story ids                                                            |
 | `type`          | [PageType](#pagetype)                   | document type - blogs a and stories. By default - storie                                                                                        |
 
+## Documents
+
+list of story files, or groups
+
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L290)_
+
+`title`\*: string: [Document](#document)
+
+## SourceIdentifier
+
+an identifier/variable.argument in the source code
+
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L8)_
+
+
+
+### properties
+
+| Name    | Type                          | Description |
+| ------- | ----------------------------- | ----------- |
+| `loc`   | [CodeLocation](#codelocation) |             |
+| `name*` | string                        |             |
+
+## Stories
+
+map of stories. The id is compatible with CSF story ids
+
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L148)_
+
+`id`\*: string: [Story](#story)
+
 ## StoriesStore
 
 store of stories information in memory after the loader is applied
@@ -195,7 +203,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `components*` | [StoryComponents](#storycomponents)   | list of components used in stories                                                              |
 | `config`      | [RunConfiguration](#runconfiguration) | global configuration for config file                                                            |
-| `docs*`       | [StoryDocs](#storydocs)               | list of story files, or groups                                                                  |
+| `docs*`       | [Documents](#documents)               | list of story files, or groups                                                                  |
 | `packages*`   | [StoryPackages](#storypackages)       | list of package.json files and their data used by the components and the stories of the project |
 | `stories*`    | [StoryStories](#storystories)         | list of stories                                                                                 |
 
@@ -251,14 +259,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
-## StoryDocs
-
-list of story files, or groups
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L290)_
-
-`title`\*: string: [StoriesDoc](#storiesdoc)
-
 ## StoryPackages
 
 list of repositories
@@ -288,7 +288,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L294)_
 
-[StoriesDoc](#storiesdoc)\[]
+[Document](#document)\[]
 
 ## StoryArguments
 
@@ -322,14 +322,14 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L338)_
 
-**function** getDocPath(`pageType`\*: [PageType](#pagetype), `doc`: [StoriesDoc](#storiesdoc), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `name`\*: string, `activeTab`: string): string;
+**function** getDocPath(`pageType`\*: [PageType](#pagetype), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `name`\*: string, `activeTab`: string): string;
 
 ### parameters
 
 | Name          | Type                                | Description |
 | ------------- | ----------------------------------- | ----------- |
 | `pageType*`   | [PageType](#pagetype)               |             |
-| `doc`         | [StoriesDoc](#storiesdoc)           |             |
+| `doc`         | [Document](#document)               |             |
 | `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
 | `name*`       | string                              |             |
 | `activeTab`   | string                              |             |
@@ -339,14 +339,14 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L355)_
 
-**function** getStoryPath(`story`: [Story](#story), `doc`: [StoriesDoc](#storiesdoc), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `activeTab`: string): string;
+**function** getStoryPath(`story`: [Story](#story), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `activeTab`: string): string;
 
 ### parameters
 
 | Name          | Type                                | Description |
 | ------------- | ----------------------------------- | ----------- |
 | `story`       | [Story](#story)                     |             |
-| `doc`         | [StoriesDoc](#storiesdoc)           |             |
+| `doc`         | [Document](#document)               |             |
 | `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
 | `activeTab`   | string                              |             |
 | `returns`     | string                              |             |

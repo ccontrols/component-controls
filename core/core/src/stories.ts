@@ -155,7 +155,7 @@ export const defPageType: PageType = 'story';
  * and the 'group' is the default export
  * in the case of MDX stories, the doc is created using a <Meta /> tag
  */
-export interface StoriesDoc {
+export interface Document {
   /**
    * title of the groups of stories contained in the doc file. used to generate story ids
    */
@@ -287,11 +287,11 @@ export interface StoryComponents {
 /**
  * list of story files, or groups
  */
-export interface StoryDocs {
-  [title: string]: StoriesDoc;
+export interface Documents {
+  [title: string]: Document;
 }
 
-export type Pages = StoriesDoc[];
+export type Pages = Document[];
 
 /**
  * list of stories
@@ -318,7 +318,7 @@ export interface StoriesStore {
   /**
    * list of story files, or groups
    */
-  docs: StoryDocs;
+  docs: Documents;
   /**
    * list of stories
    */
@@ -337,7 +337,7 @@ export interface StoriesStore {
 
 export const getDocPath = (
   pageType: PageType,
-  doc?: StoriesDoc,
+  doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   name: string = '',
   activeTab?: string,
@@ -354,7 +354,7 @@ export const getDocPath = (
 
 export const getStoryPath = (
   story?: Story,
-  doc?: StoriesDoc,
+  doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   activeTab?: string,
 ): string => {

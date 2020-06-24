@@ -7,7 +7,7 @@ import {
   PageType,
   defPageType,
   Pages,
-  StoriesDoc,
+  Document,
 } from '@component-controls/core';
 import { BlockContext } from '../context';
 import { DocumentItem } from '../DocumentItem';
@@ -56,10 +56,10 @@ export const Search = () => {
       .slice(0, 20)
       .filter(
         (item: { ref: string }) =>
-          storeProvider.getStoryDoc(item.ref) as StoriesDoc,
+          storeProvider.getStoryDoc(item.ref) as Document,
       )
       .map((item: { ref: string }) => {
-        const page = storeProvider.getStoryDoc(item.ref) as StoriesDoc;
+        const page = storeProvider.getStoryDoc(item.ref) as Document;
         return { ...page, id: page.title };
       });
     setItems(newItems);
@@ -67,7 +67,7 @@ export const Search = () => {
   const onSearch = (search: string) => {
     setSearch(search);
   };
-  const onSelectItem = (item: StoriesDoc) => {
+  const onSelectItem = (item: Document) => {
     const newurl = `${window.location.origin}${storeProvider.getPagePath(
       item.type,
       item.title,
@@ -79,7 +79,7 @@ export const Search = () => {
     }
   };
   return (
-    <SearchInput<StoriesDoc>
+    <SearchInput<Document>
       aria-label="full text search"
       onSearch={onSearch}
       items={items}

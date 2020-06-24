@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import { FC, useState } from 'react';
 import { Styled } from 'theme-ui';
-import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
+import { Story, Document, PackageInfo } from '@component-controls/core';
 import {
   Source,
   SourceProps,
@@ -28,7 +28,7 @@ const ViewStyleNext: {
 
 export interface BaseStorySourceProps {
   story?: Story;
-  doc?: StoriesDoc;
+  doc?: Document;
   docPackage?: PackageInfo;
   viewStyle?: ViewStyle;
   actions?: ActionItem[];

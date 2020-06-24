@@ -1,7 +1,7 @@
 import { File } from '@babel/types';
 import {
   StoryComponent,
-  StoriesDoc,
+  Document,
   PackageInfo,
 } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
@@ -83,7 +83,7 @@ export const extractStoreComponent = async (
   initialAST?: File,
 ) => {
   if (store.doc) {
-    const doc: StoriesDoc = store.doc;
+    const doc: Document = store.doc;
     if (doc.components) {
       const componentNames = Object.keys(doc.components);
       if (componentNames) {

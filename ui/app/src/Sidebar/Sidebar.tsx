@@ -13,7 +13,7 @@ import {
   Header,
 } from '@component-controls/components';
 import {
-  StoriesDoc,
+  Document,
   PageType,
   Pages,
   defPageType,
@@ -39,7 +39,7 @@ export interface SidebarProps {
 
 const createMenuItem = (
   storeProvider: StoryStore,
-  doc: StoriesDoc,
+  doc: Document,
   type: PageType,
   levels: string[],
   activeTab?: string,
@@ -93,7 +93,7 @@ export const Sidebar: FC<SidebarProps> = ({
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
 
-      const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
+      const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
         createMenuItem(storeProvider, doc, type, levels, activeTab, acc);

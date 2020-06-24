@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box, Text } from 'theme-ui';
 import {
-  StoriesDoc,
+  Document,
   getDocPath,
   defPageType,
   RunConfiguration,
@@ -21,7 +21,7 @@ export interface PageListItemProps {
   /**
    * document to be displayed
    */
-  page: StoriesDoc;
+  page: Document;
   /**
    * store configuration object
    */
