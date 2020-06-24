@@ -12,14 +12,16 @@ export interface ActionItem {
    * title - if a string, will use the Button component, else can prvide custom React component
    */
   title: React.ReactNode;
+
   /**
-   * onClick event when passing a string as the title
+   * if the title is a string and href is set will use a default <Link /> component
+   */
+  href?: string;
+
+  /**
+   * if the title is a string and href is not set, onClick will be used on a <,>Button /> component
    */
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void | boolean;
-  /**
-   * displays the Button as disabled
-   */
-  disabled?: boolean;
   /**
    * hide an action item
    */

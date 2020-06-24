@@ -38,20 +38,6 @@ export const overview = () => (
   </Container>
 );
 
-export const disabled = () => (
-  <Container>
-    <ActionBar
-      actions={[
-        {
-          title: 'click action',
-          onClick: () => console.log('clicked'),
-          disabled: true,
-        },
-      ]}
-    />
-  </Container>
-);
-
 export const link = () => (
   <Container>
     <ActionBar
