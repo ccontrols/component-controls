@@ -148,6 +148,12 @@ application header component
 
 _Header [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Header/Header.tsx)_
 
+### properties
+
+| Name      | Type                                           | Description |
+| --------- | ---------------------------------------------- | ----------- |
+| `toolbar` | _{ left?: ActionItems; right?: ActionItems; }_ |             |
+
 ## <ins>DocLink</ins>
 
 native lonk to a documentation page

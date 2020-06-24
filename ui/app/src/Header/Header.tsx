@@ -11,10 +11,16 @@ import {
 } from '@component-controls/components';
 import { BlockContext, Search } from '@component-controls/blocks';
 
+export interface HeaderProps {
+  toolbar?: {
+    left?: ActionItems;
+    right?: ActionItems;
+  };
+}
 /**
  * application header component
  */
-export const Header: FC = () => {
+export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
@@ -23,45 +29,47 @@ export const Header: FC = () => {
     const actions: ActionItems = [
       { node: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
     ];
-    if (pages) {
-      return [
-        ...actions,
-        ...Object.keys(pages)
-          .map(type => {
-            const pageType = type as PageType;
-            return { page: pages[pageType], pageType };
-          })
-          .filter(({ page, pageType }) => {
-            return (
-              page.topMenu &&
-              Object.keys(storeProvider.getPageList(pageType)).length > 0
-            );
-          })
-          .map(({ page }) => ({
-            id: page.label?.toLowerCase(),
-            'aria-label': `go to page ${page.label}`,
-            href: `/${page.basePath}`,
-            node: page.label,
-          })),
-      ];
-    }
-    return actions;
-  }, [pages, storeProvider]);
+    const finalActions = pages
+      ? [
+          ...actions,
+          ...Object.keys(pages)
+            .map(type => {
+              const pageType = type as PageType;
+              return { page: pages[pageType], pageType };
+            })
+            .filter(({ page, pageType }) => {
+              return (
+                page.topMenu &&
+                Object.keys(storeProvider.getPageList(pageType)).length > 0
+              );
+            })
+            .map(({ page }) => ({
+              id: page.label?.toLowerCase(),
+              'aria-label': `go to page ${page.label}`,
+              href: `/${page.basePath}`,
+              node: page.label,
+            })),
+        ]
+      : actions;
+    return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
+  }, [pages, storeProvider, toolbar.left]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
       { node: <Search />, id: 'search' },
       { node: <ColorMode />, id: 'colormode' },
     ];
-    return actions;
-  }, []);
+    return toolbar.right ? [...toolbar.right, ...actions] : actions;
+  }, [toolbar.right]);
   return (
     <AppHeader>
       <Box variant="appheader.container">
         {collapsed && <SidebarToggle />}
         <ActionBar themeKey="toolbar" actions={leftActions} />
       </Box>
-      {!responsive && <ActionBar themeKey="toolbar" actions={rightActions} />}
+      <Box variant="appheader.container">
+        {!responsive && <ActionBar themeKey="toolbar" actions={rightActions} />}
+      </Box>
     </AppHeader>
   );
 };
