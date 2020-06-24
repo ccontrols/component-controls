@@ -29,30 +29,30 @@ export const ActionBar: FC<ActionBarProps> = ({
   const items = useMemo(() => {
     const sortedItems = getSortedActions(actions);
     return sortedItems.map(
-      ({ title, onClick, 'aria-label': ariaLabel, group, href }, index) => {
+      ({ node, onClick, 'aria-label': ariaLabel, group, href }, index) => {
         const nextGroup =
           index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
         return (
           <Box
-            key={`${typeof title === 'string' ? title : 'item'}_${index}`}
+            key={`${typeof node === 'string' ? node : 'item'}_${index}`}
             variant={`${themeKey}.item`}
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
             }}
           >
-            {typeof title === 'string' ? (
+            {typeof node === 'string' ? (
               href ? (
                 <Link href={href} aria-label={ariaLabel}>
-                  {title}
+                  {node}
                 </Link>
               ) : (
                 <Button onClick={onClick} aria-label={ariaLabel}>
-                  {title}
+                  {node}
                 </Button>
               )
             ) : (
-              title
+              node
             )}
           </Box>
         );

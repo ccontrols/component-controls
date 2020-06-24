@@ -8,6 +8,7 @@ import {
   IconButton,
   Zoom,
   useTheme,
+  ActionItems,
 } from '@component-controls/components';
 import { BlockDataContext } from '../context';
 
@@ -53,10 +54,10 @@ export const Playground: FC<PlaygroundProps> = ({
   const [direction, setDirection] = React.useState<DirectionType>('ltr');
   const { storyIdFromName, getStoryData } = useContext(BlockDataContext);
   React.useEffect(() => setScale(userScale), [userScale]);
-  const zoomActions = React.useMemo(
+  const zoomActions: ActionItems = React.useMemo(
     () => [
       {
-        title: (
+        node: (
           <IconButton onClick={() => setScale(1)} aria-label="reset zoom">
             <SyncIcon />
           </IconButton>
@@ -65,7 +66,7 @@ export const Playground: FC<PlaygroundProps> = ({
         group: 'zoom',
       },
       {
-        title: (
+        node: (
           <IconButton
             onClick={() => setScale(Math.max(0.5, scale - 0.2))}
             aria-label="zoom out"
@@ -77,7 +78,7 @@ export const Playground: FC<PlaygroundProps> = ({
         group: 'zoom',
       },
       {
-        title: (
+        node: (
           <IconButton
             onClick={() => setScale(Math.min(3, scale + 0.2))}
             aria-label="zoom in"
@@ -107,7 +108,7 @@ export const Playground: FC<PlaygroundProps> = ({
         return null;
       }
       userActions.push({
-        title: 'source',
+        node: 'source',
         id: 'source',
         group: 'panels',
         'aria-label': 'display story source code',
@@ -116,7 +117,7 @@ export const Playground: FC<PlaygroundProps> = ({
         ),
       });
       userActions.push({
-        title: 'config',
+        node: 'config',
         id: 'config',
         group: 'panels',
         'aria-label': 'display story configuration object',
@@ -127,15 +128,15 @@ export const Playground: FC<PlaygroundProps> = ({
     }
   }
 
-  const storyActions = [
+  const storyActions: ActionItems = [
     {
-      title: background === 'light' ? 'dark' : 'light',
+      node: background === 'light' ? 'dark' : 'light',
       id: 'background',
       group: 'story',
       onClick: () => setBackground(background === 'light' ? 'dark' : 'light'),
     },
     {
-      title: direction === 'rtl' ? 'LTR' : 'RTL',
+      node: direction === 'rtl' ? 'LTR' : 'RTL',
       id: 'direction',
       group: 'story',
       onClick: () => setDirection(direction === 'rtl' ? 'ltr' : 'rtl'),

@@ -21,7 +21,7 @@ export const Header: FC = () => {
   const { pages } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
-      { title: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
+      { node: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
     ];
     if (pages) {
       return [
@@ -41,7 +41,7 @@ export const Header: FC = () => {
             id: page.label?.toLowerCase(),
             'aria-label': `go to page ${page.label}`,
             href: `/${page.basePath}`,
-            title: page.label,
+            node: page.label,
           })),
       ];
     }
@@ -50,8 +50,8 @@ export const Header: FC = () => {
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
-      { title: <Search />, id: 'search' },
-      { title: <ColorMode />, id: 'colormode' },
+      { node: <Search />, id: 'search' },
+      { node: <ColorMode />, id: 'colormode' },
     ];
     return actions;
   }, []);

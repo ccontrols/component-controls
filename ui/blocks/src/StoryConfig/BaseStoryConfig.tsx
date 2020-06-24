@@ -35,7 +35,7 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
   }
   if (doc?.source) {
     allActions.push({
-      title: showFileSource ? 'story code' : 'file code',
+      node: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
     });
   }

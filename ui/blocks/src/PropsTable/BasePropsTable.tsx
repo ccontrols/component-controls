@@ -361,7 +361,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     }
   };
   actions.push({
-    title: copied ? 'copied' : 'copy table',
+    node: copied ? 'copied' : 'copy table',
     onClick: onCopy,
     id: 'copy_table',
     'aria-label': 'copy table as csv',

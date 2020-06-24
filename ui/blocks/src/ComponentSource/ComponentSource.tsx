@@ -48,7 +48,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
 
         if (component && component.source) {
           allActions.push({
-            title: showFileSource ? 'import' : 'source',
+            node: showFileSource ? 'import' : 'source',
             onClick: onShowFileSource,
           });
         }

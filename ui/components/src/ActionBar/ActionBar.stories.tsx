@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'theme-ui';
-import { ActionBar } from './ActionBar';
+import { ActionBar, ActionBarProps } from './ActionBar';
 import { ThemeProvider } from '../ThemeContext';
 import { ExternalLink } from '../ExternalLink';
 
@@ -21,16 +21,17 @@ const Container: React.FC = ({ children }) => (
     </Box>
   </ThemeProvider>
 );
-export const overview = () => (
+export const overview = ({ themeKey }: ActionBarProps) => (
   <Container>
     <ActionBar
+      themeKey={themeKey}
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
         },
         {
-          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          node: <ExternalLink href="https://google.com">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
       ]}
@@ -38,12 +39,22 @@ export const overview = () => (
   </Container>
 );
 
+overview.story = {
+  controls: {
+    themeKey: {
+      type: 'options',
+      options: ['actionbar', 'toolbar'],
+      value: 'actionbar',
+    },
+  },
+};
+
 export const link = () => (
   <Container>
     <ActionBar
       actions={[
         {
-          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          node: <ExternalLink href="https://google.com">google</ExternalLink>,
         },
       ]}
     />
@@ -55,12 +66,12 @@ export const order = () => (
     <ActionBar
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
           order: 1,
         },
         {
-          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          node: <ExternalLink href="https://google.com">google</ExternalLink>,
           onClick: () => console.log('clicked'),
           order: 0,
         },
@@ -74,16 +85,16 @@ export const override = () => (
     <ActionBar
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
           id: 'copy',
         },
         {
-          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          node: <ExternalLink href="https://google.com">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
         {
-          title: 'Copy',
+          node: 'Copy',
           id: 'copy',
         },
       ]}
@@ -96,14 +107,14 @@ export const groupEnd = () => (
     <ActionBar
       actions={[
         {
-          title: 'item 1',
+          node: 'item 1',
         },
         {
-          title: 'item 2',
+          node: 'item 2',
           group: '1',
         },
         {
-          title: 'item 3',
+          node: 'item 3',
           group: '1',
         },
       ]}
@@ -116,15 +127,15 @@ export const groupStart = () => (
     <ActionBar
       actions={[
         {
-          title: 'item 1',
+          node: 'item 1',
           group: '1',
         },
         {
-          title: 'item 2',
+          node: 'item 2',
           group: '1',
         },
         {
-          title: 'item 3',
+          node: 'item 3',
         },
       ]}
     />
