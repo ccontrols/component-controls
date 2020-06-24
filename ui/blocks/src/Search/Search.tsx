@@ -91,7 +91,7 @@ export const Search = () => {
           sx={{ borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}` }}
           config={storeProvider.config}
           link={storeProvider.getPagePath(props.item.type, props.item.title)}
-          page={props.item}
+          doc={props.item}
         />
       )}
     </SearchInput>

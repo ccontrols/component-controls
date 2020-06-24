@@ -170,7 +170,7 @@ _DocumentItem [source code](https://github.com/ccontrols/component-controls/tree
 | Name     | Type               | Description                |
 | -------- | ------------------ | -------------------------- |
 | `link*`  | _string_           | link to the document       |
-| `page*`  | _Document_         | document to be displayed   |
+| `doc*`   | _Document_         | document to be displayed   |
 | `config` | _RunConfiguration_ | store configuration object |
 
 ## <ins>EditPage</ins>
