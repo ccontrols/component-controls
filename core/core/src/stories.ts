@@ -217,7 +217,7 @@ export interface Document {
    * since multiple components of the same name can be used
    * example: ['Button']: 'c:/myapp/Button.tsx'
    */
-  components: {
+  componentsLookup: {
     [name: string]: string;
   };
 

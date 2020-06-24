@@ -30,13 +30,13 @@ export const addSmartControls = (
   let componentName = getComponentName(storyComponent);
   if (
     !componentName ||
-    (!components[doc.components[componentName]] &&
+    (!components[doc.componentsLookup[componentName]] &&
       typeof doc.component === 'string')
   ) {
     componentName = doc.component as string;
   }
   if (componentName) {
-    const component = components[doc.components[componentName]];
+    const component = components[doc.componentsLookup[componentName]];
 
     if (component?.info) {
       const newControls = controlsFromProps(component.info.props);

@@ -305,7 +305,7 @@ and a [link](https://google.com)
       date: new Date('2020-01-01'),
       dateModified: new Date('2020-03-31'),
       package: 'test-package',
-      components: {
+      componentsLookup: {
         ArrowButton:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
         Button:
@@ -324,7 +324,7 @@ and a [link](https://google.com)
     },
     mdxStory: {
       title: 'MDX Story',
-      components: {},
+      componentsLookup: {},
       author: 'atanasster',
       MDXPage: () => <MDXContent components={{}} />,
       stories: ['mdx-story'],
