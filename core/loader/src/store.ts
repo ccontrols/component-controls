@@ -3,7 +3,7 @@ import {
   StoryPackages,
   BuildConfiguration,
   RunConfiguration,
-  StoriesDoc,
+  Document,
   defPageType,
   Pages,
   PageType,
@@ -54,7 +54,7 @@ class Store implements LoadingStore {
         }
         return false;
       })
-      .map(store => store.doc as StoriesDoc);
+      .map(store => store.doc as Document);
   getUniquesByField = (field: string) => {
     return this.stores.reduce((acc: { [key: string]: number }, store) => {
       if (store?.doc) {

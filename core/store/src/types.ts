@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Story,
-  StoriesDoc,
+  Document,
   Pages,
   RunConfiguration,
   PageType,
@@ -17,16 +17,16 @@ export type StoreObserver = (storyId?: string, propName?: string) => void;
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
-  getStoryDoc: (name: string) => StoriesDoc | undefined;
+  getStoryDoc: (name: string) => Document | undefined;
   getPageList: (type: PageType) => Pages;
   getPrevPage: (
     type: PageType | undefined,
     docId: string,
-  ) => StoriesDoc | undefined;
+  ) => Document | undefined;
   getNextPage: (
     type: PageType | undefined,
     docId: string,
-  ) => StoriesDoc | undefined;
+  ) => Document | undefined;
   getPagesByCategory: (category: string, value?: any) => Pages;
   getUniquesByCategory: (category: string) => { [key: string]: number };
   config: RunConfiguration | undefined;

@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box, Text } from 'theme-ui';
 import {
-  StoriesDoc,
+  Document,
   getDocPath,
   defPageType,
   RunConfiguration,
@@ -12,7 +12,7 @@ import { Subtitle, Markdown, Link } from '@component-controls/components';
 import { TagsList } from '../TagsList';
 import { PageTypeTag } from '../PageTypeTag';
 
-export interface PageListItemProps {
+export interface DocumentItemProps {
   /**
    * link to the document
    */
@@ -21,7 +21,7 @@ export interface PageListItemProps {
   /**
    * document to be displayed
    */
-  page: StoriesDoc;
+  doc: Document;
   /**
    * store configuration object
    */
@@ -31,17 +31,17 @@ export interface PageListItemProps {
 /**
  * displays a single doument item
  */
-export const DocumentItem: FC<PageListItemProps> = ({ page, link, config }) => {
-  const { tags = [], date, type = defPageType } = page;
+export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
+  const { tags = [], date, type = defPageType } = doc;
   return (
     <Box variant="documentitem.container">
       <Box variant="documentitem.titlerow">
         <Link href={link}>
-          <Subtitle>{page.title}</Subtitle>
+          <Subtitle>{doc.title}</Subtitle>
         </Link>
         <PageTypeTag type={type} />
       </Box>
-      {page.description && <Markdown>{page.description}</Markdown>}
+      {doc.description && <Markdown>{doc.description}</Markdown>}
       <Box variant="documentitem.info.container">
         <Box variant="documentitem.info.inner">
           {date ? (
@@ -51,7 +51,7 @@ export const DocumentItem: FC<PageListItemProps> = ({ page, link, config }) => {
           ) : (
             ''
           )}
-          {page.author && (
+          {doc.author && (
             <Box variant="documentitem.info.author">
               {date && <Text variant="documentitem.info.comma">,</Text>}
               <Text variant="documentitem.info.by">by</Text>
@@ -60,10 +60,10 @@ export const DocumentItem: FC<PageListItemProps> = ({ page, link, config }) => {
                   'author',
                   undefined,
                   config?.pages,
-                  page.author,
+                  doc.author,
                 )}
               >
-                {page.author}
+                {doc.author}
               </Link>
             </Box>
           )}

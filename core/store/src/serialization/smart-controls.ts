@@ -1,7 +1,7 @@
 import {
   ComponentControls,
   Story,
-  StoriesDoc,
+  Document,
   StoryComponents,
   getComponentName,
   controlsFromProps,
@@ -9,7 +9,7 @@ import {
 
 export const addSmartControls = (
   story: Story,
-  doc: StoriesDoc,
+  doc: Document,
   components: StoryComponents,
 ): ComponentControls | null => {
   if (!story.arguments || story.arguments.length < 1) {

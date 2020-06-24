@@ -18,7 +18,7 @@ export const overview = () => (
           <DocumentItem
             config={storeProvider.config}
             link={storeProvider.getPagePath(page.type, page.title)}
-            page={page}
+            doc={page}
           />
         ) : null;
       }}

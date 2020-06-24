@@ -1,7 +1,7 @@
-import { Story, StoriesDoc, StoryParameters } from '@component-controls/core';
+import { Story, Document, StoryParameters } from '@component-controls/core';
 
 export const componentsFromParams = (
-  element: StoriesDoc | Story | StoryParameters,
+  element: Document | Story | StoryParameters,
 ): string[] => {
   const result = [];
   let { component } = element;

@@ -7,7 +7,7 @@ import {
   PageType,
   defPageType,
   Pages,
-  StoriesDoc,
+  Document,
 } from '@component-controls/core';
 import { BlockContext } from '../context';
 import { DocumentItem } from '../DocumentItem';
@@ -33,6 +33,7 @@ export const Search = () => {
         this.field('description');
         this.field('body');
         this.field('author');
+        this.field('stories');
         this.field('component');
         storeProvider.pages.forEach(page => {
           this.add({
@@ -42,6 +43,9 @@ export const Search = () => {
             description: page.description,
             body: page.source,
             author: page.author,
+            stories: page.stories
+              ?.map(story => story.split('-').join(' '))
+              .join(' '),
             component: Object.keys(page.components).join(' '),
           });
         });
@@ -52,10 +56,10 @@ export const Search = () => {
       .slice(0, 20)
       .filter(
         (item: { ref: string }) =>
-          storeProvider.getStoryDoc(item.ref) as StoriesDoc,
+          storeProvider.getStoryDoc(item.ref) as Document,
       )
       .map((item: { ref: string }) => {
-        const page = storeProvider.getStoryDoc(item.ref) as StoriesDoc;
+        const page = storeProvider.getStoryDoc(item.ref) as Document;
         return { ...page, id: page.title };
       });
     setItems(newItems);
@@ -63,7 +67,7 @@ export const Search = () => {
   const onSearch = (search: string) => {
     setSearch(search);
   };
-  const onSelectItem = (item: StoriesDoc) => {
+  const onSelectItem = (item: Document) => {
     const newurl = `${window.location.origin}${storeProvider.getPagePath(
       item.type,
       item.title,
@@ -75,7 +79,7 @@ export const Search = () => {
     }
   };
   return (
-    <SearchInput<StoriesDoc>
+    <SearchInput<Document>
       aria-label="full text search"
       onSearch={onSearch}
       items={items}
@@ -87,7 +91,7 @@ export const Search = () => {
           sx={{ borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}` }}
           config={storeProvider.config}
           link={storeProvider.getPagePath(props.item.type, props.item.title)}
-          page={props.item}
+          doc={props.item}
         />
       )}
     </SearchInput>
