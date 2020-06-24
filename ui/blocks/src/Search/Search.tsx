@@ -33,6 +33,7 @@ export const Search = () => {
         this.field('description');
         this.field('body');
         this.field('author');
+        this.field('stories');
         this.field('component');
         storeProvider.pages.forEach(page => {
           this.add({
@@ -42,6 +43,9 @@ export const Search = () => {
             description: page.description,
             body: page.source,
             author: page.author,
+            stories: page.stories
+              ?.map(story => story.split('-').join(' '))
+              .join(' '),
             component: Object.keys(page.components).join(' '),
           });
         });
