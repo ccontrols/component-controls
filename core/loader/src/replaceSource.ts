@@ -12,11 +12,12 @@ export const replaceSource = (
   hashKey: string,
 ) => {
   const imports = `
-const imports = {};
+
 const configJSON = ${
     configFilePath ? `require("${configFilePath}")` : 'undefined'
   };
-
+  
+  const imports = {};
 ${stories
   .map(story => `imports['${story.absPath}'] = require(${story.relPath});`)
   .join('\n')}
@@ -62,12 +63,15 @@ ${stories
   const exports = `module.exports = store;\n`;
   const hmr = `
   if (module.hot) {
+    module.hot.accept(function() {
+      console.log('HMR CALLBACK',this);
+    });
     ${stories
       .map(
         story => `
     module.hot.accept(${story.relPath}, function() {
       console.log('HMR',${story.relPath});
-    })    
+    });    
     `,
       )
       .join('\n')}

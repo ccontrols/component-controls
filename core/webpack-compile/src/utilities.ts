@@ -1,4 +1,10 @@
-import * as webpack from 'webpack';
+import webpack, {
+  Configuration,
+  Compiler,
+  Stats,
+  HotModuleReplacementPlugin,
+} from 'webpack';
+import * as chalk from 'chalk';
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 import * as path from 'path';
@@ -16,17 +22,19 @@ export type CompileRunProps = CompileProps & {
   /**
    * webpack mode
    */
-  mode: webpack.Configuration['mode'];
+  mode: Configuration['mode'];
 };
 
-const createConfig = (options: CompileRunProps): webpack.Configuration => {
+const createConfig = (options: CompileRunProps): Configuration => {
   const { webPack, presets, configPath, mode, bundleAnalyzer } = options;
   const plugins = [
     new LoaderPlugin({
       config: configPath,
       escapeOutput: mode === 'development',
     }),
+    new HotModuleReplacementPlugin({}),
   ];
+
   if (bundleAnalyzer) {
     plugins.push(
       new BundleAnalyzerPlugin({
@@ -44,7 +52,6 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
           '@component-controls/loader/story-store-data.js',
         ),
       },
-
       output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',
@@ -81,15 +88,15 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
 
 export const runCompiler = (
   run: (
-    compiler: webpack.Compiler,
-    callback: (err: Error, stats: webpack.Stats) => void,
+    compiler: Compiler,
+    callback: (err: Error, stats: Stats) => void,
   ) => void,
 
   props: CompileRunProps,
 ): Promise<CompileResults> => {
   return new Promise((resolve, reject) => {
     //@ts-ignore
-    const compiler = webpack.default(createConfig(props));
+    const compiler = webpack(createConfig(props));
     run(compiler, (err, stats) => {
       if (err) {
         console.error(err);
@@ -103,6 +110,10 @@ export const runCompiler = (
         console.error(error);
         return reject(error);
       }
+      console.log(
+        chalk.bgRgb(244, 147, 66)('@bundle generated: '),
+        require.resolve('@component-controls/loader/store'),
+      );
       const { store } = require('@component-controls/loader/store');
       resolve({ store, stats });
     });
