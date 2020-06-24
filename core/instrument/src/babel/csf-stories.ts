@@ -169,7 +169,7 @@ export const extractCSFStories = (
   });
   if (store.doc) {
     //@ts-ignore
-    store.doc.components = components;
+    store.doc.componentsLookup = components;
   } else {
     throw new Error(`stories should have one default export`);
   }

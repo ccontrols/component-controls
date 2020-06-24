@@ -84,8 +84,8 @@ export const extractStoreComponent = async (
 ) => {
   if (store.doc) {
     const doc: Document = store.doc;
-    if (doc.components) {
-      const componentNames = Object.keys(doc.components);
+    if (doc.componentsLookup) {
+      const componentNames = Object.keys(doc.componentsLookup);
       if (componentNames) {
         for (const componentName of componentNames) {
           const { component, componentPackage } = await extractComponent(
@@ -104,7 +104,7 @@ export const extractStoreComponent = async (
               `${component.request ?? filePath}-${componentName}`,
             );
             store.components[componentKey] = component;
-            doc.components[componentName] = componentKey;
+            doc.componentsLookup[componentName] = componentKey;
           }
         }
       }
