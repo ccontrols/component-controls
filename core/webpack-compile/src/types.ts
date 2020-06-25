@@ -18,11 +18,6 @@ export interface CompileProps {
    * path to the configuration file e.g : '.storybook'
    */
   configPath?: string;
-
-  /**
-   * if true, will display webpack analyzer results
-   */
-  bundleAnalyzer?: boolean;
 }
 
 /**

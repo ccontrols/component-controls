@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build-sample": "gatsby build",
-    "start": "gatsby develop"
+    "start": "gatsby develop -p 9020"
   },
   "repository": {
     "type": "git",
