@@ -1,7 +1,7 @@
 {
   "name": "component-controls-gatsby",
   "private": true,
-  "version": "1.5.2",
+  "version": "1.5.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,8 +14,8 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.5.2",
-    "@component-controls/pages": "^1.5.2",
+    "@component-controls/gatsby-theme-stories": "^1.5.3",
+    "@component-controls/pages": "^1.5.3",
     "gatsby": "^2.22.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
