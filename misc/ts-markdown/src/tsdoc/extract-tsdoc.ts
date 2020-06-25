@@ -20,6 +20,7 @@ app.bootstrap({
   includeDeclarations: true,
   excludeExternals: true,
   excludePrivate: true,
+  esModuleInterop: true,
 });
 
 export const extractTSDoc = (
