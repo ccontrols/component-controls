@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+* remove log ([9b3a8d5](https://github.com/ccontrols/component-controls/commit/9b3a8d5e2de5ded1b5307e80625e7e0e00bb9c64))
+
+
+
+
+
 # [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
 
 
