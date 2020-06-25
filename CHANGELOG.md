@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* action items title to node ([7047031](https://github.com/ccontrols/component-controls/commit/704703162e131b31d7050ed6e526d85288d3d9db))
+* add stories names to search index ([923c546](https://github.com/ccontrols/component-controls/commit/923c546fcfc958805b1bb8ccacc6b2cb34a08f53))
+* auto-expand first row ([9f35f67](https://github.com/ccontrols/component-controls/commit/9f35f6793c76112578a89356d70c2c0b755e7b7b))
+* block expand styling ([fe1f105](https://github.com/ccontrols/component-controls/commit/fe1f1050af88eb4b43d1f6ddee531541db1d5caa))
+* componentsLookup ([a8f0f43](https://github.com/ccontrols/component-controls/commit/a8f0f43af7f1b00cd6feb294f50a183552469a4e))
+* dark mode removed from theme context ([74d3b51](https://github.com/ccontrols/component-controls/commit/74d3b51b0f7f34418403a57689b231f21efab4c2))
+* document id ([29a2a48](https://github.com/ccontrols/component-controls/commit/29a2a48c81061cc7f70a0b27bb30fa66125ca267))
+* merge build config arrays ([173753e](https://github.com/ccontrols/component-controls/commit/173753ea056904408a1980fe1bb6113441e39168))
+* normalize-url lib issue under safari ([95303f8](https://github.com/ccontrols/component-controls/commit/95303f873b98219ba89b3cfb6d77a2b6183fd282))
+* remove color mode deps ([8b9e463](https://github.com/ccontrols/component-controls/commit/8b9e463b6a6864a8aef2f39c35725a81807c7ecf))
+* search issue with mock context ([3604a8f](https://github.com/ccontrols/component-controls/commit/3604a8f00dd0058d2fda237f497d5b1ef4ff9606))
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+* storybook beta breaking SET_CURRENT_STORY ([11e0386](https://github.com/ccontrols/component-controls/commit/11e0386e98f4e49afc7b0cbc8360850d28ed83e7))
+* storybook changing stories context ([780aed4](https://github.com/ccontrols/component-controls/commit/780aed48a0585c112e03a1df9b45c375cccf66e7))
+
+
+### Features
+
+* add startup script combining bootstrap, build, and dev ([cec2086](https://github.com/ccontrols/component-controls/commit/cec2086319e87bdceeb583f7fa911a6c6d85358f))
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+* color-coded tags and page types ([67a8047](https://github.com/ccontrols/component-controls/commit/67a80479819bab9375e92217565416f2237573f4))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+* toolbar actionbar styling ([b37084a](https://github.com/ccontrols/component-controls/commit/b37084a9eb078423cda27b00348282649401829d))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+### Reverts
+
+* Revert "docs: update api docs" ([8ef2224](https://github.com/ccontrols/component-controls/commit/8ef2224b9a50479077be76091f2e6621cdb7dd87))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

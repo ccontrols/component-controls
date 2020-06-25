@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+### Features
+
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package component-controls-gatsby
