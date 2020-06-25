@@ -10,7 +10,9 @@ module.exports = function(content: string) {
   const params = JSON.parse(this.query.slice(1));
   //@ts-ignore
   const config = loadConfiguration(this.rootContext, params.config);
-  store.buildConfig = deepMergeArrays(defaultBuildConfig, config?.config);
+  store.buildConfig = config?.config
+    ? deepMergeArrays(defaultBuildConfig, config.config)
+    : defaultBuildConfig;
 
   const stories: StoryPath[] = (config ? extractStories(config) || [] : []).map(
     fileName => ({
