@@ -10,8 +10,7 @@ type: tutorial
 Create a new folder
 
 ```sh
-mkdir my-gatsby-project
-cd my-gatsby-project
+mkdir my-gatsby-project && cd my-gatsby-project
 ```
 
 initialize the project
@@ -81,3 +80,21 @@ module.exports = {
 };
 ```
 
+### Create documentation folder
+
+create a folder to store your documentation files (the same as specified in the configuration file above):
+```sh
+mkdir src && mkdir src/docs
+```
+
+### Create an MDX documentation file
+
+in `src/docs/first-page.mdx`:
+
+```mdx
+---
+title: First Page
+---
+
+# My First doc page
+```
