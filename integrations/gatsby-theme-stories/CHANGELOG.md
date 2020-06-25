@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+
+### Bug Fixes
+
+* config folder unexistant ([984e2a6](https://github.com/ccontrols/component-controls/commit/984e2a6bf3dfbfeb01740d340c8f687590b8fd52))
+
+
+
+
+
 ## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
 
 
