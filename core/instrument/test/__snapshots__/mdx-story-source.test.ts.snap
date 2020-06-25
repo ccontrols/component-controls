@@ -4,7 +4,7 @@ exports[`mdx-story-source external-source.mdx 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {},
     "date": 2020-05-18T16:31:44.953Z,
     "dateModified": 2020-05-19T04:01:28.289Z,
     "title": "MDX",
@@ -80,7 +80,7 @@ exports[`mdx-story-source external-source-deconstructed-props.mdx 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {},
     "date": 2020-05-18T16:31:44.949Z,
     "dateModified": 2020-05-19T04:06:48.584Z,
     "title": "MDX",
@@ -201,7 +201,7 @@ exports[`mdx-story-source external-source-props.mdx 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {},
     "date": 2020-05-18T16:31:44.950Z,
     "dateModified": 2020-05-19T04:35:36.801Z,
     "title": "MDX",
@@ -334,7 +334,7 @@ exports[`mdx-story-source simple-source.mdx 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {},
     "date": 2020-05-18T16:31:44.955Z,
     "dateModified": 2020-05-19T01:05:17.730Z,
     "title": "MDX",
@@ -412,7 +412,7 @@ exports[`mdx-story-source simple-source-props.mdx 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {},
     "date": 2020-05-18T16:31:44.954Z,
     "dateModified": 2020-05-19T04:04:37.100Z,
     "title": "MDX",

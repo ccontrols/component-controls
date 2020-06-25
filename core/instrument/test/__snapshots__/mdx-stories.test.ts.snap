@@ -15,7 +15,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "2855216c2faa4ab43ed978e3ff6743e4",
     },
     "date": 2020-03-07T05:21:15.061Z,
@@ -49,6 +49,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -99,7 +100,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
     },
     "date": 2020-03-07T05:21:58.603Z,
@@ -133,6 +134,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -238,7 +240,7 @@ export default Button;
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
     },
     "date": 2020-03-07T04:45:17.122Z,
@@ -272,6 +274,7 @@ export default Button;
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -312,6 +315,7 @@ export default Button;
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -379,7 +383,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "c63d685efb0c65f18ffc63184e852ef4",
     },
     "date": 2020-03-07T05:26:10.375Z,
@@ -413,6 +417,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -558,7 +563,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
     },
     "date": 2020-03-07T05:24:18.801Z,
@@ -592,6 +597,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -703,7 +709,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "fe664c2ffbbcacffdac896ace94db697",
     },
     "date": 2020-03-07T05:23:10.931Z,
@@ -737,6 +743,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -833,7 +840,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "0a73df5cffa26ca62ec534813a77384f",
     },
     "date": 2020-03-07T05:25:12.973Z,
@@ -867,6 +874,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",

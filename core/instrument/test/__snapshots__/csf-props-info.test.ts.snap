@@ -2419,7 +2419,8 @@ user setting can display only props table or only controls",
   },
   "doc": Object {
     "component": "PropsTable",
-    "components": Object {
+    "components": Object {},
+    "componentsLookup": Object {
       "PropsTable": "26090286b0d42fa7a92590e6843f1687",
     },
     "date": 2020-04-18T23:11:55.469Z,
@@ -2451,6 +2452,7 @@ user setting can display only props table or only controls",
         "theme-ui": "next",
       },
       "devDependencies": Object {
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@theme-ui/presets": "^0.3.0",
         "@types/jest": "^25.1.2",
         "@types/lunr": "^2.3.3",
@@ -2498,6 +2500,7 @@ user setting can display only props table or only controls",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",

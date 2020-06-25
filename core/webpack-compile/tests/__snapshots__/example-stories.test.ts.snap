@@ -536,7 +536,8 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
         "date": 2020-06-17T18:28:16.386Z,
@@ -660,6 +661,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.388Z,
         "dateModified": 2020-06-24T16:59:00.124Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
@@ -1945,6 +1947,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "controls": Object {
           "name": Object {
             "label": "Name",
@@ -2073,7 +2076,8 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
         "date": 2020-06-17T18:28:16.389Z,
@@ -2267,7 +2271,8 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
         "date": 2020-06-17T18:28:16.390Z,
@@ -2461,6 +2466,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.391Z,
         "dateModified": 2020-06-17T18:28:16.391Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",

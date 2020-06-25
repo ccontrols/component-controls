@@ -15,7 +15,8 @@ Object {
   },
   "doc": Object {
     "component": "Toggle",
-    "components": Object {
+    "components": Object {},
+    "componentsLookup": Object {
       "Toggle": "a7e5ad523f225128d8b53302689e5a27",
     },
     "date": 2020-03-07T04:02:17.329Z,
@@ -46,6 +47,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.3.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
