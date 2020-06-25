@@ -60,11 +60,11 @@ export const PanelContainer: FC<PanelContainerProps> = ({
 
   const findPanel = useCallback(
     (id: PanelContainerOwnProps['openTab']) => {
-      return panels.findIndex((p: ActionItem) => p.id === id || p.title === id);
+      return panels.findIndex((p: ActionItem) => p.id === id || p.node === id);
     },
     // do not update on each panel change
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [JSON.stringify(panels.map(p => p.id || p.title))],
+    [JSON.stringify(panels.map(p => p.id || p.node))],
   );
   React.useEffect(() => {
     const index = findPanel(openTab);
@@ -77,7 +77,7 @@ export const PanelContainer: FC<PanelContainerProps> = ({
         return panel.panel
           ? {
               ...panel,
-              title: `${tabsIndex === index ? 'close' : 'open'} ${panel.title}`,
+              node: `${tabsIndex === index ? 'close' : 'open'} ${panel.node}`,
               onClick: (e: MouseEvent<HTMLButtonElement>) => {
                 if (index < 0) {
                   return undefined;
@@ -135,11 +135,11 @@ export const PanelContainer: FC<PanelContainerProps> = ({
               }}
             >
               {panels.map((panel: ActionItem) => (
-                <Tab key={`playground_tab_${panel.title}`}>{panel.title}</Tab>
+                <Tab key={`playground_tab_${panel.node}`}>{panel.node}</Tab>
               ))}
             </TabList>
             {panels.map((panel: ActionItem) => (
-              <TabPanel key={`playground_panel_${panel.title}`}>
+              <TabPanel key={`playground_panel_${panel.node}`}>
                 {panel.panel}
               </TabPanel>
             ))}
