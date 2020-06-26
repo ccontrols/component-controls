@@ -1,0 +1,63 @@
+---
+title: Writing Documentation/MDX Documentation
+route: /tutorial/mdx-documentation
+type: tutorial
+tags:
+  - mdx
+  - documentation
+order: 0
+---
+import Transclusion from '../../sections/transclusion.mdx';
+
+# MDX
+
+MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents.
+You can import components, such as interactive charts or alerts, and embed them within your content.
+This makes writing long-form content with components a blast :rocket:.
+
+more: [mdxjs](https://mdxjs.com)
+
+# Frontmatter
+
+When creating MDX documentation files, you can include a set of key value pairs that can be used to provide structured data. The format used is known as [frontmatter](https://github.com/jonschlinkert/gray-matter)
+
+```yaml
+---
+title: My Document
+route: /tutorials/mydoc
+type: tutorial
+tags:
+  - mdx
+  - documentation
+order: 0
+---
+```
+
+[Check all Document fields](/tutorial/document)
+
+# Import React components
+
+In MDX, you can import any react components and use them to create rich documentation pages:
+
+```jsx
+---
+title: My Button
+---
+import { Button } from 'theme-ui';
+
+<Button onClick={() => alert('clicked')}>click me</Button>
+```
+
+
+# Transclusion
+
+MDX allows you to import external MDX and MD files statically and display their content:
+
+```jsx
+---
+title: Test Transclusion
+---
+import Transclusion from '../sections/transclusion.mdx';
+
+<Transclusion />
+```

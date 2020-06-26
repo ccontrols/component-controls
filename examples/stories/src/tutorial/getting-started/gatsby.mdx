@@ -1,6 +1,9 @@
 ---
 title: Getting started/Gatsby
 type: tutorial
+order: 0
+tags:
+  - gatsby
 ---
 
 # Getting started with Gatsby
@@ -97,4 +100,52 @@ title: First Page
 ---
 
 # My First doc page
+```
+
+more: [writing mdx documentation](/tutorial/mdx-documentation)
+
+
+### Create an MDX "story" file
+
+Assuming you have a `Button` component, you can write stories(examples) for it:
+
+in `src/docs/first-story.mdx`:
+
+```mdx
+---
+title: First Story
+---
+import { Button } from '../components/Button';
+import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@component-controls/blocks';
+
+
+# My First doc page
+
+<ComponentSource of={Button} title='Component source' />
+
+<Playground description="Button story">
+  <Story name="simple">
+    <Button>
+      click me
+  </Button>
+  </Story>
+</Playground>
+
+<StorySource id="." />
+
+<PropsTable of={Button} />
+```
+
+more: [writing mdx stories](/tutorial/mdx-stories)
+
+### Start the project
+
+```sh
+yarn start
+```
+
+### Buid a static site
+
+```sh
+yarn build
 ```

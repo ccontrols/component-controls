@@ -37,19 +37,25 @@ export interface SidebarProps {
   activeTab?: string;
 }
 
+type OrderedMenuItem = MenuItem & {
+  order?: number;
+};
+
+type OrderedMenuItems = OrderedMenuItem[];
+
 const createMenuItem = (
   storeProvider: StoryStore,
   doc: Document,
   type: PageType,
   levels: string[],
   activeTab?: string,
-  parent?: MenuItems,
-  item?: MenuItem,
+  parent?: OrderedMenuItems,
+  item?: OrderedMenuItem,
 ): MenuItem => {
   if (levels.length < 1) {
     return item || {};
   }
-  const newItem: MenuItem = {
+  const newItem: OrderedMenuItem = {
     id: levels[0],
     label: levels[0],
   };
@@ -59,6 +65,7 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
+      newItem.order = doc.order;
       newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
     }
     parent.push(newItem);
@@ -91,15 +98,29 @@ export const Sidebar: FC<SidebarProps> = ({
   const { label = '' } = pages?.[type] || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
+      const sortByOrder = (items: OrderedMenuItems) => {
+        return items.sort((a, b) => {
+          if (a.items || b.items) {
+            if (a.items) {
+              a.items = sortByOrder(a.items);
+            }
+            if (b.items) {
+              b.items = sortByOrder(b.items);
+            }
+            return 0;
+          }
+          return (a.order || 0) - (b.order || 0);
+        });
+      };
       const docs: Pages = storeProvider.getPageList(type);
-
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
         createMenuItem(storeProvider, doc, type, levels, activeTab, acc);
         return acc;
       }, []);
-      return menuItems;
+      const sortedItems = sortByOrder(menuItems);
+      return sortedItems;
     }
     return [];
   }, [type, activeTab, storeProvider]);

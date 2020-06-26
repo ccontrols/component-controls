@@ -268,6 +268,11 @@ export interface Document {
    * document author
    */
   author?: string;
+
+  /**
+   * document order, used to sort documents within the same parent
+   */
+  order?: number;
 }
 
 export const dateToLocalString = (date?: Date): string =>

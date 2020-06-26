@@ -4,7 +4,9 @@ module.exports = {
   stories: [
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/authors/*.mdx',
-    '../../stories/src/tutorial/*.mdx',
+    '../../stories/src/tutorial/getting-started/*.mdx',
+    '../../stories/src/tutorial/write-documentation/*.mdx',
+    '../../stories/src/tutorial/parts/*.mdx',
     '../../stories/src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../src/stories/*.stories.(js|jsx|tsx|mdx)',
     '../../../ui/app/src/**/*.stories.(js|jsx|tsx|mdx)',
