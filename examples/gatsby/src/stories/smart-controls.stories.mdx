@@ -1,0 +1,48 @@
+import { Meta} from '@component-controls/storybook';
+import { PropsTable, Playground, Story, ComponentSource, StorySource  } from '@component-controls/blocks';
+import { Button } from '../../../stories/src/components/Button';
+
+<Meta title="Introduction/MDX Smart" parameters={{component: Button}} />
+
+
+# Smart controls
+<ComponentSource of={Button} title='Component source' />
+
+<Story id="." />
+
+<StorySource id="." />
+
+<PropsTable of={Button} />
+
+
+<Playground>
+  <Story name="smart story">
+    {(props) => (
+      <Button label="default" {...props}/>
+    )}  
+  </Story>
+</Playground>
+
+
+# Small story with custom controls
+
+<Playground>
+  <Story name="small story" 
+    controls={{
+      text: {type: 'text', value: 'Hello'},
+    }}
+    >
+    {({ text }) => (
+      <Button label={text}/>
+    )}  
+  </Story>
+</Playground>
+
+# Story with no parameters == no smart controls
+
+<Playground>
+  <Story name="no controls">
+      <Button label="Hello"/>
+      <Button label="Second button"/>
+  </Story>
+</Playground>
