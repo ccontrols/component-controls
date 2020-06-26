@@ -4,6 +4,6 @@ import { ViewportBlock } from '@component-controls/viewport-plugin';
 export const ViewportPage: FC = () => (
   <>
     <Title />
-    <ViewportBlock />
+    <ViewportBlock title="Viewport" />
   </>
 );
