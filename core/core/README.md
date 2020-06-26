@@ -124,9 +124,9 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## Document
 
-a group of stories. Usually multiple stories are in one  csf file
-and the 'group' is the default export
-in the case of MDX stories, the doc is created using a &lt;Meta /> tag
+A documentation file's metadata.
+For MDX files, fromtmatter is used to declare the document properties.
+For "es modules" documetation files, the default export is used.
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L158)_
 
@@ -134,35 +134,36 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ### properties
 
-| Name                | Type                                    | Description                                                                                                                                     |
-| ------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                                     | for MDX pages, this is an MDXContent function, to be rendered inside a MDXProvider                                                              |
-| `author`            | string                                  | document author                                                                                                                                 |
-| `component`         | string \| object                        | id for component associated with the stories file                                                                                               |
-| `componentsLookup*` | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'      |
-| `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                           |
-| `date`              | [Date](#date)                           |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                        |
-| `dateModified`      | [Date](#date)                           |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                      |
-| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                  |
-| `description`       | string                                  |  documentation file description                                                                                                                 |
-| `fileName`          | string                                  | file name of the file of stories                                                                                                                |
-| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration |
-| `package`           | string                                  | lookup into the global store of PackageInfo package.json                                                                                        |
-| `parameters`        | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                              |
-| `route`             | string                                  | if provided, will be used as the route for the page if not provided, the title in lowercase will be used as the route                           |
-| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                            |
-| `source`            | string                                  | source code of the entire file of stories                                                                                                       |
-| `stories`           | string\[]                               | list of stories contained in the file/groups                                                                                                    |
-| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                      |
-| `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                         |
-| `title*`            | string                                  | title of the groups of stories contained in the doc file. used to generate story ids                                                            |
-| `type`              | [PageType](#pagetype)                   | document type - blogs a and stories. By default - storie                                                                                        |
+| Name                | Type                                    | Description                                                                                                                                                                                  |
+| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`           | any                                     | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`            | string                                  | document author                                                                                                                                                                              |
+| `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
+| `componentsLookup*` | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
+| `date`              | [Date](#date)                           |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`      | [Date](#date)                           |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                                                               |
+| `description`       | string                                  |  documentation file description                                                                                                                                                              |
+| `fileName`          | string                                  | file name of the file of stories                                                                                                                                                             |
+| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
+| `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`           | string                                  | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `parameters`        | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                                                                           |
+| `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
+| `source`            | string                                  | source code of the entire file of stories                                                                                                                                                    |
+| `stories`           | string\[]                               | list of story ids contained in the document.                                                                                                                                                 |
+| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
+| `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
+| `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`              | [PageType](#pagetype)                   | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 
 ## Documents
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L290)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L300)_
 
 `title`\*: string: [Document](#document)
 
@@ -193,7 +194,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L313)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L323)_
 
 
 
@@ -255,7 +256,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L283)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L293)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -263,7 +264,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of repositories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L306)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L316)_
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
@@ -280,13 +281,13 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L299)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L309)_
 
 `id`\*: string: [Story](#story)
 
 ## Pages
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L294)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L304)_
 
 [Document](#document)\[]
 
@@ -307,7 +308,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L273)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L283)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -320,7 +321,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## getDocPath
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L338)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L348)_
 
 **function** getDocPath(`pageType`\*: [PageType](#pagetype), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `name`\*: string, `activeTab`: string): string;
 
@@ -337,7 +338,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## getStoryPath
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L355)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L365)_
 
 **function** getStoryPath(`story`: [Story](#story), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `activeTab`: string): string;
 
