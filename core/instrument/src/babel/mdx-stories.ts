@@ -187,6 +187,8 @@ export const extractMDXStories = (props: any) => (
             break;
           }
           default:
+            const attributes = collectAttributes(node);
+            collectComponent(attributes);
             break;
         }
         // console.log(node.name.name, attributes);

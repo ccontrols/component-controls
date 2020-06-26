@@ -1,7 +1,7 @@
 import { Story, Document, StoryParameters } from '@component-controls/core';
 
 export const componentsFromParams = (
-  element: Document | Story | StoryParameters,
+  element: (Document | Story | StoryParameters) & { of?: string },
 ): string[] => {
   const result = [];
   let { component } = element;
@@ -10,6 +10,10 @@ export const componentsFromParams = (
   }
   if (typeof component === 'string') {
     result.push(component);
+  }
+  const { of: componentShorthand } = element;
+  if (typeof componentShorthand === 'string') {
+    result.push(componentShorthand);
   }
   let { subcomponents } = element;
   if (!subcomponents && element.parameters) {
