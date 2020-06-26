@@ -40,8 +40,6 @@
     "@component-controls/core": "^1.5.1",
     "@component-controls/loader": "^1.5.5",
     "@component-controls/pages": "^1.5.5",
-    "@component-controls/react-docgen-info": "^1.5.1",
-    "@component-controls/react-docgen-typescript-info": "^1.5.1",
     "@component-controls/store": "^1.5.5",
     "@component-controls/storybook-custom-docs": "^1.5.0",
     "@component-controls/webpack-configs": "^1.5.5",
@@ -57,9 +55,7 @@
     "@storybook/addons": "next",
     "@storybook/api": "next",
     "@storybook/client-api": "next",
-    "@types/node": "^13.7.0",
-    "babel-loader": "^8.0.6",
-    "babel-preset-react-app": "^9.0.0"
+    "@types/node": "^13.7.0"
   },
   "peerDependencies": {
     "@storybook/addons": "*",
