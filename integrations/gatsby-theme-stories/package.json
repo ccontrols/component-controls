@@ -40,6 +40,8 @@
     "@component-controls/app": "^1.5.4",
     "@component-controls/core": "^1.5.1",
     "@component-controls/pages": "^1.5.4",
+    "@component-controls/react-docgen-info": "^1.5.1",
+    "@component-controls/react-docgen-typescript-info": "^1.5.1",
     "@component-controls/webpack-compile": "^1.5.4",
     "gatsby": "^2.22.10",
     "gatsby-plugin-react-helmet": "^3.3.2",
