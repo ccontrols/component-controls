@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+
+### Bug Fixes
+
+* webpack configs dependencies ([faaa608](https://github.com/ccontrols/component-controls/commit/faaa6082651c49e686715a3cfa2b39718f1a34e4))
+
+
+
+
+
 ## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
 
 **Note:** Version bump only for package @component-controls/webpack-configs
