@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx inherit webpack config ([74faadd](https://github.com/ccontrols/component-controls/commit/74faaddea63de1e3266396a8056869d2049ca1bb))
+
+
+
+
+
 ## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
 
 **Note:** Version bump only for package component-controls-gatsby

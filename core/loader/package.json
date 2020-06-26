@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/loader",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Webpack loader for component controls instrumentation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -37,7 +37,7 @@
   "dependencies": {
     "@component-controls/config": "^1.5.3",
     "@component-controls/core": "^1.5.1",
-    "@component-controls/instrument": "^1.5.3",
+    "@component-controls/instrument": "^1.5.4",
     "@storybook/csf": "^0.0.1",
     "chalk": "^4.0.0",
     "js-string-escape": "^1.0.1",

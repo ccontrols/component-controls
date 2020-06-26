@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx components of prop ([d2d968f](https://github.com/ccontrols/component-controls/commit/d2d968f24a3ed7955af0fd328dc2f6659bf4d9bf))
+
+
+
+
+
 ## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
 
 
