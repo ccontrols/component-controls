@@ -1,4 +1,4 @@
-import { Story, StoriesDoc, Stories } from '@component-controls/core';
+import { Story, Document, Stories } from '@component-controls/core';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import { extractFunctionParameters } from './extract-function-parameters';
@@ -70,7 +70,7 @@ export const extractCSFStories = (
           (acc, componentName) => ({ ...acc, [componentName]: undefined }),
           components,
         );
-        const doc: StoriesDoc = {
+        const doc: Document = {
           ...attributes,
           title,
           components: {},
@@ -169,7 +169,7 @@ export const extractCSFStories = (
   });
   if (store.doc) {
     //@ts-ignore
-    store.doc.components = components;
+    store.doc.componentsLookup = components;
   } else {
     throw new Error(`stories should have one default export`);
   }

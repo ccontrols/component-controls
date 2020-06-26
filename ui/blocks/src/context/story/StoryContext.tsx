@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import {
   Story,
-  StoriesDoc,
+  Document,
   StoryComponent,
   PackageInfo,
 } from '@component-controls/core';
@@ -30,7 +30,7 @@ export interface StoryContextProps {
   /**
    * the file/document of stories
    */
-  doc?: StoriesDoc;
+  doc?: Document;
   /**
    * current story's/document's component
    */
@@ -74,7 +74,7 @@ export const useStoryContext = ({
     : id;
   const [data, setData] = useState<{
     story?: Story;
-    doc?: StoriesDoc;
+    doc?: Document;
     component?: StoryComponent;
     docPackage?: PackageInfo;
   }>(getStoryData(storyId, docId));

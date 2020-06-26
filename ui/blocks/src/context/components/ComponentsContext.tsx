@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import {
   Story,
-  StoriesDoc,
+  Document,
   StoryComponents,
   getComponentName,
   PackageInfo,
@@ -21,7 +21,7 @@ export interface ComponentInputProps {
 
 export interface ComponentContextProps {
   components: StoryComponents;
-  doc?: StoriesDoc;
+  doc?: Document;
   story?: Story;
   componentPackage?: PackageInfo;
 }

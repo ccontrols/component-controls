@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-compile",
-  "version": "1.4.0",
+  "version": "1.5.3",
   "description": "Webpack compile api",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-node  -O '{\"module\": \"commonjs\" }' ../../scripts/docs.ts",
+    "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -32,13 +32,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/loader": "^1.4.0",
-    "@component-controls/webpack-configs": "^1.4.0",
+    "@component-controls/loader": "^1.5.3",
+    "@component-controls/webpack-configs": "^1.5.3",
     "memory-fs": "^0.5.0",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "@component-controls/ts-markdown-docs": "^1.5.0",
     "@types/jest": "^25.1.2",
     "@types/memory-fs": "^0.3.2",
     "cross-env": "^5.2.1",

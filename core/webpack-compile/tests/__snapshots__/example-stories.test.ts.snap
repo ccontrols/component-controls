@@ -437,7 +437,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
       "dependencies": undefined,
@@ -450,7 +450,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
       "dependencies": undefined,
@@ -463,7 +463,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
       "dependencies": undefined,
@@ -476,7 +476,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "dependencies": undefined,
@@ -489,7 +489,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "85a1bf440fe016c4719e372255f5ffcb": Object {
       "dependencies": undefined,
@@ -502,7 +502,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "dependencies": undefined,
@@ -515,7 +515,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
       "dependencies": undefined,
@@ -528,7 +528,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.1",
     },
   },
   "stores": Array [
@@ -536,11 +536,12 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
         "date": 2020-06-17T18:28:16.386Z,
-        "dateModified": 2020-06-17T18:28:16.388Z,
+        "dateModified": 2020-06-24T16:52:46.444Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
@@ -660,8 +661,9 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.388Z,
-        "dateModified": 2020-06-17T18:28:16.388Z,
+        "dateModified": 2020-06-24T16:59:00.124Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "684baa68d45c8becd8f39da85795335b",
         "title": "Introduction/Controls",
@@ -1945,6 +1947,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "controls": Object {
           "name": Object {
             "label": "Name",
@@ -2073,7 +2076,8 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
         "date": 2020-06-17T18:28:16.389Z,
@@ -2267,7 +2271,8 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
         "date": 2020-06-17T18:28:16.390Z,
@@ -2461,6 +2466,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.391Z,
         "dateModified": 2020-06-17T18:28:16.391Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",

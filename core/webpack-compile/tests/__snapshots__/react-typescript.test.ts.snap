@@ -41,12 +41,6 @@ Store {
       "from": "./ActionBar",
       "importedName": "ActionBar",
       "imports": Object {
-        "polished": Array [
-          Object {
-            "importedName": "transparentize",
-            "name": "transparentize",
-          },
-        ],
         "react": Array [
           Object {
             "importedName": "FC",
@@ -59,16 +53,8 @@ Store {
         ],
         "theme-ui": Array [
           Object {
-            "importedName": "Theme",
-            "name": "Theme",
-          },
-          Object {
             "importedName": "Box",
             "name": "Box",
-          },
-          Object {
-            "importedName": "Flex",
-            "name": "Flex",
           },
           Object {
             "importedName": "Button",
@@ -96,16 +82,35 @@ actions can accept an order prop, and can also be superimposed",
               "raw": "ActionItems",
             },
           },
+          "themeKey": Object {
+            "defaultValue": "actionbar",
+            "description": "two possible layouts from the theme",
+            "parentName": "ActionBarProps",
+            "type": Object {
+              "name": "enum",
+              "raw": "\\"actionbar\\" | \\"toolbar\\"",
+              "value": Array [
+                Object {
+                  "name": "string",
+                  "value": "actionbar",
+                },
+                Object {
+                  "name": "string",
+                  "value": "toolbar",
+                },
+              ],
+            },
+          },
         },
       },
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 88,
+          "line": 67,
         },
         "start": Object {
           "column": 45,
-          "line": 48,
+          "line": 25,
         },
       },
       "name": "ActionBar",
@@ -113,44 +118,21 @@ actions can accept an order prop, and can also be superimposed",
       "request": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.tsx",
       "source": "/** @jsx jsx */
 import { FC, useMemo } from 'react';
-import { transparentize } from 'polished';
-import { Theme, Box, Flex, Button, jsx } from 'theme-ui';
+import { Box, Button, jsx } from 'theme-ui';
 import { getSortedActions, ActionItems } from './utils';
-import { useTheme } from '../ThemeContext';
+import { Link } from '../Link';
 
 export interface ActionBarProps {
   /**
    * collection of action items
    */
   actions?: ActionItems;
-}
 
-const ActionColors = ({
-  theme,
-  disabled,
-}: {
-  theme: Theme;
-  disabled: boolean | undefined;
-}) => ({
-  backgroundColor: theme.colors?.['action'],
-  color: disabled ? '#ddd' : 'background',
-  //safari fix:
-  WebkitTextFillColor: 'initial',
-  cursor: disabled ? 'not-allowed' : undefined,
-  px: 2,
-  py: 1,
-  lineHeight: 1,
-  borderRadius: 1,
-  display: 'inline-block',
-  boxShadow: \`\${transparentize(
-    0.9,
-    theme.colors?.text as string,
-  )} 0 1px 3px 1px, \${transparentize(
-    0.35,
-    theme.colors?.text as string,
-  )} 0 0 0 1px\`,
-  border: \`1px solid \${theme.colors?.['action'] as string}\`,
-});
+  /**
+   * two possible layouts from the theme
+   */
+  themeKey?: 'actionbar' | 'toolbar';
+}
 
 /**
  * a strip of actions to be attached to a container
@@ -158,44 +140,46 @@ const ActionColors = ({
  * actions can accept an order prop, and can also be superimposed
  *
  */
-export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
-  const theme = useTheme();
+export const ActionBar: FC<ActionBarProps> = ({
+  actions = [],
+  themeKey = 'actionbar',
+}) => {
   const items = useMemo(() => {
     const sortedItems = getSortedActions(actions);
     return sortedItems.map(
-      ({ title, onClick, disabled, 'aria-label': ariaLabel, group }, index) => {
+      ({ node, onClick, 'aria-label': ariaLabel, group, href }, index) => {
         const nextGroup =
           index < sortedItems.length - 1 ? sortedItems[index + 1].group : group;
         return (
           <Box
-            key={\`\${typeof title === 'string' ? title : 'item'}_\${index}\`}
-            variant=\\"actionbar.item\\"
+            key={\`\${typeof node === 'string' ? node : 'item'}_\${index}\`}
+            variant={\`\${themeKey}.item\`}
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
-              a: ActionColors({ theme, disabled }),
-              button: ActionColors({ theme, disabled }),
             }}
           >
-            {typeof title === 'string' ? (
-              <Button
-                onClick={onClick}
-                disabled={disabled}
-                aria-label={ariaLabel}
-              >
-                {title}
-              </Button>
+            {typeof node === 'string' ? (
+              href ? (
+                <Link href={href} aria-label={ariaLabel}>
+                  {node}
+                </Link>
+              ) : (
+                <Button onClick={onClick} aria-label={ariaLabel}>
+                  {node}
+                </Button>
+              )
             ) : (
-              title
+              node
             )}
           </Box>
         );
       },
     );
-  }, [theme, actions]);
+  }, [actions, themeKey]);
   return (
-    <Box variant=\\"actionbar.container\\">
-      <Flex variant=\\"actionbar.inner\\">{items}</Flex>
+    <Box variant={\`\${themeKey}.container\`}>
+      <Box variant={\`\${themeKey}.inner\`}>{items}</Box>
     </Box>
   );
 };
@@ -226,6 +210,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "theme-ui": "next",
       },
       "devDependencies": Object {
+        "@component-controls/ts-markdown-docs": "^1.5.0",
         "@types/jest": "^25.1.2",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -247,7 +232,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.4.0",
+      "version": "1.5.1",
     },
     "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2": Object {
       "dependencies": Object {
@@ -269,6 +254,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "theme-ui": "next",
       },
       "devDependencies": Object {
+        "@component-controls/ts-markdown-docs": "^1.5.0",
         "@types/jest": "^25.1.2",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -290,63 +276,36 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.4.0",
+      "version": "1.5.1",
     },
   },
   "stores": Array [
     Object {
       "doc": Object {
         "component": "ActionBar",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
-        "date": 2020-03-08T15:43:26.826Z,
-        "dateModified": 2020-03-30T22:37:19.836Z,
+        "date": 2020-06-24T21:41:42.550Z,
+        "dateModified": 2020-06-24T21:41:42.551Z,
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
         "title": "Components/ActionBar",
       },
       "filePath": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
       "stories": Object {
-        "disabled": Object {
-          "arguments": Array [],
-          "id": "disabled",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 53,
-            },
-            "start": Object {
-              "column": 24,
-              "line": 41,
-            },
-          },
-          "name": "disabled",
-          "source": "() => (
-  <Container>
-    <ActionBar
-      actions={[
-        {
-          title: 'click action',
-          onClick: () => console.log('clicked'),
-          disabled: true,
-        },
-      ]}
-    />
-  </Container>
-)",
-        },
         "groupEnd": Object {
           "arguments": Array [],
           "id": "groupEnd",
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 126,
+              "line": 123,
             },
             "start": Object {
               "column": 24,
-              "line": 108,
+              "line": 105,
             },
           },
           "name": "groupEnd",
@@ -355,14 +314,14 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
     <ActionBar
       actions={[
         {
-          title: 'item 1',
+          node: 'item 1',
         },
         {
-          title: 'item 2',
+          node: 'item 2',
           group: '1',
         },
         {
-          title: 'item 3',
+          node: 'item 3',
           group: '1',
         },
       ]}
@@ -376,11 +335,11 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 146,
+              "line": 143,
             },
             "start": Object {
               "column": 26,
-              "line": 128,
+              "line": 125,
             },
           },
           "name": "groupStart",
@@ -389,15 +348,15 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
     <ActionBar
       actions={[
         {
-          title: 'item 1',
+          node: 'item 1',
           group: '1',
         },
         {
-          title: 'item 2',
+          node: 'item 2',
           group: '1',
         },
         {
-          title: 'item 3',
+          node: 'item 3',
         },
       ]}
     />
@@ -410,11 +369,11 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 65,
+              "line": 62,
             },
             "start": Object {
               "column": 20,
-              "line": 55,
+              "line": 52,
             },
           },
           "name": "link",
@@ -423,7 +382,7 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
     <ActionBar
       actions={[
         {
-          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          node: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
         },
       ]}
     />
@@ -436,11 +395,11 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 84,
+              "line": 81,
             },
             "start": Object {
               "column": 21,
-              "line": 67,
+              "line": 64,
             },
           },
           "name": "order",
@@ -449,12 +408,12 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
     <ActionBar
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
           order: 1,
         },
         {
-          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          node: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
           onClick: () => console.log('clicked'),
           order: 0,
         },
@@ -469,11 +428,11 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 106,
+              "line": 103,
             },
             "start": Object {
               "column": 24,
-              "line": 86,
+              "line": 83,
             },
           },
           "name": "override",
@@ -482,16 +441,16 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
     <ActionBar
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
           id: 'copy',
         },
         {
-          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          node: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
         {
-          title: 'Copy',
+          node: 'Copy',
           id: 'copy',
         },
       ]}
@@ -500,12 +459,67 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
 )",
         },
         "overview": Object {
-          "arguments": Array [],
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 29,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": undefined,
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 11,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 3,
+                      "line": 0,
+                    },
+                  },
+                  "name": "themeKey",
+                  "usage": Array [
+                    Object {
+                      "loc": Object {
+                        "end": Object {
+                          "column": 24,
+                          "line": 3,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 3,
+                        },
+                      },
+                      "shorthand": undefined,
+                    },
+                  ],
+                  "value": "themeKey",
+                },
+              ],
+            },
+          ],
+          "controls": Object {
+            "themeKey": Object {
+              "options": Array [
+                "actionbar",
+                "toolbar",
+              ],
+              "type": "options",
+              "value": "actionbar",
+            },
+          },
           "id": "overview",
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 39,
+              "line": 40,
             },
             "start": Object {
               "column": 24,
@@ -513,16 +527,17 @@ export const ActionBar: FC<ActionBarProps> = ({ actions = [] }) => {
             },
           },
           "name": "overview",
-          "source": "() => (
+          "source": "({ themeKey }: ActionBarProps) => (
   <Container>
     <ActionBar
+      themeKey={themeKey}
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
         },
         {
-          title: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
+          node: <ExternalLink href=\\"https://google.com\\">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
       ]}

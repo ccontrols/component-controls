@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/blocks
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/blocks
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/blocks
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* add stories names to search index ([923c546](https://github.com/ccontrols/component-controls/commit/923c546fcfc958805b1bb8ccacc6b2cb34a08f53))
+* auto-expand first row ([9f35f67](https://github.com/ccontrols/component-controls/commit/9f35f6793c76112578a89356d70c2c0b755e7b7b))
+* dark mode removed from theme context ([74d3b51](https://github.com/ccontrols/component-controls/commit/74d3b51b0f7f34418403a57689b231f21efab4c2))
+* document id ([29a2a48](https://github.com/ccontrols/component-controls/commit/29a2a48c81061cc7f70a0b27bb30fa66125ca267))
+* normalize-url lib issue under safari ([95303f8](https://github.com/ccontrols/component-controls/commit/95303f873b98219ba89b3cfb6d77a2b6183fd282))
+* search issue with mock context ([3604a8f](https://github.com/ccontrols/component-controls/commit/3604a8f00dd0058d2fda237f497d5b1ef4ff9606))
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+* storybook beta breaking SET_CURRENT_STORY ([11e0386](https://github.com/ccontrols/component-controls/commit/11e0386e98f4e49afc7b0cbc8360850d28ed83e7))
+
+
+### Features
+
+* color-coded tags and page types ([67a8047](https://github.com/ccontrols/component-controls/commit/67a80479819bab9375e92217565416f2237573f4))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

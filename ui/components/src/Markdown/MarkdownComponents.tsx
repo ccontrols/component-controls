@@ -58,7 +58,6 @@ export const markdownComponents: MarkdownComponentType = {
     const { className = '', children } = codeProps || {};
     const arrClass = className.split('-');
     const mdxLanguage = arrClass.length === 2 ? arrClass[1] : 'js';
-
     const language = mdxLanguageMap[mdxLanguage] || mdxLanguage;
     return <Source language={language}>{children}</Source>;
   },

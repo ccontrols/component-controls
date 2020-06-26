@@ -1,7 +1,7 @@
 import {
   StoriesStore,
   Pages,
-  StoriesDoc,
+  Document,
   RunConfiguration,
   getDocPath,
   getStoryPath,
@@ -173,8 +173,8 @@ export class Store implements StoryStore {
     if (this.loadedStore?.docs) {
       if (!this._cachedPages[type]) {
         this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
-          (acc: StoriesDoc[], key: string) => {
-            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
+          (acc: Pages, key: string) => {
+            const doc: Document | undefined = this.loadedStore?.docs[key];
             if (doc) {
               const { type: docTYpe = defPageType } = doc;
               if (docTYpe === type) {
@@ -197,7 +197,7 @@ export class Store implements StoryStore {
   getPrevPage = (
     type: PageType | undefined,
     docId: string,
-  ): StoriesDoc | undefined => {
+  ): Document | undefined => {
     if (docId) {
       const pages = this.getPageList(type);
       const index = pages.findIndex(p => p.title === docId);
@@ -214,7 +214,7 @@ export class Store implements StoryStore {
   getNextPage = (
     type: PageType | undefined,
     docId: string,
-  ): StoriesDoc | undefined => {
+  ): Document | undefined => {
     if (docId) {
       const pages = this.getPageList(type);
       const index = pages.findIndex(p => p.title === docId);

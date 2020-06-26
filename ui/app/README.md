@@ -10,7 +10,6 @@
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>DocPage</ins>](#insdocpageins)
     -   [<ins>DocumentsList</ins>](#insdocumentslistins)
-    -   [<ins>DocumentsListItem</ins>](#insdocumentslistitemins)
     -   [<ins>Footer</ins>](#insfooterins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>DocLink</ins>](#insdoclinkins)
@@ -24,7 +23,6 @@
     -   [<ins>SidebarsMDXPage</ins>](#inssidebarsmdxpageins)
     -   [<ins>SidebarsPage</ins>](#inssidebarspageins)
     -   [<ins>SidebarsStoryPage</ins>](#inssidebarsstorypageins)
-    -   [<ins>TagsList</ins>](#instagslistins)
 
 # Overview
 
@@ -138,20 +136,6 @@ _DocumentsList [source code](https://github.com/ccontrols/component-controls/tre
 | -------- | ------- | ---------------------- |
 | `pages*` | _Pages_ | list of document pages |
 
-## <ins>DocumentsListItem</ins>
-
-displays a single doument item
-
-_DocumentsListItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentsList/DocumentsListItem.tsx)_
-
-### properties
-
-| Name     | Type               | Description                |
-| -------- | ------------------ | -------------------------- |
-| `link*`  | _string_           | link to the document       |
-| `page*`  | _StoriesDoc_       | document to be displayed   |
-| `config` | _RunConfiguration_ | store configuration object |
-
 ## <ins>Footer</ins>
 
 application footer component
@@ -163,6 +147,12 @@ _Footer [source code](https://github.com/ccontrols/component-controls/tree/maste
 application header component
 
 _Header [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/Header/Header.tsx)_
+
+### properties
+
+| Name      | Type                                           | Description |
+| --------- | ---------------------------------------------- | ----------- |
+| `toolbar` | _{ left?: ActionItems; right?: ActionItems; }_ |             |
 
 ## <ins>DocLink</ins>
 
@@ -300,17 +290,5 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 | ----------- | ---------- | --------------- |
 | `type*`     | _PageType_ | page type       |
 | `activeTab` | _string_   | active page tab |
-
-## <ins>TagsList</ins>
-
-row of tags with link to their page
-
-_TagsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/TagsList/TagsList.tsx)_
-
-### properties
-
-| Name   | Type        | Description              |
-| ------ | ----------- | ------------------------ |
-| `tags` | _string\[]_ | string list of tag names |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

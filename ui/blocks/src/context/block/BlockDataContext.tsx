@@ -7,7 +7,7 @@ import {
   StoriesStore,
   StoryComponent,
   StoryComponents,
-  StoriesDoc,
+  Document,
   getComponentName,
   PackageInfo,
 } from '@component-controls/core';
@@ -22,7 +22,7 @@ export interface BlockDataContextProps {
     docId?: string,
   ) => {
     story?: Story;
-    doc?: StoriesDoc;
+    doc?: Document;
     component?: StoryComponent;
     docPackage?: PackageInfo;
     componentPackage?: PackageInfo;
@@ -33,7 +33,7 @@ export interface BlockDataContextProps {
    */
   getComponents: (
     components: { [key: string]: any } | undefined,
-    doc: StoriesDoc | undefined,
+    doc: Document | undefined,
   ) => StoryComponents;
   /**
    *
@@ -94,8 +94,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
       const componentName = getComponentName(storyComponent);
       const component =
-        componentName && doc && doc.components[componentName]
-          ? store.components[doc.components[componentName]]
+        componentName && doc && doc.componentsLookup[componentName]
+          ? store.components[doc.componentsLookup[componentName]]
           : undefined;
       const docPackage =
         doc && doc.package ? store.packages[doc.package] : undefined;
@@ -110,15 +110,15 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
   const getComponents = (
     components: { [key: string]: any } | undefined,
-    doc: StoriesDoc | undefined,
+    doc: Document | undefined,
   ): StoryComponents =>
     store && doc && components
       ? Object.keys(components).reduce((acc, key) => {
           const name = getComponentName(components[key]);
           const component =
             name &&
-            doc?.components[name] &&
-            store?.components[doc.components[name]];
+            doc?.componentsLookup[name] &&
+            store?.components[doc.componentsLookup[name]];
           if (component) {
             return { ...acc, [key]: component };
           } else {

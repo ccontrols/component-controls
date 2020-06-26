@@ -53,9 +53,7 @@ export const loadStoryStore = (
               source,
               component,
               fileName,
-              components,
-              excludeStories,
-              includeStories,
+              componentsLookup,
               package: docPackage,
               ...otherDocProps
             } = doc;

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook-custom-docs",
-  "version": "1.3.0",
+  "version": "1.5.0",
   "description": "Storybook custom docs pages",
   "keywords": [
     "addon",
@@ -18,7 +18,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
+    "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -39,6 +39,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@component-controls/ts-markdown-docs": "^1.5.0",
     "@storybook/addons": "next",
     "@storybook/api": "next",
     "@storybook/client-api": "next",

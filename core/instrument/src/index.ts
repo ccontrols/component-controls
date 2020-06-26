@@ -6,7 +6,7 @@ import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
 import deepMerge from 'deepmerge';
-import { Story, StoriesDoc, getASTSource } from '@component-controls/core';
+import { Story, Document, getASTSource } from '@component-controls/core';
 
 import { extractCSFStories } from './babel/csf-stories';
 import { extractMDXStories } from './babel/mdx-stories';
@@ -68,39 +68,8 @@ const parseSource = async (
     }
   }
   await extractStoreComponent(store, filePath, source, options, ast);
-  const doc: StoriesDoc | undefined = store.doc;
+  const doc: Document | undefined = store.doc;
   if (doc && store.stories) {
-    let includedStories = Object.keys(store.stories);
-    const { includeStories, excludeStories } = doc;
-    if (includeStories) {
-      if (Array.isArray(includeStories)) {
-        includedStories = includedStories.filter(
-          name => includeStories.indexOf(name) > -1,
-        );
-      } else {
-        const match = new RegExp(includeStories);
-        includedStories = includedStories.filter(name => {
-          return name.match(match);
-        });
-      }
-    }
-    if (excludeStories) {
-      if (Array.isArray(excludeStories)) {
-        includedStories = includedStories.filter(
-          name => excludeStories.indexOf(name) === -1,
-        );
-      } else {
-        const match = new RegExp(excludeStories);
-        includedStories = includedStories.filter(name => !name.match(match));
-      }
-    }
-    if (includeStories || excludeStories) {
-      for (var key in store.stories) {
-        if (includedStories.indexOf(key) === -1) {
-          delete store.stories[key];
-        }
-      }
-    }
     const storyPackage = await packageInfo(filePath, options.stories.package);
     if (storyPackage) {
       store.packages[storyPackage.fileHash] = storyPackage;

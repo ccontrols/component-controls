@@ -1,6 +1,6 @@
 import {
   Story,
-  StoriesDoc,
+  Document,
   StoryParameters,
   CodeLocation,
   getASTSource,
@@ -170,8 +170,8 @@ export const extractMDXStories = (props: any) => (
             const exports = transformMDX ? { story: attributes } : undefined;
             const { title } = attributes;
             if (title) {
-              const doc: StoriesDoc = {
-                components: {},
+              const doc: Document = {
+                componentsLookup: {},
                 ...attributes,
                 title,
               };
@@ -196,7 +196,7 @@ export const extractMDXStories = (props: any) => (
 
   if (store.doc && store.doc.title) {
     //@ts-ignore
-    store.doc.components = components;
+    store.doc.componentsLookup = components;
     return store;
   } else {
     return undefined;

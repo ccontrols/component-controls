@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+### Features
+
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+### Reverts
+
+* Revert "docs: update api docs" ([8ef2224](https://github.com/ccontrols/component-controls/commit/8ef2224b9a50479077be76091f2e6621cdb7dd87))
+
+
+
+
+
 # [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
 
 

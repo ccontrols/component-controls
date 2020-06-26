@@ -4,7 +4,7 @@
 /* eslint react/jsx-key: 0 */
 import { jsx } from 'theme-ui';
 import { FC, useState } from 'react';
-import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
+import { Story, Document, PackageInfo } from '@component-controls/core';
 import {
   Source,
   SourceProps,
@@ -14,7 +14,7 @@ import { repositoryActions } from '../utils/repositoryActions';
 
 export interface BaseStoryConfigProps {
   story?: Story;
-  doc?: StoriesDoc;
+  doc?: Document;
   docPackage?: PackageInfo;
   sourceProps: SourceProps;
 }
@@ -35,7 +35,7 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
   }
   if (doc?.source) {
     allActions.push({
-      title: showFileSource ? 'story code' : 'file code',
+      node: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
     });
   }

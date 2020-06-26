@@ -1,7 +1,7 @@
 import {
   ComponentControls,
   Story,
-  StoriesDoc,
+  Document,
   StoryComponents,
   getComponentName,
   controlsFromProps,
@@ -9,7 +9,7 @@ import {
 
 export const addSmartControls = (
   story: Story,
-  doc: StoriesDoc,
+  doc: Document,
   components: StoryComponents,
 ): ComponentControls | null => {
   if (!story.arguments || story.arguments.length < 1) {
@@ -30,13 +30,13 @@ export const addSmartControls = (
   let componentName = getComponentName(storyComponent);
   if (
     !componentName ||
-    (!components[doc.components[componentName]] &&
+    (!components[doc.componentsLookup[componentName]] &&
       typeof doc.component === 'string')
   ) {
     componentName = doc.component as string;
   }
   if (componentName) {
-    const component = components[doc.components[componentName]];
+    const component = components[doc.componentsLookup[componentName]];
 
     if (component?.info) {
       const newControls = controlsFromProps(component.info.props);

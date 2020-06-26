@@ -1,6 +1,4 @@
 import * as webpack from 'webpack';
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
 import * as path from 'path';
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
@@ -20,22 +18,13 @@ export type CompileRunProps = CompileProps & {
 };
 
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
-  const { webPack, presets, configPath, mode, bundleAnalyzer } = options;
+  const { webPack, presets, configPath, mode } = options;
   const plugins = [
     new LoaderPlugin({
       config: configPath,
       escapeOutput: mode === 'development',
     }),
   ];
-  if (bundleAnalyzer) {
-    plugins.push(
-      new BundleAnalyzerPlugin({
-        generateStatsFile: true,
-        statsFilename: 'stats.json',
-      }),
-    );
-  }
-
   const webpackConfig = mergeWebpackConfig(
     {
       mode,

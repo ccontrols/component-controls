@@ -20,7 +20,6 @@
     -   [<ins>IconButton</ins>](#insiconbuttonins)
     -   [<ins>PanelContainer</ins>](#inspanelcontainerins)
     -   [<ins>Popover</ins>](#inspopoverins)
-    -   [<ins>SearchInputItem</ins>](#inssearchinputitemins)
     -   [<ins>SearchInput</ins>](#inssearchinputins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
     -   [<ins>SidebarContextProvider</ins>](#inssidebarcontextproviderins)
@@ -84,9 +83,10 @@ _ActionBar [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name      | Type          | Description                |
-| --------- | ------------- | -------------------------- |
-| `actions` | _ActionItems_ | collection of action items |
+| Name       | Type                       | Description                         |
+| ---------- | -------------------------- | ----------------------------------- |
+| `actions`  | _ActionItems_              | collection of action items          |
+| `themeKey` | _"actionbar" \| "toolbar"_ | two possible layouts from the theme |
 
 ## <ins>ActionContainer</ins>
 
@@ -303,26 +303,6 @@ Used to display enhanced information that could not fit into the main scren.
 
 _Popover [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
 
-## <ins>SearchInputItem</ins>
-
-display single search input item box
-
-_SearchInputItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/SearchInput/SearchInput.tsx)_
-
-### properties
-
-| Name          | Type                                                      | Description                                                |
-| ------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
-| `item*`       | _ItemType_                                                | curent to be rendered                                      |
-| `index*`      | _number_                                                  | item index                                                 |
-| `key`         | _Key_                                                     | unique key, to be used by react                            |
-| `isOpen*`     | _boolean_                                                 | whether the popover is open                                |
-| `search*`     | _string_                                                  | the search string                                          |
-| `selected`    | _number_                                                  | selected item index                                        |
-| `selectItem*` | _(item: ItemType, index: number, close: boolean) => void_ | select item function to be called when an item is selected |
-| `as`          | _ElementType&lt;any>_                                     |                                                            |
-| `variant`     | _string_                                                  |                                                            |
-
 ## <ins>SearchInput</ins>
 
 an input component combined with a popover, can be used for incremental search.
@@ -331,15 +311,15 @@ _SearchInput [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name           | Type                                                                                                                                                                                                                                                                                                                    | Description                                                                  |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                                                                                                                                          | callback on change of search input. user can retrieve items in this callback |
-| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                                                                                                                                              | on select a search item.                                                     |
-| `children`     | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ((props: SearchBoxCallbackProps&lt;...>) => ReactNode)_ | children is a render prop to allow custom rendering of items, one at a time  |
-| `items*`       | _ItemType\[]_                                                                                                                                                                                                                                                                                                           | items array                                                                  |
-| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                         | customize the popover                                                        |
-| `as`           | _ElementType&lt;any>_                                                                                                                                                                                                                                                                                                   |                                                                              |
-| `variant`      | _string_                                                                                                                                                                                                                                                                                                                |                                                                              |
+| Name           | Type                                                                                                                                                                                                                                                                                                                          | Description                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                                                                                                                                                | callback on change of search input. user can retrieve items in this callback |
+| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                                                                                                                                                    | on select a search item.                                                     |
+| `children`     | _string \| number \| boolean \| {} \| ((props: SearchBoxCallbackProps&lt;ItemType>) => ReactNode) \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... 1 more ... \| (new (props: any) => Component&lt;...>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal_ | children is a render prop to allow custom rendering of items, one at a time  |
+| `items*`       | _ItemType\[]_                                                                                                                                                                                                                                                                                                                 | items array                                                                  |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                               | customize the popover                                                        |
+| `as`           | _ElementType&lt;any>_                                                                                                                                                                                                                                                                                                         |                                                                              |
+| `variant`      | _string_                                                                                                                                                                                                                                                                                                                      |                                                                              |
 
 ## <ins>Sidebar</ins>
 
@@ -531,6 +511,7 @@ _Tag [source code](https://github.com/ccontrols/component-controls/tree/master/u
 | ------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `color`             | _string_              | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
 | `transparentAmount` | _number_              | transparent amount - 0 to 1                                                                                            |
+| `borderSize`        | _number_              | borderSize in pixels                                                                                                   |
 | `variant`           | _string_              | theme variant additional                                                                                               |
 | `as`                | _ElementType&lt;any>_ |                                                                                                                        |
 

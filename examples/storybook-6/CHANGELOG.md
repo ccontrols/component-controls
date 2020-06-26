@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package component-controls-storybook-6

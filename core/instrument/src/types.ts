@@ -1,5 +1,5 @@
 import { ParserOptions } from '@babel/parser';
-import { StoriesDoc, StoriesStore } from '@component-controls/core';
+import { Document, StoriesStore } from '@component-controls/core';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
@@ -13,7 +13,7 @@ export type LoadingDocStore = {
   /**
    * the document itself
    */
-  doc: StoriesDoc | undefined;
+  doc: Document | undefined;
 } & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {

@@ -56,7 +56,7 @@ export const DocumentsList: FC<DocumentsListProps> = ({ pages }) => {
             <DocumentItem
               config={storeProvider.config}
               link={storeProvider.getPagePath(page.type, page.title)}
-              page={page}
+              doc={page}
             />
           </Box>
         ))}

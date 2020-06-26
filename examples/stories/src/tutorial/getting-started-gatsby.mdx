@@ -5,29 +5,79 @@ type: tutorial
 
 # Getting started with Gatsby
 
-## Install
+## New project 
+
+Create a new folder
 
 ```sh
-yarn add gatsby-theme-stories
+mkdir my-gatsby-project
+cd my-gatsby-project
 ```
 
-## Configure
+initialize the project
 
-the default options will configure `componnet-controls` to work with react apps,  with `reac-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+```sh
+yarn init
+```
 
-in `gatsby-config.js`:
+add gatsby dependencies
 
+```sh
+yarn add gatsby react react-dom
+```
+
+in `package.json`
+```json
+...
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop"
+  },
+...
+```
+
+The remaining steps are the same as for an existing gatsby project
+
+## Existing project
+
+### Add theme
+
+```sh
+yarn add @component-controls/gatsby-theme-stories
+```
+
+### Configure theme
+
+create a `gatsby-config.js` file in your project folder
 ```js
+//gatsby-config.js:
+module.exports = {
   plugins: [
-    ...
     {
       resolve: '@component-controls/gatsby-theme-stories',
       options: {
-        //path to the configuration files
         configPath: '.config',
       },
     },
-    ...
   ],
-
+};
 ```
+
+### Create component-controls config folder
+
+Create a new folder `.config` inside your proejct (or any other name that you used in the step above)
+
+
+### Create component-controls build-time configuration
+
+create a file `.config/buildtime.js` and enter the paths to search for component-controls documentation files
+
+```js
+//.config/buildtime.js
+module.exports = {
+  stories: [
+    '../src/docs/*.mdx',
+  ],
+};
+```
+

@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/gatsby-theme-stories
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+
+### Bug Fixes
+
+* config folder unexistant ([984e2a6](https://github.com/ccontrols/component-controls/commit/984e2a6bf3dfbfeb01740d340c8f687590b8fd52))
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

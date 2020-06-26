@@ -1,0 +1,55 @@
+{
+  "name": "@component-controls/ts-markdown-docs",
+  "version": "1.5.0",
+  "description": "Typescript documentation generator for markdown files",
+  "keywords": [
+    "markdown",
+    "typescript",
+    "readme"
+  ],
+  "main": "bin/index.js",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "node .",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "yarn jest --passWithNoTests"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "bin": {
+    "ts-md": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "misc/ts-markdown"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "react-docgen-typescript": "^1.16.1",
+    "remark": "^11.0.2",
+    "remark-toc": "^7.0.0",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.8.3",
+    "unified": "^9.0.0",
+    "yargs": "^15.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+}

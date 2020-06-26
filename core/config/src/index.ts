@@ -46,7 +46,11 @@ export const loadConfiguration = (
 ): ConfigrationResult | undefined => {
   const folder = configFolder ?? getConfigurationArg(args);
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
-  const allFiles = fs.readdirSync(configPath);
+  const hasConfigFolder = fs.existsSync(configPath);
+  if (!hasConfigFolder) {
+    console.warn('configuration folder not found', configPath);
+  }
+  const allFiles = hasConfigFolder ? fs.readdirSync(configPath) : [];
   const buildConfigFile = allFiles.find(file =>
     buildConfigFileNames.includes(file.toLowerCase()),
   );

@@ -9,10 +9,12 @@
     -   [<ins>ComponentSource</ins>](#inscomponentsourceins)
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
+    -   [<ins>DocumentItem</ins>](#insdocumentitemins)
     -   [<ins>EditPage</ins>](#inseditpageins)
     -   [<ins>LastEdited</ins>](#inslasteditedins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
+    -   [<ins>PageTypeTag</ins>](#inspagetypetagins)
     -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
@@ -22,6 +24,7 @@
     -   [<ins>StoryConfig</ins>](#insstoryconfigins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
+    -   [<ins>TagsList</ins>](#instagslistins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
     -   [<ins>MDXContent</ins>](#insmdxcontentins)
@@ -156,6 +159,20 @@ _Description [source code](https://github.com/ccontrols/component-controls/tree/
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.                                                                                                                                                                                                                                                      |
 | `of`         | _any_                                                                                                                                                                                                                    | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 
+## <ins>DocumentItem</ins>
+
+displays a single doument item
+
+_DocumentItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/DocumentItem/DocumentItem.tsx)_
+
+### properties
+
+| Name     | Type               | Description                |
+| -------- | ------------------ | -------------------------- |
+| `link*`  | _string_           | link to the document       |
+| `doc*`   | _Document_         | document to be displayed   |
+| `config` | _RunConfiguration_ | store configuration object |
+
 ## <ins>EditPage</ins>
 
 Display a Edit this page link to the page source repository.
@@ -191,6 +208,16 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 | `ref`     | _LegacyRef&lt;HTMLDivElement>_ | ref to the page container component |
 | `variant` | _string_                       | theme variant                       |
 | `wrapper` | _ComponentType&lt;{}>_         | inner wrapper container             |
+
+## <ins>PageTypeTag</ins>
+
+_PageTypeTag [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PageTypeTag/PageTypeTag.tsx)_
+
+### properties
+
+| Name    | Type       | Description |
+| ------- | ---------- | ----------- |
+| `type*` | _PageType_ |             |
 
 ## <ins>Pagination</ins>
 
@@ -379,6 +406,18 @@ _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/mas
 | `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
 | `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                         | DOM node type to render as. By default h3.                                  |
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
+
+## <ins>TagsList</ins>
+
+row of tags with link to their page
+
+_TagsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/TagsList/TagsList.tsx)_
+
+### properties
+
+| Name   | Type        | Description              |
+| ------ | ----------- | ------------------------ |
+| `tags` | _string\[]_ | string list of tag names |
 
 ## <ins>Title</ins>
 
