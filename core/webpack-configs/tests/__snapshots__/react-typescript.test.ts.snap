@@ -5,6 +5,25 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+      },
+      Object {
         "enforce": "pre",
         "exclude": Array [
           /node_modules/,
@@ -34,7 +53,6 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
         ],
@@ -43,6 +61,26 @@ Object {
           "prettier": Object {
             "tabWidth": 4,
           },
+          "propsLoaders": Array [
+            Object {
+              "name": "@component-controls/react-docgen-info",
+              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+            },
+            Object {
+              "name": "@component-controls/react-docgen-typescript-info",
+              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+            },
+          ],
+        },
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+      },
+      Object {
+        "enforce": "pre",
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "loader": "@component-controls/loader/loader",
+        "options": Object {
           "propsLoaders": Array [
             Object {
               "name": "@component-controls/react-docgen-info",
