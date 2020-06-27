@@ -82,7 +82,8 @@ export const extractStories = ({
   const stories =
     config && config.stories
       ? config.stories.reduce((acc: string[], storyRg: string) => {
-          const regex = storyRg.replace(/\((.*?)\)/g, '+($1)');
+          //fix for sb5 issue handling glob
+          const regex = storyRg.replace('.(', '.@(');
           return [...acc, ...globSync(path.resolve(configPath, regex))];
         }, [])
       : undefined;
