@@ -59,14 +59,21 @@ export interface StoryArgument {
  */
 export type StoryArguments = StoryArgument[];
 
-/**
- * list of configuration parameters for indivudual stories and docs files
- * can be specified either through CSF or MDX tags
- */
-export interface StoryParameters {
-  [name: string]: any;
-}
+export interface SmartControls {
+  /**
+   * whether to generate "smart" controls for a story
+   */
+  smart?: boolean;
+  /**
+   * include props only
+   */
+  include?: string[];
 
+  /**
+   * exclude props only
+   */
+  exclude?: string[];
+}
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */
@@ -102,10 +109,6 @@ export interface Story {
    */
   arguments?: StoryArguments;
   /**
-   * configuration parameters passed to the story - either CSF or MDX
-   */
-  parameters?: StoryParameters;
-  /**
    * location in the source file of the story definition
    */
   loc?: CodeLocation;
@@ -136,6 +139,10 @@ export interface Story {
    */
   controls?: ComponentControls;
 
+  /**
+   * "smart" controls options
+   */
+  smartControls?: SmartControls;
   /**
    * story decorators (or wrappers)
    */
@@ -172,13 +179,6 @@ export interface Document {
    * if not provided, the title in lowercase will be used as the route
    */
   route?: string;
-
-  /**
-   * configuration parameters passed to the story groups
-   * configured either as CSF default export
-   * or MDX <Meta /> tag
-   */
-  parameters?: StoryParameters;
 
   /**
    * id for component associated with the stories file

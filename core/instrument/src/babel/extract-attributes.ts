@@ -1,5 +1,3 @@
-import { StoryParameters } from '@component-controls/core';
-
 interface StoryAttribute {
   name: string;
   value: any;
@@ -55,11 +53,11 @@ const nodeToAttribute = (node: any): StoryAttribute | undefined => {
 };
 export const extractAttributes = (
   node: any,
-): StoryParameters | any | undefined => {
+): Record<string, any> | any | undefined => {
   if (node) {
     if (node.properties) {
-      const attributes: StoryParameters = node.properties.reduce(
-        (acc: StoryParameters, propNode: any) => {
+      const attributes: Record<string, any> = node.properties.reduce(
+        (acc: Record<string, any>, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {
             return { ...acc, [attribute.name]: attribute.value };

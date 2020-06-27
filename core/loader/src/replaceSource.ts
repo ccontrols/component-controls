@@ -28,9 +28,12 @@ ${stories
     const componentName = obj.component;
     const subcomponentsName = obj.subcomponents;
     Object.assign(obj, props);
-    obj.component = componentName;
-    obj.subcomponents = subcomponentsName;
-
+    if (componentName !== undefined) {
+      obj.component = componentName;
+    }  
+    if (subcomponentsName !== undefined) {
+      obj.subcomponents = subcomponentsName;
+    }  
   }
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];

@@ -1,13 +1,11 @@
-import { Story, Document, StoryParameters } from '@component-controls/core';
+import { Story, Document } from '@component-controls/core';
 
 export const componentsFromParams = (
-  element: (Document | Story | StoryParameters) & { of?: string },
+  element: (Document | Story) & { of?: string },
 ): string[] => {
   const result = [];
   let { component } = element;
-  if (!component && element.parameters) {
-    ({ component } = element.parameters);
-  }
+
   if (typeof component === 'string') {
     result.push(component);
   }
@@ -16,22 +14,17 @@ export const componentsFromParams = (
     result.push(componentShorthand);
   }
   let { subcomponents } = element;
-  if (!subcomponents && element.parameters) {
-    ({ subcomponents } = element.parameters);
-  }
   if (typeof subcomponents === 'string') {
     result.push(subcomponents);
   }
   if (typeof subcomponents === 'object') {
+    //@ts-ignore
     Object.keys(subcomponents).forEach(key => result.push(subcomponents[key]));
   }
-
-  let { of } = element as StoryParameters;
-  if (typeof of === 'string') {
-    result.push(of);
-  }
-  if (typeof of === 'object') {
-    Object.keys(of).forEach(key => result.push(of[key]));
+  if (typeof componentShorthand === 'object') {
+    Object.keys(componentShorthand).forEach(key =>
+      result.push(componentShorthand[key]),
+    );
   }
 
   return result;

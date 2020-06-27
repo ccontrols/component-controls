@@ -2081,12 +2081,9 @@ Button.propTypes = {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
         "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-27T00:50:35.611Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
-        "parameters": Object {
-          "component": "Button",
-        },
         "title": "Introduction/Smart PropTypes",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
@@ -2127,11 +2124,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 54,
-              "line": 12,
+              "line": 10,
             },
             "start": Object {
               "column": 24,
-              "line": 12,
+              "line": 10,
             },
           },
           "name": "allProps",
@@ -2173,23 +2170,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 76,
-              "line": 26,
+              "line": 20,
             },
             "start": Object {
               "column": 24,
-              "line": 26,
+              "line": 20,
             },
           },
           "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "exclude": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2199,11 +2192,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 61,
-              "line": 39,
+              "line": 29,
             },
             "start": Object {
               "column": 23,
-              "line": 39,
+              "line": 29,
             },
           },
           "name": "noProps",
@@ -2245,23 +2238,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 78,
-              "line": 14,
+              "line": 12,
             },
             "start": Object {
               "column": 26,
-              "line": 14,
+              "line": 12,
             },
           },
           "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "include": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2276,12 +2265,9 @@ Button.propTypes = {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
         "date": 2020-06-17T18:28:16.390Z,
-        "dateModified": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-27T00:48:44.343Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
-        "parameters": Object {
-          "component": "Button",
-        },
         "title": "Introduction/Smart Typescript",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
@@ -2322,11 +2308,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 54,
-              "line": 12,
+              "line": 10,
             },
             "start": Object {
               "column": 24,
-              "line": 12,
+              "line": 10,
             },
           },
           "name": "allProps",
@@ -2368,23 +2354,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 76,
-              "line": 26,
+              "line": 20,
             },
             "start": Object {
               "column": 24,
-              "line": 26,
+              "line": 20,
             },
           },
           "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "exclude": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2394,11 +2376,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 61,
-              "line": 39,
+              "line": 29,
             },
             "start": Object {
               "column": 23,
-              "line": 39,
+              "line": 29,
             },
           },
           "name": "noProps",
@@ -2440,23 +2422,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 78,
-              "line": 14,
+              "line": 12,
             },
             "start": Object {
               "column": 26,
-              "line": 14,
+              "line": 12,
             },
           },
           "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "include": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },

@@ -13,7 +13,7 @@ Object {
       "ControlsTable": "2ee8b0e9e58c6034c09cf994cd086170",
     },
     "date": 2020-03-07T03:52:40.832Z,
-    "dateModified": 2020-04-14T04:57:01.066Z,
+    "dateModified": 2020-06-27T00:45:31.057Z,
     "package": "27309cd065c1624443c9c2cdb62d73ed",
     "title": "Story",
   },
@@ -57,7 +57,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -76,11 +76,8 @@ Object {
         },
       },
       "name": "Custom story name",
-      "parameters": Object {
-        "addonControls": Object {
-          "smart": false,
-        },
-        "component": "ControlsTable",
+      "smartControls": Object {
+        "smart": false,
       },
       "source": "() => {}",
     },
@@ -89,11 +86,9 @@ Object {
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',
-  parameters: {
-    component: ControlsTable,
-    addonControls: {
-      smart: false,
-    },
+  component: ControlsTable,
+  smartControls: {
+    smart: false,
   },
 };
 ",
@@ -107,7 +102,7 @@ Object {
     "components": Object {},
     "componentsLookup": Object {},
     "date": 2020-03-07T03:53:56.234Z,
-    "dateModified": 2020-04-14T04:57:06.968Z,
+    "dateModified": 2020-06-27T00:45:42.379Z,
     "package": "15ca3a76fad6a8b03adedc0e9e4a590d",
     "title": "Story",
   },
@@ -151,12 +146,20 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
     "myStory": Object {
       "arguments": Array [],
+      "controls": Object {
+        "name": Object {
+          "label": "Name",
+          "order": 9999,
+          "type": "ControlTypes.TEXT",
+          "value": "Mark",
+        },
+      },
       "id": "myStory",
       "loc": Object {
         "end": Object {
@@ -169,18 +172,8 @@ Object {
         },
       },
       "name": "Custom story name",
-      "parameters": Object {
-        "addonControls": Object {
-          "smart": false,
-        },
-        "controls": Object {
-          "name": Object {
-            "label": "Name",
-            "order": 9999,
-            "type": "ControlTypes.TEXT",
-            "value": "Mark",
-          },
-        },
+      "smartControls": Object {
+        "smart": false,
       },
       "source": "() => {}",
     },
@@ -189,18 +182,16 @@ Object {
 export const myStory = () => {};
 myStory.story = {
   name: 'Custom story name',
-  parameters: {
-    controls: {
-      name: {
-        type: ControlTypes.TEXT,
-        label: 'Name',
-        value: 'Mark',
-        order: 9999,
-      },
+  controls: {
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'Mark',
+      order: 9999,
     },
-    addonControls: {
-      smart: false,
-    },
+  },
+  smartControls: {
+    smart: false,
   },
 };
 ",
@@ -258,7 +249,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {

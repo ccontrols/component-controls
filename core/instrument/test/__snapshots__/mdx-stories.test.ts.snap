@@ -19,11 +19,8 @@ Object {
       "Button": "2855216c2faa4ab43ed978e3ff6743e4",
     },
     "date": 2020-03-07T05:21:15.061Z,
-    "dateModified": 2020-05-18T16:38:12.799Z,
+    "dateModified": 2020-06-27T00:46:11.579Z,
     "package": "8c5cf9d9fa1d5bc7742765b451f2a255",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -66,7 +63,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {},
@@ -76,7 +73,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story>
   <Button />
@@ -104,11 +101,8 @@ Object {
       "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
     },
     "date": 2020-03-07T05:21:58.603Z,
-    "dateModified": 2020-05-18T16:38:18.357Z,
+    "dateModified": 2020-06-27T00:46:23.617Z,
     "package": "5025d10bd14c417a3985dd520bbc8ce0",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -151,7 +145,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -176,11 +170,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 57,
-          "line": 28,
+          "line": 22,
         },
         "start": Object {
           "column": 38,
-          "line": 28,
+          "line": 22,
         },
       },
       "name": "story-with-props",
@@ -193,7 +187,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {props => <Button />}
@@ -244,11 +238,8 @@ export default Button;
       "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
     },
     "date": 2020-03-07T04:45:17.122Z,
-    "dateModified": 2020-05-18T16:38:24.229Z,
+    "dateModified": 2020-06-27T00:46:36.491Z,
     "package": "9d6345a2d09c05cff0ad7c86fe40c4f9",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -291,7 +282,7 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
     "9d6345a2d09c05cff0ad7c86fe40c4f9": Object {
       "dependencies": Object {
@@ -332,7 +323,7 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -341,11 +332,11 @@ export default Button;
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 30,
+          "line": 24,
         },
         "start": Object {
           "column": 32,
-          "line": 28,
+          "line": 22,
         },
       },
       "name": "smart story",
@@ -358,7 +349,7 @@ export default Button;
 import Button from '../../components/button-default-arrow-func';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"smart story\\">
   <Button />
@@ -387,11 +378,8 @@ Object {
       "Button": "c63d685efb0c65f18ffc63184e852ef4",
     },
     "date": 2020-03-07T05:26:10.375Z,
-    "dateModified": 2020-05-18T16:38:30.328Z,
+    "dateModified": 2020-06-27T00:46:49.539Z,
     "package": "c151e21eacb60e5b077423daed2d02e2",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -434,7 +422,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -517,11 +505,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 33,
+          "line": 27,
         },
         "start": Object {
           "column": 9,
-          "line": 29,
+          "line": 23,
         },
       },
       "name": "story-with-props",
@@ -538,7 +526,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name: { first, last }, age }) => <Button />}
@@ -567,11 +555,8 @@ Object {
       "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
     },
     "date": 2020-03-07T05:24:18.801Z,
-    "dateModified": 2020-05-18T16:38:34.980Z,
+    "dateModified": 2020-06-27T00:47:00.416Z,
     "package": "9c0d66b95cdae13733bdeb986761ca47",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -614,7 +599,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -668,11 +653,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 67,
-          "line": 28,
+          "line": 22,
         },
         "start": Object {
           "column": 38,
-          "line": 28,
+          "line": 22,
         },
       },
       "name": "story-with-props",
@@ -685,7 +670,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name, age }) => <Button />}
@@ -713,11 +698,8 @@ Object {
       "Button": "fe664c2ffbbcacffdac896ace94db697",
     },
     "date": 2020-03-07T05:23:10.931Z,
-    "dateModified": 2020-05-18T16:38:39.081Z,
+    "dateModified": 2020-06-27T00:47:13.163Z,
     "package": "82864065f08bddd8e5586424d90a51f0",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -760,7 +742,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -799,11 +781,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 68,
-          "line": 28,
+          "line": 22,
         },
         "start": Object {
           "column": 38,
-          "line": 28,
+          "line": 22,
         },
       },
       "name": "story-with-props",
@@ -816,7 +798,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {(props, context) => <Button />}
@@ -844,11 +826,8 @@ Object {
       "Button": "0a73df5cffa26ca62ec534813a77384f",
     },
     "date": 2020-03-07T05:25:12.973Z,
-    "dateModified": 2020-05-18T16:38:43.233Z,
+    "dateModified": 2020-06-27T00:47:23.685Z,
     "package": "fea8eb808fd320237df6714339cbe69b",
-    "parameters": Object {
-      "component": "Button",
-    },
     "title": "Storybook/MDX",
   },
   "packages": Object {
@@ -891,7 +870,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {
@@ -945,11 +924,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 46,
-          "line": 29,
+          "line": 23,
         },
         "start": Object {
           "column": 9,
-          "line": 29,
+          "line": 23,
         },
       },
       "name": "story-with-props",
@@ -962,7 +941,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" parameters={{component: Button}} />
+<Meta title=\\"Storybook/MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name: MyName, age }) => <Button />}

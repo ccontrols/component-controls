@@ -6,6 +6,7 @@
     -   [ArgUsageLocation](#argusagelocation)
     -   [Document](#document)
     -   [Documents](#documents)
+    -   [SmartControls](#smartcontrols)
     -   [SourceIdentifier](#sourceidentifier)
     -   [Stories](#stories)
     -   [StoriesStore](#storiesstore)
@@ -13,7 +14,6 @@
     -   [StoryArgument](#storyargument)
     -   [StoryComponents](#storycomponents)
     -   [StoryPackages](#storypackages)
-    -   [StoryParameters](#storyparameters)
     -   [StoryStories](#storystories)
     -   [Pages](#pages)
     -   [StoryArguments](#storyarguments)
@@ -128,7 +128,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For "es modules" documetation files, the default export is used.
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L158)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L165)_
 
 
 
@@ -149,7 +149,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
 | `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`           | string                                  | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `parameters`        | [StoryParameters](#storyparameters)     | configuration parameters passed to the story groups configured either as CSF default export or MDX &lt;Meta /> tag                                                                           |
 | `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
 | `source`            | string                                  | source code of the entire file of stories                                                                                                                                                    |
@@ -166,6 +165,20 @@ list of story files, or groups
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L300)_
 
 `title`\*: string: [Document](#document)
+
+## SmartControls
+
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L62)_
+
+
+
+### properties
+
+| Name      | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `exclude` | string\[] | exclude props only                               |
+| `include` | string\[] | include props only                               |
+| `smart`   | boolean   | whether to generate "smart" controls for a story |
 
 ## SourceIdentifier
 
@@ -186,7 +199,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 map of stories. The id is compatible with CSF story ids
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L148)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L155)_
 
 `id`\*: string: [Story](#story)
 
@@ -212,7 +225,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L73)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L80)_
 
 
 
@@ -229,8 +242,8 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `id`            | string                                  | csf id of the story                                                                         |
 | `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                         |
 | `name*`         | string                                  | name of the Story.                                                                          |
-| `parameters`    | [StoryParameters](#storyparameters)     | configuration parameters passed to the story - either CSF or MDX                            |
 | `renderFn`      | [StoryRenderFn](#storyrenderfn)         | render function for the story                                                               |
+| `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                    |
 | `source`        | string                                  | the source code of the story, extracted byt the AST instrumenting loaders                   |
 | `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                  |
 | `subtitle`      | string                                  | optional story subtitle property                                                            |
@@ -268,15 +281,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
-## StoryParameters
-
-list of configuration parameters for indivudual stories and docs files
-can be specified either through CSF or MDX tags
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L66)_
-
-`name`\*: string: any
-
 ## StoryStories
 
 list of stories
@@ -302,7 +306,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## defPageType
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L152)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L159)_
 
 
 

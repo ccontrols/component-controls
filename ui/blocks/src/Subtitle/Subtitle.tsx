@@ -9,7 +9,6 @@ export type SubtitleProps = StoryInputProps & SubtitlePropsBase;
 
 /**
  * displays a subtitle as assigned to the story parameters:
- * story.parameters.componentSubtitle
  * or story.subtitle
  *
  */
@@ -18,9 +17,6 @@ export const Subtitle: FC<SubtitleProps> = ({ id, name, ...rest }) => {
     id,
     name,
   });
-  const title =
-    story &&
-    (story.subtitle ||
-      (story.parameters && story.parameters.componentSubtitle));
+  const title = story ? story.subtitle : null;
   return title ? <SubtitleBlock {...rest}>{title}</SubtitleBlock> : null;
 };

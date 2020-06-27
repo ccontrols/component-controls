@@ -51,7 +51,6 @@ export const loadStoryStore = (
               title,
               stories,
               source,
-              component,
               fileName,
               componentsLookup,
               package: docPackage,

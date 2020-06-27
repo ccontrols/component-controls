@@ -5,6 +5,7 @@ import {
   StoryComponents,
   getComponentName,
   controlsFromProps,
+  SmartControls,
 } from '@component-controls/core';
 
 export const addSmartControls = (
@@ -16,14 +17,14 @@ export const addSmartControls = (
     //story has no arguments
     return null;
   }
-  const params = story.parameters || {};
-  const { addonControls = {} } = params;
-  const { smart: smartControls = true } = addonControls;
-  if (!smartControls) {
+  const smartControls: SmartControls = story.smartControls || {};
+
+  const { smart = true } = smartControls;
+  if (!smart) {
     return null;
   }
-  const storyComponent = story.component || params.component;
 
+  const storyComponent = story.component;
   if (!storyComponent) {
     return null;
   }

@@ -4,9 +4,7 @@ import { Button } from '../components/PropTypesButton';
 export default {
   title: 'Introduction/Smart PropTypes',
   author: 'atanasster',
-  parameters: {
-    component: Button,
-  },
+  component: Button,
 };
 
 export const allProps = props => <Button {...props} />;
@@ -14,24 +12,16 @@ export const allProps = props => <Button {...props} />;
 export const onlyColors = props => <Button label="Choose colors" {...props} />;
 
 onlyColors.story = {
-  parameters: {
-    addonControls: {
-      smart: {
-        include: ['color', 'backgroundColor'],
-      },
-    },
+  smartControls: {
+    include: ['color', 'backgroundColor'],
   },
 };
 
 export const noColors = props => <Button label="Choose colors" {...props} />;
 
 noColors.story = {
-  parameters: {
-    addonControls: {
-      smart: {
-        exclude: ['color', 'backgroundColor'],
-      },
-    },
+  smartControls: {
+    exclude: ['color', 'backgroundColor'],
   },
 };
 

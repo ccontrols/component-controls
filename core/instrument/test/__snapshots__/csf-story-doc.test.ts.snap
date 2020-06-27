@@ -52,7 +52,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {},
@@ -78,13 +78,10 @@ Object {
       "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
     },
     "date": 2020-06-17T18:28:16.347Z,
-    "dateModified": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-27T00:40:51.026Z,
     "package": "aef0eeece1e59f4690b7e3f0065cdc41",
-    "parameters": Object {
-      "addonControls": Object {
-        "smart": false,
-      },
-      "component": "ControlsTable",
+    "smartControls": Object {
+      "smart": false,
     },
     "title": "Storybook/Blocks/ControlsTable",
   },
@@ -128,17 +125,15 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {},
   "transformed": "export default {
   title: 'Storybook/Blocks/ControlsTable',
-  parameters: {
-    component: ControlsTable,
-    addonControls: {
-      smart: false,
-    },
+  component: ControlsTable,
+  smartControls: {
+    smart: false,
   },
 };
 ",
@@ -158,19 +153,17 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "04b628ec4e86b8383f71524efe46f138",
     },
-    "date": 2020-06-17T18:28:16.347Z,
-    "dateModified": 2020-06-17T18:28:16.347Z,
-    "package": "4dd4688f69a323d0b893ca9c902cc47a",
-    "parameters": Object {
-      "controls": Object {
-        "name": Object {
-          "label": "Name",
-          "order": 9999,
-          "type": "ControlTypes.TEXT",
-          "value": "Mark",
-        },
+    "controls": Object {
+      "name": Object {
+        "label": "Name",
+        "order": 9999,
+        "type": "ControlTypes.TEXT",
+        "value": "Mark",
       },
     },
+    "date": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-27T00:45:10.864Z,
+    "package": "4dd4688f69a323d0b893ca9c902cc47a",
     "title": "Storybook/Kind",
   },
   "packages": Object {
@@ -213,21 +206,19 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {},
   "transformed": "export default {
   title: 'Storybook/Kind',
   component: ControlsTable,
-  parameters: {
-    controls: {
-      name: {
-        type: ControlTypes.TEXT,
-        label: 'Name',
-        value: 'Mark',
-        order: 9999,
-      },
+  controls: {
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'Mark',
+      order: 9999,
     },
   },
 };
@@ -286,7 +277,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.5",
+      "version": "1.5.6",
     },
   },
   "stories": Object {},

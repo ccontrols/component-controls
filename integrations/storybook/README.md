@@ -209,9 +209,7 @@ import { Button } from './Button';
 
 export default {
   title: 'Storybook smart controls',
-  parameters: {
-    component: Button,
-  },
+  component: Button,
 };
 
 export const smartControls = props => <Button {...props} />;
@@ -223,7 +221,7 @@ export const smartControls = props => <Button {...props} />;
 import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
 import { Button } from './Button';
 
-<Meta title="Storybook smart controls" parameters={{component: Button}} />
+<Meta title="Storybook smart controls" component={Button} />
 
 # Smart Controls
 <Preview>
@@ -241,12 +239,8 @@ import { Button } from './Button';
 
 ```js
 onlyColors.story = {
-  parameters: {
-    addonControls: {
-      smart: {
-        include: ['color', 'backgroundColor'],
-      },
-    },
+  smartControls: {
+    include: ['color', 'backgroundColor'],
   },
 };
 ```

@@ -1,7 +1,6 @@
 import {
   Story,
   Document,
-  StoryParameters,
   CodeLocation,
   getASTSource,
 } from '@component-controls/core';
@@ -21,25 +20,30 @@ export const extractMDXStories = (props: any) => (
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType | undefined => {
-  const collectAttributes = (node: any): StoryParameters => {
-    return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
-      if (attribute.value.type === 'StringLiteral') {
-        return {
-          ...acc,
-          [attribute.name.name]: attribute.value.value,
-        };
-      } else if (attribute.value.type === 'JSXExpressionContainer') {
-        return {
-          ...acc,
-          [attribute.name.name]: extractAttributes(attribute.value.expression),
-        };
-      }
-      return acc;
-    }, {});
+  const collectAttributes = (node: any): Record<string, any> => {
+    return node.attributes.reduce(
+      (acc: Record<string, any>, attribute: any) => {
+        if (attribute.value.type === 'StringLiteral') {
+          return {
+            ...acc,
+            [attribute.name.name]: attribute.value.value,
+          };
+        } else if (attribute.value.type === 'JSXExpressionContainer') {
+          return {
+            ...acc,
+            [attribute.name.name]: extractAttributes(
+              attribute.value.expression,
+            ),
+          };
+        }
+        return acc;
+      },
+      {},
+    );
   };
 
   let components: { [key: string]: string | undefined } = {};
-  const collectComponent = (attributes: StoryParameters) => {
+  const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
     components = attrComponents.reduce(
       (acc, componentName) => ({ ...acc, [componentName]: undefined }),
@@ -149,7 +153,7 @@ export const extractMDXStories = (props: any) => (
                   : storySource;
               }
               const component = collectComponent(attributes);
-              if (component) {
+              if (component !== undefined) {
                 story.component = component;
               }
               traverse(
