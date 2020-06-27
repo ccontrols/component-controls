@@ -44,14 +44,14 @@ const getPackageJson = async (
       return resolve(null);
     }
     const fileName = traverseFolder(
-      path.dirname(filePath),
+      fs.lstatSync(filePath).isDirectory() ? filePath : path.dirname(filePath),
       opts?.maxLevels || 10,
       opts?.packageJsonName || 'package.json',
     );
     if (!fileName) {
       return resolve(null);
     }
-    readJson(fileName, console.error, false, (err: string, data: object) => {
+    readJson(fileName, null, false, (err: string, data: object) => {
       if (err) {
         return reject(err);
       }
@@ -76,6 +76,22 @@ export const packageInfo = async (
         typeof packageJSON.repository === 'string'
           ? packageJSON.repository
           : packageJSON.repository && packageJSON.repository.url;
+      const {
+        name,
+        version,
+        dependencies,
+        devDependencies,
+        peerDependencies,
+      } = packageJSON;
+      const result: PackageInfo = {
+        fileHash: hashStoreId(filePath),
+        name,
+        version,
+        repository: {},
+        dependencies,
+        devDependencies,
+        peerDependencies,
+      };
       if (repositoryURL) {
         const templates =
           hostedGitInfo.fromUrl(repositoryURL) ||
@@ -100,22 +116,7 @@ export const packageInfo = async (
             )
             .replace('{committish}', templates.committish || 'master');
         };
-        const {
-          name,
-          version,
-          dependencies,
-          devDependencies,
-          peerDependencies,
-        } = packageJSON;
-        const result: PackageInfo = {
-          fileHash: hashStoreId(filePath),
-          name,
-          version,
-          repository: {},
-          dependencies,
-          devDependencies,
-          peerDependencies,
-        };
+
         const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
         if (storeBrowseLink) {
           result.repository.browse = fillTemplate(templates.browsefiletemplate);
@@ -126,8 +127,8 @@ export const packageInfo = async (
         if (storeIssuesLink) {
           result.repository.issues = fillTemplate(templates.bugstemplate);
         }
-        return result;
       }
+      return result;
     }
   }
   return undefined;
