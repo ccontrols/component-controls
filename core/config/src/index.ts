@@ -84,7 +84,11 @@ export const extractStories = ({
       ? config.stories.reduce((acc: string[], storyRg: string) => {
           //fix for sb5 issue handling glob
           const regex = storyRg.replace('.(', '.@(');
-          return [...acc, ...globSync(path.resolve(configPath, regex))];
+          const matches = globSync(path.resolve(configPath, regex));
+          if (!matches.length) {
+            throw new Error(`${storyRg} did not match any files`);
+          }
+          return [...acc, ...matches];
         }, [])
       : undefined;
   return stories;
