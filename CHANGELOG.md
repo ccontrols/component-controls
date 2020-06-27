@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+
+### Bug Fixes
+
+* gatsby story remove meta ([fe0e7ea](https://github.com/ccontrols/component-controls/commit/fe0e7eabe78526630b2645ed068333bcaf882d7d))
+
+
+
+
+
 ## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
 
 
