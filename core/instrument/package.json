@@ -45,6 +45,8 @@
     "js-string-escape": "^1.0.1",
     "prettier": "^1.19.1",
     "read-package-json": "^2.1.1",
+    "remark-images": "^2.0.0",
+    "remark-emoji": "^2.1.0",
     "resolve": "^1.15.1",
     "typescript": "^3.8.3"
   },

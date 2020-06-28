@@ -1,5 +1,7 @@
 import { ParserOptions } from '@babel/parser';
 import { Document, StoriesStore } from '@component-controls/core';
+import images from 'remark-images';
+import emoji from 'remark-emoji';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
@@ -42,6 +44,7 @@ import { mdx } from '@mdx-js/react';
 export const defaultMDXOptions: MDXOptions = {
   test: /\.(mdx|md)$/i,
   renderer: DEFAULT_MDX_RENDERER,
+  mdPlugins: [images, emoji],
 };
 
 /**
