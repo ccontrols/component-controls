@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Theme } from 'theme-ui';
-import { useState, useContext, useRef, useEffect } from 'react';
+import { FC, useState, useContext, useRef, useEffect } from 'react';
 import lunr, { Index } from 'lunr';
-import { SearchInput } from '@component-controls/components';
+import { SearchInput, SearchInputProps } from '@component-controls/components';
 import {
   PageType,
   defPageType,
@@ -20,7 +20,10 @@ export interface SearchItem {
   description?: string;
   body?: string;
 }
-export const Search = () => {
+export const Search: FC<Omit<
+  SearchInputProps<Document>,
+  'items' | 'onSearch'
+>> = props => {
   const [items, setItems] = useState<Pages>([]);
   const [search, setSearch] = useState<string>('');
   const { storeProvider } = useContext(BlockContext);
@@ -85,6 +88,7 @@ export const Search = () => {
       items={items}
       onSelect={onSelectItem}
       placeholder="search..."
+      {...props}
     >
       {props => (
         <DocumentItem
