@@ -44,7 +44,7 @@ import { mdx } from '@mdx-js/react';
 export const defaultMDXOptions: MDXOptions = {
   test: /\.(mdx|md)$/i,
   renderer: DEFAULT_MDX_RENDERER,
-  mdPlugins: [images, emoji],
+  remarkPlugins: [images, emoji],
 };
 
 /**
@@ -169,7 +169,7 @@ export interface MDXOptions {
   /**
    * specify remark plugins
    */
-  mdPlugins?: any[];
+  remarkPlugins?: any[];
   /**
    * specify rehype plugins
    */

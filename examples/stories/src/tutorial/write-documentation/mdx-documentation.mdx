@@ -39,7 +39,7 @@ order: 0
 
 In MDX, you can import any react components and use them to create rich documentation pages:
 
-```jsx
+```mdx
 ---
 title: My Button
 ---
@@ -53,7 +53,7 @@ import { Button } from 'theme-ui';
 
 MDX allows you to import external MDX and MD files statically and display their content:
 
-```jsx
+```mdx
 ---
 title: Test Transclusion
 ---
@@ -61,3 +61,50 @@ import Transclusion from '../sections/transclusion.mdx';
 
 <Transclusion />
 ```
+
+# Syntax highlighting
+
+You can include source code in your MDX and MD documentation and add some useful parameters
+
+## Language
+
+The language can be specified as the first parameter
+````mdx
+```jsx
+  import { Button } from 'theme-ui';   
+```
+````  
+
+## Title
+
+A title attribute can be added. Due to some current MDX limitations, the title can not contain spaces.
+
+````mdx:title=my-title
+```jsx:title=my-title
+import { Button } from 'theme-ui';   
+```
+````   
+
+## Highlight lines
+
+You can specify a line to highlight
+````markdown {2}
+```jsx {2}
+import { Button } from 'theme-ui';   
+<Button >click me </Button>
+```
+````
+
+Or a range of lines
+````markdown {2-3}
+```jsx {2-3}
+import { Button } from 'theme-ui';   
+<Button >click me </Button>
+```
+````
+
+## Emoji
+
+You can use `:emoji:` in your documents 
+
+`:rocket: :dog: :+1:` =  :rocket: :dog: :+1:
