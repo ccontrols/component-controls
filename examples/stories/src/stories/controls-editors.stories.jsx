@@ -8,11 +8,11 @@ export default {
 };
 
 export const textDefaultProp = ({ text }) => text;
-textDefaultProp.story = {
-  description: 'A simple story that just returns the text parameter',
-  controls: {
-    text: { type: ControlTypes.TEXT, value: 'Hello' },
-  },
+textDefaultProp.description =
+  'A simple story that just returns the text parameter';
+
+textDefaultProp.controls = {
+  text: { type: ControlTypes.TEXT, value: 'Hello' },
 };
 
 export const kitchenSink = ({
@@ -101,126 +101,125 @@ const GROUP_IDS = {
   FAVORITES: 'Favorites',
 };
 
-kitchenSink.story = {
-  description: 'Complex story with a variety of control types.',
-  controls: {
-    userName: {
-      type: ControlTypes.TEXT,
-      label: 'Name',
-      value: 'Storyteller',
-      groupId: GROUP_IDS.GENERAL,
-    },
-    age: {
-      type: ControlTypes.NUMBER,
-      label: 'Age',
-      value: 78,
-      range: true,
-      min: 0,
-      max: 90,
-      step: 5,
-      groupId: GROUP_IDS.GENERAL,
-    },
-    birthday: {
-      type: ControlTypes.DATE,
-      label: 'Birthday',
-      value: new Date(1990, 1, 1),
-      groupId: GROUP_IDS.GENERAL,
-    },
-    dollars: {
-      type: ControlTypes.NUMBER,
-      label: 'Dollars',
-      value: 12.5,
-      min: 0,
-      max: 100,
-      step: 0.01,
-      groupId: GROUP_IDS.GENERAL,
-    },
-    years: {
-      type: ControlTypes.NUMBER,
-      label: 'Years in NY',
-      value: 9,
-      groupId: GROUP_IDS.GENERAL,
-    },
-    nice: {
-      type: ControlTypes.BOOLEAN,
-      label: 'Nice',
-      value: true,
-      groupId: GROUP_IDS.FAVORITES,
-    },
-    items: {
-      type: ControlTypes.ARRAY,
-      label: 'Items',
-      rowType: {
-        name: { type: ControlTypes.TEXT },
-      },
-      value: [{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }],
-      groupId: GROUP_IDS.FAVORITES,
-    },
+kitchenSink.description = 'Complex story with a variety of control types.';
 
-    fruit: {
-      type: ControlTypes.OPTIONS,
-      label: 'Fruit',
-      value: 'apple',
-      options: {
-        Apple: 'apple',
-        Banana: 'banana',
-        Cherry: 'cherry',
-      },
-      groupId: GROUP_IDS.FAVORITES,
-    },
-    otherFruit: {
-      type: ControlTypes.OPTIONS,
-      label: 'Other Fruit',
-      value: 'watermelon',
-      options: {
-        Kiwi: 'kiwi',
-        Guava: 'guava',
-        Watermelon: 'watermelon',
-      },
-      display: 'radio',
-      groupId: GROUP_IDS.FAVORITES,
-    },
-    dog: {
-      type: ControlTypes.OPTIONS,
-      options: arrayOfObjects,
-      value: arrayOfObjects[0],
-      groupId: GROUP_IDS.FAVORITES,
-    },
-    backgroundColor: {
-      type: ControlTypes.COLOR,
-      value: '#dedede',
-      groupId: GROUP_IDS.DISPLAY,
-    },
-
-    color: {
-      type: ControlTypes.COLOR,
-      value: '#000000',
-      groupId: GROUP_IDS.DISPLAY,
-    },
-
-    otherStyles: {
-      type: ControlTypes.OBJECT,
-      label: 'Styles',
-      value: {
-        // do not randomize the border style
-        border: { type: 'text', value: '2px dashed silver', data: null },
-        borderRadius: { type: 'number', value: 10 },
-        padding: { type: 'number', value: 10 },
-      },
-      groupId: GROUP_IDS.DISPLAY,
-    },
-    images: {
-      type: ControlTypes.FILES,
-      label: 'Happy Picture',
-      accept: 'image/*',
-      value: [
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',
-      ],
-      groupId: GROUP_IDS.DISPLAY,
-    },
-
-    hidden: { type: ControlTypes.TEXT, hidden: true },
+kitchenSink.controls = {
+  userName: {
+    type: ControlTypes.TEXT,
+    label: 'Name',
+    value: 'Storyteller',
+    groupId: GROUP_IDS.GENERAL,
   },
+  age: {
+    type: ControlTypes.NUMBER,
+    label: 'Age',
+    value: 78,
+    range: true,
+    min: 0,
+    max: 90,
+    step: 5,
+    groupId: GROUP_IDS.GENERAL,
+  },
+  birthday: {
+    type: ControlTypes.DATE,
+    label: 'Birthday',
+    value: new Date(1990, 1, 1),
+    groupId: GROUP_IDS.GENERAL,
+  },
+  dollars: {
+    type: ControlTypes.NUMBER,
+    label: 'Dollars',
+    value: 12.5,
+    min: 0,
+    max: 100,
+    step: 0.01,
+    groupId: GROUP_IDS.GENERAL,
+  },
+  years: {
+    type: ControlTypes.NUMBER,
+    label: 'Years in NY',
+    value: 9,
+    groupId: GROUP_IDS.GENERAL,
+  },
+  nice: {
+    type: ControlTypes.BOOLEAN,
+    label: 'Nice',
+    value: true,
+    groupId: GROUP_IDS.FAVORITES,
+  },
+  items: {
+    type: ControlTypes.ARRAY,
+    label: 'Items',
+    rowType: {
+      name: { type: ControlTypes.TEXT },
+    },
+    value: [{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }],
+    groupId: GROUP_IDS.FAVORITES,
+  },
+
+  fruit: {
+    type: ControlTypes.OPTIONS,
+    label: 'Fruit',
+    value: 'apple',
+    options: {
+      Apple: 'apple',
+      Banana: 'banana',
+      Cherry: 'cherry',
+    },
+    groupId: GROUP_IDS.FAVORITES,
+  },
+  otherFruit: {
+    type: ControlTypes.OPTIONS,
+    label: 'Other Fruit',
+    value: 'watermelon',
+    options: {
+      Kiwi: 'kiwi',
+      Guava: 'guava',
+      Watermelon: 'watermelon',
+    },
+    display: 'radio',
+    groupId: GROUP_IDS.FAVORITES,
+  },
+  dog: {
+    type: ControlTypes.OPTIONS,
+    options: arrayOfObjects,
+    value: arrayOfObjects[0],
+    groupId: GROUP_IDS.FAVORITES,
+  },
+  backgroundColor: {
+    type: ControlTypes.COLOR,
+    value: '#dedede',
+    groupId: GROUP_IDS.DISPLAY,
+  },
+
+  color: {
+    type: ControlTypes.COLOR,
+    value: '#000000',
+    groupId: GROUP_IDS.DISPLAY,
+  },
+
+  otherStyles: {
+    type: ControlTypes.OBJECT,
+    label: 'Styles',
+    value: {
+      // do not randomize the border style
+      border: { type: 'text', value: '2px dashed silver', data: null },
+      borderRadius: { type: 'number', value: 10 },
+      padding: { type: 'number', value: 10 },
+    },
+    groupId: GROUP_IDS.DISPLAY,
+  },
+  images: {
+    type: ControlTypes.FILES,
+    label: 'Happy Picture',
+    accept: 'image/*',
+    value: [
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',
+    ],
+    groupId: GROUP_IDS.DISPLAY,
+  },
+
+  hidden: { type: ControlTypes.TEXT, hidden: true },
 };
 
 export const XssSafety = ({ content }) => (
@@ -236,47 +235,44 @@ XssSafety.propTypes = {
   content: PropTypes.string.isRequired,
 };
 
-XssSafety.story = {
-  name: 'XSS safety',
-  controls: {
-    content: {
-      type: ControlTypes.TEXT,
-      label: 'Rendered string',
-      value: '<img src="x" onerror="alert(\'XSS Attack\')" >',
-      escapeValue: true,
-    },
+XssSafety.storyName = 'XSS safety';
+
+XssSafety.controls = {
+  content: {
+    type: ControlTypes.TEXT,
+    label: 'Rendered string',
+    value: '<img src="x" onerror="alert(\'XSS Attack\')" >',
+    escapeValue: true,
   },
 };
 
 export const generateRandomData = ({ street }) => street;
 
-generateRandomData.story = {
-  description:
-    'Story using the `data` field of `controls` to generate **streetAddress** random data.',
-  controls: {
-    street: {
-      type: ControlTypes.TEXT,
-      label: 'Street',
-      value: '30333 Atlantic Ave.',
-      // reference: https://github.com/marak/Faker.js/
-      data: { name: 'address.streetAddress' },
-    },
+generateRandomData.description =
+  'Story using the `data` field of `controls` to generate **streetAddress** random data.';
+
+generateRandomData.controls = {
+  street: {
+    type: ControlTypes.TEXT,
+    label: 'Street',
+    value: '30333 Atlantic Ave.',
+    // reference: https://github.com/marak/Faker.js/
+    data: { name: 'address.streetAddress' },
   },
 };
 
 export const randomNumber = ({ number }) => number;
 
-randomNumber.story = {
-  description:
-    'Story using the `data` field of `controls` to generate random **number** with **min/max** parameters.',
-  controls: {
-    number: {
-      type: ControlTypes.NUMBER,
-      label: 'A number',
-      value: 10,
-      // reference: https://github.com/marak/Faker.js/
-      data: { name: 'random.number', options: { min: 50, max: 100 } },
-    },
+randomNumber.description =
+  'Story using the `data` field of `controls` to generate random **number** with **min/max** parameters.';
+
+randomNumber.controls = {
+  number: {
+    type: ControlTypes.NUMBER,
+    label: 'A number',
+    value: 10,
+    // reference: https://github.com/marak/Faker.js/
+    data: { name: 'random.number', options: { min: 50, max: 100 } },
   },
 };
 
@@ -292,27 +288,25 @@ export const groupedControls = ({ age, name, message }) => {
 const personalGroupId = 'personal info';
 const generalGroupId = 'general info';
 
-groupedControls.story = {
-  description: 'Controls grouped in multiple tabs.',
-  controls: {
-    name: {
-      type: ControlTypes.TEXT,
-      label: 'Name',
-      value: 'James',
-      groupId: personalGroupId,
-    },
-    age: {
-      type: ControlTypes.NUMBER,
-      label: 'Age',
-      value: 35,
-      groupId: personalGroupId,
-    },
-    message: {
-      type: ControlTypes.TEXT,
-      label: 'Mesage',
-      value: 'Hello!',
-      groupId: generalGroupId,
-    },
+groupedControls.description = 'Controls grouped in multiple tabs.';
+groupedControls.controls = {
+  name: {
+    type: ControlTypes.TEXT,
+    label: 'Name',
+    value: 'James',
+    groupId: personalGroupId,
+  },
+  age: {
+    type: ControlTypes.NUMBER,
+    label: 'Age',
+    value: 35,
+    groupId: personalGroupId,
+  },
+  message: {
+    type: ControlTypes.TEXT,
+    label: 'Mesage',
+    value: 'Hello!',
+    groupId: generalGroupId,
   },
 };
 
@@ -331,26 +325,25 @@ export const orderControls = ({ age, name, message }) => {
   return <div>{content}</div>;
 };
 
-orderControls.story = {
-  description: 'Controls grouped in multiple tabs.',
-  controls: {
-    name: {
-      type: ControlTypes.TEXT,
-      label: 'Name',
-      value: 'James',
-      order: 3,
-    },
-    age: {
-      type: ControlTypes.NUMBER,
-      label: 'Age',
-      value: 35,
-    },
-    message: {
-      type: ControlTypes.TEXT,
-      label: 'Mesage',
-      value: 'Hello!',
-      order: 0,
-    },
+orderControls.description = 'Controls grouped in multiple tabs.';
+
+orderControls.controls = {
+  name: {
+    type: ControlTypes.TEXT,
+    label: 'Name',
+    value: 'James',
+    order: 3,
+  },
+  age: {
+    type: ControlTypes.NUMBER,
+    label: 'Age',
+    value: 35,
+  },
+  message: {
+    type: ControlTypes.TEXT,
+    label: 'Mesage',
+    value: 'Hello!',
+    order: 0,
   },
 };
 

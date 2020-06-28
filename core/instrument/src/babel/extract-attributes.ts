@@ -42,13 +42,17 @@ const nodeToValue = (node: any): any => {
 };
 const nodeToAttribute = (node: any): StoryAttribute | undefined => {
   const value = node.value || node;
-  const name = node.key ? node.key.name ?? node.key.value : node.name;
+  const name = node.key
+    ? node.key.name ?? node.key.value
+    : node.property?.name || node.name;
 
   const retVal = nodeToValue(value);
   return retVal !== undefined
     ? name
       ? { value: retVal, name }
       : retVal
+    : value
+    ? { value }
     : undefined;
 };
 export const extractAttributes = (
