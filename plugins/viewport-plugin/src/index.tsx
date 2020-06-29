@@ -14,7 +14,7 @@ export const ViewportBlock: FC<StoryBlockContainerProps> = props => {
     <StoryBlockContainer {...props}>
       {({ story: { id: storyId } = {} }) => (
         <ActionContainer
-          actions={[{ title: 'actions', onClick: () => alert('actions') }]}
+          actions={[{ node: 'actions', onClick: () => alert('actions') }]}
         >
           <Box
             sx={{
