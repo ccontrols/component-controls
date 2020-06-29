@@ -154,6 +154,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         },
         {
           Header: 'Name',
+          width: 150,
           accessor: 'name',
           Cell: ({ row: { original } }: any) => {
             if (!original) {
@@ -278,16 +279,13 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                 getPropertyEditor(control.type) || InvalidType;
 
               return (
-                <Flex
+                <Box
                   sx={{
-                    flexDirection: 'column',
-                    alignItems: 'left',
-                    flexBasis: '100%',
-                    minWidth: 200,
+                    minWidth: 150,
                   }}
                 >
                   <InputType name={original.name} />
-                </Flex>
+                </Box>
               );
             }
             return null;
@@ -297,7 +295,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       return { columns, rows, groupProps };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [extraColumns, hasControls, info.props, infoKeys, story.id, visibility],
+    [extraColumns, hasControls, info.props, story.id, visibility],
   );
 
   const onChange = (propName: string, value: any) => {

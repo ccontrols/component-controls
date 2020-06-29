@@ -7,6 +7,7 @@ import { Label, Button, Image } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 import { Source } from '../Source';
+import { LinkHeading } from '../LinkHeading';
 
 export interface MDXLanguageType {
   [key: string]: Language;
@@ -89,6 +90,12 @@ export const markdownComponents: MarkdownComponentType = {
       </Source>
     );
   },
+  h1: props => <LinkHeading as="h1" {...props} />,
+  h2: props => <LinkHeading as="h2" {...props} />,
+  h3: props => <LinkHeading as="h3" {...props} />,
+  h4: props => <LinkHeading as="h4" {...props} />,
+  h5: props => <LinkHeading as="h5" {...props} />,
+  h6: props => <LinkHeading as="h6" {...props} />,
   image: Image,
   button: Button,
   label: Label,

@@ -3,9 +3,9 @@ const text =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif';
 
 const heading = {
-  fontFamily: 'semibold',
-  lineHeight: 'semibold',
-  fontWeight: 'semibold',
+  fontFamily: 'heading',
+  lineHeight: 'heading',
+  fontWeight: 'heading',
 };
 
 const ActionItemStyle: ThemeUIStyleObject = {
@@ -29,6 +29,7 @@ export type ControlsTheme = {
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
+  linkheading: Record<string, ThemeUIStyleObject>;
   searchinput: Record<string, ThemeUIStyleObject>;
   subtitle: ThemeUIStyleObject;
   subheading: ThemeUIStyleObject;
@@ -119,7 +120,7 @@ export const theme: ControlsTheme = {
   fontWeights: {
     thin: 300,
     body: 400,
-    semibold: 600,
+    heading: 600,
     bold: 700,
   },
   lineHeights: {
@@ -151,7 +152,7 @@ export const theme: ControlsTheme = {
   links: {
     nav: {
       fontWeight: 'thin',
-      fontSize: '14px',
+      fontSize: 3,
       lineHeight: '1.6rem',
       '&.active': {
         fontWeight: 'bold',
@@ -179,26 +180,32 @@ export const theme: ControlsTheme = {
     h1: {
       ...heading,
       fontSize: 6,
+      my: 3,
     },
     h2: {
       ...heading,
-      fontSize: 4,
+      fontSize: 5,
+      my: 4,
     },
     h3: {
       ...heading,
       fontSize: 3,
+      my: 3,
     },
     h4: {
       ...heading,
       fontSize: 2,
+      my: 3,
     },
     h5: {
       ...heading,
       fontSize: 1,
+      my: 3,
     },
     h6: {
       ...heading,
       fontSize: 0,
+      my: 3,
     },
     a: {
       color: 'primary',
@@ -244,7 +251,8 @@ export const theme: ControlsTheme = {
     },
     th: {
       border: 'none',
-      padding: '10px 0 10px 20px',
+      px: 2,
+      pl: 3,
     },
     //@ts-ignore
     tbody: {
@@ -258,14 +266,15 @@ export const theme: ControlsTheme = {
       color: 'text',
     },
     td: {
-      padding: '16px 20px',
+      py: 3,
+      px: 3,
       borderBottom: 0,
     },
     tdgroup: {
       lineHeight: '24px',
       background: '#fafbfc',
       whiteSpace: 'nowrap',
-      padding: '16px 20px',
+      py: 3,
       fontWeight: 'bold',
       fontFamily: 'monospace',
       flexDirection: 'row',
@@ -345,6 +354,30 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
       justifyContent: 'space-between',
       mb: 4,
+    },
+  },
+  linkheading: {
+    container: {
+      width: '100%',
+      scrollMarginTop: '5rem',
+    },
+    inner: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      ':hover': {
+        a: {
+          visibility: 'visible',
+        },
+      },
+    },
+    link: {
+      position: 'absolute',
+      visibility: 'hidden',
+      ':hover': {
+        visibility: 'visible',
+      },
     },
   },
   searchinput: {
@@ -760,7 +793,7 @@ export const theme: ControlsTheme = {
     inner: {
       alignItems: `center`,
       color: `text`,
-      fontWeight: `semibold`,
+      fontWeight: `heading`,
       a: { color: `text` },
     },
   },
@@ -840,7 +873,7 @@ export const theme: ControlsTheme = {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
-      gridTemplateColumns: '300px 1fr',
+      gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
       position: 'relative',
     },
   },

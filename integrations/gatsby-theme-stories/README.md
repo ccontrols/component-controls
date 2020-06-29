@@ -9,6 +9,7 @@
     -   [<ins>Store</ins>](#insstoreins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
+    -   [<ins>DefaultName</ins>](#insdefaultnameins)
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
     -   [<ins>DocPage</ins>](#insdocpageins)
@@ -89,6 +90,10 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 | ------- | ---------- | ----------- |
 | `docId` | _string_   |             |
 | `type`  | _PageType_ |             |
+
+## <ins>DefaultName</ins>
+
+_DefaultName [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/404.tsx)_
 
 ## <ins>CategoryList</ins>
 

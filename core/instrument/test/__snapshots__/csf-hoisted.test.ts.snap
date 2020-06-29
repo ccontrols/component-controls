@@ -12,8 +12,8 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "a5c8750149d81a8bf4e29242df86960c",
     },
-    "date": 2020-06-28T15:34:24.198Z,
-    "dateModified": 2020-06-28T15:35:12.922Z,
+    "date": 2020-06-29T01:18:57.680Z,
+    "dateModified": 2020-06-29T01:18:57.681Z,
     "package": "ec71283d1606ec1307a72179d47d2255",
     "title": "Story",
   },
@@ -101,8 +101,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-28T15:34:24.200Z,
-    "dateModified": 2020-06-28T15:36:04.549Z,
+    "date": 2020-06-29T01:18:57.681Z,
+    "dateModified": 2020-06-29T01:18:57.681Z,
     "package": "99930802624c5d84c6815b0aa494de28",
     "title": "Story",
   },
@@ -204,8 +204,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-28T15:34:24.201Z,
-    "dateModified": 2020-06-28T15:36:27.589Z,
+    "date": 2020-06-29T01:18:57.682Z,
+    "dateModified": 2020-06-29T01:18:57.682Z,
     "package": "f0c3d627ecddef021936755ba261c5e9",
     "title": "Story",
   },

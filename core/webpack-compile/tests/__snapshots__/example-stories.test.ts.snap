@@ -540,8 +540,8 @@ Button.propTypes = {
         "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
-        "date": 2020-06-28T15:52:24.433Z,
-        "dateModified": 2020-06-28T16:10:02.341Z,
+        "date": 2020-06-29T01:18:57.726Z,
+        "dateModified": 2020-06-29T22:44:26.979Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
@@ -631,7 +631,7 @@ Button.propTypes = {
               "min": 10,
               "type": "ControlTypes.NUMBER",
               "undefined": Node {
-                "end": 923,
+                "end": 925,
                 "loc": SourceLocation {
                   "end": Position {
                     "column": 22,
@@ -642,7 +642,7 @@ Button.propTypes = {
                     "line": 43,
                   },
                 },
-                "start": 919,
+                "start": 921,
                 "type": "NullLiteral",
               },
               "value": 19,
@@ -651,7 +651,7 @@ Button.propTypes = {
               "label": "Name",
               "type": "ControlTypes.TEXT",
               "undefined": Node {
-                "end": 735,
+                "end": 736,
                 "expressions": Array [],
                 "loc": SourceLocation {
                   "end": Position {
@@ -665,7 +665,7 @@ Button.propTypes = {
                 },
                 "quasis": Array [
                   Node {
-                    "end": 734,
+                    "end": 735,
                     "loc": SourceLocation {
                       "end": Position {
                         "column": 0,
@@ -681,12 +681,12 @@ Button.propTypes = {
                     "type": "TemplateElement",
                     "value": Object {
                       "cooked": "
-## name of the person
+**name of the person**
 
 any text is allowed
 ",
                       "raw": "
-## name of the person
+**name of the person**
 
 any text is allowed
 ",
@@ -723,8 +723,8 @@ any text is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-06-17T18:28:16.388Z,
-        "dateModified": 2020-06-28T16:17:29.773Z,
+        "date": 2020-06-29T01:18:57.727Z,
+        "dateModified": 2020-06-29T01:18:57.727Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "684baa68d45c8becd8f39da85795335b",
         "title": "Introduction/Controls",
@@ -2150,8 +2150,8 @@ any text is allowed
             "value": "Mark",
           },
         },
-        "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-28T16:04:05.681Z,
+        "date": 2020-06-29T01:18:57.728Z,
+        "dateModified": 2020-06-29T01:18:57.728Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
         "package": "d1f03618863bd813182b2668bed6d262",
         "title": "Introduction/Doc",
@@ -2274,8 +2274,8 @@ any text is allowed
         "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
-        "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-28T16:04:54.609Z,
+        "date": 2020-06-29T01:18:57.728Z,
+        "dateModified": 2020-06-29T01:18:57.729Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
         "title": "Introduction/Smart PropTypes",
@@ -2458,8 +2458,8 @@ any text is allowed
         "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
-        "date": 2020-06-17T18:28:16.390Z,
-        "dateModified": 2020-06-28T16:05:13.913Z,
+        "date": 2020-06-29T01:18:57.729Z,
+        "dateModified": 2020-06-29T01:18:57.730Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
         "title": "Introduction/Smart Typescript",
@@ -2639,8 +2639,8 @@ any text is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-06-17T18:28:16.391Z,
-        "dateModified": 2020-06-28T16:10:25.494Z,
+        "date": 2020-06-29T01:18:57.730Z,
+        "dateModified": 2020-06-29T01:18:57.731Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
         "package": "85a1bf440fe016c4719e372255f5ffcb",
         "title": "Introduction/CSF",

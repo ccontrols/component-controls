@@ -79,8 +79,8 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "72da0b761debbc67acfdcfe4cc253e29",
     },
-    "date": 2020-06-17T18:28:16.347Z,
-    "dateModified": 2020-06-27T00:40:51.026Z,
+    "date": 2020-06-29T01:18:57.679Z,
+    "dateModified": 2020-06-29T01:18:57.679Z,
     "package": "aef0eeece1e59f4690b7e3f0065cdc41",
     "smartControls": Object {
       "smart": false,
@@ -165,8 +165,8 @@ Object {
         "value": "Mark",
       },
     },
-    "date": 2020-06-17T18:28:16.347Z,
-    "dateModified": 2020-06-27T00:45:10.864Z,
+    "date": 2020-06-29T01:18:57.679Z,
+    "dateModified": 2020-06-29T01:18:57.680Z,
     "package": "4dd4688f69a323d0b893ca9c902cc47a",
     "title": "Storybook/Kind",
   },
