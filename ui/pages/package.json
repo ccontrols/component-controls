@@ -30,9 +30,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.5.7",
-    "@component-controls/blocks": "^1.5.7",
+    "@component-controls/axe-plugin": "^1.5.3",
     "@component-controls/viewport-plugin": "^1.2.0",
+    "@component-controls/blocks": "^1.5.3",
     "react": "^16.8.3"
   },
   "devDependencies": {
