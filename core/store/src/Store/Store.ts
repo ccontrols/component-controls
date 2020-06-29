@@ -81,26 +81,41 @@ export class Store implements StoryStore {
    */
   initDocs = () => {
     if (this.loadedStore) {
-      const docs: string[] = Object.keys(this.loadedStore.docs || []);
+      let sortedDocs: string[] = Object.keys(this.loadedStore.docs || []);
+      //custom sort function
       const { storySort } = this.loadedStore.config || {};
       if (storySort) {
-        this.loadedStore.docs = docs
-          .sort((a: string, b: string) => {
-            //@ts-ignore
-            const sort = storySort(a, b);
-            if (sort !== 0) {
-              return sort;
-            }
-            return docs.indexOf(a) - docs.indexOf(b);
-          })
-          .reduce(
-            //@ts-ignore
-            (acc, key) => ({ ...acc, [key]: this.loadedStore.docs[key] }),
-            {},
-          );
+        sortedDocs = sortedDocs.sort((a: string, b: string) => {
+          //@ts-ignore
+          const sort = storySort(a, b);
+          if (sort !== 0) {
+            return sort;
+          }
+          return sortedDocs.indexOf(a) - sortedDocs.indexOf(b);
+        });
       }
-
-      const sortedDocs = Object.keys(this.loadedStore.docs);
+      const store = this.loadedStore;
+      //split documents by their common 'parent'
+      sortedDocs = sortedDocs
+        .map(doc => {
+          const levels = doc.split('/');
+          const parent = levels.slice(0, -1).join('/');
+          return { id: doc, parent };
+        })
+        .sort((a, b) => {
+          if (a.parent === b.parent) {
+            return (
+              (store.docs[a.id].order || 0) - (store.docs[b.id].order || 0)
+            );
+          }
+          return 0;
+        })
+        .map(item => item.id);
+      this.loadedStore.docs = sortedDocs.reduce(
+        //@ts-ignore
+        (acc, key) => ({ ...acc, [key]: this.loadedStore.docs[key] }),
+        {},
+      );
       const { pages = {} } = this.loadedStore?.config || {};
       Object.keys(pages).forEach(type => {
         this._firstDocument[type as PageType] = sortedDocs.find(name => {

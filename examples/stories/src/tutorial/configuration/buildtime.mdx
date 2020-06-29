@@ -1,0 +1,21 @@
+---
+title: Configuration/Build time
+route: /configuration/buildtime/
+type: tutorial
+order: 1
+tags:
+  - configuration
+---
+
+# 
+
+# Fields
+
+| Name           | Type                                | Description                                                                                                                                    |
+| -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `categories`   | [PageType](#pagetype)\[]            | page types that are considred as categories fields as well                                                                                     |
+| `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| `webpack` or `finalWebpack`     | [WebpackConfig](#webpackconfig)     | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+
+

@@ -6,6 +6,7 @@ module.exports = {
     '../../stories/src/authors/*.mdx',
     '../../stories/src/tutorial/getting-started/*.mdx',
     '../../stories/src/tutorial/write-documentation/*.mdx',
+    '../../stories/src/tutorial/configuration/*.mdx',
     '../../stories/src/tutorial/parts/*.mdx',
     '../../stories/src/stories/*.stories.@(js|jsx|tsx|mdx)',
     '../src/stories/*.stories.@(js|jsx|tsx|mdx)',
