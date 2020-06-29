@@ -1,4 +1,5 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
+import { ActionItems } from '@component-controls/components';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
 
@@ -169,6 +170,21 @@ export interface RunOnlyConfiguration {
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
+
+  /**
+   * custom toolbar items
+   */
+  toolbar?: {
+    /**
+     * left side toolbar items
+     */
+    left?: ActionItems;
+
+    /**
+     * right side toolbar items
+     */
+    right?: ActionItems;
+  };
 }
 
 export type RunConfiguration = RunOnlyConfiguration &

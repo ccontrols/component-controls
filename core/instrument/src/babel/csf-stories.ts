@@ -84,22 +84,21 @@ export const extractCSFStories = (
     },
     AssignmentExpression: (path: any) => {
       const node = path.node;
+      const storyExport = node.left?.object?.name;
       if (
         node.left.type === 'MemberExpression' &&
         node.left.property.type === 'Identifier' &&
-        node.left.property.name === 'story' &&
-        node.right.type === 'ObjectExpression'
+        store.stories[storyExport]
       ) {
-        const storyName = node.left.object.name;
-        const { name = storyName, ...attributes } = extractAttributes(
-          node.right,
-        );
-        globals[storyName] = {
-          ...attributes,
-          name,
-        };
+        const extractedValue = extractAttributes(node.right);
+        const extractedProps =
+          node.left.property.name === 'story'
+            ? extractedValue
+            : { [node.left.property.name]: extractedValue };
+        const { name, storyName, ...attributes } = extractedProps;
 
-        if (store.stories[storyName]) {
+        const nameAttr = storyName || name;
+        if (store.stories[storyExport]) {
           const attrComponents = componentsFromParams(attributes);
           components = attrComponents.reduce(
             (acc, componentName) => ({ ...acc, [componentName]: undefined }),
@@ -107,13 +106,16 @@ export const extractCSFStories = (
           );
           const story: Story = {
             ...attributes,
-            ...store.stories[storyName],
-            name,
+            ...store.stories[storyExport],
           };
+          if (nameAttr) {
+            story.name = nameAttr;
+          }
           if (attrComponents.length > 0) {
             story.component = attrComponents[0];
           }
-          store.stories[storyName] = story;
+          store.stories[storyExport] = story;
+          globals[storyExport] = story;
         }
       }
     },
@@ -168,6 +170,7 @@ export const extractCSFStories = (
     },
   });
   if (store.doc) {
+    debugger;
     //@ts-ignore
     store.doc.componentsLookup = components;
   } else {

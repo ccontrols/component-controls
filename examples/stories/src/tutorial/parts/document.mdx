@@ -1,0 +1,32 @@
+---
+title: Structure/Document
+route: /tutorial/document
+type: tutorial
+tags:
+  - documentation
+order: 0
+---
+
+# Document
+
+Document is a single file containing documentation in `mdx` or `es modules` format.
+
+The following fields are available
+
+| Name                | Type                                    | Description                                                                                                                                                                                  |
+| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `author`            | string                                  | document author                                                                                                                                                                              |
+| `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
+| `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
+| `date`              | Date                                    |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`      | Date                                    |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                                                               |
+| `description`       | string                                  |  documentation file description                                                                                                                                                              |
+| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
+| `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
+| `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
+| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
+| `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
+| `type`              | [PageType](#pagetype)                   | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |

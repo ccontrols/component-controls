@@ -20,7 +20,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
     "date": 2020-03-07T04:11:13.289Z,
@@ -53,7 +53,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "dc86c4457416c54c13147e780d972747",
     },
     "date": 2020-03-07T04:13:53.738Z,
@@ -73,9 +73,26 @@ import { Btn as Button } from '../../components/button-named-class';
 
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "dc262d21cd7820523c7e0bacca461e87": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
   "doc": Object {
-    "components": Object {},
+    "componentsLookup": Object {
+      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+    },
     "date": 2020-03-16T23:49:41.736Z,
     "dateModified": 2020-05-18T16:37:54.357Z,
     "title": "Story",
@@ -115,7 +132,7 @@ Object {
   },
   "doc": Object {
     "component": "Button",
-    "components": Object {
+    "componentsLookup": Object {
       "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
       "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
     },
@@ -188,7 +205,7 @@ Object {
     },
   },
   "doc": Object {
-    "components": Object {
+    "componentsLookup": Object {
       "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
@@ -272,7 +289,7 @@ Object {
   },
   "doc": Object {
     "component": "ArrowButton",
-    "components": Object {
+    "componentsLookup": Object {
       "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },

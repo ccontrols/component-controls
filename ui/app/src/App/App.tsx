@@ -21,6 +21,7 @@ export interface AppProps {
 export const App: FC<AppProps> = ({ title, children }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+  const { toolbar } = storeProvider.config || {};
   const items: SkiLinksItemProps[] = [
     {
       target: 'content',
@@ -43,7 +44,7 @@ export const App: FC<AppProps> = ({ title, children }) => {
       <SEO title={title} />
       <SkipLinks items={items} />
       <Box variant="app">
-        <Header />
+        <Header toolbar={toolbar} />
 
         {children}
         <Footer />

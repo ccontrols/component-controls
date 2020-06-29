@@ -11,10 +11,8 @@ export const overview = ({ href }: ExternalLinkProps) => {
 };
 
 overview.story = {
-  parameters: {
-    addonControls: {
-      smart: false,
-    },
+  smartControls: {
+    smart: false,
   },
   controls: {
     href: {

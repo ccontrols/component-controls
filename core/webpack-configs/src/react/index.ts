@@ -47,25 +47,23 @@ export const react: Configuration = {
       {
         test: /\.(md|mdx)$/i,
         exclude: [/node_modules/],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
-                require.resolve('@babel/preset-react'),
-              ],
-            },
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
+            require.resolve('@babel/preset-react'),
+          ],
+        },
+      },
+      {
+        test: /\.(md|mdx)$/i,
+        exclude: [/node_modules/],
+        loader: '@component-controls/loader/loader',
+        options: {
+          mdx: {
+            transformMDX: true,
           },
-          {
-            loader: '@component-controls/loader/loader',
-            options: {
-              mdx: {
-                transformMDX: true,
-              },
-            },
-          },
-        ],
+        },
       },
       {
         test: /\.(story|stories|doc|docs).(js|jsx|ts|tsx)$/,

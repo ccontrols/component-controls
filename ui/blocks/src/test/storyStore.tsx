@@ -352,9 +352,7 @@ and a [link](https://google.com)
       subcomponents: {
         'My Button Tab': 'Button',
       },
-      parameters: {
-        componentSubtitle: 'story subtitle',
-      },
+      subtitle: 'story subtitle',
     },
     'id-of-single': {
       id: 'id-of-single',
@@ -376,9 +374,7 @@ and a [link](https://google.com)
       subcomponents: {
         'My Button Tab': 'Button',
       },
-      parameters: {
-        componentSubtitle: 'story subtitle',
-      },
+      subtitle: 'story subtitle',
     },
     'id-of-button-story': {
       id: 'id-of-button-story',

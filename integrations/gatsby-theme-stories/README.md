@@ -37,7 +37,7 @@ yarn add gatsby-theme-stories
 
 ## Configure
 
-the default options will configure `componnet-controls` to work with react apps,  with `reac-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
 
 in `gatsby-config.js`:
 

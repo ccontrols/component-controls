@@ -46,14 +46,8 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
     //@ts-ignore
     moduleId,
     arguments: storyArgs,
-    parameters,
     ...restStory
   } = story || {};
-  const { storySource, ...restParameters } = parameters || {};
-  if (restParameters && Object.keys(restParameters).length) {
-    //@ts-ignore
-    restStory.parameters = restParameters;
-  }
   return Object.keys(restStory).length ? (
     <Source language="json" {...sourceProps} actions={allActions}>
       {JSON.stringify(restStory, null, 2)}

@@ -32,6 +32,7 @@ export type ControlsTheme = {
   searchinput: Record<string, ThemeUIStyleObject>;
   subtitle: ThemeUIStyleObject;
   subheading: ThemeUIStyleObject;
+  syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
   title: ThemeUIStyleObject;
@@ -375,6 +376,18 @@ export const theme: ControlsTheme = {
   subheading: {
     fontWeight: 'body',
     pb: 1,
+  },
+  syntaxhighlight: {
+    highlight: {
+      pl: 1,
+      backgroundColor: 'highlight',
+      borderLeft: (t: Theme) => `4px solid ${t.colors?.primary}`,
+    },
+    normal: {},
+    title: {
+      fontWeight: 'bold',
+      pl: 2,
+    },
   },
   tabs: {
     '.react-tabs': {

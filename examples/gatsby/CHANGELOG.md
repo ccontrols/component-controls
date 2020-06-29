@@ -3,6 +3,87 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+
+### Bug Fixes
+
+* gatsby story remove meta ([fe0e7ea](https://github.com/ccontrols/component-controls/commit/fe0e7eabe78526630b2645ed068333bcaf882d7d))
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-gatsby
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-gatsby
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx inherit webpack config ([74faadd](https://github.com/ccontrols/component-controls/commit/74faaddea63de1e3266396a8056869d2049ca1bb))
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-gatsby
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-gatsby
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+### Features
+
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package component-controls-gatsby

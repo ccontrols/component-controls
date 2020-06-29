@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+
+### Bug Fixes
+
+* webpack configs dependencies ([faaa608](https://github.com/ccontrols/component-controls/commit/faaa6082651c49e686715a3cfa2b39718f1a34e4))
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx inherit webpack config ([74faadd](https://github.com/ccontrols/component-controls/commit/74faaddea63de1e3266396a8056869d2049ca1bb))
+* webpack configs inherit mdx ([826c1b8](https://github.com/ccontrols/component-controls/commit/826c1b8bf03c5ef67eeade769ea13ab9c62dedf1))
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/webpack-configs
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

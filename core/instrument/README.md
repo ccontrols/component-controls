@@ -475,7 +475,7 @@ _Defined in [@types/resolve/index.d.ts](https://github.com/DefinitelyTyped/Defin
 
 enable footnotes
 
-• **mdPlugins**? : _any\[]_
+• **remarkPlugins**? : _any\[]_
 
 specify remark plugins
 

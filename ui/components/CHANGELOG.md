@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+* remove log ([9b3a8d5](https://github.com/ccontrols/component-controls/commit/9b3a8d5e2de5ded1b5307e80625e7e0e00bb9c64))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* action items title to node ([7047031](https://github.com/ccontrols/component-controls/commit/704703162e131b31d7050ed6e526d85288d3d9db))
+* block expand styling ([fe1f105](https://github.com/ccontrols/component-controls/commit/fe1f1050af88eb4b43d1f6ddee531541db1d5caa))
+* dark mode removed from theme context ([74d3b51](https://github.com/ccontrols/component-controls/commit/74d3b51b0f7f34418403a57689b231f21efab4c2))
+* remove color mode deps ([8b9e463](https://github.com/ccontrols/component-controls/commit/8b9e463b6a6864a8aef2f39c35725a81807c7ecf))
+
+
+### Features
+
+* color-coded tags and page types ([67a8047](https://github.com/ccontrols/component-controls/commit/67a80479819bab9375e92217565416f2237573f4))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* toolbar actionbar styling ([b37084a](https://github.com/ccontrols/component-controls/commit/b37084a9eb078423cda27b00348282649401829d))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

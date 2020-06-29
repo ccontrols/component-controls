@@ -26,15 +26,13 @@ export const docsControlsTable = ({ name, age }: DocsControlsTable = {}) => {
   );
 };
 
-docsControlsTable.story = {
-  controls: {
-    age: {
-      type: ControlTypes.NUMBER,
-      label: 'Age',
-      value: 19,
-      min: 10,
-      max: 75,
-      step: 5,
-    },
+docsControlsTable.controls = {
+  age: {
+    type: ControlTypes.NUMBER,
+    label: 'Age',
+    value: 19,
+    min: 10,
+    max: 75,
+    step: 5,
   },
 };

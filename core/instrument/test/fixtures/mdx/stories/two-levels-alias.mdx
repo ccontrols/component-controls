@@ -2,7 +2,7 @@ import { Story, Meta } from '@component-controls/blocks';
 import Button from '../components/BaseButton';
 
 
-<Meta title="Storybook/MDX" parameters={{component: Button}} />
+<Meta title="Storybook/MDX" component={Button} />
 
 <Story name="story-with-props">
   {({ name: MyName, age }) => <Button />}

@@ -36,7 +36,6 @@ export interface SidebarProps {
    */
   activeTab?: string;
 }
-
 const createMenuItem = (
   storeProvider: StoryStore,
   doc: Document,
@@ -92,7 +91,6 @@ export const Sidebar: FC<SidebarProps> = ({
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
-
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "1.4.0",
+  "version": "1.5.7",
   "description": "Component controls editors for component control values.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,7 @@
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-node  -O '{\"module\": \"commonjs\"}' ../../scripts/docs.ts",
+    "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -30,8 +30,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.4.0",
-    "@component-controls/core": "^1.3.0",
+    "@component-controls/components": "^1.5.7",
+    "@component-controls/core": "^1.5.7",
     "@primer/octicons-react": "^10.0.0",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
@@ -42,6 +42,7 @@
     "theme-ui": "next"
   },
   "devDependencies": {
+    "@component-controls/ts-markdown-docs": "^1.5.0",
     "@types/jest": "^25.1.2",
     "@types/react-color": "^3.0.1",
     "cross-env": "^5.2.1",

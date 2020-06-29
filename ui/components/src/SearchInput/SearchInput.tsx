@@ -37,7 +37,7 @@ export interface SearchInputItemType {
   [key: string]: any;
 }
 
-export interface SearchBoxProps<ItemType> {
+export interface SearchInputOwnProps<ItemType> {
   /**
    * callback on change of search input. user can retrieve items in this callback
    *
@@ -62,6 +62,8 @@ export interface SearchBoxProps<ItemType> {
   popoverProps?: PopoverProps;
 }
 
+export type SearchInputProps<ItemType> = SearchInputOwnProps<ItemType> &
+  Omit<InputProps, 'ref' | 'onSelect'>;
 /**
  * an input component combined with a popover, can be used for incremental search.
  */
@@ -72,7 +74,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
   onSelect,
   popoverProps,
   ...rest
-}: SearchBoxProps<ItemType> & Omit<InputProps, 'ref' | 'onSelect'>) => {
+}: SearchInputProps<ItemType>) => {
   const [selected, setSelected] = useState<number | undefined>(undefined);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [search, setSearch] = useState<string>('');

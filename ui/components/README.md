@@ -83,9 +83,10 @@ _ActionBar [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name      | Type          | Description                |
-| --------- | ------------- | -------------------------- |
-| `actions` | _ActionItems_ | collection of action items |
+| Name       | Type                       | Description                         |
+| ---------- | -------------------------- | ----------------------------------- |
+| `actions`  | _ActionItems_              | collection of action items          |
+| `themeKey` | _"actionbar" \| "toolbar"_ | two possible layouts from the theme |
 
 ## <ins>ActionContainer</ins>
 

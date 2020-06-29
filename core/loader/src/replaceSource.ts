@@ -23,14 +23,20 @@ ${stories
 `;
   const storeConst = `const store = ${hashKey};\n`;
   let loadStories = `
-  const assignProps = (obj, props) => {
+  const assignProps = (obj, { storyName, story, ...props}) => {
     //preserve component and subcomponents as strings
     const componentName = obj.component;
     const subcomponentsName = obj.subcomponents;
     Object.assign(obj, props);
-    obj.component = componentName;
-    obj.subcomponents = subcomponentsName;
-
+    if (componentName !== undefined) {
+      obj.component = componentName;
+    }  
+    if (subcomponentsName !== undefined) {
+      obj.subcomponents = subcomponentsName;
+    }
+    if (storyName) {
+      obj.name = storyName;
+    }
   }
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
@@ -47,6 +53,7 @@ ${stories
             const story = s.stories[key];
             if (story) {
               story.renderFn = exported;
+              assignProps(story, exported);
               if (exported.story) {
                 assignProps(story, exported.story);
               }

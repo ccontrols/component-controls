@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+
+
+
+
+
 # [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
 
 

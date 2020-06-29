@@ -437,7 +437,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
       "dependencies": undefined,
@@ -450,7 +450,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
       "dependencies": undefined,
@@ -463,7 +463,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
       "dependencies": undefined,
@@ -476,7 +476,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "dependencies": undefined,
@@ -489,7 +489,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "85a1bf440fe016c4719e372255f5ffcb": Object {
       "dependencies": undefined,
@@ -502,7 +502,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "dependencies": undefined,
@@ -515,7 +515,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
       "dependencies": undefined,
@@ -528,7 +528,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.3.0",
+      "version": "1.5.7",
     },
   },
   "stores": Array [
@@ -536,11 +536,12 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
-        "date": 2020-06-17T18:28:16.386Z,
-        "dateModified": 2020-06-24T16:52:46.444Z,
+        "date": 2020-06-28T15:52:24.433Z,
+        "dateModified": 2020-06-28T16:10:02.341Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
@@ -629,11 +630,72 @@ Button.propTypes = {
               "max": 75,
               "min": 10,
               "type": "ControlTypes.NUMBER",
+              "undefined": Node {
+                "end": 923,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 22,
+                    "line": 43,
+                  },
+                  "start": Position {
+                    "column": 18,
+                    "line": 43,
+                  },
+                },
+                "start": 919,
+                "type": "NullLiteral",
+              },
               "value": 19,
             },
             "name": Object {
               "label": "Name",
               "type": "ControlTypes.TEXT",
+              "undefined": Node {
+                "end": 735,
+                "expressions": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 1,
+                    "line": 32,
+                  },
+                  "start": Position {
+                    "column": 17,
+                    "line": 28,
+                  },
+                },
+                "quasis": Array [
+                  Node {
+                    "end": 734,
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 0,
+                        "line": 32,
+                      },
+                      "start": Position {
+                        "column": 18,
+                        "line": 28,
+                      },
+                    },
+                    "start": 690,
+                    "tail": true,
+                    "type": "TemplateElement",
+                    "value": Object {
+                      "cooked": "
+## name of the person
+
+any text is allowed
+",
+                      "raw": "
+## name of the person
+
+any text is allowed
+",
+                    },
+                  },
+                ],
+                "start": 689,
+                "type": "TemplateLiteral",
+              },
               "value": "Mark",
             },
           },
@@ -660,8 +722,9 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.388Z,
-        "dateModified": 2020-06-24T16:59:00.124Z,
+        "dateModified": 2020-06-28T16:17:29.773Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "684baa68d45c8becd8f39da85795335b",
         "title": "Introduction/Controls",
@@ -740,14 +803,17 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 233,
+              "line": 232,
             },
             "start": Object {
               "column": 25,
-              "line": 226,
+              "line": 225,
             },
           },
           "name": "XSS safety",
+          "propTypes": Object {
+            "content": "undefined.isRequired",
+          },
           "source": "({ content }) => (
   <div
     // eslint-disable-next-line react/no-danger
@@ -819,11 +885,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 56,
-              "line": 251,
+              "line": 249,
             },
             "start": Object {
               "column": 34,
-              "line": 251,
+              "line": 249,
             },
           },
           "name": "generateRandomData",
@@ -959,14 +1025,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 290,
+              "line": 286,
             },
             "start": Object {
               "column": 31,
-              "line": 283,
+              "line": 279,
             },
           },
           "name": "groupedControls",
+          "propTypes": Object {
+            "age": "undefined.isRequired",
+            "message": "undefined.isRequired",
+            "name": "undefined.isRequired",
+          },
           "source": "({ age, name, message }) => {
   const content = \`
     I am \${name} and I'm \${age} years old.
@@ -1472,6 +1543,100 @@ Button.propTypes = {
               "groupId": "GROUP_IDS.GENERAL",
               "label": "Birthday",
               "type": "ControlTypes.DATE",
+              "undefined": Node {
+                "arguments": Array [
+                  Node {
+                    "end": 3138,
+                    "extra": Object {
+                      "raw": "1990",
+                      "rawValue": 1990,
+                    },
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 24,
+                        "line": 126,
+                      },
+                      "start": Position {
+                        "column": 20,
+                        "line": 126,
+                      },
+                    },
+                    "start": 3134,
+                    "type": "NumericLiteral",
+                    "value": 1990,
+                  },
+                  Node {
+                    "end": 3141,
+                    "extra": Object {
+                      "raw": "1",
+                      "rawValue": 1,
+                    },
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 27,
+                        "line": 126,
+                      },
+                      "start": Position {
+                        "column": 26,
+                        "line": 126,
+                      },
+                    },
+                    "start": 3140,
+                    "type": "NumericLiteral",
+                    "value": 1,
+                  },
+                  Node {
+                    "end": 3144,
+                    "extra": Object {
+                      "raw": "1",
+                      "rawValue": 1,
+                    },
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 30,
+                        "line": 126,
+                      },
+                      "start": Position {
+                        "column": 29,
+                        "line": 126,
+                      },
+                    },
+                    "start": 3143,
+                    "type": "NumericLiteral",
+                    "value": 1,
+                  },
+                ],
+                "callee": Node {
+                  "end": 3133,
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 19,
+                      "line": 126,
+                    },
+                    "identifierName": "Date",
+                    "start": Position {
+                      "column": 15,
+                      "line": 126,
+                    },
+                  },
+                  "name": "Date",
+                  "start": 3129,
+                  "type": "Identifier",
+                },
+                "end": 3145,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 31,
+                    "line": 126,
+                  },
+                  "start": Position {
+                    "column": 11,
+                    "line": 126,
+                  },
+                },
+                "start": 3125,
+                "type": "NewExpression",
+              },
             },
             "color": Object {
               "groupId": "GROUP_IDS.DISPLAY",
@@ -1563,6 +1728,21 @@ Button.propTypes = {
               "value": Object {
                 "border": Object {
                   "type": "text",
+                  "undefined": Node {
+                    "end": 4832,
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 68,
+                        "line": 206,
+                      },
+                      "start": Position {
+                        "column": 64,
+                        "line": 206,
+                      },
+                    },
+                    "start": 4828,
+                    "type": "NullLiteral",
+                  },
                   "value": "2px dashed silver",
                 },
                 "borderRadius": Object {
@@ -1601,6 +1781,22 @@ Button.propTypes = {
             },
           },
           "name": "kitchenSink",
+          "propTypes": Object {
+            "age": "undefined.isRequired",
+            "backgroundColor": "undefined.isRequired",
+            "birthday": "undefined.isRequired",
+            "color": "undefined.isRequired",
+            "dog": "undefined.isRequired",
+            "dollars": "undefined.isRequired",
+            "fruit": "undefined.isRequired",
+            "images": "undefined.isRequired",
+            "items": "undefined.isRequired",
+            "nice": "undefined.isRequired",
+            "otherFruit": "undefined.isRequired",
+            "otherStyles": "undefined.isRequired",
+            "userName": "undefined.isRequired",
+            "years": "undefined.isRequired",
+          },
           "source": "({
   userName,
   age,
@@ -1778,11 +1974,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 332,
+              "line": 326,
             },
             "start": Object {
               "column": 29,
-              "line": 325,
+              "line": 319,
             },
           },
           "name": "orderControls",
@@ -1861,11 +2057,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 50,
-              "line": 267,
+              "line": 264,
             },
             "start": Object {
               "column": 28,
-              "line": 267,
+              "line": 264,
             },
           },
           "name": "randomNumber",
@@ -1945,6 +2141,7 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "controls": Object {
           "name": Object {
             "label": "Name",
@@ -1954,7 +2151,7 @@ Button.propTypes = {
           },
         },
         "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-17T18:28:16.389Z,
+        "dateModified": 2020-06-28T16:04:05.681Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
         "package": "d1f03618863bd813182b2668bed6d262",
         "title": "Introduction/Doc",
@@ -2073,16 +2270,14 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
         "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-28T16:04:54.609Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
-        "parameters": Object {
-          "component": "Button",
-        },
         "title": "Introduction/Smart PropTypes",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
@@ -2123,11 +2318,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 54,
-              "line": 12,
+              "line": 10,
             },
             "start": Object {
               "column": 24,
-              "line": 12,
+              "line": 10,
             },
           },
           "name": "allProps",
@@ -2169,23 +2364,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 76,
-              "line": 26,
+              "line": 18,
             },
             "start": Object {
               "column": 24,
-              "line": 26,
+              "line": 18,
             },
           },
           "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "exclude": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2195,11 +2386,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 61,
-              "line": 39,
+              "line": 25,
             },
             "start": Object {
               "column": 23,
-              "line": 39,
+              "line": 25,
             },
           },
           "name": "noProps",
@@ -2241,23 +2432,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 78,
-              "line": 14,
+              "line": 12,
             },
             "start": Object {
               "column": 26,
-              "line": 14,
+              "line": 12,
             },
           },
           "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "include": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2267,16 +2454,14 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "component": "Button",
-        "components": Object {
+        "components": Object {},
+        "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
         "date": 2020-06-17T18:28:16.390Z,
-        "dateModified": 2020-06-17T18:28:16.390Z,
+        "dateModified": 2020-06-28T16:05:13.913Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
-        "parameters": Object {
-          "component": "Button",
-        },
         "title": "Introduction/Smart Typescript",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
@@ -2317,11 +2502,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 54,
-              "line": 12,
+              "line": 10,
             },
             "start": Object {
               "column": 24,
-              "line": 12,
+              "line": 10,
             },
           },
           "name": "allProps",
@@ -2363,23 +2548,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 76,
-              "line": 26,
+              "line": 18,
             },
             "start": Object {
               "column": 24,
-              "line": 26,
+              "line": 18,
             },
           },
           "name": "noColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "exclude": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "exclude": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2389,11 +2570,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 61,
-              "line": 39,
+              "line": 25,
             },
             "start": Object {
               "column": 23,
-              "line": 39,
+              "line": 25,
             },
           },
           "name": "noProps",
@@ -2435,23 +2616,19 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 78,
-              "line": 14,
+              "line": 12,
             },
             "start": Object {
               "column": 26,
-              "line": 14,
+              "line": 12,
             },
           },
           "name": "onlyColors",
-          "parameters": Object {
-            "addonControls": Object {
-              "smart": Object {
-                "include": Array [
-                  "color",
-                  "backgroundColor",
-                ],
-              },
-            },
+          "smartControls": Object {
+            "include": Array [
+              "color",
+              "backgroundColor",
+            ],
           },
           "source": "props => <Button label=\\"Choose colors\\" {...props} />",
         },
@@ -2461,8 +2638,9 @@ Button.propTypes = {
       "doc": Object {
         "author": "atanasster",
         "components": Object {},
+        "componentsLookup": Object {},
         "date": 2020-06-17T18:28:16.391Z,
-        "dateModified": 2020-06-17T18:28:16.391Z,
+        "dateModified": 2020-06-28T16:10:25.494Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
         "package": "85a1bf440fe016c4719e372255f5ffcb",
         "title": "Introduction/CSF",
@@ -2614,11 +2792,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 22,
+              "line": 20,
             },
             "start": Object {
               "column": 32,
-              "line": 17,
+              "line": 15,
             },
           },
           "name": "multipleChildren",
@@ -2704,11 +2882,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 71,
-              "line": 34,
+              "line": 30,
             },
             "start": Object {
               "column": 40,
-              "line": 34,
+              "line": 30,
             },
           },
           "name": "storyDesconstructedProps",
@@ -2757,11 +2935,11 @@ Button.propTypes = {
           "loc": Object {
             "end": Object {
               "column": 58,
-              "line": 28,
+              "line": 24,
             },
             "start": Object {
               "column": 26,
-              "line": 28,
+              "line": 24,
             },
           },
           "name": "storyProps",

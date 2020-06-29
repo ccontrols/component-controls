@@ -392,7 +392,6 @@ _StorySource [source code](https://github.com/ccontrols/component-controls/tree/
 ## <ins>Subtitle</ins>
 
 displays a subtitle as assigned to the story parameters:
-story.parameters.componentSubtitle
 or story.subtitle
 
 _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Subtitle/Subtitle.tsx)_

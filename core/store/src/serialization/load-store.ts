@@ -49,9 +49,18 @@ export const loadStoryStore = (
             const doc = storeDoc;
             const {
               title,
+              order,
+              type,
+              MDXPage,
+              author,
+              date,
+              dateModified,
+              description,
+              fullPage,
+              route,
+              sidebars,
               stories,
               source,
-              component,
               fileName,
               componentsLookup,
               package: docPackage,
@@ -69,8 +78,8 @@ export const loadStoryStore = (
               if (smartControls) {
                 story.controls = deepMerge(smartControls, story.controls || {});
               }
-              if (doc.title && story.name) {
-                const id = toId(doc.title, storyNameFromExport(story.name));
+              if (doc.title && story.id) {
+                const id = toId(doc.title, storyNameFromExport(story.id));
                 if (!doc.stories) {
                   doc.stories = [];
                 }
