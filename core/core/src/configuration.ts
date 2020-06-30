@@ -27,7 +27,7 @@ export interface TabConfiguration {
 
 export type PageTabs = TabConfiguration[];
 
-export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
+export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
 export interface PageConfiguration {
   /**

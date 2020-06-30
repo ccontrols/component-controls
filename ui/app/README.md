@@ -62,7 +62,7 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 | Name         | Type           | Description |
 | ------------ | -------------- | ----------- |
-| `type`       | _PageType_     |             |
+| `type`       | _string_       |             |
 | `docId`      | _string_       |             |
 | `store`      | _LoadingStore_ |             |
 | `linkClass*` | _any_          |             |
@@ -75,9 +75,9 @@ _CategoryList [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ | page type   |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ | page type   |
 
 ## <ins>CategoryListItem</ins>
 
@@ -99,10 +99,10 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type       | Description |
-| ----------- | ---------- | ----------- |
-| `type*`     | _PageType_ |             |
-| `category*` | _any_      |             |
+| Name        | Type     | Description |
+| ----------- | -------- | ----------- |
+| `type*`     | _string_ |             |
+| `category*` | _any_    |             |
 
 ## <ins>Container</ins>
 
@@ -119,10 +119,10 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type`      | _PageType_ | page type       |
-| `activeTab` | _string_   | active page tab |
+| Name        | Type     | Description     |
+| ----------- | -------- | --------------- |
+| `type`      | _string_ | page type       |
+| `activeTab` | _string_ | active page tab |
 
 ## <ins>DocumentsList</ins>
 
@@ -202,7 +202,7 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 
 | Name      | Type                                                                                                                                                                                                                                                                                  | Description                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| `type*`   | _PageType_                                                                                                                                                                                                                                                                            | page type                           |
+| `type*`   | _string_                                                                                                                                                                                                                                                                              | page type                           |
 | `variant` | _string_                                                                                                                                                                                                                                                                              | theme variant                       |
 | `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement> \| (((instance: HTMLDivElement) => void) & string) \| (((instance: HTMLDivElement) => void) & RefObject&lt;...>) \| (RefObject&lt;...> & string) \| (RefObject&lt;...> & ((instance: HTMLDivElement) => void))_ | ref to the page container component |
 
@@ -214,9 +214,9 @@ _PageList [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ |             |
 
 ## <ins>SEO</ins>
 
@@ -252,7 +252,7 @@ _Sidebar [source code](https://github.com/ccontrols/component-controls/tree/mast
 | Name        | Type        | Description                                           |
 | ----------- | ----------- | ----------------------------------------------------- |
 | `title`     | _ReactNode_ | title element                                         |
-| `type`      | _PageType_  | page type                                             |
+| `type`      | _string_    | page type                                             |
 | `activeTab` | _string_    | currently active tab. Use to creae the sidemenu links |
 
 ## <ins>SidebarsMDXPage</ins>
@@ -263,9 +263,9 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ | page type   |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ | page type   |
 
 ## <ins>SidebarsPage</ins>
 
@@ -273,10 +273,10 @@ _SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type*`     | _PageType_ | page type       |
-| `activeTab` | _string_   | active page tab |
+| Name        | Type     | Description     |
+| ----------- | -------- | --------------- |
+| `type*`     | _string_ | page type       |
+| `activeTab` | _string_ | active page tab |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -286,9 +286,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type*`     | _PageType_ | page type       |
-| `activeTab` | _string_   | active page tab |
+| Name        | Type     | Description     |
+| ----------- | -------- | --------------- |
+| `type*`     | _string_ | page type       |
+| `activeTab` | _string_ | active page tab |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

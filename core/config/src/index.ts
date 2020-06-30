@@ -6,7 +6,14 @@ import { BuildConfiguration } from '@component-controls/core';
 
 export const buildConfigFileNames = ['buildtime.js', 'build.js', 'main.js'];
 
-export const optionsFileNames = ['runtime.js', 'options.js'];
+export const optionsFileNames = [
+  'runtime.js',
+  'options.js',
+  'runtime.ts',
+  'runtime.tsx',
+  'options.ts',
+  'options.tsx',
+];
 export interface ConfigrationResult {
   config: BuildConfiguration;
   configPath: string;
@@ -57,7 +64,6 @@ export const loadConfiguration = (
   const optionsFile = allFiles.find(file =>
     optionsFileNames.includes(file.toLowerCase()),
   );
-
   if (buildConfigFile) {
     return {
       config: require(path.resolve(configPath, buildConfigFile)),

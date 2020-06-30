@@ -217,9 +217,9 @@ _PageTypeTag [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ |             |
 
 ## <ins>Pagination</ins>
 

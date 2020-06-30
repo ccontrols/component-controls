@@ -1030,7 +1030,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
-'story' | 'blog' | 'page' | 'tags' | 'author'
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 ## PagesConfiguration
 
@@ -1104,10 +1104,10 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ### properties
 
-| Name          | Type                  | Description |
-| ------------- | --------------------- | ----------- |
-| `categories*` | 'tags' \| 'author'\[] |             |
-| `pages*`      | object                |             |
+| Name          | Type      | Description |
+| ------------- | --------- | ----------- |
+| `categories*` | string\[] |             |
+| `pages*`      | object    |             |
 
 ## defaultRunConfig
 
@@ -1148,7 +1148,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
-'story' | 'blog' | 'page' | 'tags' | 'author'
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 ## RunConfiguration
 
@@ -1259,6 +1259,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
-'story' | 'blog' | 'page' | 'tags' | 'author'
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 <!-- END-TSDOC-TYPESCRIPT -->

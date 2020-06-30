@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
+import { RunOnlyConfiguration } from "@component-controls/core";
 import { Link } from "@component-controls/components";
-import { Container } from "@component-controls/app";
 import { OctofaceIcon } from '@primer/octicons-react';
 
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
-module.exports = {
-  container: Container,
+const config: RunOnlyConfiguration = {
   siteTitle: `Component controls`,
   siteTitleAlt: `Component controls - https://github.com/ccontrols/component-controls`,
   siteHeadline: `Component controls gatsby`,
@@ -69,3 +68,5 @@ module.exports = {
     ]
   }
 }
+
+export default config;

@@ -36,7 +36,6 @@ export type ControlsTheme = {
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
-  title: ThemeUIStyleObject;
   zoom: ThemeUIStyleObject;
   editpage: Record<string, ThemeUIStyleObject>;
   lastedited: Record<string, ThemeUIStyleObject>;
@@ -496,10 +495,6 @@ export const theme: ControlsTheme = {
       display: 'inline-block',
       px: 1,
     },
-  },
-  title: {
-    fontWeight: 'bold',
-    pb: 4,
   },
   zoom: {
     position: 'relative',

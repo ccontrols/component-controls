@@ -86,10 +86,10 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `docId` | _string_   |             |
-| `type`  | _PageType_ |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `docId` | _string_ |             |
+| `type`  | _string_ |             |
 
 ## <ins>DefaultName</ins>
 
@@ -101,9 +101,9 @@ _CategoryList [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name           | Type                               | Description |
-| -------------- | ---------------------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; doc: string; }_ |             |
+| Name           | Type                             | Description |
+| -------------- | -------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; doc: string; }_ |             |
 
 ## <ins>CategoryPage</ins>
 
@@ -111,9 +111,9 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name           | Type                                                 | Description |
-| -------------- | ---------------------------------------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; category: string; doc: string; }_ |             |
+| Name           | Type                                               | Description |
+| -------------- | -------------------------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; category: string; doc: string; }_ |             |
 
 ## <ins>DocPage</ins>
 
@@ -121,9 +121,9 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name           | Type                                                   | Description |
-| -------------- | ------------------------------------------------------ | ----------- |
-| `pathContext*` | _{ doc: string; type: PageType; activeTab?: string; }_ |             |
+| Name           | Type                                                 | Description |
+| -------------- | ---------------------------------------------------- | ----------- |
+| `pathContext*` | _{ doc: string; type: string; activeTab?: string; }_ |             |
 
 ## <ins>PageList</ins>
 
@@ -131,8 +131,8 @@ _PageList [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name           | Type                  | Description |
-| -------------- | --------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; }_ |             |
+| Name           | Type                | Description |
+| -------------- | ------------------- | ----------- |
+| `pathContext*` | _{ type: string; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

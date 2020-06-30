@@ -13,7 +13,7 @@ interface TitleOwnProps {
 export type TitleProps = TitleOwnProps & Omit<HeadingProps, 'children'>;
 
 export const Title: FC<TitleProps> = ({ children, ...rest }) => (
-  <Heading as="h1" variant="title" {...rest}>
+  <Heading as="h1" variant="styles.h1" {...rest}>
     {children}
   </Heading>
 );

@@ -41,12 +41,6 @@ Store {
       "from": "../components/Button",
       "importedName": "Button",
       "imports": Object {
-        "polished": Array [
-          Object {
-            "importedName": "lighten",
-            "name": "lighten",
-          },
-        ],
         "react": Array [
           Object {
             "importedName": "default",
@@ -72,6 +66,15 @@ Store {
               "raw": "string",
             },
           },
+          "children": Object {
+            "defaultValue": "default",
+            "description": "button label",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "ReactNode",
+              "raw": "ReactNode",
+            },
+          },
           "color": Object {
             "defaultValue": "black",
             "description": "Text color, default black",
@@ -88,15 +91,6 @@ Store {
             "type": Object {
               "name": "boolean",
               "raw": "boolean",
-            },
-          },
-          "label": Object {
-            "defaultValue": "default",
-            "description": "button label.",
-            "parentName": "ButtonProps",
-            "type": Object {
-              "name": "string",
-              "raw": "string",
             },
           },
           "onClick": Object {
@@ -154,46 +148,66 @@ Store {
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 51,
+          "line": 71,
         },
         "start": Object {
           "column": 39,
-          "line": 28,
+          "line": 48,
         },
       },
       "name": "Button",
       "package": "999878322b2acba3a7ca83bc6972a800",
       "request": "/Users/atanasster/component-controls/examples/stories/src/components/Button.tsx",
       "source": "import React, { FC } from 'react';
-import { lighten } from 'polished';
 
 interface ButtonProps {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   *  Boolean indicating whether the button should render as disabled
+   */
   disabled?: boolean;
-  /** button label. */
-  label?: string;
-  /** onClick handler */
-  onClick: () => void;
-  /** Custom styles */
-  style: object;
 
-  /** Background color */
-  backgroundColor: string;
+  /**
+   * button label
+   */
+  children?: string;
 
-  /** Text color, default black */
-  color: string;
+  /**
+   * onClick handler
+   */
+  onClick?: () => void;
 
-  /** Button type */
-  type: 'button' | 'reset' | 'submit';
+  /**
+   * Custom styles
+   */
+  style?: object;
 
-  /** Numeric  field type */
-  padding: number;
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+
+  /**
+   * Text color, default black
+   */
+  color?: string;
+
+  /**
+   * Button type
+   */
+  type?: 'button' | 'reset' | 'submit';
+
+  /**
+   * Numeric  field type
+   */
+  padding?: number;
 }
 
-/** Button with react Typescript properties */
+/**
+ * Button with react Typescript properties
+ */
 export const Button: FC<ButtonProps> = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -208,17 +222,17 @@ export const Button: FC<ButtonProps> = ({
     style={{
       ...style,
       backgroundColor,
-      color: lighten(disabled ? 0.4 : 0, color),
+      color,
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -273,6 +287,14 @@ Button.defaultProps = {
               "required": false,
             },
           },
+          "children": Object {
+            "defaultValue": "'default'",
+            "description": "button label",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
           "color": Object {
             "defaultValue": "'black'",
             "description": "Text color, default black",
@@ -286,14 +308,6 @@ Button.defaultProps = {
             "description": "Boolean indicating whether the button should render as disabled",
             "type": Object {
               "name": "boolean",
-            },
-          },
-          "label": Object {
-            "defaultValue": "'default'",
-            "description": "button label.",
-            "type": Object {
-              "name": "string",
-              "required": false,
             },
           },
           "onClick": Object {
@@ -346,11 +360,11 @@ Button.defaultProps = {
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 29,
+          "line": 31,
         },
         "start": Object {
           "column": 22,
-          "line": 6,
+          "line": 8,
         },
       },
       "name": "Button",
@@ -360,10 +374,12 @@ Button.defaultProps = {
 import { lighten } from 'polished';
 import PropTypes from 'prop-types';
 
-/** Button with react PropTypes */
+/**
+ * Button with react PropTypes
+ */
 export const Button = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -382,13 +398,13 @@ export const Button = ({
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -398,25 +414,44 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   * Boolean indicating whether the button should render as disabled
+   */
   disabled: PropTypes.bool,
-  /** button label. */
-  label: PropTypes.string,
-  /** onClick handler */
+
+  /**
+   * button label
+   */
+  children: PropTypes.string,
+
+  /**
+   * onClick handler
+   */
   onClick: PropTypes.func,
-  /** Custom styles */
+
+  /**
+   * Custom styles
+   */
   style: PropTypes.shape({}),
 
-  /** Background color */
+  /**
+   * Background color
+   */
   backgroundColor: PropTypes.string,
 
-  /** Text color, default black */
+  /**
+   * Text color, default black
+   */
   color: PropTypes.string,
 
-  /** Button type */
+  /**
+   * Button type
+   */
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
 
-  /** Numeric  field type */
+  /**
+   * Numeric  field type
+   */
   padding: PropTypes.number,
 };
 ",
@@ -2275,7 +2310,7 @@ any text is allowed
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
         "date": 2020-06-29T01:18:57.728Z,
-        "dateModified": 2020-06-29T01:18:57.729Z,
+        "dateModified": 2020-06-30T13:00:19.509Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
         "title": "Introduction/Smart PropTypes",
@@ -2346,11 +2381,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2363,7 +2398,7 @@ any text is allowed
           "id": "noColors",
           "loc": Object {
             "end": Object {
-              "column": 76,
+              "column": 74,
               "line": 18,
             },
             "start": Object {
@@ -2378,14 +2413,14 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
         "noProps": Object {
           "arguments": Array [],
           "id": "noProps",
           "loc": Object {
             "end": Object {
-              "column": 61,
+              "column": 59,
               "line": 25,
             },
             "start": Object {
@@ -2394,7 +2429,7 @@ any text is allowed
             },
           },
           "name": "noProps",
-          "source": "() => <Button label=\\"No properties\\" />",
+          "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
           "arguments": Array [
@@ -2414,11 +2449,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2431,7 +2466,7 @@ any text is allowed
           "id": "onlyColors",
           "loc": Object {
             "end": Object {
-              "column": 78,
+              "column": 76,
               "line": 12,
             },
             "start": Object {
@@ -2446,7 +2481,7 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
       },
     },
@@ -2459,7 +2494,7 @@ any text is allowed
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
         "date": 2020-06-29T01:18:57.729Z,
-        "dateModified": 2020-06-29T01:18:57.730Z,
+        "dateModified": 2020-06-30T13:01:54.416Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
         "title": "Introduction/Smart Typescript",
@@ -2530,11 +2565,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2547,7 +2582,7 @@ any text is allowed
           "id": "noColors",
           "loc": Object {
             "end": Object {
-              "column": 76,
+              "column": 74,
               "line": 18,
             },
             "start": Object {
@@ -2562,14 +2597,14 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
         "noProps": Object {
           "arguments": Array [],
           "id": "noProps",
           "loc": Object {
             "end": Object {
-              "column": 61,
+              "column": 59,
               "line": 25,
             },
             "start": Object {
@@ -2578,7 +2613,7 @@ any text is allowed
             },
           },
           "name": "noProps",
-          "source": "() => <Button label=\\"No properties\\" />",
+          "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
           "arguments": Array [
@@ -2598,11 +2633,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2615,7 +2650,7 @@ any text is allowed
           "id": "onlyColors",
           "loc": Object {
             "end": Object {
-              "column": 78,
+              "column": 76,
               "line": 12,
             },
             "start": Object {
@@ -2630,7 +2665,7 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
       },
     },

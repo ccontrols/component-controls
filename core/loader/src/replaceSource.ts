@@ -83,7 +83,7 @@ ${stories
   const newContent = `
 ${imports}
 ${storeConst}
-store.config = configJSON;
+store.config = configJSON.default || configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
 ${loadStories}
 ${hmr}

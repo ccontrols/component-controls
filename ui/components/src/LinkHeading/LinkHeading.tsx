@@ -24,7 +24,7 @@ export const LinkHeading: FC<LinkHeadingProps> = ({
   ...rest
 }) => {
   const { size, level } = iconSize[as as string];
-  const padding = Math.max(4, Math.ceil(size / 4));
+  const padding = 4;
   const linkId = titleToId(id || children);
   return (
     <Box id={linkId} variant="linkheading.container">
