@@ -8,6 +8,118 @@ tags:
 order: 2
 ---
 
-import Transclusion from '../../sections/transclusion.mdx';
+## Overview
 
-<Transclusion />
+You can create interactive components examples (aka stories) similar to [ES Modules](/tutorial/esmodules-stories/) in [MDX](/tutorial/mdx-documentation/)
+
+To do so, you need to import some components from **'@component-controls/blocks'** and use them inside your MDX files
+
+## Example
+
+```
+---
+title: First Story
+---
+import { Button } from '../components/Button';
+import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@component-controls/blocks';
+
+# My first doc story
+
+<ComponentSource of={Button} title='Component source' />
+
+<Playground description="Button story">
+  <Story name="simple">
+    <Button>
+      click me
+  </Button>
+  </Story>
+</Playground>
+
+<StorySource id="." />
+
+<PropsTable of={Button} />
+```
+
+## Components
+
+following is a list of the most commonly used components when writing MDX stories:
+
+
+## Story-related
+
+### Playground
+
+component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
+
+[Playground](/api/blocks/playground/)
+
+### Story
+
+block component to render story function with decorators.
+
+[Story](/api/blocks/story/)
+
+### StoryConfig
+
+displays the configuration object of a story.
+
+[StoryConfig](/api/blocks/storyconfig/)
+
+
+### StorySource
+
+displays source code of a story. If controls are used, all story arguments will be highlighted. Additional commands are made available if the repository data of the story is available.
+
+[StorySource](/api/blocks/storysource/)
+
+### Subtitle
+
+displays a subtitle as assigned to the story.subtitle field
+
+[Subtitle](/api/blocks/subtitle/)
+
+## Component-related
+
+### PropsTable
+
+displays the component's properties as well as configurable controls to interact with the component.
+
+[PropsTable](/api/blocks/propstable/)
+
+
+### ComponentSource
+
+displays import statement for a component as well as the component file source code Optionally also displays some repository information from the component's package.json
+
+[ComponentDeps](/api/blocks/componentsource/)
+
+
+### Description
+
+description component with markdown. The 'of' property can specify which component's description to display.
+
+[Description](/api/blocks/description/)
+
+
+### ComponentDeps
+
+displays external dependencies for a component
+
+[ComponentDeps](/api/blocks/componentdeps/)
+
+
+## Document-related
+
+### Stories
+
+displays multiple stories in ther own [Playground](#playground) components.
+
+[Stories](/api/blocks/stories/)
+
+
+### TagsList
+
+displays a row of tags assigned to the current document, with links to their pages
+
+[TagsList](/api/blocks/tagslist/)
+

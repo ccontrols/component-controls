@@ -34,6 +34,9 @@ export type PlaygroundProps = PlaygroundOwnProps &
   StoryBlockContainerProps &
   PanelContainerProps;
 
+/**
+ * Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
+ */
 export const Playground: FC<PlaygroundProps> = ({
   title,
   id,

@@ -229,6 +229,8 @@ _Pagination [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ## <ins>Playground</ins>
 
+Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
+
 _Playground [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/Playground.tsx)_
 
 ### properties
@@ -251,6 +253,8 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                                       |
 
 ## <ins>PropsTable</ins>
+
+Displays the component's properties as well as configurable controls to interact with the component.
 
 _PropsTable [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/PropsTable.tsx)_
 
@@ -424,7 +428,7 @@ _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ## <ins>TagsList</ins>
 
-row of tags with link to their page
+displays a row of tags assigned to the current document, with links to their pages
 
 _TagsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/TagsList/TagsList.tsx)_
 

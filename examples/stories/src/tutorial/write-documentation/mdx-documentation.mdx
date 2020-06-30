@@ -9,7 +9,7 @@ order: 0
 ---
 import Transclusion from '../../sections/transclusion.mdx';
 
-# MDX
+## MDX
 
 MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents.
 You can import components, such as interactive charts or alerts, and embed them within your content.
@@ -17,14 +17,14 @@ This makes writing long-form content with components a blast :rocket:.
 
 more: [mdxjs](https://mdxjs.com)
 
-# Frontmatter
+## Frontmatter
 
 When creating MDX documentation files, you can include a set of key value pairs that can be used to provide structured data. The format used is known as [frontmatter](https://github.com/jonschlinkert/gray-matter)
 
 ```yaml
 ---
 title: My Document
-route: /tutorials/mydoc
+route: /tutorials/mdx-documentation/
 type: tutorial
 tags:
   - mdx
@@ -35,7 +35,7 @@ order: 0
 
 [Check all Document fields](/tutorial/structure/document/)
 
-# Import React components
+## Import React components
 
 In MDX, you can import any react components and use them to create rich documentation pages:
 
@@ -49,7 +49,7 @@ import { Button } from 'theme-ui';
 ```
 
 
-# Transclusion
+## Transclusion
 
 MDX allows you to import external MDX and MD files statically and display their content:
 
@@ -62,11 +62,11 @@ import Transclusion from '../sections/transclusion.mdx';
 <Transclusion />
 ```
 
-# Syntax highlighting
+## Syntax highlighting
 
 You can include source code in your MDX and MD documentation and add some useful parameters
 
-## Language
+### Language
 
 The language can be specified as the first parameter
 ````mdx
@@ -75,7 +75,7 @@ The language can be specified as the first parameter
 ```
 ````  
 
-## Title
+### Title
 
 A title attribute can be added. Due to some current MDX limitations, the title can not contain spaces.
 
@@ -85,7 +85,7 @@ import { Button } from 'theme-ui';
 ```
 ````   
 
-## Highlight lines
+### Highlight lines
 
 You can specify a line to highlight
 ````markdown {2}
@@ -103,7 +103,7 @@ import { Button } from 'theme-ui';
 ```
 ````
 
-# Emoji
+## Emoji
 
 You can use `:emoji:` in your documents 
 

@@ -59,6 +59,7 @@
     -   [PageConfiguration](#pageconfiguration)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [TabConfiguration](#tabconfiguration)
+    -   [ToolbarConfig](#toolbarconfig)
     -   [PageTabs](#pagetabs)
     -   [PageType](#pagetype)
     -   [PagesConfiguration](#pagesconfiguration)
@@ -952,11 +953,11 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 | Name           | Type                                | Description                                                                                                                                    |
 | -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [PageType](#pagetype)\[]            | page types that are considered as categories fields as well                                                                                     |
+| `categories`   | [PageType](#pagetype)\[]            | page types that are considered as categories fields as well                                                                                    |
 | `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
 ## PageConfiguration
 
@@ -981,27 +982,27 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L114)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L125)_
 
 
 
 ### properties
 
-| Name              | Type                                                                                                                       | Description                                                                                                                                                                          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `author`          | string                                                                                                                     | author: Default is "@component-controls"                                                                                                                                             |
-| `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                                                                                         | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
-| `pages`           | [PagesConfiguration](#pagesconfiguration)                                                                                  | page types configurations                                                                                                                                                            |
-| `siteDescription` | string                                                                                                                     | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
-| `siteHeadline`    | string                                                                                                                     | Site headline. Default is "Component controls gatsby"                                                                                                                                |
-| `siteImage`       | string                                                                                                                     | link to site image                                                                                                                                                                   |
-| `siteLanguage`    | string                                                                                                                     | site language, Deault is "en"                                                                                                                                                        |
-| `siteTitle`       | string                                                                                                                     | standalone site title. Default is "Component controls"                                                                                                                               |
-| `siteTitleAlt`    | string                                                                                                                     | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
-| `siteUrl`         | string                                                                                                                     | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
-| `storySort`       | **function** (`a`\*: string, `b`\*: string): number;                                                                       | story sorting function                                                                                                                                                               |
-| `theme`           | \[key: string]: any                                                                                                        | theme-ui theme configuration                                                                                                                                                         |
-| `toolbar`         | left side toolbar items**left**: [ActionItems](#actionitems)right side toolbar items**right**: [ActionItems](#actionitems) | custom toolbar items                                                                                                                                                                 |
+| Name              | Type                                                 | Description                                                                                                                                                                          |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
+| `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
+| `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
+| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `siteHeadline`    | string                                               | Site headline. Default is "Component controls gatsby"                                                                                                                                |
+| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
+| `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
+| `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
+| `siteTitleAlt`    | string                                               | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
+| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
+| `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
+| `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
+| `toolbar`         | [ToolbarConfig](#toolbarconfig)                      | custom toolbar items                                                                                                                                                                 |
 
 ## TabConfiguration
 
@@ -1019,6 +1020,19 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `route`  | string                                                  | tab route string                                                      |
 | `title*` | string                                                  | title will be used as tab caption                                     |
 | `type`   | string                                                  | page container type - a key into the component-controls/pages package |
+
+## ToolbarConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L110)_
+
+
+
+### properties
+
+| Name    | Type                        | Description              |
+| ------- | --------------------------- | ------------------------ |
+| `left`  | [ActionItems](#actionitems) | left side toolbar items  |
+| `right` | [ActionItems](#actionitems) | right side toolbar items |
 
 ## PageTabs
 
@@ -1067,7 +1081,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L191)_
 
 ### properties
 
@@ -1098,7 +1112,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L231)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L232)_
 
 
 
@@ -1111,7 +1125,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L193)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L194)_
 
 
 
@@ -1152,7 +1166,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L191)_
 
 ### properties
 
