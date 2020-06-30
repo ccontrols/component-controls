@@ -63,12 +63,12 @@ module.exports = {
 };
 ```
 
-### Create component-controls config folder
+### configuration folder
 
 Create a new folder `.config` inside your proejct (or any other name that you used in the step above)
 
 
-### Create component-controls build-time configuration
+### build-time configuration
 
 create a file `.config/buildtime.js` and enter the paths to search for component-controls documentation files
 
@@ -80,34 +80,37 @@ module.exports = {
   ],
 };
 ```
+more: [run-time configuration](/configuration/buildtime/)
 
-### Create documentation folder
+### documentation folder
 
 create a folder to store your documentation files (the same as specified in the configuration file above):
 ```sh
 mkdir src && mkdir src/docs
 ```
 
-### Create an MDX documentation file
+### MDX documentation file
 
-in `src/docs/first-page.mdx`:
+in `src/docs/first-page.mdx`
 
 ```mdx
 ---
 title: First Page
 ---
 
-# My First doc page
+# My first doc page
+
+other markdown
 ```
 
 more: [writing mdx documentation](/tutorial/mdx-documentation)
 
 
-### Create an MDX "story" file
+### MDX "story" file
 
 Assuming you have a `Button` component, you can write stories(examples) for it:
 
-in `src/docs/first-story.mdx`:
+in `src/docs/first-story.mdx`
 
 ```mdx
 ---
@@ -116,8 +119,7 @@ title: First Story
 import { Button } from '../components/Button';
 import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@component-controls/blocks';
 
-
-# My First doc page
+# My first doc story
 
 <ComponentSource of={Button} title='Component source' />
 
@@ -136,14 +138,40 @@ import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@
 
 more: [writing mdx stories](/tutorial/mdx-stories)
 
-### Start the project
+### ES module "story" file
 
-```sh
-yarn start
+Assuming you have a `Button` component, you can write stories(examples) for it:
+
+in `src/docs/first-story.stories.tsx`
+
+```jsx
+import { Button } from '../components/Button';
+
+export default {
+  title: 'ES Story',
+  component: Button,
+}
+
+export const overview = () => <Button>click me</Button>;
+ 
 ```
 
-### Buid a static site
+more: [writing es module stories](/tutorial/esmodules-stories)
 
-```sh
-yarn build
+
+### run-time configuration
+
+create a file `.config/runtime.js` and change some of the site meta information
+
+```js
+//.config/runtime.js
+module.exports = {
+  siteTitle: `awLib`,
+  siteHeadline: `Awesome components only`,
+  siteUrl: `https://component-controls-gatsby.netlify.app`,
+  siteDescription: `Some description meta.`,
+  author: 'my name'
+};
 ```
+
+more: [run-time configuration](/configuration/runtime/)
