@@ -97,16 +97,27 @@ export interface BuildConfiguration {
   pages?: PagesOnlyRoutes;
 
   /**
-   * page types that are considred as categories fields as well
+   * page types that are considered as categories fields as well
    */
   categories?: PageType[];
   /**
-   * custom webpack fonfigurations setup. One or the other will be used
+   * custom webpack configuration setup. One or the other will be used
    */
   webpack?: WebpackConfig;
   finalWebpack?: WebpackConfig;
 }
 
+export interface ToolbarConfig {
+  /**
+   * left side toolbar items
+   */
+  left?: ActionItems;
+
+  /**
+   * right side toolbar items
+   */
+  right?: ActionItems;
+}
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -174,17 +185,7 @@ export interface RunOnlyConfiguration {
   /**
    * custom toolbar items
    */
-  toolbar?: {
-    /**
-     * left side toolbar items
-     */
-    left?: ActionItems;
-
-    /**
-     * right side toolbar items
-     */
-    right?: ActionItems;
-  };
+  toolbar?: ToolbarConfig;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &

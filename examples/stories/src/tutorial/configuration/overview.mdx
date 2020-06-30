@@ -7,12 +7,17 @@ tags:
   - configuration
 ---
 
-# Configuration path
+## Configuration path
 
+The two configuration files are stored in a folder (by default **.config**)
 
-# Configuration files
+[using gatsby](/tutorial/#configure-theme)
 
-[build-time](/configuration/buildtime/)
+## Configuration files
 
-[run-time](/configuration/runtime/)
+There are two main configuration files:
+
+1. [build-time](/configuration/buildtime/) configuation file is used during the webpack build process. This file runs under a `nodejs` environment and you can access libraries such `path` and `fs`. However you can not access browser-specific features such as `document` global variables or front-end libraries.
+
+2. [run-time](/configuration/runtime/)  configuation file is used to configure the generated site. This file runs under the `browser` environment and can you can access any broswer-specific libraries and global variables. However from this file you can not access `nodejs`-specific libraries. 
 

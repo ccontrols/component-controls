@@ -952,7 +952,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 | Name           | Type                                | Description                                                                                                                                    |
 | -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [PageType](#pagetype)\[]            | page types that are considred as categories fields as well                                                                                     |
+| `categories`   | [PageType](#pagetype)\[]            | page types that are considered as categories fields as well                                                                                     |
 | `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |

@@ -14,14 +14,14 @@ export interface ActionItem {
   node: React.ReactNode;
 
   /**
-   * if the title is a string and href is set will use a default <Link /> component
+   * if the title is a string and href is set will use a default `<Link />` component
    */
   href?: string;
 
   /**
-   * if the title is a string and href is not set, onClick will be used on a <,>Button /> component
+   * if the title is a string and href is not set, onClick will be used on a `<Button />` component
    */
-  onClick?: (e: MouseEvent<HTMLButtonElement>) => void | boolean;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   /**
    * hide an action item
    */

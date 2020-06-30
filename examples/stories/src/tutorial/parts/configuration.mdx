@@ -1,0 +1,118 @@
+---
+title: Structure/Configuration types
+route: /tutorial/structure/configuration
+type: tutorial
+tags:
+  - documentation
+prder: 5
+---
+## PageType
+
+Confgurable page type that can be assigned to a document. By default, all documentas are treated as **story** page types.
+
+```ts
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
+```
+
+
+## PagesOnlyRoutes
+
+An object of the routes only portion of the page type configuation. The routes configurations are used during build-time to construct the static pages routes.
+
+```ts
+Record<
+  PageType,
+  {
+    // the part of the route for this page
+    basePath?: string;
+    tabs?: {
+      route?: string;
+    }[]  
+  }
+>
+```
+
+## WebpackConfig
+
+This is the webpack configuration object.
+
+[official documentation](https://webpack.js.org/configuration/)
+
+
+## StoryRenderFn
+
+Story render function. The resolved control values are passed as the first argument and the story context is passed as the second argument.
+
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+
+
+## PageConfiguration
+
+
+### properties
+
+| Name        | Type                                    | Description                                    |
+| ----------- | --------------------------------------- | ---------------------------------------------- |
+| `basePath`  | string                                  | base url path for the page                     |
+| `container` | [ComponentType](https://reactjs.org/docs/react-api.html) \| null | page container react component                 |
+| `fullPage`  | boolean                                 | whether to take a fullpage theme option        |
+| `label`     | string                                  | label - used for menu labels                   |
+| `sidebars`  | boolean                                 | whether to add navigation sidebars to the page |
+| `tabs`      | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages        |
+| `topMenu`   | boolean                                 | whether to add to the top navigation menu      |
+
+## PageTabs
+
+array of tab configurations
+
+[TabConfiguration](#tabconfiguration)\[]
+
+## TabConfiguration
+
+story type pages can have multiple tabs with separate page configurations.
+
+### properties
+
+| Name     | Type                                                    | Description                                                           |
+| -------- | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| `render` | **function** (`props`\*: any): [ReactNode](https://reactjs.org/docs/react-api.html); | render function, returns a react component                            |
+| `route`  | string                                                  | tab route string                                                      |
+| `title*` | string                                                  | title will be used as tab caption                                     |
+| `type`   | string                                                  | page container type - a key into the component-controls/pages package |
+
+
+## ActionItem
+
+an item in the ActionBar component
+
+### properties 
+| Name     | Type                                                    | Description                                                           |
+| -------- | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| `node*` | [ReactNode](https://reactjs.org/docs/react-api.html)     | title - if a string, will use the built-in components, else can prvide custom React component|
+| `id` | string                                                      | optional id, used if title is not set                                     |
+| `href` | string                                                    | if the title is a string and href is set will use a default `<Link />` component|
+| `onClick` | `(e) => void` | if the title is a string and href is not set, onClick will be used on a `<Button />` component|
+| `hidden` | boolean                                                      |  hide an action item|
+| `order` | number                                                      |  optional order, if not provided will use the natural order of items from right to left |
+| `group` | string | number                                                      |  optional group. ActionItems in the same group will not be separated by horizonal margin|
+| `aria-label` | string                                                      |  optional label visible to screen readers for aria accessibility|
+| `panel` | [ReactNode](https://reactjs.org/docs/react-api.html)    |  panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel|
+
+
+## ActionItems
+
+array of action items
+
+[ActionItem](#actionitem)\[]
+
+
+## ToolbarConfig
+
+left and right hand side toolbar configuration on the main screen
+
+### properties 
+
+| Name     | Type                                                    | Description                                                           |
+| -------- | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| `left` | [ActionItems](#actionitems)                              |  left side toolbar items |
+| `right` | [ActionItems](#actionitems)                              |  right side toolbar items |
