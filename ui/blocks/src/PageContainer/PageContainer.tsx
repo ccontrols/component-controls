@@ -42,15 +42,16 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     { children, variant, wrapper: Wrapper = Container, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
-    const pageURL =
-      (typeof window !== 'undefined' &&
-      window.location !== window.parent.location &&
-      window.parent.location
-        ? window.parent.location.href
-        : document.location.href) || '';
-    const url = new URL(pageURL);
     useEffect(() => {
       try {
+        const pageURL =
+          (typeof window !== 'undefined' &&
+          window.location !== window.parent.location &&
+          window.parent.location
+            ? window.parent.location.href
+            : document.location.href) || '';
+        const url = new URL(pageURL);
+
         const scrollId = url.hash ? url.hash.substring(1) : undefined;
         if (scrollId) {
           const element = document.getElementById(scrollId);
@@ -61,7 +62,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
           }
         }
       } catch (err) {}
-    }, [url.hash]);
+    }, []);
     const theme = useTheme();
     return (
       <Box
