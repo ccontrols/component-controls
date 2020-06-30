@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* sb6 beta has now fixed handling of glob ([d3f21e9](https://github.com/ccontrols/component-controls/commit/d3f21e966f5e3d9c10fada21ae588441ca3a4a2d))
+* ssr hide document ([713bbb7](https://github.com/ccontrols/component-controls/commit/713bbb72af1ace17b907e5bed0c968f2c27a6f4c))
+* throw error on invalid glob pattern ([70bd152](https://github.com/ccontrols/component-controls/commit/70bd1522520313caeb50bd95e46147b75cc1e72b))
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* mdx code add parameters and mdx docs ([58f80ba](https://github.com/ccontrols/component-controls/commit/58f80ba2cc2417d14dc83e09b489889da7799e5d))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
 ## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
 
 
