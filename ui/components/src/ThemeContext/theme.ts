@@ -355,6 +355,9 @@ export const theme: ControlsTheme = {
       justifyContent: 'space-between',
       mb: 4,
     },
+    titlerow: {
+      mb: 4,
+    },
   },
   linkheading: {
     container: {

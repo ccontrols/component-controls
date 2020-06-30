@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import {
   Playground,
   PropsTable,
-  Title,
   Subtitle,
   Story,
   Description,
@@ -10,7 +9,6 @@ import {
 import { AxeAllyBlock } from '@component-controls/axe-plugin';
 export const TestingPage: FC = () => (
   <>
-    <Title />
     <Subtitle />
     <Description />
     <Playground title=".">
