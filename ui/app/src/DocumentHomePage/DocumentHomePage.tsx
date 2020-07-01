@@ -6,22 +6,26 @@ import { Title } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
+import { DocPage } from '../DocPage';
 
-export interface PageListProps {
+export interface DocumentHomePageProps {
   type: PageType;
+  docId?: string;
 }
 
 /**
  * list of documents for a specific page type
  */
-export const PageList: FC<PageListProps> = ({ type }) => {
+export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
   const pages = storeProvider?.getPageList(type) || [];
-  const pageConfig = storeProvider?.config?.pages?.[type] || {};
-  return (
+  const page = storeProvider?.config?.pages?.[type] || {};
+  return page.indexHome ? (
     <PageContainer variant="pagelist.container" type={type} id="content">
-      <Title>{pageConfig.label}</Title>
+      <Title>{page.label}</Title>
       <DocumentsList pages={pages} />
     </PageContainer>
+  ) : (
+    <DocPage type={type} />
   );
 };

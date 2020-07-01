@@ -32,7 +32,6 @@ export const store: StoriesStore = {
         '@component-controls/store': '^1.0.3',
         '@mdx-js/react': '^1.6.5',
         '@primer/octicons-react': '^10.0.0',
-        '@storybook/csf': '^0.0.1',
         'copy-to-clipboard': '^3.2.1',
         global: '^4.3.2',
         'js-string-escape': '^1.0.1',

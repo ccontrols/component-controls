@@ -1,17 +1,17 @@
 import React from 'react';
 import { ThemeProvider } from '@component-controls/components';
 import { MockContext } from '@component-controls/blocks';
-import { PageList } from './PageList';
+import { DocumentHomePage } from './DocumentHomePage';
 
 export default {
-  title: 'Application/PageList',
-  component: PageList,
+  title: 'Application/DocumentHomePage',
+  component: DocumentHomePage,
 };
 
 export const overview = () => (
   <ThemeProvider>
     <MockContext storyId="id-of-story">
-      <PageList type="story" />
+      <DocumentHomePage type="blog" />
     </MockContext>
   </ThemeProvider>
 );

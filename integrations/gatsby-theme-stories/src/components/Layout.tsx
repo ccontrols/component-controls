@@ -9,12 +9,19 @@ import { GatsbyLink } from './GatsbyLink';
 
 interface LayoutProps {
   docId?: string;
+  storyId?: string;
   type?: PageType;
 }
 
-export const Layout: FC<LayoutProps> = ({ docId, type, children }) => {
+export const Layout: FC<LayoutProps> = ({ docId, storyId, type, children }) => {
   return (
-    <AppContext docId={docId} store={bundle} linkClass={GatsbyLink} type={type}>
+    <AppContext
+      docId={docId}
+      storyId={storyId}
+      store={bundle}
+      linkClass={GatsbyLink}
+      type={type}
+    >
       {children}
     </AppContext>
   );

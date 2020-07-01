@@ -89,7 +89,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
                       key={`context_link_${index}`}
                       href={el.href}
                       // eslint-disable-next-line no-mixed-operators
-                      sx={{ pl: `${4 + (el.level - 1) * 2}px` }}
+                      sx={{ pl: `${4 + (el.level - 1) * 6}px` }}
                       className={index === activeItem ? 'active' : undefined}
                     >
                       {el.title}

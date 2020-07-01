@@ -7,6 +7,7 @@ import {
   defPageType,
   Pages,
   PageType,
+  docStoryToId,
 } from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
 
@@ -54,7 +55,19 @@ class Store implements LoadingStore {
         }
         return false;
       })
-      .map(store => store.doc as Document);
+      .map(
+        store =>
+          ({
+            ...store.doc,
+            stories:
+              store.doc && store.stories
+                ? Object.keys(store.stories).map(id =>
+                    //@ts-ignore
+                    docStoryToId(store.doc.title, id),
+                  )
+                : undefined,
+          } as Document),
+      );
   getUniquesByField = (field: string) => {
     return this.stores.reduce((acc: { [key: string]: number }, store) => {
       if (store?.doc) {

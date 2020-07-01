@@ -6,9 +6,10 @@ import {
   deepMergeArrays,
   deepMerge,
   defaultRunConfig,
+  docStoryToId,
+  storyNameFromExport,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import { addSmartControls } from './smart-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
@@ -79,7 +80,7 @@ export const loadStoryStore = (
                 story.controls = deepMerge(smartControls, story.controls || {});
               }
               if (doc.title && story.id) {
-                const id = toId(doc.title, storyNameFromExport(story.id));
+                const id = docStoryToId(doc.title, story.id);
                 if (!doc.stories) {
                   doc.stories = [];
                 }

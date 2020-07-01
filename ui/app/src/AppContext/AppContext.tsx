@@ -17,6 +17,7 @@ import { mdxComponents } from './mdxComponents';
 export interface AppContextProps {
   type?: PageType;
   docId?: string;
+  storyId?: string;
   store?: LoadingStore;
   linkClass: LinkContextProviderProps['linkClass'];
 }
@@ -24,6 +25,7 @@ export interface AppContextProps {
 export const AppContext: FC<AppContextProps> = ({
   type = defPageType,
   docId,
+  storyId,
   children,
   store,
   linkClass,
@@ -45,7 +47,11 @@ export const AppContext: FC<AppContextProps> = ({
     : undefined;
   return (
     <ThemeProvider theme={storyStore.config?.theme} components={mdxComponents}>
-      <BlockContextProvider docId={documentId} store={storyStore}>
+      <BlockContextProvider
+        storyId={storyId}
+        docId={documentId}
+        store={storyStore}
+      >
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>
             <App title={docId}>{children}</App>

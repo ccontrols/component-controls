@@ -21,7 +21,7 @@ export interface ActionItem {
   /**
    * if the title is a string and href is not set, onClick will be used on a `<Button />` component
    */
-  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void | boolean;
   /**
    * hide an action item
    */

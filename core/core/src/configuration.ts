@@ -46,6 +46,12 @@ export interface PageConfiguration {
   fullPage?: boolean;
 
   /**
+   * whether to have an index home page for the page type.
+   * if false, will show the first document of the page type as the home page.
+   */
+  indexHome?: boolean;
+
+  /**
    * whether to add navigation sidebars to the page
    */
   sidebars?: boolean;
@@ -215,6 +221,7 @@ export const defaultRunConfig: RunConfiguration = {
       label: 'Blog',
       sidebars: false,
       topMenu: true,
+      indexHome: true,
     },
     author: {
       label: 'Authors',

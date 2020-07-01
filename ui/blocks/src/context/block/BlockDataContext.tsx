@@ -1,5 +1,4 @@
 import React from 'react';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import { StoryStore, StoreObserver } from '@component-controls/store';
 
 import {
@@ -10,6 +9,7 @@ import {
   Document,
   getComponentName,
   PackageInfo,
+  docStoryToId,
 } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 
@@ -131,7 +131,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
     if (store) {
       for (const title in store.docs) {
         const doc = store.docs[title];
-        const storyId = toId(title, storyNameFromExport(name));
+        const storyId = docStoryToId(title, name);
         if (doc.stories && doc.stories.indexOf(storyId) > -1) {
           return storyId;
         }

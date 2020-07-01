@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
+import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
 
 import { BlockContext, useStoryContext } from '@component-controls/blocks';
 import {
@@ -14,6 +15,7 @@ import {
 } from '@component-controls/components';
 import {
   Document,
+  Story,
   PageType,
   Pages,
   defPageType,
@@ -58,7 +60,28 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
-      newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+      if (doc.stories && doc.stories.length) {
+        if (doc.stories.length > 1) {
+          // multiple stories - each with a link
+          newItem.items = doc.stories.map(storyId => {
+            const story = storeProvider.getStory(storyId) as Story;
+            return {
+              id: story.id,
+              label: story.name,
+              icon: <NoteIcon verticalAlign="middle" />,
+              href: storeProvider.getStoryPath(storyId, activeTab),
+            };
+          });
+        } else {
+          newItem.icon = <FileIcon verticalAlign="middle" />;
+          //only one story -direct link to it
+          newItem.href = storeProvider.getStoryPath(doc.stories[0], activeTab);
+        }
+      } else {
+        newItem.icon = <BookIcon verticalAlign="middle" />;
+        // no stories - link to document
+        newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+      }
     }
     parent.push(newItem);
   }

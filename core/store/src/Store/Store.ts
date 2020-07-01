@@ -340,7 +340,7 @@ export class Store implements StoryStore {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    return getStoryPath(story, doc, this.config?.pages, activeTab);
+    return getStoryPath(story.id, doc, this.config?.pages, activeTab);
   };
 
   /**

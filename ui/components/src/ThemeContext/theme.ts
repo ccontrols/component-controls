@@ -667,7 +667,7 @@ export const theme: ControlsTheme = {
     default: {
       overflowX: 'hidden',
       position: 'sticky',
-      top: 60,
+      top: '5rem',
       maxHeight: '100vh',
       overflowY: 'auto',
       backgroundColor: 'background',
@@ -744,7 +744,7 @@ export const theme: ControlsTheme = {
     },
     nav: { display: 'flex', flexDirection: 'column' },
     navlink: {
-      pl: 2,
+      fontSize: 1,
       fontWeight: 'body',
     },
     toggle: {

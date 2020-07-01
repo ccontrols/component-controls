@@ -1,3 +1,4 @@
+import { toId, storyNameFromExport } from '@storybook/csf';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
@@ -345,6 +346,8 @@ export interface StoriesStore {
   packages: StoryPackages;
 }
 
+export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
+
 export const getDocPath = (
   pageType: PageType,
   doc?: Document,
@@ -355,23 +358,28 @@ export const getDocPath = (
   const { basePath = '' } = pagesConfig?.[pageType] || {};
   const route = doc
     ? doc.route ||
-      `/${basePath}${
-        activeTab ? `${activeTab}/` : ''
-      }${doc.title?.toLowerCase()}/`
-    : `/${basePath}${activeTab ? `${activeTab}/` : ''}${name}/`;
+      `/${basePath}${activeTab ? `${activeTab}/` : ''}${strToId(doc.title)}/`
+    : `/${basePath}${activeTab ? `${activeTab}/` : ''}${strToId(name)}/`;
   return route;
 };
 
 export const getStoryPath = (
-  story?: Story,
+  storyId?: string,
   doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   activeTab?: string,
 ): string => {
-  if (!story) {
-    return '';
+  const pageType = doc?.type || defPageType;
+  if (!storyId) {
+    return getDocPath(pageType, doc, pagesConfig, undefined, activeTab);
   }
 
-  const docsPath = getDocPath('story', doc, pagesConfig, undefined, activeTab);
-  return `${docsPath}#${story.id}`;
+  const { basePath = '' } = pagesConfig?.[pageType] || {};
+  const route = `/${basePath}${activeTab ? `${activeTab}/` : ''}`;
+  return `${route}${storyId || ''}`;
 };
+
+export const docStoryToId = (docId: string, storyId: string) =>
+  toId(docId, storyNameFromExport(storyId));
+
+export { storyNameFromExport };

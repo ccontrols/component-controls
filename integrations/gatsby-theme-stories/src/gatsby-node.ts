@@ -1,5 +1,6 @@
 import {
   getDocPath,
+  getStoryPath,
   PageType,
   TabConfiguration,
 } from '@component-controls/core';
@@ -24,21 +25,6 @@ exports.createPages = async (
     presets: defaultPresets,
     configPath: options.configPath,
   };
-  const pageTemplates: Record<PageType, string> = {
-    story: require.resolve(`../src/templates/DocPage.tsx`),
-    blog: require.resolve(`../src/templates/DocPage.tsx`),
-    page: require.resolve(`../src/templates/DocPage.tsx`),
-    tags: require.resolve(`../src/templates/CategoryPage.tsx`),
-    author: require.resolve(`../src/templates/CategoryPage.tsx`),
-  };
-  const listTemplates: Record<PageType, string> = {
-    story: require.resolve(`../src/templates/DocPage.tsx`),
-    page: require.resolve(`../src/templates/DocPage.tsx`),
-    blog: require.resolve(`../src/templates/PageList.tsx`),
-    tags: require.resolve(`../src/templates/CategoryList.tsx`),
-    author: require.resolve(`../src/templates/CategoryList.tsx`),
-  };
-
   const { store } =
     process.env.NODE_ENV === 'development'
       ? await watch(config)
@@ -57,20 +43,24 @@ exports.createPages = async (
           tabs.forEach((tab, tabIndex) => {
             const route = tabIndex > 0 ? tab.route : undefined;
             docs.forEach(doc => {
-              createPage({
-                path: getDocPath(
-                  pageType,
+              const stories = doc.stories?.length ? doc.stories : [undefined];
+              stories.forEach((storyId?: string) => {
+                const url = getStoryPath(
+                  storyId,
                   doc,
                   store.buildConfig?.pages,
-                  undefined,
                   route,
-                ),
-                component: pageTemplates[pageType] || pageTemplates['story'],
-                context: {
-                  type: pageType,
-                  activeTab: route,
-                  doc: doc.title,
-                },
+                );
+                createPage({
+                  path: url,
+                  component: require.resolve(`../src/templates/DocPage.tsx`),
+                  context: {
+                    type: pageType,
+                    activeTab: route,
+                    docId: doc.title,
+                    storyId,
+                  },
+                });
               });
             });
           });
@@ -80,10 +70,10 @@ exports.createPages = async (
             );
             createPage({
               path: `/${page.basePath}`,
-              component: listTemplates[pageType] || listTemplates['story'],
+              component: require.resolve(`../src/templates/DocHome.tsx`),
               context: {
                 type: pageType,
-                doc: docsPage?.title,
+                docId: docsPage?.title,
               },
             });
           }
@@ -101,21 +91,21 @@ exports.createPages = async (
               store.buildConfig?.pages,
               tag,
             ),
-            component: pageTemplates[catName as PageType],
+            component: require.resolve(`../src/templates/CategoryPage.tsx`),
             context: {
               type: catName as PageType,
               category: tag,
-              doc: null,
+              docId: null,
             },
           });
         });
         if (catKeys.length) {
           createPage({
             path: `/${catPage.basePath}`,
-            component: listTemplates[catName as PageType],
+            component: require.resolve(`../src/templates/CategoryList.tsx`),
             context: {
               type: catName,
-              doc: null,
+              docId: null,
             },
           });
         }
@@ -124,9 +114,9 @@ exports.createPages = async (
     const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
-      component: pageTemplates['page'],
+      component: require.resolve(`../src/templates/DocPage.tsx`),
       context: {
-        doc: homePage?.doc?.title,
+        docId: homePage?.doc?.title,
         type: homePage?.doc?.type,
       },
     });

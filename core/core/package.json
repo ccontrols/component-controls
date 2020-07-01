@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/components": "^1.6.0",
+    "@storybook/csf": "^0.0.1",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
