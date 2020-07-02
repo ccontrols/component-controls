@@ -76,9 +76,9 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
     </ComponentsContainer>
   );
   // console.log(child);
-  return (
+  return child ? (
     <BlockContainer title={title} collapsible={collapsible} id={id}>
       {block}
     </BlockContainer>
-  );
+  ) : null;
 };
