@@ -9,6 +9,7 @@
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>DocPage</ins>](#insdocpageins)
+    -   [<ins>DocumentHomePage</ins>](#insdocumenthomepageins)
     -   [<ins>DocumentsList</ins>](#insdocumentslistins)
     -   [<ins>Footer</ins>](#insfooterins)
     -   [<ins>Header</ins>](#insheaderins)
@@ -16,7 +17,6 @@
     -   [<ins>DocsLink</ins>](#insdocslinkins)
     -   [<ins>StoryLink</ins>](#insstorylinkins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
-    -   [<ins>PageList</ins>](#inspagelistins)
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
@@ -64,6 +64,7 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 | ------------ | -------------- | ----------- |
 | `type`       | _string_       |             |
 | `docId`      | _string_       |             |
+| `storyId`    | _string_       |             |
 | `store`      | _LoadingStore_ |             |
 | `linkClass*` | _any_          |             |
 
@@ -123,6 +124,19 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 | ----------- | -------- | --------------- |
 | `type`      | _string_ | page type       |
 | `activeTab` | _string_ | active page tab |
+
+## <ins>DocumentHomePage</ins>
+
+list of documents for a specific page type
+
+_DocumentHomePage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentHomePage/DocumentHomePage.tsx)_
+
+### properties
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ |             |
+| `docId` | _string_ |             |
 
 ## <ins>DocumentsList</ins>
 
@@ -205,18 +219,6 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 | `type*`   | _string_                                                                                                                                                                                                                                                                              | page type                           |
 | `variant` | _string_                                                                                                                                                                                                                                                                              | theme variant                       |
 | `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement> \| (((instance: HTMLDivElement) => void) & string) \| (((instance: HTMLDivElement) => void) & RefObject&lt;...>) \| (RefObject&lt;...> & string) \| (RefObject&lt;...> & ((instance: HTMLDivElement) => void))_ | ref to the page container component |
-
-## <ins>PageList</ins>
-
-list of documents for a specific page type
-
-_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/PageList/PageList.tsx)_
-
-### properties
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `type*` | _string_ |             |
 
 ## <ins>SEO</ins>
 

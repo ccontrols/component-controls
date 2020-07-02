@@ -12,8 +12,8 @@
     -   [<ins>DefaultName</ins>](#insdefaultnameins)
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
+    -   [<ins>DocHome</ins>](#insdochomeins)
     -   [<ins>DocPage</ins>](#insdocpageins)
-    -   [<ins>PageList</ins>](#inspagelistins)
 
 # In action
 
@@ -86,10 +86,11 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `docId` | _string_ |             |
-| `type`  | _string_ |             |
+| Name      | Type     | Description |
+| --------- | -------- | ----------- |
+| `docId`   | _string_ |             |
+| `storyId` | _string_ |             |
+| `type`    | _string_ |             |
 
 ## <ins>DefaultName</ins>
 
@@ -101,9 +102,9 @@ _CategoryList [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name           | Type                             | Description |
-| -------------- | -------------------------------- | ----------- |
-| `pathContext*` | _{ type: string; doc: string; }_ |             |
+| Name           | Type                               | Description |
+| -------------- | ---------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; docId: string; }_ |             |
 
 ## <ins>CategoryPage</ins>
 
@@ -111,9 +112,19 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name           | Type                                               | Description |
-| -------------- | -------------------------------------------------- | ----------- |
-| `pathContext*` | _{ type: string; category: string; doc: string; }_ |             |
+| Name           | Type                                                  | Description |
+| -------------- | ----------------------------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; category: string; docId?: string; }_ |             |
+
+## <ins>DocHome</ins>
+
+_DocHome [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocHome.tsx)_
+
+### properties
+
+| Name           | Type                                | Description |
+| -------------- | ----------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; docId?: string; }_ |             |
 
 ## <ins>DocPage</ins>
 
@@ -121,18 +132,8 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name           | Type                                                 | Description |
-| -------------- | ---------------------------------------------------- | ----------- |
-| `pathContext*` | _{ doc: string; type: string; activeTab?: string; }_ |             |
-
-## <ins>PageList</ins>
-
-_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/PageList.tsx)_
-
-### properties
-
-| Name           | Type                | Description |
-| -------------- | ------------------- | ----------- |
-| `pathContext*` | _{ type: string; }_ |             |
+| Name           | Type                                                                      | Description |
+| -------------- | ------------------------------------------------------------------------- | ----------- |
+| `pathContext*` | _{ docId?: string; storyId?: string; type: string; activeTab?: string; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
