@@ -169,6 +169,19 @@ export const theme: ControlsTheme = {
         outline: 'none',
       },
     },
+    slider: {
+      label: {
+        paddingLeft: 1,
+        paddingRight: 1,
+        fontSize: 0,
+        whiteSpace: 'nowrap',
+      },
+      wrapper: {
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+      },
+    },
   },
   styles: {
     root: {
