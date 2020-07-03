@@ -2,6 +2,7 @@ interface StoryAttribute {
   name: string;
   value: any;
 }
+
 const nodeToValue = (node: any): any => {
   if (node) {
     switch (node.type) {
@@ -10,7 +11,8 @@ const nodeToValue = (node: any): any => {
       case 'StringLiteral':
         return node.value;
       case 'Identifier':
-        return node.name;
+        //String class is used when the prop value should not be stringified when serializing
+        return new String(node.name);
       case 'Property':
         return node.name;
       case 'ObjectProperty':
@@ -25,7 +27,7 @@ const nodeToValue = (node: any): any => {
           ? value.replace(/^\/|\/$/g, '')
           : value;
       case 'MemberExpression':
-        return `${node.object.name}.${node.property.name}`;
+        return new String(`${node.object.name}.${node.property.name}`);
       case 'ObjectExpression':
         return extractAttributes(node);
       case 'ArrayExpression':
