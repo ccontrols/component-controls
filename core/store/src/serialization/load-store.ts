@@ -10,7 +10,7 @@ import {
   storyNameFromExport,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
-import { addSmartControls } from './smart-controls';
+import { transformControls } from './transform-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
 
@@ -73,14 +73,7 @@ export const loadStoryStore = (
             Object.keys(storeStories).forEach((storyName: string) => {
               const story: Story = storeStories[storyName];
               Object.assign(story, deepMerge(otherDocProps, story));
-              const smartControls = addSmartControls(
-                story,
-                doc,
-                loadedComponents,
-              );
-              if (smartControls) {
-                story.controls = deepMerge(smartControls, story.controls || {});
-              }
+              story.controls = transformControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);
                 if (!doc.stories) {

@@ -1,6 +1,9 @@
 import {
   ComponentControls,
+  ComponentControl,
+  ControlTypes,
   Story,
+  deepMerge,
   Document,
   StoryComponents,
   getComponentName,
@@ -8,25 +11,53 @@ import {
   SmartControls,
 } from '@component-controls/core';
 
-export const addSmartControls = (
+export const transformControls = (
   story: Story,
   doc: Document,
   components: StoryComponents,
-): ComponentControls | null => {
+): ComponentControls | undefined => {
+  const { controls: storyControls } = story;
+  const controls: ComponentControls | undefined = storyControls
+    ? Object.keys(storyControls).reduce((acc, key) => {
+        const control: ComponentControl = storyControls[key];
+        if (typeof control === 'string') {
+          return {
+            ...acc,
+            [key]: { type: ControlTypes.TEXT, value: control },
+          };
+        }
+        if (typeof control === 'string') {
+          return {
+            ...acc,
+            [key]: { type: ControlTypes.NUMBER, value: control },
+          };
+        }
+        if (typeof control === 'object') {
+          if (control instanceof Date) {
+            return {
+              ...acc,
+              [key]: { type: ControlTypes.DATE, value: control },
+            };
+          }
+        }
+
+        return { ...acc, [key]: control };
+      }, {})
+    : undefined;
   if (!story.arguments || story.arguments.length < 1) {
     //story has no arguments
-    return null;
+    return controls;
   }
   const smartControls: SmartControls = story.smartControls || {};
 
   const { smart = true } = smartControls;
   if (!smart) {
-    return null;
+    return controls;
   }
 
   const storyComponent = story.component;
   if (!storyComponent) {
-    return null;
+    return controls;
   }
   let componentName = getComponentName(storyComponent);
   if (
@@ -47,7 +78,7 @@ export const addSmartControls = (
       )
         ? story.arguments[0].value.map(v => v.name as string)
         : undefined;
-      const controls = Object.keys(newControls)
+      const filteredControls = Object.keys(newControls)
         .filter(key => {
           if (Array.isArray(include) && !include.includes(key)) {
             return false;
@@ -61,8 +92,8 @@ export const addSmartControls = (
           return true;
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
-      return controls;
+      return deepMerge(filteredControls, controls || {});
     }
   }
-  return null;
+  return controls;
 };
