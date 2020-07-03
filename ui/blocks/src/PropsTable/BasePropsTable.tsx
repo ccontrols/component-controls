@@ -60,7 +60,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   const { setControlValue, clickControl } = useControlsContext();
   const [copied, setCopied] = useState(false);
   const info: Partial<ComponentInfo> = component.info || {};
-
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story.controls || {} : {};
     return visibleControls(storyControls);
@@ -295,7 +294,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       return { columns, rows, groupProps };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [extraColumns, hasControls, info.props, story.id, visibility],
+    [hasControls, info.props, story.id, visibility],
   );
 
   const onChange = (propName: string, value: any) => {
