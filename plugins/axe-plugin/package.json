@@ -41,13 +41,13 @@
     "axe-core": "^3.5.3",
     "react": "^16.12.0",
     "react-google-charts": "^3.0.15",
-    "recoil": "0.0.7",
+    "recoil": "^0.0.10",
     "theme-ui": "next"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.5.0",
     "@types/react": "^16.9.34",
-    "@types/recoil": "^0.0.0",
+    "@types/recoil": "^0.0.1",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {

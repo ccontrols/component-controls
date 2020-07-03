@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Text, Flex, Styled, Box } from 'theme-ui';
-import { FC, useContext, useMemo, MouseEvent, useState } from 'react';
+import { FC, useMemo, MouseEvent, useState } from 'react';
 import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
 import copy from 'copy-to-clipboard';
@@ -28,7 +28,7 @@ import {
   ConrolsContextProvider,
 } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { BlockControlsContext } from '../context';
+import { useControlsContext } from '../context';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
@@ -57,7 +57,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   tableProps,
   visibility,
 }) => {
-  const { setControlValue, clickControl } = useContext(BlockControlsContext);
+  const { setControlValue, clickControl } = useControlsContext();
   const [copied, setCopied] = useState(false);
   const info: Partial<ComponentInfo> = component.info || {};
 
