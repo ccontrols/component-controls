@@ -43,6 +43,12 @@ export interface BlockDataContextProps {
   storyIdFromName: (name: string) => string | undefined;
 
   /**
+   *
+   * find a story id from a story 'name' in current document
+   */
+  storyIdFromNameCurrent: (name: string) => string | undefined;
+
+  /**
    * add an observer for onChange events
    */
   addObserver: (observer: StoreObserver) => void;
@@ -139,6 +145,13 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
     }
     return undefined;
   };
+
+  const storyIdFromNameCurrent = (name: string): string | undefined => {
+    if (store && docId) {
+      return docStoryToId(docId, name);
+    }
+    return undefined;
+  };
   return (
     <BlockDataContext.Provider
       value={{
@@ -146,6 +159,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         docId,
         getStoryData,
         storyIdFromName,
+        storyIdFromNameCurrent,
         getComponents,
         addObserver: storeProvider ? storeProvider.addObserver : () => {},
         removeObserver: storeProvider ? storeProvider.removeObserver : () => {},
