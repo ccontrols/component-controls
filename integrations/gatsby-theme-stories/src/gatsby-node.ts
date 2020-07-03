@@ -43,7 +43,10 @@ exports.createPages = async (
           tabs.forEach((tab, tabIndex) => {
             const route = tabIndex > 0 ? tab.route : undefined;
             docs.forEach(doc => {
-              const stories = doc.stories?.length ? doc.stories : [undefined];
+              const stories =
+                page.storyPaths && doc.stories?.length
+                  ? doc.stories
+                  : [undefined];
               stories.forEach((storyId?: string) => {
                 const url = getStoryPath(
                   storyId,

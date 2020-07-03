@@ -36,6 +36,11 @@ export interface PageConfiguration {
   basePath?: string;
 
   /**
+   * if true, generate story-based paths. This is for documents with sidebars that allow selection of stories
+   */
+  storyPaths?: boolean;
+
+  /**
    * label - used for menu labels
    */
   label?: string;
@@ -82,7 +87,7 @@ type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
   PageType,
-  Pick<PageConfiguration, 'basePath'> & {
+  Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
 >;
@@ -241,6 +246,7 @@ export const defaultBuildConfig: BuildConfiguration = {
   pages: {
     story: {
       basePath: 'docs/',
+      storyPaths: true,
       tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {
