@@ -19,7 +19,7 @@ export const ClassicPage: FC = () => (
     <PackageVersion />
     <Description />
     <ComponentSource id="." title="Component" />
-    <Playground openTab="source" title=".">
+    <Playground title=".">
       <Story id="." />
     </Playground>
     <PropsTable of="." title="Properties" visibility="all" />
