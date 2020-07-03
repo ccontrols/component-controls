@@ -279,6 +279,11 @@ export interface Document {
    * for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider
    */
   MDXPage?: any;
+
+  /**
+   * custom prop set by mdxjs
+   */
+  isMDXComponent?: boolean;
 }
 
 export const dateToLocalString = (date?: Date): string =>

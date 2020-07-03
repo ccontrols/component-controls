@@ -49,6 +49,8 @@ export const loadStoryStore = (
           if (storeDoc && storeStories && s.stories) {
             const doc = storeDoc;
             const {
+              isMDXComponent,
+              tags,
               title,
               order,
               type,
