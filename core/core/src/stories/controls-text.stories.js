@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { TextControl } from './components/TextControl';
 
 export default {
-  title: 'Controls/TEXT',
+  title: 'Controls/Text',
   component: TextControl,
 };
 

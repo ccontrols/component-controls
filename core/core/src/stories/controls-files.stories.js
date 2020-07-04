@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { FilesControl } from './components/FilesControl';
 
 export default {
-  title: 'Controls/FILES',
+  title: 'Controls/Files',
   component: FilesControl,
 };
 

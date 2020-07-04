@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { NumberControl } from './components/NumberControl';
 
 export default {
-  title: 'Controls/NUMBER',
+  title: 'Controls/Number',
   component: NumberControl,
 };
 
