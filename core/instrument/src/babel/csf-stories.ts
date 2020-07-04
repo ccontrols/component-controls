@@ -170,11 +170,10 @@ export const extractCSFStories = (
     },
   });
   if (store.doc) {
-    debugger;
     //@ts-ignore
     store.doc.componentsLookup = components;
   } else {
-    throw new Error(`stories should have one default export`);
+    throw new Error(`esm files should have one default export`);
   }
   return store;
 };

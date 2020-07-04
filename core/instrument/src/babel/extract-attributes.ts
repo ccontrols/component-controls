@@ -1,3 +1,4 @@
+import generate from '@babel/generator';
 import { stringifyObject } from '../misc/stringify-object';
 
 interface StoryAttribute {
@@ -24,22 +25,12 @@ const nodeToValue = (node: any): any => {
         return node.raw;
       case 'RegExpLiteral':
         const value = node.raw ?? node.extra ? node.extra.raw : undefined;
-        // remove leading trailing slashes for string to reg xonversion
+        // remove leading trailing slashes for string to reg conversion
         return typeof value === 'string'
           ? value.replace(/^\/|\/$/g, '')
           : value;
       case 'MemberExpression':
         return new String(`${node.object.name}.${node.property.name}`);
-      case 'NewExpression':
-        return new String(
-          `new ${node.callee.name}(${
-            node.arguments
-              ? node.arguments
-                  .map((arg: any) => stringifyObject(nodeToValue(arg)))
-                  .join(', ')
-              : ''
-          })`,
-        );
       case 'ObjectExpression':
         return extractAttributes(node);
       case 'ArrayExpression':
@@ -47,9 +38,17 @@ const nodeToValue = (node: any): any => {
           return node.elements.map((v: any) => nodeToValue(v));
         }
         break;
-      default:
-        // console.log(property.value);
-        return undefined;
+      default: {
+        if (node.type) {
+          const { code } = generate(node, {
+            retainFunctionParens: true,
+            retainLines: true,
+          });
+          return code ? new String(code) : undefined;
+        } else {
+          return node;
+        }
+      }
     }
   }
   return undefined;
