@@ -1,3 +1,5 @@
+import { stringifyObject } from '../misc/stringify-object';
+
 interface StoryAttribute {
   name: string;
   value: any;
@@ -28,6 +30,16 @@ const nodeToValue = (node: any): any => {
           : value;
       case 'MemberExpression':
         return new String(`${node.object.name}.${node.property.name}`);
+      case 'NewExpression':
+        return new String(
+          `new ${node.callee.name}(${
+            node.arguments
+              ? node.arguments
+                  .map((arg: any) => stringifyObject(nodeToValue(arg)))
+                  .join(', ')
+              : ''
+          })`,
+        );
       case 'ObjectExpression':
         return extractAttributes(node);
       case 'ArrayExpression':
