@@ -568,7 +568,7 @@ export const theme: ControlsTheme = {
       whiteSpace: 'pre-wrap',
     },
     control: {
-      maxWidth: 200,
+      maxWidth: 300,
     },
     description: {
       container: {
