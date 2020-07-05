@@ -9,7 +9,7 @@ order: 0
 
 ## Properties
 
-Document is a single file containing documentation in `mdx` or `es modules` format.
+Document is a single file containing documentation in [mdx](/tutorial/mdx-stories/) or [esm](/tutorial/esmodules-stories/) format.
 
 The following fields are available
 
@@ -18,7 +18,7 @@ The following fields are available
 | `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
 | `author`            | string                                  | document author                                                                                                                                                                              |
 | `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
-| `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
+| `controls`          | [ComponentControls](/tutorial/structure/controls#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
 | `date`              | Date                                    |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
 | `dateModified`      | Date                                    |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
 | `decorators`        | [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)       | story decorators (or wrappers)                                                                                                                                                               |

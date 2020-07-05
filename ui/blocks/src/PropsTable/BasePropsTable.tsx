@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
-import { jsx, Text, Flex, Styled, Box } from 'theme-ui';
+import { jsx, Text, Styled, Box } from 'theme-ui';
 import { FC, useMemo, MouseEvent, useState } from 'react';
 import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
@@ -51,7 +51,7 @@ type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 export const BasePropsTable: FC<BasePropsTableProps> = ({
-  story = {},
+  story,
   component = {},
   extraColumns,
   tableProps,
@@ -61,9 +61,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   const [copied, setCopied] = useState(false);
   const info: Partial<ComponentInfo> = component.info || {};
   const controls = useMemo(() => {
-    const storyControls = visibility !== 'info' ? story.controls || {} : {};
-    return visibleControls(storyControls);
-  }, [visibility, story.controls]);
+    const storyControls = visibility !== 'info' ? story?.controls || {} : {};
+    return visibleControls(storyControls, story);
+  }, [visibility, story]);
   const infoKeys = useMemo(
     () => (info && info.props ? Object.keys(info.props) : []),
     [info],
@@ -86,7 +86,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
           //@ts-ignore
           const prop = info.props[key];
           const control = propControls[key];
-          const parentName = prop.parentName || control?.groupId || '-';
+          const parentName = control?.groupId || prop.parentName || '-';
           const { description, label, required } = control || {};
           if (control) {
             delete propControls[key];
@@ -167,12 +167,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               control,
             } = original;
             const text = (
-              <Text
-                sx={{
-                  fontWeight: 'bold',
-                  textOverflow: 'ellipsis',
-                }}
-              >
+              <Text variant="propstable.name">
                 {control ? control.label || name : name}
               </Text>
             );
@@ -188,7 +183,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         {
           Header: 'Description',
           accessor: 'prop.description',
-          width: '60%',
           Cell: ({ row: { original } }: any) => {
             if (!original) {
               return null;
@@ -201,21 +195,10 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               },
             } = original;
             return (
-              <Flex
-                sx={{
-                  flexDirection: 'column',
-                }}
-              >
+              <Box variant="propstable.description.container">
                 {description && <Markdown>{description}</Markdown>}
                 {(raw ?? typeName) && (
-                  <Styled.pre
-                    sx={{
-                      color: 'fadedText',
-                      letterSpacing: '0.10em',
-                      whiteSpace: 'pre-wrap',
-                      margin: 0,
-                    }}
-                  >
+                  <Styled.pre variant="propstable.description.type">
                     {Array.isArray(value) && value.length > 1
                       ? value.map(({ name: typeName, value }) => (
                           <Tag
@@ -231,14 +214,13 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                       : raw ?? typeName}
                   </Styled.pre>
                 )}
-              </Flex>
+              </Box>
             );
           },
         },
         {
           Header: 'Default',
           accessor: 'prop.defaultValue',
-          width: '40%',
           Cell: ({ row: { original } }: any) => {
             if (!original) {
               return null;
@@ -270,7 +252,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         columns.push({
           Header: 'Controls',
           accessor: 'control',
-          width: '30%',
           Cell: ({ row: { original } }: any) => {
             const { control } = original;
             if (control) {
@@ -278,11 +259,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
                 getPropertyEditor(control.type) || InvalidType;
 
               return (
-                <Box
-                  sx={{
-                    minWidth: 150,
-                  }}
-                >
+                <Box variant="propstable.control">
                   <InputType name={original.name} />
                 </Box>
               );
@@ -294,7 +271,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
       return { columns, rows, groupProps };
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [hasControls, info.props, story.id, visibility],
+    [hasControls, info.props, story?.id, visibility],
   );
 
   const onChange = (propName: string, value: any) => {

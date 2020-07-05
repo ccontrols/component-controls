@@ -19,6 +19,7 @@ Store {
       },
       "story": Object {
         "basePath": "docs/",
+        "storyPaths": true,
         "tabs": Array [
           Object {
             "route": "page",

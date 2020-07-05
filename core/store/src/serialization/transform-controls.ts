@@ -9,6 +9,7 @@ import {
   getComponentName,
   controlsFromProps,
   SmartControls,
+  getControlValue,
 } from '@component-controls/core';
 
 export const transformControls = (
@@ -19,28 +20,23 @@ export const transformControls = (
   const { controls: storyControls } = story;
   const controls: ComponentControls | undefined = storyControls
     ? Object.keys(storyControls).reduce((acc, key) => {
-        const control: ComponentControl = storyControls[key];
-        if (typeof control === 'string') {
-          return {
-            ...acc,
-            [key]: { type: ControlTypes.TEXT, value: control },
-          };
+        let control: ComponentControl;
+        const value = storyControls[key];
+        if (typeof value === 'string') {
+          control = { type: ControlTypes.TEXT, value };
+        } else if (typeof value === 'string') {
+          control = { type: ControlTypes.NUMBER, value };
+        } else if (typeof value === 'object' && value instanceof Date) {
+          control = { type: ControlTypes.DATE, value };
+        } else {
+          control = value;
         }
-        if (typeof control === 'string') {
-          return {
-            ...acc,
-            [key]: { type: ControlTypes.NUMBER, value: control },
-          };
-        }
-        if (typeof control === 'object') {
-          if (control instanceof Date) {
-            return {
-              ...acc,
-              [key]: { type: ControlTypes.DATE, value: control },
-            };
+        if (control.defaultValue === undefined) {
+          const defaultValue = getControlValue(control);
+          if (typeof defaultValue !== 'function') {
+            control.defaultValue = defaultValue;
           }
         }
-
         return { ...acc, [key]: control };
       }, {})
     : undefined;
@@ -51,7 +47,7 @@ export const transformControls = (
   const smartControls: SmartControls = story.smartControls || {};
 
   const { smart = true } = smartControls;
-  if (!smart) {
+  if (!smart || story.smartControls === false) {
     return controls;
   }
 

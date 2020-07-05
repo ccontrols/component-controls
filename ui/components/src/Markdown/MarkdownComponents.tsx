@@ -72,7 +72,7 @@ export const markdownComponents: MarkdownComponentType = {
       return <pre {...props} />;
     }
     const { codeString = '', metastring, className } = mdxProps;
-    const [language = 'jsx', ...rest] = paramsFromClassName(className);
+    const [language, ...rest] = paramsFromClassName(className);
     const otherProps = Array.isArray(rest)
       ? rest.reduce(
           (acc, p) =>
@@ -82,7 +82,7 @@ export const markdownComponents: MarkdownComponentType = {
       : undefined;
     return (
       <Source
-        language={mdxLanguageMap[language] || language}
+        language={mdxLanguageMap[language || 'jsx'] || language}
         metastring={metastring}
         {...otherProps}
       >

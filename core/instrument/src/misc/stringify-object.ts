@@ -39,6 +39,6 @@ export const stringifyObject = (
         }
         `;
     default:
-      return val.toString();
+      return val !== undefined ? val.toString() : val;
   }
 };

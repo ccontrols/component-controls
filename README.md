@@ -69,7 +69,7 @@ There are many developments that have contributed to the creation of `component-
 # Roadmap
 
 -   [x] Core packages
--   [x] Support CSF and MDX stories format
+-   [x] Support ESM and MDX stories format
 -   [x] Instrumentation packages
 -   [x] UI Libraries
 -   [x] Storybook integration with addon-docs
@@ -178,8 +178,8 @@ Component controls instrumentation library
 
 Parsing a source file will generate the following information:
 
--   CSF: List of story named exports
--   CSF: Default export stories file information
+-   ESM: List of story named exports
+-   ESM: Default export stories file information
 -   MDX: List of `<Story />` story tags
 -   MDX: List of `<Meta />` stories file information
 -   Source code extracted for the stories

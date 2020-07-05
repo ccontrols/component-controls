@@ -236,6 +236,7 @@ export const theme: ControlsTheme = {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
+      color: 'red',
     },
     img: {
       maxWidth: '100%',
@@ -558,8 +559,28 @@ export const theme: ControlsTheme = {
     full: { maxWidth: 'unset', p: 0 },
   },
   propstable: {
+    name: {
+      fontWeight: 'bold',
+      textOverflow: 'ellipsis',
+    },
     defaultvalue: {
+      maxWidth: 400,
       whiteSpace: 'pre-wrap',
+    },
+    control: {
+      maxWidth: 200,
+    },
+    description: {
+      container: {
+        display: 'flex',
+        flexDirection: 'column',
+      },
+      type: {
+        color: 'fadedText',
+        letterSpacing: '0.10em',
+        whiteSpace: 'pre-wrap',
+        margin: 0,
+      },
     },
   },
   story: {

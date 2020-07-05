@@ -1,4 +1,5 @@
 import escape from 'escape-html';
+import deepmerge from 'deepmerge';
 
 import {
   ComponentControl,
@@ -6,7 +7,8 @@ import {
   ComponentControlArray,
   ControlTypes,
 } from './controls';
-import deepmerge from 'deepmerge';
+
+import { Story } from './stories';
 
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {
@@ -22,8 +24,6 @@ const mergeValue = (control: ComponentControl, value: any): any => {
   return {
     ...control,
     value,
-    resetValue:
-      control.resetValue === undefined ? control.value : control.resetValue,
   };
 };
 
@@ -54,11 +54,11 @@ export const resetControlValues = (
   controlName?: string,
 ) => {
   return controlName
-    ? controls[controlName].resetValue
+    ? controls[controlName].defaultValue
     : Object.keys(controls).reduce(
         (acc, key) => ({
           ...acc,
-          [key]: controls[key].resetValue,
+          [key]: controls[key].defaultValue,
         }),
         {},
       );
@@ -68,11 +68,7 @@ export interface ControlValues {
   [name: string]: any;
 }
 
-export const getControlValue = (
-  controls: ComponentControls,
-  propName: string,
-): any => {
-  const control: ComponentControl = controls[propName];
+export const getControlValue = (control: ComponentControl): any => {
   if (control) {
     const { value } = control;
     switch (control.type) {
@@ -143,17 +139,32 @@ export const getControlValue = (
 export const getControlValues = (controls?: ComponentControls): ControlValues =>
   controls
     ? Object.keys(controls).reduce((acc, key) => {
-        const value = getControlValue(controls, key);
+        const value = getControlValue(controls[key]);
         return { ...acc, [key]: value };
       }, {})
     : {};
 
 export const visibleControls = (
   controls?: ComponentControls,
+  story?: Story,
 ): ComponentControls =>
   controls && typeof controls === 'object'
     ? Object.keys(controls)
-        .filter(key => !controls[key].hidden)
+        .filter(key => {
+          const control = controls[key];
+          if (control.hidden) {
+            return false;
+          }
+          const args = story?.arguments;
+          //  check if arguments are included in story parameters
+          if (args && args.length) {
+            const firstArg = args[0];
+            return Array.isArray(firstArg.value)
+              ? firstArg.value.find(arg => arg.name === key)
+              : true;
+          }
+          return false;
+        })
         .map((key, index) => ({
           name: key,
           control: {

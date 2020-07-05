@@ -36,8 +36,8 @@
 
 Parsing a source file will generate the following information:
 
--   CSF: List of story named exports
--   CSF: Default export stories file information
+-   ESM: List of story named exports
+-   ESM: Default export stories file information
 -   MDX: List of `<Story />` story tags
 -   MDX: List of `<Meta />` stories file information
 -   Source code extracted for the stories

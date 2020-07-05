@@ -441,7 +441,7 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 9,
+              "column": 1,
               "line": 4,
             },
             "start": Object {
@@ -454,11 +454,11 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 31,
+                  "column": 23,
                   "line": 1,
                 },
                 "start": Object {
-                  "column": 16,
+                  "column": 8,
                   "line": 1,
                 },
               },
@@ -467,11 +467,11 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 23,
+                      "column": 15,
                       "line": 1,
                     },
                     "start": Object {
-                      "column": 18,
+                      "column": 10,
                       "line": 1,
                     },
                   },
@@ -481,11 +481,11 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 29,
+                      "column": 21,
                       "line": 1,
                     },
                     "start": Object {
-                      "column": 25,
+                      "column": 17,
                       "line": 1,
                     },
                   },
@@ -497,11 +497,11 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 13,
+                  "column": 5,
                   "line": 3,
                 },
                 "start": Object {
-                  "column": 10,
+                  "column": 2,
                   "line": 3,
                 },
               },
@@ -524,10 +524,10 @@ Object {
       },
       "name": "story-with-props",
       "source": "({
-          name: { first, last },
+  name: { first, last },
 
-          age,
-        }) => <Button />",
+  age,
+}) => <Button />",
     },
   },
   "transformed": "

@@ -43,6 +43,7 @@ const createMenuItem = (
   doc: Document,
   type: PageType,
   levels: string[],
+  storyPaths: boolean,
   activeTab?: string,
   parent?: MenuItems,
   item?: MenuItem,
@@ -60,8 +61,9 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
-      if (doc.stories && doc.stories.length) {
-        if (doc.stories.length > 1) {
+
+      if (storyPaths && doc.stories && doc.stories.length) {
+        if (doc.stories.length >= 1) {
           // multiple stories - each with a link
           newItem.items = doc.stories.map(storyId => {
             const story = storeProvider.getStory(storyId) as Story;
@@ -90,6 +92,7 @@ const createMenuItem = (
     doc,
     type,
     levels.slice(1),
+    storyPaths,
     activeTab,
     sibling ? sibling.items : newItem.items,
     newItem,
@@ -110,14 +113,22 @@ export const Sidebar: FC<SidebarProps> = ({
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
   const { pages } = config || {};
-  const { label = '' } = pages?.[type] || {};
+  const { label = '', storyPaths = false } = pages?.[type] || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
-        createMenuItem(storeProvider, doc, type, levels, activeTab, acc);
+        createMenuItem(
+          storeProvider,
+          doc,
+          type,
+          levels,
+          storyPaths,
+          activeTab,
+          acc,
+        );
         return acc;
       }, []);
       return menuItems;

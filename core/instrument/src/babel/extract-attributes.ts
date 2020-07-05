@@ -1,5 +1,4 @@
 import generate from '@babel/generator';
-import { stringifyObject } from '../misc/stringify-object';
 
 interface StoryAttribute {
   name: string;
@@ -53,17 +52,13 @@ const nodeToValue = (node: any): any => {
   }
   return undefined;
 };
-const nodeToAttribute = (node: any): StoryAttribute | undefined => {
+const nodeToAttribute = (
+  node: any,
+): Pick<StoryAttribute, 'value'> | undefined => {
   const value = node.value || node;
-  const name = node.key
-    ? node.key.name ?? node.key.value
-    : node.property?.name || node.name;
-
   const retVal = nodeToValue(value);
   return retVal !== undefined
-    ? name
-      ? { value: retVal, name }
-      : retVal
+    ? { value: retVal }
     : value
     ? { value }
     : undefined;
@@ -77,7 +72,11 @@ export const extractAttributes = (
         (acc: Record<string, any>, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {
-            return { ...acc, [attribute.name]: attribute.value };
+            const name: string = propNode.key
+              ? propNode.key.name ?? propNode.key.value
+              : propNode.property?.name || propNode.name;
+
+            return { ...acc, [name]: attribute.value };
           } else {
             return acc;
           }

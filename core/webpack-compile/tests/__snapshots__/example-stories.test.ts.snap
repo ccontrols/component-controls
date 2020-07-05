@@ -19,6 +19,7 @@ Store {
       },
       "story": Object {
         "basePath": "docs/",
+        "storyPaths": true,
         "tabs": Array [
           Object {
             "route": "page",
@@ -661,76 +662,26 @@ Button.propTypes = {
           ],
           "controls": Object {
             "age": Object {
+              "defaultValue": "null",
+              "description": "\`
+**age of the person**
+
+numeric, values between 10 and 75 allowed
+\`",
               "label": "Age",
               "max": 75,
               "min": 10,
               "type": "ControlTypes.NUMBER",
-              "undefined": Node {
-                "end": 925,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 22,
-                    "line": 43,
-                  },
-                  "start": Position {
-                    "column": 18,
-                    "line": 43,
-                  },
-                },
-                "start": 921,
-                "type": "NullLiteral",
-              },
               "value": 19,
             },
             "name": Object {
+              "description": "\`
+**name of the person**
+
+any text is allowed
+\`",
               "label": "Name",
               "type": "ControlTypes.TEXT",
-              "undefined": Node {
-                "end": 736,
-                "expressions": Array [],
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 1,
-                    "line": 32,
-                  },
-                  "start": Position {
-                    "column": 17,
-                    "line": 28,
-                  },
-                },
-                "quasis": Array [
-                  Node {
-                    "end": 735,
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 0,
-                        "line": 32,
-                      },
-                      "start": Position {
-                        "column": 18,
-                        "line": 28,
-                      },
-                    },
-                    "start": 690,
-                    "tail": true,
-                    "type": "TemplateElement",
-                    "value": Object {
-                      "cooked": "
-**name of the person**
-
-any text is allowed
-",
-                      "raw": "
-**name of the person**
-
-any text is allowed
-",
-                    },
-                  },
-                ],
-                "start": 689,
-                "type": "TemplateLiteral",
-              },
               "value": "Mark",
             },
           },
@@ -1578,100 +1529,7 @@ any text is allowed
               "groupId": "GROUP_IDS.GENERAL",
               "label": "Birthday",
               "type": "ControlTypes.DATE",
-              "undefined": Node {
-                "arguments": Array [
-                  Node {
-                    "end": 3138,
-                    "extra": Object {
-                      "raw": "1990",
-                      "rawValue": 1990,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 24,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 20,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3134,
-                    "type": "NumericLiteral",
-                    "value": 1990,
-                  },
-                  Node {
-                    "end": 3141,
-                    "extra": Object {
-                      "raw": "1",
-                      "rawValue": 1,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 27,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 26,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3140,
-                    "type": "NumericLiteral",
-                    "value": 1,
-                  },
-                  Node {
-                    "end": 3144,
-                    "extra": Object {
-                      "raw": "1",
-                      "rawValue": 1,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 30,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 29,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3143,
-                    "type": "NumericLiteral",
-                    "value": 1,
-                  },
-                ],
-                "callee": Node {
-                  "end": 3133,
-                  "loc": SourceLocation {
-                    "end": Position {
-                      "column": 19,
-                      "line": 126,
-                    },
-                    "identifierName": "Date",
-                    "start": Position {
-                      "column": 15,
-                      "line": 126,
-                    },
-                  },
-                  "name": "Date",
-                  "start": 3129,
-                  "type": "Identifier",
-                },
-                "end": 3145,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 31,
-                    "line": 126,
-                  },
-                  "start": Position {
-                    "column": 11,
-                    "line": 126,
-                  },
-                },
-                "start": 3125,
-                "type": "NewExpression",
-              },
+              "value": "new Date(1990, 1, 1)",
             },
             "color": Object {
               "groupId": "GROUP_IDS.DISPLAY",
@@ -1762,22 +1620,8 @@ any text is allowed
               "type": "ControlTypes.OBJECT",
               "value": Object {
                 "border": Object {
+                  "data": "null",
                   "type": "text",
-                  "undefined": Node {
-                    "end": 4832,
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 68,
-                        "line": 206,
-                      },
-                      "start": Position {
-                        "column": 64,
-                        "line": 206,
-                      },
-                    },
-                    "start": 4828,
-                    "type": "NullLiteral",
-                  },
                   "value": "2px dashed silver",
                 },
                 "borderRadius": Object {

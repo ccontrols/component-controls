@@ -1,0 +1,516 @@
+---
+title: Introduction to controls
+type: blog
+author: atanasster
+description: Controls allow interactive editing of component's properties at run-time.
+tags:
+  - controls
+  - stories
+---
+import { ControlTypes } from '@component-controls/core';
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+## Overview
+
+The [controls api](/tutorial/structure/controls-api) provides an extensible interface for specifying and using input controls to enter component property values at run-time.
+
+You can also check the list of [pre-defined controls](/tutorial/structure/controls) that are available for creating interactive examples of your components.
+
+![in action](https://github.com/ccontrols/component-controls/raw/master/examples/stories/src/media/controls.gif)
+
+
+## Background
+
+You can use controls in both formats [ESM](/tutorial/esmodules-stories) and [MDX](/tutorial/mdx-stories).
+
+## Basic usage
+
+1. Attach a controls object to your `example`
+2. Ensure your `example` accepts the same parameters as declared in the controls object.
+
+### ESM
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+
+export const textControl = ({ text }) => (<div>{props.text}</div>);
+
+textControl.controls = {
+  text: { type: ControlTypes.TEXT, value: 'some text'}
+};
+
+```
+
+### MDX
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+
+<Story name="text-control" controls={{ text: { type: ControlTypes.TEXT, value: 'some text'} }}>
+  {props => (
+    <div>{props.text}</div>
+  )}
+</Story>
+
+```
+
+## Smart properties 
+
+The component-controls built-in [instrumentation module](https://github.com/ccontrols/component-controls/tree/master/core/instrument) provides the ability to smartly detect any properties passed to your "stories" and creates the controls table accordingly. 
+
+1. No properties are passed to the example. In this case, no controls will be used at run-time, since the properties can not be passed to the example:
+
+```jsx
+export const overview = () => <button>no props</button>
+```
+
+<Playground>
+  <Story name="no-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+    {() => (
+      <button>no props</button>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="no-props-example" />
+
+
+2. Some named properties are passed to the example. In this case, only the properties specifically listed will be available at run-time (ie: `color`):
+
+```jsx
+export const overview = ({ color }) => <button style={{ color }}>some props</button>
+```
+
+<Playground>
+  <Story name="named-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+    {({ color }) => (
+      <button style={{ color }}>some props</button>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="named-props-example" />
+
+3. All the properties are passed. In this case, all listed controls will be available at run-time:
+
+```jsx
+export const overview = props => <button style={props}>all props</button>
+```
+
+<Playground>
+  <Story name="all-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+    {props => (
+      <button style={props}>all props</button>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="all-props-example" />
+
+## Display options
+
+All controls can receive the following configuration properties 
+
+### description
+
+Full text property description with markdown support. It is used in the Props table.
+
+<Playground>
+  <Story name="description-example" controls={{ text: { type: ControlTypes.TEXT, value: 'some text', description: 'a description with **markdown** support' }}}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="description-example" />
+
+
+### hidden
+
+Hide the property editor for this property will only use the value.
+
+<Playground>
+  <Story name="hidden-example" controls={{ text: { type: ControlTypes.TEXT, value: 'some text', hidden: true }}}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="hidden-example" />
+
+### label
+
+Label to display next to the field editor by default uses the property name itself.
+
+<Playground>
+  <Story name="label-example" controls={{ text: { type: ControlTypes.TEXT, value: 'some text', label: 'Enter some text:' } }}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="label-example" />
+
+
+### order
+
+Allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable) 
+
+<Playground>
+  <Story name="order-example" controls={{ 
+    text1: { type: ControlTypes.TEXT, value: 'text 1', order: 1 },
+    text2: { type: ControlTypes.TEXT, value: 'text 2', order: 0 }
+    }}>
+    {({ text1, text2 }) => (
+      <div>{text1}/{text2}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="order-example" />
+
+
+### required
+
+Visually display the control property as required in the Props table.
+
+<Playground>
+  <Story name="required-example" controls={{ text: { type: ControlTypes.TEXT, value: 'some text', required: true } }}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="required-example" />
+
+
+## defaultValue
+
+The default value that will be displayed in the Props table and the value that will be reverted to when the user clicks on reset. By default it is set from the value field of the control but you can also assign it manually.
+
+<Playground>
+  <Story name="default-example" controls={{ text: { type: ControlTypes.TEXT, value: 'some text', defaultValue: 'a default value' } }}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="default-example" />
+
+## Randomize data
+
+[data](/tutorial/structure/controls-api#componentcontroldata) helper information to generate random data will be used in conjunction with [faker.js](https://github.com/marak/Faker.js/).
+
+```
+  data: {
+    name: string; //faker.js name of data generator
+    options: object; // options to be passed to the faker data generator
+  }
+```
+
+### Custom generator name
+
+```
+export const overview = ({ street }) => street;
+
+overview.controls = {
+  street: {
+    type: ControlTypes.TEXT,
+    label: 'Street',
+    value: '30333 Atlantic Ave.',
+    data: { name: 'address.streetAddress' },
+  },
+};
+```
+
+<Playground>
+  <Story name="street-data-example" controls={{
+    street: {
+      type: ControlTypes.TEXT,
+      label: 'Street',
+      value: '30333 Atlantic Ave.',
+      data: { name: 'address.streetAddress' },
+    },
+  }}>
+    {({ street }) => street}
+  </Story>
+</Playground>
+
+<PropsTable name="street-data-example" />
+
+### Custom generator options
+
+```
+export const overview = ({ number }) => number;
+
+overview.controls = {
+  number: {
+    type: ControlTypes.NUMBER,
+    label: 'A number',
+    value: 10,
+    data: { name: 'random.number', options: { min: 50, max: 100 } },
+  }
+}    
+
+```
+
+<Playground>
+  <Story name="number-data-example" controls={{
+    number: {
+      type: ControlTypes.NUMBER,
+      label: 'A number',
+      value: 10,
+      data: { name: 'random.number', options: { min: 50, max: 100 } },
+    }
+  }}>
+    {({ number }) => number}
+  </Story>
+</Playground>
+
+<PropsTable name="street-data-example" />
+
+## Smart controls
+
+The controls module can automatically extract component properties from the components prop info (ie typescript interfaces or react-props). This extraction process is called `smart-props`.
+
+1. The make `smart-props` work, you need to assign a component to your [ESM](/tutorial/esmodules-stories) or [MDX](/tutorial/mdx-stories) documents (will aplpy to all stories defined) or to a specific story.
+
+2. You also need to pass some parameters to your stories:
+
+### ESM
+
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Smart Controls',
+  component: Button,
+};
+
+export const smart = props => <Button {...props} />;
+
+```
+
+### MDX
+
+```
+---
+title: Smart Controls
+component: Button
+---
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name='smart'>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+
+```
+
+<Playground>
+  <Story name='smart' component={Button}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+
+### Configure smart-controls
+
+You can the behavior or smart-controls using the `smartControls` story property
+
+#### Disable
+
+If you assign false to `smartControls`, the system will skip creating automatically smart controls for the story.
+
+***ESM***
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Smart Controls',
+};
+
+export const smart = props => <Button {...props} />;
+smart.component = Button;
+smart.smartControls = false;
+```
+
+***MDX***
+```
+---
+title: Smart Controls
+---
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name='smart' component={Button} smartControls={false}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+```
+
+<Playground>
+  <Story name='smart-disable' component={Button} smartControls={false}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart-disable" />
+
+
+#### Include only specific properties
+
+You might want to configure only some properties of your components to be editable. 
+
+***ESM***
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Smart Controls',
+};
+
+export const smart = props => <Button {...props} />;
+smart.component = Button;
+smart.smartControls = {
+  include: ['color', 'backgroundColor'],
+};
+```
+
+***MDX***
+```
+---
+title: Smart Controls
+---
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name='smart' component={Button} smartControls={{ include: ['color', 'backgroundColor'] }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+```
+
+<Playground>
+  <Story name='smart-include' component={Button} smartControls={{ include: ['color', 'backgroundColor'] }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart-include" />
+
+#### Exclude specific properties
+
+You might want to prevent some properties of your components to be editable. 
+
+***ESM***
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Smart Controls',
+};
+
+export const smart = props => <Button {...props} />;
+smart.component = Button;
+smart.smartControls = {
+  exclude: ['color', 'backgroundColor'],
+};
+```
+
+***MDX***
+```
+---
+title: Smart Controls
+---
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name='smart' component={Button} smartControls={{ exclude: ['color', 'backgroundColor'] }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+```
+
+<Playground>
+  <Story name='smart-exclude' component={Button} smartControls={{ exclude: ['color', 'backgroundColor'] }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart-exclude" />
+
+## Grouping
+
+By assigning a `groupId` property you can display the properties grouped in different tabs. This works both when creating controls from scratch, or using smart-controls and just overriding their groupId field.
+
+***ESM***
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Smart Controls',
+};
+
+export const smart = props => <Button {...props} />;
+smart.component = Button;
+smart.controls = { 
+  color: { groupId: 'Colors' },
+  backgroundColor: { groupId: 'Colors' }
+};
+```
+
+***MDX***
+```
+---
+title: Smart Controls
+---
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name='smart'
+    component={Button} 
+    controls={{ 
+      color: { groupId: 'Colors' },
+      backgroundColor: { groupId: 'Colors' }
+    }}
+  >
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart" />
+```
+
+<Playground>
+  <Story name='smart-group' component={Button} controls={{ 
+    color: { groupId: 'Colors' },
+    backgroundColor: { groupId: 'Colors' }
+  }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="smart-group" />

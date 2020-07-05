@@ -2,7 +2,7 @@
 
 exports[`extract-props-info PropsTable 1`] = `
 Object {
-  "description": "",
+  "description": "Displays the component's properties as well as configurable controls to interact with the component.",
   "displayName": "PropsTable",
   "methods": Array [],
   "props": Object {
@@ -988,6 +988,14 @@ from the title.",
     },
     "lang": Object {
       "parentName": "HTMLAttributes",
+      "type": Object {
+        "name": "string",
+        "raw": "string",
+      },
+    },
+    "name": Object {
+      "description": "some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls",
+      "parentName": "ComponentInputProps",
       "type": Object {
         "name": "string",
         "raw": "string",

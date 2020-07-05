@@ -85,7 +85,7 @@ export interface Story {
   name: string;
 
   /**
-   * csf id of the story
+   * id of the story
    */
   id?: string;
 
@@ -161,7 +161,7 @@ export const defPageType: PageType = 'story';
 /**
  * A documentation file's metadata.
  * For MDX files, fromtmatter is used to declare the document properties.
- * For "es modules" documetation files, the default export is used.
+ * For ESM (ES Modules) documentation files, the default export is used.
  */
 export interface Document {
   /**
