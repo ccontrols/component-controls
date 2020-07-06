@@ -3,7 +3,10 @@ import { BlockContext } from '@component-controls/blocks';
 import { SidebarsMDXPage } from './SidebarsMDXPage';
 import { DocPageProps, SidebarsStoryPage } from './SidebarsStoryPage';
 
-export const SidebarsPage: FC<DocPageProps> = ({ type, activeTab }) => {
+export const SidebarsPage: FC<Omit<DocPageProps, 'doc'>> = ({
+  type,
+  activeTab,
+}) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
   if (doc && doc.MDXPage && !doc.stories?.length) {

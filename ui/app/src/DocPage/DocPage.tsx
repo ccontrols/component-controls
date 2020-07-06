@@ -15,6 +15,7 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'>> = ({
 }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+
   const hasNoSideBars = doc && !doc.navSidebar && !doc.contextSidebar;
   const isFullPage = doc && doc.fullPage;
   if (hasNoSideBars || isFullPage) {
@@ -26,5 +27,5 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'>> = ({
       />
     );
   }
-  return doc ? <SidebarsPage type={type} doc={doc} {...props} /> : null;
+  return <SidebarsPage type={type} {...props} />;
 };

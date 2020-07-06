@@ -79,7 +79,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
           <BlockContext.Provider
             value={{
               storyId,
-              docId,
+              docId: propsDocId,
               storeProvider: store,
               options,
             }}
@@ -87,7 +87,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
             <BlockDataContextProvider
               store={store}
               storyId={storyId}
-              docId={docId}
+              docId={propsDocId}
             >
               {children}
             </BlockDataContextProvider>
