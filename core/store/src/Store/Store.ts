@@ -280,7 +280,7 @@ export class Store implements StoryStore {
                 if (typeof acc[v] === 'undefined') {
                   acc[v] = 0;
                 }
-                acc[v] = acc[v] = 1;
+                acc[v] = acc[v] + 1;
               }
             });
             return acc;
