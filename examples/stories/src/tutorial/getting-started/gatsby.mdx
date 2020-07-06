@@ -2,7 +2,7 @@
 title: Getting started/Gatsby
 type: tutorial
 order: 0
-tags:
+tags:in your project folder
   - gatsby
 ---
 
@@ -48,7 +48,7 @@ yarn add @component-controls/gatsby-theme-stories
 
 ### Configure theme
 
-create a `gatsby-config.js` file in your project folder
+create a `gatsby-config.js` file in your project's home directory
 ```js
 //gatsby-config.js:
 module.exports = {
@@ -65,12 +65,12 @@ module.exports = {
 
 ### Configuration folder
 
-Create a new folder `.config` inside your proejct (or any other name that you used in the step above)
+Create a new folder `.config` inside your project (or any other name that you used in the step above)
 
 
 ### Build-time configuration
 
-create a file `.config/buildtime.js` and enter the paths to search for component-controls documentation files
+In `.config` create a `buildtime.js` file and enter the paths to search for the component-controls documentation files
 
 ```js
 //.config/buildtime.js
@@ -161,7 +161,7 @@ more: [writing esm stories](/tutorial/esmodules-stories)
 
 ### Run-time configuration
 
-create a file `.config/runtime.js` and change some of the site meta information
+In `.config` create a `runtime.js` file and change some of the site meta information
 
 ```js
 //.config/runtime.js
@@ -179,7 +179,7 @@ more: [run-time configuration](/configuration/runtime/)
 
 ### Project repository
 
-if your project is public, you can automatically display a git link on all documentation pages, just add the repository information in `package.json`
+If your project is public, you can automatically display a git link on all documentation pages.Jjust add the repository information in `package.json`
 
 ```json
 ...
