@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+
+### Bug Fixes
+
+* docId context ([65eec8e](https://github.com/ccontrols/component-controls/commit/65eec8eb43bbd1bb83b39f65fabbb318302160ad))
+
+
+
+
+
 # [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
 
 
