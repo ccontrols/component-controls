@@ -26,7 +26,8 @@ const config: RunOnlyConfiguration = {
     tutorial: {
       label: 'Tutorial',
       topMenu: true,
-      sidebars: true,
+      navSidebar: true,
+      contextSidebar: true,
     },
   },  
   storySort: (a, b) => {

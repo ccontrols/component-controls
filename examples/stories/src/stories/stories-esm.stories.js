@@ -4,7 +4,7 @@ import { customStory as customStoryProps } from './external/external-story-props
 import { customStory as customStoryDeconstructedProps } from './external/external-story-deconstructed-props';
 
 export default {
-  title: 'Introduction/CSF',
+  title: 'Introduction/ESM',
   author: 'atanasster',
 };
 

@@ -527,19 +527,6 @@ Button.propTypes = {
       },
       "version": "1.6.0",
     },
-    "85a1bf440fe016c4719e372255f5ffcb": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
-      "fileHash": "85a1bf440fe016c4719e372255f5ffcb",
-      "name": "component-controls-stories",
-      "peerDependencies": undefined,
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-csf.stories.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.6.0",
-    },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "dependencies": undefined,
       "devDependencies": undefined,
@@ -561,6 +548,19 @@ Button.propTypes = {
       "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.6.0",
+    },
+    "f6e72e22789f0ec595d8610e56ea91ff": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "f6e72e22789f0ec595d8610e56ea91ff",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -2519,12 +2519,12 @@ any text is allowed
         "components": Object {},
         "componentsLookup": Object {},
         "date": 2020-06-29T01:18:57.730Z,
-        "dateModified": 2020-06-29T01:18:57.731Z,
-        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
-        "package": "85a1bf440fe016c4719e372255f5ffcb",
-        "title": "Introduction/CSF",
+        "dateModified": 2020-07-06T20:42:11.524Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
+        "package": "f6e72e22789f0ec595d8610e56ea91ff",
+        "title": "Introduction/ESM",
       },
-      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
       "stories": Object {
         "externalStory": Object {
           "arguments": Array [],

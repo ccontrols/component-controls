@@ -1,24 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-hoisted name-and-parameters.js 1`] = `
+exports[`esm-story-doc no-title.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-06-17T18:28:16.346Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
+    "package": "a03a6b619ce62e5e6f82a4a5388ace7c",
+    "test": 1,
+    "title": "Story",
+  },
+  "packages": Object {
+    "a03a6b619ce62e5e6f82a4a5388ace7c": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.6.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "a03a6b619ce62e5e6f82a4a5388ace7c",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/doc/no-title.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.6.0",
+    },
+  },
+  "stories": Object {},
+  "transformed": "export default {
+  title: 'Story',
+  test: 1,
+};
+",
+}
+`;
+
+exports[`esm-story-doc title-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "a5c8750149d81a8bf4e29242df86960c": Object {
+    "73cac298d983c71aec166657453a64fe": Object {
       "name": "ControlsTable",
     },
   },
   "doc": Object {
+    "component": "ControlsTable",
     "components": Object {},
     "componentsLookup": Object {
-      "ControlsTable": "a5c8750149d81a8bf4e29242df86960c",
+      "ControlsTable": "73cac298d983c71aec166657453a64fe",
     },
-    "date": 2020-06-29T01:18:57.680Z,
-    "dateModified": 2020-06-29T01:18:57.681Z,
-    "package": "ec71283d1606ec1307a72179d47d2255",
-    "title": "Story",
+    "date": 2020-06-29T01:18:57.679Z,
+    "dateModified": 2020-06-29T01:18:57.679Z,
+    "package": "8081f639b288cdd9ab2efc243ebbaa32",
+    "smartControls": Object {
+      "smart": false,
+    },
+    "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
-    "ec71283d1606ec1307a72179d47d2255": Object {
+    "8081f639b288cdd9ab2efc243ebbaa32": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -51,63 +121,57 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "ec71283d1606ec1307a72179d47d2255",
+      "fileHash": "8081f639b288cdd9ab2efc243ebbaa32",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/hoisted/name-and-parameters.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/doc/title-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
       "version": "1.6.0",
     },
   },
-  "stories": Object {
-    "myStory": Object {
-      "arguments": Array [],
-      "component": "ControlsTable",
-      "id": "myStory",
-      "loc": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 23,
-          "line": 2,
-        },
-      },
-      "name": "Custom story name",
-      "smartControls": Object {
-        "smart": false,
-      },
-      "source": "() => {}",
-    },
+  "stories": Object {},
+  "transformed": "export default {
+  title: 'Storybook/Blocks/ControlsTable',
+  component: ControlsTable,
+  smartControls: {
+    smart: false,
   },
-  "transformed": "export default { title: 'Story' };
-export const myStory = () => {};
-myStory.storyName = 'Custom story name';
-myStory.component = ControlsTable;
-myStory.smartControls = {
-  smart: false,
 };
 ",
 }
 `;
 
-exports[`csf-hoisted name-parameters-and-controls.js 1`] = `
+exports[`esm-story-doc title-controls-and-parameters.js 1`] = `
 Object {
-  "components": Object {},
+  "components": Object {
+    "eef0b4fe04a3c49402964c3c8dbe5bc8": Object {
+      "name": "ControlsTable",
+    },
+  },
   "doc": Object {
+    "component": "ControlsTable",
     "components": Object {},
-    "componentsLookup": Object {},
-    "date": 2020-06-29T01:18:57.681Z,
-    "dateModified": 2020-06-29T01:18:57.681Z,
-    "package": "99930802624c5d84c6815b0aa494de28",
-    "title": "Story",
+    "componentsLookup": Object {
+      "ControlsTable": "eef0b4fe04a3c49402964c3c8dbe5bc8",
+    },
+    "controls": Object {
+      "name": Object {
+        "label": "Name",
+        "order": 9999,
+        "type": "ControlTypes.TEXT",
+        "value": "Mark",
+      },
+    },
+    "date": 2020-06-29T01:18:57.679Z,
+    "dateModified": 2020-06-29T01:18:57.680Z,
+    "package": "6db9fafb88b9be0bff2ddaea194f3c5b",
+    "title": "Storybook/Kind",
   },
   "packages": Object {
-    "99930802624c5d84c6815b0aa494de28": Object {
+    "6db9fafb88b9be0bff2ddaea194f3c5b": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -140,77 +204,47 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "99930802624c5d84c6815b0aa494de28",
+      "fileHash": "6db9fafb88b9be0bff2ddaea194f3c5b",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/hoisted/name-parameters-and-controls.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/doc/title-controls-and-parameters.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
       "version": "1.6.0",
     },
   },
-  "stories": Object {
-    "myStory": Object {
-      "arguments": Array [],
-      "controls": Object {
-        "name": Object {
-          "label": "Name",
-          "order": 9999,
-          "type": "ControlTypes.TEXT",
-          "value": "Mark",
-        },
-      },
-      "id": "myStory",
-      "loc": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 23,
-          "line": 2,
-        },
-      },
-      "name": "Custom story name",
-      "smartControls": Object {
-        "smart": false,
-      },
-      "source": "() => {}",
+  "stories": Object {},
+  "transformed": "export default {
+  title: 'Storybook/Kind',
+  component: ControlsTable,
+  controls: {
+    name: {
+      type: ControlTypes.TEXT,
+      label: 'Name',
+      value: 'Mark',
+      order: 9999,
     },
   },
-  "transformed": "export default { title: 'Story' };
-export const myStory = () => {};
-myStory.storyName = 'Custom story name';
-myStory.controls = {
-  name: {
-    type: ControlTypes.TEXT,
-    label: 'Name',
-    value: 'Mark',
-    order: 9999,
-  },
-};
-myStory.smartControls = {
-  smart: false,
 };
 ",
 }
 `;
 
-exports[`csf-hoisted story-property-name.js 1`] = `
+exports[`esm-story-doc with-title.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-29T01:18:57.682Z,
-    "dateModified": 2020-06-29T01:18:57.682Z,
-    "package": "f0c3d627ecddef021936755ba261c5e9",
-    "title": "Story",
+    "date": 2020-06-17T18:28:16.347Z,
+    "dateModified": 2020-06-17T18:28:16.347Z,
+    "package": "39a28a959d9e8a3456b1df4b10db9ffc",
+    "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
-    "f0c3d627ecddef021936755ba261c5e9": Object {
+    "39a28a959d9e8a3456b1df4b10db9ffc": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -243,38 +277,21 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "f0c3d627ecddef021936755ba261c5e9",
+      "fileHash": "39a28a959d9e8a3456b1df4b10db9ffc",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/hoisted/story-property-name.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/doc/with-title.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
       "version": "1.6.0",
     },
   },
-  "stories": Object {
-    "myStory": Object {
-      "arguments": Array [],
-      "id": "myStory",
-      "loc": Object {
-        "end": Object {
-          "column": 31,
-          "line": 2,
-        },
-        "start": Object {
-          "column": 23,
-          "line": 2,
-        },
-      },
-      "name": "myStory",
-      "source": "() => {}",
-    },
-  },
-  "transformed": "export default { title: 'Story' };
-export const myStory = () => {};
-story.storyName = 'Custom story name';
+  "stories": Object {},
+  "transformed": "export default {
+  title: 'Storybook/Blocks/ControlsTable',
+};
 ",
 }
 `;

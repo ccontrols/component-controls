@@ -7,7 +7,9 @@ export const SidebarsPage: FC<DocPageProps> = ({ type, activeTab }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
   if (doc && doc.MDXPage && !doc.stories?.length) {
-    return <SidebarsMDXPage type={type} />;
+    return <SidebarsMDXPage type={type} doc={doc} />;
   }
-  return <SidebarsStoryPage type={type} activeTab={activeTab} />;
+  return doc ? (
+    <SidebarsStoryPage type={type} activeTab={activeTab} doc={doc} />
+  ) : null;
 };

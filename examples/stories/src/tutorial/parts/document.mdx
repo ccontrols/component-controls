@@ -7,26 +7,126 @@ tags:
 order: 0
 ---
 
-## Properties
+## Overview
 
 Document is a single file containing documentation in [mdx](/tutorial/mdx-stories/) or [esm](/tutorial/esmodules-stories/) format.
 
-The following fields are available
+## Properties
 
-| Name                | Type                                    | Description                                                                                                                                                                                  |
-| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `author`            | string                                  | document author                                                                                                                                                                              |
-| `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
-| `controls`          | [ComponentControls](/tutorial/structure/controls#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
-| `date`              | Date                                    |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | Date                                    |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `decorators`        | [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)       | story decorators (or wrappers)                                                                                                                                                               |
-| `description`       | string                                  |  documentation file description                                                                                                                                                              |
-| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
-| `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
-| `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
-| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
-| `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
-| `type`              | [PageType](/tutorial/structure/configuration#pagetype)| document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+### title
+
+type: `string`
+
+Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specifified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Button
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+}  
+```
+
+## Type
+
+type: [PageType](/tutorial/structure/configuration#pagetype)
+
+Document type - blogs, pages, stories and even custom ones. By default all documents are type `story`
+
+
+### order
+
+type: `number`
+
+Document order, used to sort between documents within the same parent menu. By default documents are ordered by their filesystem precendance (alphabetically).
+
+The order is used for the menu display as well as next/previous page navigation.
+
+### route
+
+type:  `string`
+
+If provided, will be used as the route for the document page. By default, the title in lowercase will be used as the route.
+
+
+### description
+
+type:  `string`
+
+Short description of the documentation page - can be an excerpt for blog posts or keywords for the full text search.
+
+
+### date
+
+type:  `Date`
+
+Optional date when the document was created. If not assigned, the instrumentation process will use birthtime from the filesystem.
+
+### dateModified
+
+type:  `Date`
+
+Optional date when the document was last modified. If not assigned, the instrumentation process will use mtime from the filesystem.
+
+### tags
+
+type: `string[]`
+
+List of document tags, used for cross-linking documents and the full-text search.
+
+
+### author
+
+type: `string` 
+
+Document author.
+
+
+### navSidebar
+
+type: `boolean`
+
+Whether to add a sidebar to navigate all the pages from the same page type. The default value is from the page type configuration.
+
+### contextSidebar
+
+type: `boolean`
+  
+Whether to add conext sidebar to navigate the sections of the page. The default value is from the page type configuration.
+
+### fullPage
+
+type: `boolean
+
+Whether the page to take full width (pagecontainer.full theme variant to be customized). The default value is from the page type configuration.
+
+### controls
+
+type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
+
+Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
+
+### component
+
+type: `string | object`
+
+The component associated with the documentation page. 
+
+### subcomponents
+
+type: `string[] | object[]
+
+Multiple components option.
+
+
+### decorators
+
+type [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)
+
+Wrapper function to be called around rendering each individual story.

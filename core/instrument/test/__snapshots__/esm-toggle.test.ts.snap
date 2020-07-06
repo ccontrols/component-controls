@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-toggle toggle-story.js 1`] = `
+exports[`esm-toggle toggle-story.js 1`] = `
 Object {
   "components": Object {
-    "a7e5ad523f225128d8b53302689e5a27": Object {
+    "88b383f24b1cfbfb44763744ac121b71": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
       "imports": undefined,
@@ -17,15 +17,15 @@ Object {
     "component": "Toggle",
     "components": Object {},
     "componentsLookup": Object {
-      "Toggle": "a7e5ad523f225128d8b53302689e5a27",
+      "Toggle": "88b383f24b1cfbfb44763744ac121b71",
     },
     "date": 2020-03-07T04:02:17.329Z,
     "dateModified": 2020-03-07T04:02:32.477Z,
-    "package": "907f6c0f914114634c0f7069bb74b196",
+    "package": "874ad578fa3a5df897053afa7602e705",
     "title": "Components/Toggle",
   },
   "packages": Object {
-    "907f6c0f914114634c0f7069bb74b196": Object {
+    "874ad578fa3a5df897053afa7602e705": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -58,11 +58,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "907f6c0f914114634c0f7069bb74b196",
+      "fileHash": "874ad578fa3a5df897053afa7602e705",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/toggle/toggle-story.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/toggle/toggle-story.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },

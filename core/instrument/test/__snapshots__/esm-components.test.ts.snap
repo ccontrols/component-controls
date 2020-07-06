@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-components default-import.js 1`] = `
+exports[`esm-components default-import.js 1`] = `
 Object {
   "components": Object {
     "ceea0565a65f75c8c7b6b355d6d335ac": Object {
@@ -39,7 +39,7 @@ export default {
 }
 `;
 
-exports[`csf-components story-subcomponents.js 1`] = `
+exports[`esm-components story-subcomponents.js 1`] = `
 Object {
   "components": Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {
@@ -121,7 +121,7 @@ story.story = {
 }
 `;
 
-exports[`csf-components subcomponents.js 1`] = `
+exports[`esm-components subcomponents.js 1`] = `
 Object {
   "components": Object {
     "2f4bd34d15be236674abaf6e894afe6e": Object {

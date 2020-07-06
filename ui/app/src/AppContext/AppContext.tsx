@@ -42,7 +42,7 @@ export const AppContext: FC<AppContextProps> = ({
   const page = pages?.[type];
   const documentId = docId
     ? docId
-    : docId === undefined && page?.sidebars
+    : docId === undefined && page?.navSidebar
     ? storyStore.getFirstDocument(type)
     : undefined;
   return (

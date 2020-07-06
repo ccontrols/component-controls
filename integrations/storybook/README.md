@@ -12,7 +12,7 @@
         -   [Use only `react-docgen` (even for typescript)](#use-only-react-docgen-even-for-typescript)
         -   [Use built-in instrument for everything (not use storybook `addon-docs` at all)](#use-built-in-instrument-for-everything-not-use-storybook-addon-docs-at-all)
 -   [Creating stories](#creating-stories)
-    -   -   [CSF](#csf)
+    -   -   [ESM](#esm)
         -   [MDX](#mdx)
 -   [Available Controls](#available-controls)
 -   [Smart Controls](#smart-controls)
@@ -72,7 +72,7 @@
 ### Limitations
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
--   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
+-   Only handles the ESM(CSF) and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
 
 # Getting Started
 
@@ -132,7 +132,7 @@ module.exports = {
 
 # Creating stories
 
-### CSF
+### ESM
 
 ```js
 import React from "react";

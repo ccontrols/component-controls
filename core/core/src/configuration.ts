@@ -36,7 +36,7 @@ export interface PageConfiguration {
   basePath?: string;
 
   /**
-   * if true, generate story-based paths. This is for documents with sidebars that allow selection of stories
+   * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
    */
   storyPaths?: boolean;
 
@@ -57,9 +57,14 @@ export interface PageConfiguration {
   indexHome?: boolean;
 
   /**
-   * whether to add navigation sidebars to the page
+   * whether to add navigation sidebar to the page
    */
-  sidebars?: boolean;
+  navSidebar?: boolean;
+
+  /**
+   * whether to add conext sidebar to navigate the sections of the current document
+   */
+  contextSidebar?: boolean;
 
   /**
    * whether to add to the top navigation menu
@@ -215,7 +220,8 @@ export const defaultRunConfig: RunConfiguration = {
   pages: {
     story: {
       label: 'Docs',
-      sidebars: true,
+      navSidebar: true,
+      contextSidebar: true,
       topMenu: true,
       tabs: [
         { title: 'Documentation', type: 'ClassicPage' },
@@ -224,7 +230,7 @@ export const defaultRunConfig: RunConfiguration = {
     },
     blog: {
       label: 'Blog',
-      sidebars: false,
+      contextSidebar: true,
       topMenu: true,
       indexHome: true,
     },

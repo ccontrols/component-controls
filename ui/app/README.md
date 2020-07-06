@@ -265,9 +265,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `type*` | _string_ | page type   |
+| Name    | Type       | Description     |
+| ------- | ---------- | --------------- |
+| `type*` | _string_   | page type       |
+| `doc*`  | _Document_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -275,10 +276,11 @@ _SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type     | Description     |
-| ----------- | -------- | --------------- |
-| `type*`     | _string_ | page type       |
-| `activeTab` | _string_ | active page tab |
+| Name        | Type       | Description     |
+| ----------- | ---------- | --------------- |
+| `type*`     | _string_   | page type       |
+| `activeTab` | _string_   | active page tab |
+| `doc*`      | _Document_ | document object |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -288,9 +290,10 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name        | Type     | Description     |
-| ----------- | -------- | --------------- |
-| `type*`     | _string_ | page type       |
-| `activeTab` | _string_ | active page tab |
+| Name        | Type       | Description     |
+| ----------- | ---------- | --------------- |
+| `type*`     | _string_   | page type       |
+| `activeTab` | _string_   | active page tab |
+| `doc*`      | _Document_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

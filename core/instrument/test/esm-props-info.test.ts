@@ -1,7 +1,7 @@
 import path from 'path';
 import { loadStoriesTests } from './loadTestFiles';
 
-describe('csf-props-info', () => {
+describe('esm-props-info', () => {
   loadStoriesTests(
     {
       stories: { storeSourceFile: false },
@@ -27,6 +27,6 @@ describe('csf-props-info', () => {
         },
       },
     },
-    ['csf', 'props-info'],
+    ['esm', 'props-info'],
   );
 });

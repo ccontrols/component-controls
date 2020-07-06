@@ -1,8 +1,8 @@
 import { loadStoriesTests } from './loadTestFiles';
 
-describe('csf-named-exports', () => {
+describe('esm-parameters', () => {
   loadStoriesTests({ stories: { storeSourceFile: false } }, [
-    'csf',
-    'named-exports',
+    'esm',
+    'parameters',
   ]);
 });

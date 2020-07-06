@@ -39,11 +39,11 @@ Parsing a source file will generate the following information:
 -   ESM: List of story named exports
 -   ESM: Default export stories file information
 -   MDX: List of `<Story />` story tags
--   MDX: List of `<Meta />` stories file information
+-   MDX: List of Frontammetr or `<Meta />` stories file information
 -   Source code extracted for the stories
 -   Source code of the entire stories file
--   List of all attributes(ie parameters) passed to CSF/MDX stories
--   List of story function arguments passed to CSF/MDX stories
+-   List of all attributes(ie parameters) passed to ESM/MDX stories
+-   List of story function arguments passed to ESM/MDX stories
 -   Usage location (in thesource code) of the function arguments
 -   Extract 'component' information for stories: import clause, source file,source loction
 -   Extract package.json repository information for the stories file

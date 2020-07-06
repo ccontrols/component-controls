@@ -4,22 +4,19 @@ import { jsx } from 'theme-ui';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
-import { PageType } from '@component-controls/core';
 
 /**
  * documentation page for current document.
  * will check if the page has a layout with sidebars or if the page is standalone.
  */
-export const DocPage: FC<DocPageProps> = ({ type = 'story', ...props }) => {
+export const DocPage: FC<Omit<DocPageProps, 'doc'>> = ({
+  type = 'story',
+  ...props
+}) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
-  const { pages } = storeProvider.config || {};
-  const page = pages ? pages[type as PageType] : undefined;
-
-  const hasNoSideBars =
-    (doc && doc.sidebars === false) || (page && page.sidebars === false);
-  const isFullPage =
-    (doc && doc.fullPage === true) || (page && !!page.fullPage);
+  const hasNoSideBars = doc && !doc.navSidebar && !doc.contextSidebar;
+  const isFullPage = doc && doc.fullPage;
   if (hasNoSideBars || isFullPage) {
     return (
       <PageContainer
@@ -29,5 +26,5 @@ export const DocPage: FC<DocPageProps> = ({ type = 'story', ...props }) => {
       />
     );
   }
-  return <SidebarsPage type={type} {...props} />;
+  return doc ? <SidebarsPage type={type} doc={doc} {...props} /> : null;
 };

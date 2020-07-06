@@ -64,7 +64,7 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;
 
@@ -132,6 +132,6 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;

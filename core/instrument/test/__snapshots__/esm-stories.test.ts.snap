@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-stories named-object-export.js 1`] = `
+exports[`esm-stories named-object-export.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -8,11 +8,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:06:01.880Z,
     "dateModified": 2020-04-14T04:56:35.949Z,
-    "package": "023d0d8cf3e4a1a38f08775068d9729d",
+    "package": "25920f3d7248502e343cd20b80fffb17",
     "title": "Story",
   },
   "packages": Object {
-    "023d0d8cf3e4a1a38f08775068d9729d": Object {
+    "25920f3d7248502e343cd20b80fffb17": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -45,11 +45,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "023d0d8cf3e4a1a38f08775068d9729d",
+      "fileHash": "25920f3d7248502e343cd20b80fffb17",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/named-object-export.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/named-object-export.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -65,7 +65,7 @@ export const myStory = {
 }
 `;
 
-exports[`csf-stories no-arguments.js 1`] = `
+exports[`esm-stories no-arguments.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -73,11 +73,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:06:17.604Z,
     "dateModified": 2020-04-14T04:56:08.906Z,
-    "package": "2bf18b76a1b9e90d723ba13b6a10fc58",
+    "package": "bcca088a5f5c78ca90b1d26a540b85e8",
     "title": "Story",
   },
   "packages": Object {
-    "2bf18b76a1b9e90d723ba13b6a10fc58": Object {
+    "bcca088a5f5c78ca90b1d26a540b85e8": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -110,11 +110,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "2bf18b76a1b9e90d723ba13b6a10fc58",
+      "fileHash": "bcca088a5f5c78ca90b1d26a540b85e8",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-arguments.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/no-arguments.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -145,7 +145,7 @@ export const myStory = () => {};
 }
 `;
 
-exports[`csf-stories no-story.js 1`] = `
+exports[`esm-stories no-story.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -153,11 +153,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:04:54.289Z,
     "dateModified": 2020-04-14T04:56:12.341Z,
-    "package": "77d49f77a8b5ff73e715da87e9ab3277",
+    "package": "318ee2593df867f715fd861db60e5abf",
     "title": "Story",
   },
   "packages": Object {
-    "77d49f77a8b5ff73e715da87e9ab3277": Object {
+    "318ee2593df867f715fd861db60e5abf": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -190,11 +190,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "77d49f77a8b5ff73e715da87e9ab3277",
+      "fileHash": "318ee2593df867f715fd861db60e5abf",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/no-story.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/no-story.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -208,7 +208,7 @@ const i = 1;
 }
 `;
 
-exports[`csf-stories props-argument.js 1`] = `
+exports[`esm-stories props-argument.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -216,11 +216,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:06:38.295Z,
     "dateModified": 2020-04-14T04:56:16.733Z,
-    "package": "d8b5c54145ef8f8db3e19289e1c19f95",
+    "package": "2ed1b6c570450cfa3cd7c74cc78ca56b",
     "title": "Story",
   },
   "packages": Object {
-    "d8b5c54145ef8f8db3e19289e1c19f95": Object {
+    "2ed1b6c570450cfa3cd7c74cc78ca56b": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -253,11 +253,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "d8b5c54145ef8f8db3e19289e1c19f95",
+      "fileHash": "2ed1b6c570450cfa3cd7c74cc78ca56b",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/props-argument.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/props-argument.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -303,7 +303,7 @@ export const myStory = props => {};
 }
 `;
 
-exports[`csf-stories three-levels-alias.js 1`] = `
+exports[`esm-stories three-levels-alias.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -311,11 +311,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:08:27.099Z,
     "dateModified": 2020-04-14T04:56:20.303Z,
-    "package": "83b0676f45ac751b689864159d82ed31",
+    "package": "f1a4b6accd2b3403016fbabeec45c742",
     "title": "Story",
   },
   "packages": Object {
-    "83b0676f45ac751b689864159d82ed31": Object {
+    "f1a4b6accd2b3403016fbabeec45c742": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -348,11 +348,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "83b0676f45ac751b689864159d82ed31",
+      "fileHash": "f1a4b6accd2b3403016fbabeec45c742",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/three-levels-alias.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/three-levels-alias.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -456,7 +456,7 @@ export const myStory = ({ name: { first, last }, age }) => {};
 }
 `;
 
-exports[`csf-stories two-arguments.js 1`] = `
+exports[`esm-stories two-arguments.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -464,11 +464,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:06:59.049Z,
     "dateModified": 2020-04-14T04:56:23.651Z,
-    "package": "28503fc854679acdc04bb4eccfeacbb3",
+    "package": "4c8ad6c7277231fb9a5b27d4311a8667",
     "title": "Story",
   },
   "packages": Object {
-    "28503fc854679acdc04bb4eccfeacbb3": Object {
+    "4c8ad6c7277231fb9a5b27d4311a8667": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -501,11 +501,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "28503fc854679acdc04bb4eccfeacbb3",
+      "fileHash": "4c8ad6c7277231fb9a5b27d4311a8667",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-arguments.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-arguments.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -565,7 +565,7 @@ export const myStory = (props, context) => {};
 }
 `;
 
-exports[`csf-stories two-levels-alias.js 1`] = `
+exports[`esm-stories two-levels-alias.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -573,11 +573,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:08:11.695Z,
     "dateModified": 2020-04-14T04:56:27.188Z,
-    "package": "937b0fd35d556a5e5cfcb7fb25a785c8",
+    "package": "ba875b7136e19d0acee47ecca70f30c1",
     "title": "Story",
   },
   "packages": Object {
-    "937b0fd35d556a5e5cfcb7fb25a785c8": Object {
+    "ba875b7136e19d0acee47ecca70f30c1": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -610,11 +610,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "937b0fd35d556a5e5cfcb7fb25a785c8",
+      "fileHash": "ba875b7136e19d0acee47ecca70f30c1",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-alias.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-levels-alias.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -689,7 +689,7 @@ export const myStory = ({ name: MyNam, age }) => {};
 }
 `;
 
-exports[`csf-stories two-levels-sub-arguments.js 1`] = `
+exports[`esm-stories two-levels-sub-arguments.js 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -697,11 +697,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:07:36.418Z,
     "dateModified": 2020-04-14T04:56:30.571Z,
-    "package": "6fe1b3bd8baa1d5965b447e926972dab",
+    "package": "38da62adc9c63c890999f65a2c6f757e",
     "title": "Story",
   },
   "packages": Object {
-    "6fe1b3bd8baa1d5965b447e926972dab": Object {
+    "38da62adc9c63c890999f65a2c6f757e": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -734,11 +734,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "6fe1b3bd8baa1d5965b447e926972dab",
+      "fileHash": "38da62adc9c63c890999f65a2c6f757e",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/two-levels-sub-arguments.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-levels-sub-arguments.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -813,7 +813,7 @@ export const myStory = ({ name, age }) => {};
 }
 `;
 
-exports[`csf-stories typescript.ts 1`] = `
+exports[`esm-stories typescript.ts 1`] = `
 Object {
   "components": Object {},
   "doc": Object {
@@ -821,11 +821,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-03-07T04:07:18.256Z,
     "dateModified": 2020-04-14T04:51:39.559Z,
-    "package": "b683a7b765d6b542242ea58703bc8138",
+    "package": "3b3060a06e2dac8176e2c0a660f8b956",
     "title": "Story",
   },
   "packages": Object {
-    "b683a7b765d6b542242ea58703bc8138": Object {
+    "3b3060a06e2dac8176e2c0a660f8b956": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -858,11 +858,11 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "b683a7b765d6b542242ea58703bc8138",
+      "fileHash": "3b3060a06e2dac8176e2c0a660f8b956",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/stories/typescript.ts",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/typescript.ts",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },

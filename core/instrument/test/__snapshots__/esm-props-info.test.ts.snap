@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`csf-props-info resolve-node-modules.jsx 1`] = `
+exports[`esm-props-info resolve-node-modules.jsx 1`] = `
 Object {
   "components": Object {
     "26090286b0d42fa7a92590e6843f1687": Object {
@@ -2433,7 +2433,7 @@ user setting can display only props table or only controls",
     },
     "date": 2020-06-29T01:18:57.684Z,
     "dateModified": 2020-06-29T01:18:57.684Z,
-    "package": "dd9d92dc79a97d724bc2dff2c5f2aa7a",
+    "package": "a62e1dde0ad3643683513e77602cc630",
     "title": "Storybook/Blocks/PropsTable",
   },
   "packages": Object {
@@ -2484,7 +2484,7 @@ user setting can display only props table or only controls",
       },
       "version": "1.6.0",
     },
-    "dd9d92dc79a97d724bc2dff2c5f2aa7a": Object {
+    "a62e1dde0ad3643683513e77602cc630": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -2517,11 +2517,11 @@ user setting can display only props table or only controls",
         "eslint": "^6.5.1",
         "jest": "^24.9.0",
       },
-      "fileHash": "dd9d92dc79a97d724bc2dff2c5f2aa7a",
+      "fileHash": "a62e1dde0ad3643683513e77602cc630",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/csf/props-info/resolve-node-modules.jsx",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/props-info/resolve-node-modules.jsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },

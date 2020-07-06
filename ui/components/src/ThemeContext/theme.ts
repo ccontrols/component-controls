@@ -896,19 +896,25 @@ export const theme: ControlsTheme = {
     container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
   },
   appsidebarpage: {
-    storycontainer: {
+    allsidebar: {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
       gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
       position: 'relative',
     },
-    //@ts-ignore
-    mdxcontainer: {
+    navsidebar: {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
-      gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
+      gridTemplateColumns: ['1fr', '1fr', '300px 1fr'],
+      position: 'relative',
+    },
+    contextsidebar: {
+      display: 'grid',
+      flex: 1,
+      minHeight: '100vh',
+      gridTemplateColumns: ['1fr', '1fr', '1fr 300px'],
       position: 'relative',
     },
   },

@@ -105,7 +105,7 @@ export interface Story {
   description?: string;
 
   /**
-   * arguments pass to a CSF story
+   * arguments passed to the story function.
    * eg `export const story = props => <Story {...props} />;`
    */
   arguments?: StoryArguments;
@@ -151,7 +151,7 @@ export interface Story {
 }
 
 /**
- * map of stories. The id is compatible with CSF story ids
+ * map of stories. The id is compatible with storybook's story ids
  */
 export interface Stories {
   [id: string]: Story;
@@ -209,10 +209,16 @@ export interface Document {
   fullPage?: boolean;
 
   /**
-   * whether to add navigation sidebars to the page
+   * whether to add navigation sidebar to the page
    * the default value is from the page type configuration
    */
-  sidebars?: boolean;
+  navSidebar?: boolean;
+
+  /**
+   * whether to add conext sidebar to navigate the sections of the page
+   * the default value is from the page type configuration
+   */
+  contextSidebar?: boolean;
 
   /**
    *  optional date the document was created. If not assigned, the instrumentation process will use birthtime

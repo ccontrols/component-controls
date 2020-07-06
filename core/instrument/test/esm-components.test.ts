@@ -1,11 +1,11 @@
 import { loadStoriesTests } from './loadTestFiles';
 
-describe('csf-components', () => {
+describe('esm-components', () => {
   loadStoriesTests(
     {
       stories: { storeSourceFile: false, package: false },
       components: { storeSourceFile: false, package: false },
     },
-    ['csf', 'components'],
+    ['esm', 'components'],
   );
 });

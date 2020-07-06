@@ -1,9 +1,9 @@
 import { loadStoriesTests } from './loadTestFiles';
 
-describe('csf-props-usage', () => {
+describe('esm-props-usage', () => {
   loadStoriesTests(
     { stories: { storeSourceFile: false } },
-    ['csf', 'props-usage'],
+    ['esm', 'props-usage'],
     // ['shorthand.js'],
   );
 });
