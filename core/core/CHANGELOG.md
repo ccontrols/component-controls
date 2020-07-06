@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* add storyPaths page option ([563add3](https://github.com/ccontrols/component-controls/commit/563add3a2d35b36f354eb05e6d224ab9c4bfd88c))
+
+
+
+
+
 # [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* generate code for complex attributes ([17f5b09](https://github.com/ccontrols/component-controls/commit/17f5b098eac6dafd4eb3fe3793584d90f7e2b9d5))
+* handle "new" expressions in MDX ([8ebf546](https://github.com/ccontrols/component-controls/commit/8ebf5463c69d206907bf5dc0161713420dc5b461))
+
+
+### Features
+
+* custom serialization of mdx attributes ([028e366](https://github.com/ccontrols/component-controls/commit/028e366d931b94140ffe1c7d09fdb45b1403e36b))
+
+
+
+
+
 # [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
 
 

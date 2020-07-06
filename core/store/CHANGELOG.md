@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* categories count ([3dc60f0](https://github.com/ccontrols/component-controls/commit/3dc60f0c6b48efb9caf262fc568b1024f1c11fe4))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
 # [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
 
 **Note:** Version bump only for package @component-controls/store

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add keyboard handlingto and slider ([772c7d0](https://github.com/ccontrols/component-controls/commit/772c7d03e04572e4fb3a4d46f95a76c0e2a17600))
+* avoid controls column refresh on change ([858044b](https://github.com/ccontrols/component-controls/commit/858044b7f6677be41bdad1ee5cd084dd84140b99))
+* log doc on error ([4f81cfc](https://github.com/ccontrols/component-controls/commit/4f81cfc459bd9f6b358c9d4bb3a369150a6d06a1))
+* remove container if no children ([3cb0281](https://github.com/ccontrols/component-controls/commit/3cb0281c4656d708134de75452cff5c8a88f0dfb))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* ability to use story name in "component" ([fbc2324](https://github.com/ccontrols/component-controls/commit/fbc232495a2065636c672698ba73d7a726e32e12))
+
+
+
+
+
 # [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
 
 
