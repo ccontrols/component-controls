@@ -18,7 +18,7 @@ export type CompileRunProps = CompileProps & {
 };
 
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
-  const { webPack, presets, configPath, mode } = options;
+  const { webPack, presets, configPath, mode, outputFolder } = options;
   const plugins = [
     new LoaderPlugin({
       config: configPath,
@@ -48,6 +48,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       ...(webPack || {}),
     },
     presets,
+    { outputFolder },
   );
 
   //add all the aliases to avoid double loading of packages

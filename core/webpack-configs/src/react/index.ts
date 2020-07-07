@@ -1,6 +1,6 @@
-import { Configuration } from 'webpack';
+import { PresetType, PresetOptions } from '../types';
 
-export const react: Configuration = {
+export const react: PresetType = (options?: PresetOptions) => ({
   performance: { hints: false },
   module: {
     rules: [
@@ -20,19 +20,14 @@ export const react: Configuration = {
         ],
       },
       {
-        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/,
+        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
+        exclude: [/node_modules/],
         loader: 'url-loader',
         options: {
           limit: 25000,
-        },
-      },
-      {
-        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[hash].[ext]',
-          },
+          name: '[name].[hash].[ext]',
+          publicPath: '/static',
+          outputPath: options?.outputFolder,
         },
       },
       {
@@ -82,4 +77,4 @@ export const react: Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-};
+});

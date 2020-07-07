@@ -1,3 +1,4 @@
+import * as path from 'path';
 import {
   getDocPath,
   getStoryPath,
@@ -24,6 +25,8 @@ exports.createPages = async (
     webPack: options.webpack,
     presets: defaultPresets,
     configPath: options.configPath,
+    outputFolder:
+      options.outputFolder || `${path.join(process.cwd(), 'public')}`,
   };
   const { store } =
     process.env.NODE_ENV === 'development'

@@ -7,3 +7,10 @@ export interface RuleOptions {
 export type RuleType = string | RuleOptions;
 
 export type RuleTypes = RuleType[];
+
+export interface PresetOptions {
+  outputFolder?: string;
+}
+
+export type PresetCallback = (options?: PresetOptions) => Configuration;
+export type PresetType = Configuration | PresetCallback;
