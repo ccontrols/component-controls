@@ -20,11 +20,18 @@ export const react: Configuration = {
         ],
       },
       {
-        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf)$/,
+        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        },
+      },
+      {
+        test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: '[path][name].[hash].[ext]',
           },
         },
       },
