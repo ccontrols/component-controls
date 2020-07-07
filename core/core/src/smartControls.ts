@@ -2,7 +2,8 @@
 import { ComponentControl, ComponentControls, ControlTypes } from './controls';
 import { PropType, PropTypes } from './components';
 
-const cleanQuotes = (txt?: string) => (txt ? txt.replace(/['"]+/g, '') : txt);
+const cleanQuotes = (txt?: string) =>
+  typeof txt === 'string' ? txt.replace(/['"]+/g, '') : txt;
 
 const handledTypes = [
   'boolean',
