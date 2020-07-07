@@ -38,7 +38,7 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
       text: 'skip to context sidebar',
     });
   }
-  const titleParts = title.split('/');
+  const titleParts = title ? title.split('/') : [''];
   const pageTitle = titleParts[titleParts.length - 1];
   return (
     <Fragment>
