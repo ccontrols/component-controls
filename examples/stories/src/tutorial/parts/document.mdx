@@ -7,6 +7,8 @@ tags:
 order: 0
 ---
 
+import titleImg from './media/doc-title.jpg';
+
 ## Overview
 
 Document is a single file containing documentation in [mdx](/tutorial/mdx-stories/) or [esm](/tutorial/esmodules-stories/) format.
@@ -33,12 +35,15 @@ export default {
 }  
 ```
 
+<img alt="hierarchical document title" title="Document Title" src={titleImg} />
+
 ## Type
 
-type: [PageType](/tutorial/structure/configuration#pagetype)
+type: [DocumentType](/tutorial/structure/configuration#documenttype)
 
-Document type - blogs, pages, stories and even custom ones. By default all documents are type `story`
+Document type - blogs, pages, stories and even custom ones. By default all documents are of type `story`
 
+All documents of the same type are grouped together for easier search and navigation.
 
 ### order
 
@@ -92,19 +97,19 @@ Document author.
 
 type: `boolean`
 
-Whether to add a sidebar to navigate all the pages from the same page type. The default value is from the page type configuration.
+Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration.
 
 ### contextSidebar
 
 type: `boolean`
   
-Whether to add conext sidebar to navigate the sections of the page. The default value is from the page type configuration.
+Whether to add conext sidebar to navigate the sections of the page. The default value is from the document type configuration.
 
 ### fullPage
 
 type: `boolean
 
-Whether the page to take full width (pagecontainer.full theme variant to be customized). The default value is from the page type configuration.
+Whether the page to take full width (pagecontainer.full theme variant to be customized). The default value is from the document type configuration.
 
 ### controls
 

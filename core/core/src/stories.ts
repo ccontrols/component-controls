@@ -2,7 +2,11 @@ import { toId, storyNameFromExport } from '@storybook/csf';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, PagesOnlyRoutes, PageType } from './configuration';
+import {
+  RunConfiguration,
+  PagesOnlyRoutes,
+  DocumentType,
+} from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -157,7 +161,7 @@ export interface Stories {
   [id: string]: Story;
 }
 
-export const defPageType: PageType = 'story';
+export const defDocType: DocumentType = 'story';
 /**
  * A documentation file's metadata.
  * For MDX files, fromtmatter is used to declare the document properties.
@@ -173,7 +177,7 @@ export interface Document {
   /**
    * document type - blogs, pages, stories and even custom ones. By default - story
    */
-  type?: PageType;
+  type?: DocumentType;
 
   /**
    * if provided, will be used as the route for the page.
@@ -204,19 +208,19 @@ export interface Document {
 
   /**
    * if true, will display the documentation page full size (pagecontainer.full theme variant)
-   * the default value is from the page type configuration
+   * the default value is from the doc type configuration
    */
   fullPage?: boolean;
 
   /**
    * whether to add navigation sidebar to the page
-   * the default value is from the page type configuration
+   * the default value is from the doc type configuration
    */
   navSidebar?: boolean;
 
   /**
    * whether to add conext sidebar to navigate the sections of the page
-   * the default value is from the page type configuration
+   * the default value is from the doc type configuration
    */
   contextSidebar?: boolean;
 
@@ -360,13 +364,13 @@ export interface StoriesStore {
 export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
 
 export const getDocPath = (
-  pageType: PageType,
+  docType: DocumentType,
   doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   name: string = '',
   activeTab?: string,
 ): string => {
-  const { basePath = '' } = pagesConfig?.[pageType] || {};
+  const { basePath = '' } = pagesConfig?.[docType] || {};
   const route = doc
     ? doc.route ||
       `/${basePath}${activeTab ? `${activeTab}/` : ''}${strToId(doc.title)}/`
@@ -380,12 +384,12 @@ export const getStoryPath = (
   pagesConfig?: PagesOnlyRoutes,
   activeTab?: string,
 ): string => {
-  const pageType = doc?.type || defPageType;
+  const docType = doc?.type || defDocType;
   if (!storyId) {
-    return getDocPath(pageType, doc, pagesConfig, undefined, activeTab);
+    return getDocPath(docType, doc, pagesConfig, undefined, activeTab);
   }
 
-  const { basePath = '' } = pagesConfig?.[pageType] || {};
+  const { basePath = '' } = pagesConfig?.[docType] || {};
   const route = `/${basePath}${activeTab ? `${activeTab}/` : ''}`;
   return `${route}${storyId || ''}`;
 };

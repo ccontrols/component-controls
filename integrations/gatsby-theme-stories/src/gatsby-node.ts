@@ -2,7 +2,7 @@ import * as path from 'path';
 import {
   getDocPath,
   getStoryPath,
-  PageType,
+  DocumentType,
   TabConfiguration,
 } from '@component-controls/core';
 
@@ -36,10 +36,10 @@ exports.createPages = async (
     const { pages, categories = [] } = store.buildConfig || {};
     if (pages) {
       Object.keys(pages).forEach(type => {
-        if (!categories.includes(type as PageType)) {
-          const page = pages[type as PageType];
-          const pageType = type as PageType;
-          const docs = store.getDocs(pageType);
+        if (!categories.includes(type as DocumentType)) {
+          const page = pages[type as DocumentType];
+          const docType = type as DocumentType;
+          const docs = store.getDocs(docType);
           const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
             { route: undefined },
           ];
@@ -61,7 +61,7 @@ exports.createPages = async (
                   path: url,
                   component: require.resolve(`../src/templates/DocPage.tsx`),
                   context: {
-                    type: pageType,
+                    type: docType,
                     activeTab: route,
                     docId: doc.title,
                     storyId,
@@ -78,7 +78,7 @@ exports.createPages = async (
               path: `/${page.basePath}`,
               component: require.resolve(`../src/templates/DocHome.tsx`),
               context: {
-                type: pageType,
+                type: docType,
                 docId: docsPage?.title,
               },
             });
@@ -87,19 +87,19 @@ exports.createPages = async (
       });
       categories.forEach(catName => {
         const cats = store.getUniquesByField(catName);
-        const catPage = pages[catName as PageType];
+        const catPage = pages[catName as DocumentType];
         const catKeys = Object.keys(cats);
         catKeys.forEach(tag => {
           createPage({
             path: getDocPath(
-              catName as PageType,
+              catName as DocumentType,
               undefined,
               store.buildConfig?.pages,
               tag,
             ),
             component: require.resolve(`../src/templates/CategoryPage.tsx`),
             context: {
-              type: catName as PageType,
+              type: catName as DocumentType,
               category: tag,
               docId: null,
             },

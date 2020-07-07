@@ -4,8 +4,8 @@ import { FC, useState, useContext, useRef, useEffect } from 'react';
 import lunr, { Index } from 'lunr';
 import { SearchInput, SearchInputProps } from '@component-controls/components';
 import {
-  PageType,
-  defPageType,
+  DocumentType,
+  defDocType,
   Pages,
   Document,
 } from '@component-controls/core';
@@ -15,7 +15,7 @@ import { DocumentItem } from '../DocumentItem';
 export interface SearchItem {
   id: string;
   title: string;
-  type: PageType;
+  type: DocumentType;
   component?: string;
   description?: string;
   body?: string;
@@ -42,7 +42,7 @@ export const Search: FC<Omit<
           this.add({
             id: page.title,
             title: page.title.replace('/', ' '),
-            type: page.type || defPageType,
+            type: page.type || defDocType,
             description: page.description,
             body: page.source,
             author: page.author,

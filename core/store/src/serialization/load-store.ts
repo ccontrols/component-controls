@@ -8,7 +8,7 @@ import {
   defaultRunConfig,
   docStoryToId,
   storyNameFromExport,
-  defPageType,
+  defDocType,
   PageConfiguration,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
@@ -50,7 +50,7 @@ export const loadStoryStore = (
           const storeStories = s.stories;
           if (storeDoc && storeStories && s.stories) {
             const page = globalStore.config?.pages?.[
-              storeDoc.type || defPageType
+              storeDoc.type || defDocType
             ] as PageConfiguration;
             const doc = {
               fullPage: page.fullPage,

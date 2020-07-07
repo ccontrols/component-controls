@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType } from '@component-controls/core';
+import { DocumentType } from '@component-controls/core';
 import { Title, Link } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 
 export interface CategoryPageProps {
-  type: PageType;
+  type: DocumentType;
   category: any;
 }
 export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {

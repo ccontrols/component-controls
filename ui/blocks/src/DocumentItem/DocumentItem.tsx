@@ -4,7 +4,7 @@ import { jsx, Box, Text } from 'theme-ui';
 import {
   Document,
   getDocPath,
-  defPageType,
+  defDocType,
   RunConfiguration,
   dateToLocalString,
 } from '@component-controls/core';
@@ -32,7 +32,7 @@ export interface DocumentItemProps {
  * displays a single doument item
  */
 export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
-  const { tags = [], date, type = defPageType } = doc;
+  const { tags = [], date, type = defDocType } = doc;
   return (
     <Box variant="documentitem.container">
       <Box variant="documentitem.titlerow">

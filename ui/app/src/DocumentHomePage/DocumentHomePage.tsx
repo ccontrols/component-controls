@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
-import { PageType } from '@component-controls/core';
+import { DocumentType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
@@ -9,12 +9,12 @@ import { DocumentsList } from '../DocumentsList';
 import { DocPage } from '../DocPage';
 
 export interface DocumentHomePageProps {
-  type: PageType;
+  type: DocumentType;
   docId?: string;
 }
 
 /**
- * list of documents for a specific page type
+ * list of documents for a specific document type
  */
 export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);

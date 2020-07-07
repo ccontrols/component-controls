@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import { FC, useRef, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType, TabConfiguration, Document } from '@component-controls/core';
+import {
+  DocumentType,
+  TabConfiguration,
+  Document,
+} from '@component-controls/core';
 import { BlockContext } from '@component-controls/blocks';
 import * as pages from '@component-controls/pages';
 import {
@@ -18,9 +22,9 @@ import { docToVariant } from './docToVariant';
 
 export interface DocPageProps {
   /**
-   * page type
+   * document type
    */
-  type: PageType;
+  type: DocumentType;
   /**
    * active page tab
    */

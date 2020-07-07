@@ -6,22 +6,37 @@ tags:
   - documentation
 order: 5
 ---
-## PageType
+## DocumentType
 
-Confgurable page type that can be assigned to a document. By default, all documentas are treated as **story** page types.
+Confgurable document type. By default, all documentas are treated as **story** page types.
 
 ```ts
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 ```
 
+**defaults**
+
+| property    |  story   |   blog   |   page   |   tags   | author  |
+| ----------- | -------- | -------- | -------- | -------- | -------- |
+| basePath    |  docs/   |  blogs/  |  pages/  |  tags/   | authors/ |
+| storyPaths  |  true    |          |          |          |          |
+| label       |  Docs    |   Blog   |  Page    |  Tags    |  Authors |
+| fullPage    |          |          |          |          |          |     
+| indexHome   |          |  true    |          |          |          |
+| navSidebar  |  true    |          |          |          |          |
+|contextSidebar|  true   |  true    |          |          |          | 
+|topMenu      |  true    |  true    |          |          |          |  
+|container    |          |          |          |          |          |
+|tabs|[{ title: 'Documentation', type: 'ClassicPage', route: 'page' }, { title: 'Testing', type: 'TestingPage', route: 'test' }]|           |          |          |          |
+
 
 ## PagesOnlyRoutes
 
-An object of the routes only portion of the page type configuation. The routes configurations are used during build-time to construct the static pages routes.
+An object of the routes only portion of the document type configuation. The routes configurations are used during build-time to construct the static pages routes.
 
 ```ts
 Record<
-  PageType,
+  DocumentType,
   {
     // the part of the route for this page
     basePath?: string;
@@ -57,8 +72,8 @@ Story render function. The resolved control values are passed as the first argum
 | `container` | [ComponentType](https://reactjs.org/docs/react-api.html) \| null | page container react component                 |
 | `fullPage`  | boolean                                 | whether to take a fullpage theme option        |
 | `label`     | string                                  | label - used for menu labels                   |
-| `indexHome`  | boolean                                | whether to have an index home page for the page type.  if false, will show the first document of the page type as the home page.                    |
-| `navSidebar`  | boolean                                 | whether to add navigation sidebar to navigate all the pages of the same page type |
+| `indexHome`  | boolean                                | whether to have an index home page for the document type.  if false, will show the first document of the document type as the home page.                    |
+| `navSidebar`  | boolean                                 | whether to add navigation sidebar to navigate all the pages of the same document type |
 | `contextSidebar`  | boolean                                 | whether to add context sidebar to navigate the sections on the page |
 | `tabs`      | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages        |
 | `topMenu`   | boolean                                 | whether to add to the top navigation menu      |

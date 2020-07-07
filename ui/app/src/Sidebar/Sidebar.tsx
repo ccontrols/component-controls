@@ -16,9 +16,9 @@ import {
 import {
   Document,
   Story,
-  PageType,
+  DocumentType,
   Pages,
-  defPageType,
+  defDocType,
 } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 
@@ -29,9 +29,9 @@ export interface SidebarProps {
   title?: React.ReactNode;
 
   /**
-   * page type
+   * document type
    */
-  type?: PageType;
+  type?: DocumentType;
 
   /**
    * currently active tab. Use to creae the sidemenu links
@@ -41,7 +41,7 @@ export interface SidebarProps {
 const createMenuItem = (
   storeProvider: StoryStore,
   doc: Document,
-  type: PageType,
+  type: DocumentType,
   levels: string[],
   storyPaths: boolean,
   activeTab?: string,
@@ -105,7 +105,7 @@ const createMenuItem = (
 
 export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
-  type = defPageType,
+  type = defDocType,
   activeTab,
 }) => {
   const { doc } = useStoryContext({ id: '.' });

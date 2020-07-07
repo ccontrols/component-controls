@@ -27,7 +27,13 @@ export interface TabConfiguration {
 
 export type PageTabs = TabConfiguration[];
 
-export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
+export type DocumentType =
+  | 'story'
+  | 'blog'
+  | 'page'
+  | 'tags'
+  | 'author'
+  | string;
 
 export interface PageConfiguration {
   /**
@@ -51,8 +57,8 @@ export interface PageConfiguration {
   fullPage?: boolean;
 
   /**
-   * whether to have an index home page for the page type.
-   * if false, will show the first document of the page type as the home page.
+   * whether to have an index home page for the doc type.
+   * if false, will show the first document of the doc type as the home page.
    */
   indexHome?: boolean;
 
@@ -82,7 +88,7 @@ export interface PageConfiguration {
   tabs?: PageTabs;
 }
 
-export type PagesConfiguration = Record<PageType, PageConfiguration>;
+export type PagesConfiguration = Record<DocumentType, PageConfiguration>;
 
 type WebpackConfigFn = (
   config: WebpackConfiguration,
@@ -91,7 +97,7 @@ type WebpackConfigFn = (
 type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
-  PageType,
+  DocumentType,
   Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
@@ -115,7 +121,7 @@ export interface BuildConfiguration {
   /**
    * page types that are considered as categories fields as well
    */
-  categories?: PageType[];
+  categories?: DocumentType[];
   /**
    * custom webpack configuration setup. One or the other will be used
    */

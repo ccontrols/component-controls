@@ -37,6 +37,7 @@
     -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>Tag</ins>](#instagins)
     -   [<ins>Title</ins>](#institleins)
+    -   [<ins>TitledImage</ins>](#institledimageins)
     -   [<ins>Toggle</ins>](#instoggleins)
     -   [<ins>Zoom</ins>](#inszoomins)
 
@@ -545,6 +546,19 @@ _Title [source code](https://github.com/ccontrols/component-controls/tree/master
 | `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
 | `as`       | _ElementType&lt;any>_                                                          |                                        |
 | `variant`  | _string_                                                                       |                                        |
+
+## <ins>TitledImage</ins>
+
+image components with a title if available
+
+_TitledImage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/TitledImage/TitledImage.tsx)_
+
+### properties
+
+| Name      | Type                  | Description |
+| --------- | --------------------- | ----------- |
+| `as`      | _ElementType&lt;any>_ |             |
+| `variant` | _string_              |             |
 
 ## <ins>Toggle</ins>
 

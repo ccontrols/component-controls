@@ -5,8 +5,8 @@ import {
   RunConfiguration,
   getDocPath,
   getStoryPath,
-  PageType,
-  defPageType,
+  DocumentType,
+  defDocType,
 } from '@component-controls/core';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -118,9 +118,9 @@ export class Store implements StoryStore {
       );
       const { pages = {} } = this.loadedStore?.config || {};
       Object.keys(pages).forEach(type => {
-        this._firstDocument[type as PageType] = sortedDocs.find(name => {
+        this._firstDocument[type as DocumentType] = sortedDocs.find(name => {
           //@ts-ignore
-          const { type: docType = defPageType } = this.loadedStore.docs[name];
+          const { type: docType = defDocType } = this.loadedStore.docs[name];
           return docType === type;
         });
       });
@@ -184,15 +184,15 @@ export class Store implements StoryStore {
   /**
    * returns all the documents/pages of a certain type.
    */
-  getPageList = (type: PageType = defPageType): Pages => {
+  getPageList = (type: DocumentType = defDocType): Pages => {
     if (this.loadedStore?.docs) {
       if (!this._cachedPages[type]) {
         this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
           (acc: Pages, key: string) => {
             const doc: Document | undefined = this.loadedStore?.docs[key];
             if (doc) {
-              const { type: docTYpe = defPageType } = doc;
-              if (docTYpe === type) {
+              const { type: docType = defDocType } = doc;
+              if (docType === type) {
                 return [...acc, doc];
               }
             }
@@ -210,7 +210,7 @@ export class Store implements StoryStore {
    * returns the previous page of the same type.
    */
   getPrevPage = (
-    type: PageType | undefined,
+    type: DocumentType | undefined,
     docId: string,
   ): Document | undefined => {
     if (docId) {
@@ -227,7 +227,7 @@ export class Store implements StoryStore {
    * returns the next page of the same type.
    */
   getNextPage = (
-    type: PageType | undefined,
+    type: DocumentType | undefined,
     docId: string,
   ): Document | undefined => {
     if (docId) {
@@ -313,22 +313,22 @@ export class Store implements StoryStore {
   }
 
   /**
-   * returns the first document of a page type.
+   * returns the first document of a doc type.
    */
-  getFirstDocument(pageType: PageType): string | undefined {
-    return this._firstDocument[pageType];
+  getFirstDocument(type: DocumentType): string | undefined {
+    return this._firstDocument[type];
   }
 
   /**
    * returns the url path to a document.
    */
   getPagePath = (
-    pageType: PageType | undefined = defPageType,
+    type: DocumentType | undefined = defDocType,
     name: string,
     activeTab?: string,
   ): string => {
     const doc = this.getStoryDoc(name);
-    return getDocPath(pageType, doc, this.config?.pages, name, activeTab);
+    return getDocPath(type, doc, this.config?.pages, name, activeTab);
   };
 
   /**

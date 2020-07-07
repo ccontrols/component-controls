@@ -4,7 +4,7 @@ import {
   Document,
   Pages,
   RunConfiguration,
-  PageType,
+  DocumentType,
 } from '@component-controls/core';
 
 /**
@@ -18,22 +18,22 @@ export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => Document | undefined;
-  getPageList: (type: PageType) => Pages;
+  getPageList: (type: DocumentType) => Pages;
   getPrevPage: (
-    type: PageType | undefined,
+    type: DocumentType | undefined,
     docId: string,
   ) => Document | undefined;
   getNextPage: (
-    type: PageType | undefined,
+    type: DocumentType | undefined,
     docId: string,
   ) => Document | undefined;
   getPagesByCategory: (category: string, value?: any) => Pages;
   getUniquesByCategory: (category: string) => { [key: string]: number };
   config: RunConfiguration | undefined;
   pages: Pages;
-  getFirstDocument: (pageType: PageType) => string | undefined;
+  getFirstDocument: (type: DocumentType) => string | undefined;
   getPagePath: (
-    pageType: PageType | undefined,
+    type: DocumentType | undefined,
     name: string,
     activeTab?: string,
   ) => string;
