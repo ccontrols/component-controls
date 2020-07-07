@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
-  "browser": "dist/bundle.js",
-  "files": [
+   "files": [
     "dist/",
     "package.json",
     "README.md",
