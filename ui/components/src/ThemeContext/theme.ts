@@ -36,6 +36,7 @@ export type ControlsTheme = {
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
+  titledimage: Record<string, ThemeUIStyleObject>;
   zoom: ThemeUIStyleObject;
   editpage: Record<string, ThemeUIStyleObject>;
   lastedited: Record<string, ThemeUIStyleObject>;
@@ -68,7 +69,7 @@ export const theme: ControlsTheme = {
     background: '#fff',
     primary: '#5c6ac4',
     secondary: '#006fbb',
-    muted: '#e6e6e6',
+    muted: '#69768C',
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
@@ -77,7 +78,6 @@ export const theme: ControlsTheme = {
     highlight: '#d9f2f1',
     action: '#3B817D',
     selected: '#027AC5',
-    fadedText: '#69768C',
     shadow: 'rgba(0, 0, 0, 0.1)',
     accentPalette0: '#8338ec',
     accentPalette1: '#fb5607',
@@ -97,12 +97,11 @@ export const theme: ControlsTheme = {
         primary: '#d5c0f1',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
-        muted: '#e6e6e6',
+        muted: '#c9cacf',
         background: '#38404a',
         sidebar: '#000',
         text: '#d3d4db',
         header: '#111111',
-        fadedText: '#c9cacf',
         selected: '#b3d9ff',
         action: '#d9f2f1',
         shadow: 'rgba(211, 212, 219, 0.1)',
@@ -421,7 +420,7 @@ export const theme: ControlsTheme = {
     },
   },
   subtitle: {
-    color: 'fadedText',
+    color: 'muted',
     fontWeight: 'body',
     pb: 2,
   },
@@ -461,7 +460,7 @@ export const theme: ControlsTheme = {
       ml: 1,
       mr: 1,
       cursor: 'pointer',
-      color: 'fadedText',
+      color: 'muted',
       a: {
         textDecoration: 'inherit',
         color: 'inherit',
@@ -486,7 +485,7 @@ export const theme: ControlsTheme = {
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
-      color: 'fadedText',
+      color: 'muted',
       cursor: 'default',
     },
     '.react-tabs__tab-panel': {
@@ -511,6 +510,19 @@ export const theme: ControlsTheme = {
       ml: 1,
       display: 'inline-block',
       px: 1,
+    },
+  },
+  titledimage: {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    img: {},
+    title: {
+      color: 'muted',
+      py: 2,
+      fontSize: 1,
     },
   },
   zoom: {
@@ -538,7 +550,7 @@ export const theme: ControlsTheme = {
     },
     text: {
       pr: 2,
-      color: 'fadedText',
+      color: 'muted',
     },
   },
 
@@ -576,7 +588,7 @@ export const theme: ControlsTheme = {
         flexDirection: 'column',
       },
       type: {
-        color: 'fadedText',
+        color: 'muted',
         letterSpacing: '0.10em',
         whiteSpace: 'pre-wrap',
         margin: 0,
@@ -681,7 +693,7 @@ export const theme: ControlsTheme = {
 
     label: {
       fontSize: 1,
-      color: 'fadedText',
+      color: 'muted',
       pb: 2,
     },
     linktitle: {

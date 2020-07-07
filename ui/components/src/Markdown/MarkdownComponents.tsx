@@ -3,11 +3,12 @@
 import { ComponentType } from 'react';
 import { preToCodeBlock } from 'mdx-utils';
 import { jsx } from 'theme-ui';
-import { Label, Button, Image } from 'theme-ui';
+import { Label, Button } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 import { Source } from '../Source';
 import { LinkHeading } from '../LinkHeading';
+import { TitledImage } from '../TitledImage';
 
 export interface MDXLanguageType {
   [key: string]: Language;
@@ -96,7 +97,7 @@ export const markdownComponents: MarkdownComponentType = {
   h4: props => <LinkHeading as="h4" {...props} />,
   h5: props => <LinkHeading as="h5" {...props} />,
   h6: props => <LinkHeading as="h6" {...props} />,
-  image: Image,
+  img: TitledImage,
   button: Button,
   label: Label,
 };

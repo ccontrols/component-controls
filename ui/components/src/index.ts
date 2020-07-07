@@ -24,5 +24,6 @@ export * from './Tabs';
 export * from './Tag';
 export * from './ThemeContext';
 export * from './Title';
+export * from './TitledImage';
 export * from './Toggle';
 export * from './Zoom';
