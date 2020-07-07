@@ -97,12 +97,20 @@ export const reserveStories = (filePaths: string[]) => {
 };
 export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   const { components, packages, stories, doc } = added;
+  if (!doc) {
+    throw new FatalError(`Invalid store with no document ${filePath}`);
+  }
+
   Object.keys(components).forEach(key => {
     store.components[key] = components[key];
   });
   Object.keys(packages).forEach(key => {
     store.packages[key] = packages[key];
   });
+  const { title } = doc;
+  if (store.stores.find(s => s.doc?.title === title)) {
+    throw new FatalError(`Duplicate document title "${title}"`);
+  }
   const storeStore = store.stores.find(s => s.filePath === filePath);
   if (storeStore) {
     storeStore.stories = stories;
