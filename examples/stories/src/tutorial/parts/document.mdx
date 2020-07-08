@@ -9,6 +9,9 @@ order: 0
 ---
 
 import titleImg from './media/doc-title.jpg';
+import routeImg from './media/doc-route.jpg';
+import orderImg from './media/doc-order.jpg';
+import descriptionImg from './media/doc-description.jpg';
 
 ## Overview
 
@@ -36,7 +39,7 @@ export default {
 }  
 ```
 
-<img alt="hierarchical document title" title="Document Title" src={titleImg} />
+<img alt="hierarchical document title" title="document title" src={titleImg} />
 
 ## Type
 
@@ -54,11 +57,74 @@ Document order, used to sort between documents within the same parent menu. By d
 
 The order is used for the menu display as well as next/previous page navigation.
 
+as an example, lets suppose you have the following 3 documents:
+
+```
+// first.mdx
+---
+title: Components/One
+---
+
+// second.mdx
+---
+title: Components/Two
+---
+
+// third.mdx
+---
+title: Components/Three
+---
+
+```
+
+From the file-system order, the documents will be ordered first.mdx, second.mdx and third.mdx (ordered by their file name alphabetically). However we can order the files manually and sort them first.mdx, third.mdx and second.mdx.
+
+```
+// first.mdx
+---
+title: Components/One
+order: 0
+---
+
+// second.mdx
+---
+title: Components/Two
+order: 2
+---
+
+// third.mdx
+---
+title: Components/Three
+order: 1
+---
+
+```
+
+<img alt="custom document order" title="document order" src={orderImg} />
+
 ### route
 
 type:  `string`
 
 If provided, will be used as the route for the document page. By default, the title in lowercase will be used as the route.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+route: /library/my-route
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  route: '/library/esm-route',
+};
+```
+
+<img alt="custom document route" title="document route" src={routeImg} />
 
 
 ### description
@@ -67,6 +133,23 @@ type:  `string`
 
 Short description of the documentation page - can be an excerpt for blog posts or keywords for the full text search.
 
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+description: this is a spinner documentation page
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  description: 'this is a button documentation page'
+};
+```
+
+<img alt="assign document description" title="document description" src={descriptionImg} />
 
 ### date
 
