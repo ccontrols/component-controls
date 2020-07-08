@@ -15,7 +15,7 @@ export const LastEdited: FC = () => {
     <Box variant="lastedited.container">
       <Box variant="lastedited.inner">
         <Text variant="lastedited.text">
-          {`Last updated: ${dateToLocalString(doc.dateModified)}`}
+          {`updated: ${dateToLocalString(doc.dateModified)}`}
         </Text>
       </Box>
     </Box>

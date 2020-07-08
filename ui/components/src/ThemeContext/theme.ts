@@ -368,10 +368,10 @@ export const theme: ControlsTheme = {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      mb: 4,
     },
+    inforow: { pt: 2 },
     titlerow: {
-      mb: 4,
+      my: 4,
     },
   },
   linkheading: {
@@ -549,7 +549,6 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
     },
     text: {
-      pr: 2,
       color: 'muted',
     },
   },
@@ -894,7 +893,9 @@ export const theme: ControlsTheme = {
         flexDirection: 'row',
         alignItems: 'center',
       },
-      date: {},
+      date: {
+        color: 'muted',
+      },
       comma: { mr: 2 },
       by: { mr: 1 },
       author: {

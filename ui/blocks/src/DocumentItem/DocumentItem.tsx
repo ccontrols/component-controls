@@ -1,16 +1,14 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Text } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import {
   Document,
-  getDocPath,
   defDocType,
   RunConfiguration,
-  dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
-import { TagsList } from '../TagsList';
 import { PageTypeTag } from '../PageTypeTag';
+import { DocumentShortItem } from './DocumentShortItem';
 
 export interface DocumentItemProps {
   /**
@@ -32,7 +30,7 @@ export interface DocumentItemProps {
  * displays a single doument item
  */
 export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
-  const { tags = [], date, type = defDocType } = doc;
+  const { type = defDocType } = doc;
   return (
     <Box variant="documentitem.container">
       <Box variant="documentitem.titlerow">
@@ -42,34 +40,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
         <PageTypeTag type={type} />
       </Box>
       {doc.description && <Markdown>{doc.description}</Markdown>}
-      <Box variant="documentitem.info.container">
-        <Box variant="documentitem.info.inner">
-          {date ? (
-            <Box variant="documentitem.info.date">{`created: ${dateToLocalString(
-              date,
-            )}`}</Box>
-          ) : (
-            ''
-          )}
-          {doc.author && (
-            <Box variant="documentitem.info.author">
-              {date && <Text variant="documentitem.info.comma">,</Text>}
-              <Text variant="documentitem.info.by">by</Text>
-              <Link
-                href={getDocPath(
-                  'author',
-                  undefined,
-                  config?.pages,
-                  doc.author,
-                )}
-              >
-                {doc.author}
-              </Link>
-            </Box>
-          )}
-        </Box>
-        <TagsList tags={tags} />
-      </Box>
+      <DocumentShortItem config={config} doc={doc} />
     </Box>
   );
 };
