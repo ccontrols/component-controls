@@ -4,6 +4,12 @@ import { Document, defDocType } from './stories';
 
 export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
 
+export const ensureTrailingSlash = (route: string) =>
+  route.endsWith('/') ? route : route + '/';
+
+export const ensureStartingSlash = (route: string) =>
+  route.startsWith('/') ? route : '/' + route;
+
 export const getDocPath = (
   docType: DocType,
   doc?: Document,
@@ -14,8 +20,12 @@ export const getDocPath = (
   const { basePath = '' } = pagesConfig?.[docType] || {};
   const route = doc
     ? doc.route ||
-      `/${basePath}${activeTab ? `${activeTab}/` : ''}${strToId(doc.title)}/`
-    : `/${basePath}${activeTab ? `${activeTab}/` : ''}${strToId(name)}/`;
+      `${ensureStartingSlash(ensureTrailingSlash(basePath))}${
+        activeTab ? `${ensureTrailingSlash(activeTab)}` : ''
+      }${ensureTrailingSlash(strToId(doc.title))}`
+    : `${ensureStartingSlash(ensureTrailingSlash(basePath))}${
+        activeTab ? `${ensureTrailingSlash(activeTab)}` : ''
+      }${ensureTrailingSlash(strToId(name))}`;
   return route;
 };
 
@@ -31,7 +41,11 @@ export const getStoryPath = (
   }
 
   const { basePath = '' } = pagesConfig?.[docType] || {};
-  const route = `/${basePath}${activeTab ? `${activeTab}/` : ''}`;
+  const route = `${
+    doc?.route
+      ? ensureStartingSlash(ensureTrailingSlash(doc?.route))
+      : `${ensureStartingSlash(ensureTrailingSlash(basePath))}`
+  }${activeTab ? `${ensureTrailingSlash(activeTab)}` : ''}`;
   return `${route}${storyId || ''}`;
 };
 
