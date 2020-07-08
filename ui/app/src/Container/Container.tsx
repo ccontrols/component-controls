@@ -18,9 +18,10 @@ export const Container: FC = ({ children }) => {
 
   return (
     <Box variant="container.container">
-      <BlocksContainer
-        infoRow={<DocumentShortItem reverse={true} doc={doc} config={config} />}
-      >
+      <Box variant="container.inforow">
+        <DocumentShortItem reverse={true} doc={doc} config={config} />
+      </Box>
+      <BlocksContainer>
         {children}
         <Box variant="container.pagination">
           <Pagination />

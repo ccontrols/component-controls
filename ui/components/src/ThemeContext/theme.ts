@@ -372,7 +372,7 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
       justifyContent: 'space-between',
     },
-    inforow: { pt: 2 },
+    inforow: { mt: 2 },
     titlerow: {
       my: 4,
     },
@@ -937,6 +937,7 @@ export const theme: ControlsTheme = {
   container: {
     container: {},
     pagination: { py: 4 },
+    inforow: { mb: 2 },
   },
   documentslist: {
     container: {},
