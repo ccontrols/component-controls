@@ -28,38 +28,37 @@ export const DocumentShortItem: FC<DocumentShortItemProps> = ({
   reverse,
 }) => {
   const { tags = [], date, author } = doc || {};
-  const dateNode =
-    date || author ? (
-      <Box variant="documentitem.info.inner">
-        {date ? (
-          <Box variant="documentitem.info.date">{`created: ${dateToLocalString(
-            date,
-          )}`}</Box>
-        ) : (
-          ''
-        )}
-        {author && (
-          <Box variant="documentitem.info.author">
-            {date && <Text variant="documentitem.info.comma">,</Text>}
-            <Text variant="documentitem.info.by">by</Text>
-            <Link href={getDocPath('author', undefined, config?.pages, author)}>
-              {author}
-            </Link>
-          </Box>
-        )}
-      </Box>
-    ) : null;
+  const dateNode = date ? (
+    <Box variant="documentitem.info.inner">
+      {date ? (
+        <Box variant="documentitem.info.date">{`created: ${dateToLocalString(
+          date,
+        )}`}</Box>
+      ) : (
+        ''
+      )}
+      {author && (
+        <Box variant="documentitem.info.author">
+          {date && <Text variant="documentitem.info.comma">,</Text>}
+          <Text variant="documentitem.info.by">by</Text>
+          <Link href={getDocPath('author', undefined, config?.pages, author)}>
+            {author}
+          </Link>
+        </Box>
+      )}
+    </Box>
+  ) : null;
   const tagsNode = tags.length ? <TagsList tags={tags} /> : null;
-  return tagsNode && dateNode ? (
+  return tagsNode || dateNode ? (
     <Box variant="documentitem.info.container">
       {reverse ? (
         <Fragment>
-          {tagsNode}
+          {tagsNode || <div />}
           {dateNode}
         </Fragment>
       ) : (
         <Fragment>
-          {dateNode}
+          {dateNode || <div />}
           {tagsNode}
         </Fragment>
       )}
