@@ -323,6 +323,9 @@ export const theme: ControlsTheme = {
       flexDirection: 'row',
       alignItems: 'center',
     },
+    link: {
+      mr: 1,
+    },
   },
   actioncontainer: {
     borderRadius: '4px',
