@@ -3,19 +3,14 @@ import { jsx, Theme } from 'theme-ui';
 import { FC, useState, useContext, useRef, useEffect } from 'react';
 import lunr, { Index } from 'lunr';
 import { SearchInput, SearchInputProps } from '@component-controls/components';
-import {
-  DocumentType,
-  defDocType,
-  Pages,
-  Document,
-} from '@component-controls/core';
+import { DocType, defDocType, Pages, Document } from '@component-controls/core';
 import { BlockContext } from '../context';
 import { DocumentItem } from '../DocumentItem';
 
 export interface SearchItem {
   id: string;
   title: string;
-  type: DocumentType;
+  type: DocType;
   component?: string;
   description?: string;
   body?: string;

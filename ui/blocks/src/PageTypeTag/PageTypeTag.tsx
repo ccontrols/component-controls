@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect, useContext } from 'react';
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import {
   Tag,
   Link,
@@ -8,7 +8,7 @@ import {
 import { BlockContext } from '../context';
 
 export interface PageTypeTagProps {
-  type: DocumentType;
+  type: DocType;
 }
 export const PageTypeTag: FC<PageTypeTagProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);

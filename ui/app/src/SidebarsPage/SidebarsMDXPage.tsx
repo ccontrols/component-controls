@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useRef } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocumentType, Document } from '@component-controls/core';
+import { DocType, Document } from '@component-controls/core';
 import { PageContainer } from '../PageContainer';
 import { Sidebar } from '../Sidebar';
 import { SideContext } from '../SideContext';
@@ -11,7 +11,7 @@ export interface SidebarsMDXPageProps {
   /**
    * document type
    */
-  type: DocumentType;
+  type: DocType;
 
   /**
    * document object

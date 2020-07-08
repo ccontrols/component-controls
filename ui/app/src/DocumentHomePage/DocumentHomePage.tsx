@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
@@ -9,7 +9,7 @@ import { DocumentsList } from '../DocumentsList';
 import { DocPage } from '../DocPage';
 
 export interface DocumentHomePageProps {
-  type: DocumentType;
+  type: DocType;
   docId?: string;
 }
 

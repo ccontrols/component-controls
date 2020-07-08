@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { CategoryList } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface CategoryListProps {
   pathContext: {
-    type: DocumentType;
+    type: DocType;
     docId: string;
   };
 }

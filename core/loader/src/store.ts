@@ -6,7 +6,7 @@ import {
   Document,
   defDocType,
   Pages,
-  DocumentType,
+  DocType,
   docStoryToId,
 } from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
@@ -36,7 +36,7 @@ export interface LoadingStore {
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
-  getDocs: (docType: DocumentType) => Pages;
+  getDocs: (type: DocType) => Pages;
   getUniquesByField: (field: string) => { [key: string]: number };
 }
 
@@ -46,7 +46,7 @@ class Store implements LoadingStore {
   packages: LoadingStore['packages'] = {};
   config: LoadingStore['config'] = {};
   buildConfig: LoadingStore['buildConfig'] = {};
-  getDocs = (docType: DocumentType) =>
+  getDocs = (docType: DocType) =>
     this.stores
       .filter(store => {
         if (store?.doc) {

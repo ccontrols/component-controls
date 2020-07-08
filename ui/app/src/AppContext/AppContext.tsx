@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { DocumentType, defDocType } from '@component-controls/core';
+import { DocType, defDocType } from '@component-controls/core';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
@@ -15,7 +15,7 @@ import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
-  type?: DocumentType;
+  type?: DocType;
   docId?: string;
   storyId?: string;
   store?: LoadingStore;

@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, DocumentType } from './configuration';
+import { RunConfiguration, DocType } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -156,7 +156,7 @@ export interface Stories {
   [id: string]: Story;
 }
 
-export const defDocType: DocumentType = 'story';
+export const defDocType: DocType = 'story';
 /**
  * A documentation file's metadata.
  * For MDX files, fromtmatter is used to declare the document properties.
@@ -172,7 +172,7 @@ export interface Document {
   /**
    * document type - blogs, pages, stories and even custom ones. By default - story
    */
-  type?: DocumentType;
+  type?: DocType;
 
   /**
    * if provided, will be used as the route for the page.

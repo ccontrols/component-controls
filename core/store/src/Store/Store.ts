@@ -5,7 +5,7 @@ import {
   RunConfiguration,
   getDocPath,
   getStoryPath,
-  DocumentType,
+  DocType,
   defDocType,
 } from '@component-controls/core';
 import { BroadcastChannel } from 'broadcast-channel';
@@ -118,7 +118,7 @@ export class Store implements StoryStore {
       );
       const { pages = {} } = this.loadedStore?.config || {};
       Object.keys(pages).forEach(type => {
-        this._firstDocument[type as DocumentType] = sortedDocs.find(name => {
+        this._firstDocument[type as DocType] = sortedDocs.find(name => {
           //@ts-ignore
           const { type: docType = defDocType } = this.loadedStore.docs[name];
           return docType === type;
@@ -184,7 +184,7 @@ export class Store implements StoryStore {
   /**
    * returns all the documents/pages of a certain type.
    */
-  getPageList = (type: DocumentType = defDocType): Pages => {
+  getPageList = (type: DocType = defDocType): Pages => {
     if (this.loadedStore?.docs) {
       if (!this._cachedPages[type]) {
         this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
@@ -210,7 +210,7 @@ export class Store implements StoryStore {
    * returns the previous page of the same type.
    */
   getPrevPage = (
-    type: DocumentType | undefined,
+    type: DocType | undefined,
     docId: string,
   ): Document | undefined => {
     if (docId) {
@@ -227,7 +227,7 @@ export class Store implements StoryStore {
    * returns the next page of the same type.
    */
   getNextPage = (
-    type: DocumentType | undefined,
+    type: DocType | undefined,
     docId: string,
   ): Document | undefined => {
     if (docId) {
@@ -315,7 +315,7 @@ export class Store implements StoryStore {
   /**
    * returns the first document of a doc type.
    */
-  getFirstDocument(type: DocumentType): string | undefined {
+  getFirstDocument(type: DocType): string | undefined {
     return this._firstDocument[type];
   }
 
@@ -323,7 +323,7 @@ export class Store implements StoryStore {
    * returns the url path to a document.
    */
   getPagePath = (
-    type: DocumentType | undefined = defDocType,
+    type: DocType | undefined = defDocType,
     name: string,
     activeTab?: string,
   ): string => {

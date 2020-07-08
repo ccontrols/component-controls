@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
@@ -7,7 +7,7 @@ interface DocPageProps {
   pathContext: {
     docId?: string;
     storyId?: string;
-    type: DocumentType;
+    type: DocType;
     activeTab?: string;
   };
 }

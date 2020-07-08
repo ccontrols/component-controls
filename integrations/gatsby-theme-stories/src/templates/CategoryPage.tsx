@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { CategoryPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface CategoryPageProps {
   pathContext: {
-    type: DocumentType;
+    type: DocType;
     category: string;
     docId?: string;
   };

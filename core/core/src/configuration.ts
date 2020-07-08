@@ -27,13 +27,7 @@ export interface TabConfiguration {
 
 export type PageTabs = TabConfiguration[];
 
-export type DocumentType =
-  | 'story'
-  | 'blog'
-  | 'page'
-  | 'tags'
-  | 'author'
-  | string;
+export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
 export interface PageConfiguration {
   /**
@@ -88,7 +82,7 @@ export interface PageConfiguration {
   tabs?: PageTabs;
 }
 
-export type PagesConfiguration = Record<DocumentType, PageConfiguration>;
+export type PagesConfiguration = Record<DocType, PageConfiguration>;
 
 type WebpackConfigFn = (
   config: WebpackConfiguration,
@@ -97,7 +91,7 @@ type WebpackConfigFn = (
 type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
-  DocumentType,
+  DocType,
   Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
@@ -121,7 +115,7 @@ export interface BuildConfiguration {
   /**
    * page types that are considered as categories fields as well
    */
-  categories?: DocumentType[];
+  categories?: DocType[];
   /**
    * custom webpack configuration setup. One or the other will be used
    */

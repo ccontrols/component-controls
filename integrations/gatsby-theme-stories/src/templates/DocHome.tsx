@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 
-import { DocumentType, defDocType } from '@component-controls/core';
+import { DocType, defDocType } from '@component-controls/core';
 import { DocumentHomePage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface PageListProps {
   pathContext: {
-    type: DocumentType;
+    type: DocType;
     docId?: string;
   };
 }

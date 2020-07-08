@@ -1,11 +1,11 @@
 import { toId, storyNameFromExport } from '@storybook/csf';
-import { PagesOnlyRoutes, DocumentType } from './configuration';
+import { PagesOnlyRoutes, DocType } from './configuration';
 import { Document, defDocType } from './stories';
 
 export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
 
 export const getDocPath = (
-  docType: DocumentType,
+  docType: DocType,
   doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   name: string = '',

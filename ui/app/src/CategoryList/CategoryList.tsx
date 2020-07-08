@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
@@ -11,7 +11,7 @@ export interface CategoryListProps {
   /**
    * document type
    */
-  type: DocumentType;
+  type: DocType;
 }
 
 /**

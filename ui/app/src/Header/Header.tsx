@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocumentType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { ActionBar, ActionItems } from '@component-controls/components';
 
 import {
@@ -34,7 +34,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
           ...actions,
           ...Object.keys(pages)
             .map(type => {
-              const docType = type as DocumentType;
+              const docType = type as DocType;
               return { page: pages[docType], docType };
             })
             .filter(({ page, docType }) => {

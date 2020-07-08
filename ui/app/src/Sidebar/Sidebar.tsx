@@ -16,7 +16,7 @@ import {
 import {
   Document,
   Story,
-  DocumentType,
+  DocType,
   Pages,
   defDocType,
 } from '@component-controls/core';
@@ -31,7 +31,7 @@ export interface SidebarProps {
   /**
    * document type
    */
-  type?: DocumentType;
+  type?: DocType;
 
   /**
    * currently active tab. Use to creae the sidemenu links
@@ -41,7 +41,7 @@ export interface SidebarProps {
 const createMenuItem = (
   storeProvider: StoryStore,
   doc: Document,
-  type: DocumentType,
+  type: DocType,
   levels: string[],
   storyPaths: boolean,
   activeTab?: string,
