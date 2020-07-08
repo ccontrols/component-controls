@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Image, ImageProps, Text, Box } from 'theme-ui';
 
-export { ImageProps as TitledImageProps };
 /**
  * image components with a title if available
  */

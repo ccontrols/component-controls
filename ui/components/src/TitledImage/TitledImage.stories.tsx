@@ -1,12 +1,14 @@
 import React from 'react';
-import { TitledImage, TitledImageProps } from './TitledImage';
+import { ImageProps } from 'theme-ui';
+
+import { TitledImage } from './TitledImage';
 
 export default {
   title: 'Components/TitledImage',
   component: TitledImage,
 };
 
-export const overview = ({ title }: TitledImageProps) => {
+export const overview = ({ title }: ImageProps) => {
   return (
     <TitledImage
       title={title}
