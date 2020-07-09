@@ -31,7 +31,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
 
 <Playground>
-  <Story name='text-control' controls={{ text: 'some text' }}>
+  <Story name="text-control" controls={{ text: 'some text' }}>
     {({ text }) => (
       <div>{text}</div>
     )}
@@ -66,7 +66,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
 
 <Playground>
-  <Story name='numeric-control' controls={{ number: { type: ControlTypes.NUMBER, value: 7} }}>
+  <Story name="numeric-control" controls={{ number: { type: ControlTypes.NUMBER, value: 7} }}>
     {({ number }) => (
       <div>{number}</div>
     )}
@@ -90,7 +90,7 @@ nice: {
 all properties of [ControlType](/tutorial/structure/controls-api/#controltype)
 
 <Playground>
-  <Story name='boolean-control' controls={{ bool: { type: ControlTypes.BOOLEAN, value: true} }}>
+  <Story name="boolean-control" controls={{ bool: { type: ControlTypes.BOOLEAN, value: true} }}>
     {({ bool }) => (
       <div>{bool ? 'TRUE' : 'FALSE'}</div>
     )}
@@ -125,7 +125,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 
 <Playground>
   <Story 
-    name='options-control' 
+    name="options-control"
     controls={{ 
       options: { 
         type: ControlTypes.OPTIONS, 
@@ -166,7 +166,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
 
 <Playground>
-  <Story name='date-control' controls={{ date: {
+  <Story name="date-control" controls={{ date: {
       type: ControlTypes.DATE,
       value: new Date('01/01/2020'),
       timePicker: false,
@@ -193,7 +193,7 @@ color: {
 all properties of [ControlType](/tutorial/structure/controls-api/#controltype)
 
 <Playground>
-  <Story name='color-control' controls={{ color: {
+  <Story name="color-control" controls={{ color: {
       type: ControlTypes.COLOR,
       value: '#555',
     }}}>
@@ -225,7 +225,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `onClick`      | **function** (`prop`\*: [ComponentControlButton](#controltypes-button)): void;    | for button type fields, an onClick handler                                                                                                            |
 
 <Playground>
-  <Story name='button-control' controls={{ onClick: {
+  <Story name="button-control" controls={{ onClick: {
       type: ControlTypes.BUTTON,
       value: () => console.log('clicked'),
     }}}>
@@ -261,7 +261,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
 
 <Playground>
-  <Story name='object-control' controls={{ style: {
+  <Story name="object-control" controls={{ style: {
       type: ControlTypes.OBJECT,
       value: {
         color: { type: ControlTypes.COLOR, value: 'red' },
@@ -300,7 +300,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
 
 <Playground>
-  <Story name='array-control' controls={{ array: {
+  <Story name="array-control" controls={{ array: {
       type: ControlTypes.ARRAY,
       value: [
         { label: 'Button 1', color: 'red' },
@@ -347,7 +347,7 @@ all properties of [ControlType](/tutorial/structure/controls-api/#controltype) i
 | `accept`       | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                   |
 
 <Playground>
-  <Story name='files-control' controls={{ files: {
+  <Story name="files-control" controls={{ files: {
       type: ControlTypes.FILES,
       accept: 'image/*',
       value: [
