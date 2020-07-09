@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Box, Theme, jsx } from 'theme-ui';
 import {
   StoryBlockContainer,
@@ -10,11 +10,19 @@ import {
 import { ActionContainer } from '@component-controls/components';
 
 export const ViewportBlock: FC<StoryBlockContainerProps> = props => {
+  const [showXSmall, setShowXSmall] = useState(true);
+  const [showSmall, setShowSmall] = useState(true);
+  const [showMed, setShowMed] = useState(true);
   return (
     <StoryBlockContainer {...props}>
       {({ story: { id: storyId } = {} }) => (
         <ActionContainer
-          actions={[{ node: 'actions', onClick: () => alert('actions') }]}
+          actions={[
+            { node: 'medium', onClick: () => setShowMed(!showMed) },
+            { node: 'small', onClick: () => setShowSmall(!showSmall) },
+            { node: 'xtra-small', onClick: () => setShowXSmall(!showXSmall) },
+          ]}
+          plain={true}
         >
           <Box
             sx={{
@@ -35,6 +43,7 @@ export const ViewportBlock: FC<StoryBlockContainerProps> = props => {
                 m: 1,
                 boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
               }}
+              hidden={!showXSmall}
             >
               <Story id={storyId} />
             </Box>
@@ -45,6 +54,7 @@ export const ViewportBlock: FC<StoryBlockContainerProps> = props => {
                 m: 1,
                 boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
               }}
+              hidden={!showSmall}
             >
               <Story id={storyId} />
             </Box>
@@ -55,6 +65,7 @@ export const ViewportBlock: FC<StoryBlockContainerProps> = props => {
                 m: 1,
                 boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
               }}
+              hidden={!showMed}
             >
               <Story id={storyId} />
             </Box>
