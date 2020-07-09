@@ -12,6 +12,10 @@ import titleImg from './media/doc-title.jpg';
 import routeImg from './media/doc-route.jpg';
 import orderImg from './media/doc-order.jpg';
 import descriptionImg from './media/doc-description.jpg';
+import tagsImg from './media/doc-tags.jpg';
+import sidebarImg from './media/doc-sidebar.jpg';
+import contextImg from './media/doc-context.jpg';
+import fullpageImg from './media/doc-fullpage.jpg';
 
 ## Overview
 
@@ -41,7 +45,7 @@ export default {
 
 <img alt="hierarchical document title" title="document title" src={titleImg} />
 
-## Type
+## type
 
 type: [DocType](/tutorial/structure/configuration#doctype)
 
@@ -155,13 +159,45 @@ export default {
 
 type:  `Date`
 
-Optional date when the document was created. If not assigned, the instrumentation process will use birthtime from the filesystem.
+Optional date when the document was created. If not assigned, the instrumentation process will use [birthtime](https://nodejs.org/api/fs.html#fs_stats_birthtimems) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+date: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  date: new Date('01/01/2020'),
+};
+```
 
 ### dateModified
 
 type:  `Date`
 
-Optional date when the document was last modified. If not assigned, the instrumentation process will use mtime from the filesystem.
+Optional date when the document was last modified. If not assigned, the instrumentation process will use [mtime](https://nodejs.org/api/fs.html#fs_stats_mtime) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+dateModified: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  dateModified: new Date('01/01/2020'),
+};
+```
 
 ### tags
 
@@ -169,37 +205,121 @@ type: `string[]`
 
 List of document tags, used for cross-linking documents and the full-text search.
 
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+tags:
+  - documentation
+  - components
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  tags: ['documentation', 'components' ],
+};
+```
+
+<img alt="custom document tags" title="document tags" src={tagsImg} />
 
 ### author
 
 type: `string` 
 
-Document author.
+Document author. Allows categorizing documents by author and also creating custom author's home page.
 
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+author: atanasster
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  author: 'atanasster',
+};
+```
 
 ### navSidebar
 
 type: `boolean`
 
-Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration.
+Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+navSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  navSidebar: false,
+};
+```
+
+<img alt="document navigation sidebar" title="document navSidebar" src={sidebarImg} />
+
 
 ### contextSidebar
 
 type: `boolean`
   
-Whether to add conext sidebar to navigate the sections of the page. The default value is from the document type configuration.
+Whether to add a conext sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+contextSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  contextSidebar: false,
+};
+```
+
+<img alt="document context sidebar" title="document context sidebar" src={contextImg} />
+
 
 ### fullPage
 
 type: `boolean
 
-Whether the page to take full width (pagecontainer.full theme variant to be customized). The default value is from the document type configuration.
+Whether the page to use the full-page theme styling (pagecontainer.full theme variant can be customized). The default value is from the document type configuration but can also be changed at the document level.
 
-### controls
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+fullPage: true
+---
+```
 
-type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  fullPage: true,
+};
+```
 
-Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
+<img alt="document full page" title="document fullPage" src={fullpageImg} />
 
 ### component
 
@@ -212,6 +332,13 @@ The component associated with the documentation page.
 type: `string[] | object[]
 
 Multiple components option.
+
+
+### controls
+
+type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
+
+Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
 
 
 ### decorators
