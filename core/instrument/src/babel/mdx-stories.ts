@@ -49,7 +49,12 @@ export const extractMDXStories = (props: any) => (
   const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
     components = attrComponents.reduce(
-      (acc, componentName) => ({ ...acc, [componentName]: undefined }),
+      (acc, componentName) => ({
+        ...acc,
+        [componentName === '.' && store.doc
+          ? (store.doc.component as string)
+          : componentName]: undefined,
+      }),
       components,
     );
     return attrComponents.length > 0 ? attrComponents[0] : undefined;

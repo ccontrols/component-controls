@@ -117,21 +117,25 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
   const getComponents = (
     components: { [key: string]: any } | undefined,
     doc: Document | undefined,
-  ): StoryComponents =>
-    store && doc && components
+  ): StoryComponents => {
+    return store && doc && components
       ? Object.keys(components).reduce((acc, key) => {
-          const name = getComponentName(components[key]);
-          const component =
-            name &&
-            doc?.componentsLookup[name] &&
-            store?.components[doc.componentsLookup[name]];
-          if (component) {
-            return { ...acc, [key]: component };
-          } else {
-            return acc;
+          const comp = components[key];
+          const name = getComponentName(
+            comp === CURRENT_STORY ? doc.component : comp,
+          );
+          if (name) {
+            const component =
+              doc?.componentsLookup[name] &&
+              store?.components[doc.componentsLookup[name]];
+            if (component) {
+              return { ...acc, [key]: component };
+            }
           }
+          return acc;
         }, {})
       : {};
+  };
 
   const storyIdFromName = (name: string): string | undefined => {
     if (store) {

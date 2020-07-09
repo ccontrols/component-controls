@@ -60,14 +60,8 @@ export const useComponentsContext = ({
       removeObserver(onChange);
     };
   }, [docId, storyId, addObserver, getStoryData, removeObserver]);
-
-  if (!story) {
-    return {
-      components: {},
-    };
-  }
   let components: StoryComponents = {};
-  if (of === CURRENT_STORY) {
+  if (of === CURRENT_STORY && story) {
     if (component) {
       const name = getComponentName(component);
       if (name) {
