@@ -36,6 +36,7 @@ module.exports = {
     '../stories/**/*.stories.@(js|jsx|tsx|mdx)',
     // '../../stories/src/tutorial/parts/controls.mdx',
     // '../../stories/src/blogs/introduction-to-controls.mdx',
+    //'../../tutorial/src/docs/first-story.mdx',
   ],
   webpackFinal: (config = {}, options = {}) => {
     return {

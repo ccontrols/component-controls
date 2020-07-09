@@ -16,6 +16,7 @@ import tagsImg from './media/doc-tags.jpg';
 import sidebarImg from './media/doc-sidebar.jpg';
 import contextImg from './media/doc-context.jpg';
 import fullpageImg from './media/doc-fullpage.jpg';
+import componentImg from './media/doc-component.jpg';
 
 ## Overview
 
@@ -326,6 +327,35 @@ export default {
 type: `string | object`
 
 The component associated with the documentation page. 
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+component: Button
+---
+import { Button } from '../components/Button';
+import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+## Component Component
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+};
+```
+
+<img alt="document component" title="document component" src={componentImg} />
+
 
 ### subcomponents
 
