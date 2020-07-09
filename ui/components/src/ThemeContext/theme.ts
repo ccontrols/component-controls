@@ -263,6 +263,13 @@ export const theme: ControlsTheme = {
       textAlign: 'left',
       width: '100%',
       borderSpacing: 0,
+      p: {
+        m: 0,
+      },
+      pre: {
+        mt: 2,
+        mb: 0,
+      },
     },
     th: {
       border: 'none',
