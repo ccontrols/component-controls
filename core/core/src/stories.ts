@@ -188,7 +188,7 @@ export interface Document {
   /**
    * multiple components option
    */
-  subcomponents?: string[] | object[];
+  subcomponents?: Record<string, Document['component']>;
 
   /**
    * story decorators (or wrappers)

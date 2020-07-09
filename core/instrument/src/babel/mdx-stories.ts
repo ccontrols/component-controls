@@ -48,15 +48,29 @@ export const extractMDXStories = (props: any) => (
   let components: { [key: string]: string | undefined } = {};
   const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
-    components = attrComponents.reduce(
-      (acc, componentName) => ({
+    components = attrComponents.reduce((acc, componentName) => {
+      if (componentName === '.') {
+        const newComps: Record<string, undefined> = {};
+        if (store.doc?.component) {
+          newComps[store.doc.component as string] = undefined;
+        }
+        if (store.doc && typeof store.doc.subcomponents === 'object') {
+          Object.keys(store.doc.subcomponents).forEach((name: any) => {
+            //@ts-ignore
+            const sub = store.doc.subcomponents[name];
+            newComps[sub as string] = undefined;
+          });
+        }
+        return {
+          ...acc,
+          ...newComps,
+        };
+      }
+      return {
         ...acc,
-        [componentName === '.' && store.doc
-          ? (store.doc.component as string)
-          : componentName]: undefined,
-      }),
-      components,
-    );
+        [componentName]: undefined,
+      };
+    }, components);
     return attrComponents.length > 0 ? attrComponents[0] : undefined;
   };
 
