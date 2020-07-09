@@ -1,32 +1,348 @@
 ---
 title: Structure/Document
-route: /tutorial/document
+route: /tutorial/structure/document
 type: tutorial
+author: atanasster
 tags:
   - documentation
 order: 0
 ---
 
-# Document
+import titleImg from './media/doc-title.jpg';
+import routeImg from './media/doc-route.jpg';
+import orderImg from './media/doc-order.jpg';
+import descriptionImg from './media/doc-description.jpg';
+import tagsImg from './media/doc-tags.jpg';
+import sidebarImg from './media/doc-sidebar.jpg';
+import contextImg from './media/doc-context.jpg';
+import fullpageImg from './media/doc-fullpage.jpg';
 
-Document is a single file containing documentation in `mdx` or `es modules` format.
+## Overview
 
-The following fields are available
+Document is a single file containing documentation in [mdx](/tutorial/mdx-stories/) or [esm](/tutorial/esmodules-stories/) format.
 
-| Name                | Type                                    | Description                                                                                                                                                                                  |
-| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `author`            | string                                  | document author                                                                                                                                                                              |
-| `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
-| `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
-| `date`              | Date                                    |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | Date                                    |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                                                               |
-| `description`       | string                                  |  documentation file description                                                                                                                                                              |
-| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
-| `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
-| `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
-| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
-| `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
-| `type`              | [PageType](#pagetype)                   | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+## Properties
+
+### title
+
+type: `string`
+
+Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specifified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Button
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+}  
+```
+
+<img alt="hierarchical document title" title="document title" src={titleImg} />
+
+## type
+
+type: [DocType](/tutorial/structure/configuration#doctype)
+
+Document type - blogs, pages, stories and even custom ones. By default all documents are of type `story`
+
+All documents of the same type are grouped together for easier search and navigation.
+
+### order
+
+type: `number`
+
+Document order, used to sort between documents within the same parent menu. By default documents are ordered by their filesystem precendance (alphabetically).
+
+The order is used for the menu display as well as next/previous page navigation.
+
+as an example, lets suppose you have the following 3 documents:
+
+```
+// first.mdx
+---
+title: Components/One
+---
+
+// second.mdx
+---
+title: Components/Two
+---
+
+// third.mdx
+---
+title: Components/Three
+---
+
+```
+
+From the file-system order, the documents will be ordered first.mdx, second.mdx and third.mdx (ordered by their file name alphabetically). However we can order the files manually and sort them first.mdx, third.mdx and second.mdx.
+
+```
+// first.mdx
+---
+title: Components/One
+order: 0
+---
+
+// second.mdx
+---
+title: Components/Two
+order: 2
+---
+
+// third.mdx
+---
+title: Components/Three
+order: 1
+---
+
+```
+
+<img alt="custom document order" title="document order" src={orderImg} />
+
+### route
+
+type:  `string`
+
+If provided, will be used as the route for the document page. By default, the title in lowercase will be used as the route.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+route: /library/my-route
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  route: '/library/esm-route',
+};
+```
+
+<img alt="custom document route" title="document route" src={routeImg} />
+
+
+### description
+
+type:  `string`
+
+Short description of the documentation page - can be an excerpt for blog posts or keywords for the full text search.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+description: this is a spinner documentation page
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  description: 'this is a button documentation page'
+};
+```
+
+<img alt="assign document description" title="document description" src={descriptionImg} />
+
+### date
+
+type:  `Date`
+
+Optional date when the document was created. If not assigned, the instrumentation process will use [birthtime](https://nodejs.org/api/fs.html#fs_stats_birthtimems) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+date: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  date: new Date('01/01/2020'),
+};
+```
+
+### dateModified
+
+type:  `Date`
+
+Optional date when the document was last modified. If not assigned, the instrumentation process will use [mtime](https://nodejs.org/api/fs.html#fs_stats_mtime) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+dateModified: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  dateModified: new Date('01/01/2020'),
+};
+```
+
+### tags
+
+type: `string[]`
+
+List of document tags, used for cross-linking documents and the full-text search.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+tags:
+  - documentation
+  - components
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  tags: ['documentation', 'components' ],
+};
+```
+
+<img alt="custom document tags" title="document tags" src={tagsImg} />
+
+### author
+
+type: `string` 
+
+Document author. Allows categorizing documents by author and also creating custom author's home page.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+author: atanasster
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  author: 'atanasster',
+};
+```
+
+### navSidebar
+
+type: `boolean`
+
+Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+navSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  navSidebar: false,
+};
+```
+
+<img alt="document navigation sidebar" title="document navSidebar" src={sidebarImg} />
+
+
+### contextSidebar
+
+type: `boolean`
+  
+Whether to add a conext sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+contextSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  contextSidebar: false,
+};
+```
+
+<img alt="document context sidebar" title="document context sidebar" src={contextImg} />
+
+
+### fullPage
+
+type: `boolean
+
+Whether the page to use the full-page theme styling (pagecontainer.full theme variant can be customized). The default value is from the document type configuration but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+fullPage: true
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  fullPage: true,
+};
+```
+
+<img alt="document full page" title="document fullPage" src={fullpageImg} />
+
+### component
+
+type: `string | object`
+
+The component associated with the documentation page. 
+
+### subcomponents
+
+type: `string[] | object[]
+
+Multiple components option.
+
+
+### controls
+
+type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
+
+Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
+
+
+### decorators
+
+type [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)
+
+Wrapper function to be called around rendering each individual story.

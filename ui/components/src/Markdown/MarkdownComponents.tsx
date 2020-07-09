@@ -3,10 +3,12 @@
 import { ComponentType } from 'react';
 import { preToCodeBlock } from 'mdx-utils';
 import { jsx } from 'theme-ui';
-import { Label, Button, Image } from 'theme-ui';
+import { Label, Button } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 import { Source } from '../Source';
+import { LinkHeading } from '../LinkHeading';
+import { TitledImage } from '../TitledImage';
 
 export interface MDXLanguageType {
   [key: string]: Language;
@@ -71,7 +73,7 @@ export const markdownComponents: MarkdownComponentType = {
       return <pre {...props} />;
     }
     const { codeString = '', metastring, className } = mdxProps;
-    const [language = 'jsx', ...rest] = paramsFromClassName(className);
+    const [language, ...rest] = paramsFromClassName(className);
     const otherProps = Array.isArray(rest)
       ? rest.reduce(
           (acc, p) =>
@@ -81,7 +83,7 @@ export const markdownComponents: MarkdownComponentType = {
       : undefined;
     return (
       <Source
-        language={mdxLanguageMap[language] || language}
+        language={mdxLanguageMap[language || 'jsx'] || language}
         metastring={metastring}
         {...otherProps}
       >
@@ -89,7 +91,13 @@ export const markdownComponents: MarkdownComponentType = {
       </Source>
     );
   },
-  image: Image,
+  h1: props => <LinkHeading as="h1" {...props} />,
+  h2: props => <LinkHeading as="h2" {...props} />,
+  h3: props => <LinkHeading as="h3" {...props} />,
+  h4: props => <LinkHeading as="h4" {...props} />,
+  h5: props => <LinkHeading as="h5" {...props} />,
+  h6: props => <LinkHeading as="h6" {...props} />,
+  img: TitledImage,
   button: Button,
   label: Label,
 };

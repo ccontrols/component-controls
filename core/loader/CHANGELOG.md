@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* import invalid config path ([fd91a1d](https://github.com/ccontrols/component-controls/commit/fd91a1df8619db92a3eebc937ca34c9f5887b23f))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
 ## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
 
 **Note:** Version bump only for package @component-controls/loader

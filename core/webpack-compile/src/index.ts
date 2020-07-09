@@ -9,12 +9,14 @@ export const compile = ({
   webPack,
   presets,
   configPath,
+  outputFolder,
 }: CompileProps): Promise<CompileResults> => {
   return runCompiler((compiler, callback) => compiler.run(callback), {
     webPack,
     mode: 'production',
     presets,
     configPath,
+    outputFolder,
   });
 };
 
@@ -27,6 +29,7 @@ export const watch = ({
   presets,
   configPath,
   watchOptions,
+  outputFolder,
 }: WatchProps): Promise<CompileResults> => {
   return runCompiler(
     (compiler, callback) => compiler.watch({ ...watchOptions }, callback),
@@ -35,6 +38,7 @@ export const watch = ({
       mode: 'development',
       presets,
       configPath,
+      outputFolder,
     },
   );
 };

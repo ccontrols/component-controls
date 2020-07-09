@@ -1,33 +1,53 @@
 import React, { FC } from 'react';
-import { lighten } from 'polished';
 
 interface ButtonProps {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   *  Boolean indicating whether the button should render as disabled
+   */
   disabled?: boolean;
-  /** button label. */
-  label?: string;
-  /** onClick handler */
-  onClick: () => void;
-  /** Custom styles */
-  style: object;
 
-  /** Background color */
-  backgroundColor: string;
+  /**
+   * button label
+   */
+  children?: string;
 
-  /** Text color, default black */
-  color: string;
+  /**
+   * onClick handler
+   */
+  onClick?: () => void;
 
-  /** Button type */
-  type: 'button' | 'reset' | 'submit';
+  /**
+   * Custom styles
+   */
+  style?: object;
 
-  /** Numeric  field type */
-  padding: number;
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+
+  /**
+   * Text color, default black
+   */
+  color?: string;
+
+  /**
+   * Button type
+   */
+  type?: 'button' | 'reset' | 'submit';
+
+  /**
+   * Numeric  field type
+   */
+  padding?: number;
 }
 
-/** Button with react Typescript properties */
+/**
+ * Button with react Typescript properties
+ */
 export const Button: FC<ButtonProps> = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -42,17 +62,17 @@ export const Button: FC<ButtonProps> = ({
     style={{
       ...style,
       backgroundColor,
-      color: lighten(disabled ? 0.4 : 0, color),
+      color,
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',

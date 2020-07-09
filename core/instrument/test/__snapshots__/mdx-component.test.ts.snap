@@ -24,7 +24,7 @@ Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
     "date": 2020-03-07T04:11:13.289Z,
-    "dateModified": 2020-05-18T16:37:44.945Z,
+    "dateModified": 2020-07-05T22:57:52.430Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -57,7 +57,7 @@ Object {
       "Button": "dc86c4457416c54c13147e780d972747",
     },
     "date": 2020-03-07T04:13:53.738Z,
-    "dateModified": 2020-05-18T16:37:49.912Z,
+    "dateModified": 2020-07-05T22:57:52.430Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -137,7 +137,7 @@ Object {
       "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
     },
     "date": 2020-03-07T04:30:56.209Z,
-    "dateModified": 2020-05-18T16:37:59.320Z,
+    "dateModified": 2020-07-05T22:57:52.430Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -210,7 +210,7 @@ Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
     "date": 2020-03-16T23:40:58.322Z,
-    "dateModified": 2020-05-18T16:38:03.084Z,
+    "dateModified": 2020-07-05T22:57:52.430Z,
     "title": "Story",
   },
   "packages": Object {},
@@ -230,12 +230,12 @@ Object {
       },
       "name": "story",
       "source": "<Story
-        name=\\"story\\"
-        component={ArrowButton}
-        subcomponents={{
-          'My Button Tab': Button,
-        }}
-      />",
+  name=\\"story\\"
+  component={ArrowButton}
+  subcomponents={{
+    'My Button Tab': Button,
+  }}
+/>",
       "subcomponents": Object {
         "My Button Tab": "Button",
       },
@@ -294,7 +294,7 @@ Object {
       "Button": "2f4bd34d15be236674abaf6e894afe6e",
     },
     "date": 2020-03-16T23:40:58.322Z,
-    "dateModified": 2020-05-18T16:38:07.903Z,
+    "dateModified": 2020-07-05T22:57:52.431Z,
     "subcomponents": Object {
       "Button": "Button",
     },

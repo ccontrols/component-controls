@@ -14,4 +14,9 @@ export interface LoaderOptions {
    * presets options that will be passed to the instrumenter.
    */
   presets?: RuleTypes;
+
+  /**
+   * output folder for generated bundle
+   */
+  outputFolder?: string;
 }

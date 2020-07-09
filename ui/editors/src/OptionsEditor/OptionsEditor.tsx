@@ -42,7 +42,7 @@ export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
   ) {
     const { entries, selected } = normalizeOptions(options, value);
     const handleChange = (e: ChangeEvent<HTMLSelectElement>) =>
-      onChange(name, [e.target.value]);
+      onChange(name, e.target.value);
 
     const selectValue = entries.filter(op => selected.includes(op.value));
     const v: string = selectValue.length ? selectValue[0].value : '';

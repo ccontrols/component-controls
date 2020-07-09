@@ -1,5 +1,4 @@
 import React from 'react';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import { StoryStore, StoreObserver } from '@component-controls/store';
 
 import {
@@ -10,6 +9,7 @@ import {
   Document,
   getComponentName,
   PackageInfo,
+  docStoryToId,
 } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 
@@ -41,6 +41,12 @@ export interface BlockDataContextProps {
    * will navigate through the store docs and look for a matching story id
    */
   storyIdFromName: (name: string) => string | undefined;
+
+  /**
+   *
+   * find a story id from a story 'name' in current document
+   */
+  storyIdFromNameCurrent: (name: string) => string | undefined;
 
   /**
    * add an observer for onChange events
@@ -131,11 +137,18 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
     if (store) {
       for (const title in store.docs) {
         const doc = store.docs[title];
-        const storyId = toId(title, storyNameFromExport(name));
+        const storyId = docStoryToId(title, name);
         if (doc.stories && doc.stories.indexOf(storyId) > -1) {
           return storyId;
         }
       }
+    }
+    return undefined;
+  };
+
+  const storyIdFromNameCurrent = (name: string): string | undefined => {
+    if (store && docId) {
+      return docStoryToId(docId, name);
     }
     return undefined;
   };
@@ -146,6 +159,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         docId,
         getStoryData,
         storyIdFromName,
+        storyIdFromNameCurrent,
         getComponents,
         addObserver: storeProvider ? storeProvider.addObserver : () => {},
         removeObserver: storeProvider ? storeProvider.removeObserver : () => {},

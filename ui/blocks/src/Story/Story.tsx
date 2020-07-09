@@ -25,7 +25,7 @@ export const Story: FC<StoryProps> = forwardRef(
     return (
       <StoryBlockContainer {...props}>
         {(context, rest) => {
-          const { story, options = {} } = context;
+          const { story, doc, options = {} } = context;
           if (story && story.renderFn) {
             try {
               const values = getControlValues(story.controls);
@@ -53,7 +53,7 @@ export const Story: FC<StoryProps> = forwardRef(
               console.error(e);
             }
           }
-          console.error('Story function not found', props, story);
+          console.error('Story function not found', props, doc);
           return null;
         }}
       </StoryBlockContainer>

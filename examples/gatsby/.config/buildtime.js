@@ -16,6 +16,7 @@ module.exports = {
     '../../../core/core/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/editors/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/axe-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
+    // '../../stories/src/blogs/introduction-to-controls.mdx',
   ],
   pages: {
     story: {

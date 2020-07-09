@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, PagesOnlyRoutes, PageType } from './configuration';
+import { RunConfiguration, DocType } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -84,7 +84,7 @@ export interface Story {
   name: string;
 
   /**
-   * csf id of the story
+   * id of the story
    */
   id?: string;
 
@@ -104,7 +104,7 @@ export interface Story {
   description?: string;
 
   /**
-   * arguments pass to a CSF story
+   * arguments passed to the story function.
    * eg `export const story = props => <Story {...props} />;`
    */
   arguments?: StoryArguments;
@@ -150,17 +150,17 @@ export interface Story {
 }
 
 /**
- * map of stories. The id is compatible with CSF story ids
+ * map of stories. The id is compatible with storybook's story ids
  */
 export interface Stories {
   [id: string]: Story;
 }
 
-export const defPageType: PageType = 'story';
+export const defDocType: DocType = 'story';
 /**
  * A documentation file's metadata.
  * For MDX files, fromtmatter is used to declare the document properties.
- * For "es modules" documetation files, the default export is used.
+ * For ESM (ES Modules) documentation files, the default export is used.
  */
 export interface Document {
   /**
@@ -172,7 +172,7 @@ export interface Document {
   /**
    * document type - blogs, pages, stories and even custom ones. By default - story
    */
-  type?: PageType;
+  type?: DocType;
 
   /**
    * if provided, will be used as the route for the page.
@@ -203,15 +203,21 @@ export interface Document {
 
   /**
    * if true, will display the documentation page full size (pagecontainer.full theme variant)
-   * the default value is from the page type configuration
+   * the default value is from the doc type configuration
    */
   fullPage?: boolean;
 
   /**
-   * whether to add navigation sidebars to the page
-   * the default value is from the page type configuration
+   * whether to add navigation sidebar to the page
+   * the default value is from the doc type configuration
    */
-  sidebars?: boolean;
+  navSidebar?: boolean;
+
+  /**
+   * whether to add conext sidebar to navigate the sections of the page
+   * the default value is from the doc type configuration
+   */
+  contextSidebar?: boolean;
 
   /**
    *  optional date the document was created. If not assigned, the instrumentation process will use birthtime
@@ -278,6 +284,11 @@ export interface Document {
    * for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider
    */
   MDXPage?: any;
+
+  /**
+   * custom prop set by mdxjs
+   */
+  isMDXComponent?: boolean;
 }
 
 export const dateToLocalString = (date?: Date): string =>
@@ -344,34 +355,3 @@ export interface StoriesStore {
    */
   packages: StoryPackages;
 }
-
-export const getDocPath = (
-  pageType: PageType,
-  doc?: Document,
-  pagesConfig?: PagesOnlyRoutes,
-  name: string = '',
-  activeTab?: string,
-): string => {
-  const { basePath = '' } = pagesConfig?.[pageType] || {};
-  const route = doc
-    ? doc.route ||
-      `/${basePath}${
-        activeTab ? `${activeTab}/` : ''
-      }${doc.title?.toLowerCase()}/`
-    : `/${basePath}${activeTab ? `${activeTab}/` : ''}${name}/`;
-  return route;
-};
-
-export const getStoryPath = (
-  story?: Story,
-  doc?: Document,
-  pagesConfig?: PagesOnlyRoutes,
-  activeTab?: string,
-): string => {
-  if (!story) {
-    return '';
-  }
-
-  const docsPath = getDocPath('story', doc, pagesConfig, undefined, activeTab);
-  return `${docsPath}#${story.id}`;
-};

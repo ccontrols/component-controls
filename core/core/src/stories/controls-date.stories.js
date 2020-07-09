@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { DateControl } from './components/DateControl';
 
 export default {
-  title: 'Controls/DATE',
+  title: 'Controls/Date',
   component: DateControl,
 };
 

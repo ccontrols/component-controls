@@ -64,14 +64,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = () => <div>test</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -185,14 +189,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = ({ text }) => <div>{text}</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -236,46 +244,19 @@ Object {
               },
               "shorthand": undefined,
             },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 26,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 21,
-                  "line": 0,
-                },
-              },
-              "shorthand": undefined,
-            },
           ],
-          "value": "props",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 5,
-              "line": 0,
-            },
-            "start": Object {
-              "column": 0,
-              "line": 0,
-            },
-          },
-          "name": "props",
           "value": "props",
         },
       ],
       "id": "mdxStory",
       "loc": Object {
         "end": Object {
-          "column": 58,
-          "line": 22,
+          "column": 59,
+          "line": 3,
         },
         "start": Object {
-          "column": 31,
-          "line": 22,
+          "column": 27,
+          "line": 3,
         },
       },
       "name": "mdx-story",
@@ -318,14 +299,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
-export const mdxStory = props => customStory(props)
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+export const mdxStory = props => <div>{props.text}</div>
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -392,18 +377,22 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = () => (<>
 
 <div>test 1</div>
 
 </>)
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -501,14 +490,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = props => <div>{props.text}</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;

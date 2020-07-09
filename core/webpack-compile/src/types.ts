@@ -18,6 +18,9 @@ export interface CompileProps {
    * path to the configuration file e.g : '.storybook'
    */
   configPath?: string;
+
+  /** public output folder for the bundle */
+  outputFolder?: string;
 }
 
 /**

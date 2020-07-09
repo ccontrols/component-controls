@@ -19,6 +19,7 @@
     -   [<ins>Playground</ins>](#insplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
+    -   [<ins>Search</ins>](#inssearchins)
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
     -   [<ins>StoryConfig</ins>](#insstoryconfigins)
@@ -43,7 +44,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx,BaseStoryConfig.tsx,BaseStorySource.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,repositoryActions.tsx,StoryContext.tsx,utils.ts,ComponentsContext.tsx,context.tsx,argument-utils.ts,channel.ts,BasePropsTable.tsx,BaseComponentDeps.tsx,ErrorBoundary.tsx,BaseStoryConfig.tsx,BaseStorySource.tsx,storeState.ts" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
@@ -58,6 +59,7 @@ _ComponentsBlockContainer [source code](https://github.com/ccontrols/component-c
 | `visibility`  | _ComponentVisibility_                                          | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
 | `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`          | _any_                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`        | _string_                                                       | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
 | `title`       | _string_                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `description` | _string_                                                       | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
@@ -93,6 +95,7 @@ _ComponentDeps [source code](https://github.com/ccontrols/component-controls/tre
 | `visibility`  | _ComponentVisibility_                                          | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
 | `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`          | _any_                                                          | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`        | _string_                                                       | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
 | `title`       | _string_                                                       | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `description` | _string_                                                       | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
@@ -125,7 +128,8 @@ _ComponentSource [source code](https://github.com/ccontrols/component-controls/t
 | `visibility`  | _ComponentVisibility_                                              | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
 | `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_     | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`          | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `title`       | _string_                                                           | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `name`        | _string_                                                           | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
+| `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                                                                                                                                          |
 | `description` | _string_                                                           | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`          | _string_                                                           | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
@@ -136,8 +140,9 @@ _ComponentSource [source code](https://github.com/ccontrols/component-controls/t
 | `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                                                                                                                                             |
 | `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                                                                                                                                         |
 | `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used.                                                                                                                   |
-| `style`       | _any_                                                              | css styles for the container.                                                                                                                                                                                                                                                                      |
-| `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
+| `style`       | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                                                                                                                                      |
+| `as`          | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                                                                                                                                   |
+| `metastring`  | _string_                                                           | code configuration string passed from MDX                                                                                                                                                                                                                                                          |
 
 ## <ins>Container</ins>
 
@@ -158,6 +163,7 @@ _Description [source code](https://github.com/ccontrols/component-controls/tree/
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.                                                                                                                                                                                                                                                      |
 | `of`         | _any_                                                                                                                                                                                                                    | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`       | _string_                                                                                                                                                                                                                 | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
 
 ## <ins>DocumentItem</ins>
 
@@ -215,9 +221,9 @@ _PageTypeTag [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ |             |
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ |             |
 
 ## <ins>Pagination</ins>
 
@@ -226,6 +232,8 @@ displays automatic pagination to the next/previous document of this same type.
 _Pagination [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Pagination/Pagination.tsx)_
 
 ## <ins>Playground</ins>
+
+Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
 
 _Playground [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/Playground.tsx)_
 
@@ -250,6 +258,8 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ## <ins>PropsTable</ins>
 
+Displays the component's properties as well as configurable controls to interact with the component.
+
 _PropsTable [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/PropsTable/PropsTable.tsx)_
 
 ### properties
@@ -260,6 +270,7 @@ _PropsTable [source code](https://github.com/ccontrols/component-controls/tree/m
 | `visibility`            | _ComponentVisibility_                                                                                                           | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
 | `onSelect`              | _((name: string, component: StoryComponent) => boolean \| void) \| ((event: SyntheticEvent&lt;HTMLDivElement, Event>) => void)_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`                    | _any_                                                                                                                           | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`                  | _string_                                                                                                                        | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
 | `title`                 | _string_                                                                                                                        | optional section title for the block.                                                                                                                                                                                                                                                              |
 | `description`           | _string_                                                                                                                        | optional markdown description.                                                                                                                                                                                                                                                                     |
 | `id`                    | _string_                                                                                                                        | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
@@ -289,6 +300,18 @@ _useControlsActions [source code](https://github.com/ccontrols/component-control
 | `controls`        | _ComponentControls_ |             |
 | `storyId`         | _string_            |             |
 | `setControlValue` | _SetControlValueFn_ |             |
+
+## <ins>Search</ins>
+
+_Search [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Search/Search.tsx)_
+
+### properties
+
+| Name           | Type                                                                                                                                                                                                                                                                                                                                                            | Description                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `onSelect`     | _(item: Document) => void_                                                                                                                                                                                                                                                                                                                                      | on select a search item.                                                    |
+| `children`     | _string \| number \| boolean \| {} \| ((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... 1 more ... \| (new (props: any) => Component&lt;...>)>) \| (new (props: any) => Component&lt;...>)> \| ... 8 more ... \| (((props: SearchBoxCallbackProps&lt;...>) ..._ | children is a render prop to allow custom rendering of items, one at a time |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                                                                 | customize the popover                                                       |
 
 ## <ins>Stories</ins>
 
@@ -346,7 +369,7 @@ _StoryConfig [source code](https://github.com/ccontrols/component-controls/tree/
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
-| `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
+| `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                        |
 | `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
 | `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
@@ -357,8 +380,9 @@ _StoryConfig [source code](https://github.com/ccontrols/component-controls/tree/
 | `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
 | `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
 | `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`       | _any_                                                              | css styles for the container.                                                                                                                                                    |
-| `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `style`       | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
+| `as`          | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `metastring`  | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
 
 ## <ins>StorySource</ins>
 
@@ -375,7 +399,7 @@ _StorySource [source code](https://github.com/ccontrols/component-controls/tree/
 | `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
 | `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
 | `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
-| `title`       | _string_                                                           | optional section title for the block.                                                                                                                                            |
+| `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                        |
 | `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
 | `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
@@ -386,8 +410,9 @@ _StorySource [source code](https://github.com/ccontrols/component-controls/tree/
 | `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
 | `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
 | `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`       | _any_                                                              | css styles for the container.                                                                                                                                                    |
-| `as`          | _any_                                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `style`       | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
+| `as`          | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `metastring`  | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
 
 ## <ins>Subtitle</ins>
 
@@ -408,7 +433,7 @@ _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ## <ins>TagsList</ins>
 
-row of tags with link to their page
+displays a row of tags assigned to the current document, with links to their pages
 
 _TagsList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/TagsList/TagsList.tsx)_
 

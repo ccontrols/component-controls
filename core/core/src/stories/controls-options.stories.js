@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { OptionsControl } from './components/OptionsControl';
 
 export default {
-  title: 'Controls/OPTIONS',
+  title: 'Controls/Options',
   component: OptionsControl,
 };
 

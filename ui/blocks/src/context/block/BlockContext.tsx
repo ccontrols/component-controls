@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StoryStore } from '@component-controls/store';
+import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
-import { BlockControlsContextProvider } from './BlockControlsContext';
 import { ErrorBoundary } from './ErrorBoundary';
 
 export interface BlockContextInputProps {
@@ -46,6 +46,11 @@ export interface BlockContextProps {
    */
   options?: any;
 }
+
+export const StoreContext = React.createContext<{ storeProvider: StoryStore }>(
+  //@ts-ignore
+  {},
+);
 //@ts-ignore
 export const BlockContext = React.createContext<BlockContextProps>({});
 
@@ -63,26 +68,40 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
     storyId =
       doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
   }
-
   return (
-    <ErrorBoundary>
-      <BlockContext.Provider
-        value={{
-          storyId,
-          docId,
-          storeProvider: store,
-          options,
-        }}
-      >
-        <BlockDataContextProvider store={store} storyId={storyId} docId={docId}>
-          <BlockControlsContextProvider store={store}>
-            {children}
-          </BlockControlsContextProvider>
-        </BlockDataContextProvider>
-      </BlockContext.Provider>
-    </ErrorBoundary>
+    <RecoilRoot>
+      <ErrorBoundary>
+        <StoreContext.Provider
+          value={{
+            storeProvider: store,
+          }}
+        >
+          <BlockContext.Provider
+            value={{
+              storyId,
+              docId: propsDocId,
+              storeProvider: store,
+              options,
+            }}
+          >
+            <BlockDataContextProvider
+              store={store}
+              storyId={storyId}
+              docId={propsDocId}
+            >
+              {children}
+            </BlockDataContextProvider>
+          </BlockContext.Provider>
+        </StoreContext.Provider>
+      </ErrorBoundary>
+    </RecoilRoot>
   );
 };
 
 export const useBlockContext: () => BlockContextProps = () =>
   React.useContext(BlockContext);
+
+export const useStore = () => {
+  const { storeProvider } = useContext(StoreContext);
+  return storeProvider;
+};

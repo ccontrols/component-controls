@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/config",
-  "version": "1.5.7",
+  "version": "1.7.0",
   "description": "Component controls configuration reading utilities",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.5.7",
+    "@component-controls/core": "^1.7.0",
     "chalk": "^4.0.0",
     "glob": "^7.1.6",
     "typescript": "^3.8.3",

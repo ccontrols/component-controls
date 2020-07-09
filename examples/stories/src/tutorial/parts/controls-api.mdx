@@ -1,0 +1,120 @@
+---
+title: Structure/Controls API
+route: /tutorial/structure/controls-api
+type: tutorial
+tags:
+  - documentation
+  - controls
+order: 3
+---
+import { ControlTypes } from '@component-controls/core';
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+
+## Overview
+
+The component controls are designed to provide an extensible interface for specifying and using input controls to enter component properties at run-time.
+
+## Usage
+
+### ESM
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+
+export const textControl = ({ text }) => (<div>{props.text}</div>);
+
+textControl.controls = {
+  text: 'some text'
+};
+
+```
+
+### MDX
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+
+<Playground>
+  <Story name='text-control' controls={{ text: 'some text' }}>
+    {props => (
+      <div>{props.text}</div>
+    )}
+  </Story>
+</Playground>
+```
+
+## Interfaces
+
+### ComponentControls
+
+ComponentControls are defined in key value pairs where the name of the property is the key and the value is a [ComponentControl](#componentcontrol) object
+```jsx
+  Record<string, ComponentControl>
+```  
+
+
+### ComponentControl
+
+ComponentControl is a either an object of property settings [ControlTypes](#controltypes):
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+
+export const textControl = ({ text }) => (<div>{props.text}</div>);
+
+textControl.controls = {
+  text: { type: ControlTypes.TEXT, value: 'some text'}
+};
+```
+
+Or a shortcut can be used for types TEXT, NUMBER and DATE:
+
+```jsx
+import { ControlTypes } from '@component-controls/core';
+
+export const textControl = ({ text }) => (<div>{props.text}</div>);
+
+textControl.controls = {
+  text: 'some text', //shortcut notation
+};
+```
+
+
+### ControlTypes
+
+One of the types [ControlTypes.TEXT](#controltypes-text) | [ControlTypes.NUMBER](#controltypes-number) | [ControlTypes.BOOLEAN](#controltypes-boolean) | [ControlTypes.OPTIONS](#controltypes-options) | [ControlTypes.DATE](#controltypes-date) | [ControlTypes.COLOR](#controltypes-color) | [ControlTypes.BUTTON](#controltypes-button) | [ControlTypes.OBJECT](#controltypes-object) | [ControlTypes.ARRAY](#controltypes-array) | [ControlTypes.FILES](#controltypes-files)
+
+All control types descend from [ControlType](#controltype)
+
+### ControlType
+
+The base class has the following propeties that apply to all control types
+
+**common properties for all controls**
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type*`        | [ControlTypes](#controltypes)                                  |                                                                                                                                                       |
+| `value`        |                                                                | a default value for the property                                                                                                                      |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` |                                                                | default value is usually set at run-time, from the value                                                                                              |
+
+
+More info on the [pre-defined controls](/tutorial/structure/controls-api), however you can also create custom control types and their respective control editors.
+
+
+### ComponentControlData
+
+**properties**
+
+| Name      | Type                | Description                                                                                                                    |
+| --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `name*`   | string              | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
+| `options` | \[key: string]: any | options to be passed to the random data generators example {  min: 10, max: 20 }   

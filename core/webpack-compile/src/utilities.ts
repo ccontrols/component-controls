@@ -18,7 +18,8 @@ export type CompileRunProps = CompileProps & {
 };
 
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
-  const { webPack, presets, configPath, mode } = options;
+  const { webPack, presets, configPath, mode, outputFolder } = options;
+  const distFolder = path.resolve(__dirname, '../dist');
   const plugins = [
     new LoaderPlugin({
       config: configPath,
@@ -35,7 +36,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       },
 
       output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: distFolder,
         filename: 'bundle.js',
         libraryTarget: 'umd',
         globalObject: 'this',
@@ -48,6 +49,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       ...(webPack || {}),
     },
     presets,
+    { outputFolder, distFolder },
   );
 
   //add all the aliases to avoid double loading of packages

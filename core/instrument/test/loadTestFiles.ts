@@ -1,6 +1,14 @@
 import * as path from 'path';
 import * as fs from 'fs';
+import jsStringEscape from 'js-string-escape';
 import { parseStories } from '../src/index';
+
+expect.addSnapshotSerializer({
+  test: val => typeof val === 'object' && val instanceof String,
+  print: val => {
+    return `"${jsStringEscape(val.toString())}"`;
+  },
+});
 
 export type LoadTestCallbackFn = (fileName: string) => any;
 

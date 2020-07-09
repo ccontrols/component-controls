@@ -22,6 +22,9 @@ export type PropsTableProps = PropsTableOwnProps &
   Omit<ComponentsBlockContainerProps, 'children'> &
   Omit<TableProps, 'columns' | 'data'>;
 
+/**
+ * Displays the component's properties as well as configurable controls to interact with the component.
+ */
 export const PropsTable: FC<PropsTableProps> = ({
   extraColumns = [],
   visibility = 'all',

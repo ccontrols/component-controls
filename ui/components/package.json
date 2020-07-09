@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "1.5.7",
+  "version": "1.7.0",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -35,8 +35,8 @@
     "@theme-ui/presets": "next",
     "copy-to-clipboard": "^3.2.1",
     "fast-memoize": "^2.5.2",
-    "mdx-utils": "*",    
     "markdown-to-jsx": "^6.11.0",
+    "mdx-utils": "*",
     "prism-react-renderer": "^1.0.2",
     "react": "^16.13.1",
     "react-animate-height": "^2.0.20",

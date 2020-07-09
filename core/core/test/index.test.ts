@@ -8,12 +8,12 @@ import {
 
 describe('Controls utils', () => {
   const controls: ComponentControls = {
-    name: { type: ControlTypes.TEXT, value: 'hello', resetValue: 'hello' },
-    age: { type: ControlTypes.NUMBER, value: 19, resetValue: 19 },
+    name: { type: ControlTypes.TEXT, value: 'hello', defaultValue: 'hello' },
+    age: { type: ControlTypes.NUMBER, value: 19, defaultValue: 19 },
   };
   const modifiedControls: ComponentControls = {
-    name: { type: ControlTypes.TEXT, value: 'today', resetValue: 'hello' },
-    age: { type: ControlTypes.NUMBER, value: 19, resetValue: 19 },
+    name: { type: ControlTypes.TEXT, value: 'today', defaultValue: 'hello' },
+    age: { type: ControlTypes.NUMBER, value: 19, defaultValue: 19 },
   };
 
   it('Should merge property value', () => {

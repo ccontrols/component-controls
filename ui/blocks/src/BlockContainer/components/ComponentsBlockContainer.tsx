@@ -29,6 +29,7 @@ export type ComponentsBlockContainerProps = {
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   title: userTitle,
   collapsible,
+  name,
   id,
   of,
   children,
@@ -64,6 +65,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   const block = (
     <ComponentsContainer
       of={of}
+      name={name}
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { ActionBar, ActionItems } from '@component-controls/components';
 
 import {
@@ -34,13 +34,13 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
           ...actions,
           ...Object.keys(pages)
             .map(type => {
-              const pageType = type as PageType;
-              return { page: pages[pageType], pageType };
+              const docType = type as DocType;
+              return { page: pages[docType], docType };
             })
-            .filter(({ page, pageType }) => {
+            .filter(({ page, docType }) => {
               return (
                 page.topMenu &&
-                Object.keys(storeProvider.getPageList(pageType)).length > 0
+                Object.keys(storeProvider.getPageList(docType)).length > 0
               );
             })
             .map(({ page }) => ({

@@ -1,16 +1,10 @@
 /** @jsx jsx */
 import React, { FC } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
-import {
-  LinkIcon,
-  ChevronRightIcon,
-  ChevronDownIcon,
-} from '@primer/octicons-react';
+import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 import { Markdown } from '../Markdown';
-import { Subtitle } from '../Subtitle';
-import { Subheading } from '../Subheading';
 import { Collapsible } from '../Collapsible';
-import { pageLink } from './pageLink';
+import { LinkHeading } from '../LinkHeading';
 
 export interface BlockContainerProps {
   /**
@@ -54,48 +48,43 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   sxStyle,
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
-  const blockId =
-    id !== '.'
-      ? id
-      : undefined ||
-        (title ? title.toLowerCase().replace(/\s/g, '-') : undefined);
-  const BlockTitle: FC = () =>
-    collapsible ? (
-      <Subtitle>{title}</Subtitle>
-    ) : (
-      <Subheading>{title}</Subheading>
-    );
+  const blockId = id !== '.' ? id : undefined || title;
+
   return (
-    <Box variant="blockcontainer.container" sx={sxStyle} id={blockId}>
+    <Box variant="blockcontainer.container" sx={sxStyle}>
       {(blockId || title || collapsible) && (
-        <Flex variant="blockcontainer.inner">
-          {blockId && (
-            <Link
-              variant="blockcontainer.link"
-              href={pageLink(blockId)}
-              data-title={title}
-            >
-              <LinkIcon />
-            </Link>
-          )}
-          {title && collapsible && (
-            <Link
-              aria-label={isOpen ? 'Collapse this block' : 'Expand this block'}
-              sx={{
-                cursor: 'pointer',
-              }}
-              onClick={() => setIsOpen(!isOpen)}
-            >
+        <LinkHeading
+          as={collapsible ? 'h3' : 'h4'}
+          id={blockId}
+          title={title}
+          sx={{ my: 0, py: 1 }}
+        >
+          {title &&
+            (collapsible ? (
               <Flex variant="blockcontainer.titleblock">
-                <BlockTitle />
-                <Text variant="blockcontainer.expandicon">
-                  {isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
-                </Text>
+                {title}
+                <Link
+                  aria-label={
+                    isOpen ? 'Collapse this block' : 'Expand this block'
+                  }
+                  sx={{
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  <Text variant="blockcontainer.expandicon">
+                    {isOpen ? (
+                      <ChevronDownIcon verticalAlign="middle" />
+                    ) : (
+                      <ChevronRightIcon verticalAlign="middle" />
+                    )}
+                  </Text>
+                </Link>
               </Flex>
-            </Link>
-          )}
-          {title && !collapsible && <BlockTitle />}
-        </Flex>
+            ) : (
+              title
+            ))}
+        </LinkHeading>
       )}
       {description && <Markdown>{description}</Markdown>}
       {collapsible && children ? (

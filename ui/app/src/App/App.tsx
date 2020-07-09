@@ -18,7 +18,7 @@ export interface AppProps {
  * application container component. adds SEO, SkipLinks, Header and Footer.
  *
  */
-export const App: FC<AppProps> = ({ title, children }) => {
+export const App: FC<AppProps> = ({ title = '', children }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
   const { toolbar } = storeProvider.config || {};
@@ -38,10 +38,11 @@ export const App: FC<AppProps> = ({ title, children }) => {
       text: 'skip to context sidebar',
     });
   }
-
+  const titleParts = title ? title.split('/') : [''];
+  const pageTitle = titleParts[titleParts.length - 1];
   return (
     <Fragment>
-      <SEO title={title} />
+      <SEO title={pageTitle} />
       <SkipLinks items={items} />
       <Box variant="app">
         <Header toolbar={toolbar} />

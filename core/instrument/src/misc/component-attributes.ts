@@ -1,17 +1,29 @@
 import { Story, Document } from '@component-controls/core';
 
+const componentName = (component: string | object | undefined) => {
+  if (component) {
+    if (typeof component === 'string') {
+      return component;
+    }
+    if (typeof component.toString === 'function') {
+      return component.toString();
+    }
+  }
+  return undefined;
+};
 export const componentsFromParams = (
   element: (Document | Story) & { of?: string },
 ): string[] => {
   const result = [];
   let { component } = element;
-
-  if (typeof component === 'string') {
-    result.push(component);
+  const name = componentName(component);
+  if (name) {
+    result.push(name);
   }
   const { of: componentShorthand } = element;
-  if (typeof componentShorthand === 'string') {
-    result.push(componentShorthand);
+  const ofName = componentName(componentShorthand);
+  if (ofName) {
+    result.push(ofName);
   }
   let { subcomponents } = element;
   if (typeof subcomponents === 'string') {
@@ -21,11 +33,5 @@ export const componentsFromParams = (
     //@ts-ignore
     Object.keys(subcomponents).forEach(key => result.push(subcomponents[key]));
   }
-  if (typeof componentShorthand === 'object') {
-    Object.keys(componentShorthand).forEach(key =>
-      result.push(componentShorthand[key]),
-    );
-  }
-
   return result;
 };

@@ -69,7 +69,7 @@ There are many developments that have contributed to the creation of `component-
 # Roadmap
 
 -   [x] Core packages
--   [x] Support CSF and MDX stories format
+-   [x] Support ESM and MDX stories format
 -   [x] Instrumentation packages
 -   [x] UI Libraries
 -   [x] Storybook integration with addon-docs
@@ -122,7 +122,7 @@ Storybook Addon For live editing of component controls
 ### Limitations
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
--   Only handles the CSF and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
+-   Only handles the ESM(CSF) and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -178,14 +178,14 @@ Component controls instrumentation library
 
 Parsing a source file will generate the following information:
 
--   CSF: List of story named exports
--   CSF: Default export stories file information
+-   ESM: List of story named exports
+-   ESM: Default export stories file information
 -   MDX: List of `<Story />` story tags
--   MDX: List of `<Meta />` stories file information
+-   MDX: List of Frontammetr or `<Meta />` stories file information
 -   Source code extracted for the stories
 -   Source code of the entire stories file
--   List of all attributes(ie parameters) passed to CSF/MDX stories
--   List of story function arguments passed to CSF/MDX stories
+-   List of all attributes(ie parameters) passed to ESM/MDX stories
+-   List of story function arguments passed to ESM/MDX stories
 -   Usage location (in thesource code) of the function arguments
 -   Extract 'component' information for stories: import clause, source file,source loction
 -   Extract package.json repository information for the stories file

@@ -2,10 +2,12 @@ import React from 'react';
 import { lighten } from 'polished';
 import PropTypes from 'prop-types';
 
-/** Button with react PropTypes */
+/**
+ * Button with react PropTypes
+ */
 export const Button = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -24,13 +26,13 @@ export const Button = ({
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -40,24 +42,43 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   * Boolean indicating whether the button should render as disabled
+   */
   disabled: PropTypes.bool,
-  /** button label. */
-  label: PropTypes.string,
-  /** onClick handler */
+
+  /**
+   * button label
+   */
+  children: PropTypes.string,
+
+  /**
+   * onClick handler
+   */
   onClick: PropTypes.func,
-  /** Custom styles */
+
+  /**
+   * Custom styles
+   */
   style: PropTypes.shape({}),
 
-  /** Background color */
+  /**
+   * Background color
+   */
   backgroundColor: PropTypes.string,
 
-  /** Text color, default black */
+  /**
+   * Text color, default black
+   */
   color: PropTypes.string,
 
-  /** Button type */
+  /**
+   * Button type
+   */
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
 
-  /** Numeric  field type */
+  /**
+   * Numeric  field type
+   */
   padding: PropTypes.number,
 };

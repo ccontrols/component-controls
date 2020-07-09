@@ -3,6 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+
+### Bug Fixes
+
+* docId context ([65eec8e](https://github.com/ccontrols/component-controls/commit/65eec8eb43bbd1bb83b39f65fabbb318302160ad))
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* add keyboard handlingto and slider ([772c7d0](https://github.com/ccontrols/component-controls/commit/772c7d03e04572e4fb3a4d46f95a76c0e2a17600))
+* avoid controls column refresh on change ([858044b](https://github.com/ccontrols/component-controls/commit/858044b7f6677be41bdad1ee5cd084dd84140b99))
+* categories count ([3dc60f0](https://github.com/ccontrols/component-controls/commit/3dc60f0c6b48efb9caf262fc568b1024f1c11fe4))
+* generate code for complex attributes ([17f5b09](https://github.com/ccontrols/component-controls/commit/17f5b098eac6dafd4eb3fe3793584d90f7e2b9d5))
+* handle "new" expressions in MDX ([8ebf546](https://github.com/ccontrols/component-controls/commit/8ebf5463c69d206907bf5dc0161713420dc5b461))
+* import invalid config path ([fd91a1d](https://github.com/ccontrols/component-controls/commit/fd91a1df8619db92a3eebc937ca34c9f5887b23f))
+* log doc on error ([4f81cfc](https://github.com/ccontrols/component-controls/commit/4f81cfc459bd9f6b358c9d4bb3a369150a6d06a1))
+* remove container if no children ([3cb0281](https://github.com/ccontrols/component-controls/commit/3cb0281c4656d708134de75452cff5c8a88f0dfb))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* ability to use story name in "component" ([fbc2324](https://github.com/ccontrols/component-controls/commit/fbc232495a2065636c672698ba73d7a726e32e12))
+* add storyPaths page option ([563add3](https://github.com/ccontrols/component-controls/commit/563add3a2d35b36f354eb05e6d224ab9c4bfd88c))
+* custom serialization of mdx attributes ([028e366](https://github.com/ccontrols/component-controls/commit/028e366d931b94140ffe1c7d09fdb45b1403e36b))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* sb6 beta has now fixed handling of glob ([d3f21e9](https://github.com/ccontrols/component-controls/commit/d3f21e966f5e3d9c10fada21ae588441ca3a4a2d))
+* ssr hide document ([713bbb7](https://github.com/ccontrols/component-controls/commit/713bbb72af1ace17b907e5bed0c968f2c27a6f4c))
+* throw error on invalid glob pattern ([70bd152](https://github.com/ccontrols/component-controls/commit/70bd1522520313caeb50bd95e46147b75cc1e72b))
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* mdx code add parameters and mdx docs ([58f80ba](https://github.com/ccontrols/component-controls/commit/58f80ba2cc2417d14dc83e09b489889da7799e5d))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
 ## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
 
 

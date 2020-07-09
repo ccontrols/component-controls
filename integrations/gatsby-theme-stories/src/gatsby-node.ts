@@ -1,6 +1,8 @@
+import * as path from 'path';
 import {
   getDocPath,
-  PageType,
+  getStoryPath,
+  DocType,
   TabConfiguration,
 } from '@component-controls/core';
 
@@ -23,22 +25,9 @@ exports.createPages = async (
     webPack: options.webpack,
     presets: defaultPresets,
     configPath: options.configPath,
+    outputFolder:
+      options.outputFolder || `${path.join(process.cwd(), 'public')}`,
   };
-  const pageTemplates: Record<PageType, string> = {
-    story: require.resolve(`../src/templates/DocPage.tsx`),
-    blog: require.resolve(`../src/templates/DocPage.tsx`),
-    page: require.resolve(`../src/templates/DocPage.tsx`),
-    tags: require.resolve(`../src/templates/CategoryPage.tsx`),
-    author: require.resolve(`../src/templates/CategoryPage.tsx`),
-  };
-  const listTemplates: Record<PageType, string> = {
-    story: require.resolve(`../src/templates/DocPage.tsx`),
-    page: require.resolve(`../src/templates/DocPage.tsx`),
-    blog: require.resolve(`../src/templates/PageList.tsx`),
-    tags: require.resolve(`../src/templates/CategoryList.tsx`),
-    author: require.resolve(`../src/templates/CategoryList.tsx`),
-  };
-
   const { store } =
     process.env.NODE_ENV === 'development'
       ? await watch(config)
@@ -47,30 +36,37 @@ exports.createPages = async (
     const { pages, categories = [] } = store.buildConfig || {};
     if (pages) {
       Object.keys(pages).forEach(type => {
-        if (!categories.includes(type as PageType)) {
-          const page = pages[type as PageType];
-          const pageType = type as PageType;
-          const docs = store.getDocs(pageType);
+        if (!categories.includes(type as DocType)) {
+          const page = pages[type as DocType];
+          const docType = type as DocType;
+          const docs = store.getDocs(docType);
           const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
             { route: undefined },
           ];
           tabs.forEach((tab, tabIndex) => {
             const route = tabIndex > 0 ? tab.route : undefined;
             docs.forEach(doc => {
-              createPage({
-                path: getDocPath(
-                  pageType,
+              const stories =
+                page.storyPaths && doc.stories?.length
+                  ? doc.stories
+                  : [undefined];
+              stories.forEach((storyId?: string) => {
+                const url = getStoryPath(
+                  storyId,
                   doc,
                   store.buildConfig?.pages,
-                  undefined,
                   route,
-                ),
-                component: pageTemplates[pageType] || pageTemplates['story'],
-                context: {
-                  type: pageType,
-                  activeTab: route,
-                  doc: doc.title,
-                },
+                );
+                createPage({
+                  path: url,
+                  component: require.resolve(`../src/templates/DocPage.tsx`),
+                  context: {
+                    type: docType,
+                    activeTab: route,
+                    docId: doc.title,
+                    storyId,
+                  },
+                });
               });
             });
           });
@@ -80,10 +76,10 @@ exports.createPages = async (
             );
             createPage({
               path: `/${page.basePath}`,
-              component: listTemplates[pageType] || listTemplates['story'],
+              component: require.resolve(`../src/templates/DocHome.tsx`),
               context: {
-                type: pageType,
-                doc: docsPage?.title,
+                type: docType,
+                docId: docsPage?.title,
               },
             });
           }
@@ -91,31 +87,31 @@ exports.createPages = async (
       });
       categories.forEach(catName => {
         const cats = store.getUniquesByField(catName);
-        const catPage = pages[catName as PageType];
+        const catPage = pages[catName as DocType];
         const catKeys = Object.keys(cats);
         catKeys.forEach(tag => {
           createPage({
             path: getDocPath(
-              catName as PageType,
+              catName as DocType,
               undefined,
               store.buildConfig?.pages,
               tag,
             ),
-            component: pageTemplates[catName as PageType],
+            component: require.resolve(`../src/templates/CategoryPage.tsx`),
             context: {
-              type: catName as PageType,
+              type: catName as DocType,
               category: tag,
-              doc: null,
+              docId: null,
             },
           });
         });
         if (catKeys.length) {
           createPage({
             path: `/${catPage.basePath}`,
-            component: listTemplates[catName as PageType],
+            component: require.resolve(`../src/templates/CategoryList.tsx`),
             context: {
               type: catName,
-              doc: null,
+              docId: null,
             },
           });
         }
@@ -124,9 +120,9 @@ exports.createPages = async (
     const homePage = store.stores.find(s => s.doc?.route === '/');
     createPage({
       path: `/`,
-      component: pageTemplates['page'],
+      component: require.resolve(`../src/templates/DocPage.tsx`),
       context: {
-        doc: homePage?.doc?.title,
+        docId: homePage?.doc?.title,
         type: homePage?.doc?.type,
       },
     });

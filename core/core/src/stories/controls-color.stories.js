@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { ColorControl } from './components/ColorControl';
 
 export default {
-  title: 'Controls/COLOR',
+  title: 'Controls/Color',
   component: ColorControl,
 };
 
