@@ -39,9 +39,9 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
   activeTab,
   doc,
 }) => {
-  const { storeProvider, docId } = useContext(BlockContext);
+  const { storeProvider, docId, storyId } = useContext(BlockContext);
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
-  const { tabs = [] } = pageConfig;
+  const { tabs = [], storyPaths } = pageConfig;
   const selectedTab = activeTab
     ? activeTab
     : tabs.length > 0
@@ -76,7 +76,12 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
                 <Tab key={`tab_${tab.route}`}>
                   <Link
                     href={
-                      docId
+                      storyPaths && storyId
+                        ? storeProvider.getStoryPath(
+                            storyId,
+                            tabIndex > 0 ? tab.route : undefined,
+                          )
+                        : docId
                         ? storeProvider.getPagePath(
                             type,
                             docId,
