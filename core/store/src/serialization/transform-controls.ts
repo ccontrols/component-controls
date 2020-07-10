@@ -3,7 +3,7 @@ import {
   ComponentControl,
   ControlTypes,
   Story,
-  deepMerge,
+  deepMergeReplaceArrays,
   Document,
   StoryComponents,
   getComponentName,
@@ -88,7 +88,7 @@ export const transformControls = (
           return true;
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
-      return deepMerge(filteredControls, controls || {});
+      return deepMergeReplaceArrays(filteredControls, controls || {});
     }
   }
   return controls;
