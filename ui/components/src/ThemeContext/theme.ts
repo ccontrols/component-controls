@@ -43,7 +43,6 @@ export type ControlsTheme = {
   pagecontainer: ThemeUIStyleObject;
   propstable: Record<string, ThemeUIStyleObject>;
   story: Record<string, ThemeUIStyleObject>;
-  renderer: Record<string, ThemeUIStyleObject>;
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   navmenu: Record<string, ThemeUIStyleObject>;

@@ -117,5 +117,7 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
     return null;
   }
 
-  return <Table data={dependencies} columns={columns} />;
+  return (
+    <Table data-testid="dependencies" data={dependencies} columns={columns} />
+  );
 };

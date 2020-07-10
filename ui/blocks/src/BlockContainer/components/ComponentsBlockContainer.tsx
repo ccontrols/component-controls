@@ -34,6 +34,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   of,
   children,
   visibility,
+  'data-testid': dataTestid,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
@@ -79,7 +80,12 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   );
   // console.log(child);
   return (
-    <BlockContainer title={title} collapsible={collapsible} id={id}>
+    <BlockContainer
+      data-testid={dataTestid}
+      title={title}
+      collapsible={collapsible}
+      id={id}
+    >
       {block}
     </BlockContainer>
   );

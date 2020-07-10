@@ -33,6 +33,11 @@ export interface BlockContainerProps {
    * theme-ui styling object for Block Box
    */
   sxStyle?: SxStyleProp;
+
+  /**
+   * testing id
+   */
+  'data-testid'?: string;
 }
 
 /**
@@ -46,12 +51,13 @@ export const BlockContainer: FC<BlockContainerProps> = ({
   description,
   collapsible = true,
   sxStyle,
+  ...rest
 }) => {
   const [isOpen, setIsOpen] = React.useState(true);
   const blockId = id !== '.' ? id : undefined || title;
 
   return (
-    <Box variant="blockcontainer.container" sx={sxStyle}>
+    <Box variant="blockcontainer.container" sx={sxStyle} {...rest}>
       {(blockId || title || collapsible) && (
         <LinkHeading
           as={collapsible ? 'h3' : 'h4'}
