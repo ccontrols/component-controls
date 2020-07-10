@@ -134,7 +134,7 @@ export const Sidebar: FC<SidebarProps> = ({
       return menuItems;
     }
     return [];
-  }, [type, activeTab, storeProvider]);
+  }, [type, activeTab, storeProvider, storyPaths]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
