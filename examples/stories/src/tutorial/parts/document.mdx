@@ -17,6 +17,10 @@ import sidebarImg from './media/doc-sidebar.jpg';
 import contextImg from './media/doc-context.jpg';
 import fullpageImg from './media/doc-fullpage.jpg';
 import componentImg from './media/doc-component.jpg';
+import subcomponentsImg from './media/doc-subcomponents.jpg';
+import controlsImg from './media/doc-controls.jpg';
+import decoratorsImg from './media/doc-decorators.jpg';
+
 
 ## Overview
 
@@ -363,6 +367,38 @@ type: `string[] | object[]
 
 Multiple components option.
 
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+component: Button
+subcomponents:
+  - Spinner
+---
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+## Component Component
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+  subcomponents: [Spinner]
+};
+```
+
+<img alt="document subcomponents" title="document subcomponents" src={subcomponentsImg} />
 
 ### controls
 
@@ -370,9 +406,65 @@ type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
 
 Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
 
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+controls: { text: 'some text' }
+---
+import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
+
+<Playground>
+  <Story name="text-control">
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="text-control" />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+  controls: { text: 'some text' },
+};
+
+export const textControls = ({ text }) => <div>{text}</div>;
+```
+
+[Introduction to controls](/blogs/introduction-to-controls/)
+
+<img alt="document controls" title="document controls" src={controlsImg} />
+
 
 ### decorators
 
 type [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)
 
-Wrapper function to be called around rendering each individual story.
+Array of wrapper functions (decorators) that will be called when rendering each individual story.
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+  decorators: [
+    (controls, context) => {
+      const { renderFn } = context;
+      return (
+        <div style={{ background: 'lightpink' }}>
+          {renderFn(controls, context)}
+        </div>
+      );
+    },
+  ],
+};
+
+export const overview = () => <div>decorator test</div>;
+```
+
+<img alt="document decorators" title="document decorators" src={decoratorsImg} />
