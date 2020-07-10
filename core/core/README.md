@@ -19,10 +19,6 @@
     -   [StoryArguments](#storyarguments)
     -   [defDocType](#defdoctype)
     -   [dateToLocalString](#datetolocalstring)
-    -   [docStoryToId](#docstorytoid)
-    -   [getDocPath](#getdocpath)
-    -   [getStoryPath](#getstorypath)
-    -   [strToId](#strtoid)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -62,7 +58,7 @@
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [TabConfiguration](#tabconfiguration)
     -   [ToolbarConfig](#toolbarconfig)
-    -   [DocumentType](#documenttype)
+    -   [DocType](#doctype)
     -   [PageTabs](#pagetabs)
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
@@ -72,18 +68,18 @@
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
     -   [StoryRenderFn](#storyrenderfn-1)
-    -   [DocumentType](#documenttype-1)
+    -   [DocType](#doctype-1)
     -   [RunConfiguration](#runconfiguration-1)
     -   [StoryArguments](#storyarguments-1)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
     -   [WebpackConfig](#webpackconfig-1)
+    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
     -   [PageTabs](#pagetabs-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
-    -   [DocumentType](#documenttype-2)
+    -   [DocType](#doctype-2)
 
 # Overview
 
@@ -113,7 +109,7 @@ $ npm install @component-controls/core --save-dev
 
 ## ArgUsageLocation
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L17)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L12)_
 
 
 
@@ -131,7 +127,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L170)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L165)_
 
 
 
@@ -147,7 +143,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
 | `date`              | [Date](#date)                           |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
 | `dateModified`      | [Date](#date)                           |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                                                               |
+| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story.                                                                                                   |
 | `description`       | string                                  |  documentation file description                                                                                                                                                              |
 | `fileName`          | string                                  | file name of the file of stories                                                                                                                                                             |
 | `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the doc type configuration                                               |
@@ -158,22 +154,22 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
 | `source`            | string                                  | source code of the entire file of stories                                                                                                                                                    |
 | `stories`           | string\[]                               | list of story ids contained in the document.                                                                                                                                                 |
-| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
+| `subcomponents`     | Record&lt;string, >                     | multiple components option                                                                                                                                                                   |
 | `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
 | `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocumentType](#documenttype)           | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `type`              | [DocType](#doctype)                     | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 
 ## Documents
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L316)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L311)_
 
 `title`\*: string: [Document](#document)
 
 ## SmartControls
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L67)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L62)_
 
 
 
@@ -189,7 +185,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 an identifier/variable.argument in the source code
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L13)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L8)_
 
 
 
@@ -204,7 +200,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 map of stories. The id is compatible with storybook's story ids
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L160)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L155)_
 
 `id`\*: string: [Story](#story)
 
@@ -212,7 +208,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L339)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L334)_
 
 
 
@@ -230,7 +226,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L85)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L80)_
 
 
 
@@ -241,7 +237,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `arguments`     | [StoryArguments](#storyarguments)       | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
 | `component`     | string \| object                        | id for component associated with the story                                                            |
 | `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                                       |
-| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                        |
+| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story.            |
 | `description`   | string                                  | story extended description. can use markdown.                                                         |
 | `doc`           | string                                  | title of the file/group of stories                                                                    |
 | `id`            | string                                  | id of the story                                                                                       |
@@ -257,7 +253,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 arguments passed to the 'story' function, extracted by an AST loader
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L41)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L36)_
 
 
 
@@ -274,7 +270,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L309)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L304)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -282,7 +278,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of repositories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L332)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L327)_
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
@@ -290,13 +286,13 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L325)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L320)_
 
 `id`\*: string: [Story](#story)
 
 ## Pages
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L320)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L315)_
 
 [Document](#document)\[]
 
@@ -305,19 +301,19 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L65)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L60)_
 
 [StoryArgument](#storyargument)\[]
 
 ## defDocType
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L164)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L159)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L299)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L294)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -327,66 +323,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | --------- | ------------- | ----------- |
 | `date`    | [Date](#date) |             |
 | `returns` | string        |             |
-
-## docStoryToId
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L397)_
-
-**function** docStoryToId(`docId`\*: string, `storyId`\*: string): string;
-
-### parameters
-
-| Name       | Type   | Description |
-| ---------- | ------ | ----------- |
-| `docId*`   | string |             |
-| `storyId*` | string |             |
-| `returns`  | string |             |
-
-## getDocPath
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L366)_
-
-**function** getDocPath(`docType`\*: [DocumentType](#documenttype), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `name`\*: string, `activeTab`: string): string;
-
-### parameters
-
-| Name          | Type                                | Description |
-| ------------- | ----------------------------------- | ----------- |
-| `docType*`    | [DocumentType](#documenttype)       |             |
-| `doc`         | [Document](#document)               |             |
-| `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
-| `name*`       | string                              |             |
-| `activeTab`   | string                              |             |
-| `returns`     | string                              |             |
-
-## getStoryPath
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L381)_
-
-**function** getStoryPath(`storyId`: string, `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `activeTab`: string): string;
-
-### parameters
-
-| Name          | Type                                | Description |
-| ------------- | ----------------------------------- | ----------- |
-| `storyId`     | string                              |             |
-| `doc`         | [Document](#document)               |             |
-| `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
-| `activeTab`   | string                              |             |
-| `returns`     | string                              |             |
-
-## strToId
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L364)_
-
-**function** strToId(`str`\*: string): string;
-
-### parameters
-
-| Name      | Type   | Description |
-| --------- | ------ | ----------- |
-| `str*`    | string |             |
-| `returns` | string |             |
 
 ## ControlTypes
 
@@ -965,7 +901,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L109)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L103)_
 
 
 
@@ -973,7 +909,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 | Name           | Type                                | Description                                                                                                                                    |
 | -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [DocumentType](#documenttype)\[]    | page types that are considered as categories fields as well                                                                                    |
+| `categories`   | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
 | `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
@@ -981,7 +917,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L38)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L32)_
 
 
 
@@ -1005,7 +941,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L147)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L141)_
 
 
 
@@ -1014,6 +950,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | Name              | Type                                                 | Description                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
+| `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
 | `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
@@ -1046,7 +983,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L132)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L126)_
 
 
 
@@ -1057,7 +994,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `left`  | [ActionItems](#actionitems) | left side toolbar items  |
 | `right` | [ActionItems](#actionitems) | right side toolbar items |
 
-## DocumentType
+## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
@@ -1071,11 +1008,11 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L85)_
 
 Record&lt;
 
-[DocumentType](#documenttype)
+[DocType](#doctype)
 
 , 
 
@@ -1085,11 +1022,11 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L99)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
 
 Record&lt;
 
-[DocumentType](#documenttype)
+[DocType](#doctype)
 
 , 
 
@@ -1104,7 +1041,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L213)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
 
 ### properties
 
@@ -1115,13 +1052,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L97)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1135,7 +1072,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L256)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L258)_
 
 
 
@@ -1148,7 +1085,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L216)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L218)_
 
 
 
@@ -1181,7 +1118,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
 
-## DocumentType
+## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
@@ -1189,7 +1126,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L213)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
 
 ### properties
 
@@ -1203,28 +1140,9 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L65)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L60)_
 
 [StoryArgument](#storyargument)\[]
-
-## PagesOnlyRoutes
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L99)_
-
-Record&lt;
-
-[DocumentType](#documenttype)
-
-, 
-
-### properties
-
-| Name   | Type                                                                         | Description |
-| ------ | ---------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
-
->
 
 ## ComponentControl
 
@@ -1254,9 +1172,28 @@ string
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L97)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## PagesOnlyRoutes
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+
+Record&lt;
+
+[DocType](#doctype)
+
+, 
+
+### properties
+
+| Name   | Type                                                                         | Description |
+| ------ | ---------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
+
+>
 
 ## PageTabs
 
@@ -1266,11 +1203,11 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L85)_
 
 Record&lt;
 
-[DocumentType](#documenttype)
+[DocType](#doctype)
 
 , 
 
@@ -1280,7 +1217,7 @@ Record&lt;
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1292,7 +1229,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `options` | any                                           |             |
 | `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
-## DocumentType
+## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 

@@ -12,8 +12,8 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "57e65d42bacf0af9b3f4dd3fe2377cde",
     },
-    "date": 2020-06-29T01:18:57.680Z,
-    "dateModified": 2020-06-29T01:18:57.681Z,
+    "date": 2020-06-29T01:18:57.000Z,
+    "dateModified": 2020-06-29T01:18:57.000Z,
     "package": "c530e9236c215c5023fe34f23def3047",
     "title": "Story",
   },
@@ -59,7 +59,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.7.1",
     },
   },
   "stories": Object {
@@ -101,8 +101,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-29T01:18:57.681Z,
-    "dateModified": 2020-06-29T01:18:57.681Z,
+    "date": 2020-06-29T01:18:57.000Z,
+    "dateModified": 2020-06-29T01:18:57.000Z,
     "package": "9b19ea69af761f36bd07998cc518decf",
     "title": "Story",
   },
@@ -148,7 +148,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.7.1",
     },
   },
   "stories": Object {
@@ -204,8 +204,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-29T01:18:57.682Z,
-    "dateModified": 2020-06-29T01:18:57.682Z,
+    "date": 2020-06-29T01:18:57.000Z,
+    "dateModified": 2020-06-29T01:18:57.000Z,
     "package": "bb3ac5be32f72100f7edcb5a37624298",
     "title": "Story",
   },
@@ -251,7 +251,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.7.1",
     },
   },
   "stories": Object {

@@ -107,7 +107,7 @@ actions can accept an order prop, and can also be superimposed",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 67,
+          "line": 75,
         },
         "start": Object {
           "column": 45,
@@ -162,11 +162,19 @@ export const ActionBar: FC<ActionBarProps> = ({
           >
             {typeof node === 'string' ? (
               href ? (
-                <Link href={href} aria-label={ariaLabel}>
+                <Link
+                  variant={\`\${themeKey}.link\`}
+                  href={href}
+                  aria-label={ariaLabel}
+                >
                   {node}
                 </Link>
               ) : (
-                <Button onClick={onClick} aria-label={ariaLabel}>
+                <Button
+                  variant={\`\${themeKey}.button\`}
+                  onClick={onClick}
+                  aria-label={ariaLabel}
+                >
                   {node}
                 </Button>
               )
@@ -290,8 +298,8 @@ export const ActionBar: FC<ActionBarProps> = ({
         "componentsLookup": Object {
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
-        "date": 2020-06-24T21:41:42.550Z,
-        "dateModified": 2020-06-24T21:41:42.551Z,
+        "date": 2020-06-24T21:41:42.000Z,
+        "dateModified": 2020-06-24T21:41:42.000Z,
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
         "title": "Components/ActionBar",

@@ -223,6 +223,7 @@ _defined in [@component-controls/webpack-configs/src/types.ts](https://github.co
 
 | Name           | Type   | Description |
 | -------------- | ------ | ----------- |
+| `distFolder`   | string |             |
 | `outputFolder` | string |             |
 
 ## RuleOptions
@@ -240,7 +241,7 @@ _defined in [@component-controls/webpack-configs/src/types.ts](https://github.co
 
 ## PresetCallback
 
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L15)_
+_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L18)_
 
 **function** (`options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
 
@@ -253,7 +254,7 @@ _defined in [@component-controls/webpack-configs/src/types.ts](https://github.co
 
 ## PresetType
 
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L16)_
+_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L19)_
 
 [Configuration](#configuration) \| [PresetCallback](#presetcallback)
 

@@ -19,8 +19,8 @@ Object {
     "componentsLookup": Object {
       "Toggle": "88b383f24b1cfbfb44763744ac121b71",
     },
-    "date": 2020-03-07T04:02:17.329Z,
-    "dateModified": 2020-03-07T04:02:32.477Z,
+    "date": 2020-03-07T04:02:17.000Z,
+    "dateModified": 2020-03-07T04:02:32.000Z,
     "package": "874ad578fa3a5df897053afa7602e705",
     "title": "Components/Toggle",
   },
@@ -66,7 +66,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.7.1",
     },
   },
   "stories": Object {

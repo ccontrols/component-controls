@@ -10,6 +10,7 @@
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>DocumentItem</ins>](#insdocumentitemins)
+    -   [<ins>DocumentShortItem</ins>](#insdocumentshortitemins)
     -   [<ins>EditPage</ins>](#inseditpageins)
     -   [<ins>LastEdited</ins>](#inslasteditedins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
@@ -22,6 +23,7 @@
     -   [<ins>Search</ins>](#inssearchins)
     -   [<ins>Stories</ins>](#insstoriesins)
     -   [<ins>Story</ins>](#insstoryins)
+    -   [<ins>StoryRender</ins>](#insstoryrenderins)
     -   [<ins>StoryConfig</ins>](#insstoryconfigins)
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
@@ -65,6 +67,7 @@ _ComponentsBlockContainer [source code](https://github.com/ccontrols/component-c
 | `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`     | _ThemeUIStyleObject_                                           | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid` | _string_                                                       | testing id                                                                                                                                                                                                                                                                                         |
 
 ## <ins>StoryBlockContainer</ins>
 
@@ -81,6 +84,7 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 | `description`         | _string_             | optional markdown description.                                                                                                  |
 | `collapsible`         | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`             | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+| `data-testid`         | _string_             | testing id                                                                                                                      |
 
 ## <ins>ComponentDeps</ins>
 
@@ -101,6 +105,7 @@ _ComponentDeps [source code](https://github.com/ccontrols/component-controls/tre
 | `id`          | _string_                                                       | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                      | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`     | _ThemeUIStyleObject_                                           | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid` | _string_                                                       | testing id                                                                                                                                                                                                                                                                                         |
 
 ## <ins>Dependencies</ins>
 
@@ -134,6 +139,7 @@ _ComponentSource [source code](https://github.com/ccontrols/component-controls/t
 | `id`          | _string_                                                           | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid` | _string_                                                           | testing id                                                                                                                                                                                                                                                                                         |
 | `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                                                                                                                                         |
 | `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                                                                                                                                          |
 | `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                                                                                                                                              |
@@ -149,6 +155,12 @@ _ComponentSource [source code](https://github.com/ccontrols/component-controls/t
 page inner container. will display a like to edit the page and a last updated date.
 
 _Container [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Container/Container.tsx)_
+
+### properties
+
+| Name      | Type        | Description |
+| --------- | ----------- | ----------- |
+| `infoRow` | _ReactNode_ |             |
 
 ## <ins>Description</ins>
 
@@ -178,6 +190,18 @@ _DocumentItem [source code](https://github.com/ccontrols/component-controls/tree
 | `link*`  | _string_           | link to the document       |
 | `doc*`   | _Document_         | document to be displayed   |
 | `config` | _RunConfiguration_ | store configuration object |
+
+## <ins>DocumentShortItem</ins>
+
+_DocumentShortItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/DocumentItem/DocumentShortItem.tsx)_
+
+### properties
+
+| Name      | Type               | Description                |
+| --------- | ------------------ | -------------------------- |
+| `doc`     | _Document_         | document to be displayed   |
+| `config`  | _RunConfiguration_ | store configuration object |
+| `reverse` | _boolean_          |                            |
 
 ## <ins>EditPage</ins>
 
@@ -249,6 +273,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | `description` | _string_             | optional markdown description.                                                                                                  |
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                                      |
 | `openTab`     | _any_                | by default, which tab to have open.                                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                                 |
 | `background`  | _BackgroundType_     | background pattern type                                                                                                         |
@@ -276,6 +301,7 @@ _PropsTable [source code](https://github.com/ccontrols/component-controls/tree/m
 | `id`                    | _string_                                                                                                                        | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
 | `collapsible`           | _boolean_                                                                                                                       | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
 | `sxStyle`               | _ThemeUIStyleObject_                                                                                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid`           | _string_                                                                                                                        | testing id                                                                                                                                                                                                                                                                                         |
 | `header`                | _boolean_                                                                                                                       | show or hide the header element.                                                                                                                                                                                                                                                                   |
 | `sorting`               | _boolean_                                                                                                                       | enable.disable sorting.                                                                                                                                                                                                                                                                            |
 | `filtering`             | _boolean_                                                                                                                       | enable/disable filtering.                                                                                                                                                                                                                                                                          |
@@ -330,6 +356,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `description` | _string_             | optional markdown description.                                                                                                  |
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                                      |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                                    |
 | `openTab`     | _any_                | by default, which tab to have open.                                                                                             |
 | `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                                 |
@@ -354,8 +381,22 @@ _Story [source code](https://github.com/ccontrols/component-controls/tree/master
 | `description` | _string_                 | optional markdown description.                                                                                                  |
 | `collapsible` | _boolean_                | if false, will nothave a collapsible frame.                                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_     | theme-ui styling object for Block Box                                                                                           |
-| `ref`         | _Ref&lt;HTMLDivElement>_ |                                                                                                                                 |
-| `onRender`    | _() => void_             |                                                                                                                                 |
+| `data-testid` | _string_                 | testing id                                                                                                                      |
+| `ref`         | _Ref&lt;HTMLDivElement>_ | ref can be used by blocks embedding Story - ie ally plugin                                                                      |
+| `onRender`    | _() => void_             | used by other blocks ie ally plugin uses it launch a new ally test on re-render                                                 |
+| `wrapper`     | _StoryWrapper_           | wrapper type - can be an iframe or just regular react                                                                           |
+| `iframeStyle` | _CSSProperties_          | if an iframe wrapper - this is additional iframe style                                                                          |
+
+## <ins>StoryRender</ins>
+
+_StoryRender [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Story/StoryRender.tsx)_
+
+### properties
+
+| Name          | Type            | Description |
+| ------------- | --------------- | ----------- |
+| `wrapper`     | _StoryWrapper_  |             |
+| `iframeStyle` | _CSSProperties_ |             |
 
 ## <ins>StoryConfig</ins>
 
@@ -373,6 +414,7 @@ _StoryConfig [source code](https://github.com/ccontrols/component-controls/tree/
 | `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
 | `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
+| `data-testid` | _string_                                                           | testing id                                                                                                                                                                       |
 | `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
 | `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
 | `children`    | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
@@ -403,6 +445,7 @@ _StorySource [source code](https://github.com/ccontrols/component-controls/tree/
 | `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
 | `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
 | `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
+| `data-testid` | _string_                                                           | testing id                                                                                                                                                                       |
 | `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
 | `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
 | `children`    | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |

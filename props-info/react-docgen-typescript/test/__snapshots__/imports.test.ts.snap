@@ -14,6 +14,14 @@ Object {
         "raw": "boolean",
       },
     },
+    "data-testid": Object {
+      "description": "testing id",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "string",
+        "raw": "string",
+      },
+    },
     "description": Object {
       "description": "optional markdown description.",
       "parentName": "BlockContainerProps",
@@ -33,6 +41,13 @@ from the title.",
         "raw": "string",
       },
     },
+    "iframeStyle": Object {
+      "description": "if an iframe wrapper - this is additional iframe style",
+      "type": Object {
+        "name": "CSSProperties",
+        "raw": "CSSProperties",
+      },
+    },
     "name": Object {
       "description": "alternatively you can use the name of a story to load from an external file",
       "parentName": "StoryInputProps",
@@ -42,12 +57,15 @@ from the title.",
       },
     },
     "onRender": Object {
+      "description": "used by other blocks
+ie ally plugin uses it launch a new ally test on re-render",
       "type": Object {
         "name": "() => void",
         "raw": "() => void",
       },
     },
     "ref": Object {
+      "description": "ref can be used by blocks embedding Story - ie ally plugin",
       "type": Object {
         "name": "Ref<HTMLDivElement>",
         "raw": "Ref<HTMLDivElement>",
@@ -67,6 +85,23 @@ from the title.",
       "type": Object {
         "name": "string",
         "raw": "string",
+      },
+    },
+    "wrapper": Object {
+      "description": "wrapper type - can be an iframe or just regular react",
+      "type": Object {
+        "name": "enum",
+        "raw": "StoryWrapper",
+        "value": Array [
+          Object {
+            "name": "string",
+            "value": "wrapper",
+          },
+          Object {
+            "name": "string",
+            "value": "iframe",
+          },
+        ],
       },
     },
   },

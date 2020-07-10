@@ -118,6 +118,7 @@ _BlockContainer [source code](https://github.com/ccontrols/component-controls/tr
 | `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
 
 ## <ins>Collapsible</ins>
 
