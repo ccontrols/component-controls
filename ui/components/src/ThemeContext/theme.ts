@@ -42,7 +42,8 @@ export type ControlsTheme = {
   lastedited: Record<string, ThemeUIStyleObject>;
   pagecontainer: ThemeUIStyleObject;
   propstable: Record<string, ThemeUIStyleObject>;
-  story: ThemeUIStyleObject;
+  story: Record<string, ThemeUIStyleObject>;
+  renderer: Record<string, ThemeUIStyleObject>;
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   navmenu: Record<string, ThemeUIStyleObject>;
@@ -605,8 +606,13 @@ export const theme: ControlsTheme = {
     },
   },
   story: {
-    px: 4,
-    py: 3,
+    container: {
+      px: 4,
+      py: 3,
+    },
+    wrapper: {
+      all: 'unset',
+    },
   },
   colormode: {
     container: {},

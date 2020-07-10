@@ -118,7 +118,6 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
     components: { [key: string]: any } | undefined,
     doc: Document | undefined,
   ): StoryComponents => {
-    console.log(doc);
     const getComponent = (name: string) =>
       doc?.componentsLookup[name] &&
       store?.components[doc.componentsLookup[name]];

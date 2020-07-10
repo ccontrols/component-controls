@@ -34,3 +34,9 @@ export const description = () => (
     <Story id="." />
   </MockContext>
 );
+
+export const iframe = () => (
+  <MockContext storyId="blocks-core-story-plain--controls">
+    <Story id="." wrapper="iframe" />
+  </MockContext>
+);

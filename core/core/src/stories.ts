@@ -144,7 +144,7 @@ export interface Story {
    */
   smartControls?: SmartControls;
   /**
-   * story decorators (or wrappers)
+   * array of wrapper functions (decorators) to be called when rendering each individual story.
    */
   decorators?: StoryRenderFn[];
 }
@@ -191,7 +191,7 @@ export interface Document {
   subcomponents?: Record<string, Document['component']>;
 
   /**
-   * story decorators (or wrappers)
+   * array of wrapper functions (decorators) to be called when rendering each individual story.
    */
   decorators?: StoryRenderFn[];
 

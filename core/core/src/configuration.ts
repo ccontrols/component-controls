@@ -202,6 +202,14 @@ export interface RunOnlyConfiguration {
    * custom toolbar items
    */
   toolbar?: ToolbarConfig;
+
+  /**
+   * custom props to components
+   * ex:
+   * components: { story:{ wrapper: 'iframe' } },
+   *
+   */
+  components?: Record<string, any>;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &

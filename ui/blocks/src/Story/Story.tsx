@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, createElement, forwardRef, useEffect } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, CSSProperties } from 'theme-ui';
 import {
   deepMerge,
   StoryRenderFn,
@@ -10,20 +10,41 @@ import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
+import { useCustomProps } from '../context';
+import { StoryWrapper, StoryRender } from './StoryRender';
+
+const NAME = 'story';
 
 export type StoryProps = StoryBlockContainerProps & {
+  /**
+   * ref can be used by blocks embedding Story - ie ally plugin
+   */
   ref?: React.Ref<HTMLDivElement>;
+  /**
+   * used by other blocks
+   * ie ally plugin uses it launch a new ally test on re-render
+   */
   onRender?: () => void;
+  /**
+   * wrapper type - can be an iframe or just regular react
+   */
+  wrapper?: StoryWrapper;
+  /**
+   * if an iframe wrapper - this is additional iframe style
+   */
+  iframeStyle?: CSSProperties;
 };
 
 /**
  * block component to render story function with decorators
  */
 export const Story: FC<StoryProps> = forwardRef(
-  ({ onRender, ...props }: StoryProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: StoryProps, ref: React.Ref<HTMLDivElement>) => {
+    const custom = useCustomProps<StoryProps>(NAME, props);
+    const { wrapper, onRender, iframeStyle, ...rest } = custom;
     useEffect(() => onRender && onRender());
     return (
-      <StoryBlockContainer {...props}>
+      <StoryBlockContainer {...rest}>
         {(context, rest) => {
           const { story, doc, options = {} } = context;
           if (story && story.renderFn) {
@@ -32,28 +53,35 @@ export const Story: FC<StoryProps> = forwardRef(
               const { decorators: globalDecorators = [] } = options;
               const { decorators: storyDecorators = [] } = story;
               const decorators = deepMerge(globalDecorators, storyDecorators);
-              const renderFn = decorators.reduce(
+              const renderFn = decorators.reverse().reduce(
                 (acc: StoryRenderFn, item: StoryRenderFn) => () =>
-                  item(acc, { context }),
+                  item(acc, { ...context, renderFn: acc }),
                 //@ts-ignore
-                () => story.renderFn(values, { context }),
+                () => story.renderFn(values, context),
               );
               return (
-                <Box id={story.id} variant="story" {...rest}>
-                  <div
-                    className="story-render-container"
-                    style={{ all: 'unset' }}
-                    ref={ref}
-                  >
-                    {createElement(renderFn)}
-                  </div>
+                <Box
+                  data-testid={NAME}
+                  id={story.id}
+                  variant={`${NAME}.container`}
+                  {...rest}
+                >
+                  <StoryRender iframeStyle={iframeStyle} wrapper={wrapper}>
+                    <Box
+                      className="story-render-container"
+                      variant={`${NAME}.wrapper`}
+                      ref={ref}
+                    >
+                      {createElement(renderFn)}
+                    </Box>
+                  </StoryRender>
                 </Box>
               );
             } catch (e) {
               console.error(e);
             }
           }
-          console.error('Story function not found', props, doc);
+          console.error('Story function not found', rest, doc);
           return null;
         }}
       </StoryBlockContainer>

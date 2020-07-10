@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { deepMerge } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
@@ -81,7 +82,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
               storyId,
               docId: propsDocId,
               storeProvider: store,
-              options,
+              options: deepMerge(options, store.config),
             }}
           >
             <BlockDataContextProvider
@@ -104,4 +105,14 @@ export const useBlockContext: () => BlockContextProps = () =>
 export const useStore = () => {
   const { storeProvider } = useContext(StoreContext);
   return storeProvider;
+};
+
+export const useCustomProps = <T extends unknown>(
+  name: string,
+  props: T,
+): T => {
+  const { storeProvider } = useContext(StoreContext);
+  const { config } = storeProvider;
+  const userProps = config?.components?.[name];
+  return userProps ? deepMerge(props, userProps) : props;
 };
