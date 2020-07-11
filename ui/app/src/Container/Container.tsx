@@ -17,7 +17,6 @@ export const Container: FC = ({ children }) => {
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
   const { author } = doc || {};
   const config = storeProvider.config;
-  console.log(doc, config);
   return (
     <Box variant="container.container">
       <BlocksContainer
