@@ -60,7 +60,7 @@ export enum ControlTypes {
 
   /**
    * color: {
-   *   type: 'color',
+   *   type: ControlTypes.COLOR,
    *   value: '#000000',
    * },
    */
@@ -124,7 +124,7 @@ export interface ComponentControlData {
   name: string;
 
   /**
-   * options to be passe to the random data generators
+   * options to be passed to the random data generators
    * example {
    *  min: 10, max: 20
    * }
@@ -153,16 +153,9 @@ export interface ComponentControlBase<T> {
   value?: T;
 
   /**
-   * default value is usually set at run-time, from the value
+   * default value is automatically set at run-time, from the value
    */
   defaultValue?: T;
-
-  /**
-   * reset value - this is automatically saved as the initial 'value'
-   * used when user wants to click rest and go back to the initial values
-   */
-  resetValue?: T;
-
   /**
    * visually display the control property as required
    */
@@ -197,7 +190,7 @@ export interface ComponentControlBase<T> {
   /**
    * helper information to generate random data
    * will be used in conjunction with faker.js
-   * datacan be set to false, if the control should not be randomized
+   * data can be set to false, if the control should not be randomized
    */
   data?: ComponentControlData | null | false;
 }

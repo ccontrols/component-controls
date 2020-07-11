@@ -23,7 +23,7 @@ import { Button } from '../../../stories/src/components/Button';
 <Playground>
   <Story name="smart story">
     {(props) => (
-      <Button label="default" {...props}/>
+      <Button{...props}>default</Button>
     )}  
   </Story>
 </Playground>
@@ -38,7 +38,7 @@ import { Button } from '../../../stories/src/components/Button';
     }}
     >
     {({ text }) => (
-      <Button label={text}/>
+      <Button>{text}</Button>
     )}  
   </Story>
 </Playground>
@@ -47,7 +47,7 @@ import { Button } from '../../../stories/src/components/Button';
 
 <Playground>
   <Story name="no controls">
-      <Button label="Hello"/>
-      <Button label="Second button"/>
+      <Button>Hello</Button>
+      <Button>Second button</Button>
   </Story>
 </Playground>

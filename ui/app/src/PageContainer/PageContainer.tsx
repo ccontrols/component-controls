@@ -4,15 +4,15 @@ import {
   PageContainer as BlockPageContainer,
   PageContainerProps as BlockPageContainerProps,
 } from '@component-controls/blocks';
-import { PageType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 
 import { Container as DefaultContainer } from '../Container';
 
 export type PageContainerProps = {
   /**
-   * page type
+   * document type
    */
-  type: PageType;
+  type: DocType;
 } & Omit<BlockPageContainerProps, 'wrapper'>;
 
 /**

@@ -43,11 +43,19 @@ export const ActionBar: FC<ActionBarProps> = ({
           >
             {typeof node === 'string' ? (
               href ? (
-                <Link href={href} aria-label={ariaLabel}>
+                <Link
+                  variant={`${themeKey}.link`}
+                  href={href}
+                  aria-label={ariaLabel}
+                >
                   {node}
                 </Link>
               ) : (
-                <Button onClick={onClick} aria-label={ariaLabel}>
+                <Button
+                  variant={`${themeKey}.button`}
+                  onClick={onClick}
+                  aria-label={ariaLabel}
+                >
                   {node}
                 </Button>
               )

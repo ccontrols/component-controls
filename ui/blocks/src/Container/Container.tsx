@@ -1,19 +1,39 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui';
-import { FC } from 'react';
+import { jsx, Box, Text } from 'theme-ui';
+import { FC, ReactNode } from 'react';
+import { dateToLocalString } from '@component-controls/core';
+import { Value } from '@component-controls/components';
+import { Title } from '../Title';
 import { EditPage } from '../EditPage';
-import { LastEdited } from '../LastEdited';
 
+import { useStoryContext } from '../context';
+
+export interface ContainerProps {
+  author?: ReactNode;
+}
 /**
  * page inner container. will display a like to edit the page and a last updated date.
  */
-export const Container: FC = ({ children }) => {
+export const Container: FC<ContainerProps> = ({ children, author }) => {
+  const { doc } = useStoryContext({ id: '.' });
   return (
     <Box variant="blockpagecontainer.container">
-      <Box variant="blockpagecontainer.editrow">
+      <Box variant="blockpagecontainer.inforow">
         <EditPage />
-        <LastEdited />
+        <Box variant="blockpagecontainer.createdbox.container">
+          <Value label="created:" value={dateToLocalString(doc?.date)} />
+          <Text variant="blockpagecontainer.createdbox.separator">,</Text>
+          <Value
+            label="updated:"
+            value={dateToLocalString(doc?.dateModified)}
+          />
+          {author}
+        </Box>
       </Box>
+      <Box variant="blockpagecontainer.titlerow">
+        <Title sx={{ paddingBottom: 0 }} />
+      </Box>
+
       {children}
     </Box>
   );

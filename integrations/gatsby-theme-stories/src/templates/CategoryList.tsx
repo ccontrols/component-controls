@@ -1,21 +1,21 @@
 import React, { FC } from 'react';
 
-import { PageType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { CategoryList } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface CategoryListProps {
   pathContext: {
-    type: PageType;
-    doc: string;
+    type: DocType;
+    docId: string;
   };
 }
 
 const CategroryListTemplate: FC<CategoryListProps> = ({
-  pathContext: { type, doc },
+  pathContext: { type, docId },
 }) => {
   return (
-    <Layout type={type} docId={doc}>
+    <Layout type={type} docId={docId}>
       <CategoryList type={type} />
     </Layout>
   );

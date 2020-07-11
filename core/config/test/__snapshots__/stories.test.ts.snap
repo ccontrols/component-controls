@@ -21,6 +21,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/ExternalLink/ExternalLink.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Link/Link.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/LinkHeading/LinkHeading.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Navmenu/Navmenu.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Pagination/Pagination.stories.tsx",
@@ -36,6 +37,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/Tabs/Tabs.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Tag/Tag.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Title/Title.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/TitledImage/TitledImage.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Toggle/Toggle.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Zoom/Zoom.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/ComponentDeps/ComponentDeps.stories.tsx",
@@ -63,7 +65,7 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;
 
@@ -88,6 +90,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/ExternalLink/ExternalLink.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Link/Link.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/LinkHeading/LinkHeading.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Markdown/Markdown.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Navmenu/Navmenu.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Pagination/Pagination.stories.tsx",
@@ -103,6 +106,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/Tabs/Tabs.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Tag/Tag.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Title/Title.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/TitledImage/TitledImage.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Toggle/Toggle.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Zoom/Zoom.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/ComponentDeps/ComponentDeps.stories.tsx",
@@ -130,6 +134,6 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;

@@ -1,27 +1,40 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { PageType } from '@component-controls/core';
+import { DocType, Document } from '@component-controls/core';
 import { PageContainer } from '../PageContainer';
 import { Sidebar } from '../Sidebar';
+import { SideContext } from '../SideContext';
+import { docToVariant } from './docToVariant';
 
 export interface SidebarsMDXPageProps {
   /**
-   * page type
+   * document type
    */
-  type: PageType;
+  type: DocType;
+
+  /**
+   * document object
+   */
+  doc: Document;
 }
 
 /**
  * document page - rendering with sidebars and tabs for multiple document views
  */
-export const SidebarsMDXPage: FC<SidebarsMDXPageProps> = ({ type }) => {
+export const SidebarsMDXPage: FC<SidebarsMDXPageProps> = ({ type, doc }) => {
+  const pageRef = useRef<HTMLDivElement>(null);
   return (
-    <Box variant="appsidebarpage.mdxcontainer">
-      <Sidebar type={type} />
+    <Box variant={docToVariant(doc)}>
+      {doc.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
-        <PageContainer type={type} variant={`pagecontainer.${type}`} />
+        <PageContainer
+          type={type}
+          variant={`pagecontainer.${type}`}
+          ref={pageRef}
+        />
       </Box>
+      {doc.contextSidebar && <SideContext pageRef={pageRef} />}
     </Box>
   );
 };

@@ -30,6 +30,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   children,
   useStoryDescription,
   description: userDescription,
+  'data-testid': dataTestid,
   ...rest
 }) => {
   const context = useStoryContext({
@@ -46,6 +47,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
     userDescription || (useStoryDescription ? story?.description : undefined);
   return block ? (
     <BlockContainer
+      data-testid={dataTestid}
       title={title}
       collapsible={collapsible}
       id={userTitle === CURRENT_STORY && story ? story.id : undefined}

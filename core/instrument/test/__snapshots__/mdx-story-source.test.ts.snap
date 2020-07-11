@@ -5,8 +5,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-05-18T16:31:44.953Z,
-    "dateModified": 2020-05-19T04:01:28.289Z,
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:01:28.000Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -64,14 +64,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = () => <div>test</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -81,8 +85,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-05-18T16:31:44.949Z,
-    "dateModified": 2020-05-19T04:06:48.584Z,
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:06:48.000Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -185,14 +189,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = ({ text }) => <div>{text}</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -202,8 +210,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-05-18T16:31:44.950Z,
-    "dateModified": 2020-05-19T04:35:36.801Z,
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:35:36.000Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -236,46 +244,19 @@ Object {
               },
               "shorthand": undefined,
             },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 26,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 21,
-                  "line": 0,
-                },
-              },
-              "shorthand": undefined,
-            },
           ],
-          "value": "props",
-        },
-        Object {
-          "loc": Object {
-            "end": Object {
-              "column": 5,
-              "line": 0,
-            },
-            "start": Object {
-              "column": 0,
-              "line": 0,
-            },
-          },
-          "name": "props",
           "value": "props",
         },
       ],
       "id": "mdxStory",
       "loc": Object {
         "end": Object {
-          "column": 58,
-          "line": 22,
+          "column": 59,
+          "line": 3,
         },
         "start": Object {
-          "column": 31,
-          "line": 22,
+          "column": 27,
+          "line": 3,
         },
       },
       "name": "mdx-story",
@@ -318,14 +299,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
-export const mdxStory = props => customStory(props)
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+export const mdxStory = props => <div>{props.text}</div>
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -335,8 +320,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-05-18T16:31:44.955Z,
-    "dateModified": 2020-05-19T01:05:17.730Z,
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T01:05:17.000Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -392,18 +377,22 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = () => (<>
 
 <div>test 1</div>
 
 </>)
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;
@@ -413,8 +402,8 @@ Object {
   "components": Object {},
   "doc": Object {
     "componentsLookup": Object {},
-    "date": 2020-05-18T16:31:44.954Z,
-    "dateModified": 2020-05-19T04:04:37.100Z,
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:04:37.000Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -501,14 +490,18 @@ MDXContent.isMDXComponent = true;
         const dmsPageExport = MDXContent;
         dmsPageExport.MDXPage = MDXContent;
 
-        export default Object.assign(dmsPageExport, {
-  \\"title\\": \\"MDX\\"
-});
+        export default Object.assign(dmsPageExport, 
+        {
+        title: \\"MDX\\"
+        }
+        );
 
 export const mdxStory = props => <div>{props.text}</div>
-mdxStory.story = {
-  \\"name\\": \\"mdx-story\\"
-}
+mdxStory.story = 
+        {
+        name: \\"mdx-story\\"
+        }
+        
              ",
 }
 `;

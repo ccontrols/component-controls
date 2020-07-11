@@ -1,10 +1,9 @@
 ---
 title: Getting started/Storybook
 type: tutorial
+route: /tutorial/getting-started/storybook
 order: 2
 ---
-
-# Getting started with Storybook
 
 ## Install
 
@@ -16,9 +15,9 @@ yarn add @component-controls/storybook --dev
 
 ### Default options
 
-the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+The default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
 
-in `main.js`:
+In `main.js`:
 
 ```js
 module.exports = {
@@ -26,7 +25,7 @@ module.exports = {
 }
 ```
 
-### Use only `react-docgen` (even for typescript)
+### Using only `react-docgen` (even for typescript)
 
 Currently this is not recommended as the typescript support in `react-docgen` is a bit lagging.
 
@@ -43,7 +42,7 @@ module.exports = {
 }
 ```
 
-### Use built-in instrument for everything (not use storybook `addon-docs` at all)
+### Use built-in instrument for everything (not using storybook `addon-docs` at all)
 
 The following options will bypass the loaders installed by `addon-docs` and will rely only on the instrumenting loaders from `component-controls`
 

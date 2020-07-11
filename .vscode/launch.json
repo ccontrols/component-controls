@@ -98,7 +98,7 @@
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/instrument",
       "args": [
-        "mdx-story-source",
+        "mdx-component",
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",

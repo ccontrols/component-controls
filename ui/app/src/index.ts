@@ -9,7 +9,7 @@ export * from './Footer';
 export * from './Header';
 export * from './Links';
 export * from './PageContainer';
-export * from './PageList';
+export * from './DocumentHomePage';
 export * from './SEO';
 export * from './Sidebar';
 export * from './SidebarsPage';

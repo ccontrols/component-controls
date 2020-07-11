@@ -4,5 +4,4 @@ dist
 .cache
 .rpt2_cache
 *.log
-docs
 public

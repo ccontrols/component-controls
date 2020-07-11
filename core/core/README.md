@@ -17,10 +17,8 @@
     -   [StoryStories](#storystories)
     -   [Pages](#pages)
     -   [StoryArguments](#storyarguments)
-    -   [defPageType](#defpagetype)
+    -   [defDocType](#defdoctype)
     -   [dateToLocalString](#datetolocalstring)
-    -   [getDocPath](#getdocpath)
-    -   [getStoryPath](#getstorypath)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -59,8 +57,9 @@
     -   [PageConfiguration](#pageconfiguration)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [TabConfiguration](#tabconfiguration)
+    -   [ToolbarConfig](#toolbarconfig)
+    -   [DocType](#doctype)
     -   [PageTabs](#pagetabs)
-    -   [PageType](#pagetype)
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
     -   [RunConfiguration](#runconfiguration)
@@ -69,18 +68,18 @@
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
     -   [StoryRenderFn](#storyrenderfn-1)
-    -   [PageType](#pagetype-1)
+    -   [DocType](#doctype-1)
     -   [RunConfiguration](#runconfiguration-1)
     -   [StoryArguments](#storyarguments-1)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
     -   [WebpackConfig](#webpackconfig-1)
+    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
     -   [PageTabs](#pagetabs-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
-    -   [PageType](#pagetype-2)
+    -   [DocType](#doctype-2)
 
 # Overview
 
@@ -126,7 +125,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
-For "es modules" documetation files, the default export is used.
+For ESM (ES Modules) documentation files, the default export is used.
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L165)_
 
@@ -140,29 +139,31 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `author`            | string                                  | document author                                                                                                                                                                              |
 | `component`         | string \| object                        | id for component associated with the stories file                                                                                                                                            |
 | `componentsLookup*` | \[name: string]: string                 | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `contextSidebar`    | boolean                                 | whether to add conext sidebar to navigate the sections of the page the default value is from the doc type configuration                                                                      |
 | `controls`          | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file                                                                        |
 | `date`              | [Date](#date)                           |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
 | `dateModified`      | [Date](#date)                           |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                                                                                                                               |
+| `decorators`        | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story.                                                                                                   |
 | `description`       | string                                  |  documentation file description                                                                                                                                                              |
 | `fileName`          | string                                  | file name of the file of stories                                                                                                                                                             |
-| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the page type configuration                                              |
+| `fullPage`          | boolean                                 | if true, will display the documentation page full size (pagecontainer.full theme variant) the default value is from the doc type configuration                                               |
+| `isMDXComponent`    | boolean                                 | custom prop set by mdxjs                                                                                                                                                                     |
+| `navSidebar`        | boolean                                 | whether to add navigation sidebar to the page the default value is from the doc type configuration                                                                                           |
 | `order`             | number                                  | document order, used to sort documents within the same parent                                                                                                                                |
 | `package`           | string                                  | lookup into the global store of PackageInfo package.json                                                                                                                                     |
 | `route`             | string                                  | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `sidebars`          | boolean                                 | whether to add navigation sidebars to the page the default value is from the page type configuration                                                                                         |
 | `source`            | string                                  | source code of the entire file of stories                                                                                                                                                    |
 | `stories`           | string\[]                               | list of story ids contained in the document.                                                                                                                                                 |
-| `subcomponents`     | string\[] \| object\[]                  | multiple components option                                                                                                                                                                   |
+| `subcomponents`     | Record&lt;string, >                     | multiple components option                                                                                                                                                                   |
 | `tags`              | string\[]                               |  comma-separated list of document tags, used for search                                                                                                                                      |
 | `title*`            | string                                  | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [PageType](#pagetype)                   | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `type`              | [DocType](#doctype)                     | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 
 ## Documents
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L300)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L311)_
 
 `title`\*: string: [Document](#document)
 
@@ -197,7 +198,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## Stories
 
-map of stories. The id is compatible with CSF story ids
+map of stories. The id is compatible with storybook's story ids
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L155)_
 
@@ -207,7 +208,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L323)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L334)_
 
 
 
@@ -231,22 +232,22 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ### properties
 
-| Name            | Type                                    | Description                                                                                 |
-| --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `arguments`     | [StoryArguments](#storyarguments)       | arguments pass to a CSF story eg \`export const story = props => &lt;Story {...props} />;\` |
-| `component`     | string \| object                        | id for component associated with the story                                                  |
-| `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                             |
-| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | story decorators (or wrappers)                                                              |
-| `description`   | string                                  | story extended description. can use markdown.                                               |
-| `doc`           | string                                  | title of the file/group of stories                                                          |
-| `id`            | string                                  | csf id of the story                                                                         |
-| `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                         |
-| `name*`         | string                                  | name of the Story.                                                                          |
-| `renderFn`      | [StoryRenderFn](#storyrenderfn)         | render function for the story                                                               |
-| `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                    |
-| `source`        | string                                  | the source code of the story, extracted byt the AST instrumenting loaders                   |
-| `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                  |
-| `subtitle`      | string                                  | optional story subtitle property                                                            |
+| Name            | Type                                    | Description                                                                                           |
+| --------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `arguments`     | [StoryArguments](#storyarguments)       | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
+| `component`     | string \| object                        | id for component associated with the story                                                            |
+| `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                                       |
+| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story.            |
+| `description`   | string                                  | story extended description. can use markdown.                                                         |
+| `doc`           | string                                  | title of the file/group of stories                                                                    |
+| `id`            | string                                  | id of the story                                                                                       |
+| `loc`           | [CodeLocation](#codelocation)           | location in the source file of the story definition                                                   |
+| `name*`         | string                                  | name of the Story.                                                                                    |
+| `renderFn`      | [StoryRenderFn](#storyrenderfn)         | render function for the story                                                                         |
+| `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                              |
+| `source`        | string                                  | the source code of the story, extracted byt the AST instrumenting loaders                             |
+| `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                            |
+| `subtitle`      | string                                  | optional story subtitle property                                                                      |
 
 ## StoryArgument
 
@@ -269,7 +270,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L293)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L304)_
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
@@ -277,7 +278,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of repositories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L316)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L327)_
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
@@ -285,13 +286,13 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 list of stories
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L309)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L320)_
 
 `id`\*: string: [Story](#story)
 
 ## Pages
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L304)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L315)_
 
 [Document](#document)\[]
 
@@ -304,7 +305,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 [StoryArgument](#storyargument)\[]
 
-## defPageType
+## defDocType
 
 _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L159)_
 
@@ -312,7 +313,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L283)_
+_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L294)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -322,39 +323,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | --------- | ------------- | ----------- |
 | `date`    | [Date](#date) |             |
 | `returns` | string        |             |
-
-## getDocPath
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L348)_
-
-**function** getDocPath(`pageType`\*: [PageType](#pagetype), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `name`\*: string, `activeTab`: string): string;
-
-### parameters
-
-| Name          | Type                                | Description |
-| ------------- | ----------------------------------- | ----------- |
-| `pageType*`   | [PageType](#pagetype)               |             |
-| `doc`         | [Document](#document)               |             |
-| `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
-| `name*`       | string                              |             |
-| `activeTab`   | string                              |             |
-| `returns`     | string                              |             |
-
-## getStoryPath
-
-_defined in [@component-controls/core/src/stories.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/stories.ts#L365)_
-
-**function** getStoryPath(`story`: [Story](#story), `doc`: [Document](#document), `pagesConfig`: [PagesOnlyRoutes](#pagesonlyroutes), `activeTab`: string): string;
-
-### parameters
-
-| Name          | Type                                | Description |
-| ------------- | ----------------------------------- | ----------- |
-| `story`       | [Story](#story)                     |             |
-| `doc`         | [Document](#document)               |             |
-| `pagesConfig` | [PagesOnlyRoutes](#pagesonlyroutes) |             |
-| `activeTab`   | string                              |             |
-| `returns`     | string                              |             |
 
 ## ControlTypes
 
@@ -372,7 +340,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `ARRAY*`   | **function** ARRAY   | arrayItems: {   type: ControlTypes.ARRAY,   label: 'Items',   rowType: {     name: { type: ControlTypes.TEXT },   },   value: \[{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }], },                                                                                                                                                                                                                                                                                                                                                                          |
 | `BOOLEAN*` | **function** BOOLEAN | nice: {  type: ControlTypes.BOOLEAN,  label: 'Nice',  value: true, },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `BUTTON*`  | **function** BUTTON  | button: {  type: ControlTypes.BUTTON,   onClick: () => {    ... code to modify some variables  } },                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `COLOR*`   | **function** COLOR   | color: {   type: 'color',   value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `COLOR*`   | **function** COLOR   | color: {   type: ControlTypes.COLOR,   value: '#000000', },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `DATE*`    | **function** DATE    |  birthday: {   type: ControlTypes.DATE,   label: 'Birthday',   value: new Date(),  },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `FILES*`   | **function** FILES   | images: {   type: ControlTypes.FILES,   label: 'Happy Picture',   accept: 'image/\*',   value: \[     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',   ], }, |
 | `NUMBER*`  | **function** NUMBER  |  age: {   type: ControlTypes.NUMBER,   label: 'Age',   value: 78,   range: true,   min: 0,   max: 90,   step: 5, },                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -382,27 +350,26 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlArray
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L263)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L256)_
 
 ** extends ComponentControlBase&lt;\[key: string]: any\[]>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | \[key: string]: any\[]                                         | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | \[key: string]: any\[]                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `rowType*`     | [ComponentControls](#componentcontrols)                        | type of the items in each row of the array                                                                                                            |
-| `type*`        | [ARRAY](#array)                                                |                                                                                                                                                       |
-| `value`        | \[key: string]: any\[]                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | \[key: string]: any\[]                                         | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `rowType*`     | [ComponentControls](#componentcontrols)                        | type of the items in each row of the array                                                                                                             |
+| `type*`        | [ARRAY](#array)                                                |                                                                                                                                                        |
+| `value`        | \[key: string]: any\[]                                         | a default value for the property                                                                                                                       |
 
 ## ComponentControlBase
 
@@ -415,86 +382,82 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` |                                                                | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   |                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [ControlTypes](#controltypes)                                  |                                                                                                                                                       |
-| `value`        |                                                                | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` |                                                                | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `type*`        | [ControlTypes](#controltypes)                                  |                                                                                                                                                        |
+| `value`        |                                                                | a default value for the property                                                                                                                       |
 
 ## ComponentControlBoolean
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L230)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L223)_
 
 ** extends ComponentControlBase&lt;boolean>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | boolean                                                        | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | boolean                                                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [BOOLEAN](#boolean)                                            |                                                                                                                                                       |
-| `value`        | boolean                                                        | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | boolean                                                        | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `type*`        | [BOOLEAN](#boolean)                                            |                                                                                                                                                        |
+| `value`        | boolean                                                        | a default value for the property                                                                                                                       |
 
 ## ComponentControlButton
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L285)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L278)_
 
 ** extends ComponentControlBase&lt;>**
 
 ### properties
 
-| Name           | Type                                                                              | Description                                                                                                                                           |
-| -------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                    | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` |                                                                                   | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                                            | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                                            | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                                           | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                                            | label to display next to the field editor by default uses the property name itself                                                                    |
-| `onClick`      | **function** (`prop`\*: [ComponentControlButton](#componentcontrolbutton)): void; | for button type fields, an onClick handler                                                                                                            |
-| `order`        | number                                                                            | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                                           | visually display the control property as required                                                                                                     |
-| `resetValue`   |                                                                                   | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [BUTTON](#button)                                                                 |                                                                                                                                                       |
-| `value`        |                                                                                   | a default value for the property                                                                                                                      |
+| Name           | Type                                                                              | Description                                                                                                                                            |
+| -------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                    | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` |                                                                                   | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                                            | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                                            | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                                           | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                                            | label to display next to the field editor by default uses the property name itself                                                                     |
+| `onClick`      | **function** (`prop`\*: [ComponentControlButton](#componentcontrolbutton)): void; | for button type fields, an onClick handler                                                                                                             |
+| `order`        | number                                                                            | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                                           | visually display the control property as required                                                                                                      |
+| `type*`        | [BUTTON](#button)                                                                 |                                                                                                                                                        |
+| `value`        |                                                                                   | a default value for the property                                                                                                                       |
 
 ## ComponentControlColor
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L234)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L227)_
 
 ** extends ComponentControlBase&lt;string>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | string                                                         | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [COLOR](#color)                                                |                                                                                                                                                       |
-| `value`        | string                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | string                                                         | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `type*`        | [COLOR](#color)                                                |                                                                                                                                                        |
+| `value`        | string                                                         | a default value for the property                                                                                                                       |
 
 ## ComponentControlData
 
@@ -507,103 +470,99 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | Name      | Type                | Description                                                                                                                    |
 | --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `name*`   | string              | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
-| `options` | \[key: string]: any | options to be passe to the random data generators example {  min: 10, max: 20 }                                                |
+| `options` | \[key: string]: any | options to be passed to the random data generators example {  min: 10, max: 20 }                                               |
 
 ## ComponentControlDate
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L238)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L231)_
 
 ** extends ComponentControlBase&lt;[Date](#date)>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `datePicker`   | boolean                                                        | whether to display a date picker (calendar). default: true                                                                                            |
-| `defaultValue` | [Date](#date)                                                  | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | [Date](#date)                                                  | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
-| `type*`        | [DATE](#date)                                                  |                                                                                                                                                       |
-| `value`        | [Date](#date)                                                  | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `datePicker`   | boolean                                                        | whether to display a date picker (calendar). default: true                                                                                             |
+| `defaultValue` | [Date](#date)                                                  | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                             |
+| `type*`        | [DATE](#date)                                                  |                                                                                                                                                        |
+| `value`        | [Date](#date)                                                  | a default value for the property                                                                                                                       |
 
 ## ComponentControlFiles
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L254)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L247)_
 
 ** extends ComponentControlBase&lt;string\[]>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `accept`       | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                   |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | string\[]                                                      | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | string\[]                                                      | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [FILES](#files)                                                |                                                                                                                                                       |
-| `value`        | string\[]                                                      | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `accept`       | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                    |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | string\[]                                                      | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `type*`        | [FILES](#files)                                                |                                                                                                                                                        |
+| `value`        | string\[]                                                      | a default value for the property                                                                                                                       |
 
 ## ComponentControlNumber
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L335)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L328)_
 
 ** extends ComponentControlBase&lt;number>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | number                                                         | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `max`          | number                                                         | maximum allowed value for numeric property                                                                                                            |
-| `min`          | number                                                         | minimum allowed value for numeric property                                                                                                            |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `range`        | boolean                                                        | if true, will display a range type slider editor                                                                                                      |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | number                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
-| `type*`        | [NUMBER](#number)                                              |                                                                                                                                                       |
-| `value`        | number                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | number                                                         | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `max`          | number                                                         | maximum allowed value for numeric property                                                                                                             |
+| `min`          | number                                                         | minimum allowed value for numeric property                                                                                                             |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `range`        | boolean                                                        | if true, will display a range type slider editor                                                                                                       |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                             |
+| `type*`        | [NUMBER](#number)                                              |                                                                                                                                                        |
+| `value`        | number                                                         | a default value for the property                                                                                                                       |
 
 ## ComponentControlObject
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L276)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L269)_
 
 ** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | [ComponentControls](#componentcontrols)                        | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | [ComponentControls](#componentcontrols)                        | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [OBJECT](#object)                                              |                                                                                                                                                       |
-| `value`        | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | [ComponentControls](#componentcontrols)                        | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `type*`        | [OBJECT](#object)                                              |                                                                                                                                                        |
+| `value`        | [ComponentControls](#componentcontrols)                        | a default value for the property                                                                                                                       |
 
 ## ComponentControlOptions
 
@@ -612,52 +571,50 @@ list of options can be
 2\. array of strings
 3\. array of key-value pair objects
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L316)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L309)_
 
 ** extends ComponentControlBase&lt;OptionsValueType&lt;>>**
 
 ### properties
 
-| Name           | Type                                                                                 | Description                                                                                                                                           |
-| -------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                       | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | OptionsValueType&lt;>                                                                | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                                               | full text property description. can use markdown.                                                                                                     |
-| `display`      | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                              |
-| `groupId`      | string                                                                               | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                                              | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                                               | label to display next to the field editor by default uses the property name itself                                                                    |
-| `options*`     | OptionsListType&lt;>                                                                 |                                                                                                                                                       |
-| `order`        | number                                                                               | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `required`     | boolean                                                                              | visually display the control property as required                                                                                                     |
-| `resetValue`   | OptionsValueType&lt;>                                                                | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `type*`        | [OPTIONS](#options)                                                                  |                                                                                                                                                       |
-| `value`        | OptionsValueType&lt;>                                                                | a default value for the property                                                                                                                      |
+| Name           | Type                                                                                 | Description                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false                       | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | OptionsValueType&lt;>                                                                | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                                               | full text property description. can use markdown.                                                                                                      |
+| `display`      | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                               |
+| `groupId`      | string                                                                               | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                                              | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                                               | label to display next to the field editor by default uses the property name itself                                                                     |
+| `options*`     | OptionsListType&lt;>                                                                 |                                                                                                                                                        |
+| `order`        | number                                                                               | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `required`     | boolean                                                                              | visually display the control property as required                                                                                                      |
+| `type*`        | [OPTIONS](#options)                                                                  |                                                                                                                                                        |
+| `value`        | OptionsValueType&lt;>                                                                | a default value for the property                                                                                                                       |
 
 ## ComponentControlText
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L205)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L198)_
 
 ** extends ComponentControlBase&lt;string>**
 
 ### properties
 
-| Name           | Type                                                           | Description                                                                                                                                           |
-| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js datacan be set to false, if the control should not be randomized |
-| `defaultValue` | string                                                         | default value is usually set at run-time, from the value                                                                                              |
-| `description`  | string                                                         | full text property description. can use markdown.                                                                                                     |
-| `escapeValue`  | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                |
-| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                              |
-| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                    |
-| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                    |
-| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)              |
-| `placeholder`  | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                              |
-| `required`     | boolean                                                        | visually display the control property as required                                                                                                     |
-| `resetValue`   | string                                                         | reset value - this is automatically saved as the initial 'value' used when user wants to click rest and go back to the initial values                 |
-| `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
-| `type*`        | [TEXT](#text)                                                  |                                                                                                                                                       |
-| `value`        | string                                                         | a default value for the property                                                                                                                      |
+| Name           | Type                                                           | Description                                                                                                                                            |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `data`         | [ComponentControlData](#componentcontroldata) \| null \| false | helper information to generate random data will be used in conjunction with faker.js data can be set to false, if the control should not be randomized |
+| `defaultValue` | string                                                         | default value is automatically set at run-time, from the value                                                                                         |
+| `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
+| `escapeValue`  | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                 |
+| `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
+| `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
+| `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
+| `placeholder`  | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                               |
+| `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
+| `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                             |
+| `type*`        | [TEXT](#text)                                                  |                                                                                                                                                        |
+| `value`        | string                                                         | a default value for the property                                                                                                                       |
 
 ## ComponentControls
 
@@ -665,7 +622,7 @@ ComponentControls are defined in key value pairs
 the name of the property is the key
 and the value is the ComponentControl
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L388)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L381)_
 
 `name`\*: string: [ComponentControl](#componentcontrol)
 
@@ -677,7 +634,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L371)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L364)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -685,13 +642,13 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 value/label pairs or array of OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L305)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L298)_
 
 \[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L295)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L288)_
 
  | number | string\[] \| number\[] \| **label**: string**value**: any
 
@@ -944,7 +901,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L103)_
 
 
 
@@ -952,11 +909,11 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 | Name           | Type                                | Description                                                                                                                                    |
 | -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [PageType](#pagetype)\[]            | page types that are considred as categories fields as well                                                                                     |
+| `categories`   | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
 | `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack fonfigurations setup. One or the other will be used                                                                             |
+| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
 ## PageConfiguration
 
@@ -966,42 +923,46 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ### properties
 
-| Name        | Type                                    | Description                                    |
-| ----------- | --------------------------------------- | ---------------------------------------------- |
-| `basePath`  | string                                  | base url path for the page                     |
-| `container` | [ComponentType](#componenttype) \| null | page container react component                 |
-| `fullPage`  | boolean                                 | whether to take a fullpage theme option        |
-| `label`     | string                                  | label - used for menu labels                   |
-| `sidebars`  | boolean                                 | whether to add navigation sidebars to the page |
-| `tabs`      | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages        |
-| `topMenu`   | boolean                                 | whether to add to the top navigation menu      |
+| Name             | Type                                    | Description                                                                                                                   |
+| ---------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`       | string                                  | base url path for the page                                                                                                    |
+| `container`      | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
+| `contextSidebar` | boolean                                 | whether to add conext sidebar to navigate the sections of the current document                                                |
+| `fullPage`       | boolean                                 | whether to take a fullpage theme option                                                                                       |
+| `indexHome`      | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`          | string                                  | label - used for menu labels                                                                                                  |
+| `navSidebar`     | boolean                                 | whether to add navigation sidebar to the page                                                                                 |
+| `storyPaths`     | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
+| `tabs`           | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
+| `topMenu`        | boolean                                 | whether to add to the top navigation menu                                                                                     |
 
 ## RunOnlyConfiguration
 
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L114)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L141)_
 
 
 
 ### properties
 
-| Name              | Type                                                                                                                       | Description                                                                                                                                                                          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `author`          | string                                                                                                                     | author: Default is "@component-controls"                                                                                                                                             |
-| `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                                                                                         | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
-| `pages`           | [PagesConfiguration](#pagesconfiguration)                                                                                  | page types configurations                                                                                                                                                            |
-| `siteDescription` | string                                                                                                                     | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
-| `siteHeadline`    | string                                                                                                                     | Site headline. Default is "Component controls gatsby"                                                                                                                                |
-| `siteImage`       | string                                                                                                                     | link to site image                                                                                                                                                                   |
-| `siteLanguage`    | string                                                                                                                     | site language, Deault is "en"                                                                                                                                                        |
-| `siteTitle`       | string                                                                                                                     | standalone site title. Default is "Component controls"                                                                                                                               |
-| `siteTitleAlt`    | string                                                                                                                     | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
-| `siteUrl`         | string                                                                                                                     | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
-| `storySort`       | **function** (`a`\*: string, `b`\*: string): number;                                                                       | story sorting function                                                                                                                                                               |
-| `theme`           | \[key: string]: any                                                                                                        | theme-ui theme configuration                                                                                                                                                         |
-| `toolbar`         | left side toolbar items**left**: [ActionItems](#actionitems)right side toolbar items**right**: [ActionItems](#actionitems) | custom toolbar items                                                                                                                                                                 |
+| Name              | Type                                                 | Description                                                                                                                                                                          |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
+| `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
+| `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
+| `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
+| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `siteHeadline`    | string                                               | Site headline. Default is "Component controls gatsby"                                                                                                                                |
+| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
+| `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
+| `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
+| `siteTitleAlt`    | string                                               | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
+| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
+| `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
+| `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
+| `toolbar`         | [ToolbarConfig](#toolbarconfig)                      | custom toolbar items                                                                                                                                                                 |
 
 ## TabConfiguration
 
@@ -1020,25 +981,38 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `title*` | string                                                  | title will be used as tab caption                                     |
 | `type`   | string                                                  | page container type - a key into the component-controls/pages package |
 
+## ToolbarConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L126)_
+
+
+
+### properties
+
+| Name    | Type                        | Description              |
+| ------- | --------------------------- | ------------------------ |
+| `left`  | [ActionItems](#actionitems) | left side toolbar items  |
+| `right` | [ActionItems](#actionitems) | right side toolbar items |
+
+## DocType
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
+
 ## PageTabs
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
 
 [TabConfiguration](#tabconfiguration)\[]
 
-## PageType
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
-
-'story' | 'blog' | 'page' | 'tags' | 'author'
-
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L69)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L85)_
 
 Record&lt;
 
-[PageType](#pagetype)
+[DocType](#doctype)
 
 , 
 
@@ -1048,26 +1022,26 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L77)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
 
 Record&lt;
 
-[PageType](#pagetype)
+[DocType](#doctype)
 
 , 
 
 ### properties
 
-| Name   | Type                                                         | Description |
-| ------ | ------------------------------------------------------------ | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]   |             |
+| Name   | Type                                                                         | Description |
+| ------ | ---------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
 
 >
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
 
 ### properties
 
@@ -1078,13 +1052,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L75)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L71)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1098,20 +1072,20 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L231)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L258)_
 
 
 
 ### properties
 
-| Name          | Type                  | Description |
-| ------------- | --------------------- | ----------- |
-| `categories*` | 'tags' \| 'author'\[] |             |
-| `pages*`      | object                |             |
+| Name          | Type      | Description |
+| ------------- | --------- | ----------- |
+| `categories*` | string\[] |             |
+| `pages*`      | object    |             |
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L193)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L218)_
 
 
 
@@ -1144,15 +1118,15 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
 
-## PageType
+## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
-'story' | 'blog' | 'page' | 'tags' | 'author'
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
 
 ### properties
 
@@ -1170,25 +1144,6 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 
 [StoryArgument](#storyargument)\[]
 
-## PagesOnlyRoutes
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L77)_
-
-Record&lt;
-
-[PageType](#pagetype)
-
-, 
-
-### properties
-
-| Name   | Type                                                         | Description |
-| ------ | ------------------------------------------------------------ | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]   |             |
-
->
-
 ## ComponentControl
 
 ComponentControl is a either an object of property settings
@@ -1197,7 +1152,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L371)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L364)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -1217,9 +1172,28 @@ string
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L75)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L91)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## PagesOnlyRoutes
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+
+Record&lt;
+
+[DocType](#doctype)
+
+, 
+
+### properties
+
+| Name   | Type                                                                         | Description |
+| ------ | ---------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
+
+>
 
 ## PageTabs
 
@@ -1229,11 +1203,11 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L69)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L85)_
 
 Record&lt;
 
-[PageType](#pagetype)
+[DocType](#doctype)
 
 , 
 
@@ -1243,7 +1217,7 @@ Record&lt;
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L71)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1255,10 +1229,10 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `options` | any                                           |             |
 | `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
-## PageType
+## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
-'story' | 'blog' | 'page' | 'tags' | 'author'
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 <!-- END-TSDOC-TYPESCRIPT -->

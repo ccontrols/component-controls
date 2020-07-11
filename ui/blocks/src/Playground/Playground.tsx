@@ -10,7 +10,7 @@ import {
   useTheme,
   ActionItems,
 } from '@component-controls/components';
-import { BlockDataContext } from '../context';
+import { BlockDataContext, useCustomProps } from '../context';
 
 import {
   StoryBlockContainer,
@@ -34,20 +34,26 @@ export type PlaygroundProps = PlaygroundOwnProps &
   StoryBlockContainerProps &
   PanelContainerProps;
 
-export const Playground: FC<PlaygroundProps> = ({
-  title,
-  id,
-  name,
-  collapsible,
-  dark,
-  actions: userActions = [],
-  children,
-  openTab,
-  visibleTabs = false,
-  description,
-  scale: userScale = 1,
-}) => {
+const NAME = 'playground';
+
+/**
+ * Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
+ */
+export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const theme = useTheme();
+  const custom = useCustomProps<PlaygroundProps>(NAME, props);
+  const {
+    title,
+    id,
+    name,
+    collapsible,
+    dark,
+    actions: userActions = [],
+    openTab,
+    visibleTabs = false,
+    description,
+    scale: userScale = 1,
+  } = custom;
 
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
@@ -147,6 +153,7 @@ export const Playground: FC<PlaygroundProps> = ({
     : [...storyActions, ...userActions];
   return (
     <StoryBlockContainer
+      data-testid={NAME}
       description={description}
       useStoryDescription={true}
       name={name}

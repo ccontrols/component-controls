@@ -26,7 +26,7 @@ overview.controls = {
     label: 'Name',
     value: 'Mark',
     description: `
-## name of the person
+**name of the person**
 
 any text is allowed
 `,
@@ -34,7 +34,7 @@ any text is allowed
   age: {
     type: ControlTypes.NUMBER,
     description: `
-## age of the person
+**age of the person**
 
 numeric, values between 10 and 75 allowed
 `,

@@ -8,7 +8,7 @@ import generate from '@babel/generator';
 import deepMerge from 'deepmerge';
 import { Story, Document, getASTSource } from '@component-controls/core';
 
-import { extractCSFStories } from './babel/csf-stories';
+import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
 import { removeMDXAttributes } from './babel/remove-mdx-attributes';
 import { extractStoreComponent } from './babel/extract-component';
@@ -42,7 +42,7 @@ type TraverseFn = (
 /**
  * Instrument a source file, with options
  * @param code The source code
- * @param traverseFn A traverse function. can be different for MDX and CSF story files
+ * @param traverseFn A traverse function. can be different for MDX and ESM story files
  * @param originalSource If the source was modified (ie mdx compiler)
  * @param filePath file name with fiull path
  * @param options Instrument options

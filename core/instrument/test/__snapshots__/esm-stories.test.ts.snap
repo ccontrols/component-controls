@@ -1,0 +1,909 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`esm-stories named-object-export.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:06:01.000Z,
+    "dateModified": 2020-04-14T04:56:35.000Z,
+    "package": "25920f3d7248502e343cd20b80fffb17",
+    "title": "Story",
+  },
+  "packages": Object {
+    "25920f3d7248502e343cd20b80fffb17": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "25920f3d7248502e343cd20b80fffb17",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/named-object-export.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {},
+  "transformed": "export default { title: 'Story' };
+export const myStory = {
+  i: 1,
+};
+",
+}
+`;
+
+exports[`esm-stories no-arguments.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:06:17.000Z,
+    "dateModified": 2020-04-14T04:56:08.000Z,
+    "package": "bcca088a5f5c78ca90b1d26a540b85e8",
+    "title": "Story",
+  },
+  "packages": Object {
+    "bcca088a5f5c78ca90b1d26a540b85e8": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "bcca088a5f5c78ca90b1d26a540b85e8",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/no-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 31,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "() => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = () => {};
+",
+}
+`;
+
+exports[`esm-stories no-story.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:04:54.000Z,
+    "dateModified": 2020-04-14T04:56:12.000Z,
+    "package": "318ee2593df867f715fd861db60e5abf",
+    "title": "Story",
+  },
+  "packages": Object {
+    "318ee2593df867f715fd861db60e5abf": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "318ee2593df867f715fd861db60e5abf",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/no-story.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {},
+  "transformed": "export default { title: 'Story' };
+const i = 1;
+",
+}
+`;
+
+exports[`esm-stories props-argument.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:06:38.000Z,
+    "dateModified": 2020-04-14T04:56:16.000Z,
+    "package": "2ed1b6c570450cfa3cd7c74cc78ca56b",
+    "title": "Story",
+  },
+  "packages": Object {
+    "2ed1b6c570450cfa3cd7c74cc78ca56b": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "2ed1b6c570450cfa3cd7c74cc78ca56b",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/props-argument.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 34,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "props => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = props => {};
+",
+}
+`;
+
+exports[`esm-stories three-levels-alias.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:08:27.000Z,
+    "dateModified": 2020-04-14T04:56:20.000Z,
+    "package": "f1a4b6accd2b3403016fbabeec45c742",
+    "title": "Story",
+  },
+  "packages": Object {
+    "f1a4b6accd2b3403016fbabeec45c742": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "f1a4b6accd2b3403016fbabeec45c742",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/three-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 31,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 24,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+              },
+              "name": "name",
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 16,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 11,
+                      "line": 0,
+                    },
+                  },
+                  "name": "first",
+                  "value": "first",
+                },
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 22,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 18,
+                      "line": 0,
+                    },
+                  },
+                  "name": "last",
+                  "value": "last",
+                },
+              ],
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 29,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 26,
+                  "line": 0,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 61,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "({ name: { first, last }, age }) => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = ({ name: { first, last }, age }) => {};
+",
+}
+`;
+
+exports[`esm-stories two-arguments.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:06:59.000Z,
+    "dateModified": 2020-04-14T04:56:23.000Z,
+    "package": "4c8ad6c7277231fb9a5b27d4311a8667",
+    "title": "Story",
+  },
+  "packages": Object {
+    "4c8ad6c7277231fb9a5b27d4311a8667": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "4c8ad6c7277231fb9a5b27d4311a8667",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 6,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 15,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 0,
+            },
+          },
+          "name": "context",
+          "value": "context",
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 45,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "(props, context) => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = (props, context) => {};
+",
+}
+`;
+
+exports[`esm-stories two-levels-alias.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:08:11.000Z,
+    "dateModified": 2020-04-14T04:56:27.000Z,
+    "package": "ba875b7136e19d0acee47ecca70f30c1",
+    "title": "Story",
+  },
+  "packages": Object {
+    "ba875b7136e19d0acee47ecca70f30c1": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "ba875b7136e19d0acee47ecca70f30c1",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-levels-alias.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 21,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 14,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+              },
+              "name": "name",
+              "value": "MyNam",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 19,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 51,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "({ name: MyNam, age }) => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = ({ name: MyNam, age }) => {};
+",
+}
+`;
+
+exports[`esm-stories two-levels-sub-arguments.js 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:07:36.000Z,
+    "dateModified": 2020-04-14T04:56:30.000Z,
+    "package": "38da62adc9c63c890999f65a2c6f757e",
+    "title": "Story",
+  },
+  "packages": Object {
+    "38da62adc9c63c890999f65a2c6f757e": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "38da62adc9c63c890999f65a2c6f757e",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/two-levels-sub-arguments.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 14,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "name",
+              "value": "name",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 9,
+                  "line": 0,
+                },
+              },
+              "name": "age",
+              "value": "age",
+            },
+          ],
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 44,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "({ name, age }) => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = ({ name, age }) => {};
+",
+}
+`;
+
+exports[`esm-stories typescript.ts 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {},
+    "date": 2020-03-07T04:07:18.000Z,
+    "dateModified": 2020-04-14T04:51:39.000Z,
+    "package": "3b3060a06e2dac8176e2c0a660f8b956",
+    "title": "Story",
+  },
+  "packages": Object {
+    "3b3060a06e2dac8176e2c0a660f8b956": Object {
+      "dependencies": Object {
+        "@babel/generator": "^7.9.4",
+        "@babel/parser": "^7.9.4",
+        "@babel/traverse": "^7.9.0",
+        "@component-controls/core": "^1.7.0",
+        "@hutson/parse-repository-url": "^5.0.0",
+        "@mdx-js/loader": "^1.5.5",
+        "@mdx-js/react": "^1.6.5",
+        "camelcase": "^6.0.0",
+        "deepmerge": "^4.2.2",
+        "find-cache-dir": "^3.3.1",
+        "gray-matter": "^4.0.2",
+        "hosted-git-info": "^3.0.4",
+        "js-string-escape": "^1.0.1",
+        "prettier": "^1.19.1",
+        "read-package-json": "^2.1.1",
+        "remark-emoji": "^2.1.0",
+        "remark-images": "^2.0.0",
+        "resolve": "^1.15.1",
+        "typescript": "^3.8.3",
+      },
+      "devDependencies": Object {
+        "@babel/types": "^7.9.0",
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/find-cache-dir": "^3.2.0",
+        "@types/hosted-git-info": "^3.0.0",
+        "@types/jest": "^25.1.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+      },
+      "fileHash": "3b3060a06e2dac8176e2c0a660f8b956",
+      "name": "@component-controls/instrument",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/esm/stories/typescript.ts",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.1",
+    },
+  },
+  "stories": Object {
+    "myStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 18,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "value": "props",
+        },
+      ],
+      "id": "myStory",
+      "loc": Object {
+        "end": Object {
+          "column": 48,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 23,
+          "line": 2,
+        },
+      },
+      "name": "myStory",
+      "source": "(props: Properties) => {}",
+    },
+  },
+  "transformed": "export default { title: 'Story' };
+export const myStory = (props: Properties) => {};
+",
+}
+`;

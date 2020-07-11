@@ -3,9 +3,9 @@ const text =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif';
 
 const heading = {
-  fontFamily: 'semibold',
-  lineHeight: 'semibold',
-  fontWeight: 'semibold',
+  fontFamily: 'heading',
+  lineHeight: 'heading',
+  fontWeight: 'heading',
 };
 
 const ActionItemStyle: ThemeUIStyleObject = {
@@ -29,19 +29,20 @@ export type ControlsTheme = {
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
+  linkheading: Record<string, ThemeUIStyleObject>;
   searchinput: Record<string, ThemeUIStyleObject>;
   subtitle: ThemeUIStyleObject;
   subheading: ThemeUIStyleObject;
   syntaxhighlight: Record<string, ThemeUIStyleObject>;
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
-  title: ThemeUIStyleObject;
+  titledimage: Record<string, ThemeUIStyleObject>;
+  value: Record<string, ThemeUIStyleObject>;
   zoom: ThemeUIStyleObject;
   editpage: Record<string, ThemeUIStyleObject>;
-  lastedited: Record<string, ThemeUIStyleObject>;
   pagecontainer: ThemeUIStyleObject;
   propstable: Record<string, ThemeUIStyleObject>;
-  story: ThemeUIStyleObject;
+  story: Record<string, ThemeUIStyleObject>;
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
   navmenu: Record<string, ThemeUIStyleObject>;
@@ -68,7 +69,7 @@ export const theme: ControlsTheme = {
     background: '#fff',
     primary: '#5c6ac4',
     secondary: '#006fbb',
-    muted: '#e6e6e6',
+    muted: '#69768C',
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
@@ -77,7 +78,6 @@ export const theme: ControlsTheme = {
     highlight: '#d9f2f1',
     action: '#3B817D',
     selected: '#027AC5',
-    fadedText: '#69768C',
     shadow: 'rgba(0, 0, 0, 0.1)',
     accentPalette0: '#8338ec',
     accentPalette1: '#fb5607',
@@ -97,12 +97,11 @@ export const theme: ControlsTheme = {
         primary: '#d5c0f1',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
-        muted: '#e6e6e6',
+        muted: '#c9cacf',
         background: '#38404a',
         sidebar: '#000',
         text: '#d3d4db',
         header: '#111111',
-        fadedText: '#c9cacf',
         selected: '#b3d9ff',
         action: '#d9f2f1',
         shadow: 'rgba(211, 212, 219, 0.1)',
@@ -119,7 +118,7 @@ export const theme: ControlsTheme = {
   fontWeights: {
     thin: 300,
     body: 400,
-    semibold: 600,
+    heading: 600,
     bold: 700,
   },
   lineHeights: {
@@ -151,7 +150,7 @@ export const theme: ControlsTheme = {
   links: {
     nav: {
       fontWeight: 'thin',
-      fontSize: '14px',
+      fontSize: 3,
       lineHeight: '1.6rem',
       '&.active': {
         fontWeight: 'bold',
@@ -169,6 +168,19 @@ export const theme: ControlsTheme = {
         outline: 'none',
       },
     },
+    slider: {
+      label: {
+        paddingLeft: 1,
+        paddingRight: 1,
+        fontSize: 0,
+        whiteSpace: 'nowrap',
+      },
+      wrapper: {
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+      },
+    },
   },
   styles: {
     root: {
@@ -179,26 +191,35 @@ export const theme: ControlsTheme = {
     h1: {
       ...heading,
       fontSize: 6,
+      mt: 4,
+      mb: 3,
     },
     h2: {
       ...heading,
-      fontSize: 4,
+      fontSize: 5,
+      mt: 4,
+      mb: 3,
     },
     h3: {
       ...heading,
-      fontSize: 3,
+      mt: 4,
+      mb: 3,
     },
     h4: {
       ...heading,
       fontSize: 2,
+      mt: 4,
+      mb: 3,
     },
     h5: {
       ...heading,
       fontSize: 1,
+      my: 2,
     },
     h6: {
       ...heading,
       fontSize: 0,
+      my: 2,
     },
     a: {
       color: 'primary',
@@ -214,13 +235,14 @@ export const theme: ControlsTheme = {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
+      color: 'red',
     },
     img: {
       maxWidth: '100%',
     },
     p: {
       fontSize: 3,
-      py: 2,
+      my: 4,
       color: 'text',
       fontFamily: 'body',
       fontWeight: 'body',
@@ -241,10 +263,18 @@ export const theme: ControlsTheme = {
       textAlign: 'left',
       width: '100%',
       borderSpacing: 0,
+      p: {
+        m: 0,
+      },
+      pre: {
+        mt: 2,
+        mb: 0,
+      },
     },
     th: {
       border: 'none',
-      padding: '10px 0 10px 20px',
+      px: 2,
+      pl: 3,
     },
     //@ts-ignore
     tbody: {
@@ -258,14 +288,15 @@ export const theme: ControlsTheme = {
       color: 'text',
     },
     td: {
-      padding: '16px 20px',
+      py: 3,
+      px: 3,
       borderBottom: 0,
     },
     tdgroup: {
       lineHeight: '24px',
       background: '#fafbfc',
       whiteSpace: 'nowrap',
-      padding: '16px 20px',
+      py: 3,
       fontWeight: 'bold',
       fontFamily: 'monospace',
       flexDirection: 'row',
@@ -298,6 +329,9 @@ export const theme: ControlsTheme = {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
+    },
+    link: {
+      mr: 1,
     },
   },
   actioncontainer: {
@@ -339,12 +373,50 @@ export const theme: ControlsTheme = {
   },
   blockpagecontainer: {
     container: {},
-    editrow: {
+    inforow: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      mb: 4,
+    },
+    titlerow: {
+      my: 4,
+    },
+    createdbox: {
+      container: {
+        display: 'flex',
+        flexDirection: ['column', 'row'],
+        alignItems: ['flex-end', 'baseline'],
+      },
+      separator: {
+        visibility: ['hidden', 'visible'],
+        height: [0],
+        mr: [0, 1],
+      },
+    },
+  },
+  linkheading: {
+    container: {
+      width: '100%',
+      scrollMarginTop: '5rem',
+    },
+    inner: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      ':hover': {
+        a: {
+          visibility: 'visible',
+        },
+      },
+    },
+    link: {
+      position: 'absolute',
+      visibility: 'hidden',
+      ':hover': {
+        visibility: 'visible',
+      },
     },
   },
   searchinput: {
@@ -369,7 +441,7 @@ export const theme: ControlsTheme = {
     },
   },
   subtitle: {
-    color: 'fadedText',
+    color: 'muted',
     fontWeight: 'body',
     pb: 2,
   },
@@ -409,7 +481,7 @@ export const theme: ControlsTheme = {
       ml: 1,
       mr: 1,
       cursor: 'pointer',
-      color: 'fadedText',
+      color: 'muted',
       a: {
         textDecoration: 'inherit',
         color: 'inherit',
@@ -434,7 +506,7 @@ export const theme: ControlsTheme = {
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
-      color: 'fadedText',
+      color: 'muted',
       cursor: 'default',
     },
     '.react-tabs__tab-panel': {
@@ -461,9 +533,35 @@ export const theme: ControlsTheme = {
       px: 1,
     },
   },
-  title: {
-    fontWeight: 'bold',
-    pb: 4,
+  titledimage: {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    img: {},
+    title: {
+      color: 'muted',
+      py: 2,
+      fontSize: 1,
+    },
+  },
+  value: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+    },
+    label: {
+      fontSize: 0,
+      color: 'muted',
+      mr: 1,
+      lineHeight: 'heading',
+    },
+    value: {
+      fontSize: 2,
+      lineHeight: 'heading',
+    },
   },
   zoom: {
     position: 'relative',
@@ -471,29 +569,20 @@ export const theme: ControlsTheme = {
     transition: 'transform .2s',
   },
   editpage: {
-    container: {},
+    container: {
+      lineHeight: 'heading',
+    },
     inner: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
     },
     text: {
-      pl: 2,
+      pl: 1,
+      fontSize: 2,
+      fontWeight: 'bold',
     },
   },
-  lastedited: {
-    container: {},
-    inner: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    text: {
-      pr: 2,
-      color: 'fadedText',
-    },
-  },
-
   pagecontainer: {
     bg: 'background',
     color: 'text',
@@ -511,13 +600,38 @@ export const theme: ControlsTheme = {
     full: { maxWidth: 'unset', p: 0 },
   },
   propstable: {
+    name: {
+      fontWeight: 'bold',
+      textOverflow: 'ellipsis',
+    },
     defaultvalue: {
+      maxWidth: 400,
       whiteSpace: 'pre-wrap',
+    },
+    control: {
+      maxWidth: 300,
+    },
+    description: {
+      container: {
+        display: 'flex',
+        flexDirection: 'column',
+      },
+      type: {
+        color: 'muted',
+        letterSpacing: '0.10em',
+        whiteSpace: 'pre-wrap',
+        margin: 0,
+      },
     },
   },
   story: {
-    px: 4,
-    py: 3,
+    container: {
+      px: 4,
+      py: 3,
+    },
+    wrapper: {
+      all: 'unset',
+    },
   },
   colormode: {
     container: {},
@@ -613,7 +727,7 @@ export const theme: ControlsTheme = {
 
     label: {
       fontSize: 1,
-      color: 'fadedText',
+      color: 'muted',
       pb: 2,
     },
     linktitle: {
@@ -636,7 +750,7 @@ export const theme: ControlsTheme = {
     default: {
       overflowX: 'hidden',
       position: 'sticky',
-      top: 60,
+      top: '5rem',
       maxHeight: '100vh',
       overflowY: 'auto',
       backgroundColor: 'background',
@@ -713,7 +827,7 @@ export const theme: ControlsTheme = {
     },
     nav: { display: 'flex', flexDirection: 'column' },
     navlink: {
-      pl: 2,
+      fontSize: 1,
       fontWeight: 'body',
     },
     toggle: {
@@ -760,7 +874,7 @@ export const theme: ControlsTheme = {
     inner: {
       alignItems: `center`,
       color: `text`,
-      fontWeight: `semibold`,
+      fontWeight: `heading`,
       a: { color: `text` },
     },
   },
@@ -814,7 +928,9 @@ export const theme: ControlsTheme = {
         flexDirection: 'row',
         alignItems: 'center',
       },
-      date: {},
+      date: {
+        color: 'muted',
+      },
       comma: { mr: 2 },
       by: { mr: 1 },
       author: {
@@ -828,25 +944,32 @@ export const theme: ControlsTheme = {
     container: { display: 'flex', flexDirection: 'row', alignItems: 'center' },
   },
   appsidebarpage: {
-    storycontainer: {
+    allsidebar: {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
       gridTemplateColumns: ['1fr', '1fr', '300px 1fr 250px'],
       position: 'relative',
     },
-    //@ts-ignore
-    mdxcontainer: {
+    navsidebar: {
       display: 'grid',
       flex: 1,
       minHeight: '100vh',
-      gridTemplateColumns: '300px 1fr',
+      gridTemplateColumns: ['1fr', '1fr', '300px 1fr'],
+      position: 'relative',
+    },
+    contextsidebar: {
+      display: 'grid',
+      flex: 1,
+      minHeight: '100vh',
+      gridTemplateColumns: ['1fr', '1fr', '1fr 300px'],
       position: 'relative',
     },
   },
   container: {
     container: {},
     pagination: { py: 4 },
+    author: { ml: [0, 2] },
   },
   documentslist: {
     container: {},

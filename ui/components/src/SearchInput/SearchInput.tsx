@@ -77,11 +77,15 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
 }: SearchInputProps<ItemType>) => {
   const [selected, setSelected] = useState<number | undefined>(undefined);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string | undefined>(undefined);
   const updateIsOpen = (newIsOpen: boolean) => {
-    setIsOpen(newIsOpen && items.length > 0);
+    // if first time open, send a onSearch message to collect items
+    if (newIsOpen && search === undefined && items.length === 0) {
+      onSearch('');
+    } else {
+      setIsOpen(newIsOpen && items.length > 0);
+    }
   };
-
   useEffect(() => {
     setIsOpen(items.length > 0 && search !== '');
   }, [items, search]);
@@ -157,7 +161,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
                     item,
                     index,
                     isOpen,
-                    search,
+                    search: search || '',
                     selected,
                     selectItem,
                   };
@@ -189,7 +193,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         <div sx={{ position: 'relative' }}>
           <Input
             aria-label="type some text to start searching"
-            value={search}
+            value={search || ''}
             onBlur={() => {
               setTimeout(() => {
                 updateIsOpen(false);

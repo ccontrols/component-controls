@@ -13,11 +13,11 @@ export const overview = () => {
     <ActionContainer
       actions={[
         {
-          title: 'action 1',
+          node: 'action 1',
           onClick: () => console.log('clicked'),
         },
         {
-          title: <ExternalLink href="https://google.com">google</ExternalLink>,
+          node: <ExternalLink href="https://google.com">google</ExternalLink>,
           onClick: () => console.log('clicked'),
         },
       ]}
@@ -31,12 +31,12 @@ export const order = () => (
   <ActionContainer
     actions={[
       {
-        title: 'action 1',
+        node: 'action 1',
         onClick: () => console.log('clicked'),
         order: 1,
       },
       {
-        title: <ExternalLink href="https://google.com">google</ExternalLink>,
+        node: <ExternalLink href="https://google.com">google</ExternalLink>,
         onClick: () => console.log('clicked'),
         order: 0,
       },
@@ -50,17 +50,17 @@ export const override = () => (
   <ActionContainer
     actions={[
       {
-        title: 'action 1',
+        node: 'action 1',
         onClick: () => console.log('clicked'),
         id: 'copy',
       },
       {
-        title: <ExternalLink href="https://google.com">google</ExternalLink>,
+        node: <ExternalLink href="https://google.com">google</ExternalLink>,
         onClick: () => console.log('clicked'),
       },
       {
         //this will override the action above
-        title: 'Copy',
+        node: 'Copy',
         id: 'copy',
       },
     ]}

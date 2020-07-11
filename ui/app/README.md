@@ -9,6 +9,7 @@
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>DocPage</ins>](#insdocpageins)
+    -   [<ins>DocumentHomePage</ins>](#insdocumenthomepageins)
     -   [<ins>DocumentsList</ins>](#insdocumentslistins)
     -   [<ins>Footer</ins>](#insfooterins)
     -   [<ins>Header</ins>](#insheaderins)
@@ -16,7 +17,6 @@
     -   [<ins>DocsLink</ins>](#insdocslinkins)
     -   [<ins>StoryLink</ins>](#insstorylinkins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
-    -   [<ins>PageList</ins>](#inspagelistins)
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
@@ -62,8 +62,9 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 | Name         | Type           | Description |
 | ------------ | -------------- | ----------- |
-| `type`       | _PageType_     |             |
+| `type`       | _string_       |             |
 | `docId`      | _string_       |             |
+| `storyId`    | _string_       |             |
 | `store`      | _LoadingStore_ |             |
 | `linkClass*` | _any_          |             |
 
@@ -75,9 +76,9 @@ _CategoryList [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ | page type   |
+| Name    | Type     | Description   |
+| ------- | -------- | ------------- |
+| `type*` | _string_ | document type |
 
 ## <ins>CategoryListItem</ins>
 
@@ -99,10 +100,10 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type       | Description |
-| ----------- | ---------- | ----------- |
-| `type*`     | _PageType_ |             |
-| `category*` | _any_      |             |
+| Name        | Type     | Description |
+| ----------- | -------- | ----------- |
+| `type*`     | _string_ |             |
+| `category*` | _any_    |             |
 
 ## <ins>Container</ins>
 
@@ -119,10 +120,23 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type`      | _PageType_ | page type       |
-| `activeTab` | _string_   | active page tab |
+| Name        | Type     | Description     |
+| ----------- | -------- | --------------- |
+| `type`      | _string_ | document type   |
+| `activeTab` | _string_ | active page tab |
+
+## <ins>DocumentHomePage</ins>
+
+list of documents for a specific document type
+
+_DocumentHomePage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/DocumentHomePage/DocumentHomePage.tsx)_
+
+### properties
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `type*` | _string_ |             |
+| `docId` | _string_ |             |
 
 ## <ins>DocumentsList</ins>
 
@@ -202,21 +216,9 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 
 | Name      | Type                                                                                                                                                                                                                                                                                  | Description                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| `type*`   | _PageType_                                                                                                                                                                                                                                                                            | page type                           |
+| `type*`   | _string_                                                                                                                                                                                                                                                                              | document type                       |
 | `variant` | _string_                                                                                                                                                                                                                                                                              | theme variant                       |
 | `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement> \| (((instance: HTMLDivElement) => void) & string) \| (((instance: HTMLDivElement) => void) & RefObject&lt;...>) \| (RefObject&lt;...> & string) \| (RefObject&lt;...> & ((instance: HTMLDivElement) => void))_ | ref to the page container component |
-
-## <ins>PageList</ins>
-
-list of documents for a specific page type
-
-_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/PageList/PageList.tsx)_
-
-### properties
-
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ |             |
 
 ## <ins>SEO</ins>
 
@@ -252,7 +254,7 @@ _Sidebar [source code](https://github.com/ccontrols/component-controls/tree/mast
 | Name        | Type        | Description                                           |
 | ----------- | ----------- | ----------------------------------------------------- |
 | `title`     | _ReactNode_ | title element                                         |
-| `type`      | _PageType_  | page type                                             |
+| `type`      | _string_    | document type                                         |
 | `activeTab` | _string_    | currently active tab. Use to creae the sidemenu links |
 
 ## <ins>SidebarsMDXPage</ins>
@@ -263,9 +265,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `type*` | _PageType_ | page type   |
+| Name    | Type       | Description     |
+| ------- | ---------- | --------------- |
+| `type*` | _string_   | document type   |
+| `doc*`  | _Document_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -273,10 +276,10 @@ _SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type*`     | _PageType_ | page type       |
-| `activeTab` | _string_   | active page tab |
+| Name        | Type     | Description     |
+| ----------- | -------- | --------------- |
+| `type*`     | _string_ | document type   |
+| `activeTab` | _string_ | active page tab |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -288,7 +291,8 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 | Name        | Type       | Description     |
 | ----------- | ---------- | --------------- |
-| `type*`     | _PageType_ | page type       |
+| `type*`     | _string_   | document type   |
 | `activeTab` | _string_   | active page tab |
+| `doc*`      | _Document_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

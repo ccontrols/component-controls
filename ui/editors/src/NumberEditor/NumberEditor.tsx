@@ -1,33 +1,17 @@
 import React, { FC, ChangeEvent } from 'react';
-import { Input, Box, BoxProps } from 'theme-ui';
+import { Input, Box, BoxProps, Slider } from 'theme-ui';
+import { Keyboard, DOWN_ARROW, UP_ARROW } from '@component-controls/components';
 import { ComponentControlNumber, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
 import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';
 
 const RangeLabel: FC<BoxProps> = props => (
-  <Box
-    as="span"
-    css={{
-      paddingLeft: 5,
-      paddingRight: 5,
-      fontSize: 12,
-      whiteSpace: 'nowrap',
-    }}
-    {...props}
-  />
+  <Box as="span" variant="forms.slider.label" {...props} />
 );
 
 const RangeWrapper: FC<BoxProps> = props => (
-  <Box
-    as="div"
-    css={{
-      display: 'flex',
-      alignItems: 'center',
-      width: '100%',
-    }}
-    {...props}
-  />
+  <Box as="div" variant="forms.slider.wrapper" {...props} />
 );
 
 /**
@@ -49,42 +33,57 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
     onChange(name, parsedValue);
   };
 
-  return control.range ? (
-    <RangeWrapper>
-      <RangeLabel>{control.min}</RangeLabel>
-      <Input
-        css={{
-          boxSizing: 'border-box',
-          height: 25,
-          outline: 'none',
-          border: '1px solid #f7f4f4',
-          borderRadius: 2,
-          fontSize: 11,
-          padding: 5,
-          color: '#444',
-          display: 'table-cell',
-          flexGrow: 1,
-        }}
-        value={control.value}
-        type="range"
-        name={name}
-        min={control.min}
-        max={control.max}
-        step={control.step}
-        onChange={handleChange}
-      />
-      <RangeLabel>{`${control.value} / ${control.max}`}</RangeLabel>
-    </RangeWrapper>
-  ) : (
-    <Input
-      value={control.value}
-      type="number"
-      name={name}
-      min={control.min}
-      max={control.max}
-      step={control.step}
-      onChange={handleChange}
-    />
+  const onKeyPressed = (key: number) => {
+    switch (key) {
+      case UP_ARROW:
+        if (typeof control.value === 'number') {
+          onChange(
+            name,
+            Math.min(
+              control.max || Number.MAX_VALUE,
+              control.value + (control.step || 1),
+            ),
+          );
+        }
+        break;
+      case DOWN_ARROW:
+        if (typeof control.value === 'number') {
+          onChange(
+            name,
+            Math.max(control.min || 0, control.value - (control.step || 1)),
+          );
+        }
+        break;
+    }
+  };
+
+  return (
+    <Keyboard keys={[DOWN_ARROW, UP_ARROW]} onKeyDown={onKeyPressed}>
+      {control.range ? (
+        <RangeWrapper>
+          <RangeLabel>{control.min}</RangeLabel>
+          <Slider
+            value={control.value}
+            name={name}
+            min={control.min}
+            max={control.max}
+            step={control.step}
+            onChange={handleChange}
+          />
+          <RangeLabel>{`${control.value} / ${control.max}`}</RangeLabel>
+        </RangeWrapper>
+      ) : (
+        <Input
+          value={control.value}
+          type="number"
+          name={name}
+          min={control.min}
+          max={control.max}
+          step={control.step}
+          onChange={handleChange}
+        />
+      )}
+    </Keyboard>
   );
 };
 

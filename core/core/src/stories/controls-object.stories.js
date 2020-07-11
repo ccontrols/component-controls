@@ -4,7 +4,7 @@ import { ControlTypes } from '../controls';
 import { ObjectControl } from './components/ObjectControl';
 
 export default {
-  title: 'Controls/OBJECT',
+  title: 'Controls/Object',
   component: ObjectControl,
 };
 

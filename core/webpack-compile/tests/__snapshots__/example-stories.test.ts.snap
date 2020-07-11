@@ -19,6 +19,7 @@ Store {
       },
       "story": Object {
         "basePath": "docs/",
+        "storyPaths": true,
         "tabs": Array [
           Object {
             "route": "page",
@@ -41,12 +42,6 @@ Store {
       "from": "../components/Button",
       "importedName": "Button",
       "imports": Object {
-        "polished": Array [
-          Object {
-            "importedName": "lighten",
-            "name": "lighten",
-          },
-        ],
         "react": Array [
           Object {
             "importedName": "default",
@@ -72,6 +67,15 @@ Store {
               "raw": "string",
             },
           },
+          "children": Object {
+            "defaultValue": "default",
+            "description": "button label",
+            "parentName": "ButtonProps",
+            "type": Object {
+              "name": "ReactNode",
+              "raw": "ReactNode",
+            },
+          },
           "color": Object {
             "defaultValue": "black",
             "description": "Text color, default black",
@@ -88,15 +92,6 @@ Store {
             "type": Object {
               "name": "boolean",
               "raw": "boolean",
-            },
-          },
-          "label": Object {
-            "defaultValue": "default",
-            "description": "button label.",
-            "parentName": "ButtonProps",
-            "type": Object {
-              "name": "string",
-              "raw": "string",
             },
           },
           "onClick": Object {
@@ -154,46 +149,66 @@ Store {
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 51,
+          "line": 71,
         },
         "start": Object {
           "column": 39,
-          "line": 28,
+          "line": 48,
         },
       },
       "name": "Button",
       "package": "999878322b2acba3a7ca83bc6972a800",
       "request": "/Users/atanasster/component-controls/examples/stories/src/components/Button.tsx",
       "source": "import React, { FC } from 'react';
-import { lighten } from 'polished';
 
 interface ButtonProps {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   *  Boolean indicating whether the button should render as disabled
+   */
   disabled?: boolean;
-  /** button label. */
-  label?: string;
-  /** onClick handler */
-  onClick: () => void;
-  /** Custom styles */
-  style: object;
 
-  /** Background color */
-  backgroundColor: string;
+  /**
+   * button label
+   */
+  children?: string;
 
-  /** Text color, default black */
-  color: string;
+  /**
+   * onClick handler
+   */
+  onClick?: () => void;
 
-  /** Button type */
-  type: 'button' | 'reset' | 'submit';
+  /**
+   * Custom styles
+   */
+  style?: object;
 
-  /** Numeric  field type */
-  padding: number;
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+
+  /**
+   * Text color, default black
+   */
+  color?: string;
+
+  /**
+   * Button type
+   */
+  type?: 'button' | 'reset' | 'submit';
+
+  /**
+   * Numeric  field type
+   */
+  padding?: number;
 }
 
-/** Button with react Typescript properties */
+/**
+ * Button with react Typescript properties
+ */
 export const Button: FC<ButtonProps> = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -208,17 +223,17 @@ export const Button: FC<ButtonProps> = ({
     style={{
       ...style,
       backgroundColor,
-      color: lighten(disabled ? 0.4 : 0, color),
+      color,
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -273,6 +288,14 @@ Button.defaultProps = {
               "required": false,
             },
           },
+          "children": Object {
+            "defaultValue": "'default'",
+            "description": "button label",
+            "type": Object {
+              "name": "string",
+              "required": false,
+            },
+          },
           "color": Object {
             "defaultValue": "'black'",
             "description": "Text color, default black",
@@ -286,14 +309,6 @@ Button.defaultProps = {
             "description": "Boolean indicating whether the button should render as disabled",
             "type": Object {
               "name": "boolean",
-            },
-          },
-          "label": Object {
-            "defaultValue": "'default'",
-            "description": "button label.",
-            "type": Object {
-              "name": "string",
-              "required": false,
             },
           },
           "onClick": Object {
@@ -346,11 +361,11 @@ Button.defaultProps = {
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 29,
+          "line": 31,
         },
         "start": Object {
           "column": 22,
-          "line": 6,
+          "line": 8,
         },
       },
       "name": "Button",
@@ -360,10 +375,12 @@ Button.defaultProps = {
 import { lighten } from 'polished';
 import PropTypes from 'prop-types';
 
-/** Button with react PropTypes */
+/**
+ * Button with react PropTypes
+ */
 export const Button = ({
   disabled,
-  label,
+  children,
   onClick,
   style,
   backgroundColor,
@@ -382,13 +399,13 @@ export const Button = ({
       padding,
     }}
   >
-    {label}
+    {children}
   </button>
 );
 
 Button.defaultProps = {
   disabled: false,
-  label: 'default',
+  children: 'default',
   onClick: () => {},
   style: {},
   backgroundColor: '#fefefe',
@@ -398,25 +415,44 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  /** Boolean indicating whether the button should render as disabled */
+  /**
+   * Boolean indicating whether the button should render as disabled
+   */
   disabled: PropTypes.bool,
-  /** button label. */
-  label: PropTypes.string,
-  /** onClick handler */
+
+  /**
+   * button label
+   */
+  children: PropTypes.string,
+
+  /**
+   * onClick handler
+   */
   onClick: PropTypes.func,
-  /** Custom styles */
+
+  /**
+   * Custom styles
+   */
   style: PropTypes.shape({}),
 
-  /** Background color */
+  /**
+   * Background color
+   */
   backgroundColor: PropTypes.string,
 
-  /** Text color, default black */
+  /**
+   * Text color, default black
+   */
   color: PropTypes.string,
 
-  /** Button type */
+  /**
+   * Button type
+   */
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
 
-  /** Numeric  field type */
+  /**
+   * Numeric  field type
+   */
   padding: PropTypes.number,
 };
 ",
@@ -437,7 +473,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
       "dependencies": undefined,
@@ -450,7 +486,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
       "dependencies": undefined,
@@ -463,7 +499,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
       "dependencies": undefined,
@@ -476,7 +512,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "dependencies": undefined,
@@ -489,20 +525,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
-    },
-    "85a1bf440fe016c4719e372255f5ffcb": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
-      "fileHash": "85a1bf440fe016c4719e372255f5ffcb",
-      "name": "component-controls-stories",
-      "peerDependencies": undefined,
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-csf.stories.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "dependencies": undefined,
@@ -515,7 +538,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
       "dependencies": undefined,
@@ -528,7 +551,20 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.5.7",
+      "version": "1.7.0",
+    },
+    "f6e72e22789f0ec595d8610e56ea91ff": Object {
+      "dependencies": undefined,
+      "devDependencies": undefined,
+      "fileHash": "f6e72e22789f0ec595d8610e56ea91ff",
+      "name": "component-controls-stories",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.7.0",
     },
   },
   "stores": Array [
@@ -540,8 +576,8 @@ Button.propTypes = {
         "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
-        "date": 2020-06-28T15:52:24.433Z,
-        "dateModified": 2020-06-28T16:10:02.341Z,
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-06-29T22:44:26.000Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
@@ -626,76 +662,26 @@ Button.propTypes = {
           ],
           "controls": Object {
             "age": Object {
+              "defaultValue": "null",
+              "description": "\`
+**age of the person**
+
+numeric, values between 10 and 75 allowed
+\`",
               "label": "Age",
               "max": 75,
               "min": 10,
               "type": "ControlTypes.NUMBER",
-              "undefined": Node {
-                "end": 923,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 22,
-                    "line": 43,
-                  },
-                  "start": Position {
-                    "column": 18,
-                    "line": 43,
-                  },
-                },
-                "start": 919,
-                "type": "NullLiteral",
-              },
               "value": 19,
             },
             "name": Object {
+              "description": "\`
+**name of the person**
+
+any text is allowed
+\`",
               "label": "Name",
               "type": "ControlTypes.TEXT",
-              "undefined": Node {
-                "end": 735,
-                "expressions": Array [],
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 1,
-                    "line": 32,
-                  },
-                  "start": Position {
-                    "column": 17,
-                    "line": 28,
-                  },
-                },
-                "quasis": Array [
-                  Node {
-                    "end": 734,
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 0,
-                        "line": 32,
-                      },
-                      "start": Position {
-                        "column": 18,
-                        "line": 28,
-                      },
-                    },
-                    "start": 690,
-                    "tail": true,
-                    "type": "TemplateElement",
-                    "value": Object {
-                      "cooked": "
-## name of the person
-
-any text is allowed
-",
-                      "raw": "
-## name of the person
-
-any text is allowed
-",
-                    },
-                  },
-                ],
-                "start": 689,
-                "type": "TemplateLiteral",
-              },
               "value": "Mark",
             },
           },
@@ -723,8 +709,8 @@ any text is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-06-17T18:28:16.388Z,
-        "dateModified": 2020-06-28T16:17:29.773Z,
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-06-29T01:18:57.000Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "684baa68d45c8becd8f39da85795335b",
         "title": "Introduction/Controls",
@@ -1543,100 +1529,7 @@ any text is allowed
               "groupId": "GROUP_IDS.GENERAL",
               "label": "Birthday",
               "type": "ControlTypes.DATE",
-              "undefined": Node {
-                "arguments": Array [
-                  Node {
-                    "end": 3138,
-                    "extra": Object {
-                      "raw": "1990",
-                      "rawValue": 1990,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 24,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 20,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3134,
-                    "type": "NumericLiteral",
-                    "value": 1990,
-                  },
-                  Node {
-                    "end": 3141,
-                    "extra": Object {
-                      "raw": "1",
-                      "rawValue": 1,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 27,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 26,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3140,
-                    "type": "NumericLiteral",
-                    "value": 1,
-                  },
-                  Node {
-                    "end": 3144,
-                    "extra": Object {
-                      "raw": "1",
-                      "rawValue": 1,
-                    },
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 30,
-                        "line": 126,
-                      },
-                      "start": Position {
-                        "column": 29,
-                        "line": 126,
-                      },
-                    },
-                    "start": 3143,
-                    "type": "NumericLiteral",
-                    "value": 1,
-                  },
-                ],
-                "callee": Node {
-                  "end": 3133,
-                  "loc": SourceLocation {
-                    "end": Position {
-                      "column": 19,
-                      "line": 126,
-                    },
-                    "identifierName": "Date",
-                    "start": Position {
-                      "column": 15,
-                      "line": 126,
-                    },
-                  },
-                  "name": "Date",
-                  "start": 3129,
-                  "type": "Identifier",
-                },
-                "end": 3145,
-                "loc": SourceLocation {
-                  "end": Position {
-                    "column": 31,
-                    "line": 126,
-                  },
-                  "start": Position {
-                    "column": 11,
-                    "line": 126,
-                  },
-                },
-                "start": 3125,
-                "type": "NewExpression",
-              },
+              "value": "new Date(1990, 1, 1)",
             },
             "color": Object {
               "groupId": "GROUP_IDS.DISPLAY",
@@ -1727,22 +1620,8 @@ any text is allowed
               "type": "ControlTypes.OBJECT",
               "value": Object {
                 "border": Object {
+                  "data": "null",
                   "type": "text",
-                  "undefined": Node {
-                    "end": 4832,
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 68,
-                        "line": 206,
-                      },
-                      "start": Position {
-                        "column": 64,
-                        "line": 206,
-                      },
-                    },
-                    "start": 4828,
-                    "type": "NullLiteral",
-                  },
                   "value": "2px dashed silver",
                 },
                 "borderRadius": Object {
@@ -2150,8 +2029,8 @@ any text is allowed
             "value": "Mark",
           },
         },
-        "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-28T16:04:05.681Z,
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-06-29T01:18:57.000Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
         "package": "d1f03618863bd813182b2668bed6d262",
         "title": "Introduction/Doc",
@@ -2274,8 +2153,8 @@ any text is allowed
         "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
-        "date": 2020-06-17T18:28:16.389Z,
-        "dateModified": 2020-06-28T16:04:54.609Z,
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-06-30T13:00:19.000Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
         "title": "Introduction/Smart PropTypes",
@@ -2346,11 +2225,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2363,7 +2242,7 @@ any text is allowed
           "id": "noColors",
           "loc": Object {
             "end": Object {
-              "column": 76,
+              "column": 74,
               "line": 18,
             },
             "start": Object {
@@ -2378,14 +2257,14 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
         "noProps": Object {
           "arguments": Array [],
           "id": "noProps",
           "loc": Object {
             "end": Object {
-              "column": 61,
+              "column": 59,
               "line": 25,
             },
             "start": Object {
@@ -2394,7 +2273,7 @@ any text is allowed
             },
           },
           "name": "noProps",
-          "source": "() => <Button label=\\"No properties\\" />",
+          "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
           "arguments": Array [
@@ -2414,11 +2293,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2431,7 +2310,7 @@ any text is allowed
           "id": "onlyColors",
           "loc": Object {
             "end": Object {
-              "column": 78,
+              "column": 76,
               "line": 12,
             },
             "start": Object {
@@ -2446,7 +2325,7 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
       },
     },
@@ -2458,8 +2337,8 @@ any text is allowed
         "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
-        "date": 2020-06-17T18:28:16.390Z,
-        "dateModified": 2020-06-28T16:05:13.913Z,
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-06-30T13:01:54.000Z,
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
         "title": "Introduction/Smart Typescript",
@@ -2530,11 +2409,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2547,7 +2426,7 @@ any text is allowed
           "id": "noColors",
           "loc": Object {
             "end": Object {
-              "column": 76,
+              "column": 74,
               "line": 18,
             },
             "start": Object {
@@ -2562,14 +2441,14 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
         "noProps": Object {
           "arguments": Array [],
           "id": "noProps",
           "loc": Object {
             "end": Object {
-              "column": 61,
+              "column": 59,
               "line": 25,
             },
             "start": Object {
@@ -2578,7 +2457,7 @@ any text is allowed
             },
           },
           "name": "noProps",
-          "source": "() => <Button label=\\"No properties\\" />",
+          "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
           "arguments": Array [
@@ -2598,11 +2477,11 @@ any text is allowed
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 48,
+                      "column": 26,
                       "line": 0,
                     },
                     "start": Object {
-                      "column": 43,
+                      "column": 21,
                       "line": 0,
                     },
                   },
@@ -2615,7 +2494,7 @@ any text is allowed
           "id": "onlyColors",
           "loc": Object {
             "end": Object {
-              "column": 78,
+              "column": 76,
               "line": 12,
             },
             "start": Object {
@@ -2630,7 +2509,7 @@ any text is allowed
               "backgroundColor",
             ],
           },
-          "source": "props => <Button label=\\"Choose colors\\" {...props} />",
+          "source": "props => <Button {...props}>Choose colors</Button>",
         },
       },
     },
@@ -2639,13 +2518,13 @@ any text is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-06-17T18:28:16.391Z,
-        "dateModified": 2020-06-28T16:10:25.494Z,
-        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
-        "package": "85a1bf440fe016c4719e372255f5ffcb",
-        "title": "Introduction/CSF",
+        "date": 2020-06-29T01:18:57.000Z,
+        "dateModified": 2020-07-06T20:42:11.000Z,
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
+        "package": "f6e72e22789f0ec595d8610e56ea91ff",
+        "title": "Introduction/ESM",
       },
-      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-csf.stories.js",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
       "stories": Object {
         "externalStory": Object {
           "arguments": Array [],

@@ -4,9 +4,10 @@ import {
   BuildConfiguration,
   RunConfiguration,
   Document,
-  defPageType,
+  defDocType,
   Pages,
-  PageType,
+  DocType,
+  docStoryToId,
 } from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
 
@@ -35,7 +36,7 @@ export interface LoadingStore {
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
-  getDocs: (pageType: PageType) => Pages;
+  getDocs: (type: DocType) => Pages;
   getUniquesByField: (field: string) => { [key: string]: number };
 }
 
@@ -45,16 +46,28 @@ class Store implements LoadingStore {
   packages: LoadingStore['packages'] = {};
   config: LoadingStore['config'] = {};
   buildConfig: LoadingStore['buildConfig'] = {};
-  getDocs = (pageType: PageType) =>
+  getDocs = (docType: DocType) =>
     this.stores
       .filter(store => {
         if (store?.doc) {
-          const { type = defPageType } = store.doc;
-          return type === pageType;
+          const { type = defDocType } = store.doc;
+          return type === docType;
         }
         return false;
       })
-      .map(store => store.doc as Document);
+      .map(
+        store =>
+          ({
+            ...store.doc,
+            stories:
+              store.doc && store.stories
+                ? Object.keys(store.stories).map(id =>
+                    //@ts-ignore
+                    docStoryToId(store.doc.title, id),
+                  )
+                : undefined,
+          } as Document),
+      );
   getUniquesByField = (field: string) => {
     return this.stores.reduce((acc: { [key: string]: number }, store) => {
       if (store?.doc) {
@@ -84,12 +97,20 @@ export const reserveStories = (filePaths: string[]) => {
 };
 export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   const { components, packages, stories, doc } = added;
+  if (!doc) {
+    throw new Error(`Invalid store with no document ${filePath}`);
+  }
+
   Object.keys(components).forEach(key => {
     store.components[key] = components[key];
   });
   Object.keys(packages).forEach(key => {
     store.packages[key] = packages[key];
   });
+  const { title } = doc;
+  if (store.stores.find(s => s.doc?.title === title)) {
+    throw new Error(`Duplicate document title "${title}"`);
+  }
   const storeStore = store.stores.find(s => s.filePath === filePath);
   if (storeStore) {
     storeStore.stories = stories;

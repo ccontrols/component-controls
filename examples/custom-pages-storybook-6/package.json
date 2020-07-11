@@ -1,14 +1,14 @@
 {
   "name": "custom-pages-storybook-6",
   "private": true,
-  "version": "1.5.7",
+  "version": "1.7.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9017 -c .storybook",
     "start": "webpack-dev-server --open --mode development",
     "storybook": "start-storybook -p 9017 -c .storybook",
-    "build-sample": "build-storybook -c .storybook -o ./docs"
+    "build-sample": "build-storybook -c .storybook -o ./public"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
-    "@component-controls/storybook": "^1.5.7",
+    "@component-controls/storybook": "^1.7.1",
     "@component-controls/storybook-custom-docs": "^1.5.0",
     "@storybook/addon-docs": "next",
     "@storybook/client-api": "next",

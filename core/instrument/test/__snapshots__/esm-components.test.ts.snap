@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`esm-components default-import.js 1`] = `
+Object {
+  "components": Object {
+    "ceea0565a65f75c8c7b6b355d6d335ac": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
+  "doc": Object {
+    "component": "Button",
+    "components": Object {},
+    "componentsLookup": Object {
+      "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
+    },
+    "date": 2020-03-16T21:41:36.000Z,
+    "dateModified": 2020-03-16T23:09:06.000Z,
+    "title": "Story",
+  },
+  "packages": Object {},
+  "stories": Object {},
+  "transformed": "import Button from '../../components/button-default-arrow-func';
+export default {
+  title: 'Story',
+  component: Button,
+};
+",
+}
+`;
+
+exports[`esm-components story-subcomponents.js 1`] = `
+Object {
+  "components": Object {
+    "2f4bd34d15be236674abaf6e894afe6e": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    },
+    "dc262d21cd7820523c7e0bacca461e87": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
+  "doc": Object {
+    "components": Object {},
+    "componentsLookup": Object {
+      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+      "Button": "2f4bd34d15be236674abaf6e894afe6e",
+    },
+    "date": 2020-03-16T22:51:58.000Z,
+    "dateModified": 2020-03-16T23:07:46.000Z,
+    "title": "Story",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "story": Object {
+      "arguments": Array [],
+      "component": "ArrowButton",
+      "id": "story",
+      "loc": Object {
+        "end": Object {
+          "column": 34,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 21,
+          "line": 8,
+        },
+      },
+      "name": "story",
+      "source": "() => 'hello'",
+      "subcomponents": Object {
+        "My Button Tab": "Button",
+      },
+    },
+  },
+  "transformed": "import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+export default {
+  title: 'Story',
+};
+
+export const story = () => 'hello';
+
+story.story = {
+  component: ArrowButton,
+  subcomponents: { 'My Button Tab': Button },
+};
+",
+}
+`;
+
+exports[`esm-components subcomponents.js 1`] = `
+Object {
+  "components": Object {
+    "2f4bd34d15be236674abaf6e894afe6e": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "Button",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    },
+    "dc262d21cd7820523c7e0bacca461e87": Object {
+      "from": "../../components/button-default-arrow-func",
+      "importedName": "default",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "ArrowButton",
+      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+  },
+  "doc": Object {
+    "component": "ArrowButton",
+    "components": Object {},
+    "componentsLookup": Object {
+      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+      "Button": "2f4bd34d15be236674abaf6e894afe6e",
+    },
+    "date": 2020-03-16T21:52:16.000Z,
+    "dateModified": 2020-03-16T23:09:05.000Z,
+    "subcomponents": Object {
+      "Button": "Button",
+    },
+    "title": "Story",
+  },
+  "packages": Object {},
+  "stories": Object {},
+  "transformed": "import ArrowButton from '../../components/button-default-arrow-func';
+import { Button } from '../../components/button-named-arrow-func';
+
+export default {
+  title: 'Story',
+  component: ArrowButton,
+  subcomponents: { Button },
+};
+",
+}
+`;

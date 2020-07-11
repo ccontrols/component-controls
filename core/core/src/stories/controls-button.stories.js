@@ -4,7 +4,7 @@ import { ControlTypes } from '../controls';
 import { ButtonControl } from './components/ButtonControl';
 
 export default {
-  title: 'Controls/BUTTON',
+  title: 'Controls/Button',
   component: ButtonControl,
 };
 

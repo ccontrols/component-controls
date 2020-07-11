@@ -1,4 +1,3 @@
-import React from 'react';
 import { StoryStore } from '@component-controls/store';
 import {
   SetControlValueFn,
@@ -6,6 +5,9 @@ import {
   ComponentControlButton,
   mergeControlValues,
 } from '@component-controls/core';
+
+import { useStore } from './BlockContext';
+// import { useStore } from './storeState';
 
 export interface BlockControlsContextInputProps {
   /**
@@ -25,15 +27,9 @@ export interface BlockControlsContextProps {
    */
   clickControl?: ClickControlFn;
 }
-//@ts-ignore
-export const BlockControlsContext = React.createContext<
-  BlockControlsContextProps
->({});
 
-export const BlockControlsContextProvider: React.FC<BlockControlsContextInputProps> = ({
-  children,
-  store,
-}) => {
+export const useControlsContext = (): BlockControlsContextProps => {
+  const store = useStore();
   const setControlValue: SetControlValueFn = (
     storyId: string,
     propName: string | undefined,
@@ -58,14 +54,8 @@ export const BlockControlsContextProvider: React.FC<BlockControlsContextInputPro
       }
     }
   };
-  return (
-    <BlockControlsContext.Provider
-      value={{
-        setControlValue,
-        clickControl,
-      }}
-    >
-      {children}
-    </BlockControlsContext.Provider>
-  );
+  return {
+    setControlValue,
+    clickControl,
+  };
 };
