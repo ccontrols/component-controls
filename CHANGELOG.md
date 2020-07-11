@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* account for non string ([9c93794](https://github.com/ccontrols/component-controls/commit/9c9379489b7b0854e255e6d6a9ce4a530af89926))
+* action item node ([c885e2d](https://github.com/ccontrols/component-controls/commit/c885e2d29a3ef54bcd34b437aa4a72756582cbb8))
+* add deepMergeReplaceArrays for controls ([74c4a3b](https://github.com/ccontrols/component-controls/commit/74c4a3b082ec896651fadda99df8c70a2582703b))
+* add storyPaths dependency ([ccf976c](https://github.com/ccontrols/component-controls/commit/ccf976c96ee029af80115e18452488624db77b73))
+* assets relative path ([b3bf9e8](https://github.com/ccontrols/component-controls/commit/b3bf9e8a05c450ceefa82a7d12560034f6923804))
+* check for missing author ([20974f7](https://github.com/ccontrols/component-controls/commit/20974f71ec00af987d2057681bcdc1739bc66d52))
+* check for null options ([468cae6](https://github.com/ccontrols/component-controls/commit/468cae6041ce69114059a65989d887d479e16e5e))
+* checks for missing doc and duplicated title ([81f0b12](https://github.com/ccontrols/component-controls/commit/81f0b124766ac4fe86dbeeda2aa9498e4026103b))
+* display when only date available ([d35bc0b](https://github.com/ccontrols/component-controls/commit/d35bc0b3f3d75e3223e472c07a800e25ee90a900))
+* document route ([4dc8969](https://github.com/ccontrols/component-controls/commit/4dc8969e316c9ada0b74a00cc6009ef2c2b97051))
+* emit url-loader assets to public folder ([d77775c](https://github.com/ccontrols/component-controls/commit/d77775c329305ab71c295671e55a4174c4cf4e52))
+* handle of="." in MDX ([98cbb2d](https://github.com/ccontrols/component-controls/commit/98cbb2d7fac8a8ec66103d4f6b66bf944199a3d7))
+* info row above edit page row ([53389b4](https://github.com/ccontrols/component-controls/commit/53389b45e77ad7657bdae3dce65ce281a2dd4c13))
+* mdx subcomponents handling ([9d0b1c0](https://github.com/ccontrols/component-controls/commit/9d0b1c0e5d153b8105df230b53e95f32b1a2b00e))
+* optimize initial search loading ([2624c55](https://github.com/ccontrols/component-controls/commit/2624c55939cbb93034faf48ace42e86ac07daa39))
+* page title split ([0206483](https://github.com/ccontrols/component-controls/commit/02064833bbde779783ae1bfc72f8adaea70eefd7))
+* randomize data correct import ([459246a](https://github.com/ccontrols/component-controls/commit/459246aaf9abba330df8946d86f9eda82847e60a))
+* remove logs ([3c62005](https://github.com/ccontrols/component-controls/commit/3c6200534f47236ea33bf44fbc6328987212bda9))
+* rename FatalError ([5712ba3](https://github.com/ccontrols/component-controls/commit/5712ba3be4c2f177a8305ee87c64d07ced4645b2))
+* skip reexport ImageProps ([6a5e27b](https://github.com/ccontrols/component-controls/commit/6a5e27b5e49370dc8605782e889a75e5ec551dd2))
+* tab url when storyPaths = true ([32735d2](https://github.com/ccontrols/component-controls/commit/32735d251feede9d834b190d12c82f3b828373c1))
+* table p and pre margins reduce ([cddbf47](https://github.com/ccontrols/component-controls/commit/cddbf47bdb0fe0d39ac5f782f358a3c7f2593e86))
+* title null check ([03410d8](https://github.com/ccontrols/component-controls/commit/03410d8e72f4ef50e7c9cfdfc95a5a65191913d7))
+* url-loader ([3587c55](https://github.com/ccontrols/component-controls/commit/3587c5590bc93f14f78914aa645fdbac912c0f92))
+* workaround new bug in SB RC ([66112b5](https://github.com/ccontrols/component-controls/commit/66112b56a95f40a3bb49b8182321b00c264c4577))
+
+
+### Features
+
+* added TitledImage for mdx ([5d46370](https://github.com/ccontrols/component-controls/commit/5d46370a1b85c7c45fcf97aa26b292253992a13a))
+* added Value component, info row ([fbe5f0e](https://github.com/ccontrols/component-controls/commit/fbe5f0e8ad6cd41d6965a0425d7a42c94bf78a76))
+* data-testids ([07b9f64](https://github.com/ccontrols/component-controls/commit/07b9f6480ac7a2b1e0a3384007755f1e9a5c86ba))
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+* story iframe and components configuration ([f903953](https://github.com/ccontrols/component-controls/commit/f903953f5644d020229ea836a46e6536233ef871))
+
+
+
+
+
 ## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
 
 

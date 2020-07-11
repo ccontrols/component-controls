@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/core",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Component controls core types and utility functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.7.0",
+    "@component-controls/components": "^1.8.0",
     "@storybook/csf": "^0.0.1",
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
