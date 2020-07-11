@@ -22,18 +22,25 @@ export const Container: FC = ({ children }) => {
     <Box variant="container.container">
       <BlocksContainer
         author={
-          <Box variant="container.author">
-            <Value
-              label="by"
-              value={
-                <Link
-                  href={getDocPath('author', undefined, config?.pages, author)}
-                >
-                  {author}
-                </Link>
-              }
-            />
-          </Box>
+          author ? (
+            <Box variant="container.author">
+              <Value
+                label="by"
+                value={
+                  <Link
+                    href={getDocPath(
+                      'author',
+                      undefined,
+                      config?.pages,
+                      author,
+                    )}
+                  >
+                    {author}
+                  </Link>
+                }
+              />
+            </Box>
+          ) : null
         }
       >
         {children}
