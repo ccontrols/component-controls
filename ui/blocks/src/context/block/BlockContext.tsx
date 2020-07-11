@@ -82,7 +82,9 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
               storyId,
               docId: propsDocId,
               storeProvider: store,
-              options: deepMerge(options, store.config),
+              options: store.config
+                ? deepMerge(options, store.config)
+                : options,
             }}
           >
             <BlockDataContextProvider
