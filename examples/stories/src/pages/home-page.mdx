@@ -1,0 +1,108 @@
+---
+title: Home
+route: /
+type: page
+author: atanasster
+fullPage: true
+---
+
+import { jsx, Flex, Grid, Box, Heading, Text, Button, Card, Divider, Image } from 'theme-ui';
+import { Link } from '@component-controls/components';
+import documentationImg from './media/documentation.jpg';
+import controlsImg from './media/controls.jpg';
+import cmsImg from './media/cms.jpg';
+import configurationImg from './media/configuration.jpg';
+
+export const BoxItem = ({ children,...rest }) => (
+  <Card sx={{ overflow: 'hidden', py: 4, height: '360px', justifyContent: 'space-between', bg: 'gray', ...rest }}>
+    {children}
+  </Card>  
+);
+
+<Flex sx={{ py: 4, flexDirection: 'column',  minHeight: '350px', alignItems: 'center', justifyContent: 'space-between', bg: 'primary', color: 'white' }}>
+  <Flex sx={{ flexDirection: 'column', alignItems: 'center',  maxWidth: '600px' }}>
+    <Heading as="h1">component-controls</Heading>
+    <Heading sx={{ py: 3 }} as="h3">
+      Start documenting your react components
+    </Heading>  
+    <Text sx={{ py: 1, textAlign: 'center' }}>
+      From auto-generated documentation for your react components, all the way to a full-featured CMS with blogs, tutorials, tags, authors and full-text search: component-controls compbines the best of breed from all pre-existing tools in the industry into a flexible platform.
+    </Text>
+  </Flex>  
+  <Button aria-label="visit tutorial" as={Link} href='/tutorial/'>Start learning</Button>
+</Flex>  
+
+
+<Divider sx={{ my: 4 }}/>
+<Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+  <Heading as="h1">Choose your favorite site generator</Heading>
+  <Grid
+    sx={{
+      m: 4,
+      gridTemplateColumns: ['1fr', '1fr', '33.3% 33.3% 33.3%'],
+    }}
+  >
+    <BoxItem>
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Start with gatsby</Heading>
+        <p>Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.</p>
+      </Flex>
+      <Button aria-label="start with gatsby" as={Link} href='/tutorial/getting-started/gatsby'>get started...</Button>
+    </BoxItem>
+    <BoxItem>
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center' }}>
+        <Heading as="h2">Start with next.js</Heading>
+        <p>Production grade react applications: build static and dynamic websites and web applications that scale.</p>
+      </Flex>  
+      <Button aria-label="start with nextjs" as={Link} href='/tutorial/getting-started/nextjs'>get started...</Button>
+    </BoxItem>
+    <BoxItem>
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Start with storybook</Heading>
+        <p>User interface development environment and playground: create components independently and showcase components interactively in an isolated development environment.</p>
+      </Flex>  
+      <Button aria-label="start with storybook" as={Link} href='/tutorial/getting-started/storybook'>get started...</Button>
+    </BoxItem>
+  </Grid>
+</Flex>  
+
+<Divider sx={{ my: 4 }}/>
+<Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+  <Heading as="h1">At a glance</Heading>
+  <Grid
+    gap={2}
+    sx={{
+      m: 4,
+      gridTemplateColumns: ['1fr', '1fr', '50% 50%'],
+    }}
+  >
+    <BoxItem height="450px" bg="background">
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Create documentation</Heading>
+        <p>You can create documentation for your library in <Link aria-label="create documentation" href="/tutorial/mdx-documentation">MDX</Link> and create interactive examples for your components in <Link aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link> or <Link aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>. Or even mix and match - and import MDX or ESM into your documents.</p>
+      </Flex> 
+      <Image src={documentationImg} alt="documentation" />
+    </BoxItem>
+    <BoxItem height="450px" bg="background">
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Interactive stories</Heading>
+        <p>Let your users interact with your components and get the generated code using our powerful <Link aria-label="interactive controls" href="/blogs/introduction-to-controls/">controls</Link>. Create custom controls for your own property types.</p>
+      </Flex>  
+      <Image src={controlsImg} alt="interactive controls" />
+    </BoxItem>
+    <BoxItem height="450px" bg="background">
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Fully featured CMS</Heading>
+        <p>Create all the <Link href="/tutorial/mdx-documentation">documentation</Link> for your project - from tutorials, blog posts, component stories all the way to home, about pages. Assign authors, catagories and tags to all documents.</p>
+      </Flex>
+      <Image src={cmsImg} alt="various page types" />
+    </BoxItem>
+    <BoxItem height="450px" bg="background">
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+        <Heading as="h2">Fully configurable</Heading>
+        <p>We are atriving to provide full custom experience with <Link aria-label="custom configurations" href="/configuration/overview/">configuration</Link> files. Customize the user-interface, the meta information and create custom webpack settings.</p>
+      </Flex> 
+      <Image src={configurationImg} alt="extensive configuration" /> 
+    </BoxItem>
+  </Grid>
+</Flex>  

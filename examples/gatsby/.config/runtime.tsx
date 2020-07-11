@@ -13,7 +13,7 @@ const config: RunOnlyConfiguration = {
   siteUrl: `https://component-controls-gatsby.netlify.app`,
   siteDescription: `Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.`,
   siteLanguage: `en`,
-  author: `@atanasster`,
+  author: `@component-controls`,
   theme: {
     colors: {
       //primary: 'pink',
