@@ -11,7 +11,7 @@ import {
 import { jsx, Box, BoxProps } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '@component-controls/components';
-import { Container } from '../Container';
+import { Container } from '../Container/Container';
 import { StoryContextConsumer } from '../context';
 
 export interface PageContainerOwnProps {

@@ -26,4 +26,5 @@ export * from './ThemeContext';
 export * from './Title';
 export * from './TitledImage';
 export * from './Toggle';
+export * from './Value';
 export * from './Zoom';

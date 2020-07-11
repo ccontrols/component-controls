@@ -37,9 +37,9 @@ export type ControlsTheme = {
   tabs: Record<string, ThemeUIStyleObject>;
   tag: Record<string, ThemeUIStyleObject>;
   titledimage: Record<string, ThemeUIStyleObject>;
+  value: Record<string, ThemeUIStyleObject>;
   zoom: ThemeUIStyleObject;
   editpage: Record<string, ThemeUIStyleObject>;
-  lastedited: Record<string, ThemeUIStyleObject>;
   pagecontainer: ThemeUIStyleObject;
   propstable: Record<string, ThemeUIStyleObject>;
   story: Record<string, ThemeUIStyleObject>;
@@ -373,15 +373,26 @@ export const theme: ControlsTheme = {
   },
   blockpagecontainer: {
     container: {},
-    editrow: {
+    inforow: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
     },
-    inforow: { mt: 2 },
     titlerow: {
       my: 4,
+    },
+    createdbox: {
+      container: {
+        display: 'flex',
+        flexDirection: ['column', 'row'],
+        alignItems: ['flex-end', 'baseline'],
+      },
+      separator: {
+        visibility: ['hidden', 'visible'],
+        height: [0],
+        mr: [0, 1],
+      },
     },
   },
   linkheading: {
@@ -535,34 +546,43 @@ export const theme: ControlsTheme = {
       fontSize: 1,
     },
   },
+  value: {
+    container: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+    },
+    label: {
+      fontSize: 0,
+      color: 'muted',
+      mr: 1,
+      lineHeight: 'heading',
+    },
+    value: {
+      fontSize: 2,
+      lineHeight: 'heading',
+    },
+  },
   zoom: {
     position: 'relative',
     transformOrigin: 'top left',
     transition: 'transform .2s',
   },
   editpage: {
-    container: {},
+    container: {
+      lineHeight: 'heading',
+    },
     inner: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
     },
     text: {
-      pl: 2,
+      pl: 1,
+      fontSize: 2,
+      fontWeight: 'bold',
     },
   },
-  lastedited: {
-    container: {},
-    inner: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    text: {
-      color: 'muted',
-    },
-  },
-
   pagecontainer: {
     bg: 'background',
     color: 'text',
@@ -949,7 +969,7 @@ export const theme: ControlsTheme = {
   container: {
     container: {},
     pagination: { py: 4 },
-    inforow: { mb: 2 },
+    author: { ml: [0, 2] },
   },
   documentslist: {
     container: {},

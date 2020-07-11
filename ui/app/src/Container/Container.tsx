@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { FC, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
+import { getDocPath } from '@component-controls/core';
+import { Link, Value } from '@component-controls/components';
 import {
   BlockContext,
   Pagination,
   Container as BlocksContainer,
-  DocumentShortItem,
 } from '@component-controls/blocks';
 
 /**
@@ -14,14 +15,27 @@ import {
 export const Container: FC = ({ children }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+  const { author } = doc || {};
   const config = storeProvider.config;
-
+  console.log(doc, config);
   return (
     <Box variant="container.container">
-      <Box variant="container.inforow">
-        <DocumentShortItem reverse={true} doc={doc} config={config} />
-      </Box>
-      <BlocksContainer>
+      <BlocksContainer
+        author={
+          <Box variant="container.author">
+            <Value
+              label="by"
+              value={
+                <Link
+                  href={getDocPath('author', undefined, config?.pages, author)}
+                >
+                  {author}
+                </Link>
+              }
+            />
+          </Box>
+        }
+      >
         {children}
         <Box variant="container.pagination">
           <Pagination />
