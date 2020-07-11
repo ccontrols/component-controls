@@ -8,7 +8,7 @@
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9017 -c .storybook",
     "start": "webpack-dev-server --open --mode development",
     "storybook": "start-storybook -p 9017 -c .storybook",
-    "build-sample": "build-storybook -c .storybook -o ./docs"
+    "build-sample": "build-storybook -c .storybook -o ./public"
   },
   "repository": {
     "type": "git",
