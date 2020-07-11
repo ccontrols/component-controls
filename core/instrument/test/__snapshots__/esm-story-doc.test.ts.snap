@@ -6,8 +6,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-17T18:28:16.000Z,
-    "dateModified": 2020-06-17T18:28:16.000Z,
+    "date": 2020-07-11T17:53:39.975Z,
+    "dateModified": 2020-07-11T17:53:39.975Z,
     "package": "a03a6b619ce62e5e6f82a4a5388ace7c",
     "test": 1,
     "title": "Story",
@@ -79,8 +79,8 @@ Object {
     "componentsLookup": Object {
       "ControlsTable": "73cac298d983c71aec166657453a64fe",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-11T17:53:39.974Z,
+    "dateModified": 2020-07-11T17:53:39.974Z,
     "package": "8081f639b288cdd9ab2efc243ebbaa32",
     "smartControls": Object {
       "smart": false,
@@ -165,8 +165,8 @@ Object {
         "value": "Mark",
       },
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-11T17:53:39.973Z,
+    "dateModified": 2020-07-11T17:53:39.973Z,
     "package": "6db9fafb88b9be0bff2ddaea194f3c5b",
     "title": "Storybook/Kind",
   },
@@ -238,8 +238,8 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-06-17T18:28:16.000Z,
-    "dateModified": 2020-06-17T18:28:16.000Z,
+    "date": 2020-07-11T17:53:39.973Z,
+    "dateModified": 2020-07-11T17:53:39.973Z,
     "package": "39a28a959d9e8a3456b1df4b10db9ffc",
     "title": "Storybook/Blocks/ControlsTable",
   },
