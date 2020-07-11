@@ -53,11 +53,13 @@ export const Story: FC<StoryProps> = forwardRef(
               const { decorators: globalDecorators = [] } = options;
               const { decorators: storyDecorators = [] } = story;
               const decorators = deepMerge(globalDecorators, storyDecorators);
+              //parameters added to avoid bug in SB6 rc that it assumes parameters exist
+              const storyContext = { ...context, parameters: {} };
               const renderFn = decorators.reverse().reduce(
                 (acc: StoryRenderFn, item: StoryRenderFn) => () =>
-                  item(acc, { ...context, renderFn: acc }),
+                  item(acc, { ...storyContext, renderFn: acc }),
                 //@ts-ignore
-                () => story.renderFn(values, context),
+                () => story.renderFn(values, storyContext),
               );
               return (
                 <Box
