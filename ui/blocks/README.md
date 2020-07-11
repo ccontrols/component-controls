@@ -10,9 +10,7 @@
     -   [<ins>Container</ins>](#inscontainerins)
     -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>DocumentItem</ins>](#insdocumentitemins)
-    -   [<ins>DocumentShortItem</ins>](#insdocumentshortitemins)
     -   [<ins>EditPage</ins>](#inseditpageins)
-    -   [<ins>LastEdited</ins>](#inslasteditedins)
     -   [<ins>PackageVersion</ins>](#inspackageversionins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>PageTypeTag</ins>](#inspagetypetagins)
@@ -158,9 +156,9 @@ _Container [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name      | Type        | Description |
-| --------- | ----------- | ----------- |
-| `infoRow` | _ReactNode_ |             |
+| Name     | Type        | Description |
+| -------- | ----------- | ----------- |
+| `author` | _ReactNode_ |             |
 
 ## <ins>Description</ins>
 
@@ -191,30 +189,12 @@ _DocumentItem [source code](https://github.com/ccontrols/component-controls/tree
 | `doc*`   | _Document_         | document to be displayed   |
 | `config` | _RunConfiguration_ | store configuration object |
 
-## <ins>DocumentShortItem</ins>
-
-_DocumentShortItem [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/DocumentItem/DocumentShortItem.tsx)_
-
-### properties
-
-| Name      | Type               | Description                |
-| --------- | ------------------ | -------------------------- |
-| `doc`     | _Document_         | document to be displayed   |
-| `config`  | _RunConfiguration_ | store configuration object |
-| `reverse` | _boolean_          |                            |
-
 ## <ins>EditPage</ins>
 
 Display a Edit this page link to the page source repository.
 In order for this to work, you need to set up the `repository` field in `package.json`.
 
 _EditPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/EditPage/EditPage.tsx)_
-
-## <ins>LastEdited</ins>
-
-Display the date last modified for the current document.
-
-_LastEdited [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/LastEdited/LastEdited.tsx)_
 
 ## <ins>PackageVersion</ins>
 

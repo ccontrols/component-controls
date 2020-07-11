@@ -39,6 +39,7 @@
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>TitledImage</ins>](#institledimageins)
     -   [<ins>Toggle</ins>](#instoggleins)
+    -   [<ins>Value</ins>](#insvalueins)
     -   [<ins>Zoom</ins>](#inszoomins)
 
 # Installation
@@ -573,6 +574,19 @@ _Toggle [source code](https://github.com/ccontrols/component-controls/tree/maste
 | ------- | --------------------- | --------------------------------------------------- |
 | `label` | _string_              | optional label to be displayed alongside the toggle |
 | `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
+
+## <ins>Value</ins>
+
+Displays a label and value styled
+
+_Value [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Value/Value.tsx)_
+
+### properties
+
+| Name     | Type        | Description                       |
+| -------- | ----------- | --------------------------------- |
+| `label*` | _ReactNode_ | label - usually smaller and muted |
+| `value*` | _ReactNode_ | highlighted value                 |
 
 ## <ins>Zoom</ins>
 
