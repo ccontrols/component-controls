@@ -11,6 +11,7 @@ import {
   ActionItems,
 } from '@component-controls/components';
 import { BlockDataContext, useCustomProps } from '../context';
+import { PlaygroundContext } from './PlaygroundContext';
 
 import {
   StoryBlockContainer,
@@ -170,7 +171,11 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
           background={background}
           direction={direction}
         >
-          <Zoom scale={scale || 1}>{children}</Zoom>
+          <Zoom scale={scale || 1}>
+            <PlaygroundContext.Provider value={{ useDescription: true }}>
+              {children}
+            </PlaygroundContext.Provider>
+          </Zoom>
         </PanelContainer>
       )}
     </StoryBlockContainer>
