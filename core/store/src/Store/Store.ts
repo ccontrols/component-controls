@@ -413,6 +413,6 @@ export class Store implements StoryStore {
         return component.info.description;
       }
     }
-    return doc.title;
+    return undefined;
   };
 }
