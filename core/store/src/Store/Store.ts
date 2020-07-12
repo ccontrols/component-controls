@@ -396,8 +396,7 @@ export class Store implements StoryStore {
     }
   };
   visitPage = () => {
-    debugger;
-    if (this._analytics) {
+    if (this._analytics && typeof window !== 'undefined') {
       this._analytics.page();
     }
   };
