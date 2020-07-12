@@ -36,8 +36,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@analytics/google-analytics": "^0.4.0",
     "@component-controls/core": "^1.8.0",
     "@component-controls/loader": "^1.8.0",
+    "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
     "typescript": "^3.8.3"
   },

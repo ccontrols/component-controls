@@ -210,6 +210,11 @@ export interface RunOnlyConfiguration {
    *
    */
   components?: Record<string, any>;
+
+  /**
+   * analytics options
+   */
+  analytics?: any;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &

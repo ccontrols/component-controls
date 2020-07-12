@@ -1,3 +1,5 @@
+import Analytics from 'analytics';
+import googleAnalytics from '@analytics/google-analytics';
 import {
   StoriesStore,
   Pages,
@@ -40,6 +42,7 @@ export class Store implements StoryStore {
   private observers: StoreObserver[];
   private moduleId: number;
   private _cachedPages: { [key: string]: Pages } = {};
+  private _analytics: any = null;
   private _categoryItems: {
     [key: string]: {
       [key: string]: number;
@@ -73,6 +76,7 @@ export class Store implements StoryStore {
         }
       };
     }
+    this.initializeAnalytics();
   }
 
   /**
@@ -371,5 +375,30 @@ export class Store implements StoryStore {
       this.notifyObservers(storyId, propName);
     }
     return this.loadedStore;
+  };
+  initializeAnalytics = () => {
+    if (this.loadedStore) {
+      const options = this.loadedStore.config?.analytics;
+      if (options) {
+        if (typeof options === 'string') {
+          this._analytics = Analytics({
+            app: this.loadedStore.config?.siteTitle,
+            plugins: [
+              googleAnalytics({
+                trackingId: options,
+              }),
+            ],
+          });
+        } else {
+          this._analytics = Analytics(options);
+        }
+      }
+    }
+  };
+  visitPage = () => {
+    debugger;
+    if (this._analytics) {
+      this._analytics.page();
+    }
   };
 }

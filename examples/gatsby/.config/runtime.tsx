@@ -7,6 +7,7 @@ import { OctofaceIcon } from '@primer/octicons-react';
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
 const config: RunOnlyConfiguration = {
+  analytics: 'UA-172446254-1',
   siteTitle: `Component controls`,
   siteTitleAlt: `Component controls - https://github.com/ccontrols/component-controls`,
   siteHeadline: `Component controls gatsby`,
