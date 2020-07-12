@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import {
-  Subtitle,
   Story,
   Playground,
   Stories,
@@ -15,7 +14,6 @@ import {
 
 export const ClassicPage: FC = () => (
   <div>
-    <Subtitle />
     <PackageVersion />
     <Description />
     <ComponentSource id="." title="Component" />

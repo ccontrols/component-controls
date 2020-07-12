@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import {
-  Subtitle,
   Story,
   Playground,
   Description,
@@ -10,7 +9,6 @@ import {
 
 export const CurrentStoryPage: FC = () => (
   <>
-    <Subtitle />
     <Description />
     <ComponentSource id="." title="Component" />
     <Playground openTab="source" title=".">

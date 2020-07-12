@@ -4,6 +4,7 @@ import { FC, ReactNode } from 'react';
 import { dateToLocalString } from '@component-controls/core';
 import { Value } from '@component-controls/components';
 import { Title } from '../Title';
+import { Subtitle } from '../Subtitle';
 import { EditPage } from '../EditPage';
 
 import { useStoryContext } from '../context';
@@ -33,6 +34,7 @@ export const Container: FC<ContainerProps> = ({ children, author }) => {
       <Box variant="blockpagecontainer.titlerow">
         <Title sx={{ paddingBottom: 0 }} />
       </Box>
+      <Subtitle />
 
       {children}
     </Box>
