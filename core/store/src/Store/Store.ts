@@ -9,6 +9,7 @@ import {
   getStoryPath,
   DocType,
   defDocType,
+  getComponentName,
 } from '@component-controls/core';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -396,8 +397,21 @@ export class Store implements StoryStore {
     }
   };
   visitPage = () => {
-    if (this._analytics && typeof window !== 'undefined') {
+    if (this._analytics) {
       this._analytics.page();
     }
+  };
+  getDocDescriotion = (doc: Document): string | undefined => {
+    if (doc.description) {
+      return doc.description;
+    }
+    const componentName = getComponentName(doc.component);
+    if (componentName) {
+      const component = this.loadedStore?.components[componentName];
+      if (component?.info?.description) {
+        return component.info.description;
+      }
+    }
+    return doc.title;
   };
 }

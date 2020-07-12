@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, Fragment, useContext } from 'react';
+import { FC, Fragment, useContext, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
@@ -40,9 +40,16 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
   }
   const titleParts = title ? title.split('/') : [''];
   const pageTitle = titleParts[titleParts.length - 1];
+  const pageDescription = doc
+    ? storeProvider.getDocDescriotion(doc)
+    : undefined;
+  useEffect(() => {
+    storeProvider.visitPage();
+  }, [storeProvider]);
+
   return (
     <Fragment>
-      <SEO title={pageTitle} />
+      <SEO title={pageTitle} description={pageDescription} />
       <SkipLinks items={items} />
       <Box variant="app">
         <Header toolbar={toolbar} />

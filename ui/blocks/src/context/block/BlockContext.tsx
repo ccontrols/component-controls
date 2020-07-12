@@ -69,7 +69,6 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
     storyId =
       doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
   }
-  store.visitPage();
   return (
     <RecoilRoot>
       <ErrorBoundary>
