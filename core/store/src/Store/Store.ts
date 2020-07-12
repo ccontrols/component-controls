@@ -401,13 +401,14 @@ export class Store implements StoryStore {
       this._analytics.page();
     }
   };
-  getDocDescriotion = (doc: Document): string | undefined => {
+  getDocDescription = (doc: Document): string | undefined => {
     if (doc.description) {
       return doc.description;
     }
     const componentName = getComponentName(doc.component);
     if (componentName) {
-      const component = this.loadedStore?.components[componentName];
+      const componnetHash = doc.componentsLookup[componentName];
+      const component = this.loadedStore?.components[componnetHash];
       if (component?.info?.description) {
         return component.info.description;
       }

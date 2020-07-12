@@ -46,7 +46,7 @@ export interface StoryStore {
   addObserver: (observer: StoreObserver) => void;
   removeObserver: (observer: StoreObserver) => void;
   visitPage: () => void;
-  getDocDescriotion: (doc: Document) => string | undefined;
+  getDocDescription: (doc: Document) => string | undefined;
 }
 
 export const UPDATE_STORY_MSG = 'component_controls_update_story';

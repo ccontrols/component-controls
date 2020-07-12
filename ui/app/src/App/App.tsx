@@ -41,12 +41,11 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
   const titleParts = title ? title.split('/') : [''];
   const pageTitle = titleParts[titleParts.length - 1];
   const pageDescription = doc
-    ? storeProvider.getDocDescriotion(doc)
+    ? storeProvider.getDocDescription(doc)
     : undefined;
   useEffect(() => {
     storeProvider.visitPage();
   }, [storeProvider]);
-
   return (
     <Fragment>
       <SEO title={pageTitle} description={pageDescription} />

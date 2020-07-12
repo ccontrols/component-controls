@@ -63,8 +63,11 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   options,
 }) => {
   let storyId = propsStoryId;
-  const docId = storyId || propsDocId;
-  if (!storyId && docId) {
+  let docId = propsDocId;
+  if (storyId && !docId) {
+    const story = store.getStory(storyId);
+    docId = story?.doc;
+  } else if (!storyId && docId) {
     const doc = store.getStoryDoc(docId);
     storyId =
       doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
@@ -80,7 +83,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
           <BlockContext.Provider
             value={{
               storyId,
-              docId: propsDocId,
+              docId,
               storeProvider: store,
               options: store.config
                 ? deepMerge(options, store.config)
