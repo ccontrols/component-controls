@@ -43,7 +43,6 @@ export const SEO = ({
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
   };
-  console.log(seo.description);
   return (
     <Helmet
       title={title}
