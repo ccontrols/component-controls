@@ -7,6 +7,8 @@ tags:
   - stories
 order: 2
 ---
+import { Playground, Story } from '@component-controls/blocks';
+import { customStory } from '../../stories/external/external-story-props';
 
 ## Overview
 
@@ -57,9 +59,38 @@ import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@
 <PropsTable of={Button} />
 ```
 
+## External stories
+
+You can import [ESM](/tutorial/esmodules-stories) stories into your MDX documentation. Usually this is to use the benefits of writing your stories in `.tsx`/`.jsx` files with full code completion support from your code editor.
+
+Our instrumenting module will take care to show the actual story source imported, not the code in the MDX file doing the importing.
+
+```
+---
+title: External Story
+---
+import { Playground, Story } from '@component-controls/blocks';
+import { customStory } from '../../stories/src/stories/external/external-story-props';
+
+<Playground description="story from external file with props">
+  <Story name='mdx-external-story' controls={{ text: 'hello' }} >
+    {props => customStory(props)}
+  </Story>
+</Playground>
+
+```
+In the example below, click on `open source` to view the imported story source.
+
+<Playground>
+  <Story name='mdx-external-story' controls={{ text: 'hello' }} >
+    {props => customStory(props)}
+  </Story>
+</Playground>
+
+
 ## Components
 
-Below is a list of the most commonly used components when writing MDX stories:
+Below is a list of the most commonly used components (aka blocks) when writing MDX stories:
 
 
 ## Story-related
