@@ -33,7 +33,11 @@ export const stringifyObject = (
           .map(key => {
             return typeof val[key] === 'function'
               ? null
-              : `${key}: ${stringifyObject(val[key], sep, depth + 1)}`;
+              : `"${jsStringEscape(key)}": ${stringifyObject(
+                  val[key],
+                  sep,
+                  depth + 1,
+                )}`;
           })
           .filter(v => v)}
         }
