@@ -111,9 +111,6 @@ export const extractCSFStories = (
           if (nameAttr) {
             story.name = nameAttr;
           }
-          if (attrComponents.length > 0) {
-            story.component = attrComponents[0];
-          }
           store.stories[storyExport] = story;
           globals[storyExport] = story;
         }
