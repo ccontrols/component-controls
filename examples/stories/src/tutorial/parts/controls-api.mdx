@@ -118,3 +118,13 @@ More info on the [pre-defined controls](/tutorial/structure/controls-api), howev
 | --------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `name*`   | string              | 'name' for generating random data from faker.js  usually comprised of two parts, separated by a dot  example 'internet.avatar' |
 | `options` | \[key: string]: any | options to be passed to the random data generators example {  min: 10, max: 20 }   
+
+### SmartControls
+
+**properties**
+
+| Name      | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `exclude` | string\[] | exclude props only                               |
+| `include` | string\[] | include props only                               |
+| `smart`   | boolean   | whether to generate "smart" controls for a story |
