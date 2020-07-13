@@ -113,7 +113,7 @@ export interface Story {
    */
   loc?: CodeLocation;
   /**
-   * the source code of the story, extracted byt the AST instrumenting loaders
+   * the source code of the story, extracted by the AST instrumenting loaders
    */
   source?: string;
 

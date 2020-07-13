@@ -245,7 +245,7 @@ _defined in [@component-controls/core/src/stories.ts](https://github.com/ccontro
 | `name*`         | string                                  | name of the Story.                                                                                    |
 | `renderFn`      | [StoryRenderFn](#storyrenderfn)         | render function for the story                                                                         |
 | `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                              |
-| `source`        | string                                  | the source code of the story, extracted byt the AST instrumenting loaders                             |
+| `source`        | string                                  | the source code of the story, extracted by the AST instrumenting loaders                              |
 | `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                            |
 | `subtitle`      | string                                  | optional story subtitle property                                                                      |
 
@@ -715,7 +715,7 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 | `name*`        | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
 | `package`      | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
 | `request`      | string                             | resolved import request                                                                                                                                                                                                                    |
-| `source`       | string                             | the source code of the component file, extracted byt the AST instrumenting loaders                                                                                                                                                         |
+| `source`       | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
 
 ## TypeInformation
 
@@ -949,6 +949,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 | Name              | Type                                                 | Description                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `analytics`       | any                                                  | analytics options                                                                                                                                                                    |
 | `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
 | `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
@@ -1041,7 +1042,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L220)_
 
 ### properties
 
@@ -1072,7 +1073,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L258)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L263)_
 
 
 
@@ -1085,7 +1086,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L218)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L223)_
 
 
 
@@ -1126,7 +1127,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L215)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L220)_
 
 ### properties
 
