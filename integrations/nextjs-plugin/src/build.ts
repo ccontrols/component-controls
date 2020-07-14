@@ -17,8 +17,8 @@ export default ({
   presets,
   webpack,
   ...rest
-}: LoaderOptions) => () => {
-  if (!store) {
+}: LoaderOptions) => (phase: string) => {
+  if (phase !== 'phase-export' && !store) {
     const config: CompileProps = {
       webPack: webpack,
       presets: presets || defaultPresets,
