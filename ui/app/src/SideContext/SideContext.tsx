@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, RefObject, useState, useCallback, useLayoutEffect } from 'react';
+import { FC, RefObject, useState, useCallback, useEffect } from 'react';
 import { jsx, Box, NavLink } from 'theme-ui';
 import {
   Sidebar as AppSidebar,
@@ -40,7 +40,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
       setActiveItem(curItem);
     }
   }, [items, pageRef]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const links: ScrollElement[] = [];
     const pageEl = pageRef?.current;
     if (pageEl) {
@@ -63,7 +63,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
     setItems(links);
   }, [pageRef]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', onScroll, false);
     onScroll();
     return () => {

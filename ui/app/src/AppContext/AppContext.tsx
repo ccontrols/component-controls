@@ -42,9 +42,10 @@ export const AppContext: FC<AppContextProps> = ({
   const page = pages?.[type];
   const documentId = docId
     ? docId
-    : docId === undefined && page?.navSidebar
+    : !docId && page?.navSidebar
     ? storyStore.getFirstDocument(type)
     : undefined;
+
   return (
     <ThemeProvider theme={storyStore.config?.theme} components={mdxComponents}>
       <BlockContextProvider

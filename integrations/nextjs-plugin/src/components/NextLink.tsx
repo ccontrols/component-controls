@@ -6,8 +6,10 @@ import Link from 'next/link';
 export const NextLink: FC<LinkProps & { to?: string }> = ({
   href,
   to,
+  children,
   ...props
 }) => (
-  //@ts-ignore
-  <Link to={href || to || ''} {...props} activeClassName="active" />
+  <Link href={href || to || ''}>
+    <a {...props}>{children}</a>
+  </Link>
 );

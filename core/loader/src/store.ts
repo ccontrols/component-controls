@@ -3,9 +3,9 @@ import {
   StoryPackages,
   BuildConfiguration,
   RunConfiguration,
+  Pages,
   Document,
   defDocType,
-  Pages,
   DocType,
   docStoryToId,
 } from '@component-controls/core';
@@ -36,8 +36,6 @@ export interface LoadingStore {
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
   })[];
-  getDocs: (type: DocType) => Pages;
-  getUniquesByField: (field: string) => { [key: string]: number };
 }
 
 class Store implements LoadingStore {
@@ -46,48 +44,54 @@ class Store implements LoadingStore {
   packages: LoadingStore['packages'] = {};
   config: LoadingStore['config'] = {};
   buildConfig: LoadingStore['buildConfig'] = {};
-  getDocs = (docType: DocType) =>
-    this.stores
-      .filter(store => {
-        if (store?.doc) {
-          const { type = defDocType } = store.doc;
-          return type === docType;
-        }
-        return false;
-      })
-      .map(
-        store =>
-          ({
-            ...store.doc,
-            stories:
-              store.doc && store.stories
-                ? Object.keys(store.stories).map(id =>
-                    //@ts-ignore
-                    docStoryToId(store.doc.title, id),
-                  )
-                : undefined,
-          } as Document),
-      );
-  getUniquesByField = (field: string) => {
-    return this.stores.reduce((acc: { [key: string]: number }, store) => {
-      if (store?.doc) {
-        //@ts-ignore
-        const value = store.doc[field];
-        const values = Array.isArray(value) ? value : [value];
-        values.forEach(v => {
-          if (v !== undefined) {
-            if (typeof acc[v] === 'undefined') {
-              acc[v] = 0;
-            }
-            acc[v] = acc[v] = 1;
-          }
-        });
-      }
-      return acc;
-    }, {});
-  };
 }
 
+export const getDocs = (
+  stores: LoadingStore['stores'],
+  docType: DocType,
+): Pages =>
+  stores
+    .filter(store => {
+      if (store?.doc) {
+        const { type = defDocType } = store.doc;
+        return type === docType;
+      }
+      return false;
+    })
+    .map(
+      store =>
+        ({
+          ...store.doc,
+          stories:
+            store.doc && store.stories
+              ? Object.keys(store.stories).map(id =>
+                  //@ts-ignore
+                  docStoryToId(store.doc.title, id),
+                )
+              : undefined,
+        } as Document),
+    );
+export const getUniquesByField = (
+  stores: LoadingStore['stores'],
+  field: string,
+): { [key: string]: number } => {
+  return stores.reduce((acc: { [key: string]: number }, store) => {
+    if (store?.doc) {
+      //@ts-ignore
+      const value = store.doc[field];
+      const values = Array.isArray(value) ? value : [value];
+      values.forEach(v => {
+        if (v !== undefined) {
+          if (typeof acc[v] === 'undefined') {
+            acc[v] = 0;
+          }
+          acc[v] = acc[v] = 1;
+        }
+      });
+    }
+    return acc;
+  }, {});
+};
 export const store = new Store();
 
 export const reserveStories = (filePaths: string[]) => {

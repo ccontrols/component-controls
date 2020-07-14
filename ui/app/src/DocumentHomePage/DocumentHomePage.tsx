@@ -7,6 +7,7 @@ import { BlockContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 import { DocPage } from '../DocPage';
+import { CategoryList } from '../CategoryList';
 
 export interface DocumentHomePageProps {
   type: DocType;
@@ -18,6 +19,11 @@ export interface DocumentHomePageProps {
  */
 export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
+  const { categories } = storeProvider.config || {};
+  const isCategory = categories?.includes(type);
+  if (isCategory) {
+    return <CategoryList type={type} />;
+  }
   const pages = storeProvider?.getPageList(type) || [];
   const page = storeProvider?.config?.pages?.[type] || {};
   return page.indexHome ? (

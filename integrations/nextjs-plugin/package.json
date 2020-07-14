@@ -12,7 +12,8 @@
   "files": [
     "dist/",
     "package.json",
-    "README.md"
+    "README.md",
+    "build.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

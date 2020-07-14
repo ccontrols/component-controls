@@ -4,7 +4,9 @@ import {
   getStoryPath,
   DocType,
   TabConfiguration,
+  Pages,
 } from '@component-controls/core';
+import { getDocs, getUniquesByField } from '@component-controls/loader';
 
 import {
   compile,
@@ -23,7 +25,7 @@ exports.createPages = async (
   const { createPage } = actions;
   const config: CompileProps = {
     webPack: options.webpack,
-    presets: defaultPresets,
+    presets: options.presets || defaultPresets,
     configPath: options.configPath,
     outputFolder:
       options.outputFolder || `${path.join(process.cwd(), 'public')}`,
@@ -39,7 +41,7 @@ exports.createPages = async (
         if (!categories.includes(type as DocType)) {
           const page = pages[type as DocType];
           const docType = type as DocType;
-          const docs = store.getDocs(docType);
+          const docs: Pages = getDocs(store.stores, docType);
           const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
             { route: undefined },
           ];
@@ -86,7 +88,7 @@ exports.createPages = async (
         }
       });
       categories.forEach(catName => {
-        const cats = store.getUniquesByField(catName);
+        const cats = getUniquesByField(store.stores, catName);
         const catPage = pages[catName as DocType];
         const catKeys = Object.keys(cats);
         catKeys.forEach(tag => {
@@ -105,16 +107,14 @@ exports.createPages = async (
             },
           });
         });
-        if (catKeys.length) {
-          createPage({
-            path: `/${catPage.basePath}`,
-            component: require.resolve(`../src/templates/CategoryList.tsx`),
-            context: {
-              type: catName,
-              docId: null,
-            },
-          });
-        }
+        createPage({
+          path: `/${catPage.basePath}`,
+          component: require.resolve(`../src/templates/DocHome.tsx`),
+          context: {
+            type: catName,
+            docId: null,
+          },
+        });
       });
     }
     const homePage = store.stores.find(s => s.doc?.route === '/');
