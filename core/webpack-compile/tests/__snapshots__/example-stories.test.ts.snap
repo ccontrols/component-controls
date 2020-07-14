@@ -2,6 +2,8 @@
 
 exports[`test example stories compile 1`] = `
 Store {
+  "_docpaths": undefined,
+  "_homepaths": undefined,
   "buildConfig": Object {
     "categories": Array [
       "author",
@@ -37,6 +39,8 @@ Store {
       "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
   },
+  "buildDocPaths": [Function],
+  "buildHomePaths": [Function],
   "components": Object {
     "b5fffc2a9e710b29374f13f1d7ef028c": Object {
       "from": "../components/Button",
@@ -459,7 +463,12 @@ Button.propTypes = {
     },
   },
   "config": Object {},
+  "getDocPage": [Function],
+  "getDocPaths": [Function],
   "getDocs": [Function],
+  "getHomePage": [Function],
+  "getHomePaths": [Function],
+  "getIndexPage": [Function],
   "getUniquesByField": [Function],
   "packages": Object {
     "2971104eea653041fd49648ff7a04be8": Object {
@@ -473,7 +482,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
       "dependencies": undefined,
@@ -486,7 +495,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
       "dependencies": undefined,
@@ -499,7 +508,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
       "dependencies": undefined,
@@ -512,7 +521,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "dependencies": undefined,
@@ -525,7 +534,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "dependencies": undefined,
@@ -538,7 +547,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
       "dependencies": undefined,
@@ -551,7 +560,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
     "f6e72e22789f0ec595d8610e56ea91ff": Object {
       "dependencies": undefined,
@@ -564,7 +573,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.0",
+      "version": "1.8.0",
     },
   },
   "stores": Array [

@@ -20,13 +20,17 @@ export const getDocPath = (
   const { basePath = '' } = pagesConfig?.[docType] || {};
   const route = doc
     ? doc.route ||
-      `${ensureStartingSlash(ensureTrailingSlash(basePath))}${
+      `${ensureStartingSlash(
+        ensureTrailingSlash(basePath),
+      )}${ensureTrailingSlash(strToId(doc.title))}${
         activeTab ? `${ensureTrailingSlash(activeTab)}` : ''
-      }${ensureTrailingSlash(strToId(doc.title))}`
-    : `${ensureStartingSlash(ensureTrailingSlash(basePath))}${
+      }`
+    : `${ensureStartingSlash(
+        ensureTrailingSlash(basePath),
+      )}${ensureTrailingSlash(strToId(name))}${
         activeTab ? `${ensureTrailingSlash(activeTab)}` : ''
-      }${ensureTrailingSlash(strToId(name))}`;
-  return route;
+      }`;
+  return ensureTrailingSlash(route);
 };
 
 export const getStoryPath = (
@@ -41,12 +45,15 @@ export const getStoryPath = (
   }
 
   const { basePath = '' } = pagesConfig?.[docType] || {};
-  const route = `${
+  const docRoute = `${
     doc?.route
       ? ensureStartingSlash(ensureTrailingSlash(doc?.route))
       : `${ensureStartingSlash(ensureTrailingSlash(basePath))}`
-  }${activeTab ? `${ensureTrailingSlash(activeTab)}` : ''}`;
-  return `${route}${storyId || ''}`;
+  }`;
+  const route = `${docRoute}${storyId ? ensureTrailingSlash(storyId) : ''}${
+    activeTab ? `${ensureTrailingSlash(activeTab)}` : ''
+  }`;
+  return ensureTrailingSlash(route);
 };
 
 export const docStoryToId = (docId: string, storyId: string) =>

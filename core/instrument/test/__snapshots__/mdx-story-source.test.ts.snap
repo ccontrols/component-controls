@@ -66,14 +66,14 @@ MDXContent.isMDXComponent = true;
 
         export default Object.assign(dmsPageExport, 
         {
-        title: \\"MDX\\"
+        \\"title\\": \\"MDX\\"
         }
         );
 
 export const mdxStory = () => <div>test</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -191,14 +191,14 @@ MDXContent.isMDXComponent = true;
 
         export default Object.assign(dmsPageExport, 
         {
-        title: \\"MDX\\"
+        \\"title\\": \\"MDX\\"
         }
         );
 
 export const mdxStory = ({ text }) => <div>{text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -301,14 +301,14 @@ MDXContent.isMDXComponent = true;
 
         export default Object.assign(dmsPageExport, 
         {
-        title: \\"MDX\\"
+        \\"title\\": \\"MDX\\"
         }
         );
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -379,7 +379,7 @@ MDXContent.isMDXComponent = true;
 
         export default Object.assign(dmsPageExport, 
         {
-        title: \\"MDX\\"
+        \\"title\\": \\"MDX\\"
         }
         );
 
@@ -390,7 +390,7 @@ export const mdxStory = () => (<>
 </>)
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -492,14 +492,14 @@ MDXContent.isMDXComponent = true;
 
         export default Object.assign(dmsPageExport, 
         {
-        title: \\"MDX\\"
+        \\"title\\": \\"MDX\\"
         }
         );
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",

@@ -4,12 +4,13 @@ import {
   watch,
   CompileProps,
 } from '@component-controls/webpack-compile';
-import { LoadingStore } from '@component-controls/loader';
+
 import { LoaderOptions } from './types';
+import { LoadingStore } from '@component-controls/loader';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-let store: LoadingStore | undefined = undefined;
+let store: LoadingStore;
 export default ({
   configPath,
   outputFolder,

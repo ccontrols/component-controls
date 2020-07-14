@@ -124,6 +124,7 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 | ----------- | -------- | --------------- |
 | `type`      | _string_ | document type   |
 | `activeTab` | _string_ | active page tab |
+| `category`  | _string_ |                 |
 
 ## <ins>DocumentHomePage</ins>
 

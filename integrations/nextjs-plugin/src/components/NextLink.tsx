@@ -4,12 +4,24 @@ import { jsx, LinkProps } from 'theme-ui';
 import Link from 'next/link';
 
 export const NextLink: FC<LinkProps & { to?: string }> = ({
-  href,
-  to,
+  href = '',
   children,
   ...props
-}) => (
-  <Link href={href || to || ''}>
-    <a {...props}>{children}</a>
-  </Link>
-);
+}) => {
+  const urlparts = href.split('/');
+  const isHomePage =
+    urlparts.length === 2 && urlparts[0] === '' && urlparts[1] === '';
+  const isDocTypeHome =
+    (!isHomePage && urlparts.length === 2) ||
+    (urlparts.length === 3 && urlparts[2] === '');
+  const dynamicHref = isHomePage
+    ? '/'
+    : isDocTypeHome
+    ? '/[doctype]'
+    : '/[doctype]/[...docid]';
+  return (
+    <Link href={dynamicHref} as={href}>
+      <a {...props}>{children}</a>
+    </Link>
+  );
+};

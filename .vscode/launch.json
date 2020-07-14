@@ -92,6 +92,15 @@
       "sourceMaps": false
     },
     {
+      "name": "nextjs attach",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "jest instrument",

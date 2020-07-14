@@ -2,6 +2,8 @@
 
 exports[`test subcomponents compile 1`] = `
 Store {
+  "_docpaths": undefined,
+  "_homepaths": undefined,
   "buildConfig": Object {
     "categories": Array [
       "author",
@@ -37,6 +39,8 @@ Store {
       "./*.stories.(js|jsx|tsx|mdx)",
     ],
   },
+  "buildDocPaths": [Function],
+  "buildHomePaths": [Function],
   "components": Object {
     "08a97b28475aff9eba8252eeffddeea5": Object {
       "from": "../../../../../examples/stories/src/components/PropTypesButton",
@@ -450,7 +454,12 @@ Button.defaultProps = {
     },
   },
   "config": Object {},
+  "getDocPage": [Function],
+  "getDocPaths": [Function],
   "getDocs": [Function],
+  "getHomePage": [Function],
+  "getHomePaths": [Function],
+  "getIndexPage": [Function],
   "getUniquesByField": [Function],
   "packages": Object {
     "411a6b6f22151d62603115530afde73f": Object {

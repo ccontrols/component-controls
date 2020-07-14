@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 import { DocType, defDocType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '@component-controls/nextjs-plugin';
-import { LoadingDocStore } from '@component-controls/instrument';
 
 interface PageListProps {
   type: DocType;
@@ -20,11 +19,9 @@ const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const store = require('@component-controls/webpack-compile/bundle');
-  const homePage = store.stores.find(
-    (s: LoadingDocStore) => s.doc?.route === '/',
-  );
-  return { props: { docId: homePage?.doc?.title, type: homePage?.doc?.type } };
+  const { store } = require('@component-controls/nextjs-plugin');
+  const { docId = null, type = null } = store.getIndexPage() || {};
+  return { props: { docId, type } };
 };
 
 export default HomePage;

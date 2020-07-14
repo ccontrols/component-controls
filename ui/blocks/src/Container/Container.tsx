@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, Fragment } from 'react';
 import { dateToLocalString } from '@component-controls/core';
 import { Value } from '@component-controls/components';
 import { Title } from '../Title';
@@ -22,12 +22,20 @@ export const Container: FC<ContainerProps> = ({ children, author }) => {
       <Box variant="blockpagecontainer.inforow">
         <EditPage />
         <Box variant="blockpagecontainer.createdbox.container">
-          <Value label="created:" value={dateToLocalString(doc?.date)} />
-          <Text variant="blockpagecontainer.createdbox.separator">,</Text>
-          <Value
-            label="updated:"
-            value={dateToLocalString(doc?.dateModified)}
-          />
+          {doc?.date && (
+            <Fragment>
+              <Value label="created:" value={dateToLocalString(doc.date)} />
+              {doc?.dateModified && (
+                <Text variant="blockpagecontainer.createdbox.separator">,</Text>
+              )}
+            </Fragment>
+          )}
+          {doc?.dateModified && (
+            <Value
+              label="updated:"
+              value={dateToLocalString(doc.dateModified)}
+            />
+          )}
           {author}
         </Box>
       </Box>
