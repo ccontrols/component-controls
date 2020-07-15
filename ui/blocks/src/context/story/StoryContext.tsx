@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useContext } from 'react';
 import {
   Story,
   Document,
@@ -60,13 +60,10 @@ export const useStoryContext = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): StoryContextProps => {
-  const {
-    storyId: currentId,
-    storeProvider,
-    options,
-    docId,
-  } = React.useContext(BlockContext);
-  const { getStoryData, storyIdFromName } = React.useContext(BlockDataContext);
+  const { storyId: currentId, storeProvider, options, docId } = useContext(
+    BlockContext,
+  );
+  const { getStoryData, storyIdFromName } = useContext(BlockDataContext);
   const storyId = name
     ? storyIdFromName(name)
     : id === CURRENT_STORY
@@ -80,7 +77,7 @@ export const useStoryContext = ({
   }>(getStoryData(storyId, docId));
 
   useEffect(() => {
-    const updateData = (updateId?: string) => {
+    const updateStoryData = (updateId?: string) => {
       if (!updateId || updateId === storyId) {
         const { story, doc, component, docPackage } = getStoryData(
           storyId,
@@ -89,12 +86,13 @@ export const useStoryContext = ({
         setData({ story, doc, component, docPackage });
       }
     };
-    const { story } = data;
-    if (story?.id !== storyId) {
-      updateData(storyId);
+
+    const { story, doc } = data;
+    if (story?.id !== storyId || doc?.title !== docId) {
+      updateStoryData(storyId);
     }
     const onChange = (id?: string) => {
-      updateData(id);
+      updateStoryData(id);
     };
     storeProvider.addObserver(onChange);
     return () => {
@@ -120,4 +118,22 @@ export const StoryContextConsumer: FC<StoryContextConsumer &
   StoryInputProps> = ({ children, ...rest }) => {
   const context = useStoryContext(rest);
   return children ? children(context) || null : null;
+};
+
+export interface DocContextProps {
+  doc?: Document;
+  package?: PackageInfo;
+  storeProvider?: StoryStore;
+}
+export const useDocContext = (): DocContextProps => {
+  const { storeProvider, docId } = useContext(BlockContext);
+  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+  return {
+    doc,
+    storeProvider,
+    package:
+      doc && doc.package
+        ? storeProvider.getStore()?.packages[doc.package]
+        : undefined,
+  };
 };

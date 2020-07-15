@@ -5,14 +5,14 @@ import {
   Pagination as PaginationControl,
   PaginationPage,
 } from '@component-controls/components';
-import { useStoryContext } from '../context';
+import { useDocContext } from '../context';
 
 /**
  * displays automatic pagination to the next/previous document of this same type.
  */
 export const Pagination: FC = () => {
-  const { doc, storeProvider } = useStoryContext({ id: '.' });
-  if (doc) {
+  const { doc, storeProvider } = useDocContext();
+  if (doc && storeProvider) {
     const prevDoc = storeProvider.getPrevPage(doc.type, doc.title);
     const nextDoc = storeProvider.getNextPage(doc.type, doc.title);
     const prevLink: PaginationPage | undefined = prevDoc

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { BlockContext } from '@component-controls/blocks';
+import { useDocContext } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { CategoryPage } from '../CategoryPage';
@@ -15,13 +15,10 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
   category,
   ...props
 }) => {
-  const { storeProvider, docId } = useContext(BlockContext);
+  const { doc } = useDocContext();
   if (category) {
     return <CategoryPage type={type} category={category} />;
   }
-
-  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
-
   const hasNoSideBars = doc && !doc.navSidebar && !doc.contextSidebar;
   const isFullPage = doc && doc.fullPage;
   if (hasNoSideBars || isFullPage) {
