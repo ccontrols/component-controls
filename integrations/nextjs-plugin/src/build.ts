@@ -4,13 +4,11 @@ import {
   watch,
   CompileProps,
 } from '@component-controls/webpack-compile';
-
 import { LoaderOptions } from './types';
-import { LoadingStore } from '@component-controls/loader';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-let store: LoadingStore;
+let builtStarted = false;
 export default ({
   configPath,
   outputFolder,
@@ -18,7 +16,8 @@ export default ({
   webpack,
   ...rest
 }: LoaderOptions) => (phase: string) => {
-  if (phase !== 'phase-export' && !store) {
+  if (phase !== 'phase-export' && !builtStarted) {
+    builtStarted = true;
     const config: CompileProps = {
       webPack: webpack,
       presets: presets || defaultPresets,
@@ -27,8 +26,8 @@ export default ({
     };
     const compiler =
       process.env.NODE_ENV === 'development' ? watch(config) : compile(config);
-    compiler.then(({ store: newStore }) => {
-      store = newStore;
+    compiler.then(() => {
+      //store = newStore;
     });
   }
   return rest;
