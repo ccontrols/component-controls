@@ -77,7 +77,7 @@ There are many developments that have contributed to the creation of `component-
 -   [x] Standalone webpack compiler API
 -   [ ] HMR
 -   [x] Gatsby standalone app/static app builder
--   [ ] Nextjs standalone app/static app builder
+-   [x] Nextjs standalone app/static app builder
 -   [ ] Integrated testing facilites (WIP)
 -   [ ] Coverage and perfoamnce profiling instrumentation
 -   [x] Support frontmatter MDX declarations
@@ -86,6 +86,8 @@ There are many developments that have contributed to the creation of `component-
 # Showcase sites
 
 -   [Gatsby](https://component-controls.com/)
+
+-   [Nextjs](https://component-controls-nextjs.netlify.app/)
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
