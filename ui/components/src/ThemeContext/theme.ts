@@ -94,10 +94,11 @@ export const theme: ControlsTheme = {
     palette5: '#1976d2',
     modes: {
       dark: {
-        primary: '#d5c0f1',
+        primary: '#efefef',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
         muted: '#c9cacf',
+        gray: '#4d5866',
         background: '#38404a',
         sidebar: '#000',
         text: '#d3d4db',
