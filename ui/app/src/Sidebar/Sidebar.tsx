@@ -3,7 +3,7 @@ import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
 
-import { BlockContext, useStoryContext } from '@component-controls/blocks';
+import { BlockContext } from '@component-controls/blocks';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -108,9 +108,8 @@ export const Sidebar: FC<SidebarProps> = ({
   type = defDocType,
   activeTab,
 }) => {
-  const { doc } = useStoryContext({ id: '.' });
   const { SidebarClose, responsive } = useContext(SidebarContext);
-  const { storeProvider } = useContext(BlockContext);
+  const { storeProvider, docId } = useContext(BlockContext);
   const config = storeProvider.config;
   const { pages } = config || {};
   const { label = '', storyPaths = false } = pages?.[type] || {};
@@ -156,11 +155,7 @@ export const Sidebar: FC<SidebarProps> = ({
             onClick={e => e.stopPropagation()}
           />
         </Box>
-        <Navmenu
-          activeItem={{ id: doc?.title }}
-          search={search}
-          items={menuItems}
-        />
+        <Navmenu activeItem={{ id: docId }} search={search} items={menuItems} />
       </Box>
     </AppSidebar>
   );
