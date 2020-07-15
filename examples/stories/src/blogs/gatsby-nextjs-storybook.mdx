@@ -1,0 +1,47 @@
+---
+title: Gatsby vs Nextjs vs Storybook
+type: blog
+author: atanasster
+description: Gatsby vs Nextjs vs Storybook - analyze the pros and cons to find the best solution for building your documentation sites.
+draft: true
+tags:
+  - gatsby
+  - nextjs
+  - storybook
+---
+
+## Overview
+
+`component-controls` allows using 3 different static site generators (SSG) to create the production version of your documentation sites.
+
+- [gastby](https://www.gatsbyjs.org) - in many aspects gatsby is the original static sites generator for react and continues to be a leader in this space.
+- [nextjs](https://nextjs.org) - for many years, nextjs was known for ssr, however recent builds allow creating highly optimized static sites.
+- [storybook](https://storybook.js.org) - while storybook is not a general-purpose SSG, it comes with its own webpack bundler module.
+
+ In this blog post we will research which solution offers the best development and production experience.
+
+## Examples source
+
+The documentation sites used throughout this post are essentially the same for the purpose of comparison. We would truly appreciate any feedback to additionaly optimize our examples for the researched SSGs.
+
+|             |  source code   |
+| ----------- | -------- |
+| gatsby      |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby) |
+| nextjs      |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs) |
+| storybook   |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6-no-docs) |
+
+
+## Live sites
+
+All the sites are hosted on a free tier at [nettlify](https://www.netlify.com). The tests are conducted on the same simple documentation page.
+
+|             |  test page |
+| ----------- | -------- |
+| gatsby      |  [netlify](https://component-controls.com/api/introduction-starter--overview) |
+| nextjs      |  [netlify](hhttps://nextjs.component-controls.com/api/introduction-starter--overview) |
+| storybook   |  [netlify](https://storybook.component-controls.com/?path=/page/introduction-starter--overview) |
+
+
+## Performance tools
+
+The web tests are condicted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/). The local times are measured manually after clearing the local chache for each SSG.

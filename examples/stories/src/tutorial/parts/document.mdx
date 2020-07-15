@@ -204,6 +204,29 @@ export default {
 };
 ```
 
+ 
+### draft
+
+type:  `boolean`
+
+If set to true, the document will be hidden in production builds. This allows you to work on the draft version of a document without publishing it.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+draft: true
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  draft: true,
+};
+```
+
 ### tags
 
 type: `string[]`

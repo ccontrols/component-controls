@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test draft compile 1`] = `
+Store {
+  "_docpaths": undefined,
+  "_homepaths": undefined,
+  "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
+    "pages": Object {
+      "author": Object {
+        "basePath": "authors/",
+      },
+      "blog": Object {
+        "basePath": "blogs/",
+      },
+      "page": Object {
+        "basePath": "pages/",
+      },
+      "story": Object {
+        "basePath": "docs/",
+        "storyPaths": true,
+        "tabs": Array [
+          Object {
+            "route": "page",
+          },
+          Object {
+            "route": "test",
+          },
+        ],
+      },
+      "tags": Object {
+        "basePath": "tags/",
+      },
+    },
+    "stories": Array [
+      "./*.stories.(js|jsx|tsx|mdx)",
+    ],
+  },
+  "buildDocPaths": [Function],
+  "buildHomePaths": [Function],
+  "components": Object {},
+  "config": Object {},
+  "getDocPage": [Function],
+  "getDocPaths": [Function],
+  "getDocs": [Function],
+  "getHomePage": [Function],
+  "getHomePaths": [Function],
+  "getIndexPage": [Function],
+  "getUniquesByField": [Function],
+  "packages": Object {
+    "69197a205ad99a63b97e2a2015a91298": Object {
+      "dependencies": Object {
+        "@component-controls/loader": "^1.8.0",
+        "@component-controls/webpack-configs": "^1.8.0",
+        "chalk": "^4.0.0",
+        "memory-fs": "^0.5.0",
+        "typescript": "^3.8.3",
+        "webpack": "^4.43.0",
+      },
+      "devDependencies": Object {
+        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@types/jest": "^25.1.2",
+        "@types/memory-fs": "^0.3.2",
+        "cross-env": "^5.2.1",
+        "eslint": "^6.5.1",
+        "jest": "^24.9.0",
+        "webpack-bundle-analyzer": "^3.7.0",
+      },
+      "fileHash": "69197a205ad99a63b97e2a2015a91298",
+      "name": "@component-controls/webpack-compile",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/tests/fixtures/draft/mdx.stories.mdx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.8.0",
+    },
+  },
+  "stores": Array [
+    Object {
+      "doc": Object {
+        "componentsLookup": Object {},
+        "date": 2020-07-15T17:02:54.230Z,
+        "dateModified": 2020-07-15T17:03:09.895Z,
+        "draft": true,
+        "fileName": "/Users/atanasster/component-controls/core/webpack-compile/tests/fixtures/draft/mdx.stories.mdx",
+        "package": "69197a205ad99a63b97e2a2015a91298",
+        "title": "Library/Components/Spinner",
+      },
+      "filePath": "/Users/atanasster/component-controls/core/webpack-compile/tests/fixtures/draft/mdx.stories.mdx",
+      "stories": Object {},
+    },
+  ],
+}
+`;

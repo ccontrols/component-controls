@@ -5,6 +5,11 @@
 -   [Getting Started](#getting-started)
     -   [Install](#install)
     -   [Configure](#configure)
+    -   [Configure emotion ssr](#configure-emotion-ssr)
+    -   [Create routes](#create-routes)
+        -   [Create home page](#create-home-page)
+        -   [Create document type pages](#create-document-type-pages)
+        -   [Create document and story pages](#create-document-and-story-pages)
 -   [API](#api)
     -   [<ins>build</ins>](#insbuildins)
     -   [<ins>Layout</ins>](#inslayoutins)
@@ -40,6 +45,7 @@ const withStories = require('@component-controls/nextjs-plugin/build');
 
 module.exports = withStories({ configPath: '.config', ....other options });
 ```
+
 ## Configure emotion ssr
 
 [`_app.js and _document.js`](https://github.com/vercel/next.js/tree/canary/examples/with-emotion/pages)
@@ -47,7 +53,9 @@ module.exports = withStories({ configPath: '.config', ....other options });
 ## Create routes
 
 ### Create home page
+
 in `pages/index.tsx`:
+
 ```jsx
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
@@ -81,6 +89,7 @@ export default HomePage;
 ### Create document type pages
 
 in `pages/[doctype].tsx`:
+
 ```jsx
 import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
@@ -119,6 +128,7 @@ export default DocHomeTemplate;
 ### Create document and story pages
 
 in `pages/[doctype]/[...docid].tsx`:
+
 ```jsx
 import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
@@ -167,6 +177,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { docId, type, storyId, category, activeTab } };
 };
 ```
+
 # API
 
 <react-docgen-typescript path="./src" />

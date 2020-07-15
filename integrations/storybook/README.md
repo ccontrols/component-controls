@@ -51,7 +51,6 @@
 -   [Storybook 6 without addon-docs](https://storybook.component-controls.com)
 -   [Storybook 6](https://components-storybook-6.netlify.app/)
 
-
 # Overview
 
 ### [storybook](https://storybook.js.org) integration of component-controls.

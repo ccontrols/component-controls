@@ -1,6 +1,6 @@
 import { toId, storyNameFromExport } from '@storybook/csf';
 import { PagesOnlyRoutes, DocType, PageConfiguration } from './configuration';
-import { Document, defDocType } from './stories';
+import { Document, defDocType } from './document';
 
 export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
 

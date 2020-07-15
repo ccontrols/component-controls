@@ -230,6 +230,11 @@ export interface Document {
   dateModified?: Date;
 
   /**
+   * if set to true, the document will be hidden in production builds.
+   */
+  draft?: boolean;
+
+  /**
    *  comma-separated list of document tags, used for search
    */
   tags?: string[];

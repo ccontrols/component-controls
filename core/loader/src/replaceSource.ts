@@ -41,7 +41,7 @@ ${stories
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
     const doc = s.doc;
-    if (imports.hasOwnProperty(doc.fileName)) {
+    if (doc && imports.hasOwnProperty(doc.fileName)) {
       const exports = imports[doc.fileName];
       try {
         Object.keys(exports).forEach(key => {

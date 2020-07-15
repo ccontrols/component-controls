@@ -4,6 +4,7 @@
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [API](#api)
+    -   [chalk](#chalk)
     -   [compile](#compile)
     -   [watch](#watch)
     -   [CompileProps](#compileprops)
@@ -35,12 +36,18 @@ $ npm install @component-controls/webpack-compile --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
+## chalk
+
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L1)_
+
+
+
 ## compile
 
 compile the stories with webpack
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L8)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L9)_
 
 **function** compile(`__namedParameters`\*: **configPath**: string**outputFolder**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 
@@ -56,7 +63,7 @@ _defined in [@component-controls/webpack-compile/src/index.ts](https://github.co
 compile the stories with webpack and launch watching for changes
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L27)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L32)_
 
 **function** watch(`__namedParameters`\*: **configPath**: string**outputFolder**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 

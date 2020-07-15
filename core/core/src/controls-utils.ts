@@ -8,7 +8,7 @@ import {
   ControlTypes,
 } from './controls';
 
-import { Story } from './stories';
+import { Story } from './document';
 
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {

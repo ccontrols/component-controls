@@ -63,6 +63,10 @@ const parseSource = async (
   }
   if (store.doc) {
     const doc = store.doc;
+    if (doc.draft === true && process.env.NODE_ENV === 'production') {
+      return undefined;
+    }
+
     if (options.stories.storeSourceFile) {
       doc.source = originalSource;
     }
@@ -152,6 +156,11 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
+    if (!store) {
+      return {
+        transformed: code,
+      };
+    }
     const { stories, doc, components, exports, packages } = store || {};
     const exportsSource = extractStoryExports(exports);
     let transformed = `

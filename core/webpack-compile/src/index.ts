@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+const chalk = require('chalk');
 import { CompileProps, CompileResults, WatchProps } from './types';
 import { runCompiler } from './utilities';
 export * from './types';
