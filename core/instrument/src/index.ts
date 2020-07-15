@@ -63,8 +63,10 @@ const parseSource = async (
   }
   if (store.doc) {
     const doc = store.doc;
-    if (doc.draft === true && process.env.NODE_ENV === 'production') {
-      return undefined;
+    if (doc.draft === true) {
+      if (process.env.NODE_ENV !== 'development') {
+        return undefined;
+      }
     }
 
     if (options.stories.storeSourceFile) {

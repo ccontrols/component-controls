@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
+const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
@@ -95,6 +96,11 @@ export const runCompiler = (
         return reject(error);
       }
       const { store } = require('@component-controls/loader/store');
+      console.log(
+        chalk.bgRgb(244, 147, 66)('@end compilation'),
+        `${store.stores.length} documents compiled`,
+      );
+
       resolve({ store, stats });
     });
   });

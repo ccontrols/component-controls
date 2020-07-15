@@ -245,6 +245,9 @@ export const reserveStories = (filePaths: string[]) => {
     filePaths.forEach(filePath => store.stores.push({ filePath }));
   }
 };
+export const removeStoriesDoc = (filePath: string) => {
+  store.stores = store.stores.filter(s => s.filePath !== filePath);
+};
 export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   const { components, packages, stories, doc } = added;
   if (!doc) {
