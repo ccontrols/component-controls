@@ -89,7 +89,7 @@ There are many developments that have contributed to the creation of `component-
 
 -   [Nextjs](https://nextjs.component-controls.com/)
 
--   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
+-   [Storybook 6 without addon-docs](https://storybook.component-controls.com)
 
 -   [Storybook 6](https://components-storybook-6.netlify.app/)
 

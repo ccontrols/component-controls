@@ -48,8 +48,9 @@
 
 # Shocase sites
 
+-   [Storybook 6 without addon-docs](https://storybook.component-controls.com)
 -   [Storybook 6](https://components-storybook-6.netlify.app/)
--   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
+
 
 # Overview
 
