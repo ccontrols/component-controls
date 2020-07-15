@@ -87,7 +87,7 @@ There are many developments that have contributed to the creation of `component-
 
 -   [Gatsby](https://component-controls.com/)
 
--   [Nextjs](https://component-controls-nextjs.netlify.app/)
+-   [Nextjs](https://nextjs.component-controls.com/)
 
 -   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 

@@ -12,7 +12,7 @@
 
 # In action
 
-[Live site](https://component-controls-nextjs.netlify.app)
+[Live site](https://nextjs.component-controls.com)
 
 # Overview
 
