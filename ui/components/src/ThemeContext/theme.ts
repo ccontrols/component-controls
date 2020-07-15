@@ -191,25 +191,21 @@ export const theme: ControlsTheme = {
     h1: {
       ...heading,
       fontSize: 6,
-      mt: 4,
-      mb: 3,
+      my: 4,
     },
     h2: {
       ...heading,
       fontSize: 5,
-      mt: 4,
-      mb: 3,
+      my: 3,
     },
     h3: {
       ...heading,
-      mt: 4,
-      mb: 3,
+      my: 3,
     },
     h4: {
       ...heading,
       fontSize: 2,
-      mt: 4,
-      mb: 3,
+      my: 3,
     },
     h5: {
       ...heading,
