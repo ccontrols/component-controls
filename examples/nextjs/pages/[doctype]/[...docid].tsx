@@ -41,6 +41,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     storyId = null,
     category = null,
     activeTab = null,
-  } = store.getDocPage(`/${doctype}/${docid.join('/')}/`) || {};
+  } = store.getDocPage(`/${doctype}/${docid.join('/')}`) || {};
   return { props: { docId, type, storyId, category, activeTab } };
 };

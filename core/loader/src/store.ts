@@ -11,6 +11,10 @@ import {
   TabConfiguration,
   getStoryPath,
   getDocPath,
+  removeTrailingSlash,
+  ensureStartingSlash,
+  getDocTypePath,
+  PageConfiguration,
 } from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
 
@@ -136,10 +140,15 @@ export class Store implements LoadingStore {
         this._homepaths = {};
         Object.keys(pages).forEach(type => {
           const page = pages[type as DocType];
+          const path = getDocTypePath(page as PageConfiguration);
           const docs = this.getDocs(type as DocType);
-          const doc = docs.find(doc => doc?.route === `/${page.basePath}`);
+          const doc = docs.find(
+            doc =>
+              removeTrailingSlash(ensureStartingSlash(doc?.route || '')) ===
+              path,
+          );
           //@ts-ignore
-          this._homepaths[`/${page.basePath}`] = {
+          this._homepaths[path] = {
             type,
             docId: doc?.title,
           };

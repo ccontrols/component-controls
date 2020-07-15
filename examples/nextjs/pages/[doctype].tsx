@@ -24,8 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype: basepath } = params as { doctype: string };
-  const { type = null, docId = null } =
-    store.getHomePage(`/${basepath}/`) || {};
+  const { type = null, docId = null } = store.getHomePage(`/${basepath}`) || {};
   return { props: { docId, type } };
 };
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocType } from '@component-controls/core';
+import { DocType, getDocTypePath } from '@component-controls/core';
 import { ActionBar, ActionItems } from '@component-controls/components';
 
 import {
@@ -46,7 +46,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
             .map(({ page }) => ({
               id: page.label?.toLowerCase(),
               'aria-label': `go to page ${page.label}`,
-              href: `/${page.basePath}`,
+              href: getDocTypePath(page),
               node: page.label,
             })),
         ]
