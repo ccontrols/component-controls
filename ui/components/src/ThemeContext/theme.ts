@@ -198,6 +198,8 @@ export const theme: ControlsTheme = {
       ...heading,
       fontSize: 5,
       my: 3,
+      borderBottom: (t: Theme) => `4px solid ${t.colors?.text}`,
+      width: '100%',
     },
     h3: {
       ...heading,
@@ -233,6 +235,27 @@ export const theme: ControlsTheme = {
       fontFamily: 'monospace',
       fontSize: 'inherit',
       color: 'red',
+    },
+    blockquote: {
+      borderLeft: (t: Theme) => `4px solid ${t.colors?.shadow}`,
+      pl: 4,
+      m: 0,
+    },
+    hr: {
+      textAlign: 'center',
+      overflow: 'visible',
+      border: 'none',
+      height: 0,
+      ':before': {
+        content: '"..."',
+        display: 'inline-block',
+        marginLeft: '.6em',
+        color: 'muted',
+        position: 'relative',
+        top: `-36px`,
+        letterSpacing: '.6em',
+        fontSize: 5,
+      },
     },
     img: {
       maxWidth: '100%',
@@ -377,6 +400,9 @@ export const theme: ControlsTheme = {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+    },
+    secondrow: {
+      pt: 2,
     },
     titlerow: {
       my: 4,
@@ -970,6 +996,7 @@ export const theme: ControlsTheme = {
     container: {},
     pagination: { py: 4 },
     author: { ml: [0, 2] },
+    tags: { display: 'flex', flexDirection: 'column', alignItems: ' flex-end' },
   },
   documentslist: {
     container: {},

@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build-sample": "next build && next export",
+    "build-sample": "rm -rf .next && rm -rf dist && rm -rf out && next build && next export",
     "start": "next -p 9021",
     "debug": "NODE_OPTIONS='--inspect' next -p 9021"
   },

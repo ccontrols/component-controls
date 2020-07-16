@@ -2,14 +2,6 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { BlockContext } from '@component-controls/blocks';
 
-const defaultProps = {
-  title: ``,
-  description: false,
-  pathname: false,
-  image: false,
-  children: null,
-};
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -22,7 +14,7 @@ export const SEO = ({
   title,
   description,
   pathname,
-  image,
+  image: propImage,
   children,
 }: SEOProps) => {
   const { storeProvider } = useContext(BlockContext);
@@ -36,12 +28,12 @@ export const SEO = ({
     siteImage: defaultImage,
     author,
   } = config || {};
-
+  const image = propImage || defaultImage;
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image ? `${siteUrl}${image}` : undefined,
   };
   return (
     <Helmet
@@ -51,18 +43,18 @@ export const SEO = ({
     >
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      {seo.image && <meta name="image" content={seo.image} />}
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:image" content={seo.image} />
+      {seo.image && <meta property="og:image" content={seo.image} />}
       <meta property="og:type" content="website" />
       <meta property="og:image:alt" content={seo.description} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={seo.image} />
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
       {/* <link
@@ -86,5 +78,3 @@ export const SEO = ({
     </Helmet>
   );
 };
-
-SEO.defaultProps = defaultProps;

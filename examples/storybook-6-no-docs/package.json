@@ -6,7 +6,7 @@
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9016 -c .storybook",
     "start": "start-storybook -p 9016 -c .storybook",
-    "build-sample": "build-storybook -c .storybook -o ./public"
+    "build-sample": "rm -rf node_modules/.cache/storybook && build-storybook -c .storybook -o ./public"
   },
   "dependencies": {
     "@component-controls/core": "^1.8.0",

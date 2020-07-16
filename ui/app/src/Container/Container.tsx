@@ -7,6 +7,7 @@ import {
   BlockContext,
   Pagination,
   Container as BlocksContainer,
+  TagsList,
 } from '@component-controls/blocks';
 
 /**
@@ -15,7 +16,7 @@ import {
 export const Container: FC = ({ children }) => {
   const { storeProvider, docId } = useContext(BlockContext);
   const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
-  const { author } = doc || {};
+  const { author, tags } = doc || {};
   const config = storeProvider.config;
   return (
     <Box variant="container.container">
@@ -40,6 +41,14 @@ export const Container: FC = ({ children }) => {
               />
             </Box>
           ) : null
+        }
+        secondRow={
+          tags &&
+          tags.length && (
+            <Box variant="container.tags">
+              <TagsList tags={tags} />
+            </Box>
+          )
         }
       >
         {children}

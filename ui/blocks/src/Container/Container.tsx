@@ -11,11 +11,16 @@ import { useDocContext } from '../context';
 
 export interface ContainerProps {
   author?: ReactNode;
+  secondRow?: ReactNode;
 }
 /**
  * page inner container. will display a like to edit the page and a last updated date.
  */
-export const Container: FC<ContainerProps> = ({ children, author }) => {
+export const Container: FC<ContainerProps> = ({
+  children,
+  author,
+  secondRow,
+}) => {
   const { doc } = useDocContext();
   return (
     <Box variant="blockpagecontainer.container">
@@ -39,6 +44,9 @@ export const Container: FC<ContainerProps> = ({ children, author }) => {
           {author}
         </Box>
       </Box>
+      {secondRow && (
+        <Box variant="blockpagecontainer.secondrow">{secondRow}</Box>
+      )}
       <Box variant="blockpagecontainer.titlerow">
         <Title sx={{ paddingBottom: 0 }} />
       </Box>

@@ -2,8 +2,7 @@
 title: Gatsby vs Nextjs vs Storybook
 type: blog
 author: atanasster
-description: Gatsby vs Nextjs vs Storybook - analyze the pros and cons to find the best solution for building your documentation sites.
-draft: true
+description: Gatsby vs Nextjs vs Storybook - analysis of the pros and cons to help us find the best solution for generating static documentation sites.
 tags:
   - gatsby
   - nextjs
@@ -14,34 +13,196 @@ tags:
 
 `component-controls` allows using 3 different static site generators (SSG) to create the production version of your documentation sites.
 
-- [gastby](https://www.gatsbyjs.org) - in many aspects gatsby is the original static sites generator for react and continues to be a leader in this space.
-- [nextjs](https://nextjs.org) - for many years, nextjs was known for ssr, however recent builds allow creating highly optimized static sites.
-- [storybook](https://storybook.js.org) - while storybook is not a general-purpose SSG, it comes with its own webpack bundler module.
+- [gastby](https://www.gatsbyjs.org) - in many aspects, gatsby is the original static site generator for react and continues to be a leader in this space.
+- [nextjs](https://nextjs.org) - for many years, nextjs was known for SSR, however recent builds allow creating highly optimized static sites.
+- [storybook](https://storybook.js.org) - while storybook is not a general-purpose SSG, it comes with its own SSG engine under the hood.
 
- In this blog post we will research which solution offers the best development and production experience.
+In this blog post, we will research which solution offers the best development and production experience.
 
-## Examples source
+## Examples Source Code
 
-The documentation sites used throughout this post are essentially the same for the purpose of comparison. We would truly appreciate any feedback to additionaly optimize our examples for the researched SSGs.
+The documentation sites used throughout this post are essentially the same for the purpose of comparison. We would truly appreciate any feedback to additionally optimize our examples for the researched SSGs.
 
 |             |  source code   |
 | ----------- | -------- |
-| gatsby      |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby) |
-| nextjs      |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs) |
-| storybook   |  [github](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6-no-docs) |
+| gatsby      |  [gatsby 2+](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby) |
+| nextjs      |  [nextjs 9+](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs) |
+| storybook   |  [storybook 6](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6-no-docs) |
 
 
-## Live sites
+## Live Sites
 
-All the sites are hosted on a free tier at [nettlify](https://www.netlify.com). The tests are conducted on the same simple documentation page.
+All the sites are hosted on a free tier at [netlify](https://www.netlify.com). The tests are conducted on the same simple documentation page.
 
 |             |  test page |
 | ----------- | -------- |
-| gatsby      |  [netlify](https://component-controls.com/api/introduction-starter--overview) |
-| nextjs      |  [netlify](hhttps://nextjs.component-controls.com/api/introduction-starter--overview) |
-| storybook   |  [netlify](https://storybook.component-controls.com/?path=/page/introduction-starter--overview) |
+| gatsby      |  [https://component-controls.com](https://component-controls.com/api/introduction-starter--overview) |
+| nextjs      |  [https://nextjs.component-controls.com](https://nextjs.component-controls.com/api/introduction-starter--overview) |
+| storybook   |  [https://storybook.component-controls.com](https://storybook.component-controls.com/?path=/page/introduction-starter--overview) |
 
 
-## Performance tools
+## Performance Tools
 
-The web tests are condicted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/). The local times are measured manually after clearing the local chache for each SSG.
+The web tests are conducted with [WebPageTest](https://www.webpagetest.org) and [PageSpeed](https://developers.google.com/speed/pagespeed/insights/).
+
+## Development Mode Startup Time
+
+Measuring the time to start up in development mode. For this test, the projects were already run once upfront, to make sure all possible caches are created.
+  
+|             |  time(s) |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |    30s   |   +30%   | 
+| nextjs      |    23s   |   best   | 
+| storybook   |    32s   |   +39%   |
+
+> The times are fairly similar, with nextjs having the fastest development time startup. However, nextjs compiles individual pages on-demand so there is a sensible slowdown navigating from page to page.
+
+## Production Mode Build
+
+Measuring the time to create a static site. Prior to launching this test, all the caches are deleted to create a level testing field.
+
+|             |  time |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |  7m35s   |  +638%   | 
+| nextjs      |  1m03s   |   best   | 
+| storybook   |  1m04s   |   best   |
+
+> nextjs and storybook build the static site files the fastest, with gatsby much slower. To note that gatsby and nextjs create individual static pages for every document/story/page tab, while storybook creates one single bundle where all the pages are kept together under the same URL.
+
+## WebPageTest results
+
+|             |  time |   
+| ----------- | -------- |
+| gatsby      |  [results](https://www.webpagetest.org/result/200715_YT_6da8f397c707688a7c096567769337f8/)|
+| nextjs      |  [results](https://www.webpagetest.org/result/200715_79_1d41cd9a7cacbbf60bf81b132896853f/)|
+| storybook   |  [results](https://www.webpagetest.org/result/200715_NH_bd8d8178abccfc4181e4463ffbe19e88/)|
+
+
+## Largest Contentful Paint
+
+An important, user-centric metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.
+
+|             |  time |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |  0.591s  |  +14%     | 
+| nextjs      |  0.519s  |   best    | 
+| storybook   |  11.182s | +2054.53% |
+
+
+> nextjs and gatsby are very close in this test, with storybook lagging by a staggering 2000+ percent.
+
+## Total Blocking Time
+
+An important lab metric for measuring load responsiveness because it helps quantify the severity of how non-interactive a page is before it becoming reliably interactive—a low TBT helps ensure that the page is usable.
+
+|             |  time |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |  1.057s  |  +5%     | 
+| nextjs      |  1.004s |   best    | 
+| storybook   |  2.448s |  +143% |
+
+> nextjs and gatsby again are very close, with storybook over two times slower.
+
+## Document Complete Time
+
+The time is takes to fully load all the content referenced in the HTML.
+
+|             |  time |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |  2.206s  |  best   | 
+| nextjs      |  3.012s |   +36%    | 
+| storybook   |  6.075s |  +175% |
+
+
+> gatsby is in the lead, with nextjs almost a second slower and storybook about 3 times slower.
+
+## Document Complete Size
+
+The size in kilobytes at the Document Complete Time.
+
+|             |  kb |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |   755kb |  best   | 
+| nextjs      |  1,452kb |  +92%    | 
+| storybook   |  2,126kb |  +181% |
+
+
+> gatsby generates significantly smaller bundles size, with nextjs almost twice larger and storybook about 3 times larger.
+
+## Fully Loaded Time
+
+The time when a page completely stops loading content, including ads and below the fold elements.
+
+|             |  time |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |  3.209s  |  best   | 
+| nextjs      |  3.122s |   best    | 
+| storybook   |  8.253s |  +164% |
+
+
+> gatsby and nextjs have very similar times, with storybook over two times slower.
+
+## Fully Loaded Size
+
+The size in kilobytes at the Fully Loaded Time.
+
+|             |  kb |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |   781kb |  best   | 
+| nextjs      |  1,453kb |  +86%    | 
+| storybook   |  3,014kb |  +285% |
+
+
+> gatsby generates significantly smaller bundles size, with nextjs almost twice larger and storybook almost 4 times larger.
+
+## Cost Of Site
+
+Measures how much it [costs](https://whatdoesmysitecost.com/) for someone to use your site on mobile networks around the world. For this comparison, we will use the USA location. This measure is mostly linked to the fully loaded size. 
+
+|             |  USD |   +/-%   |
+| ----------- | -------- | -------- |
+| gatsby      |   $0.05 |  best   | 
+| nextjs      |  $0.09 |  +80%    | 
+| storybook   |  $0.19 |  +280% |
+
+> gatsby sites are the cheapest to use, with nextjs twice more expensive and storybook almost 4 times more expensive.
+
+## PageSpeed Mobile Speed Score
+
+The speed score is based on the lab data analyzed by [Lighthouse](https://developers.google.com/web/tools/lighthouse/).  The results of this test vary to some extent on each run.
+
+|             |  results |  score |  +/-%  |
+| ----------- | -------- | -------- | -------- |
+| gatsby      |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcomponent-controls.com%2Fapi&tab=mobile)| 29 |  -29%
+| nextjs      |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnextjs.component-controls.com%2Fapi&tab=mobile)| 41 |  best |
+| storybook   |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fstorybook.component-controls.com%2F%3Fpath%3D%2Fpage%2Fintroduction-starter--overview&tab=mobile)| 5 | -87% |
+
+
+> nextjs sites get the best mobile speed score, with gatsby underperforming and the storybook score is close to zero.
+
+## PageSpeed Desktop Speed Score
+
+The speed score is based on the lab data analyzed by [Lighthouse](https://developers.google.com/web/tools/lighthouse/). The results of this test vary to some extent on each run.
+
+|             |  results |  score |  +/-%  |
+| ----------- | -------- | -------- | -------- |
+| gatsby      |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fcomponent-controls.com%2Fapi&tab=desktop)| 75 |  -7%
+| nextjs      |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnextjs.component-controls.com%2Fapi&tab=desktop)| 81 |  best |
+| storybook   |  [results](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fstorybook.component-controls.com%2F%3Fpath%3D%2Fpage%2Fintroduction-starter--overview&tab=desktop)| 57 | -29% |
+
+
+> nextjs sites get the best desktop speed score, with gatsby very close and the storybook score significantly lower..
+
+
+## Recap
+
+- **build time** gatsby is significantly slower, however this process is usually performed on a CI server.
+- **blocking time** gatsby and nextjs sites have very similar times, with storybook over twice slower.
+- **bundle sizes** gatsby shines here, and while it is expected that storybook creates 3 times larger bundles than gatsby since it generates one bundle for al pages, it is strange that the bundles from nextjs are twice as large as the gatsby bundles.
+- **loading time** nextjs and gatsby are very similar, with storybook sites performing about 3 times slower.
+- **cost to use** gatsby outperforms the other SSGs, with nextjs sites almost twice more expensive and storybook 4 times more expensive.
+- **google pagespeed**  nextjs has slightly better pagespeed scores than gatsby, with storybook sites significantly underperforming.
+
+## Conclusion
+
+gatsby and nextjs generate fast and highly optimized documentation sites, with nextjs doing slightly better on the blocking time measurement but significantly worse on the bundle size. The storybook SSG engine does not stack up favorably and generates significantly slower and bulkier sites.
