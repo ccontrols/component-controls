@@ -590,7 +590,7 @@ Button.defaultProps = {
           "Spinner": "08a97b28475aff9eba8252eeffddeea5",
         },
         "date": 2020-07-13T13:59:53.358Z,
-        "dateModified": 2020-07-13T13:59:53.360Z,
+        "dateModified": 2020-07-16T20:43:10.375Z,
         "fileName": "/Users/atanasster/component-controls/core/webpack-compile/tests/fixtures/subcomponents/mdx.stories.mdx",
         "package": "a3c604b46a9a60e6152bda8549a7f0e8",
         "title": "Library/Components/Spinner",
@@ -603,11 +603,11 @@ Button.defaultProps = {
           "loc": Object {
             "end": Object {
               "column": 6,
-              "line": 30,
+              "line": 31,
             },
             "start": Object {
               "column": 7,
-              "line": 28,
+              "line": 29,
             },
           },
           "name": "overview",
