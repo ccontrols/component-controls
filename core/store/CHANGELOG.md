@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* do not use title as seo description ([5b60496](https://github.com/ccontrols/component-controls/commit/5b604965c6146e01215a33f6ac95b8cdee82f81d))
+* ga ssr ([fb47769](https://github.com/ccontrols/component-controls/commit/fb47769f93a0ebd435af04eb6f16af730aa68e44))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 

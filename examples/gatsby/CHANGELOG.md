@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Features
+
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 **Note:** Version bump only for package component-controls-gatsby

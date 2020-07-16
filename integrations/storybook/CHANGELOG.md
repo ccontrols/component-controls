@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 **Note:** Version bump only for package @component-controls/storybook

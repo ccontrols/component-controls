@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 

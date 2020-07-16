@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* prevent table overflowing container ([e716842](https://github.com/ccontrols/component-controls/commit/e7168421389ce4aa6a8e5122924d1fa3254ad3b6))
+* reduce head links sizes ([31d501f](https://github.com/ccontrols/component-controls/commit/31d501feb0c920032576ea30bfcb51b9c1733d19))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 

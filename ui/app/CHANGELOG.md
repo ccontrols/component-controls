@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* context scroll current if next invisible ([f277b6f](https://github.com/ccontrols/component-controls/commit/f277b6fb7b34badd4a902368a53a6753c60101b1))
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+* remove logs ([c71e316](https://github.com/ccontrols/component-controls/commit/c71e316730587221e6388c7e4e16d1486ca21e4a))
+* remove unneeded useStoryContext ([e458838](https://github.com/ccontrols/component-controls/commit/e458838cf7c66d148f657ce72bdb2de448d759bf))
+
+
+### Features
+
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 

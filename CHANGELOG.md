@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* compile options ([5eaad21](https://github.com/ccontrols/component-controls/commit/5eaad21062a67a4cd83a4da63411e54febbf8109))
+* context scroll current if next invisible ([f277b6f](https://github.com/ccontrols/component-controls/commit/f277b6fb7b34badd4a902368a53a6753c60101b1))
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* do not generate store at export phase ([f776987](https://github.com/ccontrols/component-controls/commit/f776987b4a46b2b9ffe10ae0e3a8a671dbe9f446))
+* do not use title as seo description ([5b60496](https://github.com/ccontrols/component-controls/commit/5b604965c6146e01215a33f6ac95b8cdee82f81d))
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* ga ssr ([fb47769](https://github.com/ccontrols/component-controls/commit/fb47769f93a0ebd435af04eb6f16af730aa68e44))
+* link colors ([931e3de](https://github.com/ccontrols/component-controls/commit/931e3de5169b44a0b78ce2525dffff00f8c61a37))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+* playground context ([5dfca0b](https://github.com/ccontrols/component-controls/commit/5dfca0baed60328726fb96f9e8cefdf176388f71))
+* prevent table overflowing container ([e716842](https://github.com/ccontrols/component-controls/commit/e7168421389ce4aa6a8e5122924d1fa3254ad3b6))
+* reduce head links sizes ([31d501f](https://github.com/ccontrols/component-controls/commit/31d501feb0c920032576ea30bfcb51b9c1733d19))
+* remove logs ([c71e316](https://github.com/ccontrols/component-controls/commit/c71e316730587221e6388c7e4e16d1486ca21e4a))
+* remove unneeded useStoryContext ([e458838](https://github.com/ccontrols/component-controls/commit/e458838cf7c66d148f657ce72bdb2de448d759bf))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+* initial commit ([b7b0e90](https://github.com/ccontrols/component-controls/commit/b7b0e9022fbcc937d216a63073c575e38ab1a628))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
 # [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
 
 
