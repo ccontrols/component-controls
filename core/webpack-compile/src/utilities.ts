@@ -1,4 +1,9 @@
-import * as webpack from 'webpack';
+import webpack, {
+  Configuration,
+  Compiler,
+  Stats,
+  HotModuleReplacementPlugin,
+} from 'webpack';
 import * as path from 'path';
 const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
