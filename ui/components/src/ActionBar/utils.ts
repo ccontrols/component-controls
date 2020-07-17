@@ -9,17 +9,19 @@ export interface ActionItem {
    */
   id?: string;
   /**
-   * title - if a string, will use the Button component, else can prvide custom React component
+   * title - if a string, will use the built-in components, else can prvide custom React component
    */
-  title: React.ReactNode;
+  node: React.ReactNode;
+
   /**
-   * onClick event when passing a string as the title
+   * if the title is a string and href is set will use a default `<Link />` component
+   */
+  href?: string;
+
+  /**
+   * if the title is a string and href is not set, onClick will be used on a `<Button />` component
    */
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void | boolean;
-  /**
-   * displays the Button as disabled
-   */
-  disabled?: boolean;
   /**
    * hide an action item
    */
@@ -57,7 +59,7 @@ export const getSortedActions = (actions: ActionItems): ActionItems =>
     .filter(({ hidden }) => !hidden)
     .reduce((acc: ActionItem[], item: ActionItem) => {
       const accIndex = acc.findIndex(
-        accItem => (accItem.id ?? accItem.title) === (item.id ?? item.title),
+        accItem => (accItem.id ?? accItem.node) === (item.id ?? item.node),
       );
       if (accIndex > -1) {
         acc[accIndex] = { ...acc[accIndex], ...item };

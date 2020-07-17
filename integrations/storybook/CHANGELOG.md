@@ -3,6 +3,127 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+
+### Bug Fixes
+
+* webpack configs dependencies ([faaa608](https://github.com/ccontrols/component-controls/commit/faaa6082651c49e686715a3cfa2b39718f1a34e4))
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/storybook
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove color mode deps ([8b9e463](https://github.com/ccontrols/component-controls/commit/8b9e463b6a6864a8aef2f39c35725a81807c7ecf))
+
+
+### Features
+
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

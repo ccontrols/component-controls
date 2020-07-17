@@ -13,7 +13,7 @@ export interface TagsListProps {
 }
 
 /**
- * row of tags with link to their page
+ * displays a row of tags assigned to the current document, with links to their pages
  */
 export const TagsList: FC<TagsListProps> = ({ tags }) => {
   const { storeProvider } = useContext(BlockContext);

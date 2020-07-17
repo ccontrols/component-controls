@@ -3,6 +3,139 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* do not use title as seo description ([5b60496](https://github.com/ccontrols/component-controls/commit/5b604965c6146e01215a33f6ac95b8cdee82f81d))
+* ga ssr ([fb47769](https://github.com/ccontrols/component-controls/commit/fb47769f93a0ebd435af04eb6f16af730aa68e44))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* add deepMergeReplaceArrays for controls ([74c4a3b](https://github.com/ccontrols/component-controls/commit/74c4a3b082ec896651fadda99df8c70a2582703b))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* categories count ([3dc60f0](https://github.com/ccontrols/component-controls/commit/3dc60f0c6b48efb9caf262fc568b1024f1c11fe4))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+### Reverts
+
+* Revert "docs: update api docs" ([8ef2224](https://github.com/ccontrols/component-controls/commit/8ef2224b9a50479077be76091f2e6621cdb7dd87))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package @component-controls/store

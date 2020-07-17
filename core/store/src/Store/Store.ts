@@ -1,12 +1,15 @@
+import Analytics from 'analytics';
+import googleAnalytics from '@analytics/google-analytics';
 import {
   StoriesStore,
   Pages,
-  StoriesDoc,
+  Document,
   RunConfiguration,
   getDocPath,
   getStoryPath,
-  PageType,
-  defPageType,
+  DocType,
+  defDocType,
+  getComponentName,
 } from '@component-controls/core';
 import { BroadcastChannel } from 'broadcast-channel';
 import {
@@ -40,6 +43,7 @@ export class Store implements StoryStore {
   private observers: StoreObserver[];
   private moduleId: number;
   private _cachedPages: { [key: string]: Pages } = {};
+  private _analytics: any = null;
   private _categoryItems: {
     [key: string]: {
       [key: string]: number;
@@ -73,6 +77,7 @@ export class Store implements StoryStore {
         }
       };
     }
+    this.initializeAnalytics();
   }
 
   /**
@@ -81,31 +86,46 @@ export class Store implements StoryStore {
    */
   initDocs = () => {
     if (this.loadedStore) {
-      const docs: string[] = Object.keys(this.loadedStore.docs || []);
+      let sortedDocs: string[] = Object.keys(this.loadedStore.docs || []);
+      //custom sort function
       const { storySort } = this.loadedStore.config || {};
       if (storySort) {
-        this.loadedStore.docs = docs
-          .sort((a: string, b: string) => {
-            //@ts-ignore
-            const sort = storySort(a, b);
-            if (sort !== 0) {
-              return sort;
-            }
-            return docs.indexOf(a) - docs.indexOf(b);
-          })
-          .reduce(
-            //@ts-ignore
-            (acc, key) => ({ ...acc, [key]: this.loadedStore.docs[key] }),
-            {},
-          );
+        sortedDocs = sortedDocs.sort((a: string, b: string) => {
+          //@ts-ignore
+          const sort = storySort(a, b);
+          if (sort !== 0) {
+            return sort;
+          }
+          return sortedDocs.indexOf(a) - sortedDocs.indexOf(b);
+        });
       }
-
-      const sortedDocs = Object.keys(this.loadedStore.docs);
+      const store = this.loadedStore;
+      //split documents by their common 'parent'
+      sortedDocs = sortedDocs
+        .map(doc => {
+          const levels = doc.split('/');
+          const parent = levels.slice(0, -1).join('/');
+          return { id: doc, parent };
+        })
+        .sort((a, b) => {
+          if (a.parent === b.parent) {
+            return (
+              (store.docs[a.id].order || 0) - (store.docs[b.id].order || 0)
+            );
+          }
+          return 0;
+        })
+        .map(item => item.id);
+      this.loadedStore.docs = sortedDocs.reduce(
+        //@ts-ignore
+        (acc, key) => ({ ...acc, [key]: this.loadedStore.docs[key] }),
+        {},
+      );
       const { pages = {} } = this.loadedStore?.config || {};
       Object.keys(pages).forEach(type => {
-        this._firstDocument[type as PageType] = sortedDocs.find(name => {
+        this._firstDocument[type as DocType] = sortedDocs.find(name => {
           //@ts-ignore
-          const { type: docType = defPageType } = this.loadedStore.docs[name];
+          const { type: docType = defDocType } = this.loadedStore.docs[name];
           return docType === type;
         });
       });
@@ -169,15 +189,15 @@ export class Store implements StoryStore {
   /**
    * returns all the documents/pages of a certain type.
    */
-  getPageList = (type: PageType = defPageType): Pages => {
+  getPageList = (type: DocType = defDocType): Pages => {
     if (this.loadedStore?.docs) {
       if (!this._cachedPages[type]) {
         this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
-          (acc: StoriesDoc[], key: string) => {
-            const doc: StoriesDoc | undefined = this.loadedStore?.docs[key];
+          (acc: Pages, key: string) => {
+            const doc: Document | undefined = this.loadedStore?.docs[key];
             if (doc) {
-              const { type: docTYpe = defPageType } = doc;
-              if (docTYpe === type) {
+              const { type: docType = defDocType } = doc;
+              if (docType === type) {
                 return [...acc, doc];
               }
             }
@@ -195,9 +215,9 @@ export class Store implements StoryStore {
    * returns the previous page of the same type.
    */
   getPrevPage = (
-    type: PageType | undefined,
+    type: DocType | undefined,
     docId: string,
-  ): StoriesDoc | undefined => {
+  ): Document | undefined => {
     if (docId) {
       const pages = this.getPageList(type);
       const index = pages.findIndex(p => p.title === docId);
@@ -212,9 +232,9 @@ export class Store implements StoryStore {
    * returns the next page of the same type.
    */
   getNextPage = (
-    type: PageType | undefined,
+    type: DocType | undefined,
     docId: string,
-  ): StoriesDoc | undefined => {
+  ): Document | undefined => {
     if (docId) {
       const pages = this.getPageList(type);
       const index = pages.findIndex(p => p.title === docId);
@@ -265,7 +285,7 @@ export class Store implements StoryStore {
                 if (typeof acc[v] === 'undefined') {
                   acc[v] = 0;
                 }
-                acc[v] = acc[v] = 1;
+                acc[v] = acc[v] + 1;
               }
             });
             return acc;
@@ -298,22 +318,22 @@ export class Store implements StoryStore {
   }
 
   /**
-   * returns the first document of a page type.
+   * returns the first document of a doc type.
    */
-  getFirstDocument(pageType: PageType): string | undefined {
-    return this._firstDocument[pageType];
+  getFirstDocument(type: DocType): string | undefined {
+    return this._firstDocument[type];
   }
 
   /**
    * returns the url path to a document.
    */
   getPagePath = (
-    pageType: PageType | undefined = defPageType,
+    type: DocType | undefined = defDocType,
     name: string,
     activeTab?: string,
   ): string => {
     const doc = this.getStoryDoc(name);
-    return getDocPath(pageType, doc, this.config?.pages, name, activeTab);
+    return getDocPath(type, doc, this.config?.pages, name, activeTab);
   };
 
   /**
@@ -325,7 +345,7 @@ export class Store implements StoryStore {
       return '';
     }
     const doc = this.getStoryDoc(story?.doc || '');
-    return getStoryPath(story, doc, this.config?.pages, activeTab);
+    return getStoryPath(story.id, doc, this.config?.pages, activeTab);
   };
 
   /**
@@ -356,5 +376,43 @@ export class Store implements StoryStore {
       this.notifyObservers(storyId, propName);
     }
     return this.loadedStore;
+  };
+  initializeAnalytics = () => {
+    if (this.loadedStore) {
+      const options = this.loadedStore.config?.analytics;
+      if (options) {
+        if (typeof options === 'string') {
+          this._analytics = Analytics({
+            app: this.loadedStore.config?.siteTitle,
+            plugins: [
+              googleAnalytics({
+                trackingId: options,
+              }),
+            ],
+          });
+        } else {
+          this._analytics = Analytics(options);
+        }
+      }
+    }
+  };
+  visitPage = () => {
+    if (this._analytics) {
+      this._analytics.page();
+    }
+  };
+  getDocDescription = (doc: Document): string | undefined => {
+    if (doc.description) {
+      return doc.description;
+    }
+    const componentName = getComponentName(doc.component);
+    if (componentName) {
+      const componnetHash = doc.componentsLookup[componentName];
+      const component = this.loadedStore?.components[componnetHash];
+      if (component?.info?.description) {
+        return component.info.description;
+      }
+    }
+    return undefined;
   };
 }

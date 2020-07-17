@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import {
   Story,
-  StoriesDoc,
+  Document,
   StoryComponents,
   getComponentName,
   PackageInfo,
@@ -17,27 +17,34 @@ export interface ComponentInputProps {
    * If an array of components is specified, each component will be displayed in a separate tab.
    */
   of?: typeof CURRENT_STORY | any;
+
+  /**
+   * some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls
+   */
+  name?: string;
 }
 
 export interface ComponentContextProps {
   components: StoryComponents;
-  doc?: StoriesDoc;
+  doc?: Document;
   story?: Story;
   componentPackage?: PackageInfo;
 }
 
 export const useComponentsContext = ({
   of = CURRENT_STORY,
+  name,
 }: ComponentInputProps): ComponentContextProps => {
   const {
-    storyId,
+    storyId: currentStoryId,
     docId,
     getStoryData,
     getComponents,
+    storyIdFromNameCurrent,
     addObserver,
     removeObserver,
   } = useContext(BlockDataContext);
-
+  const storyId = name ? storyIdFromNameCurrent(name) : currentStoryId;
   const [{ story, doc, component, componentPackage }, setStoryData] = useState(
     getStoryData(storyId, docId),
   );
@@ -53,14 +60,8 @@ export const useComponentsContext = ({
       removeObserver(onChange);
     };
   }, [docId, storyId, addObserver, getStoryData, removeObserver]);
-
-  if (!story) {
-    return {
-      components: {},
-    };
-  }
   let components: StoryComponents = {};
-  if (of === CURRENT_STORY) {
+  if (of === CURRENT_STORY && story) {
     if (component) {
       const name = getComponentName(component);
       if (name) {

@@ -3,6 +3,116 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* sb6 beta has now fixed handling of glob ([d3f21e9](https://github.com/ccontrols/component-controls/commit/d3f21e966f5e3d9c10fada21ae588441ca3a4a2d))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package component-controls-storybook-6
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package component-controls-storybook-6

@@ -32,7 +32,6 @@ export const store: StoriesStore = {
         '@component-controls/store': '^1.0.3',
         '@mdx-js/react': '^1.6.5',
         '@primer/octicons-react': '^10.0.0',
-        '@storybook/csf': '^0.0.1',
         'copy-to-clipboard': '^3.2.1',
         global: '^4.3.2',
         'js-string-escape': '^1.0.1',
@@ -305,7 +304,7 @@ and a [link](https://google.com)
       date: new Date('2020-01-01'),
       dateModified: new Date('2020-03-31'),
       package: 'test-package',
-      components: {
+      componentsLookup: {
         ArrowButton:
           '/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js',
         Button:
@@ -324,7 +323,7 @@ and a [link](https://google.com)
     },
     mdxStory: {
       title: 'MDX Story',
-      components: {},
+      componentsLookup: {},
       author: 'atanasster',
       MDXPage: () => <MDXContent components={{}} />,
       stories: ['mdx-story'],
@@ -352,9 +351,7 @@ and a [link](https://google.com)
       subcomponents: {
         'My Button Tab': 'Button',
       },
-      parameters: {
-        componentSubtitle: 'story subtitle',
-      },
+      subtitle: 'story subtitle',
     },
     'id-of-single': {
       id: 'id-of-single',
@@ -376,9 +373,7 @@ and a [link](https://google.com)
       subcomponents: {
         'My Button Tab': 'Button',
       },
-      parameters: {
-        componentSubtitle: 'story subtitle',
-      },
+      subtitle: 'story subtitle',
     },
     'id-of-button-story': {
       id: 'id-of-button-story',

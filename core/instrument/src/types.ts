@@ -1,5 +1,7 @@
 import { ParserOptions } from '@babel/parser';
-import { StoriesDoc, StoriesStore } from '@component-controls/core';
+import { Document, StoriesStore } from '@component-controls/core';
+import images from 'remark-images';
+import emoji from 'remark-emoji';
 import { SyncOpts as ResolveOptions } from 'resolve';
 import {
   Options,
@@ -13,7 +15,7 @@ export type LoadingDocStore = {
   /**
    * the document itself
    */
-  doc: StoriesDoc | undefined;
+  doc: Document | undefined;
 } & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {
@@ -42,6 +44,7 @@ import { mdx } from '@mdx-js/react';
 export const defaultMDXOptions: MDXOptions = {
   test: /\.(mdx|md)$/i,
   renderer: DEFAULT_MDX_RENDERER,
+  remarkPlugins: [images, emoji],
 };
 
 /**
@@ -166,7 +169,7 @@ export interface MDXOptions {
   /**
    * specify remark plugins
    */
-  mdPlugins?: any[];
+  remarkPlugins?: any[];
   /**
    * specify rehype plugins
    */

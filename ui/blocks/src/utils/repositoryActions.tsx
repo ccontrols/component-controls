@@ -11,7 +11,7 @@ export const repositoryActions = (
       const actions: ActionItem[] = [];
       if (browse) {
         actions.push({
-          title: (
+          node: (
             <ExternalLink href={browse} aria-label="browse repository">
               browse
             </ExternalLink>
@@ -22,7 +22,7 @@ export const repositoryActions = (
       }
       if (docs) {
         actions.push({
-          title: (
+          node: (
             <ExternalLink href={docs} aria-label="browse readme documentation">
               docs
             </ExternalLink>
@@ -33,7 +33,7 @@ export const repositoryActions = (
       }
       if (issues) {
         actions.push({
-          title: (
+          node: (
             <ExternalLink href={issues} aria-label="browse filed issues">
               issues
             </ExternalLink>

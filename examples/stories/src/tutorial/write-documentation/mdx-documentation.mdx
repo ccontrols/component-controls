@@ -1,0 +1,110 @@
+---
+title: Writing Documentation/MDX Documentation
+route: /tutorial/mdx-documentation
+type: tutorial
+tags:
+  - mdx
+  - documentation
+order: 0
+---
+import Transclusion from '../../sections/transclusion.mdx';
+
+## MDX
+
+MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents.
+You can import components, such as interactive charts or alerts, and embed them within your content.
+This makes writing long-form content with components a blast :rocket:.
+
+more: [mdxjs](https://mdxjs.com)
+
+## Frontmatter
+
+When creating MDX documentation files, you can include a set of key value pairs that can be used to provide structured data. The format used is known as [frontmatter](https://github.com/jonschlinkert/gray-matter)
+
+```yaml
+---
+title: My Document
+route: /tutorials/mdx-documentation/
+type: tutorial
+tags:
+  - mdx
+  - documentation
+order: 0
+---
+```
+
+[Check all Document fields](/tutorial/structure/document)
+
+## Import React components
+
+In MDX, you can import any React components and use them to create rich documentation pages:
+
+```mdx
+---
+title: My Button
+---
+import { Button } from 'theme-ui';
+
+<Button onClick={() => alert('clicked')}>click me</Button>
+```
+
+
+## Transclusion
+
+MDX allows you to import external MDX and MD files statically and display their content:
+
+```mdx
+---
+title: Test Transclusion
+---
+import Transclusion from '../sections/transclusion.mdx';
+
+<Transclusion />
+```
+
+## Syntax highlighting
+
+You can include source code in your MDX and MD documentation and add some useful parameters
+
+### Language
+
+The language can be specified as the first parameter
+````mdx
+```jsx
+  import { Button } from 'theme-ui';   
+```
+````  
+
+### Title
+
+A title attribute can be added. Due to some current MDX limitations, the title can not contain spaces.
+
+````mdx:title=my-title
+```jsx:title=my-title
+import { Button } from 'theme-ui';   
+```
+````   
+
+### Highlight lines
+
+You can specify a line to highlight
+````markdown {2}
+```jsx {2}
+import { Button } from 'theme-ui';   
+<Button >click me </Button>
+```
+````
+
+Or a range of lines
+````markdown {2-3}
+```jsx {2-3}
+import { Button } from 'theme-ui';   
+<Button >click me </Button>
+```
+````
+
+## Emoji
+
+You can use `:emoji:` in your documents 
+
+`:rocket: :dog: :+1:` =  :rocket: :dog: :+1:

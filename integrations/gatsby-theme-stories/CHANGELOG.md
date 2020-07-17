@@ -3,6 +3,149 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* compile options ([5eaad21](https://github.com/ccontrols/component-controls/commit/5eaad21062a67a4cd83a4da63411e54febbf8109))
+
+
+### Features
+
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* emit url-loader assets to public folder ([d77775c](https://github.com/ccontrols/component-controls/commit/d77775c329305ab71c295671e55a4174c4cf4e52))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/gatsby-theme-stories
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* add storyPaths page option ([563add3](https://github.com/ccontrols/component-controls/commit/563add3a2d35b36f354eb05e6d224ab9c4bfd88c))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/gatsby-theme-stories
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+
+### Bug Fixes
+
+* webpack configs dependencies ([faaa608](https://github.com/ccontrols/component-controls/commit/faaa6082651c49e686715a3cfa2b39718f1a34e4))
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* props info packages added deps ([941ca59](https://github.com/ccontrols/component-controls/commit/941ca599cd49d705951520621407088e0c0993f1))
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/gatsby-theme-stories
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/gatsby-theme-stories
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+
+### Bug Fixes
+
+* config folder unexistant ([984e2a6](https://github.com/ccontrols/component-controls/commit/984e2a6bf3dfbfeb01740d340c8f687590b8fd52))
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

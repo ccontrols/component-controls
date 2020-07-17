@@ -1,0 +1,29 @@
+{
+  "name": "component-controls-nextjs-starter",
+  "private": true,
+  "version": "1.9.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-sample": "rm -rf .next && rm -rf dist && rm -rf out && next build && next export",
+    "start": "next -p 9021",
+    "debug": "NODE_OPTIONS='--inspect' next -p 9021"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "examples/nextjs"
+  },
+  "dependencies": {
+    "@component-controls/nextjs-plugin": "^1.9.0",
+    "emotion": "^10.0.27",
+    "emotion-server": "^10.0.27",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.3",
+    "webpack-bundle-analyzer": "^3.7.0"
+  }
+}

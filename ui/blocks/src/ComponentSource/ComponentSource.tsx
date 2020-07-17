@@ -5,6 +5,7 @@ import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
 } from '../BlockContainer/components/ComponentsBlockContainer';
+import { useCustomProps } from '../context';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export type ComponentSourceProps = Omit<
@@ -13,16 +14,16 @@ export type ComponentSourceProps = Omit<
 > &
   Omit<SourceProps, 'children'>;
 
+const NAME = 'componentsource';
 /**
  * Displays import statement for a component as well as the component file source code
  * Optionally also displays some repository information from the component's package.json
  */
 
-export const ComponentSource: FC<ComponentSourceProps> = ({
-  actions,
-  ...rest
-}) => {
+export const ComponentSource: FC<ComponentSourceProps> = props => {
   const [showFileSource, setShowFileSource] = React.useState<boolean>(false);
+  const custom = useCustomProps<ComponentSourceProps>(NAME, props);
+  const { actions, ...rest } = custom;
   return (
     <ComponentsBlockContainer visibility="info" {...rest}>
       {(component, props, sourceProps) => {
@@ -48,7 +49,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
 
         if (component && component.source) {
           allActions.push({
-            title: showFileSource ? 'import' : 'source',
+            node: showFileSource ? 'import' : 'source',
             onClick: onShowFileSource,
           });
         }
@@ -61,7 +62,7 @@ export const ComponentSource: FC<ComponentSourceProps> = ({
           allActions.push.apply(allActions, actions);
         }
         return (
-          <Source {...sourceProps} actions={allActions}>
+          <Source data-testid={NAME} {...sourceProps} actions={allActions}>
             {showFileSource ? component?.source ?? '' : source}
           </Source>
         );

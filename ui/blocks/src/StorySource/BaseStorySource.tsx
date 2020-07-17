@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import { FC, useState } from 'react';
 import { Styled } from 'theme-ui';
-import { Story, StoriesDoc, PackageInfo } from '@component-controls/core';
+import { Story, Document, PackageInfo } from '@component-controls/core';
 import {
   Source,
   SourceProps,
@@ -28,7 +28,7 @@ const ViewStyleNext: {
 
 export interface BaseStorySourceProps {
   story?: Story;
-  doc?: StoriesDoc;
+  doc?: Document;
   docPackage?: PackageInfo;
   viewStyle?: ViewStyle;
   actions?: ActionItem[];
@@ -57,7 +57,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   }
   if (doc?.source) {
     allActions.push({
-      title: showFileSource ? 'story code' : 'file code',
+      node: showFileSource ? 'story code' : 'file code',
       onClick: onShowFileSource,
     });
   }
@@ -66,7 +66,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   if (args && args.length) {
     if (!showFileSource) {
       allActions.push({
-        title: ViewStyleNext[viewStyle],
+        node: ViewStyleNext[viewStyle],
         onClick: onMergeValues,
       });
     }

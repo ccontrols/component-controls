@@ -1,4 +1,5 @@
 declare module '@mdx-js/runtime';
+declare module 'mdx-utils';
 declare module '@theme-ui/match-media';
 declare module '@mdx-js/react' {
   import * as React from 'react';

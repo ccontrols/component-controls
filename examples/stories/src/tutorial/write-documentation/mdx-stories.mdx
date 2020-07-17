@@ -1,0 +1,173 @@
+---
+title: Writing Documentation/MDX Stories
+route: /tutorial/mdx-stories
+type: tutorial
+tags:
+  - mdx
+  - stories
+order: 2
+---
+import { Playground, Story } from '@component-controls/blocks';
+import { customStory } from '../../stories/external/external-story-props';
+
+## Overview
+
+You can create interactive component examples (aka stories) similar to [ESM](/tutorial/esmodules-stories) in [MDX](/tutorial/mdx-documentation)
+
+To do so, you need to import some components from **'@component-controls/blocks'** and use them inside your MDX files
+
+## Advantages
+
+The MDX format has the following advantages:
+
+- You have full control over your documentation, testing and design pages.
+- You can include custom markdown documentation text.
+
+The MDX format has the following dis-advantages:
+
+- Documentation pages are not automatically created.
+- IDE code-completion and linting support will be sub-par for now.
+
+## File extensions
+
+The MDX story files need to have an `.mdx` file extension and they should contain at least one `Story` componnet (if not, they are treated as regular [MDX documentation](/tutorial/mdx-documentation) pages);
+
+
+## Example
+
+```jsx
+---
+title: First Story
+---
+import { Button } from '../components/Button';
+import { Playground, Story, PropsTable,  ComponentSource, StorySource  } from '@component-controls/blocks';
+
+# My first doc story
+
+<ComponentSource of={Button} title="Component source" />
+
+<Playground description="Button story">
+  <Story name="simple">
+    <Button>
+      click me
+  </Button>
+  </Story>
+</Playground>
+
+<StorySource id="." />
+
+<PropsTable of={Button} />
+```
+
+## External stories
+
+You can import [ESM](/tutorial/esmodules-stories) stories into your MDX documentation. Usually this is to use the benefits of writing your stories in `.tsx`/`.jsx` files with full code completion support from your code editor.
+
+Our instrumenting module will take care to show the actual story source imported, not the code in the MDX file doing the importing.
+
+```
+---
+title: External Story
+---
+import { Playground, Story } from '@component-controls/blocks';
+import { customStory } from '../../stories/src/stories/external/external-story-props';
+
+<Playground description="story from external file with props">
+  <Story name='mdx-external-story' controls={{ text: 'hello' }} >
+    {props => customStory(props)}
+  </Story>
+</Playground>
+
+```
+In the example below, click on `open source` to view the imported story source.
+
+<Playground>
+  <Story name='mdx-external-story' controls={{ text: 'hello' }} >
+    {props => customStory(props)}
+  </Story>
+</Playground>
+
+
+## Components
+
+Below is a list of the most commonly used components (aka blocks) when writing MDX stories:
+
+
+## Story-related
+
+### Playground
+
+Component to display a live playground of component examples. Has custom actions for zooming, switching direction, reviewing story source and configuration.
+
+[Playground](/api/blocks-playground--overview)
+
+### Story
+
+Block component to render story function with decorators.
+
+[Story](/api/blocks-story--overview)
+
+### StoryConfig
+
+Displays the configuration object of a story.
+
+[StoryConfig](/api/blocks-storyconfig--overview)
+
+
+### StorySource
+
+Displays source code of a story. If controls are used, all story arguments will be highlighted. Additional commands are made available if the repository data of the story is available.
+
+[StorySource](/api/blocks-storysource--overview)
+
+### Subtitle
+
+Displays a subtitle as assigned to the story.subtitle field
+
+[Subtitle](/api/blocks-subtitle--overview)
+
+## Component-related
+
+### PropsTable
+
+Displays the component's properties as well as configurable controls to interact with the component.
+
+[PropsTable](/api/blocks-propstable--overview)
+
+
+### ComponentSource
+
+Displays import statement for a component as well as the component file source code Optionally also displays some repository information from the component's package.json
+
+[ComponentSource](/api/blocks-componentsource--overview)
+
+
+### Description
+
+Description component with markdown. The 'of' property can specify which component's description to display.
+
+[Description](/api/blocks-description--overview)
+
+
+### ComponentDeps
+
+Displays external dependencies for a component
+
+[ComponentDeps](/api/blocks-componentdeps--overview)
+
+
+## Document-related
+
+### Stories
+
+Displays multiple stories in ther own [Playground](#playground) components.
+
+[Stories](/api/blocks-stories--overview)
+
+
+### TagsList
+
+Displays a row of tags assigned to the current document, with links to their pages
+
+[TagsList](/api/blocks-tagslist--overview)
+

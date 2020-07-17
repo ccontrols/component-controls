@@ -1,7 +1,8 @@
 import { MDXExportType, MDXExportTypes } from '../types';
+import { stringifyObject } from './stringify-object';
 
 const mdxPropertiesExport = (exportType: MDXExportType): string | undefined => {
-  return exportType ? JSON.stringify(exportType.story, null, 2) : undefined;
+  return exportType ? stringifyObject(exportType.story) : undefined;
 };
 
 const mdxFunctionExport = (

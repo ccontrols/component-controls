@@ -3,6 +3,111 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* account for non string ([9c93794](https://github.com/ccontrols/component-controls/commit/9c9379489b7b0854e255e6d6a9ce4a530af89926))
+* add deepMergeReplaceArrays for controls ([74c4a3b](https://github.com/ccontrols/component-controls/commit/74c4a3b082ec896651fadda99df8c70a2582703b))
+* document route ([4dc8969](https://github.com/ccontrols/component-controls/commit/4dc8969e316c9ada0b74a00cc6009ef2c2b97051))
+* mdx subcomponents handling ([9d0b1c0](https://github.com/ccontrols/component-controls/commit/9d0b1c0e5d153b8105df230b53e95f32b1a2b00e))
+* randomize data correct import ([459246a](https://github.com/ccontrols/component-controls/commit/459246aaf9abba330df8946d86f9eda82847e60a))
+
+
+### Features
+
+* story iframe and components configuration ([f903953](https://github.com/ccontrols/component-controls/commit/f903953f5644d020229ea836a46e6536233ef871))
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* add storyPaths page option ([563add3](https://github.com/ccontrols/component-controls/commit/563add3a2d35b36f354eb05e6d224ab9c4bfd88c))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+
+
+### Features
+
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+### Reverts
+
+* Revert "docs: update api docs" ([8ef2224](https://github.com/ccontrols/component-controls/commit/8ef2224b9a50479077be76091f2e6621cdb7dd87))
+
+
+
+
+
 # [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
 
 

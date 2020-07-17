@@ -1,7 +1,7 @@
 import { Meta, PropsTable, Playground as Preview, Story, ComponentSource, StorySource } from '@component-controls/storybook';
 import { Button } from '../../stories/src/components/Button';
 
-<Meta title="Introduction/MDX Smart" parameters={{component: Button}} />
+<Meta title="Introduction/MDX Smart" component={Button} />
 
 
 # Smart controls
@@ -13,7 +13,7 @@ import { Button } from '../../stories/src/components/Button';
 <Preview>
   <Story name="smart story">
     {(props) => (
-      <Button label="default" {...props}/>
+      <Button {...props}>default</Button>
     )}  
   </Story>
 </Preview>
@@ -28,7 +28,7 @@ import { Button } from '../../stories/src/components/Button';
     }}
     >
     {({ text }) => (
-      <Button label={text}/>
+      <Button>{text}</Button>
     )}  
   </Story>
 </Preview>
@@ -38,7 +38,7 @@ import { Button } from '../../stories/src/components/Button';
 
 <Preview>
   <Story name="no controls">
-      <Button label="Hello"/>
-      <Button label="Second button"/>
+      <Button>Hello</Button>
+      <Button>Second button</Button>
   </Story>
 </Preview>

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* storybook beta breaking SET_CURRENT_STORY ([11e0386](https://github.com/ccontrols/component-controls/commit/11e0386e98f4e49afc7b0cbc8360850d28ed83e7))
+* storybook changing stories context ([780aed4](https://github.com/ccontrols/component-controls/commit/780aed48a0585c112e03a1df9b45c375cccf66e7))
+
+
+### Features
+
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.3.0](https://github.com/ccontrols/component-controls/compare/v1.2.0...v1.3.0) (2020-06-17)
 
 

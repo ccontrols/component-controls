@@ -1,4 +1,5 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
+import { ActionItems } from '@component-controls/components';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
 
@@ -26,13 +27,18 @@ export interface TabConfiguration {
 
 export type PageTabs = TabConfiguration[];
 
-export type PageType = 'story' | 'blog' | 'page' | 'tags' | 'author';
+export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
 export interface PageConfiguration {
   /**
    * base url path for the page
    */
   basePath?: string;
+
+  /**
+   * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+   */
+  storyPaths?: boolean;
 
   /**
    * label - used for menu labels
@@ -45,9 +51,20 @@ export interface PageConfiguration {
   fullPage?: boolean;
 
   /**
-   * whether to add navigation sidebars to the page
+   * whether to have an index home page for the doc type.
+   * if false, will show the first document of the doc type as the home page.
    */
-  sidebars?: boolean;
+  indexHome?: boolean;
+
+  /**
+   * whether to add navigation sidebar to the page
+   */
+  navSidebar?: boolean;
+
+  /**
+   * whether to add conext sidebar to navigate the sections of the current document
+   */
+  contextSidebar?: boolean;
 
   /**
    * whether to add to the top navigation menu
@@ -65,7 +82,7 @@ export interface PageConfiguration {
   tabs?: PageTabs;
 }
 
-export type PagesConfiguration = Record<PageType, PageConfiguration>;
+export type PagesConfiguration = Record<DocType, PageConfiguration>;
 
 type WebpackConfigFn = (
   config: WebpackConfiguration,
@@ -74,8 +91,8 @@ type WebpackConfigFn = (
 type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
-  PageType,
-  Pick<PageConfiguration, 'basePath'> & {
+  DocType,
+  Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
 >;
@@ -96,16 +113,27 @@ export interface BuildConfiguration {
   pages?: PagesOnlyRoutes;
 
   /**
-   * page types that are considred as categories fields as well
+   * page types that are considered as categories fields as well
    */
-  categories?: PageType[];
+  categories?: DocType[];
   /**
-   * custom webpack fonfigurations setup. One or the other will be used
+   * custom webpack configuration setup. One or the other will be used
    */
   webpack?: WebpackConfig;
   finalWebpack?: WebpackConfig;
 }
 
+export interface ToolbarConfig {
+  /**
+   * left side toolbar items
+   */
+  left?: ActionItems;
+
+  /**
+   * right side toolbar items
+   */
+  right?: ActionItems;
+}
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -169,6 +197,24 @@ export interface RunOnlyConfiguration {
    * story sorting function
    */
   storySort?: (a: string, b: string) => number;
+
+  /**
+   * custom toolbar items
+   */
+  toolbar?: ToolbarConfig;
+
+  /**
+   * custom props to components
+   * ex:
+   * components: { story:{ wrapper: 'iframe' } },
+   *
+   */
+  components?: Record<string, any>;
+
+  /**
+   * analytics options
+   */
+  analytics?: any;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &
@@ -187,7 +233,8 @@ export const defaultRunConfig: RunConfiguration = {
   pages: {
     story: {
       label: 'Docs',
-      sidebars: true,
+      navSidebar: true,
+      contextSidebar: true,
       topMenu: true,
       tabs: [
         { title: 'Documentation', type: 'ClassicPage' },
@@ -196,8 +243,9 @@ export const defaultRunConfig: RunConfiguration = {
     },
     blog: {
       label: 'Blog',
-      sidebars: false,
+      contextSidebar: true,
       topMenu: true,
+      indexHome: true,
     },
     author: {
       label: 'Authors',
@@ -217,6 +265,7 @@ export const defaultBuildConfig: BuildConfiguration = {
   pages: {
     story: {
       basePath: 'docs/',
+      storyPaths: true,
       tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {

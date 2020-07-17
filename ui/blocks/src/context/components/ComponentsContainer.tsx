@@ -22,12 +22,14 @@ export type ComponentsContainerProps = {
 
 export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({
   of,
+  name,
   children,
   onSelect,
   ...rest
 }) => {
   const { components, story, componentPackage } = useComponentsContext({
     of,
+    name,
   });
   const keys = components ? Object.keys(components) : [];
   if (keys.length === 0) {

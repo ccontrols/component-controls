@@ -1,14 +1,16 @@
 import {
   Story,
-  StoriesDoc,
-  StoryParameters,
+  Document,
   CodeLocation,
   getASTSource,
 } from '@component-controls/core';
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
-import { extractFunctionParameters } from './extract-function-parameters';
+import {
+  extractFunctionParameters,
+  adjustArgumentsLocation,
+} from './extract-function-parameters';
 import { followStoryImport } from './follow-imports';
 import { extractAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
@@ -21,30 +23,54 @@ export const extractMDXStories = (props: any) => (
   _options: Required<InstrumentOptions>,
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType | undefined => {
-  const collectAttributes = (node: any): StoryParameters => {
-    return node.attributes.reduce((acc: StoryParameters, attribute: any) => {
-      if (attribute.value.type === 'StringLiteral') {
-        return {
-          ...acc,
-          [attribute.name.name]: attribute.value.value,
-        };
-      } else if (attribute.value.type === 'JSXExpressionContainer') {
-        return {
-          ...acc,
-          [attribute.name.name]: extractAttributes(attribute.value.expression),
-        };
-      }
-      return acc;
-    }, {});
+  const collectAttributes = (node: any): Record<string, any> => {
+    return node.attributes.reduce(
+      (acc: Record<string, any>, attribute: any) => {
+        if (attribute.value.type === 'StringLiteral') {
+          return {
+            ...acc,
+            [attribute.name.name]: attribute.value.value,
+          };
+        } else if (attribute.value.type === 'JSXExpressionContainer') {
+          return {
+            ...acc,
+            [attribute.name.name]: extractAttributes(
+              attribute.value.expression,
+            ),
+          };
+        }
+        return acc;
+      },
+      {},
+    );
   };
 
   let components: { [key: string]: string | undefined } = {};
-  const collectComponent = (attributes: StoryParameters) => {
+  const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
-    components = attrComponents.reduce(
-      (acc, componentName) => ({ ...acc, [componentName]: undefined }),
-      components,
-    );
+    components = attrComponents.reduce((acc, componentName) => {
+      if (componentName === '.') {
+        const newComps: Record<string, undefined> = {};
+        if (store.doc?.component) {
+          newComps[store.doc.component as string] = undefined;
+        }
+        if (store.doc && typeof store.doc.subcomponents === 'object') {
+          Object.keys(store.doc.subcomponents).forEach((name: any) => {
+            //@ts-ignore
+            const sub = store.doc.subcomponents[name];
+            newComps[sub as string] = undefined;
+          });
+        }
+        return {
+          ...acc,
+          ...newComps,
+        };
+      }
+      return {
+        ...acc,
+        [componentName]: undefined,
+      };
+    }, components);
     return attrComponents.length > 0 ? attrComponents[0] : undefined;
   };
 
@@ -132,32 +158,52 @@ export const extractMDXStories = (props: any) => (
                             .end,
                       }
                   : path.node.loc;
+                const component = collectComponent(attributes);
+                if (component !== undefined) {
+                  story.component = component;
+                }
+                traverse(
+                  expression || path.node,
+                  extractFunctionParameters(story, exports),
+                  path.scope,
+                  path,
+                );
                 // adjust for source code wraping issues
                 const storySource = getASTSource(source, loc);
                 const storyLines = storySource?.split('\n');
-                //remove as many spaces as there are in the first non-empty line
-                const firstLine = storyLines?.find(
-                  line => line.trim().length > 0,
-                );
-                const whiteSpaces = firstLine ? firstLine.search(/\S/) : 0;
+                //remove as many spaces as there are in the line with the smallest amount of white spaces (but still some)
+                const whiteSpaces = storyLines?.reduce((spaces, line) => {
+                  if (line.substring(0, 1) === ' ' && line.trim() !== '') {
+                    const startSpaces = line.search(/\S/);
+                    if (startSpaces && (spaces === 0 || startSpaces < spaces)) {
+                      return startSpaces;
+                    }
+                  }
+                  return spaces;
+                }, 0);
                 story.loc = sourceLocation(loc);
-                story.source = storyLines
-                  ? storyLines
-                      .map(line => line.substr(whiteSpaces))
-                      .join('\n')
-                      .trim()
-                  : storySource;
+                story.source =
+                  storyLines && whiteSpaces
+                    ? storyLines
+                        .map((line, lineIndex) => {
+                          if (line.search(/\S/) >= whiteSpaces) {
+                            //adjust location of arguments usage
+                            if (story.arguments) {
+                              story.arguments = adjustArgumentsLocation(
+                                story.arguments,
+                                lineIndex,
+                                whiteSpaces,
+                              );
+                            }
+                            return line.substr(whiteSpaces);
+                          }
+                          return line;
+                        })
+                        .join('\n')
+                        .trim()
+                    : storySource;
               }
-              const component = collectComponent(attributes);
-              if (component) {
-                story.component = component;
-              }
-              traverse(
-                expression || path.node,
-                extractFunctionParameters(story, exports),
-                path.scope,
-                path,
-              );
+
               store.stories[id] = story;
               if (exports) {
                 store.exports[id] = exports;
@@ -170,8 +216,8 @@ export const extractMDXStories = (props: any) => (
             const exports = transformMDX ? { story: attributes } : undefined;
             const { title } = attributes;
             if (title) {
-              const doc: StoriesDoc = {
-                components: {},
+              const doc: Document = {
+                componentsLookup: {},
                 ...attributes,
                 title,
               };
@@ -187,16 +233,17 @@ export const extractMDXStories = (props: any) => (
             break;
           }
           default:
+            const attributes = collectAttributes(node);
+            collectComponent(attributes);
             break;
         }
         // console.log(node.name.name, attributes);
       }
     },
   });
-
   if (store.doc && store.doc.title) {
     //@ts-ignore
-    store.doc.components = components;
+    store.doc.componentsLookup = components;
     return store;
   } else {
     return undefined;

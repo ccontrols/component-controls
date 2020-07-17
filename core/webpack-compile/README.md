@@ -4,6 +4,7 @@
 -   [Installation](#installation)
 -   [Usage](#usage)
 -   [API](#api)
+    -   [chalk](#chalk)
     -   [compile](#compile)
     -   [watch](#watch)
     -   [CompileProps](#compileprops)
@@ -35,37 +36,43 @@ $ npm install @component-controls/webpack-compile --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
+## chalk
+
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L1)_
+
+
+
 ## compile
 
 compile the stories with webpack
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L8)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L9)_
 
-**function** compile(`__namedParameters`\*: **bundleAnalyzer**: boolean**configPath**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
+**function** compile(`__namedParameters`\*: **configPath**: string**outputFolder**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 
 ### parameters
 
-| Name                 | Type                                                                                                                                               | Description |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **bundleAnalyzer**: boolean**configPath**: string**presets**: string \| [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration) |             |
-| `returns`            | Promise&lt;[CompileResults](#compileresults)>                                                                                                      |             |
+| Name                 | Type                                                                                                                                            | Description |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **configPath**: string**outputFolder**: string**presets**: string \| [RuleOptions](#ruleoptions)\[]**webPack**: [Configuration](#configuration) |             |
+| `returns`            | Promise&lt;[CompileResults](#compileresults)>                                                                                                   |             |
 
 ## watch
 
 compile the stories with webpack and launch watching for changes
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L27)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L32)_
 
-**function** watch(`__namedParameters`\*: **bundleAnalyzer**: boolean**configPath**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
+**function** watch(`__namedParameters`\*: **configPath**: string**outputFolder**: string**presets**: string | [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration)): Promise&lt;[CompileResults](#compileresults)>;
 
 ### parameters
 
-| Name                 | Type                                                                                                                                                                                              | Description |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **bundleAnalyzer**: boolean**configPath**: string**presets**: string \| [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration) |             |
-| `returns`            | Promise&lt;[CompileResults](#compileresults)>                                                                                                                                                     |             |
+| Name                 | Type                                                                                                                                                                                           | Description |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **configPath**: string**outputFolder**: string**presets**: string \| [RuleOptions](#ruleoptions)\[]**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration) |             |
+| `returns`            | Promise&lt;[CompileResults](#compileresults)>                                                                                                                                                  |             |
 
 ## CompileProps
 
@@ -77,18 +84,18 @@ _defined in [@component-controls/webpack-compile/src/types.ts](https://github.co
 
 ### properties
 
-| Name             | Type                            | Description                                                           |
-| ---------------- | ------------------------------- | --------------------------------------------------------------------- |
-| `bundleAnalyzer` | boolean                         | if true, will display webpack analyzer results                        |
-| `configPath`     | string                          | path to the configuration file e.g : '.storybook'                     |
-| `presets`        | [RuleTypes](#ruletypes)         | a list of webpack configuration presets from webpack-configs packages |
-| `webPack`        | [Configuration](#configuration) | webpack configuration object                                          |
+| Name           | Type                            | Description                                                           |
+| -------------- | ------------------------------- | --------------------------------------------------------------------- |
+| `configPath`   | string                          | path to the configuration file e.g : '.storybook'                     |
+| `outputFolder` | string                          | public output folder for the bundle                                   |
+| `presets`      | [RuleTypes](#ruletypes)         | a list of webpack configuration presets from webpack-configs packages |
+| `webPack`      | [Configuration](#configuration) | webpack configuration object                                          |
 
 ## CompileResults
 
 return type from compile and watch functions
 
-_defined in [@component-controls/webpack-compile/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/types.ts#L31)_
+_defined in [@component-controls/webpack-compile/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/types.ts#L29)_
 
 
 
@@ -103,7 +110,7 @@ _defined in [@component-controls/webpack-compile/src/types.ts](https://github.co
 
 adds webpack WatchOptions to the Compiler options
 
-_defined in [@component-controls/webpack-compile/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/types.ts#L45)_
+_defined in [@component-controls/webpack-compile/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/types.ts#L43)_
 
 ### properties
 

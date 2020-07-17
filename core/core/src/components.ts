@@ -128,7 +128,7 @@ export interface StoryComponent {
   package?: string;
 
   /**
-   * the source code of the component file, extracted byt the AST instrumenting loaders
+   * the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.
    */
   source?: string;
   /**

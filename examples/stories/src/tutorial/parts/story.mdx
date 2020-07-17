@@ -1,0 +1,428 @@
+---
+title: Structure/Story
+route: /tutorial/structure/story
+type: tutorial
+author: atanasster
+tags:
+  - documentation
+order: 1
+---
+import nameImg from './media/story-name.jpg';
+import descriptionImg from './media/story-description.jpg';
+import sourceImg from './media/story-source.jpg';
+import subtitleImg from './media/story-subtitle.jpg';
+import componentImg from './media/doc-component.jpg';
+import subcomponentsImg from './media/doc-subcomponents.jpg';
+import controlsImg from './media/doc-controls.jpg';
+import decoratorsImg from './media/doc-decorators.jpg';
+import smartcontrolsImg from './media/story-smartcontrols.jpg';
+
+## Overview
+
+Story is a (relatively) small code example that demonstrates a specific component. You can write stories in [mdx](/tutorial/mdx-stories) or [esm](/tutorial/esmodules-stories) format.
+
+For MDX stories, the properties are asigned to the `<Story />` component:
+
+```
+import { Story } from '@component-controls/blocks';
+
+<Story name="overview" description="Story description." controls={{ name: 'some text' }}>
+  {({ name }) => <button>{name}</button>}
+</Story>
+```
+
+For ESM stories, the properties can either be assigned to a `story` namespace:
+
+```
+export const overview = ({ name }) => <button>{name}</button>;
+
+overview.story = {
+  description: 'Story description.',
+  controls: {
+    name: 'some text'
+  }  
+}  
+```
+
+or directly to the exported function:
+
+```
+export const overview = ({ name }) => <button>{name}</button>;
+
+overview.description = 'Story description.';
+overview.controls = {
+  name: 'some text'
+}  
+```
+
+## Properties
+
+### name or storyName
+
+type: `string`
+
+Name of the story. In [ESM](/tutorial/esmodules-stories) stories, the name is automatically created from the name of the exported function. However, you can also override the created name.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Story } from '@component-controls/blocks';
+
+<Story name="overview">
+  <button>click me</button>
+</Story>
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <button>click me</button>;
+
+overview.storyName = 'custom story name';
+
+//also valid: 
+overview.story = {
+  name: 'custom story name',
+}
+```
+  
+<img alt="story name" title="story name" src={nameImg} />
+
+### description
+
+type: `string`
+
+Story extended description, can use markdown.  
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Story } from '@component-controls/blocks';
+
+<Story name="overview" description="story **nice** description">
+  <button>click me</button>
+</Story>
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <button>click me</button>;
+
+overview.description = 'story **nice** description'
+```
+
+<img alt="story description" title="story description" src={descriptionImg} />
+
+### source
+
+type: `string`
+
+Story source code is extracted automatically by the AST instrumenting loaders, but can also be overriden manually.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Story } from '@component-controls/blocks';
+
+<Playground>
+  <Story name="overview" source={`
+  () => <div>custom source code</div>;
+  `}>
+    <button>click me</button>
+  </Story>
+</Playground>  
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <button>click me</button>;
+
+overview.source = `
+() => <div>custom source code</div>;
+`
+```
+
+<img alt="story source" title="story source" src={sourceImg} />
+
+
+### subtitle
+
+type: `string`
+
+Optional story subtitle property, will be displayed at the top of a documentation page
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Story } from '@component-controls/blocks';
+
+<Story name="overview" subtitle="story subtitle">
+  <button>click me</button>
+</Story>
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <button>click me</button>;
+
+overview.subtitle = 'story subtitle';
+```
+
+<img alt="story subtitle" title="story subtitle" src={subtitleImg} />
+
+### component
+
+type: `string | object`
+
+The component associated with the story. 
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Button } from '../components/Button';
+import { Story, PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+<Story name="overview" component={Button}>
+  <Button>click me</Button>
+</Story>
+
+## Component source
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <Button>click me</Button>;
+
+overview.component = Button;
+```
+
+<img alt="story component" title="story component" src={componentImg} />
+
+
+### subcomponents
+
+type: `string[] | object[]
+
+Multiple components option.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+---
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+import { Story, PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+<Story name="overview" component={Button} subcomponents={{ Spinner }}>
+  <Button>click me</Button>
+</Story>
+
+## Component source
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <Button>click me</Button>;
+
+overview.story = {
+  component: Button,
+  subcomponents: { Spinner },
+};
+```
+
+<img alt="story subcomponents" title="story subcomponents" src={subcomponentsImg} />
+
+### controls
+
+type: [ComponentControls](/tutorial/structure/controls#componentcontrols)
+
+Object of key/value pairs specifying the controls for the story.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+
+---
+import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
+
+<Playground>
+  <Story name="text-control" controls={{ text: 'some text' }}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="text-control" />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const textControls = ({ text }) => <div>{text}</div>;
+
+textControls.controls: { text: 'some text' },
+```
+
+[Introduction to controls](/blogs/introduction-to-controls)
+
+<img alt="story controls" title="story controls" src={controlsImg} />
+
+
+### smartControls
+
+type [SmartControls](/tutorial/structure/controls-api#smartcontrols)
+
+"smart" controls options
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+
+---
+import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Playground>
+  <Story name="text-control" component={Button} smartControls={{ include: ['color', 'backgroundColor'] }}>
+    {props => <Button {...props} />}
+  </Story>
+</Playground>
+
+<PropsTable name="text-control" />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+import { Button } from '../components/Button';
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const textControls = props => <Button {...props} />;
+
+textControls.story = {
+  component: Button,
+  smartControls: { include: ['color', 'backgroundColor'] },
+}  
+```  
+
+<img alt="story smart controls" title="story smartControls" src={smartcontrolsImg} />
+
+
+### decorators
+
+type [StoryRenderFn[]](/tutorial/structure/configuration#storyrenderfn)
+
+Array of wrapper functions (decorators) that will be called when rendering the story.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+
+---
+import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
+import { Button } from '../components/Button';
+
+<Story name="overview" decorators={[
+  (controls, context) => {
+    const { renderFn } = context;
+    return (
+      <div style={{ background: 'lightpink' }}>
+        {renderFn(controls, context)}
+      </div>
+    );
+  },
+  ]}
+>
+  {() => <div>decorator test</div>}
+</Story>
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const overview = () => <div>decorator test</div>;
+overview.decorators = [
+  (controls, context) => {
+    const { renderFn } = context;
+    return (
+      <div style={{ background: 'lightpink' }}>
+        {renderFn(controls, context)}
+      </div>
+    );
+  },
+];
+```
+
+<img alt="story decorators" title="story decorators" src={decoratorsImg} />
+

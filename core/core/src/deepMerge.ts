@@ -17,4 +17,9 @@ const mergeArrays = (dest: any[], src: any[]) => {
 export const deepMergeArrays = (a: any, b: any) =>
   merge(a, b, { arrayMerge: mergeArrays });
 
-export { merge };
+export const deepMergeReplaceArrays = (a: any, b: any) =>
+  merge(a, b, {
+    arrayMerge: (dest: any[], src: any[]) => src,
+  });
+
+export { deepMergeReplaceArrays as merge };

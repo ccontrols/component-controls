@@ -6,10 +6,13 @@ import {
   deepMergeArrays,
   deepMerge,
   defaultRunConfig,
+  docStoryToId,
+  storyNameFromExport,
+  defDocType,
+  PageConfiguration,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
-import { toId, storyNameFromExport } from '@storybook/csf';
-import { addSmartControls } from './smart-controls';
+import { transformControls } from './transform-controls';
 
 let storyStore: StoriesStore | undefined = undefined;
 
@@ -46,16 +49,35 @@ export const loadStoryStore = (
           const storeDoc = s.doc;
           const storeStories = s.stories;
           if (storeDoc && storeStories && s.stories) {
-            const doc = storeDoc;
+            const page = globalStore.config?.pages?.[
+              storeDoc.type || defDocType
+            ] as PageConfiguration;
+            const doc = {
+              fullPage: page.fullPage,
+              navSidebar: page.navSidebar,
+              contextSidebar: page.contextSidebar,
+              ...storeDoc,
+            };
+
             const {
+              isMDXComponent,
+              tags,
               title,
+              order,
+              type,
+              MDXPage,
+              author,
+              date,
+              dateModified,
+              description,
+              fullPage,
+              route,
+              navSidebar,
+              contextSidebar,
               stories,
               source,
-              component,
               fileName,
-              components,
-              excludeStories,
-              includeStories,
+              componentsLookup,
               package: docPackage,
               ...otherDocProps
             } = doc;
@@ -63,16 +85,9 @@ export const loadStoryStore = (
             Object.keys(storeStories).forEach((storyName: string) => {
               const story: Story = storeStories[storyName];
               Object.assign(story, deepMerge(otherDocProps, story));
-              const smartControls = addSmartControls(
-                story,
-                doc,
-                loadedComponents,
-              );
-              if (smartControls) {
-                story.controls = deepMerge(smartControls, story.controls || {});
-              }
-              if (doc.title && story.name) {
-                const id = toId(doc.title, storyNameFromExport(story.name));
+              story.controls = transformControls(story, doc, loadedComponents);
+              if (doc.title && story.id) {
+                const id = docStoryToId(doc.title, story.id);
                 if (!doc.stories) {
                   doc.stories = [];
                 }

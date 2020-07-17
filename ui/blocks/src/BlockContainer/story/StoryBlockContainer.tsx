@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import {
   BlockContainer,
   BlockContainerProps,
@@ -10,6 +10,7 @@ import {
   StoryContextProps,
 } from '../../context';
 import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
+import { PlaygroundContext } from '../../Playground/PlaygroundContext';
 
 export type StoryBlockContainerProps = StoryInputProps & BlockContainerProps;
 
@@ -30,12 +31,14 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   children,
   useStoryDescription,
   description: userDescription,
+  'data-testid': dataTestid,
   ...rest
 }) => {
   const context = useStoryContext({
     id,
     name,
   });
+  const playground = useContext(PlaygroundContext);
   const { story } = context;
   const title = getStoryBlockTitle({
     story,
@@ -43,9 +46,11 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   });
   const block = children && children(context, rest);
   const description =
-    userDescription || (useStoryDescription ? story?.description : undefined);
+    (playground === undefined && userDescription) ||
+    (useStoryDescription ? story?.description : undefined);
   return block ? (
     <BlockContainer
+      data-testid={dataTestid}
       title={title}
       collapsible={collapsible}
       id={userTitle === CURRENT_STORY && story ? story.id : undefined}

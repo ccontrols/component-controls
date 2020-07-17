@@ -1,12 +1,12 @@
 {
-  "name": "component-controls-gatsby",
+  "name": "component-controls-gatsby-starter",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.9.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build-sample": "gatsby build",
-    "start": "gatsby develop"
+    "build-sample": "gatsby clean && gatsby build",
+    "start": "gatsby develop -p 9020"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,9 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.4.0",
-    "@component-controls/pages": "^1.4.0",
+    "@component-controls/gatsby-theme-stories": "^1.9.0",
     "gatsby": "^2.22.10",
+    "gatsby-plugin-sitemap": "^2.4.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

@@ -30,7 +30,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
   }, []);
   const actions: ActionItems = [
     {
-      title: `dashboard`,
+      node: `dashboard`,
       id: 'dashboard',
       'aria-label': 'display the accessibility overview dashboard',
       panel: <AllyDashboard />,
@@ -38,7 +38,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
   ];
   if (violations?.length) {
     actions.push({
-      title: `errors (${violations.length})`,
+      node: `errors (${violations.length})`,
       id: 'errors',
       group: 'results',
       'aria-label': 'display the accessibility violations',
@@ -47,7 +47,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
   }
   if (passes?.length) {
     actions.push({
-      title: `passed (${passes?.length})`,
+      node: `passed (${passes?.length})`,
       id: 'passed',
       group: 'results',
       'aria-label': 'display the accessibility successfully passed tests',
@@ -57,7 +57,7 @@ export const BaseAllyBlock: FC<BaseAllyBlockProps> = ({ children }) => {
 
   if (incomplete?.length) {
     actions.push({
-      title: `incomplete (${incomplete.length})`,
+      node: `incomplete (${incomplete.length})`,
       id: 'incomplete',
       group: 'results',
       'aria-label': 'display the incomplete accessibility tests',

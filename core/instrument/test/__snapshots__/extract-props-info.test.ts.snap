@@ -2,7 +2,7 @@
 
 exports[`extract-props-info PropsTable 1`] = `
 Object {
-  "description": "",
+  "description": "Displays the component's properties as well as configurable controls to interact with the component.",
   "displayName": "PropsTable",
   "methods": Array [],
   "props": Object {
@@ -740,6 +740,14 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "{ __html: string; }",
       },
     },
+    "data-testid": Object {
+      "description": "testing id",
+      "parentName": "BlockContainerProps",
+      "type": Object {
+        "name": "string",
+        "raw": "string",
+      },
+    },
     "datatype": Object {
       "parentName": "HTMLAttributes",
       "type": Object {
@@ -797,7 +805,6 @@ A hint could be a sample value or a brief description of the expected format.",
       },
     },
     "extraColumns": Object {
-      "defaultValue": "[]",
       "description": "extra custom columns passed to the PropsTable.",
       "parentName": "PropsTableOwnProps",
       "type": Object {
@@ -988,6 +995,14 @@ from the title.",
     },
     "lang": Object {
       "parentName": "HTMLAttributes",
+      "type": Object {
+        "name": "string",
+        "raw": "string",
+      },
+    },
+    "name": Object {
+      "description": "some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls",
+      "parentName": "ComponentInputProps",
       "type": Object {
         "name": "string",
         "raw": "string",
@@ -2350,7 +2365,6 @@ import { jsx } from 'theme-ui'
       },
     },
     "visibility": Object {
-      "defaultValue": "all",
       "description": "by default will show both controls and props tables
 user setting can display only props table or only controls",
       "type": Object {

@@ -1,9 +1,9 @@
-import { StoriesDoc, StoryComponent, Story } from '@component-controls/core';
+import { Document, StoryComponent, Story } from '@component-controls/core';
 
 export const CURRENT_STORY = '.';
 
 export const getStoryTitle = (
-  doc: StoriesDoc | undefined,
+  doc: Document | undefined,
   component: StoryComponent | undefined,
 ): string | undefined => {
   if (doc) {

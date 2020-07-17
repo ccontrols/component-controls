@@ -1,5 +1,4 @@
 import React from 'react';
-import { toId, storyNameFromExport } from '@storybook/csf';
 import { StoryStore, StoreObserver } from '@component-controls/store';
 
 import {
@@ -7,9 +6,10 @@ import {
   StoriesStore,
   StoryComponent,
   StoryComponents,
-  StoriesDoc,
+  Document,
   getComponentName,
   PackageInfo,
+  docStoryToId,
 } from '@component-controls/core';
 import { CURRENT_STORY } from '../../utils';
 
@@ -22,7 +22,7 @@ export interface BlockDataContextProps {
     docId?: string,
   ) => {
     story?: Story;
-    doc?: StoriesDoc;
+    doc?: Document;
     component?: StoryComponent;
     docPackage?: PackageInfo;
     componentPackage?: PackageInfo;
@@ -33,7 +33,7 @@ export interface BlockDataContextProps {
    */
   getComponents: (
     components: { [key: string]: any } | undefined,
-    doc: StoriesDoc | undefined,
+    doc: Document | undefined,
   ) => StoryComponents;
   /**
    *
@@ -41,6 +41,12 @@ export interface BlockDataContextProps {
    * will navigate through the store docs and look for a matching story id
    */
   storyIdFromName: (name: string) => string | undefined;
+
+  /**
+   *
+   * find a story id from a story 'name' in current document
+   */
+  storyIdFromNameCurrent: (name: string) => string | undefined;
 
   /**
    * add an observer for onChange events
@@ -94,8 +100,8 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
       const componentName = getComponentName(storyComponent);
       const component =
-        componentName && doc && doc.components[componentName]
-          ? store.components[doc.components[componentName]]
+        componentName && doc && doc.componentsLookup[componentName]
+          ? store.components[doc.componentsLookup[componentName]]
           : undefined;
       const docPackage =
         doc && doc.package ? store.packages[doc.package] : undefined;
@@ -110,32 +116,64 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
 
   const getComponents = (
     components: { [key: string]: any } | undefined,
-    doc: StoriesDoc | undefined,
-  ): StoryComponents =>
-    store && doc && components
+    doc: Document | undefined,
+  ): StoryComponents => {
+    const getComponent = (name: string) =>
+      doc?.componentsLookup[name] &&
+      store?.components[doc.componentsLookup[name]];
+    return store && doc && components
       ? Object.keys(components).reduce((acc, key) => {
-          const name = getComponentName(components[key]);
-          const component =
-            name &&
-            doc?.components[name] &&
-            store?.components[doc.components[name]];
-          if (component) {
-            return { ...acc, [key]: component };
-          } else {
-            return acc;
+          const comp = components[key];
+          if (comp === CURRENT_STORY) {
+            const comps: Record<string, StoryComponent> = {};
+            const name = getComponentName(doc.component);
+            if (name) {
+              const component = getComponent(name);
+              if (component) {
+                comps[name] = component;
+              }
+            }
+            if (doc.subcomponents) {
+              Object.keys(doc.subcomponents).forEach(subKey => {
+                const name = getComponentName(doc.subcomponents?.[subKey]);
+                if (name) {
+                  const component = getComponent(name);
+                  if (component) {
+                    comps[name] = component;
+                  }
+                }
+              });
+            }
+            return { ...acc, ...comps };
           }
+          const name = getComponentName(comp);
+          if (name) {
+            const component = getComponent(name);
+            if (component) {
+              return { ...acc, [key]: component };
+            }
+          }
+          return acc;
         }, {})
       : {};
+  };
 
   const storyIdFromName = (name: string): string | undefined => {
     if (store) {
       for (const title in store.docs) {
         const doc = store.docs[title];
-        const storyId = toId(title, storyNameFromExport(name));
+        const storyId = docStoryToId(title, name);
         if (doc.stories && doc.stories.indexOf(storyId) > -1) {
           return storyId;
         }
       }
+    }
+    return undefined;
+  };
+
+  const storyIdFromNameCurrent = (name: string): string | undefined => {
+    if (store && docId) {
+      return docStoryToId(docId, name);
     }
     return undefined;
   };
@@ -146,6 +184,7 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         docId,
         getStoryData,
         storyIdFromName,
+        storyIdFromNameCurrent,
         getComponents,
         addObserver: storeProvider ? storeProvider.addObserver : () => {},
         removeObserver: storeProvider ? storeProvider.removeObserver : () => {},

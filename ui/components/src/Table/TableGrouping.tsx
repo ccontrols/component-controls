@@ -24,7 +24,7 @@ const useControlledState = (state: GroupByState) => {
       };
     }
     return state;
-  }, [state, state?.groupBy?.length]);
+  }, [state]);
 };
 export const useExpanderColumn = (itemsLabel: string) => (
   hooks: UseTableHooks<{}>,

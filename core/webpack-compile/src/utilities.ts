@@ -1,13 +1,6 @@
-import webpack, {
-  Configuration,
-  Compiler,
-  Stats,
-  HotModuleReplacementPlugin,
-} from 'webpack';
-import * as chalk from 'chalk';
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+import * as webpack from 'webpack';
 import * as path from 'path';
+const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
@@ -25,8 +18,9 @@ export type CompileRunProps = CompileProps & {
   mode: Configuration['mode'];
 };
 
-const createConfig = (options: CompileRunProps): Configuration => {
-  const { webPack, presets, configPath, mode, bundleAnalyzer } = options;
+const createConfig = (options: CompileRunProps): webpack.Configuration => {
+  const { webPack, presets, configPath, mode, outputFolder } = options;
+  const distFolder = path.resolve(__dirname, '../dist');
   const plugins = [
     new LoaderPlugin({
       config: configPath,
@@ -34,16 +28,6 @@ const createConfig = (options: CompileRunProps): Configuration => {
     }),
     new HotModuleReplacementPlugin({}),
   ];
-
-  if (bundleAnalyzer) {
-    plugins.push(
-      new BundleAnalyzerPlugin({
-        generateStatsFile: true,
-        statsFilename: 'stats.json',
-      }),
-    );
-  }
-
   const webpackConfig = mergeWebpackConfig(
     {
       mode,
@@ -53,7 +37,7 @@ const createConfig = (options: CompileRunProps): Configuration => {
         ),
       },
       output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: distFolder,
         filename: 'bundle.js',
         libraryTarget: 'umd',
         globalObject: 'this',
@@ -66,6 +50,7 @@ const createConfig = (options: CompileRunProps): Configuration => {
       ...(webPack || {}),
     },
     presets,
+    { outputFolder, distFolder },
   );
 
   //add all the aliases to avoid double loading of packages
@@ -115,6 +100,11 @@ export const runCompiler = (
         require.resolve('@component-controls/loader/store'),
       );
       const { store } = require('@component-controls/loader/store');
+      console.log(
+        chalk.bgRgb(244, 147, 66)('@end compilation'),
+        `${store.stores.length} documents compiled`,
+      );
+
       resolve({ store, stats });
     });
   });

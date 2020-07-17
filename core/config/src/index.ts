@@ -6,7 +6,14 @@ import { BuildConfiguration } from '@component-controls/core';
 
 export const buildConfigFileNames = ['buildtime.js', 'build.js', 'main.js'];
 
-export const optionsFileNames = ['runtime.js', 'options.js'];
+export const optionsFileNames = [
+  'runtime.js',
+  'options.js',
+  'runtime.ts',
+  'runtime.tsx',
+  'options.ts',
+  'options.tsx',
+];
 export interface ConfigrationResult {
   config: BuildConfiguration;
   configPath: string;
@@ -46,14 +53,17 @@ export const loadConfiguration = (
 ): ConfigrationResult | undefined => {
   const folder = configFolder ?? getConfigurationArg(args);
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
-  const allFiles = fs.readdirSync(configPath);
+  const hasConfigFolder = fs.existsSync(configPath);
+  if (!hasConfigFolder) {
+    console.warn('configuration folder not found', configPath);
+  }
+  const allFiles = hasConfigFolder ? fs.readdirSync(configPath) : [];
   const buildConfigFile = allFiles.find(file =>
     buildConfigFileNames.includes(file.toLowerCase()),
   );
   const optionsFile = allFiles.find(file =>
     optionsFileNames.includes(file.toLowerCase()),
   );
-
   if (buildConfigFile) {
     return {
       config: require(path.resolve(configPath, buildConfigFile)),
@@ -78,8 +88,13 @@ export const extractStories = ({
   const stories =
     config && config.stories
       ? config.stories.reduce((acc: string[], storyRg: string) => {
-          const regex = storyRg.replace(/\((.*?)\)/g, '+($1)');
-          return [...acc, ...globSync(path.resolve(configPath, regex))];
+          //fix for sb5 issue handling glob
+          const regex = storyRg.replace('.(', '.@(');
+          const matches = globSync(path.resolve(configPath, regex));
+          if (!matches.length) {
+            throw new Error(`${storyRg} did not match any files`);
+          }
+          return [...acc, ...matches];
         }, [])
       : undefined;
   return stories;

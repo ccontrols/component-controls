@@ -1,0 +1,27 @@
+---
+title: Configuration/Build time
+route: /configuration/buildtime/
+type: tutorial
+order: 1
+tags:
+  - configuration
+---
+
+## File
+The build-time configuration file is located in the [configuration-path](/configuration/overview/#configuration-path) folder.
+This file runs under a **nodejs** process and some functionlity is limited (e.g. typescript).
+Possible names for the file:
+- `buildtime.js`
+- `build.js`
+- `main.js`
+
+## Configurable Fields
+
+| Name           | Type                                | Description                                                                                                                                    |
+| -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `categories`   | [DocType[]](/tutorial/structure/configuration#doctype)            | page types that are considered as categories fields as well                                                                                     |
+| `pages`        | [PagesOnlyRoutes](/tutorial/structure/configuration#pagesonlyroutes) | base url path for API documentation pages.|
+| `stories`      | string[]                           | wild card search string for the stories internally using [glob](https://www.npmjs.com/package/glob)|
+| `webpack` or `finalWebpack`     | [WebpackConfig](/tutorial/structure/configuration#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                             |
+
+

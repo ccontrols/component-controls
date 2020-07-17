@@ -1,34 +1,37 @@
-import { Story, StoriesDoc, StoryParameters } from '@component-controls/core';
+import { Story, Document } from '@component-controls/core';
 
+const componentName = (component: string | object | undefined) => {
+  if (component) {
+    if (typeof component === 'string') {
+      return component;
+    }
+    if (typeof component.toString === 'function') {
+      return component.toString();
+    }
+  }
+  return undefined;
+};
 export const componentsFromParams = (
-  element: StoriesDoc | Story | StoryParameters,
+  element: (Document | Story) & { of?: string },
 ): string[] => {
   const result = [];
   let { component } = element;
-  if (!component && element.parameters) {
-    ({ component } = element.parameters);
+  const name = componentName(component);
+  if (name) {
+    result.push(name);
   }
-  if (typeof component === 'string') {
-    result.push(component);
+  const { of: componentShorthand } = element;
+  const ofName = componentName(componentShorthand);
+  if (ofName) {
+    result.push(ofName);
   }
   let { subcomponents } = element;
-  if (!subcomponents && element.parameters) {
-    ({ subcomponents } = element.parameters);
-  }
   if (typeof subcomponents === 'string') {
     result.push(subcomponents);
   }
   if (typeof subcomponents === 'object') {
+    //@ts-ignore
     Object.keys(subcomponents).forEach(key => result.push(subcomponents[key]));
   }
-
-  let { of } = element as StoryParameters;
-  if (typeof of === 'string') {
-    result.push(of);
-  }
-  if (typeof of === 'object') {
-    Object.keys(of).forEach(key => result.push(of[key]));
-  }
-
   return result;
 };

@@ -1,17 +1,17 @@
 {
   "private": true,
-  "version": "1.4.0",
+  "version": "1.9.0",
   "name": "component-controls-storybook-6",
   "license": "MIT",
   "scripts": {
     "debug": "NODE_OPTIONS=--inspect-brk start-storybook -p 9015 -c .storybook",
     "start": "start-storybook -p 9015 -c .storybook",
-    "debug-build": "NODE_OPTIONS=--inspect-brk build-storybook -c .storybook -o ./docs",
-    "build-sample": "build-storybook -c .storybook -o ./docs"
+    "debug-build": "NODE_OPTIONS=--inspect-brk build-storybook -c .storybook -o ./public",
+    "build-sample": "build-storybook -c .storybook -o ./public"
   },
   "dependencies": {
-    "@component-controls/core": "^1.3.0",
-    "@component-controls/storybook": "^1.4.0",
+    "@component-controls/core": "^1.9.0",
+    "@component-controls/storybook": "^1.9.0",
     "@storybook/addon-docs": "next",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",

@@ -19,10 +19,8 @@ export interface CompileProps {
    */
   configPath?: string;
 
-  /**
-   * if true, will display webpack analyzer results
-   */
-  bundleAnalyzer?: boolean;
+  /** public output folder for the bundle */
+  outputFolder?: string;
 }
 
 /**

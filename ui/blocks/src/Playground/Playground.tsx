@@ -8,8 +8,10 @@ import {
   IconButton,
   Zoom,
   useTheme,
+  ActionItems,
 } from '@component-controls/components';
-import { BlockDataContext } from '../context';
+import { BlockDataContext, useCustomProps } from '../context';
+import { PlaygroundContext } from './PlaygroundContext';
 
 import {
   StoryBlockContainer,
@@ -33,30 +35,36 @@ export type PlaygroundProps = PlaygroundOwnProps &
   StoryBlockContainerProps &
   PanelContainerProps;
 
-export const Playground: FC<PlaygroundProps> = ({
-  title,
-  id,
-  name,
-  collapsible,
-  dark,
-  actions: userActions = [],
-  children,
-  openTab,
-  visibleTabs = false,
-  description,
-  scale: userScale = 1,
-}) => {
+const NAME = 'playground';
+
+/**
+ * Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
+ */
+export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const theme = useTheme();
+  const custom = useCustomProps<PlaygroundProps>(NAME, props);
+  const {
+    title,
+    id,
+    name,
+    collapsible,
+    dark,
+    actions: userActions = [],
+    openTab,
+    visibleTabs = false,
+    description,
+    scale: userScale = 1,
+  } = custom;
 
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
   const [direction, setDirection] = React.useState<DirectionType>('ltr');
   const { storyIdFromName, getStoryData } = useContext(BlockDataContext);
   React.useEffect(() => setScale(userScale), [userScale]);
-  const zoomActions = React.useMemo(
+  const zoomActions: ActionItems = React.useMemo(
     () => [
       {
-        title: (
+        node: (
           <IconButton onClick={() => setScale(1)} aria-label="reset zoom">
             <SyncIcon />
           </IconButton>
@@ -65,7 +73,7 @@ export const Playground: FC<PlaygroundProps> = ({
         group: 'zoom',
       },
       {
-        title: (
+        node: (
           <IconButton
             onClick={() => setScale(Math.max(0.5, scale - 0.2))}
             aria-label="zoom out"
@@ -77,7 +85,7 @@ export const Playground: FC<PlaygroundProps> = ({
         group: 'zoom',
       },
       {
-        title: (
+        node: (
           <IconButton
             onClick={() => setScale(Math.min(3, scale + 0.2))}
             aria-label="zoom in"
@@ -107,7 +115,7 @@ export const Playground: FC<PlaygroundProps> = ({
         return null;
       }
       userActions.push({
-        title: 'source',
+        node: 'source',
         id: 'source',
         group: 'panels',
         'aria-label': 'display story source code',
@@ -116,7 +124,7 @@ export const Playground: FC<PlaygroundProps> = ({
         ),
       });
       userActions.push({
-        title: 'config',
+        node: 'config',
         id: 'config',
         group: 'panels',
         'aria-label': 'display story configuration object',
@@ -127,15 +135,15 @@ export const Playground: FC<PlaygroundProps> = ({
     }
   }
 
-  const storyActions = [
+  const storyActions: ActionItems = [
     {
-      title: background === 'light' ? 'dark' : 'light',
+      node: background === 'light' ? 'dark' : 'light',
       id: 'background',
       group: 'story',
       onClick: () => setBackground(background === 'light' ? 'dark' : 'light'),
     },
     {
-      title: direction === 'rtl' ? 'LTR' : 'RTL',
+      node: direction === 'rtl' ? 'LTR' : 'RTL',
       id: 'direction',
       group: 'story',
       onClick: () => setDirection(direction === 'rtl' ? 'ltr' : 'rtl'),
@@ -146,6 +154,7 @@ export const Playground: FC<PlaygroundProps> = ({
     : [...storyActions, ...userActions];
   return (
     <StoryBlockContainer
+      data-testid={NAME}
       description={description}
       useStoryDescription={true}
       name={name}
@@ -162,7 +171,11 @@ export const Playground: FC<PlaygroundProps> = ({
           background={background}
           direction={direction}
         >
-          <Zoom scale={scale || 1}>{children}</Zoom>
+          <Zoom scale={scale || 1}>
+            <PlaygroundContext.Provider value={{ useDescription: true }}>
+              {children}
+            </PlaygroundContext.Provider>
+          </Zoom>
         </PanelContainer>
       )}
     </StoryBlockContainer>

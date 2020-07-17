@@ -3,6 +3,144 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* checks for missing doc and duplicated title ([81f0b12](https://github.com/ccontrols/component-controls/commit/81f0b124766ac4fe86dbeeda2aa9498e4026103b))
+* rename FatalError ([5712ba3](https://github.com/ccontrols/component-controls/commit/5712ba3be4c2f177a8305ee87c64d07ced4645b2))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* import invalid config path ([fd91a1d](https://github.com/ccontrols/component-controls/commit/fd91a1df8619db92a3eebc937ca34c9f5887b23f))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+
+### Bug Fixes
+
+* default runtime config ([2684a03](https://github.com/ccontrols/component-controls/commit/2684a03cce1409c0a50ddb09869e3c14ff249f01))
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* merge build config arrays ([173753e](https://github.com/ccontrols/component-controls/commit/173753ea056904408a1980fe1bb6113441e39168))
+
+
+### Features
+
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

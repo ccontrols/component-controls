@@ -29,10 +29,12 @@ export type ComponentsBlockContainerProps = {
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   title: userTitle,
   collapsible,
+  name,
   id,
   of,
   children,
   visibility,
+  'data-testid': dataTestid,
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
@@ -64,6 +66,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   const block = (
     <ComponentsContainer
       of={of}
+      name={name}
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }
@@ -77,7 +80,12 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   );
   // console.log(child);
   return (
-    <BlockContainer title={title} collapsible={collapsible} id={id}>
+    <BlockContainer
+      data-testid={dataTestid}
+      title={title}
+      collapsible={collapsible}
+      id={id}
+    >
       {block}
     </BlockContainer>
   );

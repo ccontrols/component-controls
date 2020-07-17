@@ -3,6 +3,265 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* compile options ([5eaad21](https://github.com/ccontrols/component-controls/commit/5eaad21062a67a4cd83a4da63411e54febbf8109))
+* context scroll current if next invisible ([f277b6f](https://github.com/ccontrols/component-controls/commit/f277b6fb7b34badd4a902368a53a6753c60101b1))
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* do not generate store at export phase ([f776987](https://github.com/ccontrols/component-controls/commit/f776987b4a46b2b9ffe10ae0e3a8a671dbe9f446))
+* do not use title as seo description ([5b60496](https://github.com/ccontrols/component-controls/commit/5b604965c6146e01215a33f6ac95b8cdee82f81d))
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* ga ssr ([fb47769](https://github.com/ccontrols/component-controls/commit/fb47769f93a0ebd435af04eb6f16af730aa68e44))
+* link colors ([931e3de](https://github.com/ccontrols/component-controls/commit/931e3de5169b44a0b78ce2525dffff00f8c61a37))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+* playground context ([5dfca0b](https://github.com/ccontrols/component-controls/commit/5dfca0baed60328726fb96f9e8cefdf176388f71))
+* prevent table overflowing container ([e716842](https://github.com/ccontrols/component-controls/commit/e7168421389ce4aa6a8e5122924d1fa3254ad3b6))
+* reduce head links sizes ([31d501f](https://github.com/ccontrols/component-controls/commit/31d501feb0c920032576ea30bfcb51b9c1733d19))
+* remove logs ([c71e316](https://github.com/ccontrols/component-controls/commit/c71e316730587221e6388c7e4e16d1486ca21e4a))
+* remove unneeded useStoryContext ([e458838](https://github.com/ccontrols/component-controls/commit/e458838cf7c66d148f657ce72bdb2de448d759bf))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+* initial commit ([b7b0e90](https://github.com/ccontrols/component-controls/commit/b7b0e9022fbcc937d216a63073c575e38ab1a628))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* account for non string ([9c93794](https://github.com/ccontrols/component-controls/commit/9c9379489b7b0854e255e6d6a9ce4a530af89926))
+* action item node ([c885e2d](https://github.com/ccontrols/component-controls/commit/c885e2d29a3ef54bcd34b437aa4a72756582cbb8))
+* add deepMergeReplaceArrays for controls ([74c4a3b](https://github.com/ccontrols/component-controls/commit/74c4a3b082ec896651fadda99df8c70a2582703b))
+* add storyPaths dependency ([ccf976c](https://github.com/ccontrols/component-controls/commit/ccf976c96ee029af80115e18452488624db77b73))
+* assets relative path ([b3bf9e8](https://github.com/ccontrols/component-controls/commit/b3bf9e8a05c450ceefa82a7d12560034f6923804))
+* check for missing author ([20974f7](https://github.com/ccontrols/component-controls/commit/20974f71ec00af987d2057681bcdc1739bc66d52))
+* check for null options ([468cae6](https://github.com/ccontrols/component-controls/commit/468cae6041ce69114059a65989d887d479e16e5e))
+* checks for missing doc and duplicated title ([81f0b12](https://github.com/ccontrols/component-controls/commit/81f0b124766ac4fe86dbeeda2aa9498e4026103b))
+* display when only date available ([d35bc0b](https://github.com/ccontrols/component-controls/commit/d35bc0b3f3d75e3223e472c07a800e25ee90a900))
+* document route ([4dc8969](https://github.com/ccontrols/component-controls/commit/4dc8969e316c9ada0b74a00cc6009ef2c2b97051))
+* emit url-loader assets to public folder ([d77775c](https://github.com/ccontrols/component-controls/commit/d77775c329305ab71c295671e55a4174c4cf4e52))
+* handle of="." in MDX ([98cbb2d](https://github.com/ccontrols/component-controls/commit/98cbb2d7fac8a8ec66103d4f6b66bf944199a3d7))
+* info row above edit page row ([53389b4](https://github.com/ccontrols/component-controls/commit/53389b45e77ad7657bdae3dce65ce281a2dd4c13))
+* mdx subcomponents handling ([9d0b1c0](https://github.com/ccontrols/component-controls/commit/9d0b1c0e5d153b8105df230b53e95f32b1a2b00e))
+* optimize initial search loading ([2624c55](https://github.com/ccontrols/component-controls/commit/2624c55939cbb93034faf48ace42e86ac07daa39))
+* page title split ([0206483](https://github.com/ccontrols/component-controls/commit/02064833bbde779783ae1bfc72f8adaea70eefd7))
+* randomize data correct import ([459246a](https://github.com/ccontrols/component-controls/commit/459246aaf9abba330df8946d86f9eda82847e60a))
+* remove logs ([3c62005](https://github.com/ccontrols/component-controls/commit/3c6200534f47236ea33bf44fbc6328987212bda9))
+* rename FatalError ([5712ba3](https://github.com/ccontrols/component-controls/commit/5712ba3be4c2f177a8305ee87c64d07ced4645b2))
+* skip reexport ImageProps ([6a5e27b](https://github.com/ccontrols/component-controls/commit/6a5e27b5e49370dc8605782e889a75e5ec551dd2))
+* tab url when storyPaths = true ([32735d2](https://github.com/ccontrols/component-controls/commit/32735d251feede9d834b190d12c82f3b828373c1))
+* table p and pre margins reduce ([cddbf47](https://github.com/ccontrols/component-controls/commit/cddbf47bdb0fe0d39ac5f782f358a3c7f2593e86))
+* title null check ([03410d8](https://github.com/ccontrols/component-controls/commit/03410d8e72f4ef50e7c9cfdfc95a5a65191913d7))
+* url-loader ([3587c55](https://github.com/ccontrols/component-controls/commit/3587c5590bc93f14f78914aa645fdbac912c0f92))
+* workaround new bug in SB RC ([66112b5](https://github.com/ccontrols/component-controls/commit/66112b56a95f40a3bb49b8182321b00c264c4577))
+
+
+### Features
+
+* added TitledImage for mdx ([5d46370](https://github.com/ccontrols/component-controls/commit/5d46370a1b85c7c45fcf97aa26b292253992a13a))
+* added Value component, info row ([fbe5f0e](https://github.com/ccontrols/component-controls/commit/fbe5f0e8ad6cd41d6965a0425d7a42c94bf78a76))
+* data-testids ([07b9f64](https://github.com/ccontrols/component-controls/commit/07b9f6480ac7a2b1e0a3384007755f1e9a5c86ba))
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+* story iframe and components configuration ([f903953](https://github.com/ccontrols/component-controls/commit/f903953f5644d020229ea836a46e6536233ef871))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+
+### Bug Fixes
+
+* docId context ([65eec8e](https://github.com/ccontrols/component-controls/commit/65eec8eb43bbd1bb83b39f65fabbb318302160ad))
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add isMDXComponent from mdxjs ([8f800c1](https://github.com/ccontrols/component-controls/commit/8f800c16fa3d5c7860d2618e8b20f08d9cfdd873))
+* add keyboard handlingto and slider ([772c7d0](https://github.com/ccontrols/component-controls/commit/772c7d03e04572e4fb3a4d46f95a76c0e2a17600))
+* avoid controls column refresh on change ([858044b](https://github.com/ccontrols/component-controls/commit/858044b7f6677be41bdad1ee5cd084dd84140b99))
+* categories count ([3dc60f0](https://github.com/ccontrols/component-controls/commit/3dc60f0c6b48efb9caf262fc568b1024f1c11fe4))
+* generate code for complex attributes ([17f5b09](https://github.com/ccontrols/component-controls/commit/17f5b098eac6dafd4eb3fe3793584d90f7e2b9d5))
+* handle "new" expressions in MDX ([8ebf546](https://github.com/ccontrols/component-controls/commit/8ebf5463c69d206907bf5dc0161713420dc5b461))
+* import invalid config path ([fd91a1d](https://github.com/ccontrols/component-controls/commit/fd91a1df8619db92a3eebc937ca34c9f5887b23f))
+* log doc on error ([4f81cfc](https://github.com/ccontrols/component-controls/commit/4f81cfc459bd9f6b358c9d4bb3a369150a6d06a1))
+* remove container if no children ([3cb0281](https://github.com/ccontrols/component-controls/commit/3cb0281c4656d708134de75452cff5c8a88f0dfb))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+### Features
+
+* ability to use story name in "component" ([fbc2324](https://github.com/ccontrols/component-controls/commit/fbc232495a2065636c672698ba73d7a726e32e12))
+* add storyPaths page option ([563add3](https://github.com/ccontrols/component-controls/commit/563add3a2d35b36f354eb05e6d224ab9c4bfd88c))
+* custom serialization of mdx attributes ([028e366](https://github.com/ccontrols/component-controls/commit/028e366d931b94140ffe1c7d09fdb45b1403e36b))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* sb6 beta has now fixed handling of glob ([d3f21e9](https://github.com/ccontrols/component-controls/commit/d3f21e966f5e3d9c10fada21ae588441ca3a4a2d))
+* ssr hide document ([713bbb7](https://github.com/ccontrols/component-controls/commit/713bbb72af1ace17b907e5bed0c968f2c27a6f4c))
+* throw error on invalid glob pattern ([70bd152](https://github.com/ccontrols/component-controls/commit/70bd1522520313caeb50bd95e46147b75cc1e72b))
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* mdx code add parameters and mdx docs ([58f80ba](https://github.com/ccontrols/component-controls/commit/58f80ba2cc2417d14dc83e09b489889da7799e5d))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+
+### Bug Fixes
+
+* gatsby story remove meta ([fe0e7ea](https://github.com/ccontrols/component-controls/commit/fe0e7eabe78526630b2645ed068333bcaf882d7d))
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+
+### Bug Fixes
+
+* webpack configs dependencies ([faaa608](https://github.com/ccontrols/component-controls/commit/faaa6082651c49e686715a3cfa2b39718f1a34e4))
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* props info packages added deps ([941ca59](https://github.com/ccontrols/component-controls/commit/941ca599cd49d705951520621407088e0c0993f1))
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx components of prop ([d2d968f](https://github.com/ccontrols/component-controls/commit/d2d968f24a3ed7955af0fd328dc2f6659bf4d9bf))
+* mdx inherit webpack config ([74faadd](https://github.com/ccontrols/component-controls/commit/74faaddea63de1e3266396a8056869d2049ca1bb))
+* webpack configs inherit mdx ([826c1b8](https://github.com/ccontrols/component-controls/commit/826c1b8bf03c5ef67eeade769ea13ab9c62dedf1))
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+
+### Bug Fixes
+
+* default runtime config ([2684a03](https://github.com/ccontrols/component-controls/commit/2684a03cce1409c0a50ddb09869e3c14ff249f01))
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+
+### Bug Fixes
+
+* config folder unexistant ([984e2a6](https://github.com/ccontrols/component-controls/commit/984e2a6bf3dfbfeb01740d340c8f687590b8fd52))
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+* remove log ([9b3a8d5](https://github.com/ccontrols/component-controls/commit/9b3a8d5e2de5ded1b5307e80625e7e0e00bb9c64))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* action items title to node ([7047031](https://github.com/ccontrols/component-controls/commit/704703162e131b31d7050ed6e526d85288d3d9db))
+* add stories names to search index ([923c546](https://github.com/ccontrols/component-controls/commit/923c546fcfc958805b1bb8ccacc6b2cb34a08f53))
+* auto-expand first row ([9f35f67](https://github.com/ccontrols/component-controls/commit/9f35f6793c76112578a89356d70c2c0b755e7b7b))
+* block expand styling ([fe1f105](https://github.com/ccontrols/component-controls/commit/fe1f1050af88eb4b43d1f6ddee531541db1d5caa))
+* componentsLookup ([a8f0f43](https://github.com/ccontrols/component-controls/commit/a8f0f43af7f1b00cd6feb294f50a183552469a4e))
+* dark mode removed from theme context ([74d3b51](https://github.com/ccontrols/component-controls/commit/74d3b51b0f7f34418403a57689b231f21efab4c2))
+* document id ([29a2a48](https://github.com/ccontrols/component-controls/commit/29a2a48c81061cc7f70a0b27bb30fa66125ca267))
+* merge build config arrays ([173753e](https://github.com/ccontrols/component-controls/commit/173753ea056904408a1980fe1bb6113441e39168))
+* normalize-url lib issue under safari ([95303f8](https://github.com/ccontrols/component-controls/commit/95303f873b98219ba89b3cfb6d77a2b6183fd282))
+* remove color mode deps ([8b9e463](https://github.com/ccontrols/component-controls/commit/8b9e463b6a6864a8aef2f39c35725a81807c7ecf))
+* search issue with mock context ([3604a8f](https://github.com/ccontrols/component-controls/commit/3604a8f00dd0058d2fda237f497d5b1ef4ff9606))
+* stories fixes ([80a981e](https://github.com/ccontrols/component-controls/commit/80a981e76c2b127d508ac801a202206486610841))
+* storybook beta breaking SET_CURRENT_STORY ([11e0386](https://github.com/ccontrols/component-controls/commit/11e0386e98f4e49afc7b0cbc8360850d28ed83e7))
+* storybook changing stories context ([780aed4](https://github.com/ccontrols/component-controls/commit/780aed48a0585c112e03a1df9b45c375cccf66e7))
+
+
+### Features
+
+* add startup script combining bootstrap, build, and dev ([cec2086](https://github.com/ccontrols/component-controls/commit/cec2086319e87bdceeb583f7fa911a6c6d85358f))
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+* color-coded tags and page types ([67a8047](https://github.com/ccontrols/component-controls/commit/67a80479819bab9375e92217565416f2237573f4))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+* toolbar actionbar styling ([b37084a](https://github.com/ccontrols/component-controls/commit/b37084a9eb078423cda27b00348282649401829d))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+### Reverts
+
+* Revert "docs: update api docs" ([8ef2224](https://github.com/ccontrols/component-controls/commit/8ef2224b9a50479077be76091f2e6621cdb7dd87))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
+import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
 
-import { BlockContext, useStoryContext } from '@component-controls/blocks';
+import { BlockContext } from '@component-controls/blocks';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -13,10 +14,11 @@ import {
   Header,
 } from '@component-controls/components';
 import {
-  StoriesDoc,
-  PageType,
+  Document,
+  Story,
+  DocType,
   Pages,
-  defPageType,
+  defDocType,
 } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 
@@ -27,21 +29,21 @@ export interface SidebarProps {
   title?: React.ReactNode;
 
   /**
-   * page type
+   * document type
    */
-  type?: PageType;
+  type?: DocType;
 
   /**
    * currently active tab. Use to creae the sidemenu links
    */
   activeTab?: string;
 }
-
 const createMenuItem = (
   storeProvider: StoryStore,
-  doc: StoriesDoc,
-  type: PageType,
+  doc: Document,
+  type: DocType,
   levels: string[],
+  storyPaths: boolean,
   activeTab?: string,
   parent?: MenuItems,
   item?: MenuItem,
@@ -59,7 +61,29 @@ const createMenuItem = (
       newItem.items = [];
     } else {
       newItem.id = doc.title;
-      newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+
+      if (storyPaths && doc.stories && doc.stories.length) {
+        if (doc.stories.length >= 1) {
+          // multiple stories - each with a link
+          newItem.items = doc.stories.map(storyId => {
+            const story = storeProvider.getStory(storyId) as Story;
+            return {
+              id: story.id,
+              label: story.name,
+              icon: <NoteIcon verticalAlign="middle" />,
+              href: storeProvider.getStoryPath(storyId, activeTab),
+            };
+          });
+        } else {
+          newItem.icon = <FileIcon verticalAlign="middle" />;
+          //only one story -direct link to it
+          newItem.href = storeProvider.getStoryPath(doc.stories[0], activeTab);
+        }
+      } else {
+        newItem.icon = <BookIcon verticalAlign="middle" />;
+        // no stories - link to document
+        newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+      }
     }
     parent.push(newItem);
   }
@@ -68,6 +92,7 @@ const createMenuItem = (
     doc,
     type,
     levels.slice(1),
+    storyPaths,
     activeTab,
     sibling ? sibling.items : newItem.items,
     newItem,
@@ -80,29 +105,35 @@ const createMenuItem = (
 
 export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
-  type = defPageType,
+  type = defDocType,
   activeTab,
 }) => {
-  const { doc } = useStoryContext({ id: '.' });
   const { SidebarClose, responsive } = useContext(SidebarContext);
-  const { storeProvider } = useContext(BlockContext);
+  const { storeProvider, docId } = useContext(BlockContext);
   const config = storeProvider.config;
   const { pages } = config || {};
-  const { label = '' } = pages?.[type] || {};
+  const { label = '', storyPaths = false } = pages?.[type] || {};
   const menuItems = useMemo(() => {
     if (storeProvider) {
       const docs: Pages = storeProvider.getPageList(type);
-
-      const menuItems = docs.reduce((acc: MenuItems, doc: StoriesDoc) => {
+      const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
-        createMenuItem(storeProvider, doc, type, levels, activeTab, acc);
+        createMenuItem(
+          storeProvider,
+          doc,
+          type,
+          levels,
+          storyPaths,
+          activeTab,
+          acc,
+        );
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [type, activeTab, storeProvider]);
+  }, [type, activeTab, storeProvider, storyPaths]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
@@ -124,11 +155,7 @@ export const Sidebar: FC<SidebarProps> = ({
             onClick={e => e.stopPropagation()}
           />
         </Box>
-        <Navmenu
-          activeItem={{ id: doc?.title }}
-          search={search}
-          items={menuItems}
-        />
+        <Navmenu activeItem={{ id: docId }} search={search} items={menuItems} />
       </Box>
     </AppSidebar>
   );

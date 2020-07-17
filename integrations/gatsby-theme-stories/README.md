@@ -9,10 +9,10 @@
     -   [<ins>Store</ins>](#insstoreins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
-    -   [<ins>CategoryList</ins>](#inscategorylistins)
+    -   [<ins>DefaultName</ins>](#insdefaultnameins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
+    -   [<ins>DocHome</ins>](#insdochomeins)
     -   [<ins>DocPage</ins>](#insdocpageins)
-    -   [<ins>PageList</ins>](#inspagelistins)
 
 # In action
 
@@ -32,12 +32,12 @@ Special thanks for the inspiration drawn from [Gatsby themes](https://github.com
 ## Install
 
 ```sh
-yarn add gatsby-theme-stories
+yarn add @component-controls/gatsby-theme-stories
 ```
 
 ## Configure
 
-the default options will configure `componnet-controls` to work with react apps,  with `reac-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
 
 in `gatsby-config.js`:
 
@@ -85,20 +85,15 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name    | Type       | Description |
-| ------- | ---------- | ----------- |
-| `docId` | _string_   |             |
-| `type`  | _PageType_ |             |
+| Name      | Type     | Description |
+| --------- | -------- | ----------- |
+| `docId`   | _string_ |             |
+| `storyId` | _string_ |             |
+| `type`    | _string_ |             |
 
-## <ins>CategoryList</ins>
+## <ins>DefaultName</ins>
 
-_CategoryList [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/CategoryList.tsx)_
-
-### properties
-
-| Name           | Type                               | Description |
-| -------------- | ---------------------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; doc: string; }_ |             |
+_DefaultName [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/pages/404.tsx)_
 
 ## <ins>CategoryPage</ins>
 
@@ -106,9 +101,19 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name           | Type                                                 | Description |
-| -------------- | ---------------------------------------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; category: string; doc: string; }_ |             |
+| Name           | Type                                                  | Description |
+| -------------- | ----------------------------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; category: string; docId?: string; }_ |             |
+
+## <ins>DocHome</ins>
+
+_DocHome [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/DocHome.tsx)_
+
+### properties
+
+| Name           | Type                                | Description |
+| -------------- | ----------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; docId?: string; }_ |             |
 
 ## <ins>DocPage</ins>
 
@@ -116,18 +121,8 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name           | Type                                                   | Description |
-| -------------- | ------------------------------------------------------ | ----------- |
-| `pathContext*` | _{ doc: string; type: PageType; activeTab?: string; }_ |             |
-
-## <ins>PageList</ins>
-
-_PageList [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/templates/PageList.tsx)_
-
-### properties
-
-| Name           | Type                  | Description |
-| -------------- | --------------------- | ----------- |
-| `pathContext*` | _{ type: PageType; }_ |             |
+| Name           | Type                                                                                         | Description |
+| -------------- | -------------------------------------------------------------------------------------------- | ----------- |
+| `pathContext*` | _{ docId?: string; storyId?: string; type: string; activeTab?: string; category?: string; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

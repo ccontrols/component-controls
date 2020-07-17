@@ -3,7 +3,7 @@ import { ControlTypes } from '../controls';
 import { ArrayControl } from './components/ArrayControl';
 
 export default {
-  title: 'Controls/ARRAY',
+  title: 'Controls/Array',
   component: ArrayControl,
 };
 

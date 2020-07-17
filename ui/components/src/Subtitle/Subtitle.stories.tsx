@@ -11,9 +11,7 @@ export const overview = ({ children }: SubtitleProps) => {
 };
 
 overview.story = {
-  parameters: {
-    componentSubtitle: 'This is subtitle',
-  },
+  subtitle: 'This is subtitle',
   controls: {
     children: { type: 'text', value: 'Subtitle text' },
   },

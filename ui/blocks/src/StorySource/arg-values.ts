@@ -106,7 +106,7 @@ export const findTagLocation = (
 
 export const tagToValue = (param: ArgLocation, name: string) => {
   const value =
-    getControlValue(param.controls, name) ?? getControlValues(param.controls);
+    getControlValue(param.controls[name]) ?? getControlValues(param.controls);
   let retValue: any;
   if (Array.isArray(value) || typeof value === 'object') {
     retValue = stringifyObject(value, {

@@ -3,6 +3,115 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* prevent table overflowing container ([e716842](https://github.com/ccontrols/component-controls/commit/e7168421389ce4aa6a8e5122924d1fa3254ad3b6))
+* reduce head links sizes ([31d501f](https://github.com/ccontrols/component-controls/commit/31d501feb0c920032576ea30bfcb51b9c1733d19))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* action item node ([c885e2d](https://github.com/ccontrols/component-controls/commit/c885e2d29a3ef54bcd34b437aa4a72756582cbb8))
+* info row above edit page row ([53389b4](https://github.com/ccontrols/component-controls/commit/53389b45e77ad7657bdae3dce65ce281a2dd4c13))
+* optimize initial search loading ([2624c55](https://github.com/ccontrols/component-controls/commit/2624c55939cbb93034faf48ace42e86ac07daa39))
+* skip reexport ImageProps ([6a5e27b](https://github.com/ccontrols/component-controls/commit/6a5e27b5e49370dc8605782e889a75e5ec551dd2))
+* table p and pre margins reduce ([cddbf47](https://github.com/ccontrols/component-controls/commit/cddbf47bdb0fe0d39ac5f782f358a3c7f2593e86))
+
+
+### Features
+
+* added TitledImage for mdx ([5d46370](https://github.com/ccontrols/component-controls/commit/5d46370a1b85c7c45fcf97aa26b292253992a13a))
+* added Value component, info row ([fbe5f0e](https://github.com/ccontrols/component-controls/commit/fbe5f0e8ad6cd41d6965a0425d7a42c94bf78a76))
+* data-testids ([07b9f64](https://github.com/ccontrols/component-controls/commit/07b9f6480ac7a2b1e0a3384007755f1e9a5c86ba))
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+* story iframe and components configuration ([f903953](https://github.com/ccontrols/component-controls/commit/f903953f5644d020229ea836a46e6536233ef871))
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* add keyboard handlingto and slider ([772c7d0](https://github.com/ccontrols/component-controls/commit/772c7d03e04572e4fb3a4d46f95a76c0e2a17600))
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* mdx code add parameters and mdx docs ([58f80ba](https://github.com/ccontrols/component-controls/commit/58f80ba2cc2417d14dc83e09b489889da7799e5d))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* remove bundle analyzer dependency ([a8489cd](https://github.com/ccontrols/component-controls/commit/a8489cd57e293835609a2631be9aee9065490903))
+* remove log ([9b3a8d5](https://github.com/ccontrols/component-controls/commit/9b3a8d5e2de5ded1b5307e80625e7e0e00bb9c64))
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* action items title to node ([7047031](https://github.com/ccontrols/component-controls/commit/704703162e131b31d7050ed6e526d85288d3d9db))
+* block expand styling ([fe1f105](https://github.com/ccontrols/component-controls/commit/fe1f1050af88eb4b43d1f6ddee531541db1d5caa))
+* dark mode removed from theme context ([74d3b51](https://github.com/ccontrols/component-controls/commit/74d3b51b0f7f34418403a57689b231f21efab4c2))
+* remove color mode deps ([8b9e463](https://github.com/ccontrols/component-controls/commit/8b9e463b6a6864a8aef2f39c35725a81807c7ecf))
+
+
+### Features
+
+* color-coded tags and page types ([67a8047](https://github.com/ccontrols/component-controls/commit/67a80479819bab9375e92217565416f2237573f4))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* toolbar actionbar styling ([b37084a](https://github.com/ccontrols/component-controls/commit/b37084a9eb078423cda27b00348282649401829d))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

@@ -33,7 +33,7 @@ export const Source: FC<SourceProps> = ({
 
   const actionsItems = [
     {
-      title: copied ? 'copied' : 'copy',
+      node: copied ? 'copied' : 'copy',
       onClick: onCopy,
       id: 'copy',
       'aria-label': 'copy the displayed source code',
@@ -51,7 +51,7 @@ export const Source: FC<SourceProps> = ({
           display: 'block',
         }}
       >
-        {children.trimRight()}
+        {children}
       </SyntaxHighlighter>
     </ActionContainer>
   );

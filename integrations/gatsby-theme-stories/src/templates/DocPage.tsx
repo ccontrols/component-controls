@@ -1,22 +1,24 @@
 import React, { FC } from 'react';
-import { PageType } from '@component-controls/core';
+import { DocType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface DocPageProps {
   pathContext: {
-    doc: string;
-    type: PageType;
+    docId?: string;
+    storyId?: string;
+    type: DocType;
     activeTab?: string;
+    category?: string;
   };
 }
 
 const DocPageTemplate: FC<DocPageProps> = ({
-  pathContext: { doc, type, activeTab },
+  pathContext: { docId, storyId, type, activeTab, category },
 }) => {
   return (
-    <Layout docId={doc} type={type}>
-      <DocPage activeTab={activeTab} type={type} />
+    <Layout docId={docId} storyId={storyId} type={type}>
+      <DocPage activeTab={activeTab} type={type} category={category} />
     </Layout>
   );
 };

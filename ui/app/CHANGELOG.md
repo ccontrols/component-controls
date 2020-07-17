@@ -3,6 +3,155 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* context scroll current if next invisible ([f277b6f](https://github.com/ccontrols/component-controls/commit/f277b6fb7b34badd4a902368a53a6753c60101b1))
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+* remove logs ([c71e316](https://github.com/ccontrols/component-controls/commit/c71e316730587221e6388c7e4e16d1486ca21e4a))
+* remove unneeded useStoryContext ([e458838](https://github.com/ccontrols/component-controls/commit/e458838cf7c66d148f657ce72bdb2de448d759bf))
+
+
+### Features
+
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+* nextjs index pages ([ea97ca0](https://github.com/ccontrols/component-controls/commit/ea97ca03b69147e40017fa55fec28507ade5c439))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* add storyPaths dependency ([ccf976c](https://github.com/ccontrols/component-controls/commit/ccf976c96ee029af80115e18452488624db77b73))
+* check for missing author ([20974f7](https://github.com/ccontrols/component-controls/commit/20974f71ec00af987d2057681bcdc1739bc66d52))
+* info row above edit page row ([53389b4](https://github.com/ccontrols/component-controls/commit/53389b45e77ad7657bdae3dce65ce281a2dd4c13))
+* page title split ([0206483](https://github.com/ccontrols/component-controls/commit/02064833bbde779783ae1bfc72f8adaea70eefd7))
+* remove logs ([3c62005](https://github.com/ccontrols/component-controls/commit/3c6200534f47236ea33bf44fbc6328987212bda9))
+* tab url when storyPaths = true ([32735d2](https://github.com/ccontrols/component-controls/commit/32735d251feede9d834b190d12c82f3b828373c1))
+* title null check ([03410d8](https://github.com/ccontrols/component-controls/commit/03410d8e72f4ef50e7c9cfdfc95a5a65191913d7))
+
+
+### Features
+
+* added Value component, info row ([fbe5f0e](https://github.com/ccontrols/component-controls/commit/fbe5f0e8ad6cd41d6965a0425d7a42c94bf78a76))
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+
+### Bug Fixes
+
+* docId context ([65eec8e](https://github.com/ccontrols/component-controls/commit/65eec8eb43bbd1bb83b39f65fabbb318302160ad))
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* stories routes for selection ([fae0387](https://github.com/ccontrols/component-controls/commit/fae0387cd05cfceb5f65d7823bc1d92eccdeb64d))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* typescript run-time config ([4d17a90](https://github.com/ccontrols/component-controls/commit/4d17a90eec41441c31dc9cfc6e4e17d873dd4fb0))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Features
+
+* add toolbar links ([0e19144](https://github.com/ccontrols/component-controls/commit/0e1914445c04e07ffa3412bf5e13fc880456602f))
+* full text search initial ([342f660](https://github.com/ccontrols/component-controls/commit/342f66014da248f3a71409fc23c162f5e3a85076))
+* toolbar actionbar styling ([b37084a](https://github.com/ccontrols/component-controls/commit/b37084a9eb078423cda27b00348282649401829d))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 

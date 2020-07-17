@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { jsx } from 'theme-ui';
-import { PageType, defPageType } from '@component-controls/core';
+import { DocType, defDocType } from '@component-controls/core';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
@@ -15,15 +15,17 @@ import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
-  type?: PageType;
+  type?: DocType;
   docId?: string;
+  storyId?: string;
   store?: LoadingStore;
   linkClass: LinkContextProviderProps['linkClass'];
 }
 
 export const AppContext: FC<AppContextProps> = ({
-  type = defPageType,
+  type = defDocType,
   docId,
+  storyId,
   children,
   store,
   linkClass,
@@ -40,12 +42,17 @@ export const AppContext: FC<AppContextProps> = ({
   const page = pages?.[type];
   const documentId = docId
     ? docId
-    : docId === undefined && page?.sidebars
+    : !docId && page?.navSidebar
     ? storyStore.getFirstDocument(type)
     : undefined;
+
   return (
     <ThemeProvider theme={storyStore.config?.theme} components={mdxComponents}>
-      <BlockContextProvider docId={documentId} store={storyStore}>
+      <BlockContextProvider
+        storyId={storyId}
+        docId={documentId}
+        store={storyStore}
+      >
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>
             <App title={docId}>{children}</App>

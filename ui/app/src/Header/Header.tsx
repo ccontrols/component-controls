@@ -1,64 +1,75 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
-import { jsx, Box, Text } from 'theme-ui';
-import { PageType, PageConfiguration } from '@component-controls/core';
+import { FC, useContext, useMemo } from 'react';
+import { jsx, Box } from 'theme-ui';
+import { DocType, getDocTypePath } from '@component-controls/core';
+import { ActionBar, ActionItems } from '@component-controls/components';
 
 import {
-  Link,
   ColorMode,
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
 import { BlockContext, Search } from '@component-controls/blocks';
 
+export interface HeaderProps {
+  toolbar?: {
+    left?: ActionItems;
+    right?: ActionItems;
+  };
+}
 /**
  * application header component
  */
-export const Header: FC = () => {
+export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const { storeProvider } = useContext(BlockContext);
   const config = storeProvider.config;
   const { pages } = config || {};
+  const leftActions: ActionItems = useMemo(() => {
+    const actions: ActionItems = [
+      { node: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
+    ];
+    const finalActions = pages
+      ? [
+          ...actions,
+          ...Object.keys(pages)
+            .map(type => {
+              const docType = type as DocType;
+              return { page: pages[docType], docType };
+            })
+            .filter(({ page, docType }) => {
+              return (
+                page.topMenu &&
+                Object.keys(storeProvider.getPageList(docType)).length > 0
+              );
+            })
+            .map(({ page }) => ({
+              id: page.label?.toLowerCase(),
+              'aria-label': `go to page ${page.label}`,
+              href: getDocTypePath(page),
+              node: page.label,
+            })),
+        ]
+      : actions;
+    return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
+  }, [pages, storeProvider, toolbar.left]);
+
+  const rightActions: ActionItems = useMemo(() => {
+    const actions: ActionItems = [
+      { node: <Search />, id: 'search' },
+      { node: <ColorMode />, id: 'colormode' },
+    ];
+    return toolbar.right ? [...toolbar.right, ...actions] : actions;
+  }, [toolbar.right]);
   return (
     <AppHeader>
       <Box variant="appheader.container">
         {collapsed && <SidebarToggle />}
-        <Box variant="appheader.inner">
-          <Link href="/">
-            <Text variant="appheader.linktext">Home</Text>
-          </Link>
-          {pages
-            ? Object.keys(pages).map(type => {
-                const pageType = type as PageType;
-                const page: PageConfiguration = pages[pageType];
-                if (
-                  page.topMenu &&
-                  Object.keys(storeProvider.getPageList(pageType)).length > 0
-                ) {
-                  return (
-                    <Link
-                      key={`link_${page.basePath}`}
-                      href={`/${page.basePath}`}
-                    >
-                      <Text variant="appheader.linktext">{page.label}</Text>
-                    </Link>
-                  );
-                }
-                return null;
-              })
-            : null}
-        </Box>
+        <ActionBar themeKey="toolbar" actions={leftActions} />
       </Box>
-      {!responsive && (
-        <Box variant="appheader.righthandrow">
-          <Box variant="appheader.righthanditem">
-            <Search />
-          </Box>
-          <Box variant="appheader.righthanditem">
-            <ColorMode />
-          </Box>
-        </Box>
-      )}
+      <Box variant="appheader.container">
+        {!responsive && <ActionBar themeKey="toolbar" actions={rightActions} />}
+      </Box>
     </AppHeader>
   );
 };

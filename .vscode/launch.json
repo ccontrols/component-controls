@@ -92,13 +92,22 @@
       "sourceMaps": false
     },
     {
+      "name": "nextjs attach",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "jest instrument",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/instrument",
       "args": [
-        "mdx-story-source",
+        "mdx-component",
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -130,7 +139,7 @@
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "cwd": "${workspaceFolder}/core/webpack-compile",
       "args": [
-        "example-stories",
+        "draft",
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",

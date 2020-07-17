@@ -1,7 +1,7 @@
 import { File } from '@babel/types';
 import {
   StoryComponent,
-  StoriesDoc,
+  Document,
   PackageInfo,
 } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
@@ -83,9 +83,9 @@ export const extractStoreComponent = async (
   initialAST?: File,
 ) => {
   if (store.doc) {
-    const doc: StoriesDoc = store.doc;
-    if (doc.components) {
-      const componentNames = Object.keys(doc.components);
+    const doc: Document = store.doc;
+    if (doc.componentsLookup) {
+      const componentNames = Object.keys(doc.componentsLookup);
       if (componentNames) {
         for (const componentName of componentNames) {
           const { component, componentPackage } = await extractComponent(
@@ -104,7 +104,7 @@ export const extractStoreComponent = async (
               `${component.request ?? filePath}-${componentName}`,
             );
             store.components[componentKey] = component;
-            doc.components[componentName] = componentKey;
+            doc.componentsLookup[componentName] = componentKey;
           }
         }
       }

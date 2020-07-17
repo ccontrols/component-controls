@@ -37,7 +37,7 @@ export interface SearchInputItemType {
   [key: string]: any;
 }
 
-export interface SearchBoxProps<ItemType> {
+export interface SearchInputOwnProps<ItemType> {
   /**
    * callback on change of search input. user can retrieve items in this callback
    *
@@ -62,6 +62,8 @@ export interface SearchBoxProps<ItemType> {
   popoverProps?: PopoverProps;
 }
 
+export type SearchInputProps<ItemType> = SearchInputOwnProps<ItemType> &
+  Omit<InputProps, 'ref' | 'onSelect'>;
 /**
  * an input component combined with a popover, can be used for incremental search.
  */
@@ -72,14 +74,18 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
   onSelect,
   popoverProps,
   ...rest
-}: SearchBoxProps<ItemType> & Omit<InputProps, 'ref' | 'onSelect'>) => {
+}: SearchInputProps<ItemType>) => {
   const [selected, setSelected] = useState<number | undefined>(undefined);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string | undefined>(undefined);
   const updateIsOpen = (newIsOpen: boolean) => {
-    setIsOpen(newIsOpen && items.length > 0);
+    // if first time open, send a onSearch message to collect items
+    if (newIsOpen && search === undefined && items.length === 0) {
+      onSearch('');
+    } else {
+      setIsOpen(newIsOpen && items.length > 0);
+    }
   };
-
   useEffect(() => {
     setIsOpen(items.length > 0 && search !== '');
   }, [items, search]);
@@ -155,7 +161,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
                     item,
                     index,
                     isOpen,
-                    search,
+                    search: search || '',
                     selected,
                     selectItem,
                   };
@@ -187,7 +193,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         <div sx={{ position: 'relative' }}>
           <Input
             aria-label="type some text to start searching"
-            value={search}
+            value={search || ''}
             onBlur={() => {
               setTimeout(() => {
                 updateIsOpen(false);

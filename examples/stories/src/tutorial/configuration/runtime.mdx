@@ -1,0 +1,38 @@
+---
+title: Configuration/Run time
+type: tutorial
+order: 2
+route: /configuration/runtime/
+tags:
+  - configuration
+---
+
+## File
+The run-time configuration file is located in the [configuration-path](/configuration/overview/#configuration-path) folder.
+This file runs in a **browser** environment and you can use regular javascript or typescript.
+Possible names for the file are:
+- `buildtime.js`
+- `runtime.js`
+- `runtime.ts`
+- `runtime.tsx`
+- `options.js`
+- `options.ts`
+- `options.tsx`
+
+## Configurable Fields
+
+| Name              | Type                                                                                                                       | Description                                                                                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `author`          | string                                                                                                                     | author: Default is "@component-controls"                                                                                                                                             |
+| `decorators`      | [StoryRenderFn]((/tutorial/structure/configuration/#storyrenderfn)\[]                                                      | story decorator functions - used to wrap stories. Example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
+| `pages`           | [PagesConfiguration]((/tutorial/structure/configuration#pagesconfiguration)                                                | page types configurations                                                                                                                                                            |
+| `siteDescription` | string                                                                                                                     | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `siteHeadline`    | string                                                                                                                     | Site headline. Default is "Component controls gatsby"                                                                                                                                |
+| `siteImage`       | string                                                                                                                     | link to site image                                                                                                                                                                   |
+| `siteLanguage`    | string                                                                                                                     | site language, Deault is "en"                                                                                                                                                        |
+| `siteTitle`       | string                                                                                                                     | standalone site title. Default is "Component controls"                                                                                                                               |
+| `siteTitleAlt`    | string                                                                                                                     | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
+| `siteUrl`         | string                                                                                                                     | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
+| `storySort`       | **function** (`a`\*: string, `b`\*: string): number;                                                                       | story sorting function                                                                                                                                                               |
+| `theme`           | \[key: string]: any                                                                                                        | theme-ui theme configuration                                                                                                                                                         |
+| `toolbar`         | [ToolbarConfig](/tutorial/structure/configuration#toolbarconfig)                                                           | custom toolbar items                                                                                              

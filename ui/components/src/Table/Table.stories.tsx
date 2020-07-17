@@ -28,10 +28,6 @@ const columns = [
     accessor: 'address.street',
   },
   {
-    Header: 'Suite',
-    accessor: 'address.suite',
-  },
-  {
     Header: 'City',
     accessor: 'address.city',
   },

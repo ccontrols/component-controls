@@ -3,6 +3,153 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* handle of="." in MDX ([98cbb2d](https://github.com/ccontrols/component-controls/commit/98cbb2d7fac8a8ec66103d4f6b66bf944199a3d7))
+* mdx subcomponents handling ([9d0b1c0](https://github.com/ccontrols/component-controls/commit/9d0b1c0e5d153b8105df230b53e95f32b1a2b00e))
+
+
+
+
+
+## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
+
+
+### Bug Fixes
+
+* generate code for complex attributes ([17f5b09](https://github.com/ccontrols/component-controls/commit/17f5b098eac6dafd4eb3fe3793584d90f7e2b9d5))
+* handle "new" expressions in MDX ([8ebf546](https://github.com/ccontrols/component-controls/commit/8ebf5463c69d206907bf5dc0161713420dc5b461))
+
+
+### Features
+
+* custom serialization of mdx attributes ([028e366](https://github.com/ccontrols/component-controls/commit/028e366d931b94140ffe1c7d09fdb45b1403e36b))
+
+
+
+
+
+# [1.6.0](https://github.com/ccontrols/component-controls/compare/v1.5.7...v1.6.0) (2020-06-30)
+
+
+### Features
+
+* context links in sidebar ([ed12379](https://github.com/ccontrols/component-controls/commit/ed123799865eafc82856de5e8c7537f564320ef4))
+* mdx code add parameters and mdx docs ([58f80ba](https://github.com/ccontrols/component-controls/commit/58f80ba2cc2417d14dc83e09b489889da7799e5d))
+
+
+
+
+
+## [1.5.7](https://github.com/ccontrols/component-controls/compare/v1.5.6...v1.5.7) (2020-06-27)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.5.6](https://github.com/ccontrols/component-controls/compare/v1.5.5...v1.5.6) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.5.5](https://github.com/ccontrols/component-controls/compare/v1.5.4...v1.5.5) (2020-06-26)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.5.4](https://github.com/ccontrols/component-controls/compare/v1.5.3...v1.5.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* mdx components of prop ([d2d968f](https://github.com/ccontrols/component-controls/commit/d2d968f24a3ed7955af0fd328dc2f6659bf4d9bf))
+
+
+
+
+
+## [1.5.3](https://github.com/ccontrols/component-controls/compare/v1.5.2...v1.5.3) (2020-06-25)
+
+
+### Bug Fixes
+
+* default runtime config ([2684a03](https://github.com/ccontrols/component-controls/commit/2684a03cce1409c0a50ddb09869e3c14ff249f01))
+
+
+
+
+
+## [1.5.2](https://github.com/ccontrols/component-controls/compare/v1.5.1...v1.5.2) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.5.1](https://github.com/ccontrols/component-controls/compare/v1.5.0...v1.5.1) (2020-06-25)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
+
+
+### Bug Fixes
+
+* componentsLookup ([a8f0f43](https://github.com/ccontrols/component-controls/commit/a8f0f43af7f1b00cd6feb294f50a183552469a4e))
+
+
+### Features
+
+* mdx|md transclusion ([bf3a68b](https://github.com/ccontrols/component-controls/commit/bf3a68b0776fa15fcc2f6efdea104c84b18ac4b6))
+* ts-md in own package ([d849383](https://github.com/ccontrols/component-controls/commit/d849383f502ccdd3a4f9a4f912bafb81260dfdc7))
+
+
+
+
+
 # [1.4.0](https://github.com/ccontrols/component-controls/compare/v1.3.0...v1.4.0) (2020-06-19)
 
 **Note:** Version bump only for package @component-controls/instrument

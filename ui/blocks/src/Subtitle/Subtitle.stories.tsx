@@ -14,7 +14,5 @@ export const overview = () => (
 );
 
 overview.story = {
-  parameters: {
-    componentSubtitle: 'This is subtitle',
-  },
+  subtitle: 'This is subtitle',
 };
