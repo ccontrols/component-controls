@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as chalk from 'chalk';
 import { getOptions } from 'loader-utils';
+import { loader } from 'webpack';
 
 import {
   InstrumentOptions,
@@ -9,9 +10,10 @@ import {
 
 import { addStoriesDoc, removeStoriesDoc } from './store';
 
-module.exports.pitch = async function() {
-  const options: InstrumentOptions = getOptions(this) || {};
-  const filePath = this.resource;
+module.exports = async function() {
+  const context = (this as unknown) as loader.LoaderContext;
+  const options: InstrumentOptions = getOptions(context) || {};
+  const filePath = context.resource;
   const source = fs.readFileSync(filePath, 'utf8');
   const { transformed, ...store } = await parseStories(
     source,

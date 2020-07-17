@@ -25,20 +25,6 @@ export const react: PresetType = (options?: PresetOptions) => {
           ],
         },
         {
-          test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
-          exclude: [/node_modules/],
-          loader: 'url-loader',
-          options: {
-            limit: 25000,
-            name: '[name].[hash].[ext]',
-            publicPath: '/static',
-            outputPath: path.relative(
-              options?.distFolder || process.cwd(),
-              path.resolve(options?.outputFolder || process.cwd(), 'static'),
-            ),
-          },
-        },
-        {
           test: /\.(ts|tsx)$/,
           exclude: [/node_modules/],
           use: [
@@ -49,10 +35,6 @@ export const react: PresetType = (options?: PresetOptions) => {
               },
             },
           ],
-        },
-        {
-          test: /\.txt$/i,
-          use: require.resolve('raw-loader'),
         },
         {
           test: /\.(md|mdx)$/i,
@@ -66,9 +48,30 @@ export const react: PresetType = (options?: PresetOptions) => {
           },
         },
         {
+          test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
+          exclude: [/node_modules/],
+          loader: 'url-loader',
+          options: {
+            limit: 25000,
+            name: '[name].[hash].[ext]',
+            publicPath: '/static',
+            outputPath: path.relative(
+              options?.distFolder || process.cwd(),
+              path.resolve(options?.outputFolder || process.cwd(), 'static'),
+            ),
+          },
+        },
+
+        {
+          test: /\.txt$/i,
+          use: require.resolve('raw-loader'),
+        },
+
+        {
           test: /\.(md|mdx)$/i,
           exclude: [/node_modules/],
           loader: '@component-controls/loader/loader',
+          enforce: 'pre',
           options: {
             mdx: {
               transformMDX: true,
@@ -79,6 +82,7 @@ export const react: PresetType = (options?: PresetOptions) => {
           test: /\.(story|stories|doc|docs).(js|jsx|ts|tsx)$/,
           loader: '@component-controls/loader/loader',
           exclude: [/node_modules/],
+          enforce: 'pre',
         },
       ],
     },

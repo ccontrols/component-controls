@@ -68,29 +68,12 @@ ${stories
   }
 `;
   const exports = `module.exports = store;\n`;
-  const hmr = `
-  if (module.hot) {
-    module.hot.accept(function() {
-      console.log('HMR CALLBACK',this);
-    });
-    ${stories
-      .map(
-        story => `
-    module.hot.accept(${story.relPath}, function() {
-      console.log('HMR',${story.relPath});
-    });    
-    `,
-      )
-      .join('\n')}
-  }
-  `;
   const newContent = `
 ${imports}
 ${storeConst}
 store.config = ${configFilePath ? 'configJSON.default ||' : ''} configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
 ${loadStories}
-${hmr}
 ${exports}
 `;
   return newContent;

@@ -1,9 +1,4 @@
-import webpack, {
-  Configuration,
-  Compiler,
-  Stats,
-  HotModuleReplacementPlugin,
-} from 'webpack';
+import webpack, { Configuration, Compiler, Stats } from 'webpack';
 import * as path from 'path';
 const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
@@ -31,8 +26,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       config: configPath,
       escapeOutput: mode === 'development',
     }),
-    new HotModuleReplacementPlugin({}),
-  ];
+  ].filter(Boolean);
   const webpackConfig = mergeWebpackConfig(
     {
       mode,
@@ -100,16 +94,13 @@ export const runCompiler = (
         console.error(error);
         return reject(error);
       }
+
+      const { store } = require('@component-controls/loader/store');
       console.log(
         chalk.bgRgb(244, 147, 66)('@bundle generated: '),
         require.resolve('@component-controls/loader/store'),
+        chalk.bgRgb(244, 147, 66)(`${store.stores.length} documents compiled`),
       );
-      const { store } = require('@component-controls/loader/store');
-      console.log(
-        chalk.bgRgb(244, 147, 66)('@end compilation'),
-        `${store.stores.length} documents compiled`,
-      );
-
       resolve({ store, stats });
     });
   });
