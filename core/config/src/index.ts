@@ -128,7 +128,6 @@ export const configRequireContext = ({
           const regExp = base.isGlob
             ? RegExp(makeRe(glob).source.substr(1))
             : new RegExp(glob);
-          console.log(glob, regExp, storyRg);
           return [
             ...acc,
             {
