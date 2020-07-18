@@ -6,7 +6,6 @@ export let store: StoryStore = new HMRStore(
 );
 if (module.hot) {
   module.hot.accept('@component-controls/webpack-compile/bundle', () => {
-    //@ts-ignore
     import('@component-controls/webpack-compile/bundle').then(updated => {
       store = (store as HMRStore).hmr(updated);
     });
