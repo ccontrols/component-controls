@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { AppContext } from '@component-controls/app';
-const bundle = require('@component-controls/webpack-compile/bundle');
+import { useStore } from '@component-controls/store/store';
 
 import { GatsbyLink } from './GatsbyLink';
 
@@ -14,11 +14,12 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ docId, storyId, type, children }) => {
+  const store = useStore();
   return (
     <AppContext
       docId={docId}
       storyId={storyId}
-      store={bundle}
+      store={store}
       linkClass={GatsbyLink}
       type={type}
     >

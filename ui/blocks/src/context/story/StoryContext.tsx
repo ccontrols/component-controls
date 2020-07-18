@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, useContext } from 'react';
+import React, { FC, useState, useEffect, useContext, useCallback } from 'react';
 import {
   Story,
   Document,
@@ -76,8 +76,8 @@ export const useStoryContext = ({
     docPackage?: PackageInfo;
   }>(getStoryData(storyId, docId));
 
-  useEffect(() => {
-    const updateStoryData = (updateId?: string) => {
+  const updateStoryData = useCallback(
+    (updateId?: string) => {
       if (!updateId || updateId === storyId) {
         const { story, doc, component, docPackage } = getStoryData(
           storyId,
@@ -85,12 +85,10 @@ export const useStoryContext = ({
         );
         setData({ story, doc, component, docPackage });
       }
-    };
-
-    const { story, doc } = data;
-    if (story?.id !== storyId || doc?.title !== docId) {
-      updateStoryData(storyId);
-    }
+    },
+    [storyId, docId, getStoryData],
+  );
+  useEffect(() => {
     const onChange = (id?: string) => {
       updateStoryData(id);
     };
@@ -98,7 +96,12 @@ export const useStoryContext = ({
     return () => {
       storeProvider.removeObserver(onChange);
     };
-  }, [docId, storyId, data, storeProvider, getStoryData]);
+  }, [updateStoryData, storeProvider]);
+
+  useEffect(() => {
+    updateStoryData(storyId);
+  }, [storyId, updateStoryData]);
+
   return {
     id: storyId,
     story: data.story,

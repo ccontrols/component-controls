@@ -1,4 +1,4 @@
-import { StoryStore } from '@component-controls/store';
+import { BroadcastStore } from '@component-controls/store';
 import {
   SetControlValueFn,
   ClickControlFn,
@@ -13,7 +13,7 @@ export interface BlockControlsContextInputProps {
   /**
    * store
    */
-  store: StoryStore;
+  store: BroadcastStore;
 }
 
 export interface BlockControlsContextProps {
@@ -29,7 +29,7 @@ export interface BlockControlsContextProps {
 }
 
 export const useControlsContext = (): BlockControlsContextProps => {
-  const store = useStore();
+  const store = useStore() as BroadcastStore;
   const setControlValue: SetControlValueFn = (
     storyId: string,
     propName: string | undefined,

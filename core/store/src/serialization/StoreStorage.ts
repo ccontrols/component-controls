@@ -54,7 +54,6 @@ export const updateStory = (
   storyId: string,
   propName: string,
   newValue: any,
-  updateLocalStorage?: boolean,
 ): StoriesStore | undefined => {
   if (store) {
     store.stories = {
@@ -64,12 +63,10 @@ export const updateStory = (
         [propName]: newValue,
       },
     };
-    if (updateLocalStorage) {
-      localStorage.setItem(
-        COMPONENT_CONTROLS_STORAGE,
-        JSON.stringify(store, encodeFn),
-      );
-    }
+    localStorage.setItem(
+      COMPONENT_CONTROLS_STORAGE,
+      JSON.stringify(store, encodeFn),
+    );
   }
   return store;
 };

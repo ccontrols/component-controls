@@ -11,37 +11,17 @@ import {
   defDocType,
   getComponentName,
 } from '@component-controls/core';
-import { BroadcastChannel } from 'broadcast-channel';
-import {
-  StoreObserver,
-  StoryStore,
-  MessageType,
-  UPDATE_STORY_MSG,
-} from '../types';
-import { readStore, updateStory } from '../serialization/StoreStorage';
 
-export { BroadcastChannel };
+import { StoreObserver, StoryStore, StoreOptions } from '../types';
+
 export { StoreObserver, StoryStore };
 
-export interface StoreOptions {
-  /**
-   * optional store initializer
-   */
-  store?: StoriesStore;
-  /**
-   * set to false to prevent the Store from updating localStorage values
-   */
-  updateLocalStorage?: boolean;
-}
 /**
  * Store class used to query the stories and exchange information between processes
  */
 export class Store implements StoryStore {
-  private loadedStore: StoriesStore | undefined;
-  private updateLocalStorage: boolean = true;
-  private channel: BroadcastChannel | undefined;
+  protected loadedStore: StoriesStore | undefined;
   private observers: StoreObserver[];
-  private moduleId: number;
   private _cachedPages: { [key: string]: Pages } = {};
   private _analytics: any = null;
   private _categoryItems: {
@@ -54,29 +34,10 @@ export class Store implements StoryStore {
    * create a store with options
    */
   constructor(options?: StoreOptions) {
-    const { store, updateLocalStorage = true } = options || {};
-    this.moduleId = Math.random();
+    const { store } = options || {};
     this.loadedStore = store;
-    this.updateLocalStorage = updateLocalStorage;
     this.observers = [];
     this.initDocs();
-    if (updateLocalStorage) {
-      this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
-        type: 'localstorage',
-      });
-      this.channel.onmessage = ({
-        storyId,
-        moduleId,
-        propName,
-      }: MessageType) => {
-        if (storyId && moduleId) {
-          if (this.moduleId !== moduleId) {
-            this.readData(storyId, propName);
-            this.notifyObservers(storyId, propName);
-          }
-        }
-      };
-    }
     this.initializeAnalytics();
   }
 
@@ -142,7 +103,7 @@ export class Store implements StoryStore {
   removeObserver = (observer: StoreObserver) =>
     (this.observers = this.observers.filter(o => o !== observer));
 
-  private notifyObservers = (storyId?: string, propName?: string) => {
+  notifyObservers = (storyId?: string, propName?: string) => {
     if (this.observers.length > 0) {
       this.observers.forEach(observer => observer(storyId, propName));
     }
@@ -155,18 +116,11 @@ export class Store implements StoryStore {
     this.loadedStore = store;
     this.notifyObservers();
   };
-  private readData = (storyId?: string, propName?: string) => {
-    this.loadedStore = readStore(this.loadedStore, storyId, propName);
-  };
 
   /**
    * returns an instance of the store
    */
   getStore = () => {
-    if (this.loadedStore) {
-      return this.loadedStore;
-    }
-    this.readData();
     return this.loadedStore;
   };
 
@@ -348,35 +302,6 @@ export class Store implements StoryStore {
     return getStoryPath(story.id, doc, this.config?.pages, activeTab);
   };
 
-  /**
-   * modify story properties, for example controls values.
-   * will notify all installed store observers of the changed story.
-   */
-  updateStoryProp = (
-    storyId: string,
-    propName: string,
-    newValue: any,
-  ): StoriesStore | undefined => {
-    this.loadedStore = updateStory(
-      this.loadedStore,
-      storyId,
-      propName,
-      newValue,
-      this.updateLocalStorage,
-    );
-    if (this.loadedStore) {
-      if (this.channel) {
-        const message: MessageType = {
-          storyId,
-          moduleId: this.moduleId,
-          propName,
-        };
-        this.channel.postMessage(message);
-      }
-      this.notifyObservers(storyId, propName);
-    }
-    return this.loadedStore;
-  };
   initializeAnalytics = () => {
     if (this.loadedStore) {
       const options = this.loadedStore.config?.analytics;

@@ -14,17 +14,10 @@ import {
 import { LoadingStore } from '@component-controls/loader';
 import { transformControls } from './transform-controls';
 
-let storyStore: StoriesStore | undefined = undefined;
-
 export const loadStoryStore = (
-  store?: LoadingStore,
+  store: LoadingStore,
 ): StoriesStore | undefined => {
-  if (storyStore) {
-    return storyStore;
-  }
-  const newStore: LoadingStore =
-    store || require('@component-controls/loader/story-store-data.js');
-  if (newStore) {
+  if (store) {
     try {
       const {
         stores,
@@ -32,7 +25,7 @@ export const loadStoryStore = (
         components: loadedComponents,
         config = {},
         buildConfig = {},
-      } = newStore;
+      } = store;
 
       if (stores) {
         const globalStore: StoriesStore = {
@@ -102,13 +95,13 @@ export const loadStoryStore = (
             });
           }
         });
-        storyStore = globalStore;
-        storyStore.packages = loadedPackages;
-        storyStore.components = loadedComponents;
+        globalStore.packages = loadedPackages;
+        globalStore.components = loadedComponents;
+        return globalStore;
       }
     } catch (e) {
       console.error(e);
     }
   }
-  return storyStore;
+  return undefined;
 };

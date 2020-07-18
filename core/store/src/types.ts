@@ -9,8 +9,6 @@ import {
 
 /**
  * store on change observer.
- * when updateStoryProp is called on the store, the store observers will be notified
- * so they can re-load the stories
  */
 export type StoreObserver = (storyId?: string, propName?: string) => void;
 
@@ -38,15 +36,14 @@ export interface StoryStore {
     activeTab?: string,
   ) => string;
   getStoryPath: (storyId: string, activeTab?: string) => string;
-  updateStoryProp: (
-    storyId: string,
-    propName: string,
-    newVal: any,
-  ) => StoriesStore | undefined;
   addObserver: (observer: StoreObserver) => void;
   removeObserver: (observer: StoreObserver) => void;
   visitPage: () => void;
   getDocDescription: (doc: Document) => string | undefined;
+}
+
+export interface BroadcastStore extends StoryStore {
+  updateStoryProp: (storyId: string, propName: string, newValue: any) => void;
 }
 
 export const UPDATE_STORY_MSG = 'component_controls_update_story';
@@ -56,4 +53,15 @@ export interface MessageType {
   storyId: string;
   moduleId: number;
   propName: string;
+}
+
+export interface StoreOptions {
+  /**
+   * optional store initializer
+   */
+  store?: StoriesStore;
+  /**
+   * set to false to prevent the Store from updating localStorage values
+   */
+  updateLocalStorage?: boolean;
 }
