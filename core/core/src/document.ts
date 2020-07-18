@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { StoryComponent } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, DocType } from './configuration';
+import { RunConfiguration, DocType, PageLayout } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -74,10 +74,43 @@ export interface SmartControls {
    */
   exclude?: string[];
 }
+
+/**
+ * story prooperties that can be inherited from the document, or each story can have its properties
+ */
+
+export interface StoryProps {
+  /**
+   * id for component associated with the story
+   */
+  component?: string | object;
+
+  /**
+   * multiple components option
+   */
+  subcomponents?: {
+    [key: string]: string | object;
+  };
+
+  /**
+   * object of key/value pairs specifying the controls for the story
+   */
+  controls?: ComponentControls;
+
+  /**
+   * "smart" controls options
+   */
+  smartControls?: SmartControls;
+  /**
+   * array of wrapper functions (decorators) to be called when rendering each individual story.
+   */
+  decorators?: StoryRenderFn[];
+}
+
 /**
  * Story interface - usually extracted by the AST instrumenting loader
  */
-export interface Story {
+export type Story = {
   /**
    * name of the Story.
    */
@@ -121,33 +154,7 @@ export interface Story {
    * optional story subtitle property
    */
   subtitle?: string;
-
-  /**
-   * id for component associated with the story
-   */
-  component?: string | object;
-
-  /**
-   * multiple components option
-   */
-  subcomponents?: {
-    [key: string]: string | object;
-  };
-
-  /**
-   * object of key/value pairs specifying the controls for the story
-   */
-  controls?: ComponentControls;
-
-  /**
-   * "smart" controls options
-   */
-  smartControls?: SmartControls;
-  /**
-   * array of wrapper functions (decorators) to be called when rendering each individual story.
-   */
-  decorators?: StoryRenderFn[];
-}
+} & StoryProps;
 
 /**
  * map of stories. The id is compatible with storybook's story ids
@@ -162,7 +169,7 @@ export const defDocType: DocType = 'story';
  * For MDX files, fromtmatter is used to declare the document properties.
  * For ESM (ES Modules) documentation files, the default export is used.
  */
-export interface Document {
+export type Document = {
   /**
    * title of the document. If no 'route' parameter is specifified, the title is used to generate the document url.
    * This is the only required field, to show the document in the menu structures.
@@ -181,43 +188,9 @@ export interface Document {
   route?: string;
 
   /**
-   * id for component associated with the stories file
+   * page layout - sidebars, full width
    */
-  component?: string | object;
-
-  /**
-   * multiple components option
-   */
-  subcomponents?: Record<string, Document['component']>;
-
-  /**
-   * array of wrapper functions (decorators) to be called when rendering each individual story.
-   */
-  decorators?: StoryRenderFn[];
-
-  /**
-   * object of key/value pairs specifying the controls for the stories file
-   * this will apply to all the stories in the file
-   */
-  controls?: ComponentControls;
-
-  /**
-   * if true, will display the documentation page full size (pagecontainer.full theme variant)
-   * the default value is from the doc type configuration
-   */
-  fullPage?: boolean;
-
-  /**
-   * whether to add navigation sidebar to the page
-   * the default value is from the doc type configuration
-   */
-  navSidebar?: boolean;
-
-  /**
-   * whether to add conext sidebar to navigate the sections of the page
-   * the default value is from the doc type configuration
-   */
-  contextSidebar?: boolean;
+  layout?: PageLayout;
 
   /**
    *  optional date the document was created. If not assigned, the instrumentation process will use birthtime
@@ -294,7 +267,7 @@ export interface Document {
    * custom prop set by mdxjs
    */
   isMDXComponent?: boolean;
-}
+} & StoryProps;
 
 export const dateToLocalString = (date?: Date): string =>
   date

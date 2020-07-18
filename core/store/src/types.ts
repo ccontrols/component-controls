@@ -54,14 +54,3 @@ export interface MessageType {
   moduleId: number;
   propName: string;
 }
-
-export interface StoreOptions {
-  /**
-   * optional store initializer
-   */
-  store?: StoriesStore;
-  /**
-   * set to false to prevent the Store from updating localStorage values
-   */
-  updateLocalStorage?: boolean;
-}

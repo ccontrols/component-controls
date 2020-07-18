@@ -10,10 +10,7 @@ export default {
 
 export const overview: FC = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const storyStore = React.useMemo(
-    () => new Store({ store, updateLocalStorage: false }),
-    [],
-  );
+  const storyStore = React.useMemo(() => new Store(store), []);
   return (
     <BlockContextProvider
       storyId="blocks-core-story-plain--controls"

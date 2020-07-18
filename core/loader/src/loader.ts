@@ -23,7 +23,7 @@ module.exports = async function() {
   if (store?.doc) {
     console.log(chalk.bgRgb(244, 147, 66)('@loaded: '), filePath);
     if (store.stories && store.components && store.packages) {
-      addStoriesDoc(filePath, {
+      addStoriesDoc(filePath, context._compilation.records.hash, {
         stories: store.stories,
         components: store.components,
         packages: store.packages,

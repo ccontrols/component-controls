@@ -275,7 +275,7 @@ export default {
 };
 ```
 
-### navSidebar
+### layout.navSidebar
 
 type: `boolean`
 
@@ -285,7 +285,7 @@ Whether to add a sidebar to navigate all the documents from the same document ty
 ```
 ---
 title: Library/Components/Spinner
-navSidebar: false
+layout: { navSidebar: false }
 ---
 ```
 
@@ -293,14 +293,14 @@ navSidebar: false
 ```
 export default {
   title: 'Library/Components/Button',
-  navSidebar: false,
+  layout: { navSidebar: false }
 };
 ```
 
 <img alt="document navigation sidebar" title="document navSidebar" src={sidebarImg} />
 
 
-### contextSidebar
+### layout.contextSidebar
 
 type: `boolean`
   
@@ -310,7 +310,7 @@ Whether to add a conext sidebar to access the sections on the current page. The 
 ```
 ---
 title: Library/Components/Spinner
-contextSidebar: false
+layout: { contextSidebar: false }
 ---
 ```
 
@@ -318,14 +318,14 @@ contextSidebar: false
 ```
 export default {
   title: 'Library/Components/Button',
-  contextSidebar: false,
+  layout: { contextSidebar: false },
 };
 ```
 
 <img alt="document context sidebar" title="document context sidebar" src={contextImg} />
 
 
-### fullPage
+### layout.fullPage
 
 type: `boolean
 
@@ -335,7 +335,7 @@ Whether the page to use the full-page theme styling (pagecontainer.full theme va
 ```
 ---
 title: Library/Components/Spinner
-fullPage: true
+layout: { fullPage: true }
 ---
 ```
 
@@ -343,7 +343,7 @@ fullPage: true
 ```
 export default {
   title: 'Library/Components/Button',
-  fullPage: true,
+  layout: { fullPage: true },
 };
 ```
 

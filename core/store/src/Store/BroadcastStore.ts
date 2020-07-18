@@ -1,16 +1,18 @@
 import { BroadcastChannel } from 'broadcast-channel';
-import { MessageType, UPDATE_STORY_MSG, StoreOptions } from '../types';
-import { Store } from './Store';
+import { StoriesStore } from '@component-controls/core';
+import { LoadingStore } from '@component-controls/loader';
+import { MessageType, UPDATE_STORY_MSG } from '../types';
+import { HMRStore } from './HMRStore';
 import { readStore, updateStory } from '../serialization/StoreStorage';
 
 export { BroadcastChannel };
 
-export class BroadcastStore extends Store {
+export class BroadcastStore extends HMRStore {
   private moduleId: number;
   private channel: BroadcastChannel | undefined;
 
-  constructor(options?: StoreOptions) {
-    super(options);
+  constructor(store?: LoadingStore) {
+    super(store);
     this.moduleId = Math.random();
     this.channel = new BroadcastChannel<MessageType>(UPDATE_STORY_MSG, {
       type: 'localstorage',
@@ -24,7 +26,13 @@ export class BroadcastStore extends Store {
       }
     };
   }
-
+  /**
+   * internal set store, use for testing with mockup store.
+   */
+  setStore = (store?: StoriesStore) => {
+    this.loadedStore = store;
+    this.notifyObservers();
+  };
   private readData = (storyId?: string, propName?: string) => {
     this.setStore(readStore(this.loadedStore, storyId, propName));
   };

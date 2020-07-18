@@ -19,6 +19,8 @@ module.exports = {
     // '../../../plugins/axe-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     //'../../stories/src/blogs/introduction-to-controls.mdx',
     '../../stories/src/stories/controls-editors-starter.stories.tsx',
+    '../../stories/src/blogs/gatsby-nextjs-storybook.mdx',
+    
   ],
   pages: {
     story: {

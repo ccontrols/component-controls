@@ -27,5 +27,9 @@ module.exports = function(content: string) {
     store.buildConfig,
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
+  //add dependencies for HMR
+  // stories.forEach(story =>
+  //   context.addDependency(path.normalize(story.absPath)),
+  // );
   return content;
 };

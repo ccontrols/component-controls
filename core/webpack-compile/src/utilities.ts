@@ -1,4 +1,9 @@
-import webpack, { Configuration, Compiler, Stats } from 'webpack';
+import webpack, {
+  Configuration,
+  Compiler,
+  Stats,
+  HotModuleReplacementPlugin,
+} from 'webpack';
 import * as path from 'path';
 const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
@@ -26,6 +31,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       config: configPath,
       escapeOutput: mode === 'development',
     }),
+    mode === 'development' && new HotModuleReplacementPlugin({}),
   ].filter(Boolean);
   const webpackConfig = mergeWebpackConfig(
     {

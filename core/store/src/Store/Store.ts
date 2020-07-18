@@ -12,7 +12,7 @@ import {
   getComponentName,
 } from '@component-controls/core';
 
-import { StoreObserver, StoryStore, StoreOptions } from '../types';
+import { StoreObserver, StoryStore } from '../types';
 
 export { StoreObserver, StoryStore };
 
@@ -33,8 +33,7 @@ export class Store implements StoryStore {
   /**
    * create a store with options
    */
-  constructor(options?: StoreOptions) {
-    const { store } = options || {};
+  constructor(store?: StoriesStore) {
     this.loadedStore = store;
     this.observers = [];
     this.initDocs();
@@ -107,14 +106,6 @@ export class Store implements StoryStore {
     if (this.observers.length > 0) {
       this.observers.forEach(observer => observer(storyId, propName));
     }
-  };
-
-  /**
-   * internal set store, use for testing with mockup store.
-   */
-  setStore = (store?: StoriesStore) => {
-    this.loadedStore = store;
-    this.notifyObservers();
   };
 
   /**

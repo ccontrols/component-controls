@@ -42,6 +42,7 @@ export interface LoadingStore {
    */
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
+    hash?: string;
   })[];
 
   getDocs: (docType: DocType) => Pages;
@@ -248,7 +249,11 @@ export const reserveStories = (filePaths: string[]) => {
 export const removeStoriesDoc = (filePath: string) => {
   store.stores = store.stores.filter(s => s.filePath !== filePath);
 };
-export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
+export const addStoriesDoc = (
+  filePath: string,
+  hash: string,
+  added: LoadingDocStore,
+) => {
   const { components, packages, stories, doc } = added;
   if (!doc) {
     throw new Error(`Invalid store with no document ${filePath}`);
@@ -270,7 +275,8 @@ export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
   if (storeStore) {
     storeStore.stories = stories;
     storeStore.doc = doc;
+    storeStore.hash = hash;
   } else {
-    store.stores.push({ filePath, stories, doc });
+    store.stores.push({ filePath, hash, stories, doc });
   }
 };

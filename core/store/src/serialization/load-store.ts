@@ -2,7 +2,9 @@
 /* eslint-disable no-unused-vars */
 import {
   StoriesStore,
+  StoryProps,
   Story,
+  Document,
   deepMergeArrays,
   deepMerge,
   defaultRunConfig,
@@ -45,39 +47,19 @@ export const loadStoryStore = (
             const page = globalStore.config?.pages?.[
               storeDoc.type || defDocType
             ] as PageConfiguration;
-            const doc = {
-              fullPage: page.fullPage,
-              navSidebar: page.navSidebar,
-              contextSidebar: page.contextSidebar,
-              ...storeDoc,
+            const doc: Document = deepMerge({ layout: page.layout }, storeDoc);
+            //props shared by document and story, extract so story gets default values from doc
+            const docStoryProps: StoryProps = {
+              component: doc.component,
+              subcomponents: doc.subcomponents,
+              controls: doc.controls,
+              smartControls: doc.smartControls,
+              decorators: doc.decorators,
             };
-
-            const {
-              isMDXComponent,
-              tags,
-              title,
-              order,
-              type,
-              MDXPage,
-              author,
-              date,
-              dateModified,
-              description,
-              fullPage,
-              route,
-              navSidebar,
-              contextSidebar,
-              stories,
-              source,
-              fileName,
-              componentsLookup,
-              package: docPackage,
-              ...otherDocProps
-            } = doc;
             globalStore.docs[doc.title] = doc;
             Object.keys(storeStories).forEach((storyName: string) => {
               const story: Story = storeStories[storyName];
-              Object.assign(story, deepMerge(otherDocProps, story));
+              Object.assign(story, deepMerge(docStoryProps, story));
               story.controls = transformControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);

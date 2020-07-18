@@ -33,7 +33,7 @@ export const AppContext: FC<AppContextProps> = ({
   const page = pages?.[type];
   const documentId = docId
     ? docId
-    : !docId && page?.navSidebar
+    : !docId && page?.layout?.navSidebar
     ? store.getFirstDocument(type)
     : undefined;
   return (

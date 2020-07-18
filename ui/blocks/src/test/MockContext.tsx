@@ -13,10 +13,7 @@ export const MockContext: React.FC<MockContexProps> = ({
   children,
   storyId = 'id-of-story',
 }) => {
-  const storyStore = React.useMemo(
-    () => new Store({ store, updateLocalStorage: false }),
-    [],
-  );
+  const storyStore = React.useMemo(() => new Store(store), []);
   return (
     <BlockContextProvider storyId={storyId} store={storyStore}>
       {children}

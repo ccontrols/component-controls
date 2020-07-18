@@ -24,9 +24,10 @@ export interface SidebarsMDXPageProps {
  */
 export const SidebarsMDXPage: FC<SidebarsMDXPageProps> = ({ type, doc }) => {
   const pageRef = useRef<HTMLDivElement>(null);
+  const layout = doc.layout;
   return (
     <Box variant={docToVariant(doc)}>
-      {doc.navSidebar && <Sidebar type={type} />}
+      {layout?.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
         <PageContainer
           type={type}
@@ -34,7 +35,7 @@ export const SidebarsMDXPage: FC<SidebarsMDXPageProps> = ({ type, doc }) => {
           ref={pageRef}
         />
       </Box>
-      {doc.contextSidebar && <SideContext pageRef={pageRef} />}
+      {layout?.contextSidebar && <SideContext pageRef={pageRef} />}
     </Box>
   );
 };
