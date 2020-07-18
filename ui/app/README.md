@@ -60,13 +60,13 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name         | Type           | Description |
-| ------------ | -------------- | ----------- |
-| `type`       | _string_       |             |
-| `docId`      | _string_       |             |
-| `storyId`    | _string_       |             |
-| `store`      | _LoadingStore_ |             |
-| `linkClass*` | _any_          |             |
+| Name         | Type         | Description |
+| ------------ | ------------ | ----------- |
+| `type`       | _string_     |             |
+| `docId`      | _string_     |             |
+| `storyId`    | _string_     |             |
+| `store*`     | _StoryStore_ |             |
+| `linkClass*` | _any_        |             |
 
 ## <ins>CategoryList</ins>
 

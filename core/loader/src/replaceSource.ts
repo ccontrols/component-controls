@@ -1,3 +1,4 @@
+import { RequireContextProps } from '@component-controls/config';
 import { BuildConfiguration } from '@component-controls/core';
 
 export interface StoryPath {
@@ -6,7 +7,7 @@ export interface StoryPath {
 }
 
 export const replaceSource = (
-  stories: StoryPath[],
+  contexts: RequireContextProps[],
   configFilePath: string | undefined,
   config: BuildConfiguration | undefined,
   hashKey: string,
@@ -16,10 +17,14 @@ export const replaceSource = (
 const configJSON = ${
     configFilePath ? `require("${configFilePath}")` : 'undefined'
   };
-  
-  const imports = {};
-${stories
-  .map(story => `imports['${story.absPath}'] = require(${story.relPath});`)
+ const imports = [];
+${contexts
+  .map(
+    context =>
+      `imports.push(require.context('${context.directory}', ${
+        context.useSubdirectories ? 'true' : 'false'
+      }, ${context.regExp}));`,
+  )
   .join('\n')}
 `;
   const storeConst = `const store = ${hashKey};\n`;
@@ -42,8 +47,9 @@ ${stories
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
     const doc = s.doc;
-    if (doc && imports.hasOwnProperty(doc.fileName)) {
-      const exports = imports[doc.fileName];
+    const importedFile = imports.find(i => i.hasOwnProperty(doc.fileName));
+    if (doc && importedFile) {
+      const exports = importedFile[doc.fileName];
       try {
         Object.keys(exports).forEach(key => {
           const exported = exports[key];

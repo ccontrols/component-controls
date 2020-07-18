@@ -156,9 +156,10 @@ _Container [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name     | Type        | Description |
-| -------- | ----------- | ----------- |
-| `author` | _ReactNode_ |             |
+| Name        | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `author`    | _ReactNode_ |             |
+| `secondRow` | _ReactNode_ |             |
 
 ## <ins>Description</ins>
 

@@ -99,11 +99,12 @@ export type PagesOnlyRoutes = Record<
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
 >;
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export interface BuildConfiguration {
+export type BuildConfiguration = {
   /**
    * wild card search string for the stories
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
@@ -124,7 +125,7 @@ export interface BuildConfiguration {
    */
   webpack?: WebpackConfig;
   finalWebpack?: WebpackConfig;
-}
+};
 
 export interface ToolbarConfig {
   /**

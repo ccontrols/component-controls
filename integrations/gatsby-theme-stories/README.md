@@ -6,7 +6,6 @@
     -   [Install](#install)
     -   [Configure](#configure)
 -   [API](#api)
-    -   [<ins>Store</ins>](#insstoreins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
     -   [<ins>DefaultName</ins>](#insdefaultnameins)
@@ -61,12 +60,6 @@ in `gatsby-config.js`:
 <react-docgen-typescript path="./src" exclude="Store.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
-
-## <ins>Store</ins>
-
-Store class used to query the stories and exchange information between processes
-
-_Store [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/index.ts)_
 
 ## <ins>GatsbyLink</ins>
 

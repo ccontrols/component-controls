@@ -1,10 +1,12 @@
 import { deepMergeArrays, defaultBuildConfig } from '@component-controls/core';
 
-import { loadConfiguration, extractStories } from '@component-controls/config';
-import { stringifyRequest } from 'loader-utils';
+import {
+  loadConfiguration,
+  configRequireContext,
+} from '@component-controls/config';
 import { loader } from 'webpack';
-import { replaceSource, StoryPath } from './replaceSource';
-import { store, reserveStories } from './store';
+import { replaceSource } from './replaceSource';
+import { store } from './store';
 
 module.exports = function(content: string) {
   const context = (this as unknown) as loader.LoaderContext;
@@ -14,22 +16,12 @@ module.exports = function(content: string) {
     ? deepMergeArrays(defaultBuildConfig, config.config)
     : defaultBuildConfig;
 
-  const stories: StoryPath[] = (config ? extractStories(config) || [] : []).map(
-    fileName => ({
-      absPath: fileName,
-      relPath: stringifyRequest(context, fileName),
-    }),
-  );
-  reserveStories(stories.map(story => story.absPath));
+  const contexts = config ? configRequireContext(config) || [] : [];
   content = replaceSource(
-    stories,
+    contexts,
     config?.optionsFilePath,
     store.buildConfig,
     `__COMPILATION_HASH__${params.compilationHash}`,
   );
-  //add dependencies for HMR
-  // stories.forEach(story =>
-  //   context.addDependency(path.normalize(story.absPath)),
-  // );
   return content;
 };

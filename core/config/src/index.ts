@@ -1,6 +1,10 @@
 import * as path from 'path';
 import * as fs from 'fs';
+
 import { sync as globSync } from 'glob';
+import globBase from 'glob-base';
+import { makeRe } from 'micromatch';
+
 import yargs from 'yargs';
 import { BuildConfiguration } from '@component-controls/core';
 
@@ -76,26 +80,64 @@ export const loadConfiguration = (
   return undefined;
 };
 
+//fix for sb5 issue handling glob
+const fixGlob = (golbExpr: string): string => golbExpr.replace('.(', '.@(');
+
 /**
  * find the story files out of a configuration file
  * using glob for the regex file search
- * @param param0 configuration info return by getConfiguration
  */
-export const extractStories = ({
+export const extractDocuments = ({
   config,
   configPath,
 }: ConfigrationResult): string[] | undefined => {
-  const stories =
+  const documents =
     config && config.stories
       ? config.stories.reduce((acc: string[], storyRg: string) => {
-          //fix for sb5 issue handling glob
-          const regex = storyRg.replace('.(', '.@(');
-          const matches = globSync(path.resolve(configPath, regex));
+          const matches = globSync(path.resolve(configPath, fixGlob(storyRg)));
           if (!matches.length) {
             throw new Error(`${storyRg} did not match any files`);
           }
           return [...acc, ...matches];
         }, [])
       : undefined;
-  return stories;
+  return documents;
+};
+
+/**
+ * from the glob list of documents, extract require.context array of props
+ */
+export interface RequireContextProps {
+  directory: string;
+  useSubdirectories: boolean;
+  regExp: RegExp;
+}
+/**
+ * convert glob patters from config file into require.context objects
+ */
+export const configRequireContext = ({
+  config,
+  configPath,
+}: ConfigrationResult): RequireContextProps[] | undefined => {
+  const contexts =
+    config && config.stories
+      ? config.stories.reduce((acc: RequireContextProps[], storyRg: string) => {
+          const base = globBase(fixGlob(storyRg));
+          const useSubdirectories = base.glob.startsWith('**');
+          const glob = useSubdirectories ? base.glob.substr(3) : base.glob;
+          const regExp = base.isGlob
+            ? RegExp(makeRe(glob).source.substr(1))
+            : new RegExp(glob);
+          console.log(glob, regExp, storyRg);
+          return [
+            ...acc,
+            {
+              directory: path.resolve(configPath, base.base),
+              useSubdirectories,
+              regExp,
+            },
+          ];
+        }, [])
+      : undefined;
+  return contexts;
 };
