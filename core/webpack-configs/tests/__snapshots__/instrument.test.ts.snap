@@ -42,6 +42,7 @@ Object {
         "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
       },
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
           /node_modules/,
@@ -140,6 +141,7 @@ Object {
         "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
       },
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
           /node_modules/,

@@ -5,6 +5,7 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
         ],
@@ -53,6 +54,7 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
         ],
