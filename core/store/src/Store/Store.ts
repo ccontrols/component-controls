@@ -109,6 +109,28 @@ export class Store implements StoryStore {
   };
 
   /**
+   * modify story properties, for example controls values.
+   * will notify all installed store observers of the changed story.
+   */
+  updateStoryProp = (
+    storyId: string,
+    propName: string,
+    newValue: any,
+  ): void => {
+    if (this.loadedStore) {
+      this.loadedStore.stories = {
+        ...this.loadedStore.stories,
+        [storyId]: {
+          ...this.loadedStore.stories[storyId],
+          [propName]: newValue,
+        },
+      };
+    }
+    if (this.loadedStore) {
+      this.notifyObservers(storyId, propName);
+    }
+  };
+  /**
    * returns an instance of the store
    */
   getStore = () => {

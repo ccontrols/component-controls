@@ -4,7 +4,6 @@ import { LoadingStore } from '@component-controls/loader';
 import { MessageType, UPDATE_STORY_MSG } from '../types';
 import { HMRStore } from './HMRStore';
 import { readStore, updateStory } from '../serialization/StoreStorage';
-
 export { BroadcastChannel };
 
 export class BroadcastStore extends HMRStore {
@@ -21,7 +20,7 @@ export class BroadcastStore extends HMRStore {
       if (storyId && moduleId) {
         if (this.moduleId !== moduleId) {
           this.readData(storyId, propName);
-          super.notifyObservers(storyId, propName);
+          this.notifyObservers(storyId, propName);
         }
       }
     };
@@ -33,10 +32,16 @@ export class BroadcastStore extends HMRStore {
     this.loadedStore = store;
     this.notifyObservers();
   };
+  getStore = () => {
+    if (this.loadedStore) {
+      return this.loadedStore;
+    }
+    this.readData();
+    return this.loadedStore;
+  };
   private readData = (storyId?: string, propName?: string) => {
     this.setStore(readStore(this.loadedStore, storyId, propName));
   };
-
   /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.

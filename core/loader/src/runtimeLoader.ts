@@ -3,10 +3,11 @@ import { deepMergeArrays, defaultBuildConfig } from '@component-controls/core';
 import {
   loadConfiguration,
   configRequireContext,
+  extractDocuments,
 } from '@component-controls/config';
 import { loader } from 'webpack';
 import { replaceSource } from './replaceSource';
-import { store } from './store';
+import { store, reserveStories } from './store';
 
 module.exports = function(content: string) {
   const context = (this as unknown) as loader.LoaderContext;
@@ -17,6 +18,8 @@ module.exports = function(content: string) {
     : defaultBuildConfig;
 
   const contexts = config ? configRequireContext(config) || [] : [];
+  const stories: string[] = config ? extractDocuments(config) || [] : [];
+  reserveStories(stories);
   content = replaceSource(
     contexts,
     config?.optionsFilePath,
