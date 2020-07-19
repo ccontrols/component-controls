@@ -75,7 +75,7 @@ There are many developments that have contributed to the creation of `component-
 -   [x] Storybook integration with addon-docs
 -   [x] Storybook integration without addon-docs (replace all storybook loaders)
 -   [x] Standalone webpack compiler API
--   [ ] HMR
+-   [x] HMR
 -   [x] Gatsby standalone app/static app builder
 -   [x] Nextjs standalone app/static app builder
 -   [ ] Integrated testing facilites (WIP)
