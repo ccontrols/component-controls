@@ -103,9 +103,8 @@ export const runCompiler = (
 
       const { store } = require('@component-controls/loader/store');
       console.log(
-        chalk.bgRgb(244, 147, 66)('@bundle generated: '),
+        chalk.bgRgb(244, 147, 66)(`compiled ${store.stores.length} documents`),
         require.resolve('@component-controls/loader/store'),
-        chalk.bgRgb(244, 147, 66)(`${store.stores.length} documents compiled`),
       );
       resolve({ store, stats });
     });
