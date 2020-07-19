@@ -83,7 +83,11 @@ ${contexts
         } catch (e) {
           console.error(\`unable to load module \${doc.moduleId}\`, e);
         }
-      }  
+      } else {
+        //file could not be found
+        store.stores.splice(i, 1);
+        i -= 1; 
+      }
     }  
   }
 `;
