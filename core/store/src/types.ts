@@ -12,6 +12,18 @@ import {
  */
 export type StoreObserver = (storyId?: string, propName?: string) => void;
 
+export interface DocPageInfo {
+  type: string;
+  activeTab?: string;
+  docId?: string;
+  storyId?: string;
+  category?: string;
+}
+export interface HomePageInfo {
+  type: string;
+  docId?: string;
+}
+
 export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
@@ -40,6 +52,13 @@ export interface StoryStore {
   removeObserver: (observer: StoreObserver) => void;
   visitPage: () => void;
   getDocDescription: (doc: Document) => string | undefined;
+
+  getIndexPage: () => HomePageInfo;
+  getHomePage: (path: string) => HomePageInfo | undefined;
+  getHomePaths: () => string[];
+
+  getDocPage: (path: string) => DocPageInfo | undefined;
+  getDocPaths: () => string[];
 }
 
 export interface BroadcastStore extends StoryStore {

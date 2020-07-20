@@ -10,7 +10,7 @@ export type RuleTypes = RuleType[];
 
 export interface PresetOptions {
   //output folder for static assets
-  outputFolder?: string;
+  staticFolder?: string;
   //dist folder where bundle is output
   distFolder?: string;
 }

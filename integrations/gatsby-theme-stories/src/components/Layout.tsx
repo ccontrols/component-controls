@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { AppContext } from '@component-controls/app';
-import { store } from '@component-controls/store/store';
+import { store } from '@component-controls/store/controls-store';
 
 import { GatsbyLink } from './GatsbyLink';
 

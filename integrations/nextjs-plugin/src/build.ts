@@ -1,34 +1,58 @@
-import * as path from 'path';
+import path from 'path';
+import fs from 'fs';
 import {
   compile,
   watch,
   CompileProps,
 } from '@component-controls/webpack-compile';
-import { LoaderOptions } from './types';
-
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
 let builtStarted = false;
 export default ({
+  bundleName,
   configPath,
-  outputFolder,
+  distFolder,
   presets,
-  webpack,
+  staticFolder,
+  webPack,
   ...rest
-}: LoaderOptions) => (phase: string) => {
+}: CompileProps) => (phase: string, nextConfig: any) => {
+  const { defaultConfig } = nextConfig;
+  const userProps: CompileProps = {
+    bundleName,
+    configPath,
+    staticFolder,
+    webPack,
+  };
+  const options: CompileProps = {
+    presets: presets || defaultPresets,
+    distFolder: distFolder || path.join(process.cwd(), defaultConfig.distDir),
+    ...userProps,
+  };
+
   if (phase !== 'phase-export' && !builtStarted) {
     builtStarted = true;
-    const config: CompileProps = {
-      webPack: webpack,
-      presets: presets || defaultPresets,
-      configPath: configPath,
-      outputFolder: outputFolder || `${path.join(process.cwd(), 'public')}`,
-    };
     const compiler =
-      process.env.NODE_ENV === 'development' ? watch(config) : compile(config);
-    compiler.then(() => {
-      //store = newStore;
+      process.env.NODE_ENV === 'development'
+        ? watch(options)
+        : compile(options);
+    compiler.then(({ bundleName }) => {
+      //temporary hack to send the bundle name to static props
+      fs.writeFile(
+        path.resolve(__dirname, './store.js'),
+        `
+const { HMRStore } = require('@component-controls/store');
+const bundle = require("${bundleName}");
+const store = new HMRStore(bundle);
+exports.store = store;
+`,
+        err => {
+          console.error(err);
+        },
+      );
     });
   }
-  return rest;
+  return {
+    ...rest,
+  };
 };

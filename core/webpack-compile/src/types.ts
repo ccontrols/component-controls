@@ -1,6 +1,5 @@
 import * as webpack from 'webpack';
 import { RuleTypes } from '@component-controls/webpack-configs';
-import { LoadingStore } from '@component-controls/loader';
 
 /**
  * configuration properties for compile and run
@@ -20,7 +19,13 @@ export interface CompileProps {
   configPath?: string;
 
   /** public output folder for the bundle */
-  outputFolder?: string;
+  distFolder?: string;
+
+  /** public file name the bundle, by default 'compoonent-controls.js' */
+  bundleName: string;
+
+  /** public output folder for the assets like images */
+  staticFolder?: string;
 }
 
 /**
@@ -28,9 +33,9 @@ export interface CompileProps {
  */
 export interface CompileResults {
   /**
-   * the stories store
+   * bundle full path and name
    */
-  store: LoadingStore;
+  bundleName: string;
   /**
    * the webpack stats object
    */

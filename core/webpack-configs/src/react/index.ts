@@ -57,7 +57,7 @@ export const react: PresetType = (options?: PresetOptions) => {
             publicPath: '/static',
             outputPath: path.relative(
               options?.distFolder || process.cwd(),
-              path.resolve(options?.outputFolder || process.cwd(), 'static'),
+              path.resolve(options?.staticFolder || process.cwd(), 'static'),
             ),
           },
         },

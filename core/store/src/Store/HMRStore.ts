@@ -9,7 +9,6 @@ export class HMRStore extends Store {
   }
 
   hmr = (store?: LoadingStore): StoryStore => {
-    console.log(store);
     return new HMRStore(store);
   };
 }

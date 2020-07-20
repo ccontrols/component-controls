@@ -4,7 +4,7 @@ import webpack, {
   Stats,
   HotModuleReplacementPlugin,
 } from 'webpack';
-import * as path from 'path';
+import path from 'path';
 const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
@@ -23,9 +23,26 @@ export type CompileRunProps = CompileProps & {
   mode: Configuration['mode'];
 };
 
+export const defBundleName = 'compoonent-controls.js';
+
+export const getBundleName = (options: CompileProps) =>
+  path.join(
+    options.distFolder || `${path.join(process.cwd(), 'public')}`,
+    options.bundleName || defBundleName,
+  );
+
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
-  const { webPack, presets, configPath, mode, outputFolder } = options;
-  const distFolder = path.resolve(__dirname, '../dist');
+  const {
+    webPack,
+    presets,
+    configPath,
+    mode,
+    staticFolder: propStaticFolder,
+    distFolder: propDistFolder,
+    bundleName = defBundleName,
+  } = options;
+  const distFolder = propDistFolder || `${path.join(process.cwd(), 'public')}`;
+  const staticFolder = propStaticFolder || path.join(distFolder, 'static');
   const plugins = [
     new LoaderPlugin({
       config: configPath,
@@ -43,7 +60,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       },
       output: {
         path: distFolder,
-        filename: 'bundle.js',
+        filename: bundleName,
         libraryTarget: 'umd',
         globalObject: 'this',
       },
@@ -55,7 +72,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       ...(webPack || {}),
     },
     presets,
-    { outputFolder, distFolder },
+    { staticFolder, distFolder },
   );
 
   //add all the aliases to avoid double loading of packages
@@ -85,11 +102,9 @@ export const runCompiler = (
   props: CompileRunProps,
 ): Promise<CompileResults> => {
   return new Promise((resolve, reject) => {
-    //@ts-ignore
     const compiler = webpack(createConfig(props));
     run(compiler, (err, stats) => {
       if (err) {
-        console.error(err);
         return reject(err);
       }
       if (stats.hasErrors() || stats.hasWarnings()) {
@@ -97,16 +112,18 @@ export const runCompiler = (
           errorDetails: true,
           warnings: true,
         });
-        console.error(error);
         return reject(error);
       }
-
       const { store } = require('@component-controls/loader/store');
+      const bundleName = path.join(
+        stats.compilation.outputOptions.path,
+        stats.compilation.outputOptions.filename,
+      );
       console.log(
         chalk.bgRgb(244, 147, 66)(`compiled ${store.stores.length} documents`),
-        require.resolve('@component-controls/loader/store'),
+        bundleName,
       );
-      resolve({ store, stats });
+      resolve({ bundleName, stats });
     });
   });
 };

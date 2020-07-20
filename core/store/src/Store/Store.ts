@@ -10,9 +10,14 @@ import {
   DocType,
   defDocType,
   getComponentName,
+  TabConfiguration,
+  removeTrailingSlash,
+  ensureStartingSlash,
+  getDocTypePath,
+  PageConfiguration,
 } from '@component-controls/core';
 
-import { StoreObserver, StoryStore } from '../types';
+import { StoreObserver, StoryStore, DocPageInfo, HomePageInfo } from '../types';
 
 export { StoreObserver, StoryStore };
 
@@ -22,6 +27,9 @@ export { StoreObserver, StoryStore };
 export class Store implements StoryStore {
   protected loadedStore: StoriesStore | undefined;
   private observers: StoreObserver[];
+  private _homepaths: { [path: string]: HomePageInfo } | undefined = undefined;
+  private _docpaths: { [path: string]: DocPageInfo } | undefined = undefined;
+
   private _cachedPages: { [key: string]: Pages } = {};
   private _analytics: any = null;
   private _categoryItems: {
@@ -352,5 +360,133 @@ export class Store implements StoryStore {
       }
     }
     return undefined;
+  };
+
+  getUniquesByField = (field: string): { [key: string]: number } => {
+    const documents = this.pages;
+    return documents.reduce((acc: { [key: string]: number }, doc) => {
+      const value = (doc as any)[field];
+      const values = Array.isArray(value) ? value : [value];
+      values.forEach(v => {
+        if (v !== undefined) {
+          if (typeof acc[v] === 'undefined') {
+            acc[v] = 0;
+          }
+          acc[v] = acc[v] = 1;
+        }
+      });
+      return acc;
+    }, {});
+  };
+  getIndexPage = (): HomePageInfo => {
+    const homePage = this.pages.find(doc => doc.route === '/');
+    return {
+      docId: homePage?.title,
+      type: homePage?.type || defDocType,
+    };
+  };
+
+  buildHomePaths = () => {
+    if (this._homepaths === undefined) {
+      const { pages = {} } = this.loadedStore?.config || {};
+      if (pages) {
+        this._homepaths = {};
+        Object.keys(pages).forEach(type => {
+          const page = pages[type as DocType];
+          const path = getDocTypePath(page as PageConfiguration);
+          const docs = this.getPageList(type as DocType);
+          const doc = docs.find(
+            doc =>
+              removeTrailingSlash(ensureStartingSlash(doc?.route || '')) ===
+              path,
+          );
+          //@ts-ignore
+          this._homepaths[path] = {
+            type,
+            docId: doc?.title,
+          };
+        });
+      }
+    }
+  };
+  getHomePage = (path: string): HomePageInfo | undefined => {
+    this.buildHomePaths();
+    return this._homepaths ? this._homepaths[path] : undefined;
+  };
+  getHomePaths = (): string[] => {
+    this.buildHomePaths();
+    return this._homepaths ? Object.keys(this._homepaths) : [];
+  };
+
+  buildDocPaths = () => {
+    if (this._docpaths === undefined) {
+      this._docpaths = {};
+      const { pages, categories = [] } = this.loadedStore?.config || {};
+      if (pages) {
+        Object.keys(pages).forEach(type => {
+          if (!categories.includes(type as DocType)) {
+            const page = pages[type as DocType];
+            const docType = type as DocType;
+            const docs: Pages = this.getPageList(docType);
+            const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
+              { route: undefined },
+            ];
+            tabs.forEach((tab, tabIndex) => {
+              const route = tabIndex > 0 ? tab.route : undefined;
+              docs.forEach(doc => {
+                if (doc.route !== '/') {
+                  const stories =
+                    page.storyPaths && doc.stories?.length
+                      ? doc.stories
+                      : [undefined];
+                  stories.forEach((storyId?: string) => {
+                    const url = getStoryPath(storyId, doc, pages, route);
+                    //@ts-ignore
+                    this._docpaths[url] = {
+                      type: docType,
+                      activeTab: route,
+                      docId: doc.title,
+                      storyId,
+                    };
+                  });
+                }
+              });
+            });
+          } else {
+            const cats = this.getUniquesByField(type);
+            const catKeys = Object.keys(cats);
+            catKeys.forEach(tag => {
+              const url = getDocPath(
+                type as DocType,
+                { title: tag, componentsLookup: {} },
+                pages,
+              );
+              //@ts-ignore
+              this._docpaths[url] = {
+                type,
+                category: tag,
+              };
+            });
+          }
+        });
+      }
+    }
+  };
+
+  getDocPage = (path: string): DocPageInfo | undefined => {
+    this.buildDocPaths();
+    if (this._docpaths && !this._docpaths[path]) {
+      console.log(
+        path,
+        Object.keys(this._docpaths).filter(key =>
+          key.startsWith('/tutorial/structure/'),
+        ),
+      );
+    }
+    return this._docpaths ? this._docpaths[path] : undefined;
+  };
+  getDocPaths = (): string[] => {
+    this.buildDocPaths();
+    return this._docpaths ? Object.keys(this._docpaths) : [];
   };
 }

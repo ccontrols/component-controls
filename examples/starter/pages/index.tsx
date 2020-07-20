@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-
 import { DocType, defDocType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
 import { Layout } from '@component-controls/nextjs-plugin';
@@ -19,7 +18,7 @@ const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { store } = require('@component-controls/nextjs-plugin');
+  const { store } = require('@component-controls/nextjs-plugin/store');
   const { docId = null, type = null } = store.getIndexPage() || {};
   return { props: { docId, type } };
 };

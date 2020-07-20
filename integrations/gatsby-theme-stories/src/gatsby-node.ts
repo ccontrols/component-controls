@@ -1,32 +1,31 @@
-import * as path from 'path';
-
 import {
   compile,
   watch,
   CompileProps,
+  getBundleName,
 } from '@component-controls/webpack-compile';
-import { CreatePagesArgs } from 'gatsby';
-import { LoaderOptions } from './types';
+import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
+import { StorePlugin } from '@component-controls/store/plugin';
+import { HMRStore } from '@component-controls/store';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
 exports.createPages = async (
   { actions }: CreatePagesArgs,
-  options: LoaderOptions,
+  options: CompileProps,
 ) => {
   const { createPage } = actions;
   const config: CompileProps = {
-    webPack: options.webpack,
-    presets: options.presets || defaultPresets,
-    configPath: options.configPath,
-    outputFolder:
-      options.outputFolder || `${path.join(process.cwd(), 'public')}`,
+    presets: defaultPresets,
+    ...options,
   };
-  const { store } =
+  const { bundleName } =
     process.env.NODE_ENV === 'development'
       ? await watch(config)
       : await compile(config);
-  if (store) {
+  if (bundleName) {
+    const bundle = require(bundleName);
+    const store = new HMRStore(bundle);
     //home page
     const { docId = null, type = null } = store.getIndexPage() || {};
     createPage({
@@ -73,4 +72,14 @@ exports.createPages = async (
       });
     });
   }
+};
+
+exports.onCreateWebpackConfig = (
+  { actions }: CreateWebpackConfigArgs,
+  options: CompileProps,
+) => {
+  //inject store bundle name
+  actions.setWebpackConfig({
+    plugins: [new StorePlugin({ bundleFileName: getBundleName(options) })],
+  });
 };

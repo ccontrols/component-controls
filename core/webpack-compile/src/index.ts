@@ -1,6 +1,8 @@
 const chalk = require('chalk');
 import { CompileProps, CompileResults, WatchProps } from './types';
 import { runCompiler } from './utilities';
+
+export { getBundleName, defBundleName } from './utilities';
 export * from './types';
 /**
  * compile the stories with webpack
@@ -10,7 +12,9 @@ export const compile = ({
   webPack,
   presets,
   configPath,
-  outputFolder,
+  staticFolder,
+  distFolder,
+  bundleName,
 }: CompileProps): Promise<CompileResults> => {
   console.log(
     chalk.bgRgb(244, 147, 66)('@start compilation'),
@@ -21,7 +25,9 @@ export const compile = ({
     mode: 'production',
     presets,
     configPath,
-    outputFolder,
+    staticFolder,
+    distFolder,
+    bundleName,
   });
 };
 
@@ -34,7 +40,9 @@ export const watch = ({
   presets,
   configPath,
   watchOptions,
-  outputFolder,
+  staticFolder,
+  distFolder,
+  bundleName,
 }: WatchProps): Promise<CompileResults> => {
   console.log(
     chalk.bgRgb(244, 147, 66)('@start compilation'),
@@ -47,7 +55,9 @@ export const watch = ({
       mode: 'development',
       presets,
       configPath,
-      outputFolder,
+      staticFolder,
+      distFolder,
+      bundleName,
     },
   );
 };
