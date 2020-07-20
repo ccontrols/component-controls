@@ -1,16 +1,15 @@
 ---
 title: Library/Components/Spinner
 ---
-import { Button } from '../components/Button';
-import { Spinner } from '../components/Spinner';
+import { Button, ButtonProps } from '../components/Button';
 import { Story, PropsTable,  ComponentSource  } from '@component-controls/blocks';
 
-<Story name="overview" component={Button} subcomponents={{ 'Custom tab': Spinner }}>
-  <Button>click me</Button>
+<Story name="overview" component={Button}>
+  {({ color }) => <Button color={color}>click me</Button>}
 </Story>
 
 ## Component source
 <ComponentSource of="." />
 
 ## Component Props
-<PropsTable of="." />
+<PropsTable of="." visibility="controls"/>

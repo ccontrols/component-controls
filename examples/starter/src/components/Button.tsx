@@ -1,25 +1,10 @@
 import React, { FC } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    *  Boolean indicating whether the button should render as disabled
    */
   disabled?: boolean;
-
-  /**
-   * button label
-   */
-  children?: string;
-
-  /**
-   * onClick handler
-   */
-  onClick?: () => void;
-
-  /**
-   * Custom styles
-   */
-  style?: object;
 
   /**
    * Background color
@@ -32,14 +17,28 @@ interface ButtonProps {
   color?: string;
 
   /**
+   * Numeric  field type
+   */
+  padding?: number;
+
+  /**
    * Button type
    */
   type?: 'button' | 'reset' | 'submit';
 
   /**
-   * Numeric  field type
+   * Custom styles
    */
-  padding?: number;
+  style?: object;
+  /**
+   * button label
+   */
+  children?: string;
+
+  /**
+   * onClick handler
+   */
+  onClick?: () => void;
 }
 
 /**
