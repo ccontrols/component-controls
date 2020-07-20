@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test example stories compile 1`] = `
-Store {
-  "_docpaths": undefined,
-  "_homepaths": undefined,
+Object {
   "buildConfig": Object {
     "categories": Array [
       "author",
@@ -39,8 +37,6 @@ Store {
       "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
   },
-  "buildDocPaths": [Function],
-  "buildHomePaths": [Function],
   "components": Object {
     "b5fffc2a9e710b29374f13f1d7ef028c": Object {
       "from": "../components/Button",
@@ -250,11 +246,7 @@ Button.defaultProps = {
     "ccd158de2e347c69fe7bf00b78db5145": Object {
       "from": "theme-ui",
       "importedName": "Button",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
     "dd96934cfa10038428b57421ede5ec17": Object {
       "from": "../components/PropTypesButton",
@@ -462,21 +454,11 @@ Button.propTypes = {
 ",
     },
   },
-  "config": Object {},
-  "getDocPage": [Function],
-  "getDocPaths": [Function],
-  "getDocs": [Function],
-  "getHomePage": [Function],
-  "getHomePaths": [Function],
-  "getIndexPage": [Function],
-  "getUniquesByField": [Function],
+  "config": undefined,
   "packages": Object {
     "2971104eea653041fd49648ff7a04be8": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "2971104eea653041fd49648ff7a04be8",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -485,11 +467,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "56bf0298abb3e6152739be8e0540ef47",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-prop-type.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -498,11 +477,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "684baa68d45c8becd8f39da85795335b",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -511,11 +487,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "6b1e448146504b441f181f0e3fc41fc9",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -524,11 +497,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "7661d674db5188cc22e26c1b22bef349",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -537,11 +507,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "999878322b2acba3a7ca83bc6972a800",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -550,11 +517,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "d1f03618863bd813182b2668bed6d262",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -563,11 +527,8 @@ Button.propTypes = {
       "version": "1.9.0",
     },
     "f6e72e22789f0ec595d8610e56ea91ff": Object {
-      "dependencies": undefined,
-      "devDependencies": undefined,
       "fileHash": "f6e72e22789f0ec595d8610e56ea91ff",
       "name": "component-controls-stories",
-      "peerDependencies": undefined,
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
@@ -585,14 +546,13 @@ Button.propTypes = {
         "componentsLookup": Object {
           "Button": "ccd158de2e347c69fe7bf00b78db5145",
         },
-        "date": 2020-07-19T04:06:29.277Z,
-        "dateModified": 2020-07-19T04:06:29.279Z,
+        "date": "2020-07-19T04:06:29.277Z",
+        "dateModified": "2020-07-19T20:17:47.902Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-      "hash": undefined,
       "stories": Object {
         "overview": Object {
           "arguments": Array [
@@ -607,7 +567,6 @@ Button.propTypes = {
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -633,7 +592,6 @@ Button.propTypes = {
                           "line": 1,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -662,7 +620,6 @@ Button.propTypes = {
                           "line": 1,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -672,24 +629,24 @@ Button.propTypes = {
           ],
           "controls": Object {
             "age": Object {
-              "defaultValue": "null",
-              "description": "\`
+              "defaultValue": null,
+              "description": "
 **age of the person**
 numeric, values between 10 and 75 allowed
-\`",
+",
               "label": "Age",
               "max": 75,
               "min": 10,
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 19,
             },
             "name": Object {
-              "description": "\`
+              "description": "
 **name of the person**
 any *markdown* is allowed
-\`",
+",
               "label": "Name",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "Mark",
             },
           },
@@ -706,6 +663,7 @@ any *markdown* is allowed
             },
           },
           "name": "overview",
+          "renderFn": [Function],
           "source": "({ name, age }: DocsControlsTable) => (
   <h2>{\`Hello, my name is \${name}, and I am \${age} years old.\`}</h2>
 )",
@@ -717,14 +675,13 @@ any *markdown* is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-07-17T14:45:45.848Z,
-        "dateModified": 2020-07-17T14:45:45.849Z,
+        "date": "2020-07-17T14:45:45.848Z",
+        "dateModified": "2020-07-17T14:45:45.849Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "684baa68d45c8becd8f39da85795335b",
         "title": "Introduction/Controls",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
-      "hash": undefined,
       "stories": Object {
         "XssSafety": Object {
           "arguments": Array [
@@ -739,7 +696,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -790,7 +746,7 @@ any *markdown* is allowed
             "content": Object {
               "escapeValue": true,
               "label": "Rendered string",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "<img src=\\"x\\" onerror=\\"alert('XSS Attack')\\" >",
             },
           },
@@ -807,8 +763,9 @@ any *markdown* is allowed
           },
           "name": "XSS safety",
           "propTypes": Object {
-            "content": "undefined.isRequired",
+            "content": [Function],
           },
+          "renderFn": [Function],
           "source": "({ content }) => (
   <div
     // eslint-disable-next-line react/no-danger
@@ -831,7 +788,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -857,7 +813,6 @@ any *markdown* is allowed
                           "line": 0,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "street",
@@ -871,7 +826,7 @@ any *markdown* is allowed
                 "name": "address.streetAddress",
               },
               "label": "Street",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "30333 Atlantic Ave.",
             },
           },
@@ -888,6 +843,7 @@ any *markdown* is allowed
             },
           },
           "name": "generateRandomData",
+          "renderFn": [Function],
           "source": "({ street }) => street",
         },
         "groupedControls": Object {
@@ -903,7 +859,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -929,7 +884,6 @@ any *markdown* is allowed
                           "line": 2,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -958,7 +912,6 @@ any *markdown* is allowed
                           "line": 2,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -987,7 +940,6 @@ any *markdown* is allowed
                           "line": 3,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "message",
@@ -997,21 +949,21 @@ any *markdown* is allowed
           ],
           "controls": Object {
             "age": Object {
-              "groupId": "personalGroupId",
+              "groupId": "personal info",
               "label": "Age",
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 35,
             },
             "message": Object {
-              "groupId": "generalGroupId",
+              "groupId": "general info",
               "label": "Mesage",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "Hello!",
             },
             "name": Object {
-              "groupId": "personalGroupId",
+              "groupId": "personal info",
               "label": "Name",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "James",
             },
           },
@@ -1029,10 +981,11 @@ any *markdown* is allowed
           },
           "name": "groupedControls",
           "propTypes": Object {
-            "age": "undefined.isRequired",
-            "message": "undefined.isRequired",
-            "name": "undefined.isRequired",
+            "age": [Function],
+            "message": [Function],
+            "name": [Function],
           },
+          "renderFn": [Function],
           "source": "({ age, name, message }) => {
   const content = \`
     I am \${name} and I'm \${age} years old.
@@ -1055,7 +1008,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1081,7 +1033,6 @@ any *markdown* is allowed
                           "line": 16,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "userName",
@@ -1110,7 +1061,6 @@ any *markdown* is allowed
                           "line": 16,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -1139,7 +1089,6 @@ any *markdown* is allowed
                           "line": 16,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "fruit",
@@ -1168,7 +1117,6 @@ any *markdown* is allowed
                           "line": 16,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "otherFruit",
@@ -1197,7 +1145,6 @@ any *markdown* is allowed
                           "line": 35,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "dollars",
@@ -1226,7 +1173,6 @@ any *markdown* is allowed
                           "line": 34,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "years",
@@ -1339,7 +1285,6 @@ any *markdown* is allowed
                           "line": 38,
                         },
                       },
-                      "shorthand": undefined,
                     },
                     Object {
                       "loc": Object {
@@ -1352,7 +1297,6 @@ any *markdown* is allowed
                           "line": 38,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "items",
@@ -1381,7 +1325,6 @@ any *markdown* is allowed
                           "line": 17,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "otherStyles",
@@ -1410,7 +1353,6 @@ any *markdown* is allowed
                           "line": 18,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "nice",
@@ -1439,7 +1381,6 @@ any *markdown* is allowed
                           "line": 42,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "images",
@@ -1468,7 +1409,6 @@ any *markdown* is allowed
                           "line": 16,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "dog",
@@ -1497,7 +1437,6 @@ any *markdown* is allowed
                           "line": 31,
                         },
                       },
-                      "shorthand": undefined,
                     },
                     Object {
                       "loc": Object {
@@ -1510,7 +1449,6 @@ any *markdown* is allowed
                           "line": 32,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "birthday",
@@ -1520,79 +1458,94 @@ any *markdown* is allowed
           ],
           "controls": Object {
             "age": Object {
-              "groupId": "GROUP_IDS.GENERAL",
+              "groupId": "General",
               "label": "Age",
               "max": 90,
               "min": 0,
               "range": true,
               "step": 5,
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 78,
             },
             "backgroundColor": Object {
-              "groupId": "GROUP_IDS.DISPLAY",
-              "type": "ControlTypes.COLOR",
+              "groupId": "Display",
+              "type": "color",
               "value": "#dedede",
             },
             "birthday": Object {
-              "groupId": "GROUP_IDS.GENERAL",
+              "groupId": "General",
               "label": "Birthday",
-              "type": "ControlTypes.DATE",
-              "value": "new Date(1990, 1, 1)",
+              "type": "date",
+              "value": 1990-02-01T05:00:00.000Z,
             },
             "color": Object {
-              "groupId": "GROUP_IDS.DISPLAY",
-              "type": "ControlTypes.COLOR",
+              "groupId": "Display",
+              "type": "color",
               "value": "#000000",
             },
             "dog": Object {
-              "groupId": "GROUP_IDS.FAVORITES",
-              "options": "arrayOfObjects",
-              "type": "ControlTypes.OPTIONS",
-              "value": "arrayOfObjects.undefined",
+              "groupId": "Favorites",
+              "options": Array [
+                Object {
+                  "dogParent": "Matthew",
+                  "label": "Sparky",
+                  "location": "Austin",
+                },
+                Object {
+                  "dogParent": "Joshua",
+                  "label": "Juniper",
+                  "location": "Austin",
+                },
+              ],
+              "type": "options",
+              "value": Object {
+                "dogParent": "Matthew",
+                "label": "Sparky",
+                "location": "Austin",
+              },
             },
             "dollars": Object {
-              "groupId": "GROUP_IDS.GENERAL",
+              "groupId": "General",
               "label": "Dollars",
               "max": 100,
               "min": 0,
               "step": 0.01,
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 12.5,
             },
             "fruit": Object {
-              "groupId": "GROUP_IDS.FAVORITES",
+              "groupId": "Favorites",
               "label": "Fruit",
               "options": Object {
                 "Apple": "apple",
                 "Banana": "banana",
                 "Cherry": "cherry",
               },
-              "type": "ControlTypes.OPTIONS",
+              "type": "options",
               "value": "apple",
             },
             "hidden": Object {
               "hidden": true,
-              "type": "ControlTypes.TEXT",
+              "type": "text",
             },
             "images": Object {
               "accept": "image/*",
-              "groupId": "GROUP_IDS.DISPLAY",
+              "groupId": "Display",
               "label": "Happy Picture",
-              "type": "ControlTypes.FILES",
+              "type": "files",
               "value": Array [
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=",
               ],
             },
             "items": Object {
-              "groupId": "GROUP_IDS.FAVORITES",
+              "groupId": "Favorites",
               "label": "Items",
               "rowType": Object {
                 "name": Object {
-                  "type": "ControlTypes.TEXT",
+                  "type": "text",
                 },
               },
-              "type": "ControlTypes.ARRAY",
+              "type": "array",
               "value": Array [
                 Object {
                   "name": "Laptop",
@@ -1606,30 +1559,30 @@ any *markdown* is allowed
               ],
             },
             "nice": Object {
-              "groupId": "GROUP_IDS.FAVORITES",
+              "groupId": "Favorites",
               "label": "Nice",
-              "type": "ControlTypes.BOOLEAN",
+              "type": "boolean",
               "value": true,
             },
             "otherFruit": Object {
               "display": "radio",
-              "groupId": "GROUP_IDS.FAVORITES",
+              "groupId": "Favorites",
               "label": "Other Fruit",
               "options": Object {
                 "Guava": "guava",
                 "Kiwi": "kiwi",
                 "Watermelon": "watermelon",
               },
-              "type": "ControlTypes.OPTIONS",
+              "type": "options",
               "value": "watermelon",
             },
             "otherStyles": Object {
-              "groupId": "GROUP_IDS.DISPLAY",
+              "groupId": "Display",
               "label": "Styles",
-              "type": "ControlTypes.OBJECT",
+              "type": "object",
               "value": Object {
                 "border": Object {
-                  "data": "null",
+                  "data": null,
                   "type": "text",
                   "value": "2px dashed silver",
                 },
@@ -1644,15 +1597,15 @@ any *markdown* is allowed
               },
             },
             "userName": Object {
-              "groupId": "GROUP_IDS.GENERAL",
+              "groupId": "General",
               "label": "Name",
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "Storyteller",
             },
             "years": Object {
-              "groupId": "GROUP_IDS.GENERAL",
+              "groupId": "General",
               "label": "Years in NY",
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 9,
             },
           },
@@ -1670,21 +1623,22 @@ any *markdown* is allowed
           },
           "name": "kitchenSink",
           "propTypes": Object {
-            "age": "undefined.isRequired",
-            "backgroundColor": "undefined.isRequired",
-            "birthday": "undefined.isRequired",
-            "color": "undefined.isRequired",
-            "dog": "undefined.isRequired",
-            "dollars": "undefined.isRequired",
-            "fruit": "undefined.isRequired",
-            "images": "undefined.isRequired",
-            "items": "undefined.isRequired",
-            "nice": "undefined.isRequired",
-            "otherFruit": "undefined.isRequired",
-            "otherStyles": "undefined.isRequired",
-            "userName": "undefined.isRequired",
-            "years": "undefined.isRequired",
+            "age": [Function],
+            "backgroundColor": [Function],
+            "birthday": [Function],
+            "color": [Function],
+            "dog": [Function],
+            "dollars": [Function],
+            "fruit": [Function],
+            "images": [Function],
+            "items": [Function],
+            "nice": [Function],
+            "otherFruit": [Function],
+            "otherStyles": [Function],
+            "userName": [Function],
+            "years": [Function],
           },
+          "renderFn": [Function],
           "source": "({
   userName,
   age,
@@ -1746,7 +1700,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1772,7 +1725,6 @@ any *markdown* is allowed
                           "line": 2,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -1801,7 +1753,6 @@ any *markdown* is allowed
                           "line": 2,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -1830,7 +1781,6 @@ any *markdown* is allowed
                           "line": 3,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "message",
@@ -1841,19 +1791,19 @@ any *markdown* is allowed
           "controls": Object {
             "age": Object {
               "label": "Age",
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 35,
             },
             "message": Object {
               "label": "Mesage",
               "order": 0,
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "Hello!",
             },
             "name": Object {
               "label": "Name",
               "order": 3,
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "James",
             },
           },
@@ -1870,6 +1820,7 @@ any *markdown* is allowed
             },
           },
           "name": "orderControls",
+          "renderFn": [Function],
           "source": "({ age, name, message }) => {
   const content = \`
     I am \${name} and I'm \${age} years old.
@@ -1892,7 +1843,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1918,7 +1868,6 @@ any *markdown* is allowed
                           "line": 0,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "number",
@@ -1936,7 +1885,7 @@ any *markdown* is allowed
                 },
               },
               "label": "A number",
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 10,
             },
           },
@@ -1953,6 +1902,7 @@ any *markdown* is allowed
             },
           },
           "name": "randomNumber",
+          "renderFn": [Function],
           "source": "({ number }) => number",
         },
         "textDefaultProp": Object {
@@ -1968,7 +1918,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -1994,7 +1943,6 @@ any *markdown* is allowed
                           "line": 0,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -2004,7 +1952,7 @@ any *markdown* is allowed
           ],
           "controls": Object {
             "text": Object {
-              "type": "ControlTypes.TEXT",
+              "type": "text",
               "value": "Hello",
             },
           },
@@ -2021,6 +1969,7 @@ any *markdown* is allowed
             },
           },
           "name": "textDefaultProp",
+          "renderFn": [Function],
           "source": "({ text }) => text",
         },
       },
@@ -2034,18 +1983,17 @@ any *markdown* is allowed
           "name": Object {
             "label": "Name",
             "order": 9999,
-            "type": "ControlTypes.TEXT",
+            "type": "text",
             "value": "Mark",
           },
         },
-        "date": 2020-07-17T14:45:45.849Z,
-        "dateModified": 2020-07-17T14:45:45.850Z,
+        "date": "2020-07-17T14:45:45.849Z",
+        "dateModified": "2020-07-17T14:45:45.850Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
         "package": "d1f03618863bd813182b2668bed6d262",
         "title": "Introduction/Doc",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
-      "hash": undefined,
       "stories": Object {
         "docsControlsTable": Object {
           "arguments": Array [
@@ -2060,7 +2008,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -2086,7 +2033,6 @@ any *markdown* is allowed
                           "line": 3,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "name",
@@ -2115,7 +2061,6 @@ any *markdown* is allowed
                           "line": 3,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "age",
@@ -2129,7 +2074,7 @@ any *markdown* is allowed
               "max": 75,
               "min": 10,
               "step": 5,
-              "type": "ControlTypes.NUMBER",
+              "type": "number",
               "value": 19,
             },
           },
@@ -2145,6 +2090,7 @@ any *markdown* is allowed
             },
           },
           "name": "docsControlsTable",
+          "renderFn": [Function],
           "source": "({ name, age }: DocsControlsTable = {}) => {
   return (
     <>
@@ -2163,14 +2109,13 @@ any *markdown* is allowed
         "componentsLookup": Object {
           "Button": "dd96934cfa10038428b57421ede5ec17",
         },
-        "date": 2020-07-17T14:45:45.850Z,
-        "dateModified": 2020-07-17T14:45:45.850Z,
+        "date": "2020-07-17T14:45:45.850Z",
+        "dateModified": "2020-07-17T14:45:45.850Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
         "package": "56bf0298abb3e6152739be8e0540ef47",
         "title": "Introduction/Smart PropTypes",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
-      "hash": undefined,
       "stories": Object {
         "allProps": Object {
           "arguments": Array [
@@ -2198,7 +2143,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2216,6 +2160,7 @@ any *markdown* is allowed
             },
           },
           "name": "allProps",
+          "renderFn": [Function],
           "source": "props => <Button {...props} />",
         },
         "noColors": Object {
@@ -2244,7 +2189,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2262,6 +2206,7 @@ any *markdown* is allowed
             },
           },
           "name": "noColors",
+          "renderFn": [Function],
           "smartControls": Object {
             "exclude": Array [
               "color",
@@ -2284,6 +2229,7 @@ any *markdown* is allowed
             },
           },
           "name": "noProps",
+          "renderFn": [Function],
           "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
@@ -2312,7 +2258,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2330,6 +2275,7 @@ any *markdown* is allowed
             },
           },
           "name": "onlyColors",
+          "renderFn": [Function],
           "smartControls": Object {
             "include": Array [
               "color",
@@ -2348,14 +2294,13 @@ any *markdown* is allowed
         "componentsLookup": Object {
           "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
-        "date": 2020-07-17T14:45:45.850Z,
-        "dateModified": 2020-07-17T14:45:45.851Z,
+        "date": "2020-07-17T14:45:45.850Z",
+        "dateModified": "2020-07-17T14:45:45.851Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
         "package": "2971104eea653041fd49648ff7a04be8",
         "title": "Introduction/Smart Typescript",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-      "hash": undefined,
       "stories": Object {
         "allProps": Object {
           "arguments": Array [
@@ -2383,7 +2328,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2401,6 +2345,7 @@ any *markdown* is allowed
             },
           },
           "name": "allProps",
+          "renderFn": [Function],
           "source": "props => <Button {...props} />",
         },
         "noColors": Object {
@@ -2429,7 +2374,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2447,6 +2391,7 @@ any *markdown* is allowed
             },
           },
           "name": "noColors",
+          "renderFn": [Function],
           "smartControls": Object {
             "exclude": Array [
               "color",
@@ -2469,6 +2414,7 @@ any *markdown* is allowed
             },
           },
           "name": "noProps",
+          "renderFn": [Function],
           "source": "() => <Button>No properties</Button>",
         },
         "onlyColors": Object {
@@ -2497,7 +2443,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2515,6 +2460,7 @@ any *markdown* is allowed
             },
           },
           "name": "onlyColors",
+          "renderFn": [Function],
           "smartControls": Object {
             "include": Array [
               "color",
@@ -2530,14 +2476,13 @@ any *markdown* is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": 2020-07-17T14:45:46.127Z,
-        "dateModified": 2020-07-17T14:45:46.127Z,
+        "date": "2020-07-17T14:45:46.127Z",
+        "dateModified": "2020-07-17T14:45:46.127Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
         "package": "f6e72e22789f0ec595d8610e56ea91ff",
         "title": "Introduction/ESM",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
-      "hash": undefined,
       "stories": Object {
         "externalStory": Object {
           "arguments": Array [],
@@ -2554,6 +2499,7 @@ any *markdown* is allowed
             },
           },
           "name": "externalStory",
+          "renderFn": [Function],
           "source": "() => <div>test</div>",
         },
         "externalStoryDeconstructedProps": Object {
@@ -2569,7 +2515,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -2595,7 +2540,6 @@ any *markdown* is allowed
                           "line": 0,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -2622,6 +2566,7 @@ any *markdown* is allowed
             },
           },
           "name": "externalStoryDeconstructedProps",
+          "renderFn": [Function],
           "source": "({ text }) => <div>{text}</div>",
         },
         "externalStoryProps": Object {
@@ -2650,7 +2595,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2675,6 +2619,7 @@ any *markdown* is allowed
             },
           },
           "name": "externalStoryProps",
+          "renderFn": [Function],
           "source": "props => <div>{props.text}</div>",
         },
         "multipleChildren": Object {
@@ -2692,6 +2637,7 @@ any *markdown* is allowed
             },
           },
           "name": "multipleChildren",
+          "renderFn": [Function],
           "source": "() => (
   <>
     <button>button 1</button>
@@ -2714,6 +2660,7 @@ any *markdown* is allowed
             },
           },
           "name": "simple",
+          "renderFn": [Function],
           "source": "() => <div>test</div>",
         },
         "storyDesconstructedProps": Object {
@@ -2729,7 +2676,6 @@ any *markdown* is allowed
                   "line": 0,
                 },
               },
-              "name": undefined,
               "value": Array [
                 Object {
                   "loc": Object {
@@ -2755,7 +2701,6 @@ any *markdown* is allowed
                           "line": 0,
                         },
                       },
-                      "shorthand": undefined,
                     },
                   ],
                   "value": "text",
@@ -2782,6 +2727,7 @@ any *markdown* is allowed
             },
           },
           "name": "storyDesconstructedProps",
+          "renderFn": [Function],
           "source": "({ text }) => <div>{text}</div>",
         },
         "storyProps": Object {
@@ -2810,7 +2756,6 @@ any *markdown* is allowed
                       "line": 0,
                     },
                   },
-                  "shorthand": undefined,
                 },
               ],
               "value": "props",
@@ -2835,6 +2780,7 @@ any *markdown* is allowed
             },
           },
           "name": "storyProps",
+          "renderFn": [Function],
           "source": "props => <div>{props.text}</div>",
         },
       },

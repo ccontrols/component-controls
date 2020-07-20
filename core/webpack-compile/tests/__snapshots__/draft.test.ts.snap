@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test draft compile 1`] = `
-Store {
-  "_docpaths": undefined,
-  "_homepaths": undefined,
+Object {
   "buildConfig": Object {
     "categories": Array [
       "author",
@@ -39,17 +37,8 @@ Store {
       "./*.stories.(js|jsx|tsx|mdx)",
     ],
   },
-  "buildDocPaths": [Function],
-  "buildHomePaths": [Function],
   "components": Object {},
-  "config": Object {},
-  "getDocPage": [Function],
-  "getDocPaths": [Function],
-  "getDocs": [Function],
-  "getHomePage": [Function],
-  "getHomePaths": [Function],
-  "getIndexPage": [Function],
-  "getUniquesByField": [Function],
+  "config": undefined,
   "packages": Object {},
   "stores": Array [],
 }

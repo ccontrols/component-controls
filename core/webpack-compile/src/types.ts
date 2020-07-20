@@ -22,7 +22,7 @@ export interface CompileProps {
   distFolder?: string;
 
   /** public file name the bundle, by default 'compoonent-controls.js' */
-  bundleName: string;
+  bundleName?: string;
 
   /** public output folder for the assets like images */
   staticFolder?: string;

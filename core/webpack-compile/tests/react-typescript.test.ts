@@ -10,10 +10,11 @@ expect.addSnapshotSerializer({
 
 describe('test typescript react settings', () => {
   it('compile', async () => {
-    const { store } = await compile({
+    const { bundleName } = await compile({
       presets: ['react', 'react-docgen-typescript'],
       configPath: path.resolve(__dirname, 'fixtures'),
     });
-    expect(store).toMatchSnapshot();
+    const bundle = require(bundleName);
+    expect(bundle).toMatchSnapshot();
   }, 30000);
 });
