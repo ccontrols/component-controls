@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/ccontrols/component-controls/compare/v1.10.0...v1.10.1) (2020-07-20)
+
+
+### Bug Fixes
+
+* bundle location for nextjs ([171e9c9](https://github.com/ccontrols/component-controls/commit/171e9c9c67fe11d84e5f98ea8985b10f2f8c6b10))
+
+
+
+
+
 # [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
 
 
