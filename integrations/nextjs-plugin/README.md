@@ -190,12 +190,14 @@ _build [source code](https://github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name           | Type            | Description                                              |
-| -------------- | --------------- | -------------------------------------------------------- |
-| `configPath`   | _string_        | path to config file                                      |
-| `webpack`      | _Configuration_ | webpack                                                  |
-| `presets`      | _RuleTypes_     | presets options that will be passed to the instrumenter. |
-| `outputFolder` | _string_        | output folder for generated bundle                       |
+| Name           | Type            | Description                                                           |
+| -------------- | --------------- | --------------------------------------------------------------------- |
+| `webPack`      | _Configuration_ | webpack configuration object                                          |
+| `presets`      | _RuleTypes_     | a list of webpack configuration presets from webpack-configs packages |
+| `configPath`   | _string_        | path to the configuration file e.g : '.storybook'                     |
+| `distFolder`   | _string_        | public output folder for the bundle                                   |
+| `bundleName`   | _string_        | public file name the bundle, by default 'compoonent-controls.js'      |
+| `staticFolder` | _string_        | public output folder for the assets like images                       |
 
 ## <ins>Layout</ins>
 

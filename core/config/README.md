@@ -79,14 +79,16 @@ convert glob patters from config file into require.context objects
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L118)_
 
-**function** configRequireContext(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): [RequireContextProps](#requirecontextprops)\[] | undefined;
+**function** configRequireContext(`__namedParameters`\*: **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)base url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories
+internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
+example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string): [RequireContextProps](#requirecontextprops)\[] | undefined;
 
 ### parameters
 
-| Name                 | Type                                                                        | Description |
-| -------------------- | --------------------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string |             |
-| `returns`            | [RequireContextProps](#requirecontextprops)\[] \| undefined                 |             |
+| Name                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)base url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string |             |
+| `returns`            | [RequireContextProps](#requirecontextprops)\[] \| undefined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
 
 ## extractDocuments
 
@@ -95,14 +97,16 @@ using glob for the regex file search
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L90)_
 
-**function** extractDocuments(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): string\[] | undefined;
+**function** extractDocuments(`__namedParameters`\*: **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)base url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories
+internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
+example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string): string\[] | undefined;
 
 ### parameters
 
-| Name                 | Type                                                                        | Description |
-| -------------------- | --------------------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string |             |
-| `returns`            | string\[] \| undefined                                                      |             |
+| Name                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)base url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string |             |
+| `returns`            | string\[] \| undefined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |             |
 
 ## fixGlob
 

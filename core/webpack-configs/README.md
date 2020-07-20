@@ -224,7 +224,7 @@ _defined in [@component-controls/webpack-configs/src/types.ts](https://github.co
 | Name           | Type   | Description |
 | -------------- | ------ | ----------- |
 | `distFolder`   | string |             |
-| `outputFolder` | string |             |
+| `staticFolder` | string |             |
 
 ## RuleOptions
 
