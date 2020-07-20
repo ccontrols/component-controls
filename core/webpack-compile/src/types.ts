@@ -21,7 +21,7 @@ export interface CompileProps {
   /** public output folder for the bundle */
   distFolder?: string;
 
-  /** public file name the bundle, by default 'compoonent-controls.js' */
+  /** public file name the bundle, by default 'component-controls.js' */
   bundleName?: string;
 
   /** public output folder for the assets like images */

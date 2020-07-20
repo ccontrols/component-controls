@@ -86,7 +86,7 @@ _defined in [@component-controls/webpack-compile/src/types.ts](https://github.co
 
 | Name           | Type                            | Description                                                           |
 | -------------- | ------------------------------- | --------------------------------------------------------------------- |
-| `bundleName`   | string                          | public file name the bundle, by default 'compoonent-controls.js'      |
+| `bundleName`   | string                          | public file name the bundle, by default 'component-controls.js'       |
 | `configPath`   | string                          | path to the configuration file e.g : '.storybook'                     |
 | `distFolder`   | string                          | public output folder for the bundle                                   |
 | `presets`      | [RuleTypes](#ruletypes)         | a list of webpack configuration presets from webpack-configs packages |

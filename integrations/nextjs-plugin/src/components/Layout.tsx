@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { AppContext } from '@component-controls/app';
-const { store } = require('./store');
+import { store } from '../store';
 
 import { NextLink } from './NextLink';
 

@@ -1,5 +1,4 @@
 import path from 'path';
-import fs from 'fs';
 import {
   compile,
   watch,
@@ -11,7 +10,6 @@ let builtStarted = false;
 export default ({
   bundleName,
   configPath,
-  distFolder,
   presets,
   staticFolder,
   webPack,
@@ -21,12 +19,13 @@ export default ({
   const userProps: CompileProps = {
     bundleName,
     configPath,
-    staticFolder,
     webPack,
   };
   const options: CompileProps = {
     presets: presets || defaultPresets,
-    distFolder: distFolder || path.join(process.cwd(), defaultConfig.distDir),
+    distFolder: path.resolve(__dirname, '..'),
+    staticFolder:
+      staticFolder || path.join(process.cwd(), defaultConfig.distDir),
     ...userProps,
   };
 
@@ -36,23 +35,7 @@ export default ({
       process.env.NODE_ENV === 'development'
         ? watch(options)
         : compile(options);
-    compiler.then(({ bundleName }) => {
-      //temporary hack to send the bundle name to static props
-      fs.writeFile(
-        path.resolve(__dirname, './store.js'),
-        `
-const { HMRStore } = require('@component-controls/store');
-const bundle = require("${bundleName}");
-const store = new HMRStore(bundle);
-exports.store = store;
-`,
-        err => {
-          if (err) {
-            console.error(err);
-          }
-        },
-      );
-    });
+    compiler.then(() => {});
   }
   return {
     ...rest,

@@ -23,7 +23,7 @@ export type CompileRunProps = CompileProps & {
   mode: Configuration['mode'];
 };
 
-export const defBundleName = 'compoonent-controls.js';
+export const defBundleName = 'component-controls.js';
 
 export const getBundleName = (options: CompileProps) =>
   path.join(
