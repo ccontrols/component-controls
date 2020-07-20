@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* clean up compile message ([4401d09](https://github.com/ccontrols/component-controls/commit/4401d09656c2bfc3e70b4b3b6f91e0232988f773))
+* hmr account for deleted files ([3fb11da](https://github.com/ccontrols/component-controls/commit/3fb11dacedbfeb326fb9b7f678555580f5f96459))
+* lint memo hook ([5ebba02](https://github.com/ccontrols/component-controls/commit/5ebba02353d50b845a5bb079e673c4d2e6f4cec1))
+* nextjs story bundle location ([636ffac](https://github.com/ccontrols/component-controls/commit/636ffac5d2b02889e9d76bd5a723c5d07c97d97b))
+* only log assigned error ([ca5c219](https://github.com/ccontrols/component-controls/commit/ca5c219053b268efd7ea2e9ca077cdba0514c345))
+* remove log ([47c0ad1](https://github.com/ccontrols/component-controls/commit/47c0ad1582348b5c9f18d7ffa95c9ebd95d8c007))
+* restore import ([f9785d0](https://github.com/ccontrols/component-controls/commit/f9785d05ab5db6882e1e4841beee9d0972a9f75b))
+* static path fix ([8e13d58](https://github.com/ccontrols/component-controls/commit/8e13d580f5d4309e956f26092e50dad32ae9e0e2))
+* typings ([b08e750](https://github.com/ccontrols/component-controls/commit/b08e750a77ad7e97830c0bf735319bb2a99c80f2))
+* update loader for HMR ([fdf1ee8](https://github.com/ccontrols/component-controls/commit/fdf1ee8095b818e9309f0c1c31ca4970ed35b91d))
+* update readdata store for sb ([5852985](https://github.com/ccontrols/component-controls/commit/58529853a669379cc0e56887256841e659d27754))
+* update store import ([a5b017b](https://github.com/ccontrols/component-controls/commit/a5b017b077be275dc4aae1a38437c8f789bbecc7))
+
+
+### Features
+
+* hmr update ([49413fc](https://github.com/ccontrols/component-controls/commit/49413fc6cb7e14fc4bb494c24223a9f9f719d609))
+* require context hmr ([1587fba](https://github.com/ccontrols/component-controls/commit/1587fbab36a4f70b8c014f86c040e33adfe6ce58))
+
+
+
+
+
 # [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
 
 

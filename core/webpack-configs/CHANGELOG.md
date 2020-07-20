@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* static path fix ([8e13d58](https://github.com/ccontrols/component-controls/commit/8e13d580f5d4309e956f26092e50dad32ae9e0e2))
+* update loader for HMR ([fdf1ee8](https://github.com/ccontrols/component-controls/commit/fdf1ee8095b818e9309f0c1c31ca4970ed35b91d))
+
+
+
+
+
 # [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* typings ([b08e750](https://github.com/ccontrols/component-controls/commit/b08e750a77ad7e97830c0bf735319bb2a99c80f2))
+* update readdata store for sb ([5852985](https://github.com/ccontrols/component-controls/commit/58529853a669379cc0e56887256841e659d27754))
+
+
+### Features
+
+* hmr update ([49413fc](https://github.com/ccontrols/component-controls/commit/49413fc6cb7e14fc4bb494c24223a9f9f719d609))
+
+
+
+
+
 # [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
 
 

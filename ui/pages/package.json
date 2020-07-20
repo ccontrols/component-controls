@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/pages",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Component controls pre-built documentation page templates.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,12 +30,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.9.0",
-    "@component-controls/blocks": "^1.9.0",
+    "@component-controls/axe-plugin": "^1.10.0",
+    "@component-controls/blocks": "^1.10.0",
     "react": "^16.8.3"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.5.0",
+    "@component-controls/ts-markdown-docs": "^1.10.0",
     "@types/jest": "^25.1.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",

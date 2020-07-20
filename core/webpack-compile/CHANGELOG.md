@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* clean up compile message ([4401d09](https://github.com/ccontrols/component-controls/commit/4401d09656c2bfc3e70b4b3b6f91e0232988f773))
+* nextjs story bundle location ([636ffac](https://github.com/ccontrols/component-controls/commit/636ffac5d2b02889e9d76bd5a723c5d07c97d97b))
+* restore import ([f9785d0](https://github.com/ccontrols/component-controls/commit/f9785d05ab5db6882e1e4841beee9d0972a9f75b))
+* update loader for HMR ([fdf1ee8](https://github.com/ccontrols/component-controls/commit/fdf1ee8095b818e9309f0c1c31ca4970ed35b91d))
+
+
+
+
+
 # [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
 
 

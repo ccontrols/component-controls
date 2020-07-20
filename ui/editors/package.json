@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/editors",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Component controls editors for component control values.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,8 +30,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.9.0",
-    "@component-controls/core": "^1.9.0",
+    "@component-controls/components": "^1.10.0",
+    "@component-controls/core": "^1.10.0",
     "@primer/octicons-react": "^10.0.0",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",
@@ -42,7 +42,7 @@
     "theme-ui": "next"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.5.0",
+    "@component-controls/ts-markdown-docs": "^1.10.0",
     "@types/jest": "^25.1.2",
     "@types/react-color": "^3.0.1",
     "cross-env": "^5.2.1",
