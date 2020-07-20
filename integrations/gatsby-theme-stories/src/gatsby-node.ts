@@ -5,8 +5,8 @@ import {
   getBundleName,
 } from '@component-controls/webpack-compile';
 import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
-import { StorePlugin } from '@component-controls/store/plugin';
 import { HMRStore } from '@component-controls/store';
+const { StorePlugin } = require('@component-controls/store/plugin');
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
