@@ -19,7 +19,7 @@ const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { store } = require('@component-controls/nextjs-plugin/store');
+  const { store } = require('@component-controls/nextjs-plugin');
   const { docId = null, type = null } = store.getIndexPage() || {};
   return { props: { docId, type } };
 };

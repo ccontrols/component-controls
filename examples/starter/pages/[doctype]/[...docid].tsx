@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocPage } from '@component-controls/app';
 import { DocType } from '@component-controls/core';
-import { Layout } from '@component-controls/nextjs-plugin';
+import { Layout, store } from '@component-controls/nextjs-plugin';
 
 interface DocPageProps {
   docId?: string;
@@ -29,13 +29,11 @@ const DocPageTemplate: FC<DocPageProps> = ({
 export default DocPageTemplate;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { store } = require('@component-controls/nextjs-plugin/store');
   const paths: string[] = store ? store.getDocPaths() : [];
   return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { store } = require('@component-controls/nextjs-plugin/store');
   const { doctype, docid } = params as { doctype: string; docid: string[] };
   const {
     type = null,

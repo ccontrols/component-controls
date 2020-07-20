@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocType, defDocType } from '@component-controls/core';
 import { DocumentHomePage } from '@component-controls/app';
-import { Layout } from '@component-controls/nextjs-plugin';
+import { Layout, store } from '@component-controls/nextjs-plugin';
 
 interface PageListProps {
   type: DocType;
@@ -18,13 +18,11 @@ const DocHomeTemplate: FC<PageListProps> = ({ type = defDocType, docId }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { store } = require('@component-controls/nextjs-plugin/store');
   const paths: string[] = store.getHomePaths();
   return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { store } = require('@component-controls/nextjs-plugin/store');
   const { doctype: basepath } = params as { doctype: string };
   const { type = null, docId = null } = store.getHomePage(`/${basepath}`) || {};
   return { props: { docId, type } };
