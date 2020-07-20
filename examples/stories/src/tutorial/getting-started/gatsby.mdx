@@ -31,8 +31,7 @@ Add gatsby and its dependencies:
 yarn add gatsby react react-dom
 ```
 
-In `package.json`:
-```json
+```json:title=package.json
 ...
   "scripts": {
     "build": "gatsby build",
@@ -54,8 +53,7 @@ yarn add @component-controls/gatsby-theme-stories
 ### Configure theme
 
 Create a `gatsby-config.js` file in your project's home directory:
-```js
-//gatsby-config.js:
+```js:title=gatsby-config.js
 module.exports = {
   plugins: [
     {
@@ -79,8 +77,7 @@ In the `.config` folder, create a `buildtime.js` file.
 
 In this file, enter the paths (e.g. .mdx and/or .tsx) we want to search for the documentation files:
 
-```js
-//.config/buildtime.js
+```js:title=.config/buildtime.js
 module.exports = {
   stories: [
     '../src/docs/*.@(mdx|tsx)',
@@ -98,9 +95,7 @@ mkdir src && mkdir src/docs
 
 ### MDX documentation file
 
-In `src/docs/first-page.mdx`:
-
-```mdx
+```mdx:title=src/docs/first-page.mdx
 ---
 title: First Page
 ---
@@ -119,9 +114,7 @@ Assuming you have a `Button` component, you can write stories(examples) for it.
 
 (If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
 
-In `src/docs/first-story.mdx`:
-
-```mdx
+```mdx:title=src/docs/first-story.mdx
 ---
 title: First Story
 ---
@@ -153,9 +146,8 @@ Assuming you have a `Button` component, you can write stories(examples) for it.
 
 (If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
 
-In `src/docs/first-story.stories.tsx`:
 
-```jsx
+```jsx:title=src/docs/first-story.stories.tsx
 import React from 'react';
 import { Button } from '../components/Button';
 
@@ -175,8 +167,7 @@ more: [writing esm stories](/tutorial/esmodules-stories)
 
 In `.config`, create a `runtime.js` file and change some of the site's meta information:
 
-```js
-//.config/runtime.js
+```js:title=.config/runtime.js
 module.exports = {
   siteTitle: `awLib`,
   siteHeadline: `Awesome components only`,
@@ -195,7 +186,7 @@ If your project is public, you can automatically display a git link on all docum
 
 Displaying the git link is simple. Just add the repository's information in `package.json`:
 
-```json
+```json:title=package.json
 ...
 "repository": {
   "type": "git",

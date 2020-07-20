@@ -106,7 +106,7 @@ export const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({
       : ({ className, style, tokens, getLineProps, getTokenProps }: any) => (
           <Fragment>
             {title && (
-              <Heading as="h2" variant="syntaxhighlight.title">
+              <Heading as="h3" variant="syntaxhighlight.title">
                 {title}
               </Heading>
             )}

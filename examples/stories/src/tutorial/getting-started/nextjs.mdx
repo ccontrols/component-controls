@@ -15,9 +15,8 @@ yarn add @component-controls/nextjs-plugin
 
 the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
 
-in `next.config.js`:
 
-```js
+```js:title=next.config.js
 const withStories = require('@component-controls/nextjs-plugin/build');
 
 module.exports = withStories({ configPath: '.config', ....other options });
@@ -29,8 +28,8 @@ module.exports = withStories({ configPath: '.config', ....other options });
 ## Create routes
 
 ### Create home page
-in `pages/index.tsx`:
-```jsx
+
+```jsx:title=pages/index.tsx
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
 
@@ -62,8 +61,7 @@ export default HomePage;
 
 ### Create document type pages
 
-in `pages/[doctype].tsx`:
-```jsx
+```jsx:title=pages/[doctype].tsx
 import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocType, defDocType } from '@component-controls/core';
@@ -100,8 +98,7 @@ export default DocHomeTemplate;
 
 ### Create document and story pages
 
-in `pages/[doctype]/[...docid].tsx`:
-```jsx
+```jsx:title=pages/[doctype]/[...docid].tsx
 import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocPage } from '@component-controls/app';

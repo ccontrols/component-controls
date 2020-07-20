@@ -475,6 +475,9 @@ export const theme: ControlsTheme = {
     pb: 1,
   },
   syntaxhighlight: {
+    markdown: {
+      my: 2,
+    },
     highlight: {
       pl: 1,
       backgroundColor: 'highlight',
@@ -482,8 +485,10 @@ export const theme: ControlsTheme = {
     },
     normal: {},
     title: {
-      fontWeight: 'bold',
-      pl: 2,
+      width: 'inherit',
+      background: 'transparent',
+      p: 2,
+      fontSize: 2,
     },
   },
   tabs: {

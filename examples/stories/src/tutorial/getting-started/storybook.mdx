@@ -17,9 +17,8 @@ yarn add @component-controls/storybook --dev
 
 The default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
 
-In `main.js`:
 
-```js
+```js:title=main.js
 module.exports = {
   addons: ['@component-controls/storybook']
 }
@@ -29,9 +28,8 @@ module.exports = {
 
 Currently this is not recommended as the typescript support in `react-docgen` is a bit lagging.
 
-in `main.js`:
 
-```js
+```js:title=main.js
 module.exports = {
   addons: [{
     name: '@component-controls/storybook',
@@ -46,9 +44,8 @@ module.exports = {
 
 The following options will bypass the loaders installed by `addon-docs` and will rely only on the instrumenting loaders from `component-controls`
 
-in `main.js`:
 
-```js
+```js:title=main.js
 module.exports = {
   addons: [{
     name: '@component-controls/storybook',
