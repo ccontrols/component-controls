@@ -47,7 +47,9 @@ const store = new HMRStore(bundle);
 exports.store = store;
 `,
         err => {
-          console.error(err);
+          if (err) {
+            console.error(err);
+          }
         },
       );
     });
