@@ -218,7 +218,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "next",
       },
       "devDependencies": Object {
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@types/jest": "^25.1.2",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -240,7 +240,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.9.0",
+      "version": "1.10.0",
     },
     "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2": Object {
       "dependencies": Object {
@@ -263,7 +263,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "next",
       },
       "devDependencies": Object {
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@types/jest": "^25.1.2",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -285,7 +285,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.9.0",
+      "version": "1.10.0",
     },
   },
   "stores": Array [
