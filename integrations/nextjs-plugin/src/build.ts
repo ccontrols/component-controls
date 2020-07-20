@@ -23,7 +23,7 @@ export default ({
   };
   const options: CompileProps = {
     presets: presets || defaultPresets,
-    distFolder: path.resolve(__dirname, '..'),
+    distFolder: path.resolve(__dirname),
     staticFolder:
       staticFolder || path.join(process.cwd(), defaultConfig.distDir),
     ...userProps,
