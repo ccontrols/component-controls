@@ -7,27 +7,31 @@ tags:
   - gatsby
 ---
 
+Below, we go over how to add a `component-controls` documentation site to both [new](/tutorial/getting-started/gatsby#new-project) and [existing](/tutorial/getting-started/gatsby#existing-gatsby-project) Gatsby projects.
+
+You can find a [git repo](https://github.com/atanasster/gatsby-controls-starter) and a [live version](https://gatsby-controls-starter.netlify.app/) of the site we'll build below.
+
 ## New project 
 
-Create a new folder
+Create a new folder:
 
 ```sh
 mkdir my-gatsby-project && cd my-gatsby-project
 ```
 
-initialize the project
+Initialize the project:
 
 ```sh
 yarn init
 ```
 
-add gatsby dependencies
+Add gatsby and its dependencies:
 
 ```sh
 yarn add gatsby react react-dom
 ```
 
-in `package.json`
+In `package.json`:
 ```json
 ...
   "scripts": {
@@ -37,9 +41,9 @@ in `package.json`
 ...
 ```
 
-The remaining steps are the same as for an existing gatsby project
+The remaining steps are the same as for an existing gatsby project, so just follow the steps below.
 
-## Existing project
+## Existing Gatsby project
 
 ### Add theme
 
@@ -49,7 +53,7 @@ yarn add @component-controls/gatsby-theme-stories
 
 ### Configure theme
 
-create a `gatsby-config.js` file in your project's home directory
+Create a `gatsby-config.js` file in your project's home directory:
 ```js
 //gatsby-config.js:
 module.exports = {
@@ -66,18 +70,20 @@ module.exports = {
 
 ### Configuration folder
 
-Create a new folder `.config` inside your project (or any other name that you used in the step above)
+Create a new folder called `.config` (or any other name that you used in the step above) inside your project's home directory:
 
 
 ### Build-time configuration
 
-In `.config` create a `buildtime.js` file and enter the paths to search for the component-controls documentation files
+In the `.config` folder, create a `buildtime.js` file.
+
+In this file, enter the paths (e.g. .mdx and/or .tsx) we want to search for the documentation files:
 
 ```js
 //.config/buildtime.js
 module.exports = {
   stories: [
-    '../src/docs/*.mdx',
+    '../src/docs/*.@(mdx|tsx)',
   ],
 };
 ```
@@ -85,14 +91,14 @@ more: [run-time configuration](/configuration/buildtime)
 
 ### Documentation folder
 
-create a folder to store your documentation files (the same as specified in the configuration file above):
+Create a folder to store your documentation files (the same as specified in the `.config/buildtime.js` file above):
 ```sh
 mkdir src && mkdir src/docs
 ```
 
 ### MDX documentation file
 
-in `src/docs/first-page.mdx`
+In `src/docs/first-page.mdx`:
 
 ```mdx
 ---
@@ -109,9 +115,11 @@ more: [writing mdx documentation](/tutorial/mdx-documentation)
 
 ### MDX "story" file
 
-Assuming you have a `Button` component, you can write stories(examples) for it:
+Assuming you have a `Button` component, you can write stories(examples) for it.
 
-in `src/docs/first-story.mdx`
+(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
+
+In `src/docs/first-story.mdx`:
 
 ```mdx
 ---
@@ -141,11 +149,14 @@ more: [writing mdx stories](/tutorial/mdx-stories)
 
 ### ESM "story" file
 
-Assuming you have a `Button` component, you can write stories(examples) for it:
+Assuming you have a `Button` component, you can write stories(examples) for it.
 
-in `src/docs/first-story.stories.tsx`
+(If you don't have a `Button` component, we built a simple one you can copy [here](https://github.com/atanasster/gatsby-controls-starter/blob/master/src/components/Button.tsx).)
+
+In `src/docs/first-story.stories.tsx`:
 
 ```jsx
+import React from 'react';
 import { Button } from '../components/Button';
 
 export default {
@@ -162,7 +173,7 @@ more: [writing esm stories](/tutorial/esmodules-stories)
 
 ### Run-time configuration
 
-In `.config` create a `runtime.js` file and change some of the site meta information
+In `.config`, create a `runtime.js` file and change some of the site's meta information:
 
 ```js
 //.config/runtime.js
@@ -180,7 +191,9 @@ more: [run-time configuration](/configuration/runtime)
 
 ### Project repository
 
-If your project is public, you can automatically display a git link on all documentation pages.Jjust add the repository information in `package.json`
+If your project is public, you can automatically display a git link on all documentation pages. For example, check out the "Edit this page" section [here](https://gatsby-controls-starter.netlify.app/docs/es-story--overview).
+
+Displaying the git link is simple. Just add the repository's information in `package.json`:
 
 ```json
 ...
@@ -190,5 +203,3 @@ If your project is public, you can automatically display a git link on all docum
 },
 ...
 ```
-
-[sample app source code](https://github.com/atanasster/gatsby-controls-starter)
