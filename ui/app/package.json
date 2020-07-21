@@ -34,7 +34,6 @@
     "@component-controls/components": "^1.10.0",
     "@component-controls/core": "^1.10.0",
     "@component-controls/pages": "^1.10.2",
-    "@theme-ui/match-media": "next",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",

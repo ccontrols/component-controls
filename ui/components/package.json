@@ -30,6 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@theme-ui/match-media": "next",
     "@primer/octicons-react": "^10.0.0",
     "@theme-ui/css": "next",
     "@theme-ui/presets": "next",
