@@ -1,18 +1,17 @@
 import { atom, useRecoilValue, useSetRecoilState } from 'recoil';
-import { StoryStore } from '@component-controls/store';
+import { Document, PackageInfo } from '@component-controls/core';
 
-export const storeAtom = atom<StoryStore | null>({
-  key: 'storyStore', // unique ID (with respect to other atoms/selectors)
-  default: null, // default value (aka initial value)
+export type DocumentAtom = Document & { package?: PackageInfo };
+
+export const documentAtom = atom<DocumentAtom | undefined>({
+  key: 'document',
+  default: undefined,
 });
 
-export const useStore = (): StoryStore => {
-  const store = useRecoilValue(storeAtom);
-  if (store === null) {
-    throw new Error('You can not access store before assigning it');
-  }
-  return store;
+export const useDocument = (): DocumentAtom | undefined => {
+  const doc = useRecoilValue(documentAtom);
+  return doc;
 };
 
-export const setStore = (store: StoryStore) =>
-  useSetRecoilState(storeAtom)(store);
+export const setDocument = (doc: DocumentAtom) =>
+  useSetRecoilState(documentAtom)(doc);

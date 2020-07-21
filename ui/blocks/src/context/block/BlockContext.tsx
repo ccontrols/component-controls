@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { deepMerge } from '@component-controls/core';
+import { deepMerge, Document } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { ErrorBoundary } from './ErrorBoundary';
+import { documentAtom } from './storeState';
 
 export interface BlockContextInputProps {
   /**
@@ -64,16 +65,28 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
 }) => {
   let storyId = propsStoryId;
   let docId = propsDocId;
+  let doc: Document | undefined;
   if (storyId && !docId) {
     const story = store.getStory(storyId);
     docId = story?.doc;
+    doc = docId ? store.getStoryDoc(docId) : undefined;
   } else if (!storyId && docId) {
-    const doc = store.getStoryDoc(docId);
+    doc = store.getStoryDoc(docId);
     storyId =
       doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
   }
   return (
-    <RecoilRoot>
+    <RecoilRoot
+      initializeState={({ set }) => {
+        set(documentAtom, {
+          ...doc,
+          package:
+            doc && doc.package
+              ? store.getStore()?.packages[doc.package]
+              : undefined,
+        });
+      }}
+    >
       <ErrorBoundary>
         <StoreContext.Provider
           value={{

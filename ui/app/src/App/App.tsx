@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { FC, Fragment, useContext, useEffect } from 'react';
+import { FC, Fragment, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
 import { BlockContext } from '@component-controls/blocks';
 import { SEO } from '../SEO';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { useAnalytics } from './useAnalytics';
 
 export interface AppProps {
   /**
@@ -43,9 +44,8 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
   const pageDescription = doc
     ? storeProvider.getDocDescription(doc)
     : undefined;
-  useEffect(() => {
-    storeProvider.visitPage();
-  }, [storeProvider]);
+  useAnalytics(storeProvider);
+
   return (
     <Fragment>
       <SEO title={pageTitle} description={pageDescription} />

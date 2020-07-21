@@ -1,5 +1,3 @@
-import Analytics from 'analytics';
-import googleAnalytics from '@analytics/google-analytics';
 import {
   StoriesStore,
   Pages,
@@ -323,30 +321,6 @@ export class Store implements StoryStore {
     return getStoryPath(story.id, doc, this.config?.pages, activeTab);
   };
 
-  initializeAnalytics = () => {
-    if (this.loadedStore) {
-      const options = this.loadedStore.config?.analytics;
-      if (options) {
-        if (typeof options === 'string') {
-          this._analytics = Analytics({
-            app: this.loadedStore.config?.siteTitle,
-            plugins: [
-              googleAnalytics({
-                trackingId: options,
-              }),
-            ],
-          });
-        } else {
-          this._analytics = Analytics(options);
-        }
-      }
-    }
-  };
-  visitPage = () => {
-    if (this._analytics) {
-      this._analytics.page();
-    }
-  };
   getDocDescription = (doc: Document): string | undefined => {
     if (doc.description) {
       return doc.description;

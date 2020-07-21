@@ -30,11 +30,13 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@analytics/google-analytics": "^0.4.0",
     "@component-controls/blocks": "^1.10.2",
     "@component-controls/components": "^1.10.0",
     "@component-controls/core": "^1.10.0",
     "@component-controls/pages": "^1.10.2",
     "@theme-ui/match-media": "next",
+    "analytics": "^0.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",

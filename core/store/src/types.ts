@@ -50,7 +50,6 @@ export interface StoryStore {
   getStoryPath: (storyId: string, activeTab?: string) => string;
   addObserver: (observer: StoreObserver) => void;
   removeObserver: (observer: StoreObserver) => void;
-  visitPage: () => void;
   getDocDescription: (doc: Document) => string | undefined;
 
   getIndexPage: () => HomePageInfo;
