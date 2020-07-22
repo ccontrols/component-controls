@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
+
+
+### Bug Fixes
+
+* hmr store import ([844de69](https://github.com/ccontrols/component-controls/commit/844de694a2e8d6314554d117b8bf84635e1546a2))
+* video on youtube ([a0518ef](https://github.com/ccontrols/component-controls/commit/a0518ef2e65bcc1318784099bdaf75e239dab3a3))
+
+
+
+
+
 ## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
 
 
