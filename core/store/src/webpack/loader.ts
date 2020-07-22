@@ -6,7 +6,7 @@ module.exports = function(content: string) {
   const options = getOptions(context) || {};
   const { bundleFileName } = options;
   content = `
-  import { HMRStore } from './dist/HMRStore';
+  import { HMRStore } from './dist/types';
   export let store = new HMRStore(
     require('${bundleFileName}'),
   );
