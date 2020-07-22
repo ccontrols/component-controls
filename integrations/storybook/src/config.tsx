@@ -1,20 +1,23 @@
+import { useEffect } from 'react';
 /* eslint-disable react/display-name */
 import { addDecorator } from '@storybook/client-api';
 import addons, { makeDecorator } from '@storybook/addons';
 import { FORCE_RE_RENDER } from '@storybook/core-events';
 
 import { store } from '@component-controls/store/live_store';
+import { addObserver } from '@component-controls/blocks';
 import { getControlValues } from '@component-controls/core';
-
-store.addObserver(() => {
-  addons.getChannel().emit(FORCE_RE_RENDER);
-});
 
 addDecorator(
   makeDecorator({
     name: 'component-controls',
     parameterName: 'controls',
     wrapper: (storyFn, context) => {
+      useEffect(() => {
+        addObserver(() => {
+          addons.getChannel().emit(FORCE_RE_RENDER);
+        });
+      }, []);
       const story = store.getStory(context.id);
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;

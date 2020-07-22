@@ -3,7 +3,7 @@ import { FC, useContext } from 'react';
 import { jsx } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { BlockContext, useDocByType } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 import { DocPage } from '../DocPage';
@@ -24,7 +24,7 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   if (isCategory) {
     return <CategoryList type={type} />;
   }
-  const pages = storeProvider?.getPageList(type) || [];
+  const pages = useDocByType(type);
   const page = storeProvider?.config?.pages?.[type] || {};
   return page.indexHome ? (
     <PageContainer variant="pagelist.container" type={type} id="content">

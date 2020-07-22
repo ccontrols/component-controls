@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { deepMerge, Document } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { ErrorBoundary } from './ErrorBoundary';
-import { documentAtom } from './storeState';
+import { documentAtom, storeAtom, useStore } from './storeState';
 
 export interface BlockContextInputProps {
   /**
@@ -49,10 +49,6 @@ export interface BlockContextProps {
   options?: any;
 }
 
-export const StoreContext = React.createContext<{ storeProvider: StoryStore }>(
-  //@ts-ignore
-  {},
-);
 //@ts-ignore
 export const BlockContext = React.createContext<BlockContextProps>({});
 
@@ -85,52 +81,37 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
               ? store.getStore()?.packages[doc.package]
               : undefined,
         });
+        set(storeAtom, store);
       }}
     >
       <ErrorBoundary>
-        <StoreContext.Provider
+        <BlockContext.Provider
           value={{
+            storyId,
+            docId,
             storeProvider: store,
+            options: store.config ? deepMerge(options, store.config) : options,
           }}
         >
-          <BlockContext.Provider
-            value={{
-              storyId,
-              docId,
-              storeProvider: store,
-              options: store.config
-                ? deepMerge(options, store.config)
-                : options,
-            }}
+          <BlockDataContextProvider
+            store={store}
+            storyId={storyId}
+            docId={propsDocId}
           >
-            <BlockDataContextProvider
-              store={store}
-              storyId={storyId}
-              docId={propsDocId}
-            >
-              {children}
-            </BlockDataContextProvider>
-          </BlockContext.Provider>
-        </StoreContext.Provider>
+            {children}
+          </BlockDataContextProvider>
+        </BlockContext.Provider>
       </ErrorBoundary>
     </RecoilRoot>
   );
-};
-
-export const useBlockContext: () => BlockContextProps = () =>
-  React.useContext(BlockContext);
-
-export const useStore = () => {
-  const { storeProvider } = useContext(StoreContext);
-  return storeProvider;
 };
 
 export const useCustomProps = <T extends unknown>(
   name: string,
   props: T,
 ): T => {
-  const { storeProvider } = useContext(StoreContext);
-  const { config } = storeProvider;
+  const store = useStore();
+  const { config } = store;
   const userProps = config?.components?.[name];
   return userProps ? deepMerge(props, userProps) : props;
 };

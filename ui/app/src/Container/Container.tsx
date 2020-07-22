@@ -1,10 +1,11 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Link, Value } from '@component-controls/components';
 import {
-  BlockContext,
+  useConfig,
+  useDocument,
   Pagination,
   Container as BlocksContainer,
   TagsList,
@@ -14,10 +15,9 @@ import {
  *  application inner container for pages. Adds pagination to the blocks/Container component.
  */
 export const Container: FC = ({ children }) => {
-  const { storeProvider, docId } = useContext(BlockContext);
-  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
+  const doc = useDocument();
   const { author, tags } = doc || {};
-  const config = storeProvider.config;
+  const config = useConfig();
   return (
     <Box variant="container.container">
       <BlocksContainer

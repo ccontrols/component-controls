@@ -5,7 +5,7 @@ import {
   Link,
   getAccentPaletteColor,
 } from '@component-controls/components';
-import { BlockContext } from '../context';
+import { BlockContext, useDocPropCount } from '../context';
 
 export interface PageTypeTagProps {
   type: DocType;
@@ -14,10 +14,11 @@ export const PageTypeTag: FC<PageTypeTagProps> = ({ type }) => {
   const { storeProvider } = useContext(BlockContext);
   const { config } = storeProvider;
   const [colors, setColors] = useState<{ [key: string]: string }>({});
+
   useEffect(() => {
-    const uniqueTypes = storeProvider.getUniquesByCategory('type');
+    const tags = useDocPropCount('type');
     setColors(
-      Object.keys(uniqueTypes).reduce(
+      Object.keys(tags).reduce(
         (acc, key, index) => ({
           ...acc,
           [key]: getAccentPaletteColor(index),

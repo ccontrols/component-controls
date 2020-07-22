@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { FC, Fragment, useContext } from 'react';
+import { FC, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { useStore, useDocument } from '@component-controls/blocks';
 import { SEO } from '../SEO';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -20,9 +20,9 @@ export interface AppProps {
  *
  */
 export const App: FC<AppProps> = ({ title = '', children }) => {
-  const { storeProvider, docId } = useContext(BlockContext);
-  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
-  const { toolbar } = storeProvider.config || {};
+  const store = useStore();
+  const doc = useDocument();
+  const { toolbar } = store.config || {};
   const items: SkiLinksItemProps[] = [
     {
       target: 'content',
@@ -41,10 +41,8 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
   }
   const titleParts = title ? title.split('/') : [''];
   const pageTitle = titleParts[titleParts.length - 1];
-  const pageDescription = doc
-    ? storeProvider.getDocDescription(doc)
-    : undefined;
-  useAnalytics(storeProvider);
+  const pageDescription = doc ? store.getDocDescription(doc) : undefined;
+  useAnalytics(store);
 
   return (
     <Fragment>

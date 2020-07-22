@@ -13,6 +13,7 @@ import {
   ensureStartingSlash,
   getDocTypePath,
   PageConfiguration,
+  Documents,
 } from '@component-controls/core';
 
 import { StoreObserver, StoryStore, DocPageInfo, HomePageInfo } from '../types';
@@ -24,26 +25,16 @@ export { StoreObserver, StoryStore };
  */
 export class Store implements StoryStore {
   protected loadedStore: StoriesStore | undefined;
-  private observers: StoreObserver[];
   private _homepaths: { [path: string]: HomePageInfo } | undefined = undefined;
   private _docpaths: { [path: string]: DocPageInfo } | undefined = undefined;
 
-  private _cachedPages: { [key: string]: Pages } = {};
-  private _analytics: any = null;
-  private _categoryItems: {
-    [key: string]: {
-      [key: string]: number;
-    };
-  } = {};
   private _firstDocument: { [key: string]: string | undefined } = {};
   /**
    * create a store with options
    */
   constructor(store?: StoriesStore) {
     this.loadedStore = store;
-    this.observers = [];
     this.initDocs();
-    this.initializeAnalytics();
   }
 
   /**
@@ -97,22 +88,6 @@ export class Store implements StoryStore {
       });
     }
   };
-  /**
-   * add observer callback function
-   */
-  addObserver = (observer: StoreObserver) => this.observers.push(observer);
-
-  /**
-   * remove installed observer callback function
-   */
-  removeObserver = (observer: StoreObserver) =>
-    (this.observers = this.observers.filter(o => o !== observer));
-
-  notifyObservers = (storyId?: string, propName?: string) => {
-    if (this.observers.length > 0) {
-      this.observers.forEach(observer => observer(storyId, propName));
-    }
-  };
 
   /**
    * modify story properties, for example controls values.
@@ -133,7 +108,7 @@ export class Store implements StoryStore {
       };
     }
     if (this.loadedStore) {
-      this.notifyObservers(storyId, propName);
+      // this.notifyObservers(storyId, propName);
     }
   };
   /**
@@ -160,65 +135,6 @@ export class Store implements StoryStore {
   };
 
   /**
-   * returns all the documents/pages of a certain type.
-   */
-  getPageList = (type: DocType = defDocType): Pages => {
-    if (this.loadedStore?.docs) {
-      if (!this._cachedPages[type]) {
-        this._cachedPages[type] = Object.keys(this.loadedStore.docs).reduce(
-          (acc: Pages, key: string) => {
-            const doc: Document | undefined = this.loadedStore?.docs[key];
-            if (doc) {
-              const { type: docType = defDocType } = doc;
-              if (docType === type) {
-                return [...acc, doc];
-              }
-            }
-            return acc;
-          },
-          [],
-        );
-      }
-      return this._cachedPages[type];
-    }
-    return [];
-  };
-
-  /**
-   * returns the previous page of the same type.
-   */
-  getPrevPage = (
-    type: DocType | undefined,
-    docId: string,
-  ): Document | undefined => {
-    if (docId) {
-      const pages = this.getPageList(type);
-      const index = pages.findIndex(p => p.title === docId);
-      if (index > 0) {
-        return pages[index - 1];
-      }
-    }
-    return undefined;
-  };
-
-  /**
-   * returns the next page of the same type.
-   */
-  getNextPage = (
-    type: DocType | undefined,
-    docId: string,
-  ): Document | undefined => {
-    if (docId) {
-      const pages = this.getPageList(type);
-      const index = pages.findIndex(p => p.title === docId);
-      if (index >= 0 && index < pages.length - 1) {
-        return pages[index + 1];
-      }
-    }
-    return undefined;
-  };
-
-  /**
    * returns all the documents/pages of a certain category value.
    */
   getPagesByCategory = (category: string, value?: any): Pages => {
@@ -241,37 +157,6 @@ export class Store implements StoryStore {
   };
 
   /**
-   * returns all the unique category values (and their cound) for a category field.
-   */
-  getUniquesByCategory = (category: string): { [key: string]: number } => {
-    if (this.loadedStore?.docs) {
-      const docs = this.loadedStore?.docs;
-      if (!this._categoryItems[category]) {
-        this._categoryItems[category] = Object.keys(docs).reduce(
-          (acc: { [key: string]: number }, key) => {
-            const doc = docs[key];
-            //@ts-ignore
-            const value = doc[category];
-            const values = Array.isArray(value) ? value : [value];
-            values.forEach(v => {
-              if (v !== undefined) {
-                if (typeof acc[v] === 'undefined') {
-                  acc[v] = 0;
-                }
-                acc[v] = acc[v] + 1;
-              }
-            });
-            return acc;
-          },
-          {},
-        );
-      }
-      return this._categoryItems[category];
-    }
-    return {};
-  };
-
-  /**
    * returns the run time configuration object.
    */
   get config(): RunConfiguration | undefined {
@@ -288,6 +173,10 @@ export class Store implements StoryStore {
           key => this.loadedStore.docs[key],
         )
       : [];
+  }
+
+  get docs(): Documents {
+    return this.loadedStore?.docs || {};
   }
 
   /**

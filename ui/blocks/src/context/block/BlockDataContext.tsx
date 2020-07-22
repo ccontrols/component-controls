@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryStore, StoreObserver } from '@component-controls/store';
+import { StoryStore } from '@component-controls/store';
 
 import {
   Story,
@@ -47,15 +47,6 @@ export interface BlockDataContextProps {
    * find a story id from a story 'name' in current document
    */
   storyIdFromNameCurrent: (name: string) => string | undefined;
-
-  /**
-   * add an observer for onChange events
-   */
-  addObserver: (observer: StoreObserver) => void;
-  /**
-   * add an observer for onChange events
-   */
-  removeObserver: (observer: StoreObserver) => void;
 
   /**
    * current story id
@@ -186,8 +177,6 @@ export const BlockDataContextProvider: React.FC<BlockDataContextInoutProps> = ({
         storyIdFromName,
         storyIdFromNameCurrent,
         getComponents,
-        addObserver: storeProvider ? storeProvider.addObserver : () => {},
-        removeObserver: storeProvider ? storeProvider.removeObserver : () => {},
       }}
     >
       {children}

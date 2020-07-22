@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import {
   Story,
   Document,
@@ -41,25 +41,12 @@ export const useComponentsContext = ({
     getStoryData,
     getComponents,
     storyIdFromNameCurrent,
-    addObserver,
-    removeObserver,
   } = useContext(BlockDataContext);
   const storyId = name ? storyIdFromNameCurrent(name) : currentStoryId;
-  const [{ story, doc, component, componentPackage }, setStoryData] = useState(
+  const [{ story, doc, component, componentPackage }] = useState(
     getStoryData(storyId, docId),
   );
 
-  useEffect(() => {
-    setStoryData(getStoryData(storyId, docId));
-    const onChange = () => {
-      //force refresh of context
-      setStoryData(getStoryData(storyId, docId));
-    };
-    addObserver(onChange);
-    return () => {
-      removeObserver(onChange);
-    };
-  }, [docId, storyId, addObserver, getStoryData, removeObserver]);
   let components: StoryComponents = {};
   if (of === CURRENT_STORY && story) {
     if (component) {

@@ -9,7 +9,7 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
-import { BlockContext, Search } from '@component-controls/blocks';
+import { useConfig, Search, useDocTypeCount } from '@component-controls/blocks';
 
 export interface HeaderProps {
   toolbar?: {
@@ -22,8 +22,8 @@ export interface HeaderProps {
  */
 export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
-  const { storeProvider } = useContext(BlockContext);
-  const config = storeProvider.config;
+  const docCounts = useDocTypeCount();
+  const config = useConfig();
   const { pages } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
@@ -38,10 +38,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
               return { page: pages[docType], docType };
             })
             .filter(({ page, docType }) => {
-              return (
-                page.topMenu &&
-                Object.keys(storeProvider.getPageList(docType)).length > 0
-              );
+              return page.topMenu && docCounts[docType];
             })
             .map(({ page }) => ({
               id: page.label?.toLowerCase(),
@@ -52,7 +49,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         ]
       : actions;
     return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
-  }, [pages, storeProvider, toolbar.left]);
+  }, [pages, toolbar.left, docCounts]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [

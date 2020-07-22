@@ -3,7 +3,11 @@ import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
 
-import { BlockContext } from '@component-controls/blocks';
+import {
+  BlockContext,
+  useDocByType,
+  useConfig,
+} from '@component-controls/blocks';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -110,12 +114,12 @@ export const Sidebar: FC<SidebarProps> = ({
 }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const { storeProvider, docId } = useContext(BlockContext);
-  const config = storeProvider.config;
+  const config = useConfig();
   const { pages } = config || {};
   const { label = '', storyPaths = false } = pages?.[type] || {};
+  const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
     if (storeProvider) {
-      const docs: Pages = storeProvider.getPageList(type);
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
@@ -133,7 +137,7 @@ export const Sidebar: FC<SidebarProps> = ({
       return menuItems;
     }
     return [];
-  }, [type, activeTab, storeProvider, storyPaths]);
+  }, [type, activeTab, storeProvider, storyPaths, docs]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">

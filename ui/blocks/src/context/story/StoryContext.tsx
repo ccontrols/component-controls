@@ -7,6 +7,7 @@ import {
 } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 import { BlockContext, BlockDataContext } from '../block';
+
 import { CURRENT_STORY } from '../../utils';
 
 export interface StoryInputProps {
@@ -88,15 +89,6 @@ export const useStoryContext = ({
     },
     [storyId, docId, getStoryData],
   );
-  useEffect(() => {
-    const onChange = (id?: string) => {
-      updateStoryData(id);
-    };
-    storeProvider.addObserver(onChange);
-    return () => {
-      storeProvider.removeObserver(onChange);
-    };
-  }, [updateStoryData, storeProvider]);
 
   useEffect(() => {
     updateStoryData(storyId);
