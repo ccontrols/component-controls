@@ -1,16 +1,14 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { Text, Flex, Link, jsx } from 'theme-ui';
-import { BlockContext } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/blocks';
 
 /**
  * application footer component
  */
 export const Footer: FC = () => {
-  const { storeProvider } = useContext(BlockContext);
-  const config = storeProvider.config;
+  const config = useConfig();
   const { author, siteUrl, siteTitle } = config || {};
-
   return (
     <Flex as="footer" variant="appfooter.container">
       <Text variant="appfooter.copyright">

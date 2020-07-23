@@ -22,13 +22,8 @@ import {
   Tag,
   ActionItems,
 } from '@component-controls/components';
-import {
-  getPropertyEditor,
-  PropertyEditor,
-  ConrolsContextProvider,
-} from '@component-controls/editors';
+import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { useControlsContext } from '../context';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
@@ -57,7 +52,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   tableProps,
   visibility,
 }) => {
-  const { setControlValue, clickControl } = useControlsContext();
   const [copied, setCopied] = useState(false);
   const info: Partial<ComponentInfo> = component.info || {};
   const controls = useMemo(() => {
@@ -274,35 +268,19 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     [hasControls, info.props, story?.id, visibility],
   );
 
-  const onChange = (propName: string, value: any) => {
-    if (setControlValue && story) {
-      setControlValue(story.id || '', propName, value);
-    }
-  };
-  const onClick = () => {
-    if (clickControl && story) {
-      clickControl(story.id || '', name);
-    }
-  };
   const table = (
-    <ConrolsContextProvider
-      controls={controls}
-      onChange={onChange}
-      onClick={onClick}
-    >
-      <Table
-        {...groupProps}
-        {...tableProps}
-        columns={columns}
-        data={rows}
-        sx={{
-          th: {
-            //some space for the action bar
-            pt: 4,
-          },
-        }}
-      />
-    </ConrolsContextProvider>
+    <Table
+      {...groupProps}
+      {...tableProps}
+      columns={columns}
+      data={rows}
+      sx={{
+        th: {
+          //some space for the action bar
+          pt: 4,
+        },
+      }}
+    />
   );
   const actions: ActionItems = [];
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
@@ -345,7 +323,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     actions,
     useControlsActions({
       controls,
-      setControlValue,
       storyId: story?.id,
     }),
   );

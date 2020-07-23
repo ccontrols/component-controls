@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx, Theme } from 'theme-ui';
-import { FC, useState, useContext, useRef, useCallback } from 'react';
+import { FC, useState, useRef, useCallback } from 'react';
 import lunr, { Index } from 'lunr';
 import { SearchInput, SearchInputProps } from '@component-controls/components';
 import { DocType, defDocType, Pages, Document } from '@component-controls/core';
-import { BlockContext } from '../context';
+import { useGetDocumentPath, useGetDocument, usePages } from '../state';
 import { DocumentItem } from '../DocumentItem';
 
 export interface SearchItem {
@@ -20,7 +20,9 @@ export const Search: FC<Omit<
   'items' | 'onSearch'
 >> = props => {
   const [items, setItems] = useState<Pages>([]);
-  const { storeProvider } = useContext(BlockContext);
+  const getDocumentPath = useGetDocumentPath();
+  const getDocument = useGetDocument();
+  const pages = usePages();
   const lunrRef = useRef<Index | undefined>(undefined);
 
   const onSearch = useCallback(
@@ -34,7 +36,7 @@ export const Search: FC<Omit<
           this.field('stories');
           this.field('component');
           this.field('tags');
-          storeProvider.pages.forEach(page => {
+          pages.forEach(page => {
             this.add({
               id: page.title,
               title: page.title.replace('/', ' '),
@@ -54,20 +56,17 @@ export const Search: FC<Omit<
       const searchResults = lunrRef.current.search(search);
       const newItems: Pages = searchResults
         .slice(0, 20)
-        .filter(
-          (item: { ref: string }) =>
-            storeProvider.getStoryDoc(item.ref) as Document,
-        )
+        .filter((item: { ref: string }) => getDocument(item.ref) as Document)
         .map((item: { ref: string }) => {
-          const page = storeProvider.getStoryDoc(item.ref) as Document;
+          const page = getDocument(item.ref) as Document;
           return { ...page, id: page.title };
         });
       setItems(newItems);
     },
-    [storeProvider],
+    [getDocument, pages],
   );
   const onSelectItem = (item: Document) => {
-    const newurl = `${window.location.origin}${storeProvider.getPagePath(
+    const newurl = `${window.location.origin}${getDocumentPath(
       item.type,
       item.title,
     )}`;
@@ -89,8 +88,7 @@ export const Search: FC<Omit<
       {props => (
         <DocumentItem
           sx={{ borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}` }}
-          config={storeProvider.config}
-          link={storeProvider.getPagePath(props.item.type, props.item.title)}
+          link={getDocumentPath(props.item.type, props.item.title)}
           doc={props.item}
         />
       )}

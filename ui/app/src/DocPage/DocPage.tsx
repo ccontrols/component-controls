@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { useDocument } from '@component-controls/blocks';
+import { useCurrentDocument } from '@component-controls/blocks';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { CategoryPage } from '../CategoryPage';
@@ -15,7 +15,7 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
   category,
   ...props
 }) => {
-  const doc = useDocument();
+  const doc = useCurrentDocument();
   if (category) {
     return <CategoryPage type={type} category={category} />;
   }

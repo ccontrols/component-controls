@@ -2,12 +2,14 @@
 import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { Subtitle, Link } from '@component-controls/components';
+import { useDocumentPath } from '@component-controls/blocks';
+import { DocType } from '@component-controls/core';
 
 export interface CategoryListItemProps {
   /**
-   * link url
+   * doc type
    */
-  link: string;
+  type: DocType;
   /**
    * category name
    */
@@ -24,8 +26,9 @@ export interface CategoryListItemProps {
 export const CategoryListItem: FC<CategoryListItemProps> = ({
   name,
   count,
-  link,
+  type,
 }) => {
+  const link = useDocumentPath(type, name);
   return (
     <li>
       <Box variant="categorylist.item">

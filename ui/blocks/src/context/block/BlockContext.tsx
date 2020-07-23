@@ -4,7 +4,13 @@ import { StoryStore } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { ErrorBoundary } from './ErrorBoundary';
-import { documentAtom, storeAtom, useStore } from './storeState';
+import {
+  currentDocumentAtom,
+  storeAtom,
+  currentStoryAtom,
+  activeTabAtom,
+  useStore,
+} from '../../state';
 
 export interface BlockContextInputProps {
   /**
@@ -20,6 +26,10 @@ export interface BlockContextInputProps {
    * store object
    */
   store: StoryStore;
+  /**
+   * active page tab
+   */
+  activeTab?: string;
 
   /**
    * global options passed from container
@@ -42,6 +52,7 @@ export interface BlockContextProps {
    * store interface
    */
   storeProvider: StoryStore;
+
   /**
    * global options passed from container
    * those are global parameters as well as decorators
@@ -58,6 +69,7 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   docId: propsDocId,
   store,
   options,
+  activeTab,
 }) => {
   let storyId = propsStoryId;
   let docId = propsDocId;
@@ -74,14 +86,16 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
   return (
     <RecoilRoot
       initializeState={({ set }) => {
-        set(documentAtom, {
+        set(currentDocumentAtom, {
           ...doc,
           package:
             doc && doc.package
               ? store.getStore()?.packages[doc.package]
               : undefined,
         });
-        set(storeAtom, store);
+        set(storeAtom, store.store);
+        set(currentStoryAtom, storyId ? store.getStory(storyId) : undefined);
+        set(activeTabAtom, activeTab);
       }}
     >
       <ErrorBoundary>

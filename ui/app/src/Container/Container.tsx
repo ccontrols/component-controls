@@ -5,7 +5,7 @@ import { getDocPath } from '@component-controls/core';
 import { Link, Value } from '@component-controls/components';
 import {
   useConfig,
-  useDocument,
+  useCurrentDocument,
   Pagination,
   Container as BlocksContainer,
   TagsList,
@@ -15,7 +15,7 @@ import {
  *  application inner container for pages. Adds pagination to the blocks/Container component.
  */
 export const Container: FC = ({ children }) => {
-  const doc = useDocument();
+  const doc = useCurrentDocument();
   const { author, tags } = doc || {};
   const config = useConfig();
   return (

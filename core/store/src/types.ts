@@ -29,16 +29,11 @@ export interface StoryStore {
   getStore: () => StoriesStore | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => Document | undefined;
-  getPagesByCategory: (category: string, value?: any) => Pages;
   config: RunConfiguration | undefined;
+  store: StoriesStore;
   pages: Pages;
   docs: Documents;
   getFirstDocument: (type: DocType) => string | undefined;
-  getPagePath: (
-    type: DocType | undefined,
-    name: string,
-    activeTab?: string,
-  ) => string;
   updateStoryProp: (storyId: string, propName: string, newValue: any) => void;
 
   getStoryPath: (storyId: string, activeTab?: string) => string;

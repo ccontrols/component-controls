@@ -29,7 +29,7 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   return page.indexHome ? (
     <PageContainer variant="pagelist.container" type={type} id="content">
       <Title>{page.label}</Title>
-      <DocumentsList pages={pages} />
+      <DocumentsList pages={pages} type={type} />
     </PageContainer>
   ) : (
     <DocPage type={type} />

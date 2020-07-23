@@ -3,7 +3,7 @@ import { FC, useState, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Tag, Link, getPaletteColor } from '@component-controls/components';
-import { useConfig, useDocPropCount } from '../context';
+import { useConfig, useDocPropCount } from '../state';
 
 export interface TagsListProps {
   /**

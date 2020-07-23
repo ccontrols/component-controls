@@ -2,30 +2,28 @@ import { useMemo, useEffect } from 'react';
 
 import Analytics from 'analytics';
 import googleAnalytics from '@analytics/google-analytics';
+import { useConfig } from '@component-controls/blocks';
 
-import { StoryStore } from '@component-controls/store';
-
-export const useAnalytics = (store: StoryStore) => {
+export const useAnalytics = () => {
+  const config = useConfig();
   const analytics = useMemo(() => {
-    if (store) {
-      const options = store.config?.analytics;
-      if (options) {
-        if (typeof options === 'string') {
-          return Analytics({
-            app: store.config?.siteTitle,
-            plugins: [
-              googleAnalytics({
-                trackingId: options,
-              }),
-            ],
-          });
-        } else {
-          return Analytics(options);
-        }
+    const options = config?.analytics;
+    if (options) {
+      if (typeof options === 'string') {
+        return Analytics({
+          app: config?.siteTitle,
+          plugins: [
+            googleAnalytics({
+              trackingId: options,
+            }),
+          ],
+        });
+      } else {
+        return Analytics(options);
       }
     }
     return undefined;
-  }, [store]);
+  }, [config]);
   useEffect(() => {
     if (analytics) {
       analytics.page();

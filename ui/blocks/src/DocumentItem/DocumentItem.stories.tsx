@@ -16,7 +16,6 @@ export const overview = () => (
         const page = storeProvider.getStoryDoc('Story');
         return page ? (
           <DocumentItem
-            config={storeProvider.config}
             link={storeProvider.getPagePath(page.type, page.title)}
             doc={page}
           />

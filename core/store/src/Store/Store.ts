@@ -27,7 +27,7 @@ export class Store implements StoryStore {
   protected loadedStore: StoriesStore | undefined;
   private _homepaths: { [path: string]: HomePageInfo } | undefined = undefined;
   private _docpaths: { [path: string]: DocPageInfo } | undefined = undefined;
-
+  private observers: StoreObserver[] = [];
   private _firstDocument: { [key: string]: string | undefined } = {};
   /**
    * create a store with options
@@ -88,7 +88,11 @@ export class Store implements StoryStore {
       });
     }
   };
-
+  notifyObservers = (storyId?: string, propName?: string) => {
+    if (this.observers.length > 0) {
+      this.observers.forEach(observer => observer(storyId, propName));
+    }
+  };
   /**
    * modify story properties, for example controls values.
    * will notify all installed store observers of the changed story.
@@ -134,27 +138,16 @@ export class Store implements StoryStore {
     return store ? store.docs[name] : undefined;
   };
 
-  /**
-   * returns all the documents/pages of a certain category value.
-   */
-  getPagesByCategory = (category: string, value?: any): Pages => {
-    if (this.loadedStore?.docs) {
-      const docs = this.loadedStore?.docs;
-      return Object.keys(docs)
-        .filter(key => {
-          const doc = docs[key];
-          //@ts-ignore
-          const cateValue = doc[category];
-          if (value === undefined) {
-            return cateValue !== undefined;
-          }
-          const catValues = Array.isArray(cateValue) ? cateValue : [cateValue];
-          return catValues.some(v => v === value);
-        })
-        .map(key => docs[key]);
-    }
-    return [];
-  };
+  get store(): StoriesStore {
+    return (
+      this.loadedStore || {
+        docs: {},
+        stories: {},
+        components: {},
+        packages: {},
+      }
+    );
+  }
 
   /**
    * returns the run time configuration object.
@@ -185,18 +178,6 @@ export class Store implements StoryStore {
   getFirstDocument(type: DocType): string | undefined {
     return this._firstDocument[type];
   }
-
-  /**
-   * returns the url path to a document.
-   */
-  getPagePath = (
-    type: DocType | undefined = defDocType,
-    name: string,
-    activeTab?: string,
-  ): string => {
-    const doc = this.getStoryDoc(name);
-    return getDocPath(type, doc, this.config?.pages, name, activeTab);
-  };
 
   /**
    * returns the url path to a story.
@@ -248,7 +229,27 @@ export class Store implements StoryStore {
       type: homePage?.type || defDocType,
     };
   };
-
+  /**
+   * returns all the documents/pages of a certain type.
+   */
+  getPageList = (type: DocType = defDocType): Pages => {
+    if (this.loadedStore?.docs) {
+      return Object.keys(this.loadedStore.docs).reduce(
+        (acc: Pages, key: string) => {
+          const doc: Document | undefined = this.loadedStore?.docs[key];
+          if (doc) {
+            const { type: docType = defDocType } = doc;
+            if (docType === type) {
+              return [...acc, doc];
+            }
+          }
+          return acc;
+        },
+        [],
+      );
+    }
+    return [];
+  };
   buildHomePaths = () => {
     if (this._homepaths === undefined) {
       const { pages = {} } = this.loadedStore?.config || {};

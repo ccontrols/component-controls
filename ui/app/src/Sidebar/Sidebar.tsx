@@ -4,7 +4,8 @@ import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
 
 import {
-  BlockContext,
+  useStore,
+  useCurrentDocument,
   useDocByType,
   useConfig,
 } from '@component-controls/blocks';
@@ -19,12 +20,14 @@ import {
 } from '@component-controls/components';
 import {
   Document,
-  Story,
   DocType,
   Pages,
   defDocType,
+  RunConfiguration,
+  StoriesStore,
+  getStoryPath,
+  getDocPath,
 } from '@component-controls/core';
-import { StoryStore } from '@component-controls/store';
 
 export interface SidebarProps {
   /**
@@ -42,8 +45,10 @@ export interface SidebarProps {
    */
   activeTab?: string;
 }
+
 const createMenuItem = (
-  storeProvider: StoryStore,
+  store: StoriesStore,
+  config: RunConfiguration,
   doc: Document,
   type: DocType,
   levels: string[],
@@ -55,6 +60,24 @@ const createMenuItem = (
   if (levels.length < 1) {
     return item || {};
   }
+  const storyPath = (storyId: string, activeTab?: string): string => {
+    const story = store.stories[storyId];
+    if (!story) {
+      return '';
+    }
+    const doc = story.doc ? store.docs[story.doc] : undefined;
+    return getStoryPath(story.id, doc, config.pages, activeTab);
+  };
+
+  const documentPath = (
+    type: DocType | undefined = defDocType,
+    name: string,
+    activeTab?: string,
+  ): string => {
+    const doc = store.docs[name];
+    const config = useConfig();
+    return getDocPath(type, doc, config?.pages, name, activeTab);
+  };
   const newItem: MenuItem = {
     id: levels[0],
     label: levels[0],
@@ -70,29 +93,30 @@ const createMenuItem = (
         if (doc.stories.length >= 1) {
           // multiple stories - each with a link
           newItem.items = doc.stories.map(storyId => {
-            const story = storeProvider.getStory(storyId) as Story;
+            const story = store.stories[storyId];
             return {
               id: story.id,
               label: story.name,
               icon: <NoteIcon verticalAlign="middle" />,
-              href: storeProvider.getStoryPath(storyId, activeTab),
+              href: storyPath(storyId, activeTab),
             };
           });
         } else {
           newItem.icon = <FileIcon verticalAlign="middle" />;
           //only one story -direct link to it
-          newItem.href = storeProvider.getStoryPath(doc.stories[0], activeTab);
+          newItem.href = storyPath(doc.stories[0], activeTab);
         }
       } else {
         newItem.icon = <BookIcon verticalAlign="middle" />;
         // no stories - link to document
-        newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+        newItem.href = documentPath(type, doc.title, activeTab);
       }
     }
     parent.push(newItem);
   }
   return createMenuItem(
-    storeProvider,
+    store,
+    config,
     doc,
     type,
     levels.slice(1),
@@ -113,18 +137,21 @@ export const Sidebar: FC<SidebarProps> = ({
   activeTab,
 }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
-  const { storeProvider, docId } = useContext(BlockContext);
-  const config = useConfig();
-  const { pages } = config || {};
+  const store = useStore();
+  const { title: docId } = useCurrentDocument() || {};
+
+  const config = useConfig() || {};
+  const { pages } = config;
   const { label = '', storyPaths = false } = pages?.[type] || {};
   const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
-    if (storeProvider) {
+    if (store) {
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
         createMenuItem(
-          storeProvider,
+          store,
+          config,
           doc,
           type,
           levels,
@@ -137,7 +164,7 @@ export const Sidebar: FC<SidebarProps> = ({
       return menuItems;
     }
     return [];
-  }, [type, activeTab, storeProvider, storyPaths, docs]);
+  }, [type, activeTab, store, config, storyPaths, docs]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">

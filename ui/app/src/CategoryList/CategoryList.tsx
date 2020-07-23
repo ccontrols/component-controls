@@ -33,7 +33,7 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
           {Object.keys(categories).map(key => (
             <CategoryListItem
               key={key}
-              link={store.getPagePath(type, key)}
+              type={type}
               name={key}
               count={categories[key]}
             />

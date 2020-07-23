@@ -4,13 +4,13 @@ import { jsx, Box, Text } from 'theme-ui';
 import {
   Document,
   defDocType,
-  RunConfiguration,
   getDocPath,
   dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
 import { PageTypeTag } from '../PageTypeTag';
 import { TagsList } from '../TagsList';
+import { useConfig } from '../state';
 
 export interface DocumentItemProps {
   /**
@@ -22,17 +22,14 @@ export interface DocumentItemProps {
    * document to be displayed
    */
   doc: Document;
-  /**
-   * store configuration object
-   */
-  config?: RunConfiguration;
 }
 
 /**
  * displays a single doument item
  */
-export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
+export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
   const { type = defDocType, tags = [], date, author } = doc;
+  const config = useConfig();
   const dateNode = date ? (
     <Box variant="documentitem.info.inner">
       {date ? (

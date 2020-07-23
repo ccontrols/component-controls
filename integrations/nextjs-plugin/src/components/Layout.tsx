@@ -11,9 +11,16 @@ interface LayoutProps {
   docId?: string;
   storyId?: string;
   type?: DocType;
+  activeTab?: string;
 }
 
-export const Layout: FC<LayoutProps> = ({ docId, storyId, type, children }) => {
+export const Layout: FC<LayoutProps> = ({
+  docId,
+  storyId,
+  type,
+  children,
+  activeTab,
+}) => {
   return (
     <AppContext
       docId={docId}
@@ -21,6 +28,7 @@ export const Layout: FC<LayoutProps> = ({ docId, storyId, type, children }) => {
       store={store}
       linkClass={NextLink}
       type={type}
+      activeTab={activeTab}
     >
       {children}
     </AppContext>

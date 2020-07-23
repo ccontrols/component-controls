@@ -21,5 +21,6 @@ export * from './Subtitle';
 export * from './TagsList';
 export * from './Title';
 export * from './notifications';
+export * from './state';
 export * from './test';
 export * from './utils';

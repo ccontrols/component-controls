@@ -19,6 +19,7 @@ export interface AppContextProps {
   storyId?: string;
   store: StoryStore;
   linkClass: LinkContextProviderProps['linkClass'];
+  activeTab?: string;
 }
 
 export const AppContext: FC<AppContextProps> = ({
@@ -28,6 +29,7 @@ export const AppContext: FC<AppContextProps> = ({
   children,
   store,
   linkClass,
+  activeTab,
 }) => {
   const { pages } = store.config || {};
   const page = pages?.[type];
@@ -38,7 +40,12 @@ export const AppContext: FC<AppContextProps> = ({
     : undefined;
   return (
     <ThemeProvider theme={store.config?.theme} components={mdxComponents}>
-      <BlockContextProvider storyId={storyId} docId={documentId} store={store}>
+      <BlockContextProvider
+        storyId={storyId}
+        docId={documentId}
+        store={store}
+        activeTab={activeTab}
+      >
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>
             <App title={docId}>{children}</App>

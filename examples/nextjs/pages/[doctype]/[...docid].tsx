@@ -20,8 +20,8 @@ const DocPageTemplate: FC<DocPageProps> = ({
   category,
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId} type={type}>
-      <DocPage activeTab={activeTab} type={type} category={category} />
+    <Layout docId={docId} storyId={storyId} type={type} activeTab={activeTab}>
+      <DocPage type={type} category={category} />
     </Layout>
   );
 };

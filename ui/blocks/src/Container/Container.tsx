@@ -7,7 +7,7 @@ import { Title } from '../Title';
 import { Subtitle } from '../Subtitle';
 import { EditPage } from '../EditPage';
 
-import { useDocument } from '../context';
+import { useCurrentDocument } from '../state';
 
 export interface ContainerProps {
   author?: ReactNode;
@@ -21,7 +21,7 @@ export const Container: FC<ContainerProps> = ({
   author,
   secondRow,
 }) => {
-  const doc = useDocument();
+  const doc = useCurrentDocument();
   return (
     <Box variant="blockpagecontainer.container">
       <Box variant="blockpagecontainer.inforow">

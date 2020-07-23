@@ -2,7 +2,11 @@
 import { FC, useRef, useContext } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType, TabConfiguration, Document } from '@component-controls/core';
-import { BlockContext } from '@component-controls/blocks';
+import {
+  BlockContext,
+  useActiveTab,
+  useGetDocumentPath,
+} from '@component-controls/blocks';
 import * as pages from '@component-controls/pages';
 import {
   Tabs,
@@ -22,10 +26,6 @@ export interface DocPageProps {
    */
   type: DocType;
   /**
-   * active page tab
-   */
-  activeTab?: string;
-  /**
    * document object
    */
   doc: Document;
@@ -34,12 +34,10 @@ export interface DocPageProps {
 /**
  * document page - rendering with sidebars and tabs for multiple document views
  */
-export const SidebarsStoryPage: FC<DocPageProps> = ({
-  type,
-  activeTab,
-  doc,
-}) => {
+export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const { storeProvider, docId, storyId } = useContext(BlockContext);
+  const getDocumentPath = useGetDocumentPath();
+  const activeTab = useActiveTab();
   const pageConfig = storeProvider?.config?.pages?.[type] || {};
   const { tabs = [], storyPaths } = pageConfig;
   const selectedTab = activeTab
@@ -83,7 +81,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
                             tabIndex > 0 ? tab.route : undefined,
                           )
                         : docId
-                        ? storeProvider.getPagePath(
+                        ? getDocumentPath(
                             type,
                             docId,
                             tabIndex > 0 ? tab.route : undefined,
