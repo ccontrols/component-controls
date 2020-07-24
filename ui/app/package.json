@@ -34,6 +34,7 @@
     "@component-controls/components": "^1.10.3",
     "@component-controls/core": "^1.10.3",
     "@component-controls/pages": "^1.10.4",
+    "@component-controls/store": "^1.10.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",

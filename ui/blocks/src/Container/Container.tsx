@@ -3,11 +3,10 @@ import { jsx, Box, Text } from 'theme-ui';
 import { FC, ReactNode, Fragment } from 'react';
 import { dateToLocalString } from '@component-controls/core';
 import { Value } from '@component-controls/components';
+import { useCurrentDocument } from '@component-controls/store';
 import { Title } from '../Title';
 import { Subtitle } from '../Subtitle';
 import { EditPage } from '../EditPage';
-
-import { useCurrentDocument } from '../state';
 
 export interface ContainerProps {
   author?: ReactNode;

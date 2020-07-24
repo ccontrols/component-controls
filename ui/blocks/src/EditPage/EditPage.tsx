@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { Box, Text } from 'theme-ui';
 import { MarkGithubIcon } from '@primer/octicons-react';
 import { ExternalLink } from '@component-controls/components';
-import { useDocPackage } from '../state';
+import { useDocPackage } from '@component-controls/store';
 
 /**
  * Display a Edit this page link to the page source repository.

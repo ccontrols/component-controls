@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { Text, Flex, Link, jsx } from 'theme-ui';
-import { useConfig } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/store';
 
 /**
  * application footer component

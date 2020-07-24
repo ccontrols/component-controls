@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useConfig } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/store';
 
 interface SEOProps {
   title?: string;

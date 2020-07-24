@@ -7,7 +7,7 @@ import {
   useDocument,
   usePagesByCategory,
   useConfig,
-} from '@component-controls/blocks';
+} from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 

@@ -8,7 +8,7 @@ import {
   useCurrentStory,
   useGetStoryPath,
   useConfig,
-} from '@component-controls/blocks';
+} from '@component-controls/store';
 import * as pages from '@component-controls/pages';
 import {
   Tabs,

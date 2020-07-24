@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
-import { useDocumentPath } from '@component-controls/blocks';
+import { useDocumentPath } from '@component-controls/store';
 
 export interface DocLinkProps {
   id: string;

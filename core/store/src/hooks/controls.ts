@@ -1,6 +1,9 @@
 import { selector, selectorFamily } from 'recoil';
-import { ComponentControls, ComponentControl } from '@component-controls/core';
-import { RecoilControlSelector } from '@component-controls/editors';
+import {
+  ComponentControls,
+  ComponentControl,
+  RecoilControlSelector,
+} from '@component-controls/core';
 
 import { currentStorySelector } from './story';
 

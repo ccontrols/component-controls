@@ -36,12 +36,14 @@
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
     "react": "^16.13.1",
+    "recoil": "^0.0.10",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.10.0",
     "@types/faker": "^4.1.9",
     "@types/jest": "^25.1.2",
+    "@types/recoil": "^0.0.1",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",

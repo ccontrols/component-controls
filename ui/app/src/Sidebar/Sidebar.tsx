@@ -2,13 +2,12 @@
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
 import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
-
 import {
   useStore,
   useCurrentDocument,
   useDocByType,
   useConfig,
-} from '@component-controls/blocks';
+} from '@component-controls/store';
 import {
   Sidebar as AppSidebar,
   ColorMode,

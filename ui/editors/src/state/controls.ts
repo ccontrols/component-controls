@@ -1,9 +1,9 @@
-import { useRecoilState, selectorFamily, RecoilState } from 'recoil';
-import { ComponentControl, ComponentControls } from '@component-controls/core';
-
-export type RecoilControlSelector = (
-  propName: string,
-) => RecoilState<ComponentControl | undefined>;
+import { useRecoilState, selectorFamily } from 'recoil';
+import {
+  ComponentControl,
+  ComponentControls,
+  RecoilControlSelector,
+} from '@component-controls/core';
 
 export const useControl = <T extends ComponentControl>(
   name: string,

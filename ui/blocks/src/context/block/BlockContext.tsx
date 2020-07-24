@@ -1,16 +1,16 @@
 import React from 'react';
 import { deepMerge } from '@component-controls/core';
-import { StoryStore } from '@component-controls/store';
-import { RecoilRoot } from 'recoil';
-import { BlockDataContextProvider } from './BlockDataContext';
-import { ErrorBoundary } from './ErrorBoundary';
 import {
+  StoryStore,
   documentIdAtom,
   storeAtom,
   storyIdAtom,
   activeTabAtom,
   useStore,
-} from '../../state';
+} from '@component-controls/store';
+import { RecoilRoot } from 'recoil';
+import { BlockDataContextProvider } from './BlockDataContext';
+import { ErrorBoundary } from './ErrorBoundary';
 
 export interface BlockContextInputProps {
   /**

@@ -24,10 +24,10 @@ import {
 } from '@component-controls/components';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Column } from 'react-table';
+import { currentControlsPropSelector } from '@component-controls/store';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
-import { currentControlsPropSelector } from '../state';
 
 interface PropRow {
   name: string;

@@ -6,7 +6,7 @@ import {
   useStore,
   useCurrentDocument,
   useDocDescription,
-} from '@component-controls/blocks';
+} from '@component-controls/store';
 import { SEO } from '../SEO';
 import { Header } from '../Header';
 import { Footer } from '../Footer';

@@ -5,7 +5,7 @@ import {
   Link,
   getAccentPaletteColor,
 } from '@component-controls/components';
-import { useDocPropCount, useConfig } from '../state';
+import { useDocPropCount, useConfig } from '@component-controls/store';
 
 export interface PageTypeTagProps {
   type: DocType;

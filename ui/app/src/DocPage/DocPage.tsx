@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { useCurrentDocument } from '@component-controls/blocks';
+import { useCurrentDocument } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
 import { CategoryPage } from '../CategoryPage';

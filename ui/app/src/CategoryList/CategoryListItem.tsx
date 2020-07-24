@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { Subtitle, Link } from '@component-controls/components';
-import { useDocumentPath } from '@component-controls/blocks';
+import { useDocumentPath } from '@component-controls/store';
 import { DocType } from '@component-controls/core';
 
 export interface CategoryListItemProps {

@@ -3,11 +3,11 @@ import { FC } from 'react';
 import { jsx, Select, Label, Box } from 'theme-ui';
 import { Pages, DocType } from '@component-controls/core';
 import {
-  DocumentItem,
   useGetDocumentPath,
   useDocSort,
   DocSortOrder,
-} from '@component-controls/blocks';
+} from '@component-controls/store';
+import { DocumentItem } from '@component-controls/blocks';
 
 export interface DocumentsListProps {
   /**

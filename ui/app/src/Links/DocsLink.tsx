@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
-import { useConfig } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/store';
 
 /**
  * native lonk to the documentation

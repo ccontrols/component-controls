@@ -8,9 +8,9 @@ import {
   dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
+import { useConfig } from '@component-controls/store';
 import { PageTypeTag } from '../PageTypeTag';
 import { TagsList } from '../TagsList';
-import { useConfig } from '../state';
 
 export interface DocumentItemProps {
   /**

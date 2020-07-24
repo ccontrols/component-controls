@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
-import { useConfig, useDocByType } from '@component-controls/blocks';
+import { useConfig, useDocByType } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 import { DocPage } from '../DocPage';

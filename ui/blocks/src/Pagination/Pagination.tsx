@@ -5,7 +5,7 @@ import {
   Pagination as PaginationControl,
   PaginationPage,
 } from '@component-controls/components';
-import { useNavigationInfo } from '../state';
+import { useNavigationInfo } from '@component-controls/store';
 
 /**
  * displays automatic pagination to the next/previous document of this same type.

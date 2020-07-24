@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useCurrentDocument } from '@component-controls/blocks';
+import { useCurrentDocument } from '@component-controls/store';
 import { SidebarsMDXPage } from './SidebarsMDXPage';
 import { DocPageProps, SidebarsStoryPage } from './SidebarsStoryPage';
 

@@ -2,7 +2,7 @@ import { useMemo, useEffect } from 'react';
 
 import Analytics from 'analytics';
 import googleAnalytics from '@analytics/google-analytics';
-import { useConfig } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/store';
 
 export const useAnalytics = () => {
   const config = useConfig();

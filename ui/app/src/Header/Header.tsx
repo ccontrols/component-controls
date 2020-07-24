@@ -9,7 +9,8 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
-import { useConfig, Search, useDocTypeCount } from '@component-controls/blocks';
+import { useConfig, useDocTypeCount } from '@component-controls/store';
+import { Search } from '@component-controls/blocks';
 
 export interface HeaderProps {
   toolbar?: {

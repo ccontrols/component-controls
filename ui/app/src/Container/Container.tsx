@@ -3,9 +3,8 @@ import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Link, Value } from '@component-controls/components';
+import { useConfig, useCurrentDocument } from '@component-controls/store';
 import {
-  useConfig,
-  useCurrentDocument,
   Pagination,
   Container as BlocksContainer,
   TagsList,

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
-import { useStoryPath } from '@component-controls/blocks';
+import { useStoryPath } from '@component-controls/store';
 
 export interface StoryLinkProps {
   id: string;

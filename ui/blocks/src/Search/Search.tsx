@@ -4,7 +4,11 @@ import { FC, useState, useRef, useCallback } from 'react';
 import lunr, { Index } from 'lunr';
 import { SearchInput, SearchInputProps } from '@component-controls/components';
 import { DocType, defDocType, Pages, Document } from '@component-controls/core';
-import { useGetDocumentPath, useGetDocument, usePages } from '../state';
+import {
+  useGetDocumentPath,
+  useGetDocument,
+  usePages,
+} from '@component-controls/store';
 import { DocumentItem } from '../DocumentItem';
 
 export interface SearchItem {

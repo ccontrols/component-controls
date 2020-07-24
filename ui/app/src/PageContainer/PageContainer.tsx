@@ -1,10 +1,10 @@
 import React, { FC, forwardRef } from 'react';
+import { DocType } from '@component-controls/core';
+import { useConfig } from '@component-controls/store';
 import {
-  useConfig,
   PageContainer as BlockPageContainer,
   PageContainerProps as BlockPageContainerProps,
 } from '@component-controls/blocks';
-import { DocType } from '@component-controls/core';
 
 import { Container as DefaultContainer } from '../Container';
 
