@@ -1,7 +1,7 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { useStoryPath } from '@component-controls/blocks';
 
 export interface StoryLinkProps {
   id: string;
@@ -14,9 +14,7 @@ export const StoryLink: FC<StoryLinkProps & Omit<LinkProps, 'href'>> = ({
   id,
   ...props
 }) => {
-  const { storeProvider } = useContext(BlockContext);
-  const story = storeProvider.getStory(id);
-  const href = story ? storeProvider.getStoryPath(story.id || '') : '';
+  const href = useStoryPath(id);
   return (
     <Link href={href} {...props}>
       {children}

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { BlockContext } from '@component-controls/blocks';
+import { useConfig } from '@component-controls/blocks';
 
 interface SEOProps {
   title?: string;
@@ -17,8 +17,7 @@ export const SEO = ({
   image: propImage,
   children,
 }: SEOProps) => {
-  const { storeProvider } = useContext(BlockContext);
-  const config = storeProvider.config;
+  const config = useConfig();
   const {
     siteTitle,
     siteTitleAlt: defaultTitle,

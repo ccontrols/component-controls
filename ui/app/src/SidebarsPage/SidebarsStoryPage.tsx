@@ -1,11 +1,13 @@
 /** @jsx jsx */
-import { FC, useRef, useContext } from 'react';
+import { FC, useRef } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType, TabConfiguration, Document } from '@component-controls/core';
 import {
-  BlockContext,
   useActiveTab,
   useGetDocumentPath,
+  useCurrentStory,
+  useGetStoryPath,
+  useConfig,
 } from '@component-controls/blocks';
 import * as pages from '@component-controls/pages';
 import {
@@ -35,10 +37,14 @@ export interface DocPageProps {
  * document page - rendering with sidebars and tabs for multiple document views
  */
 export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
-  const { storeProvider, docId, storyId } = useContext(BlockContext);
+  const docId = doc.title;
+  const story = useCurrentStory();
+  const storyId = story?.id;
+  const config = useConfig();
+  const getStoryPath = useGetStoryPath();
   const getDocumentPath = useGetDocumentPath();
   const activeTab = useActiveTab();
-  const pageConfig = storeProvider?.config?.pages?.[type] || {};
+  const pageConfig = config?.pages?.[type] || {};
   const { tabs = [], storyPaths } = pageConfig;
   const selectedTab = activeTab
     ? activeTab
@@ -52,7 +58,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   );
   const renderTab = (tab: TabConfiguration) => {
     if (tab.render) {
-      return tab.render({ storeProvider, docId });
+      return tab.render({ docId });
     }
     if (tab.type) {
       //@ts-ignore
@@ -76,7 +82,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
                   <Link
                     href={
                       storyPaths && storyId
-                        ? storeProvider.getStoryPath(
+                        ? getStoryPath(
                             storyId,
                             tabIndex > 0 ? tab.route : undefined,
                           )
