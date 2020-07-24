@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { useControlSelector } from '../state';
 import { ArrayEditor } from './ArrayEditor';
 
 export default {
@@ -14,21 +14,22 @@ export const overview = () => {
     { name: 'Book' },
     { name: 'Whiskey' },
   ]);
+  const selector = useControlSelector(
+    {
+      prop: {
+        type: ControlTypes.ARRAY,
+        rowType: { name: { type: ControlTypes.TEXT } },
+        value: state,
+      },
+    },
+    (name, newVal) => setState(newVal),
+  );
   return (
-    <ConrolsContextProvider
-      onChange={(name, newVal) => setState(newVal)}
-      controls={{
-        prop: {
-          type: ControlTypes.ARRAY,
-          rowType: { name: { type: ControlTypes.TEXT } },
-          value: state,
-        },
-      }}
-    >
-      <ArrayEditor name="prop" />
+    <div>
+      <ArrayEditor name="prop" selector={selector} />
       <ul>
         {state && state.map(item => <li key={item.name}>{item.name}</li>)}
       </ul>
-    </ConrolsContextProvider>
+    </div>
   );
 };

@@ -1,13 +1,34 @@
-import { atomFamily, useRecoilValue } from 'recoil';
-import { ComponentControls } from '@component-controls/core';
-import { useCurrentStory } from './story';
+import { selector, selectorFamily } from 'recoil';
+import { ComponentControls, ComponentControl } from '@component-controls/core';
+import { RecoilControlSelector } from '@component-controls/editors';
 
-const controlsAtom = atomFamily<ComponentControls, string>({
-  key: 'story_controls',
-  default: {},
+import { currentStorySelector } from './story';
+
+export const storyControls = selector<ComponentControls | undefined>({
+  key: 'story_prop',
+  get: ({ get }) => {
+    const story = get(currentStorySelector);
+    return story?.controls;
+  },
+  set: ({ get, set }, newValue) => {
+    const story = get(currentStorySelector);
+    const updated = { ...story, controls: newValue };
+    set(currentStorySelector, updated);
+  },
 });
 
-export const useCurrentControls = (): ComponentControls | undefined => {
-  const story = useCurrentStory();
-  return story?.id ? useRecoilValue(controlsAtom(story.id)) : undefined;
-};
+export const currentControlsPropSelector: RecoilControlSelector = selectorFamily<
+  ComponentControl | undefined,
+  string
+>({
+  key: 'controls_prop',
+  get: name => ({ get }) => {
+    const controls = get(storyControls);
+    return controls ? controls[name] : undefined;
+  },
+  set: name => ({ get, set }, newValue) => {
+    const controls = get(storyControls);
+    const updated: ComponentControls = { ...controls, [name]: newValue as any };
+    set(storyControls, updated);
+  },
+});

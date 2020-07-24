@@ -2,17 +2,16 @@ import React, { ChangeEvent } from 'react';
 import { Input, Textarea } from 'theme-ui';
 import { ComponentControlText, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Text control editor.
  */
 
-export const TextEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlText>({
-    name,
-  });
+export const TextEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlText>(name, selector);
+
   const { rows = 1 } = control;
   return rows > 1 ? (
     <Textarea
@@ -23,7 +22,7 @@ export const TextEditor: PropertyEditor = ({ name }) => {
       placeholder={control.placeholder}
       onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
         const { value } = event.target;
-        onChange(name, value);
+        onChange(value);
       }}
     />
   ) : (
@@ -34,7 +33,7 @@ export const TextEditor: PropertyEditor = ({ name }) => {
       placeholder={control.placeholder}
       onChange={(event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
-        onChange(name, value);
+        onChange(value);
       }}
     />
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { useControlSelector } from '../state';
 import { DateEditor } from './DateEditor';
 
 export default {
@@ -10,42 +10,36 @@ export default {
 
 export const overview = () => {
   const [state, setState] = React.useState(new Date());
-  return (
-    <ConrolsContextProvider
-      onChange={(name, newVal) => setState(newVal)}
-      controls={{
-        prop: { type: ControlTypes.DATE, value: state },
-      }}
-    >
-      <DateEditor name="prop" />
-    </ConrolsContextProvider>
+  const selector = useControlSelector(
+    {
+      prop: { type: ControlTypes.DATE, value: state },
+    },
+    (name, newVal) => setState(newVal),
   );
+
+  return <DateEditor name="prop" selector={selector} />;
 };
 
 export const onlyDatePicker = () => {
   const [state, setState] = React.useState(new Date());
-  return (
-    <ConrolsContextProvider
-      onChange={(name, newVal) => setState(newVal)}
-      controls={{
-        prop: { type: ControlTypes.DATE, value: state, timePicker: false },
-      }}
-    >
-      <DateEditor name="prop" />
-    </ConrolsContextProvider>
+  const selector = useControlSelector(
+    {
+      prop: { type: ControlTypes.DATE, value: state, timePicker: false },
+    },
+    (name, newVal) => setState(newVal),
   );
+
+  return <DateEditor name="prop" selector={selector} />;
 };
 
 export const onlyTimePicker = () => {
   const [state, setState] = React.useState(new Date());
-  return (
-    <ConrolsContextProvider
-      onChange={(name, newVal) => setState(newVal)}
-      controls={{
-        prop: { type: ControlTypes.DATE, value: state, datePicker: false },
-      }}
-    >
-      <DateEditor name="prop" />
-    </ConrolsContextProvider>
+  const selector = useControlSelector(
+    {
+      prop: { type: ControlTypes.DATE, value: state, datePicker: false },
+    },
+    (name, newVal) => setState(newVal),
   );
+
+  return <DateEditor name="prop" selector={selector} />;
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { useControlSelector } from '../state';
 import { ButtonEditor } from './ButtonEditor';
 
 export default {
@@ -8,14 +8,16 @@ export default {
   component: ButtonEditor,
 };
 
-export const overview = () => (
-  <ConrolsContextProvider
-    onClick={() => console.log('clicked')}
-    onChange={() => {}}
-    controls={{
-      prop: { type: ControlTypes.BUTTON },
-    }}
-  >
-    <ButtonEditor name="Check in console" />
-  </ConrolsContextProvider>
-);
+export const overview = () => {
+  const selector = useControlSelector(
+    {
+      prop: {
+        type: ControlTypes.BUTTON,
+        onClick: () => console.log('clicked'),
+      },
+    },
+    () => {},
+  );
+
+  return <ButtonEditor name="Check in console" selector={selector} />;
+};

@@ -1,10 +1,15 @@
 import { FC } from 'react';
-
+import { RecoilControlSelector } from './state';
 export interface PropertyControlProps {
   /**
    * name of the property control.
    */
   name: string;
+
+  /**
+   * recoil state selector
+   */
+  selector: RecoilControlSelector;
 }
 
 /**

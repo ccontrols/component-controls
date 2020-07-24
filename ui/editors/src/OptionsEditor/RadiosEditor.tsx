@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/core';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 
 const RadiosWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
   isInline
@@ -24,10 +24,12 @@ const RadioLabel = styled.label({
   display: 'inline-block',
 });
 
-export const RadiosEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlOptions>({
+export const RadiosEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlOptions>(
     name,
-  });
+    selector,
+  );
+
   const renderRadioButton = (entry: NormalizedOption) => {
     const id = `${entry.label}-${entry.value}`;
     return (
@@ -37,7 +39,7 @@ export const RadiosEditor: PropertyEditor = ({ name }) => {
           id={id}
           name={entry.label}
           value={entry.value}
-          onChange={e => onChange(name, e.target.value)}
+          onChange={e => onChange(e.target.value)}
           checked={
             entry.value === control.value ||
             (typeof entry.value.toString === 'function' &&

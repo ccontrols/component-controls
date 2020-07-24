@@ -9,7 +9,7 @@ import {
 } from '@component-controls/core';
 import { Popover } from '@component-controls/components';
 import { PropertyEditor, PropertyControlProps } from '../types';
-import { useControlContext, ConrolsContextProvider } from '../context';
+import { useControl, useControlSelector } from '../state';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
@@ -36,16 +36,18 @@ export interface ObjectEditorProps extends PropertyControlProps {
 
 export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   name,
+  selector,
   editLabel = 'edit...',
 }) => {
-  const { control, onChange, onClick } = useControlContext<
-    ComponentControlObject
-  >({ name });
+  const [control, onChange] = useControl<ComponentControlObject>(
+    name,
+    selector,
+  );
+
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (childName: string, value: any) => {
     onChange(
-      name,
       getControlValues(
         mergeControlValues(control.value as any, childName, value),
       ),
@@ -73,6 +75,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       })
       .filter(p => p && p.node);
   }
+  const childSelector = useControlSelector(control.value || {}, handleChange);
   return (
     <Popover
       trigger="click"
@@ -83,27 +86,24 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       }}
       tooltip={() => (
         <ChildContainer>
-          <ConrolsContextProvider
-            controls={control.value || {}}
-            onChange={handleChange}
-            onClick={onClick}
-          >
-            <table>
-              <tbody>
-                {children &&
-                  children.map(child =>
-                    child ? (
-                      <tr key={`editor_${child.name}`}>
-                        <td>{child.prop.label || child.name}</td>
-                        <td>
-                          <child.node name={child.name} />
-                        </td>
-                      </tr>
-                    ) : null,
-                  )}
-              </tbody>
-            </table>
-          </ConrolsContextProvider>
+          <table>
+            <tbody>
+              {children &&
+                children.map(child =>
+                  child ? (
+                    <tr key={`editor_${child.name}`}>
+                      <td>{child.prop.label || child.name}</td>
+                      <td>
+                        <child.node
+                          name={child.name}
+                          selector={childSelector}
+                        />
+                      </td>
+                    </tr>
+                  ) : null,
+                )}
+            </tbody>
+          </table>
         </ChildContainer>
       )}
     >

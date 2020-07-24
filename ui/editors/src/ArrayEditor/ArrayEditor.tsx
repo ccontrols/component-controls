@@ -11,7 +11,7 @@ import {
 
 import { Popover } from '@component-controls/components';
 import { PropertyEditor, PropertyControlProps } from '../types';
-import { useControlContext, ConrolsContextProvider } from '../context';
+import { useControl, useControlSelector } from '../state';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
@@ -25,6 +25,45 @@ const ChildContainer: FC = props => (
   />
 );
 
+interface RowEditorProps {
+  propName: string;
+  control: ComponentControlArray;
+  row: any;
+  Editor: PropertyEditor;
+  onChange: (name: string, value: any) => void;
+}
+const RowEditor: FC<RowEditorProps> = ({
+  propName,
+  control,
+  row,
+  Editor,
+  onChange,
+}) => {
+  const selector = useControlSelector(
+    {
+      [propName]:
+        control.rowType[propName].type === ControlTypes.OBJECT
+          ? deepmerge<ComponentControl>(control.rowType[propName], {
+              value: Object.keys(row[propName]).reduce(
+                (a, k) => ({
+                  ...a,
+                  [k]: {
+                    value: row[propName] ? row[propName][k] : {},
+                  },
+                }),
+                {},
+              ),
+            })
+          : deepmerge<ComponentControl>(control.rowType[propName], {
+              value: row[propName],
+            }),
+    },
+    onChange,
+  );
+
+  return <Editor name={propName} selector={selector} />;
+};
+
 export interface ArrayEditorProps extends PropertyControlProps {
   /**
    * label for the editor button.
@@ -37,17 +76,15 @@ export interface ArrayEditorProps extends PropertyControlProps {
  */
 export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   name,
+  selector,
   editLabel = 'edit...',
 }) => {
-  const { control, onChange, onClick } = useControlContext<
-    ComponentControlArray
-  >({ name });
+  const [control, setProp] = useControl<ComponentControlArray>(name, selector);
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (rowIndex: number, propName: string, value: any) => {
     if (Array.isArray(control.value)) {
-      onChange(
-        name,
+      setProp(
         control.value.map((row, index) =>
           rowIndex === index ? { ...row, [propName]: value } : row,
         ),
@@ -56,15 +93,12 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   };
   const handleOnDelete = (rowIndex: number) => {
     if (Array.isArray(control.value)) {
-      onChange(
-        name,
-        control.value.filter((row, index) => index !== rowIndex),
-      );
+      setProp(control.value.filter((row, index) => index !== rowIndex));
     }
   };
   const handleOnAdd = () => {
     if (Array.isArray(control.value)) {
-      onChange(name, [...control.value, newControlValues(control.rowType)]);
+      setProp([...control.value, newControlValues(control.rowType)]);
     }
   };
   return (
@@ -102,43 +136,15 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
                           return Editor ? (
                             <td key={`row_data_${idx}_${key}`}>
                               <Flex>
-                                <ConrolsContextProvider
-                                  controls={{
-                                    [key]:
-                                      control.rowType[key].type ===
-                                      ControlTypes.OBJECT
-                                        ? deepmerge<ComponentControl>(
-                                            control.rowType[key],
-                                            {
-                                              value: Object.keys(
-                                                row[key],
-                                              ).reduce(
-                                                (a, k) => ({
-                                                  ...a,
-                                                  [k]: {
-                                                    value: row[key]
-                                                      ? row[key][k]
-                                                      : {},
-                                                  },
-                                                }),
-                                                {},
-                                              ),
-                                            },
-                                          )
-                                        : deepmerge<ComponentControl>(
-                                            control.rowType[key],
-                                            {
-                                              value: row[key],
-                                            },
-                                          ),
-                                  }}
+                                <RowEditor
+                                  control={control}
+                                  propName={key}
+                                  row={row}
+                                  Editor={Editor}
                                   onChange={(propName: string, value: any) =>
                                     handleChange(idx, propName, value)
                                   }
-                                  onClick={onClick}
-                                >
-                                  <Editor name={key} />
-                                </ConrolsContextProvider>
+                                />
                               </Flex>
                             </td>
                           ) : null;

@@ -2,7 +2,7 @@ import { useRecoilValue, selectorFamily } from 'recoil';
 import { Pages } from '@component-controls/core';
 
 import {
-  docsAtom,
+  docsSelector,
   DocCountType,
   useDocs,
   docSortByTypeAtom,
@@ -12,7 +12,7 @@ import {
 const docPropCountSelector = selectorFamily<DocCountType, string>({
   key: 'docs_prop_count',
   get: category => ({ get }) => {
-    const docs = get(docsAtom);
+    const docs = get(docsSelector);
     return Object.keys(docs).reduce((acc: { [key: string]: number }, key) => {
       const doc = docs[key];
       const value = (doc as any)[category];

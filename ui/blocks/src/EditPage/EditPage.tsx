@@ -5,14 +5,14 @@ import { FC } from 'react';
 import { Box, Text } from 'theme-ui';
 import { MarkGithubIcon } from '@primer/octicons-react';
 import { ExternalLink } from '@component-controls/components';
-import { useCurrentDocument } from '../state';
+import { useDocPackage } from '../state';
 
 /**
  * Display a Edit this page link to the page source repository.
  * In order for this to work, you need to set up the `repository` field in `package.json`.
  */
 export const EditPage: FC = () => {
-  const { package: docPackage } = useCurrentDocument() || {};
+  const docPackage = useDocPackage();
   return docPackage && docPackage.repository && docPackage.repository.browse ? (
     <Box variant="editpage.container">
       <ExternalLink

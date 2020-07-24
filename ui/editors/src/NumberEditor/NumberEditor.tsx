@@ -3,7 +3,7 @@ import { Input, Box, BoxProps, Slider } from 'theme-ui';
 import { Keyboard, DOWN_ARROW, UP_ARROW } from '@component-controls/components';
 import { ComponentControlNumber, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 const RangeLabel: FC<BoxProps> = props => (
@@ -17,10 +17,11 @@ const RangeWrapper: FC<BoxProps> = props => (
 /**
  * Number control editor.
  */
-export const NumberEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlNumber>({
+export const NumberEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlNumber>(
     name,
-  });
+    selector,
+  );
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
@@ -30,7 +31,7 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
       parsedValue = null;
     }
 
-    onChange(name, parsedValue);
+    onChange(parsedValue);
   };
 
   const onKeyPressed = (key: number) => {
@@ -38,7 +39,6 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
       case UP_ARROW:
         if (typeof control.value === 'number') {
           onChange(
-            name,
             Math.min(
               control.max || Number.MAX_VALUE,
               control.value + (control.step || 1),
@@ -49,7 +49,6 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
       case DOWN_ARROW:
         if (typeof control.value === 'number') {
           onChange(
-            name,
             Math.max(control.min || 0, control.value - (control.step || 1)),
           );
         }

@@ -25,7 +25,39 @@ import {
   useActiveTab,
 } from './store';
 
-export const docsAtom = selector<Documents>({
+export const documentIdAtom = atom<string | undefined>({
+  key: 'document_id',
+  default: undefined,
+});
+
+export const currentDocumentSelector = selector<Document | undefined>({
+  key: 'current_document',
+  get: ({ get }) => {
+    const id = get(documentIdAtom);
+    if (!id) {
+      return undefined;
+    }
+    const store = get(storeAtom);
+    return store.docs[id];
+  },
+});
+
+export const useCurrentDocument = (): Document | undefined =>
+  useRecoilValue(currentDocumentSelector);
+
+const docPackageSelector = selector<PackageInfo | undefined>({
+  key: 'current_doc_package',
+  get: ({ get }) => {
+    const doc = get(currentDocumentSelector);
+    const store = get(storeAtom);
+    return doc && doc.package ? store.packages[doc.package] : undefined;
+  },
+});
+
+export const useDocPackage = (): PackageInfo | undefined =>
+  useRecoilValue(docPackageSelector);
+
+export const docsSelector = selector<Documents>({
   key: 'docs',
   get: ({ get }) => {
     const store = get(storeAtom);
@@ -33,9 +65,9 @@ export const docsAtom = selector<Documents>({
   },
 });
 
-export const useDocs = () => useRecoilValue(docsAtom);
+export const useDocs = () => useRecoilValue(docsSelector);
 
-export const pagesAtom = selector<Pages>({
+export const pagesSelector = selector<Pages>({
   key: 'pages',
   get: ({ get }) => {
     const store = get(storeAtom);
@@ -43,17 +75,7 @@ export const pagesAtom = selector<Pages>({
   },
 });
 
-export const usePages = () => useRecoilValue(pagesAtom);
-
-type DocumentStoreType = Document & { package?: PackageInfo };
-
-export const currentDocumentAtom = atom<DocumentStoreType | undefined>({
-  key: 'document',
-  default: undefined,
-});
-
-export const useCurrentDocument = (): DocumentStoreType | undefined =>
-  useRecoilValue(currentDocumentAtom);
+export const usePages = () => useRecoilValue(pagesSelector);
 
 export type DocSortOrder = 'date' | 'dateModified' | 'title';
 
@@ -84,7 +106,7 @@ export const useDocSort = (type: DocType) =>
 const docsByTypeSelector = selectorFamily<Pages, DocType>({
   key: 'docs_by_type',
   get: type => ({ get }) => {
-    const docs = get(docsAtom);
+    const docs = get(docsSelector);
     const sort = get(docSortByTypeAtom(type));
     return Object.keys(docs)
       .reduce((acc: Pages, key: string) => {
@@ -133,7 +155,7 @@ interface NavigationResult {
 const navigationSelector = selector<NavigationResult>({
   key: 'navigation_selector',
   get: ({ get }) => {
-    const doc = get(currentDocumentAtom);
+    const doc = get(currentDocumentSelector);
     const config = get(configSelector);
     const activeTab = get(activeTabAtom);
     const result: NavigationResult = {};
@@ -231,7 +253,9 @@ export const useGetDocumentPath = (): UseGetDocumentPath => {
     getDocPath(type, doc, config?.pages, name, activeTab || currentActiveTab);
 };
 
-export const useDocDescription = (doc?: Document): string | undefined => {
+export const useDocDescription = (
+  doc?: Document | Document,
+): string | undefined => {
   const store = useStore();
   if (!doc) {
     return undefined;

@@ -1,13 +1,13 @@
 import React from 'react';
-import { deepMerge, Document } from '@component-controls/core';
+import { deepMerge } from '@component-controls/core';
 import { StoryStore } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
 import { BlockDataContextProvider } from './BlockDataContext';
 import { ErrorBoundary } from './ErrorBoundary';
 import {
-  currentDocumentAtom,
+  documentIdAtom,
   storeAtom,
-  currentStoryAtom,
+  storyIdAtom,
   activeTabAtom,
   useStore,
 } from '../../state';
@@ -73,28 +73,20 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
 }) => {
   let storyId = propsStoryId;
   let docId = propsDocId;
-  let doc: Document | undefined;
   if (storyId && !docId) {
     const story = store.getStory(storyId);
     docId = story?.doc;
-    doc = docId ? store.getStoryDoc(docId) : undefined;
   } else if (!storyId && docId) {
-    doc = store.getStoryDoc(docId);
+    const doc = store.getStoryDoc(docId);
     storyId =
       doc && doc.stories && doc.stories.length ? doc.stories[0] : undefined;
   }
   return (
     <RecoilRoot
       initializeState={({ set }) => {
-        set(currentDocumentAtom, {
-          ...doc,
-          package:
-            doc && doc.package
-              ? store.getStore()?.packages[doc.package]
-              : undefined,
-        });
+        set(documentIdAtom, docId);
         set(storeAtom, store.store);
-        set(currentStoryAtom, storyId ? store.getStory(storyId) : undefined);
+        set(storyIdAtom, storyId);
         set(activeTabAtom, activeTab);
       }}
     >

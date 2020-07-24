@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/core';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 
 const CheckboxesWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
   isInline
@@ -30,10 +30,12 @@ const CheckboxLabel = styled.label({
   display: 'inline-block',
 });
 
-export const CheckboxEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlOptions>({
+export const CheckboxEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlOptions>(
     name,
-  });
+    selector,
+  );
+
   const { options, value } = control;
   const { entries, selected } = normalizeOptions(options, value);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +51,7 @@ export const CheckboxEditor: PropertyEditor = ({ name }) => {
           : currentValue === entryValue;
       })
       .map(entry => entry.value);
-    onChange(name, values);
+    onChange(values);
   };
 
   const renderCheckboxList = () => {

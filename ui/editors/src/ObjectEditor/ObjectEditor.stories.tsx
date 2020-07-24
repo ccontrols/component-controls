@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes, ComponentControls } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { useControlSelector } from '../state';
 import { ObjectEditor } from './ObjectEditor';
 
 export default {
@@ -14,17 +14,14 @@ export const overview = () => {
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
   });
-
-  return (
-    <ConrolsContextProvider
-      onChange={(_name, newVal) => setState(newVal)}
-      controls={{
-        prop: { type: ControlTypes.OBJECT, value: state },
-      }}
-    >
-      <ObjectEditor name="prop" />
-    </ConrolsContextProvider>
+  const selector = useControlSelector(
+    {
+      prop: { type: ControlTypes.OBJECT, value: state },
+    },
+    (name, newVal) => setState(newVal),
   );
+
+  return <ObjectEditor name="prop" selector={selector} />;
 };
 
 export const editLabel = () => {
@@ -33,15 +30,14 @@ export const editLabel = () => {
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
   });
+  const selector = useControlSelector(
+    {
+      prop: { type: ControlTypes.OBJECT, value: state },
+    },
+    (name, newVal) => setState(newVal),
+  );
 
   return (
-    <ConrolsContextProvider
-      onChange={(_name, newVal) => setState(newVal)}
-      controls={{
-        prop: { type: ControlTypes.OBJECT, value: state },
-      }}
-    >
-      <ObjectEditor name="prop" editLabel="Click to edit" />
-    </ConrolsContextProvider>
+    <ObjectEditor name="prop" selector={selector} editLabel="Click to edit" />
   );
 };

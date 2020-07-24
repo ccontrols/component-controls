@@ -27,6 +27,7 @@ import { Column } from 'react-table';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
+import { currentControlsPropSelector } from '../state';
 
 interface PropRow {
   name: string;
@@ -254,7 +255,10 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
 
               return (
                 <Box variant="propstable.control">
-                  <InputType name={original.name} />
+                  <InputType
+                    name={original.name}
+                    selector={currentControlsPropSelector}
+                  />
                 </Box>
               );
             }

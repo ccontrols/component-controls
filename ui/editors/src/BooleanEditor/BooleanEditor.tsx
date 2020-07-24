@@ -5,21 +5,22 @@ import {
   ControlTypes,
 } from '@component-controls/core';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Boolean control editor. Uses the Toggle component.
  *
  */
-export const BooleanEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlBoolean>({
+export const BooleanEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlBoolean>(
     name,
-  });
+    selector,
+  );
   return (
     <Toggle
       id={name}
-      onChange={checked => onChange(name, checked)}
+      onChange={checked => onChange(checked)}
       checked={control.value ?? false}
     />
   );

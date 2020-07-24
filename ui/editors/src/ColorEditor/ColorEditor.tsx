@@ -3,22 +3,19 @@ import { SketchPicker, ColorResult } from 'react-color';
 import { Button, Box } from 'theme-ui';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
+import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Color control editor.
  */
 
-export const ColorEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlColor>({
-    name,
-  });
+export const ColorEditor: PropertyEditor = ({ name, selector }) => {
+  const [control, onChange] = useControl<ComponentControlColor>(name, selector);
   const [displayColorPicker, setDisplayColorPicker] = React.useState(false);
 
   const handleChange = (color: ColorResult) => {
     onChange(
-      name,
       `rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`,
     );
   };
