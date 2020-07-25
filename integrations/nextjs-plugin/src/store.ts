@@ -1,4 +1,5 @@
 import { StoriesStore } from '@component-controls/core';
 import { loadStore } from '@component-controls/store';
 
-export const store: StoriesStore = loadStore(require('./component-controls'));
+const bundle = require('./component-controls');
+export const store: StoriesStore = loadStore(bundle);

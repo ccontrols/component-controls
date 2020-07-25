@@ -257,11 +257,19 @@ export const useDocumentPath: UseGetDocumentPath = (
 };
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
-  const doc = useDocument(name);
+  const getDoc = useGetDocument();
   const currentActiveTab = useActiveTab();
   const config = useConfig();
-  return (type = defDocType, name, activeTab) =>
-    getDocPath(type, doc, config?.pages, name, activeTab || currentActiveTab);
+  return (type = defDocType, name, activeTab) => {
+    const doc = getDoc(name);
+    return getDocPath(
+      type,
+      doc,
+      config?.pages,
+      name,
+      activeTab || currentActiveTab,
+    );
+  };
 };
 
 export const useDocDescription = (

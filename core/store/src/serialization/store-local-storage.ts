@@ -1,6 +1,6 @@
 import { StoriesStore, getComponentName } from '@component-controls/core';
 
-import { COMPONENT_CONTROLS_STORAGE, StoryStore } from '../types';
+import { COMPONENT_CONTROLS_STORAGE } from '../types';
 
 const encodeFn = (name: string, val: any) => {
   // convert RegExp to string
@@ -13,7 +13,7 @@ const encodeFn = (name: string, val: any) => {
   }
   return val;
 };
-export const saveStore = (store: StoryStore) => {
+export const saveStore = (store: StoriesStore) => {
   for (var key in localStorage) {
     if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
       localStorage.removeItem(key);
@@ -21,7 +21,7 @@ export const saveStore = (store: StoryStore) => {
   }
   localStorage.setItem(
     COMPONENT_CONTROLS_STORAGE,
-    JSON.stringify(store.getStore(), encodeFn),
+    JSON.stringify(store, encodeFn),
   );
 };
 
@@ -69,4 +69,8 @@ export const updateStory = (
     );
   }
   return store;
+};
+
+export const notifyStoreReload = () => {
+  console.log('loaded');
 };
