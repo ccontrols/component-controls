@@ -106,25 +106,66 @@ export const useDocSort = (type: DocType) =>
 const docsByTypeSelector = selectorFamily<Pages, DocType>({
   key: 'docs_by_type',
   get: type => ({ get }) => {
-    const docs = get(docsSelector);
-    const sort = get(docSortByTypeAtom(type));
-    return Object.keys(docs)
-      .reduce((acc: Pages, key: string) => {
-        const doc: Document | undefined = docs[key];
-        if (doc) {
-          const { type: docType = defDocType } = doc;
-          if (docType === type) {
-            return [...acc, doc];
-          }
+    const store = get(storeAtom);
+    const docs = store.docs;
+    const { storySort } = get(configSelector) || {};
+    let resultDocs = Object.keys(docs).reduce((acc: Pages, key: string) => {
+      const doc: Document | undefined = docs[key];
+      if (doc) {
+        const { type: docType = defDocType } = doc;
+        if (docType === type) {
+          return [...acc, doc];
         }
-        return acc;
-      }, [])
-      .sort(docSortFn(sort));
+      }
+      return acc;
+    }, []);
+
+    if (storySort) {
+      resultDocs = resultDocs.sort((a: Document, b: Document) => {
+        //@ts-ignore
+        const sort = storySort(a.title, b.title);
+        if (sort !== 0) {
+          return sort;
+        }
+        return resultDocs.indexOf(a) - resultDocs.indexOf(b);
+      });
+    }
+    //split documents by their common 'parent'
+    resultDocs = resultDocs
+      .map(doc => {
+        const levels = doc.title.split('/');
+        const parent = levels.slice(0, -1).join('/');
+        return { id: doc, parent };
+      })
+      .sort((a, b) => {
+        if (a.parent === b.parent) {
+          return (
+            (store.docs[a.id.title].order || 0) -
+            (store.docs[b.id.title].order || 0)
+          );
+        }
+        return 0;
+      })
+      .map(item => item.id);
+    return resultDocs;
   },
 });
 
 export const useDocByType = (type: DocType): Pages => {
   return useRecoilValue(docsByTypeSelector(type));
+};
+
+const docsSortedSelector = selectorFamily<Pages, DocType>({
+  key: 'docs_sorted_by_type',
+  get: type => ({ get }) => {
+    const docs = get(docsByTypeSelector(type));
+    const sort = get(docSortByTypeAtom(type));
+    return [...docs].sort(docSortFn(sort));
+  },
+});
+
+export const useSortedDocByType = (type: DocType): Pages => {
+  return useRecoilValue(docsSortedSelector(type));
 };
 
 export type DocCountType = Record<DocType, number>;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from '@component-controls/components';
-import { MockContext, useDocByType } from '@component-controls/blocks';
+import { MockContext } from '@component-controls/blocks';
+import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
 
 export default {
@@ -10,7 +11,7 @@ export default {
 
 const MockList = () => {
   const pages = useDocByType('story');
-  return <DocumentsList pages={pages} />;
+  return <DocumentsList pages={pages} type="story" />;
 };
 
 export const overview = () => (

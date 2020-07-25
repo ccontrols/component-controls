@@ -31,7 +31,6 @@ export const AppContext: FC<AppContextProps> = ({
   linkClass,
   activeTab,
 }) => {
-  console.log(docId, storyId);
   const { pages } = store.config || {};
   const page = pages?.[type];
   const documentId = docId
