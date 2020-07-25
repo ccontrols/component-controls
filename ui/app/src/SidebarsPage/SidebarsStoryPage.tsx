@@ -5,8 +5,6 @@ import { DocType, TabConfiguration, Document } from '@component-controls/core';
 import {
   useActiveTab,
   useGetDocumentPath,
-  useCurrentStory,
-  useGetStoryPath,
   useConfig,
 } from '@component-controls/store';
 import * as pages from '@component-controls/pages';
@@ -38,14 +36,11 @@ export interface DocPageProps {
  */
 export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const docId = doc.title;
-  const story = useCurrentStory();
-  const storyId = story?.id;
   const config = useConfig();
-  const getStoryPath = useGetStoryPath();
   const getDocumentPath = useGetDocumentPath();
   const activeTab = useActiveTab();
   const pageConfig = config?.pages?.[type] || {};
-  const { tabs = [], storyPaths } = pageConfig;
+  const { tabs = [] } = pageConfig;
   const selectedTab = activeTab
     ? activeTab
     : tabs.length > 0
@@ -72,7 +67,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const layout = doc.layout;
   return (
     <Box variant={docToVariant(doc)}>
-      {layout?.navSidebar && <Sidebar type={type} activeTab={activeTab} />}
+      {layout?.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs fontSize={2} defaultIndex={tabIndex}>
           {tabs && tabs.length > 1 && (
@@ -81,12 +76,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
                 <Tab key={`tab_${tab.route}`}>
                   <Link
                     href={
-                      storyPaths && storyId
-                        ? getStoryPath(
-                            storyId,
-                            tabIndex > 0 ? tab.route : undefined,
-                          )
-                        : docId
+                      docId
                         ? getDocumentPath(
                             type,
                             docId,

@@ -169,10 +169,12 @@ const navigationSelector = selector<NavigationResult>({
     const doc = get(currentDocumentSelector);
     const config = get(configSelector);
     const activeTab = get(activeTabAtom);
+
     const result: NavigationResult = {};
     if (doc) {
       const docId = doc.title;
-      const docs = get(docsByTypeSelector(doc.type || defDocType));
+      const type = doc.type || defDocType;
+      const docs = get(docsByTypeSelector(type));
       //next page
       const nextIndex = docs.findIndex(p => p.title === docId);
       if (nextIndex >= 0 && nextIndex < docs.length - 1) {
@@ -258,17 +260,10 @@ export const useDocumentPath: UseGetDocumentPath = (
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
   const getDoc = useGetDocument();
-  const currentActiveTab = useActiveTab();
   const config = useConfig();
   return (type = defDocType, name, activeTab) => {
     const doc = getDoc(name);
-    return getDocPath(
-      type,
-      doc,
-      config?.pages,
-      name,
-      activeTab || currentActiveTab,
-    );
+    return getDocPath(type, doc, config?.pages, name, activeTab);
   };
 };
 

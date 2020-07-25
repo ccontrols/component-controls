@@ -65,17 +65,11 @@ export const useStoryPath = (storyId: string): string => {
 
 export const useGetStoryPath = () => {
   const store = useStore();
-  const currentActiveTab = useActiveTab();
   const config = useConfig();
   return (storyId: string, activeTab?: string): string => {
     const story = store.stories[storyId];
     const doc = story && story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(
-      storyId,
-      doc,
-      config?.pages,
-      activeTab || currentActiveTab,
-    );
+    return getStoryPath(storyId, doc, config?.pages, activeTab);
   };
 };
 

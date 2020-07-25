@@ -20,7 +20,10 @@ export const getDocPath = (
   name: string = '',
   activeTab?: string,
 ): string => {
-  const { basePath = '' } = pagesConfig?.[docType] || {};
+  const { basePath = '', storyPaths } = pagesConfig?.[docType] || {};
+  if (storyPaths && doc && doc.stories && doc.stories.length > 0) {
+    return getStoryPath(doc.stories[0], doc, pagesConfig, activeTab);
+  }
   const route = doc
     ? doc.route ||
       `${ensureStartingSlash(

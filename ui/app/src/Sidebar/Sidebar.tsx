@@ -7,6 +7,7 @@ import {
   useCurrentDocument,
   useDocByType,
   useConfig,
+  useActiveTab,
 } from '@component-controls/store';
 import {
   Sidebar as AppSidebar,
@@ -38,11 +39,6 @@ export interface SidebarProps {
    * document type
    */
   type?: DocType;
-
-  /**
-   * currently active tab. Use to creae the sidemenu links
-   */
-  activeTab?: string;
 }
 
 const createMenuItem = (
@@ -132,10 +128,10 @@ const createMenuItem = (
 export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
   type = defDocType,
-  activeTab,
 }) => {
   const { SidebarClose, responsive } = useContext(SidebarContext);
   const store = useStore();
+  const activeTab = useActiveTab();
   const { title: docId } = useCurrentDocument() || {};
 
   const config = useConfig() || {};
