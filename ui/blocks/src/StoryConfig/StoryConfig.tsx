@@ -4,32 +4,42 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import { SourceProps } from '@component-controls/components';
-
+import {
+  useStory,
+  StoryInputProps,
+  useCurrentDocument,
+  usePackage,
+} from '@component-controls/store';
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
 } from '../BlockContainer/story';
 import { BaseStoryConfig } from './BaseStoryConfig';
 
-export type StoryConfigProps = StoryBlockContainerProps & SourceProps;
+export type StoryConfigProps = StoryBlockContainerProps & {
+  sourceProps?: SourceProps;
+} & StoryInputProps;
 
 /**
  * Displays the configuration object of a story.
  */
-export const StoryConfig: FC<StoryConfigProps> = props => {
+export const StoryConfig: FC<StoryConfigProps> = ({
+  id,
+  name,
+  sourceProps,
+  ...rest
+}) => {
+  const story = useStory({ id, name });
+  const doc = useCurrentDocument();
+  const docPackage = doc && doc.package ? usePackage(doc.package) : undefined;
   return (
-    <StoryBlockContainer {...props}>
-      {(context, sourceProps: SourceProps) => {
-        const { story, doc, docPackage } = context;
-        return (
-          <BaseStoryConfig
-            story={story}
-            doc={doc}
-            docPackage={docPackage}
-            sourceProps={sourceProps}
-          />
-        );
-      }}
+    <StoryBlockContainer {...rest}>
+      <BaseStoryConfig
+        story={story}
+        doc={doc}
+        docPackage={docPackage}
+        sourceProps={sourceProps}
+      />
     </StoryBlockContainer>
   );
 };

@@ -1,5 +1,5 @@
 import { atom, useRecoilValue, useSetRecoilState, selector } from 'recoil';
-import { StoriesStore } from '@component-controls/core';
+import { StoriesStore, PackageInfo } from '@component-controls/core';
 
 export const storeAtom = atom<StoriesStore>({
   key: 'store',
@@ -51,3 +51,15 @@ export const notifyObservers = (storyId: string, propName: string) => {
   const observers = useRecoilValue(observersAtom);
   observers.forEach(observer => observer(storyId, propName));
 };
+
+export const usePackage = (packageId?: string): PackageInfo | undefined => {
+  const store = useStore();
+  return packageId ? store.packages[packageId] : undefined;
+};
+
+export const optionsAtom = atom<any>({
+  key: 'global_options',
+  default: {},
+});
+
+export const useExternalOptions = () => useRecoilValue(optionsAtom);

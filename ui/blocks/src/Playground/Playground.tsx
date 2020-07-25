@@ -1,5 +1,8 @@
-import React, { FC, Children, useContext } from 'react';
+import React, { FC, Children } from 'react';
 import { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
+import { Story } from '@component-controls/core';
+import { getStoryIdFromName, useGetStory } from '@component-controls/store';
+
 import {
   BackgroundType,
   DirectionType,
@@ -10,7 +13,7 @@ import {
   useTheme,
   ActionItems,
 } from '@component-controls/components';
-import { BlockDataContext, useCustomProps } from '../context';
+import { useCustomProps } from '../context';
 import { PlaygroundContext } from './PlaygroundContext';
 
 import {
@@ -44,9 +47,8 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const theme = useTheme();
   const custom = useCustomProps<PlaygroundProps>(NAME, props);
   const {
-    title,
     id,
-    name,
+    title,
     collapsible,
     dark,
     actions: userActions = [],
@@ -59,7 +61,6 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const [scale, setScale] = React.useState(userScale);
   const [background, setBackground] = React.useState<BackgroundType>('light');
   const [direction, setDirection] = React.useState<DirectionType>('ltr');
-  const { storyIdFromName, getStoryData } = useContext(BlockDataContext);
   React.useEffect(() => setScale(userScale), [userScale]);
   const zoomActions: ActionItems = React.useMemo(
     () => [
@@ -102,7 +103,9 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const childArr = Children.toArray(children);
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
-
+  let story: Story | undefined = undefined;
+  const storyIdFromName = getStoryIdFromName();
+  const getStory = useGetStory();
   if (childArr.length === 1) {
     //@ts-ignore
     const childProps = childArr[0].props;
@@ -110,7 +113,7 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
       const storyId = childProps.name
         ? storyIdFromName(childProps.name)
         : id || childProps.id;
-      const { story } = getStoryData(storyId);
+      story = getStory({ id: storyId });
       if (!story) {
         return null;
       }
@@ -120,7 +123,11 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
         group: 'panels',
         'aria-label': 'display story source code',
         panel: (
-          <StorySource dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+          <StorySource
+            sourceProps={{ dark: isDark }}
+            sxStyle={{ mt: 0, mb: 0 }}
+            id={storyId}
+          />
         ),
       });
       userActions.push({
@@ -129,7 +136,11 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
         group: 'panels',
         'aria-label': 'display story configuration object',
         panel: (
-          <StoryConfig dark={isDark} sxStyle={{ mt: 0, mb: 0 }} id={storyId} />
+          <StoryConfig
+            sourceProps={{ dark: isDark }}
+            sxStyle={{ mt: 0, mb: 0 }}
+            id={storyId}
+          />
         ),
       });
     }
@@ -154,30 +165,27 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
     : [...storyActions, ...userActions];
   return (
     <StoryBlockContainer
+      story={story}
       data-testid={NAME}
       description={description}
       useStoryDescription={true}
-      name={name}
       title={title}
-      id={id}
       collapsible={collapsible}
     >
-      {() => (
-        <PanelContainer
-          plain={false}
-          actions={actionsItems}
-          openTab={openTab}
-          visibleTabs={visibleTabs}
-          background={background}
-          direction={direction}
-        >
-          <Zoom scale={scale || 1}>
-            <PlaygroundContext.Provider value={{ useDescription: true }}>
-              {children}
-            </PlaygroundContext.Provider>
-          </Zoom>
-        </PanelContainer>
-      )}
+      <PanelContainer
+        plain={false}
+        actions={actionsItems}
+        openTab={openTab}
+        visibleTabs={visibleTabs}
+        background={background}
+        direction={direction}
+      >
+        <Zoom scale={scale || 1}>
+          <PlaygroundContext.Provider value={{ useDescription: true }}>
+            {children}
+          </PlaygroundContext.Provider>
+        </Zoom>
+      </PanelContainer>
     </StoryBlockContainer>
   );
 };

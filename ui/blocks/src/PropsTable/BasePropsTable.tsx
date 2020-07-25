@@ -6,7 +6,6 @@ import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
 import copy from 'copy-to-clipboard';
 import {
-  Story,
   StoryComponent,
   ComponentControl,
   PropType,
@@ -24,7 +23,10 @@ import {
 } from '@component-controls/components';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { currentControlsPropSelector } from '@component-controls/store';
+import {
+  currentControlsPropSelector,
+  useCurrentStory,
+} from '@component-controls/store';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
@@ -36,7 +38,6 @@ interface PropRow {
 }
 
 export interface BasePropsTableProps {
-  story?: Story;
   component?: StoryComponent;
   extraColumns: Column[];
   tableProps: any;
@@ -47,13 +48,13 @@ type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 export const BasePropsTable: FC<BasePropsTableProps> = ({
-  story,
   component = {},
   extraColumns,
   tableProps,
   visibility,
 }) => {
   const [copied, setCopied] = useState(false);
+  const story = useCurrentStory();
   const info: Partial<ComponentInfo> = component.info || {};
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story?.controls || {} : {};

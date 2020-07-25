@@ -4,13 +4,17 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 
-import { getComponentName, hasControls } from '@component-controls/core';
-import { CURRENT_STORY } from '../../utils';
 import {
-  ComponentsContainer,
-  ComponentsContainerProps,
-  useComponentsContext,
-} from '../../context';
+  getComponentName,
+  hasControls,
+  CURRENT_STORY,
+} from '@component-controls/core';
+import {
+  useComponents,
+  ComponentInputProps,
+  useStory,
+} from '@component-controls/store';
+import { ComponentsContainer, ComponentsContainerProps } from '../../context';
 
 /**
  * component level visibility
@@ -23,7 +27,8 @@ export type ComponentsBlockContainerProps = {
    * user setting can display only props table or only controls
    */
   visibility?: ComponentVisibility;
-} & ComponentsContainerProps &
+} & Omit<ComponentsContainerProps, 'components'> &
+  ComponentInputProps &
   BlockContainerProps;
 
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
@@ -38,8 +43,8 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
-  const { components, story } = useComponentsContext({ of });
-
+  const components = useComponents({ of });
+  const story = useStory({ id, name });
   React.useEffect(() => {
     const componentNames = Object.keys(components);
     setTitle(
@@ -65,15 +70,14 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   let child: React.ReactElement | null = null;
   const block = (
     <ComponentsContainer
-      of={of}
-      name={name}
+      components={components}
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }
       {...rest}
     >
-      {(component, props, otherProps) => {
-        child = children(component, props, otherProps);
+      {(component, otherProps) => {
+        child = children(component, otherProps);
         return child;
       }}
     </ComponentsContainer>

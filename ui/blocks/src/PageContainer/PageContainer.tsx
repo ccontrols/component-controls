@@ -12,7 +12,7 @@ import { jsx, Box, BoxProps } from 'theme-ui';
 import { get } from '@theme-ui/css';
 import { useTheme } from '@component-controls/components';
 import { Container } from '../Container/Container';
-import { StoryContextConsumer } from '../context';
+import { useCurrentDocument } from '@component-controls/store';
 
 export interface PageContainerOwnProps {
   /**
@@ -70,6 +70,9 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         window.removeEventListener('hashchange', parseURLHash, false);
     }, []);
     const theme = useTheme();
+    const doc = useCurrentDocument();
+    const { MDXPage } = doc || {};
+    const node = MDXPage ? <MDXPage /> : children;
     return (
       <Box
         variant="pagecontainer"
@@ -77,13 +80,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         ref={ref}
         {...rest}
       >
-        <StoryContextConsumer id=".">
-          {({ doc }) => {
-            const { MDXPage } = doc || {};
-            const node = MDXPage ? <MDXPage /> : children;
-            return Wrapper ? <Wrapper>{node}</Wrapper> : node;
-          }}
-        </StoryContextConsumer>
+        {Wrapper ? <Wrapper>{node}</Wrapper> : node}
       </Box>
     );
   },

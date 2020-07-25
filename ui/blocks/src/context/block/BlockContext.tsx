@@ -6,10 +6,10 @@ import {
   storeAtom,
   storyIdAtom,
   activeTabAtom,
+  optionsAtom,
   useStore,
 } from '@component-controls/store';
 import { RecoilRoot } from 'recoil';
-import { BlockDataContextProvider } from './BlockDataContext';
 import { ErrorBoundary } from './ErrorBoundary';
 
 export interface BlockContextInputProps {
@@ -35,7 +35,7 @@ export interface BlockContextInputProps {
    * global options passed from container
    * those are global parameters as well as decorators
    */
-  options?: any;
+  options?: object;
 }
 
 export interface BlockContextProps {
@@ -57,7 +57,7 @@ export interface BlockContextProps {
    * global options passed from container
    * those are global parameters as well as decorators
    */
-  options?: any;
+  options?: object;
 }
 
 //@ts-ignore
@@ -88,26 +88,10 @@ export const BlockContextProvider: React.FC<BlockContextInputProps> = ({
         set(storeAtom, store.store);
         set(storyIdAtom, storyId);
         set(activeTabAtom, activeTab);
+        set(optionsAtom, options || {});
       }}
     >
-      <ErrorBoundary>
-        <BlockContext.Provider
-          value={{
-            storyId,
-            docId,
-            storeProvider: store,
-            options: store.config ? deepMerge(options, store.config) : options,
-          }}
-        >
-          <BlockDataContextProvider
-            store={store}
-            storyId={storyId}
-            docId={propsDocId}
-          >
-            {children}
-          </BlockDataContextProvider>
-        </BlockContext.Provider>
-      </ErrorBoundary>
+      <ErrorBoundary>{children}</ErrorBoundary>
     </RecoilRoot>
   );
 };

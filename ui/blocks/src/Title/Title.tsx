@@ -3,7 +3,12 @@ import {
   Title as TitleBlock,
   TitleProps as TitlePropsBase,
 } from '@component-controls/components';
-import { useStoryContext, StoryInputProps } from '../context';
+import {
+  useStory,
+  useDocument,
+  useStoryComponent,
+  StoryInputProps,
+} from '@component-controls/store';
 import { getStoryTitle } from '../utils';
 
 export type TitleProps = StoryInputProps & TitlePropsBase;
@@ -12,7 +17,12 @@ export type TitleProps = StoryInputProps & TitlePropsBase;
  * displays a title as assigned to the story document
  */
 export const Title: FC<TitleProps> = ({ id, name, children, ...rest }) => {
-  const { component, doc } = useStoryContext({
+  const story = useStory({
+    id,
+    name,
+  });
+  const doc = story && story.doc ? useDocument(story.doc) : undefined;
+  const component = useStoryComponent({
     id,
     name,
   });

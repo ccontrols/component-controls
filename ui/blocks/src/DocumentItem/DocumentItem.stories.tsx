@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { useDocument, useDocumentPath } from '@component-controls/store';
 import { DocumentItem } from '.';
-import { BlockContext } from '../context';
 import { MockContext } from '../test/MockContext';
 
 export default {
@@ -9,18 +9,15 @@ export default {
   component: DocumentItem,
 };
 
-export const overview = () => (
-  <MockContext storyId="id-of-story">
-    <BlockContext.Consumer>
-      {({ storeProvider }) => {
-        const page = storeProvider.getStoryDoc('Story');
-        return page ? (
-          <DocumentItem
-            link={storeProvider.getPagePath(page.type, page.title)}
-            doc={page}
-          />
-        ) : null;
-      }}
-    </BlockContext.Consumer>
-  </MockContext>
-);
+export const overview = () => {
+  const Story = () => {
+    const doc = useDocument('Story');
+    const path = useDocumentPath(doc.type, doc.title);
+    return doc ? <DocumentItem link={path} doc={doc} /> : null;
+  };
+  return (
+    <MockContext storyId="id-of-story">
+      <Story />
+    </MockContext>
+  );
+};

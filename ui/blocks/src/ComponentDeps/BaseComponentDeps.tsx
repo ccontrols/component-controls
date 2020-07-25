@@ -1,10 +1,10 @@
 import React, { FC, useMemo } from 'react';
-import { StoryComponent, PackageInfo } from '@component-controls/core';
+import { StoryComponent } from '@component-controls/core';
+import { usePackage } from '@component-controls/store';
 import { Dependencies } from './Dependencies';
 
 export interface BaseComponentDepsProps {
   component?: StoryComponent;
-  componentPackage?: PackageInfo;
 }
 
 /**
@@ -13,8 +13,8 @@ export interface BaseComponentDepsProps {
 
 export const BaseComponentDeps: FC<BaseComponentDepsProps> = ({
   component,
-  componentPackage,
 }) => {
+  const componentPackage = usePackage(component?.package);
   const { dependencies = {}, devDependencies = {}, peerDependencies = {} } =
     componentPackage || {};
   const { imports } = component || {};

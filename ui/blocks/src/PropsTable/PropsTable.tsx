@@ -37,10 +37,9 @@ export const PropsTable: FC<PropsTableProps> = props => {
       visibility={visibility}
       {...rest}
     >
-      {(component, { story }, tableProps) => (
+      {(component, tableProps) => (
         <BasePropsTable
           component={component}
-          story={story}
           visibility={visibility}
           extraColumns={extraColumns}
           tableProps={tableProps}

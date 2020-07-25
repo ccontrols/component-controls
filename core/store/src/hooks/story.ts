@@ -1,5 +1,13 @@
 import { atom, selector, useRecoilValue } from 'recoil';
-import { Story, StoriesStore, getStoryPath } from '@component-controls/core';
+import {
+  Story,
+  StoriesStore,
+  getStoryPath,
+  CURRENT_STORY,
+  docStoryToId,
+  getComponentName,
+  StoryComponent,
+} from '@component-controls/core';
 import { storeAtom, useStore, useActiveTab, useConfig } from './store';
 
 export const storyIdAtom = atom<string | undefined>({
@@ -35,7 +43,7 @@ export const currentStorySelector = selector<Story | undefined>({
 export const useCurrentStory = (): Story | undefined =>
   useRecoilValue(currentStorySelector);
 
-export const useStory = (storyId: string) => {
+export const useStoryById = (storyId: string) => {
   const store = useStore();
   return store.stories[storyId];
 };
@@ -69,4 +77,58 @@ export const useGetStoryPath = () => {
       activeTab || currentActiveTab,
     );
   };
+};
+
+export const getStoryIdFromName = () => (name: string): string | undefined => {
+  const store = useStore();
+  for (const title in store.docs) {
+    const doc = store.docs[title];
+    const storyId = docStoryToId(title, name);
+    if (doc.stories && doc.stories.indexOf(storyId) > -1) {
+      return storyId;
+    }
+  }
+  return undefined;
+};
+
+export interface StoryInputProps {
+  id?: string;
+  name?: string;
+}
+
+export const useStoryId = ({
+  id = CURRENT_STORY,
+  name,
+}: StoryInputProps): string | undefined => {
+  const currentStoryId = useRecoilValue(storyIdAtom);
+  const storyIdFromName = getStoryIdFromName();
+  return name
+    ? storyIdFromName(name)
+    : id === CURRENT_STORY
+    ? currentStoryId
+    : id;
+};
+
+export const useStory = (props: StoryInputProps): Story | undefined => {
+  const storyId = useStoryId(props);
+  return storyId ? useStoryById(storyId) : undefined;
+};
+
+export const useGetStory = () => (props: StoryInputProps) => useStory(props);
+
+export const useStoryComponent = (
+  props: StoryInputProps,
+): StoryComponent | undefined => {
+  const storyId = useStoryId(props);
+  const store = useStore();
+  const story: Story | undefined = storyId ? store.stories[storyId] : undefined;
+  const storyComponent: any = story?.component;
+
+  const componentName = getComponentName(storyComponent);
+  const doc = story && story.doc ? store.docs[story.doc] : undefined;
+  const component =
+    componentName && doc && doc.componentsLookup[componentName]
+      ? store.components[doc.componentsLookup[componentName]]
+      : undefined;
+  return component;
 };

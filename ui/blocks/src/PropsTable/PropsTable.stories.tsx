@@ -1,6 +1,6 @@
 import React from 'react';
+import { useStoryControls } from '@component-controls/store';
 import { PropsTable } from './PropsTable';
-import { StoryContextConsumer } from '../context/story/StoryContext';
 import { MockContext } from '../test/MockContext';
 
 export default {
@@ -36,16 +36,20 @@ export const extraColumns = () => (
   </MockContext>
 );
 
-export const controls = () => (
-  <MockContext storyId="blocks-core-story-plain--controls">
-    <StoryContextConsumer id="blocks-core-story-plain--controls">
-      {({ story: { controls } = {} }) => (
-        <h2>{`Hello, my name is ${controls?.name.value}, and I am ${controls?.age.value} years old.`}</h2>
-      )}
-    </StoryContextConsumer>
-    <PropsTable />
-  </MockContext>
-);
+export const controls = () => {
+  const Story = () => {
+    const controls = useStoryControls('blocks-core-story-plain--controls');
+    return (
+      <h2>{`Hello, my name is ${controls?.name.value}, and I am ${controls?.age.value} years old.`}</h2>
+    );
+  };
+  return (
+    <MockContext storyId="blocks-core-story-plain--controls">
+      <Story />
+      <PropsTable />
+    </MockContext>
+  );
+};
 
 export const title = () => (
   <MockContext storyId="id-of-story">

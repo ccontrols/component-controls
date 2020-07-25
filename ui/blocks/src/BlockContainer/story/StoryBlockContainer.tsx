@@ -1,30 +1,22 @@
 import React, { FC, useContext } from 'react';
+import { Story } from '@component-controls/core';
 import {
   BlockContainer,
   BlockContainerProps,
 } from '@component-controls/components';
 
-import {
-  useStoryContext,
-  StoryInputProps,
-  StoryContextProps,
-} from '../../context';
 import { CURRENT_STORY, getStoryBlockTitle } from '../../utils';
 import { PlaygroundContext } from '../../Playground/PlaygroundContext';
 
-export type StoryBlockContainerProps = StoryInputProps & BlockContainerProps;
+export type StoryBlockContainerProps = BlockContainerProps;
 
 export type StoryBlockContainerAllProps = {
-  children?: (
-    context: StoryContextProps,
-    props: any,
-  ) => React.ReactElement | null;
+  story?: Story;
   useStoryDescription?: boolean;
 } & StoryBlockContainerProps;
 
 export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
-  id,
-  name,
+  story,
   collapsible,
   title: userTitle,
   sxStyle,
@@ -32,23 +24,16 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
   useStoryDescription,
   description: userDescription,
   'data-testid': dataTestid,
-  ...rest
 }) => {
-  const context = useStoryContext({
-    id,
-    name,
-  });
   const playground = useContext(PlaygroundContext);
-  const { story } = context;
   const title = getStoryBlockTitle({
     story,
     title: userTitle,
   });
-  const block = children && children(context, rest);
   const description =
     (playground === undefined && userDescription) ||
     (useStoryDescription ? story?.description : undefined);
-  return block ? (
+  return (
     <BlockContainer
       data-testid={dataTestid}
       title={title}
@@ -57,7 +42,7 @@ export const StoryBlockContainer: FC<StoryBlockContainerAllProps> = ({
       sxStyle={sxStyle}
       description={description}
     >
-      {block}
+      {children}
     </BlockContainer>
-  ) : null;
+  );
 };

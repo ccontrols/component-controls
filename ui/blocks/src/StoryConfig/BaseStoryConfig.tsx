@@ -16,7 +16,7 @@ export interface BaseStoryConfigProps {
   story?: Story;
   doc?: Document;
   docPackage?: PackageInfo;
-  sourceProps: SourceProps;
+  sourceProps?: SourceProps;
 }
 
 export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
