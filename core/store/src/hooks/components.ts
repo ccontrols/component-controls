@@ -7,7 +7,6 @@ import {
 
 import { useStore } from './store';
 import { useStory } from './story';
-import { useCurrentDocument } from './document';
 
 export interface ComponentInputProps {
   /**
@@ -31,10 +30,12 @@ export const useComponents = ({
   const story = useStory({ id: name });
   const { component: storyComponentName } = story || {};
   const storyComponent = getComponentName(storyComponentName);
-  const component = storyComponent
-    ? store.components[storyComponent]
-    : undefined;
   const doc = story && story.doc ? store.docs[story.doc] : undefined;
+  const component =
+    storyComponent && doc && doc.componentsLookup
+      ? store.components[doc.componentsLookup[storyComponent]]
+      : undefined;
+
   let components: StoryComponents | undefined = undefined;
   const getComponents = (
     components: { [key: string]: any } | undefined,
@@ -103,14 +104,16 @@ export const useComponent = ({
   name,
 }: ComponentInputProps): StoryComponent | undefined => {
   const story = useStory({ id: name });
-  const doc = useCurrentDocument();
   const store = useStore();
+  const doc = story && story.doc ? store.docs[story.doc] : undefined;
   let component;
   if (of === CURRENT_STORY) {
     component = story ? story.component : doc?.component;
   } else {
     component = of;
   }
-  const omponentName = getComponentName(component);
-  return omponentName ? store.components[omponentName] : undefined;
+  const componentName = getComponentName(component);
+  return componentName && doc && doc.componentsLookup
+    ? store.components[doc.componentsLookup[componentName]]
+    : undefined;
 };
