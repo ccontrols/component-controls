@@ -14,7 +14,10 @@ import {
   ComponentInputProps,
   useStory,
 } from '@component-controls/store';
-import { ComponentsContainer, ComponentsContainerProps } from '../../context';
+import {
+  ComponentsContainer,
+  ComponentsContainerProps,
+} from './ComponentsContainer';
 
 /**
  * component level visibility
