@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from 'react';
-import { StoryComponent } from '@component-controls/core';
+import { StoryComponent, defaultExport } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import { Dependencies } from './Dependencies';
 
@@ -37,7 +37,19 @@ export const BaseComponentDeps: FC<BaseComponentDepsProps> = ({
             ));
         return {
           name,
-          imports: importObj[name],
+          imports: [...importObj[name]].sort((a, b) => {
+            if (a.importedName === defaultExport) {
+              return -1;
+            } else if (b.importedName === defaultExport) {
+              return 1;
+            }
+            if (a.importedName > b.importedName) {
+              return -1;
+            } else if (a.importedName < b.importedName) {
+              return 1;
+            }
+            return 0;
+          }),
           packageName,
           peer: packageName
             ? peerDependenciesKeys.includes(packageName)

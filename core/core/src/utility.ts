@@ -120,3 +120,8 @@ export interface ImportName {
 export interface Imports {
   [key: string]: ImportName[];
 }
+
+/**
+ * default export keyword
+ */
+export const defaultExport = 'default';

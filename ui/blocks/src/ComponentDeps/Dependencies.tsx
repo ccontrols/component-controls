@@ -1,10 +1,9 @@
 /* eslint-disable react/display-name */
 import React, { FC, useMemo } from 'react';
 import { Flex, Box } from 'theme-ui';
-import { ImportName } from '@component-controls/core';
+import { ImportName, defaultExport } from '@component-controls/core';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
-const defaultExport = 'default';
 export interface Dependency {
   /**
    * import name (can include /dist/ folders)
@@ -72,32 +71,16 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
               flexWrap: 'wrap',
             }}
           >
-            {value
-              .sort((a, b) => {
-                if (a.importedName === defaultExport) {
-                  return -1;
-                } else if (b.importedName === defaultExport) {
-                  return 1;
-                }
-                if (a.importedName > b.importedName) {
-                  return -1;
-                } else if (a.importedName < b.importedName) {
-                  return 1;
-                }
-                return 0;
-              })
-              .map(v => (
-                <Tag
-                  variant="tag.rightmargin"
-                  key={`${v.name}`}
-                  borderSize={1}
-                  color={
-                    v.importedName === defaultExport ? 'green' : 'lightgrey'
-                  }
-                >
-                  {v.importedName === defaultExport ? v.name : v.importedName}
-                </Tag>
-              ))}
+            {value.map(v => (
+              <Tag
+                variant="tag.rightmargin"
+                key={`${v.name}`}
+                borderSize={1}
+                color={v.importedName === defaultExport ? 'green' : 'lightgrey'}
+              >
+                {v.importedName === defaultExport ? v.name : v.importedName}
+              </Tag>
+            ))}
           </Flex>
         ),
       },
