@@ -74,7 +74,6 @@ const createMenuItem = (
     activeTab?: string,
   ): string => {
     const doc = store.docs[name];
-    const config = useConfig();
     return getDocPath(type, doc, config?.pages, name, activeTab);
   };
   const newItem: MenuItem = {

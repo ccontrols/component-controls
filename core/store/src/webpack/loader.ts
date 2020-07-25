@@ -6,14 +6,12 @@ module.exports = function(content: string) {
   const options = getOptions(context) || {};
   const { bundleFileName } = options;
   content = `
-  import { HMRStore } from './dist/types';
-  export let store = new HMRStore(
-    require('${bundleFileName}'),
-  );
+  import { loadStore } from './dist/types';
+  export let store = loadStore(require('${bundleFileName}'));
   if (module.hot) {
     module.hot.accept('${bundleFileName}', () => {
       import('${bundleFileName}').then(updated => {
-        store = store.hmr(updated);
+        store = loadStore(updated);
       });
     });
   }  

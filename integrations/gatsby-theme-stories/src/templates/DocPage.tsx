@@ -17,7 +17,7 @@ const DocPageTemplate: FC<DocPageProps> = ({
   pathContext: { docId, storyId, type, activeTab, category },
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId} type={type} activeTab={activeTab}>
+    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
       <DocPage type={type} category={category} />
     </Layout>
   );

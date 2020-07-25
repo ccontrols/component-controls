@@ -108,46 +108,16 @@ const docsByTypeSelector = selectorFamily<Pages, DocType>({
   get: type => ({ get }) => {
     const store = get(storeAtom);
     const docs = store.docs;
-    const { storySort } = get(configSelector) || {};
-    let resultDocs = Object.keys(docs).reduce((acc: Pages, key: string) => {
+    return Object.keys(docs).reduce((acc: Pages, key: string) => {
       const doc: Document | undefined = docs[key];
       if (doc) {
         const { type: docType = defDocType } = doc;
         if (docType === type) {
-          return [...acc, doc];
+          return [...acc, { ...doc }];
         }
       }
       return acc;
     }, []);
-
-    if (storySort) {
-      resultDocs = resultDocs.sort((a: Document, b: Document) => {
-        //@ts-ignore
-        const sort = storySort(a.title, b.title);
-        if (sort !== 0) {
-          return sort;
-        }
-        return resultDocs.indexOf(a) - resultDocs.indexOf(b);
-      });
-    }
-    //split documents by their common 'parent'
-    resultDocs = resultDocs
-      .map(doc => {
-        const levels = doc.title.split('/');
-        const parent = levels.slice(0, -1).join('/');
-        return { id: doc, parent };
-      })
-      .sort((a, b) => {
-        if (a.parent === b.parent) {
-          return (
-            (store.docs[a.id.title].order || 0) -
-            (store.docs[b.id.title].order || 0)
-          );
-        }
-        return 0;
-      })
-      .map(item => item.id);
-    return resultDocs;
   },
 });
 

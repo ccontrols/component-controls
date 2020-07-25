@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { DocType, defDocType } from '@component-controls/core';
+import { StoriesStore } from '@component-controls/core';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
@@ -9,21 +9,18 @@ import {
   LinkContextProviderProps,
 } from '@component-controls/components';
 import { BlockContextProvider } from '@component-controls/blocks';
-import { StoryStore } from '@component-controls/store';
 import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
-  type?: DocType;
   docId?: string;
   storyId?: string;
-  store: StoryStore;
+  store: StoriesStore;
   linkClass: LinkContextProviderProps['linkClass'];
   activeTab?: string;
 }
 
 export const AppContext: FC<AppContextProps> = ({
-  type = defDocType,
   docId,
   storyId,
   children,
@@ -31,18 +28,11 @@ export const AppContext: FC<AppContextProps> = ({
   linkClass,
   activeTab,
 }) => {
-  const { pages } = store.config || {};
-  const page = pages?.[type];
-  const documentId = docId
-    ? docId
-    : !docId && page?.layout?.navSidebar
-    ? store.getFirstDocument(type)
-    : undefined;
   return (
     <ThemeProvider theme={store.config?.theme} components={mdxComponents}>
       <BlockContextProvider
         storyId={storyId}
-        docId={documentId}
+        docId={docId}
         store={store}
         activeTab={activeTab}
       >

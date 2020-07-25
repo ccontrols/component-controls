@@ -15,7 +15,7 @@ const DocHomeTemplate: FC<PageListProps> = ({
   pathContext: { type = defDocType, docId },
 }) => {
   return (
-    <Layout docId={docId} type={type}>
+    <Layout docId={docId}>
       <DocumentHomePage type={type} />
     </Layout>
   );

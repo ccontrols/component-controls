@@ -5,7 +5,16 @@ import {
   getBundleName,
 } from '@component-controls/webpack-compile';
 import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
-import { HMRStore } from '@component-controls/store';
+import { StoriesStore } from '@component-controls/core';
+import {
+  getIndexPage,
+  getHomePages,
+  DocHomePagesPath,
+  getDocPages,
+  DocPagesPath,
+  loadStore,
+} from '@component-controls/store';
+
 const { StorePlugin } = require('@component-controls/store/plugin');
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
@@ -24,10 +33,9 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (bundleName) {
-    const bundle = require(bundleName);
-    const store = new HMRStore(bundle);
+    const store: StoriesStore = loadStore(require(bundleName));
     //home page
-    const { docId = null, type = null } = store.getIndexPage() || {};
+    const { docId = null, type = null } = getIndexPage(store) || {};
     createPage({
       path: `/`,
       component: require.resolve(`../src/templates/DocPage.tsx`),
@@ -36,9 +44,8 @@ exports.createPages = async (
         type,
       },
     });
-    const paths: string[] = store.getHomePaths();
-    paths.forEach(path => {
-      const { type = null, docId = null } = store.getHomePage(path) || {};
+    const homePages = getHomePages(store);
+    homePages.forEach(({ path, docId, type }: DocHomePagesPath) => {
       createPage({
         path,
         component: require.resolve(`../src/templates/DocHome.tsx`),
@@ -49,28 +56,29 @@ exports.createPages = async (
       });
     });
 
-    const docPaths: string[] = store.getDocPaths();
-    docPaths.forEach(path => {
-      const {
-        type = null,
+    const docPages = getDocPages(store);
+    docPages.forEach(
+      ({
+        path,
+        type,
         docId = null,
         storyId = null,
         category = null,
         activeTab = null,
-      } = store.getDocPage(path) || {};
-
-      createPage({
-        path,
-        component: require.resolve(`../src/templates/DocPage.tsx`),
-        context: {
-          type,
-          docId,
-          storyId,
-          category,
-          activeTab,
-        },
-      });
-    });
+      }: DocPagesPath) => {
+        createPage({
+          path,
+          component: require.resolve(`../src/templates/DocPage.tsx`),
+          context: {
+            type,
+            docId,
+            storyId,
+            category,
+            activeTab,
+          },
+        });
+      },
+    );
   }
 };
 

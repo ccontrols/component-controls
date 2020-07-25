@@ -1,3 +1,4 @@
-import { StoryStore, HMRStore } from '@component-controls/store';
-const bundle = require('./component-controls');
-export const store: StoryStore = new HMRStore(bundle);
+import { StoriesStore } from '@component-controls/core';
+import { loadStore } from '@component-controls/store';
+
+export const store: StoriesStore = loadStore(require('./component-controls'));
