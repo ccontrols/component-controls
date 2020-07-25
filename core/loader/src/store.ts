@@ -3,11 +3,6 @@ import {
   StoryPackages,
   BuildConfiguration,
   RunConfiguration,
-  Pages,
-  Document,
-  defDocType,
-  DocType,
-  docStoryToId,
 } from '@component-controls/core';
 import { LoadingDocStore } from '@component-controls/instrument';
 
@@ -39,47 +34,13 @@ export interface LoadingStore {
   })[];
 }
 
-export class Store implements LoadingStore {
-  stores: LoadingStore['stores'] = [];
-  components: LoadingStore['components'] = {};
-  packages: LoadingStore['packages'] = {};
-  config: LoadingStore['config'] = {};
-  buildConfig: LoadingStore['buildConfig'] = {};
-
-  constructor(initial?: LoadingStore) {
-    if (initial) {
-      this.stores = initial.stores;
-      this.components = initial.components;
-      this.packages = initial.packages;
-      this.config = initial.config;
-      this.buildConfig = initial.buildConfig;
-    }
-  }
-  getDocs = (docType: DocType): Pages =>
-    this.stores
-      .filter(store => {
-        if (store?.doc) {
-          const { type = defDocType } = store.doc;
-          return type === docType;
-        }
-        return false;
-      })
-      .map(
-        store =>
-          ({
-            ...store.doc,
-            stories:
-              store.doc && store.stories
-                ? Object.keys(store.stories).map(id =>
-                    //@ts-ignore
-                    docStoryToId(store.doc.title, id),
-                  )
-                : undefined,
-          } as Document),
-      );
-}
-
-export const store = new Store();
+export const store: LoadingStore = {
+  stores: [],
+  components: {},
+  packages: {},
+  config: {},
+  buildConfig: {},
+};
 
 export const reserveStories = (filePaths: string[]) => {
   if (store.stores.length === 0) {
