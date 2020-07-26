@@ -1,4 +1,4 @@
 export * from './types';
-export * from './hooks';
+export * from './state';
 export * from './serialization/load-store';
 export * from './create-pages';

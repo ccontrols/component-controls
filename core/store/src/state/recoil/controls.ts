@@ -5,46 +5,49 @@ import {
   RecoilControlSelector,
 } from '@component-controls/core';
 
-import { currentStorySelector } from './story';
-import { storeAtom } from './store';
+import { currentStoryState } from './story';
+import { storeState } from './store';
 
-const currentStoryControls = selector<ComponentControls | undefined>({
+const currentControlsState = selector<ComponentControls | undefined>({
   key: 'story_prop',
   get: ({ get }) => {
-    const story = get(currentStorySelector);
+    const story = get(currentStoryState);
     return story?.controls;
   },
   set: ({ get, set }, newValue) => {
-    const story = get(currentStorySelector);
+    const story = get(currentStoryState);
     const updated = { ...story, controls: newValue };
-    set(currentStorySelector, updated);
+    set(currentStoryState, updated);
   },
 });
 
-export const currentControlsPropSelector: RecoilControlSelector = selectorFamily<
+export const currentControlsPropState: RecoilControlSelector = selectorFamily<
   ComponentControl | undefined,
   string
 >({
   key: 'controls_prop',
   get: name => ({ get }) => {
-    const controls = get(currentStoryControls);
+    const controls = get(currentControlsState);
     return controls ? controls[name] : undefined;
   },
   set: name => ({ get, set }, newValue) => {
-    const controls = get(currentStoryControls);
+    const controls = get(currentControlsState);
     const updated: ComponentControls = { ...controls, [name]: newValue as any };
-    set(currentStoryControls, updated);
+    set(currentControlsState, updated);
   },
 });
 
-const storyControls = selectorFamily<ComponentControls | undefined, string>({
+const storyControlsState = selectorFamily<
+  ComponentControls | undefined,
+  string
+>({
   key: 'story_prop',
   get: storyId => ({ get }) => {
-    const store = get(storeAtom);
+    const store = get(storeState);
     return store.stories[storyId]?.controls;
   },
 });
 
 export const useStoryControls = (
   storyId: string,
-): ComponentControls | undefined => useRecoilValue(storyControls(storyId));
+): ComponentControls | undefined => useRecoilValue(storyControlsState(storyId));

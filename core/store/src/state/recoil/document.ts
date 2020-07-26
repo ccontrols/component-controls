@@ -17,65 +17,65 @@ import {
   getComponentName,
 } from '@component-controls/core';
 import {
-  storeAtom,
+  storeState,
   useStore,
   useConfig,
-  configSelector,
-  activeTabAtom,
+  configState,
+  activeTabState,
   useActiveTab,
 } from './store';
 
-export const documentIdAtom = atom<string | undefined>({
+export const documentIdState = atom<string | undefined>({
   key: 'document_id',
   default: undefined,
 });
 
-export const currentDocumentSelector = selector<Document | undefined>({
+export const currentDocumentState = selector<Document | undefined>({
   key: 'current_document',
   get: ({ get }) => {
-    const id = get(documentIdAtom);
+    const id = get(documentIdState);
     if (!id) {
       return undefined;
     }
-    const store = get(storeAtom);
+    const store = get(storeState);
     return store.docs[id];
   },
 });
 
 export const useCurrentDocument = (): Document | undefined =>
-  useRecoilValue(currentDocumentSelector);
+  useRecoilValue(currentDocumentState);
 
-const docPackageSelector = selector<PackageInfo | undefined>({
+const docPackageState = selector<PackageInfo | undefined>({
   key: 'current_doc_package',
   get: ({ get }) => {
-    const doc = get(currentDocumentSelector);
-    const store = get(storeAtom);
+    const doc = get(currentDocumentState);
+    const store = get(storeState);
     return doc && doc.package ? store.packages[doc.package] : undefined;
   },
 });
 
 export const useDocPackage = (): PackageInfo | undefined =>
-  useRecoilValue(docPackageSelector);
+  useRecoilValue(docPackageState);
 
-export const docsSelector = selector<Documents>({
+export const docsState = selector<Documents>({
   key: 'docs',
   get: ({ get }) => {
-    const store = get(storeAtom);
+    const store = get(storeState);
     return store?.docs || {};
   },
 });
 
-export const useDocs = () => useRecoilValue(docsSelector);
+export const useDocs = () => useRecoilValue(docsState);
 
-export const pagesSelector = selector<Pages>({
+export const pagesState = selector<Pages>({
   key: 'pages',
   get: ({ get }) => {
-    const store = get(storeAtom);
+    const store = get(storeState);
     return Object.keys(store.docs).map(key => store.docs[key]);
   },
 });
 
-export const usePages = () => useRecoilValue(pagesSelector);
+export const usePages = () => useRecoilValue(pagesState);
 
 export type DocSortOrder = 'date' | 'dateModified' | 'title';
 
@@ -95,18 +95,19 @@ export const docSortFn = (sort: DocSortOrder) => (
   }
   return v1 ? -1 : 1;
 };
-export const docSortByTypeAtom = atomFamily<DocSortOrder, DocType>({
+
+export const docSortByTypeState = atomFamily<DocSortOrder, DocType>({
   key: 'docs_sort)by_type',
   default: 'date',
 });
 
 export const useDocSort = (type: DocType) =>
-  useRecoilState(docSortByTypeAtom(type));
+  useRecoilState(docSortByTypeState(type));
 
-const docsByTypeSelector = selectorFamily<Pages, DocType>({
+const docsByTypeState = selectorFamily<Pages, DocType>({
   key: 'docs_by_type',
   get: type => ({ get }) => {
-    const store = get(storeAtom);
+    const store = get(storeState);
     const docs = store.docs;
     return Object.keys(docs).reduce((acc: Pages, key: string) => {
       const doc: Document | undefined = docs[key];
@@ -122,38 +123,38 @@ const docsByTypeSelector = selectorFamily<Pages, DocType>({
 });
 
 export const useDocByType = (type: DocType): Pages => {
-  return useRecoilValue(docsByTypeSelector(type));
+  return useRecoilValue(docsByTypeState(type));
 };
 
-const docsSortedSelector = selectorFamily<Pages, DocType>({
+const docsSortedState = selectorFamily<Pages, DocType>({
   key: 'docs_sorted_by_type',
   get: type => ({ get }) => {
-    const docs = get(docsByTypeSelector(type));
-    const sort = get(docSortByTypeAtom(type));
+    const docs = get(docsByTypeState(type));
+    const sort = get(docSortByTypeState(type));
     return [...docs].sort(docSortFn(sort));
   },
 });
 
 export const useSortedDocByType = (type: DocType): Pages => {
-  return useRecoilValue(docsSortedSelector(type));
+  return useRecoilValue(docsSortedState(type));
 };
 
 export type DocCountType = Record<DocType, number>;
 
-const docTypeCountSelector = selector<DocCountType>({
+const docTypeCountState = selector<DocCountType>({
   key: 'docs_type_count',
   get: ({ get }) => {
-    const store = get(storeAtom);
+    const store = get(storeState);
     const { pages = {} } = store?.config || {};
     return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
-      const docs = get(docsByTypeSelector(type));
+      const docs = get(docsByTypeState(type));
       return { ...acc, [type]: docs.length };
     }, {});
   },
 });
 
 export const useDocTypeCount = (): DocCountType => {
-  return useRecoilValue(docTypeCountSelector);
+  return useRecoilValue(docTypeCountState);
 };
 
 type DocumentPage = { link: string } & Document;
@@ -163,18 +164,18 @@ interface NavigationResult {
   prevPage?: DocumentPage;
 }
 
-const navigationSelector = selector<NavigationResult>({
+const navigationState = selector<NavigationResult>({
   key: 'navigation_selector',
   get: ({ get }) => {
-    const doc = get(currentDocumentSelector);
-    const config = get(configSelector);
-    const activeTab = get(activeTabAtom);
+    const doc = get(currentDocumentState);
+    const config = get(configState);
+    const activeTab = get(activeTabState);
 
     const result: NavigationResult = {};
     if (doc) {
       const docId = doc.title;
       const type = doc.type || defDocType;
-      const docs = get(docsByTypeSelector(type));
+      const docs = get(docsByTypeState(type));
       //next page
       const nextIndex = docs.findIndex(p => p.title === docId);
       if (nextIndex >= 0 && nextIndex < docs.length - 1) {
@@ -212,7 +213,7 @@ const navigationSelector = selector<NavigationResult>({
 });
 
 export const useNavigationInfo = (): NavigationResult => {
-  return useRecoilValue(navigationSelector);
+  return useRecoilValue(navigationState);
 };
 
 export const useDocument = (docId: string) => {

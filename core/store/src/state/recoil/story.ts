@@ -8,40 +8,40 @@ import {
   getComponentName,
   StoryComponent,
 } from '@component-controls/core';
-import { storeAtom, useStore, useActiveTab, useConfig } from './store';
+import { storeState, useStore, useActiveTab, useConfig } from './store';
 
-export const storyIdAtom = atom<string | undefined>({
+export const storyIdState = atom<string | undefined>({
   key: 'story_id',
   default: undefined,
 });
 
-export const currentStorySelector = selector<Story | undefined>({
+export const currentStoryState = selector<Story | undefined>({
   key: 'current_story',
   get: ({ get }) => {
-    const id = get(storyIdAtom);
+    const id = get(storyIdState);
     if (!id) {
       return undefined;
     }
-    const store = get(storeAtom);
+    const store = get(storeState);
     return store.stories[id];
   },
   set: ({ get, set }, newValue) => {
     if (newValue) {
-      const id = get(storyIdAtom);
+      const id = get(storyIdState);
       if (id) {
-        const store = get(storeAtom);
+        const store = get(storeState);
         const newStore: StoriesStore = {
           ...store,
           stories: { ...store.stories, [id]: newValue as Story },
         };
-        set(storeAtom, newStore);
+        set(storeState, newStore);
       }
     }
   },
 });
 
 export const useCurrentStory = (): Story | undefined =>
-  useRecoilValue(currentStorySelector);
+  useRecoilValue(currentStoryState);
 
 export const useStoryById = (storyId: string) => {
   const store = useStore();
@@ -94,7 +94,7 @@ export const useStoryId = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): string | undefined => {
-  const currentStoryId = useRecoilValue(storyIdAtom);
+  const currentStoryId = useRecoilValue(storyIdState);
   const storyIdFromName = getStoryIdFromName();
   return name
     ? storyIdFromName(name)

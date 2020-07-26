@@ -4,3 +4,4 @@ export * from './categories';
 export * from './story';
 export * from './controls';
 export * from './components';
+export * from './StateRoot';
