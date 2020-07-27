@@ -1,7 +1,6 @@
 import { atom, selector, useRecoilValue } from 'recoil';
 import {
   Story,
-  Store,
   getStoryPath,
   CURRENT_STORY,
   docStoryToId,
