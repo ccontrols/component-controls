@@ -1,5 +1,4 @@
 import { Configuration } from 'webpack';
-import { getBundleName } from '../compilation';
 
 export const instrument: Configuration = {
   module: {

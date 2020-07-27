@@ -81,16 +81,16 @@ _AxeAllyBlock [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                                     |
-| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `axeOptions`  | _Spec_               |                                                                                                                                 |
-| `id`          | _string_             | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_             | optional section title for the block.                                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                                      |
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_               |                                                                                                                 |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_             |                                                                                                                 |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
 
 ## <ins>AxeContextProvider</ins>
 

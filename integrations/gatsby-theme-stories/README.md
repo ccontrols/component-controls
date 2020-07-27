@@ -78,11 +78,11 @@ _Layout [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name      | Type     | Description |
-| --------- | -------- | ----------- |
-| `docId`   | _string_ |             |
-| `storyId` | _string_ |             |
-| `type`    | _string_ |             |
+| Name        | Type     | Description |
+| ----------- | -------- | ----------- |
+| `docId`     | _string_ |             |
+| `storyId`   | _string_ |             |
+| `activeTab` | _string_ |             |
 
 ## <ins>DefaultName</ins>
 
@@ -104,9 +104,9 @@ _DocHome [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name           | Type                                | Description |
-| -------------- | ----------------------------------- | ----------- |
-| `pathContext*` | _{ type: string; docId?: string; }_ |             |
+| Name           | Type                                                  | Description |
+| -------------- | ----------------------------------------------------- | ----------- |
+| `pathContext*` | _{ type: string; docId?: string; storyId?: string; }_ |             |
 
 ## <ins>DocPage</ins>
 

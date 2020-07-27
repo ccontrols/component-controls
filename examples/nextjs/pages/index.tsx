@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-
 import { DocType, defDocType } from '@component-controls/core';
-import { getIndexPage } from '@component-controls/store';
 import { DocPage } from '@component-controls/app';
-import { Layout, store } from '@component-controls/nextjs-plugin';
+import { Layout, store, getIndexPage } from '@component-controls/nextjs-plugin';
 
 interface PageListProps {
   type: DocType;

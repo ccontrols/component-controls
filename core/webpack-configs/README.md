@@ -95,7 +95,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## arrayMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L34)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L35)_
 
 **function** arrayMerge(`dest`\*: any\[], `src`\*: any\[]): any\[];
 
@@ -109,7 +109,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L61)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L62)_
 
 **function** deepMerge(`dest`\*: any, `source`\*: any): any;
 
@@ -125,7 +125,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 deep merge two webpack configurations
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L102)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L103)_
 
 **function** deepMergeWebpackConfig(`dest`: [WebpackConfiguration](#webpackconfiguration), `source`: [WebpackConfiguration](#webpackconfiguration)): [WebpackConfiguration](#webpackconfiguration);
 
@@ -139,7 +139,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMergeWithPresets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L53)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L54)_
 
 **function** deepMergeWithPresets(`dest`\*: any, `source`\*: any): any;
 
@@ -153,7 +153,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## getConfigredPreset
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L26)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L27)_
 
 **function** getConfigredPreset(`name`\*: string, `options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
 
@@ -169,7 +169,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 expands the presets into webpack config
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L72)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L73)_
 
 **function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes), `options`: [PresetOptions](#presetoptions)): [WebpackConfiguration](#webpackconfiguration);
 
@@ -185,7 +185,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 merge webpack config with custom set of presets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L119)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L120)_
 
 **function** mergeWebpackConfig(`webPack`: [WebpackConfiguration](#webpackconfiguration), `presets`: [RuleTypes](#ruletypes), `options`: [PresetOptions](#presetoptions)): [WebpackConfiguration](#webpackconfiguration);
 
@@ -200,7 +200,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## presetsFactory
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L17)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L18)_
 
 
 

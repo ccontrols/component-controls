@@ -32,10 +32,9 @@ module.exports = withStories({ configPath: '.config', ....other options });
 ```jsx:title=pages/index.tsx
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-
 import { DocType, defDocType } from '@component-controls/core';
 import { DocPage } from '@component-controls/app';
-import { Layout } from '@component-controls/nextjs-plugin';
+import { Layout, store, getIndexPage } from '@component-controls/nextjs-plugin';
 
 interface PageListProps {
   type: DocType;
@@ -44,15 +43,15 @@ interface PageListProps {
 
 const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
   return (
-    <Layout docId={docId} type={type}>
+    <Layout docId={docId}>
       <DocPage type={type} />
     </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { store } = require('@component-controls/nextjs-plugin');
-  const { docId = null, type = null } = store.getIndexPage() || {};
+  const homePage = getIndexPage(store);
+  const { docId = null, type = null } = homePage;
   return { props: { docId, type } };
 };
 
@@ -66,31 +65,40 @@ import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocType, defDocType } from '@component-controls/core';
 import { DocumentHomePage } from '@component-controls/app';
-import { Layout, store } from '@component-controls/nextjs-plugin';
+import {
+  Layout,
+  store,
+  getHomePagesPaths,
+  getDocHomePage,
+} from '@component-controls/nextjs-plugin';
 
 interface PageListProps {
   type: DocType;
   docId?: string;
+  storyId?: string;
 }
 
-const DocHomeTemplate: FC<PageListProps> = ({ type = defDocType, docId }) => {
+const DocHomeTemplate: FC<PageListProps> = ({
+  type = defDocType,
+  docId,
+  storyId,
+}) => {
   return (
-    <Layout docId={docId} type={type}>
+    <Layout docId={docId} storyId={storyId}>
       <DocumentHomePage type={type} />
     </Layout>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths: string[] = store.getHomePaths();
-  return { paths, fallback: false };
+  return { paths: getHomePagesPaths(store), fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype: basepath } = params as { doctype: string };
-  const { type = null, docId = null } =
-    store.getHomePage(`/${basepath}/`) || {};
-  return { props: { docId, type } };
+  const page = getDocHomePage(store, basepath);
+  const { type = null, docId = null, storyId = null } = page || {};
+  return { props: { docId, storyId, type } };
 };
 
 export default DocHomeTemplate;
@@ -103,7 +111,12 @@ import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { DocPage } from '@component-controls/app';
 import { DocType } from '@component-controls/core';
-import { Layout, store } from '@component-controls/nextjs-plugin';
+import {
+  Layout,
+  store,
+  getDocPagesPaths,
+  getDocPage,
+} from '@component-controls/nextjs-plugin';
 
 interface DocPageProps {
   docId?: string;
@@ -117,32 +130,31 @@ const DocPageTemplate: FC<DocPageProps> = ({
   docId,
   storyId,
   type,
-  activeTab,
   category,
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId} type={type}>
-      <DocPage activeTab={activeTab} type={type} category={category} />
+    <Layout docId={docId} storyId={storyId}>
+      <DocPage type={type} category={category} />
     </Layout>
   );
 };
 
-export default DocPageTemplate;
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths: string[] = store.getDocPaths();
-  return { paths, fallback: false };
+  return { paths: getDocPagesPaths(store), fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype, docid } = params as { doctype: string; docid: string[] };
+  const page = getDocPage(store, doctype, docid);
   const {
     type = null,
     docId = null,
     storyId = null,
     category = null,
     activeTab = null,
-  } = store.getDocPage(`/${doctype}/${docid.join('/')}/`) || {};
+  } = page || {};
   return { props: { docId, type, storyId, category, activeTab } };
 };
+
+export default DocPageTemplate;
 ```

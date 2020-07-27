@@ -1,9 +1,13 @@
 import React, { FC } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { getDocPages } from '@component-controls/store';
 import { DocPage } from '@component-controls/app';
 import { DocType } from '@component-controls/core';
-import { Layout, store } from '@component-controls/nextjs-plugin';
+import {
+  Layout,
+  store,
+  getDocPagesPaths,
+  getDocPage,
+} from '@component-controls/nextjs-plugin';
 
 interface DocPageProps {
   docId?: string;
@@ -26,18 +30,13 @@ const DocPageTemplate: FC<DocPageProps> = ({
   );
 };
 
-export default DocPageTemplate;
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const pages = getDocPages(store);
-  return { paths: pages.map(page => page.path), fallback: false };
+  return { paths: getDocPagesPaths(store), fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype, docid } = params as { doctype: string; docid: string[] };
-  const path = `/${doctype}/${docid.join('/')}`;
-  const pages = getDocPages(store);
-  const page = pages.find(page => page.path === path);
+  const page = getDocPage(store, doctype, docid);
   const {
     type = null,
     docId = null,
@@ -47,3 +46,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   } = page || {};
   return { props: { docId, type, storyId, category, activeTab } };
 };
+
+export default DocPageTemplate;

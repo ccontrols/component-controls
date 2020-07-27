@@ -7,19 +7,22 @@
     -   [Documents](#documents)
     -   [SmartControls](#smartcontrols)
     -   [SourceIdentifier](#sourceidentifier)
+    -   [Store](#store)
+    -   [StoreComponents](#storecomponents)
+    -   [StorePackages](#storepackages)
+    -   [StoreStories](#storestories)
     -   [Stories](#stories)
-    -   [Store](#storiesstore)
     -   [StoryArgument](#storyargument)
-    -   [StoreComponents](#storycomponents)
-    -   [StorePackages](#storypackages)
     -   [StoryProps](#storyprops)
-    -   [StoreStories](#storystories)
     -   [Document](#document)
     -   [Pages](#pages)
+    -   [StoreObserver](#storeobserver)
     -   [Story](#story)
     -   [StoryArguments](#storyarguments)
+    -   [CURRENT_STORY](#current_story)
     -   [defDocType](#defdoctype)
     -   [dateToLocalString](#datetolocalstring)
+    -   [defaultStore](#defaultstore)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -54,6 +57,7 @@
     -   [PackageRepository](#packagerepository)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
+    -   [defaultExport](#defaultexport)
     -   [PageConfiguration](#pageconfiguration)
     -   [PageLayout](#pagelayout)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
@@ -70,8 +74,9 @@
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
     -   [Document](#document-1)
-    -   [Story](#story-1)
+    -   [StoreObserver](#storeobserver-1)
     -   [RunConfiguration](#runconfiguration-1)
+    -   [Story](#story-1)
     -   [StoryArguments](#storyarguments-1)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [DocType](#doctype-1)
@@ -167,6 +172,51 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `loc`   | [CodeLocation](#codelocation) |             |
 | `name*` | string                        |             |
 
+## Store
+
+store of stories information in memory after the loader is applied
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L315)_
+
+
+
+### properties
+
+| Name              | Type                                                                | Description                                                                                     |
+| ----------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `addObserver*`    | **function** (`observer`\*: [StoreObserver](#storeobserver)): void; | storybook integration notifiers                                                                 |
+| `components*`     | [StoreComponents](#storecomponents)                                 | list of components used in stories                                                              |
+| `config`          | [RunConfiguration](#runconfiguration)                               | global configuration for config file                                                            |
+| `docs*`           | [Documents](#documents)                                             | list of story files, or groups                                                                  |
+| `packages*`       | [StorePackages](#storepackages)                                     | list of package.json files and their data used by the components and the stories of the project |
+| `removeObserver*` | **function** (`observer`\*: [StoreObserver](#storeobserver)): void; |                                                                                                 |
+| `stories*`        | [StoreStories](#storestories)                                       | list of stories                                                                                 |
+| `updateStory*`    | **function** (`story`\*: [Story](#story)): void;                    | update store, for example controls or state                                                     |
+
+## StoreComponents
+
+list of components used in stories
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
+
+`fileName`\*: string: [StoryComponent](#storycomponent)
+
+## StorePackages
+
+list of repositories
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
+
+`id`\*: string: [PackageInfo](#packageinfo)
+
+## StoreStories
+
+list of stories
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
+
+`id`\*: string: [Story](#story)
+
 ## Stories
 
 map of stories. The id is compatible with storybook's story ids
@@ -174,24 +224,6 @@ map of stories. The id is compatible with storybook's story ids
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L162)_
 
 `id`\*: string: [Story](#story)
-
-## Store
-
-store of stories information in memory after the loader is applied
-
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L312)_
-
-
-
-### properties
-
-| Name          | Type                                  | Description                                                                                     |
-| ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `components*` | [StoreComponents](#storycomponents)   | list of components used in stories                                                              |
-| `config`      | [RunConfiguration](#runconfiguration) | global configuration for config file                                                            |
-| `docs*`       | [Documents](#documents)               | list of story files, or groups                                                                  |
-| `packages*`   | [StorePackages](#storypackages)       | list of package.json files and their data used by the components and the stories of the project |
-| `stories*`    | [StoreStories](#storystories)         | list of stories                                                                                 |
 
 ## StoryArgument
 
@@ -210,22 +242,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `usage`  | [ArgUsageLocation](#argusagelocation)\[]    | list of locations where the argument is used in the body of the story                      |
 | `value*` | string \| [StoryArguments](#storyarguments) | either the name used (or a variable alias), or an array of sub-arguments ({ name: alias }) |
 
-## StoreComponents
-
-list of components used in stories
-
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
-
-`fileName`\*: string: [StoryComponent](#storycomponent)
-
-## StorePackages
-
-list of repositories
-
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
-
-`id`\*: string: [PackageInfo](#packageinfo)
-
 ## StoryProps
 
 story prooperties that can be inherited from the document, or each story can have its properties
@@ -243,14 +259,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story. |
 | `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                   |
 | `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                 |
-
-## StoreStories
-
-list of stories
-
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
-
-`id`\*: string: [Story](#story)
 
 ## Document
 
@@ -290,6 +298,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 [Document](#document)\[]
 
+## StoreObserver
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+
+**function** (`story`: [Story](#story)): void;
+
+### parameters
+
+| Name      | Type            | Description |
+| --------- | --------------- | ----------- |
+| `story`   | [Story](#story) |             |
+| `returns` | void            |             |
+
 ## Story
 
 Story interface - usually extracted by the AST instrumenting loader
@@ -320,6 +341,12 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 [StoryArgument](#storyargument)\[]
 
+## CURRENT_STORY
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+
+
+
 ## defDocType
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L166)_
@@ -338,6 +365,24 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | --------- | ------------- | ----------- |
 | `date`    | [Date](#date) |             |
 | `returns` | string        |             |
+
+## defaultStore
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L350)_
+
+
+
+### properties
+
+| Name              | Type                                                        | Description |
+| ----------------- | ----------------------------------------------------------- | ----------- |
+| `components*`     |                                                             |             |
+| `docs*`           |                                                             |             |
+| `packages*`       |                                                             |             |
+| `stories*`        |                                                             |             |
+| `addObserver*`    | **function** addObserver(): void;                           |             |
+| `removeObserver*` | **function** removeObserver(): void;                        |             |
+| `updateStory*`    | **function** updateStory(`story`\*: [Story](#story)): void; |             |
 
 ## ControlTypes
 
@@ -911,6 +956,14 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
 
+## defaultExport
+
+default export keyword
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L127)_
+
+
+
 ## PageConfiguration
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L46)_
@@ -1170,6 +1223,30 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `type`              | [DocType](#doctype)       | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
 | `StoryProps`        | [StoryProps](#storyprops) |                                                                                                                                                                                              |
 
+## StoreObserver
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+
+**function** (`story`: [Story](#story)): void;
+
+### parameters
+
+| Name      | Type            | Description |
+| --------- | --------------- | ----------- |
+| `story`   | [Story](#story) |             |
+| `returns` | void            |             |
+
+## RunConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
+
+### properties
+
+| Name                   | Type                                                        | Description |
+| ---------------------- | ----------------------------------------------------------- | ----------- |
+| `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
+| `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
+
 ## Story
 
 Story interface - usually extracted by the AST instrumenting loader
@@ -1190,17 +1267,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
 | `subtitle`    | string                            | optional story subtitle property                                                                      |
 | `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
-
-## RunConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
-
-### properties
-
-| Name                   | Type                                                        | Description |
-| ---------------------- | ----------------------------------------------------------- | ----------- |
-| `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
-| `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
 
 ## StoryArguments
 
