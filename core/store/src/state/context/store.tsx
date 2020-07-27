@@ -1,15 +1,8 @@
-import React, {
-  FC,
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-} from 'react';
-import { Store, PackageInfo, Story } from '@component-controls/core';
+import React, { FC, createContext, useContext } from 'react';
+import { Store, PackageInfo } from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
-  updateStory: (newValue: Story) => void;
 }
 
 export const StoreContext = createContext<StoreContextProps>({
@@ -19,26 +12,16 @@ export const StoreContext = createContext<StoreContextProps>({
     packages: {},
     components: {},
   },
-  updateStory: () => {},
 });
 
 export const StoreContextProvider: FC<{ store: Store }> = ({
-  store: propsStore,
+  store,
   children,
 }) => {
-  const [store, setStore] = useState<Store>(propsStore);
-  useEffect(() => {
-    setStore(propsStore);
-  }, [propsStore]);
   return (
     <StoreContext.Provider
       value={{
         store,
-        updateStory: newStory =>
-          setStore({
-            ...store,
-            stories: { ...store.stories, [newStory.id as string]: newStory },
-          }),
       }}
     >
       {children}

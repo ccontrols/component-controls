@@ -1,4 +1,10 @@
-import React, { FC, createContext, useContext } from 'react';
+import React, {
+  FC,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+} from 'react';
 import {
   Story,
   getStoryPath,
@@ -22,12 +28,23 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
   storyId,
   children,
 }) => {
-  const { store, updateStory } = useContext(StoreContext);
+  const { store } = useContext(StoreContext);
+  const [story, setStory] = useState<Story | undefined>(
+    storyId ? store.stories[storyId] : undefined,
+  );
+  useEffect(() => {
+    setStory(storyId ? store.stories[storyId] : undefined);
+  }, [storyId, store]);
   return (
     <StoryContext.Provider
       value={{
-        story: storyId ? store.stories[storyId] : undefined,
-        updateStory: newValue => updateStory(newValue),
+        story,
+        updateStory: newValue => {
+          if (storyId) {
+            store.stories = { ...store.stories, [storyId]: newValue };
+            setStory(newValue);
+          }
+        },
       }}
     >
       {children}

@@ -21,7 +21,6 @@ export const ControlsContextStoryProvider: FC = ({ children }) => {
         controls: story ? story.controls : undefined,
         updateValue: (name: string, newValue: any) => {
           if (story) {
-            console.log(newValue);
             const storyControls = story.controls || {};
             updateStory({
               ...story,
