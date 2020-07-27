@@ -279,7 +279,7 @@ export const dateToLocalString = (date?: Date): string =>
  * list of components used in stories
  */
 
-export interface StoryComponents {
+export interface StoreComponents {
   [fileName: string]: StoryComponent;
 }
 
@@ -295,16 +295,18 @@ export type Pages = Document[];
 /**
  * list of stories
  */
-export interface StoryStories {
+export interface StoreStories {
   [id: string]: Story;
 }
 
 /**
  * list of repositories
  */
-export interface StoryPackages {
+export interface StorePackages {
   [id: string]: PackageInfo;
 }
+
+export type StoreObserver = (story?: Story) => void;
 
 export const CURRENT_STORY = '.';
 /**
@@ -322,15 +324,44 @@ export interface Store {
   /**
    * list of stories
    */
-  stories: StoryStories;
+  stories: StoreStories;
   /**
    * list of components used in stories
    */
-  components: StoryComponents;
+  components: StoreComponents;
 
   /**
    * list of package.json files and their data
    * used by the components and the stories of the project
    */
-  packages: StoryPackages;
+  packages: StorePackages;
+
+  /**
+   * storybook integration notifiers
+   */
+  addObserver: (observer: StoreObserver) => void;
+  removeObserver: (observer: StoreObserver) => void;
+  /**
+   * update store, for example controls or state
+   */
+  updateStory: (story: Story) => void;
 }
+
+export const defaultStore: Store = {
+  components: {},
+  docs: {},
+  packages: {},
+  stories: {},
+  addObserver: () => {},
+  removeObserver: () => {},
+  updateStory: function(story: Story) {
+    if (story) {
+      if (story.id) {
+        this.stories = {
+          ...this.stories,
+          [story.id]: story,
+        };
+      }
+    }
+  },
+};

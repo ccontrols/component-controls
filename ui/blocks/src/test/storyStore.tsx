@@ -3,6 +3,7 @@ import React from 'react';
 import { Donut, Button, Heading } from 'theme-ui';
 import {
   Store,
+  defaultStore,
   ControlTypes,
   defaultBuildConfig,
   deepMerge,
@@ -12,6 +13,7 @@ import {
 import { MDXContent } from './MDXStory';
 
 export const store: Store = {
+  ...defaultStore,
   config: deepMerge(defaultBuildConfig, defaultRunConfig),
   packages: {
     'test-package': {

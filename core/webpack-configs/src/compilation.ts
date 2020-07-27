@@ -1,5 +1,6 @@
+import path from 'path';
 import * as webpack from 'webpack';
-import { RuleTypes } from '@component-controls/webpack-configs';
+import { RuleTypes } from './types';
 
 /**
  * configuration properties for compile and run
@@ -48,3 +49,11 @@ export interface CompileResults {
 export type WatchProps = {
   watchOptions?: webpack.ICompiler.WatchOptions;
 } & CompileProps;
+
+export const defBundleName = 'component-controls.js';
+
+export const getBundleName = (options: CompileProps) =>
+  path.join(
+    options.distFolder || `${path.join(process.cwd(), 'public')}`,
+    options.bundleName || defBundleName,
+  );

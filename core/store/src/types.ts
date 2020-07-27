@@ -11,7 +11,8 @@ import {
 /**
  * store on change observer.
  */
-export type StoreObserver = (storyId?: string, propName?: string) => void;
+
+export const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
 
 export interface DocPageInfo {
   type: string;
@@ -45,17 +46,4 @@ export interface StoryStore {
 
   getDocPage: (path: string) => DocPageInfo | undefined;
   getDocPaths: () => string[];
-}
-
-export interface BroadcastStore extends StoryStore {
-  updateStoryProp: (storyId: string, propName: string, newValue: any) => void;
-}
-
-export const UPDATE_STORY_MSG = 'component_controls_update_story';
-export const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
-
-export interface MessageType {
-  storyId: string;
-  moduleId: number;
-  propName: string;
 }

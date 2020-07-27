@@ -20,7 +20,7 @@ export type StoriesProps = StoriesOwnProps & StoryInputProps & PlaygroundProps;
  * displays multiple stories in ther own Playground components
  *
  */
-export const Stories: FC<StoriesProps> = ({ id, name, ...rest }) => {
+export const Stories: FC<StoriesProps> = ({ id, name, title, ...rest }) => {
   const story = useStory({ id, name });
   const doc = useCurrentDocument();
   const stories = doc?.stories
@@ -30,7 +30,7 @@ export const Stories: FC<StoriesProps> = ({ id, name, ...rest }) => {
     return null;
   }
   return (
-    <StoryBlockContainer {...rest}>
+    <StoryBlockContainer title={title} {...rest}>
       {stories.map((id: string) => {
         return (
           <Playground

@@ -39,6 +39,7 @@
   "dependencies": {
     "@component-controls/app": "^1.10.4",
     "@component-controls/webpack-compile": "^1.10.4",
+    "@component-controls/webpack-configs": "^1.10.4",
     "next": "^9.4.4"
   },
   "devDependencies": {

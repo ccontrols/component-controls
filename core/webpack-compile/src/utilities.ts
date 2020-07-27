@@ -10,9 +10,12 @@ import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
   deepMergeWebpackConfig,
+  CompileProps,
+  CompileResults,
+  defBundleName,
 } from '@component-controls/webpack-configs';
 import { loadConfiguration } from '@component-controls/config';
-import { CompileProps, CompileResults } from './types';
+
 import { ResolveExternals, ResolveExternalsConfig } from './resolve_externals';
 import { defaultExternals } from './externals-config';
 
@@ -22,14 +25,6 @@ export type CompileRunProps = CompileProps & {
    */
   mode: Configuration['mode'];
 };
-
-export const defBundleName = 'component-controls.js';
-
-export const getBundleName = (options: CompileProps) =>
-  path.join(
-    options.distFolder || `${path.join(process.cwd(), 'public')}`,
-    options.bundleName || defBundleName,
-  );
 
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
   const {

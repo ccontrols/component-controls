@@ -1,6 +1,6 @@
 import {
   StoryComponent,
-  StoryComponents,
+  StoreComponents,
   getComponentName,
   CURRENT_STORY,
 } from '@component-controls/core';
@@ -25,7 +25,7 @@ export interface ComponentInputProps {
 export const useComponents = ({
   of = CURRENT_STORY,
   name,
-}: ComponentInputProps): StoryComponents => {
+}: ComponentInputProps): StoreComponents => {
   const store = useStore();
   const story = useStory({ id: name });
   const { component: storyComponentName } = story || {};
@@ -36,10 +36,10 @@ export const useComponents = ({
       ? store.components[doc.componentsLookup[storyComponent]]
       : undefined;
 
-  let components: StoryComponents | undefined = undefined;
+  let components: StoreComponents | undefined = undefined;
   const getComponents = (
     components: { [key: string]: any } | undefined,
-  ): StoryComponents => {
+  ): StoreComponents => {
     const getComponent = (name: string) =>
       doc?.componentsLookup[name] &&
       store?.components[doc.componentsLookup[name]];

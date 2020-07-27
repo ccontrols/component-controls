@@ -12,6 +12,7 @@ import {
   PresetType,
 } from './types';
 export * from './types';
+export * from './compilation';
 
 export { WebpackConfiguration };
 export const presetsFactory: {

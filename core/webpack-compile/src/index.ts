@@ -1,9 +1,11 @@
 const chalk = require('chalk');
-import { CompileProps, CompileResults, WatchProps } from './types';
+import {
+  CompileProps,
+  CompileResults,
+  WatchProps,
+} from '@component-controls/webpack-configs';
 import { runCompiler } from './utilities';
 
-export { getBundleName, defBundleName } from './utilities';
-export * from './types';
 /**
  * compile the stories with webpack
  * returns the stories store object

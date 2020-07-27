@@ -1,9 +1,7 @@
 import path from 'path';
-import {
-  compile,
-  watch,
-  CompileProps,
-} from '@component-controls/webpack-compile';
+import { compile, watch } from '@component-controls/webpack-compile';
+import { CompileProps } from '@component-controls/webpack-configs';
+
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
 let builtStarted = false;

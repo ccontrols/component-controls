@@ -1,14 +1,16 @@
-import {
-  saveStore,
-  notifyStoreReload,
-} from './serialization/store-local-storage';
 import { loadStore } from './serialization/load-store';
+import { BroadcastStore } from './serialization/BroadcastStore';
+import { Store, defaultStore } from '@component-controls/core';
+
+const bundle = require('@component-controls/loader/story-store-data.js');
 
 /**
  * store variable, automatically filled with stories.
  */
-export const store = loadStore(
-  require('@component-controls/loader/story-store-data.js'),
+export const store: Store = new BroadcastStore(
+  bundle ? loadStore(bundle) : defaultStore,
 );
-saveStore(store);
-notifyStoreReload();
+
+if (bundle) {
+  (store as BroadcastStore).saveStore();
+}

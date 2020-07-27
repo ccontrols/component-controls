@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { StoryComponent, StoryComponents } from '@component-controls/core';
+import { StoryComponent, StoreComponents } from '@component-controls/core';
 
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 
@@ -9,7 +9,7 @@ export type ComponentsContainerProps = {
     props: any,
   ) => React.ReactElement | null;
 
-  components: StoryComponents;
+  components: StoreComponents;
   /**
    * callback to be called when the tab changes
    * if the function returns false, it can stop chabging to the new tab

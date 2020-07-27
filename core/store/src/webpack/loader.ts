@@ -6,7 +6,7 @@ module.exports = function(content: string) {
   const options = getOptions(context) || {};
   const { bundleFileName } = options;
   content = `
-  import { loadStore } from './dist/types';
+  import { loadStore } from './dist/load-store';
   export let store = loadStore(require('${bundleFileName}'));
   if (module.hot) {
     module.hot.accept('${bundleFileName}', () => {

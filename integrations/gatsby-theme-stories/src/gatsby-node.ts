@@ -1,9 +1,9 @@
+import { compile, watch } from '@component-controls/webpack-compile';
 import {
-  compile,
-  watch,
   CompileProps,
   getBundleName,
-} from '@component-controls/webpack-compile';
+} from '@component-controls/webpack-configs';
+
 import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
 import { Store } from '@component-controls/core';
 import {

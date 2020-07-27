@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/instrument": "^1.10.4",
+    "@component-controls/store": "^1.10.4",
     "@component-controls/react-docgen-info": "^1.10.3",
     "@component-controls/react-docgen-typescript-info": "^1.10.3",
     "babel-loader": "^8.0.6",

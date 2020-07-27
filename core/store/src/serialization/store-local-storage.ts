@@ -1,4 +1,10 @@
-import { Store, getComponentName } from '@component-controls/core';
+import {
+  Store,
+  Story,
+  getComponentName,
+  defaultStore,
+  StoreStories,
+} from '@component-controls/core';
 
 import { COMPONENT_CONTROLS_STORAGE } from '../types';
 
@@ -19,58 +25,33 @@ export const saveStore = (store: Store) => {
       localStorage.removeItem(key);
     }
   }
+  const save: Omit<Store, 'addObserver' | 'removeObserver' | 'updateStory'> = {
+    stories: store.stories,
+    config: store.config,
+    components: store.components,
+    docs: store.docs,
+    packages: store.packages,
+  };
   localStorage.setItem(
     COMPONENT_CONTROLS_STORAGE,
-    JSON.stringify(store, encodeFn),
+    JSON.stringify(save, encodeFn),
   );
 };
 
-export const readStore = (
-  store?: Store,
-  storyId?: string,
-  propName?: string,
-): Store | undefined => {
+export const readStore = (stories: StoreStories): Store => {
   const data = localStorage.getItem(COMPONENT_CONTROLS_STORAGE);
   if (data) {
     const newStore = JSON.parse(data) as Store;
-    if (store && storyId && propName) {
-      const newValue = (newStore.stories[storyId] as any)[propName];
-      store.stories = {
-        ...store.stories,
-        [storyId]: {
-          ...store.stories[storyId],
-          [propName]: newValue,
-        },
-      };
-      return store;
-    }
-    return newStore;
-  }
-  return store;
-};
-
-export const updateStory = (
-  store: Store | undefined,
-  storyId: string,
-  propName: string,
-  newValue: any,
-): Store | undefined => {
-  if (store) {
-    store.stories = {
-      ...store.stories,
-      [storyId]: {
-        ...store.stories[storyId],
-        [propName]: newValue,
-      },
+    return {
+      ...newStore,
+      stories: Object.keys(newStore.stories).reduce((acc, storyId) => {
+        const story: Story = newStore.stories[storyId];
+        const renderFn = stories[storyId]
+          ? stories[storyId].renderFn
+          : story.renderFn;
+        return { ...acc, [storyId]: { ...story, renderFn } };
+      }, {}),
     };
-    localStorage.setItem(
-      COMPONENT_CONTROLS_STORAGE,
-      JSON.stringify(store, encodeFn),
-    );
   }
-  return store;
-};
-
-export const notifyStoreReload = () => {
-  console.log('loaded');
+  return defaultStore;
 };

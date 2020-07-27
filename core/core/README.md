@@ -10,10 +10,10 @@
     -   [Stories](#stories)
     -   [Store](#storiesstore)
     -   [StoryArgument](#storyargument)
-    -   [StoryComponents](#storycomponents)
-    -   [StoryPackages](#storypackages)
+    -   [StoreComponents](#storycomponents)
+    -   [StorePackages](#storypackages)
     -   [StoryProps](#storyprops)
-    -   [StoryStories](#storystories)
+    -   [StoreStories](#storystories)
     -   [Document](#document)
     -   [Pages](#pages)
     -   [Story](#story)
@@ -187,11 +187,11 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 | Name          | Type                                  | Description                                                                                     |
 | ------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `components*` | [StoryComponents](#storycomponents)   | list of components used in stories                                                              |
+| `components*` | [StoreComponents](#storycomponents)   | list of components used in stories                                                              |
 | `config`      | [RunConfiguration](#runconfiguration) | global configuration for config file                                                            |
 | `docs*`       | [Documents](#documents)               | list of story files, or groups                                                                  |
-| `packages*`   | [StoryPackages](#storypackages)       | list of package.json files and their data used by the components and the stories of the project |
-| `stories*`    | [StoryStories](#storystories)         | list of stories                                                                                 |
+| `packages*`   | [StorePackages](#storypackages)       | list of package.json files and their data used by the components and the stories of the project |
+| `stories*`    | [StoreStories](#storystories)         | list of stories                                                                                 |
 
 ## StoryArgument
 
@@ -210,7 +210,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `usage`  | [ArgUsageLocation](#argusagelocation)\[]    | list of locations where the argument is used in the body of the story                      |
 | `value*` | string \| [StoryArguments](#storyarguments) | either the name used (or a variable alias), or an array of sub-arguments ({ name: alias }) |
 
-## StoryComponents
+## StoreComponents
 
 list of components used in stories
 
@@ -218,7 +218,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 `fileName`\*: string: [StoryComponent](#storycomponent)
 
-## StoryPackages
+## StorePackages
 
 list of repositories
 
@@ -244,7 +244,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                   |
 | `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                 |
 
-## StoryStories
+## StoreStories
 
 list of stories
 

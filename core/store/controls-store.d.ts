@@ -1,2 +1,2 @@
-import { StoryStore } from './dist/types';
-export declare let store: StoryStore;
+import { Store } from '@component-controls/core';
+export declare let store: Store;

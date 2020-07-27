@@ -1,17 +1,12 @@
 import React, { FC, createContext, useContext } from 'react';
-import { Store, PackageInfo } from '@component-controls/core';
+import { Store, defaultStore, PackageInfo } from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
 }
 
 export const StoreContext = createContext<StoreContextProps>({
-  store: {
-    docs: {},
-    stories: {},
-    packages: {},
-    components: {},
-  },
+  store: defaultStore,
 });
 
 export const StoreContextProvider: FC<{ store: Store }> = ({

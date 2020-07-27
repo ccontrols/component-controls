@@ -25,16 +25,12 @@ export const currentStoryState = selector<Story | undefined>({
     const store = get(storeState);
     return store.stories[id];
   },
-  set: ({ get, set }, newValue) => {
+  set: ({ get }, newValue) => {
     if (newValue) {
       const id = get(storyIdState);
       if (id) {
         const store = get(storeState);
-        const newStore: Store = {
-          ...store,
-          stories: { ...store.stories, [id]: newValue as Story },
-        };
-        set(storeState, newStore);
+        store.updateStory(newValue as Story);
       }
     }
   },
