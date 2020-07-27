@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { RecoilRoot } from 'recoil';
-import { StoriesStore } from '@component-controls/core';
+import { Store } from '@component-controls/core';
 import { storeState, activeTabState, optionsState } from './store';
 import { documentIdState } from './document';
 import { storyIdState } from './story';
@@ -18,7 +18,7 @@ export interface StateRootProps {
   /**
    * store object
    */
-  store: StoriesStore;
+  store: Store;
   /**
    * active page tab
    */

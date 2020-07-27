@@ -2,16 +2,16 @@ import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { Button, Box } from 'theme-ui';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Color control editor.
  */
 
-export const ColorEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlColor>(name, selector);
+export const ColorEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlColor>(name);
   const [displayColorPicker, setDisplayColorPicker] = React.useState(false);
 
   const handleChange = (color: ColorResult) => {

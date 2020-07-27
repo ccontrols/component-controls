@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { TextEditor } from './TextEditor';
 
 export default {
@@ -10,45 +10,51 @@ export default {
 
 export const overview = () => {
   const [state, setState] = React.useState('Hello');
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.TEXT, value: state },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.TEXT, value: state },
+      }}
+    >
+      <TextEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <TextEditor name="prop" selector={selector} />;
 };
 
 export const placeholder = () => {
   const [state, setState] = React.useState();
-  const selector = useControlSelector(
-    {
-      prop: {
-        type: ControlTypes.TEXT,
-        value: state,
-        placeholder: 'Enter some text',
-      },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: {
+          type: ControlTypes.TEXT,
+          value: state,
+          placeholder: 'Enter some text',
+        },
+      }}
+    >
+      <TextEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <TextEditor name="prop" selector={selector} />;
 };
 
 export const textArea = () => {
   const [state, setState] = React.useState();
-  const selector = useControlSelector(
-    {
-      prop: {
-        type: ControlTypes.TEXT,
-        value: state,
-        rows: 4,
-        placeholder: 'Enter multiple lines of text',
-      },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: {
+          type: ControlTypes.TEXT,
+          value: state,
+          rows: 4,
+          placeholder: 'Enter multiple lines of text',
+        },
+      }}
+    >
+      <TextEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <TextEditor name="prop" selector={selector} />;
 };

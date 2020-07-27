@@ -1,9 +1,9 @@
 import React, { ChangeEvent } from 'react';
 import styled from '@emotion/styled';
 import { ComponentControlOptions } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 
 const CheckboxesWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
   isInline
@@ -30,11 +30,8 @@ const CheckboxLabel = styled.label({
   display: 'inline-block',
 });
 
-export const CheckboxEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlOptions>(
-    name,
-    selector,
-  );
+export const CheckboxEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlOptions>(name);
 
   const { options, value } = control;
   const { entries, selected } = normalizeOptions(options, value);

@@ -1,4 +1,4 @@
-import { StoriesStore, getComponentName } from '@component-controls/core';
+import { Store, getComponentName } from '@component-controls/core';
 
 import { COMPONENT_CONTROLS_STORAGE } from '../types';
 
@@ -13,7 +13,7 @@ const encodeFn = (name: string, val: any) => {
   }
   return val;
 };
-export const saveStore = (store: StoriesStore) => {
+export const saveStore = (store: Store) => {
   for (var key in localStorage) {
     if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
       localStorage.removeItem(key);
@@ -26,13 +26,13 @@ export const saveStore = (store: StoriesStore) => {
 };
 
 export const readStore = (
-  store?: StoriesStore,
+  store?: Store,
   storyId?: string,
   propName?: string,
-): StoriesStore | undefined => {
+): Store | undefined => {
   const data = localStorage.getItem(COMPONENT_CONTROLS_STORAGE);
   if (data) {
-    const newStore = JSON.parse(data) as StoriesStore;
+    const newStore = JSON.parse(data) as Store;
     if (store && storyId && propName) {
       const newValue = (newStore.stories[storyId] as any)[propName];
       store.stories = {
@@ -50,11 +50,11 @@ export const readStore = (
 };
 
 export const updateStory = (
-  store: StoriesStore | undefined,
+  store: Store | undefined,
   storyId: string,
   propName: string,
   newValue: any,
-): StoriesStore | undefined => {
+): Store | undefined => {
   if (store) {
     store.stories = {
       ...store.stories,

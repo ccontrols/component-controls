@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { BooleanEditor } from './BooleanEditor';
 
 export default {
@@ -10,11 +10,14 @@ export default {
 
 export const overview = () => {
   const [state, setState] = React.useState(false);
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.BOOLEAN, value: state },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.BOOLEAN, value: state },
+      }}
+    >
+      <BooleanEditor name="prop" />
+    </ControlsStateProvider>
   );
-  return <BooleanEditor name="prop" selector={selector} />;
 };

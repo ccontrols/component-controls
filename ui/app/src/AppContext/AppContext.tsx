@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { StoriesStore } from '@component-controls/core';
+import { Store } from '@component-controls/core';
 import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
@@ -15,7 +15,7 @@ import { mdxComponents } from './mdxComponents';
 export interface AppContextProps {
   docId?: string;
   storyId?: string;
-  store: StoriesStore;
+  store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
   activeTab?: string;
 }

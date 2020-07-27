@@ -1,5 +1,3 @@
-import { RecoilState } from 'recoil';
-
 /**
  * Control field types
  * examples are provided for the different types:
@@ -383,10 +381,3 @@ export type ComponentControl =
 export interface ComponentControls {
   [name: string]: ComponentControl;
 }
-
-/**
- * editors state update interface
- */
-export type RecoilControlSelector = (
-  propName: string,
-) => RecoilState<ComponentControl | undefined>;

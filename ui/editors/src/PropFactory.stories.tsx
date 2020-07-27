@@ -3,19 +3,18 @@ import {
   ControlTypes,
   ComponentControlBoolean,
 } from '@component-controls/core';
+import { useControl, ControlsStateProvider } from '@component-controls/store';
+import {} from '@component-controls/store';
 import { PropertyEditor } from './types';
-import { useControl, useControlSelector } from './state';
+
 import { addPropertyEditor, getPropertyEditor } from './prop-factory';
 
 export default {
-  title: 'Editors/prop-factory',
+  title: 'Editors/Custom Control',
 };
 
-const CheckboxEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlBoolean>(
-    name,
-    selector,
-  );
+const CheckboxEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlBoolean>(name);
   return (
     <input
       type="checkbox"
@@ -32,12 +31,16 @@ addPropertyEditor(ControlTypes.BOOLEAN, CheckboxEditor);
 export const overview = () => {
   const [state, setState] = React.useState(false);
   const Component = getPropertyEditor(ControlTypes.BOOLEAN);
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.BOOLEAN, value: state },
-    },
-    (name: any, newVal: React.SetStateAction<boolean>) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name: any, newVal: React.SetStateAction<boolean>) =>
+        setState(newVal)
+      }
+      controls={{
+        prop: { type: ControlTypes.BOOLEAN, value: state },
+      }}
+    >
+      <Component name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <Component name="prop" selector={selector} />;
 };

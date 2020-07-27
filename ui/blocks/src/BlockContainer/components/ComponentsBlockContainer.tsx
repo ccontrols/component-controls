@@ -66,7 +66,6 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   ) {
     keys.push('Controls');
   }
-
   if (keys.length === 0) {
     return null;
   }

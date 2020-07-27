@@ -7,11 +7,12 @@ import {
   ComponentControlArray,
   ControlTypes,
   newControlValues,
+  ComponentControls,
 } from '@component-controls/core';
 
 import { Popover } from '@component-controls/components';
+import { useControl, ControlsStateProvider } from '@component-controls/store';
 import { PropertyEditor, PropertyControlProps } from '../types';
-import { useControl, useControlSelector } from '../state';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
@@ -39,29 +40,30 @@ const RowEditor: FC<RowEditorProps> = ({
   Editor,
   onChange,
 }) => {
-  const selector = useControlSelector(
-    {
-      [propName]:
-        control.rowType[propName].type === ControlTypes.OBJECT
-          ? deepmerge<ComponentControl>(control.rowType[propName], {
-              value: Object.keys(row[propName]).reduce(
-                (a, k) => ({
-                  ...a,
-                  [k]: {
-                    value: row[propName] ? row[propName][k] : {},
-                  },
-                }),
-                {},
-              ),
-            })
-          : deepmerge<ComponentControl>(control.rowType[propName], {
-              value: row[propName],
-            }),
-    },
-    onChange,
-  );
+  const controls: ComponentControls = {
+    [propName]:
+      control.rowType[propName].type === ControlTypes.OBJECT
+        ? deepmerge<ComponentControl>(control.rowType[propName], {
+            value: Object.keys(row[propName]).reduce(
+              (a, k) => ({
+                ...a,
+                [k]: {
+                  value: row[propName] ? row[propName][k] : {},
+                },
+              }),
+              {},
+            ),
+          })
+        : deepmerge<ComponentControl>(control.rowType[propName], {
+            value: row[propName],
+          }),
+  };
 
-  return <Editor name={propName} selector={selector} />;
+  return (
+    <ControlsStateProvider controls={controls} onChange={onChange}>
+      <Editor name={propName} />
+    </ControlsStateProvider>
+  );
 };
 
 export interface ArrayEditorProps extends PropertyControlProps {
@@ -76,10 +78,9 @@ export interface ArrayEditorProps extends PropertyControlProps {
  */
 export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   name,
-  selector,
   editLabel = 'edit...',
 }) => {
-  const [control, setProp] = useControl<ComponentControlArray>(name, selector);
+  const [control, setProp] = useControl<ComponentControlArray>(name);
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (rowIndex: number, propName: string, value: any) => {

@@ -5,9 +5,9 @@ import {
   ComponentControlOptions,
   ControlTypes,
 } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { normalizeOptions } from './utils';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
 import { addPropertyEditor } from '../prop-factory';
@@ -21,19 +21,16 @@ const OptionsSelect = styled(Select)({
  * Options control editor.
  */
 
-export const OptionsEditor: PropertyEditor = ({ name, selector, ...rest }) => {
-  const [control, onChange] = useControl<ComponentControlOptions>(
-    name,
-    selector,
-  );
+export const OptionsEditor: PropertyEditor = ({ name, ...rest }) => {
+  const [control, onChange] = useControl<ComponentControlOptions>(name);
   const { display, options, value } = control;
 
   if (display === 'check' || display === 'inline-check') {
-    return <CheckboxEditor name={name} selector={selector} {...rest} />;
+    return <CheckboxEditor name={name} {...rest} />;
   }
 
   if (display === 'radio' || display === 'inline-radio') {
-    return <RadiosEditor name={name} selector={selector} {...rest} />;
+    return <RadiosEditor name={name} {...rest} />;
   }
 
   if (

@@ -1,5 +1,5 @@
 import {
-  StoriesStore,
+  Store,
   defDocType,
   DocType,
   getDocTypePath,
@@ -13,7 +13,7 @@ import {
 
 import { HomePageInfo } from '../types';
 
-export const getIndexPage = (store: StoriesStore): HomePageInfo => {
+export const getIndexPage = (store: Store): HomePageInfo => {
   const docs = Object.keys(store.docs);
   const homePageId = docs.find(key => {
     const doc = store.docs[key];
@@ -34,8 +34,9 @@ export interface DocHomePagesPath {
   type: DocType;
   path: string;
   docId?: string;
+  storyId?: string;
 }
-export const getHomePages = (store: StoriesStore): DocHomePagesPath[] => {
+export const getHomePages = (store: Store): DocHomePagesPath[] => {
   const { pages = {} } = store?.config || {};
   if (pages) {
     const docs = Object.keys(store.docs);
@@ -44,18 +45,26 @@ export const getHomePages = (store: StoriesStore): DocHomePagesPath[] => {
         const page = pages[type];
         const path = getDocTypePath(page) as string;
 
-        const docId =
-          docs.find(key => {
-            const doc = store.docs[key];
-            return (
-              removeTrailingSlash(ensureStartingSlash(doc?.route || '')) ===
-              path
-            );
-          }) || docs.find(key => (store.docs[key].type || defDocType) === type);
+        const docId = page.indexHome
+          ? undefined
+          : docs.find(key => {
+              const doc = store.docs[key];
+              return (
+                removeTrailingSlash(ensureStartingSlash(doc?.route || '')) ===
+                path
+              );
+            }) ||
+            docs.find(key => (store.docs[key].type || defDocType) === type);
+        const docStories: string[] =
+          docId && store.docs[docId] ? store.docs[docId].stories || [] : [];
+        const storyId: string | undefined = docStories.length
+          ? docStories[0]
+          : undefined;
         return {
           type,
           path,
           docId,
+          storyId,
         };
       },
     );
@@ -65,7 +74,7 @@ export const getHomePages = (store: StoriesStore): DocHomePagesPath[] => {
 };
 
 export const getPageList = (
-  store: StoriesStore,
+  store: Store,
   type: DocType = defDocType,
 ): Pages => {
   if (store) {
@@ -84,7 +93,7 @@ export const getPageList = (
 };
 
 export const getUniquesByField = (
-  store: StoriesStore,
+  store: Store,
   field: string,
 ): { [key: string]: number } => {
   return Object.keys(store.docs).reduce(
@@ -114,7 +123,7 @@ export interface DocPagesPath {
   category?: string | null;
   activeTab?: string | null;
 }
-export const getDocPages = (store: StoriesStore): DocPagesPath[] => {
+export const getDocPages = (store: Store): DocPagesPath[] => {
   const { pages = {}, categories = [] } = store?.config || {};
   const docPaths: DocPagesPath[] = [];
   Object.keys(pages).forEach(type => {

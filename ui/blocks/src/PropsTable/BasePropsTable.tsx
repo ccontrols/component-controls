@@ -23,10 +23,7 @@ import {
 } from '@component-controls/components';
 import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Column } from 'react-table';
-import {
-  currentControlsPropState,
-  useCurrentStory,
-} from '@component-controls/store';
+import { useCurrentStory } from '@component-controls/store';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
@@ -256,10 +253,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
 
               return (
                 <Box variant="propstable.control">
-                  <InputType
-                    name={original.name}
-                    selector={currentControlsPropState}
-                  />
+                  <InputType name={original.name} />
                 </Box>
               );
             }

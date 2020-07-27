@@ -8,11 +8,16 @@ import { Layout, store } from '@component-controls/nextjs-plugin';
 interface PageListProps {
   type: DocType;
   docId?: string;
+  storyId?: string;
 }
 
-const DocHomeTemplate: FC<PageListProps> = ({ type = defDocType, docId }) => {
+const DocHomeTemplate: FC<PageListProps> = ({
+  type = defDocType,
+  docId,
+  storyId,
+}) => {
   return (
-    <Layout docId={docId}>
+    <Layout docId={docId} storyId={storyId}>
       <DocumentHomePage type={type} />
     </Layout>
   );
@@ -27,8 +32,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { doctype: basepath } = params as { doctype: string };
   const pages = getHomePages(store);
   const page = pages.find(page => page.path === `/${basepath}`);
-  const { type = null, docId = null } = page || {};
-  return { props: { docId, type } };
+  const { type = null, docId = null, storyId = null } = page || {};
+  return { props: { docId, storyId, type } };
 };
 
 export default DocHomeTemplate;

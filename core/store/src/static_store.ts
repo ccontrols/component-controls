@@ -1,9 +1,9 @@
-import { StoriesStore } from '@component-controls/core';
+import { Store } from '@component-controls/core';
 
 /**
  * store variable, automatically filled with stories.
  */
-export const store: StoriesStore = {
+export const store: Store = {
   components: {},
   docs: {},
   packages: {},

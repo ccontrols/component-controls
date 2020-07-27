@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes, ComponentControls } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { ObjectEditor } from './ObjectEditor';
 
 export default {
@@ -14,14 +14,17 @@ export const overview = () => {
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
   });
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.OBJECT, value: state },
-    },
-    (name, newVal) => setState(newVal),
-  );
 
-  return <ObjectEditor name="prop" selector={selector} />;
+  return (
+    <ControlsStateProvider
+      onChange={(_name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.OBJECT, value: state },
+      }}
+    >
+      <ObjectEditor name="prop" />
+    </ControlsStateProvider>
+  );
 };
 
 export const editLabel = () => {
@@ -30,14 +33,15 @@ export const editLabel = () => {
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
     padding: { type: ControlTypes.NUMBER, value: 10 },
   });
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.OBJECT, value: state },
-    },
-    (name, newVal) => setState(newVal),
-  );
 
   return (
-    <ObjectEditor name="prop" selector={selector} editLabel="Click to edit" />
+    <ControlsStateProvider
+      onChange={(_name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.OBJECT, value: state },
+      }}
+    >
+      <ObjectEditor name="prop" editLabel="Click to edit" />
+    </ControlsStateProvider>
   );
 };

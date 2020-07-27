@@ -8,7 +8,7 @@
     -   [SmartControls](#smartcontrols)
     -   [SourceIdentifier](#sourceidentifier)
     -   [Stories](#stories)
-    -   [StoriesStore](#storiesstore)
+    -   [Store](#storiesstore)
     -   [StoryArgument](#storyargument)
     -   [StoryComponents](#storycomponents)
     -   [StoryPackages](#storypackages)
@@ -175,7 +175,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 `id`\*: string: [Story](#story)
 
-## StoriesStore
+## Store
 
 store of stories information in memory after the loader is applied
 

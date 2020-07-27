@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { NumberEditor } from './NumberEditor';
 
 export default {
@@ -9,43 +9,49 @@ export default {
 };
 
 export const overview = () => {
-  const [value, setState] = React.useState(10);
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.NUMBER, value, min: 3, max: 22 },
-    },
-    (name, newVal) => setState(newVal),
+  const [value, setValue] = React.useState(10);
+  return (
+    <ControlsStateProvider
+      onChange={(nama, newValue) => setValue(newValue)}
+      controls={{
+        prop: { type: ControlTypes.NUMBER, value, min: 3, max: 22 },
+      }}
+    >
+      <NumberEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <NumberEditor name="prop" selector={selector} />;
 };
 
 export const range = () => {
-  const [value, setState] = React.useState(10);
-  const selector = useControlSelector(
-    {
-      prop: {
-        type: ControlTypes.NUMBER,
-        value,
-        min: 3,
-        max: 22,
-        range: true,
-      },
-    },
-    (name, newVal) => setState(newVal),
+  const [value, setValue] = React.useState(10);
+  return (
+    <ControlsStateProvider
+      onChange={(nama, newValue) => setValue(newValue)}
+      controls={{
+        prop: {
+          type: ControlTypes.NUMBER,
+          value,
+          min: 3,
+          max: 22,
+          range: true,
+        },
+      }}
+    >
+      <NumberEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <NumberEditor name="prop" selector={selector} />;
 };
 
 export const step = () => {
-  const [value, setState] = React.useState(10);
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.NUMBER, value, min: 3, max: 22, step: 0.5 },
-    },
-    (name, newVal) => setState(newVal),
+  const [value, setValue] = React.useState(10);
+  return (
+    <ControlsStateProvider
+      onChange={(nama, newValue) => setValue(newValue)}
+      controls={{
+        prop: { type: ControlTypes.NUMBER, value, min: 3, max: 22, step: 0.5 },
+      }}
+    >
+      <NumberEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <NumberEditor name="prop" selector={selector} />;
 };

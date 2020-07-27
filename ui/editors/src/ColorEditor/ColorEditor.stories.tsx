@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { ColorEditor } from './ColorEditor';
 
 export default {
@@ -10,23 +10,28 @@ export default {
 
 export const overview = () => {
   const [state, setState] = React.useState('#dedede');
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.COLOR, value: state },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.COLOR, value: state },
+      }}
+    >
+      <ColorEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <ColorEditor name="prop" selector={selector} />;
 };
 
 export const rgb = () => {
   const [state, setState] = React.useState('rgb(192,0,0)');
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.COLOR, value: state },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.COLOR, value: state },
+      }}
+    >
+      <ColorEditor name="prop" />
+    </ControlsStateProvider>
   );
-  return <ColorEditor name="prop" selector={selector} />;
 };

@@ -1,7 +1,7 @@
 import { atom, useRecoilValue, selector } from 'recoil';
-import { StoriesStore, PackageInfo } from '@component-controls/core';
+import { Store, PackageInfo } from '@component-controls/core';
 
-export const storeState = atom<StoriesStore>({
+export const storeState = atom<Store>({
   key: 'store',
   default: {
     docs: {},
@@ -11,9 +11,9 @@ export const storeState = atom<StoriesStore>({
   },
 });
 
-export const useStore = (): StoriesStore => useRecoilValue(storeState);
+export const useStore = (): Store => useRecoilValue(storeState);
 
-export const configState = selector<StoriesStore['config']>({
+export const configState = selector<Store['config']>({
   key: 'config',
   get: ({ get }) => {
     const store = get(storeState);

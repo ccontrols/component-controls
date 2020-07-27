@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
 import {
-  StoriesStore,
+  Store,
   StoryProps,
   Story,
   Document,
@@ -17,8 +17,8 @@ import {
 import { LoadingStore } from '@component-controls/loader';
 import { transformControls } from './transform-controls';
 
-export const loadStore = (store: LoadingStore): StoriesStore => {
-  const globalStore: StoriesStore = {
+export const loadStore = (store: LoadingStore): Store => {
+  const globalStore: Store = {
     docs: {},
     stories: {},
     components: {},

@@ -5,11 +5,11 @@ import {
   ComponentControl,
   ComponentControlObject,
   mergeControlValues,
-  getControlValues,
+  ComponentControls,
 } from '@component-controls/core';
 import { Popover } from '@component-controls/components';
+import { useControl, ControlsStateProvider } from '@component-controls/store';
 import { PropertyEditor, PropertyControlProps } from '../types';
-import { useControl, useControlSelector } from '../state';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
@@ -36,22 +36,14 @@ export interface ObjectEditorProps extends PropertyControlProps {
 
 export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   name,
-  selector,
   editLabel = 'edit...',
 }) => {
-  const [control, onChange] = useControl<ComponentControlObject>(
-    name,
-    selector,
-  );
+  const [control, onChange] = useControl<ComponentControlObject>(name);
 
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (childName: string, value: any) => {
-    onChange(
-      getControlValues(
-        mergeControlValues(control.value as any, childName, value),
-      ),
-    );
+    onChange(mergeControlValues(control.value as any, childName, value));
   };
   let children: ({
     name: string;
@@ -75,7 +67,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       })
       .filter(p => p && p.node);
   }
-  const childSelector = useControlSelector(control.value || {}, handleChange);
+  const childControls: ComponentControls = control.value || {};
   return (
     <Popover
       trigger="click"
@@ -94,10 +86,12 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
                     <tr key={`editor_${child.name}`}>
                       <td>{child.prop.label || child.name}</td>
                       <td>
-                        <child.node
-                          name={child.name}
-                          selector={childSelector}
-                        />
+                        <ControlsStateProvider
+                          onChange={handleChange}
+                          controls={childControls}
+                        >
+                          <child.node name={child.name} />
+                        </ControlsStateProvider>
                       </td>
                     </tr>
                   ) : null,

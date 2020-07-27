@@ -289,6 +289,7 @@ export const theme: ControlsTheme = {
       pre: {
         whiteSpace: 'pre-wrap',
         wordWrap: 'break-word',
+        maxWidth: '240px',
         mt: 2,
         mb: 0,
       },

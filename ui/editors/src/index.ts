@@ -8,6 +8,5 @@ export * from './NumberEditor';
 export * from './ObjectEditor';
 export * from './OptionsEditor';
 export * from './TextEditor';
-export * from './state';
 export * from './prop-factory';
 export * from './types';

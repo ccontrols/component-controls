@@ -5,7 +5,7 @@ import {
   getBundleName,
 } from '@component-controls/webpack-compile';
 import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
-import { StoriesStore } from '@component-controls/core';
+import { Store } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -33,7 +33,7 @@ exports.createPages = async (
       ? await watch(config)
       : await compile(config);
   if (bundleName) {
-    const store: StoriesStore = loadStore(require(bundleName));
+    const store: Store = loadStore(require(bundleName));
     //home page
     const { docId = null, type = null } = getIndexPage(store) || {};
     createPage({
@@ -45,13 +45,14 @@ exports.createPages = async (
       },
     });
     const homePages = getHomePages(store);
-    homePages.forEach(({ path, docId, type }: DocHomePagesPath) => {
+    homePages.forEach(({ path, docId, storyId, type }: DocHomePagesPath) => {
       createPage({
         path,
         component: require.resolve(`../src/templates/DocHome.tsx`),
         context: {
           type,
           docId,
+          storyId,
         },
       });
     });

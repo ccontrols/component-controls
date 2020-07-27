@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { useControlSelector } from '../state';
+import { ControlsStateProvider } from '@component-controls/store';
 import { DateEditor } from './DateEditor';
 
 export default {
@@ -10,36 +10,42 @@ export default {
 
 export const overview = () => {
   const [state, setState] = React.useState(new Date());
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.DATE, value: state },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <DateEditor name="prop" selector={selector} />;
 };
 
 export const onlyDatePicker = () => {
   const [state, setState] = React.useState(new Date());
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.DATE, value: state, timePicker: false },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state, timePicker: false },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <DateEditor name="prop" selector={selector} />;
 };
 
 export const onlyTimePicker = () => {
   const [state, setState] = React.useState(new Date());
-  const selector = useControlSelector(
-    {
-      prop: { type: ControlTypes.DATE, value: state, datePicker: false },
-    },
-    (name, newVal) => setState(newVal),
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.DATE, value: state, datePicker: false },
+      }}
+    >
+      <DateEditor name="prop" />
+    </ControlsStateProvider>
   );
-
-  return <DateEditor name="prop" selector={selector} />;
 };

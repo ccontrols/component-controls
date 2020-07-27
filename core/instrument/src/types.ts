@@ -1,5 +1,5 @@
 import { ParserOptions } from '@babel/parser';
-import { Document, StoriesStore } from '@component-controls/core';
+import { Document, Store } from '@component-controls/core';
 import images from 'remark-images';
 import emoji from 'remark-emoji';
 import { SyncOpts as ResolveOptions } from 'resolve';
@@ -16,7 +16,7 @@ export type LoadingDocStore = {
    * the document itself
    */
   doc: Document | undefined;
-} & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
+} & Required<Pick<Store, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;

@@ -26,7 +26,6 @@ export interface DocumentsListProps {
 export const DocumentsList: FC<DocumentsListProps> = ({ pages, type }) => {
   const getDocumentPath = useGetDocumentPath();
   const [sortOrder, setSortOrder] = useDocSort(type);
-
   return (
     <Box variant="documentslist.container">
       <Box variant="documentslist.sortrow">

@@ -65,7 +65,7 @@ _Defined in [core/instrument/src/index.ts](https://github.com/atanasster/compone
 
 ### parseStories
 
-▸ **parseStories**(`source`: string, `filePath`: string, `options?`: [InstrumentOptions](#instrumentoptions)): _Promise‹StoriesStore›_
+▸ **parseStories**(`source`: string, `filePath`: string, `options?`: [InstrumentOptions](#instrumentoptions)): _Promise‹Store›_
 
 Parse and instrument a javascript, typescript or MDX file of stories
 
@@ -77,7 +77,7 @@ Parse and instrument a javascript, typescript or MDX file of stories
 | `filePath` | string                                  | Resolved file path name.              |
 | `options?` | [InstrumentOptions](#instrumentoptions) | Instrumenting options                 |
 
-**Returns:** _Promise‹StoriesStore›_
+**Returns:** _Promise‹Store›_
 
 * * *
 

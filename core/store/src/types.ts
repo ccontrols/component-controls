@@ -1,5 +1,5 @@
 import {
-  StoriesStore,
+  Store,
   Story,
   Document,
   Pages,
@@ -26,11 +26,11 @@ export interface HomePageInfo {
 }
 
 export interface StoryStore {
-  getStore: () => StoriesStore | undefined;
+  getStore: () => Store | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => Document | undefined;
   config: RunConfiguration | undefined;
-  store: StoriesStore;
+  store: Store;
   pages: Pages;
   docs: Documents;
   getFirstDocument: (type: DocType) => string | undefined;

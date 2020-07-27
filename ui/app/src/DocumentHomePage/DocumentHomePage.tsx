@@ -11,7 +11,6 @@ import { CategoryList } from '../CategoryList';
 
 export interface DocumentHomePageProps {
   type: DocType;
-  docId?: string;
 }
 
 /**
@@ -24,14 +23,16 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   if (isCategory) {
     return <CategoryList type={type} />;
   }
+
   const pages = useSortedDocByType(type);
   const page = config?.pages?.[type] || {};
-  return page.indexHome ? (
-    <PageContainer variant="pagelist.container" type={type} id="content">
-      <Title>{page.label}</Title>
-      <DocumentsList pages={pages} type={type} />
-    </PageContainer>
-  ) : (
-    <DocPage type={type} />
-  );
+  if (page.indexHome) {
+    return (
+      <PageContainer variant="pagelist.container" type={type} id="content">
+        <Title>{page.label}</Title>
+        <DocumentsList pages={pages} type={type} />
+      </PageContainer>
+    );
+  }
+  return <DocPage type={type} />;
 };

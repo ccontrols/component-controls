@@ -24,7 +24,7 @@ import {
   Pages,
   defDocType,
   RunConfiguration,
-  StoriesStore,
+  Store,
   getStoryPath,
   getDocPath,
 } from '@component-controls/core';
@@ -42,7 +42,7 @@ export interface SidebarProps {
 }
 
 const createMenuItem = (
-  store: StoriesStore,
+  store: Store,
   config: RunConfiguration,
   doc: Document,
   type: DocType,

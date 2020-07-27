@@ -1,8 +1,8 @@
 import React, { ChangeEvent, RefObject } from 'react';
 import { Input, Box } from 'theme-ui';
 import { ComponentControlDate, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 const toDate = (date?: string | Date): Date | undefined =>
@@ -32,8 +32,8 @@ const formatTime = (date: Date | undefined) => {
 /**
  * Date control editor.
  */
-export const DateEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlDate>(name, selector);
+export const DateEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlDate>(name);
   const [valid, setValid] = React.useState(true);
   const dateInputRef = React.useRef<HTMLInputElement>();
   const timeInputRef = React.useRef<HTMLInputElement>();
@@ -88,7 +88,7 @@ export const DateEditor: PropertyEditor = ({ name, selector }) => {
   };
   const { datePicker = true, timePicker = true } = control;
   return name ? (
-    <Box css={{ display: 'flex' }}>
+    <Box css={{ display: 'flex', flexDirection: 'column' }}>
       {datePicker && (
         <Input
           css={{

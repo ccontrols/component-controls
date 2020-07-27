@@ -310,7 +310,7 @@ export const CURRENT_STORY = '.';
 /**
  * store of stories information in memory after the loader is applied
  */
-export interface StoriesStore {
+export interface Store {
   /**
    * global configuration for config file
    */

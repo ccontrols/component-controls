@@ -1,47 +1,44 @@
-import { atom, selector, useRecoilValue } from 'recoil';
+import React, { FC, createContext, useContext } from 'react';
 import {
   Story,
-  Store,
   getStoryPath,
   CURRENT_STORY,
   docStoryToId,
   getComponentName,
   StoryComponent,
 } from '@component-controls/core';
-import { storeState, useStore, useActiveTab, useConfig } from './store';
+import { useStore, StoreContext, useActiveTab, useConfig } from './store';
 
-export const storyIdState = atom<string | undefined>({
-  key: 'story_id',
-  default: undefined,
+interface StoryContextProps {
+  story?: Story;
+  updateStory: (newStory: Story) => void;
+}
+
+export const StoryContext = createContext<StoryContextProps>({
+  updateStory: () => {},
 });
 
-export const currentStoryState = selector<Story | undefined>({
-  key: 'current_story',
-  get: ({ get }) => {
-    const id = get(storyIdState);
-    if (!id) {
-      return undefined;
-    }
-    const store = get(storeState);
-    return store.stories[id];
-  },
-  set: ({ get, set }, newValue) => {
-    if (newValue) {
-      const id = get(storyIdState);
-      if (id) {
-        const store = get(storeState);
-        const newStore: Store = {
-          ...store,
-          stories: { ...store.stories, [id]: newValue as Story },
-        };
-        set(storeState, newStore);
-      }
-    }
-  },
-});
+export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
+  storyId,
+  children,
+}) => {
+  const { store, updateStory } = useContext(StoreContext);
+  return (
+    <StoryContext.Provider
+      value={{
+        story: storyId ? store.stories[storyId] : undefined,
+        updateStory: newValue => updateStory(newValue),
+      }}
+    >
+      {children}
+    </StoryContext.Provider>
+  );
+};
 
-export const useCurrentStory = (): Story | undefined =>
-  useRecoilValue(currentStoryState);
+export const useCurrentStory = (): Story | undefined => {
+  const { story } = useContext(StoryContext);
+  return story;
+};
 
 export const useStoryById = (storyId: string) => {
   const store = useStore();
@@ -94,7 +91,8 @@ export const useStoryId = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): string | undefined => {
-  const currentStoryId = useRecoilValue(storyIdState);
+  const story = useCurrentStory();
+  const { id: currentStoryId } = story || {};
   const storyIdFromName = getStoryIdFromName();
   return name
     ? storyIdFromName(name)

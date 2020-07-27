@@ -1,16 +1,16 @@
 import React, { ChangeEvent } from 'react';
 import { Input, Textarea } from 'theme-ui';
 import { ComponentControlText, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
  * Text control editor.
  */
 
-export const TextEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlText>(name, selector);
+export const TextEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlText>(name);
 
   const { rows = 1 } = control;
   return rows > 1 ? (

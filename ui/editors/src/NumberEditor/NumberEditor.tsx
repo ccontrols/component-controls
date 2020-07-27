@@ -2,8 +2,8 @@ import React, { FC, ChangeEvent } from 'react';
 import { Input, Box, BoxProps, Slider } from 'theme-ui';
 import { Keyboard, DOWN_ARROW, UP_ARROW } from '@component-controls/components';
 import { ComponentControlNumber, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControl } from '../state';
 import { addPropertyEditor } from '../prop-factory';
 
 const RangeLabel: FC<BoxProps> = props => (
@@ -17,11 +17,8 @@ const RangeWrapper: FC<BoxProps> = props => (
 /**
  * Number control editor.
  */
-export const NumberEditor: PropertyEditor = ({ name, selector }) => {
-  const [control, onChange] = useControl<ComponentControlNumber>(
-    name,
-    selector,
-  );
+export const NumberEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlNumber>(name);
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
