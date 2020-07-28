@@ -6,7 +6,7 @@ import {
 } from '@component-controls/store';
 import { StoryBlockContainer } from '../BlockContainer/story';
 import { Playground, PlaygroundProps } from '../Playground';
-import { Story as StoryComponent } from '../Story';
+import { Story as Component } from '../Story';
 
 export interface StoriesOwnProps {
   /**
@@ -40,7 +40,7 @@ export const Stories: FC<StoriesProps> = ({ id, name, title, ...rest }) => {
             key={`playground-${id}`}
             {...rest}
           >
-            <StoryComponent id={id} />
+            <Component id={id} />
           </Playground>
         );
       })}

@@ -11,7 +11,7 @@ export const DocsLink: FC<Omit<LinkProps, 'href'>> = ({
   ...props
 }) => {
   const config = useConfig();
-  const { basePath = '' } = config?.pages?.['story'] || {};
+  const { basePath = '' } = config.pages?.['story'] || {};
 
   return (
     <Link href={basePath} {...props}>

@@ -43,7 +43,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
         <Box variant="documentitem.info.author">
           {date && <Text variant="documentitem.info.comma">,</Text>}
           <Text variant="documentitem.info.by">by</Text>
-          <Link href={getDocPath('author', undefined, config?.pages, author)}>
+          <Link href={getDocPath('author', undefined, config.pages, author)}>
             {author}
           </Link>
         </Box>

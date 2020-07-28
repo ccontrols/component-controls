@@ -1,10 +1,10 @@
 import React, { FC, useMemo } from 'react';
-import { StoryComponent, defaultExport } from '@component-controls/core';
+import { Component, defaultExport } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import { Dependencies } from './Dependencies';
 
 export interface BaseComponentDepsProps {
-  component?: StoryComponent;
+  component?: Component;
 }
 
 /**

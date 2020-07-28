@@ -34,10 +34,7 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
   return tags ? (
     <Box variant="taglist.container">
       {tags.map(tag => (
-        <Link
-          key={tag}
-          href={getDocPath('tags', undefined, config?.pages, tag)}
-        >
+        <Link key={tag} href={getDocPath('tags', undefined, config.pages, tag)}>
           <Tag color={tagColors[tag] || '#dddddd'} variant="tag.leftmargin">
             {tag}
           </Tag>

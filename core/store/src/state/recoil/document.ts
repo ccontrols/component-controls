@@ -42,6 +42,23 @@ export const currentDocumentState = selector<Document | undefined>({
   },
 });
 
+/**
+ * Retrieves a Document object from a document id
+ */
+export const useDocument = (docId: string) => {
+  const store = useStore();
+  return store.docs[docId];
+};
+
+export const useGetDocument = () => (docId: string) => {
+  const store = useStore();
+  return store.docs[docId];
+};
+
+/**
+ * Returns the currently selected document
+ */
+
 export const useCurrentDocument = (): Document | undefined =>
   useRecoilValue(currentDocumentState);
 
@@ -54,6 +71,9 @@ const docPackageState = selector<PackageInfo | undefined>({
   },
 });
 
+/**
+ * Returns the package information for the currently selected document
+ */
 export const useDocPackage = (): PackageInfo | undefined =>
   useRecoilValue(docPackageState);
 
@@ -65,6 +85,9 @@ export const docsState = selector<Documents>({
   },
 });
 
+/**
+ *  Returns a key-value object of all documents in the store
+ */
 export const useDocs = () => useRecoilValue(docsState);
 
 export const pagesState = selector<Pages>({
@@ -74,6 +97,10 @@ export const pagesState = selector<Pages>({
     return Object.keys(store.docs).map(key => store.docs[key]);
   },
 });
+
+/**
+ *  Returns an array of all documents in the store
+ */
 
 export const usePages = () => useRecoilValue(pagesState);
 
@@ -101,6 +128,10 @@ export const docSortByTypeState = atomFamily<DocSortOrder, DocType>({
   default: 'date',
 });
 
+/**
+ * Returns the doc sort order and a setter to update the sort order
+ * for a specific doc type
+ */
 export const useDocSort = (type: DocType) =>
   useRecoilState(docSortByTypeState(type));
 
@@ -122,6 +153,9 @@ const docsByTypeState = selectorFamily<Pages, DocType>({
   },
 });
 
+/**
+ * Returns an array of all documents of a specific doc type
+ */
 export const useDocByType = (type: DocType): Pages => {
   return useRecoilValue(docsByTypeState(type));
 };
@@ -135,6 +169,9 @@ const docsSortedState = selectorFamily<Pages, DocType>({
   },
 });
 
+/**
+ * Returns a sorted list of documents of a specific doc type. Uses the sort order state.
+ */
 export const useSortedDocByType = (type: DocType): Pages => {
   return useRecoilValue(docsSortedState(type));
 };
@@ -153,6 +190,9 @@ const docTypeCountState = selector<DocCountType>({
   },
 });
 
+/**
+ * Returns a global object of key/value pairs with counts of documents per doc type
+ */
 export const useDocTypeCount = (): DocCountType => {
   return useRecoilValue(docTypeCountState);
 };
@@ -185,7 +225,7 @@ const navigationState = selector<NavigationResult>({
           link: getDocPath(
             nextDoc.type || defDocType,
             nextDoc,
-            config?.pages,
+            config.pages,
             nextDoc.title,
             activeTab,
           ),
@@ -201,7 +241,7 @@ const navigationState = selector<NavigationResult>({
           link: getDocPath(
             prevDoc.type || defDocType,
             prevDoc,
-            config?.pages,
+            config.pages,
             prevDoc.title,
             activeTab,
           ),
@@ -212,65 +252,46 @@ const navigationState = selector<NavigationResult>({
   },
 });
 
+/**
+ * Returns the next/previous page objects for the current document
+ */
 export const useNavigationInfo = (): NavigationResult => {
   return useRecoilValue(navigationState);
 };
 
-export const useDocument = (docId: string) => {
-  const store = useStore();
-  return store.docs[docId];
-};
-
-export const useGetDocument = () => (docId: string) => {
-  const store = useStore();
-  return store.docs[docId];
-};
-
-export const useCurrentDocumentPath = (
-  type: DocType | undefined = defDocType,
-  name: string,
-): string => {
-  const doc = useDocument(name);
-  const activeTab = useActiveTab();
-  const config = useConfig();
-  return getDocPath(type, doc, config?.pages, name, activeTab);
-};
-
 type UseGetDocumentPath = (
   type: DocType | undefined,
-  name: string,
+  docId: string,
   activeTab?: string,
 ) => string;
 
+/**
+ * Returns a link to a document from a DocType, document id and active tab
+ */
+
 export const useDocumentPath: UseGetDocumentPath = (
   type = defDocType,
-  name,
+  docId,
   activeTab,
 ) => {
-  const doc = useDocument(name);
-  const currentActiveTab = useActiveTab();
+  const doc = useDocument(docId);
   const config = useConfig();
-  return getDocPath(
-    type,
-    doc,
-    config?.pages,
-    name,
-    activeTab || currentActiveTab,
-  );
+  return getDocPath(type, doc, config.pages, name, activeTab);
 };
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
   const getDoc = useGetDocument();
   const config = useConfig();
-  return (type = defDocType, name, activeTab) => {
-    const doc = getDoc(name);
-    return getDocPath(type, doc, config?.pages, name, activeTab);
+  return (type = defDocType, docId, activeTab) => {
+    const doc = getDoc(docId);
+    return getDocPath(type, doc, config.pages, docId, activeTab);
   };
 };
 
-export const useDocDescription = (
-  doc?: Document | Document,
-): string | undefined => {
+/**
+ * Returns the descript for a document page. It uses the doc.description property if available, or if there is a component assigned to the document will return the component's name.
+ */
+export const useDocDescription = (doc?: Document): string | undefined => {
   const store = useStore();
   if (!doc) {
     return undefined;

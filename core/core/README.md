@@ -8,9 +8,9 @@
     -   [SmartControls](#smartcontrols)
     -   [SourceIdentifier](#sourceidentifier)
     -   [Store](#store)
-    -   [StoreComponents](#storecomponents)
-    -   [StorePackages](#storepackages)
-    -   [StoreStories](#storestories)
+    -   [Components](#storecomponents)
+    -   [Packages](#storepackages)
+    -   [Stories](#storestories)
     -   [Stories](#stories)
     -   [StoryArgument](#storyargument)
     -   [StoryProps](#storyprops)
@@ -43,7 +43,7 @@
     -   [ComponentInfo](#componentinfo)
     -   [PropType](#proptype)
     -   [PropTypes](#proptypes)
-    -   [StoryComponent](#storycomponent)
+    -   [Component](#storycomponent)
     -   [TypeInformation](#typeinformation)
     -   [TypeValue](#typevalue)
     -   [getComponentName](#getcomponentname)
@@ -185,23 +185,23 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name              | Type                                                                | Description                                                                                     |
 | ----------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `addObserver*`    | **function** (`observer`\*: [StoreObserver](#storeobserver)): void; | storybook integration notifiers                                                                 |
-| `components*`     | [StoreComponents](#storecomponents)                                 | list of components used in stories                                                              |
+| `components*`     | [Components](#storecomponents)                                 | list of components used in stories                                                              |
 | `config`          | [RunConfiguration](#runconfiguration)                               | global configuration for config file                                                            |
 | `docs*`           | [Documents](#documents)                                             | list of story files, or groups                                                                  |
-| `packages*`       | [StorePackages](#storepackages)                                     | list of package.json files and their data used by the components and the stories of the project |
+| `packages*`       | [Packages](#storepackages)                                     | list of package.json files and their data used by the components and the stories of the project |
 | `removeObserver*` | **function** (`observer`\*: [StoreObserver](#storeobserver)): void; |                                                                                                 |
-| `stories*`        | [StoreStories](#storestories)                                       | list of stories                                                                                 |
+| `stories*`        | [Stories](#storestories)                                       | list of stories                                                                                 |
 | `updateStory*`    | **function** (`story`\*: [Story](#story)): void;                    | update store, for example controls or state                                                     |
 
-## StoreComponents
+## Components
 
 list of components used in stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
 
-`fileName`\*: string: [StoryComponent](#storycomponent)
+`fileName`\*: string: [Component](#storycomponent)
 
-## StorePackages
+## Packages
 
 list of repositories
 
@@ -209,7 +209,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 `id`\*: string: [PackageInfo](#packageinfo)
 
-## StoreStories
+## Stories
 
 list of stories
 
@@ -755,7 +755,7 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 `key`\*: string: [PropType](#proptype)
 
-## StoryComponent
+## Component
 
 component specified for stories or story files
 

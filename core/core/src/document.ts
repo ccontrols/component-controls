@@ -1,5 +1,5 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
-import { StoryComponent } from './components';
+import { Component } from './components';
 import { ComponentControls } from './controls';
 import { RunConfiguration, DocType, PageLayout } from './configuration';
 /**
@@ -156,13 +156,6 @@ export type Story = {
   subtitle?: string;
 } & StoryProps;
 
-/**
- * map of stories. The id is compatible with storybook's story ids
- */
-export interface Stories {
-  [id: string]: Story;
-}
-
 export const defDocType: DocType = 'story';
 /**
  * A documentation file's metadata.
@@ -279,32 +272,24 @@ export const dateToLocalString = (date?: Date): string =>
  * list of components used in stories
  */
 
-export interface StoreComponents {
-  [fileName: string]: StoryComponent;
-}
+export type Components = Record<string, Component>;
 
 /**
  * list of story files, or groups
  */
-export interface Documents {
-  [title: string]: Document;
-}
+export type Documents = Record<string, Document>;
 
 export type Pages = Document[];
 
 /**
  * list of stories
  */
-export interface StoreStories {
-  [id: string]: Story;
-}
+export type Stories = Record<string, Story>;
 
 /**
  * list of repositories
  */
-export interface StorePackages {
-  [id: string]: PackageInfo;
-}
+export type Packages = Record<string, PackageInfo>;
 
 export type StoreObserver = (story?: Story) => void;
 
@@ -316,25 +301,25 @@ export interface Store {
   /**
    * global configuration for config file
    */
-  config?: RunConfiguration;
+  config: RunConfiguration;
   /**
-   * list of story files, or groups
+   * list of documents (pages)
    */
   docs: Documents;
   /**
    * list of stories
    */
-  stories: StoreStories;
+  stories: Stories;
   /**
-   * list of components used in stories
+   * list of components used in stories and documents
    */
-  components: StoreComponents;
+  components: Components;
 
   /**
    * list of package.json files and their data
    * used by the components and the stories of the project
    */
-  packages: StorePackages;
+  packages: Packages;
 
   /**
    * storybook integration notifiers
@@ -348,6 +333,7 @@ export interface Store {
 }
 
 export const defaultStore: Store = {
+  config: {},
   components: {},
   docs: {},
   packages: {},

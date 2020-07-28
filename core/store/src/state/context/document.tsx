@@ -25,8 +25,28 @@ export const DocumentContextProvider: FC<{ docId: string | undefined }> = ({
   );
 };
 
+/**
+ * Retrieves a Document object from a document id
+ */
+export const useDocument = (docId: string) => {
+  const store = useStore();
+  return store.docs[docId];
+};
+
+export const useGetDocument = () => (docId: string) => {
+  const store = useStore();
+  return store.docs[docId];
+};
+
+/**
+ * Returns the currently selected document
+ */
 export const useCurrentDocument = (): Document | undefined =>
   useContext(DocumentContext);
+
+/**
+ * Returns the package information for the currently selected document
+ */
 
 export const useDocPackage = (): PackageInfo | undefined => {
   const store = useStore();
@@ -34,10 +54,17 @@ export const useDocPackage = (): PackageInfo | undefined => {
   return doc && doc.package ? store.packages[doc.package] : undefined;
 };
 
+/**
+ *  Returns a key-value object of all documents in the store
+ */
 export const useDocs = (): Documents => {
   const store = useStore();
   return store.docs;
 };
+
+/**
+ *  Returns an array of all documents in the store
+ */
 
 export const usePages = (): Pages => {
   const store = useStore();
@@ -88,6 +115,11 @@ export const DocsSortContextProvider: FC = ({ children }) => {
     </DocsSortContext.Provider>
   );
 };
+
+/**
+ * Returns the doc sort order and a setter to update the sort order
+ * for a specific doc type
+ */
 export const useDocSort = (
   type: DocType,
 ): [DocSortOrder, (newOrder: DocSortOrder) => void] => {
@@ -95,6 +127,9 @@ export const useDocSort = (
   return [sort[type] || 'date', newSort => setSort(type, newSort)];
 };
 
+/**
+ * Returns an array of all documents of a specific doc type
+ */
 export const useDocByType = (type: DocType): Pages => {
   const docs = useDocs();
   return Object.keys(docs).reduce((acc: Pages, key: string) => {
@@ -112,6 +147,9 @@ export const useDocByType = (type: DocType): Pages => {
 export const useGetDocByType = () => (type: DocType): Pages =>
   useDocByType(type);
 
+/**
+ * Returns a sorted list of documents of a specific doc type. Uses the sort order state.
+ */
 export const useSortedDocByType = (type: DocType): Pages => {
   const docs = useDocByType(type);
   const [sort] = useDocSort(type);
@@ -120,6 +158,9 @@ export const useSortedDocByType = (type: DocType): Pages => {
 
 export type DocCountType = Record<DocType, number>;
 
+/**
+ * Returns a global object of key/value pairs with counts of documents per doc type
+ */
 export const useDocTypeCount = (): DocCountType => {
   const store = useStore();
   const getByDocType = useGetDocByType();
@@ -137,6 +178,9 @@ interface NavigationResult {
   prevPage?: DocumentPage;
 }
 
+/**
+ * Returns the next/previous page objects for the current document
+ */
 export const useNavigationInfo = (): NavigationResult => {
   const doc = useCurrentDocument();
   const config = useConfig();
@@ -156,7 +200,7 @@ export const useNavigationInfo = (): NavigationResult => {
         link: getDocPath(
           nextDoc.type || defDocType,
           nextDoc,
-          config?.pages,
+          config.pages,
           nextDoc.title,
           activeTab,
         ),
@@ -172,7 +216,7 @@ export const useNavigationInfo = (): NavigationResult => {
         link: getDocPath(
           prevDoc.type || defDocType,
           prevDoc,
-          config?.pages,
+          config.pages,
           prevDoc.title,
           activeTab,
         ),
@@ -182,61 +226,38 @@ export const useNavigationInfo = (): NavigationResult => {
   return result;
 };
 
-export const useDocument = (docId: string) => {
-  const store = useStore();
-  return store.docs[docId];
-};
-
-export const useGetDocument = () => (docId: string) => {
-  const store = useStore();
-  return store.docs[docId];
-};
-
-export const useCurrentDocumentPath = (
-  type: DocType | undefined = defDocType,
-  name: string,
-): string => {
-  const doc = useDocument(name);
-  const activeTab = useActiveTab();
-  const config = useConfig();
-  return getDocPath(type, doc, config?.pages, name, activeTab);
-};
-
 type UseGetDocumentPath = (
   type: DocType | undefined,
-  name: string,
+  docId: string,
   activeTab?: string,
 ) => string;
 
+/**
+ * Returns a link to a document from a DocType, document id and active tab
+ */
 export const useDocumentPath: UseGetDocumentPath = (
   type = defDocType,
-  name,
+  docId,
   activeTab,
 ) => {
-  const doc = useDocument(name);
-  const currentActiveTab = useActiveTab();
+  const doc = useDocument(docId);
   const config = useConfig();
-  return getDocPath(
-    type,
-    doc,
-    config?.pages,
-    name,
-    activeTab || currentActiveTab,
-  );
+  return getDocPath(type, doc, config.pages, docId, activeTab);
 };
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
   const store = useStore();
   const config = useConfig();
-  return (type = defDocType, name, activeTab) => {
-    const doc = store.docs[name];
-    return getDocPath(type, doc, config?.pages, name, activeTab);
+  return (type = defDocType, docId, activeTab) => {
+    const doc = store.docs[docId];
+    return getDocPath(type, doc, config.pages, docId, activeTab);
   };
 };
 
-export const useDocDescription = (
-  doc?: Document | Document,
-): string | undefined => {
+/**
+ * Returns the descript for a document page. It uses the doc.description property if available, or if there is a component assigned to the document will return the component's name.
+ */
+export const useDocDescription = (doc?: Document): string | undefined => {
   const store = useStore();
   if (!doc) {
     return undefined;

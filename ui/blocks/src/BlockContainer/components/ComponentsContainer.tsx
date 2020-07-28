@@ -1,20 +1,17 @@
 import React, { Fragment } from 'react';
-import { StoryComponent, StoreComponents } from '@component-controls/core';
+import { Component, Components } from '@component-controls/core';
 
 import { Tab, Tabs, TabList, TabPanel } from '@component-controls/components';
 
 export type ComponentsContainerProps = {
-  children: (
-    component: StoryComponent,
-    props: any,
-  ) => React.ReactElement | null;
+  children: (component: Component, props: any) => React.ReactElement | null;
 
-  components: StoreComponents;
+  components: Components;
   /**
    * callback to be called when the tab changes
    * if the function returns false, it can stop chabging to the new tab
    */
-  onSelect?: (name: string, component: StoryComponent) => boolean | void;
+  onSelect?: (name: string, component: Component) => boolean | void;
 };
 
 export const ComponentsContainer: React.FC<ComponentsContainerProps> = ({

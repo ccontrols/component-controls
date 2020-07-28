@@ -1,0 +1,345 @@
+---
+title: Structure/Store
+route: /tutorial/structure/store
+type: tutorial
+author: atanasster
+tags:
+  - documentation
+order: 6
+---
+import activeTabImg from './media/active-tab.jpg';
+
+## Overview
+
+The Store module [@component-controls/store](https://github.com/ccontrols/component-controls/tree/master/core/store) provides access to the in-memory store of documents, stories, components and react hooks to get access to this data.
+
+## Store
+
+The root `Store` object provides access to the global store of documents and data. 
+
+```
+interface Store {
+  
+  /**
+   * global configuration for config file
+   */
+  config?: RunConfiguration;
+  
+  /**
+   * list of documents (pages)
+   */
+  docs: StoreDocuments;
+  
+  /**
+   * list of stories
+   */
+  stories: Stories;
+  
+  /**
+   * list of components used in stories and documents
+   */
+  components: Components;
+
+  /**
+   * list of package.json files and their data
+   * used by the components and the stories of the project
+   */
+  packages: Packages;
+}
+```
+
+
+## Store hooks
+
+### useStore
+
+Returns the global store object
+
+> useStore = (): [Store](#store)
+
+```
+import { useStore } from '@component-controls/store';
+{
+  const store = useStore();
+  console.log(store.config.theme);
+}
+```
+
+### useConfig
+
+Returns the configuration object part of the store
+
+> useConfig = (): [Configuration](/tutorial/structure/configuration)
+
+```
+import { useConfig } from '@component-controls/store';
+{
+  const store = useConfig();
+  console.log(config.theme);
+}
+```
+
+### useActiveTab
+
+Returns the current active tab for documenta that have multiple tabs/pages
+
+> useActiveTab = (): string;
+
+<img alt="active tab" title="active tab" src={activeTabImg} />
+
+### usePackage
+
+Returns a package object from a package package id. The package id can come from a Document or a Component object.
+
+> usePackage = (packageId?: string): PackageInfo
+
+```
+import { usePackage } from '@component-controls/store';
+{
+  const store = usePackage('some-package-id');
+  console.log(config.theme);
+}
+```
+
+## Document hooks
+
+### useDocument
+
+Retrieves a Document object from a document id
+
+> useDocument = (docId: string) => Document
+
+```
+import { useDocument } from '@component-controls/store';
+{
+  const doc = useDocument('Introduction/Getting Started');
+  console.log(doc.title);
+}
+```
+
+### useCurrentDocument
+
+Returns the currently selected document
+
+> useCurrentDocument = (): Document
+
+```
+import { useCurrentDocument } from '@component-controls/store';
+{
+  const doc = useCurrentDocument();
+  console.log(doc.title);
+}
+```
+
+### useDocPackage
+
+Returns the package information for the currently selected document
+
+> useDocPackage = (): PackageInfo
+
+```
+import { useDocPackage } from '@component-controls/store';
+{
+  const pckg = useDocPackage();
+  console.log(pckg.dependencies);
+}
+```
+
+### useDocs
+
+Returns a key-value object of all documents in the store
+ 
+> useDocs = () => Record<string, Document>
+
+```
+import { useDocs } from '@component-controls/store';
+{
+  const docs = useDocs();
+  console.log(Object.keys(docs));
+}
+```
+
+### usePages
+
+Returns an array of all documents in the store
+
+
+> usePages = () => Document[]
+
+```
+import { usePages } from '@component-controls/store';
+{
+  const pages = usePages();
+  console.log(pages.map(page => page.title));
+}
+```
+
+### useDocSort
+
+Returns the doc sort order and a setter to update the sort order for a specific doc type
+
+> useDocSort = (ype: DocType): [DocSortOrder, (newOrder: DocSortOrder) => void]
+
+```
+import { useDocSort } from '@component-controls/store';
+{
+  const [sortOrder, setSortOrder] = useDocSort('blogs');
+  console.log(sortOrder);
+  <button onClick={() => setSortOrder('title')}>by title</button>
+} 
+```
+
+### useDocByType
+
+Returns an array of all documents of a specific doc type
+
+> useDocByType = (type: DocType): Document[]
+
+```
+import { useDocByType } from '@component-controls/store';
+{
+  const blogs = useDocByType('blogs');
+  console.log(blogs.map(blog => blog.title));  
+} 
+```
+
+### useSortedDocByType
+
+Returns a sorted list of documents of a specific doc type. Uses the sort order state.
+
+> useSortedDocByType = (type: DocType): Document[]
+
+```
+import { useSortedDocByType } from '@component-controls/store';
+{
+  const blogs = useSortedDocByType('blogs');
+  console.log(blogs.map(blog => blog.title));  
+} 
+```
+
+### useDocTypeCount
+
+Returns a global object of key/value pairs with counts of documents per doc type
+
+> useDocTypeCount = (): Record<DocType, number>
+
+```
+import { useDocTypeCount } from '@component-controls/store';
+{
+  const counts = useDocTypeCount('blogs');
+  console.log(counts['blogs']);  
+} 
+```
+
+### useNavigationInfo
+
+Returns the next/previous page objects for the current document
+
+> useNavigationInfo = (): NavigationResult
+
+```
+import { useNavigationInfo } from '@component-controls/store';
+{
+  const nav = useNavigationInfo('blogs');
+  console.log(nav.nextPage.link, nav.nextPage.title);  
+} 
+```
+### useDocumentPath
+
+Returns a link to a document from a DocType, document id and active tab
+
+> useDocumentPath: = (type?: DocType, docId: string, activeTab?: string ) => string
+
+```
+import { useDocumentPath } from '@component-controls/store';
+{
+  const href = useDocumentPath('blogs', 'Introduction/Getting Started');
+  return <a href={href}>Visit tutorial</a>
+} 
+```
+
+### useDocDescription
+
+Returns the descript for a document page. It uses the doc.description property if available, or if there is a component assigned to the document will return the component's name.
+
+> useDocDescription = (doc?: Document): string
+
+```
+import { useDocument, useDocDescription } from '@component-controls/store';
+{
+  const doc = useDocument('Introduction/Getting Started');
+  const description = useDocDescription(doc);
+  console.log(description);
+}
+```
+
+## Story hooks
+
+### useStoryById
+
+Retrieves a Story object from a story id
+
+> useStoryById = (storyId: string) => Story
+
+```
+import { useStoryById } from '@component-controls/store';
+{
+  const story = useStoryById('introduction-starter--overview');
+  console.log(story.description);
+}
+```
+
+### useCurrentStory
+
+Returns the currently selected story
+
+> useCurrentStory = (): Story
+
+```
+import { useCurrentStory } from '@component-controls/store';
+{
+  const story = useCurrentStory();
+  console.log(story.description);
+}
+```
+
+### useStory
+
+Returns a story from an input id or story name. The id can be '.', which means the current story.
+
+> useStory = ({ id: string, name: string}): Story
+
+```
+import { useStory } from '@component-controls/store';
+{
+  const story = useStory({ id: '.' });
+  console.log(story.description);
+}
+```
+
+### useStoryComponent
+
+Returns a story's component from an input id or story name. The id can be '.', which means the current story.
+
+> useStoryComponent = ({ id: string, name: string}): Component
+```
+import { useStoryComponent } from '@component-controls/store';
+{
+  const component = useStoryComponent({ id: '.' });
+  console.log(component.source);
+}
+```
+
+### useStoryPath
+
+Returns a link to a story from a story id
+
+> useStoryPath = (storyId: string): string
+
+```
+import { useStoryPath } from '@component-controls/store';
+{
+  const href = useStoryPath('introduction-starter--overview');
+  return <a href={href}>Visit tutorial</a>
+}
+```

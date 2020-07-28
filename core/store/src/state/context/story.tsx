@@ -11,7 +11,7 @@ import {
   CURRENT_STORY,
   docStoryToId,
   getComponentName,
-  StoryComponent,
+  Component,
 } from '@component-controls/core';
 import { useStore, StoreContext, useActiveTab, useConfig } from './store';
 
@@ -61,46 +61,32 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
   );
 };
 
+/**
+ * Returns the currently selected story
+ */
 export const useCurrentStory = (): Story | undefined => {
   const { story } = useContext(StoryContext);
   return story;
 };
 
+/**
+ * Retrieves a Story object from a story id
+ */
 export const useStoryById = (storyId: string) => {
   const store = useStore();
   return store.stories[storyId];
 };
 
 /**
- * returns the url path to a story.
+ * given a story name, will go through the store to find a story that matches it
  */
-export const useStoryPath = (storyId: string): string => {
+export const useGetStoryIdFromName = () => (
+  name: string,
+): string | undefined => {
   const store = useStore();
-  const activeTab = useActiveTab();
-  const config = useConfig();
-  const story = store.stories[storyId];
-  if (!story) {
-    return '';
-  }
-  const doc = store.docs[story?.doc || ''];
-  return getStoryPath(story.id, doc, config?.pages, activeTab);
-};
-
-export const useGetStoryPath = () => {
-  const store = useStore();
-  const config = useConfig();
-  return (storyId: string, activeTab?: string): string => {
-    const story = store.stories[storyId];
-    const doc = story && story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(storyId, doc, config?.pages, activeTab);
-  };
-};
-
-export const getStoryIdFromName = () => (name: string): string | undefined => {
-  const store = useStore();
-  for (const title in store.docs) {
-    const doc = store.docs[title];
-    const storyId = docStoryToId(title, name);
+  for (const docId in store.docs) {
+    const doc = store.docs[docId];
+    const storyId = docStoryToId(docId, name);
     if (doc.stories && doc.stories.indexOf(storyId) > -1) {
       return storyId;
     }
@@ -113,13 +99,16 @@ export interface StoryInputProps {
   name?: string;
 }
 
+/**
+ * Returns a story id from an input id or story name. The id can be '.', which means the current story.
+ */
 export const useStoryId = ({
   id = CURRENT_STORY,
   name,
 }: StoryInputProps): string | undefined => {
   const story = useCurrentStory();
   const { id: currentStoryId } = story || {};
-  const storyIdFromName = getStoryIdFromName();
+  const storyIdFromName = useGetStoryIdFromName();
   return name
     ? storyIdFromName(name)
     : id === CURRENT_STORY
@@ -127,16 +116,24 @@ export const useStoryId = ({
     : id;
 };
 
+/**
+ * Returns a story from an input id or story name. The id can be '.', which means the current story.
+ */
+
 export const useStory = (props: StoryInputProps): Story | undefined => {
   const storyId = useStoryId(props);
-  return storyId ? useStoryById(storyId) : undefined;
+  const store = useStore();
+  return storyId ? store.stories[storyId] : undefined;
 };
 
 export const useGetStory = () => (props: StoryInputProps) => useStory(props);
 
+/**
+ * Returns a story's component from an input id or story name. The id can be '.', which means the current story.
+ */
 export const useStoryComponent = (
   props: StoryInputProps,
-): StoryComponent | undefined => {
+): Component | undefined => {
   const storyId = useStoryId(props);
   const store = useStore();
   const story: Story | undefined = storyId ? store.stories[storyId] : undefined;
@@ -149,4 +146,29 @@ export const useStoryComponent = (
       ? store.components[doc.componentsLookup[componentName]]
       : undefined;
   return component;
+};
+
+/**
+ * Returns a link to a story from a story id.
+ */
+export const useStoryPath = (storyId: string): string => {
+  const store = useStore();
+  const activeTab = useActiveTab();
+  const config = useConfig();
+  const story = store.stories[storyId];
+  if (!story) {
+    return '';
+  }
+  const doc = store.docs[story?.doc || ''];
+  return getStoryPath(story.id, doc, config.pages, activeTab);
+};
+
+export const useGetStoryPath = () => {
+  const store = useStore();
+  const config = useConfig();
+  return (storyId: string, activeTab?: string): string => {
+    const story = store.stories[storyId];
+    const doc = story && story.doc ? store.docs[story.doc] : undefined;
+    return getStoryPath(storyId, doc, config.pages, activeTab);
+  };
 };

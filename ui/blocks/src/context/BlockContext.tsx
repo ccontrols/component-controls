@@ -20,6 +20,6 @@ export const useCustomProps = <T extends unknown>(
 ): T => {
   const store = useStore();
   const { config } = store;
-  const userProps = config?.components?.[name];
+  const userProps = config.components?.[name];
   return userProps ? deepMerge(props, userProps) : props;
 };

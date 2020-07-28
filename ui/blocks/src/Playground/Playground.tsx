@@ -1,7 +1,7 @@
 import React, { FC, Children } from 'react';
 import { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
 import { Story } from '@component-controls/core';
-import { getStoryIdFromName, useGetStory } from '@component-controls/store';
+import { useGetStoryIdFromName, useGetStory } from '@component-controls/store';
 
 import {
   BackgroundType,
@@ -104,7 +104,7 @@ export const Playground: FC<PlaygroundProps> = ({ children, ...props }) => {
   const isDark =
     dark === undefined ? theme.initialColorModeName === 'dark' : dark;
   let story: Story | undefined = undefined;
-  const storyIdFromName = getStoryIdFromName();
+  const storyIdFromName = useGetStoryIdFromName();
   const getStory = useGetStory();
   if (childArr.length === 1) {
     //@ts-ignore

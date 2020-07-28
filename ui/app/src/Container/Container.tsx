@@ -27,12 +27,7 @@ export const Container: FC = ({ children }) => {
                 label="by"
                 value={
                   <Link
-                    href={getDocPath(
-                      'author',
-                      undefined,
-                      config?.pages,
-                      author,
-                    )}
+                    href={getDocPath('author', undefined, config.pages, author)}
                   >
                     {author}
                   </Link>

@@ -7,11 +7,11 @@ import { useConfig } from '@component-controls/store';
 export const useAnalytics = () => {
   const config = useConfig();
   const analytics = useMemo(() => {
-    const options = config?.analytics;
+    const options = config.analytics;
     if (options) {
       if (typeof options === 'string') {
         return Analytics({
-          app: config?.siteTitle,
+          app: config.siteTitle,
           plugins: [
             googleAnalytics({
               trackingId: options,

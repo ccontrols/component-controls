@@ -70,7 +70,7 @@ const createMenuItem = (
     activeTab?: string,
   ): string => {
     const doc = store.docs[name];
-    return getDocPath(type, doc, config?.pages, name, activeTab);
+    return getDocPath(type, doc, config.pages, name, activeTab);
   };
   const newItem: MenuItem = {
     id: levels[0],

@@ -25,7 +25,7 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   }
 
   const pages = useSortedDocByType(type);
-  const page = config?.pages?.[type] || {};
+  const page = config.pages?.[type] || {};
   if (page.indexHome) {
     return (
       <PageContainer variant="pagelist.container" type={type} id="content">

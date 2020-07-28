@@ -20,7 +20,7 @@ export interface CategoryListProps {
 export const CategoryList: FC<CategoryListProps> = ({ type }) => {
   const store = useStore();
   const categories = useDocPropCount(type);
-  const pageConfig = store.config?.pages?.[type] || {};
+  const pageConfig = store.config.pages?.[type] || {};
   return (
     <PageContainer
       type={type}

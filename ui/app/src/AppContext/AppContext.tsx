@@ -29,7 +29,7 @@ export const AppContext: FC<AppContextProps> = ({
   activeTab,
 }) => {
   return (
-    <ThemeProvider theme={store.config?.theme} components={mdxComponents}>
+    <ThemeProvider theme={store.config.theme} components={mdxComponents}>
       <BlockContextProvider
         storyId={storyId}
         docId={docId}

@@ -39,7 +39,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const config = useConfig();
   const getDocumentPath = useGetDocumentPath();
   const activeTab = useActiveTab();
-  const pageConfig = config?.pages?.[type] || {};
+  const pageConfig = config.pages?.[type] || {};
   const { tabs = [] } = pageConfig;
   const selectedTab = activeTab
     ? activeTab

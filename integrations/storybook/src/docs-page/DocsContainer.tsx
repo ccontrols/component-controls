@@ -14,7 +14,7 @@ export const PageContextContainer: FC = ({ children }) => {
   const options = React.useMemo(() => getGlobalOptions(), []);
   const storyId = useStoryId();
   return (
-    <ThemeProvider theme={store.config?.theme}>
+    <ThemeProvider theme={store.config.theme}>
       <BlockContextProvider storyId={storyId} store={store} options={options}>
         <BlockPageContainer variant="pagecontainer.storybook">
           {children}

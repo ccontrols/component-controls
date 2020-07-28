@@ -3,7 +3,7 @@ import {
   Story,
   getComponentName,
   defaultStore,
-  StoreStories,
+  Stories,
 } from '@component-controls/core';
 
 import { COMPONENT_CONTROLS_STORAGE } from '../types';
@@ -38,7 +38,7 @@ export const saveStore = (store: Store) => {
   );
 };
 
-export const readStore = (stories: StoreStories): Store => {
+export const readStore = (stories: Stories): Store => {
   const data = localStorage.getItem(COMPONENT_CONTROLS_STORAGE);
   if (data) {
     const newStore = JSON.parse(data) as Store;

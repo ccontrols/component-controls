@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { StoryComponent } from '@component-controls/core';
+import { Component } from '@component-controls/core';
 import { usePackage } from '@component-controls/store';
 import {
   ActionItem,
@@ -10,7 +10,7 @@ import { useCustomProps } from '../context';
 import { repositoryActions } from '../utils/repositoryActions';
 
 export interface BaseComponentSourceOwnProps {
-  component: StoryComponent;
+  component: Component;
 }
 const NAME = 'componentsource';
 

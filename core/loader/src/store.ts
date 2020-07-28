@@ -1,6 +1,6 @@
 import {
-  StoreComponents,
-  StorePackages,
+  Components,
+  Packages,
   BuildConfiguration,
   RunConfiguration,
 } from '@component-controls/core';
@@ -20,11 +20,11 @@ export interface LoadingStore {
   /**
    * global store of packages
    */
-  packages: StorePackages;
+  packages: Packages;
   /**
    * global store of components
    */
-  components: StoreComponents;
+  components: Components;
   /**
    * stores, loaded from each .stories.* file
    */

@@ -6,7 +6,7 @@ import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
 import copy from 'copy-to-clipboard';
 import {
-  StoryComponent,
+  Component,
   ComponentControl,
   PropType,
   ComponentInfo,
@@ -35,7 +35,7 @@ interface PropRow {
 }
 
 export interface BasePropsTableProps {
-  component?: StoryComponent;
+  component?: Component;
   extraColumns: Column[];
   tableProps: any;
   visibility?: ComponentVisibility;

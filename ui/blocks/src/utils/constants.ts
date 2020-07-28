@@ -1,10 +1,10 @@
-import { Document, StoryComponent, Story } from '@component-controls/core';
+import { Document, Component, Story } from '@component-controls/core';
 
 export const CURRENT_STORY = '.';
 
 export const getStoryTitle = (
   doc: Document | undefined,
-  component: StoryComponent | undefined,
+  component: Component | undefined,
 ): string | undefined => {
   if (doc) {
     const titleParts = doc.title.split('/').filter(k => k);

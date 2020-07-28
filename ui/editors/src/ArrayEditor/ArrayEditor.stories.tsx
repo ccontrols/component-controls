@@ -25,10 +25,10 @@ export const overview = () => {
         },
       }}
     >
-      <ArrayEditor name="prop" />
       <ul>
         {state && state.map(item => <li key={item.name}>{item.name}</li>)}
       </ul>
+      <ArrayEditor name="prop" />
     </ControlsStateProvider>
   );
 };

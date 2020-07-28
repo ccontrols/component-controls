@@ -17,7 +17,7 @@ export interface CategoryPageProps {
 }
 export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const config = useConfig();
-  const pageConfig = config?.pages?.[type] || {};
+  const pageConfig = config.pages?.[type] || {};
   const pages = usePagesByCategory(type, category);
   const customPage = useDocument(category);
   const Page =

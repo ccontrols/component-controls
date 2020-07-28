@@ -93,7 +93,7 @@ export interface ComponentInfo {
 /**
  * component specified for stories or story files
  */
-export interface StoryComponent {
+export interface Component {
   /**
    * name of the component as used in the fiel
    */

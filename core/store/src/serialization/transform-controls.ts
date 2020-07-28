@@ -5,7 +5,7 @@ import {
   Story,
   deepMergeReplaceArrays,
   Document,
-  StoreComponents,
+  Components,
   getComponentName,
   controlsFromProps,
   SmartControls,
@@ -15,7 +15,7 @@ import {
 export const transformControls = (
   story: Story,
   doc: Document,
-  components: StoreComponents,
+  components: Components,
 ): ComponentControls | undefined => {
   const { controls: storyControls } = story;
   const controls: ComponentControls | undefined = storyControls

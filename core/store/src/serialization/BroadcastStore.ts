@@ -5,9 +5,9 @@ import {
   StoreObserver,
   RunConfiguration,
   Documents,
-  StoreStories,
-  StoreComponents,
-  StorePackages,
+  Stories,
+  Components,
+  Packages,
 } from '@component-controls/core';
 import { readStore, saveStore } from './store-local-storage';
 export const UPDATE_STORY_MSG = 'component_controls_update_story';
@@ -17,11 +17,11 @@ export interface MessageType {
 }
 
 export class BroadcastStore implements Store {
-  config: RunConfiguration | undefined;
+  config: RunConfiguration = {};
   docs: Documents = {};
-  stories: StoreStories = {};
-  components: StoreComponents = {};
-  packages: StorePackages = {};
+  stories: Stories = {};
+  components: Components = {};
+  packages: Packages = {};
   observers: StoreObserver[];
   channel: BroadcastChannel;
 

@@ -27,7 +27,7 @@ export const PageTypeTag: FC<PageTypeTagProps> = ({ type }) => {
     );
   }, [tags]);
   return (
-    <Link href={`/${config?.pages?.[type].basePath}`}>
+    <Link href={`/${config.pages?.[type].basePath}`}>
       <Tag color={colors[type] || '#f49342'}>{type}</Tag>
     </Link>
   );

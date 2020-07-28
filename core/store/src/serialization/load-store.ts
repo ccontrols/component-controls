@@ -38,7 +38,7 @@ export const loadStore = (store: LoadingStore): Store => {
         const storeDoc = s.doc;
         const storeStories = s.stories;
         if (storeDoc && storeStories && s.stories) {
-          const page = globalStore.config?.pages?.[
+          const page = globalStore.config.pages?.[
             storeDoc.type || defDocType
           ] as PageConfiguration;
           const doc: Document = deepMerge({ layout: page.layout }, storeDoc);

@@ -1,9 +1,5 @@
 import { File } from '@babel/types';
-import {
-  StoryComponent,
-  Document,
-  PackageInfo,
-} from '@component-controls/core';
+import { Component, Document, PackageInfo } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
@@ -11,7 +7,7 @@ import { propsInfo } from '../misc/props-info';
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
 interface ComponentParseData {
-  component?: StoryComponent;
+  component?: Component;
   componentPackage?: PackageInfo;
 }
 const globalCache: {
@@ -36,7 +32,7 @@ export const extractComponent = async (
     initialAST,
   );
   const { components } = options || {};
-  let component: StoryComponent;
+  let component: Component;
   let componentPackage: PackageInfo | undefined;
   if (follow) {
     component = {

@@ -1961,7 +1961,7 @@ If an array of components is specified, each component will be displayed in a se
 if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "((name: string, component: StoryComponent) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "raw": "((name: string, component: Component) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {
