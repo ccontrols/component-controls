@@ -31,7 +31,7 @@ interface RowEditorProps {
   control: ComponentControlArray;
   row: any;
   Editor: PropertyEditor;
-  onChange: (name: string, value: any) => void;
+  onChange: (name: string | undefined, value: any) => void;
 }
 const RowEditor: FC<RowEditorProps> = ({
   propName,
@@ -83,11 +83,15 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   const [control, setProp] = useControl<ComponentControlArray>(name);
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
-  const handleChange = (rowIndex: number, propName: string, value: any) => {
+  const handleChange = (
+    rowIndex: number,
+    propName: string | undefined,
+    value: any,
+  ) => {
     if (Array.isArray(control.value)) {
       setProp(
         control.value.map((row, index) =>
-          rowIndex === index ? { ...row, [propName]: value } : row,
+          rowIndex === index ? { ...row, [propName as string]: value } : row,
         ),
       );
     }
@@ -142,9 +146,10 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
                                   propName={key}
                                   row={row}
                                   Editor={Editor}
-                                  onChange={(propName: string, value: any) =>
-                                    handleChange(idx, propName, value)
-                                  }
+                                  onChange={(
+                                    propName: string | undefined,
+                                    value: any,
+                                  ) => handleChange(idx, propName, value)}
                                 />
                               </Flex>
                             </td>

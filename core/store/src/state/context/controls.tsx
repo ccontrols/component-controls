@@ -1,9 +1,13 @@
 import React, { FC, createContext, useContext } from 'react';
-import { ComponentControls, ComponentControl } from '@component-controls/core';
+import {
+  ComponentControls,
+  ComponentControl,
+  mergeControlValues,
+} from '@component-controls/core';
 
 import { StoryContext, useStoryById } from './story';
 
-export type ControlUpdateFn = (name: string, newValue: any) => void;
+export type ControlUpdateFn = (name: string | undefined, newValue: any) => void;
 
 export interface ControlsContextProps {
   controls?: ComponentControls;
@@ -19,15 +23,12 @@ export const ControlsContextStoryProvider: FC = ({ children }) => {
     <ControlsContext.Provider
       value={{
         controls: story ? story.controls : undefined,
-        updateValue: (name: string, newValue: any) => {
+        updateValue: (name: string | undefined, newValue: any) => {
           if (story) {
             const storyControls = story.controls || {};
             updateStory({
               ...story,
-              controls: {
-                ...storyControls,
-                [name]: { ...storyControls[name], value: newValue },
-              },
+              controls: mergeControlValues(storyControls, name, newValue),
             });
           }
         },
@@ -74,10 +75,10 @@ export const ControlsStateProvider: FC<ControlsStateProviderProps> = ({
  *
  */
 export const useControl = <T extends ComponentControl>(
-  name: string,
+  name?: string,
 ): [T, (value: any) => void] => {
   const { controls, updateValue } = useContext(ControlsContext);
-  const control = controls ? controls[name] : undefined;
+  const control = controls ? (name ? controls[name] : controls) : undefined;
   const setValue = (value: any) => {
     updateValue(name, value);
   };
