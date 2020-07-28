@@ -12,6 +12,7 @@ import {
   ComponentInfo,
   visibleControls,
 } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 
 import {
   Table,
@@ -53,6 +54,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   const [copied, setCopied] = useState(false);
   const story = useCurrentStory();
   const info: Partial<ComponentInfo> = component.info || {};
+  const [, setControlValue] = useControl();
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story?.controls || {} : {};
     return visibleControls(storyControls, story);
@@ -323,6 +325,14 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     useControlsActions({
       controls,
       storyId: story?.id,
+      setControlValue: (
+        storyId: string,
+        propertyName: string | undefined,
+        value: any,
+      ) => {
+        setControlValue(value);
+        console.log(storyId, propertyName, value);
+      },
     }),
   );
   return <ActionContainer actions={actions}>{table}</ActionContainer>;

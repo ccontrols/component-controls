@@ -6,7 +6,11 @@ import {
   useRecoilState,
   RecoilRoot,
 } from 'recoil';
-import { ComponentControls, ComponentControl } from '@component-controls/core';
+import {
+  ComponentControls,
+  ComponentControl,
+  mergeControlValues,
+} from '@component-controls/core';
 
 import { currentStoryState } from './story';
 import { storeState } from './store';
@@ -40,12 +44,12 @@ export const useStoryControls = (
 ): ComponentControls | undefined => useRecoilValue(storyControlsState(storyId));
 
 export const useControl = <T extends ComponentControl>(
-  name: string,
+  name?: string,
 ): [T, (value: any) => void] => {
   const [controls, setControls] = useRecoilState(currentControlsState);
-  const control = controls ? controls[name] : undefined;
-  const setValue = (value: any) => {
-    setControls({ ...controls, [name]: value });
+  const control = controls ? (name ? controls[name] : controls) : undefined;
+  const setValue = (newValue: any) => {
+    setControls(mergeControlValues(controls || {}, name, newValue));
   };
   return [control as T, setValue];
 };

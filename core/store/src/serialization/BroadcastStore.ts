@@ -17,7 +17,7 @@ export interface MessageType {
 }
 
 export class BroadcastStore implements Store {
-  config: RunConfiguration | undefined;
+  config: RunConfiguration = {};
   docs: Documents = {};
   stories: StoreStories = {};
   components: StoreComponents = {};

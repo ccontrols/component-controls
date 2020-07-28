@@ -42,7 +42,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
 
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
-  const handleChange = (childName: string, value: any) => {
+  const handleChange = (childName: string | undefined, value: any) => {
     onChange(mergeControlValues(control.value as any, childName, value));
   };
   let children: ({
