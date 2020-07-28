@@ -22,6 +22,9 @@ export interface ComponentInputProps {
   name?: string;
 }
 
+/**
+ * If the `of` property is specified, will return the listed components, if `of` is not specified, will return the components specified in the component and subcomponent properties of the document or the story.
+ */
 export const useComponents = ({
   of = CURRENT_STORY,
   name,
@@ -98,6 +101,10 @@ export const useComponents = ({
   }
   return components;
 };
+
+/**
+ * If the `of` property is specified, will return the listed component, if `of` is not specified, will return the component specified in the component property of the document or the story.
+ */
 
 export const useComponent = ({
   of = CURRENT_STORY,

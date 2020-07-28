@@ -5,7 +5,7 @@ import { DocType } from '@component-controls/core';
 import { Title, Link } from '@component-controls/components';
 import {
   useDocument,
-  usePagesByCategory,
+  useDocsByCategory,
   useConfig,
 } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
@@ -18,7 +18,7 @@ export interface CategoryPageProps {
 export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
   const config = useConfig();
   const pageConfig = config.pages?.[type] || {};
-  const pages = usePagesByCategory(type, category);
+  const pages = useDocsByCategory(type, category);
   const customPage = useDocument(category);
   const Page =
     customPage && customPage.type === type ? customPage.MDXPage : undefined;

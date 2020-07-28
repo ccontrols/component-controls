@@ -30,11 +30,18 @@ const docPropCountState = selectorFamily<DocCountType, string>({
   },
 });
 
+/**
+ * Returns the number of documents by unique values in their `category` field
+ */
+
 export const useDocPropCount = (category: string): DocCountType => {
   return useRecoilValue(docPropCountState(category));
 };
 
-export const usePagesByCategory = (category: string, value?: any): Pages => {
+/**
+ * Returns an array of documents that have a specific value in their `category` field
+ */
+export const useDocsByCategory = (category: string, value?: any): Pages => {
   const docs = useDocs();
   const sort = useRecoilValue(docSortByTypeState(category));
   return Object.keys(docs)

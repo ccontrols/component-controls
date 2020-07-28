@@ -317,6 +317,49 @@ import { useStory } from '@component-controls/store';
 }
 ```
 
+### useStoryPath
+
+Returns a link to a story from a story id
+
+> useStoryPath = (storyId: string): string
+
+```
+import { useStoryPath } from '@component-controls/store';
+{
+  const href = useStoryPath('introduction-starter--overview');
+  return <a href={href}>Visit tutorial</a>
+}
+```
+
+## Component hooks
+
+### useComponents
+
+If the `of` property is specified, will return the listed components, if `of` is not specified, will return the components specified in the component and subcomponent properties of the document or the story.
+
+> useComponents = ({ of: string, name: string}): Components
+```
+import { useComponents } from '@component-controls/store';
+{
+  const components = useComponents({ of: '.' });
+  console.log(Object.keys(components));
+}
+```
+
+### useComponent
+
+If the `of` property is specified, will return the listed component, if `of` is not specified, will return the component specified in the component property of the document or the story.
+
+> useComponent = ({ of: string, name: string}): Component
+```
+import { useComponent } from '@component-controls/store';
+import { Button } from '../Button';
+{
+  const component = useComponent({ of: Button });
+  console.log(component.source);
+}
+```
+
 ### useStoryComponent
 
 Returns a story's component from an input id or story name. The id can be '.', which means the current story.
@@ -330,16 +373,78 @@ import { useStoryComponent } from '@component-controls/store';
 }
 ```
 
-### useStoryPath
 
-Returns a link to a story from a story id
+## Controls hooks
 
-> useStoryPath = (storyId: string): string
+### useStoryControls
+
+Returns the controls associated with a story
+
+> useStoryControls = (storyId: string): ComponentControls
 
 ```
-import { useStoryPath } from '@component-controls/store';
+import { useStoryControls } from '@component-controls/store';
 {
-  const href = useStoryPath('introduction-starter--overview');
-  return <a href={href}>Visit tutorial</a>
+  const controls = useStoryControls('introduction-starter--overview');
+  console.log(controls);
+}
+```
+
+### useControl
+
+Retruns a controls and a setter function from the current controls context, given a control name. This hook is to be used when creating custom control editors.
+
+> useControl = (name: string): [T, (value: any) => void]
+
+```
+import { ControlTypes, ComponentControlBoolean } from '@component-controls/core';
+import { PropertyEditor } from '@component-controls/editors';
+import { useControl } from '@component-controls/store';
+
+const CheckboxEditor: PropertyEditor = ({ name }) => {
+  const [control, onChange] = useControl<ComponentControlBoolean>(name);
+  return (
+    <input
+      type="checkbox"
+      id={name}
+      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+        onChange(e.target.checked);
+      }}
+      checked={control.value ?? false}
+    />
+  );
+};
+
+addPropertyEditor(ControlTypes.BOOLEAN, CheckboxEditor);
+
+```
+
+## Categories
+
+### useDocPropCount
+
+Returns the number of documents by unique values in their `category` field
+
+> useDocPropCount = (category: string): Record<string, number>
+
+```
+import { useDocPropCount } from '@component-controls/store';
+{
+  const authors = useDocPropCount('author');
+  console.log(authors);
+}
+```
+
+### useDocsByCategory
+
+Returns an array of documents that have a specific value in their `category` field
+
+> useDocsByCategory = (category: string, value?: any): Document[]
+
+```
+import { useDocsByCategory } from '@component-controls/store';
+{
+  const pages = useDocsByCategory('author', 'atanasster');
+  console.log(pages);
 }
 ```

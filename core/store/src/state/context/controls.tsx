@@ -38,6 +38,9 @@ export const ControlsContextStoryProvider: FC = ({ children }) => {
   );
 };
 
+/**
+ * Returns the controls associated with a story
+ */
 export const useStoryControls = (
   storyId: string,
 ): ComponentControls | undefined => {
@@ -66,6 +69,10 @@ export const ControlsStateProvider: FC<ControlsStateProviderProps> = ({
   );
 };
 
+/**
+ * Retruns a controls and a setter function from the current controls context, given a control name
+ *
+ */
 export const useControl = <T extends ComponentControl>(
   name: string,
 ): [T, (value: any) => void] => {

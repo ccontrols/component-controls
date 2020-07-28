@@ -35,10 +35,16 @@ const storyControlsState = selectorFamily<
   },
 });
 
+/**
+ * Returns the controls associated with a story
+ */
 export const useStoryControls = (
   storyId: string,
 ): ComponentControls | undefined => useRecoilValue(storyControlsState(storyId));
 
+/**
+ * Retruns a controls and a setter function from the current controls context, given a control name
+ */
 export const useControl = <T extends ComponentControl>(
   name: string,
 ): [T, (value: any) => void] => {

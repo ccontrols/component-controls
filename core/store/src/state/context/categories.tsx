@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { Pages } from '@component-controls/core';
 import { DocCountType, useDocs, docSortFn, useDocSort } from './document';
 
+/**
+ * Returns the number of documents by unique values in their `category` field
+ */
 export const useDocPropCount = (category: string): DocCountType => {
   const [state, setState] = useState<DocCountType>({});
   const docs = useDocs();
@@ -26,7 +29,10 @@ export const useDocPropCount = (category: string): DocCountType => {
   return state;
 };
 
-export const usePagesByCategory = (category: string, value?: any): Pages => {
+/**
+ * Returns an array of documents that have a specific value in their `category` field
+ */
+export const useDocsByCategory = (category: string, value?: any): Pages => {
   const [state, setState] = useState<Pages>([]);
   const docs = useDocs();
   const [sort] = useDocSort(category);
