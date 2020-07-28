@@ -44,7 +44,7 @@ export const defaultExternals: ExternalProps[] = [
   { lib: '@theme-ui/css' },
 
   { lib: '@component-controls/core' },
-  { lib: '@component-controls/loader' },
+  { lib: '@component-controls/store' },
   { lib: '@component-controls/blocks' },
   { lib: '@component-controls/components' },
 
