@@ -34,7 +34,7 @@ Initialize the project:
 yarn init
 ```
 
-Add nextjs and its dependencies:
+Add `nextjs` and react packages:
 
 ```sh
 yarn add next react react-dom
@@ -44,8 +44,8 @@ yarn add next react react-dom
 ...
   "scripts": {
     "build": "next build && next export",
-    "start-next": "next -p 9031",
-    "start-next-server": "next build && next start -p 9031"
+    "start": "next",
+    "start-server": "next build && next start"
   },
 ...
 ```
@@ -55,17 +55,15 @@ The remaining steps are the same as for an existing gatsby project, so just foll
 
 ## Existing Nextjs project
 
-### Add plugin
+### Add component-controls
 
 ```sh
 yarn add @component-controls/nextjs-plugin
 ```
 
-<hr />
-
 ### Configure emotion SSR
 
-#### Add plugin
+#### Add emotion packages
 
 ```sh
 yarn add emotion emotion-server
