@@ -4,7 +4,6 @@ import { CompileProps } from '@component-controls/webpack-configs';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-let builtStarted = false;
 export default ({
   bundleName,
   configPath,
@@ -13,29 +12,33 @@ export default ({
   webPack,
   ...rest
 }: CompileProps) => (phase: string, nextConfig: any) => {
-  const { defaultConfig } = nextConfig;
-  const userProps: CompileProps = {
-    bundleName,
-    configPath,
-    webPack,
-  };
-  const options: CompileProps = {
-    presets: presets || defaultPresets,
-    distFolder: path.resolve(__dirname),
-    staticFolder:
-      staticFolder || path.join(process.cwd(), defaultConfig.distDir),
-    ...userProps,
-  };
-
-  if (phase !== 'phase-export' && !builtStarted) {
-    builtStarted = true;
-    const compiler =
-      process.env.NODE_ENV === 'development'
-        ? watch(options)
-        : compile(options);
-    compiler.then(() => {});
-  }
   return {
+    /**
+     * we need some async function, to make sure the compilation process is completed
+     */
+    async headers() {
+      const { defaultConfig } = nextConfig;
+      const userProps: CompileProps = {
+        bundleName,
+        configPath,
+        webPack,
+      };
+      const options: CompileProps = {
+        presets: presets || defaultPresets,
+        distFolder: path.resolve(__dirname),
+        staticFolder:
+          staticFolder || path.join(process.cwd(), defaultConfig.distDir),
+        ...userProps,
+      };
+
+      const compiler =
+        process.env.NODE_ENV === 'development'
+          ? watch(options)
+          : compile(options);
+      await compiler;
+
+      return [];
+    },
     ...rest,
   };
 };
