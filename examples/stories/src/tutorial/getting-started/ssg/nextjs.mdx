@@ -2,6 +2,7 @@
 title: Getting started/Site generators/Nextjs
 type: tutorial
 route: /tutorial/getting-started/nextjs
+description: getting started creating a documentation static site with nextjs and component-controls
 order: 1
 tags:
   - nextjs
@@ -40,6 +41,12 @@ Add `nextjs` and react packages:
 yarn add next react react-dom
 ```
 
+Optional (but recommended), add typescript dependencies
+
+```sh
+yarn add --dev typescript @types/react @types/node
+```
+
 ```json:title=package.json
 ...
   "scripts": {
@@ -71,6 +78,13 @@ yarn add emotion emotion-server
 
 
 To configure [emotion](https://emotion.sh/docs/introduction) for SSR, you can view this [`emotion starter project`](https://github.com/vercel/next.js/tree/canary/examples/with-emotion/pages)
+
+### Create a pages folder
+
+```sh
+mkdir pages
+```
+
 
 #### Add pages/_app.js
 
@@ -253,6 +267,12 @@ export default DocHomeTemplate;
 
 Create a new sub-folder `[doctype]` in the pages folder, and in it a new `[...docid].tsx` or `[...docid].js` file:
 
+### Create a pages folder
+
+```sh
+mkdir pages/[doctype]
+```
+
 <details>
   <summary>view source...</summary>
 
@@ -312,4 +332,4 @@ export default DocPageTemplate;
 
 ## Create your documentation site
 
-Check our [Create documentation site](/tutorial/getting-started/documentation-site) tutorial
+Check our [create a documentation site](/tutorial/getting-started/documentation-site) tutorial
