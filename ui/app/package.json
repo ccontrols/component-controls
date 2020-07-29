@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/app",
-  "version": "1.11.1",
+  "version": "1.11.2",
   "description": "Component controls standalone application.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,11 +30,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.11.1",
+    "@component-controls/blocks": "^1.11.2",
     "@component-controls/components": "^1.11.0",
     "@component-controls/core": "^1.11.0",
-    "@component-controls/pages": "^1.11.1",
-    "@component-controls/store": "^1.11.1",
+    "@component-controls/pages": "^1.11.2",
+    "@component-controls/store": "^1.11.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",

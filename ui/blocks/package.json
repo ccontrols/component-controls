@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/blocks",
-  "version": "1.11.1",
+  "version": "1.11.2",
   "description": "Component controls core documentation blocks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -32,8 +32,8 @@
   "dependencies": {
     "@component-controls/components": "^1.11.0",
     "@component-controls/core": "^1.11.0",
-    "@component-controls/editors": "^1.11.1",
-    "@component-controls/store": "^1.11.1",
+    "@component-controls/editors": "^1.11.2",
+    "@component-controls/store": "^1.11.2",
     "@primer/octicons-react": "^10.0.0",
     "@theme-ui/css": "next",
     "copy-to-clipboard": "^3.2.1",

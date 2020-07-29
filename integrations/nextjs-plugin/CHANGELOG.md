@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
+
+
+### Bug Fixes
+
+* plug into async method ([b2ced9a](https://github.com/ccontrols/component-controls/commit/b2ced9a4efb67205049f247df44ede55676a6e1f))
+
+
+
+
+
 ## [1.11.1](https://github.com/ccontrols/component-controls/compare/v1.11.0...v1.11.1) (2020-07-29)
 
 **Note:** Version bump only for package @component-controls/nextjs-plugin
