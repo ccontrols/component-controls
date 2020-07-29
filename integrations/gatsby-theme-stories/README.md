@@ -2,9 +2,6 @@
 
 -   [In action](#in-action)
 -   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Configure](#configure)
 -   [API](#api)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
@@ -26,34 +23,7 @@ Gatsby theme for documenting your projects with component controls
 
 Special thanks for the inspiration drawn from [Gatsby themes](https://github.com/LekoArts/gatsby-themes).
 
-# Getting Started
-
-## Install
-
-```sh
-yarn add @component-controls/gatsby-theme-stories
-```
-
-## Configure
-
-the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
-
-in `gatsby-config.js`:
-
-```js
-  plugins: [
-    ...
-    {
-      resolve: '@component-controls/gatsby-theme-stories',
-      options: {
-        //path to the configuration files
-        configPath: '.config',
-      },
-    },
-    ...
-  ],
-
-```
+[Getting started with gatsby](https://component-controls.com/tutorial/getting-started/gatsby)
 
 # API
 

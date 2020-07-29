@@ -7,9 +7,10 @@
 -   [Showcase sites](#showcase-sites)
 -   [Integrations](#integrations)
     -   [@component-controls/storybook](#component-controlsstorybook)
-        -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
-        -   [Motivation](#motivation-1)
-        -   [Limitations](#limitations)
+    -   [PresetOptions](#presetoptions)
+        -   [properties](#properties)
+    -   [defaultRules](#defaultrules)
+    -   [Storybook addon panels](#storybook-addon-panels)
 -   [Core packages](#core-packages)
     -   [@component-controls/core](#component-controlscore)
     -   [@component-controls/core](#component-controlscore-1)
@@ -105,26 +106,56 @@ There are many developments that have contributed to the creation of `component-
 
 Storybook Addon For live editing of component controls
 
-### [storybook](https://storybook.js.org) integration of component-controls.
+Storybook plugin for documenting your projects with component controls
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif" alt="introduction to using component-controls" width="738">
-</p>
+-   Full replacement for the storybook addon-docs
+-   Works with storybook-5 and storybook-6
 
-### Motivation
-
--   Allow adding component-controls in storybook DocsPage.
--   Allow adding storybook docs blocks in component-controls documentation pages.
--   Allow standalone component-controls documentation pages.
--   Allow an unlimited number of documentation pages.
--   Fully replace and extend the Storybook addon-docs block components.
--   Fully replace Storybook's modx-compiler and source-loader.
--   Provide and extensible framework of components, blocks and pages.
-
-### Limitations
+**Limitations**
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the ESM(CSF) and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
+
+[Getting started with storybook](https://component-controls.com/tutorial/getting-started/storybook)
+
+<tsdoc-typescript entry="./src/types.ts" />
+
+<!-- START-TSDOC-TYPESCRIPT -->
+
+## PresetOptions
+
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L3)_
+
+### properties
+
+| Name               | Type                    | Description                                                             |
+| ------------------ | ----------------------- | ----------------------------------------------------------------------- |
+| `pages`            | string\[]               | additional custom documentation pages                                   |
+| `propsPanel`       | boolean                 | whether to display the props table as an addon panel in storybook       |
+| `storyConfigPanel` | boolean                 | whether to display the StoryConfig block as an addon panel in storybook |
+| `storySourcePanel` | boolean                 | whether to display the StorySource block as an addon panel in storybook |
+| `webpack`          | [RuleTypes](#ruletypes) | options that will be passed to the instrumenter.                        |
+
+## defaultRules
+
+_defined in [@component-controls/storybook/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/integrations/storybook/src/types.ts#L28)_
+
+<!-- END-TSDOC-TYPESCRIPT -->
+
+## Storybook addon panels
+
+The `component-controls` block components ahev been designed from the ground up to be able to be placed either on documentation pages or in addon tabs. 
+
+You can turn on and off the available panels:
+
+      {
+        name: '@component-controls/storybook',
+        options: {
+          controlsPanel: true,
+          propsPanel: true,
+          storySourcePanel: true,
+        }
+      }  
 
 <!-- END-PACKAGE-SECTION -->
 
@@ -239,7 +270,9 @@ Collection of standard webpack rules for [@component-controls/instrument](https:
 
 Component controls shared storage store
 
-Utility classes to abstract loading the stories store from the webpack loader and provides an interface to access the store. Will also share the store accross bundles using localStorage and broadcastig messages.
+Utility functions and hooks to abstract loading and using the documentation store. Can also share the store accross bundles using localStorage and broadcastig messages.
+
+[Store reference documentation](https://component-controls.com/tutorial/reference/store)
 
 <!-- END-PACKAGE-SECTION -->
 

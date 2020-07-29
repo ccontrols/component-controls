@@ -5,7 +5,9 @@
 
 # Overview
 
-Utility classes to abstract loading the stories store from the webpack loader and provides an interface to access the store. Will also share the store accross bundles using localStorage and broadcastig messages.
+Utility functions and hooks to abstract loading and using the documentation store. Can also share the store accross bundles using localStorage and broadcastig messages.
+
+[Store reference documentation](https://component-controls.com/tutorial/reference/store)
 
 # Installation
 
