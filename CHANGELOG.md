@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.1](https://github.com/ccontrols/component-controls/compare/v1.11.0...v1.11.1) (2020-07-29)
+
+
+### Bug Fixes
+
+* add raw-loader dependency ([7ad6049](https://github.com/ccontrols/component-controls/commit/7ad604966439039ca64eddfebb67d3360e7e94a0))
+
+
+
+
+
 # [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
 
 
