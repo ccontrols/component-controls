@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* cleanup store context ([6c1f208](https://github.com/ccontrols/component-controls/commit/6c1f208c85d01b9394e2fe1469057dfad09dcbc4))
+
+
+
+
+
 ## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

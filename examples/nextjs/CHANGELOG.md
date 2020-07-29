@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* nextjs store state ([b3819fa](https://github.com/ccontrols/component-controls/commit/b3819fad0cc970380a1161a6a4ec45109c628172))
+
+
+
+
+
 ## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
 
 **Note:** Version bump only for package component-controls-nextjs-starter

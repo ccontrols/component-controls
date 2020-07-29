@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* cleanup store context ([6c1f208](https://github.com/ccontrols/component-controls/commit/6c1f208c85d01b9394e2fe1469057dfad09dcbc4))
+* dependecnies sorting avoif recoil read only ([5f454dc](https://github.com/ccontrols/component-controls/commit/5f454dc92e722179dbb4a715a80a65cdc02b0b01))
+* fix gatsby pages creation ([a48518e](https://github.com/ccontrols/component-controls/commit/a48518ee30d957e58ae9caf093fb3d2de8757402))
+* randomize state ([8e74f55](https://github.com/ccontrols/component-controls/commit/8e74f55c58078c870142aca7058cfb8c425c6d5e))
+
+
+### Features
+
+* initial recoil state ([530c277](https://github.com/ccontrols/component-controls/commit/530c27772e0ba67b24a51d2af208984ac2053143))
+
+
+
+
+
 ## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
 
 **Note:** Version bump only for package @component-controls/blocks

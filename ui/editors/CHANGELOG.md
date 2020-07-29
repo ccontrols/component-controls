@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* randomize state ([8e74f55](https://github.com/ccontrols/component-controls/commit/8e74f55c58078c870142aca7058cfb8c425c6d5e))
+
+
+
+
+
 ## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
 
 **Note:** Version bump only for package @component-controls/editors

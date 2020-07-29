@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* attempt change by reference ([dcdae67](https://github.com/ccontrols/component-controls/commit/dcdae67ecb8b31b42c24fecf88048ec94e5fe6be))
+* cleanup store context ([6c1f208](https://github.com/ccontrols/component-controls/commit/6c1f208c85d01b9394e2fe1469057dfad09dcbc4))
+* components selectors ([9a9c85a](https://github.com/ccontrols/component-controls/commit/9a9c85aca01ea123c3ea71f08ddeccc0cb41d0c9))
+* dependecnies sorting avoif recoil read only ([5f454dc](https://github.com/ccontrols/component-controls/commit/5f454dc92e722179dbb4a715a80a65cdc02b0b01))
+* doc paths for documents with stories - first ([55e6189](https://github.com/ccontrols/component-controls/commit/55e6189851633683288565cb620c2ea88890b111))
+* docs by type sorted ([b4465c3](https://github.com/ccontrols/component-controls/commit/b4465c3115ca2992df9b8466e661998b283bf858))
+* fix gatsby pages creation ([a48518e](https://github.com/ccontrols/component-controls/commit/a48518ee30d957e58ae9caf093fb3d2de8757402))
+* nextjs store state ([b3819fa](https://github.com/ccontrols/component-controls/commit/b3819fad0cc970380a1161a6a4ec45109c628172))
+* randomize state ([8e74f55](https://github.com/ccontrols/component-controls/commit/8e74f55c58078c870142aca7058cfb8c425c6d5e))
+* remove loader store class ([d50e60e](https://github.com/ccontrols/component-controls/commit/d50e60e1751009d4c458e87fd11122fcd406eb8b))
+* store context type ([b22a6c5](https://github.com/ccontrols/component-controls/commit/b22a6c535ea07320447fad479828cb488b950d06))
+* store external module ([e35d5ab](https://github.com/ccontrols/component-controls/commit/e35d5abef15cbaa9ac0ac6b2fa93ebae87b49100))
+* sync store state ([5d10e72](https://github.com/ccontrols/component-controls/commit/5d10e725dc88d8705040bdd1c53b0b42247a2ef6))
+* unused var ([886c36e](https://github.com/ccontrols/component-controls/commit/886c36ef056a6221140b095634c21955dcac1704))
+
+
+### Features
+
+* initial recoil state ([530c277](https://github.com/ccontrols/component-controls/commit/530c27772e0ba67b24a51d2af208984ac2053143))
+
+
+
+
+
 ## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
 
 

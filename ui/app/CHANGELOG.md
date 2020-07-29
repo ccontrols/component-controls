@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* doc paths for documents with stories - first ([55e6189](https://github.com/ccontrols/component-controls/commit/55e6189851633683288565cb620c2ea88890b111))
+* docs by type sorted ([b4465c3](https://github.com/ccontrols/component-controls/commit/b4465c3115ca2992df9b8466e661998b283bf858))
+* fix gatsby pages creation ([a48518e](https://github.com/ccontrols/component-controls/commit/a48518ee30d957e58ae9caf093fb3d2de8757402))
+
+
+### Features
+
+* initial recoil state ([530c277](https://github.com/ccontrols/component-controls/commit/530c27772e0ba67b24a51d2af208984ac2053143))
+
+
+
+
+
 ## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
 
 **Note:** Version bump only for package @component-controls/app
