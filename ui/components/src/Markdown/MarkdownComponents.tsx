@@ -102,4 +102,6 @@ export const markdownComponents: MarkdownComponentType = {
   img: TitledImage,
   button: Button,
   label: Label,
+  summary: props => <summary variant="styles.summary" {...props} />,
+  details: props => <details variant="styles.details" {...props} />,
 };

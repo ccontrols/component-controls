@@ -234,7 +234,7 @@ export const theme: ControlsTheme = {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
-      color: 'red',
+      color: 'accent',
     },
     blockquote: {
       borderLeft: (t: Theme) => `4px solid ${t.colors?.shadow}`,
@@ -262,11 +262,15 @@ export const theme: ControlsTheme = {
     },
     p: {
       fontSize: 3,
-      my: 4,
+      my: 3,
       color: 'text',
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+    },
+    summary: {
+      fontSize: 3,
+      my: 3,
     },
     ol: {
       fontSize: 3,

@@ -1,74 +1,25 @@
 ---
-title: Getting started/Gatsby
+title: Getting started/Documentation stite
 type: tutorial
 order: 0
-route: /tutorial/getting-started/gatsby
+route: /tutorial/getting-started/documentation-site
 tags:
-  - gatsby
+  - configuration
+  - mdx
+  - esm
 ---
 
-Below, we go over how to add a `component-controls` documentation site to both [new](/tutorial/getting-started/gatsby#new-project) and [existing](/tutorial/getting-started/gatsby#existing-gatsby-project) Gatsby projects.
 
-You can find a [git repo](https://github.com/atanasster/gatsby-controls-starter) and a [live version](https://gatsby-controls-starter.netlify.app/) of the site we'll build below.
+In this tutorial, we assume you have already selected and set up a static site generator (SSG) for your documentation site 
 
-## New project 
+- [Getting started with gatsby](/tutorial/getting-started/gatsby)
+- [Getting started with nextjs](/tutorial/getting-started/nextjs)
+- [Getting started with storybook](/tutorial/getting-started/storybook)
 
-Create a new folder:
 
-```sh
-mkdir my-gatsby-project && cd my-gatsby-project
-```
+## Configuration folder
 
-Initialize the project:
-
-```sh
-yarn init
-```
-
-Add gatsby and its dependencies:
-
-```sh
-yarn add gatsby react react-dom
-```
-
-```json:title=package.json
-...
-  "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop"
-  },
-...
-```
-
-The remaining steps are the same as for an existing gatsby project, so just follow the steps below.
-
-## Existing Gatsby project
-
-### Add theme
-
-```sh
-yarn add @component-controls/gatsby-theme-stories
-```
-
-### Configure theme
-
-Create a `gatsby-config.js` file in your project's home directory:
-```js:title=gatsby-config.js
-module.exports = {
-  plugins: [
-    {
-      resolve: '@component-controls/gatsby-theme-stories',
-      options: {
-        configPath: '.config',
-      },
-    },
-  ],
-};
-```
-
-### Configuration folder
-
-Create a new folder called `.config` (or any other name that you used in the step above) inside your project's home directory:
+Create a new folder called `.config` (or any other name that you used in the SSG setuo above) inside your project's home directory:
 
 
 ### Build-time configuration
@@ -86,7 +37,24 @@ module.exports = {
 ```
 more: [run-time configuration](/configuration/buildtime)
 
-### Documentation folder
+### Run-time configuration
+
+In `.config`, create a `runtime.js` file and change some of the site's meta information:
+
+```js:title=.config/runtime.js
+module.exports = {
+  siteTitle: `awLib`,
+  siteHeadline: `Awesome components only`,
+  siteUrl: `https://component-controls-gatsby.netlify.app`,
+  siteDescription: `Some description meta.`,
+  author: 'my name'
+};
+```
+
+more: [run-time configuration](/configuration/runtime)
+
+
+## Documentation folder
 
 Create a folder to store your documentation files (the same as specified in the `.config/buildtime.js` file above):
 ```sh
@@ -161,23 +129,6 @@ export const overview = () => <Button>click me</Button>;
 ```
 
 more: [writing esm stories](/tutorial/esmodules-stories)
-
-
-### Run-time configuration
-
-In `.config`, create a `runtime.js` file and change some of the site's meta information:
-
-```js:title=.config/runtime.js
-module.exports = {
-  siteTitle: `awLib`,
-  siteHeadline: `Awesome components only`,
-  siteUrl: `https://component-controls-gatsby.netlify.app`,
-  siteDescription: `Some description meta.`,
-  author: 'my name'
-};
-```
-
-more: [run-time configuration](/configuration/runtime)
 
 
 ### Project repository
