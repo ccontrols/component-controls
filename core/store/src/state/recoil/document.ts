@@ -22,7 +22,6 @@ import {
   useConfig,
   configState,
   activeTabState,
-  useActiveTab,
 } from './store';
 
 export const documentIdState = atom<string | undefined>({
