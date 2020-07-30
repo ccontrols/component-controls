@@ -88,7 +88,7 @@ module.exports = {
   addons: [{
     name: '@component-controls/storybook',
     options: {
-      webpack: ['instrument', 'react-docgen', 'react-docgen-typescript'],
+      webpack: ['instrument', 'react-docgen-typescript'],
     }
   }]
 }
@@ -96,7 +96,7 @@ module.exports = {
 
 **with @storybook/addon-docs**
 
-The following configuration will let addon-docs use its mdx compiler:
+The following configuration will let addon-docs use its own mdx compiler:
 
 ```js:title=.storybook/main.js
 module.exports = {
@@ -108,10 +108,7 @@ module.exports = {
     },
   },
   {
-    name: '@component-controls/storybook',
-    options: {
-      webpack: ['react-docgen', 'react-docgen-typescript'],
-    }
+    name: '@component-controls/storybook'
   }]
 }
 ```
@@ -136,4 +133,23 @@ export default {
     withTheme({ theme }),
   ]
 }
+```
+
+
+### Options
+
+You can enable some of the component-controls blocks as storybook addons:
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      propsPanel: true,
+      storySourcePanel: true,
+      storyConfigPanel: true,
+    }
+  }],
+}  
 ```
