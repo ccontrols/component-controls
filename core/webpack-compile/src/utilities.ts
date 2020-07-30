@@ -115,7 +115,15 @@ export const runCompiler = (
         stats.compilation.outputOptions.filename,
       );
       console.log(
-        chalk.bgRgb(244, 147, 66)(`compiled ${store.stores.length} documents`),
+        chalk.bgRgb(
+          244,
+          147,
+          66,
+        )(
+          store
+            ? `compiled ${store.stores.length} documents`
+            : 'error creating bundle',
+        ),
         bundleName,
       );
       resolve({ bundleName, stats });
