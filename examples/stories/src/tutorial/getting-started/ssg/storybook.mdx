@@ -4,56 +4,136 @@ type: tutorial
 route: /tutorial/getting-started/storybook
 description: getting started creating a documentation static site with storybook and component-controls
 order: 2
+tags:
+  - storybook
 ---
 
-## Install
+Below, we go over how to add a `component-controls` documentation addon to both [new](#new-project) and [existing](#existing-storybook-project) storybook projects.
+
+Starter projects:
+[storybook 5 git repo](https://github.com/atanasster/storybook-5-controls-starter) and a [live storybook 5 site](https://storybook-5-controls-starter.netlify.app/).
+[storybook 6 git repo](https://github.com/atanasster/storybook-6-controls-starter) and a [live storybook 6 site](https://storybook-5-controls-starter.netlify.app/).
+
+## New project 
+
+Create a new folder:
 
 ```sh
-yarn add @component-controls/storybook --dev
+mkdir storybook-project && cd storybook-project
 ```
 
-## Configure
+Initialize the project:
 
-### Default options
-
-The default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
-
-
-```js:title=main.js
-module.exports = {
-  addons: ['@component-controls/storybook']
-}
+```sh
+yarn init
 ```
 
-### Using only `react-docgen` (even for typescript)
+Add storybook and its dependencies:
 
-Currently this is not recommended as the typescript support in `react-docgen` is a bit lagging.
+```sh:title=storybok-5
+yarn add @storybook/react@^5.3.18 react react-dom
+```
 
+```sh:title=storybok-6
+yarn add @storybook/react@next react react-dom
+```
 
-```js:title=main.js
+```json:title=package.json
+
+  "scripts": {
+    "start": "start-storybook -c .storybook",
+    "build": "build-storybook -c .storybook"
+  },
+
+```
+
+create a new configuration folder, as specified above
+
+```sh
+mkdir .storybook
+```
+
+and create a configuration file that will be picked up by both storybook and the component-controls addon.
+
+```json:title=.storybook/main.js
+
 module.exports = {
+  stories: [
+    '../src/docs/*.@(mdx|tsx)',
+  ],
+};
+
+```
+
+The remaining steps are the same as for an storybook gatsby project.
+
+## Existing Storybook project
+
+### Add component-controls addon
+
+```sh
+yarn add @component-controls/storybook
+```
+
+
+### Configure
+
+**without @storybook/addon-docs**
+
+The following configuration will use component-controls's built-in instrumenting package with react-docgen and react-docgen-typescript
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
   addons: [{
     name: '@component-controls/storybook',
     options: {
-      webpack: ['react-docgen'],
+      webpack: ['instrument', 'react-docgen', 'react-docgen-typescript'],
     }
   }]
 }
 ```
 
-### Use built-in instrument for everything (not using storybook `addon-docs` at all)
+**with @storybook/addon-docs**
 
-The following options will bypass the loaders installed by `addon-docs` and will rely only on the instrumenting loaders from `component-controls`
+The following configuration will let addon-docs use its mdx compiler:
 
-
-```js:title=main.js
+```js:title=.storybook/main.js
 module.exports = {
+  stories: ...,
   addons: [{
+    name: '@storybook/addon-docs',
+    options: {
+      configureJSX: true,
+    },
+  },
+  {
     name: '@component-controls/storybook',
     options: {
-      webpack: ['instrument', 'react-docgen-typescript'],
+      webpack: ['react-docgen', 'react-docgen-typescript'],
     }
   }]
-}  
+}
 ```
 
+### Decorators
+
+For storybook-6, decorators are picked up automatically by component-controls. For storybook-5, you will need to ceate an additional run-time configuration file
+
+```js:title=.storybook/preview.js
+import { addDecorator } from '@storybook/react';
+addDecorator(
+  withTheme({ theme })
+);
+
+```
+
+for storybook-5 **only**:
+
+```js:title=.storybook/runtime.js
+export default {
+  decorators: [
+    withTheme({ theme }),
+  ]
+}
+```
