@@ -27,7 +27,7 @@ export class LoaderPlugin {
   apply(compiler: webpack.Compiler) {
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {
-      compilation.hooks.optimizeChunkAssets.tap(
+      compilation.hooks.optimizeChunkAssets.tapPromise(
         LoaderPlugin.pluginName,
         async chunks => {
           const jsFiles: string[] = [];
