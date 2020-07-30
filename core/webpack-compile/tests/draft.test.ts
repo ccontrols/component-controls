@@ -16,5 +16,5 @@ describe('test draft', () => {
     });
     const bundle = require(bundleName);
     expect(bundle).toMatchSnapshot();
-  }, 30000);
+  }, 50000);
 });

@@ -1,11 +1,11 @@
 import * as path from 'path';
-import { propsInfo } from '../src/misc/props-info';
+import { getComponentProps } from '../src/misc/props-info';
 
 describe('extract-props-info', () => {
   const loadTestFiles = (componentName: string, fileName: string) => {
     it(componentName, async () => {
       expect(
-        await propsInfo(
+        await getComponentProps(
           [
             {
               name: '@component-controls/react-docgen-info',
