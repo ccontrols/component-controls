@@ -30,7 +30,7 @@ ${contexts
   )
   .join('\n')}
 `;
-  const storeConst = `const store = "${hashKey}";\n`;
+  const storeConst = `const store = ${hashKey};\n`;
   let loadStories = `
   const assignProps = (obj, { storyName, story, ...props}) => {
     //preserve component and subcomponents as strings
