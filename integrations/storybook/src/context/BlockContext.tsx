@@ -12,8 +12,9 @@ export const BlockContextProvider: React.FC<BlockContextProviderProps> = ({
 }) => {
   const defaultStoyId = useStoryId();
   const storyId = id ? id : defaultStoyId;
+  const docId = storyId && store ? store.stories[storyId].doc : undefined;
   return (
-    <BlocksContextProvider store={store} storyId={storyId}>
+    <BlocksContextProvider store={store} storyId={storyId} docId={docId}>
       {children}
     </BlocksContextProvider>
   );

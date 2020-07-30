@@ -26,10 +26,10 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
     channel.on(SET_CURRENT_STORY, onChangeStory);
     return () => channel.off(SET_CURRENT_STORY, onChangeStory);
   }, [api, channel]);
-
+  const docId = storyId && store ? store.stories[storyId].doc : undefined;
   return active && storyId ? (
     <ThemeProvider>
-      <BlockContextProvider store={store} storyId={storyId}>
+      <BlockContextProvider store={store} storyId={storyId} docId={docId}>
         {children}
       </BlockContextProvider>
     </ThemeProvider>

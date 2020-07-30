@@ -13,9 +13,16 @@ import { store } from '@component-controls/store/live_store';
 export const PageContextContainer: FC = ({ children }) => {
   const options = React.useMemo(() => getGlobalOptions(), []);
   const storyId = useStoryId();
+  const docId = storyId && store ? store.stories[storyId].doc : undefined;
+  console.group('HERE', docId);
   return (
     <ThemeProvider theme={store.config.theme}>
-      <BlockContextProvider storyId={storyId} store={store} options={options}>
+      <BlockContextProvider
+        storyId={storyId}
+        store={store}
+        docId={docId}
+        options={options}
+      >
         <BlockPageContainer variant="pagecontainer.storybook">
           {children}
         </BlockPageContainer>
