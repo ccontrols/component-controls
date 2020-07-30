@@ -26,7 +26,7 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
 <Flex sx={{ py: 4, flexDirection: 'column',  minHeight: '350px', alignItems: 'center', justifyContent: 'space-between', bg: 'primary', color: 'background' }}>
   <Flex sx={{ flexDirection: 'column', alignItems: 'center',  maxWidth: '600px' }}>
     <Heading as="h1">component-controls</Heading>
-    <Heading sx={{ py: 3 }} as="h3">
+    <Heading sx={{ py: 3, textAlign: 'center', px: 1 }} as="h3">
       Start documenting your components with <Link sx={{ color: 'background' }} aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link> and <Link sx={{ color: 'background' }} aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>.
     </Heading>  
     <Text sx={{ py: 1, textAlign: 'center' }}>
@@ -39,7 +39,7 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
 
 <Divider sx={{ my: 4 }}/>
 <Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
-  <Heading as="h1">Choose your favorite site generator</Heading>
+  <Heading as="h1" sx={{ px: 1, textAlign: 'center' }}>Choose your favorite site generator</Heading>
   <Grid
     sx={{
       m: 4,
