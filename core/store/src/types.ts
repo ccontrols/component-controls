@@ -30,7 +30,7 @@ export interface StoryStore {
   getStore: () => Store | undefined;
   getStory: (storyId: string) => Story | undefined;
   getStoryDoc: (name: string) => Document | undefined;
-  config: RunConfiguration | undefined;
+  config: RunConfiguration;
   store: Store;
   pages: Pages;
   docs: Documents;

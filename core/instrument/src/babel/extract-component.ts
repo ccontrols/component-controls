@@ -3,7 +3,6 @@ import { Component, Document, PackageInfo } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
-import { propsInfo } from '../misc/props-info';
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
 interface ComponentParseData {
@@ -55,18 +54,7 @@ export const extractComponent = async (
       name: componentName,
     };
   }
-  const { propsLoaders } = options || {};
-  if (follow && follow.filePath && Array.isArray(propsLoaders)) {
-    const info = await propsInfo(
-      propsLoaders,
-      follow.filePath,
-      follow.importedName,
-      follow.source,
-    );
-    if (info) {
-      component.info = info;
-    }
-  }
+
   globalCache[filePath] = { component, componentPackage };
   return globalCache[filePath];
 };

@@ -32,6 +32,7 @@ import {
 } from './types';
 
 export * from './types';
+export { getComponentProps } from './misc/props-info';
 
 type TraverseFn = (
   ast: File,

@@ -4,7 +4,11 @@ import {
   BuildConfiguration,
   RunConfiguration,
 } from '@component-controls/core';
-import { LoadingDocStore } from '@component-controls/instrument';
+import {
+  LoadingDocStore,
+  InstrumentOptions,
+  getComponentProps,
+} from '@component-controls/instrument';
 
 export interface LoadingStore {
   /**
@@ -42,6 +46,8 @@ export const store: LoadingStore = {
   buildConfig: {},
 };
 
+let instrumentOptions: InstrumentOptions = {};
+
 export const reserveStories = (filePaths: string[]) => {
   if (store.stores.length === 0) {
     filePaths.forEach(filePath => store.stores.push({ filePath }));
@@ -51,10 +57,12 @@ export const removeStoriesDoc = (filePath: string) => {
   store.stores = store.stores.filter(s => s.filePath !== filePath);
 };
 export const addStoriesDoc = (
+  options: InstrumentOptions,
   filePath: string,
   hash: string,
   added: LoadingDocStore,
 ) => {
+  instrumentOptions = options;
   const { components, packages, stories, doc } = added;
   if (!doc) {
     throw new Error(`Invalid store with no document ${filePath}`);
@@ -80,4 +88,23 @@ export const addStoriesDoc = (
   } else {
     store.stores.push({ filePath, hash, stories, doc });
   }
+};
+
+export const getSerializedStore = async (): Promise<string> => {
+  const { propsLoaders = [] } = instrumentOptions;
+  for (const name in store.components) {
+    const component = store.components[name];
+    if (component.request) {
+      const propsInfo = await getComponentProps(
+        propsLoaders,
+        component.request,
+        component.name,
+        component.source,
+      );
+      if (propsInfo) {
+        component.info = propsInfo;
+      }
+    }
+  }
+  return JSON.stringify(store);
 };
