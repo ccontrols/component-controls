@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Features
+
+* props-info hmr support ([51a2a53](https://github.com/ccontrols/component-controls/commit/51a2a537f0b758b65ca29b7d3d1c8c0134481f87))
+
+
+
+
+
 ## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
 
 **Note:** Version bump only for package @component-controls/store

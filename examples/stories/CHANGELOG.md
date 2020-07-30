@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Bug Fixes
+
+* home page mobile layout ([85c45ac](https://github.com/ccontrols/component-controls/commit/85c45ac22a9777c17e0919c0139e2c99512b8220))
+
+
+
+
+
 ## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
 
 **Note:** Version bump only for package component-controls-stories

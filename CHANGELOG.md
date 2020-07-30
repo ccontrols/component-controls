@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Bug Fixes
+
+* home page mobile layout ([85c45ac](https://github.com/ccontrols/component-controls/commit/85c45ac22a9777c17e0919c0139e2c99512b8220))
+* revert change ([e8a99a6](https://github.com/ccontrols/component-controls/commit/e8a99a64835a736655df5e9d3db1bf8ba54e80db))
+* tapAsync plugin ([b34fff3](https://github.com/ccontrols/component-controls/commit/b34fff371dd3edf7258fcb24f8eb5b7886d24f3a))
+* update docId for new state ([7930fb7](https://github.com/ccontrols/component-controls/commit/7930fb71353cb4a3951775079778cc4659589b3d))
+
+
+### Features
+
+* props-info hmr support ([51a2a53](https://github.com/ccontrols/component-controls/commit/51a2a537f0b758b65ca29b7d3d1c8c0134481f87))
+
+
+
+
+
 ## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
 
 
