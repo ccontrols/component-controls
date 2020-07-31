@@ -1,8 +1,12 @@
 import { MDXExportType, MDXExportTypes } from '../types';
 import { stringifyObject } from './stringify-object';
 
-const mdxPropertiesExport = (exportType: MDXExportType): string | undefined => {
-  return exportType ? stringifyObject(exportType.story) : undefined;
+const mdxPropertiesExport = (
+  exportType: MDXExportType,
+  defObject: object,
+): string => {
+  const obj = { ...defObject, ...(exportType ? exportType.story : {}) };
+  return stringifyObject(obj);
 };
 
 const mdxFunctionExport = (
@@ -20,17 +24,10 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
     if (exportNames.length) {
       let defaultExportCode = '';
       if (exports.default) {
-        const expCode = mdxPropertiesExport(exports.default);
-        defaultExportCode = `
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default ${
-          expCode
-            ? `Object.assign(dmsPageExport, ${expCode});`
-            : 'dmsPageExport;'
-        }
-`;
+        const expCode = mdxPropertiesExport(exports.default, {
+          MDXPage: new String('MDXContent'),
+        });
+        defaultExportCode = `export default ${expCode};`;
       }
 
       let storiesExports: string[] = [];
@@ -41,7 +38,7 @@ export const extractStoryExports = (exports?: MDXExportTypes): string => {
           if (expFn) {
             storiesExports.push(expFn);
           }
-          const expCode = mdxPropertiesExport(exports[exportStory]);
+          const expCode = mdxPropertiesExport(exports[exportStory], {});
           if (expCode) {
             storiesExports.push(`${exportStory}.story = ${expCode}
              `);
