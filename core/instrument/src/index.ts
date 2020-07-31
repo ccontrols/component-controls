@@ -138,7 +138,7 @@ export const parseStories = async (
     test,
     renderer,
     transformMDX,
-    storybookExports,
+    storybookExports = false,
     ...otherMDXOptions
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
