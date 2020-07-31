@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+
+### Bug Fixes
+
+* default value ([3756c73](https://github.com/ccontrols/component-controls/commit/3756c7397d24dae21c2aa0531313806fe5dae168))
+* stringify default export object ([d455445](https://github.com/ccontrols/component-controls/commit/d45544556df9cce6a82dbdf2ce0e3a448813623c))
+
+
+### Features
+
+* support storybook docs-only pages ([4014d65](https://github.com/ccontrols/component-controls/commit/4014d652ef68d52ec977db331bfcfd259bc0face))
+
+
+
+
+
 # [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
 
 

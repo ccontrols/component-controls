@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+
+### Features
+
+* support storybook docs-only pages ([4014d65](https://github.com/ccontrols/component-controls/commit/4014d652ef68d52ec977db331bfcfd259bc0face))
+
+
+
+
+
 # [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
 
 
