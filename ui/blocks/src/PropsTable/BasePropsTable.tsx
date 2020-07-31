@@ -331,7 +331,6 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         value: any,
       ) => {
         setControlValue(value);
-        console.log(storyId, propertyName, value);
       },
     }),
   );

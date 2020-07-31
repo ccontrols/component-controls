@@ -144,10 +144,16 @@ interface NamedComponentControl {
 }
 export const controlsFromProps = (props: PropTypes): ComponentControls => {
   return Object.keys(props)
-    .map((key: string) => ({
-      name: key,
-      control: controlFromProps(key, props[key]),
-    }))
+    .map((key: string) => {
+      const control = controlFromProps(key, props[key]);
+      if (control) {
+        control.defaultValue = control.value;
+      }
+      return {
+        name: key,
+        control,
+      };
+    })
     .filter(p => p.control)
     .reduce(
       (acc: ComponentControls, prop: NamedComponentControl) => ({
