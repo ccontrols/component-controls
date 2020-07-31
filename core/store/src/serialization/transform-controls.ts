@@ -24,7 +24,7 @@ export const transformControls = (
         const value = storyControls[key];
         if (typeof value === 'string') {
           control = { type: ControlTypes.TEXT, value };
-        } else if (typeof value === 'string') {
+        } else if (typeof value === 'number') {
           control = { type: ControlTypes.NUMBER, value };
         } else if (typeof value === 'object' && value instanceof Date) {
           control = { type: ControlTypes.DATE, value };

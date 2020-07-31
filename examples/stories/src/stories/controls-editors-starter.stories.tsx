@@ -38,7 +38,6 @@ numeric, values between 10 and 75 allowed
 `,
     label: 'Age',
     value: 19,
-    defaultValue: null,
     min: 10,
     max: 75,
   },
