@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.13.1",
+  "version": "1.13.2",
   "name": "component-controls-storybook-6",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@component-controls/core": "^1.11.0",
-    "@component-controls/storybook": "^1.13.1",
+    "@component-controls/storybook": "^1.13.2",
     "@storybook/addon-docs": "next",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",
