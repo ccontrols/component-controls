@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.3](https://github.com/ccontrols/component-controls/compare/v1.13.2...v1.13.3) (2020-07-31)
+
+
+### Bug Fixes
+
+* reset values on smart controls ([30dfba3](https://github.com/ccontrols/component-controls/commit/30dfba3d1b87fb7ed3e816f91dc371ea5c47196d))
+
+
+
+
+
 # [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
 
 
