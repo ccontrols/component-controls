@@ -464,7 +464,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "56bf0298abb3e6152739be8e0540ef47": Object {
       "fileHash": "56bf0298abb3e6152739be8e0540ef47",
@@ -474,7 +474,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "684baa68d45c8becd8f39da85795335b": Object {
       "fileHash": "684baa68d45c8becd8f39da85795335b",
@@ -484,7 +484,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "6b1e448146504b441f181f0e3fc41fc9": Object {
       "fileHash": "6b1e448146504b441f181f0e3fc41fc9",
@@ -494,7 +494,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "7661d674db5188cc22e26c1b22bef349": Object {
       "fileHash": "7661d674db5188cc22e26c1b22bef349",
@@ -504,7 +504,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "999878322b2acba3a7ca83bc6972a800": Object {
       "fileHash": "999878322b2acba3a7ca83bc6972a800",
@@ -514,7 +514,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "d1f03618863bd813182b2668bed6d262": Object {
       "fileHash": "d1f03618863bd813182b2668bed6d262",
@@ -524,7 +524,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
     "f6e72e22789f0ec595d8610e56ea91ff": Object {
       "fileHash": "f6e72e22789f0ec595d8610e56ea91ff",
@@ -534,7 +534,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.12.0",
+      "version": "1.13.0",
     },
   },
   "stores": Array [
