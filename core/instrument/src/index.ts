@@ -138,6 +138,7 @@ export const parseStories = async (
     test,
     renderer,
     transformMDX,
+    storybookExports,
     ...otherMDXOptions
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
@@ -165,7 +166,7 @@ export const parseStories = async (
       };
     }
     const { stories, doc, components, exports, packages } = store || {};
-    const exportsSource = extractStoryExports(exports);
+    const exportsSource = extractStoryExports(storybookExports, exports);
     let transformed = `
     
     ${content}

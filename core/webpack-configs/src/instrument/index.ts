@@ -33,6 +33,7 @@ export const instrument: Configuration = {
         options: {
           mdx: {
             transformMDX: true,
+            storybookExports: true,
           },
         },
       },

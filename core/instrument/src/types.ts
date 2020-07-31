@@ -188,6 +188,11 @@ export interface MDXOptions {
    * if true, will return the transformed MDX -< JSX, ready to be loaded by babel
    */
   transformMDX?: boolean;
+
+  /**
+   * generate storybok required fake exports for MDX compatibility
+   */
+  storybookExports?: boolean;
   /**
    * ability to configure the mdx files imports. Works with transformMDX: true
    * by default this is the string
