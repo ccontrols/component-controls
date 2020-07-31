@@ -22,9 +22,10 @@ const DocPageTemplate: FC<DocPageProps> = ({
   storyId,
   type,
   category,
+  activeTab,
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId}>
+    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
       <DocPage type={type} category={category} />
     </Layout>
   );
