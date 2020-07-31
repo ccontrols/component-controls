@@ -61,14 +61,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        \\"title\\": \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = () => <div>test</div>
 mdxStory.story = 
@@ -186,14 +185,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        \\"title\\": \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = ({ text }) => <div>{text}</div>
 mdxStory.story = 
@@ -296,14 +294,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        \\"title\\": \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 
@@ -374,14 +371,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        \\"title\\": \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = () => (<>
 
@@ -487,14 +483,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        \\"title\\": \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 

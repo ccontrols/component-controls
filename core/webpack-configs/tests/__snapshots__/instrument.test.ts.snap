@@ -50,6 +50,7 @@ Object {
         "loader": "@component-controls/loader/loader",
         "options": Object {
           "mdx": Object {
+            "storybookExports": true,
             "transformMDX": true,
           },
           "propsLoaders": Array [
@@ -149,6 +150,7 @@ Object {
         "loader": "@component-controls/loader/loader",
         "options": Object {
           "mdx": Object {
+            "storybookExports": true,
             "transformMDX": true,
           },
           "prettier": Object {

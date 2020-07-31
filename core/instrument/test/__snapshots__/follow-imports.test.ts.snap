@@ -11,11 +11,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 51,
+      "line": 50,
     },
     "start": Object {
       "column": 19,
-      "line": 48,
+      "line": 47,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -35,9 +35,8 @@ var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
 const BlockContextProvider = ({ children, id, }) => {
-    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    const docId = storyId && live_store.store ? live_store.store.stories[storyId].doc : undefined;
     return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
@@ -220,11 +219,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 51,
+      "line": 50,
     },
     "start": Object {
       "column": 19,
-      "line": 48,
+      "line": 47,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -244,9 +243,8 @@ var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
 const BlockContextProvider = ({ children, id, }) => {
-    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    const docId = storyId && live_store.store ? live_store.store.stories[storyId].doc : undefined;
     return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
