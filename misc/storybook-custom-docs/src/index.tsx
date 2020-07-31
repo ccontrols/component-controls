@@ -62,17 +62,30 @@ export const useStoryId = () => {
   return storyId;
 };
 
+export interface CurrentSelection {
+  /**
+   * current story id
+   */
+  storyId: string;
+  /**
+   * current document id - its the title
+   */
+  docId: string;
+  /**
+   * story name
+   */
+  name: string;
+  /**
+   * story parameters
+   */
+  parameters: any;
+}
 /**
  * React hook hook that tracks the changes to the current story and returns the data
  * @returns a story id , document id, name and parameters
  */
 
-export const useCurrentData = (): {
-  storyId: string;
-  docId: string;
-  name: string;
-  parameters: any;
-} => {
+export const useCurrentData = (): CurrentSelection => {
   const storyId = useStoryId();
   const storyStore = (window as any).__STORYBOOK_CLIENT_API__._storyStore;
   const data = storyStore.fromId(storyId);
