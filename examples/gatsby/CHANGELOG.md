@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
+
+
+### Bug Fixes
+
+* notify stories on changes non-current ([7af6bb8](https://github.com/ccontrols/component-controls/commit/7af6bb892c03a6751db8f566b3171bbad7b29829))
+
+
+
+
+
 # [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
 
 **Note:** Version bump only for package component-controls-gatsby-starter
