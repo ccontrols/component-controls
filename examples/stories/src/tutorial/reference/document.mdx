@@ -32,7 +32,7 @@ Document is a single file containing documentation in [mdx](/tutorial/mdx-storie
 
 type: `string`
 
-Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specifified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
+Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
 
 [MDX](/tutorial/mdx-documentation)
 ```
@@ -54,19 +54,19 @@ export default {
 
 type: [DocType](/tutorial/reference/configuration#doctype)
 
-Document type - blogs, pages, stories and even custom ones. By default all documents are of type `story`
+Document type - blogs, pages, stories, and even custom ones. By default, all documents are of type `story`
 
-All documents of the same type are grouped together for easier search and navigation.
+All documents of the same type are grouped for easier search and navigation.
 
 ### order
 
 type: `number`
 
-Document order, used to sort between documents within the same parent menu. By default documents are ordered by their filesystem precendance (alphabetically).
+Document order used to sort between documents within the same parent menu. By default, documents are ordered by their filesystem precedence (alphabetically).
 
 The order is used for the menu display as well as next/previous page navigation.
 
-as an example, lets suppose you have the following 3 documents:
+as an example, let's suppose you have the following 3 documents:
 
 ```
 // first.mdx
@@ -86,7 +86,7 @@ title: Components/Three
 
 ```
 
-From the file-system order, the documents will be ordered first.mdx, second.mdx and third.mdx (ordered by their file name alphabetically). However we can order the files manually and sort them first.mdx, third.mdx and second.mdx.
+From the file-system order, the documents will be ordered first.mdx, second.mdx and third.mdx (ordered by their file name alphabetically). However, we can order the files manually and sort them first.mdx, third.mdx and second.mdx.
 
 ```
 // first.mdx
@@ -140,7 +140,7 @@ export default {
 
 type:  `string`
 
-Short description of the documentation page - can be an excerpt for blog posts or keywords for the full text search. If the description is set, it will also be used for SEO purposes as the description meta tag of the page.
+Short description of the documentation page - can be an excerpt for blog posts or keywords for the full-text search. If the description is set, it will also be used for SEO purposes as the description meta tag of the page.
 
 [MDX](/tutorial/mdx-documentation)
 ```
@@ -304,7 +304,7 @@ export default {
 
 type: `boolean`
   
-Whether to add a conext sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
+Whether to add a context sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
 
 [MDX](/tutorial/mdx-documentation)
 ```
@@ -427,7 +427,7 @@ export default {
 
 type: [ComponentControls](/tutorial/reference/controls#componentcontrols)
 
-Object of key/value pairs specifying the controls for the stories file this will apply to all the stories in the file.
+An object of key/value pairs specifying the controls for the stories file will apply to all the stories in the file.
 
 [MDX](/tutorial/mdx-documentation)
 ```
@@ -468,7 +468,7 @@ export const textControls = ({ text }) => <div>{text}</div>;
 
 type [StoryRenderFn[]](/tutorial/reference/configuration#storyrenderfn)
 
-Array of wrapper functions (decorators) that will be called when rendering each individual story.
+An array of wrapper functions (decorators) that will be called when rendering each story.
 
 [ESM](/tutorial/esmodules-stories)
 ```

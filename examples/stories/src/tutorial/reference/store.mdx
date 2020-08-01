@@ -11,7 +11,7 @@ import activeTabImg from './media/active-tab.jpg';
 
 ## Overview
 
-The Store module [@component-controls/store](https://github.com/ccontrols/component-controls/tree/master/core/store) provides access to the in-memory store of documents, stories, components and react hooks to get access to this data.
+The Store module [@component-controls/store](https://github.com/ccontrols/component-controls/tree/master/core/store) provides access to the in-memory store of documents, stories, components, and react hooks to get access to this data.
 
 ## Store
 
@@ -81,7 +81,7 @@ import { useConfig } from '@component-controls/store';
 
 ### useActiveTab
 
-Returns the current active tab for documenta that have multiple tabs/pages
+Returns the currently active tab for documents that have multiple tabs/pages
 
 > useActiveTab = (): string;
 
@@ -89,7 +89,7 @@ Returns the current active tab for documenta that have multiple tabs/pages
 
 ### usePackage
 
-Returns a package object from a package package id. The package id can come from a Document or a Component object.
+Returns a package object from a package id. The package id can come from a Document or a Component object.
 
 > usePackage = (packageId?: string): PackageInfo
 
@@ -176,9 +176,9 @@ import { usePages } from '@component-controls/store';
 
 ### useDocSort
 
-Returns the doc sort order and a setter to update the sort order for a specific doc type
+Returns the doc sort order and a setter to update the sort order for a specific DocType
 
-> useDocSort = (ype: DocType): [DocSortOrder, (newOrder: DocSortOrder) => void]
+> useDocSort = (type: DocType): [DocSortOrder, (newOrder: DocSortOrder) => void]
 
 ```
 import { useDocSort } from '@component-controls/store';
@@ -191,7 +191,7 @@ import { useDocSort } from '@component-controls/store';
 
 ### useDocByType
 
-Returns an array of all documents of a specific doc type
+Returns an array of all documents of a specific DocType
 
 > useDocByType = (type: DocType): Document[]
 
@@ -205,7 +205,7 @@ import { useDocByType } from '@component-controls/store';
 
 ### useSortedDocByType
 
-Returns a sorted list of documents of a specific doc type. Uses the sort order state.
+Returns a sorted list of documents of a specific DocType. Uses the sort order state.
 
 > useSortedDocByType = (type: DocType): Document[]
 
@@ -219,7 +219,7 @@ import { useSortedDocByType } from '@component-controls/store';
 
 ### useDocTypeCount
 
-Returns a global object of key/value pairs with counts of documents per doc type
+Returns a global object of key/value pairs with counts of documents per DocType
 
 > useDocTypeCount = (): Record<DocType, number>
 
@@ -246,7 +246,7 @@ import { useNavigationInfo } from '@component-controls/store';
 ```
 ### useDocumentPath
 
-Returns a link to a document from a DocType, document id and active tab
+Returns a link to a document from a DocType, document id, and active tab
 
 > useDocumentPath: = (type?: DocType, docId: string, activeTab?: string ) => string
 
@@ -392,7 +392,7 @@ import { useStoryControls } from '@component-controls/store';
 
 ### useControl
 
-Retruns a controls and a setter function from the current controls context, given a control name. This hook is to be used when creating custom control editors.
+Returns a controls object and a setter function from the current control's context, given a control name. This hook is to be used when creating custom control editors.
 
 > useControl = (name: string): [T, (value: any) => void]
 
