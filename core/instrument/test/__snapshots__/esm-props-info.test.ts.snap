@@ -13,6 +13,16 @@ Object {
             "name": "TableProps",
           },
         ],
+        "@component-controls/store": Array [
+          Object {
+            "importedName": "StoryContextProvider",
+            "name": "StoryContextProvider",
+          },
+          Object {
+            "importedName": "ControlsContextStoryProvider",
+            "name": "ControlsContextStoryProvider",
+          },
+        ],
         "react": Array [
           Object {
             "importedName": "FC",
