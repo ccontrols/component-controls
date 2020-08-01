@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+
+### Bug Fixes
+
+* hook into SET_CURRENT_STORY for storybook 5 ([f0d725b](https://github.com/ccontrols/component-controls/commit/f0d725bce741ccb7933cc0d39a97e76416fbc0bd))
+
+
+
+
+
 ## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
 
 
