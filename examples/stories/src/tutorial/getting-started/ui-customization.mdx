@@ -1,0 +1,29 @@
+---
+title: Getting started/UI customization
+author: atanasster
+type: tutorial
+order: 5
+route: /tutorial/getting-started/ui-customization
+draft: true
+tags:
+  - configuration
+  - theme
+---
+import { sketchy } from '@theme-ui/presets';
+import { defaultStore } from '@component-controls/core';
+import { AppContext, App } from '@component-controls/app';
+import { Story } from '@component-controls/blocks';
+
+
+component-controls allows full customization of the user interface - from theming, SEO tags to toolbars, sidebars and footer.
+
+## Selecting a theme
+
+<Story name="select-theme">
+  {() => {
+    return (
+      <AppContext store={{ ...defaultStore, config: { ...defaultStore.config, theme: sketchy }}} />
+    );  
+  }}
+</Story>
+
