@@ -67,7 +67,7 @@ export const overview = () => <button>no props</button>
 ```
 
 <Playground>
-  <Story name="no-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+  <Story name="no-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
     {() => (
       <button>no props</button>
     )}
@@ -77,16 +77,16 @@ export const overview = () => <button>no props</button>
 <PropsTable name="no-props-example" />
 
 
-2. Some named properties are passed to the example. In this case, only the properties specifically listed will be available at run-time (ie: `color`):
+2. Some named properties are passed to the example. In this case, only the properties specifically listed will be available at run-time (ie: `backgroundColor`):
 
 ```jsx
-export const overview = ({ color }) => <button style={{ color }}>some props</button>
+export const overview = ({ backgroundColor }) => <button style={{ backgroundColor }}>some props</button>
 ```
 
 <Playground>
-  <Story name="named-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+  <Story name="named-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
     {({ color }) => (
-      <button style={{ color }}>some props</button>
+      <button style={{ backgroundColor }}>some props</button>
     )}
   </Story>
 </Playground>
@@ -100,7 +100,7 @@ export const overview = props => <button style={props}>all props</button>
 ```
 
 <Playground>
-  <Story name="all-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+  <Story name="all-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
     {props => (
       <button style={props}>all props</button>
     )}
