@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
+
+
+### Bug Fixes
+
+* broadcast store update store notifiers ([d3aa1da](https://github.com/ccontrols/component-controls/commit/d3aa1dac12a5818457bac5744a659cd89f3d82a6))
+
+
+
+
+
 ## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
 
 
