@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* revert SELECT_STORY ([a80182c](https://github.com/ccontrols/component-controls/commit/a80182c2bd6373545985ceac914a30475ee8cb70))
+* update context on storyid change ([05b17b7](https://github.com/ccontrols/component-controls/commit/05b17b7cc62925cda83922bc8e530227d7776fc4))
+
+
+
+
+
 ## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
 
 
