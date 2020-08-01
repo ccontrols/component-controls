@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* number default value ([11dc062](https://github.com/ccontrols/component-controls/commit/11dc06219631db1a50bfda252638307e9c3f30e0))
+
+
+
+
+
 ## [1.13.3](https://github.com/ccontrols/component-controls/compare/v1.13.2...v1.13.3) (2020-07-31)
 
 **Note:** Version bump only for package @component-controls/store

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* nextjs active tab prop ([7ce6590](https://github.com/ccontrols/component-controls/commit/7ce65908aabaa71637cfd9c7a2dd0158f7968064))
+* number default value ([11dc062](https://github.com/ccontrols/component-controls/commit/11dc06219631db1a50bfda252638307e9c3f30e0))
+
+
+
+
+
 # [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
 
 **Note:** Version bump only for package component-controls-stories
