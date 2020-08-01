@@ -89,6 +89,6 @@ export class BroadcastStore implements Store {
       }
     }
     this.saveStore(story);
-    this.notifyObservers();
+    this.notifyObservers(story);
   };
 }
