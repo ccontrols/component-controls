@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test draft compile 1`] = `
+Object {
+  "buildConfig": Object {
+    "categories": Array [
+      "author",
+      "tags",
+    ],
+    "pages": Object {
+      "author": Object {
+        "basePath": "authors/",
+      },
+      "blog": Object {
+        "basePath": "blogs/",
+      },
+      "page": Object {
+        "basePath": "pages/",
+      },
+      "story": Object {
+        "basePath": "docs/",
+        "storyPaths": true,
+        "tabs": Array [
+          Object {
+            "route": "page",
+          },
+          Object {
+            "route": "test",
+          },
+        ],
+      },
+      "tags": Object {
+        "basePath": "tags/",
+      },
+    },
+    "stories": Array [
+      "./*.stories.(js|jsx|tsx|mdx)",
+    ],
+  },
+  "components": Object {},
+  "config": undefined,
+  "packages": Object {},
+  "stores": Array [],
+}
+`;

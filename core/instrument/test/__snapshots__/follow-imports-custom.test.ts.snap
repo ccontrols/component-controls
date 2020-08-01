@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`follow-imports-custom BooleanEditor 1`] = `[Function]`;
+
+exports[`follow-imports-custom Markdown 1`] = `[Function]`;
+
+exports[`follow-imports-custom Title 1`] = `[Function]`;

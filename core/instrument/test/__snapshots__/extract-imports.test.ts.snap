@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extract-imports all-imports.js 1`] = `
+Object {
+  "Btn": Object {
+    "from": "./buttons",
+    "importedName": "Button",
+    "name": "Btn",
+  },
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Button",
+  },
+  "Button1": Object {
+    "from": "buttons",
+    "importedName": "default",
+    "name": "Button1",
+  },
+  "Button2": Object {
+    "from": "buttons",
+    "importedName": "namespace",
+    "name": "Button2",
+  },
+  "FC": Object {
+    "from": "react",
+    "importedName": "FC",
+    "name": "FC",
+  },
+  "MouseEvent": Object {
+    "from": "react",
+    "importedName": "MouseEvent",
+    "name": "MouseEvent",
+  },
+  "React": Object {
+    "from": "react",
+    "importedName": "default",
+    "name": "React",
+  },
+}
+`;
+
+exports[`extract-imports default-import.js 1`] = `
+Object {
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "default",
+    "name": "Button",
+  },
+}
+`;
+
+exports[`extract-imports mixed-import.js 1`] = `
+Object {
+  "FC": Object {
+    "from": "./react",
+    "importedName": "FC",
+    "name": "FC",
+  },
+  "MouseEvent": Object {
+    "from": "./react",
+    "importedName": "MouseEvent",
+    "name": "MouseEvent",
+  },
+  "React": Object {
+    "from": "./react",
+    "importedName": "default",
+    "name": "React",
+  },
+}
+`;
+
+exports[`extract-imports named-alias-import.js 1`] = `
+Object {
+  "Btn": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Btn",
+  },
+}
+`;
+
+exports[`extract-imports named-import.js 1`] = `
+Object {
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "Button",
+    "name": "Button",
+  },
+}
+`;
+
+exports[`extract-imports namespace-import.js 1`] = `
+Object {
+  "Button": Object {
+    "from": "buttons",
+    "importedName": "namespace",
+    "name": "Button",
+  },
+}
+`;

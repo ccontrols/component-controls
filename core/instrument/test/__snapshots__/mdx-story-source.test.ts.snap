@@ -1,0 +1,502 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mdx-story-source external-source.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:01:28.000Z,
+    "title": "MDX",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "mdxStory": Object {
+      "arguments": Array [],
+      "id": "mdxStory",
+      "loc": Object {
+        "end": Object {
+          "column": 48,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "mdx-story",
+      "source": "() => <div>test</div>",
+    },
+  },
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsx mdx */
+import { customStory } from '../../components/external-story';
+import { Story, Meta } from '@component-controls/blocks';
+
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component '\\" + name + \\"' was not imported, exported, or provided by MDXProvider as global scope\\");
+  return <div {...props} />;
+};
+
+const layoutProps = {};
+
+
+const MDXLayout = \\"wrapper\\";
+function MDXContent({
+  components,
+  ...props })
+{
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Meta title=\\"MDX\\" />
+    <Story name='mdx-story'>
+  {customStory()}
+    </Story>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
+        }
+        );
+        export default mdxDefaultExport;
+
+export const mdxStory = () => <div>test</div>
+mdxStory.story = 
+        {
+        \\"name\\": \\"mdx-story\\"
+        }
+        
+             ",
+}
+`;
+
+exports[`mdx-story-source external-source-deconstructed-props.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:06:48.000Z,
+    "title": "MDX",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "mdxStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 9,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 1,
+              "line": 0,
+            },
+          },
+          "name": undefined,
+          "value": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 7,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 3,
+                  "line": 0,
+                },
+              },
+              "name": "text",
+              "usage": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 24,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 20,
+                      "line": 0,
+                    },
+                  },
+                  "shorthand": undefined,
+                },
+              ],
+              "value": "text",
+            },
+          ],
+        },
+      ],
+      "id": "mdxStory",
+      "loc": Object {
+        "end": Object {
+          "column": 58,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "mdx-story",
+      "source": "({ text }) => <div>{text}</div>",
+    },
+  },
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsx mdx */
+import { customStory } from '../../components/external-story-deconstructed-props';
+
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component '\\" + name + \\"' was not imported, exported, or provided by MDXProvider as global scope\\");
+  return <div {...props} />;
+};
+const Meta = makeShortcode(\\"Meta\\");
+const Story = makeShortcode(\\"Story\\");
+const layoutProps = {};
+
+
+const MDXLayout = \\"wrapper\\";
+function MDXContent({
+  components,
+  ...props })
+{
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Meta title=\\"MDX\\" />
+    <Story name='mdx-story'>
+  {customStory()}
+    </Story>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
+        }
+        );
+        export default mdxDefaultExport;
+
+export const mdxStory = ({ text }) => <div>{text}</div>
+mdxStory.story = 
+        {
+        \\"name\\": \\"mdx-story\\"
+        }
+        
+             ",
+}
+`;
+
+exports[`mdx-story-source external-source-props.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:35:36.000Z,
+    "title": "MDX",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "mdxStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 15,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "mdxStory",
+      "loc": Object {
+        "end": Object {
+          "column": 59,
+          "line": 3,
+        },
+        "start": Object {
+          "column": 27,
+          "line": 3,
+        },
+      },
+      "name": "mdx-story",
+      "source": "props => <div>{props.text}</div>",
+    },
+  },
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsx mdx */
+import { customStory } from '../../components/external-story-props';
+
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component '\\" + name + \\"' was not imported, exported, or provided by MDXProvider as global scope\\");
+  return <div {...props} />;
+};
+const Meta = makeShortcode(\\"Meta\\");
+const Story = makeShortcode(\\"Story\\");
+const layoutProps = {};
+
+
+const MDXLayout = \\"wrapper\\";
+function MDXContent({
+  components,
+  ...props })
+{
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Meta title=\\"MDX\\" />
+    <Story name='mdx-story'>
+  {props => customStory(props)}
+    </Story>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
+        }
+        );
+        export default mdxDefaultExport;
+
+export const mdxStory = props => <div>{props.text}</div>
+mdxStory.story = 
+        {
+        \\"name\\": \\"mdx-story\\"
+        }
+        
+             ",
+}
+`;
+
+exports[`mdx-story-source simple-source.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T01:05:17.000Z,
+    "title": "MDX",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "mdxStory": Object {
+      "id": "mdxStory",
+      "loc": Object {
+        "end": Object {
+          "column": 6,
+          "line": 23,
+        },
+        "start": Object {
+          "column": 30,
+          "line": 21,
+        },
+      },
+      "name": "mdx-story",
+      "source": "<div>test 1</div>",
+    },
+  },
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsx mdx */
+import { Story, Meta } from '@component-controls/blocks';
+
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component '\\" + name + \\"' was not imported, exported, or provided by MDXProvider as global scope\\");
+  return <div {...props} />;
+};
+
+const layoutProps = {};
+
+
+const MDXLayout = \\"wrapper\\";
+function MDXContent({
+  components,
+  ...props })
+{
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Meta title=\\"MDX\\" />
+    <Story name='mdx-story'>
+  <div>test 1</div>
+    </Story>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
+        }
+        );
+        export default mdxDefaultExport;
+
+export const mdxStory = () => (<>
+
+<div>test 1</div>
+
+</>)
+mdxStory.story = 
+        {
+        \\"name\\": \\"mdx-story\\"
+        }
+        
+             ",
+}
+`;
+
+exports[`mdx-story-source simple-source-props.mdx 1`] = `
+Object {
+  "components": Object {},
+  "doc": Object {
+    "componentsLookup": Object {},
+    "date": 2020-05-18T16:31:44.000Z,
+    "dateModified": 2020-05-19T04:04:37.000Z,
+    "title": "MDX",
+  },
+  "packages": Object {},
+  "stories": Object {
+    "mdxStory": Object {
+      "arguments": Array [
+        Object {
+          "loc": Object {
+            "end": Object {
+              "column": 5,
+              "line": 0,
+            },
+            "start": Object {
+              "column": 0,
+              "line": 0,
+            },
+          },
+          "name": "props",
+          "usage": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 15,
+                  "line": 0,
+                },
+              },
+              "shorthand": undefined,
+            },
+          ],
+          "value": "props",
+        },
+      ],
+      "id": "mdxStory",
+      "loc": Object {
+        "end": Object {
+          "column": 63,
+          "line": 21,
+        },
+        "start": Object {
+          "column": 31,
+          "line": 21,
+        },
+      },
+      "name": "mdx-story",
+      "source": "props => <div>{props.text}</div>",
+    },
+  },
+  "transformed": "
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+/* @jsx mdx */
+import { Story, Meta } from '@component-controls/blocks';
+
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component '\\" + name + \\"' was not imported, exported, or provided by MDXProvider as global scope\\");
+  return <div {...props} />;
+};
+
+const layoutProps = {};
+
+
+const MDXLayout = \\"wrapper\\";
+function MDXContent({
+  components,
+  ...props })
+{
+  return <MDXLayout {...layoutProps} {...props} components={components}>
+
+    <Meta title=\\"MDX\\" />
+    <Story name='mdx-story'>
+  {props => <div>{props.text}</div>}
+    </Story>
+    </MDXLayout>;
+}
+
+;
+MDXContent.isMDXComponent = true;
+
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
+        {
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
+        }
+        );
+        export default mdxDefaultExport;
+
+export const mdxStory = props => <div>{props.text}</div>
+mdxStory.story = 
+        {
+        \\"name\\": \\"mdx-story\\"
+        }
+        
+             ",
+}
+`;
