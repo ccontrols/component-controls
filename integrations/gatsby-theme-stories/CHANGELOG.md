@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+
+### Features
+
+* add build-time error saving ([912074f](https://github.com/ccontrols/component-controls/commit/912074f3fd954e61f880da171502dc1b4525be7e))
+
+
+
+
+
 ## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
 
 **Note:** Version bump only for package @component-controls/gatsby-theme-stories
