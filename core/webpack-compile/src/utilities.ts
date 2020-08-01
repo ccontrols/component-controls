@@ -5,6 +5,7 @@ import webpack, {
   HotModuleReplacementPlugin,
 } from 'webpack';
 import path from 'path';
+import fs from 'fs';
 const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
@@ -96,24 +97,40 @@ export const runCompiler = (
 
   props: CompileRunProps,
 ): Promise<CompileResults> => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     const compiler = webpack(createConfig(props));
     run(compiler, (err, stats) => {
+      const bundleName = path.join(
+        stats.compilation.outputOptions.path,
+        stats.compilation.outputOptions.filename,
+      );
+      const bailError = (error: string) => {
+        fs.writeFileSync(
+          bundleName,
+          `
+module.exports = ${JSON.stringify({
+            stores: [],
+            packages: [],
+            components: [],
+            error,
+          })}
+
+          `,
+        );
+        console.error(error);
+        return resolve({ bundleName, stats }); //reject(error);
+      };
       if (err) {
-        return reject(err);
+        return bailError(err.toString());
       }
       if (stats.hasErrors() || stats.hasWarnings()) {
         const error = stats.toString({
           errorDetails: true,
           warnings: true,
         });
-        return reject(error);
+        return bailError(error);
       }
       const { store } = require('@component-controls/loader/store');
-      const bundleName = path.join(
-        stats.compilation.outputOptions.path,
-        stats.compilation.outputOptions.filename,
-      );
       console.log(
         chalk.bgRgb(
           244,

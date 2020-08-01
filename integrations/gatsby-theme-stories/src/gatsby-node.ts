@@ -34,6 +34,7 @@ exports.createPages = async (
       : await compile(config);
   if (bundleName) {
     const store: Store = loadStore(require(bundleName));
+
     //home page
     const { docId = null, type = null } = getIndexPage(store) || {};
     createPage({

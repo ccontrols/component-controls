@@ -23,6 +23,7 @@ export const loadStore = (store: LoadingStore): Store => {
   const globalStore: Store = { ...defaultStore };
   try {
     const {
+      error,
       stores,
       packages: loadedPackages,
       components: loadedComponents,
@@ -77,6 +78,7 @@ export const loadStore = (store: LoadingStore): Store => {
           });
         }
       });
+      globalStore.error = error;
       globalStore.packages = loadedPackages;
       globalStore.components = loadedComponents;
       const { storySort } = globalStore.config || {};

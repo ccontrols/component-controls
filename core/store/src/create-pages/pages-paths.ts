@@ -40,8 +40,8 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
   const { pages = {} } = store?.config || {};
   if (pages) {
     const docs = Object.keys(store.docs);
-    const paths: DocHomePagesPath[] = Object.keys(pages).map(
-      (type: DocType) => {
+    const paths: DocHomePagesPath[] = Object.keys(pages)
+      .map((type: DocType) => {
         const page = pages[type];
         const path = getDocTypePath(page) as string;
 
@@ -66,8 +66,8 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
           docId,
           storyId,
         };
-      },
-    );
+      })
+      .filter(({ path }) => path);
     return paths;
   }
   return [];

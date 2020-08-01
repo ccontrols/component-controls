@@ -294,6 +294,10 @@ export const CURRENT_STORY = '.';
  */
 export interface Store {
   /**
+   * build-time error string
+   */
+  error?: string;
+  /**
    * global configuration for config file
    */
   config: RunConfiguration;

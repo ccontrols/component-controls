@@ -60,6 +60,7 @@ export type ControlsTheme = {
   documentitem: Record<string, ThemeUIStyleObject>;
   taglist: Record<string, ThemeUIStyleObject>;
   appsidebarpage: Record<string, ThemeUIStyleObject>;
+  apperror: ThemeUIStyleObject;
   container: Record<string, ThemeUIStyleObject>;
   documentslist: Record<string, ThemeUIStyleObject>;
 } & Theme;
@@ -1001,6 +1002,12 @@ export const theme: ControlsTheme = {
       gridTemplateColumns: ['1fr', '1fr', '1fr 300px'],
       position: 'relative',
     },
+  },
+  apperror: {
+    bg: 'black',
+    color: 'red',
+    p: 4,
+    fontFamily: 'monospace',
   },
   container: {
     container: {},

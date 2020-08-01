@@ -12,6 +12,11 @@ import {
 
 export interface LoadingStore {
   /**
+   * build-time error
+   */
+  error?: string;
+
+  /**
    * global configuration from project config file
    */
   config?: RunConfiguration;

@@ -11,7 +11,7 @@ import { SEO } from '../SEO';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useAnalytics } from './useAnalytics';
-
+import { AppError } from '../AppError';
 export interface AppProps {
   /**
    * page title
@@ -47,13 +47,13 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
   const pageTitle = titleParts[titleParts.length - 1];
   const pageDescription = useDocDescription(doc);
   useAnalytics();
-
   return (
     <Fragment>
       <SEO title={pageTitle} description={pageDescription} />
       <SkipLinks items={items} />
       <Box variant="app">
         <Header toolbar={toolbar} />
+        <AppError error={store.error} />
         {children}
         <Footer />
       </Box>
