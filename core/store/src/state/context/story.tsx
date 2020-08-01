@@ -132,6 +132,7 @@ export const useStory = (props: StoryInputProps): Story | undefined => {
         setStory(updatedStory);
       }
     };
+    setStory(storyId ? store.stories[storyId] : undefined);
     store.addObserver(onObserver);
     return () => store.removeObserver(onObserver);
   }, [store, storyId]);
