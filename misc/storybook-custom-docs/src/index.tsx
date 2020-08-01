@@ -1,5 +1,6 @@
 import * as React from 'react';
 import addons from '@storybook/addons';
+import { SET_CURRENT_STORY } from '@storybook/core-events';
 import { ConfigApi } from '@storybook/client-api';
 import { UPDATE_STORY_CONTEXT } from './types';
 export * from './types';
@@ -53,10 +54,13 @@ export const useStoryId = () => {
         setStoryId(id);
       }
     };
+
+    channel.on(SET_CURRENT_STORY, onStoryChange);
     channel.on(UPDATE_STORY_CONTEXT, onStoryChange);
 
     return () => {
       channel.off(UPDATE_STORY_CONTEXT, onStoryChange);
+      channel.off(SET_CURRENT_STORY, onStoryChange);
     };
   }, [channel]);
   return storyId;
