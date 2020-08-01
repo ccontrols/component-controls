@@ -85,7 +85,7 @@ export const overview = ({ backgroundColor }) => <button style={{ backgroundColo
 
 <Playground>
   <Story name="named-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
-    {({ color }) => (
+    {({ backgroundColor }) => (
       <button style={{ backgroundColor }}>some props</button>
     )}
   </Story>
