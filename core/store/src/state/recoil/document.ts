@@ -49,9 +49,9 @@ export const useDocument = (docId: string) => {
   return store.docs[docId];
 };
 
-export const useGetDocument = () => (docId: string) => {
+export const useGetDocument = () => {
   const store = useStore();
-  return store.docs[docId];
+  return (docId: string) => store.docs[docId];
 };
 
 /**
