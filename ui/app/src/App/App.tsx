@@ -33,7 +33,7 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
       text: 'skip to main content',
     },
   ];
-  if (!doc?.layout?.fullPage) {
+  if (!doc?.fullPage) {
     items.push({
       target: 'sidebar',
       text: 'skip to navigation sidebar',

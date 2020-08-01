@@ -1,7 +1,7 @@
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Component } from './components';
 import { ComponentControls } from './controls';
-import { RunConfiguration, DocType, PageLayout } from './configuration';
+import { RunConfiguration, DocType, PageLayoutProps } from './configuration';
 /**
  * an identifier/variable.argument in the source code
  */
@@ -181,11 +181,6 @@ export type Document = {
   route?: string;
 
   /**
-   * page layout - sidebars, full width
-   */
-  layout?: PageLayout;
-
-  /**
    *  optional date the document was created. If not assigned, the instrumentation process will use birthtime
    */
   date?: Date;
@@ -260,8 +255,8 @@ export type Document = {
    * custom prop set by mdxjs
    */
   isMDXComponent?: boolean;
-} & StoryProps;
-
+} & StoryProps &
+  PageLayoutProps;
 export const dateToLocalString = (date?: Date): string =>
   date
     ? new Date(date).toLocaleDateString('en-US', {

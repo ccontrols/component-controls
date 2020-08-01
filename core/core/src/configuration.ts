@@ -29,7 +29,11 @@ export type PageTabs = TabConfiguration[];
 
 export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
-export interface PageLayout {
+/**
+ * page layout - sidebars, full width
+ */
+
+export interface PageLayoutProps {
   /**
    * whether to add navigation sidebar to the page
    */
@@ -43,7 +47,7 @@ export interface PageLayout {
    */
   fullPage?: boolean;
 }
-export interface PageConfiguration {
+export type PageConfiguration = {
   /**
    * base url path for the page
    */
@@ -65,11 +69,6 @@ export interface PageConfiguration {
   indexHome?: boolean;
 
   /**
-   * page layout - sidebars, full width
-   */
-  layout?: PageLayout;
-
-  /**
    * whether to add to the top navigation menu
    */
   topMenu?: boolean;
@@ -83,7 +82,7 @@ export interface PageConfiguration {
    * tabs configuration for story-type pages
    */
   tabs?: PageTabs;
-}
+} & PageLayoutProps;
 
 export type PagesConfiguration = Record<DocType, PageConfiguration>;
 
@@ -237,10 +236,8 @@ export const defaultRunConfig: RunConfiguration = {
   pages: {
     story: {
       label: 'Docs',
-      layout: {
-        navSidebar: true,
-        contextSidebar: true,
-      },
+      navSidebar: true,
+      contextSidebar: true,
       topMenu: true,
       tabs: [
         { title: 'Documentation', type: 'ClassicPage' },
@@ -249,9 +246,7 @@ export const defaultRunConfig: RunConfiguration = {
     },
     blog: {
       label: 'Blog',
-      layout: {
-        contextSidebar: true,
-      },
+      contextSidebar: true,
       topMenu: true,
       indexHome: true,
     },

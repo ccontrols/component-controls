@@ -19,9 +19,8 @@ export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
   if (category) {
     return <CategoryPage type={type} category={category} />;
   }
-  const layout = doc?.layout;
-  const hasNoSideBars = !layout?.navSidebar && !layout?.contextSidebar;
-  const isFullPage = layout?.fullPage;
+  const hasNoSideBars = !doc?.navSidebar && !doc?.contextSidebar;
+  const isFullPage = doc?.fullPage;
   if (hasNoSideBars || isFullPage) {
     return (
       <PageContainer

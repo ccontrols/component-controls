@@ -14,6 +14,7 @@ import {
   defDocType,
   PageConfiguration,
   Pages,
+  PageLayoutProps,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { transformControls } from './transform-controls';
@@ -41,7 +42,12 @@ export const loadStore = (store: LoadingStore): Store => {
           const page = globalStore.config.pages?.[
             storeDoc.type || defDocType
           ] as PageConfiguration;
-          const doc: Document = deepMerge({ layout: page.layout }, storeDoc);
+          const pageLayout: PageLayoutProps = {
+            contextSidebar: page.contextSidebar,
+            fullPage: page.fullPage,
+            navSidebar: page.navSidebar,
+          };
+          const doc: Document = deepMerge(pageLayout, storeDoc);
           //props shared by document and story, extract so story gets default values from doc
           const docStoryProps: StoryProps = {
             component: doc.component,

@@ -64,10 +64,9 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
     }
     return null;
   };
-  const layout = doc.layout;
   return (
     <Box variant={docToVariant(doc)}>
-      {layout?.navSidebar && <Sidebar type={type} />}
+      {doc.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs fontSize={2} defaultIndex={tabIndex}>
           {tabs && tabs.length > 1 && (
@@ -106,7 +105,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
           </PageContainer>
         </Tabs>
       </Box>
-      {layout?.contextSidebar && <SideContext pageRef={pageRef} />}
+      {doc.contextSidebar && <SideContext pageRef={pageRef} />}
     </Box>
   );
 };
