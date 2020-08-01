@@ -243,11 +243,6 @@ Button.defaultProps = {
 };
 ",
     },
-    "ccd158de2e347c69fe7bf00b78db5145": Object {
-      "from": "theme-ui",
-      "importedName": "Button",
-      "name": "Button",
-    },
     "dd96934cfa10038428b57421ede5ec17": Object {
       "from": "../components/PropTypesButton",
       "importedName": "Button",
@@ -541,13 +536,10 @@ Button.propTypes = {
     Object {
       "doc": Object {
         "author": "atanasster",
-        "component": "Button",
         "components": Object {},
-        "componentsLookup": Object {
-          "Button": "ccd158de2e347c69fe7bf00b78db5145",
-        },
+        "componentsLookup": Object {},
         "date": "2020-07-19T04:06:29.277Z",
-        "dateModified": "2020-07-31T09:44:34.549Z",
+        "dateModified": "2020-08-01T20:16:11.440Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "package": "7661d674db5188cc22e26c1b22bef349",
         "title": "Introduction/Starter",
@@ -654,11 +646,11 @@ any *markdown* is allowed
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 18,
+              "line": 16,
             },
             "start": Object {
               "column": 24,
-              "line": 16,
+              "line": 14,
             },
           },
           "name": "overview",
