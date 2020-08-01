@@ -9,21 +9,28 @@ tags:
   - configuration
   - theme
 ---
-import { sketchy } from '@theme-ui/presets';
-import { defaultStore } from '@component-controls/core';
+import { system, funk, future, roboto, dark, deep, swiss, tosh, bootstrap, bulma, tailwind, sketchy } from '@theme-ui/presets';
+import * as themes from '@theme-ui/presets';
+import { defaultStore, ControlTypes } from '@component-controls/core';
 import { AppContext, App } from '@component-controls/app';
-import { Story } from '@component-controls/blocks';
+import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
 
 component-controls allows full customization of the user interface - from theming, SEO tags to toolbars, sidebars and footer.
 
 ## Selecting a theme
 
-<Story name="select-theme">
-  {() => {
-    return (
-      <AppContext store={{ ...defaultStore, config: { ...defaultStore.config, theme: sketchy }}} />
-    );  
-  }}
-</Story>
+<Playground>
+  <Story name="select-theme" controls={{ theme: { type: ControlTypes.OPTIONS, options: Object.keys(themes), value: 'funk' }}}>
+    {props => {
+      const theme = themes[props.theme];
+      return (
+        <AppContext store={{ ...defaultStore, config: { ...defaultStore.config, theme: { ...theme, app: { minHeight: 'unset' } }}}} />
+      );  
+    }}
+  </Story>
+</Playground>
+
+<PropsTable name="select-theme" />
+
 

@@ -8,6 +8,8 @@ import {
   getComponentName,
   hasControls,
   CURRENT_STORY,
+  Story,
+  Component,
 } from '@component-controls/core';
 import {
   useComponents,
@@ -30,7 +32,13 @@ export type ComponentsBlockContainerProps = {
    * user setting can display only props table or only controls
    */
   visibility?: ComponentVisibility;
-} & Omit<ComponentsContainerProps, 'components'> &
+
+  children: (
+    component: Component,
+    props: any,
+    story?: Story,
+  ) => React.ReactElement | null;
+} & Omit<ComponentsContainerProps, 'components' | 'children'> &
   ComponentInputProps &
   BlockContainerProps;
 
@@ -79,7 +87,7 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
       {...rest}
     >
       {(component, otherProps) => {
-        child = children(component, otherProps);
+        child = children(component, otherProps, story);
         return child;
       }}
     </ComponentsContainer>

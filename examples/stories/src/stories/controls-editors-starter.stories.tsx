@@ -1,10 +1,8 @@
 import React from 'react';
-import { Button } from 'theme-ui';
 import { ControlTypes } from '@component-controls/core';
 
 export default {
   title: 'Introduction/Starter',
-  component: Button,
   author: 'atanasster',
 };
 

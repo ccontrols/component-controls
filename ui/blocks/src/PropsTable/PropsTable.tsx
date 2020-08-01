@@ -2,9 +2,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
-
-import { TableProps } from '@component-controls/components';
 import { Column } from 'react-table';
+import { TableProps } from '@component-controls/components';
+import {
+  StoryContextProvider,
+  ControlsContextStoryProvider,
+} from '@component-controls/store';
 import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
@@ -37,14 +40,23 @@ export const PropsTable: FC<PropsTableProps> = props => {
       visibility={visibility}
       {...rest}
     >
-      {(component, tableProps) => (
-        <BasePropsTable
-          component={component}
-          visibility={visibility}
-          extraColumns={extraColumns}
-          tableProps={tableProps}
-        />
-      )}
+      {(component, tableProps, story) => {
+        const table = (
+          <BasePropsTable
+            component={component}
+            visibility={visibility}
+            extraColumns={extraColumns}
+            tableProps={tableProps}
+          />
+        );
+        return story ? (
+          <StoryContextProvider storyId={story.id}>
+            <ControlsContextStoryProvider>{table}</ControlsContextStoryProvider>
+          </StoryContextProvider>
+        ) : (
+          table
+        );
+      }}
     </ComponentsBlockContainer>
   );
 };

@@ -4484,7 +4484,7 @@
     "@theme-ui/preset-tailwind" "^0.3.0"
     "@theme-ui/preset-tosh" "^0.3.0"
 
-"@theme-ui/presets@next":
+"@theme-ui/presets@^0.4.0-rc.1", "@theme-ui/presets@next":
   version "0.4.0-rc.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/presets/-/presets-0.4.0-rc.1.tgz#7674ea99c67bf96515a503786d2ccbd0607fd8cb"
   integrity sha512-vYCIAqyKqkkzjsslsEaSMidVnynzAg8If1P8bzP4lIVjILrXTXya/jrt6Br70LaarFGEtbwYQNlHD8a97g0b7A==

@@ -123,7 +123,20 @@ export const useStoryId = ({
 export const useStory = (props: StoryInputProps): Story | undefined => {
   const storyId = useStoryId(props);
   const store = useStore();
-  return storyId ? store.stories[storyId] : undefined;
+  const [story, setStory] = useState(
+    storyId ? store.stories[storyId] : undefined,
+  );
+  useEffect(() => {
+    const onObserver = (updatedStory?: Story) => {
+      if (updatedStory?.id === storyId) {
+        setStory(updatedStory);
+      }
+    };
+    store.addObserver(onObserver);
+    return () => store.removeObserver(onObserver);
+  }, [store, storyId]);
+
+  return story;
 };
 
 export const useGetStory = () => (props: StoryInputProps) => useStory(props);

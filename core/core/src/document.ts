@@ -331,14 +331,19 @@ export interface Store {
   updateStory: (story: Story) => void;
 }
 
-export const defaultStore: Store = {
+export const defaultStore: Store & { _observers: StoreObserver[] } = {
+  _observers: [],
   config: {},
   components: {},
   docs: {},
   packages: {},
   stories: {},
-  addObserver: () => {},
-  removeObserver: () => {},
+  addObserver: function(observer: StoreObserver) {
+    this._observers.push(observer);
+  },
+  removeObserver: function(observer: StoreObserver) {
+    this._observers = this._observers.filter(o => o !== observer);
+  },
   updateStory: function(story: Story) {
     if (story) {
       if (story.id) {
@@ -346,6 +351,7 @@ export const defaultStore: Store = {
           ...this.stories,
           [story.id]: story,
         };
+        this._observers.forEach(o => o(story));
       }
     }
   },

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@component-controls/gatsby-theme-stories": "^1.14.0",
+    "@theme-ui/presets": "^0.4.0-rc.1",
     "gatsby": "^2.22.10",
     "gatsby-plugin-sitemap": "^2.4.11",
     "react": "^16.13.1",
