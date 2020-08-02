@@ -5,12 +5,7 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import {
-  Store,
-  defaultStore,
-  PackageInfo,
-  RunConfiguration,
-} from '@component-controls/core';
+import { Store, defaultStore, PackageInfo } from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
@@ -104,7 +99,7 @@ export const useThemeState = (): [
   return [
     config.theme,
     theme => {
-      setConfig({ ...config, theme: theme || {} });
+      setConfig({ ...config, theme: theme || config.theme });
     },
   ];
 };

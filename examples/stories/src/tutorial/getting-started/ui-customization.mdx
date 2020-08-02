@@ -9,10 +9,10 @@ tags:
   - configuration
   - theme
 ---
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as themes from '@theme-ui/presets';
 import { ControlTypes } from '@component-controls/core';
-import { useThemeState } from '@component-controls/store';
+import { useStore, useThemeState } from '@component-controls/store';
 import { Source } from '@component-controls/components';
 import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
@@ -25,13 +25,14 @@ You can use any [theme-ui](https://theme-ui.com) theme as a starting point for c
 
 <Story name="select-theme" controls={{ theme: { type: ControlTypes.OPTIONS, options: ['none', ...Object.keys(themes)], value: 'none' }}}>
   {({ theme: themeName }) => {
-    const [, setTheme] = useThemeState();
-    
+    const store = useStore();
+    const [globalTheme, setGlobalTheme] = useThemeState();
+    const theme = themes[themeName] || store.config.theme;
     useEffect(() => {
-      console.log(themeName);
-      setTheme(themes[themeName])
-    }, [themeName]);
-    const theme = themes[themeName];
+      if (globalTheme !== theme) {
+        setGlobalTheme(theme)
+      }
+    }, [theme]);  
     return (
         <Source title=".config/runtime.js">
 {`${themeName !== 'none' ? `import { ${themeName} } from '@theme-ui/presets';` : ''}
