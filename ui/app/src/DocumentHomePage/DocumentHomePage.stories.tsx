@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, MockContext } from '@component-controls/blocks';
+import { MockContext } from '@component-controls/blocks';
 import { DocumentHomePage } from './DocumentHomePage';
 
 export default {
@@ -8,9 +8,7 @@ export default {
 };
 
 export const overview = () => (
-  <ThemeProvider>
-    <MockContext storyId="id-of-story">
-      <DocumentHomePage type="blog" />
-    </MockContext>
-  </ThemeProvider>
+  <MockContext storyId="id-of-story">
+    <DocumentHomePage type="blog" />
+  </MockContext>
 );

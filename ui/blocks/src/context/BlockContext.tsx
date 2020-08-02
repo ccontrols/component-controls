@@ -2,14 +2,19 @@ import React from 'react';
 import { deepMerge } from '@component-controls/core';
 import { StateRoot, StateRootProps, useStore } from '@component-controls/store';
 import { ErrorBoundary } from './ErrorBoundary';
+import { ThemeProvider, ThemeProviderProps } from '../ThemeProvider';
 
-export const BlockContextProvider: React.FC<StateRootProps> = ({
+export const BlockContextProvider: React.FC<StateRootProps &
+  Pick<ThemeProviderProps, 'components'>> = ({
   children,
+  components,
   ...props
 }) => {
   return (
     <StateRoot {...props}>
-      <ErrorBoundary>{children}</ErrorBoundary>
+      <ErrorBoundary>
+        <ThemeProvider components={components}>{children}</ThemeProvider>
+      </ErrorBoundary>
     </StateRoot>
   );
 };

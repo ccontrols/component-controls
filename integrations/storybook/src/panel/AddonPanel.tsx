@@ -3,7 +3,6 @@ import { store } from '@component-controls/store/static_store';
 import { BlockContextProvider } from '@component-controls/blocks';
 import { API } from '@storybook/api';
 import { SET_CURRENT_STORY } from '@storybook/core-events';
-import { ThemeProvider } from '../context/ThemeProvider';
 
 export interface AddonPanelProps {
   active?: boolean;
@@ -29,7 +28,7 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
   const docId = storyId && store ? store.stories[storyId].doc : undefined;
   return active && storyId ? (
     <BlockContextProvider store={store} storyId={storyId} docId={docId}>
-      <ThemeProvider>{children}</ThemeProvider>
+      {children}
     </BlockContextProvider>
   ) : null;
 };

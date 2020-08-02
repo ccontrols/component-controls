@@ -7,10 +7,7 @@ import {
   LinkContextProvider,
   LinkContextProviderProps,
 } from '@component-controls/components';
-import {
-  ThemeProvider,
-  BlockContextProvider,
-} from '@component-controls/blocks';
+import { BlockContextProvider } from '@component-controls/blocks';
 import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
@@ -36,14 +33,13 @@ export const AppContext: FC<AppContextProps> = ({
       docId={docId}
       store={store}
       activeTab={activeTab}
+      components={mdxComponents}
     >
-      <ThemeProvider components={mdxComponents}>
-        <SidebarContextProvider>
-          <LinkContextProvider linkClass={linkClass}>
-            <App title={docId}>{children}</App>
-          </LinkContextProvider>
-        </SidebarContextProvider>
-      </ThemeProvider>
+      <SidebarContextProvider>
+        <LinkContextProvider linkClass={linkClass}>
+          <App title={docId}>{children}</App>
+        </LinkContextProvider>
+      </SidebarContextProvider>
     </BlockContextProvider>
   );
 };

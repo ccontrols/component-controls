@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, MockContext } from '@component-controls/blocks';
+import { MockContext } from '@component-controls/blocks';
 import { Sidebar } from './Sidebar';
 
 export default {
@@ -8,9 +8,7 @@ export default {
 };
 
 export const overview = () => (
-  <ThemeProvider>
-    <MockContext storyId="id-of-story">
-      <Sidebar title="sidebar" type="story" />
-    </MockContext>
-  </ThemeProvider>
+  <MockContext storyId="id-of-story">
+    <Sidebar title="sidebar" type="story" />
+  </MockContext>
 );

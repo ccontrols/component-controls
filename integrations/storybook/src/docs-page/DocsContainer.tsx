@@ -3,7 +3,6 @@ import {
   PageContainer as BlockPageContainer,
   BlockContextProvider,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '@component-controls/blocks';
 import {
   useCurrentData,
   getGlobalOptions,
@@ -20,11 +19,9 @@ export const PageContextContainer: FC = ({ children }) => {
       docId={docId}
       options={options}
     >
-      <ThemeProvider>
-        <BlockPageContainer variant="pagecontainer.storybook">
-          {children}
-        </BlockPageContainer>
-      </ThemeProvider>
+      <BlockPageContainer variant="pagecontainer.storybook">
+        {children}
+      </BlockPageContainer>
     </BlockContextProvider>
   );
 };

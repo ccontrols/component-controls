@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, MockContext } from '@component-controls/blocks';
+import { MockContext } from '@component-controls/blocks';
 import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
 
@@ -14,9 +14,7 @@ const MockList = () => {
 };
 
 export const overview = () => (
-  <ThemeProvider>
-    <MockContext storyId="id-of-story">
-      <MockList />
-    </MockContext>
-  </ThemeProvider>
+  <MockContext storyId="id-of-story">
+    <MockList />
+  </MockContext>
 );
