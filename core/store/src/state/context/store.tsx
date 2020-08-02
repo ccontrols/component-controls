@@ -1,5 +1,16 @@
-import React, { FC, createContext, useContext } from 'react';
-import { Store, defaultStore, PackageInfo } from '@component-controls/core';
+import React, {
+  FC,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+} from 'react';
+import {
+  Store,
+  defaultStore,
+  PackageInfo,
+  RunConfiguration,
+} from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
@@ -32,13 +43,78 @@ export const useStore = (): Store => {
   return store;
 };
 
+interface ConfigContextProps {
+  config: Store['config'];
+  setConfig: (config: Store['config']) => void;
+}
+
+export const ConfigContext = createContext<ConfigContextProps>({
+  config: {},
+  setConfig: () => {},
+});
+
+export const ConfigContextProvider: FC = ({ children }) => {
+  const store = useStore();
+  const [config, setConfig] = useState(store.config);
+  useEffect(() => {
+    setConfig(store.config);
+  }, [store, setConfig]);
+
+  return (
+    <ConfigContext.Provider
+      value={{
+        config,
+        setConfig,
+      }}
+    >
+      {children}
+    </ConfigContext.Provider>
+  );
+};
+/**
+ * Returns a configuration object and the setter method
+ */
+
+export const useConfigState = (): [
+  Store['config'],
+  (config: Store['config']) => void,
+] => {
+  const { config, setConfig } = useContext(ConfigContext);
+  return [config, setConfig];
+};
+
 /**
  * Returns the configuration object part of the store
  */
 
 export const useConfig = (): Store['config'] => {
-  const store = useStore();
-  return store.config;
+  const [config] = useConfigState();
+  return config;
+};
+
+/**
+ * Returns the current theme configuration and a setter method
+ */
+
+export const useThemeState = (): [
+  Store['config']['theme'],
+  (config: Store['config']['theme']) => void,
+] => {
+  const { config, setConfig } = useContext(ConfigContext);
+  return [
+    config.theme,
+    theme => {
+      setConfig({ ...config, theme: theme || {} });
+    },
+  ];
+};
+
+/**
+ * returns current theme object
+ */
+export const useTheme = (): Store['config']['theme'] => {
+  const [theme] = useThemeState();
+  return theme;
 };
 
 type ActiveTabType = string | undefined;

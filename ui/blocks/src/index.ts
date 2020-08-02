@@ -19,6 +19,7 @@ export * from './StoryConfig';
 export * from './StorySource';
 export * from './Subtitle';
 export * from './TagsList';
+export * from './ThemeProvider';
 export * from './Title';
 export * from './notifications';
 export * from './test';

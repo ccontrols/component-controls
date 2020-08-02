@@ -9,10 +9,11 @@ tags:
   - configuration
   - theme
 ---
-import { system, funk, future, roboto, dark, deep, swiss, tosh, bootstrap, bulma, tailwind, sketchy } from '@theme-ui/presets';
+import { useEffect } from 'react';
 import * as themes from '@theme-ui/presets';
-import { defaultStore, ControlTypes } from '@component-controls/core';
-import { AppContext, App } from '@component-controls/app';
+import { ControlTypes } from '@component-controls/core';
+import { useThemeState } from '@component-controls/store';
+import { Source } from '@component-controls/components';
 import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
 
@@ -20,16 +21,27 @@ component-controls allows full customization of the user interface - from themin
 
 ## Selecting a theme
 
-<Playground>
-  <Story name="select-theme" controls={{ theme: { type: ControlTypes.OPTIONS, options: Object.keys(themes), value: 'funk' }}}>
-    {props => {
-      const theme = themes[props.theme];
-      return (
-        <AppContext store={{ ...defaultStore, config: { ...defaultStore.config, theme: { ...theme, app: { minHeight: 'unset' } }}}} />
-      );  
-    }}
-  </Story>
-</Playground>
+You can use any [theme-ui](https://theme-ui.com) theme as a starting point for customizing the user interface.
+
+<Story name="select-theme" controls={{ theme: { type: ControlTypes.OPTIONS, options: ['none', ...Object.keys(themes)], value: 'none' }}}>
+  {({ theme: themeName }) => {
+    const [, setTheme] = useThemeState();
+    
+    useEffect(() => {
+      console.log(themeName);
+      setTheme(themes[themeName])
+    }, [themeName]);
+    const theme = themes[themeName];
+    return (
+        <Source title=".config/runtime.js">
+{`${themeName !== 'none' ? `import { ${themeName} } from '@theme-ui/presets';` : ''}
+export default {
+  theme: ${themeName !== 'none' ? themeName : '{}'},
+}`}
+      </Source>
+    );  
+  }}
+</Story>
 
 <PropsTable name="select-theme" />
 

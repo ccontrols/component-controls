@@ -3,7 +3,7 @@ import {
   PageContainer as BlockPageContainer,
   BlockContextProvider,
 } from '@component-controls/blocks';
-import { ThemeProvider } from '@component-controls/components';
+import { ThemeProvider } from '@component-controls/blocks';
 import {
   useCurrentData,
   getGlobalOptions,
@@ -14,18 +14,18 @@ export const PageContextContainer: FC = ({ children }) => {
   const options = React.useMemo(() => getGlobalOptions(), []);
   const { storyId, docId } = useCurrentData();
   return (
-    <ThemeProvider theme={store.config.theme}>
-      <BlockContextProvider
-        storyId={storyId}
-        store={store}
-        docId={docId}
-        options={options}
-      >
+    <BlockContextProvider
+      storyId={storyId}
+      store={store}
+      docId={docId}
+      options={options}
+    >
+      <ThemeProvider>
         <BlockPageContainer variant="pagecontainer.storybook">
           {children}
         </BlockPageContainer>
-      </BlockContextProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BlockContextProvider>
   );
 };
 

@@ -17,7 +17,7 @@ const config: RunOnlyConfiguration = {
   author: `@component-controls`,
   theme: {
     colors: {
-      //primary: 'pink',
+      // primary: 'pink',
     }
   },
   pages: {

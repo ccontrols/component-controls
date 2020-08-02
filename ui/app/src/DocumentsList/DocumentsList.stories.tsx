@@ -1,6 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@component-controls/components';
-import { MockContext } from '@component-controls/blocks';
+import { ThemeProvider, MockContext } from '@component-controls/blocks';
 import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
 

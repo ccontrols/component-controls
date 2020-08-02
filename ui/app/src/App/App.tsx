@@ -6,6 +6,7 @@ import {
   useStore,
   useCurrentDocument,
   useDocDescription,
+  useConfig,
 } from '@component-controls/store';
 import { SEO } from '../SEO';
 import { Header } from '../Header';
@@ -26,7 +27,8 @@ export interface AppProps {
 export const App: FC<AppProps> = ({ title = '', children }) => {
   const store = useStore();
   const doc = useCurrentDocument();
-  const { toolbar } = store.config || {};
+  const config = useConfig();
+  const { toolbar } = config;
   const items: SkiLinksItemProps[] = [
     {
       target: 'content',

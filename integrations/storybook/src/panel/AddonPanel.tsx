@@ -28,10 +28,8 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
   }, [api, channel]);
   const docId = storyId && store ? store.stories[storyId].doc : undefined;
   return active && storyId ? (
-    <ThemeProvider>
-      <BlockContextProvider store={store} storyId={storyId} docId={docId}>
-        {children}
-      </BlockContextProvider>
-    </ThemeProvider>
+    <BlockContextProvider store={store} storyId={storyId} docId={docId}>
+      <ThemeProvider>{children}</ThemeProvider>
+    </BlockContextProvider>
   ) : null;
 };

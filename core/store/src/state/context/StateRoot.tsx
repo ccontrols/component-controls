@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Store } from '@component-controls/core';
 import {
   StoreContextProvider,
+  ConfigContextProvider,
   ActiveTabContextProvider,
   OptionsContextProvider,
 } from './store';
@@ -45,19 +46,21 @@ export const StateRoot: FC<StateRootProps> = ({
 }) => {
   return (
     <StoreContextProvider store={store}>
-      <ActiveTabContextProvider activeTab={activeTab}>
-        <OptionsContextProvider options={options}>
-          <DocumentContextProvider docId={docId}>
-            <DocsSortContextProvider>
-              <StoryContextProvider storyId={storyId}>
-                <ControlsContextStoryProvider>
-                  {children}
-                </ControlsContextStoryProvider>
-              </StoryContextProvider>
-            </DocsSortContextProvider>
-          </DocumentContextProvider>
-        </OptionsContextProvider>
-      </ActiveTabContextProvider>
+      <ConfigContextProvider>
+        <ActiveTabContextProvider activeTab={activeTab}>
+          <OptionsContextProvider options={options}>
+            <DocumentContextProvider docId={docId}>
+              <DocsSortContextProvider>
+                <StoryContextProvider storyId={storyId}>
+                  <ControlsContextStoryProvider>
+                    {children}
+                  </ControlsContextStoryProvider>
+                </StoryContextProvider>
+              </DocsSortContextProvider>
+            </DocumentContextProvider>
+          </OptionsContextProvider>
+        </ActiveTabContextProvider>
+      </ConfigContextProvider>
     </StoreContextProvider>
   );
 };

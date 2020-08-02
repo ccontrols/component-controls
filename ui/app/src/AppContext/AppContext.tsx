@@ -2,13 +2,15 @@
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { Store } from '@component-controls/core';
-import { ThemeProvider } from '@component-controls/components';
 import {
   SidebarContextProvider,
   LinkContextProvider,
   LinkContextProviderProps,
 } from '@component-controls/components';
-import { BlockContextProvider } from '@component-controls/blocks';
+import {
+  ThemeProvider,
+  BlockContextProvider,
+} from '@component-controls/blocks';
 import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
@@ -29,19 +31,19 @@ export const AppContext: FC<AppContextProps> = ({
   activeTab,
 }) => {
   return (
-    <ThemeProvider theme={store.config.theme} components={mdxComponents}>
-      <BlockContextProvider
-        storyId={storyId}
-        docId={docId}
-        store={store}
-        activeTab={activeTab}
-      >
+    <BlockContextProvider
+      storyId={storyId}
+      docId={docId}
+      store={store}
+      activeTab={activeTab}
+    >
+      <ThemeProvider components={mdxComponents}>
         <SidebarContextProvider>
           <LinkContextProvider linkClass={linkClass}>
             <App title={docId}>{children}</App>
           </LinkContextProvider>
         </SidebarContextProvider>
-      </BlockContextProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BlockContextProvider>
   );
 };

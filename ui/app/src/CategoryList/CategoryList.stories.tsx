@@ -1,6 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@component-controls/components';
-import { MockContext } from '@component-controls/blocks';
+import { ThemeProvider, MockContext } from '@component-controls/blocks';
 import { CategoryList } from './CategoryList';
 
 export default {

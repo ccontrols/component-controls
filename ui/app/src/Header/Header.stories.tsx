@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Text, Box } from 'theme-ui';
 import { OctofaceIcon, HeartFillIcon } from '@primer/octicons-react';
-import { ThemeProvider, Link } from '@component-controls/components';
-import { MockContext } from '@component-controls/blocks';
+import { Link } from '@component-controls/components';
+import { ThemeProvider, MockContext } from '@component-controls/blocks';
 import { Header } from './Header';
 
 export default {
