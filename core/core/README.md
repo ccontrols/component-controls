@@ -1027,12 +1027,10 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
-| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
-| `siteHeadline`    | string                                               | Site headline. Default is "Component controls gatsby"                                                                                                                                |
-| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
+| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |                         |
+| `siteImage`       | string                                               | link to site image, used in page meta tag `<meta name="image" content={siteLanguage} />`                                                                                                                                                                   |
 | `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
 | `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
-| `siteTitleAlt`    | string                                               | site alt for images. Default is "Component controls - https&#x3A;//github.com/ccontrols/component-controls"                                                                          |
 | `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
 | `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
 | `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
@@ -1196,10 +1194,8 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | ------------------ | ------ | ----------- |
 | `author*`          | string |             |
 | `siteDescription*` | string |             |
-| `siteHeadline*`    | string |             |
 | `siteLanguage*`    | string |             |
 | `siteTitle*`       | string |             |
-| `siteTitleAlt*`    | string |             |
 | `siteUrl*`         | string |             |
 | `pages*`           | object |             |
 

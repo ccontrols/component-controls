@@ -151,18 +151,9 @@ export interface RunOnlyConfiguration {
    * standalone site title. Default is "Component controls"
    */
   siteTitle?: string;
-  /**
-   * site alt for images. Default is "Component controls - https://github.com/ccontrols/component-controls"
-   */
-  siteTitleAlt?: string;
 
   /**
-   * Site headline. Default is "Component controls gatsby"
-   */
-  siteHeadline?: string;
-
-  /**
-   * Deployed site url. Default is "https://component-controls-gatsby.netlify.app"
+   * Deployed site url. Default is "https://component-controls.com"
    */
   siteUrl?: string;
 
@@ -225,10 +216,7 @@ export type RunConfiguration = RunOnlyConfiguration &
 
 export const defaultRunConfig: RunConfiguration = {
   siteTitle: 'Component controls',
-  siteTitleAlt:
-    'Component controls - https://github.com/ccontrols/component-controls',
-  siteHeadline: 'Component controls gatsby',
-  siteUrl: 'https://component-controls-gatsby.netlify.app',
+  siteUrl: 'https://component-controls.com',
   siteDescription:
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',

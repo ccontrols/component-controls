@@ -9,17 +9,65 @@ tags:
   - configuration
   - theme
 ---
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import * as themes from '@theme-ui/presets';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, defaultStore } from '@component-controls/core';
 import { useStore, useThemeState } from '@component-controls/store';
+import { AppContext } from '@component-controls/app';
 import { Source } from '@component-controls/components';
 import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
 
-component-controls allows full customization of the user interface - from theming, SEO tags to toolbars, sidebars and footer.
+component-controls allows full customization of the user interface - from theming, SEO tags to toolbars, sidebars and footer. Most of the user-interface customizations can be set up in your .`config/runtime.js` file.
 
-## Selecting a theme
+## Project identity
+  
+<Story name="site-info" controls={{ 
+  siteTitle: {
+    type: ControlTypes.TEXT,
+    value: '',
+    description: 'Standalone site title. Default is "Component controls"',
+  },
+  siteUrl: {
+    type: ControlTypes.TEXT,
+    value: '',
+    description: 'Deployed site url. Default is "https://component-controls.com"',
+  },
+  siteDescription: {
+    type: ControlTypes.TEXT,
+    value: '',
+    description: 'Site description. Used in page "description" meta tag'
+  },
+  siteLanguage: {
+    type: ControlTypes.TEXT,
+    value: '',
+    description: 'Site language, Deault is "en"',
+  },
+  author: {
+    type: ControlTypes.TEXT,
+    value: '',
+    description: 'Site author. Default is "@component-controls"',
+  }
+}}>
+  {({ siteTitle, siteUrl, siteDescription, siteLanguage, author }) => {
+    return (
+      <Fragment>
+        <AppContext store={{...defaultStore, config: { 
+          siteTitle, siteUrl, siteDescription, siteLanguage, author, 
+          theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
+        <Source title=".config/runtime.js">
+{`export default {
+${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
+}`}
+      </Source>
+      </Fragment>
+    );  
+  }}
+</Story>
+
+<PropsTable name="site-info" />
+
+## Installing a theme
 
 You can use any [theme-ui](https://theme-ui.com) theme as a starting point for customizing the user interface.
 
@@ -46,4 +94,16 @@ export default {
 
 <PropsTable name="select-theme" />
 
+## Toolbar menu items
 
+## Toolbar buttons
+
+## Customize toolbar
+
+## Customize sidebar
+
+## Customize footer
+
+## Custom home page
+
+## Custom MDX components

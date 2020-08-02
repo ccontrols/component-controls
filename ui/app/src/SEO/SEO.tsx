@@ -20,7 +20,6 @@ export const SEO = ({
   const config = useConfig();
   const {
     siteTitle,
-    siteTitleAlt: defaultTitle,
     siteUrl,
     siteDescription: defaultDescription,
     siteLanguage,
@@ -29,7 +28,7 @@ export const SEO = ({
   } = config || {};
   const image = propImage || defaultImage;
   const seo = {
-    title: title || defaultTitle,
+    title: title || siteTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: image ? `${siteUrl}${image}` : undefined,
@@ -37,7 +36,7 @@ export const SEO = ({
   return (
     <Helmet
       title={title}
-      defaultTitle={defaultTitle}
+      defaultTitle={siteTitle}
       titleTemplate={`%s | ${siteTitle}`}
     >
       <html lang={siteLanguage} />
