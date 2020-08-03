@@ -43,7 +43,7 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
           borderRadius: '1rem',
         }}
       />
-      {control.value && control.value.toUpperCase()}
+      {typeof control.value === 'string' && control.value.toUpperCase()}
       {displayColorPicker ? (
         <Box
           css={{

@@ -12,13 +12,14 @@ import { Story } from './document';
 
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {
+    const objValue = mergeControlValues(
+      control.value as ComponentControls,
+      undefined,
+      value,
+    );
     return {
       ...control,
-      value: mergeControlValues(
-        control.value as ComponentControls,
-        undefined,
-        value,
-      ),
+      value: objValue,
     };
   }
   return {
@@ -32,21 +33,25 @@ export const mergeControlValues = (
   controlName: string | undefined,
   value: any,
 ): ComponentControls => {
-  return controlName
-    ? {
-        ...controls,
-        [controlName]: mergeValue(controls[controlName], value),
-      }
-    : Object.keys(controls).reduce(
-        (acc, key) => ({
-          ...acc,
-          [key]: mergeValue(
-            controls[key],
-            value[key] === undefined ? controls[key].value : value[key],
-          ),
-        }),
-        {},
-      );
+  if (controlName) {
+    return {
+      ...controls,
+      [controlName]: mergeValue(controls[controlName], value),
+    };
+  }
+
+  return Object.keys(controls).reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: mergeValue(
+        controls[key],
+        value[key] === undefined
+          ? controls[key].value
+          : value[key].value || value[key],
+      ),
+    }),
+    {},
+  );
 };
 
 export const resetControlValues = (
