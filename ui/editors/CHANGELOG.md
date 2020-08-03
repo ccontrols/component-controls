@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+
+### Bug Fixes
+
+* object merge values ([477809f](https://github.com/ccontrols/component-controls/commit/477809f0db63a66680ce0148d12a769552729fb0))
+
+
+
+
+
 ## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
 
 **Note:** Version bump only for package @component-controls/editors

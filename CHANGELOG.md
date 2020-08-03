@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+
+### Bug Fixes
+
+* object merge values ([477809f](https://github.com/ccontrols/component-controls/commit/477809f0db63a66680ce0148d12a769552729fb0))
+* update theme state provider ([6a95dd2](https://github.com/ccontrols/component-controls/commit/6a95dd2ffa04818bd5d120820fd002323dbe3102))
+
+
+### Features
+
+* config update state ([f8c96f0](https://github.com/ccontrols/component-controls/commit/f8c96f0201235568caf64a9b914845fd25957a92))
+
+
+
+
+
 ## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
 
 

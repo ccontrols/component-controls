@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/nextjs-plugin",
-  "version": "1.14.4",
+  "version": "1.15.0",
   "description": "Nextjs plugin to create stories documentation sites",
   "keywords": [
     "story",
@@ -36,9 +36,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^1.14.4",
-    "@component-controls/webpack-compile": "^1.14.4",
-    "@component-controls/webpack-configs": "^1.14.4",
+    "@component-controls/app": "^1.15.0",
+    "@component-controls/webpack-compile": "^1.15.0",
+    "@component-controls/webpack-configs": "^1.15.0",
     "next": "^9.5.0"
   },
   "devDependencies": {
