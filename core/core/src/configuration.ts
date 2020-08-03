@@ -163,6 +163,10 @@ export interface RunOnlyConfiguration {
   siteDescription?: string;
 
   /**
+   * copyright notice displayed in the footer
+   */
+  siteCopyright?: string;
+  /**
    * site language, Deault is "en"
    */
   siteLanguage?: string;
