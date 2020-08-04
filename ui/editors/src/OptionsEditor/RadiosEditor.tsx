@@ -34,7 +34,7 @@ export const RadiosEditor: PropertyEditor = ({ name }) => {
         <input
           type="radio"
           id={id}
-          name={entry.label}
+          name={name}
           value={entry.value}
           onChange={e => onChange(e.target.value)}
           checked={
