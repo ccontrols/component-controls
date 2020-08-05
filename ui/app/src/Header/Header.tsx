@@ -9,7 +9,11 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
-import { useConfig, useDocTypeCount } from '@component-controls/store';
+import {
+  useConfig,
+  useDocTypeCount,
+  useCurrentDocument,
+} from '@component-controls/store';
 import { Search } from '@component-controls/blocks';
 
 export interface HeaderProps {
@@ -25,6 +29,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const docCounts = useDocTypeCount();
   const config = useConfig();
+  const doc = useCurrentDocument();
   const { pages } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
@@ -62,7 +67,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   return (
     <AppHeader>
       <Box variant="appheader.container">
-        {collapsed && <SidebarToggle />}
+        {doc?.navSidebar && collapsed && <SidebarToggle />}
         <ActionBar themeKey="toolbar" actions={leftActions} />
       </Box>
       <Box variant="appheader.container">
