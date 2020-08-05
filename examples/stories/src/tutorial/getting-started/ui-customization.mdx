@@ -67,8 +67,8 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">
   {`export default {
-  ${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
-  }`}
+${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
+}`}
           </Source>
         </Box>  
         <AppContext store={{...defaultStore, config: { 
