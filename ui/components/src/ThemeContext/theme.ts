@@ -71,7 +71,8 @@ export const theme: ControlsTheme = {
     background: '#fff',
     primary: '#5c6ac4',
     secondary: '#006fbb',
-    muted: '#69768C',
+    muted: '#e6e6e6',
+    fadedText: '#69768C',
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
@@ -99,7 +100,8 @@ export const theme: ControlsTheme = {
         primary: '#efefef',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
-        muted: '#c9cacf',
+        muted: '#e6e6e6',
+        fadedText: '#c9cacf',
         gray: '#4d5866',
         background: '#38404a',
         sidebar: '#000',
@@ -252,7 +254,7 @@ export const theme: ControlsTheme = {
         content: '"..."',
         display: 'inline-block',
         marginLeft: '.6em',
-        color: 'muted',
+        color: 'fadedText',
         position: 'relative',
         top: `-36px`,
         letterSpacing: '.6em',
@@ -483,7 +485,7 @@ export const theme: ControlsTheme = {
     },
   },
   subtitle: {
-    color: 'muted',
+    color: 'fadedText',
     fontWeight: 'body',
     pb: 2,
   },
@@ -528,7 +530,7 @@ export const theme: ControlsTheme = {
       ml: 1,
       mr: 1,
       cursor: 'pointer',
-      color: 'muted',
+      color: 'fadedText',
       a: {
         textDecoration: 'inherit',
         color: 'inherit',
@@ -553,7 +555,7 @@ export const theme: ControlsTheme = {
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
-      color: 'muted',
+      color: 'fadedText',
       cursor: 'default',
     },
     '.react-tabs__tab-panel': {
@@ -588,7 +590,7 @@ export const theme: ControlsTheme = {
     },
     img: {},
     title: {
-      color: 'muted',
+      color: 'fadedText',
       py: 2,
       fontSize: 1,
     },
@@ -601,7 +603,7 @@ export const theme: ControlsTheme = {
     },
     label: {
       fontSize: 0,
-      color: 'muted',
+      color: 'fadedText',
       mr: 1,
       lineHeight: 'heading',
     },
@@ -665,7 +667,7 @@ export const theme: ControlsTheme = {
         flexDirection: 'column',
       },
       type: {
-        color: 'muted',
+        color: 'fadedText',
         letterSpacing: '0.10em',
         whiteSpace: 'pre-wrap',
         margin: 0,
@@ -775,7 +777,7 @@ export const theme: ControlsTheme = {
 
     label: {
       fontSize: 1,
-      color: 'muted',
+      color: 'fadedText',
       pb: 2,
     },
     linktitle: {
@@ -976,7 +978,7 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
       },
       date: {
-        color: 'muted',
+        color: 'fadedText',
       },
       comma: { mr: 2 },
       by: { mr: 1 },
