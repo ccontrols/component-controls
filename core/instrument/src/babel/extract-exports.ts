@@ -6,7 +6,7 @@ import { sourceLocation } from '../misc/source-location';
 export interface ExportType {
   name: string;
   internalName: string;
-  loc: CodeLocation;
+  loc?: CodeLocation;
   /**
    * in case of export { Button } from './button-named-export';
    * specifies the import from statememnt
@@ -34,20 +34,23 @@ export const traverseExports = (results: ExportTypes) => {
     path: any,
     declaration: any,
   ): ExportType | undefined => {
-    if (declaration.init && declaration.id.name) {
+    if (declaration.id && declaration.id.name) {
       const name = declaration.id.name;
       const exportType: ExportType = {
         node: declaration,
         path,
-        loc: sourceLocation(
+        name,
+        internalName: name,
+      };
+      if (declaration.init) {
+        exportType.loc = sourceLocation(
           declaration.init.body &&
             declaration.init.type !== 'ArrowFunctionExpression'
             ? declaration.init.body.loc
             : declaration.init.loc,
-        ),
-        name,
-        internalName: name,
-      };
+        );
+      }
+
       return exportType;
     }
     return undefined;
