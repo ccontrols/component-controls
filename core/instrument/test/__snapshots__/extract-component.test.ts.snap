@@ -21,7 +21,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.14.1",
+      "@component-controls/core": "^1.15.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -57,7 +57,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.14.4",
+    "version": "1.15.0",
   },
 }
 `;
@@ -83,7 +83,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.14.1",
+      "@component-controls/core": "^1.15.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -119,7 +119,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.14.4",
+    "version": "1.15.0",
   },
 }
 `;
@@ -167,7 +167,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.14.1",
+      "@component-controls/core": "^1.15.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -203,7 +203,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.14.4",
+    "version": "1.15.0",
   },
 }
 `;
@@ -339,7 +339,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.14.1",
+      "@component-controls/core": "^1.15.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -375,7 +375,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.14.4",
+    "version": "1.15.0",
   },
 }
 `;
@@ -401,7 +401,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.14.1",
+      "@component-controls/core": "^1.15.0",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -437,7 +437,7 @@ Object {
       "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
       "issues": "https://github.com/ccontrols/component-controls/issues",
     },
-    "version": "1.14.4",
+    "version": "1.15.0",
   },
 }
 `;

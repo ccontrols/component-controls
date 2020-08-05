@@ -85,21 +85,11 @@ actions can accept an order prop, and can also be superimposed",
           },
           "themeKey": Object {
             "defaultValue": "actionbar",
-            "description": "two possible layouts from the theme",
+            "description": "custom layouts from the theme, defaults to 'actionbar'",
             "parentName": "ActionBarProps",
             "type": Object {
-              "name": "enum",
-              "raw": "\\"actionbar\\" | \\"toolbar\\"",
-              "value": Array [
-                Object {
-                  "name": "string",
-                  "value": "actionbar",
-                },
-                Object {
-                  "name": "string",
-                  "value": "toolbar",
-                },
-              ],
+              "name": "string",
+              "raw": "string",
             },
           },
         },
@@ -130,9 +120,9 @@ export interface ActionBarProps {
   actions?: ActionItems;
 
   /**
-   * two possible layouts from the theme
+   * custom layouts from the theme, defaults to 'actionbar'
    */
-  themeKey?: 'actionbar' | 'toolbar';
+  themeKey?: string;
 }
 
 /**
