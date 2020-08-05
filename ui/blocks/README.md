@@ -27,6 +27,7 @@
     -   [<ins>StorySource</ins>](#insstorysourceins)
     -   [<ins>Subtitle</ins>](#inssubtitleins)
     -   [<ins>TagsList</ins>](#instagslistins)
+    -   [<ins>ThemeProvider</ins>](#insthemeproviderins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>InvalidType</ins>](#insinvalidtypeins)
     -   [<ins>MDXContent</ins>](#insmdxcontentins)
@@ -470,6 +471,16 @@ _TagsList [source code](https://github.com/ccontrols/component-controls/tree/mas
 | Name   | Type        | Description              |
 | ------ | ----------- | ------------------------ |
 | `tags` | _string\[]_ | string list of tag names |
+
+## <ins>ThemeProvider</ins>
+
+_ThemeProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/ThemeProvider/ThemeProvider.tsx)_
+
+### properties
+
+| Name         | Type                    | Description                                   |
+| ------------ | ----------------------- | --------------------------------------------- |
+| `components` | _MarkdownComponentType_ | components to customize the markdown display. |
 
 ## <ins>Title</ins>
 

@@ -57,13 +57,13 @@
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
-    -   [PageConfiguration](#pageconfiguration)
-    -   [PageLayout](#pagelayout)
+    -   [PageLayoutProps](#pagelayoutprops)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [TabConfiguration](#tabconfiguration)
     -   [ToolbarConfig](#toolbarconfig)
     -   [BuildConfiguration](#buildconfiguration)
     -   [DocType](#doctype)
+    -   [PageConfiguration](#pageconfiguration)
     -   [PageTabs](#pagetabs)
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
@@ -86,17 +86,21 @@
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
-    -   [PageTabs](#pagetabs-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfig](#webpackconfig-1)
     -   [PagesOnlyRoutes](#pagesonlyroutes-1)
+    -   [PageTabs](#pagetabs-1)
+    -   [PageConfiguration](#pageconfiguration-1)
     -   [BuildConfiguration](#buildconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [DocType](#doctype-2)
+    -   [PageTabs](#pagetabs-2)
     -   [WebpackConfig](#webpackconfig-2)
     -   [PagesOnlyRoutes](#pagesonlyroutes-2)
     -   [WebpackConfigFn](#webpackconfigfn-2)
     -   [DocType](#doctype-3)
+    -   [PageConfiguration](#pageconfiguration-2)
+    -   [PageTabs](#pagetabs-3)
 
 # Overview
 
@@ -171,7 +175,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L300)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L295)_
 
 
 
@@ -183,6 +187,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `components*`     | [Components](#components)                                           | list of components used in stories and documents                                                |
 | `config*`         | [RunConfiguration](#runconfiguration)                               | global configuration for config file                                                            |
 | `docs*`           | [Documents](#documents)                                             | list of documents (pages)                                                                       |
+| `error`           | string                                                              | build-time error string                                                                         |
 | `packages*`       | [Packages](#packages)                                               | list of package.json files and their data used by the components and the stories of the project |
 | `removeObserver*` | **function** (`observer`\*: [StoreObserver](#storeobserver)): void; |                                                                                                 |
 | `stories*`        | [Stories](#stories)                                                 | list of stories                                                                                 |
@@ -227,7 +232,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L275)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L270)_
 
 Record&lt;string, 
 
@@ -245,33 +250,33 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name                | Type                      | Description                                                                                                                                                                                  |
-| ------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                       | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
-| `author`            | string                    | document author                                                                                                                                                                              |
-| `componentsLookup*` | \[name: string]: string   | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`              | [Date](#date)             |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | [Date](#date)             |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`       | string                    |  documentation file description                                                                                                                                                              |
-| `draft`             | boolean                   | if set to true, the document will be hidden in production builds.                                                                                                                            |
-| `fileName`          | string                    | file name of the file of stories                                                                                                                                                             |
-| `isMDXComponent`    | boolean                   | custom prop set by mdxjs                                                                                                                                                                     |
-| `layout`            | [PageLayout](#pagelayout) | page layout - sidebars, full width                                                                                                                                                           |
-| `order`             | number                    | document order, used to sort documents within the same parent                                                                                                                                |
-| `package`           | string                    | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `route`             | string                    | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `source`            | string                    | source code of the entire file of stories                                                                                                                                                    |
-| `stories`           | string\[]                 | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`              | string\[]                 |  comma-separated list of document tags, used for search                                                                                                                                      |
-| `title*`            | string                    | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocType](#doctype)       | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
-| `StoryProps`        | [StoryProps](#storyprops) |                                                                                                                                                                                              |
+| Name                | Type                                | Description                                                                                                                                                                                  |
+| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`            | string                              | document author                                                                                                                                                                              |
+| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`       | string                              |  documentation file description                                                                                                                                                              |
+| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
+| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`              | string\[]                           |  comma-separated list of document tags, used for search                                                                                                                                      |
+| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
+| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
 ## Documents
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L280)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L275)_
 
 Record&lt;string, 
 
@@ -283,7 +288,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
 
 Record&lt;string, 
 
@@ -293,13 +298,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L277)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L294)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L289)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -314,7 +319,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
 
 Record&lt;string, 
 
@@ -354,7 +359,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L296)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L291)_
 
 
 
@@ -366,7 +371,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L265)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L260)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -379,22 +384,23 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## defaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L335)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
 
 
 
 ### properties
 
-| Name              | Type                                                        | Description |
-| ----------------- | ----------------------------------------------------------- | ----------- |
-| `components*`     |                                                             |             |
-| `config*`         |                                                             |             |
-| `docs*`           |                                                             |             |
-| `packages*`       |                                                             |             |
-| `stories*`        |                                                             |             |
-| `addObserver*`    | **function** addObserver(): void;                           |             |
-| `removeObserver*` | **function** removeObserver(): void;                        |             |
-| `updateStory*`    | **function** updateStory(`story`\*: [Story](#story)): void; |             |
+| Name              | Type                                                                              | Description |
+| ----------------- | --------------------------------------------------------------------------------- | ----------- |
+| `_observers*`     | undefined\[]                                                                      |             |
+| `components*`     |                                                                                   |             |
+| `config*`         |                                                                                   |             |
+| `docs*`           |                                                                                   |             |
+| `packages*`       |                                                                                   |             |
+| `stories*`        |                                                                                   |             |
+| `addObserver*`    | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): void;    |             |
+| `removeObserver*` | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): void; |             |
+| `updateStory*`    | **function** updateStory(`story`\*: [Story](#story)): void;                       |             |
 
 ## ControlTypes
 
@@ -976,28 +982,11 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 
 
-## PageConfiguration
+## PageLayoutProps
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L46)_
+page layout - sidebars, full width
 
-
-
-### properties
-
-| Name         | Type                                    | Description                                                                                                                   |
-| ------------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`   | string                                  | base url path for the page                                                                                                    |
-| `container`  | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
-| `indexHome`  | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
-| `label`      | string                                  | label - used for menu labels                                                                                                  |
-| `layout`     | [PageLayout](#pagelayout)               | page layout - sidebars, full width                                                                                            |
-| `storyPaths` | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
-| `tabs`       | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
-| `topMenu`    | boolean                                 | whether to add to the top navigation menu                                                                                     |
-
-## PageLayout
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L32)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L36)_
 
 
 
@@ -1014,7 +1003,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L145)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L144)_
 
 
 
@@ -1026,12 +1015,15 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
 | `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
+| `footer`          | [ToolbarConfig](#toolbarconfig)                      | custom footer items                                                                                                                                                                  |
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
-| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |                         |
-| `siteImage`       | string                                               | link to site image, used in page meta tag `<meta name="image" content={siteLanguage} />`                                                                                                                                                                   |
+| `sidebar`         | [ActionItems](#actionitems)                          | custom sidebar items                                                                                                                                                                 |
+| `siteCopyright`   | string                                               | copyright notice displayed in the footer                                                                                                                                             |
+| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
 | `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
 | `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
-| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls-gatsby.netlify.app"                                                                                                   |
+| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls.com"                                                                                                                  |
 | `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
 | `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
 | `toolbar`         | [ToolbarConfig](#toolbarconfig)                      | custom toolbar items                                                                                                                                                                 |
@@ -1055,7 +1047,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L130)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L129)_
 
 
 
@@ -1071,7 +1063,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L107)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
 
 page types that are considered as categories fields as well
 
@@ -1099,6 +1091,23 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
+## PageConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+### properties
+
+| Name              | Type                                    | Description                                                                                                                   |
+| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                  | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
+| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                  | label - used for menu labels                                                                                                  |
+| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
+| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+
 ## PageTabs
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
@@ -1107,7 +1116,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L88)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 Record&lt;
 
@@ -1121,7 +1130,7 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L96)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
 
 Record&lt;
 
@@ -1140,7 +1149,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L227)_
 
 ### properties
 
@@ -1151,13 +1160,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L94)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L90)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1171,7 +1180,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L271)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L267)_
 
 
 
@@ -1184,7 +1193,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L227)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L230)_
 
 
 
@@ -1201,7 +1210,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L294)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L289)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1216,7 +1225,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L275)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L270)_
 
 Record&lt;string, 
 
@@ -1226,7 +1235,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L227)_
 
 ### properties
 
@@ -1239,7 +1248,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L280)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L275)_
 
 Record&lt;string, 
 
@@ -1251,7 +1260,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
 
 Record&lt;string, 
 
@@ -1263,7 +1272,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
 
 Record&lt;string, 
 
@@ -1333,27 +1342,27 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name                | Type                      | Description                                                                                                                                                                                  |
-| ------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `MDXPage`           | any                       | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
-| `author`            | string                    | document author                                                                                                                                                                              |
-| `componentsLookup*` | \[name: string]: string   | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
-| `date`              | [Date](#date)             |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
-| `dateModified`      | [Date](#date)             |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
-| `description`       | string                    |  documentation file description                                                                                                                                                              |
-| `draft`             | boolean                   | if set to true, the document will be hidden in production builds.                                                                                                                            |
-| `fileName`          | string                    | file name of the file of stories                                                                                                                                                             |
-| `isMDXComponent`    | boolean                   | custom prop set by mdxjs                                                                                                                                                                     |
-| `layout`            | [PageLayout](#pagelayout) | page layout - sidebars, full width                                                                                                                                                           |
-| `order`             | number                    | document order, used to sort documents within the same parent                                                                                                                                |
-| `package`           | string                    | lookup into the global store of PackageInfo package.json                                                                                                                                     |
-| `route`             | string                    | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
-| `source`            | string                    | source code of the entire file of stories                                                                                                                                                    |
-| `stories`           | string\[]                 | list of story ids contained in the document.                                                                                                                                                 |
-| `tags`              | string\[]                 |  comma-separated list of document tags, used for search                                                                                                                                      |
-| `title*`            | string                    | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
-| `type`              | [DocType](#doctype)       | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
-| `StoryProps`        | [StoryProps](#storyprops) |                                                                                                                                                                                              |
+| Name                | Type                                | Description                                                                                                                                                                                  |
+| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`            | string                              | document author                                                                                                                                                                              |
+| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`       | string                              |  documentation file description                                                                                                                                                              |
+| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
+| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`              | string\[]                           |  comma-separated list of document tags, used for search                                                                                                                                      |
+| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
+| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
 ## ComponentControl
 
@@ -1381,15 +1390,9 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 string
 
-## PageTabs
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
-
-[TabConfiguration](#tabconfiguration)\[]
-
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L88)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
 
 Record&lt;
 
@@ -1403,13 +1406,13 @@ Record&lt;
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L94)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L96)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
 
 Record&lt;
 
@@ -1426,12 +1429,35 @@ Record&lt;
 
 >
 
+## PageTabs
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+
+[TabConfiguration](#tabconfiguration)\[]
+
+## PageConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+### properties
+
+| Name              | Type                                    | Description                                                                                                                   |
+| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                  | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
+| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                  | label - used for menu labels                                                                                                  |
+| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
+| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+
 ## BuildConfiguration
 
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L107)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
 
 page types that are considered as categories fields as well
 
@@ -1455,7 +1481,7 @@ custom webpack configuration setup. One or the other will be used
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L90)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1473,15 +1499,21 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
+## PageTabs
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+
+[TabConfiguration](#tabconfiguration)\[]
+
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L94)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L96)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
 
 Record&lt;
 
@@ -1500,7 +1532,7 @@ Record&lt;
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L90)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1517,5 +1549,28 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
+
+## PageConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+### properties
+
+| Name              | Type                                    | Description                                                                                                                   |
+| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                  | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
+| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                  | label - used for menu labels                                                                                                  |
+| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
+| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+
+## PageTabs
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+
+[TabConfiguration](#tabconfiguration)\[]
 
 <!-- END-TSDOC-TYPESCRIPT -->

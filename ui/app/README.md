@@ -4,6 +4,7 @@
 -   [List of components](#list-of-components)
     -   [<ins>App</ins>](#insappins)
     -   [<ins>AppContext</ins>](#insappcontextins)
+    -   [<ins>AppError</ins>](#insapperrorins)
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryListItem</ins>](#inscategorylistitemins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
@@ -67,6 +68,18 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 | `store*`     | _Store_  |             |
 | `linkClass*` | _any_    |             |
 | `activeTab`  | _string_ |             |
+
+## <ins>AppError</ins>
+
+application build-time error container
+
+_AppError [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/AppError/AppError.tsx)_
+
+### properties
+
+| Name    | Type     | Description                       |
+| ------- | -------- | --------------------------------- |
+| `error` | _string_ | Error text, "apperror" theme key. |
 
 ## <ins>CategoryList</ins>
 

@@ -10,6 +10,7 @@
         -   [Simple page](#simple-page)
         -   [Render story](#render-story)
 -   [API](#api)
+    -   [CurrentSelection](#currentselection)
     -   [globalStoryId](#globalstoryid)
     -   [getCurrentStoryId](#getcurrentstoryid)
     -   [getGlobalOptions](#getglobaloptions)
@@ -131,6 +132,21 @@ export default {
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
+## CurrentSelection
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L65)_
+
+
+
+### properties
+
+| Name          | Type   | Description                         |
+| ------------- | ------ | ----------------------------------- |
+| `docId*`      | string | current document id - its the title |
+| `name*`       | string | story name                          |
+| `parameters*` | any    | story parameters                    |
+| `storyId*`    | string | current story id                    |
+
 ## globalStoryId
 
 _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L34)_
@@ -164,7 +180,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 React hook - returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L90)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L103)_
 
 **function** useContext(): any;
 
@@ -172,9 +188,9 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 React hook hook that tracks the changes to the current story and returns the data
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L70)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L88)_
 
-**function** useCurrentData(): **docId**: string**name**: string**parameters**: any**storyId**: string;
+**function** useCurrentData(): [CurrentSelection](#currentselection);
 
 ## useStoryId
 

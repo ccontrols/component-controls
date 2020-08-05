@@ -52,6 +52,7 @@ _\_\_type [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 | Name              | Type                                | Description                                                                                     |
 | ----------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `error`           | _string_                            | build-time error string                                                                         |
 | `config*`         | _RunConfiguration_                  | global configuration for config file                                                            |
 | `docs*`           | _Record&lt;string, Document>_       | list of documents (pages)                                                                       |
 | `stories*`        | _Record&lt;string, Story>_          | list of stories                                                                                 |
@@ -69,6 +70,7 @@ _getHomePagesPaths [source code](https://github.com/ccontrols/component-controls
 
 | Name              | Type                                | Description                                                                                     |
 | ----------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `error`           | _string_                            | build-time error string                                                                         |
 | `config*`         | _RunConfiguration_                  | global configuration for config file                                                            |
 | `docs*`           | _Record&lt;string, Document>_       | list of documents (pages)                                                                       |
 | `stories*`        | _Record&lt;string, Story>_          | list of stories                                                                                 |
@@ -86,6 +88,7 @@ _getDocPagesPaths [source code](https://github.com/ccontrols/component-controls/
 
 | Name              | Type                                | Description                                                                                     |
 | ----------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `error`           | _string_                            | build-time error string                                                                         |
 | `config*`         | _RunConfiguration_                  | global configuration for config file                                                            |
 | `docs*`           | _Record&lt;string, Document>_       | list of documents (pages)                                                                       |
 | `stories*`        | _Record&lt;string, Story>_          | list of stories                                                                                 |
