@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
-import React, { FC, useMemo } from 'react';
-import { Flex, Box } from 'theme-ui';
+/** @jsx jsx */
+import { FC, useMemo } from 'react';
+import { jsx, Flex, Box, Text } from 'theme-ui';
 import { ImportName, defaultExport } from '@component-controls/core';
 import { Table, Tag, ExternalLink } from '@component-controls/components';
 
@@ -87,6 +88,9 @@ export const Dependencies: FC<DependenciesProps> = ({ dependencies }) => {
       {
         Header: 'version',
         accessor: 'version',
+        Cell: ({ value }: { value?: string }) => (
+          <Text sx={{ whiteSpace: 'nowrap' }}>{value}</Text>
+        ),
       },
       {
         Header: 'peer',

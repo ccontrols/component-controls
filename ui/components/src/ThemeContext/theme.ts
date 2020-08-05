@@ -576,16 +576,19 @@ export const theme: ControlsTheme = {
       display: 'inline-block',
       px: 1,
       borderRadius: 5,
+      whiteSpace: 'nowrap',
     },
     rightmargin: {
       mr: 1,
       display: 'inline-block',
       px: 1,
+      whiteSpace: 'nowrap',
     },
     leftmargin: {
       ml: 1,
       display: 'inline-block',
       px: 1,
+      whiteSpace: 'nowrap',
     },
   },
   titledimage: {
