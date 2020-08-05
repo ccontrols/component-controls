@@ -31,7 +31,7 @@ export const GlobalFilter = ({
         sx={{
           mr: 3,
           width: 'auto',
-          color: 'fadedText',
+          color: 'mutedText',
         }}
       >
         search:

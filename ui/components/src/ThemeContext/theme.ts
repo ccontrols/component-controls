@@ -72,12 +72,11 @@ export const theme: ControlsTheme = {
     primary: '#5c6ac4',
     secondary: '#006fbb',
     muted: '#e6e6e6',
-    fadedText: '#69768C',
+    mutedText: '#69768C',
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
     sidebar: '#f6f6f6',
-    header: '#edebe8',
     highlight: '#d9f2f1',
     action: '#3B817D',
     selected: '#027AC5',
@@ -101,12 +100,11 @@ export const theme: ControlsTheme = {
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
         muted: '#e6e6e6',
-        fadedText: '#c9cacf',
+        mutedText: '#c9cacf',
         gray: '#4d5866',
         background: '#38404a',
         sidebar: '#000',
         text: '#d3d4db',
-        header: '#111111',
         selected: '#b3d9ff',
         action: '#d9f2f1',
         shadow: 'rgba(211, 212, 219, 0.1)',
@@ -229,8 +227,10 @@ export const theme: ControlsTheme = {
       transition: `all 0.3s ease-in-out`,
     },
     pre: {
+      variant: 'prism',
       fontFamily: 'monospace',
       overflowX: 'auto',
+      bg: 'muted',
       code: {
         color: 'inherit',
       },
@@ -239,6 +239,11 @@ export const theme: ControlsTheme = {
       fontFamily: 'monospace',
       fontSize: 'inherit',
       color: 'accent',
+    },
+    inlineCode: {
+      fontFamily: 'monospace',
+      color: 'secondary',
+      bg: 'muted',
     },
     blockquote: {
       borderLeft: (t: Theme) => `4px solid ${t.colors?.shadow}`,
@@ -254,7 +259,7 @@ export const theme: ControlsTheme = {
         content: '"..."',
         display: 'inline-block',
         marginLeft: '.6em',
-        color: 'fadedText',
+        color: 'mutedText',
         position: 'relative',
         top: `-36px`,
         letterSpacing: '.6em',
@@ -298,6 +303,7 @@ export const theme: ControlsTheme = {
         whiteSpace: 'pre-wrap',
         wordWrap: 'break-word',
         maxWidth: '240px',
+        bg: 'inherit',
         mt: 2,
         mb: 0,
       },
@@ -315,7 +321,7 @@ export const theme: ControlsTheme = {
     },
     thead: {
       borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
-      backgroundColor: 'header',
+      backgroundColor: 'muted',
       color: 'text',
     },
     td: {
@@ -485,7 +491,7 @@ export const theme: ControlsTheme = {
     },
   },
   subtitle: {
-    color: 'fadedText',
+    color: 'mutedText',
     fontWeight: 'body',
     pb: 2,
   },
@@ -530,7 +536,7 @@ export const theme: ControlsTheme = {
       ml: 1,
       mr: 1,
       cursor: 'pointer',
-      color: 'fadedText',
+      color: 'mutedText',
       a: {
         textDecoration: 'inherit',
         color: 'inherit',
@@ -555,7 +561,7 @@ export const theme: ControlsTheme = {
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
-      color: 'fadedText',
+      color: 'mutedText',
       cursor: 'default',
     },
     '.react-tabs__tab-panel': {
@@ -590,7 +596,7 @@ export const theme: ControlsTheme = {
     },
     img: {},
     title: {
-      color: 'fadedText',
+      color: 'mutedText',
       py: 2,
       fontSize: 1,
     },
@@ -603,7 +609,7 @@ export const theme: ControlsTheme = {
     },
     label: {
       fontSize: 0,
-      color: 'fadedText',
+      color: 'mutedText',
       mr: 1,
       lineHeight: 'heading',
     },
@@ -667,7 +673,7 @@ export const theme: ControlsTheme = {
         flexDirection: 'column',
       },
       type: {
-        color: 'fadedText',
+        color: 'mutedText',
         letterSpacing: '0.10em',
         whiteSpace: 'pre-wrap',
         margin: 0,
@@ -777,7 +783,7 @@ export const theme: ControlsTheme = {
 
     label: {
       fontSize: 1,
-      color: 'fadedText',
+      color: 'mutedText',
       pb: 2,
     },
     linktitle: {
@@ -978,7 +984,7 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
       },
       date: {
-        color: 'fadedText',
+        color: 'mutedText',
       },
       comma: { mr: 2 },
       by: { mr: 1 },

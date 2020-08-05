@@ -4,7 +4,6 @@ author: atanasster
 type: tutorial
 order: 5
 route: /tutorial/getting-started/ui-customization
-draft: true
 tags:
   - configuration
   - theme
@@ -22,9 +21,9 @@ import * as Icons from '@primer/octicons-react';
 import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
 
-`component-controls` allows full customization of the user interface - from theming, SEO tags to toolbars, sidebars and footer. Most of the user-interface customizations can be set up in your .`config/runtime.js` file.
+`component-controls` allows extensive customization of the user interface - from theming, SEO tags to toolbars, sidebars, and footer. Most of the user-interface customizations can be set up in your .`config/runtime.js` file.
 
-In the following examples, you can play with control values and see live the necessary source code changes to the `buildtime.js` configuration file.
+In the following examples, you can play with control values and see live the source code changes to be copy/pasted in the `buildtime.js` configuration file.
 
 ## Site meta
 
@@ -111,12 +110,12 @@ export default {
 
 ## Toolbar
 
-The toolbar consists of two sections : `left` and `right`, where the `left` section is still displayed in responsive screen sizes, while the `right` section is hidden. 
+The toolbar consists of two sections: `left` and `right`, where the `left` section is still displayed in responsive screen sizes, while the `right` section is hidden. 
 The toolbar items are [ActionBar](/api/components-actionbar--overview) items that can be extended, overrriden and changed as usual `ActionItems`.
 
 ### Add toolbar items
 
-To add new items to the toolbar, you need to specify a `left` of `right` array of new items.
+To add new items to the toolbar, you need to specify a `left` or `right` array of new items.
 
 export const ButtonControls = (type) => {
   const defIcons = {
