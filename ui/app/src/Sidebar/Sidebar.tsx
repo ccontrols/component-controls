@@ -17,6 +17,8 @@ import {
   MenuItems,
   MenuItem,
   Header,
+  ActionBar,
+  ActionItems,
 } from '@component-controls/components';
 import {
   Document,
@@ -135,7 +137,7 @@ export const Sidebar: FC<SidebarProps> = ({
   const { title: docId } = useCurrentDocument() || {};
 
   const config = useConfig() || {};
-  const { pages } = config;
+  const { pages, sidebar = [] } = config;
   const { label = '', storyPaths = false } = pages?.[type] || {};
   const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
@@ -160,6 +162,32 @@ export const Sidebar: FC<SidebarProps> = ({
     return [];
   }, [type, activeTab, store, config, storyPaths, docs]);
   const [search, setSearch] = useState<string | undefined>(undefined);
+  const actions: ActionItems = [...sidebar];
+
+  if (propsTitle || label) {
+    actions.push({
+      node: (
+        <Heading as="h3" variant="appsidebar.items">
+          {propsTitle || label}
+        </Heading>
+      ),
+      id: 'title',
+    });
+  }
+  actions.push({
+    node: (
+      <Box variant="appsidebar.items">
+        <Input
+          placeholder="filter..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onClick={e => e.stopPropagation()}
+        />
+      </Box>
+    ),
+    id: 'filter',
+  });
+
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
       {responsive && (
@@ -169,17 +197,7 @@ export const Sidebar: FC<SidebarProps> = ({
         </Header>
       )}
       <Box variant="appsidebar.container">
-        <Heading as="h3" variant="appsidebar.heading">
-          {propsTitle || label}
-        </Heading>
-        <Box variant="appsidebar.filtercontainer">
-          <Input
-            placeholder="filter..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            onClick={e => e.stopPropagation()}
-          />
-        </Box>
+        <ActionBar themeKey="appsidebar" actions={actions} />
         <Navmenu activeItem={{ id: docId }} search={search} items={menuItems} />
       </Box>
     </AppSidebar>

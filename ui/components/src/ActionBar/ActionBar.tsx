@@ -11,9 +11,9 @@ export interface ActionBarProps {
   actions?: ActionItems;
 
   /**
-   * two possible layouts from the theme
+   * custom layouts from the theme, defaults to 'actionbar'
    */
-  themeKey?: 'actionbar' | 'toolbar' | 'footer';
+  themeKey?: string;
 }
 
 /**

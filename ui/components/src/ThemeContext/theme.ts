@@ -886,6 +886,13 @@ export const theme: ControlsTheme = {
     },
   },
   appsidebar: {
+    inner: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    items: {
+      my: 2,
+    },
     sidebar: {
       borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
     },
@@ -894,8 +901,6 @@ export const theme: ControlsTheme = {
       flexDirection: 'column',
       px: 2,
     },
-    heading: { textAlign: 'left', py: 2, px: 3 },
-    filtercontainer: { py: 2, px: 3 },
   },
   appheader: {
     items: {

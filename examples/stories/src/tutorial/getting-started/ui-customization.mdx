@@ -148,13 +148,13 @@ export const toolbarItem = (type, props) => {
 
 export const itemSource = (type, props) => {
   return `          <Link href="https://component-controls.com" ${props[`${type}Type`] === 'button' ? `as={Button}` : ''}>
-        <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
-          <${props[`${type}Icon`]} />
-          <Text sx={{ ml: '2px'}}>
-            ${props[`${type}Text`]}
-          </Text>
-        </Box>
-      </Link>`;
+            <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
+              <${props[`${type}Icon`]} />
+              <Text sx={{ ml: '2px'}}>
+                ${props[`${type}Text`]}
+              </Text>
+            </Box>
+          </Link>`;
 }
 
 export const createItems = (props, name) => {
@@ -252,14 +252,14 @@ You can insert a toolbar item at any position, by specifying the `order` propert
           siteCopyright: '',
           toolbar: {
             left: [{
-        order,
-        node: (
-          <svg viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="currentColor">
-            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
-            </path>
-          </svg>
-        ),
-      }],
+            order,
+            node: (
+              <svg viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="currentColor">
+                <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
+                </path>
+              </svg>
+            ),
+          }],
           }, 
           theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
       </Fragment>
@@ -330,21 +330,58 @@ ${toolbar.join(',\n')}
 
 ## Customize sidebar
 
+The sidebar items are also [ActionBar](/api/components-actionbar--overview) and can be customized as such. By default, a document type title and a filter input are displayed.
+
 <Story name="custom-sidebar" controls={{
-  home: { type: ControlTypes.BOOLEAN, value: true },
-  search: { type: ControlTypes.BOOLEAN, value: true },
-  colormode: { type: ControlTypes.BOOLEAN, value: true },
+  order: { type: ControlTypes.NUMBER, value: 0, label: 'logo order' },
+  title: { type: ControlTypes.BOOLEAN, value: true },
+  filter: { type: ControlTypes.BOOLEAN, value: true },
 }}>
-  { props => {
+  { ({ order, title, filter }) => {
+    const actions = [{
+      order,
+      node: (
+        <Box sx={{ my: 2 }}>
+          <svg viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="currentColor">
+            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
+            </path>
+          </svg>
+        </Box>  
+      ),
+    }];
+  if (!title) {
+    actions.push({ id: 'title', hidden: true })
+  }
+  if (!filter) {
+    actions.push({ id: 'filter', hidden: true })
+  }
   return (
       <Fragment>
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">{`export default {
-}         
-`}
+  sidebar:[
+    {
+      order: ${order},
+      node: (
+        <Box sx={{ my: 2 }}>
+          <svg viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="currentColor" >
+            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z">
+            </path>
+          </svg>
+        </Box>  
+      ),
+    },${!title ? `\n    { id: 'title', hidden: true },` : ''}${!filter ? `\n    { id: 'filter', hidden: true },` : ''}
+  ]
+}`}
           </Source>
         </Box>  
-        <Sidebar />
+        <BlockContextProvider store={{...defaultStore, config: {
+          sidebar: actions,
+          }}}>
+          <Box sx={{ width: 350}}>
+            <Sidebar title='API' />
+          </Box>  
+        </BlockContextProvider>
       </Fragment>
     );
   }}    
@@ -371,7 +408,7 @@ The footer is also customizable with a `left` and `right` section as the [toolba
             left: leftNodes,
             right: rightNodes,
           }, 
-          theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}>
+          }}}>
           <Footer />
         </BlockContextProvider>
       </Fragment>
