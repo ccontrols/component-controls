@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import jsStringEscape from 'js-string-escape';
 import { parseStories } from '../src/index';
+import { getComponentProps } from '../src/misc/props-info';
 
 expect.addSnapshotSerializer({
   test: val => typeof val === 'object' && val instanceof String,
@@ -47,4 +48,28 @@ export const loadStoriesTests = (
     filePaths,
     include,
   );
+};
+
+export const extractComponentProps = (
+  componentName: string,
+  fileName: string,
+) => {
+  it(componentName, async () => {
+    expect(
+      await getComponentProps(
+        [
+          {
+            name: '@component-controls/react-docgen-info',
+            test: /\.(js|jsx)$/,
+          },
+          {
+            name: '@component-controls/react-docgen-typescript-info',
+            test: /\.(ts|tsx)$/,
+          },
+        ],
+        fileName,
+        componentName,
+      ),
+    ).toMatchSnapshot();
+  });
 };

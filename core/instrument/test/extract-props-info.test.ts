@@ -1,46 +1,26 @@
 import * as path from 'path';
-import { getComponentProps } from '../src/misc/props-info';
+import { extractComponentProps } from './loadTestFiles';
 
 describe('extract-props-info', () => {
-  const loadTestFiles = (componentName: string, fileName: string) => {
-    it(componentName, async () => {
-      expect(
-        await getComponentProps(
-          [
-            {
-              name: '@component-controls/react-docgen-info',
-              test: /\.(js|jsx)$/,
-            },
-            {
-              name: '@component-controls/react-docgen-typescript-info',
-              test: /\.(ts|tsx)$/,
-            },
-          ],
-          fileName,
-          componentName,
-        ),
-      ).toMatchSnapshot();
-    });
-  };
-  loadTestFiles(
+  extractComponentProps(
     'Tab',
     path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
   );
-  loadTestFiles(
+  extractComponentProps(
     'Tabs',
     path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
   );
 
-  loadTestFiles(
+  extractComponentProps(
     'TabList',
     path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
   );
 
-  loadTestFiles(
+  extractComponentProps(
     'TabPanel',
     path.resolve(__dirname, '../../../ui/components/src/Tabs/Tabs.tsx'),
   );
-  loadTestFiles(
+  extractComponentProps(
     'PropsTable',
     path.resolve(__dirname, '../../../ui/blocks/src/PropsTable/PropsTable.tsx'),
   );
