@@ -906,12 +906,6 @@ export const theme: ControlsTheme = {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-    },
-    copyright: {},
-    inner: {
-      alignItems: `center`,
-      color: `text`,
-      fontWeight: `heading`,
       a: { color: `text` },
     },
   },

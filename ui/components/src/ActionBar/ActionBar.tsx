@@ -13,7 +13,7 @@ export interface ActionBarProps {
   /**
    * two possible layouts from the theme
    */
-  themeKey?: 'actionbar' | 'toolbar';
+  themeKey?: 'actionbar' | 'toolbar' | 'footer';
 }
 
 /**

@@ -202,6 +202,11 @@ export interface RunOnlyConfiguration {
   toolbar?: ToolbarConfig;
 
   /**
+   * custom footer items
+   */
+  footer?: ToolbarConfig;
+
+  /**
    * custom props to components
    * ex:
    * components: { story:{ wrapper: 'iframe' } },
