@@ -66,11 +66,11 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   }, [toolbar.right]);
   return (
     <AppHeader>
-      <Box variant="appheader.container">
+      <Box variant="appheader.items">
         {doc?.navSidebar && collapsed && <SidebarToggle />}
         <ActionBar themeKey="toolbar" actions={leftActions} />
       </Box>
-      <Box variant="appheader.container">
+      <Box variant="appheader.items">
         {!responsive && <ActionBar themeKey="toolbar" actions={rightActions} />}
       </Box>
     </AppHeader>

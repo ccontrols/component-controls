@@ -26,6 +26,7 @@ const ActionItemStyle: ThemeUIStyleObject = {
 export type ControlsTheme = {
   actionbar: Record<string, ThemeUIStyleObject>;
   toolbar: Record<string, ThemeUIStyleObject>;
+  footer: Record<string, ThemeUIStyleObject>;
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
@@ -353,6 +354,16 @@ export const theme: ControlsTheme = {
     },
   },
   toolbar: {
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    link: {
+      mr: 1,
+    },
+  },
+  footer: {
     inner: {
       display: 'flex',
       flexDirection: 'row',
@@ -887,7 +898,7 @@ export const theme: ControlsTheme = {
     filtercontainer: { py: 2, px: 3 },
   },
   appheader: {
-    container: {
+    items: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -902,11 +913,11 @@ export const theme: ControlsTheme = {
   },
   appfooter: {
     container: {
+      display: 'flex',
       p: 3,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-      a: { color: `text` },
     },
   },
   categorylist: {

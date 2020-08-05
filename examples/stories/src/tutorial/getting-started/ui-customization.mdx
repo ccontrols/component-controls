@@ -14,7 +14,8 @@ import { jsx, Box, Text, Button } from 'theme-ui';
 import * as themes from '@theme-ui/presets';
 import { ControlTypes, defaultStore } from '@component-controls/core';
 import { useConfig, useThemeState } from '@component-controls/store';
-import { AppContext } from '@component-controls/app';
+import { AppContext, Sidebar, Footer } from '@component-controls/app';
+import { BlockContextProvider } from '@component-controls/blocks';
 import { Source, Link } from '@component-controls/components';
 import * as Icons from '@primer/octicons-react';
 
@@ -108,12 +109,12 @@ export default {
 
 <PropsTable name="select-theme" />
 
-## Tolbar
+## Toolbar
 
 The toolbar consists of two sections : `left` and `right`, where the `left` section is still displayed in responsive screen sizes, while the `right` section is hidden. 
 The toolbar items are [ActionBar](/api/components-actionbar--overview) items that can be extended, overrriden and changed as usual `ActionItems`.
 
-### Add tollbar items
+### Add toolbar items
 
 To add new items to the toolbar, you need to specify a `left` of `right` array of new items.
 
@@ -131,31 +132,32 @@ export const ButtonControls = (type) => {
   };
 }
 
-<Story name="custom-toolbar" controls={Object.assign(ButtonControls('first'),ButtonControls('second'))}>
-  {props => {
-    const toolbarItem = type => {
-      const Icon = Icons[props[`${type}Icon`]];
-      return (
-        <Link href="https://component-controls.com" as={props[`${type}Type`] === 'button' ? Button : Link}>
-          <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
-            {Icon && <Icon />}
-            <Text sx={{ ml: '2px'}}>
-              {props[`${type}Text`]}
-            </Text>
-          </Box>
-        </Link>  
-      );
-    }
-    const itemSource = type => {
-      return `          <Link href="https://component-controls.com" ${props[`${type}Type`] === 'button' ? `as={Button}` : ''}>
-            <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
-              <${props[`${type}Icon`]} />
-              <Text sx={{ ml: '2px'}}>
-                ${props[`${type}Text`]}
-              </Text>
-            </Box>
-          </Link>`;
-    }  
+export const toolbarItem = (type, props) => {
+  const Icon = Icons[props[`${type}Icon`]];
+  return (
+    <Link href="https://component-controls.com" as={props[`${type}Type`] === 'button' ? Button : Link}>
+      <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
+        {Icon && <Icon />}
+        <Text sx={{ ml: '2px'}}>
+          {props[`${type}Text`]}
+        </Text>
+      </Box>
+    </Link>  
+  );
+}
+
+export const itemSource = (type, props) => {
+  return `          <Link href="https://component-controls.com" ${props[`${type}Type`] === 'button' ? `as={Button}` : ''}>
+        <Box sx={{ mr: 1, display: 'flex', flexDirection: 'row', alignItems: 'center'}} >
+          <${props[`${type}Icon`]} />
+          <Text sx={{ ml: '2px'}}>
+            ${props[`${type}Text`]}
+          </Text>
+        </Box>
+      </Link>`;
+}
+
+export const createItems = (props, name) => {
     const icons = [];
     const themeUIImports = ['Box', 'Text'];
     const leftItems = [];
@@ -164,7 +166,7 @@ export const ButtonControls = (type) => {
     const leftNodes = [];
     ['first', 'second'].forEach(type => {
       if (props[`${type}Visible`]) {
-        const item = { node: toolbarItem(type) };
+        const item = { node: toolbarItem(type, props) };
         if (props[`${type}Type`] === 'button' && !themeUIImports.includes('Button')) {
           themeUIImports.push('Button')
         }
@@ -183,20 +185,27 @@ export const ButtonControls = (type) => {
     });
     const itemsToString = items => items.map(type => `      {
         node: (
-${itemSource(type)}
+${itemSource(type, props)}
         ),
       }`).join(',\n');
+    const source = `import { ${themeUIImports.join(', ')} } from 'theme-ui';
+${icons.length ? `import { ${icons.join(', ')} } from '@primer/octicons-react';\n`:''}
+export default {
+${leftItems.length || rightItems.length ? `  ${name}: {
+${leftItems.length ? `    left: [\n${itemsToString(leftItems)}\n    ],${rightItems.length ? '\n' : ''}` : ''}${rightItems.length ? `    right: [\n${itemsToString(rightItems)}\n    ],` : ''}
+  }
+` : ''}}`;
+    return { source, leftNodes, rightNodes }
+}
+
+<Story name="custom-toolbar" controls={Object.assign(ButtonControls('first'),ButtonControls('second'))}>
+  {props => {
+    const { source, leftNodes, rightNodes } = createItems(props, 'toolbar');
     return (
       <Fragment>
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">
-  {`import { ${themeUIImports.join(', ')} } from 'theme-ui';
-${icons.length ? `import { ${icons.join(', ')} } from '@primer/octicons-react';\n`:''}
-export default {
-${leftItems.length || rightItems.length ? `  toolbar: {
-${leftItems.length ? `    left: [\n${itemsToString(leftItems)}\n    ],${rightItems.length ? '\n' : ''}` : ''}${rightItems.length ? `    right: [\n${itemsToString(rightItems)}\n    ],` : ''}
-  }
-` : ''}}`}
+  {source}
           </Source>
         </Box>  
         <AppContext store={{...defaultStore, config: {
@@ -321,4 +330,53 @@ ${toolbar.join(',\n')}
 
 ## Customize sidebar
 
+<Story name="custom-sidebar" controls={{
+  home: { type: ControlTypes.BOOLEAN, value: true },
+  search: { type: ControlTypes.BOOLEAN, value: true },
+  colormode: { type: ControlTypes.BOOLEAN, value: true },
+}}>
+  { props => {
+  return (
+      <Fragment>
+        <Box sx={{ mb: 2 }}>
+          <Source title=".config/runtime.js">{`export default {
+}         
+`}
+          </Source>
+        </Box>  
+        <Sidebar />
+      </Fragment>
+    );
+  }}    
+</Story>
+
+<PropsTable name="custom-sidebar" />
+
 ## Customize footer
+
+The footer is also customizable with a `left` and `right` section as the [toolbar](#toolbar).
+
+<Story name="custom-footer" controls={Object.assign(ButtonControls('first'),ButtonControls('second'))}>
+  {props => {
+    const { source, leftNodes, rightNodes } = createItems(props, 'footer');
+    return (
+      <Fragment>
+        <Box sx={{ mb: 2 }}>
+          <Source title=".config/runtime.js">
+  {source}
+          </Source>
+        </Box>  
+        <BlockContextProvider store={{...defaultStore, config: {
+          footer: {
+            left: leftNodes,
+            right: rightNodes,
+          }, 
+          theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}>
+          <Footer />
+        </BlockContextProvider>
+      </Fragment>
+    );
+  }}    
+</Story>
+
+<PropsTable name="custom-footer" expanded={{ 'prop.parentName:first': true, 'prop.parentName:second': true }} />
