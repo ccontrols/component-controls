@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* group by id before hidden ([90bd055](https://github.com/ccontrols/component-controls/commit/90bd055fd2f9227a2e1bfa0a1f07a2d2448ef4df))
+* radio editors name prop ([ffbbe3e](https://github.com/ccontrols/component-controls/commit/ffbbe3e21024df4c07de197f293c8058770dc96a))
+* sidebar toggle only for sidebar docs ([eea21a6](https://github.com/ccontrols/component-controls/commit/eea21a636cf7a19a7d2a2c8a58defc39546885d9))
+
+
+### Features
+
+* footer left and right customization ([66e08b5](https://github.com/ccontrols/component-controls/commit/66e08b5d85400daf0cb4831cb4cc320a0fda7174))
+
+
+
+
+
 # [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
 
 
