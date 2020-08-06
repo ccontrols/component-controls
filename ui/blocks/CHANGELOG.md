@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* white space no wrapping ([1b1455d](https://github.com/ccontrols/component-controls/commit/1b1455de914871ad6c78c2d24dacb7f41e4632b9))
+
+
+
+
+
 # [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
 
 **Note:** Version bump only for package @component-controls/blocks

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* full page padding ([2673319](https://github.com/ccontrols/component-controls/commit/26733197502baa3c2e61d1010533bb08b56bb8f3))
+* reduce x-padding in mobile ([9c63f98](https://github.com/ccontrols/component-controls/commit/9c63f989fe938a210b96f6d94a69b78cb9a34909))
+* white space no wrapping ([1b1455d](https://github.com/ccontrols/component-controls/commit/1b1455de914871ad6c78c2d24dacb7f41e4632b9))
+
+
+
+
+
 # [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
 
 

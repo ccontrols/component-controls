@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* extract imports from dt files ([ce239d0](https://github.com/ccontrols/component-controls/commit/ce239d0f0f79b42d871e874b77ea72a5b024d0b7))
+
+
+
+
+
 # [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
 
 **Note:** Version bump only for package @component-controls/instrument
