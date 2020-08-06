@@ -647,7 +647,7 @@ export const theme: ControlsTheme = {
     fontFamily: 'body',
     flex: '1 0 auto',
     py: 4,
-    px: 5,
+    px: [1, 5],
     margin: 'auto',
     width: '100%',
     position: 'relative',
