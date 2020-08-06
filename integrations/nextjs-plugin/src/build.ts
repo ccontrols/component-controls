@@ -11,13 +11,12 @@ export default ({
   staticFolder,
   webPack,
   ...rest
-}: CompileProps) => (phase: string, nextConfig: any) => {
+}: CompileProps) => () => {
   return {
     /**
      * we need some async function, to make sure the compilation process is completed
      */
     async headers() {
-      const { defaultConfig } = nextConfig;
       const userProps: CompileProps = {
         bundleName,
         configPath,
@@ -27,7 +26,7 @@ export default ({
         presets: presets || defaultPresets,
         distFolder: path.resolve(__dirname),
         staticFolder:
-          staticFolder || path.join(process.cwd(), defaultConfig.distDir),
+          staticFolder || path.join(process.cwd(), 'public', 'static'),
         ...userProps,
       };
 
