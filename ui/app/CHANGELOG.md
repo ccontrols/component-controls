@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.2](https://github.com/ccontrols/component-controls/compare/v1.16.1...v1.16.2) (2020-08-06)
+
+
+### Bug Fixes
+
+* linting ([cbad502](https://github.com/ccontrols/component-controls/commit/cbad5024dd28741f88d64440409ba1a909b2ce59))
+
+
+
+
+
 ## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
 
 **Note:** Version bump only for package @component-controls/app
