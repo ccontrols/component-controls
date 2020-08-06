@@ -1,6 +1,7 @@
 {
   "name": "component-controls-starter",
   "description": "component-controls starter - works with gatsby and nextjs",
+  "private": true,
   "version": "1.16.1",
   "main": "index.js",
   "license": "MIT",
