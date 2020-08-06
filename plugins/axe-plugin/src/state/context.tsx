@@ -90,7 +90,7 @@ export const SelectionContextProvider: FC = ({ children }) => {
   );
 };
 
-export const isTagSelected = (tag: string = '') => {
+export const useIsTagSelected = (tag: string = '') => {
   const tagged = useTaggedList();
   const { selection } = useContext(SelectionContext);
   return tagged[tag]

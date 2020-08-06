@@ -21,7 +21,7 @@ export const Title: FC<TitleProps> = ({ id, name, children, ...rest }) => {
     id,
     name,
   });
-  const doc = story && story.doc ? useDocument(story.doc) : undefined;
+  const doc = useDocument(story?.doc);
   const component = useStoryComponent({
     id,
     name,

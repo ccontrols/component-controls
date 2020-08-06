@@ -20,11 +20,10 @@ export const DocumentHomePage: FC<DocumentHomePageProps> = ({ type }) => {
   const config = useConfig();
   const { categories } = config || {};
   const isCategory = categories?.includes(type);
+  const pages = useSortedDocByType(type);
   if (isCategory) {
     return <CategoryList type={type} />;
   }
-
-  const pages = useSortedDocByType(type);
   const page = config.pages?.[type] || {};
   if (page.indexHome) {
     return (

@@ -28,9 +28,9 @@ export const DocumentContextProvider: FC<{ docId: string | undefined }> = ({
 /**
  * Retrieves a Document object from a document id
  */
-export const useDocument = (docId: string) => {
+export const useDocument = (docId?: string) => {
   const store = useStore();
-  return store.docs[docId];
+  return docId ? store.docs[docId] : undefined;
 };
 
 export const useGetDocument = () => {

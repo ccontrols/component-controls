@@ -42,7 +42,7 @@ export const StorySource: FC<StorySourceProps> = ({
 }) => {
   const story = useStory({ id, name });
   const doc = useCurrentDocument();
-  const docPackage = doc && doc.package ? usePackage(doc.package) : undefined;
+  const docPackage = usePackage(doc?.package);
 
   return (
     <StoryBlockContainer {...rest}>

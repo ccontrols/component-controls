@@ -9,9 +9,9 @@
     -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
     -   [<ins>AxeContextProvider</ins>](#insaxecontextproviderins)
     -   [<ins>SelectionContextProvider</ins>](#insselectioncontextproviderins)
-    -   [<ins>isTagSelected</ins>](#insistagselectedins)
+    -   [<ins>useIsTagSelected</ins>](#insistagselectedins)
     -   [<ins>isSelected</ins>](#insisselectedins)
-    -   [<ins>isTagSelected</ins>](#insistagselectedins-1)
+    -   [<ins>useIsTagSelected</ins>](#insistagselectedins-1)
     -   [<ins>overview</ins>](#insoverviewins)
 
 # In action
@@ -100,7 +100,7 @@ _AxeContextProvider [source code](https://github.com/ccontrols/component-control
 
 _SelectionContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
-## <ins>isTagSelected</ins>
+## <ins>useIsTagSelected</ins>
 
 _isTagSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/context.tsx)_
 
@@ -108,7 +108,7 @@ _isTagSelected [source code](https://github.com/ccontrols/component-controls/tre
 
 _isSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
 
-## <ins>isTagSelected</ins>
+## <ins>useIsTagSelected</ins>
 
 _isTagSelected [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/state/recoil.tsx)_
 
