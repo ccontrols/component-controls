@@ -5,6 +5,7 @@ Object {
   "components": Object {
     "3880efc294775fe5c4afbb60ef59b162": Object {
       "name": "ControlsTable",
+      "package": "9c22f6bdeb80c60a4dcfc1fe822f5f3b",
     },
   },
   "doc": Object {

@@ -101,13 +101,13 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 ### **defaultComponentOptions**: _[ComponentOptions](#componentoptions)_
 
-• **storeSourceFile**: _boolean_ = true;
+• **sourceFiles**: _boolean_ = true;
 
 * * *
 
 ### **defaultStoriesOptions**: _[StoriesOptions](#storiesoptions)_
 
-• **storeSourceFile**: _boolean_ = false;
+• **sourceFiles**: _boolean_ = false;
 
 * * *
 
@@ -174,7 +174,7 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 Callback function to resolve the source file name of a component. 
 Return false if this file should not be processed.
 
-• **storeSourceFile**? : _boolean_
+• **sourceFiles**? : _boolean_
 
 If set to false, will not save the component's source file.
 
@@ -192,7 +192,7 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 ### Properties
 
-• **storeSourceFile**? : _boolean_
+• **sourceFiles**? : _boolean_
 
 If set to false, will not save the stories's source file, only the source of each individual story.
 

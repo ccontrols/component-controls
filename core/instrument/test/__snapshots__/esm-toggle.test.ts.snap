@@ -6,11 +6,7 @@ Object {
     "88b383f24b1cfbfb44763744ac121b71": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Toggle",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {

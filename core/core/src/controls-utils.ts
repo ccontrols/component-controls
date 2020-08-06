@@ -1,6 +1,5 @@
 import escape from 'escape-html';
-import deepmerge from 'deepmerge';
-
+import { deepmerge } from './deepMerge';
 import {
   ComponentControl,
   ComponentControls,

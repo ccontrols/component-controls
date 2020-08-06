@@ -15,7 +15,7 @@ module.exports = {
                 loader: '@component-controls/loader/loader',
                 options: {
                   stories: {
-                    storeSourceFile: false, //or false
+                    sourceFiles: false, //or false
                   },
                 },  
               },

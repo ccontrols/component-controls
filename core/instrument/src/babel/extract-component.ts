@@ -3,6 +3,8 @@ import { Component, Document, PackageInfo } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
+import { readSourceFile } from '../misc/source-file-read';
+
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
 interface ComponentParseData {
@@ -36,14 +38,30 @@ export const extractComponent = async (
   if (follow) {
     component = {
       name: componentName,
-      from: follow.from,
-      request: follow.filePath,
-      imports: follow.imports,
-      importedName: follow.importedName,
     };
-    if (components?.storeSourceFile) {
-      component.source = follow.source;
-      component.loc = follow.loc;
+    if (follow.from) {
+      component.from = follow.from;
+    }
+    if (follow.filePath) {
+      component.request = follow.filePath;
+    }
+    if (follow.imports) {
+      component.imports = follow.imports;
+    }
+    if (follow.importedName) {
+      component.importedName = follow.importedName;
+    }
+    if (follow.originalFilePath) {
+      const saveSource = readSourceFile(
+        components?.sourceFiles,
+        follow.source,
+        componentName,
+        follow.originalFilePath,
+      );
+      if (saveSource) {
+        component.source = saveSource;
+        component.loc = follow.loc;
+      }
     }
     componentPackage = await packageInfo(
       follow.originalFilePath,

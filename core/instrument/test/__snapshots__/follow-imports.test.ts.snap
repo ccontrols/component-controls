@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`follow-imports button-default-export.js 1`] = `Object {}`;
+exports[`follow-imports button-default-export.js 1`] = `
+Object {
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
+}
+`;
 
 exports[`follow-imports button-from-node-nodules.js 1`] = `
 Object {
@@ -125,7 +129,6 @@ exports[`follow-imports button-named-export.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {
@@ -171,7 +174,6 @@ exports[`follow-imports direct-import.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {
@@ -193,7 +195,6 @@ exports[`follow-imports export-all.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {

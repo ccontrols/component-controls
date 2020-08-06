@@ -7,6 +7,7 @@ import {
 
 import { useStore } from './store';
 import { useStory } from './story';
+import { useCurrentDocument } from './document';
 
 export interface ComponentInputProps {
   /**
@@ -31,9 +32,10 @@ export const useComponents = ({
 }: ComponentInputProps): Components => {
   const store = useStore();
   const story = useStory({ id: name });
+  const currentDoc = useCurrentDocument();
   const { component: storyComponentName } = story || {};
   const storyComponent = getComponentName(storyComponentName);
-  const doc = story && story.doc ? store.docs[story.doc] : undefined;
+  const doc = story && story.doc ? store.docs[story.doc] : currentDoc;
   const component =
     storyComponent && doc && doc.componentsLookup
       ? store.components[doc.componentsLookup[storyComponent]]
@@ -71,7 +73,8 @@ export const useComponents = ({
             }
             return { ...acc, ...comps };
           }
-          const name = getComponentName(comp);
+          const name =
+            getComponentName(comp) || Object.keys(doc.componentsLookup)[0];
           if (name) {
             const component = getComponent(name);
             if (component) {

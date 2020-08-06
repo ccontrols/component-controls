@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
 import jsStringEscape from 'js-string-escape';
-import { getSerializedStore } from './store';
+import { getSerializedStore, initializeBuildOptions } from './store';
 
 export interface LoaderPluginOptions {
   config?: string;
@@ -25,6 +25,7 @@ export class LoaderPlugin {
   }
 
   apply(compiler: webpack.Compiler) {
+    initializeBuildOptions(compiler.context, this.options.config);
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {
       compilation.hooks.optimizeChunkAssets.tapPromise(
@@ -53,7 +54,6 @@ export class LoaderPlugin {
             loader: path.join(__dirname, 'runtimeLoader.js'),
             options: JSON.stringify({
               compilationHash: this.compilationHash,
-              ...this.options,
             }),
           });
         }

@@ -2282,22 +2282,92 @@ A hint could be a sample value or a brief description of the expected format.",
 }
 `;
 
+exports[`external-library component package 1`] = `
+Object {
+  "component": Object {
+    "from": "theme-ui",
+    "importedName": "Button",
+    "name": "Button",
+  },
+  "componentPackage": Object {
+    "dependencies": Object {
+      "@theme-ui/color-modes": "^0.4.0-rc.1",
+      "@theme-ui/components": "^0.4.0-rc.1",
+      "@theme-ui/core": "^0.4.0-rc.1",
+      "@theme-ui/css": "^0.4.0-rc.1",
+      "@theme-ui/mdx": "^0.4.0-rc.1",
+      "@theme-ui/theme-provider": "^0.4.0-rc.1",
+    },
+    "devDependencies": undefined,
+    "fileHash": "55edc55c779e57609b549bd94f835be5",
+    "name": "theme-ui",
+    "peerDependencies": undefined,
+    "repository": Object {
+      "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
+      "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
+      "issues": "https://github.com/system-ui/theme-ui/issues",
+    },
+    "version": "0.4.0-rc.1",
+  },
+}
+`;
+
 exports[`external-library theme-ui.jsx 1`] = `
 Object {
   "components": Object {
-    "00be19a017a200d882dd02db4137b6bf": Object {
+    "98b2111b08fbab8e38c938acaf3e129a": Object {
       "from": "theme-ui",
       "importedName": "Button",
-      "imports": undefined,
+      "imports": Object {
+        "@emotion/core": Array [
+          Object {
+            "importedName": "InterpolationWithTheme",
+            "name": "InterpolationWithTheme",
+          },
+        ],
+        "@emotion/styled": Array [
+          Object {
+            "importedName": "StyledComponent",
+            "name": "StyledComponent",
+          },
+        ],
+        "@theme-ui/css": Array [
+          Object {
+            "importedName": "ResponsiveStyleValue",
+            "name": "ResponsiveStyleValue",
+          },
+        ],
+        "react": Array [
+          Object {
+            "importedName": "namespace",
+            "name": "React",
+          },
+        ],
+        "styled-system": Array [
+          Object {
+            "importedName": "SpaceProps",
+            "name": "SpaceProps",
+          },
+          Object {
+            "importedName": "ColorProps",
+            "name": "ColorProps",
+          },
+          Object {
+            "importedName": "MarginProps",
+            "name": "MarginProps",
+          },
+        ],
+      },
       "name": "Button",
-      "request": undefined,
+      "package": "55edc55c779e57609b549bd94f835be5",
+      "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
     },
   },
   "doc": Object {
     "component": "Button",
     "components": Object {},
     "componentsLookup": Object {
-      "Button": "00be19a017a200d882dd02db4137b6bf",
+      "Button": "98b2111b08fbab8e38c938acaf3e129a",
     },
     "date": 2020-08-05T12:08:58.984Z,
     "dateModified": 2020-08-05T12:13:10.991Z,
@@ -2347,6 +2417,26 @@ Object {
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
       "version": "1.16.0",
+    },
+    "55edc55c779e57609b549bd94f835be5": Object {
+      "dependencies": Object {
+        "@theme-ui/color-modes": "^0.4.0-rc.1",
+        "@theme-ui/components": "^0.4.0-rc.1",
+        "@theme-ui/core": "^0.4.0-rc.1",
+        "@theme-ui/css": "^0.4.0-rc.1",
+        "@theme-ui/mdx": "^0.4.0-rc.1",
+        "@theme-ui/theme-provider": "^0.4.0-rc.1",
+      },
+      "devDependencies": undefined,
+      "fileHash": "55edc55c779e57609b549bd94f835be5",
+      "name": "theme-ui",
+      "peerDependencies": undefined,
+      "repository": Object {
+        "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
+        "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
+        "issues": "https://github.com/system-ui/theme-ui/issues",
+      },
+      "version": "0.4.0-rc.1",
     },
   },
   "stories": Object {},

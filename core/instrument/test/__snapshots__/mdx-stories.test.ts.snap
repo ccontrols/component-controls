@@ -6,11 +6,7 @@ Object {
     "2855216c2faa4ab43ed978e3ff6743e4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -90,11 +86,7 @@ Object {
     "adb0a7ff2c278d595f4ce67bb4b42887": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -373,11 +365,7 @@ Object {
     "c63d685efb0c65f18ffc63184e852ef4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -552,11 +540,7 @@ Object {
     "88c2f5883a4daf6051d3f8a38ce7bf75": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -697,11 +681,7 @@ Object {
     "fe664c2ffbbcacffdac896ace94db697": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -827,11 +807,7 @@ Object {
     "0a73df5cffa26ca62ec534813a77384f": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {

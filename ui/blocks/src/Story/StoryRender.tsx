@@ -97,7 +97,10 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
     const values = getControlValues(controls);
     const { decorators: globalDecorators = [] } = options;
     const { decorators: storyDecorators = [] } = story;
-    const decorators = deepMerge(globalDecorators, storyDecorators);
+    const decorators = deepMerge<StoryRenderFn[]>(
+      globalDecorators,
+      storyDecorators,
+    );
     //parameters added to avoid bug in SB6 rc that assumes parameters exist
     const storyContext = { story, doc, controls, parameters: {} };
     const renderFn = decorators.reverse().reduce(

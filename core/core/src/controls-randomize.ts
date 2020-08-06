@@ -1,4 +1,3 @@
-import deepmerge from 'deepmerge';
 import { faker } from './faker';
 import {
   ControlTypes,
@@ -8,6 +7,7 @@ import {
   ComponentControls,
   ComponentControlArray,
 } from './controls';
+import { deepmerge } from './deepMerge';
 
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];

@@ -82,12 +82,12 @@ export const defaultPackageOptions: PackageInfoOptions = {
 };
 
 export const defaultComponentOptions: ComponentOptions = {
-  storeSourceFile: true,
+  sourceFiles: true,
   package: defaultPackageOptions,
 };
 
 export const defaultStoriesOptions: StoriesOptions = {
-  storeSourceFile: false,
+  sourceFiles: false,
   package: defaultPackageOptions,
 };
 
@@ -122,6 +122,9 @@ export interface PackageInfoOptions {
   storeIssuesLink?: boolean;
 }
 
+export type SourceFileFn = (name: string, fileName?: string) => string;
+export type SourceFileOption = boolean | SourceFileFn;
+
 export interface ComponentOptions {
   /**
    * Callback function to resolve the source file name of a component.
@@ -132,7 +135,7 @@ export interface ComponentOptions {
   /**
    * If set to false, will not save the component's source file
    */
-  storeSourceFile?: boolean;
+  sourceFiles?: SourceFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file
@@ -144,7 +147,7 @@ export interface StoriesOptions {
   /**
    * If set to false, will not save the stories's source file, only the source of each individual story
    */
-  storeSourceFile?: boolean;
+  sourceFiles?: SourceFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file

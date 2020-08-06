@@ -3,7 +3,8 @@ import { useStore } from '@component-controls/store';
 import { Button, ButtonProps } from '../components/Button';
 
 export default {
-  title: 'Library/Components/Button',
+  title: 'Library/Components/ESM',
+  order: 1,
 };
 
 export const overview = (props: ButtonProps) => {

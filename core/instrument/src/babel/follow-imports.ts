@@ -23,8 +23,8 @@ import {
 import { InstrumentOptions, MDXExportType } from '../types';
 
 export interface FollowImportType {
-  exportedAs: string;
-  from: string;
+  exportedAs?: string;
+  from?: string;
   filePath?: string;
   originalFilePath?: string;
   importedName?: string;
@@ -74,7 +74,6 @@ export const followImports = (
         filePath: fileName,
         originalFilePath: filePath,
         exportedAs: findExport.name,
-        from: '',
       };
       result.loc = findExport.loc;
       result.source = source ? source : undefined;
@@ -179,7 +178,9 @@ export const followImports = (
       };
     }
   }
-  return undefined;
+  return {
+    originalFilePath: filePath,
+  };
 };
 
 export const followStoryImport = (

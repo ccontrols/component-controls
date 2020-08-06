@@ -71,6 +71,7 @@ Object {
   "components": Object {
     "73cac298d983c71aec166657453a64fe": Object {
       "name": "ControlsTable",
+      "package": "8081f639b288cdd9ab2efc243ebbaa32",
     },
   },
   "doc": Object {
@@ -149,6 +150,7 @@ Object {
   "components": Object {
     "eef0b4fe04a3c49402964c3c8dbe5bc8": Object {
       "name": "ControlsTable",
+      "package": "6db9fafb88b9be0bff2ddaea194f3c5b",
     },
   },
   "doc": Object {

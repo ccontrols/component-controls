@@ -46,9 +46,7 @@ Object {
     "dc86c4457416c54c13147e780d972747": Object {
       "from": "../../components/button-named-class",
       "importedName": "Btn",
-      "imports": undefined,
       "name": "Button",
-      "request": undefined,
     },
   },
   "doc": Object {
@@ -118,16 +116,12 @@ Object {
     "1e542c3ba23e8699f77ec19bf3f9e3ea": Object {
       "from": "./Button",
       "importedName": "Btn",
-      "imports": undefined,
       "name": "Button",
-      "request": undefined,
     },
     "7e2f74e50bd73c6a0bf50c40d3c149d4": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
-      "imports": undefined,
       "name": "Toggle",
-      "request": undefined,
     },
   },
   "doc": Object {

@@ -26,5 +26,5 @@ export const useCustomProps = <T extends unknown>(
   const store = useStore();
   const { config } = store;
   const userProps = config.components?.[name];
-  return userProps ? deepMerge(props, userProps) : props;
+  return userProps ? deepMerge<T>(props, userProps) : props;
 };

@@ -3,12 +3,20 @@ import {
   Packages,
   BuildConfiguration,
   RunConfiguration,
+  deepMergeArrays,
+  defaultBuildConfig,
 } from '@component-controls/core';
+
 import {
   LoadingDocStore,
   InstrumentOptions,
   getComponentProps,
 } from '@component-controls/instrument';
+
+import {
+  loadConfiguration,
+  ConfigrationResult,
+} from '@component-controls/config';
 
 export interface LoadingStore {
   /**
@@ -112,4 +120,16 @@ export const getSerializedStore = async (): Promise<string> => {
     }
   }
   return JSON.stringify(store);
+};
+
+export let config: ConfigrationResult | undefined;
+
+export const initializeBuildOptions = (
+  rootPath: string,
+  configPath?: string,
+) => {
+  config = loadConfiguration(rootPath, configPath);
+  store.buildConfig = config?.config
+    ? deepMergeArrays(defaultBuildConfig, config.config)
+    : defaultBuildConfig;
 };

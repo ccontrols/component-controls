@@ -4,7 +4,7 @@ import { loadStoriesTests } from './loadTestFiles';
 describe('esm-props-info', () => {
   loadStoriesTests(
     {
-      stories: { storeSourceFile: false },
+      stories: { sourceFiles: false },
       propsLoaders: [
         { name: '@component-controls/react-docgen-info', test: /\.(js|jsx)$/ },
         {
@@ -14,7 +14,7 @@ describe('esm-props-info', () => {
         ,
       ],
       components: {
-        storeSourceFile: false,
+        sourceFiles: false,
         resolveFile: (componentName, filePath) => {
           if (filePath.includes('@component-controls/blocks')) {
             const resolved = path.resolve(

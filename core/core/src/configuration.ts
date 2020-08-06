@@ -124,6 +124,11 @@ export type BuildConfiguration = {
    */
   webpack?: WebpackConfig;
   finalWebpack?: WebpackConfig;
+
+  /**
+   * instrumentation configuration
+   */
+  instrument?: any;
 };
 
 export interface ToolbarConfig {

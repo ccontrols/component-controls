@@ -1,3 +1,4 @@
+const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -43,5 +44,18 @@ module.exports = {
       ]
     };
   },
-
+  instrument: {
+    components: {
+      resolveFile: (componentName, filePath) => {
+        if (filePath.includes('theme-ui/dist')) {
+          const resolved = path.resolve(
+            path.dirname(filePath),
+            `../../@theme-ui/components/index.d.ts`,
+          );
+          return resolved;
+        }
+        return filePath;
+      },
+    },
+  }
 };
