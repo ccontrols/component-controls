@@ -37,13 +37,13 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
   }, [storyId, store]);
   useEffect(() => {
     const onObserver = (updatedStory?: Story) => {
-      if (updatedStory?.id === story?.id) {
+      if (updatedStory?.id === storyId) {
         setStory(updatedStory);
       }
     };
     store.addObserver(onObserver);
     return () => store.removeObserver(onObserver);
-  }, [store, story?.id]);
+  }, [store, storyId]);
   return (
     <StoryContext.Provider
       value={{

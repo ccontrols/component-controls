@@ -14,7 +14,7 @@ export const Footer: FC = () => {
     siteUrl,
     siteTitle,
     siteCopyright = `Copyright \u00A9 ${new Date().getFullYear()}`,
-    footer,
+    footer = {},
   } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [];
@@ -24,8 +24,8 @@ export const Footer: FC = () => {
         id: 'copyright',
       });
     }
-    return footer?.left ? [...actions, ...footer.left] : actions;
-  }, [footer?.left, siteCopyright, author]);
+    return footer.left ? [...actions, ...footer.left] : actions;
+  }, [footer.left, siteCopyright, author]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [];
@@ -39,8 +39,8 @@ export const Footer: FC = () => {
         id: 'site',
       });
     }
-    return footer?.right ? [...footer.right, ...actions] : actions;
-  }, [footer?.right, siteTitle, siteUrl]);
+    return footer.right ? [...footer.right, ...actions] : actions;
+  }, [footer.right, siteTitle, siteUrl]);
 
   if (leftActions.length || rightActions.length) {
     return (
