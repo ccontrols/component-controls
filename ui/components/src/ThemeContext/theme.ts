@@ -647,7 +647,7 @@ export const theme: ControlsTheme = {
     fontFamily: 'body',
     flex: '1 0 auto',
     py: 4,
-    px: [1, 5],
+    px: [1, 1, 5],
     margin: 'auto',
     width: '100%',
     position: 'relative',
@@ -656,7 +656,7 @@ export const theme: ControlsTheme = {
     story: { maxWidth: '1200px' },
     doc: { maxWidth: '1200px' },
     page: { maxWidth: '1200px' },
-    full: { maxWidth: 'unset', p: 0 },
+    full: { maxWidth: 'unset', p: [0, 0, 0] },
   },
   propstable: {
     name: {
