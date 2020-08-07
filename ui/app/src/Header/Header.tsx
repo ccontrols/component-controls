@@ -64,7 +64,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         ]
       : actions;
     return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
-  }, [pages, toolbar.left, docCounts]);
+  }, [pages, toolbar.left, docCounts, homePage.docId]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
