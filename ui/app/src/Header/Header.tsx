@@ -13,6 +13,8 @@ import {
   useConfig,
   useDocTypeCount,
   useCurrentDocument,
+  getIndexPage,
+  useStore,
 } from '@component-controls/store';
 import { Search } from '@component-controls/blocks';
 
@@ -27,6 +29,8 @@ export interface HeaderProps {
  */
 export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
+  const store = useStore();
+  const homePage = useMemo(() => getIndexPage(store), [store]);
   const docCounts = useDocTypeCount();
   const config = useConfig();
   const doc = useCurrentDocument();
@@ -44,7 +48,12 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
               return { page: pages[docType], docType };
             })
             .filter(({ page, docType }) => {
-              return page.topMenu && docCounts[docType];
+              const docInfo = docCounts[docType];
+              return (
+                page.topMenu &&
+                docInfo.count &&
+                homePage.docId !== docInfo.home?.title
+              );
             })
             .map(({ page }) => ({
               id: page.label?.toLowerCase(),

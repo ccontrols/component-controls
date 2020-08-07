@@ -18,6 +18,7 @@ export interface DocPageInfo {
 export interface HomePageInfo {
   type: string;
   docId?: string;
+  storyId?: string;
 }
 
 export interface StoryStore {

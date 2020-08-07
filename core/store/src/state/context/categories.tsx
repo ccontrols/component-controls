@@ -10,16 +10,16 @@ export const useDocPropCount = (category: string): DocCountType => {
   const docs = useDocs();
   useEffect(() => {
     setState(
-      Object.keys(docs).reduce((acc: { [key: string]: number }, key) => {
+      Object.keys(docs).reduce((acc: DocCountType, key) => {
         const doc = docs[key];
         const value = (doc as any)[category];
         const values = Array.isArray(value) ? value : [value];
         values.forEach(v => {
           if (v !== undefined) {
             if (typeof acc[v] === 'undefined') {
-              acc[v] = 0;
+              acc[v].count = 0;
             }
-            acc[v] = acc[v] + 1;
+            acc[v].count = acc[v].count + 1;
           }
         });
         return acc;

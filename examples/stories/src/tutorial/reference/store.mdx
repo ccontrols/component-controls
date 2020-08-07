@@ -221,13 +221,13 @@ import { useSortedDocByType } from '@component-controls/store';
 
 Returns a global object of key/value pairs with counts of documents per DocType
 
-> useDocTypeCount = (): Record<DocType, number>
+> useDocTypeCount = (): Record<DocType, { count: number; home?: Document }>
 
 ```
 import { useDocTypeCount } from '@component-controls/store';
 {
   const counts = useDocTypeCount('blogs');
-  console.log(counts['blogs']);  
+  console.log(counts['blogs'].count);  
 } 
 ```
 

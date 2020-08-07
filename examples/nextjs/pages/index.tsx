@@ -7,11 +7,12 @@ import { Layout, store, getIndexPage } from '@component-controls/nextjs-plugin';
 interface PageListProps {
   type: DocType;
   docId?: string;
+  storyId?: string;
 }
 
-const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
+const HomePage: FC<PageListProps> = ({ type = defDocType, docId, storyId }) => {
   return (
-    <Layout docId={docId}>
+    <Layout docId={docId} storyId={storyId}>
       <DocPage type={type} />
     </Layout>
   );
@@ -19,8 +20,8 @@ const HomePage: FC<PageListProps> = ({ type = defDocType, docId }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const homePage = getIndexPage(store);
-  const { docId = null, type = null } = homePage;
-  return { props: { docId, type } };
+  const { docId = null, type = null, storyId = null } = homePage;
+  return { props: { docId, type, storyId } };
 };
 
 export default HomePage;

@@ -36,13 +36,15 @@ exports.createPages = async (
     const store: Store = loadStore(require(bundleName));
 
     //home page
-    const { docId = null, type = null } = getIndexPage(store) || {};
+    const { docId = null, type = null, storyId = null } =
+      getIndexPage(store) || {};
     createPage({
       path: `/`,
       component: require.resolve(`../src/templates/DocPage.tsx`),
       context: {
         docId,
         type,
+        storyId,
       },
     });
     const homePages = getHomePages(store);

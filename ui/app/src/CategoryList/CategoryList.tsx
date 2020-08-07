@@ -35,7 +35,7 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
               key={key}
               type={type}
               name={key}
-              count={categories[key]}
+              count={categories[key].count}
             />
           ))}
         </ul>

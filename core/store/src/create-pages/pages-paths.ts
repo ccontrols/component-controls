@@ -24,8 +24,15 @@ export const getIndexPage = (store: Store): HomePageInfo => {
     : docs.length > 0
     ? store.docs[docs[0]]
     : undefined;
+  const docId = homePage?.title;
+  const docStories: string[] =
+    docId && store.docs[docId] ? store.docs[docId].stories || [] : [];
+  const storyId: string | undefined = docStories.length
+    ? docStories[0]
+    : undefined;
   return {
-    docId: homePage?.title,
+    storyId,
+    docId,
     type: homePage?.type || defDocType,
   };
 };

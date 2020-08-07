@@ -158,7 +158,7 @@ export const useSortedDocByType = (type: DocType): Pages => {
   return [...docs].sort(docSortFn(sort));
 };
 
-export type DocCountType = Record<DocType, number>;
+export type DocCountType = Record<DocType, { count: number; home?: Document }>;
 
 /**
  * Returns a global object of key/value pairs with counts of documents per doc type
@@ -169,7 +169,10 @@ export const useDocTypeCount = (): DocCountType => {
   const { pages = {} } = store?.config || {};
   return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
     const docs = getByDocType(type);
-    return { ...acc, [type]: docs.length };
+    return {
+      ...acc,
+      [type]: { count: docs.length, home: docs.length ? docs[0] : undefined },
+    };
   }, {});
 };
 

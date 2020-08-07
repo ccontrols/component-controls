@@ -175,7 +175,7 @@ export const useSortedDocByType = (type: DocType): Pages => {
   return useRecoilValue(docsSortedState(type));
 };
 
-export type DocCountType = Record<DocType, number>;
+export type DocCountType = Record<DocType, { count: number; home?: Document }>;
 
 const docTypeCountState = selector<DocCountType>({
   key: 'docs_type_count',
@@ -184,7 +184,10 @@ const docTypeCountState = selector<DocCountType>({
     const { pages = {} } = store?.config || {};
     return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
       const docs = get(docsByTypeState(type));
-      return { ...acc, [type]: docs.length };
+      return {
+        ...acc,
+        [type]: { count: docs.length, home: docs.length ? docs[0] : undefined },
+      };
     }, {});
   },
 });
