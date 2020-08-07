@@ -270,6 +270,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `dark`        | _boolean_            | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
 | `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.            |
 | `name`        | _string_             |                                                                                                                            |
+| `storyProps`  | _any_                |                                                                                                                            |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
 | `title`       | _string_             | optional section title for the block.                                                                                      |
 | `description` | _string_             | optional markdown description.                                                                                             |

@@ -68,6 +68,7 @@
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
     -   [RunConfiguration](#runconfiguration)
+    -   [SideNavConfiguration](#sidenavconfiguration)
     -   [WebpackConfig](#webpackconfig)
     -   [WebpackConfigFn](#webpackconfigfn)
     -   [defaultBuildConfig](#defaultbuildconfig)
@@ -89,17 +90,20 @@
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfig](#webpackconfig-1)
     -   [PagesOnlyRoutes](#pagesonlyroutes-1)
+    -   [SideNavConfiguration](#sidenavconfiguration-1)
     -   [PageTabs](#pagetabs-1)
     -   [PageConfiguration](#pageconfiguration-1)
     -   [BuildConfiguration](#buildconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [DocType](#doctype-2)
+    -   [SideNavConfiguration](#sidenavconfiguration-2)
     -   [PageTabs](#pagetabs-2)
     -   [WebpackConfig](#webpackconfig-2)
     -   [PagesOnlyRoutes](#pagesonlyroutes-2)
     -   [WebpackConfigFn](#webpackconfigfn-2)
     -   [DocType](#doctype-3)
     -   [PageConfiguration](#pageconfiguration-2)
+    -   [SideNavConfiguration](#sidenavconfiguration-3)
     -   [PageTabs](#pagetabs-3)
 
 # Overview
@@ -1003,7 +1007,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L149)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L160)_
 
 
 
@@ -1047,7 +1051,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L134)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L145)_
 
 
 
@@ -1063,7 +1067,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
 
 page types that are considered as categories fields as well
 
@@ -1097,20 +1101,20 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
 
 ### properties
 
-| Name              | Type                                    | Description                                                                                                                   |
-| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`        | string                                  | base url path for the page                                                                                                    |
-| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
-| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
-| `label`           | string                                  | label - used for menu labels                                                                                                  |
-| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
-| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
-| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
-| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+| Name              | Type                                          | Description                                                                                                                   |
+| ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                        | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null       | page container react component                                                                                                |
+| `indexHome`       | boolean                                       | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                        | label - used for menu labels                                                                                                  |
+| `sideNav`         | [SideNavConfiguration](#sidenavconfiguration) | side navigation configuration                                                                                                 |
+| `tabs`            | [PageTabs](#pagetabs)                         | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
 
 ## PageTabs
 
@@ -1120,7 +1124,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L98)_
 
 Record&lt;
 
@@ -1134,7 +1138,7 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
 
 Record&lt;
 
@@ -1144,16 +1148,16 @@ Record&lt;
 
 ### properties
 
-| Name   | Type                                                                         | Description |
-| ------ | ---------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
+| Name   | Type                                                                      | Description |
+| ------ | ------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
 
 >
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L232)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L243)_
 
 ### properties
 
@@ -1162,15 +1166,27 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
 | `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
 
+## SideNavConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+
+**collapseSingle**: boolean
+
+if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+
+**storyPaths**: boolean
+
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1184,7 +1200,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L272)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L283)_
 
 
 
@@ -1197,7 +1213,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L235)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L246)_
 
 
 
@@ -1239,7 +1255,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L232)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L243)_
 
 ### properties
 
@@ -1396,7 +1412,7 @@ string
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L87)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L98)_
 
 Record&lt;
 
@@ -1410,13 +1426,13 @@ Record&lt;
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
 
 Record&lt;
 
@@ -1426,12 +1442,24 @@ Record&lt;
 
 ### properties
 
-| Name   | Type                                                                         | Description |
-| ------ | ---------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
+| Name   | Type                                                                      | Description |
+| ------ | ------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
 
 >
+
+## SideNavConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+
+**collapseSingle**: boolean
+
+if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+
+**storyPaths**: boolean
 
 ## PageTabs
 
@@ -1441,27 +1469,27 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
 
 ### properties
 
-| Name              | Type                                    | Description                                                                                                                   |
-| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`        | string                                  | base url path for the page                                                                                                    |
-| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
-| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
-| `label`           | string                                  | label - used for menu labels                                                                                                  |
-| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
-| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
-| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
-| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+| Name              | Type                                          | Description                                                                                                                   |
+| ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                        | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null       | page container react component                                                                                                |
+| `indexHome`       | boolean                                       | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                        | label - used for menu labels                                                                                                  |
+| `sideNav`         | [SideNavConfiguration](#sidenavconfiguration) | side navigation configuration                                                                                                 |
+| `tabs`            | [PageTabs](#pagetabs)                         | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
 
 ## BuildConfiguration
 
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
 
 page types that are considered as categories fields as well
 
@@ -1489,7 +1517,7 @@ custom webpack configuration setup. One or the other will be used
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1507,6 +1535,18 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
+## SideNavConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+
+**collapseSingle**: boolean
+
+if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+
+**storyPaths**: boolean
+
 ## PageTabs
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
@@ -1515,13 +1555,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L93)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L95)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
 
 Record&lt;
 
@@ -1531,16 +1571,16 @@ Record&lt;
 
 ### properties
 
-| Name   | Type                                                                         | Description |
-| ------ | ---------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'storyPaths'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                   |             |
+| Name   | Type                                                                      | Description |
+| ------ | ------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
 
 >
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L89)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1560,20 +1600,32 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
 
 ### properties
 
-| Name              | Type                                    | Description                                                                                                                   |
-| ----------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`        | string                                  | base url path for the page                                                                                                    |
-| `container`       | [ComponentType](#componenttype) \| null | page container react component                                                                                                |
-| `indexHome`       | boolean                                 | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
-| `label`           | string                                  | label - used for menu labels                                                                                                  |
-| `storyPaths`      | boolean                                 | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.  |
-| `tabs`            | [PageTabs](#pagetabs)                   | tabs configuration for story-type pages                                                                                       |
-| `topMenu`         | boolean                                 | whether to add to the top navigation menu                                                                                     |
-| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)     |                                                                                                                               |
+| Name              | Type                                          | Description                                                                                                                   |
+| ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                        | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null       | page container react component                                                                                                |
+| `indexHome`       | boolean                                       | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                        | label - used for menu labels                                                                                                  |
+| `sideNav`         | [SideNavConfiguration](#sidenavconfiguration) | side navigation configuration                                                                                                 |
+| `tabs`            | [PageTabs](#pagetabs)                         | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
+
+## SideNavConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+
+if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+
+**collapseSingle**: boolean
+
+if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+
+**storyPaths**: boolean
 
 ## PageTabs
 

@@ -24,7 +24,8 @@ export const getDocPath = (
   name: string = '',
   activeTab?: string,
 ): string => {
-  const { basePath = '', storyPaths } = pagesConfig?.[docType] || {};
+  const { basePath = '', sideNav = {} } = pagesConfig?.[docType] || {};
+  const { storyPaths } = sideNav;
   if (storyPaths && doc && doc.stories && doc.stories.length > 0) {
     return getStoryPath(doc.stories[0], doc, pagesConfig, activeTab);
   }

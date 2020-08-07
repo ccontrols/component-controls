@@ -16,7 +16,9 @@
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
     -   [<ins>PageTypeTag</ins>](#inspagetypetagins)
     -   [<ins>Pagination</ins>](#inspaginationins)
+    -   [<ins>BasePlayground</ins>](#insbaseplaygroundins)
     -   [<ins>Playground</ins>](#insplaygroundins)
+    -   [<ins>StoryPlayground</ins>](#insstoryplaygroundins)
     -   [<ins>PropsTable</ins>](#inspropstableins)
     -   [<ins>useControlsActions</ins>](#insusecontrolsactionsins)
     -   [<ins>Search</ins>](#inssearchins)
@@ -258,6 +260,30 @@ displays automatic pagination to the next/previous document of this same type.
 
 _Pagination [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Pagination/Pagination.tsx)_
 
+## <ins>BasePlayground</ins>
+
+_BasePlayground [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/BasePlayground.tsx)_
+
+### properties
+
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
+| `background`  | _BackgroundType_     | background pattern type                                                                                         |
+| `direction`   | _DirectionType_      | direction type                                                                                                  |
+| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                      |
+| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                       |
+| `story`       | _Story_              |                                                                                                                 |
+
 ## <ins>Playground</ins>
 
 Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
@@ -268,6 +294,30 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 
 | Name          | Type                 | Description                                                                                                     |
 | ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
+| `background`  | _BackgroundType_     | background pattern type                                                                                         |
+| `direction`   | _DirectionType_      | direction type                                                                                                  |
+| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                      |
+| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                       |
+
+## <ins>StoryPlayground</ins>
+
+_StoryPlayground [source code](https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Playground/StoryPlayground.tsx)_
+
+### properties
+
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `storyProps`  | _any_                |                                                                                                                 |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
 | `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
 | `title`       | _string_             | optional section title for the block.                                                                           |
@@ -339,7 +389,7 @@ _Search [source code](https://github.com/ccontrols/component-controls/tree/maste
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `onSelect`     | _(item: Document) => void_                                                                                                                                                                                                                                                                                                                                      | on select a search item.                                                    |
 | `children`     | _string \| number \| boolean \| {} \| ((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... 1 more ... \| (new (props: any) => Component&lt;...>)>) \| (new (props: any) => Component&lt;...>)> \| ... 8 more ... \| (((props: SearchBoxCallbackProps&lt;...>) ..._ | children is a render prop to allow custom rendering of items, one at a time |
-| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                                                                 | customize the popover                                                       |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnReferenceHidden" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_                                                                                                                                                                 | customize the popover                                                       |
 
 ## <ins>Stories</ins>
 
@@ -354,6 +404,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `dark`        | _boolean_            | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
 | `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.            |
 | `name`        | _string_             |                                                                                                                            |
+| `storyProps`  | _any_                |                                                                                                                            |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
 | `title`       | _string_             | optional section title for the block.                                                                                      |
 | `description` | _string_             | optional markdown description.                                                                                             |

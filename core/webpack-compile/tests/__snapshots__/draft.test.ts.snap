@@ -19,7 +19,10 @@ Object {
       },
       "story": Object {
         "basePath": "docs/",
-        "storyPaths": true,
+        "sideNav": Object {
+          "collapseSingle": true,
+          "storyPaths": true,
+        },
         "tabs": Array [
           Object {
             "route": "page",

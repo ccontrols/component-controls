@@ -146,7 +146,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
         docs.forEach(doc => {
           if (doc.route !== '/') {
             const stories =
-              page.storyPaths && doc.stories?.length
+              page.sideNav?.storyPaths && doc.stories?.length
                 ? doc.stories
                 : [undefined];
             stories.forEach((storyId?: string) => {

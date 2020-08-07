@@ -47,6 +47,17 @@ export interface PageLayoutProps {
    */
   fullPage?: boolean;
 }
+export type SideNavConfiguration = {
+  /**
+   * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+   */
+  storyPaths?: boolean;
+
+  /**
+   * if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+   */
+  collapseSingle?: boolean;
+};
 export type PageConfiguration = {
   /**
    * base url path for the page
@@ -54,9 +65,9 @@ export type PageConfiguration = {
   basePath?: string;
 
   /**
-   * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+   * side navigation configuration
    */
-  storyPaths?: boolean;
+  sideNav?: SideNavConfiguration;
 
   /**
    * label - used for menu labels
@@ -94,7 +105,7 @@ type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
   DocType,
-  Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
+  Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
 >;
@@ -274,7 +285,10 @@ export const defaultBuildConfig: BuildConfiguration = {
   pages: {
     story: {
       basePath: 'docs/',
-      storyPaths: true,
+      sideNav: {
+        storyPaths: true,
+        collapseSingle: true,
+      },
       tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {

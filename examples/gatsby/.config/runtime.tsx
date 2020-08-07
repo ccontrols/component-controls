@@ -21,6 +21,9 @@ const config: RunOnlyConfiguration = {
   pages: {
     story: {
       label: 'API',
+      sideNav: {
+        collapseSingle: false,
+      },
     },
     tutorial: {
       label: 'Tutorial',

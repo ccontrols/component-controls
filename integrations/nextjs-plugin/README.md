@@ -3,8 +3,6 @@
 -   [In action](#in-action)
 -   [Overview](#overview)
 -   [API](#api)
-    -   [<ins>build</ins>](#insbuildins)
-    -   [<ins>\_\_type</ins>](#ins__typeins)
     -   [<ins>getHomePagesPaths</ins>](#insgethomepagespathsins)
     -   [<ins>getDocPagesPaths</ins>](#insgetdocpagespathsins)
     -   [<ins>Layout</ins>](#inslayoutins)
@@ -28,39 +26,6 @@ Next.js plugin for documenting your projects with component controls
 <react-docgen-typescript path="./src" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
-
-## <ins>build</ins>
-
-_build [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/build.ts)_
-
-### properties
-
-| Name           | Type            | Description                                                           |
-| -------------- | --------------- | --------------------------------------------------------------------- |
-| `webPack`      | _Configuration_ | webpack configuration object                                          |
-| `presets`      | _RuleTypes_     | a list of webpack configuration presets from webpack-configs packages |
-| `configPath`   | _string_        | path to the configuration file e.g : '.storybook'                     |
-| `distFolder`   | _string_        | public output folder for the bundle                                   |
-| `bundleName`   | _string_        | public file name the bundle, by default 'component-controls.js'       |
-| `staticFolder` | _string_        | public output folder for the assets like images                       |
-
-## <ins>\_\_type</ins>
-
-_\_\_type [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/nextjs-plugin/src/page-links.ts)_
-
-### properties
-
-| Name              | Type                                | Description                                                                                     |
-| ----------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `error`           | _string_                            | build-time error string                                                                         |
-| `config*`         | _RunConfiguration_                  | global configuration for config file                                                            |
-| `docs*`           | _Record&lt;string, Document>_       | list of documents (pages)                                                                       |
-| `stories*`        | _Record&lt;string, Story>_          | list of stories                                                                                 |
-| `components*`     | _Record&lt;string, Component>_      | list of components used in stories and documents                                                |
-| `packages*`       | _Record&lt;string, PackageInfo>_    | list of package.json files and their data used by the components and the stories of the project |
-| `addObserver*`    | _(observer: StoreObserver) => void_ | storybook integration notifiers                                                                 |
-| `removeObserver*` | _(observer: StoreObserver) => void_ |                                                                                                 |
-| `updateStory*`    | _(story: Story) => void_            | update store, for example controls or state                                                     |
 
 ## <ins>getHomePagesPaths</ins>
 

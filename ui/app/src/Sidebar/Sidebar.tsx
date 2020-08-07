@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
-import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
+import { NoteIcon, BookIcon } from '@primer/octicons-react';
 import {
   useStore,
   useCurrentDocument,
@@ -29,6 +29,7 @@ import {
   Store,
   getStoryPath,
   getDocPath,
+  PageConfiguration,
 } from '@component-controls/core';
 
 export interface SidebarProps {
@@ -49,7 +50,7 @@ const createMenuItem = (
   doc: Document,
   type: DocType,
   levels: string[],
-  storyPaths: boolean,
+  page: PageConfiguration,
   activeTab?: string,
   parent?: MenuItems,
   item?: MenuItem,
@@ -57,6 +58,7 @@ const createMenuItem = (
   if (levels.length < 1) {
     return item || {};
   }
+  const { storyPaths, collapseSingle } = page?.sideNav || {};
   const storyPath = (storyId: string, activeTab?: string): string => {
     const story = store.stories[storyId];
     if (!story) {
@@ -86,7 +88,7 @@ const createMenuItem = (
       newItem.id = doc.title;
 
       if (storyPaths && doc.stories && doc.stories.length) {
-        if (doc.stories.length >= 1) {
+        if (doc.stories.length > 1 || !collapseSingle) {
           // multiple stories - each with a link
           newItem.items = doc.stories.map(storyId => {
             const story = store.stories[storyId];
@@ -98,7 +100,7 @@ const createMenuItem = (
             };
           });
         } else {
-          newItem.icon = <FileIcon verticalAlign="middle" />;
+          newItem.icon = <NoteIcon verticalAlign="middle" />;
           //only one story -direct link to it
           newItem.href = storyPath(doc.stories[0], activeTab);
         }
@@ -116,7 +118,7 @@ const createMenuItem = (
     doc,
     type,
     levels.slice(1),
-    storyPaths,
+    page,
     activeTab,
     sibling ? sibling.items : newItem.items,
     newItem,
@@ -138,29 +140,21 @@ export const Sidebar: FC<SidebarProps> = ({
 
   const config = useConfig() || {};
   const { pages, sidebar = [] } = config;
-  const { label = '', storyPaths = false } = pages?.[type] || {};
+  const page: PageConfiguration = pages?.[type] || {};
+  const { label = '' } = page;
   const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
     if (store) {
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
-        createMenuItem(
-          store,
-          config,
-          doc,
-          type,
-          levels,
-          storyPaths,
-          activeTab,
-          acc,
-        );
+        createMenuItem(store, config, doc, type, levels, page, activeTab, acc);
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [type, activeTab, store, config, storyPaths, docs]);
+  }, [type, activeTab, store, config, page, docs]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   const actions: ActionItems = [...sidebar];
 
