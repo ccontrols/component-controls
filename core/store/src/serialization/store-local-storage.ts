@@ -6,7 +6,11 @@ import {
   Stories,
 } from '@component-controls/core';
 
-import { COMPONENT_CONTROLS_STORAGE } from '../types';
+/**
+ * store on change observer.
+ */
+
+const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
 
 const encodeFn = (name: string, val: any) => {
   // convert RegExp to string

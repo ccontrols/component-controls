@@ -131,21 +131,23 @@ export const useDocSort = (
  * Returns an array of all documents of a specific doc type
  */
 export const useDocByType = (type: DocType): Pages => {
-  const docs = useDocs();
-  return Object.keys(docs).reduce((acc: Pages, key: string) => {
-    const doc: Document | undefined = docs[key];
-    if (doc) {
-      const { type: docType = defDocType } = doc;
-      if (docType === type) {
-        return [...acc, { ...doc }];
-      }
-    }
-    return acc;
-  }, []);
+  return useGetDocByType()(type);
 };
 
-export const useGetDocByType = () => (type: DocType): Pages =>
-  useDocByType(type);
+export const useGetDocByType = (): ((type: DocType) => Pages) => {
+  const docs = useDocs();
+  return (type: DocType) =>
+    Object.keys(docs).reduce((acc: Pages, key: string) => {
+      const doc: Document | undefined = docs[key];
+      if (doc) {
+        const { type: docType = defDocType } = doc;
+        if (docType === type) {
+          return [...acc, { ...doc }];
+        }
+      }
+      return acc;
+    }, []);
+};
 
 /**
  * Returns a sorted list of documents of a specific doc type. Uses the sort order state.

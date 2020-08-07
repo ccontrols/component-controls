@@ -80,15 +80,15 @@ export const useStoryById = (storyId: string) => {
 /**
  * given a story name, will go through the store to find a story that matches it
  */
-export const useGetStoryIdFromName = () => (
-  name: string,
-): string | undefined => {
+export const useStoryIdFromName = (name?: string): string | undefined => {
   const store = useStore();
-  for (const docId in store.docs) {
-    const doc = store.docs[docId];
-    const storyId = docStoryToId(docId, name);
-    if (doc.stories && doc.stories.indexOf(storyId) > -1) {
-      return storyId;
+  if (name) {
+    for (const docId in store.docs) {
+      const doc = store.docs[docId];
+      const storyId = docStoryToId(docId, name);
+      if (doc.stories && doc.stories.indexOf(storyId) > -1) {
+        return storyId;
+      }
     }
   }
   return undefined;
@@ -108,12 +108,9 @@ export const useStoryId = ({
 }: StoryInputProps): string | undefined => {
   const story = useCurrentStory();
   const { id: currentStoryId } = story || {};
-  const storyIdFromName = useGetStoryIdFromName();
-  return name
-    ? storyIdFromName(name)
-    : id === CURRENT_STORY
-    ? currentStoryId
-    : id;
+  return (
+    useStoryIdFromName(name) || (id === CURRENT_STORY ? currentStoryId : id)
+  );
 };
 
 /**
@@ -139,8 +136,6 @@ export const useStory = (props: StoryInputProps): Story | undefined => {
 
   return story;
 };
-
-export const useGetStory = () => (props: StoryInputProps) => useStory(props);
 
 /**
  * Returns a story's component from an input id or story name. The id can be '.', which means the current story.

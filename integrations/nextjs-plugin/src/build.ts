@@ -4,7 +4,7 @@ import { CompileProps } from '@component-controls/webpack-configs';
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-export default ({
+module.exports = ({
   bundleName,
   configPath,
   presets,

@@ -44,6 +44,7 @@ export const NumberEditor: PropertyEditor = ({ name }) => {
         }
         break;
       case DOWN_ARROW:
+      default:
         if (typeof control.value === 'number') {
           onChange(
             Math.max(control.min || 0, control.value - (control.step || 1)),

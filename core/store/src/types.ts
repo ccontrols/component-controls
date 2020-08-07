@@ -8,12 +8,6 @@ import {
   Documents,
 } from '@component-controls/core';
 
-/**
- * store on change observer.
- */
-
-export const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
-
 export interface DocPageInfo {
   type: string;
   activeTab?: string;

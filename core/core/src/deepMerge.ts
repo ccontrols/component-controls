@@ -24,4 +24,4 @@ export const deepMergeReplaceArrays = <T>(a: any, b: any) =>
 
 export { deepMergeReplaceArrays as merge };
 
-export { merge as deepmerge };
+export const deepmerge = merge;

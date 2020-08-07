@@ -1,7 +1,11 @@
-import { toId, storyNameFromExport } from '@storybook/csf';
+import {
+  toId,
+  storyNameFromExport as csfStoryNameFromExport,
+} from '@storybook/csf';
 import { PagesOnlyRoutes, DocType, PageConfiguration } from './configuration';
 import { Document, defDocType } from './document';
 
+export const storyNameFromExport = csfStoryNameFromExport;
 export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
 
 export const ensureTrailingSlash = (route: string) =>
@@ -69,5 +73,3 @@ export const getDocTypePath = (type: PageConfiguration) =>
 
 export const docStoryToId = (docId: string, storyId: string) =>
   toId(docId, storyNameFromExport(storyId));
-
-export { storyNameFromExport };

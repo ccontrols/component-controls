@@ -93,6 +93,7 @@ ${contexts
 `;
   const exports = `module.exports = store;\n`;
   const newContent = `
+
 const path = require('path');
 ${imports}
 ${storeConst}

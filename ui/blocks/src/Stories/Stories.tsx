@@ -5,7 +5,7 @@ import {
   StoryInputProps,
 } from '@component-controls/store';
 import { StoryBlockContainer } from '../BlockContainer/story';
-import { Playground, PlaygroundProps } from '../Playground';
+import { StoryPlayground, StoryPlaygroundProps } from '../Playground';
 import { Story as Component } from '../Story';
 
 export interface StoriesOwnProps {
@@ -14,7 +14,9 @@ export interface StoriesOwnProps {
    */
   dark?: boolean;
 }
-export type StoriesProps = StoriesOwnProps & StoryInputProps & PlaygroundProps;
+export type StoriesProps = StoriesOwnProps &
+  StoryInputProps &
+  StoryPlaygroundProps;
 
 /**
  * displays multiple stories in ther own Playground components
@@ -33,15 +35,16 @@ export const Stories: FC<StoriesProps> = ({ id, name, title, ...rest }) => {
     <StoryBlockContainer title={title} {...rest}>
       {stories.map((id: string) => {
         return (
-          <Playground
+          <StoryPlayground
             title="."
             id={id}
             collapsible={false}
             key={`playground-${id}`}
+            storyProps={{ id }}
             {...rest}
           >
             <Component id={id} />
-          </Playground>
+          </StoryPlayground>
         );
       })}
     </StoryBlockContainer>

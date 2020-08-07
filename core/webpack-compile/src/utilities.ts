@@ -3,6 +3,7 @@ import webpack, {
   Compiler,
   Stats,
   HotModuleReplacementPlugin,
+  BannerPlugin,
 } from 'webpack';
 import path from 'path';
 import fs from 'fs';
@@ -43,6 +44,10 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
     new LoaderPlugin({
       config: configPath,
       escapeOutput: mode === 'development',
+    }),
+    new BannerPlugin({
+      raw: true,
+      banner: '/* eslint-disable */',
     }),
     mode === 'development' && new HotModuleReplacementPlugin({}),
   ].filter(Boolean);
