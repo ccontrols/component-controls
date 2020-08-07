@@ -17,7 +17,7 @@ export const useDocPropCount = (category: string): DocCountType => {
         values.forEach(v => {
           if (v !== undefined) {
             if (typeof acc[v] === 'undefined') {
-              acc[v].count = 0;
+              acc[v] = { count: 0 };
             }
             acc[v].count = acc[v].count + 1;
           }

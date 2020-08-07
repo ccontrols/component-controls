@@ -20,7 +20,7 @@ const docPropCountState = selectorFamily<DocCountType, string>({
       values.forEach(v => {
         if (v !== undefined) {
           if (typeof acc[v] === 'undefined') {
-            acc[v].count = 0;
+            acc[v] = { count: 0 };
           }
           acc[v].count = acc[v].count + 1;
         }
