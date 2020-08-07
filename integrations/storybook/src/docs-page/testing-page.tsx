@@ -3,7 +3,7 @@ import React from 'react';
 import { TestingPage } from '@component-controls/pages';
 import { DocsContainer } from './DocsContainer';
 
-export default {
+module.exports = {
   key: 'test',
   title: 'Testing',
   render: ({ active }: { active: boolean }) => {
