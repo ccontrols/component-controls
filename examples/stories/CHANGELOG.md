@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+
+### Bug Fixes
+
+* avatar from theme-ui ([5b7cd6b](https://github.com/ccontrols/component-controls/commit/5b7cd6b08a7ce367ca7a1d359ac08cde1e6018de))
+* home page story id ([e5f389b](https://github.com/ccontrols/component-controls/commit/e5f389b1c29900e93baa199218d50510373d7d01))
+
+
+
+
+
 ## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
 
 **Note:** Version bump only for package component-controls-stories
