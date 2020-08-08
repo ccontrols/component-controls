@@ -292,7 +292,7 @@ export const ActionBar: FC<ActionBarProps> = ({
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
         "date": "2020-07-17T14:45:45.960Z",
-        "dateModified": "2020-07-17T14:45:45.960Z",
+        "dateModified": "2020-08-08T07:58:54.508Z",
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
         "title": "Components/ActionBar",
@@ -517,6 +517,7 @@ export const ActionBar: FC<ActionBarProps> = ({
               "options": Array [
                 "actionbar",
                 "toolbar",
+                "footer",
               ],
               "type": "options",
               "value": "actionbar",

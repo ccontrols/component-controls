@@ -825,6 +825,14 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
+    "flat": Object {
+      "description": "if true, will flatten the group by",
+      "parentName": "PropsTableOwnProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
     "groupBy": Object {
       "description": "field to be grouped by.",
       "parentName": "TableOwnProps",
