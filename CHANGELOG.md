@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
+
+
+### Bug Fixes
+
+* wordwrap for anchors in table ([735a17d](https://github.com/ccontrols/component-controls/commit/735a17db7047adaadfab789b10ccbdea61ff6c40))
+
+
+
+
+
 # [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
 
 

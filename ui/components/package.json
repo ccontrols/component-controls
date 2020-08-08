@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "1.18.0",
+  "version": "1.18.1",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
