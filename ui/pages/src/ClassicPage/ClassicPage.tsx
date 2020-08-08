@@ -53,7 +53,7 @@ export const ClassicPage: FC = () => {
       <PropsTable
         of="."
         title={mixedControls ? 'Controls' : 'Properties'}
-        flat={propsCount <= threshold || mixedControls}
+        flat={propsCount <= threshold && !mixedControls}
         visibility={splitControls ? 'info' : 'all'}
       />
       <ComponentDeps id="." title="External dependencies" />

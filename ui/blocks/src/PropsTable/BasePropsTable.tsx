@@ -135,18 +135,16 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         rows.unshift.apply(rows, controlsRows);
       }
       const groupProps: GroupingProps = {};
-      if (!flat) {
-        if (parents.size > 1) {
-          const firstRowWithParent = rows.find(row => row?.prop.parentName);
-          if (firstRowWithParent) {
-            groupProps.expanded = {
-              [`prop.parentName:${firstRowWithParent.prop.parentName}`]: true,
-            };
-          }
-          groupProps.groupBy = ['prop.parentName'];
-        } else {
-          groupProps.hiddenColumns = ['prop.parentName'];
+      if (parents.size > 1 && !flat) {
+        const firstRowWithParent = rows.find(row => row?.prop.parentName);
+        if (firstRowWithParent) {
+          groupProps.expanded = {
+            [`prop.parentName:${firstRowWithParent.prop.parentName}`]: true,
+          };
         }
+        groupProps.groupBy = ['prop.parentName'];
+      } else {
+        groupProps.hiddenColumns = ['prop.parentName'];
       }
       const columns = [
         {
