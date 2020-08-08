@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+
+### Bug Fixes
+
+* adjust controls visibility ([74e6863](https://github.com/ccontrols/component-controls/commit/74e686365f93a3c2d12e022e422a55d4730776e6))
+* remove console.log ([0f611e8](https://github.com/ccontrols/component-controls/commit/0f611e85a6e28e4ad52af80d81b86fdbd3114918))
+
+
+### Features
+
+* props and controls table visibility ([f46e8be](https://github.com/ccontrols/component-controls/commit/f46e8be0fcb7ac3588213423e82ce069928d310f))
+
+
+
+
+
 # [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
 
 

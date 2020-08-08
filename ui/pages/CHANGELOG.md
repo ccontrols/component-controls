@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+
+### Bug Fixes
+
+* adjust controls caption ([4f045b4](https://github.com/ccontrols/component-controls/commit/4f045b4d641b0499cccbe0560869a12e9234003e))
+* adjust controls state selection ([ba9c936](https://github.com/ccontrols/component-controls/commit/ba9c9366da62d8affc6f0d446d78c61ff6793f9b))
+* adjust controls visibility ([74e6863](https://github.com/ccontrols/component-controls/commit/74e686365f93a3c2d12e022e422a55d4730776e6))
+* controls grouping case ([e0b8023](https://github.com/ccontrols/component-controls/commit/e0b8023f5066a3e4a75cd6a158b55b5469863efa))
+* threshold check adjust ([a832332](https://github.com/ccontrols/component-controls/commit/a8323325c1af2ed1a766a17851f1635f27d81521))
+
+
+### Features
+
+* props and controls table visibility ([f46e8be](https://github.com/ccontrols/component-controls/commit/f46e8be0fcb7ac3588213423e82ce069928d310f))
+
+
+
+
+
 # [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
 
 **Note:** Version bump only for package @component-controls/pages
