@@ -57,6 +57,7 @@
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
+    -   [ControlsConfig](#controlsconfig)
     -   [PageLayoutProps](#pagelayoutprops)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [TabConfiguration](#tabconfiguration)
@@ -986,6 +987,20 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 
 
+## ControlsConfig
+
+configuration options for the controls module
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L160)_
+
+
+
+### properties
+
+| Name        | Type   | Description                                                                                 |
+| ----------- | ------ | ------------------------------------------------------------------------------------------- |
+| `threshold` | number | threshold for when to display the controls in their own table separate from the props table |
+
 ## PageLayoutProps
 
 page layout - sidebars, full width
@@ -1007,7 +1022,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L160)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L172)_
 
 
 
@@ -1018,6 +1033,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `analytics`       | any                                                  | analytics options                                                                                                                                                                    |
 | `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
 | `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
+| `controls`        | [ControlsConfig](#controlsconfig)                    | controls module configuration options                                                                                                                                                |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
 | `footer`          | [ToolbarConfig](#toolbarconfig)                      | custom footer items                                                                                                                                                                  |
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
@@ -1157,7 +1173,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L243)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L260)_
 
 ### properties
 
@@ -1200,7 +1216,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L283)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L303)_
 
 
 
@@ -1213,7 +1229,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L246)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L263)_
 
 
 
@@ -1226,6 +1242,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `siteLanguage*`    | string |             |
 | `siteTitle*`       | string |             |
 | `siteUrl*`         | string |             |
+| `controls*`        | object |             |
 | `pages*`           | object |             |
 
 ## StoreObserver
@@ -1255,7 +1272,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L243)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L260)_
 
 ### properties
 
