@@ -372,10 +372,10 @@ Object {
     "fileHash": "8b5cf5032e762d2f38ffd0462e3feea5",
     "name": "@component-controls/components",
     "peerDependencies": Object {
-      "@theme-ui/css": "*",
-      "react": "^16.13.1",
-      "react-dom": "^16.13.1",
-      "theme-ui": "*",
+      "@theme-ui/css": "next",
+      "react": ">= 16.8.0",
+      "react-dom": ">= 16.8.0",
+      "theme-ui": "next",
     },
     "repository": Object {
       "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/dist/index.js",

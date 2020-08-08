@@ -224,10 +224,10 @@ export const ActionBar: FC<ActionBarProps> = ({
       "fileHash": "30938aa5d7bae6c78434e15f2a2723b5",
       "name": "@component-controls/components",
       "peerDependencies": Object {
-        "@theme-ui/css": "*",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "theme-ui": "*",
+        "@theme-ui/css": "next",
+        "react": ">= 16.8.0",
+        "react-dom": ">= 16.8.0",
+        "theme-ui": "next",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.tsx",
@@ -270,10 +270,10 @@ export const ActionBar: FC<ActionBarProps> = ({
       "fileHash": "7bbf88bf0b53ee8e93c2e0a4cbe4c6b2",
       "name": "@component-controls/components",
       "peerDependencies": Object {
-        "@theme-ui/css": "*",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "theme-ui": "*",
+        "@theme-ui/css": "next",
+        "react": ">= 16.8.0",
+        "react-dom": ">= 16.8.0",
+        "theme-ui": "next",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ActionBar/ActionBar.stories.tsx",

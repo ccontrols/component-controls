@@ -97,11 +97,11 @@ Object {
       "fileHash": "53689598fe7786493f4584ab098c73cc",
       "name": "@component-controls/blocks",
       "peerDependencies": Object {
-        "@primer/octicons-react": "*",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-table": "*",
-        "theme-ui": "*",
+        "@primer/octicons-react": "10.x",
+        "react": ">= 16.8.0",
+        "react-dom": ">= 16.8.0",
+        "react-table": "7.x",
+        "theme-ui": "next",
       },
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/blocks/dist/index.js",
