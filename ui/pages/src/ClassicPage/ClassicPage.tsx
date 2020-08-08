@@ -52,7 +52,7 @@ export const ClassicPage: FC = () => {
       <PropsTable
         of="."
         title="Properties"
-        flat={propsCount <= threshold}
+        flat={propsCount <= threshold || !splitControls}
         visibility={splitControls ? 'info' : 'all'}
       />
       <ComponentDeps id="." title="External dependencies" />
