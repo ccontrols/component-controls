@@ -38,7 +38,7 @@ export const ClassicPage: FC = () => {
     controlsCount <= threshold &&
     (propsCount === 0 ||
       (controlsCount < propsCount && propsCount >= threshold));
-  const mixedControls = !splitControls && controlsCount === propsCount;
+  const mixedControls = !splitControls && controlsCount >= propsCount;
   return (
     <div>
       <PackageVersion />
