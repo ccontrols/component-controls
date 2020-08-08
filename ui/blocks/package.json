@@ -64,11 +64,11 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "@primer/octicons-react": "*",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-table": "*",
-    "theme-ui": "*"
+    "@primer/octicons-react": "10.x",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "react-table": "7.x",
+    "theme-ui": "next"
   },
   "publishConfig": {
     "access": "public"

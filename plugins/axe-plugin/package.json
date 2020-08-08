@@ -53,8 +53,8 @@
   },
   "peerDependencies": {
     "@component-controls/blocks": "*",
-    "react": "*",
-    "theme-ui": "*"
+    "react": ">= 16.8.0",
+    "theme-ui": "next"
   },
   "publishConfig": {
     "access": "public"

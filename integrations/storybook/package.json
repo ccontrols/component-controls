@@ -58,11 +58,11 @@
     "@types/node": "^13.7.0"
   },
   "peerDependencies": {
-    "@storybook/addons": "*",
-    "@storybook/api": "*",
-    "@storybook/client-api": "*",
-    "polished": "*",
-    "react": "*"
+    "@storybook/addons": "5.x 6.x",
+    "@storybook/api": "5.x 6.x",
+    "@storybook/client-api": "5.x 6.x",
+    "polished": "3.x",
+    "react": ">= 16.8.0"
   },
   "publishConfig": {
     "access": "public"

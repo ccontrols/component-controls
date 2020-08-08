@@ -60,10 +60,10 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "@theme-ui/css": "*",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "theme-ui": "*"
+    "@theme-ui/css": "next",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "theme-ui": "next"
   },
   "publishConfig": {
     "access": "public"

@@ -48,7 +48,7 @@
     "webpack": "^4.43.0"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": ">= 16.8.0"
   },
   "publishConfig": {
     "access": "public"

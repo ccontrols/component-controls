@@ -46,8 +46,8 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@component-controls/core": "*",
-    "react": "*"
+    "@component-controls/core": ">= 1.18.1",
+    "react": ">= 16.8.0"
   },
   "jest": {
     "testEnvironment": "node",
