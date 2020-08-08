@@ -153,6 +153,18 @@ export interface ToolbarConfig {
    */
   right?: ActionItems;
 }
+
+/**
+ * configuration options for the controls module
+ */
+export interface ControlsConfig {
+  /**
+   * threshold for when to display the controls in their own table
+   * separate from the props table
+   */
+  threshold?: number;
+}
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -226,6 +238,11 @@ export interface RunOnlyConfiguration {
    * custom sidebar items
    */
   sidebar?: ActionItems;
+
+  /**
+   * controls module configuration options
+   */
+  controls?: ControlsConfig;
   /**
    * custom props to components
    * ex:
@@ -250,6 +267,9 @@ export const defaultRunConfig: RunConfiguration = {
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',
   author: '@component-controls',
+  controls: {
+    threshold: 10,
+  },
   pages: {
     story: {
       label: 'Docs',

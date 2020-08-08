@@ -191,10 +191,9 @@ export const visibleControls = (
         )
     : {};
 
-export const hasControls = (controls?: ComponentControls): boolean =>
-  controls && typeof controls === 'object'
-    ? !!Object.keys(controls).filter(key => !controls[key].hidden).length
-    : false;
+export const getControlsCount = (controls?: ComponentControls): number =>
+  controls ? Object.keys(controls).length : 0;
+
 export const newControlValues = (
   controls: ComponentControls,
 ): ComponentControls => {

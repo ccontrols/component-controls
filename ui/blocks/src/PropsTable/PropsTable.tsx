@@ -20,6 +20,10 @@ export interface PropsTableOwnProps {
    * extra custom columns passed to the PropsTable.
    */
   extraColumns?: Column[];
+  /**
+   * if true, will flatten the group by
+   */
+  flat?: boolean;
 }
 export type PropsTableProps = PropsTableOwnProps &
   Omit<ComponentsBlockContainerProps, 'children'> &
@@ -32,7 +36,7 @@ const NAME = 'propstable';
  */
 export const PropsTable: FC<PropsTableProps> = props => {
   const custom = useCustomProps<PropsTableProps>(NAME, props);
-  const { extraColumns = [], visibility = 'all', ...rest } = custom;
+  const { extraColumns = [], visibility = 'all', flat, ...rest } = custom;
 
   return (
     <ComponentsBlockContainer
@@ -47,6 +51,7 @@ export const PropsTable: FC<PropsTableProps> = props => {
             visibility={visibility}
             extraColumns={extraColumns}
             tableProps={tableProps}
+            flat={flat}
           />
         );
         return story ? (

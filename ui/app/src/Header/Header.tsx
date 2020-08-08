@@ -51,6 +51,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
               const docInfo = docCounts[docType];
               return (
                 page.topMenu &&
+                docInfo &&
                 docInfo.count &&
                 homePage.docId !== docInfo.home?.title
               );

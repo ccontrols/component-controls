@@ -38,6 +38,10 @@ interface PropRow {
 export interface BasePropsTableProps {
   component?: Component;
   extraColumns: Column[];
+  /**
+   * if true, will flatten the group by
+   */
+  flat?: boolean;
   tableProps: any;
   visibility?: ComponentVisibility;
 }
@@ -50,6 +54,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   extraColumns,
   tableProps,
   visibility,
+  flat,
 }) => {
   const [copied, setCopied] = useState(false);
   const story = useCurrentStory();
@@ -130,16 +135,18 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         rows.unshift.apply(rows, controlsRows);
       }
       const groupProps: GroupingProps = {};
-      if (parents.size > 1) {
-        const firstRowWithParent = rows.find(row => row?.prop.parentName);
-        if (firstRowWithParent) {
-          groupProps.expanded = {
-            [`prop.parentName:${firstRowWithParent.prop.parentName}`]: true,
-          };
+      if (!flat) {
+        if (parents.size > 1) {
+          const firstRowWithParent = rows.find(row => row?.prop.parentName);
+          if (firstRowWithParent) {
+            groupProps.expanded = {
+              [`prop.parentName:${firstRowWithParent.prop.parentName}`]: true,
+            };
+          }
+          groupProps.groupBy = ['prop.parentName'];
+        } else {
+          groupProps.hiddenColumns = ['prop.parentName'];
         }
-        groupProps.groupBy = ['prop.parentName'];
-      } else {
-        groupProps.hiddenColumns = ['prop.parentName'];
       }
       const columns = [
         {

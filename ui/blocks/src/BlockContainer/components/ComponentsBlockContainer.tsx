@@ -6,7 +6,7 @@ import {
 
 import {
   getComponentName,
-  hasControls,
+  getControlsCount,
   CURRENT_STORY,
   Story,
   Component,
@@ -67,10 +67,11 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
 
   const keys =
     components && visibility !== 'controls' ? Object.keys(components) : [];
+  console.log(story?.controls);
   if (
     keys.length === 0 &&
     visibility !== 'info' &&
-    hasControls(story?.controls)
+    getControlsCount(story?.controls) > 0
   ) {
     keys.push('Controls');
   }
