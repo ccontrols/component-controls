@@ -43,7 +43,7 @@ overview.story = {
   controls: {
     themeKey: {
       type: 'options',
-      options: ['actionbar', 'toolbar'],
+      options: ['actionbar', 'toolbar', 'footer'],
       value: 'actionbar',
     },
   },
