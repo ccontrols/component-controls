@@ -35,9 +35,9 @@ export const ClassicPage: FC = () => {
       : 0;
   const splitControls =
     controlsCount > 0 &&
-    controlsCount < threshold &&
+    controlsCount <= threshold &&
     (propsCount === 0 ||
-      (controlsCount < propsCount && propsCount > threshold));
+      (controlsCount < propsCount && propsCount >= threshold));
   return (
     <div>
       <PackageVersion />
@@ -52,7 +52,7 @@ export const ClassicPage: FC = () => {
       <PropsTable
         of="."
         title="Properties"
-        flat={propsCount < threshold}
+        flat={propsCount <= threshold}
         visibility={splitControls ? 'info' : 'all'}
       />
       <ComponentDeps id="." title="External dependencies" />
