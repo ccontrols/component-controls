@@ -127,3 +127,20 @@ export const useComponent = ({
     ? store.components[doc.componentsLookup[componentName]]
     : undefined;
 };
+
+/**
+ * returns the number of prop-info properties count for the current document
+ * if the current document has more than one component assigned - will return the sum
+ */
+
+export const useCurrentPropsCount = (input: ComponentInputProps): number => {
+  const components = useComponents(input);
+  const store = useStore();
+  const doc = useCurrentDocument();
+  return components && doc
+    ? Object.keys(components).reduce((acc, key) => {
+        const component = store.components[doc.componentsLookup[key]];
+        return acc + Object.keys(component.info?.props || {}).length;
+      }, 0)
+    : 0;
+};

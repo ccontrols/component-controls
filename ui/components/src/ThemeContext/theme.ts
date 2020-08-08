@@ -308,7 +308,7 @@ export const theme: ControlsTheme = {
         mb: 0,
       },
       a: {
-        wordWrap: 'break-word',
+        wordBreak: 'break-word',
       },
     },
     th: {

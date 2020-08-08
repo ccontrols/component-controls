@@ -11,11 +11,11 @@ import { useCurrentStory } from '@component-controls/store';
 import { AxeAllyBlock } from '@component-controls/axe-plugin';
 export const TestingPage: FC = () => {
   const story = useCurrentStory();
-  const hasControls = getControlsCount(story?.controls) > 0;
+  const controlsCount = getControlsCount(story?.controls);
   return (
     <>
       <Description />
-      {hasControls && (
+      {controlsCount > 0 && (
         <>
           <Playground title=".">
             <Story id="." />
