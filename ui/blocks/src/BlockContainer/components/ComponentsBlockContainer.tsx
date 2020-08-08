@@ -67,7 +67,6 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
 
   const keys =
     components && visibility !== 'controls' ? Object.keys(components) : [];
-  console.log(story?.controls);
   if (
     keys.length === 0 &&
     visibility !== 'info' &&
