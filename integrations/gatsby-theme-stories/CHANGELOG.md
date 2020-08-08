@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+
+### Bug Fixes
+
+* update peer dependencies ([3e2be3b](https://github.com/ccontrols/component-controls/commit/3e2be3bf7c7c8ac22ad56f04fb5797a8124dd620))
+
+
+
+
+
 ## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
 
 **Note:** Version bump only for package @component-controls/gatsby-theme-stories
