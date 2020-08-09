@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/ccontrols/component-controls/compare/v1.19.0...v1.19.1) (2020-08-09)
+
+
+### Bug Fixes
+
+* enum empty value smart controls ([6ed559b](https://github.com/ccontrols/component-controls/commit/6ed559b73f92eab1942571f418c5731a349de320))
+
+
+
+
+
 # [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
 
 
