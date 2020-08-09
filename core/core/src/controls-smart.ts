@@ -102,12 +102,16 @@ export const controlFromProps = (
       const options = Array.isArray(propDef.type)
         ? propDef.type
         : (propDef.type as any).value || splitType;
+
       if (!Array.isArray(options)) {
         return null;
       }
+
       return {
         type: ControlTypes.OPTIONS,
-        options: options.map((v: any) => cleanQuotes(v.value ? v.value : v)),
+        options: options.map((v: any) => {
+          return cleanQuotes(v.value ?? v);
+        }),
         value,
       };
     }
