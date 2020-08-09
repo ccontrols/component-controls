@@ -34,12 +34,19 @@ interface RandomizedData {
   [key: string]: any;
 }
 
+export const canRandomizeControl = (control: ComponentControl): boolean => {
+  const { data } = control;
+  return (
+    data !== false && data !== null && control.type !== ControlTypes.BUTTON
+  );
+};
+
 export const randomizeData = (controls: ComponentControls): RandomizedData => {
   return Object.keys(controls)
     .map(name => {
       const control = controls[name];
       const { data } = control;
-      if (data === false || data === null) {
+      if (!canRandomizeControl(control)) {
         return null;
       }
       // check if control has custom settings for generating data

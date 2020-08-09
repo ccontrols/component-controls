@@ -68,6 +68,9 @@ export const resetControlValues = (
       );
 };
 
+export const canResetControl = (control: ComponentControl) => {
+  return control.defaultValue !== control.value;
+};
 export interface ControlValues {
   [name: string]: any;
 }
