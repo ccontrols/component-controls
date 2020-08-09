@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.2](https://github.com/ccontrols/component-controls/compare/v1.19.1...v1.19.2) (2020-08-09)
+
+
+### Bug Fixes
+
+* change placement randomize ([6fe605b](https://github.com/ccontrols/component-controls/commit/6fe605b584663f56c32d1784b5cae3a1c80e5520))
+* octicons peer dependency ([67a8198](https://github.com/ccontrols/component-controls/commit/67a81986660ab2cc9aa12ec5fc9134a1e2d33b1d))
+
+
+
+
+
 ## [1.19.1](https://github.com/ccontrols/component-controls/compare/v1.19.0...v1.19.1) (2020-08-09)
 
 
