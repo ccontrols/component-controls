@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Bug Fixes
+
+* add doc description to Description ([bee5777](https://github.com/ccontrols/component-controls/commit/bee57774c02dc682a8639ed5acaf270b2ceefb8f))
+* peer depenencies update ([13f3765](https://github.com/ccontrols/component-controls/commit/13f3765ce08c5b67c8ff3c4bb9138217257796b0))
+
+
+
+
+
 ## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
 
 **Note:** Version bump only for package @component-controls/blocks

@@ -1,7 +1,7 @@
 {
   "name": "component-controls-gatsby-starter",
   "private": true,
-  "version": "1.18.3",
+  "version": "1.19.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,7 +14,7 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.18.3",
+    "@component-controls/gatsby-theme-stories": "^1.19.0",
     "@theme-ui/presets": "^0.4.0-rc.1",
     "gatsby": "^2.22.10",
     "gatsby-plugin-sitemap": "^2.4.11",

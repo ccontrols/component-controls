@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/atanasster/gatsby-controls-starter/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Bug Fixes
+
+* peer depenencies update ([13f3765](https://github.com/atanasster/gatsby-controls-starter/commit/13f3765ce08c5b67c8ff3c4bb9138217257796b0))
+
+
+### Features
+
+* callback for repository locations ([50a8093](https://github.com/atanasster/gatsby-controls-starter/commit/50a8093ce34ff296163d75b89e244b620e5efe70))
+
+
+
+
+
 ## [1.18.3](https://github.com/atanasster/gatsby-controls-starter/compare/v1.18.2...v1.18.3) (2020-08-09)
 
 **Note:** Version bump only for package component-controls-starter
