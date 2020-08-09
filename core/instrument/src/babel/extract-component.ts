@@ -65,7 +65,7 @@ export const extractComponent = async (
     }
     componentPackage = await packageInfo(
       componentName,
-      follow.filePath,
+      follow.originalFilePath,
       options?.components?.package,
     );
   } else {
