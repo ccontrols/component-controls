@@ -372,6 +372,20 @@ import { useStoryComponent } from '@component-controls/store';
   console.log(component.source);
 }
 ```
+### useCurrentPropsCount
+
+Returns the number of prop-info properties count for the current document. If the current document has more than one component assigned - will return the sum.
+
+> useCurrentPropsCount = (): number
+```
+import { useCurrentPropsCount } from '@component-controls/store';
+{
+  const count = useCurrentPropsCount();
+  console.log(count);
+}
+```
+
+export const  = (input: ComponentInputProps): number => {
 
 
 ## Controls hooks

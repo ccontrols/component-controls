@@ -23,7 +23,7 @@ export const ClassicPage: FC = () => {
   const { controls: { threshold = 10 } = {} } = store.config;
   const story = useCurrentStory();
   const controlsCount = getControlsCount(story?.controls);
-  const propsCount = useCurrentPropsCount({ of: '.' });
+  const propsCount = useCurrentPropsCount();
   const splitControls =
     controlsCount > 0 &&
     controlsCount <= threshold &&

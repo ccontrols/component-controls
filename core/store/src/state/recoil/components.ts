@@ -7,6 +7,7 @@ import {
 
 import { useStore } from './store';
 import { useStory } from './story';
+import { useCurrentDocument } from './document';
 
 export interface ComponentInputProps {
   /**
@@ -124,4 +125,21 @@ export const useComponent = ({
   return componentName && doc && doc.componentsLookup
     ? store.components[doc.componentsLookup[componentName]]
     : undefined;
+};
+
+/**
+ * returns the number of prop-info properties count for the current document
+ * if the current document has more than one component assigned - will return the sum
+ */
+
+export const useCurrentPropsCount = (): number => {
+  const components = useComponents({ of: '.' });
+  const store = useStore();
+  const doc = useCurrentDocument();
+  return components && doc
+    ? Object.keys(components).reduce((acc, key) => {
+        const component = store.components[doc.componentsLookup[key]];
+        return acc + Object.keys(component.info?.props || {}).length;
+      }, 0)
+    : 0;
 };

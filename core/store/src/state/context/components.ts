@@ -133,8 +133,8 @@ export const useComponent = ({
  * if the current document has more than one component assigned - will return the sum
  */
 
-export const useCurrentPropsCount = (input: ComponentInputProps): number => {
-  const components = useComponents(input);
+export const useCurrentPropsCount = (): number => {
+  const components = useComponents({ of: '.' });
   const store = useStore();
   const doc = useCurrentDocument();
   return components && doc
