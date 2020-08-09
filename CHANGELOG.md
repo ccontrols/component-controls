@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.3](https://github.com/ccontrols/component-controls/compare/v1.19.2...v1.19.3) (2020-08-09)
+
+
+### Bug Fixes
+
+* update stories ([267b960](https://github.com/ccontrols/component-controls/commit/267b960ca550fccfb8089e6db3f7b041b72c40f2))
+
+
+
+
+
 ## [1.19.2](https://github.com/ccontrols/component-controls/compare/v1.19.1...v1.19.2) (2020-08-09)
 
 
