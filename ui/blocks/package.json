@@ -68,7 +68,7 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
     "react-table": "7.x",
-    "theme-ui": "next"
+    "theme-ui": ">= 0.4.0-rc.1"
   },
   "publishConfig": {
     "access": "public"
