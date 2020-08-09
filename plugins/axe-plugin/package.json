@@ -43,7 +43,7 @@
     "react": "^16.12.0",
     "react-google-charts": "^3.0.15",
     "recoil": "^0.0.10",
-    "theme-ui": "next"
+    "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.10.0",

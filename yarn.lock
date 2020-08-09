@@ -4472,14 +4472,14 @@
     "@theme-ui/css" "^0.4.0-rc.1"
     deepmerge "^4.2.2"
 
-"@theme-ui/css@^0.4.0-rc.1", "@theme-ui/css@next":
+"@theme-ui/css@^0.4.0-rc.1":
   version "0.4.0-rc.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.4.0-rc.1.tgz#96105db23dcba421a334228d00e9d672fa73511d"
   integrity sha512-kDfFlqpc5gm54NDF3SMvcWcXlM4EdrgfOHyiiesdr2SBd42Ns3THLHbkdXcjMt+TJuBFisZFHisF17dir7qAFA==
   dependencies:
     csstype "^2.5.7"
 
-"@theme-ui/match-media@next":
+"@theme-ui/match-media@^0.4.0-rc.1":
   version "0.4.0-rc.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/match-media/-/match-media-0.4.0-rc.1.tgz#41c5e92c71b8e350cfb529c9b7a29ca672480055"
   integrity sha512-zF020zFk/YnRtkKo/o4MS2UNh+v2bfdE30HtVNyY9LeK4AA+aVe+gce29/jV4LFWrLlhPZKMrftWAET0VGuO6Q==
@@ -4674,7 +4674,7 @@
     "@theme-ui/preset-tailwind" "^0.3.0"
     "@theme-ui/preset-tosh" "^0.3.0"
 
-"@theme-ui/presets@^0.4.0-rc.1", "@theme-ui/presets@next":
+"@theme-ui/presets@^0.4.0-rc.1":
   version "0.4.0-rc.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/presets/-/presets-0.4.0-rc.1.tgz#7674ea99c67bf96515a503786d2ccbd0607fd8cb"
   integrity sha512-vYCIAqyKqkkzjsslsEaSMidVnynzAg8If1P8bzP4lIVjILrXTXya/jrt6Br70LaarFGEtbwYQNlHD8a97g0b7A==
@@ -21281,7 +21281,7 @@ theme-ui@^0.2.49:
     "@styled-system/css" "^5.0.16"
     deepmerge "^4.0.0"
 
-theme-ui@next:
+theme-ui@^0.4.0-rc.1:
   version "0.4.0-rc.1"
   resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.4.0-rc.1.tgz#bbf7b2cf679a09fda4430f2768b59ce253a6c6ac"
   integrity sha512-c5pGGMTnC34QBJg16ZB5c5JAwDcvFDpFwhA9/qoypoLSzn6RqIqCRDeBnm0q/KP9thZqFToEXSHhiFQwrjMn9g==
