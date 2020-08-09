@@ -3,7 +3,7 @@ import { Component, Document, PackageInfo } from '@component-controls/core';
 import { hashStoreId } from '../misc/hashStore';
 import { followImports } from './follow-imports';
 import { packageInfo } from '../misc/package-info';
-import { readSourceFile } from '../misc/source-file-read';
+import { readSourceFile } from '../misc/source-options';
 
 import { LoadingDocStore, InstrumentOptions } from '../types';
 
@@ -64,6 +64,7 @@ export const extractComponent = async (
       }
     }
     componentPackage = await packageInfo(
+      componentName,
       follow.originalFilePath,
       options?.components?.package,
     );

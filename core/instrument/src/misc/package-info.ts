@@ -8,6 +8,7 @@ import parseRepositoryURL from '@hutson/parse-repository-url';
 import { PackageInfo } from '@component-controls/core';
 import { hashStoreId } from './hashStore';
 import { PackageInfoOptions } from '../types';
+import { getPackageInfo } from './source-options';
 
 const traverseFolder = (
   filePath: string,
@@ -65,6 +66,7 @@ export interface PackageInfoReturnType {
 }
 
 export const packageInfo = async (
+  partName: string,
   filePath?: string,
   opts?: PackageInfoOptions | false,
 ): Promise<PackageInfo | undefined> => {
@@ -117,15 +119,30 @@ export const packageInfo = async (
             .replace('{committish}', templates.committish || 'master');
         };
 
-        const { storeBrowseLink, storeDocsLink, storeIssuesLink } = opts || {};
+        const { browseLink, docsLink, issuesLink } = opts || {};
+        const storeBrowseLink = getPackageInfo(
+          browseLink,
+          partName,
+          fillTemplate(templates.browsefiletemplate),
+        );
         if (storeBrowseLink) {
-          result.repository.browse = fillTemplate(templates.browsefiletemplate);
+          result.repository.browse = storeBrowseLink;
         }
+        const storeDocsLink = getPackageInfo(
+          docsLink,
+          partName,
+          fillTemplate(templates.docstemplate),
+        );
         if (storeDocsLink) {
-          result.repository.docs = fillTemplate(templates.docstemplate);
+          result.repository.docs = storeDocsLink;
         }
+        const storeIssuesLink = getPackageInfo(
+          issuesLink,
+          partName,
+          fillTemplate(templates.bugstemplate),
+        );
         if (storeIssuesLink) {
-          result.repository.issues = fillTemplate(templates.bugstemplate);
+          result.repository.issues = storeIssuesLink;
         }
       }
       return result;

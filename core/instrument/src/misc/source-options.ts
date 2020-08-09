@@ -1,8 +1,8 @@
 import fs from 'fs';
-import { SourceFileOption } from '../types';
+import { ComponentFileOption } from '../types';
 
 export const readSourceFile = (
-  option: SourceFileOption | undefined,
+  option: ComponentFileOption | undefined,
   source: string | undefined,
   name: string,
   fileName: string,
@@ -16,6 +16,20 @@ export const readSourceFile = (
       return undefined;
     }
     return option ? source : undefined;
+  }
+  return undefined;
+};
+
+export const getPackageInfo = (
+  option: ComponentFileOption | undefined,
+  name: string,
+  fileName: string,
+): string | undefined => {
+  if (typeof option !== 'undefined') {
+    if (typeof option === 'function') {
+      return option(name, fileName);
+    }
+    return option ? fileName : undefined;
   }
   return undefined;
 };

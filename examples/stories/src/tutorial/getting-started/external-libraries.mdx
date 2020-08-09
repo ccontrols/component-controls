@@ -48,13 +48,31 @@ module.exports = {
   instrument: {
     components: {
       package: {
-        storeBrowseLink: false,
+        browseLink: false,
       },
     },
   }    
 };
 ```
 
+or better - we can point to the correct repository source location
+
+```js:title=.config/buildtime.js
+module.exports = {
+  instrument: {
+    components: {
+      package: {
+        browseLink: (componentName, filePath ) =>   {
+          if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
+            return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
+          }  
+          return filePath;
+        }
+      },
+    },
+  }    
+};
+```
 
 ## Props info
 
@@ -69,7 +87,12 @@ module.exports = {
   instrument: {
     components: {
       package: {
-        storeBrowseLink: false,
+        browseLink: (componentName, filePath ) =>   {
+          if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
+            return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
+          }  
+          return filePath;
+        }
       },
       resolveFile: (componentName, filePath) => {
         if (filePath.includes('theme-ui/dist')) {
@@ -109,7 +132,12 @@ module.exports = {
   instrument: {
     components: {
       package: {
-        storeBrowseLink: false,
+        browseLink: (componentName, filePath ) =>   {
+          if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
+            return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
+          }  
+          return filePath;
+        }
       },
       resolveFile: (componentName, filePath) => {
         if (filePath.includes('theme-ui/dist')) {

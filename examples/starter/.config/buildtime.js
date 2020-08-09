@@ -17,7 +17,7 @@ module.exports = {
   instrument: {
     components: {
       package: {
-        storeBrowseLink: true,
+        browseLink: true,
       },
       resolveFile: (componentName, filePath) => {
         if (filePath.includes('theme-ui/dist')) {

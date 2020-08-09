@@ -19,7 +19,7 @@ import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
-import { readSourceFile } from './misc/source-file-read';
+import { readSourceFile } from './misc/source-options';
 import {
   LoadingDocStore,
   InstrumentOptions,
@@ -87,7 +87,11 @@ const parseSource = async (
   await extractStoreComponent(store, filePath, source, options, ast);
   const doc: Document | undefined = store.doc;
   if (doc && store.stories) {
-    const storyPackage = await packageInfo(filePath, options.stories.package);
+    const storyPackage = await packageInfo(
+      doc.title,
+      filePath,
+      options.stories.package,
+    );
     if (storyPackage) {
       store.packages[storyPackage.fileHash] = storyPackage;
       doc.package = storyPackage.fileHash;

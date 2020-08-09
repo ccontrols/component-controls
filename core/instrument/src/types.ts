@@ -76,15 +76,18 @@ export interface PropsLoaderConfig {
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
   packageJsonName: 'package.json',
-  storeBrowseLink: true,
-  storeDocsLink: true,
-  storeIssuesLink: true,
+  browseLink: true,
+  docsLink: true,
+  issuesLink: true,
 };
 
 export const defaultComponentOptions: ComponentOptions = {
   sourceFiles: true,
   package: defaultPackageOptions,
 };
+
+export type ComponentFileFn = (name: string, fileName?: string) => string;
+export type ComponentFileOption = boolean | ComponentFileFn;
 
 export const defaultStoriesOptions: StoriesOptions = {
   sourceFiles: false,
@@ -108,22 +111,19 @@ export interface PackageInfoOptions {
   /**
    * Whether to save the link for browsing the file in the repository field
    */
-  storeBrowseLink?: boolean;
+  browseLink?: ComponentFileOption;
 
   /**
    * Whether to save the link for project readme file in the repository field
    */
-  storeDocsLink?: boolean;
+  docsLink?: ComponentFileOption;
 
   /**
    * Whether to save the link for filing issues with the project in the repository field
    */
 
-  storeIssuesLink?: boolean;
+  issuesLink?: ComponentFileOption;
 }
-
-export type SourceFileFn = (name: string, fileName?: string) => string;
-export type SourceFileOption = boolean | SourceFileFn;
 
 export interface ComponentOptions {
   /**
@@ -135,7 +135,7 @@ export interface ComponentOptions {
   /**
    * If set to false, will not save the component's source file
    */
-  sourceFiles?: SourceFileOption;
+  sourceFiles?: ComponentFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file
@@ -147,7 +147,7 @@ export interface StoriesOptions {
   /**
    * If set to false, will not save the stories's source file, only the source of each individual story
    */
-  sourceFiles?: SourceFileOption;
+  sourceFiles?: ComponentFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file
