@@ -5,7 +5,6 @@ Object {
   "components": Object {
     "57e65d42bacf0af9b3f4dd3fe2377cde": Object {
       "name": "ControlsTable",
-      "package": "c530e9236c215c5023fe34f23def3047",
     },
   },
   "doc": Object {
@@ -24,7 +23,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.19.2",
+        "@component-controls/core": "^1.19.3",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -60,7 +59,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.2",
+      "version": "1.19.3",
     },
   },
   "stories": Object {
@@ -113,7 +112,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.19.2",
+        "@component-controls/core": "^1.19.3",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -149,7 +148,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.2",
+      "version": "1.19.3",
     },
   },
   "stories": Object {
@@ -216,7 +215,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.19.2",
+        "@component-controls/core": "^1.19.3",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -252,7 +251,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.2",
+      "version": "1.19.3",
     },
   },
   "stories": Object {
