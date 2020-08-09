@@ -51,12 +51,12 @@ export const extractComponent = async (
     if (follow.importedName) {
       component.importedName = follow.importedName;
     }
-    if (follow.originalFilePath) {
+    if (follow.filePath) {
       const saveSource = readSourceFile(
         components?.sourceFiles,
         follow.source,
         componentName,
-        follow.originalFilePath,
+        follow.filePath,
       );
       if (saveSource) {
         component.source = saveSource;
@@ -65,7 +65,7 @@ export const extractComponent = async (
     }
     componentPackage = await packageInfo(
       componentName,
-      follow.originalFilePath,
+      follow.filePath,
       options?.components?.package,
     );
   } else {
