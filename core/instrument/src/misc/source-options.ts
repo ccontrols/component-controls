@@ -10,7 +10,7 @@ export const readSourceFile = (
   if (typeof option !== 'undefined') {
     if (typeof option === 'function') {
       const resolvedName = option(name, fileName);
-      if (fs.existsSync(resolvedName)) {
+      if (typeof resolvedName === 'string' && fs.existsSync(resolvedName)) {
         return fs.readFileSync(resolvedName, 'utf8');
       }
       return undefined;
@@ -27,7 +27,7 @@ export const getPackageInfo = (
 ): string | undefined => {
   if (typeof option !== 'undefined') {
     if (typeof option === 'function') {
-      return option(name, fileName);
+      return option(name, fileName) || undefined;
     }
     return option ? fileName : undefined;
   }

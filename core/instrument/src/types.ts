@@ -86,7 +86,13 @@ export const defaultComponentOptions: ComponentOptions = {
   package: defaultPackageOptions,
 };
 
-export type ComponentFileFn = (name: string, fileName?: string) => string;
+export type ComponentFileFn = (
+  name: string,
+  fileName?: string,
+) => string | false;
+/**
+ * custom option to extract component and doc files
+ */
 export type ComponentFileOption = boolean | ComponentFileFn;
 
 export const defaultStoriesOptions: StoriesOptions = {

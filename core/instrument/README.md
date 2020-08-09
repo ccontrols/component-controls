@@ -509,15 +509,15 @@ _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/compone
 
 `package.json` alternative name
 
-• **storeBrowseLink**? : _boolean_
+• **browseLink**? : [ComponentFileOption](#componentfileoption)
 
 Whether to save the link for browsing the file in the repository field.
 
-• **storeDocsLink**? : _boolean_
+• **browseLink**? : [ComponentFileOption](#componentfileoption)
 
 Whether to save the link for project readme file in the repository field.
 
-• **storeIssuesLink**? : _boolean_
+• **browseLink**? : [ComponentFileOption](#componentfileoption)
 
 Whether to save the link for filing issues with the project in the repository field.
 
@@ -528,6 +528,14 @@ Whether to save the link for filing issues with the project in the repository fi
 `(fileName: string, componentName?: string, source?: string) => PropTypes | undefined;`
 
 Callback function to extract props info table  - ie docgen type libraries. Used to extract displayName, and props tables for a component
+
+_Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)_
+
+## ComponentFileOption
+
+`boolean | (name: string, fileName?: string) => string;`
+
+Custom option to extract component and doc files
 
 _Defined in [core/instrument/src/types.ts](https://github.com/atanasster/component-controls/blob/ab703a5/core/instrument/src/types.ts)_
 
