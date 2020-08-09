@@ -65,15 +65,6 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
       'aria-label': 'copy control values',
     },
   ];
-  if (canReset) {
-    actions.push({
-      node: 'reset',
-      onClick: onReset,
-      group: 'controls',
-      id: 'reset',
-      'aria-label': 'reset control values to their initial value',
-    });
-  }
   if (canRandomize) {
     actions.push({
       node: 'randomize',
@@ -85,6 +76,15 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
       },
       id: 'randomize',
       'aria-label': 'generate random values for the component controls',
+    });
+  }
+  if (canReset) {
+    actions.push({
+      node: 'reset',
+      onClick: onReset,
+      group: 'controls',
+      id: 'reset',
+      'aria-label': 'reset control values to their initial value',
     });
   }
   return actions;
