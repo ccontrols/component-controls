@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 import { Markdown, MarkdownProps } from '@component-controls/components';
 import { ComponentsContainer } from '../BlockContainer/components/ComponentsContainer';
-import { useComponents, ComponentInputProps } from '@component-controls/store';
+import {
+  useComponents,
+  ComponentInputProps,
+  useCurrentDocument,
+} from '@component-controls/store';
 
 export type DescriptionProps = Omit<MarkdownProps, 'children'> &
   ComponentInputProps;
@@ -12,14 +16,20 @@ export type DescriptionProps = Omit<MarkdownProps, 'children'> &
  */
 export const Description: FC<DescriptionProps> = ({ of, ...rest }) => {
   const components = useComponents({ of });
+  const doc = useCurrentDocument();
   return (
-    <ComponentsContainer components={components}>
-      {component => {
-        if (!component || !component.info || !component.info.description) {
-          return null;
-        }
-        return <Markdown {...rest}>{component.info.description}</Markdown>;
-      }}
-    </ComponentsContainer>
+    <>
+      <ComponentsContainer components={components}>
+        {component => {
+          if (!component || !component.info || !component.info.description) {
+            return null;
+          }
+          return <Markdown {...rest}>{component.info.description}</Markdown>;
+        }}
+      </ComponentsContainer>
+      {doc && doc.description && (
+        <Markdown {...rest}>{doc.description}</Markdown>
+      )}
+    </>
   );
 };
