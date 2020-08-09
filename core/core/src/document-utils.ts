@@ -22,10 +22,11 @@ export const getDocPath = (
   doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
   name: string = '',
-  activeTab?: string,
+  tab?: string,
 ): string => {
   const { basePath = '', sideNav = {} } = pagesConfig?.[docType] || {};
   const { storyPaths } = sideNav;
+  const activeTab = doc?.MDXPage ? undefined : tab;
   if (storyPaths && doc && doc.stories && doc.stories.length > 0) {
     return getStoryPath(doc.stories[0], doc, pagesConfig, activeTab);
   }
@@ -48,9 +49,10 @@ export const getStoryPath = (
   storyId?: string,
   doc?: Document,
   pagesConfig?: PagesOnlyRoutes,
-  activeTab?: string,
+  tab?: string,
 ): string => {
   const docType = doc?.type || defDocType;
+  const activeTab = doc?.MDXPage ? undefined : tab;
   if (!storyId) {
     return getDocPath(docType, doc, pagesConfig, undefined, activeTab);
   }
