@@ -150,10 +150,10 @@ module.exports = {
         return filePath;
       },
       sourceFiles: (componentName, filePath) => {
-        if (filePath.includes('theme-ui/dist')) {
+        if (filePath.includes('@theme-ui/components/index.d.ts')) {
           const resolved = path.resolve(
             path.dirname(filePath),
-            `../../@theme-ui/components/src/${componentName}.js`,
+            `./src/${componentName}.js`,
           );
           return resolved;
         }
