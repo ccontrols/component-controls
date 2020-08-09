@@ -8,7 +8,7 @@ export default {
 };
 const actions = [
   {
-    title: 'panel-1',
+    node: 'panel-1',
     id: 'panel-1',
     'aria-label': 'display panel 1',
     panel: (
@@ -19,7 +19,7 @@ const actions = [
     ),
   },
   {
-    title: 'panel-2',
+    node: 'panel-2',
     id: 'panel-2',
     'aria-label': 'display panel 2',
     panel: (
@@ -31,7 +31,7 @@ const actions = [
     ),
   },
   {
-    title: 'action',
+    node: 'action',
     'aria-label': 'some action without panel',
   },
 ];

@@ -14,15 +14,15 @@ export const overview = () => {
     <ActionContainer
       actions={[
         {
-          title: 'reset',
+          node: 'reset',
           onClick: () => setScale(1),
         },
         {
-          title: 'zoom out',
+          node: 'zoom out',
           onClick: () => setScale(scale / 2),
         },
         {
-          title: 'zoom in',
+          node: 'zoom in',
           onClick: () => setScale(scale * 2),
         },
       ]}
