@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+
+### Bug Fixes
+
+* mdx disable tabs pages ([2c34748](https://github.com/ccontrols/component-controls/commit/2c34748dab0313da3c6505a4e7b4ee2751afecd0))
+
+
+
+
+
 ## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
 
 
