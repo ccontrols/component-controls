@@ -2302,11 +2302,7 @@ Object {
     "fileHash": "55edc55c779e57609b549bd94f835be5",
     "name": "theme-ui",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
-      "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
-      "issues": "https://github.com/system-ui/theme-ui/issues",
-    },
+    "repository": Object {},
     "version": "0.4.0-rc.1",
   },
 }

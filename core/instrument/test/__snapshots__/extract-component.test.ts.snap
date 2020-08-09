@@ -52,11 +52,7 @@ Object {
     "fileHash": "c4da3ef5ae7dc15865c9b8aa98f719dc",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-class-export.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -114,11 +110,7 @@ Object {
     "fileHash": "305b7edffa5cab1bfaf0c86ebde067bd",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-default-arrow-func.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -165,11 +157,7 @@ Object {
     "fileHash": "b41f19e3aba66e13c7c63622846d80e1",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/extract-component/kind-component.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -218,11 +206,7 @@ Object {
     "fileHash": "d817f3a58ea487eda1317bcff4199751",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -280,11 +264,7 @@ Object {
     "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -319,11 +299,7 @@ Object {
     "fileHash": "55edc55c779e57609b549bd94f835be5",
     "name": "theme-ui",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
-      "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
-      "issues": "https://github.com/system-ui/theme-ui/issues",
-    },
+    "repository": Object {},
     "version": "0.4.0-rc.1",
   },
 }
@@ -377,11 +353,7 @@ Object {
       "react-dom": ">= 16.8.0",
       "theme-ui": ">= 0.4.0-rc.1",
     },
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/ui/components/dist/index.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -450,11 +422,7 @@ Object {
     "fileHash": "d817f3a58ea487eda1317bcff4199751",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-arrow-func.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }
@@ -512,11 +480,7 @@ Object {
     "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
-    "repository": Object {
-      "browse": "https://github.com/ccontrols/component-controls/tree/master/core/instrument/test/fixtures/components/button-named-class.js",
-      "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-      "issues": "https://github.com/ccontrols/component-controls/issues",
-    },
+    "repository": Object {},
     "version": "1.18.3",
   },
 }

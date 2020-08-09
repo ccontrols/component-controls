@@ -5,13 +5,14 @@ import { packageInfo } from '../src/misc/package-info';
 describe('package-info', () => {
   it('current folder', async () => {
     expect(
-      await packageInfo(__dirname, defaultPackageOptions),
+      await packageInfo('name', __dirname, defaultPackageOptions),
     ).toMatchSnapshot();
   });
 
   it('no package', async () => {
     expect(
       await packageInfo(
+        'name',
         path.resolve(__dirname, '..', '..', '..'),
         defaultPackageOptions,
       ),
@@ -21,6 +22,7 @@ describe('package-info', () => {
   it('error fields', async () => {
     expect(
       await packageInfo(
+        'name',
         path.resolve(__dirname, 'fixtures', 'package-info'),
         defaultPackageOptions,
       ),
