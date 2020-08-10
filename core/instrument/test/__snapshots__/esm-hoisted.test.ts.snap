@@ -5,6 +5,7 @@ Object {
   "components": Object {
     "57e65d42bacf0af9b3f4dd3fe2377cde": Object {
       "name": "ControlsTable",
+      "package": "c530e9236c215c5023fe34f23def3047",
     },
   },
   "doc": Object {
@@ -59,7 +60,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.3",
+      "version": "1.19.4",
     },
   },
   "stories": Object {
@@ -148,7 +149,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.3",
+      "version": "1.19.4",
     },
   },
   "stories": Object {
@@ -251,7 +252,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.19.3",
+      "version": "1.19.4",
     },
   },
   "stories": Object {
