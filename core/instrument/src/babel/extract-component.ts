@@ -44,6 +44,15 @@ export const extractComponent = async (
     }
     if (follow.filePath) {
       component.request = follow.filePath;
+      if (components && typeof components.resolvePropsFile === 'function') {
+        const propsFile = components.resolvePropsFile(
+          componentName,
+          follow.filePath,
+        );
+        if (propsFile !== component.request) {
+          component.propsInfoFile = propsFile;
+        }
+      }
     }
     if (follow.imports) {
       component.imports = follow.imports;

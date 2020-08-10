@@ -107,10 +107,11 @@ export const getSerializedStore = async (): Promise<string> => {
   const { propsLoaders = [] } = instrumentOptions;
   for (const name in store.components) {
     const component = store.components[name];
-    if (component.request) {
+    const propsFile = component.propsInfoFile || component.request;
+    if (propsFile) {
       const propsInfo = await getComponentProps(
         propsLoaders,
-        component.request,
+        propsFile,
         component.name,
         component.source,
       );

@@ -30,6 +30,7 @@
     -   [PackageInfoOptions](#packageinfooptions)
         -   [Properties](#properties-7)
     -   [PropsInfoExtractor](#propsinfoextractor)
+    -   [ComponentFileOption](#componentfileoption)
         -   [Arguments](#arguments)
 
 # Overview

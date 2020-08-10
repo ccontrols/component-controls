@@ -65,7 +65,7 @@ module.exports = {
         browseLink: (componentName, filePath ) =>   {
           if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
             return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
-          }  
+          }
           return filePath;
         }
       },
@@ -73,12 +73,13 @@ module.exports = {
   }    
 };
 ```
+## Component source
 
-## Props info
+At this point, if you click on the `source` button in the component's source block, we will see the content of the entire `node_modules/theme-ui/dist/index.js` file, since that is where importing `theme-ui` resolves:
 
-Next, we need to find a way to automatically collect the component's properties information. In the case of `theme-ui`, we need to point the instrumenting module to the typescript interfaces for the component props and they can be found in `node_modules/@theme-ui/components/index.d.ts`. 
+<ComponentSource of={Button} />
 
-We will update our build-time configuration file to resolve the component's file.
+Since `theme-ui` also installs the source files for each individual component in `node_modules/@theme-ui/components/src/[componentName].js`, we will configure the instrumenting process to find the individual components source files:
 
 ```js:title=.config/buildtime.js
 const path = require('path');
@@ -98,11 +99,59 @@ module.exports = {
         if (filePath.includes('theme-ui/dist')) {
           const resolved = path.resolve(
             path.dirname(filePath),
-            `../../@theme-ui/components/index.d.ts`,
+            `../../@theme-ui/components/src/${componentName}.js`,
           );
           return resolved;
         }
         return filePath;
+      },
+    },
+  }    
+};
+```
+
+With the above configuration, we should be able to view the source code of the `Button` component, as installed in `node_modules/@theme-ui/components/src/Button.js`:
+
+<img alt="source code configuration" title="external library source code config" src={sourceCodeImg} />
+
+## Props info
+
+Unfortunately the individual `theme-ui` component files do not contain the component's properties information and we will configure this feature next. For `theme-ui`, we need to point the instrumenting module to the typescript interfaces for the component props and they can be found in `node_modules/@theme-ui/components/index.d.ts`. 
+
+
+```js:title=.config/buildtime.js
+const path = require('path');
+
+module.exports = {
+  instrument: {
+    components: {
+      package: {
+        browseLink: (componentName, filePath ) =>   {
+          if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
+            return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
+          }  
+          return filePath;
+        }
+      },
+      resolveFile: (componentName, filePath) => {
+        if (filePath.includes('theme-ui/dist')) {
+          const resolved = path.resolve(
+            path.dirname(filePath),
+            `../../@theme-ui/components/src/${componentName}.js`,
+          );
+          return resolved;
+        }
+        return filePath;
+      },
+      resolvePropsFile: (componentName, filePath) => {
+        if (filePath.includes('@theme-ui/components/src')) {
+          const resolved = path.resolve(
+            path.dirname(filePath),
+            `../index.d.ts`,
+          );
+          console.log(resolved);
+          return resolved;
+        }
       },
     },
   }    
@@ -117,56 +166,6 @@ As well as the component's dependencies table:
 
 <ComponentDeps of={Button} />
 
-## Component source
-
-At this point, if you click on the `source` button in the component's source block, we will see the content of the entire `node_modules/@theme-ui/components/index.d.ts` file, since that is where we pointed the instrumenting module to find the files for the `theme-ui` components:
-
-<ComponentSource of={Button} />
-
-Since `theme-ui` also installs the source files for each individual component in `node_modules/@theme-ui/components/src/[componentName].js`, next we will configure the instrumenting process to find the individual components source files:
-
-```js:title=.config/buildtime.js
-const path = require('path');
-
-module.exports = {
-  instrument: {
-    components: {
-      package: {
-        browseLink: (componentName, filePath ) =>   {
-          if (filePath.includes('system-ui/theme-ui/tree/master/dist/index.js')) {
-            return `https://github.com/system-ui/theme-ui/tree/master/packages/components/src/${componentName}.js`
-          }  
-          return filePath;
-        }
-      },
-      resolveFile: (componentName, filePath) => {
-        if (filePath.includes('theme-ui/dist')) {
-          const resolved = path.resolve(
-            path.dirname(filePath),
-            `../../@theme-ui/components/index.d.ts`,
-          );
-          return resolved;
-        }
-        return filePath;
-      },
-      sourceFiles: (componentName, filePath) => {
-        if (filePath.includes('@theme-ui/components/index.d.ts')) {
-          const resolved = path.resolve(
-            path.dirname(filePath),
-            `./src/${componentName}.js`,
-          );
-          return resolved;
-        }
-        return filePath;
-      },
-    },
-  }    
-};
-```
-
-With the above configuration, we should be able to view the source code of the `Button` component, as installed in `node_modules/@theme-ui/components/src/Button.js`:
-
-<img alt="source code configuration" title="external library source code config" src={sourceCodeImg} />
 
 ## Component playground
 

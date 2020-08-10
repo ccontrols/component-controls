@@ -745,17 +745,18 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 ### properties
 
-| Name           | Type                               | Description                                                                                                                                                                                                                                |
-| -------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `from`         | string                             | imported from                                                                                                                                                                                                                              |
-| `importedName` | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
-| `imports`      | [Imports](#imports)                | list of external imports                                                                                                                                                                                                                   |
-| `info`         | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
-| `loc`          | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
-| `name*`        | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
-| `package`      | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
-| `request`      | string                             | resolved import request                                                                                                                                                                                                                    |
-| `source`       | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
+| Name            | Type                               | Description                                                                                                                                                                                                                                |
+| --------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `from`          | string                             | imported from                                                                                                                                                                                                                              |
+| `importedName`  | 'default' \| 'namespace' \| string | imported name ex: \- default import import Button from 'buttons'; \- namespace import import \* as Button from 'buttons'; \- named import import { Button } from 'buttons'; \- named alias import import { Btn as Button } from 'buttons'; |
+| `imports`       | [Imports](#imports)                | list of external imports                                                                                                                                                                                                                   |
+| `info`          | [ComponentInfo](#componentinfo)    | docgen generated component info                                                                                                                                                                                                            |
+| `loc`           | [CodeLocation](#codelocation)      | location of the import statement in the source code file                                                                                                                                                                                   |
+| `name*`         | string                             | name of the component as used in the fiel                                                                                                                                                                                                  |
+| `package`       | string                             | lookup into the global store of PackageInfo package.json                                                                                                                                                                                   |
+| `propsInfoFile` | string                             | file containing the component's props info sometimes different from the component source file for example external libraries that have a separate index.d.ts file                                                                          |
+| `request`       | string                             | resolved import request                                                                                                                                                                                                                    |
+| `source`        | string                             | the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.                                                                                                                         |
 
 ## ComponentInfo
 
@@ -826,7 +827,7 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 given a component, return its name
 
-_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L147)_
+_defined in [@component-controls/core/src/components.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/components.ts#L154)_
 
 **function** getComponentName(`component`\*: any): string | undefined;
 

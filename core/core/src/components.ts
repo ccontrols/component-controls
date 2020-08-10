@@ -118,6 +118,13 @@ export interface Component {
   request?: string;
 
   /**
+   * file containing the component's props info
+   * sometimes different from the component source file
+   * for example external libraries that have a separate index.d.ts file
+   */
+  propsInfoFile?: string;
+
+  /**
    * location of the import statement in the source code file
    */
   loc?: CodeLocation;
