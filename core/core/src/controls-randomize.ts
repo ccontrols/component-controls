@@ -89,19 +89,18 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
             value: faker.random.boolean(),
           };
         case ControlTypes.NUMBER:
-          const step: number = control
-            ? (control as ComponentControlNumber).step || 1
-            : 1;
-
+          const step: number = (control as ComponentControlNumber)?.step || 1;
           const randomNumber: number = Math.max(
             Math.min(
               faker.random.number({
                 min:
-                  (control as ComponentControlNumber).min ||
-                  (control.value as number) / 2,
+                  (control as ComponentControlNumber).min || control.value
+                    ? (control.value as number) / 2
+                    : 0,
                 max:
-                  (control as ComponentControlNumber).max ||
-                  (control.value as number) * 2,
+                  (control as ComponentControlNumber).max || control.value
+                    ? (control.value as number) * 2
+                    : 1,
               }),
               (control as ComponentControlNumber).max || Infinity,
             ),
