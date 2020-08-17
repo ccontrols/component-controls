@@ -1,9 +1,9 @@
 import { atom, useRecoilValue, selector } from 'recoil';
-import { Store, defaultStore, PackageInfo } from '@component-controls/core';
+import { Store, getDefaultStore, PackageInfo } from '@component-controls/core';
 
 export const storeState = atom<Store>({
   key: 'store',
-  default: defaultStore,
+  default: getDefaultStore(),
 });
 
 /**

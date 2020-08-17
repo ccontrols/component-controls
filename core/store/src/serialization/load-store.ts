@@ -1,6 +1,6 @@
 import {
   Store,
-  defaultStore,
+  getDefaultStore,
   StoryProps,
   Story,
   Document,
@@ -17,8 +17,10 @@ import {
 import { LoadingStore } from '@component-controls/loader';
 import { transformControls } from './transform-controls';
 
+export { LoadingStore };
+
 export const loadStore = (store: LoadingStore): Store => {
-  const globalStore: Store = { ...defaultStore };
+  const globalStore: Store = getDefaultStore();
   try {
     const {
       error,
@@ -28,7 +30,6 @@ export const loadStore = (store: LoadingStore): Store => {
       config = {},
       buildConfig = {},
     } = store;
-
     if (stores) {
       globalStore.config = deepMergeArrays(
         buildConfig,

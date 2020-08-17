@@ -5,14 +5,14 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { Store, defaultStore, PackageInfo } from '@component-controls/core';
+import { Store, getDefaultStore, PackageInfo } from '@component-controls/core';
 
 interface StoreContextProps {
   store: Store;
 }
 
 export const StoreContext = createContext<StoreContextProps>({
-  store: defaultStore,
+  store: getDefaultStore(),
 });
 
 export const StoreContextProvider: FC<{ store: Store }> = ({

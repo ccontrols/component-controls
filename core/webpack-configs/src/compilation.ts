@@ -1,5 +1,6 @@
 import path from 'path';
 import * as webpack from 'webpack';
+import { LoadingStore } from '@component-controls/store';
 import { RuleTypes } from './types';
 
 /**
@@ -41,6 +42,10 @@ export interface CompileResults {
    * the webpack stats object
    */
   stats: webpack.Stats;
+  /**
+   * the stories store
+   */
+  store?: LoadingStore;
 }
 
 /**

@@ -28,6 +28,11 @@ export type CompileRunProps = CompileProps & {
   mode: Configuration['mode'];
 };
 
+/**
+ * callback function to monitor new documents/deleted documents
+ */
+export type CompilerCallbackFn = (results: CompileResults) => void;
+
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
   const {
     webPack,
@@ -101,6 +106,7 @@ export const runCompiler = (
   ) => void,
 
   props: CompileRunProps,
+  callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   return new Promise(resolve => {
     const compiler = webpack(createConfig(props));
@@ -148,7 +154,10 @@ module.exports = ${JSON.stringify({
         ),
         bundleName,
       );
-      resolve({ bundleName, stats });
+      if (callback) {
+        callback({ bundleName, stats, store });
+      }
+      resolve({ bundleName, stats, store });
     });
   });
 };

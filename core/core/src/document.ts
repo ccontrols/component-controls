@@ -331,28 +331,30 @@ export interface Store {
   updateStory: (story: Story) => void;
 }
 
-export const defaultStore: Store & { _observers: StoreObserver[] } = {
-  _observers: [],
-  config: {},
-  components: {},
-  docs: {},
-  packages: {},
-  stories: {},
-  addObserver: function(observer: StoreObserver) {
-    this._observers.push(observer);
-  },
-  removeObserver: function(observer: StoreObserver) {
-    this._observers = this._observers.filter(o => o !== observer);
-  },
-  updateStory: function(story: Story) {
+class DefaultStore {
+  private observers: StoreObserver[] = [];
+  config = {};
+  components = {};
+  docs = {};
+  packages = {};
+  stories = {};
+  addObserver = (observer: StoreObserver) => {
+    this.observers.push(observer);
+  };
+  removeObserver = (observer: StoreObserver) => {
+    this.observers = this.observers.filter(o => o !== observer);
+  };
+  updateStory = (story: Story) => {
     if (story) {
       if (story.id) {
         this.stories = {
           ...this.stories,
           [story.id]: story,
         };
-        this._observers.forEach(o => o(story));
+        this.observers.forEach(o => o(story));
       }
     }
-  },
-};
+  };
+}
+
+export const getDefaultStore = (): Store => new DefaultStore();

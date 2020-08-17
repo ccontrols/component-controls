@@ -2,7 +2,7 @@ import {
   Store,
   Story,
   getComponentName,
-  defaultStore,
+  getDefaultStore,
   Stories,
 } from '@component-controls/core';
 
@@ -57,5 +57,5 @@ export const readStore = (stories: Stories): Store => {
       }, {}),
     };
   }
-  return defaultStore;
+  return getDefaultStore();
 };

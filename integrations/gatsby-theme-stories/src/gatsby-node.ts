@@ -1,10 +1,19 @@
-import { compile, watch } from '@component-controls/webpack-compile';
+import {
+  compile,
+  watch,
+  CompilerCallbackFn,
+} from '@component-controls/webpack-compile';
 import {
   CompileProps,
   getBundleName,
 } from '@component-controls/webpack-configs';
 
-import { CreatePagesArgs, CreateWebpackConfigArgs } from 'gatsby';
+import {
+  CreatePagesArgs,
+  CreateWebpackConfigArgs,
+  PluginCallback,
+  Page,
+} from 'gatsby';
 import { Store } from '@component-controls/core';
 import {
   getIndexPage,
@@ -19,71 +28,83 @@ const { StorePlugin } = require('@component-controls/store/plugin');
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-exports.createPages = async (
-  { actions }: CreatePagesArgs,
+export const createPagesStatefully = async (
+  { actions, store: gatsbyStore }: CreatePagesArgs,
   options: CompileProps,
+  doneCb: PluginCallback,
 ) => {
-  const { createPage } = actions;
+  const { createPage, deletePage } = actions;
   const config: CompileProps = {
     presets: defaultPresets,
     ...options,
   };
-  const { bundleName } =
-    process.env.NODE_ENV === 'development'
-      ? await watch(config)
-      : await compile(config);
-  if (bundleName) {
-    const store: Store = loadStore(require(bundleName));
-
-    //home page
-    const { docId = null, type = null, storyId = null } =
-      getIndexPage(store) || {};
-    createPage({
-      path: `/`,
-      component: require.resolve(`../src/templates/DocPage.tsx`),
-      context: {
-        docId,
-        type,
-        storyId,
-      },
-    });
-    const homePages = getHomePages(store);
-    homePages.forEach(({ path, docId, storyId, type }: DocHomePagesPath) => {
-      createPage({
-        path,
-        component: require.resolve(`../src/templates/DocHome.tsx`),
+  const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
+    if (loadingStore) {
+      const store: Store = loadStore(loadingStore);
+      const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
+        gatsbyStore.getState().pages.forEach((page: Page) => {
+          if (page.path === props.path && page.component === props.component) {
+            deletePage({
+              path: page.path,
+              component: props.component,
+            });
+          }
+        });
+        createPage(props);
+      };
+      //home page
+      const { docId = null, type = null, storyId = null } =
+        getIndexPage(store) || {};
+      createGatsbyPage({
+        path: `/`,
+        component: require.resolve(`../src/templates/DocPage.tsx`),
         context: {
-          type,
           docId,
+          type,
           storyId,
         },
       });
-    });
-
-    const docPages = getDocPages(store);
-    docPages.forEach(
-      ({
-        path,
-        type,
-        docId = null,
-        storyId = null,
-        category = null,
-        activeTab = null,
-      }: DocPagesPath) => {
-        createPage({
+      const homePages = getHomePages(store);
+      homePages.forEach(({ path, docId, storyId, type }: DocHomePagesPath) => {
+        createGatsbyPage({
           path,
-          component: require.resolve(`../src/templates/DocPage.tsx`),
+          component: require.resolve(`../src/templates/DocHome.tsx`),
           context: {
             type,
             docId,
             storyId,
-            category,
-            activeTab,
           },
         });
-      },
-    );
-  }
+      });
+
+      const docPages = getDocPages(store);
+      docPages.forEach(
+        ({
+          path,
+          type,
+          docId = null,
+          storyId = null,
+          category = null,
+          activeTab = null,
+        }: DocPagesPath) => {
+          createGatsbyPage({
+            path,
+            component: require.resolve(`../src/templates/DocPage.tsx`),
+            context: {
+              type,
+              docId,
+              storyId,
+              category,
+              activeTab,
+            },
+          });
+        },
+      );
+    }
+    doneCb(null, null);
+  };
+  const run = process.env.NODE_ENV === 'development' ? watch : compile;
+  await run(config, onBundle);
 };
 
 exports.onCreateWebpackConfig = (

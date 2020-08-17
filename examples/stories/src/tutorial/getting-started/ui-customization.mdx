@@ -11,7 +11,7 @@ tags:
 import { Fragment, useEffect, useState } from 'react';
 import { jsx, Box, Text, Button } from 'theme-ui';
 import * as themes from '@theme-ui/presets';
-import { ControlTypes, defaultStore } from '@component-controls/core';
+import { ControlTypes, getDefaultStore } from '@component-controls/core';
 import { useConfig, useThemeState } from '@component-controls/store';
 import { AppContext, Sidebar, Footer } from '@component-controls/app';
 import { BlockContextProvider } from '@component-controls/blocks';
@@ -71,7 +71,7 @@ ${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${siteUrl ? `  siteUrl: '${s
 }`}
           </Source>
         </Box>  
-        <AppContext store={{...defaultStore, config: { 
+        <AppContext store={{...getDefaultStore(), config: { 
           siteTitle, siteUrl, siteDescription, siteLanguage, author, siteCopyright,
           theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
       </Fragment>
@@ -207,7 +207,7 @@ ${leftItems.length ? `    left: [\n${itemsToString(leftItems)}\n    ],${rightIte
   {source}
           </Source>
         </Box>  
-        <AppContext store={{...defaultStore, config: {
+        <AppContext store={{...getDefaultStore(), config: {
           siteCopyright: '',
           toolbar: {
             left: leftNodes,
@@ -247,7 +247,7 @@ You can insert a toolbar item at any position, by specifying the `order` propert
 }`}
           </Source>
         </Box>  
-        <AppContext store={{...defaultStore, config: {
+        <AppContext store={{...getDefaultStore(), config: {
           siteCopyright: '',
           toolbar: {
             left: [{
@@ -312,7 +312,7 @@ ${toolbar.join(',\n')}
 `}
           </Source>
         </Box>  
-        <AppContext store={{...defaultStore, config: {
+        <AppContext store={{...getDefaultStore(), config: {
           siteCopyright: '',
           toolbar: {
             left: left.map(item => ({ id: item, hidden: true })),
@@ -374,7 +374,7 @@ The sidebar items are also [ActionBar](/api/components-actionbar--overview) and 
 }`}
           </Source>
         </Box>  
-        <BlockContextProvider store={{...defaultStore, config: {
+        <BlockContextProvider store={{...getDefaultStore(), config: {
           sidebar: actions,
           }}}>
           <Box sx={{ width: 350}}>
@@ -402,7 +402,7 @@ The footer is also customizable with a `left` and `right` section as the [toolba
   {source}
           </Source>
         </Box>  
-        <BlockContextProvider store={{...defaultStore, config: {
+        <BlockContextProvider store={{...getDefaultStore(), config: {
           footer: {
             left: leftNodes,
             right: rightNodes,
