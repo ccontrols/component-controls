@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
+
+
+### Bug Fixes
+
+* randomize number ([d7b93d7](https://github.com/ccontrols/component-controls/commit/d7b93d76db5c43dac04d3f9ffd2471a261a4d909))
+* remove extra page ([ee0c1af](https://github.com/ccontrols/component-controls/commit/ee0c1af802b2e85a822ae0f646ffa7f8dec40dee))
+
+
+### Features
+
+* reload routes hmr, gatsby ([b6fa783](https://github.com/ccontrols/component-controls/commit/b6fa7834c547923efeeb2b36b5652e9464ceddc6))
+
+
+
+
+
 ## [1.19.5](https://github.com/ccontrols/component-controls/compare/v1.19.4...v1.19.5) (2020-08-10)
 
 
