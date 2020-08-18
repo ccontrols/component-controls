@@ -21,12 +21,6 @@ const config: RunOnlyConfiguration = {
   pages: {
     story: {
       label: 'API',
-      tabs: [
-        { title: 'Documentation', type: 'ClassicPage' },
-        { title: 'Testing', type: 'TestingPage' },
-        { title: 'Viewport', type: 'ViewportPage' },
-      ],
-
     },
     tutorial: {
       label: 'Tutorial',

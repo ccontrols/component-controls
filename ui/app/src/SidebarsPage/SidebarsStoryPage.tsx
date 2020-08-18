@@ -48,7 +48,10 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
     : undefined;
   const pageRef = useRef<HTMLDivElement>(null);
   const tabIndex = Math.max(
-    tabs.findIndex(tab => tab.route === selectedTab),
+    tabs.findIndex(tab => {
+      const route = tab.route || tab.title ? tab.title.toLowerCase() : '';
+      return route === selectedTab;
+    }),
     0,
   );
   const renderTab = (tab: TabConfiguration) => {
@@ -71,23 +74,27 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
         <Tabs fontSize={2} defaultIndex={tabIndex}>
           {tabs && tabs.length > 1 && (
             <TabList>
-              {tabs.map((tab, tabIndex) => (
-                <Tab key={`tab_${tab.route}`}>
-                  <Link
-                    href={
-                      docId
-                        ? getDocumentPath(
-                            type,
-                            docId,
-                            tabIndex > 0 ? tab.route : undefined,
-                          )
-                        : '#'
-                    }
-                  >
-                    {tab.title}
-                  </Link>
-                </Tab>
-              ))}
+              {tabs.map((tab, tabIndex) => {
+                const route =
+                  tab.route || tab.title ? tab.title.toLowerCase() : '';
+                return (
+                  <Tab key={`tab_${route}`}>
+                    <Link
+                      href={
+                        docId
+                          ? getDocumentPath(
+                              type,
+                              docId,
+                              tabIndex > 0 ? route : undefined,
+                            )
+                          : '#'
+                      }
+                    >
+                      {tab.title}
+                    </Link>
+                  </Tab>
+                );
+              })}
             </TabList>
           )}
 
@@ -97,11 +104,15 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
             ref={pageRef}
           >
             {tabs &&
-              tabs.map((tab, index) => (
-                <TabPanel key={`panel_${tab.route}`}>
-                  {tabIndex === index ? renderTab(tab) : null}
-                </TabPanel>
-              ))}
+              tabs.map((tab, index) => {
+                const route =
+                  tab.route || tab.title ? tab.title.toLowerCase() : '';
+                return (
+                  <TabPanel key={`panel_${route}`}>
+                    {tabIndex === index ? renderTab(tab) : null}
+                  </TabPanel>
+                );
+              })}
           </PageContainer>
         </Tabs>
       </Box>

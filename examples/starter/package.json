@@ -25,7 +25,6 @@
     "next": "^9.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "theme-ui": "^0.4.0-rc.1",
     "webpack-bundle-analyzer": "^3.8.0"
   }
 }

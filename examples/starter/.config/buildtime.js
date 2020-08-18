@@ -14,6 +14,15 @@ module.exports = {
       ]
     };
   },
+  pages: {
+    story: {
+      tabs: [
+        { title: 'Documentation', type: 'ClassicPage' },
+        { title: 'Testing', type: 'TestingPage' },
+        { title: 'Viewport', type: 'ViewportPage' },
+      ],
+    },
+  },
   instrument: {
     components: {
       package: {

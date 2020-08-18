@@ -10,6 +10,5 @@ export default config({
     './src/register-storyconfig-panel.tsx',
     './src//docs-page/full-page.tsx',
     './src//docs-page/testing-page.tsx',
-    './src//docs-page/viewport-page.tsx',
   ],
 });

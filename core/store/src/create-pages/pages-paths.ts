@@ -138,11 +138,16 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
       const page = pages[type as DocType];
       const docType = type as DocType;
       const docs: Pages = getPageList(store, docType);
-      const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
-        { route: undefined },
+      const tabs: Pick<TabConfiguration, 'route' | 'title'>[] = page.tabs || [
+        { route: undefined, title: '' },
       ];
       tabs.forEach((tab, tabIndex) => {
-        const route = tabIndex > 0 ? tab.route : undefined;
+        const route =
+          tabIndex > 0
+            ? tab.route || tab.title
+              ? tab.title.toLowerCase()
+              : ''
+            : undefined;
         docs.forEach(doc => {
           if (doc.route !== '/') {
             const stories =

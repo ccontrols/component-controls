@@ -32,8 +32,8 @@ export const loadStore = (store: LoadingStore): Store => {
     } = store;
     if (stores) {
       globalStore.config = deepMergeArrays(
-        buildConfig,
-        deepMergeArrays(defaultRunConfig, config),
+        defaultRunConfig,
+        deepMergeArrays(buildConfig, config),
       );
       stores.forEach(s => {
         const storeDoc = s.doc;
