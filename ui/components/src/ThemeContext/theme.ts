@@ -31,6 +31,7 @@ export type ControlsTheme = {
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
   linkheading: Record<string, ThemeUIStyleObject>;
+  multiselect: Record<string, ThemeUIStyleObject>;
   searchinput: Record<string, ThemeUIStyleObject>;
   subtitle: ThemeUIStyleObject;
   subheading: ThemeUIStyleObject;
@@ -470,6 +471,15 @@ export const theme: ControlsTheme = {
       ':hover': {
         visibility: 'visible',
       },
+    },
+  },
+  multiselect: {
+    container: {
+      px: 3,
+      py: 1,
+    },
+    item: {
+      py: 1,
     },
   },
   searchinput: {

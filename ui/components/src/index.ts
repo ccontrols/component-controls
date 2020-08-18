@@ -8,6 +8,7 @@ export * from './Header';
 export * from './Keyboard';
 export * from './Link';
 export * from './Markdown';
+export * from './Multiselect';
 export * from './Navmenu';
 export * from './Pagination';
 export * from './PanelContainer';
