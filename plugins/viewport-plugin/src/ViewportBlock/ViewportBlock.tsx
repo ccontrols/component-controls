@@ -1,78 +1,65 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
-import { Box, Theme, jsx } from 'theme-ui';
+import { Box, jsx } from 'theme-ui';
 import {
   StoryBlockContainer,
-  Story,
   StoryBlockContainerProps,
 } from '@component-controls/blocks';
 import { useStory, StoryInputProps } from '@component-controls/store';
 import { ActionContainer } from '@component-controls/components';
+import { ViewportBox } from './ViewportBox';
 
-export const ViewportBlock: FC<StoryBlockContainerProps & StoryInputProps> = ({
+export interface ViewportBlockOwnProps {
+  sizes?: Record<string, number>;
+}
+
+export type ViewportBlockProps = ViewportBlockOwnProps &
+  StoryBlockContainerProps &
+  StoryInputProps;
+export const ViewportBlock: FC<ViewportBlockProps> = ({
   id,
   name,
+  sizes = {
+    xsmall: 320,
+    small: 375,
+    medium: 768,
+    large: 1024,
+  },
   ...props
 }) => {
   const story = useStory({ id, name });
-  const [showXSmall, setShowXSmall] = useState(true);
-  const [showSmall, setShowSmall] = useState(true);
-  const [showMed, setShowMed] = useState(true);
-  return story ? (
+  const [visible, setVisible] = useState({ ...sizes });
+  return story?.id ? (
     <StoryBlockContainer story={story} {...props}>
       <ActionContainer
-        actions={[
-          { node: 'medium', onClick: () => setShowMed(!showMed) },
-          { node: 'small', onClick: () => setShowSmall(!showSmall) },
-          { node: 'xtra-small', onClick: () => setShowXSmall(!showXSmall) },
-        ]}
+        actions={Object.keys(visible)
+          .reverse()
+          .map(name => ({
+            node: name,
+            onClick: () =>
+              setVisible({
+                ...visible,
+                [name]: visible[name] ? 0 : sizes[name],
+              }),
+          }))}
         plain={true}
       >
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            minHeight: '250px',
-            height: 'fit-content',
+            height: '100vh',
             width: '100%',
             overflow: 'auto',
-            p: 1,
-            boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
+            pt: 2,
+            pl: 1,
           }}
         >
-          <Box
-            sx={{
-              minWidth: '250px',
-              height: 'fit-content',
-              m: 1,
-              boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
-            }}
-            hidden={!showXSmall}
-          >
-            <Story id={story.id} />
-          </Box>
-          <Box
-            sx={{
-              minWidth: '500px',
-              height: 'fit-content',
-              m: 1,
-              boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
-            }}
-            hidden={!showSmall}
-          >
-            <Story id={story.id} />
-          </Box>
-          <Box
-            sx={{
-              minWidth: '900px',
-              height: 'fit-content',
-              m: 1,
-              boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
-            }}
-            hidden={!showMed}
-          >
-            <Story id={story.id} />
-          </Box>
+          {Object.keys(visible)
+            .filter(name => visible[name])
+            .map(name => (
+              <ViewportBox key={name} storyId={story.id} size={visible[name]} />
+            ))}
         </Box>
       </ActionContainer>
     </StoryBlockContainer>

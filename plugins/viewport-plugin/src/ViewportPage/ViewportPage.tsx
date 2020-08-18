@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Title } from '@component-controls/blocks';
+import { Description } from '@component-controls/blocks';
 import { ViewportBlock } from '../ViewportBlock';
 export const ViewportPage: FC = () => (
   <>
-    <Title />
+    <Description />
     <ViewportBlock title="Viewport" />
   </>
 );
