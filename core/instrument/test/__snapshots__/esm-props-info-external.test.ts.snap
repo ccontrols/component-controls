@@ -2365,8 +2365,8 @@ Object {
     "componentsLookup": Object {
       "Button": "98b2111b08fbab8e38c938acaf3e129a",
     },
-    "date": 2020-08-05T12:08:58.984Z,
-    "dateModified": 2020-08-05T12:13:10.991Z,
+    "date": 2020-08-18T06:58:44.428Z,
+    "dateModified": 2020-08-18T06:58:44.435Z,
     "package": "0de7221ca26b66ff42f614448352017c",
     "title": "Storybook/Blocks/Button",
   },
