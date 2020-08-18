@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui';
-import { RunOnlyConfiguration } from "@component-controls/core";
+import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
+import { ViewportPage } from "@component-controls/viewport-plugin";
 
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
@@ -21,6 +22,10 @@ const config: RunOnlyConfiguration = {
   pages: {
     story: {
       label: 'API',
+      tabs: [
+        ...defaultRunConfig.pages.story.tabs,
+        { title: 'Viewport', render: () => <ViewportPage /> },
+      ],
       sideNav: {
         collapseSingle: false,
       },

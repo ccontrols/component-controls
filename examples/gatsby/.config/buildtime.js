@@ -1,5 +1,6 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
   stories: [

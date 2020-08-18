@@ -11,7 +11,8 @@ export const ViewportBox: FC<ViewportBoxProps> = ({ storyId, size }) => {
   return (
     <Box
       sx={{
-        minWidth: size,
+        minHeight: '100%',
+        minWidth: 'unset',
         pr: 4,
         ':hover': {
           '& > div': {
@@ -25,7 +26,7 @@ export const ViewportBox: FC<ViewportBoxProps> = ({ storyId, size }) => {
           boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
         }}
       >
-        <Story id={storyId} sxStyle={{ mb: 0 }} />
+        <Story id={storyId} sxStyle={{ mb: 0, minWidth: size }} />
       </Box>
       <Text sx={{ color: 'muted', fontWeight: 'bold' }}>{`${size}px`}</Text>
     </Box>
