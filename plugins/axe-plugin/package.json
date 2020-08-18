@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/axe-plugin",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "description": "Axe ally testing plugin",
   "keywords": [
     "addon",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.20.0",
-    "@component-controls/components": "^1.19.3",
-    "@component-controls/store": "^1.20.0",
+    "@component-controls/blocks": "^1.21.0",
+    "@component-controls/components": "^1.21.0",
+    "@component-controls/store": "^1.21.0",
     "@primer/octicons-react": "^10.0.0",
     "axe-core": "^3.5.3",
     "react": "^16.12.0",
@@ -46,7 +46,7 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.10.0",
+    "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
     "typescript": "^3.8.3"

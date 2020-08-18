@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/atanasster/gatsby-controls-starter/compare/v1.20.0...v1.21.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* update page tabs from build config ([b2551e7](https://github.com/atanasster/gatsby-controls-starter/commit/b2551e7cc83058c21e2956a331fe238604ce5051))
+
+
+### Features
+
+* integrate viewport into examples ([836aae1](https://github.com/atanasster/gatsby-controls-starter/commit/836aae1150c1883c0c361d6dbabe342c9954ca49))
+
+
+
+
+
 # [1.20.0](https://github.com/atanasster/gatsby-controls-starter/compare/v1.19.5...v1.20.0) (2020-08-17)
 
 

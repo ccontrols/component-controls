@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/ccontrols/component-controls/compare/v1.20.0...v1.21.0) (2020-08-18)
+
+
+### Features
+
+* initial commit ([8d93112](https://github.com/ccontrols/component-controls/commit/8d931121279bf39ecdb4961f480fb57b0ed1f7c7))
+
+
+
+
+
 # [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
 
 **Note:** Version bump only for package @component-controls/pages
