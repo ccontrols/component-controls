@@ -16,6 +16,7 @@
     -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
     -   [<ins>LinkHeading</ins>](#inslinkheadingins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
+    -   [<ins>Multiselect</ins>](#insmultiselectins)
     -   [<ins>Navmenu</ins>](#insnavmenuins)
     -   [<ins>Pagination</ins>](#inspaginationins)
     -   [<ins>IconButton</ins>](#insiconbuttonins)
@@ -255,6 +256,19 @@ _Markdown [source code](https://github.com/ccontrols/component-controls/tree/mas
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
 | `children`   | _ReactNode_                                                                                                                                                                                                              | the markdown source code is passed as a children pro. |
 | `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.         |
+
+## <ins>Multiselect</ins>
+
+A Popover multiselect displaying checkboxes for select/unselect.
+
+_Multiselect [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Multiselect/Multiselect.tsx)_
+
+### properties
+
+| Name        | Type                              | Description                                                |
+| ----------- | --------------------------------- | ---------------------------------------------------------- |
+| `items*`    | _MultiselectItem\[]_              | array of items to select from                              |
+| `onChange*` | _(item: MultiselectItem) => void_ | function called when the selected state of an item changes |
 
 ## <ins>Navmenu</ins>
 

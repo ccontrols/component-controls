@@ -3,6 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
+    -   [DefaultStore](#defaultstore)
     -   [ArgUsageLocation](#argusagelocation)
     -   [SmartControls](#smartcontrols)
     -   [SourceIdentifier](#sourceidentifier)
@@ -21,7 +22,7 @@
     -   [CURRENT_STORY](#current_story)
     -   [defDocType](#defdoctype)
     -   [dateToLocalString](#datetolocalstring)
-    -   [defaultStore](#defaultstore)
+    -   [getDefaultStore](#getdefaultstore)
     -   [ControlTypes](#controltypes)
     -   [ComponentControlArray](#componentcontrolarray)
     -   [ComponentControlBase](#componentcontrolbase)
@@ -75,12 +76,12 @@
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
     -   [StoreObserver](#storeobserver-1)
+    -   [Story](#story-1)
     -   [Components](#components-1)
     -   [RunConfiguration](#runconfiguration-1)
     -   [Documents](#documents-1)
     -   [Packages](#packages-1)
     -   [Stories](#stories-1)
-    -   [Story](#story-1)
     -   [StoryArguments](#storyarguments-1)
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [DocType](#doctype-1)
@@ -96,11 +97,14 @@
     -   [PageConfiguration](#pageconfiguration-1)
     -   [BuildConfiguration](#buildconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
+    -   [Story](#story-2)
     -   [DocType](#doctype-2)
     -   [SideNavConfiguration](#sidenavconfiguration-2)
     -   [PageTabs](#pagetabs-2)
     -   [WebpackConfig](#webpackconfig-2)
     -   [PagesOnlyRoutes](#pagesonlyroutes-2)
+    -   [StoryArguments](#storyarguments-2)
+    -   [StoryRenderFn](#storyrenderfn-2)
     -   [WebpackConfigFn](#webpackconfigfn-2)
     -   [DocType](#doctype-3)
     -   [PageConfiguration](#pageconfiguration-2)
@@ -132,6 +136,25 @@ $ npm install @component-controls/core --save-dev
 <tsdoc-typescript entry="./src/document.ts,./src/controls.ts,./src/components.ts,./src/propsInfo.ts,./src/utility.ts,./src/configuration.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
+
+## DefaultStore
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
+
+
+
+### properties
+
+| Name              | Type                                                                              | Description |
+| ----------------- | --------------------------------------------------------------------------------- | ----------- |
+| `components*`     |                                                                                   |             |
+| `config*`         |                                                                                   |             |
+| `docs*`           |                                                                                   |             |
+| `packages*`       |                                                                                   |             |
+| `stories*`        |                                                                                   |             |
+| `addObserver*`    | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): void;    |             |
+| `removeObserver*` | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): void; |             |
+| `updateStory*`    | **function** updateStory(`story`\*: [Story](#story)): void;                       |             |
 
 ## ArgUsageLocation
 
@@ -387,25 +410,11 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `date`    | [Date](#date) |             |
 | `returns` | string        |             |
 
-## defaultStore
+## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L334)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L360)_
 
-
-
-### properties
-
-| Name              | Type                                                                              | Description |
-| ----------------- | --------------------------------------------------------------------------------- | ----------- |
-| `_observers*`     | undefined\[]                                                                      |             |
-| `components*`     |                                                                                   |             |
-| `config*`         |                                                                                   |             |
-| `docs*`           |                                                                                   |             |
-| `packages*`       |                                                                                   |             |
-| `stories*`        |                                                                                   |             |
-| `addObserver*`    | **function** addObserver(`observer`\*: [StoreObserver](#storeobserver)): void;    |             |
-| `removeObserver*` | **function** removeObserver(`observer`\*: [StoreObserver](#storeobserver)): void; |             |
-| `updateStory*`    | **function** updateStory(`story`\*: [Story](#story)): void;                       |             |
+**function** getDefaultStore(): [Store](#store);
 
 ## ControlTypes
 
@@ -1259,6 +1268,27 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `story`   | [Story](#story) |             |
 | `returns` | void            |             |
 
+## Story
+
+Story interface - usually extracted by the AST instrumenting loader
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
+
+### properties
+
+| Name          | Type                              | Description                                                                                           |
+| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
+| `description` | string                            | story extended description. can use markdown.                                                         |
+| `doc`         | string                            | title of the file/group of stories                                                                    |
+| `id`          | string                            | id of the story                                                                                       |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
+| `name*`       | string                            | name of the Story.                                                                                    |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
+| `subtitle`    | string                            | optional story subtitle property                                                                      |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
+
 ## Components
 
 list of components used in stories
@@ -1317,27 +1347,6 @@ Record&lt;string,
 [Story](#story)
 
 >
-
-## Story
-
-Story interface - usually extracted by the AST instrumenting loader
-
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
-
-### properties
-
-| Name          | Type                              | Description                                                                                           |
-| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
-| `description` | string                            | story extended description. can use markdown.                                                         |
-| `doc`         | string                            | title of the file/group of stories                                                                    |
-| `id`          | string                            | id of the story                                                                                       |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
-| `name*`       | string                            | name of the Story.                                                                                    |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
-| `subtitle`    | string                            | optional story subtitle property                                                                      |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
 
 ## StoryArguments
 
@@ -1547,6 +1556,27 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `options` | any                                           |             |
 | `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
+## Story
+
+Story interface - usually extracted by the AST instrumenting loader
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
+
+### properties
+
+| Name          | Type                              | Description                                                                                           |
+| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
+| `description` | string                            | story extended description. can use markdown.                                                         |
+| `doc`         | string                            | title of the file/group of stories                                                                    |
+| `id`          | string                            | id of the story                                                                                       |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
+| `name*`       | string                            | name of the Story.                                                                                    |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
+| `subtitle`    | string                            | optional story subtitle property                                                                      |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
+
 ## DocType
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
@@ -1595,6 +1625,31 @@ Record&lt;
 | `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
 
 >
+
+## StoryArguments
+
+list of story arguments. Each argument can be a deconstructed argument of itself
+the first argument are the control 'values'
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L60)_
+
+[StoryArgument](#storyargument)\[]
+
+## StoryRenderFn
+
+story render function
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L98)_
+
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+
+### parameters
+
+| Name             | Type                | Description |
+| ---------------- | ------------------- | ----------- |
+| `controlValues*` | \[key: string]: any |             |
+| `context`        | any                 |             |
+| `returns`        | any                 |             |
 
 ## WebpackConfigFn
 
