@@ -12,7 +12,7 @@
 
 # In action
 
-[Example site](https://components-storybook-6-no-docs.netlify.app/?path=/test/components-actioncontainer--overview)
+[Example site](https://component-controls.com/api/components-actioncontainer--overview/viewport)
 
 # Overview
 
