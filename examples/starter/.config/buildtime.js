@@ -1,6 +1,6 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+const { defaultBuildConfig } = require('@component-controls/core');
 module.exports = {
   stories: [
     '../src/docs/*.@(mdx|tsx)',
@@ -17,9 +17,9 @@ module.exports = {
   pages: {
     story: {
       tabs: [
-        { title: 'Documentation', type: 'ClassicPage' },
-        { title: 'Testing', type: 'TestingPage' },
-        { title: 'Viewport', type: 'ViewportPage' },
+        ...defaultBuildConfig.pages.story.tabs,
+        // new viewport tab
+        { route: 'viewport' },
       ],
     },
   },

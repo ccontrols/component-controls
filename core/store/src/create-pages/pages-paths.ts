@@ -144,9 +144,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
       tabs.forEach((tab, tabIndex) => {
         const route =
           tabIndex > 0
-            ? tab.route || tab.title
-              ? tab.title.toLowerCase()
-              : ''
+            ? tab.route || (tab.title ? tab.title.toLowerCase() : '')
             : undefined;
         docs.forEach(doc => {
           if (doc.route !== '/') {

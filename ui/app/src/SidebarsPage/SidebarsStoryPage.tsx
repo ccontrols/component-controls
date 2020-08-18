@@ -49,7 +49,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const pageRef = useRef<HTMLDivElement>(null);
   const tabIndex = Math.max(
     tabs.findIndex(tab => {
-      const route = tab.route || tab.title ? tab.title.toLowerCase() : '';
+      const route = tab.route || (tab.title ? tab.title.toLowerCase() : '');
       return route === selectedTab;
     }),
     0,
@@ -76,7 +76,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
             <TabList>
               {tabs.map((tab, tabIndex) => {
                 const route =
-                  tab.route || tab.title ? tab.title.toLowerCase() : '';
+                  tab.route || (tab.title ? tab.title.toLowerCase() : '');
                 return (
                   <Tab key={`tab_${route}`}>
                     <Link
@@ -106,7 +106,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
             {tabs &&
               tabs.map((tab, index) => {
                 const route =
-                  tab.route || tab.title ? tab.title.toLowerCase() : '';
+                  tab.route || (tab.title ? tab.title.toLowerCase() : '');
                 return (
                   <TabPanel key={`panel_${route}`}>
                     {tabIndex === index ? renderTab(tab) : null}
