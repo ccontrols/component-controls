@@ -16,11 +16,59 @@
 
 # Overview
 
+Inspired from the great [playroom](https://github.com/seek-oss/playroom) project, this addon contains a `ViewportBlock` that you can integrate into any page, as well as a standalone `ViewportPage`
+
 # Getting Started
 
 ## Install
 
-## Configure
+```sh
+yarn add @component-controls/viewport-plugin --dev
+```
+
+## Configure route
+
+in `.config/buildtime.js`
+```
+const { defaultBuildConfig } = require('@component-controls/core');
+
+module.exports = {
+  stories: [
+    ...
+  ],
+  pages: {
+    story: {
+      tabs: [
+        ...defaultBuildConfig.pages.story.tabs,
+        { route: 'viewport' },
+      ],
+    },
+  },
+}  
+```
+
+## Configure page display
+
+in `.config/runtime.tsx`
+```
+import React from 'react';
+import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+import { ViewportPage } from "@component-controls/viewport-plugin";
+
+const config: RunOnlyConfiguration = {
+  pages: {
+    story: {
+      tabs: [
+        ...defaultRunConfig.pages.story.tabs,
+        { title: 'Viewport', render: () => <ViewportPage /> },
+      ],
+    },
+  },
+
+};
+
+export default config;
+```
 
 # API
 
