@@ -825,6 +825,14 @@ A hint could be a sample value or a brief description of the expected format.",
         "raw": "boolean",
       },
     },
+    "flat": Object {
+      "description": "if true, will flatten the group by",
+      "parentName": "PropsTableOwnProps",
+      "type": Object {
+        "name": "boolean",
+        "raw": "boolean",
+      },
+    },
     "groupBy": Object {
       "description": "field to be grouped by.",
       "parentName": "TableOwnProps",
@@ -1961,7 +1969,7 @@ If an array of components is specified, each component will be displayed in a se
 if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "((name: string, component: StoryComponent) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "raw": "((name: string, component: Component) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {

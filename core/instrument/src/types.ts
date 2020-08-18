@@ -1,5 +1,5 @@
 import { ParserOptions } from '@babel/parser';
-import { Document, StoriesStore } from '@component-controls/core';
+import { Document, Store } from '@component-controls/core';
 import images from 'remark-images';
 import emoji from 'remark-emoji';
 import { SyncOpts as ResolveOptions } from 'resolve';
@@ -16,7 +16,7 @@ export type LoadingDocStore = {
    * the document itself
    */
   doc: Document | undefined;
-} & Required<Pick<StoriesStore, 'components' | 'packages' | 'stories'>>;
+} & Required<Pick<Store, 'components' | 'packages' | 'stories'>>;
 
 type PrettierOptions = Options & {
   resolveConfigOptions?: ResolvePrettierConfigOptions;
@@ -76,18 +76,27 @@ export interface PropsLoaderConfig {
 export const defaultPackageOptions: PackageInfoOptions = {
   maxLevels: 10,
   packageJsonName: 'package.json',
-  storeBrowseLink: true,
-  storeDocsLink: true,
-  storeIssuesLink: true,
+  browseLink: true,
+  docsLink: true,
+  issuesLink: true,
 };
 
 export const defaultComponentOptions: ComponentOptions = {
-  storeSourceFile: true,
+  sourceFiles: true,
   package: defaultPackageOptions,
 };
 
+export type ComponentFileFn = (
+  name: string,
+  fileName?: string,
+) => string | false;
+/**
+ * custom option to extract component and doc files
+ */
+export type ComponentFileOption = boolean | ComponentFileFn;
+
 export const defaultStoriesOptions: StoriesOptions = {
-  storeSourceFile: false,
+  sourceFiles: false,
   package: defaultPackageOptions,
 };
 
@@ -108,18 +117,18 @@ export interface PackageInfoOptions {
   /**
    * Whether to save the link for browsing the file in the repository field
    */
-  storeBrowseLink?: boolean;
+  browseLink?: ComponentFileOption;
 
   /**
    * Whether to save the link for project readme file in the repository field
    */
-  storeDocsLink?: boolean;
+  docsLink?: ComponentFileOption;
 
   /**
    * Whether to save the link for filing issues with the project in the repository field
    */
 
-  storeIssuesLink?: boolean;
+  issuesLink?: ComponentFileOption;
 }
 
 export interface ComponentOptions {
@@ -130,9 +139,19 @@ export interface ComponentOptions {
   resolveFile?: (componentName: string, filePath: string) => string | undefined;
 
   /**
+   * Callback function to resolve the props info file name of a component.
+   * Sometimes the props are in a different file than the source file
+   * for example external libraries that had a separate index.d.ts file
+   */
+  resolvePropsFile?: (
+    componentName: string,
+    filePath: string,
+  ) => string | undefined;
+
+  /**
    * If set to false, will not save the component's source file
    */
-  storeSourceFile?: boolean;
+  sourceFiles?: ComponentFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file
@@ -144,7 +163,7 @@ export interface StoriesOptions {
   /**
    * If set to false, will not save the stories's source file, only the source of each individual story
    */
-  storeSourceFile?: boolean;
+  sourceFiles?: ComponentFileOption;
 
   /**
    * options for extracting repository information from the component's package,json file
@@ -188,6 +207,11 @@ export interface MDXOptions {
    * if true, will return the transformed MDX -< JSX, ready to be loaded by babel
    */
   transformMDX?: boolean;
+
+  /**
+   * generate storybok required fake exports for MDX compatibility
+   */
+  storybookExports?: boolean;
   /**
    * ability to configure the mdx files imports. Works with transformMDX: true
    * by default this is the string

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { ControlsStateProvider } from '@component-controls/store';
 import { TextEditor } from './TextEditor';
 
 export default {
@@ -11,21 +11,21 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState('Hello');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: { type: ControlTypes.TEXT, value: state },
       }}
     >
       <TextEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const placeholder = () => {
   const [state, setState] = React.useState();
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -36,14 +36,14 @@ export const placeholder = () => {
       }}
     >
       <TextEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const textArea = () => {
   const [state, setState] = React.useState();
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -55,6 +55,6 @@ export const textArea = () => {
       }}
     >
       <TextEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };

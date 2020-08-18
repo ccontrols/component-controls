@@ -3,6 +3,208 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.3](https://github.com/ccontrols/component-controls/compare/v1.19.2...v1.19.3) (2020-08-09)
+
+
+### Bug Fixes
+
+* update stories ([267b960](https://github.com/ccontrols/component-controls/commit/267b960ca550fccfb8089e6db3f7b041b72c40f2))
+
+
+
+
+
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Bug Fixes
+
+* peer depenencies update ([13f3765](https://github.com/ccontrols/component-controls/commit/13f3765ce08c5b67c8ff3c4bb9138217257796b0))
+
+
+
+
+
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+
+### Bug Fixes
+
+* update peer dependencies ([3e2be3b](https://github.com/ccontrols/component-controls/commit/3e2be3bf7c7c8ac22ad56f04fb5797a8124dd620))
+
+
+
+
+
+## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
+
+
+### Bug Fixes
+
+* wordwrap for anchors in table ([735a17d](https://github.com/ccontrols/component-controls/commit/735a17db7047adaadfab789b10ccbdea61ff6c40))
+
+
+
+
+
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+# [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
+
+
+### Features
+
+* add collapseSingle option to pages ([fe89923](https://github.com/ccontrols/component-controls/commit/fe899230a3f5fc72d05c4af05468b998a8e4b6c1))
+
+
+
+
+
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+
+### Bug Fixes
+
+* linting issues ([f375a30](https://github.com/ccontrols/component-controls/commit/f375a30f2193b19a65bda1f77a2f743eaf0ee4fd))
+
+
+
+
+
+## [1.16.2](https://github.com/ccontrols/component-controls/compare/v1.16.1...v1.16.2) (2020-08-06)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* full page padding ([2673319](https://github.com/ccontrols/component-controls/commit/26733197502baa3c2e61d1010533bb08b56bb8f3))
+* reduce x-padding in mobile ([9c63f98](https://github.com/ccontrols/component-controls/commit/9c63f989fe938a210b96f6d94a69b78cb9a34909))
+* white space no wrapping ([1b1455d](https://github.com/ccontrols/component-controls/commit/1b1455de914871ad6c78c2d24dacb7f41e4632b9))
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* group by id before hidden ([90bd055](https://github.com/ccontrols/component-controls/commit/90bd055fd2f9227a2e1bfa0a1f07a2d2448ef4df))
+
+
+### Features
+
+* footer left and right customization ([66e08b5](https://github.com/ccontrols/component-controls/commit/66e08b5d85400daf0cb4831cb4cc320a0fda7174))
+
+
+
+
+
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+
+### Features
+
+* add build-time error saving ([912074f](https://github.com/ccontrols/component-controls/commit/912074f3fd954e61f880da171502dc1b4525be7e))
+
+
+
+
+
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/components
+
+
+
+
+
+## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
+
+
+### Bug Fixes
+
+* dependency @theme-ui/match-media ([5099718](https://github.com/ccontrols/component-controls/commit/5099718dee37452aa56cbaacb5697d47875e2f12))
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* lint memo hook ([5ebba02](https://github.com/ccontrols/component-controls/commit/5ebba02353d50b845a5bb079e673c4d2e6f4cec1))
+
+
+
+
+
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* prevent table overflowing container ([e716842](https://github.com/ccontrols/component-controls/commit/e7168421389ce4aa6a8e5122924d1fa3254ad3b6))
+* reduce head links sizes ([31d501f](https://github.com/ccontrols/component-controls/commit/31d501feb0c920032576ea30bfcb51b9c1733d19))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* action item node ([c885e2d](https://github.com/ccontrols/component-controls/commit/c885e2d29a3ef54bcd34b437aa4a72756582cbb8))
+* info row above edit page row ([53389b4](https://github.com/ccontrols/component-controls/commit/53389b45e77ad7657bdae3dce65ce281a2dd4c13))
+* optimize initial search loading ([2624c55](https://github.com/ccontrols/component-controls/commit/2624c55939cbb93034faf48ace42e86ac07daa39))
+* skip reexport ImageProps ([6a5e27b](https://github.com/ccontrols/component-controls/commit/6a5e27b5e49370dc8605782e889a75e5ec551dd2))
+* table p and pre margins reduce ([cddbf47](https://github.com/ccontrols/component-controls/commit/cddbf47bdb0fe0d39ac5f782f358a3c7f2593e86))
+
+
+### Features
+
+* added TitledImage for mdx ([5d46370](https://github.com/ccontrols/component-controls/commit/5d46370a1b85c7c45fcf97aa26b292253992a13a))
+* added Value component, info row ([fbe5f0e](https://github.com/ccontrols/component-controls/commit/fbe5f0e8ad6cd41d6965a0425d7a42c94bf78a76))
+* data-testids ([07b9f64](https://github.com/ccontrols/component-controls/commit/07b9f6480ac7a2b1e0a3384007755f1e9a5c86ba))
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+* story iframe and components configuration ([f903953](https://github.com/ccontrols/component-controls/commit/f903953f5644d020229ea836a46e6536233ef871))
+
+
+
+
+
 # [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
 
 

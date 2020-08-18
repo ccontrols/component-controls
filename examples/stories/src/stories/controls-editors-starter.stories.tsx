@@ -1,10 +1,8 @@
 import React from 'react';
-import { Button } from 'theme-ui';
 import { ControlTypes } from '@component-controls/core';
 
 export default {
   title: 'Introduction/Starter',
-  component: Button,
   author: 'atanasster',
 };
 
@@ -27,20 +25,17 @@ overview.controls = {
     value: 'Mark',
     description: `
 **name of the person**
-
-any text is allowed
+any *markdown* is allowed
 `,
   },
   age: {
     type: ControlTypes.NUMBER,
     description: `
 **age of the person**
-
 numeric, values between 10 and 75 allowed
 `,
     label: 'Age',
     value: 19,
-    defaultValue: null,
     min: 10,
     max: 75,
   },

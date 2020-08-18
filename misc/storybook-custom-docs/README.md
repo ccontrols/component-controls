@@ -10,11 +10,13 @@
         -   [Simple page](#simple-page)
         -   [Render story](#render-story)
 -   [API](#api)
+    -   [CurrentSelection](#currentselection)
     -   [globalStoryId](#globalstoryid)
     -   [getCurrentStoryId](#getcurrentstoryid)
     -   [getGlobalOptions](#getglobaloptions)
     -   [getGlobalStoryId](#getglobalstoryid)
     -   [useContext](#usecontext)
+    -   [useCurrentData](#usecurrentdata)
     -   [useStoryId](#usestoryid)
     -   [CustomPageDef](#custompagedef)
     -   [CustomPageRenderFnParams](#custompagerenderfnparams)
@@ -130,9 +132,24 @@ export default {
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
+## CurrentSelection
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L65)_
+
+
+
+### properties
+
+| Name          | Type   | Description                         |
+| ------------- | ------ | ----------------------------------- |
+| `docId*`      | string | current document id - its the title |
+| `name*`       | string | story name                          |
+| `parameters*` | any    | story parameters                    |
+| `storyId*`    | string | current story id                    |
+
 ## globalStoryId
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L38)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L34)_
 
 
 
@@ -140,7 +157,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 function returning the current story id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L25)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L23)_
 
 **function** getCurrentStoryId(): string | undefined;
 
@@ -155,7 +172,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 ## getGlobalStoryId
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L39)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L35)_
 
 **function** getGlobalStoryId(): string;
 
@@ -163,15 +180,23 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 React hook - returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L72)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L103)_
 
 **function** useContext(): any;
+
+## useCurrentData
+
+React hook hook that tracks the changes to the current story and returns the data
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L88)_
+
+**function** useCurrentData(): [CurrentSelection](#currentselection);
 
 ## useStoryId
 
 React hook hook that tracks the changes to the current story and returns it's id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L50)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L46)_
 
 **function** useStoryId(): string;
 

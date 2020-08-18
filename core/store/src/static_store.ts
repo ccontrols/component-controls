@@ -1,6 +1,8 @@
-import { Store } from './Store/Store';
+import { Store, getDefaultStore } from '@component-controls/core';
+import { BroadcastStore } from './serialization/BroadcastStore';
 
 /**
  * store variable, automatically filled with stories.
  */
-export const store = new Store();
+export const store: Store = new BroadcastStore(getDefaultStore());
+(store as BroadcastStore).readData();

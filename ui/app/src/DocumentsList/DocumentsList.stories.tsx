@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { ThemeProvider } from '@component-controls/components';
-import { MockContext, BlockContext } from '@component-controls/blocks';
+import React from 'react';
+import { MockContext } from '@component-controls/blocks';
+import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
 
 export default {
@@ -9,15 +9,12 @@ export default {
 };
 
 const MockList = () => {
-  const { storeProvider } = useContext(BlockContext);
-  const pages = storeProvider.getPageList('story');
-  return <DocumentsList pages={pages} />;
+  const pages = useDocByType('story');
+  return <DocumentsList pages={pages} type="story" />;
 };
 
 export const overview = () => (
-  <ThemeProvider>
-    <MockContext storyId="id-of-story">
-      <MockList />
-    </MockContext>
-  </ThemeProvider>
+  <MockContext storyId="id-of-story">
+    <MockList />
+  </MockContext>
 );

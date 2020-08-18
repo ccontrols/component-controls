@@ -4,11 +4,11 @@ import { jsx, Box, Text } from 'theme-ui';
 import {
   Document,
   defDocType,
-  RunConfiguration,
   getDocPath,
   dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
+import { useConfig } from '@component-controls/store';
 import { PageTypeTag } from '../PageTypeTag';
 import { TagsList } from '../TagsList';
 
@@ -22,17 +22,14 @@ export interface DocumentItemProps {
    * document to be displayed
    */
   doc: Document;
-  /**
-   * store configuration object
-   */
-  config?: RunConfiguration;
 }
 
 /**
  * displays a single doument item
  */
-export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
+export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
   const { type = defDocType, tags = [], date, author } = doc;
+  const config = useConfig();
   const dateNode = date ? (
     <Box variant="documentitem.info.inner">
       {date ? (
@@ -46,7 +43,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link, config }) => {
         <Box variant="documentitem.info.author">
           {date && <Text variant="documentitem.info.comma">,</Text>}
           <Text variant="documentitem.info.by">by</Text>
-          <Link href={getDocPath('author', undefined, config?.pages, author)}>
+          <Link href={getDocPath('author', undefined, config.pages, author)}>
             {author}
           </Link>
         </Box>

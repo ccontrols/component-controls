@@ -3,7 +3,7 @@ import {
   Subtitle as SubtitleBlock,
   SubtitleProps as SubtitlePropsBase,
 } from '@component-controls/components';
-import { useStoryContext, StoryInputProps } from '../context';
+import { useStory, StoryInputProps } from '@component-controls/store';
 
 export type SubtitleProps = StoryInputProps & SubtitlePropsBase;
 
@@ -13,7 +13,7 @@ export type SubtitleProps = StoryInputProps & SubtitlePropsBase;
  *
  */
 export const Subtitle: FC<SubtitleProps> = ({ id, name, ...rest }) => {
-  const { story } = useStoryContext({
+  const story = useStory({
     id,
     name,
   });

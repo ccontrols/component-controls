@@ -2,9 +2,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
-
-import { TableProps } from '@component-controls/components';
 import { Column } from 'react-table';
+import { TableProps } from '@component-controls/components';
+import {
+  StoryContextProvider,
+  ControlsContextStoryProvider,
+} from '@component-controls/store';
 import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
@@ -17,6 +20,10 @@ export interface PropsTableOwnProps {
    * extra custom columns passed to the PropsTable.
    */
   extraColumns?: Column[];
+  /**
+   * if true, will flatten the group by
+   */
+  flat?: boolean;
 }
 export type PropsTableProps = PropsTableOwnProps &
   Omit<ComponentsBlockContainerProps, 'children'> &
@@ -29,7 +36,7 @@ const NAME = 'propstable';
  */
 export const PropsTable: FC<PropsTableProps> = props => {
   const custom = useCustomProps<PropsTableProps>(NAME, props);
-  const { extraColumns = [], visibility = 'all', ...rest } = custom;
+  const { extraColumns = [], visibility = 'all', flat, ...rest } = custom;
 
   return (
     <ComponentsBlockContainer
@@ -37,15 +44,24 @@ export const PropsTable: FC<PropsTableProps> = props => {
       visibility={visibility}
       {...rest}
     >
-      {(component, { story }, tableProps) => (
-        <BasePropsTable
-          component={component}
-          story={story}
-          visibility={visibility}
-          extraColumns={extraColumns}
-          tableProps={tableProps}
-        />
-      )}
+      {(component, tableProps, story) => {
+        const table = (
+          <BasePropsTable
+            component={component}
+            visibility={visibility}
+            extraColumns={extraColumns}
+            tableProps={tableProps}
+            flat={flat}
+          />
+        );
+        return story ? (
+          <StoryContextProvider storyId={story.id}>
+            <ControlsContextStoryProvider>{table}</ControlsContextStoryProvider>
+          </StoryContextProvider>
+        ) : (
+          table
+        );
+      }}
     </ComponentsBlockContainer>
   );
 };

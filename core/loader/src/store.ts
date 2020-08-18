@@ -1,17 +1,29 @@
 import {
-  StoryComponents,
-  StoryPackages,
+  Components,
+  Packages,
   BuildConfiguration,
   RunConfiguration,
-  Document,
-  defDocType,
-  Pages,
-  DocType,
-  docStoryToId,
+  deepMergeArrays,
+  defaultBuildConfig,
 } from '@component-controls/core';
-import { LoadingDocStore } from '@component-controls/instrument';
+
+import {
+  LoadingDocStore,
+  InstrumentOptions,
+  getComponentProps,
+} from '@component-controls/instrument';
+
+import {
+  loadConfiguration,
+  ConfigrationResult,
+} from '@component-controls/config';
 
 export interface LoadingStore {
+  /**
+   * build-time error
+   */
+  error?: string;
+
   /**
    * global configuration from project config file
    */
@@ -25,77 +37,45 @@ export interface LoadingStore {
   /**
    * global store of packages
    */
-  packages: StoryPackages;
+  packages: Packages;
   /**
    * global store of components
    */
-  components: StoryComponents;
+  components: Components;
   /**
    * stores, loaded from each .stories.* file
    */
   stores: (Partial<Pick<LoadingDocStore, 'stories' | 'doc'>> & {
     filePath: string;
+    hash?: string;
   })[];
-  getDocs: (type: DocType) => Pages;
-  getUniquesByField: (field: string) => { [key: string]: number };
 }
 
-class Store implements LoadingStore {
-  stores: LoadingStore['stores'] = [];
-  components: LoadingStore['components'] = {};
-  packages: LoadingStore['packages'] = {};
-  config: LoadingStore['config'] = {};
-  buildConfig: LoadingStore['buildConfig'] = {};
-  getDocs = (docType: DocType) =>
-    this.stores
-      .filter(store => {
-        if (store?.doc) {
-          const { type = defDocType } = store.doc;
-          return type === docType;
-        }
-        return false;
-      })
-      .map(
-        store =>
-          ({
-            ...store.doc,
-            stories:
-              store.doc && store.stories
-                ? Object.keys(store.stories).map(id =>
-                    //@ts-ignore
-                    docStoryToId(store.doc.title, id),
-                  )
-                : undefined,
-          } as Document),
-      );
-  getUniquesByField = (field: string) => {
-    return this.stores.reduce((acc: { [key: string]: number }, store) => {
-      if (store?.doc) {
-        //@ts-ignore
-        const value = store.doc[field];
-        const values = Array.isArray(value) ? value : [value];
-        values.forEach(v => {
-          if (v !== undefined) {
-            if (typeof acc[v] === 'undefined') {
-              acc[v] = 0;
-            }
-            acc[v] = acc[v] = 1;
-          }
-        });
-      }
-      return acc;
-    }, {});
-  };
-}
+export const store: LoadingStore = {
+  stores: [],
+  components: {},
+  packages: {},
+  config: {},
+  buildConfig: {},
+};
 
-export const store = new Store();
+let instrumentOptions: InstrumentOptions = {};
 
 export const reserveStories = (filePaths: string[]) => {
   if (store.stores.length === 0) {
     filePaths.forEach(filePath => store.stores.push({ filePath }));
   }
 };
-export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
+export const removeStoriesDoc = (filePath: string) => {
+  store.stores = store.stores.filter(s => s.filePath !== filePath);
+};
+export const addStoriesDoc = (
+  options: InstrumentOptions,
+  filePath: string,
+  hash: string,
+  added: LoadingDocStore,
+) => {
+  instrumentOptions = options;
   const { components, packages, stories, doc } = added;
   if (!doc) {
     throw new Error(`Invalid store with no document ${filePath}`);
@@ -108,14 +88,49 @@ export const addStoriesDoc = (filePath: string, added: LoadingDocStore) => {
     store.packages[key] = packages[key];
   });
   const { title } = doc;
-  if (store.stores.find(s => s.doc?.title === title)) {
+  if (
+    store.stores.find(s => s.filePath !== filePath && s.doc?.title === title)
+  ) {
     throw new Error(`Duplicate document title "${title}"`);
   }
   const storeStore = store.stores.find(s => s.filePath === filePath);
   if (storeStore) {
     storeStore.stories = stories;
     storeStore.doc = doc;
+    storeStore.hash = hash;
   } else {
-    store.stores.push({ filePath, stories, doc });
+    store.stores.push({ filePath, hash, stories, doc });
   }
+};
+
+export const getSerializedStore = async (): Promise<string> => {
+  const { propsLoaders = [] } = instrumentOptions;
+  for (const name in store.components) {
+    const component = store.components[name];
+    const propsFile = component.propsInfoFile || component.request;
+    if (propsFile) {
+      const propsInfo = await getComponentProps(
+        propsLoaders,
+        propsFile,
+        component.name,
+        component.source,
+      );
+      if (propsInfo) {
+        component.info = propsInfo;
+      }
+    }
+  }
+  return JSON.stringify(store);
+};
+
+export let config: ConfigrationResult | undefined;
+
+export const initializeBuildOptions = (
+  rootPath: string,
+  configPath?: string,
+) => {
+  config = loadConfiguration(rootPath, configPath);
+  store.buildConfig = config?.config
+    ? deepMergeArrays(defaultBuildConfig, config.config)
+    : defaultBuildConfig;
 };

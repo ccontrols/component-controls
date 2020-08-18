@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 export interface PropertyControlProps {
   /**
    * name of the property control.

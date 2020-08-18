@@ -1,57 +1,44 @@
 import {
-  StoriesStore,
+  Store,
   Story,
   Document,
   Pages,
   RunConfiguration,
   DocType,
+  Documents,
 } from '@component-controls/core';
 
-/**
- * store on change observer.
- * when updateStoryProp is called on the store, the store observers will be notified
- * so they can re-load the stories
- */
-export type StoreObserver = (storyId?: string, propName?: string) => void;
-
-export interface StoryStore {
-  getStore: () => StoriesStore | undefined;
-  getStory: (storyId: string) => Story | undefined;
-  getStoryDoc: (name: string) => Document | undefined;
-  getPageList: (type: DocType) => Pages;
-  getPrevPage: (
-    type: DocType | undefined,
-    docId: string,
-  ) => Document | undefined;
-  getNextPage: (
-    type: DocType | undefined,
-    docId: string,
-  ) => Document | undefined;
-  getPagesByCategory: (category: string, value?: any) => Pages;
-  getUniquesByCategory: (category: string) => { [key: string]: number };
-  config: RunConfiguration | undefined;
-  pages: Pages;
-  getFirstDocument: (type: DocType) => string | undefined;
-  getPagePath: (
-    type: DocType | undefined,
-    name: string,
-    activeTab?: string,
-  ) => string;
-  getStoryPath: (storyId: string, activeTab?: string) => string;
-  updateStoryProp: (
-    storyId: string,
-    propName: string,
-    newVal: any,
-  ) => StoriesStore | undefined;
-  addObserver: (observer: StoreObserver) => void;
-  removeObserver: (observer: StoreObserver) => void;
+export interface DocPageInfo {
+  type: string;
+  activeTab?: string;
+  docId?: string;
+  storyId?: string;
+  category?: string;
+}
+export interface HomePageInfo {
+  type: string;
+  docId?: string;
+  storyId?: string;
 }
 
-export const UPDATE_STORY_MSG = 'component_controls_update_story';
-export const COMPONENT_CONTROLS_STORAGE = 'component-controls-store-data';
+export interface StoryStore {
+  getStore: () => Store | undefined;
+  getStory: (storyId: string) => Story | undefined;
+  getStoryDoc: (name: string) => Document | undefined;
+  config: RunConfiguration;
+  store: Store;
+  pages: Pages;
+  docs: Documents;
+  getFirstDocument: (type: DocType) => string | undefined;
+  updateStoryProp: (storyId: string, propName: string, newValue: any) => void;
 
-export interface MessageType {
-  storyId: string;
-  moduleId: number;
-  propName: string;
+  getStoryPath: (storyId: string, activeTab?: string) => string;
+  getDocDescription: (doc: Document) => string | undefined;
+
+  getIndexPage: () => HomePageInfo;
+  getHomePage: (path: string) => HomePageInfo | undefined;
+  getHomePaths: () => string[];
+
+  getDocPage: (path: string) => DocPageInfo | undefined;
+  getDocPaths: () => string[];
 }

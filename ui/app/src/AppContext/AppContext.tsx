@@ -1,63 +1,45 @@
 /** @jsx jsx */
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { DocType, defDocType } from '@component-controls/core';
-import { ThemeProvider } from '@component-controls/components';
+import { Store } from '@component-controls/core';
 import {
   SidebarContextProvider,
   LinkContextProvider,
   LinkContextProviderProps,
 } from '@component-controls/components';
 import { BlockContextProvider } from '@component-controls/blocks';
-import { LoadingStore } from '@component-controls/loader';
-import { loadStoryStore, Store } from '@component-controls/store';
 import { App } from '../App';
 import { mdxComponents } from './mdxComponents';
 
 export interface AppContextProps {
-  type?: DocType;
   docId?: string;
   storyId?: string;
-  store?: LoadingStore;
+  store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
+  activeTab?: string;
 }
 
 export const AppContext: FC<AppContextProps> = ({
-  type = defDocType,
   docId,
   storyId,
   children,
   store,
   linkClass,
+  activeTab,
 }) => {
-  const storyStore = useMemo(
-    () =>
-      new Store({
-        store: loadStoryStore(store),
-        updateLocalStorage: false,
-      }),
-    [store],
-  );
-  const { pages } = storyStore.config || {};
-  const page = pages?.[type];
-  const documentId = docId
-    ? docId
-    : docId === undefined && page?.navSidebar
-    ? storyStore.getFirstDocument(type)
-    : undefined;
   return (
-    <ThemeProvider theme={storyStore.config?.theme} components={mdxComponents}>
-      <BlockContextProvider
-        storyId={storyId}
-        docId={documentId}
-        store={storyStore}
-      >
-        <SidebarContextProvider>
-          <LinkContextProvider linkClass={linkClass}>
-            <App title={docId}>{children}</App>
-          </LinkContextProvider>
-        </SidebarContextProvider>
-      </BlockContextProvider>
-    </ThemeProvider>
+    <BlockContextProvider
+      storyId={storyId}
+      docId={docId}
+      store={store}
+      activeTab={activeTab}
+      components={mdxComponents}
+    >
+      <SidebarContextProvider>
+        <LinkContextProvider linkClass={linkClass}>
+          <App title={docId}>{children}</App>
+        </LinkContextProvider>
+      </SidebarContextProvider>
+    </BlockContextProvider>
   );
 };

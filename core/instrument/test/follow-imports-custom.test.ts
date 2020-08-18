@@ -22,7 +22,7 @@ describe('follow-imports-custom', () => {
           {
             parser: defaultParserOptions,
             resolver: defaultResolveOptions,
-            components: { ...defaultComponentOptions, storeSourceFile: false },
+            components: { ...defaultComponentOptions, sourceFiles: false },
           },
         );
         return rest;

@@ -1,9 +1,20 @@
 /** @jsx jsx */
-import { FC, useState, Fragment } from 'react';
-import { jsx, CSSProperties } from 'theme-ui';
+import { FC, useState, Fragment, createElement, forwardRef } from 'react';
+import { jsx, CSSProperties, Box } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
 import ReactResizeDetector from 'react-resize-detector';
+import {
+  useStoryControls,
+  useExternalOptions,
+  useCurrentDocument,
+} from '@component-controls/store';
+import {
+  Story,
+  StoryRenderFn,
+  getControlValues,
+  deepMerge,
+} from '@component-controls/core';
 
 export interface IframeWrapperProps {
   initialIframeContent?: string;
@@ -50,13 +61,14 @@ const IframeWrapper: FC<IframeWrapperProps> = ({
   );
 };
 
-export type StoryWrapper = 'wrapper' | 'iframe';
+export type StoryWrapperType = 'wrapper' | 'iframe';
 
-export interface StoryRenderProps {
-  wrapper?: StoryWrapper;
+export interface StoryWrapperProps {
+  wrapper?: StoryWrapperType;
   iframeStyle?: CSSProperties;
 }
-export const StoryRender: FC<StoryRenderProps> = ({
+
+const StoryWrapper: FC<StoryWrapperProps> = ({
   wrapper = 'wrapper',
   iframeStyle,
   children,
@@ -68,3 +80,54 @@ export const StoryRender: FC<StoryRenderProps> = ({
       return <Fragment>{children}</Fragment>;
   }
 };
+const NAME = 'story';
+
+export interface StoryRenderProps {
+  story: Story;
+  ref?: React.Ref<HTMLDivElement>;
+}
+export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
+  (
+    { story, wrapper, iframeStyle, ...rest },
+    ref: React.Ref<HTMLDivElement>,
+  ) => {
+    const doc = useCurrentDocument();
+    const controls = useStoryControls(story.id || '');
+    const options = useExternalOptions();
+    const values = getControlValues(controls);
+    const { decorators: globalDecorators = [] } = options;
+    const { decorators: storyDecorators = [] } = story;
+    const decorators = deepMerge<StoryRenderFn[]>(
+      globalDecorators,
+      storyDecorators,
+    );
+    //parameters added to avoid bug in SB6 rc that assumes parameters exist
+    const storyContext = { story, doc, controls, parameters: {} };
+    const renderFn = decorators.reverse().reduce(
+      (acc: StoryRenderFn, item: StoryRenderFn) => () =>
+        item(acc, { ...storyContext, renderFn: acc }),
+      //@ts-ignore
+      () => story.renderFn(values, storyContext),
+    );
+    return (
+      <Box
+        data-testid={NAME}
+        id={story.id}
+        variant={`${NAME}.container`}
+        {...rest}
+      >
+        <StoryWrapper iframeStyle={iframeStyle} wrapper={wrapper}>
+          <Box
+            className="story-render-container"
+            variant={`${NAME}.wrapper`}
+            ref={ref}
+          >
+            {createElement(renderFn)}
+          </Box>
+        </StoryWrapper>
+      </Box>
+    );
+  },
+);
+
+StoryRender.displayName = 'StoryRender';

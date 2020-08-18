@@ -13,9 +13,9 @@ import { Button } from '../components/Button';
 
 ## Overview
 
-The [controls api](/tutorial/structure/controls-api) provides an extensible interface for specifying and using input controls to enter component property values at run-time.
+The [controls api](/tutorial/reference/controls-api) provides an extensible interface for specifying and using input controls to enter component property values at run-time.
 
-You can also check the list of [pre-defined controls](/tutorial/structure/controls) that are available for creating interactive examples of your components.
+You can also check the list of [pre-defined controls](/tutorial/reference/controls) that are available for creating interactive examples of your components.
 
 ![in action](https://github.com/ccontrols/component-controls/raw/master/examples/stories/src/media/controls.gif)
 
@@ -67,7 +67,7 @@ export const overview = () => <button>no props</button>
 ```
 
 <Playground>
-  <Story name="no-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+  <Story name="no-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
     {() => (
       <button>no props</button>
     )}
@@ -77,16 +77,16 @@ export const overview = () => <button>no props</button>
 <PropsTable name="no-props-example" />
 
 
-2. Some named properties are passed to the example. In this case, only the properties specifically listed will be available at run-time (ie: `color`):
+2. Some named properties are passed to the example. In this case, only the properties specifically listed will be available at run-time (ie: `backgroundColor`):
 
 ```jsx
-export const overview = ({ color }) => <button style={{ color }}>some props</button>
+export const overview = ({ backgroundColor }) => <button style={{ backgroundColor }}>some props</button>
 ```
 
 <Playground>
-  <Story name="named-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
-    {({ color }) => (
-      <button style={{ color }}>some props</button>
+  <Story name="named-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+    {({ backgroundColor }) => (
+      <button style={{ backgroundColor }}>some props</button>
     )}
   </Story>
 </Playground>
@@ -100,7 +100,7 @@ export const overview = props => <button style={props}>all props</button>
 ```
 
 <Playground>
-  <Story name="all-props-example" controls={{ color: { type: ControlTypes.COLOR, value: 'red' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
+  <Story name="all-props-example" controls={{ backgroundColor: { type: ControlTypes.COLOR, value: 'grey' }, padding: { type: ControlTypes.NUMBER, value: 10 } }}>
     {props => (
       <button style={props}>all props</button>
     )}
@@ -206,7 +206,7 @@ The default value that will be displayed in the Props table and the value that w
 
 ## Randomize data
 
-[data](/tutorial/structure/controls-api#componentcontroldata) helper information to generate random data will be used in conjunction with [faker.js](https://github.com/marak/Faker.js/).
+[data](/tutorial/reference/controls-api#componentcontroldata) helper information to generate random data will be used in conjunction with [faker.js](https://github.com/marak/Faker.js/).
 
 ```
   data: {

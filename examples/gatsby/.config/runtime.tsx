@@ -7,16 +7,15 @@ import { OctofaceIcon } from '@primer/octicons-react';
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
 const config: RunOnlyConfiguration = {
+  analytics: 'UA-172446254-1',
   siteTitle: `Component controls`,
-  siteTitleAlt: `Component controls - https://github.com/ccontrols/component-controls`,
-  siteHeadline: `Component controls gatsby`,
-  siteUrl: `https://component-controls-gatsby.netlify.app`,
+  siteUrl: `https://component-controls.com`,
   siteDescription: `Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.`,
   siteLanguage: `en`,
   author: `@component-controls`,
   theme: {
     colors: {
-      //primary: 'pink',
+      // primary: 'pink',
     }
   },
   pages: {

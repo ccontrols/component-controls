@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/gatsby-theme-stories",
-  "version": "1.7.1",
+  "version": "1.20.0",
   "description": "Gatsby theme to create stories documentation sites",
   "keywords": [
     "story",
@@ -37,10 +37,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/app": "^1.7.1",
-    "@component-controls/core": "^1.7.0",
-    "@component-controls/pages": "^1.7.1",
-    "@component-controls/webpack-compile": "^1.7.1",
+    "@component-controls/app": "^1.20.0",
+    "@component-controls/core": "^1.20.0",
+    "@component-controls/pages": "^1.20.0",
+    "@component-controls/webpack-compile": "^1.20.0",
+    "@component-controls/webpack-configs": "^1.20.0",
     "gatsby": "^2.22.10",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-theme-ui": "^0.3.0",
@@ -48,16 +49,16 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "theme-ui": "next"
+    "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.5.0",
+    "@component-controls/ts-markdown-docs": "^1.10.0",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "gatsby": "^2.22.10",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "gatsby": "2.x",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "publishConfig": {
     "access": "public"

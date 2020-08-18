@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+
+### Bug Fixes
+
+* update peer dependencies ([3e2be3b](https://github.com/ccontrols/component-controls/commit/3e2be3bf7c7c8ac22ad56f04fb5797a8124dd620))
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
+## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* revert SELECT_STORY ([a80182c](https://github.com/ccontrols/component-controls/commit/a80182c2bd6373545985ceac914a30475ee8cb70))
+
+
+
+
+
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+
+### Bug Fixes
+
+* hook into SET_CURRENT_STORY for storybook 5 ([f0d725b](https://github.com/ccontrols/component-controls/commit/f0d725bce741ccb7933cc0d39a97e76416fbc0bd))
+
+
+
+
+
+## [1.13.2](https://github.com/ccontrols/component-controls/compare/v1.13.1...v1.13.2) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+
+### Features
+
+* support storybook docs-only pages ([4014d65](https://github.com/ccontrols/component-controls/commit/4014d652ef68d52ec977db331bfcfd259bc0face))
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/storybook-custom-docs
+
+
+
+
+
 # [1.5.0](https://github.com/ccontrols/component-controls/compare/v1.4.0...v1.5.0) (2020-06-25)
 
 

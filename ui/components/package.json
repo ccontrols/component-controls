@@ -1,12 +1,13 @@
 {
   "name": "@component-controls/components",
-  "version": "1.7.0",
+  "version": "1.19.3",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
+    "src/",
     "package.json",
     "README.md"
   ],
@@ -31,8 +32,9 @@
   "license": "MIT",
   "dependencies": {
     "@primer/octicons-react": "^10.0.0",
-    "@theme-ui/css": "next",
-    "@theme-ui/presets": "next",
+    "@theme-ui/css": "^0.4.0-rc.1",
+    "@theme-ui/match-media": "^0.4.0-rc.1",
+    "@theme-ui/presets": "^0.4.0-rc.1",
     "copy-to-clipboard": "^3.2.1",
     "fast-memoize": "^2.5.2",
     "markdown-to-jsx": "^6.11.0",
@@ -41,15 +43,15 @@
     "react": "^16.13.1",
     "react-animate-height": "^2.0.20",
     "react-dom": "^16.13.1",
-    "react-popper-tooltip": "^2.10.1",
+    "react-popper-tooltip": "^3.1.0",
     "react-switch": "^5.0.1",
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
     "scroll-into-view-if-needed": "^2.2.25",
-    "theme-ui": "next"
+    "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.5.0",
+    "@component-controls/ts-markdown-docs": "^1.10.0",
     "@types/jest": "^25.1.2",
     "@types/markdown-to-jsx": "^6.11.0",
     "@types/react-table": "^7.0.10",
@@ -59,10 +61,10 @@
     "jest": "^24.9.0"
   },
   "peerDependencies": {
-    "@theme-ui/css": "*",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "theme-ui": "*"
+    "@theme-ui/css": ">= 0.4.0-rc.1",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "theme-ui": ">= 0.4.0-rc.1"
   },
   "publishConfig": {
     "access": "public"

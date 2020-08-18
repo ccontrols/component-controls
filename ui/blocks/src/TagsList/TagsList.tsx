@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { FC, useContext, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Tag, Link, getPaletteColor } from '@component-controls/components';
-import { BlockContext } from '../context';
+import { useConfig, useDocPropCount } from '@component-controls/store';
 
 export interface TagsListProps {
   /**
@@ -16,12 +16,12 @@ export interface TagsListProps {
  * displays a row of tags assigned to the current document, with links to their pages
  */
 export const TagsList: FC<TagsListProps> = ({ tags }) => {
-  const { storeProvider } = useContext(BlockContext);
   const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
+  const tagCounts = useDocPropCount('tags');
+  const config = useConfig();
   useEffect(() => {
-    const uniqueTags = storeProvider.getUniquesByCategory('tags');
     setTagColors(
-      Object.keys(uniqueTags).reduce(
+      Object.keys(tagCounts).reduce(
         (acc, key, index) => ({
           ...acc,
           [key]: getPaletteColor(index),
@@ -29,20 +29,12 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
         {},
       ),
     );
-  }, [storeProvider]);
+  }, [tagCounts]);
 
   return tags ? (
     <Box variant="taglist.container">
       {tags.map(tag => (
-        <Link
-          key={tag}
-          href={getDocPath(
-            'tags',
-            undefined,
-            storeProvider?.config?.pages,
-            tag,
-          )}
-        >
+        <Link key={tag} href={getDocPath('tags', undefined, config.pages, tag)}>
           <Tag color={tagColors[tag] || '#dddddd'} variant="tag.leftmargin">
             {tag}
           </Tag>

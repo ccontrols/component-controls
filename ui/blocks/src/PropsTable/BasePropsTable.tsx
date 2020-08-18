@@ -6,13 +6,13 @@ import { window } from 'global';
 import jsStringEscape from 'js-string-escape';
 import copy from 'copy-to-clipboard';
 import {
-  Story,
-  StoryComponent,
+  Component,
   ComponentControl,
   PropType,
   ComponentInfo,
   visibleControls,
 } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 
 import {
   Table,
@@ -22,13 +22,9 @@ import {
   Tag,
   ActionItems,
 } from '@component-controls/components';
-import {
-  getPropertyEditor,
-  PropertyEditor,
-  ConrolsContextProvider,
-} from '@component-controls/editors';
+import { getPropertyEditor, PropertyEditor } from '@component-controls/editors';
 import { Column } from 'react-table';
-import { useControlsContext } from '../context';
+import { useCurrentStory } from '@component-controls/store';
 import { ComponentVisibility } from '../BlockContainer/components/ComponentsBlockContainer';
 import { InvalidType } from '../notifications';
 import { useControlsActions } from './controlsActions';
@@ -40,9 +36,12 @@ interface PropRow {
 }
 
 export interface BasePropsTableProps {
-  story?: Story;
-  component?: StoryComponent;
+  component?: Component;
   extraColumns: Column[];
+  /**
+   * if true, will flatten the group by
+   */
+  flat?: boolean;
   tableProps: any;
   visibility?: ComponentVisibility;
 }
@@ -51,15 +50,16 @@ type GroupingProps = Partial<
   Pick<TableProps, 'groupBy' | 'hiddenColumns' | 'expanded'>
 >;
 export const BasePropsTable: FC<BasePropsTableProps> = ({
-  story,
   component = {},
   extraColumns,
   tableProps,
   visibility,
+  flat,
 }) => {
-  const { setControlValue, clickControl } = useControlsContext();
   const [copied, setCopied] = useState(false);
+  const story = useCurrentStory();
   const info: Partial<ComponentInfo> = component.info || {};
+  const [, setControlValue] = useControl();
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story?.controls || {} : {};
     return visibleControls(storyControls, story);
@@ -135,7 +135,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
         rows.unshift.apply(rows, controlsRows);
       }
       const groupProps: GroupingProps = {};
-      if (parents.size > 1) {
+      if (parents.size > 1 && !flat) {
         const firstRowWithParent = rows.find(row => row?.prop.parentName);
         if (firstRowWithParent) {
           groupProps.expanded = {
@@ -274,35 +274,19 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     [hasControls, info.props, story?.id, visibility],
   );
 
-  const onChange = (propName: string, value: any) => {
-    if (setControlValue && story) {
-      setControlValue(story.id || '', propName, value);
-    }
-  };
-  const onClick = () => {
-    if (clickControl && story) {
-      clickControl(story.id || '', name);
-    }
-  };
   const table = (
-    <ConrolsContextProvider
-      controls={controls}
-      onChange={onChange}
-      onClick={onClick}
-    >
-      <Table
-        {...groupProps}
-        {...tableProps}
-        columns={columns}
-        data={rows}
-        sx={{
-          th: {
-            //some space for the action bar
-            pt: 4,
-          },
-        }}
-      />
-    </ConrolsContextProvider>
+    <Table
+      {...groupProps}
+      {...tableProps}
+      columns={columns}
+      data={rows}
+      sx={{
+        th: {
+          //some space for the action bar
+          pt: 4,
+        },
+      }}
+    />
   );
   const actions: ActionItems = [];
   const onCopy = (e: MouseEvent<HTMLButtonElement>) => {
@@ -345,8 +329,14 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     actions,
     useControlsActions({
       controls,
-      setControlValue,
       storyId: story?.id,
+      setControlValue: (
+        storyId: string,
+        propertyName: string | undefined,
+        value: any,
+      ) => {
+        setControlValue(value);
+      },
     }),
   );
   return <ActionContainer actions={actions}>{table}</ActionContainer>;

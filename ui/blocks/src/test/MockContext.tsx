@@ -1,5 +1,4 @@
 import React from 'react';
-import { Store } from '@component-controls/store';
 import { BlockContextProvider } from '../context';
 import { store } from './storyStore';
 
@@ -13,12 +12,8 @@ export const MockContext: React.FC<MockContexProps> = ({
   children,
   storyId = 'id-of-story',
 }) => {
-  const storyStore = React.useMemo(
-    () => new Store({ store, updateLocalStorage: false }),
-    [],
-  );
   return (
-    <BlockContextProvider storyId={storyId} store={storyStore}>
+    <BlockContextProvider storyId={storyId} store={store}>
       {children}
     </BlockContextProvider>
   );

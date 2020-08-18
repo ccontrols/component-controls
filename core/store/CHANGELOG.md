@@ -3,6 +3,403 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
+
+
+### Features
+
+* reload routes hmr, gatsby ([b6fa783](https://github.com/ccontrols/component-controls/commit/b6fa7834c547923efeeb2b36b5652e9464ceddc6))
+
+
+
+
+
+## [1.19.5](https://github.com/ccontrols/component-controls/compare/v1.19.4...v1.19.5) (2020-08-10)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.19.4](https://github.com/ccontrols/component-controls/compare/v1.19.3...v1.19.4) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.19.3](https://github.com/ccontrols/component-controls/compare/v1.19.2...v1.19.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.19.2](https://github.com/ccontrols/component-controls/compare/v1.19.1...v1.19.2) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.19.1](https://github.com/ccontrols/component-controls/compare/v1.19.0...v1.19.1) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+
+### Bug Fixes
+
+* update peer dependencies ([3e2be3b](https://github.com/ccontrols/component-controls/commit/3e2be3bf7c7c8ac22ad56f04fb5797a8124dd620))
+
+
+
+
+
+## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
+
+
+### Features
+
+* add collapseSingle option to pages ([fe89923](https://github.com/ccontrols/component-controls/commit/fe899230a3f5fc72d05c4af05468b998a8e4b6c1))
+
+
+
+
+
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+
+### Bug Fixes
+
+* categories initialize ([c231964](https://github.com/ccontrols/component-controls/commit/c2319647c98ed81ab7df6cdab80fb78cc9243446))
+* home page story id ([e5f389b](https://github.com/ccontrols/component-controls/commit/e5f389b1c29900e93baa199218d50510373d7d01))
+* linting issues ([f375a30](https://github.com/ccontrols/component-controls/commit/f375a30f2193b19a65bda1f77a2f743eaf0ee4fd))
+
+
+
+
+
+## [1.16.2](https://github.com/ccontrols/component-controls/compare/v1.16.1...v1.16.2) (2020-08-06)
+
+
+### Bug Fixes
+
+* linting ([cbad502](https://github.com/ccontrols/component-controls/commit/cbad5024dd28741f88d64440409ba1a909b2ce59))
+
+
+
+
+
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+
+### Bug Fixes
+
+* update theme state provider ([6a95dd2](https://github.com/ccontrols/component-controls/commit/6a95dd2ffa04818bd5d120820fd002323dbe3102))
+
+
+### Features
+
+* config update state ([f8c96f0](https://github.com/ccontrols/component-controls/commit/f8c96f0201235568caf64a9b914845fd25957a92))
+
+
+
+
+
+## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* update context on storyid change ([05b17b7](https://github.com/ccontrols/component-controls/commit/05b17b7cc62925cda83922bc8e530227d7776fc4))
+
+
+
+
+
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
+
+
+### Bug Fixes
+
+* broadcast store update store notifiers ([d3aa1da](https://github.com/ccontrols/component-controls/commit/d3aa1dac12a5818457bac5744a659cd89f3d82a6))
+
+
+
+
+
+## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
+
+
+### Bug Fixes
+
+* notify stories on changes non-current ([7af6bb8](https://github.com/ccontrols/component-controls/commit/7af6bb892c03a6751db8f566b3171bbad7b29829))
+* recoil useGetDocument hooks ([9888977](https://github.com/ccontrols/component-controls/commit/98889770be515df26ceece137a1d3e5c84d71c01))
+
+
+
+
+
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+
+### Bug Fixes
+
+* make hook compatible ([2b5e61b](https://github.com/ccontrols/component-controls/commit/2b5e61b3301a992c47d771f2ecc9dc1dc9a294b0))
+
+
+### Features
+
+* add build-time error saving ([912074f](https://github.com/ccontrols/component-controls/commit/912074f3fd954e61f880da171502dc1b4525be7e))
+
+
+
+
+
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* number default value ([11dc062](https://github.com/ccontrols/component-controls/commit/11dc06219631db1a50bfda252638307e9c3f30e0))
+
+
+
+
+
+## [1.13.3](https://github.com/ccontrols/component-controls/compare/v1.13.2...v1.13.3) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.13.2](https://github.com/ccontrols/component-controls/compare/v1.13.1...v1.13.2) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.13.1](https://github.com/ccontrols/component-controls/compare/v1.13.0...v1.13.1) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Features
+
+* props-info hmr support ([51a2a53](https://github.com/ccontrols/component-controls/commit/51a2a537f0b758b65ca29b7d3d1c8c0134481f87))
+
+
+
+
+
+## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.11.1](https://github.com/ccontrols/component-controls/compare/v1.11.0...v1.11.1) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* attempt change by reference ([dcdae67](https://github.com/ccontrols/component-controls/commit/dcdae67ecb8b31b42c24fecf88048ec94e5fe6be))
+* cleanup store context ([6c1f208](https://github.com/ccontrols/component-controls/commit/6c1f208c85d01b9394e2fe1469057dfad09dcbc4))
+* components selectors ([9a9c85a](https://github.com/ccontrols/component-controls/commit/9a9c85aca01ea123c3ea71f08ddeccc0cb41d0c9))
+* doc paths for documents with stories - first ([55e6189](https://github.com/ccontrols/component-controls/commit/55e6189851633683288565cb620c2ea88890b111))
+* docs by type sorted ([b4465c3](https://github.com/ccontrols/component-controls/commit/b4465c3115ca2992df9b8466e661998b283bf858))
+* fix gatsby pages creation ([a48518e](https://github.com/ccontrols/component-controls/commit/a48518ee30d957e58ae9caf093fb3d2de8757402))
+* nextjs store state ([b3819fa](https://github.com/ccontrols/component-controls/commit/b3819fad0cc970380a1161a6a4ec45109c628172))
+* randomize state ([8e74f55](https://github.com/ccontrols/component-controls/commit/8e74f55c58078c870142aca7058cfb8c425c6d5e))
+* sync store state ([5d10e72](https://github.com/ccontrols/component-controls/commit/5d10e725dc88d8705040bdd1c53b0b42247a2ef6))
+* unused var ([886c36e](https://github.com/ccontrols/component-controls/commit/886c36ef056a6221140b095634c21955dcac1704))
+
+
+### Features
+
+* initial recoil state ([530c277](https://github.com/ccontrols/component-controls/commit/530c27772e0ba67b24a51d2af208984ac2053143))
+
+
+
+
+
+## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
+
+
+### Bug Fixes
+
+* hmr store import ([844de69](https://github.com/ccontrols/component-controls/commit/844de694a2e8d6314554d117b8bf84635e1546a2))
+
+
+
+
+
+## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.10.2](https://github.com/ccontrols/component-controls/compare/v1.10.1...v1.10.2) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+## [1.10.1](https://github.com/ccontrols/component-controls/compare/v1.10.0...v1.10.1) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/store
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* typings ([b08e750](https://github.com/ccontrols/component-controls/commit/b08e750a77ad7e97830c0bf735319bb2a99c80f2))
+* update readdata store for sb ([5852985](https://github.com/ccontrols/component-controls/commit/58529853a669379cc0e56887256841e659d27754))
+
+
+### Features
+
+* hmr update ([49413fc](https://github.com/ccontrols/component-controls/commit/49413fc6cb7e14fc4bb494c24223a9f9f719d609))
+
+
+
+
+
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* current doc seo description ([6b01cff](https://github.com/ccontrols/component-controls/commit/6b01cffe57e51988b1432be96685cc972ab90e47))
+* do not use title as seo description ([5b60496](https://github.com/ccontrols/component-controls/commit/5b604965c6146e01215a33f6ac95b8cdee82f81d))
+* ga ssr ([fb47769](https://github.com/ccontrols/component-controls/commit/fb47769f93a0ebd435af04eb6f16af730aa68e44))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* add seo document description ([97441e6](https://github.com/ccontrols/component-controls/commit/97441e6abda7afa8458c04ab62c934bc24e9f5b6))
+* analytics module ([a1af2f5](https://github.com/ccontrols/component-controls/commit/a1af2f5d85b11d687a825d93695c341e0351ba24))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* add deepMergeReplaceArrays for controls ([74c4a3b](https://github.com/ccontrols/component-controls/commit/74c4a3b082ec896651fadda99df8c70a2582703b))
+
+
+
+
+
 ## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
 
 **Note:** Version bump only for package @component-controls/store

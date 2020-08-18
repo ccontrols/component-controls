@@ -26,6 +26,7 @@ const ActionItemStyle: ThemeUIStyleObject = {
 export type ControlsTheme = {
   actionbar: Record<string, ThemeUIStyleObject>;
   toolbar: Record<string, ThemeUIStyleObject>;
+  footer: Record<string, ThemeUIStyleObject>;
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
@@ -60,6 +61,7 @@ export type ControlsTheme = {
   documentitem: Record<string, ThemeUIStyleObject>;
   taglist: Record<string, ThemeUIStyleObject>;
   appsidebarpage: Record<string, ThemeUIStyleObject>;
+  apperror: ThemeUIStyleObject;
   container: Record<string, ThemeUIStyleObject>;
   documentslist: Record<string, ThemeUIStyleObject>;
 } & Theme;
@@ -69,12 +71,12 @@ export const theme: ControlsTheme = {
     background: '#fff',
     primary: '#5c6ac4',
     secondary: '#006fbb',
-    muted: '#69768C',
+    muted: '#e6e6e6',
+    mutedText: '#69768C',
     accent: '#f49342',
     darken: '#00044c',
     gray: '#f6f6f6',
     sidebar: '#f6f6f6',
-    header: '#edebe8',
     highlight: '#d9f2f1',
     action: '#3B817D',
     selected: '#027AC5',
@@ -94,14 +96,15 @@ export const theme: ControlsTheme = {
     palette5: '#1976d2',
     modes: {
       dark: {
-        primary: '#d5c0f1',
+        primary: '#efefef',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
-        muted: '#c9cacf',
+        muted: '#e6e6e6',
+        mutedText: '#c9cacf',
+        gray: '#4d5866',
         background: '#38404a',
         sidebar: '#000',
         text: '#d3d4db',
-        header: '#111111',
         selected: '#b3d9ff',
         action: '#d9f2f1',
         shadow: 'rgba(211, 212, 219, 0.1)',
@@ -191,25 +194,23 @@ export const theme: ControlsTheme = {
     h1: {
       ...heading,
       fontSize: 6,
-      mt: 4,
-      mb: 3,
+      my: 4,
     },
     h2: {
       ...heading,
       fontSize: 5,
-      mt: 4,
-      mb: 3,
+      my: 3,
+      borderBottom: (t: Theme) => `4px solid ${t.colors?.text}`,
+      width: '100%',
     },
     h3: {
       ...heading,
-      mt: 4,
-      mb: 3,
+      my: 3,
     },
     h4: {
       ...heading,
       fontSize: 2,
-      mt: 4,
-      mb: 3,
+      my: 3,
     },
     h5: {
       ...heading,
@@ -226,8 +227,10 @@ export const theme: ControlsTheme = {
       transition: `all 0.3s ease-in-out`,
     },
     pre: {
+      variant: 'prism',
       fontFamily: 'monospace',
       overflowX: 'auto',
+      bg: 'muted',
       code: {
         color: 'inherit',
       },
@@ -235,18 +238,48 @@ export const theme: ControlsTheme = {
     code: {
       fontFamily: 'monospace',
       fontSize: 'inherit',
-      color: 'red',
+      color: 'accent',
+    },
+    inlineCode: {
+      fontFamily: 'monospace',
+      color: 'secondary',
+      bg: 'muted',
+    },
+    blockquote: {
+      borderLeft: (t: Theme) => `4px solid ${t.colors?.shadow}`,
+      pl: 4,
+      m: 0,
+    },
+    hr: {
+      textAlign: 'center',
+      overflow: 'visible',
+      border: 'none',
+      height: 0,
+      ':before': {
+        content: '"..."',
+        display: 'inline-block',
+        marginLeft: '.6em',
+        color: 'mutedText',
+        position: 'relative',
+        top: `-36px`,
+        letterSpacing: '.6em',
+        fontSize: 5,
+      },
     },
     img: {
       maxWidth: '100%',
     },
     p: {
       fontSize: 3,
-      my: 4,
+      my: 3,
       color: 'text',
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+    },
+    summary: {
+      fontSize: 3,
+      my: 3,
     },
     ol: {
       fontSize: 3,
@@ -267,8 +300,15 @@ export const theme: ControlsTheme = {
         m: 0,
       },
       pre: {
+        whiteSpace: 'pre-wrap',
+        wordWrap: 'break-word',
+        maxWidth: '240px',
+        bg: 'inherit',
         mt: 2,
         mb: 0,
+      },
+      a: {
+        wordBreak: 'break-word',
       },
     },
     th: {
@@ -284,7 +324,7 @@ export const theme: ControlsTheme = {
     },
     thead: {
       borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
-      backgroundColor: 'header',
+      backgroundColor: 'muted',
       color: 'text',
     },
     td: {
@@ -325,6 +365,16 @@ export const theme: ControlsTheme = {
     },
   },
   toolbar: {
+    inner: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    link: {
+      mr: 1,
+    },
+  },
+  footer: {
     inner: {
       display: 'flex',
       flexDirection: 'row',
@@ -378,6 +428,9 @@ export const theme: ControlsTheme = {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+    },
+    secondrow: {
+      pt: 2,
     },
     titlerow: {
       my: 4,
@@ -441,7 +494,7 @@ export const theme: ControlsTheme = {
     },
   },
   subtitle: {
-    color: 'muted',
+    color: 'mutedText',
     fontWeight: 'body',
     pb: 2,
   },
@@ -450,6 +503,9 @@ export const theme: ControlsTheme = {
     pb: 1,
   },
   syntaxhighlight: {
+    markdown: {
+      my: 2,
+    },
     highlight: {
       pl: 1,
       backgroundColor: 'highlight',
@@ -457,8 +513,10 @@ export const theme: ControlsTheme = {
     },
     normal: {},
     title: {
-      fontWeight: 'bold',
-      pl: 2,
+      width: 'inherit',
+      background: 'transparent',
+      p: 2,
+      fontSize: 2,
     },
   },
   tabs: {
@@ -481,7 +539,7 @@ export const theme: ControlsTheme = {
       ml: 1,
       mr: 1,
       cursor: 'pointer',
-      color: 'muted',
+      color: 'mutedText',
       a: {
         textDecoration: 'inherit',
         color: 'inherit',
@@ -506,7 +564,7 @@ export const theme: ControlsTheme = {
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
-      color: 'muted',
+      color: 'mutedText',
       cursor: 'default',
     },
     '.react-tabs__tab-panel': {
@@ -521,16 +579,19 @@ export const theme: ControlsTheme = {
       display: 'inline-block',
       px: 1,
       borderRadius: 5,
+      whiteSpace: 'nowrap',
     },
     rightmargin: {
       mr: 1,
       display: 'inline-block',
       px: 1,
+      whiteSpace: 'nowrap',
     },
     leftmargin: {
       ml: 1,
       display: 'inline-block',
       px: 1,
+      whiteSpace: 'nowrap',
     },
   },
   titledimage: {
@@ -541,7 +602,7 @@ export const theme: ControlsTheme = {
     },
     img: {},
     title: {
-      color: 'muted',
+      color: 'mutedText',
       py: 2,
       fontSize: 1,
     },
@@ -554,7 +615,7 @@ export const theme: ControlsTheme = {
     },
     label: {
       fontSize: 0,
-      color: 'muted',
+      color: 'mutedText',
       mr: 1,
       lineHeight: 'heading',
     },
@@ -588,7 +649,8 @@ export const theme: ControlsTheme = {
     color: 'text',
     fontFamily: 'body',
     flex: '1 0 auto',
-    p: 4,
+    py: 4,
+    px: [1, 1, 5],
     margin: 'auto',
     width: '100%',
     position: 'relative',
@@ -597,7 +659,7 @@ export const theme: ControlsTheme = {
     story: { maxWidth: '1200px' },
     doc: { maxWidth: '1200px' },
     page: { maxWidth: '1200px' },
-    full: { maxWidth: 'unset', p: 0 },
+    full: { maxWidth: 'unset', p: [0, 0, 0] },
   },
   propstable: {
     name: {
@@ -617,7 +679,7 @@ export const theme: ControlsTheme = {
         flexDirection: 'column',
       },
       type: {
-        color: 'muted',
+        color: 'mutedText',
         letterSpacing: '0.10em',
         whiteSpace: 'pre-wrap',
         margin: 0,
@@ -727,7 +789,7 @@ export const theme: ControlsTheme = {
 
     label: {
       fontSize: 1,
-      color: 'muted',
+      color: 'mutedText',
       pb: 2,
     },
     linktitle: {
@@ -838,6 +900,13 @@ export const theme: ControlsTheme = {
     },
   },
   appsidebar: {
+    inner: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    items: {
+      my: 2,
+    },
     sidebar: {
       borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
     },
@@ -846,11 +915,9 @@ export const theme: ControlsTheme = {
       flexDirection: 'column',
       px: 2,
     },
-    heading: { textAlign: 'left', py: 2, px: 3 },
-    filtercontainer: { py: 2, px: 3 },
   },
   appheader: {
-    container: {
+    items: {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -865,17 +932,11 @@ export const theme: ControlsTheme = {
   },
   appfooter: {
     container: {
+      display: 'flex',
       p: 3,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
-    },
-    copyright: {},
-    inner: {
-      alignItems: `center`,
-      color: `text`,
-      fontWeight: `heading`,
-      a: { color: `text` },
     },
   },
   categorylist: {
@@ -929,7 +990,7 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
       },
       date: {
-        color: 'muted',
+        color: 'mutedText',
       },
       comma: { mr: 2 },
       by: { mr: 1 },
@@ -966,10 +1027,17 @@ export const theme: ControlsTheme = {
       position: 'relative',
     },
   },
+  apperror: {
+    bg: 'black',
+    color: 'red',
+    p: 4,
+    fontFamily: 'monospace',
+  },
   container: {
     container: {},
     pagination: { py: 4 },
     author: { ml: [0, 2] },
+    tags: { display: 'flex', flexDirection: 'column', alignItems: ' flex-end' },
   },
   documentslist: {
     container: {},

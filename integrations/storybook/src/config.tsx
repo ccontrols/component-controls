@@ -15,7 +15,7 @@ addDecorator(
     name: 'component-controls',
     parameterName: 'controls',
     wrapper: (storyFn, context) => {
-      const story = store.getStory(context.id);
+      const story = store.stories[context.id];
       const values =
         story && story.controls ? getControlValues(story.controls) : undefined;
       if (context.hasOwnProperty('args')) {

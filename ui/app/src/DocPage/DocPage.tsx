@@ -1,23 +1,26 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { BlockContext } from '@component-controls/blocks';
+import { useCurrentDocument } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { SidebarsPage, DocPageProps } from '../SidebarsPage';
+import { CategoryPage } from '../CategoryPage';
 
 /**
  * documentation page for current document.
  * will check if the page has a layout with sidebars or if the page is standalone.
  */
-export const DocPage: FC<Omit<DocPageProps, 'doc'>> = ({
+export const DocPage: FC<Omit<DocPageProps, 'doc'> & { category?: string }> = ({
   type = 'story',
+  category,
   ...props
 }) => {
-  const { storeProvider, docId } = useContext(BlockContext);
-  const doc = docId ? storeProvider.getStoryDoc(docId) : undefined;
-
-  const hasNoSideBars = doc && !doc.navSidebar && !doc.contextSidebar;
-  const isFullPage = doc && doc.fullPage;
+  const doc = useCurrentDocument();
+  if (category) {
+    return <CategoryPage type={type} category={category} />;
+  }
+  const hasNoSideBars = !doc?.navSidebar && !doc?.contextSidebar;
+  const isFullPage = doc?.fullPage;
   if (hasNoSideBars || isFullPage) {
     return (
       <PageContainer

@@ -5,7 +5,7 @@ import {
   Story,
   deepMergeReplaceArrays,
   Document,
-  StoryComponents,
+  Components,
   getComponentName,
   controlsFromProps,
   SmartControls,
@@ -15,7 +15,7 @@ import {
 export const transformControls = (
   story: Story,
   doc: Document,
-  components: StoryComponents,
+  components: Components,
 ): ComponentControls | undefined => {
   const { controls: storyControls } = story;
   const controls: ComponentControls | undefined = storyControls
@@ -24,7 +24,7 @@ export const transformControls = (
         const value = storyControls[key];
         if (typeof value === 'string') {
           control = { type: ControlTypes.TEXT, value };
-        } else if (typeof value === 'string') {
+        } else if (typeof value === 'number') {
           control = { type: ControlTypes.NUMBER, value };
         } else if (typeof value === 'object' && value instanceof Date) {
           control = { type: ControlTypes.DATE, value };

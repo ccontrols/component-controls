@@ -1,7 +1,10 @@
 /* eslint-disable react/display-name */
 import React, { FC, useRef, useContext } from 'react';
 import { run as runAxe, configure as configureAxe, reset } from 'axe-core';
+
+import { useStory, StoryInputProps } from '@component-controls/store';
 import { resetTabCounter } from '@component-controls/components';
+
 import {
   StoryBlockContainer,
   StoryBlockContainerProps,
@@ -20,7 +23,9 @@ interface AxeAllyBlockOwmProps {
   axeOptions?: Spec;
 }
 
-export type AxeAllyBlockProps = AxeAllyBlockOwmProps & StoryBlockContainerProps;
+export type AxeAllyBlockProps = AxeAllyBlockOwmProps &
+  StoryInputProps &
+  StoryBlockContainerProps;
 
 const RenderStory: FC<AxeAllyBlockOwmProps & { storyId?: string }> = ({
   axeOptions,
@@ -63,19 +68,20 @@ const RenderStory: FC<AxeAllyBlockOwmProps & { storyId?: string }> = ({
  */
 export const AxeAllyBlock: FC<AxeAllyBlockProps> = ({
   axeOptions,
+  id,
+  name,
   ...props
 }) => {
-  return (
-    <StoryBlockContainer {...props}>
-      {({ story: { id: storyId } = {} }) => (
-        <AxeContextProvider>
-          <SelectionContextProvider>
-            <BaseAllyBlock options={axeOptions}>
-              <RenderStory storyId={storyId} axeOptions={axeOptions} />
-            </BaseAllyBlock>
-          </SelectionContextProvider>
-        </AxeContextProvider>
-      )}
+  const story = useStory({ id, name });
+  return story ? (
+    <StoryBlockContainer story={story} {...props}>
+      <AxeContextProvider>
+        <SelectionContextProvider>
+          <BaseAllyBlock options={axeOptions}>
+            <RenderStory storyId={story.id} axeOptions={axeOptions} />
+          </BaseAllyBlock>
+        </SelectionContextProvider>
+      </AxeContextProvider>
     </StoryBlockContainer>
-  );
+  ) : null;
 };

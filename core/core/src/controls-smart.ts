@@ -102,12 +102,16 @@ export const controlFromProps = (
       const options = Array.isArray(propDef.type)
         ? propDef.type
         : (propDef.type as any).value || splitType;
+
       if (!Array.isArray(options)) {
         return null;
       }
+
       return {
         type: ControlTypes.OPTIONS,
-        options: options.map((v: any) => cleanQuotes(v.value ? v.value : v)),
+        options: options.map((v: any) => {
+          return cleanQuotes(v.value ?? v);
+        }),
         value,
       };
     }
@@ -144,10 +148,16 @@ interface NamedComponentControl {
 }
 export const controlsFromProps = (props: PropTypes): ComponentControls => {
   return Object.keys(props)
-    .map((key: string) => ({
-      name: key,
-      control: controlFromProps(key, props[key]),
-    }))
+    .map((key: string) => {
+      const control = controlFromProps(key, props[key]);
+      if (control) {
+        control.defaultValue = control.value;
+      }
+      return {
+        name: key,
+        control,
+      };
+    })
     .filter(p => p.control)
     .reduce(
       (acc: ComponentControls, prop: NamedComponentControl) => ({

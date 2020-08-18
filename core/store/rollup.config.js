@@ -5,6 +5,7 @@ export default config({
     './src/index.ts',
     './src/live_store.ts',
     './src/static_store.ts',
-    './src/singleton_store.ts',
+    './src/webpack/loader.ts',
+    './src/webpack/plugin.ts',
   ],
 });

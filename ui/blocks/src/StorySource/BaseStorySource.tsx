@@ -32,7 +32,7 @@ export interface BaseStorySourceProps {
   docPackage?: PackageInfo;
   viewStyle?: ViewStyle;
   actions?: ActionItem[];
-  sourceProps: SourceProps;
+  sourceProps?: SourceProps;
 }
 
 export const BaseStorySource: FC<BaseStorySourceProps> = ({

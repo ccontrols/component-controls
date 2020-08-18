@@ -14,16 +14,16 @@ You can create interactive component examples (aka stories) in pure Javascript o
 
 To do so, you need to create a [default export](#metadata) with at least a title attribute and at least one [named export](#stories), which is considered a story.
 
-Our esm stories format is loosely based on storybook's [CSF](https://storybook.js.org/docs/formats/component-story-format/) with a few properties in common (ie title, component, decorators) to keep basic compatibility. However our esm stories format is fully extensible beyond just using a select hard-coded props (ie parameters).
+Our ESM stories format is loosely compatible with storybook's [CSF](https://storybook.js.org/docs/formats/component-story-format/) with a few properties in common (ie title, component, decorators). However, our ESM stories format is fully extensible beyond just using a select few hard-coded props (ie parameters).
 
 ## Advantages
 
 The ESM format has the following advantages:
 
-- The documentation, testing and design pages are created automatically.
+- The documentation, testing, and design pages are created automatically.
 - Since ESM are regular javascript or typescript files, you get full support from your IDE and linting tools.
 
-The ESM format has the following dis-advantages:
+The ESM format has the following disadvantages:
 
 - For control over the documentation pages, you need to use advanced features such as replacing the pages and tabs.
 - You can not easily embed custom documentation into the pages
@@ -56,7 +56,7 @@ export const myStory = <Button>some text</Button>;
 
 ### Story properties
 
-You can attach properies to you stories either directly:
+You can attach properties to you stories either directly:
 
 ```
 export const myStory = <Button>some text</Button>;

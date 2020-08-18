@@ -1,0 +1,155 @@
+---
+title: Getting started/Site generators/Storybook
+type: tutorial
+route: /tutorial/getting-started/storybook
+description: getting started creating a documentation static site with storybook and component-controls
+order: 2
+tags:
+  - storybook
+---
+
+Below, we go over how to add a `component-controls` documentation addon to both [new](#new-project) and [existing](#existing-storybook-project) storybook projects.
+
+[storybook 5 git repo](https://github.com/atanasster/storybook-5-controls-starter) and a [live storybook 5 site](https://storybook-5-controls-starter.netlify.app/).
+
+[storybook 6 git repo](https://github.com/atanasster/storybook-6-controls-starter) and a [live storybook 6 site](https://storybook-6-controls-starter.netlify.app/).
+
+## New project 
+
+Create a new folder:
+
+```sh
+mkdir storybook-project && cd storybook-project
+```
+
+Initialize the project:
+
+```sh
+yarn init
+```
+
+Add storybook and its dependencies:
+
+```sh:title=storybok-5
+yarn add @storybook/react@^5.3.18 react react-dom
+```
+
+```sh:title=storybok-6
+yarn add @storybook/react@next react react-dom
+```
+
+```json:title=package.json
+
+  "scripts": {
+    "start": "start-storybook -c .storybook",
+    "build": "build-storybook -c .storybook"
+  },
+
+```
+
+create a new configuration folder, as specified above
+
+```sh
+mkdir .storybook
+```
+
+and create a configuration file that will be picked up by both storybook and the component-controls addon.
+
+```json:title=.storybook/main.js
+
+module.exports = {
+  stories: [
+    '../src/docs/*.@(mdx|tsx)',
+  ],
+};
+
+```
+
+The remaining steps are the same as for an existing storybook project.
+
+## Existing Storybook project
+
+### Add component-controls addon
+
+```sh
+yarn add @component-controls/storybook
+```
+
+
+### Configure
+
+**without @storybook/addon-docs**
+
+The following configuration will use component-controls's built-in instrumenting package with react-docgen and react-docgen-typescript
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      webpack: ['instrument', 'react-docgen-typescript'],
+    }
+  }]
+}
+```
+
+**with @storybook/addon-docs**
+
+The following configuration will let addon-docs use its own mdx compiler:
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
+  addons: [{
+    name: '@storybook/addon-docs',
+    options: {
+      configureJSX: true,
+    },
+  },
+  {
+    name: '@component-controls/storybook'
+  }]
+}
+```
+
+### Decorators
+
+For storybook-6, decorators are picked up automatically by component-controls. For storybook-5, you will need to create an additional run-time configuration file
+
+```js:title=.storybook/preview.js
+import { addDecorator } from '@storybook/react';
+addDecorator(
+  withTheme({ theme })
+);
+
+```
+
+for storybook-5 **only**:
+
+```js:title=.storybook/runtime.js
+export default {
+  decorators: [
+    withTheme({ theme }),
+  ]
+}
+```
+
+
+### Options
+
+You can enable some of the component-controls blocks as storybook addons:
+
+```js:title=.storybook/main.js
+module.exports = {
+  stories: ...,
+  addons: [{
+    name: '@component-controls/storybook',
+    options: {
+      propsPanel: true,
+      storySourcePanel: true,
+      storyConfigPanel: true,
+    }
+  }],
+}  
+```

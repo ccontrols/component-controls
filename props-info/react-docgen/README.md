@@ -194,7 +194,7 @@ _defined in [@component-controls/react-docgen-info/src/types.ts](https://github.
 
 _defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
-'asyncGenerators' | 'bigInt' | 'classPrivateMethods' | 'classPrivateProperties' | 'classProperties' | 'decorators' | 'decorators-legacy' | 'doExpressions' | 'dynamicImport' | 'estree' | 'exportDefaultFrom' | 'exportNamespaceFrom' | 'flow' | 'flowComments' | 'functionBind' | 'functionSent' | 'importMeta' | 'jsx' | 'logicalAssignment' | 'moduleAttributes' | 'nullishCoalescingOperator' | 'numericSeparator' | 'objectRestSpread' | 'optionalCatchBinding' | 'optionalChaining' | 'partialApplication' | 'pipelineOperator' | 'placeholders' | 'privateIn' | 'throwExpressions' | 'topLevelAwait' | 'typescript' | 'v8intrinsic' | [ParserPluginWithOptions](#parserpluginwithoptions)
+'asyncGenerators' | 'bigInt' | 'classPrivateMethods' | 'classPrivateProperties' | 'classProperties' | 'decimal' | 'decorators' | 'decorators-legacy' | 'doExpressions' | 'dynamicImport' | 'estree' | 'exportDefaultFrom' | 'exportNamespaceFrom' | 'flow' | 'flowComments' | 'functionBind' | 'functionSent' | 'importMeta' | 'jsx' | 'logicalAssignment' | 'moduleAttributes' | 'nullishCoalescingOperator' | 'numericSeparator' | 'objectRestSpread' | 'optionalCatchBinding' | 'optionalChaining' | 'partialApplication' | 'pipelineOperator' | 'placeholders' | 'privateIn' | 'throwExpressions' | 'topLevelAwait' | 'typescript' | 'v8intrinsic' | [ParserPluginWithOptions](#parserpluginwithoptions)
 
 ## ParserPluginWithOptions
 

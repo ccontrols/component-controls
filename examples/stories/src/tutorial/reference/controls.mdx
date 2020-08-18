@@ -1,0 +1,369 @@
+---
+title: Reference/Pre-defined controls
+route: /tutorial/reference/controls
+type: tutorial
+tags:
+  - documentation
+  - controls
+order: 4
+---
+import { ControlTypes } from '@component-controls/core';
+import { Story, Playground, PropsTable } from '@component-controls/blocks';
+
+The [controls api](/tutorial/reference/controls-api) comes with a selection of pre-defined controls that can be used to create interactive examples of your components.
+
+## ControlTypes.TEXT
+
+```jsx
+userName: {
+  type: ControlTypes.TEXT,
+  label: 'Name',
+  value: 'Storyteller',
+}
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `escapeValue`  | boolean                                                        | allows to receive escaped string values to help prevent XSS attacks by default - false                                                                |
+| `placeholder`  | string                                                         | placeholder for empty properties either undefined initial value or user clears the field                                                              |
+| `rows`         | number                                                         | number of rows for a TextArea field for longer text by default, only 1 row = means a Input field \> 1 rows = an area field                            |
+
+<Playground>
+  <Story name="text-control" controls={{ text: 'some text' }}>
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="text-control" />
+
+[more examples](/api/editors-texteditor--overview)
+
+## ControlTypes.NUMBER
+
+```jsx
+age: {
+  type: ControlTypes.NUMBER,
+  label: 'Age',
+  value: 78,
+  range: true,
+  min: 0,
+  max: 90,
+  step: 5,
+},
+```   
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `max`          | number                                                         | maximum allowed value for numeric property                                                                                                            |
+| `min`          | number                                                         | minimum allowed value for numeric property                                                                                                            |
+| `range`        | boolean                                                        | if true, will display a range type slider editor                                                                                                      |
+| `step`         | number                                                         | stepper for numeric editor /i nc/dec value                                                                                                            |
+
+<Playground>
+  <Story name="numeric-control" controls={{ number: { type: ControlTypes.NUMBER, value: 7} }}>
+    {({ number }) => (
+      <div>{number}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="numeric-control" />
+
+[more examples](/api/editors-numbereditor--overview)
+
+## ControlTypes.BOOLEAN
+
+```jsx
+nice: {
+  type: ControlTypes.BOOLEAN,
+  label: 'Nice',
+  value: true,
+},
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype)
+
+<Playground>
+  <Story name="boolean-control" controls={{ bool: { type: ControlTypes.BOOLEAN, value: true} }}>
+    {({ bool }) => (
+      <div>{bool ? 'TRUE' : 'FALSE'}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="boolean-control" />
+
+[more examples](/api/editors-booleaneditor--overview)
+
+## ControlTypes.OPTIONS
+
+```jsx
+fruit: {
+  type: ControlTypes.OPTIONS,
+  label: 'Fruit',
+  value: 'apple',
+  options: {
+    Apple: 'apple',
+    Banana: 'banana',
+    Cherry: 'cherry',
+  },
+},
+```  
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                                                 | Description                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `options*`     | Record<string, number \| string[] \| number[] \| { label: string; value: any }>      |                                                                                                                                                       |
+| `display`      | 'select' \| 'multi-select' \| 'radio' \| 'inline-radio' \| 'check' \| 'inline-check' | how to render selecting the options: default is 'select'                                                                                              |
+
+<Playground>
+  <Story 
+    name="options-control"
+    controls={{ 
+      options: { 
+        type: ControlTypes.OPTIONS, 
+        options: {
+          Kiwi: 'kiwi',
+          Guava: 'guava',
+          Watermelon: 'watermelon',
+        },
+        display: 'check',
+        value: ['watermelon'],
+      } 
+    }}>
+    {({ options }) => (
+      <div>{options.join(', ')}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="options-control" />
+
+[more examples](/api/editors-optionseditor--overview)
+
+## ControlTypes.DATE
+  
+```jsx
+birthday: {
+  type: ControlTypes.DATE,
+  label: 'Birthday',
+  value: new Date(),
+},
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `datePicker`   | boolean                                                        | whether to display a date picker (calendar). default: true                                                                                            |
+| `timePicker`   | boolean                                                        | whether to display a time picker (calendar). default: true                                                                                            |
+
+<Playground>
+  <Story name="date-control" controls={{ date: {
+      type: ControlTypes.DATE,
+      value: new Date('01/01/2020'),
+      timePicker: false,
+    }}}>
+    {({ date }) => (
+      <div>{date.toLocaleDateString()}</div>
+    )}
+  </Story>
+</Playground>  
+
+<PropsTable name="date-control" />
+
+[more examples](/api/editors-dateeditor--overview)
+
+## ControlTypes.COLOR
+
+```jsx
+color: {
+  type: 'color',
+  value: '#000000',
+},
+```  
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype)
+
+<Playground>
+  <Story name="color-control" controls={{ color: {
+      type: ControlTypes.COLOR,
+      value: '#555',
+    }}}>
+    {({ color }) => (
+      <div>{color}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="color-control" />
+
+[more examples](/api/editors-coloreditor--overview)
+
+## ControlTypes.BUTTON
+
+```jsx
+button: {
+  type: ControlTypes.BUTTON,
+  onClick: () => {
+    // .. code to modify some variables
+  }
+},
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                                              | Description                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onClick`      | **function** (`prop`\*: [ComponentControlButton](#controltypes-button)): void;    | for button type fields, an onClick handler                                                                                                            |
+
+<Playground>
+  <Story name="button-control" controls={{ onClick: {
+      type: ControlTypes.BUTTON,
+      value: () => console.log('clicked'),
+    }}}>
+    {({ onClick }) => (
+      <button onClick={onClick}>click me</button>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="button-control" />
+
+[more examples](/api/editors-buttoneditor--overview)
+
+## ControlTypes.OBJECT
+
+```jsx
+style: {
+  type: ControlTypes.OBJECT,
+  label: 'Styles',
+  value: {
+    // do not randomize the border style
+    border: { type: ControlTypes.TEXT, value: '2px dashed silver', data: null },
+    borderRadius: { type: ControlTypes.NUMBER, value: 10 },
+    padding: { type: ControlTypes.NUMBER, value: 10 },
+  },
+}
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
+
+<Playground>
+  <Story name="object-control" controls={{ style: {
+      type: ControlTypes.OBJECT,
+      value: {
+        color: { type: ControlTypes.COLOR, value: 'red' },
+        backgroundColor: { type: ControlTypes.COLOR, value: 'lightgrey' },
+        padding: { type: ControlTypes.NUMBER, value: 2, step: 5, label: 'padding (px.)' },
+      },
+    }}}>
+    {({ style }) => (
+      <button style={style}>change my style</button>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="object-control" />
+
+[more examples](/api/editors-objecteditor--overview)
+
+## ControlTypes.ARRAY
+
+```jsx
+arrayItems: {
+  type: ControlTypes.ARRAY,
+  label: 'Items',
+  rowType: {
+    name: { type: ControlTypes.TEXT },
+  },
+  value: [{ name: 'Laptop' }, { name: 'Book' }, { name: 'Whiskey' }],
+},
+```
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rowType*`     | [ComponentControls](#componentcontrols)                        | type of the items in each row of the array                                                                                                            |
+| `editLabel`    | string                                                         | the label for the editor button                                                                                                                       |
+
+<Playground>
+  <Story name="array-control" controls={{ array: {
+      type: ControlTypes.ARRAY,
+      value: [
+        { label: 'Button 1', color: 'red' },
+        { label: 'Button 2', color: 'grey' },
+      ],
+      rowType: {
+        label: { type: ControlTypes.TEXT },
+        color: { type: ControlTypes.COLOR },
+      },
+    }}}>
+    {({ array }) => (
+      <div>
+        {array.map(({ label, color }, index) => (
+          <div key={`button_${index}`}>
+            <button style={{ color }}>{label}</button>
+          </div>
+        ))}
+      </div>    
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="array-control" />
+
+[more examples](/api/editors-arrayeditor--overview)
+
+## ControlTypes.FILES
+
+```jsx
+images: {
+  type: ControlTypes.FILES,
+  label: 'Happy Picture',
+    accept: 'image/*',
+    value: [
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',
+  ],
+},
+```  
+
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accept`       | string                                                         | type of files to accept user to open ex 'image/\*',                                                                                                   |
+
+<Playground>
+  <Story name="files-control" controls={{ files: {
+      type: ControlTypes.FILES,
+      accept: 'image/*',
+      value: [
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiARwMCyEWcOFPAAAAP0lEQVQoz8WQMQoAIAwDL/7/z3GwghSp4KDZyiUpBMCYUgd8rehtH16/l3XewgU2KAzapjXBbNFaPS6lDMlKB6OiDv3iAH1OAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAxLTI4VDEyOjExOjMzLTA3OjAwlAHQBgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMS0yOFQxMjoxMTozMy0wNzowMOVcaLoAAAAASUVORK5CYII=',
+      ],
+    },}}>
+    {({ files }) => (
+      <div>
+        {files.map((image, index) => (
+          <img src={image} key={`image_${index}`} alt={`run time control`} />
+        ))}
+      </div>    
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="files-control" />
+
+[more examples](/api/editors-fileseditor--overview)

@@ -1,130 +1,118 @@
-import * as path from 'path';
-import {
-  getDocPath,
-  getStoryPath,
-  DocType,
-  TabConfiguration,
-} from '@component-controls/core';
-
 import {
   compile,
   watch,
-  CompileProps,
+  CompilerCallbackFn,
 } from '@component-controls/webpack-compile';
-import { CreatePagesArgs } from 'gatsby';
-import { LoaderOptions } from './types';
+import {
+  CompileProps,
+  getBundleName,
+} from '@component-controls/webpack-configs';
+
+import {
+  CreatePagesArgs,
+  CreateWebpackConfigArgs,
+  PluginCallback,
+  Page,
+} from 'gatsby';
+import { Store } from '@component-controls/core';
+import {
+  getIndexPage,
+  getHomePages,
+  DocHomePagesPath,
+  getDocPages,
+  DocPagesPath,
+  loadStore,
+} from '@component-controls/store';
+
+const { StorePlugin } = require('@component-controls/store/plugin');
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 
-exports.createPages = async (
-  { actions }: CreatePagesArgs,
-  options: LoaderOptions,
+export const createPagesStatefully = async (
+  { actions, store: gatsbyStore }: CreatePagesArgs,
+  options: CompileProps,
+  doneCb: PluginCallback,
 ) => {
-  const { createPage } = actions;
+  const { createPage, deletePage } = actions;
   const config: CompileProps = {
-    webPack: options.webpack,
     presets: defaultPresets,
-    configPath: options.configPath,
-    outputFolder:
-      options.outputFolder || `${path.join(process.cwd(), 'public')}`,
+    ...options,
   };
-  const { store } =
-    process.env.NODE_ENV === 'development'
-      ? await watch(config)
-      : await compile(config);
-  if (store) {
-    const { pages, categories = [] } = store.buildConfig || {};
-    if (pages) {
-      Object.keys(pages).forEach(type => {
-        if (!categories.includes(type as DocType)) {
-          const page = pages[type as DocType];
-          const docType = type as DocType;
-          const docs = store.getDocs(docType);
-          const tabs: Pick<TabConfiguration, 'route'>[] = page.tabs || [
-            { route: undefined },
-          ];
-          tabs.forEach((tab, tabIndex) => {
-            const route = tabIndex > 0 ? tab.route : undefined;
-            docs.forEach(doc => {
-              const stories =
-                page.storyPaths && doc.stories?.length
-                  ? doc.stories
-                  : [undefined];
-              stories.forEach((storyId?: string) => {
-                const url = getStoryPath(
-                  storyId,
-                  doc,
-                  store.buildConfig?.pages,
-                  route,
-                );
-                createPage({
-                  path: url,
-                  component: require.resolve(`../src/templates/DocPage.tsx`),
-                  context: {
-                    type: docType,
-                    activeTab: route,
-                    docId: doc.title,
-                    storyId,
-                  },
-                });
-              });
-            });
-          });
-          if (docs.length) {
-            const docsPage = docs.find(
-              doc => doc?.route === `/${page.basePath}`,
-            );
-            createPage({
-              path: `/${page.basePath}`,
-              component: require.resolve(`../src/templates/DocHome.tsx`),
-              context: {
-                type: docType,
-                docId: docsPage?.title,
-              },
+  const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
+    if (loadingStore) {
+      const store: Store = loadStore(loadingStore);
+      const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
+        gatsbyStore.getState().pages.forEach((page: Page) => {
+          if (page.path === props.path && page.component === props.component) {
+            deletePage({
+              path: page.path,
+              component: props.component,
             });
           }
-        }
-      });
-      categories.forEach(catName => {
-        const cats = store.getUniquesByField(catName);
-        const catPage = pages[catName as DocType];
-        const catKeys = Object.keys(cats);
-        catKeys.forEach(tag => {
-          createPage({
-            path: getDocPath(
-              catName as DocType,
-              undefined,
-              store.buildConfig?.pages,
-              tag,
-            ),
-            component: require.resolve(`../src/templates/CategoryPage.tsx`),
-            context: {
-              type: catName as DocType,
-              category: tag,
-              docId: null,
-            },
-          });
         });
-        if (catKeys.length) {
-          createPage({
-            path: `/${catPage.basePath}`,
-            component: require.resolve(`../src/templates/CategoryList.tsx`),
+        createPage(props);
+      };
+      //home page
+      const { docId = null, type = null, storyId = null } =
+        getIndexPage(store) || {};
+      createGatsbyPage({
+        path: `/`,
+        component: require.resolve(`../src/templates/DocPage.tsx`),
+        context: {
+          docId,
+          type,
+          storyId,
+        },
+      });
+      const homePages = getHomePages(store);
+      homePages.forEach(({ path, docId, storyId, type }: DocHomePagesPath) => {
+        createGatsbyPage({
+          path,
+          component: require.resolve(`../src/templates/DocHome.tsx`),
+          context: {
+            type,
+            docId,
+            storyId,
+          },
+        });
+      });
+
+      const docPages = getDocPages(store);
+      docPages.forEach(
+        ({
+          path,
+          type,
+          docId = null,
+          storyId = null,
+          category = null,
+          activeTab = null,
+        }: DocPagesPath) => {
+          createGatsbyPage({
+            path,
+            component: require.resolve(`../src/templates/DocPage.tsx`),
             context: {
-              type: catName,
-              docId: null,
+              type,
+              docId,
+              storyId,
+              category,
+              activeTab,
             },
           });
-        }
-      });
+        },
+      );
     }
-    const homePage = store.stores.find(s => s.doc?.route === '/');
-    createPage({
-      path: `/`,
-      component: require.resolve(`../src/templates/DocPage.tsx`),
-      context: {
-        docId: homePage?.doc?.title,
-        type: homePage?.doc?.type,
-      },
-    });
-  }
+    doneCb(null, null);
+  };
+  const run = process.env.NODE_ENV === 'development' ? watch : compile;
+  await run(config, onBundle);
+};
+
+exports.onCreateWebpackConfig = (
+  { actions }: CreateWebpackConfigArgs,
+  options: CompileProps,
+) => {
+  //inject store bundle name
+  actions.setWebpackConfig({
+    plugins: [new StorePlugin({ bundleFileName: getBundleName(options) })],
+  });
 };

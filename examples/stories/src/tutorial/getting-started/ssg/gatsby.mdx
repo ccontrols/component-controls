@@ -1,0 +1,72 @@
+---
+title: Getting started/Site generators/Gatsby
+type: tutorial
+order: 0
+route: /tutorial/getting-started/gatsby
+description: getting started creating a documentation static site with gatsby and component-controls
+tags:
+  - gatsby
+---
+
+Below, we go over how to add a `component-controls` documentation site to both [new](#new-project) and [existing](#existing-gatsby-project) gatsby projects.
+
+You can find a [git repo](https://github.com/atanasster/gatsby-controls-starter) and a [live site](https://gatsby-controls-starter.netlify.app/).
+
+## New project 
+
+Create a new folder:
+
+```sh
+mkdir my-gatsby-project && cd my-gatsby-project
+```
+
+Initialize the project:
+
+```sh
+yarn init
+```
+
+Add gatsby and its dependencies:
+
+```sh
+yarn add gatsby react react-dom
+```
+
+```json:title=package.json
+
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop"
+  },
+
+```
+
+The remaining steps are the same as for an existing gatsby project.
+
+## Existing Gatsby project
+
+### Add component-controls theme
+
+```sh
+yarn add @component-controls/gatsby-theme-stories
+```
+
+### Configure theme
+
+Create a `gatsby-config.js` file in your project's home directory:
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        configPath: '.config',
+      },
+    },
+  ],
+};
+```
+
+## Create your documentation site
+
+Check our [create a documentation site](/tutorial/getting-started/documentation-site) tutorial

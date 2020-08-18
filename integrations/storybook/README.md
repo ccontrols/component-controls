@@ -2,28 +2,6 @@
 
 -   [Shocase sites](#shocase-sites)
 -   [Overview](#overview)
-    -   -   [storybook integration of component-controls.](#storybook-integration-of-component-controls)
-        -   [Motivation](#motivation)
-        -   [Limitations](#limitations)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Configure](#configure)
-        -   [Default options](#default-options)
-        -   [Use only `react-docgen` (even for typescript)](#use-only-react-docgen-even-for-typescript)
-        -   [Use built-in instrument for everything (not use storybook `addon-docs` at all)](#use-built-in-instrument-for-everything-not-use-storybook-addon-docs-at-all)
--   [Creating stories](#creating-stories)
-    -   -   [ESM](#esm)
-        -   [MDX](#mdx)
--   [Available Controls](#available-controls)
--   [Smart Controls](#smart-controls)
-    -   [Examples](#examples)
-        -   [React](#react)
-        -   [Smart Controls MDX](#smart-controls-mdx)
-        -   [Smart Controls Options](#smart-controls-options)
--   [Testing with random data generators](#testing-with-random-data-generators)
--   [Categories](#categories)
--   [Advanced configuration options](#advanced-configuration-options)
-    -   [Custom loader options](#custom-loader-options)
     -   [PresetOptions](#presetoptions)
     -   [defaultRules](#defaultrules)
     -   [Storybook addon panels](#storybook-addon-panels)
@@ -48,329 +26,22 @@
 
 # Shocase sites
 
+-   [Storybook 6 without addon-docs](https://storybook.component-controls.com)
 -   [Storybook 6](https://components-storybook-6.netlify.app/)
--   [Storybook 6 without addon-docs](https://components-storybook-6-no-docs.netlify.app/?path=/story/storybook-starter--overview)
 
 # Overview
 
-### [storybook](https://storybook.js.org) integration of component-controls.
+Storybook plugin for documenting your projects with component controls
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/component-controls.gif" alt="introduction to using component-controls" width="738">
-</p>
+-   Full replacement for the storybook addon-docs
+-   Works with storybook-5 and storybook-6
 
-### Motivation
-
--   Allow adding component-controls in storybook DocsPage.
--   Allow adding storybook docs blocks in component-controls documentation pages.
--   Allow standalone component-controls documentation pages.
--   Allow an unlimited number of documentation pages.
--   Fully replace and extend the Storybook addon-docs block components.
--   Fully replace Storybook's modx-compiler and source-loader.
--   Provide and extensible framework of components, blocks and pages.
-
-### Limitations
+**Limitations**
 
 -   Initial version is only for `react` apps. More frameworks are on the roadmap. 
 -   Only handles the ESM(CSF) and MDX stories format. The storiesOf API is not supported and there are currently no plans to support it.
 
-# Getting Started
-
-## Install
-
-```sh
-yarn add @component-controls/storybook --dev
-```
-
-## Configure
-
-### Default options
-
-the default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
-
-in `main.js`:
-
-```js
-module.exports = {
-  addons: ['@component-controls/storybook']
-}
-```
-
-### Use only `react-docgen` (even for typescript)
-
-Currently this is not recommended as the typescript support in `react-docgen` is a bit lagging.
-
-in `main.js`:
-
-```js
-module.exports = {
-  addons: [{
-    name: '@component-controls/storybook',
-    options: {
-      webpack: ['react-docgen'],
-    }
-  }]
-}
-```
-
-### Use built-in instrument for everything (not use storybook `addon-docs` at all)
-
-The following options will bypass the loaders installed by `addon-docs` and will rely only on the instrumenting loaders from `component-controls`
-
-in `main.js`:
-
-```js
-module.exports = {
-  addons: [{
-    name: '@component-controls/storybook',
-    options: {
-      webpack: ['instrument', 'react-docgen-typescript'],
-    }
-  }]
-}  
-```
-
-# Creating stories
-
-### ESM
-
-```js
-import React from "react";
-
-export default {
-  title: "Storybook Controls",
-};
-
-export const controlsStory = ({ disabled, text }) => (
-  <button disabled={disabled}>
-    {text}
-  </button>
-);
-
-controlsStory.story = {
-  controls: {
-    disabled: { type: 'boolean', value: false },
-    text: { type: 'text', value: 'Hello Storybook' },
-  }
-}
-```
-
-### MDX
-
-```md
-import { Meta} from '@component-controls/storybook';
-import { Playground, Story } from '@component-controls/blocks';
-
-<Meta title="Storybook controls" />
-
-<Playground>
-  <Story name="controlsStory" 
-    controls={{
-      disabled: { type: 'boolean', value: false },
-      text: { type: 'text', value: 'Hello Storybook' },
-    }}
-  >
-    {({ disabled, text }) => (
-     <button disabled={disabled}>
-      {text}
-      </button>
-    )}  
-  </Story>
-</Playground>
-```
-
-# Available Controls
-
-The list of available controls and their documented properties is available [here](https://github.com/ccontrols/component-controls/blob/master/core/specification/src/controls.ts)
-
-# Smart Controls
-
-Smart Controls use a story component's properties table type information to generate automatically controls for the story. 
-
-There are 2 requirements for a story to use smart controls: 
-
-1.  The story needs to have a component assigned, and this component needs to have a valid properties table (it can be typescript, or prop-types or any other format supported by component-controls props-info extensions).
-
-2.  The story needs to accept "some" parameters / internally detected within the source loaders / enabling the story to use the passed control values.
-
-A screenshot of smart controls in action.
-
-<p align="center">
-  <img src="https://github.com/ccontrols/component-controls/blob/master/integrations/storybook/images/smart-controls.jpg" alt="smart groups" width="428">
-</p>
-
-## Examples
-
-### React
-
-```js
-import React from 'react';
-import { Button } from './Button';
-
-export default {
-  title: 'Storybook smart controls',
-  component: Button,
-};
-
-export const smartControls = props => <Button {...props} />;
-```
-
-### Smart Controls MDX
-
-```md
-import { Story, Preview, Meta } from '@storybook/addon-docs/blocks';
-import { Button } from './Button';
-
-<Meta title="Storybook smart controls" component={Button} />
-
-# Smart Controls
-<Preview>
-  <Story name="smartControls">
-    {(props) => (
-      <Button label="default" {...props}/>
-    )}  
-  </Story>
-</Preview>
-```
-
-### Smart Controls Options
-
--   **include** an array of property names that allows you to select only a subset of the smart control properties to be displayed
-
-```js
-onlyColors.story = {
-  smartControls: {
-    include: ['color', 'backgroundColor'],
-  },
-};
-```
-
--   **exclude** an array of property names that allows you to exclude a subset of the smart control properties to be displayed
-
-```js
-noColors.story = {
-  parameters: {
-    addonControls: {
-      smart: {
-        exclude: ['color', 'backgroundColor'],
-      },
-    },
-  },
-};
-```
-
-# Testing with random data generators
-
-This is one of our favorite features, basically allowing 1-line functional component testing out of the box.
-
-By default, Addon Controls selects some basic random data generator for your field type.
-
-Additionally, Addon Controls allows you to specify the [faker.js](https://github.com/marak/Faker.js/) data generator and options to use. For example you can be specific that a field will need to be a street address, or a zip code. In the example below, we will generate random numbers between 50 and 100.
-
-```js
-export const randomNumber = ({ number }) => number;
-
-randomNumber.story = {
-  controls: {
-    number: {
-      type: 'number',
-      label: 'A number',
-      value: 10,
-      data: { name: 'random.number', options: { min: 50, max: 100 } },
-    },
-  },
-};
-```
-
-# Categories
-
-This is very similar to the categorization concept in [addon-knobs](https://github.com/storybookjs/storybook/tree/next/addons/knobs).
-You can categorize your controls by assigning them a `groupId`. When a `groupId` exists, tabs will appear in the Controls storybook panel or in the docs blocks on the Docs page to filter between the groups. Controls without a `groupId` are automatically categorized into the `OTHER` group.
-
-```js
-export const groupedControls = ({ age, name, message }) => {
-  const content = `
-    I am ${name} and I'm ${age} years old.
-    ${message}
-  `;
-
-  return <div>{content}</div>;
-};
-
-const personalGroupId = 'personal info';
-const generalGroupId = 'general info';
-
-groupedControls.story = {
-  controls: {
-    name: { type: 'text', label: 'Name', value: 'James', groupId: personalGroupId },
-    age: { type: 'number', label: 'Age', value: 35, groupId: personalGroupId },
-    message: { type: 'text', label: 'Mesage', value: 'Hello!', groupId: generalGroupId },
-  },
-};
-```
-
-You can see Controls in separate tabs as shown below.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccontrols/component-controls/master/integrations/storybook/images/grouped-controls.jpg" alt="control groups" width="428">
-</p>
-
-# Advanced configuration options
-
-The storybook addon controls comes with pre-configured options that you can use for a quick start, but you can also customise the options.
-
-## Custom loader options
-
-You can customize the preset webpack configuration settings, using a pre-existing config and only adding you custom choices.
-
-`.storybook/main.js`:
-
-```js
-  addons: [
-    ...
-  {
-    name: '@component-controls/storybook',
-    options: {
-      controlsPanel: true,
-      propsPanel: true,
-      webpack: ['instrument',
-      {
-        name: 'react-docgen-typescript', 
-        config: {
-          module: {
-            rules: [
-              {
-                loader: '@component-controls/loader/loader',
-                options: {
-                  //instrumentation options
-                  prettier: {
-                    tabWidth: 4,
-                  },
-                  components: {
-                    storeSourceFile: true, //or false
-                    resolveFile: (componentName, filePath) => {
-                      if (filePath.includes('/theme-ui/dist')) {
-                        return `${
-                          filePath.split('/theme-ui/dist')[0]
-                        }/@theme-ui/components/src/${componentName}.js`;
-                      }
-                      return filePath;
-                    },
-                  },
-                  stories: {
-                    storeSourceFile: true, //or false
-                  }, 
-                },  
-              },
-            ],
-          }
-        },  
-      }],
-    }
-  }],  
-```
-
-For more information on [InstrumentOptions](../../core/instrument/README.md#instrumentoptions)
+[Getting started with storybook](https://component-controls.com/tutorial/getting-started/storybook)
 
 <tsdoc-typescript entry="./src/types.ts" />
 
@@ -495,8 +166,8 @@ _ComponentSource [source code](https://github.com/ccontrols/component-controls/t
 
 | Name          | Type                                                               | Description                                                                                                                                                                                                                                                                                        |
 | ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onSelect`    | _(name: string, component: Component) => boolean \| void_          | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `visibility`  | _ComponentVisibility_                                              | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
-| `onSelect`    | _(name: string, component: StoryComponent) => boolean \| void_     | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
 | `of`          | _any_                                                              | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
 | `name`        | _string_                                                           | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
 | `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                                                                                                                                          |
@@ -539,23 +210,22 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                                     |
-| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                                    |
-| `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                                   |
-| `id`          | _string_             | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_             | optional section title for the block.                                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                                      |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                                             |
-| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                                 |
-| `background`  | _BackgroundType_     | background pattern type                                                                                                         |
-| `direction`   | _DirectionType_      | direction type                                                                                                                  |
-| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                                      |
-| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                                       |
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
+| `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+| `openTab`     | _any_                | by default, which tab to have open.                                                                             |
+| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                 |
+| `background`  | _BackgroundType_     | background pattern type                                                                                         |
+| `direction`   | _DirectionType_      | direction type                                                                                                  |
+| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                      |
+| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                       |
 
 ## <ins>PropsTable</ins>
 
@@ -563,31 +233,32 @@ _PropsTable [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name                    | Type                                                                                                                            | Description                                                                                                                                                                                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extraColumns`          | _Column&lt;{}>\[]_                                                                                                              | extra custom columns passed to the PropsTable.                                                                                                                                                                                                                                                     |
-| `visibility`            | _ComponentVisibility_                                                                                                           | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
-| `onSelect`              | _((name: string, component: StoryComponent) => boolean \| void) \| ((event: SyntheticEvent&lt;HTMLDivElement, Event>) => void)_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
-| `of`                    | _any_                                                                                                                           | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
-| `name`                  | _string_                                                                                                                        | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
-| `title`                 | _string_                                                                                                                        | optional section title for the block.                                                                                                                                                                                                                                                              |
-| `description`           | _string_                                                                                                                        | optional markdown description.                                                                                                                                                                                                                                                                     |
-| `id`                    | _string_                                                                                                                        | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
-| `collapsible`           | _boolean_                                                                                                                       | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
-| `sxStyle`               | _ThemeUIStyleObject_                                                                                                            | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
-| `data-testid`           | _string_                                                                                                                        | testing id                                                                                                                                                                                                                                                                                         |
-| `header`                | _boolean_                                                                                                                       | show or hide the header element.                                                                                                                                                                                                                                                                   |
-| `sorting`               | _boolean_                                                                                                                       | enable.disable sorting.                                                                                                                                                                                                                                                                            |
-| `filtering`             | _boolean_                                                                                                                       | enable/disable filtering.                                                                                                                                                                                                                                                                          |
-| `itemsLabel`            | _string_                                                                                                                        | string label for 'items' - used in the filter placeholder and grouping header.                                                                                                                                                                                                                     |
-| `groupBy`               | _string\[]_                                                                                                                     | field to be grouped by.                                                                                                                                                                                                                                                                            |
-| `hiddenColumns`         | _string\[]_                                                                                                                     | list of columns to hide.                                                                                                                                                                                                                                                                           |
-| `rowSelect`             | _boolean_                                                                                                                       | if true, will enable row selection                                                                                                                                                                                                                                                                 |
-| `initialSelected`       | _Record&lt;number, boolean>_                                                                                                    | initially selected rows                                                                                                                                                                                                                                                                            |
-| `onSelectRowsChange`    | _(selected: Record&lt;number, boolean>) => void_                                                                                | callback when selected rows change                                                                                                                                                                                                                                                                 |
-| `expanded`              | _{ \[key: string]: boolean; }_                                                                                                  | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
-| `skipPageReset`         | _boolean_                                                                                                                       | reset state update while update table data                                                                                                                                                                                                                                                         |
-| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_                                                                                    | callback to render a SubComponent row                                                                                                                                                                                                                                                              |
+| Name                    | Type                                                                                                                       | Description                                                                                                                                                                                                                                                                                        |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `extraColumns`          | _Column&lt;{}>\[]_                                                                                                         | extra custom columns passed to the PropsTable.                                                                                                                                                                                                                                                     |
+| `flat`                  | _boolean_                                                                                                                  | if true, will flatten the group by                                                                                                                                                                                                                                                                 |
+| `onSelect`              | _((name: string, component: Component) => boolean \| void) \| ((event: SyntheticEvent&lt;HTMLDivElement, Event>) => void)_ | callback to be called when the tab changes if the function returns false, it can stop chabging to the new tab                                                                                                                                                                                      |
+| `visibility`            | _ComponentVisibility_                                                                                                      | by default will show both controls and props tables user setting can display only props table or only controls                                                                                                                                                                                     |
+| `of`                    | _any_                                                                                                                      | Specify the component(s), for which to have information displayed. The default, a value of \`"."\` will indicate to display information for the current component (associated with the current Story). If an array of components is specified, each component will be displayed in a separate tab. |
+| `name`                  | _string_                                                                                                                   | some component-oriented ui components can also be driven by a story id (name). ie the PropsTable can display component props, or story controls                                                                                                                                                    |
+| `title`                 | _string_                                                                                                                   | optional section title for the block.                                                                                                                                                                                                                                                              |
+| `description`           | _string_                                                                                                                   | optional markdown description.                                                                                                                                                                                                                                                                     |
+| `id`                    | _string_                                                                                                                   | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                                                                                                                                                    |
+| `collapsible`           | _boolean_                                                                                                                  | if false, will nothave a collapsible frame.                                                                                                                                                                                                                                                        |
+| `sxStyle`               | _ThemeUIStyleObject_                                                                                                       | theme-ui styling object for Block Box                                                                                                                                                                                                                                                              |
+| `data-testid`           | _string_                                                                                                                   | testing id                                                                                                                                                                                                                                                                                         |
+| `header`                | _boolean_                                                                                                                  | show or hide the header element.                                                                                                                                                                                                                                                                   |
+| `sorting`               | _boolean_                                                                                                                  | enable.disable sorting.                                                                                                                                                                                                                                                                            |
+| `filtering`             | _boolean_                                                                                                                  | enable/disable filtering.                                                                                                                                                                                                                                                                          |
+| `itemsLabel`            | _string_                                                                                                                   | string label for 'items' - used in the filter placeholder and grouping header.                                                                                                                                                                                                                     |
+| `groupBy`               | _string\[]_                                                                                                                | field to be grouped by.                                                                                                                                                                                                                                                                            |
+| `hiddenColumns`         | _string\[]_                                                                                                                | list of columns to hide.                                                                                                                                                                                                                                                                           |
+| `rowSelect`             | _boolean_                                                                                                                  | if true, will enable row selection                                                                                                                                                                                                                                                                 |
+| `initialSelected`       | _Record&lt;number, boolean>_                                                                                               | initially selected rows                                                                                                                                                                                                                                                                            |
+| `onSelectRowsChange`    | _(selected: Record&lt;number, boolean>) => void_                                                                           | callback when selected rows change                                                                                                                                                                                                                                                                 |
+| `expanded`              | _{ \[key: string]: boolean; }_                                                                                             | object listing the initially expanded rows.                                                                                                                                                                                                                                                        |
+| `skipPageReset`         | _boolean_                                                                                                                  | reset state update while update table data                                                                                                                                                                                                                                                         |
+| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_                                                                               | callback to render a SubComponent row                                                                                                                                                                                                                                                              |
 
 ## <ins>Stories</ins>
 
@@ -595,23 +266,24 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name          | Type                 | Description                                                                                                                     |
-| ------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `dark`        | _boolean_            | whether to display the dark theme storysource code component whether to use the dark theme for the story source component.      |
-| `id`          | _string_             | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_             | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_             | optional section title for the block.                                                                                           |
-| `description` | _string_             | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                           |
-| `data-testid` | _string_             | testing id                                                                                                                      |
-| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                                    |
-| `openTab`     | _any_                | by default, which tab to have open.                                                                                             |
-| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                                 |
-| `background`  | _BackgroundType_     | background pattern type                                                                                                         |
-| `direction`   | _DirectionType_      | direction type                                                                                                                  |
-| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                                      |
-| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                                       |
+| Name          | Type                 | Description                                                                                                                |
+| ------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `dark`        | _boolean_            | whether to display the dark theme storysource code component whether to use the dark theme for the story source component. |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title.            |
+| `name`        | _string_             |                                                                                                                            |
+| `storyProps`  | _any_                |                                                                                                                            |
+| `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
+| `title`       | _string_             | optional section title for the block.                                                                                      |
+| `description` | _string_             | optional markdown description.                                                                                             |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                                      |
+| `data-testid` | _string_             | testing id                                                                                                                 |
+| `openTab`     | _any_                | by default, which tab to have open.                                                                                        |
+| `visibleTabs` | _boolean_            | if true, the tabs on the panels will be visible                                                                            |
+| `background`  | _BackgroundType_     | background pattern type                                                                                                    |
+| `direction`   | _DirectionType_      | direction type                                                                                                             |
+| `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                                 |
+| `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                                  |
 
 ## <ins>Story</ins>
 
@@ -619,19 +291,19 @@ _Story [source code](https://github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name          | Type                     | Description                                                                                                                     |
-| ------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | _string_                 | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
-| `name`        | _string_                 | alternatively you can use the name of a story to load from an external file                                                     |
-| `title`       | _string_                 | optional section title for the block.                                                                                           |
-| `description` | _string_                 | optional markdown description.                                                                                                  |
-| `collapsible` | _boolean_                | if false, will nothave a collapsible frame.                                                                                     |
-| `sxStyle`     | _ThemeUIStyleObject_     | theme-ui styling object for Block Box                                                                                           |
-| `data-testid` | _string_                 | testing id                                                                                                                      |
-| `ref`         | _Ref&lt;HTMLDivElement>_ | ref can be used by blocks embedding Story - ie ally plugin                                                                      |
-| `onRender`    | _() => void_             | used by other blocks ie ally plugin uses it launch a new ally test on re-render                                                 |
-| `wrapper`     | _StoryWrapper_           | wrapper type - can be an iframe or just regular react                                                                           |
-| `iframeStyle` | _CSSProperties_          | if an iframe wrapper - this is additional iframe style                                                                          |
+| Name          | Type                     | Description                                                                                                     |
+| ------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `ref`         | _Ref&lt;HTMLDivElement>_ | ref can be used by blocks embedding Story - ie ally plugin                                                      |
+| `onRender`    | _() => void_             | used by other blocks ie ally plugin uses it launch a new ally test on re-render                                 |
+| `wrapper`     | _StoryWrapperType_       | wrapper type - can be an iframe or just regular react                                                           |
+| `iframeStyle` | _CSSProperties_          | if an iframe wrapper - this is additional iframe style                                                          |
+| `id`          | _string_                 | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_                 |                                                                                                                 |
+| `title`       | _string_                 | optional section title for the block.                                                                           |
+| `description` | _string_                 | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_                | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_     | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_                 | testing id                                                                                                      |
 
 ## <ins>StoryConfig</ins>
 
@@ -639,25 +311,16 @@ _StoryConfig [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name          | Type                                                               | Description                                                                                                                                                                      |
-| ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
-| `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
-| `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                        |
-| `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
-| `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
-| `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
-| `data-testid` | _string_                                                           | testing id                                                                                                                                                                       |
-| `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
-| `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
-| `children`    | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
-| `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
-| `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`       | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
-| `as`          | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-| `metastring`  | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+| `sourceProps` | _SourceProps_        |                                                                                                                 |
+| `name`        | _string_             |                                                                                                                 |
 
 ## <ins>StorySource</ins>
 
@@ -665,26 +328,17 @@ _StorySource [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name          | Type                                                               | Description                                                                                                                                                                      |
-| ------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `viewStyle`   | _ViewStyle_                                                        | initial view mode                                                                                                                                                                |
-| `id`          | _string_                                                           | id of the story optional id to be used for the block if no id is provided, one will be calculated automatically from the title.                                                  |
-| `name`        | _string_                                                           | alternatively you can use the name of a story to load from an external file                                                                                                      |
-| `title`       | _string_                                                           | optional section title for the block. optional title to display for the code block. Usually used from MDX                                                                        |
-| `description` | _string_                                                           | optional markdown description.                                                                                                                                                   |
-| `collapsible` | _boolean_                                                          | if false, will nothave a collapsible frame.                                                                                                                                      |
-| `sxStyle`     | _ThemeUIStyleObject_                                               | theme-ui styling object for Block Box                                                                                                                                            |
-| `data-testid` | _string_                                                           | testing id                                                                                                                                                                       |
-| `actions`     | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
-| `plain`       | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
-| `children`    | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
-| `theme`       | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `language`    | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn`    | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
-| `dark`        | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`       | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
-| `as`          | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-| `metastring`  | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `viewStyle`   | _ViewStyle_          | initial view mode                                                                                               |
+| `sourceProps` | _SourceProps_        | source code options                                                                                             |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+| `name`        | _string_             |                                                                                                                 |
 
 ## <ins>Subtitle</ins>
 
@@ -692,13 +346,13 @@ _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name       | Type                                                                           | Description                                                                 |
-| ---------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| `id`       | _string_                                                                       | id of the story                                                             |
-| `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
-| `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
-| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                         | DOM node type to render as. By default h3.                                  |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
+| Name       | Type                                                                           | Description                                |
+| ---------- | ------------------------------------------------------------------------------ | ------------------------------------------ |
+| `id`       | _string_                                                                       |                                            |
+| `name`     | _string_                                                                       |                                            |
+| `children` | _ReactNode_                                                                    | text to be displayed in the component.     |
+| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                         | DOM node type to render as. By default h3. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                            |
 
 ## <ins>Title</ins>
 
@@ -706,12 +360,12 @@ _Title [source code](https://github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name       | Type                                                                           | Description                                                                 |
-| ---------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| `id`       | _string_                                                                       | id of the story                                                             |
-| `name`     | _string_                                                                       | alternatively you can use the name of a story to load from an external file |
-| `children` | _ReactNode_                                                                    | text to be displayed in the component.                                      |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                                                             |
+| Name       | Type                                                                           | Description                            |
+| ---------- | ------------------------------------------------------------------------------ | -------------------------------------- |
+| `id`       | _string_                                                                       |                                        |
+| `name`     | _string_                                                                       |                                        |
+| `children` | _ReactNode_                                                                    | text to be displayed in the component. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
 
 ## <ins>PageContextContainer</ins>
 

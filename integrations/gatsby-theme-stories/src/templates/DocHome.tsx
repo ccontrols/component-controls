@@ -8,14 +8,15 @@ interface PageListProps {
   pathContext: {
     type: DocType;
     docId?: string;
+    storyId?: string;
   };
 }
 
 const DocHomeTemplate: FC<PageListProps> = ({
-  pathContext: { type = defDocType, docId },
+  pathContext: { type = defDocType, docId, storyId },
 }) => {
   return (
-    <Layout docId={docId} type={type}>
+    <Layout docId={docId} storyId={storyId}>
       <DocumentHomePage type={type} />
     </Layout>
   );

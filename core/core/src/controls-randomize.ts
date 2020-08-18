@@ -1,4 +1,3 @@
-import deepmerge from 'deepmerge';
 import { faker } from './faker';
 import {
   ControlTypes,
@@ -8,6 +7,7 @@ import {
   ComponentControls,
   ComponentControlArray,
 } from './controls';
+import { deepmerge } from './deepMerge';
 
 const arrayElements = (arr: any[], c?: number) => {
   const array = arr || ['a', 'b', 'c'];
@@ -34,12 +34,19 @@ interface RandomizedData {
   [key: string]: any;
 }
 
+export const canRandomizeControl = (control: ComponentControl): boolean => {
+  const { data } = control;
+  return (
+    data !== false && data !== null && control.type !== ControlTypes.BUTTON
+  );
+};
+
 export const randomizeData = (controls: ComponentControls): RandomizedData => {
   return Object.keys(controls)
     .map(name => {
       const control = controls[name];
       const { data } = control;
-      if (data === false || data === null) {
+      if (!canRandomizeControl(control)) {
         return null;
       }
       // check if control has custom settings for generating data
@@ -82,19 +89,18 @@ export const randomizeData = (controls: ComponentControls): RandomizedData => {
             value: faker.random.boolean(),
           };
         case ControlTypes.NUMBER:
-          const step: number = control
-            ? (control as ComponentControlNumber).step || 1
-            : 1;
-
+          const step: number = (control as ComponentControlNumber)?.step || 1;
           const randomNumber: number = Math.max(
             Math.min(
               faker.random.number({
                 min:
-                  (control as ComponentControlNumber).min ||
-                  (control.value as number) / 2,
+                  (control as ComponentControlNumber).min || control.value
+                    ? (control.value as number) / 2
+                    : 0,
                 max:
-                  (control as ComponentControlNumber).max ||
-                  (control.value as number) * 2,
+                  (control as ComponentControlNumber).max || control.value
+                    ? (control.value as number) * 2
+                    : 1,
               }),
               (control as ComponentControlNumber).max || Infinity,
             ),

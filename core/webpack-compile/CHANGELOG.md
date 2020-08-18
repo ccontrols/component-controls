@@ -3,6 +3,347 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
+
+
+### Features
+
+* reload routes hmr, gatsby ([b6fa783](https://github.com/ccontrols/component-controls/commit/b6fa7834c547923efeeb2b36b5652e9464ceddc6))
+
+
+
+
+
+## [1.19.5](https://github.com/ccontrols/component-controls/compare/v1.19.4...v1.19.5) (2020-08-10)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.19.4](https://github.com/ccontrols/component-controls/compare/v1.19.3...v1.19.4) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.19.3](https://github.com/ccontrols/component-controls/compare/v1.19.2...v1.19.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.19.2](https://github.com/ccontrols/component-controls/compare/v1.19.1...v1.19.2) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.19.1](https://github.com/ccontrols/component-controls/compare/v1.19.0...v1.19.1) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Bug Fixes
+
+* peer depenencies update ([13f3765](https://github.com/ccontrols/component-controls/commit/13f3765ce08c5b67c8ff3c4bb9138217257796b0))
+
+
+
+
+
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
+
+
+### Features
+
+* add collapseSingle option to pages ([fe89923](https://github.com/ccontrols/component-controls/commit/fe899230a3f5fc72d05c4af05468b998a8e4b6c1))
+
+
+
+
+
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.16.2](https://github.com/ccontrols/component-controls/compare/v1.16.1...v1.16.2) (2020-08-06)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+
+### Features
+
+* add build-time error saving ([912074f](https://github.com/ccontrols/component-controls/commit/912074f3fd954e61f880da171502dc1b4525be7e))
+
+
+
+
+
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.13.3](https://github.com/ccontrols/component-controls/compare/v1.13.2...v1.13.3) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.13.2](https://github.com/ccontrols/component-controls/compare/v1.13.1...v1.13.2) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.13.1](https://github.com/ccontrols/component-controls/compare/v1.13.0...v1.13.1) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.11.1](https://github.com/ccontrols/component-controls/compare/v1.11.0...v1.11.1) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* cleanup store context ([6c1f208](https://github.com/ccontrols/component-controls/commit/6c1f208c85d01b9394e2fe1469057dfad09dcbc4))
+* store external module ([e35d5ab](https://github.com/ccontrols/component-controls/commit/e35d5abef15cbaa9ac0ac6b2fa93ebae87b49100))
+
+
+
+
+
+## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.10.2](https://github.com/ccontrols/component-controls/compare/v1.10.1...v1.10.2) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+## [1.10.1](https://github.com/ccontrols/component-controls/compare/v1.10.0...v1.10.1) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/webpack-compile
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* clean up compile message ([4401d09](https://github.com/ccontrols/component-controls/commit/4401d09656c2bfc3e70b4b3b6f91e0232988f773))
+* nextjs story bundle location ([636ffac](https://github.com/ccontrols/component-controls/commit/636ffac5d2b02889e9d76bd5a723c5d07c97d97b))
+* restore import ([f9785d0](https://github.com/ccontrols/component-controls/commit/f9785d05ab5db6882e1e4841beee9d0972a9f75b))
+* update loader for HMR ([fdf1ee8](https://github.com/ccontrols/component-controls/commit/fdf1ee8095b818e9309f0c1c31ca4970ed35b91d))
+
+
+
+
+
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* assets relative path ([b3bf9e8](https://github.com/ccontrols/component-controls/commit/b3bf9e8a05c450ceefa82a7d12560034f6923804))
+* emit url-loader assets to public folder ([d77775c](https://github.com/ccontrols/component-controls/commit/d77775c329305ab71c295671e55a4174c4cf4e52))
+
+
+
+
+
 ## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
 
 **Note:** Version bump only for package @component-controls/webpack-compile

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/store",
-  "version": "1.7.1",
+  "version": "1.20.0",
   "description": "Component controls shared storage store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,13 +13,14 @@
     "live_store.d.ts",
     "static_store.js",
     "static_store.d.ts",
-    "singleton_store.js",
-    "singleton_store.d.ts"
+    "controls-store.js",
+    "controls-store.d.ts",
+    "plugin.js",
+    "plugin.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
-    "docs": "ts-md",
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
@@ -36,18 +37,28 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.7.0",
-    "@component-controls/loader": "^1.7.1",
+    "@analytics/google-analytics": "^0.4.0",
+    "@component-controls/core": "^1.20.0",
+    "@component-controls/loader": "^1.20.0",
+    "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
+    "react": "^16.13.1",
+    "recoil": "^0.0.10",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.5.0",
+    "@component-controls/ts-markdown-docs": "^1.10.0",
     "@types/jest": "^25.1.2",
+    "@types/recoil": "^0.0.1",
     "@types/webpack-env": "^1.15.1",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "loader-utils": "^1.2.3",
+    "webpack": "^4.41.6"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
   },
   "publishConfig": {
     "access": "public"

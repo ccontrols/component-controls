@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { DocType } from '@component-controls/core';
+import { DocType, getDocTypePath } from '@component-controls/core';
 import { ActionBar, ActionItems } from '@component-controls/components';
 
 import {
@@ -9,7 +9,14 @@ import {
   SidebarContext,
   Header as AppHeader,
 } from '@component-controls/components';
-import { BlockContext, Search } from '@component-controls/blocks';
+import {
+  useConfig,
+  useDocTypeCount,
+  useCurrentDocument,
+  getIndexPage,
+  useStore,
+} from '@component-controls/store';
+import { Search } from '@component-controls/blocks';
 
 export interface HeaderProps {
   toolbar?: {
@@ -22,8 +29,11 @@ export interface HeaderProps {
  */
 export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
-  const { storeProvider } = useContext(BlockContext);
-  const config = storeProvider.config;
+  const store = useStore();
+  const homePage = useMemo(() => getIndexPage(store), [store]);
+  const docCounts = useDocTypeCount();
+  const config = useConfig();
+  const doc = useCurrentDocument();
   const { pages } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
@@ -38,21 +48,24 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
               return { page: pages[docType], docType };
             })
             .filter(({ page, docType }) => {
+              const docInfo = docCounts[docType];
               return (
                 page.topMenu &&
-                Object.keys(storeProvider.getPageList(docType)).length > 0
+                docInfo &&
+                docInfo.count &&
+                homePage.docId !== docInfo.home?.title
               );
             })
             .map(({ page }) => ({
               id: page.label?.toLowerCase(),
               'aria-label': `go to page ${page.label}`,
-              href: `/${page.basePath}`,
+              href: getDocTypePath(page),
               node: page.label,
             })),
         ]
       : actions;
     return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
-  }, [pages, storeProvider, toolbar.left]);
+  }, [pages, toolbar.left, docCounts, homePage.docId]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
@@ -63,11 +76,11 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   }, [toolbar.right]);
   return (
     <AppHeader>
-      <Box variant="appheader.container">
-        {collapsed && <SidebarToggle />}
+      <Box variant="appheader.items">
+        {doc?.navSidebar && collapsed && <SidebarToggle />}
         <ActionBar themeKey="toolbar" actions={leftActions} />
       </Box>
-      <Box variant="appheader.container">
+      <Box variant="appheader.items">
         {!responsive && <ActionBar themeKey="toolbar" actions={rightActions} />}
       </Box>
     </AppHeader>

@@ -39,6 +39,7 @@
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>TitledImage</ins>](#institledimageins)
     -   [<ins>Toggle</ins>](#instoggleins)
+    -   [<ins>Value</ins>](#insvalueins)
     -   [<ins>Zoom</ins>](#inszoomins)
 
 # Installation
@@ -51,7 +52,7 @@ $ npm install @component-controls/components --save
 
 # Documentation
 
-[live documentation site](https://component-controls.com/api/components/actionbar/)
+[live documentation site](https://component-controls.com/api/components-actionbar--overview)
 
 # Overview
 
@@ -85,10 +86,10 @@ _ActionBar [source code](https://github.com/ccontrols/component-controls/tree/ma
 
 ### properties
 
-| Name       | Type                       | Description                         |
-| ---------- | -------------------------- | ----------------------------------- |
-| `actions`  | _ActionItems_              | collection of action items          |
-| `themeKey` | _"actionbar" \| "toolbar"_ | two possible layouts from the theme |
+| Name       | Type          | Description                                            |
+| ---------- | ------------- | ------------------------------------------------------ |
+| `actions`  | _ActionItems_ | collection of action items                             |
+| `themeKey` | _string_      | custom layouts from the theme, defaults to 'actionbar' |
 
 ## <ins>ActionContainer</ins>
 
@@ -333,7 +334,7 @@ _SearchInput [source code](https://github.com/ccontrols/component-controls/tree/
 | `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                  | callback on change of search input. user can retrieve items in this callback |
 | `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                      | on select a search item.                                                     |
 | `items*`       | _ItemType\[]_                                                                                                                                                                                   | items array                                                                  |
-| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnOutOfBoundaries" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_ | customize the popover                                                        |
+| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnReferenceHidden" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_ | customize the popover                                                        |
 | `as`           | _ElementType&lt;any>_                                                                                                                                                                           |                                                                              |
 | `variant`      | _string_                                                                                                                                                                                        |                                                                              |
 
@@ -573,6 +574,19 @@ _Toggle [source code](https://github.com/ccontrols/component-controls/tree/maste
 | ------- | --------------------- | --------------------------------------------------- |
 | `label` | _string_              | optional label to be displayed alongside the toggle |
 | `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
+
+## <ins>Value</ins>
+
+Displays a label and value styled
+
+_Value [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Value/Value.tsx)_
+
+### properties
+
+| Name     | Type        | Description                       |
+| -------- | ----------- | --------------------------------- |
+| `label*` | _ReactNode_ | label - usually smaller and muted |
+| `value*` | _ReactNode_ | highlighted value                 |
 
 ## <ins>Zoom</ins>
 

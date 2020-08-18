@@ -3,6 +3,215 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
+
+
+### Features
+
+* reload routes hmr, gatsby ([b6fa783](https://github.com/ccontrols/component-controls/commit/b6fa7834c547923efeeb2b36b5652e9464ceddc6))
+
+
+
+
+
+## [1.19.5](https://github.com/ccontrols/component-controls/compare/v1.19.4...v1.19.5) (2020-08-10)
+
+
+### Bug Fixes
+
+* remove console.log ([a44c120](https://github.com/ccontrols/component-controls/commit/a44c120972afbdd437dd02853ecca9f246aeb993))
+* update resolve docs ([4a992e8](https://github.com/ccontrols/component-controls/commit/4a992e8f7da5be931dce80eebcb460b0d11d8772))
+
+
+
+
+
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Features
+
+* callback for repository locations ([50a8093](https://github.com/ccontrols/component-controls/commit/50a8093ce34ff296163d75b89e244b620e5efe70))
+
+
+
+
+
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+
+### Bug Fixes
+
+* avatar from theme-ui ([5b7cd6b](https://github.com/ccontrols/component-controls/commit/5b7cd6b08a7ce367ca7a1d359ac08cde1e6018de))
+* home page story id ([e5f389b](https://github.com/ccontrols/component-controls/commit/e5f389b1c29900e93baa199218d50510373d7d01))
+
+
+
+
+
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+
+### Bug Fixes
+
+* update theme state provider ([6a95dd2](https://github.com/ccontrols/component-controls/commit/6a95dd2ffa04818bd5d120820fd002323dbe3102))
+
+
+### Features
+
+* config update state ([f8c96f0](https://github.com/ccontrols/component-controls/commit/f8c96f0201235568caf64a9b914845fd25957a92))
+
+
+
+
+
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
+
+
+### Bug Fixes
+
+* notify stories on changes non-current ([7af6bb8](https://github.com/ccontrols/component-controls/commit/7af6bb892c03a6751db8f566b3171bbad7b29829))
+
+
+
+
+
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+
+### Bug Fixes
+
+* nextjs active tab prop ([7ce6590](https://github.com/ccontrols/component-controls/commit/7ce65908aabaa71637cfd9c7a2dd0158f7968064))
+* number default value ([11dc062](https://github.com/ccontrols/component-controls/commit/11dc06219631db1a50bfda252638307e9c3f30e0))
+
+
+
+
+
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Bug Fixes
+
+* home page mobile layout ([85c45ac](https://github.com/ccontrols/component-controls/commit/85c45ac22a9777c17e0919c0139e2c99512b8220))
+
+
+
+
+
+## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+**Note:** Version bump only for package component-controls-stories
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+
+### Features
+
+* hmr update ([49413fc](https://github.com/ccontrols/component-controls/commit/49413fc6cb7e14fc4bb494c24223a9f9f719d609))
+* require context hmr ([1587fba](https://github.com/ccontrols/component-controls/commit/1587fbab36a4f70b8c014f86c040e33adfe6ce58))
+
+
+
+
+
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* link colors ([931e3de](https://github.com/ccontrols/component-controls/commit/931e3de5169b44a0b78ce2525dffff00f8c61a37))
+* links remove backslash ([8505344](https://github.com/ccontrols/component-controls/commit/850534488d03d50851be5e13c27ac8e57cc70bf8))
+* update home page dark colors ([be5bb45](https://github.com/ccontrols/component-controls/commit/be5bb45c4ff8b2b1da80bfa496e481da78bc343a))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Features
+
+* info row with tags and created info ([58e0048](https://github.com/ccontrols/component-controls/commit/58e0048cd096303340947ac6ea033f1425dc9956))
+
+
+
+
+
 # [1.7.0](https://github.com/ccontrols/component-controls/compare/v1.6.0...v1.7.0) (2020-07-06)
 
 **Note:** Version bump only for package component-controls-stories

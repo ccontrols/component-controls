@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import { createHash } from 'crypto';
 import jsStringEscape from 'js-string-escape';
-import { store } from './store';
+import { getSerializedStore, initializeBuildOptions } from './store';
 
 export interface LoaderPluginOptions {
   config?: string;
@@ -25,18 +25,21 @@ export class LoaderPlugin {
   }
 
   apply(compiler: webpack.Compiler) {
+    initializeBuildOptions(compiler.context, this.options.config);
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {
-      compilation.hooks.optimizeChunkAssets.tap(
+      compilation.hooks.optimizeChunkAssets.tapPromise(
         LoaderPlugin.pluginName,
-        chunks => {
+        async chunks => {
+          const jsFiles: string[] = [];
           chunks.forEach(chunk => {
             chunk.files
               .filter(fileName => fileName.endsWith('.js'))
-              .forEach(file => {
-                this.replaceSource(compilation, file);
-              });
+              .forEach(fileName => jsFiles.push(fileName));
           });
+          for (let i = 0; i < jsFiles.length; i += 1) {
+            await this.replaceSource(compilation, jsFiles[i]);
+          }
         },
       );
     });
@@ -51,7 +54,6 @@ export class LoaderPlugin {
             loader: path.join(__dirname, 'runtimeLoader.js'),
             options: JSON.stringify({
               compilationHash: this.compilationHash,
-              ...this.options,
             }),
           });
         }
@@ -60,7 +62,7 @@ export class LoaderPlugin {
     nmrp.apply(compiler);
   }
 
-  private replaceSource(
+  private async replaceSource(
     compilation: webpack.compilation.Compilation,
     file: string,
   ) {
@@ -68,9 +70,10 @@ export class LoaderPlugin {
     const source = compilation.assets[file];
     const placeholderPos = source.source().indexOf(placeholder);
     if (placeholderPos > -1) {
+      const store = await getSerializedStore();
       const newContent = this.options.escapeOutput
-        ? jsStringEscape(JSON.stringify(store))
-        : JSON.stringify(store);
+        ? jsStringEscape(store)
+        : store;
       const newSource = new ReplaceSource(source, file);
       newSource.replace(
         placeholderPos,

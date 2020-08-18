@@ -1,0 +1,493 @@
+---
+title: Reference/Document
+route: /tutorial/reference/document
+type: tutorial
+author: atanasster
+tags:
+  - documentation
+order: 0
+---
+
+import titleImg from './media/doc-title.jpg';
+import routeImg from './media/doc-route.jpg';
+import orderImg from './media/doc-order.jpg';
+import descriptionImg from './media/doc-description.jpg';
+import tagsImg from './media/doc-tags.jpg';
+import sidebarImg from './media/doc-sidebar.jpg';
+import contextImg from './media/doc-context.jpg';
+import fullpageImg from './media/doc-fullpage.jpg';
+import componentImg from './media/doc-component.jpg';
+import subcomponentsImg from './media/doc-subcomponents.jpg';
+import controlsImg from './media/doc-controls.jpg';
+import decoratorsImg from './media/doc-decorators.jpg';
+
+
+## Overview
+
+Document is a single file containing documentation in [mdx](/tutorial/mdx-stories) or [esm](/tutorial/esmodules-stories) format.
+
+## Properties
+
+### title
+
+type: `string`
+
+Title of the document, also used as the document unique identifier. If no [route](#route) parameter is specified, the title is used to generate the document url. This is the only required field, as it is used to show the document in the menu structures.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Button
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+}  
+```
+
+<img alt="hierarchical document title" title="document title" src={titleImg} />
+
+### type
+
+type: [DocType](/tutorial/reference/configuration#doctype)
+
+Document type - blogs, pages, stories, and even custom ones. By default, all documents are of type `story`
+
+All documents of the same type are grouped for easier search and navigation.
+
+### order
+
+type: `number`
+
+Document order used to sort between documents within the same parent menu. By default, documents are ordered by their filesystem precedence (alphabetically).
+
+The order is used for the menu display as well as next/previous page navigation.
+
+as an example, let's suppose you have the following 3 documents:
+
+```
+// first.mdx
+---
+title: Components/One
+---
+
+// second.mdx
+---
+title: Components/Two
+---
+
+// third.mdx
+---
+title: Components/Three
+---
+
+```
+
+From the file-system order, the documents will be ordered first.mdx, second.mdx and third.mdx (ordered by their file name alphabetically). However, we can order the files manually and sort them first.mdx, third.mdx and second.mdx.
+
+```
+// first.mdx
+---
+title: Components/One
+order: 0
+---
+
+// second.mdx
+---
+title: Components/Two
+order: 2
+---
+
+// third.mdx
+---
+title: Components/Three
+order: 1
+---
+
+```
+
+<img alt="custom document order" title="document order" src={orderImg} />
+
+### route
+
+type:  `string`
+
+If provided, will be used as the route for the document page. By default, the title in lowercase will be used as the route.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+route: /library/my-route
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  route: '/library/esm-route',
+};
+```
+
+<img alt="custom document route" title="document route" src={routeImg} />
+
+
+### description
+
+type:  `string`
+
+Short description of the documentation page - can be an excerpt for blog posts or keywords for the full-text search. If the description is set, it will also be used for SEO purposes as the description meta tag of the page.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+description: this is a spinner documentation page
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  description: 'this is a button documentation page'
+};
+```
+
+<img alt="assign document description" title="document description" src={descriptionImg} />
+
+### date
+
+type:  `Date`
+
+Optional date when the document was created. If not assigned, the instrumentation process will use [birthtime](https://nodejs.org/api/fs.html#fs_stats_birthtimems) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+date: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  date: new Date('01/01/2020'),
+};
+```
+
+### dateModified
+
+type:  `Date`
+
+Optional date when the document was last modified. If not assigned, the instrumentation process will use [mtime](https://nodejs.org/api/fs.html#fs_stats_mtime) from the filesystem.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+dateModified: 01/01/2020
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  dateModified: new Date('01/01/2020'),
+};
+```
+
+ 
+### draft
+
+type:  `boolean`
+
+If set to true, the document will be hidden in production builds. This allows you to work on the draft version of a document without publishing it.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+draft: true
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  draft: true,
+};
+```
+
+### tags
+
+type: `string[]`
+
+List of document tags, used for cross-linking documents and the full-text search.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+tags:
+  - documentation
+  - components
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  tags: ['documentation', 'components' ],
+};
+```
+
+<img alt="custom document tags" title="document tags" src={tagsImg} />
+
+### author
+
+type: `string` 
+
+Document author. Allows categorizing documents by author and also creating custom author's home page.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+author: atanasster
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  author: 'atanasster',
+};
+```
+
+### navSidebar
+
+type: `boolean`
+
+Whether to add a sidebar to navigate all the documents from the same document type. The default value is from the document type configuration but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+navSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  navSidebar: false
+};
+```
+
+<img alt="document navigation sidebar" title="document navSidebar" src={sidebarImg} />
+
+
+### contextSidebar
+
+type: `boolean`
+  
+Whether to add a context sidebar to access the sections on the current page. The default value is from the document type configuration  but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+contextSidebar: false
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  contextSidebar: false,
+};
+```
+
+<img alt="document context sidebar" title="document context sidebar" src={contextImg} />
+
+
+### layout.fullPage
+
+type: `boolean
+
+Whether the page to use the full-page theme styling (pagecontainer.full theme variant can be customized). The default value is from the document type configuration but can also be changed at the document level.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+fullPage: true
+---
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+export default {
+  title: 'Library/Components/Button',
+  fullPage: true,
+};
+```
+
+<img alt="document full page" title="document fullPage" src={fullpageImg} />
+
+### component
+
+type: `string | object`
+
+The component associated with the documentation page. 
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+component: Button
+---
+import { Button } from '../components/Button';
+import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+## Component Component
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import { Button } from '../components/Button';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+};
+```
+
+<img alt="document component" title="document component" src={componentImg} />
+
+
+### subcomponents
+
+type: `string[] | object[]
+
+Multiple components option.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+component: Button
+subcomponents:
+  - Spinner
+---
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+import { PropsTable,  ComponentSource  } from '@component-controls/blocks';
+
+## Component Component
+<ComponentSource of="." />
+
+## Component Props
+<PropsTable of="." />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import { Button } from '../components/Button';
+import { Spinner } from '../components/Spinner';
+
+export default {
+  title: 'Library/Components/Button',
+  component: Button,
+  subcomponents: [Spinner]
+};
+```
+
+<img alt="document subcomponents" title="document subcomponents" src={subcomponentsImg} />
+
+### controls
+
+type: [ComponentControls](/tutorial/reference/controls#componentcontrols)
+
+An object of key/value pairs specifying the controls for the stories file will apply to all the stories in the file.
+
+[MDX](/tutorial/mdx-documentation)
+```
+---
+title: Library/Components/Spinner
+controls: { text: 'some text' }
+---
+import { Playground,  Story, PropsTable  } from '@component-controls/blocks';
+
+<Playground>
+  <Story name="text-control">
+    {({ text }) => (
+      <div>{text}</div>
+    )}
+  </Story>
+</Playground>
+
+<PropsTable name="text-control" />
+```
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+  controls: { text: 'some text' },
+};
+
+export const textControls = ({ text }) => <div>{text}</div>;
+```
+
+[Introduction to controls](/blogs/introduction-to-controls)
+
+<img alt="document controls" title="document controls" src={controlsImg} />
+
+
+### decorators
+
+type [StoryRenderFn[]](/tutorial/reference/configuration#storyrenderfn)
+
+An array of wrapper functions (decorators) that will be called when rendering each story.
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+  decorators: [
+    (controls, context) => {
+      const { renderFn } = context;
+      return (
+        <div style={{ background: 'lightpink' }}>
+          {renderFn(controls, context)}
+        </div>
+      );
+    },
+  ],
+};
+
+export const overview = () => <div>decorator test</div>;
+```
+
+<img alt="document decorators" title="document decorators" src={decoratorsImg} />

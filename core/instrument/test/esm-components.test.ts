@@ -3,8 +3,8 @@ import { loadStoriesTests } from './loadTestFiles';
 describe('esm-components', () => {
   loadStoriesTests(
     {
-      stories: { storeSourceFile: false, package: false },
-      components: { storeSourceFile: false, package: false },
+      stories: { sourceFiles: false, package: false },
+      components: { sourceFiles: false, package: false },
     },
     ['esm', 'components'],
   );

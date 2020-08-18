@@ -1,6 +1,5 @@
 import escape from 'escape-html';
-import deepmerge from 'deepmerge';
-
+import { deepmerge } from './deepMerge';
 import {
   ComponentControl,
   ComponentControls,
@@ -8,17 +7,18 @@ import {
   ControlTypes,
 } from './controls';
 
-import { Story } from './stories';
+import { Story } from './document';
 
 const mergeValue = (control: ComponentControl, value: any): any => {
   if (control && control.type === ControlTypes.OBJECT) {
+    const objValue = mergeControlValues(
+      control.value as ComponentControls,
+      undefined,
+      value,
+    );
     return {
       ...control,
-      value: mergeControlValues(
-        control.value as ComponentControls,
-        undefined,
-        value,
-      ),
+      value: objValue,
     };
   }
   return {
@@ -32,21 +32,25 @@ export const mergeControlValues = (
   controlName: string | undefined,
   value: any,
 ): ComponentControls => {
-  return controlName
-    ? {
-        ...controls,
-        [controlName]: mergeValue(controls[controlName], value),
-      }
-    : Object.keys(controls).reduce(
-        (acc, key) => ({
-          ...acc,
-          [key]: mergeValue(
-            controls[key],
-            value[key] === undefined ? controls[key].value : value[key],
-          ),
-        }),
-        {},
-      );
+  if (controlName) {
+    return {
+      ...controls,
+      [controlName]: mergeValue(controls[controlName], value),
+    };
+  }
+
+  return Object.keys(controls).reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: mergeValue(
+        controls[key],
+        value[key] === undefined
+          ? controls[key].value
+          : value[key].value || value[key],
+      ),
+    }),
+    {},
+  );
 };
 
 export const resetControlValues = (
@@ -64,6 +68,9 @@ export const resetControlValues = (
       );
 };
 
+export const canResetControl = (control: ComponentControl) => {
+  return control.defaultValue !== control.value;
+};
 export interface ControlValues {
   [name: string]: any;
 }
@@ -187,10 +194,9 @@ export const visibleControls = (
         )
     : {};
 
-export const hasControls = (controls?: ComponentControls): boolean =>
-  controls && typeof controls === 'object'
-    ? !!Object.keys(controls).filter(key => !controls[key].hidden).length
-    : false;
+export const getControlsCount = (controls?: ComponentControls): number =>
+  controls ? Object.keys(controls).length : 0;
+
 export const newControlValues = (
   controls: ComponentControls,
 ): ComponentControls => {

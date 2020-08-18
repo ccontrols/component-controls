@@ -4,13 +4,22 @@ import {
   BlockContainerProps,
 } from '@component-controls/components';
 
-import { getComponentName, hasControls } from '@component-controls/core';
-import { CURRENT_STORY } from '../../utils';
+import {
+  getComponentName,
+  getControlsCount,
+  CURRENT_STORY,
+  Story,
+  Component,
+} from '@component-controls/core';
+import {
+  useComponents,
+  ComponentInputProps,
+  useStory,
+} from '@component-controls/store';
 import {
   ComponentsContainer,
   ComponentsContainerProps,
-  useComponentsContext,
-} from '../../context';
+} from './ComponentsContainer';
 
 /**
  * component level visibility
@@ -23,7 +32,14 @@ export type ComponentsBlockContainerProps = {
    * user setting can display only props table or only controls
    */
   visibility?: ComponentVisibility;
-} & ComponentsContainerProps &
+
+  children: (
+    component: Component,
+    props: any,
+    story?: Story,
+  ) => React.ReactElement | null;
+} & Omit<ComponentsContainerProps, 'components' | 'children'> &
+  ComponentInputProps &
   BlockContainerProps;
 
 export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
@@ -38,8 +54,8 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   ...rest
 }) => {
   const [title, setTitle] = React.useState<string | undefined>();
-  const { components, story } = useComponentsContext({ of });
-
+  const components = useComponents({ of });
+  const story = useStory({ id, name });
   React.useEffect(() => {
     const componentNames = Object.keys(components);
     setTitle(
@@ -54,26 +70,24 @@ export const ComponentsBlockContainer: FC<ComponentsBlockContainerProps> = ({
   if (
     keys.length === 0 &&
     visibility !== 'info' &&
-    hasControls(story?.controls)
+    getControlsCount(story?.controls) > 0
   ) {
     keys.push('Controls');
   }
-
   if (keys.length === 0) {
     return null;
   }
   let child: React.ReactElement | null = null;
   const block = (
     <ComponentsContainer
-      of={of}
-      name={name}
+      components={components}
       onSelect={tabName =>
         userTitle === CURRENT_STORY ? setTitle(tabName) : undefined
       }
       {...rest}
     >
-      {(component, props, otherProps) => {
-        child = children(component, props, otherProps);
+      {(component, otherProps) => {
+        child = children(component, otherProps, story);
         return child;
       }}
     </ComponentsContainer>

@@ -12,7 +12,7 @@ import {
   resetIdCounter,
 } from 'react-tabs';
 
-export { resetIdCounter as resetTabCounter };
+export const resetTabCounter = resetIdCounter;
 /**
  * Tab heading - you should specify the title/label string as the children property. To be created inside the `<TabList />` component through the children prop.
  */

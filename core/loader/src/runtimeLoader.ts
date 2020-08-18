@@ -1,29 +1,19 @@
-import { deepMergeArrays, defaultBuildConfig } from '@component-controls/core';
-
-import { loadConfiguration, extractStories } from '@component-controls/config';
-import { stringifyRequest } from 'loader-utils';
-import { replaceSource, StoryPath } from './replaceSource';
-import { store, reserveStories } from './store';
+import {
+  configRequireContext,
+  extractDocuments,
+} from '@component-controls/config';
+import { loader } from 'webpack';
+import { replaceSource } from './replaceSource';
+import { store, reserveStories, config } from './store';
 
 module.exports = function(content: string) {
-  //@ts-ignore
-  const params = JSON.parse(this.query.slice(1));
-  //@ts-ignore
-  const config = loadConfiguration(this.rootContext, params.config);
-  store.buildConfig = config?.config
-    ? deepMergeArrays(defaultBuildConfig, config.config)
-    : defaultBuildConfig;
-
-  const stories: StoryPath[] = (config ? extractStories(config) || [] : []).map(
-    fileName => ({
-      absPath: fileName,
-      //@ts-ignore
-      relPath: stringifyRequest(this, fileName),
-    }),
-  );
-  reserveStories(stories.map(story => story.absPath));
+  const context = (this as unknown) as loader.LoaderContext;
+  const params = JSON.parse(context.query.slice(1));
+  const contexts = config ? configRequireContext(config) || [] : [];
+  const stories: string[] = config ? extractDocuments(config) || [] : [];
+  reserveStories(stories);
   content = replaceSource(
-    stories,
+    contexts,
     config?.optionsFilePath,
     store.buildConfig,
     `__COMPILATION_HASH__${params.compilationHash}`,

@@ -1,9 +1,14 @@
 /** @jsx jsx */
 import { FC, useState, useMemo, useContext } from 'react';
 import { jsx, Input, Box, Heading } from 'theme-ui';
-import { NoteIcon, BookIcon, FileIcon } from '@primer/octicons-react';
-
-import { BlockContext, useStoryContext } from '@component-controls/blocks';
+import { NoteIcon, BookIcon } from '@primer/octicons-react';
+import {
+  useStore,
+  useCurrentDocument,
+  useDocByType,
+  useConfig,
+  useActiveTab,
+} from '@component-controls/store';
 import {
   Sidebar as AppSidebar,
   ColorMode,
@@ -12,15 +17,20 @@ import {
   MenuItems,
   MenuItem,
   Header,
+  ActionBar,
+  ActionItems,
 } from '@component-controls/components';
 import {
   Document,
-  Story,
   DocType,
   Pages,
   defDocType,
+  RunConfiguration,
+  Store,
+  getStoryPath,
+  getDocPath,
+  PageConfiguration,
 } from '@component-controls/core';
-import { StoryStore } from '@component-controls/store';
 
 export interface SidebarProps {
   /**
@@ -32,18 +42,15 @@ export interface SidebarProps {
    * document type
    */
   type?: DocType;
-
-  /**
-   * currently active tab. Use to creae the sidemenu links
-   */
-  activeTab?: string;
 }
+
 const createMenuItem = (
-  storeProvider: StoryStore,
+  store: Store,
+  config: RunConfiguration,
   doc: Document,
   type: DocType,
   levels: string[],
-  storyPaths: boolean,
+  page: PageConfiguration,
   activeTab?: string,
   parent?: MenuItems,
   item?: MenuItem,
@@ -51,6 +58,24 @@ const createMenuItem = (
   if (levels.length < 1) {
     return item || {};
   }
+  const { storyPaths, collapseSingle } = page?.sideNav || {};
+  const storyPath = (storyId: string, activeTab?: string): string => {
+    const story = store.stories[storyId];
+    if (!story) {
+      return '';
+    }
+    const doc = story.doc ? store.docs[story.doc] : undefined;
+    return getStoryPath(story.id, doc, config.pages, activeTab);
+  };
+
+  const documentPath = (
+    type: DocType | undefined = defDocType,
+    name: string,
+    activeTab?: string,
+  ): string => {
+    const doc = store.docs[name];
+    return getDocPath(type, doc, config.pages, name, activeTab);
+  };
   const newItem: MenuItem = {
     id: levels[0],
     label: levels[0],
@@ -63,36 +88,37 @@ const createMenuItem = (
       newItem.id = doc.title;
 
       if (storyPaths && doc.stories && doc.stories.length) {
-        if (doc.stories.length >= 1) {
+        if (doc.stories.length > 1 || !collapseSingle) {
           // multiple stories - each with a link
           newItem.items = doc.stories.map(storyId => {
-            const story = storeProvider.getStory(storyId) as Story;
+            const story = store.stories[storyId];
             return {
               id: story.id,
               label: story.name,
               icon: <NoteIcon verticalAlign="middle" />,
-              href: storeProvider.getStoryPath(storyId, activeTab),
+              href: storyPath(storyId, activeTab),
             };
           });
         } else {
-          newItem.icon = <FileIcon verticalAlign="middle" />;
+          newItem.icon = <NoteIcon verticalAlign="middle" />;
           //only one story -direct link to it
-          newItem.href = storeProvider.getStoryPath(doc.stories[0], activeTab);
+          newItem.href = storyPath(doc.stories[0], activeTab);
         }
       } else {
         newItem.icon = <BookIcon verticalAlign="middle" />;
         // no stories - link to document
-        newItem.href = storeProvider.getPagePath(type, doc.title, activeTab);
+        newItem.href = documentPath(type, doc.title, activeTab);
       }
     }
     parent.push(newItem);
   }
   return createMenuItem(
-    storeProvider,
+    store,
+    config,
     doc,
     type,
     levels.slice(1),
-    storyPaths,
+    page,
     activeTab,
     sibling ? sibling.items : newItem.items,
     newItem,
@@ -106,36 +132,56 @@ const createMenuItem = (
 export const Sidebar: FC<SidebarProps> = ({
   title: propsTitle,
   type = defDocType,
-  activeTab,
 }) => {
-  const { doc } = useStoryContext({ id: '.' });
   const { SidebarClose, responsive } = useContext(SidebarContext);
-  const { storeProvider } = useContext(BlockContext);
-  const config = storeProvider.config;
-  const { pages } = config || {};
-  const { label = '', storyPaths = false } = pages?.[type] || {};
+  const store = useStore();
+  const activeTab = useActiveTab();
+  const { title: docId } = useCurrentDocument() || {};
+
+  const config = useConfig() || {};
+  const { pages, sidebar = [] } = config;
+  const page: PageConfiguration = pages?.[type] || {};
+  const { label = '' } = page;
+  const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
-    if (storeProvider) {
-      const docs: Pages = storeProvider.getPageList(type);
+    if (store) {
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
         const { title } = doc;
         const levels = title.split('/');
-        createMenuItem(
-          storeProvider,
-          doc,
-          type,
-          levels,
-          storyPaths,
-          activeTab,
-          acc,
-        );
+        createMenuItem(store, config, doc, type, levels, page, activeTab, acc);
         return acc;
       }, []);
       return menuItems;
     }
     return [];
-  }, [type, activeTab, storeProvider, storyPaths]);
+  }, [type, activeTab, store, config, page, docs]);
   const [search, setSearch] = useState<string | undefined>(undefined);
+  const actions: ActionItems = [...sidebar];
+
+  if (propsTitle || label) {
+    actions.push({
+      node: (
+        <Heading as="h3" variant="appsidebar.items">
+          {propsTitle || label}
+        </Heading>
+      ),
+      id: 'title',
+    });
+  }
+  actions.push({
+    node: (
+      <Box variant="appsidebar.items">
+        <Input
+          placeholder="filter..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onClick={e => e.stopPropagation()}
+        />
+      </Box>
+    ),
+    id: 'filter',
+  });
+
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
       {responsive && (
@@ -145,22 +191,8 @@ export const Sidebar: FC<SidebarProps> = ({
         </Header>
       )}
       <Box variant="appsidebar.container">
-        <Heading as="h3" variant="appsidebar.heading">
-          {propsTitle || label}
-        </Heading>
-        <Box variant="appsidebar.filtercontainer">
-          <Input
-            placeholder="filter..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            onClick={e => e.stopPropagation()}
-          />
-        </Box>
-        <Navmenu
-          activeItem={{ id: doc?.title }}
-          search={search}
-          items={menuItems}
-        />
+        <ActionBar themeKey="appsidebar" actions={actions} />
+        <Navmenu activeItem={{ id: docId }} search={search} items={menuItems} />
       </Box>
     </AppSidebar>
   );

@@ -1,7 +1,7 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { Link } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { useDocumentPath } from '@component-controls/store';
 
 export interface DocLinkProps {
   id: string;
@@ -14,8 +14,7 @@ export const DocLink: FC<DocLinkProps & Omit<LinkProps, 'href'>> = ({
   id,
   ...props
 }) => {
-  const { storeProvider } = useContext(BlockContext);
-  const href = storeProvider.getPagePath('story', id);
+  const href = useDocumentPath('story', id);
   return (
     <Link href={href} {...props}>
       {children}

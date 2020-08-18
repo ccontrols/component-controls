@@ -1,36 +1,67 @@
-import { CompileProps, CompileResults, WatchProps } from './types';
-import { runCompiler } from './utilities';
-export * from './types';
+const chalk = require('chalk');
+import {
+  CompileProps,
+  CompileResults,
+  WatchProps,
+} from '@component-controls/webpack-configs';
+import { runCompiler, CompilerCallbackFn } from './utilities';
+
+export { CompilerCallbackFn };
+
 /**
  * compile the stories with webpack
  * returns the stories store object
  */
-export const compile = ({
-  webPack,
-  presets,
-  configPath,
-  outputFolder,
-}: CompileProps): Promise<CompileResults> => {
-  return runCompiler((compiler, callback) => compiler.run(callback), {
+export const compile = (
+  {
     webPack,
-    mode: 'production',
     presets,
     configPath,
-    outputFolder,
-  });
+    staticFolder,
+    distFolder,
+    bundleName,
+  }: CompileProps,
+  callback?: CompilerCallbackFn,
+): Promise<CompileResults> => {
+  console.log(
+    chalk.bgRgb(244, 147, 66)('@start compilation'),
+    'optimized build',
+  );
+  return runCompiler(
+    (compiler, callback) => compiler.run(callback),
+    {
+      webPack,
+      mode: 'production',
+      presets,
+      configPath,
+      staticFolder,
+      distFolder,
+      bundleName,
+    },
+    callback,
+  );
 };
 
 /**
  * compile the stories with webpack and launch watching for changes
  * returns the stories store object
  */
-export const watch = ({
-  webPack,
-  presets,
-  configPath,
-  watchOptions,
-  outputFolder,
-}: WatchProps): Promise<CompileResults> => {
+export const watch = (
+  {
+    webPack,
+    presets,
+    configPath,
+    watchOptions,
+    staticFolder,
+    distFolder,
+    bundleName,
+  }: WatchProps,
+  callback?: CompilerCallbackFn,
+): Promise<CompileResults> => {
+  console.log(
+    chalk.bgRgb(244, 147, 66)('@start compilation'),
+    'development mode watch',
+  );
   return runCompiler(
     (compiler, callback) => compiler.watch({ ...watchOptions }, callback),
     {
@@ -38,7 +69,10 @@ export const watch = ({
       mode: 'development',
       presets,
       configPath,
-      outputFolder,
+      staticFolder,
+      distFolder,
+      bundleName,
     },
+    callback,
   );
 };

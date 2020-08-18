@@ -2,8 +2,8 @@ import React from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { Button, Box } from 'theme-ui';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
@@ -11,14 +11,11 @@ import { addPropertyEditor } from '../prop-factory';
  */
 
 export const ColorEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlColor>({
-    name,
-  });
+  const [control, onChange] = useControl<ComponentControlColor>(name);
   const [displayColorPicker, setDisplayColorPicker] = React.useState(false);
 
   const handleChange = (color: ColorResult) => {
     onChange(
-      name,
       `rgba(${color.rgb.r},${color.rgb.g},${color.rgb.b},${color.rgb.a})`,
     );
   };
@@ -46,7 +43,7 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
           borderRadius: '1rem',
         }}
       />
-      {control.value && control.value.toUpperCase()}
+      {typeof control.value === 'string' && control.value.toUpperCase()}
       {displayColorPicker ? (
         <Box
           css={{

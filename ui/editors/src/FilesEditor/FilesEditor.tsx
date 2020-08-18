@@ -2,8 +2,8 @@ import { FileReader } from 'global';
 import React, { ChangeEvent } from 'react';
 import { Input } from 'theme-ui';
 import { ComponentControlFiles, ControlTypes } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';
 
 function fileReaderPromise(file: File) {
@@ -20,9 +20,7 @@ function fileReaderPromise(file: File) {
  */
 
 export const FilesEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlFiles>({
-    name,
-  });
+  const [control, onChange] = useControl<ComponentControlFiles>(name);
   return (
     <Input
       type="file"
@@ -32,7 +30,7 @@ export const FilesEditor: PropertyEditor = ({ name }) => {
         if (e.target.files) {
           Promise.all(
             Array.from(e.target.files).map(fileReaderPromise),
-          ).then(files => onChange(name, files));
+          ).then(files => onChange(files));
         }
       }}
       accept={control.accept}

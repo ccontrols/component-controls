@@ -1,7 +1,7 @@
 {
-  "name": "component-controls-gatsby",
+  "name": "component-controls-gatsby-starter",
   "private": true,
-  "version": "1.7.1",
+  "version": "1.20.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,9 +14,10 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.7.1",
-    "@component-controls/pages": "^1.7.1",
+    "@component-controls/gatsby-theme-stories": "^1.20.0",
+    "@theme-ui/presets": "^0.4.0-rc.1",
     "gatsby": "^2.22.10",
+    "gatsby-plugin-sitemap": "^2.4.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

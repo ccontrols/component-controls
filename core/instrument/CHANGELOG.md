@@ -3,6 +3,354 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/ccontrols/component-controls/compare/v1.19.5...v1.20.0) (2020-08-17)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.19.5](https://github.com/ccontrols/component-controls/compare/v1.19.4...v1.19.5) (2020-08-10)
+
+
+### Bug Fixes
+
+* package info from original filename ([699187d](https://github.com/ccontrols/component-controls/commit/699187de301c3aebfc1f3758c21b3595b1eb5ffb))
+
+
+
+
+
+## [1.19.4](https://github.com/ccontrols/component-controls/compare/v1.19.3...v1.19.4) (2020-08-09)
+
+
+### Bug Fixes
+
+* use resolved filename for component ([6a45ddd](https://github.com/ccontrols/component-controls/commit/6a45ddda4bbb91ed11ec609c01df5bc4fecb4a1c))
+
+
+
+
+
+## [1.19.3](https://github.com/ccontrols/component-controls/compare/v1.19.2...v1.19.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.19.2](https://github.com/ccontrols/component-controls/compare/v1.19.1...v1.19.2) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.19.1](https://github.com/ccontrols/component-controls/compare/v1.19.0...v1.19.1) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.19.0](https://github.com/ccontrols/component-controls/compare/v1.18.3...v1.19.0) (2020-08-09)
+
+
+### Bug Fixes
+
+* peer depenencies update ([13f3765](https://github.com/ccontrols/component-controls/commit/13f3765ce08c5b67c8ff3c4bb9138217257796b0))
+
+
+### Features
+
+* callback for repository locations ([50a8093](https://github.com/ccontrols/component-controls/commit/50a8093ce34ff296163d75b89e244b620e5efe70))
+
+
+
+
+
+## [1.18.3](https://github.com/ccontrols/component-controls/compare/v1.18.2...v1.18.3) (2020-08-09)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.18.2](https://github.com/ccontrols/component-controls/compare/v1.18.1...v1.18.2) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.18.1](https://github.com/ccontrols/component-controls/compare/v1.18.0...v1.18.1) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.18.0](https://github.com/ccontrols/component-controls/compare/v1.17.0...v1.18.0) (2020-08-08)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.17.0](https://github.com/ccontrols/component-controls/compare/v1.16.3...v1.17.0) (2020-08-07)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.16.3](https://github.com/ccontrols/component-controls/compare/v1.16.2...v1.16.3) (2020-08-07)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.16.2](https://github.com/ccontrols/component-controls/compare/v1.16.1...v1.16.2) (2020-08-06)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.16.1](https://github.com/ccontrols/component-controls/compare/v1.16.0...v1.16.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* extract imports from dt files ([ce239d0](https://github.com/ccontrols/component-controls/commit/ce239d0f0f79b42d871e874b77ea72a5b024d0b7))
+
+
+
+
+
+# [1.16.0](https://github.com/ccontrols/component-controls/compare/v1.15.0...v1.16.0) (2020-08-05)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.15.0](https://github.com/ccontrols/component-controls/compare/v1.14.4...v1.15.0) (2020-08-03)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.14.4](https://github.com/ccontrols/component-controls/compare/v1.14.3...v1.14.4) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.14.3](https://github.com/ccontrols/component-controls/compare/v1.14.2...v1.14.3) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.14.2](https://github.com/ccontrols/component-controls/compare/v1.14.1...v1.14.2) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.14.1](https://github.com/ccontrols/component-controls/compare/v1.14.0...v1.14.1) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.14.0](https://github.com/ccontrols/component-controls/compare/v1.13.4...v1.14.0) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.13.4](https://github.com/ccontrols/component-controls/compare/v1.13.3...v1.13.4) (2020-08-01)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.13.3](https://github.com/ccontrols/component-controls/compare/v1.13.2...v1.13.3) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.13.2](https://github.com/ccontrols/component-controls/compare/v1.13.1...v1.13.2) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.13.1](https://github.com/ccontrols/component-controls/compare/v1.13.0...v1.13.1) (2020-07-31)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.13.0](https://github.com/ccontrols/component-controls/compare/v1.12.0...v1.13.0) (2020-07-31)
+
+
+### Bug Fixes
+
+* default value ([3756c73](https://github.com/ccontrols/component-controls/commit/3756c7397d24dae21c2aa0531313806fe5dae168))
+* stringify default export object ([d455445](https://github.com/ccontrols/component-controls/commit/d45544556df9cce6a82dbdf2ce0e3a448813623c))
+
+
+### Features
+
+* support storybook docs-only pages ([4014d65](https://github.com/ccontrols/component-controls/commit/4014d652ef68d52ec977db331bfcfd259bc0face))
+
+
+
+
+
+# [1.12.0](https://github.com/ccontrols/component-controls/compare/v1.11.2...v1.12.0) (2020-07-30)
+
+
+### Features
+
+* props-info hmr support ([51a2a53](https://github.com/ccontrols/component-controls/commit/51a2a537f0b758b65ca29b7d3d1c8c0134481f87))
+
+
+
+
+
+## [1.11.2](https://github.com/ccontrols/component-controls/compare/v1.11.1...v1.11.2) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.11.1](https://github.com/ccontrols/component-controls/compare/v1.11.0...v1.11.1) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.11.0](https://github.com/ccontrols/component-controls/compare/v1.10.4...v1.11.0) (2020-07-29)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.10.4](https://github.com/ccontrols/component-controls/compare/v1.10.3...v1.10.4) (2020-07-22)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.10.3](https://github.com/ccontrols/component-controls/compare/v1.10.2...v1.10.3) (2020-07-21)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.10.2](https://github.com/ccontrols/component-controls/compare/v1.10.1...v1.10.2) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+## [1.10.1](https://github.com/ccontrols/component-controls/compare/v1.10.0...v1.10.1) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.10.0](https://github.com/ccontrols/component-controls/compare/v1.9.0...v1.10.0) (2020-07-20)
+
+**Note:** Version bump only for package @component-controls/instrument
+
+
+
+
+
+# [1.9.0](https://github.com/ccontrols/component-controls/compare/v1.8.0...v1.9.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* esm subcomponents with custom label ([82e95b9](https://github.com/ccontrols/component-controls/commit/82e95b99ef7e589997e3cba86629ef324bfabc68))
+* exclude draft documents from store ([6390350](https://github.com/ccontrols/component-controls/commit/63903508fc6fd1473faa09670d1ab511987c886b))
+* stringify object field names ([60840a9](https://github.com/ccontrols/component-controls/commit/60840a90fb64845404c44af6634b8c1e8bc133f0))
+
+
+### Features
+
+* add draft prop to document ([d8736d2](https://github.com/ccontrols/component-controls/commit/d8736d209571c869459c2bf4fe80a0fb45009f62))
+* loading store methods to work with routes ([8eab9b1](https://github.com/ccontrols/component-controls/commit/8eab9b18993a42daa1931246252cb1d5e728c8e2))
+
+
+
+
+
+# [1.8.0](https://github.com/ccontrols/component-controls/compare/v1.7.1...v1.8.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* handle of="." in MDX ([98cbb2d](https://github.com/ccontrols/component-controls/commit/98cbb2d7fac8a8ec66103d4f6b66bf944199a3d7))
+* mdx subcomponents handling ([9d0b1c0](https://github.com/ccontrols/component-controls/commit/9d0b1c0e5d153b8105df230b53e95f32b1a2b00e))
+
+
+
+
+
 ## [1.7.1](https://github.com/ccontrols/component-controls/compare/v1.7.0...v1.7.1) (2020-07-06)
 
 **Note:** Version bump only for package @component-controls/instrument

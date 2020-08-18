@@ -3,7 +3,7 @@
 import { ComponentType } from 'react';
 import { preToCodeBlock } from 'mdx-utils';
 import { jsx } from 'theme-ui';
-import { Label, Button } from 'theme-ui';
+import { Label, Button, Box } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';
 import { Source } from '../Source';
@@ -82,13 +82,15 @@ export const markdownComponents: MarkdownComponentType = {
         )
       : undefined;
     return (
-      <Source
-        language={mdxLanguageMap[language || 'jsx'] || language}
-        metastring={metastring}
-        {...otherProps}
-      >
-        {codeString.trimRight()}
-      </Source>
+      <Box variant="syntaxhighlight.markdown">
+        <Source
+          language={mdxLanguageMap[language || 'jsx'] || language}
+          metastring={metastring}
+          {...otherProps}
+        >
+          {codeString.trimRight()}
+        </Source>
+      </Box>
     );
   },
   h1: props => <LinkHeading as="h1" {...props} />,
@@ -100,4 +102,6 @@ export const markdownComponents: MarkdownComponentType = {
   img: TitledImage,
   button: Button,
   label: Label,
+  summary: props => <summary variant="styles.summary" {...props} />,
+  details: props => <details variant="styles.details" {...props} />,
 };

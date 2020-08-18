@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`follow-imports button-default-export.js 1`] = `Object {}`;
+exports[`follow-imports button-default-export.js 1`] = `
+Object {
+  "originalFilePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-default-export.js",
+}
+`;
 
 exports[`follow-imports button-from-node-nodules.js 1`] = `
 Object {
@@ -11,11 +15,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 50,
+      "line": 47,
     },
     "start": Object {
       "column": 19,
-      "line": 47,
+      "line": 44,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -28,21 +32,18 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 var blocks = require('@component-controls/blocks');
-require('@component-controls/components');
-var ThemeProvider = require('./ThemeProvider.js');
 var live_store = require('@component-controls/store/live_store');
 var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
 const BlockContextProvider = ({ children, id, }) => {
-    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId }, children));
+    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
 const ControlsProvider = ({ children }) => {
-    return (React__default.createElement(ThemeProvider.ThemeProvider, null,
-        React__default.createElement(BlockContextProvider, null, children)));
+    return React__default.createElement(BlockContextProvider, null, children);
 };
 
 const ComponentSource = props => {
@@ -100,7 +101,10 @@ const Title = props => {
         React__default.createElement(blocks.Title, Object.assign({}, props))));
 };
 
-exports.ThemeProvider = ThemeProvider.ThemeProvider;
+const ThemeProvider = ({ children }) => {
+    return React__default.createElement(blocks.ThemeProvider, null, children);
+};
+
 exports.DocsContainer = DocsContainer.DocsContainer;
 exports.PageContextContainer = DocsContainer.PageContextContainer;
 exports.BlockContextProvider = BlockContextProvider;
@@ -115,6 +119,7 @@ exports.Story = Story;
 exports.StoryConfig = StoryConfig;
 exports.StorySource = StorySource;
 exports.Subtitle = Subtitle;
+exports.ThemeProvider = ThemeProvider;
 exports.Title = Title;
 ",
 }
@@ -124,7 +129,6 @@ exports[`follow-imports button-named-export.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {
@@ -170,7 +174,6 @@ exports[`follow-imports direct-import.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/direct-import.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {
@@ -192,7 +195,6 @@ exports[`follow-imports export-all.js 1`] = `
 Object {
   "exportedAs": "Button",
   "filePath": "/Users/atanasster/component-controls/core/instrument/test/fixtures/follow-imports/button-named-export.js",
-  "from": "",
   "imports": Object {},
   "loc": Object {
     "end": Object {
@@ -219,11 +221,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 50,
+      "line": 47,
     },
     "start": Object {
       "column": 19,
-      "line": 47,
+      "line": 44,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -236,21 +238,18 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 var blocks = require('@component-controls/blocks');
-require('@component-controls/components');
-var ThemeProvider = require('./ThemeProvider.js');
 var live_store = require('@component-controls/store/live_store');
 var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
 const BlockContextProvider = ({ children, id, }) => {
-    const defaultStoyId = storybookCustomDocs.useStoryId();
+    const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId }, children));
+    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
 const ControlsProvider = ({ children }) => {
-    return (React__default.createElement(ThemeProvider.ThemeProvider, null,
-        React__default.createElement(BlockContextProvider, null, children)));
+    return React__default.createElement(BlockContextProvider, null, children);
 };
 
 const ComponentSource = props => {
@@ -308,7 +307,10 @@ const Title = props => {
         React__default.createElement(blocks.Title, Object.assign({}, props))));
 };
 
-exports.ThemeProvider = ThemeProvider.ThemeProvider;
+const ThemeProvider = ({ children }) => {
+    return React__default.createElement(blocks.ThemeProvider, null, children);
+};
+
 exports.DocsContainer = DocsContainer.DocsContainer;
 exports.PageContextContainer = DocsContainer.PageContextContainer;
 exports.BlockContextProvider = BlockContextProvider;
@@ -323,6 +325,7 @@ exports.Story = Story;
 exports.StoryConfig = StoryConfig;
 exports.StorySource = StorySource;
 exports.Subtitle = Subtitle;
+exports.ThemeProvider = ThemeProvider;
 exports.Title = Title;
 ",
 }

@@ -4,9 +4,12 @@
 -   [Installation](#installation)
 -   [API](#api)
     -   [ConfigrationResult](#configrationresult)
+    -   [RequireContextProps](#requirecontextprops)
     -   [buildConfigFileNames](#buildconfigfilenames)
     -   [optionsFileNames](#optionsfilenames)
-    -   [extractStories](#extractstories)
+    -   [configRequireContext](#configrequirecontext)
+    -   [extractDocuments](#extractdocuments)
+    -   [fixGlob](#fixglob)
     -   [getConfigurationArg](#getconfigurationarg)
     -   [loadConfiguration](#loadconfiguration)
 
@@ -30,7 +33,7 @@ $ npm install @component-controls/config --save-dev
 
 ## ConfigrationResult
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L17)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L21)_
 
 
 
@@ -42,33 +45,81 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 | `configPath*`     | string                                    |             |
 | `optionsFilePath` | string                                    |             |
 
+## RequireContextProps
+
+from the glob list of documents, extract require.context array of props
+
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L110)_
+
+
+
+### properties
+
+| Name                 | Type              | Description |
+| -------------------- | ----------------- | ----------- |
+| `directory*`         | string            |             |
+| `regExp*`            | [RegExp](#regexp) |             |
+| `useSubdirectories*` | boolean           |             |
+
 ## buildConfigFileNames
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L7)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L11)_
 
 
 
 ## optionsFileNames
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L9)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L13)_
 
 
 
-## extractStories
+## configRequireContext
+
+convert glob patters from config file into require.context objects
+
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L118)_
+
+**function** configRequireContext(`__namedParameters`\*: **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)instrumentation configuration**instrument**: anybase url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories
+internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
+example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string): [RequireContextProps](#requirecontextprops)\[] | undefined;
+
+### parameters
+
+| Name                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)instrumentation configuration**instrument**: anybase url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string |             |
+| `returns`            | [RequireContextProps](#requirecontextprops)\[] \| undefined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |             |
+
+## extractDocuments
 
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L84)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L90)_
 
-**function** extractStories(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): string\[] | undefined;
+**function** extractDocuments(`__namedParameters`\*: **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)instrumentation configuration**instrument**: anybase url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories
+internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
+example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string): string\[] | undefined;
 
 ### parameters
 
-| Name                 | Type                                                                        | Description |
-| -------------------- | --------------------------------------------------------------------------- | ----------- |
-| `__namedParameters*` | **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string |             |
-| `returns`            | string\[] \| undefined                                                      |             |
+| Name                 | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Description |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `__namedParameters*` | **config**: page types that are considered as categories fields as well**categories**: [DocType](#doctype)\[]**finalWebpack**: [WebpackConfig](#webpackconfig)instrumentation configuration**instrument**: anybase url path for API documentation pages. Default is "docs/"**pages**: [PagesOnlyRoutes](#pagesonlyroutes)wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/**stories**: string\[]custom webpack configuration setup. One or the other will be used**webpack**: [WebpackConfig](#webpackconfig)**configPath**: string |             |
+| `returns`            | string\[] \| undefined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |             |
+
+## fixGlob
+
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L84)_
+
+**function** fixGlob(`golbExpr`\*: string): string;
+
+### parameters
+
+| Name        | Type   | Description |
+| ----------- | ------ | ----------- |
+| `golbExpr*` | string |             |
+| `returns`   | string |             |
 
 ## getConfigurationArg
 
@@ -76,7 +127,7 @@ return the configration folder from command-line parameters
 command line accepts -c/ -config parameter for config path
 the config file is assumed named main.js/main.ts
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L28)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L32)_
 
 **function** getConfigurationArg(`args`\*: string\[]): string | undefined;
 
@@ -91,7 +142,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
  given a base project folder and a configuration folder, returns the configuration file
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L49)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L53)_
 
 **function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigrationResult](#configrationresult) | undefined;
 

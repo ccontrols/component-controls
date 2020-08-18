@@ -1,3 +1,4 @@
+import { RequireContextProps } from '@component-controls/config';
 import { BuildConfiguration } from '@component-controls/core';
 
 export interface StoryPath {
@@ -6,19 +7,27 @@ export interface StoryPath {
 }
 
 export const replaceSource = (
-  stories: StoryPath[],
+  contexts: RequireContextProps[],
   configFilePath: string | undefined,
   config: BuildConfiguration | undefined,
   hashKey: string,
 ) => {
   const imports = `
-const imports = {};
+
 const configJSON = ${
     configFilePath ? `require("${configFilePath}")` : 'undefined'
   };
-
-${stories
-  .map(story => `imports['${story.absPath}'] = require(${story.relPath});`)
+ const contexts = [];
+${contexts
+  .map(
+    context =>
+      `contexts.push({
+        folder: "${context.directory}", 
+        req: require.context('${context.directory}', ${
+        context.useSubdirectories ? 'true' : 'false'
+      }, ${context.regExp})
+    });`,
+  )
   .join('\n')}
 `;
   const storeConst = `const store = ${hashKey};\n`;
@@ -41,52 +50,56 @@ ${stories
   for (let i = 0; i < store.stores.length; i+= 1) {
     const s =  store.stores[i];
     const doc = s.doc;
-    if (imports.hasOwnProperty(doc.fileName)) {
-      const exports = imports[doc.fileName];
-      try {
-        Object.keys(exports).forEach(key => {
-          const exported = exports[key];
-          if (key === 'default') {
-            const { storySource, ...rest } = exported;
-            assignProps(doc, rest);
-          } else {
-            const story = s.stories[key];
-            if (story) {
-              story.renderFn = exported;
-              assignProps(story, exported);
-              if (exported.story) {
-                assignProps(story, exported.story);
+    if (doc) {
+      let exports = null;
+      for (const context of contexts) {
+        const key = context.req.keys().find(k => {
+          const fullPath = path.resolve(context.folder, k);
+          return doc.fileName === fullPath;
+        })
+        if (key) {
+          exports = context.req(key);
+          break;
+        }
+      }
+      if (exports) {
+        try {
+          Object.keys(exports).forEach(key => {
+            const exported = exports[key];
+            if (key === 'default') {
+              const { storySource, ...rest } = exported;
+              assignProps(doc, rest);
+            } else {
+              const story = s.stories[key];
+              if (story) {
+                story.renderFn = exported;
+                assignProps(story, exported);
+                if (exported.story) {
+                  assignProps(story, exported.story);
+                }
               }
             }
-          }
-        });
-      } catch (e) {
-        console.error(\`unable to load module \${doc.moduleId}\`, e);
+          });
+        } catch (e) {
+          console.error(\`unable to load module \${doc.moduleId}\`, e);
+        }
+      } else {
+        //file could not be found
+        store.stores.splice(i, 1);
+        i -= 1; 
       }
     }  
   }
 `;
   const exports = `module.exports = store;\n`;
-  const hmr = `
-  if (module.hot) {
-    ${stories
-      .map(
-        story => `
-    module.hot.accept(${story.relPath}, function() {
-      console.log('HMR',${story.relPath});
-    })    
-    `,
-      )
-      .join('\n')}
-  }
-  `;
   const newContent = `
+
+const path = require('path');
 ${imports}
 ${storeConst}
 store.config = ${configFilePath ? 'configJSON.default ||' : ''} configJSON;
 store.buildConfig = ${config ? JSON.stringify(config) : '{}'};
 ${loadStories}
-${hmr}
 ${exports}
 `;
   return newContent;

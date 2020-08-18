@@ -29,42 +29,55 @@ export type PageTabs = TabConfiguration[];
 
 export type DocType = 'story' | 'blog' | 'page' | 'tags' | 'author' | string;
 
-export interface PageConfiguration {
-  /**
-   * base url path for the page
-   */
-  basePath?: string;
+/**
+ * page layout - sidebars, full width
+ */
 
+export interface PageLayoutProps {
+  /**
+   * whether to add navigation sidebar to the page
+   */
+  navSidebar?: boolean;
+  /**
+   * whether to add conext sidebar to navigate the sections of the current document
+   */
+  contextSidebar?: boolean;
+  /**
+   * whether to take a fullpage theme option
+   */
+  fullPage?: boolean;
+}
+export type SideNavConfiguration = {
   /**
    * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
    */
   storyPaths?: boolean;
 
   /**
+   * if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+   */
+  collapseSingle?: boolean;
+};
+export type PageConfiguration = {
+  /**
+   * base url path for the page
+   */
+  basePath?: string;
+
+  /**
+   * side navigation configuration
+   */
+  sideNav?: SideNavConfiguration;
+
+  /**
    * label - used for menu labels
    */
   label?: string;
-
-  /**
-   * whether to take a fullpage theme option
-   */
-  fullPage?: boolean;
-
   /**
    * whether to have an index home page for the doc type.
    * if false, will show the first document of the doc type as the home page.
    */
   indexHome?: boolean;
-
-  /**
-   * whether to add navigation sidebar to the page
-   */
-  navSidebar?: boolean;
-
-  /**
-   * whether to add conext sidebar to navigate the sections of the current document
-   */
-  contextSidebar?: boolean;
 
   /**
    * whether to add to the top navigation menu
@@ -80,7 +93,7 @@ export interface PageConfiguration {
    * tabs configuration for story-type pages
    */
   tabs?: PageTabs;
-}
+} & PageLayoutProps;
 
 export type PagesConfiguration = Record<DocType, PageConfiguration>;
 
@@ -92,15 +105,16 @@ type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
 
 export type PagesOnlyRoutes = Record<
   DocType,
-  Pick<PageConfiguration, 'basePath' | 'storyPaths'> & {
+  Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
     tabs?: Pick<TabConfiguration, 'route'>[];
   }
 >;
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export interface BuildConfiguration {
+export type BuildConfiguration = {
   /**
    * wild card search string for the stories
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
@@ -121,7 +135,12 @@ export interface BuildConfiguration {
    */
   webpack?: WebpackConfig;
   finalWebpack?: WebpackConfig;
-}
+
+  /**
+   * instrumentation configuration
+   */
+  instrument?: any;
+};
 
 export interface ToolbarConfig {
   /**
@@ -134,6 +153,18 @@ export interface ToolbarConfig {
    */
   right?: ActionItems;
 }
+
+/**
+ * configuration options for the controls module
+ */
+export interface ControlsConfig {
+  /**
+   * threshold for when to display the controls in their own table
+   * separate from the props table
+   */
+  threshold?: number;
+}
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -148,18 +179,9 @@ export interface RunOnlyConfiguration {
    * standalone site title. Default is "Component controls"
    */
   siteTitle?: string;
-  /**
-   * site alt for images. Default is "Component controls - https://github.com/ccontrols/component-controls"
-   */
-  siteTitleAlt?: string;
 
   /**
-   * Site headline. Default is "Component controls gatsby"
-   */
-  siteHeadline?: string;
-
-  /**
-   * Deployed site url. Default is "https://component-controls-gatsby.netlify.app"
+   * Deployed site url. Default is "https://component-controls.com"
    */
   siteUrl?: string;
 
@@ -168,6 +190,10 @@ export interface RunOnlyConfiguration {
    */
   siteDescription?: string;
 
+  /**
+   * copyright notice displayed in the footer
+   */
+  siteCopyright?: string;
   /**
    * site language, Deault is "en"
    */
@@ -204,12 +230,31 @@ export interface RunOnlyConfiguration {
   toolbar?: ToolbarConfig;
 
   /**
+   * custom footer items
+   */
+  footer?: ToolbarConfig;
+
+  /**
+   * custom sidebar items
+   */
+  sidebar?: ActionItems;
+
+  /**
+   * controls module configuration options
+   */
+  controls?: ControlsConfig;
+  /**
    * custom props to components
    * ex:
    * components: { story:{ wrapper: 'iframe' } },
    *
    */
   components?: Record<string, any>;
+
+  /**
+   * analytics options
+   */
+  analytics?: any;
 }
 
 export type RunConfiguration = RunOnlyConfiguration &
@@ -217,14 +262,14 @@ export type RunConfiguration = RunOnlyConfiguration &
 
 export const defaultRunConfig: RunConfiguration = {
   siteTitle: 'Component controls',
-  siteTitleAlt:
-    'Component controls - https://github.com/ccontrols/component-controls',
-  siteHeadline: 'Component controls gatsby',
-  siteUrl: 'https://component-controls-gatsby.netlify.app',
+  siteUrl: 'https://component-controls.com',
   siteDescription:
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',
   author: '@component-controls',
+  controls: {
+    threshold: 10,
+  },
   pages: {
     story: {
       label: 'Docs',
@@ -260,7 +305,10 @@ export const defaultBuildConfig: BuildConfiguration = {
   pages: {
     story: {
       basePath: 'docs/',
-      storyPaths: true,
+      sideNav: {
+        storyPaths: true,
+        collapseSingle: true,
+      },
       tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {

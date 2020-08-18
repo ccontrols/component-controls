@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { ControlsStateProvider } from '@component-controls/store';
 import { BooleanEditor } from './BooleanEditor';
 
 export default {
@@ -11,13 +11,13 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState(false);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: { type: ControlTypes.BOOLEAN, value: state },
       }}
     >
       <BooleanEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };

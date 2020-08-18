@@ -9,7 +9,7 @@ import {
 } from '@component-controls/core';
 import { PropsLoaderConfig } from '../types';
 
-export const propsInfo = async (
+export const getComponentProps = async (
   options: PropsLoaderConfig[],
   filePath: string,
   componentName?: string,

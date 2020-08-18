@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-
 import {
   ComponentsBlockContainer,
   ComponentsBlockContainerProps,
@@ -14,15 +13,8 @@ export type ComponentDepsProps = Omit<
  * Displays external dependencies for a component
  */
 
-export const ComponentDeps: FC<ComponentDepsProps> = ({ ...rest }) => {
-  return (
-    <ComponentsBlockContainer visibility="info" {...rest}>
-      {(component, { componentPackage }) => (
-        <BaseComponentDeps
-          component={component}
-          componentPackage={componentPackage}
-        />
-      )}
-    </ComponentsBlockContainer>
-  );
-};
+export const ComponentDeps: FC<ComponentDepsProps> = props => (
+  <ComponentsBlockContainer visibility="info" {...props}>
+    {(component, rest) => <BaseComponentDeps component={component} {...rest} />}
+  </ComponentsBlockContainer>
+);

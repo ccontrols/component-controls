@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, RefObject, useState, useCallback, useLayoutEffect } from 'react';
+import { FC, RefObject, useState, useCallback, useEffect } from 'react';
 import { jsx, Box, NavLink } from 'theme-ui';
 import {
   Sidebar as AppSidebar,
@@ -23,24 +23,27 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
   const [activeItem, setActiveItem] = useState<number>(-1);
   const onScroll = useCallback(() => {
     if (pageRef?.current) {
-      const curScroll =
-        window.scrollY +
-        (pageRef.current.getBoundingClientRect().top || 0) -
-        80;
-
-      //find first anchor element that is above the scroll position
-      const curItem = items.findIndex(item => {
+      const { top = 0 } = pageRef.current.getBoundingClientRect() || {};
+      const topScroll = window.scrollY + top - 80;
+      //find first anchor element that is below the scroll position
+      const curItem = items.findIndex((item, index) => {
         const el = pageRef.current?.querySelector(`#${item.id}`);
+        const nextItem = index < items.length - 1 && items[index + 1];
+        const nextEl =
+          nextItem && pageRef.current?.querySelector(`#${nextItem.id}`);
         if (el) {
-          const { top } = el.getBoundingClientRect();
-          return top > curScroll;
+          const { top: elTop } = el.getBoundingClientRect();
+          const { top: nextTop = 0 } = nextEl
+            ? nextEl.getBoundingClientRect()
+            : {};
+          return elTop > topScroll || nextTop > window.innerHeight;
         }
         return false;
       });
       setActiveItem(curItem);
     }
   }, [items, pageRef]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     const links: ScrollElement[] = [];
     const pageEl = pageRef?.current;
     if (pageEl) {
@@ -63,7 +66,7 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
     setItems(links);
   }, [pageRef]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', onScroll, false);
     onScroll();
     return () => {

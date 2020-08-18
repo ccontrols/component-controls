@@ -2,9 +2,6 @@
 
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
-    -   [<ins>ControlsContext</ins>](#inscontrolscontextins)
-    -   [<ins>useControlContext</ins>](#insusecontrolcontextins)
-    -   [<ins>ConrolsContextProvider</ins>](#insconrolscontextproviderins)
     -   [<ins>getPropertyEditor</ins>](#insgetpropertyeditorins)
     -   [<ins>addPropertyEditor</ins>](#insaddpropertyeditorins)
     -   [<ins>ArrayEditor</ins>](#insarrayeditorins)
@@ -30,38 +27,6 @@ Some of the guiding design goals for this library:
 <react-docgen-typescript path="./src" exclude="index.ts,.stories.tsx$,CheckboxEditor.tsx,RadiosEditor.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
-
-## <ins>ControlsContext</ins>
-
-Controls context, provides access to the values and property setters
-
-_ControlsContext [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
-
-## <ins>useControlContext</ins>
-
-controls context hook for a control editor
-
-_useControlContext [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
-
-### properties
-
-| Name    | Type     | Description                   |
-| ------- | -------- | ----------------------------- |
-| `name*` | _string_ | name of the property control. |
-
-## <ins>ConrolsContextProvider</ins>
-
-controls context provider
-
-_ConrolsContextProvider [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/context.tsx)_
-
-### properties
-
-| Name        | Type                                | Description                                             |
-| ----------- | ----------------------------------- | ------------------------------------------------------- |
-| `controls*` | _ComponentControls_                 | controls for to current context.                        |
-| `onChange*` | _(name: string, prop: any) => void_ | onChange event called when the propery is changing      |
-| `onClick`   | _PropertyOnClick_                   | onClick event handler for Button type property editors. |
 
 ## <ins>getPropertyEditor</ins>
 

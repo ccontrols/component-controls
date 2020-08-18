@@ -1,9 +1,9 @@
-import { loadConfiguration, extractStories } from '../src/index';
+import { loadConfiguration, extractDocuments } from '../src/index';
 
 describe('config-folder', () => {
   it('config file short option', () => {
     expect(
-      extractStories(
+      extractDocuments(
         loadConfiguration(__dirname, undefined, [
           'file',
           'name',
@@ -16,7 +16,7 @@ describe('config-folder', () => {
 
   it('config file long option', () => {
     expect(
-      extractStories(
+      extractDocuments(
         loadConfiguration(__dirname, undefined, [
           'file',
           'name',

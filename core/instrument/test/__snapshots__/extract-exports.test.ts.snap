@@ -276,3 +276,43 @@ Object {
   },
 }
 `;
+
+exports[`extract-exports theme-ui-style.ts 1`] = `
+Object {
+  "default": undefined,
+  "named": Object {
+    "BoxOwnProps": Object {
+      "internalName": "BoxOwnProps",
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 21,
+        },
+        "start": Object {
+          "column": 60,
+          "line": 17,
+        },
+      },
+      "name": "BoxOwnProps",
+    },
+    "Button": Object {
+      "internalName": "Button",
+      "name": "Button",
+    },
+    "ButtonProps": Object {
+      "internalName": "ButtonProps",
+      "loc": Object {
+        "end": Object {
+          "column": 71,
+          "line": 24,
+        },
+        "start": Object {
+          "column": 69,
+          "line": 24,
+        },
+      },
+      "name": "ButtonProps",
+    },
+  },
+}
+`;

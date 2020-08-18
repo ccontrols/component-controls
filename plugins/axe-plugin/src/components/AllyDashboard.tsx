@@ -6,13 +6,13 @@ import {
   AxeContext,
   useTaggedList,
   SelectionContext,
-  isTagSelected,
+  useIsTagSelected,
 } from '../state/context';
 
 type StatsStatus = 'passes' | 'violations';
 
 const TagSelectionCheckbox: FC<{ tag: string }> = ({ tag }) => {
-  const isSelected = isTagSelected(tag);
+  const isSelected = useIsTagSelected(tag);
   const { selection, setSelection } = useContext(SelectionContext);
   const tagged = useTaggedList();
   const toggleTagSelected = (tag: string) => {

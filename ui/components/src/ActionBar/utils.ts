@@ -56,7 +56,6 @@ export type ActionItems = ActionItem[];
  */
 export const getSortedActions = (actions: ActionItems): ActionItems =>
   actions
-    .filter(({ hidden }) => !hidden)
     .reduce((acc: ActionItem[], item: ActionItem) => {
       const accIndex = acc.findIndex(
         accItem => (accItem.id ?? accItem.node) === (item.id ?? item.node),
@@ -68,6 +67,7 @@ export const getSortedActions = (actions: ActionItems): ActionItems =>
         return [...acc, item];
       }
     }, [])
+    .filter(({ hidden }) => !hidden)
     .map(
       ({ order, ...item }, index) =>
         ({

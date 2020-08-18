@@ -7,6 +7,7 @@ export const reactDocgen: Configuration = {
         test: /\.(md|mdx)$/,
         exclude: [/node_modules/],
         loader: '@component-controls/loader/loader',
+        enforce: 'pre',
         options: {
           propsLoaders: [
             {

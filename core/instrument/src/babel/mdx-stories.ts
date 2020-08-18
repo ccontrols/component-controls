@@ -242,8 +242,7 @@ export const extractMDXStories = (props: any) => (
     },
   });
   if (store.doc && store.doc.title) {
-    //@ts-ignore
-    store.doc.componentsLookup = components;
+    store.doc.componentsLookup = components as Document['componentsLookup'];
     return store;
   } else {
     return undefined;

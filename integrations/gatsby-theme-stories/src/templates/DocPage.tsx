@@ -9,15 +9,16 @@ interface DocPageProps {
     storyId?: string;
     type: DocType;
     activeTab?: string;
+    category?: string;
   };
 }
 
 const DocPageTemplate: FC<DocPageProps> = ({
-  pathContext: { docId, storyId, type, activeTab },
+  pathContext: { docId, storyId, type, activeTab, category },
 }) => {
   return (
-    <Layout docId={docId} storyId={storyId} type={type}>
-      <DocPage activeTab={activeTab} type={type} />
+    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
+      <DocPage type={type} category={category} />
     </Layout>
   );
 };

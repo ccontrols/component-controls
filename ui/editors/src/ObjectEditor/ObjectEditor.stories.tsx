@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes, ComponentControls } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { ControlsStateProvider } from '@component-controls/store';
 import { ObjectEditor } from './ObjectEditor';
 
 export default {
@@ -16,14 +16,14 @@ export const overview = () => {
   });
 
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(_name, newVal) => setState(newVal)}
       controls={{
         prop: { type: ControlTypes.OBJECT, value: state },
       }}
     >
       <ObjectEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
@@ -35,13 +35,13 @@ export const editLabel = () => {
   });
 
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(_name, newVal) => setState(newVal)}
       controls={{
         prop: { type: ControlTypes.OBJECT, value: state },
       }}
     >
       <ObjectEditor name="prop" editLabel="Click to edit" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };

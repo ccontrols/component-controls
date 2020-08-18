@@ -1,9 +1,13 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { Title, Link } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import {
+  useDocument,
+  useDocsByCategory,
+  useConfig,
+} from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { DocumentsList } from '../DocumentsList';
 
@@ -12,10 +16,10 @@ export interface CategoryPageProps {
   category: any;
 }
 export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
-  const { storeProvider } = useContext(BlockContext);
-  const pageConfig = storeProvider?.config?.pages?.[type] || {};
-  const pages = storeProvider.getPagesByCategory(type, category);
-  const customPage = storeProvider.getStoryDoc(category);
+  const config = useConfig();
+  const pageConfig = config.pages?.[type] || {};
+  const pages = useDocsByCategory(type, category);
+  const customPage = useDocument(category);
   const Page =
     customPage && customPage.type === type ? customPage.MDXPage : undefined;
   return (
@@ -36,7 +40,7 @@ export const CategoryPage: FC<CategoryPageProps> = ({ type, category }) => {
         </Box>
       )}
       <Box variant="categorypage.listcontainer">
-        <DocumentsList pages={pages} />
+        <DocumentsList pages={pages} type={type} />
       </Box>
     </PageContainer>
   );

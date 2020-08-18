@@ -29,9 +29,11 @@ export const instrument: Configuration = {
         test: /\.(md|mdx)$/,
         exclude: [/node_modules/],
         loader: '@component-controls/loader/loader',
+        enforce: 'pre',
         options: {
           mdx: {
             transformMDX: true,
+            storybookExports: true,
           },
         },
       },

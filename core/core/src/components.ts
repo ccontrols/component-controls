@@ -93,7 +93,7 @@ export interface ComponentInfo {
 /**
  * component specified for stories or story files
  */
-export interface StoryComponent {
+export interface Component {
   /**
    * name of the component as used in the fiel
    */
@@ -118,6 +118,13 @@ export interface StoryComponent {
   request?: string;
 
   /**
+   * file containing the component's props info
+   * sometimes different from the component source file
+   * for example external libraries that have a separate index.d.ts file
+   */
+  propsInfoFile?: string;
+
+  /**
    * location of the import statement in the source code file
    */
   loc?: CodeLocation;
@@ -128,7 +135,7 @@ export interface StoryComponent {
   package?: string;
 
   /**
-   * the source code of the component file, extracted byt the AST instrumenting loaders
+   * the source code of the component file, extracted by the AST instrumenting loaders. Can also be overriden manually.
    */
   source?: string;
   /**

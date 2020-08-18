@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { ControlsStateProvider } from '@component-controls/store';
 import { OptionsEditor } from './OptionsEditor';
 
 export default {
@@ -11,7 +11,7 @@ export default {
 export const overview = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -22,14 +22,14 @@ export const overview = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const objects = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -40,14 +40,14 @@ export const objects = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const numeric = () => {
   const [state, setState] = React.useState(1);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -62,14 +62,14 @@ export const numeric = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const multiSelectSimple = () => {
   const [state, setState] = React.useState(['one']);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -81,14 +81,14 @@ export const multiSelectSimple = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const multiSelectObjects = () => {
   const [state, setState] = React.useState(['one']);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -100,14 +100,14 @@ export const multiSelectObjects = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const multiSelectNumeric = () => {
   const [state, setState] = React.useState([1]);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -123,14 +123,14 @@ export const multiSelectNumeric = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const simpleRadios = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -142,14 +142,14 @@ export const simpleRadios = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const objectsRadios = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -161,14 +161,14 @@ export const objectsRadios = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const numericRadios = () => {
   const [state, setState] = React.useState(1);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -184,14 +184,14 @@ export const numericRadios = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const simpleRadiosInline = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -203,14 +203,14 @@ export const simpleRadiosInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const objectsRadiosInline = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -222,14 +222,14 @@ export const objectsRadiosInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const numericRadiosInline = () => {
   const [state, setState] = React.useState(1);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -245,14 +245,14 @@ export const numericRadiosInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const simpleCheck = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -264,14 +264,14 @@ export const simpleCheck = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const objectsCheck = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -283,14 +283,14 @@ export const objectsCheck = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const numericCheck = () => {
   const [state, setState] = React.useState(1);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -306,14 +306,14 @@ export const numericCheck = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const simpleCheckInline = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -325,14 +325,14 @@ export const simpleCheckInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const objectsCheckInline = () => {
   const [state, setState] = React.useState('one');
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -344,14 +344,14 @@ export const objectsCheckInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };
 
 export const numericCheckInline = () => {
   const [state, setState] = React.useState(1);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -367,6 +367,6 @@ export const numericCheckInline = () => {
       }}
     >
       <OptionsEditor name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };

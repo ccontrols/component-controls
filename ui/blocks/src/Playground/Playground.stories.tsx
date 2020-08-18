@@ -1,6 +1,6 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
-import { Playground } from './Playground';
+import { Playground } from './index';
 import { Story } from '../Story';
 import { MockContext } from '../test/MockContext';
 export default {

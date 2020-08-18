@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType } from '@component-controls/core';
 import { Title } from '@component-controls/components';
-import { BlockContext } from '@component-controls/blocks';
+import { useDocPropCount, useConfig } from '@component-controls/store';
 import { PageContainer } from '../PageContainer';
 import { CategoryListItem } from './CategoryListItem';
 
@@ -18,9 +18,9 @@ export interface CategoryListProps {
  * displays page of categories
  */
 export const CategoryList: FC<CategoryListProps> = ({ type }) => {
-  const { storeProvider } = useContext(BlockContext);
-  const categories = storeProvider?.getUniquesByCategory(type) || [];
-  const pageConfig = storeProvider?.config?.pages?.[type] || {};
+  const config = useConfig();
+  const categories = useDocPropCount(type);
+  const pageConfig = config.pages?.[type] || {};
   return (
     <PageContainer
       type={type}
@@ -33,9 +33,9 @@ export const CategoryList: FC<CategoryListProps> = ({ type }) => {
           {Object.keys(categories).map(key => (
             <CategoryListItem
               key={key}
-              link={storeProvider.getPagePath(type, key)}
+              type={type}
               name={key}
-              count={categories[key]}
+              count={categories[key].count}
             />
           ))}
         </ul>

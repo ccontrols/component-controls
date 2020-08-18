@@ -14,7 +14,7 @@ describe('follow-imports', () => {
         followImports('Button', require.resolve(fileName), undefined, {
           parser: defaultParserOptions,
           resolver: defaultResolveOptions,
-          components: { ...defaultComponentOptions, storeSourceFile: false },
+          components: { ...defaultComponentOptions, sourceFiles: false },
         }) || {};
       return rest;
     },

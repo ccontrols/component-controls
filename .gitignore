@@ -5,3 +5,5 @@ dist
 .rpt2_cache
 *.log
 public
+.next
+out

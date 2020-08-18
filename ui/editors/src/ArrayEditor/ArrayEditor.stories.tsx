@@ -1,6 +1,6 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
-import { ConrolsContextProvider } from '../context';
+import { ControlsStateProvider } from '@component-controls/store';
 import { ArrayEditor } from './ArrayEditor';
 
 export default {
@@ -15,7 +15,7 @@ export const overview = () => {
     { name: 'Whiskey' },
   ]);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name, newVal) => setState(newVal)}
       controls={{
         prop: {
@@ -25,10 +25,10 @@ export const overview = () => {
         },
       }}
     >
-      <ArrayEditor name="prop" />
       <ul>
         {state && state.map(item => <li key={item.name}>{item.name}</li>)}
       </ul>
-    </ConrolsContextProvider>
+      <ArrayEditor name="prop" />
+    </ControlsStateProvider>
   );
 };

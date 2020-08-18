@@ -136,6 +136,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         break;
       case TAB:
       case ESC:
+      default:
         updateIsOpen(false);
         break;
     }

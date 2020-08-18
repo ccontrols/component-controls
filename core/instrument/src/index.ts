@@ -5,8 +5,12 @@ import matter from 'gray-matter';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
 import generate from '@babel/generator';
-import deepMerge from 'deepmerge';
-import { Story, Document, getASTSource } from '@component-controls/core';
+import {
+  Story,
+  Document,
+  getASTSource,
+  deepmerge,
+} from '@component-controls/core';
 
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
@@ -15,6 +19,7 @@ import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
 import { prettify } from './misc/prettify';
+import { readSourceFile } from './misc/source-options';
 import {
   LoadingDocStore,
   InstrumentOptions,
@@ -32,6 +37,7 @@ import {
 } from './types';
 
 export * from './types';
+export { getComponentProps } from './misc/props-info';
 
 type TraverseFn = (
   ast: File,
@@ -63,14 +69,29 @@ const parseSource = async (
   }
   if (store.doc) {
     const doc = store.doc;
-    if (options.stories.storeSourceFile) {
-      doc.source = originalSource;
+    if (doc.draft === true) {
+      if (process.env.NODE_ENV !== 'development') {
+        return undefined;
+      }
+    }
+    const saveSource = readSourceFile(
+      options.stories.sourceFiles,
+      originalSource,
+      doc.title,
+      filePath,
+    );
+    if (saveSource) {
+      doc.source = saveSource;
     }
   }
   await extractStoreComponent(store, filePath, source, options, ast);
   const doc: Document | undefined = store.doc;
   if (doc && store.stories) {
-    const storyPackage = await packageInfo(filePath, options.stories.package);
+    const storyPackage = await packageInfo(
+      doc.title,
+      filePath,
+      options.stories.package,
+    );
     if (storyPackage) {
       store.packages[storyPackage.fileHash] = storyPackage;
       doc.package = storyPackage.fileHash;
@@ -115,15 +136,15 @@ export const parseStories = async (
   } = options || {};
 
   const mergedOptions: Required<InstrumentOptions> = {
-    parser: deepMerge<ParserOptions>(defaultParserOptions, parserOptions),
-    resolver: deepMerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
+    parser: deepmerge<ParserOptions>(defaultParserOptions, parserOptions),
+    resolver: deepmerge<ResolveOptions>(defaultResolveOptions, resolveOptions),
     prettier: prettierOptions,
-    components: deepMerge<ComponentOptions>(
+    components: deepmerge<ComponentOptions>(
       defaultComponentOptions,
       componentOptions,
     ),
-    stories: deepMerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
-    mdx: deepMerge<MDXOptions>(defaultMDXOptions, mdxOptions),
+    stories: deepmerge<StoriesOptions>(defaultStoriesOptions, storiesOptions),
+    mdx: deepmerge<MDXOptions>(defaultMDXOptions, mdxOptions),
     propsLoaders: propsLoaders || [],
   };
   let code: string;
@@ -131,6 +152,7 @@ export const parseStories = async (
     test,
     renderer,
     transformMDX,
+    storybookExports = false,
     ...otherMDXOptions
   } = mergedOptions.mdx;
   if (test && filePath.match(test)) {
@@ -152,8 +174,13 @@ export const parseStories = async (
       filePath,
       mergedOptions,
     );
+    if (!store) {
+      return {
+        transformed: code,
+      };
+    }
     const { stories, doc, components, exports, packages } = store || {};
-    const exportsSource = extractStoryExports(exports);
+    const exportsSource = extractStoryExports(storybookExports, exports);
     let transformed = `
     
     ${content}

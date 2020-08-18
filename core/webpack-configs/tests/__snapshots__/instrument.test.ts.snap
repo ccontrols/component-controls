@@ -42,6 +42,7 @@ Object {
         "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
       },
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
           /node_modules/,
@@ -49,6 +50,7 @@ Object {
         "loader": "@component-controls/loader/loader",
         "options": Object {
           "mdx": Object {
+            "storybookExports": true,
             "transformMDX": true,
           },
           "propsLoaders": Array [
@@ -140,6 +142,7 @@ Object {
         "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
       },
       Object {
+        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
           /node_modules/,
@@ -147,6 +150,7 @@ Object {
         "loader": "@component-controls/loader/loader",
         "options": Object {
           "mdx": Object {
+            "storybookExports": true,
             "transformMDX": true,
           },
           "prettier": Object {

@@ -1,8 +1,12 @@
 /** @jsx jsx */
-import { FC, useRef, useContext } from 'react';
+import { FC, useRef } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType, TabConfiguration, Document } from '@component-controls/core';
-import { BlockContext } from '@component-controls/blocks';
+import {
+  useActiveTab,
+  useGetDocumentPath,
+  useConfig,
+} from '@component-controls/store';
 import * as pages from '@component-controls/pages';
 import {
   Tabs,
@@ -22,10 +26,6 @@ export interface DocPageProps {
    */
   type: DocType;
   /**
-   * active page tab
-   */
-  activeTab?: string;
-  /**
    * document object
    */
   doc: Document;
@@ -34,14 +34,13 @@ export interface DocPageProps {
 /**
  * document page - rendering with sidebars and tabs for multiple document views
  */
-export const SidebarsStoryPage: FC<DocPageProps> = ({
-  type,
-  activeTab,
-  doc,
-}) => {
-  const { storeProvider, docId, storyId } = useContext(BlockContext);
-  const pageConfig = storeProvider?.config?.pages?.[type] || {};
-  const { tabs = [], storyPaths } = pageConfig;
+export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
+  const docId = doc.title;
+  const config = useConfig();
+  const getDocumentPath = useGetDocumentPath();
+  const activeTab = useActiveTab();
+  const pageConfig = config.pages?.[type] || {};
+  const { tabs = [] } = pageConfig;
   const selectedTab = activeTab
     ? activeTab
     : tabs.length > 0
@@ -54,7 +53,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
   );
   const renderTab = (tab: TabConfiguration) => {
     if (tab.render) {
-      return tab.render({ storeProvider, docId });
+      return tab.render({ docId });
     }
     if (tab.type) {
       //@ts-ignore
@@ -67,7 +66,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
   };
   return (
     <Box variant={docToVariant(doc)}>
-      {doc.navSidebar && <Sidebar type={type} activeTab={activeTab} />}
+      {doc.navSidebar && <Sidebar type={type} />}
       <Box sx={{ flexGrow: 1 }} id="content">
         <Tabs fontSize={2} defaultIndex={tabIndex}>
           {tabs && tabs.length > 1 && (
@@ -76,13 +75,8 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({
                 <Tab key={`tab_${tab.route}`}>
                   <Link
                     href={
-                      storyPaths && storyId
-                        ? storeProvider.getStoryPath(
-                            storyId,
-                            tabIndex > 0 ? tab.route : undefined,
-                          )
-                        : docId
-                        ? storeProvider.getPagePath(
+                      docId
+                        ? getDocumentPath(
                             type,
                             docId,
                             tabIndex > 0 ? tab.route : undefined,

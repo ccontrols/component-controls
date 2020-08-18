@@ -1,12 +1,23 @@
-import * as webpack from 'webpack';
-import * as path from 'path';
+import webpack, {
+  Configuration,
+  Compiler,
+  Stats,
+  HotModuleReplacementPlugin,
+  BannerPlugin,
+} from 'webpack';
+import path from 'path';
+import fs from 'fs';
+const chalk = require('chalk');
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
   deepMergeWebpackConfig,
+  CompileProps,
+  CompileResults,
+  defBundleName,
 } from '@component-controls/webpack-configs';
 import { loadConfiguration } from '@component-controls/config';
-import { CompileProps, CompileResults } from './types';
+
 import { ResolveExternals, ResolveExternalsConfig } from './resolve_externals';
 import { defaultExternals } from './externals-config';
 
@@ -14,18 +25,37 @@ export type CompileRunProps = CompileProps & {
   /**
    * webpack mode
    */
-  mode: webpack.Configuration['mode'];
+  mode: Configuration['mode'];
 };
 
+/**
+ * callback function to monitor new documents/deleted documents
+ */
+export type CompilerCallbackFn = (results: CompileResults) => void;
+
 const createConfig = (options: CompileRunProps): webpack.Configuration => {
-  const { webPack, presets, configPath, mode, outputFolder } = options;
-  const distFolder = path.resolve(__dirname, '../dist');
+  const {
+    webPack,
+    presets,
+    configPath,
+    mode,
+    staticFolder: propStaticFolder,
+    distFolder: propDistFolder,
+    bundleName = defBundleName,
+  } = options;
+  const distFolder = propDistFolder || `${path.join(process.cwd(), 'public')}`;
+  const staticFolder = propStaticFolder || path.join(distFolder, 'static');
   const plugins = [
     new LoaderPlugin({
       config: configPath,
       escapeOutput: mode === 'development',
     }),
-  ];
+    new BannerPlugin({
+      raw: true,
+      banner: '/* eslint-disable */',
+    }),
+    mode === 'development' && new HotModuleReplacementPlugin({}),
+  ].filter(Boolean);
   const webpackConfig = mergeWebpackConfig(
     {
       mode,
@@ -34,10 +64,9 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
           '@component-controls/loader/story-store-data.js',
         ),
       },
-
       output: {
         path: distFolder,
-        filename: 'bundle.js',
+        filename: bundleName,
         libraryTarget: 'umd',
         globalObject: 'this',
       },
@@ -49,7 +78,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       ...(webPack || {}),
     },
     presets,
-    { outputFolder, distFolder },
+    { staticFolder, distFolder },
   );
 
   //add all the aliases to avoid double loading of packages
@@ -72,30 +101,63 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
 
 export const runCompiler = (
   run: (
-    compiler: webpack.Compiler,
-    callback: (err: Error, stats: webpack.Stats) => void,
+    compiler: Compiler,
+    callback: (err: Error, stats: Stats) => void,
   ) => void,
 
   props: CompileRunProps,
+  callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
-  return new Promise((resolve, reject) => {
-    //@ts-ignore
-    const compiler = webpack.default(createConfig(props));
+  return new Promise(resolve => {
+    const compiler = webpack(createConfig(props));
     run(compiler, (err, stats) => {
+      const bundleName = path.join(
+        stats.compilation.outputOptions.path,
+        stats.compilation.outputOptions.filename,
+      );
+      const bailError = (error: string) => {
+        fs.writeFileSync(
+          bundleName,
+          `
+module.exports = ${JSON.stringify({
+            stores: [],
+            packages: [],
+            components: [],
+            error,
+          })}
+
+          `,
+        );
+        console.error(error);
+        return resolve({ bundleName, stats }); //reject(error);
+      };
       if (err) {
-        console.error(err);
-        return reject(err);
+        return bailError(err.toString());
       }
       if (stats.hasErrors() || stats.hasWarnings()) {
         const error = stats.toString({
           errorDetails: true,
           warnings: true,
         });
-        console.error(error);
-        return reject(error);
+        return bailError(error);
       }
       const { store } = require('@component-controls/loader/store');
-      resolve({ store, stats });
+      console.log(
+        chalk.bgRgb(
+          244,
+          147,
+          66,
+        )(
+          store
+            ? `compiled ${store.stores.length} documents`
+            : 'error creating bundle',
+        ),
+        bundleName,
+      );
+      if (callback) {
+        callback({ bundleName, stats, store });
+      }
+      resolve({ bundleName, stats, store });
     });
   });
 };

@@ -36,10 +36,6 @@ import { mdx } from '@mdx-js/react';
 import { customStory } from '../../components/external-story';
 import { Story, Meta } from '@component-controls/blocks';
 
-const makeShortcode = name => function MDXDefaultShortcode(props) {
-  console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\");
-  return <div {...props} />;
-};
 
 const layoutProps = {};
 
@@ -61,19 +57,18 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        title: \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = () => <div>test</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -186,19 +181,18 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        title: \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = ({ text }) => <div>{text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -296,19 +290,18 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        title: \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -331,11 +324,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 23,
+          "line": 13,
         },
         "start": Object {
           "column": 30,
-          "line": 21,
+          "line": 11,
         },
       },
       "name": "mdx-story",
@@ -349,10 +342,6 @@ import { mdx } from '@mdx-js/react';
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
 
-const makeShortcode = name => function MDXDefaultShortcode(props) {
-  console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\");
-  return <div {...props} />;
-};
 
 const layoutProps = {};
 
@@ -374,14 +363,13 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        title: \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = () => (<>
 
@@ -390,7 +378,7 @@ export const mdxStory = () => (<>
 </>)
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",
@@ -444,11 +432,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 63,
-          "line": 21,
+          "line": 11,
         },
         "start": Object {
           "column": 31,
-          "line": 21,
+          "line": 11,
         },
       },
       "name": "mdx-story",
@@ -462,10 +450,6 @@ import { mdx } from '@mdx-js/react';
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
 
-const makeShortcode = name => function MDXDefaultShortcode(props) {
-  console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\");
-  return <div {...props} />;
-};
 
 const layoutProps = {};
 
@@ -487,19 +471,18 @@ function MDXContent({
 ;
 MDXContent.isMDXComponent = true;
 
-        const dmsPageExport = MDXContent;
-        dmsPageExport.MDXPage = MDXContent;
-
-        export default Object.assign(dmsPageExport, 
+        const mdxDefaultExport = MDXContent;
+        Object.assign(mdxDefaultExport, 
         {
-        title: \\"MDX\\"
+        \\"MDXPage\\": MDXContent,\\"title\\": \\"MDX\\"
         }
         );
+        export default mdxDefaultExport;
 
 export const mdxStory = props => <div>{props.text}</div>
 mdxStory.story = 
         {
-        name: \\"mdx-story\\"
+        \\"name\\": \\"mdx-story\\"
         }
         
              ",

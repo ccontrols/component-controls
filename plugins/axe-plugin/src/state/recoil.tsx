@@ -81,7 +81,7 @@ export const isSelected = (targets?: Selection) =>
     },
   });
 
-export const isTagSelected = (tag: string = '') =>
+export const useIsTagSelected = (tag: string = '') =>
   selector<boolean>({
     key: `isTagSelected_${tag}`,
     get: ({ get }: any) => {

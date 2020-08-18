@@ -1,3 +1,4 @@
+const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -5,19 +6,23 @@ module.exports = {
     '../../stories/src/blogs/*.mdx',
     '../../stories/src/authors/*.mdx',
     '../../stories/src/pages/*.mdx',
+    '../../stories/src/tutorial/getting-started/ssg/*.mdx',
     '../../stories/src/tutorial/getting-started/*.mdx',
     '../../stories/src/tutorial/write-documentation/*.mdx',
     '../../stories/src/tutorial/configuration/*.mdx',
-    '../../stories/src/tutorial/parts/*.mdx',
+    '../../stories/src/tutorial/reference/*.mdx',
     '../../stories/src/stories/*.stories.@(js|jsx|tsx|mdx)',
-    '../src/stories/*.stories.@(js|jsx|tsx|mdx)',
+    '../../stories/src/mdx-stories/*.mdx',
     '../../../ui/app/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/blocks/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../core/core/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/editors/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../plugins/axe-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
-    // '../../stories/src/blogs/introduction-to-controls.mdx',
+    //'../../stories/src/blogs/introduction-to-controls.mdx',
+    //'../../stories/src/stories/controls-editors-starter.stories.tsx',
+    //'../../stories/src/blogs/gatsby-nextjs-storybook.mdx',
+    
   ],
   pages: {
     story: {
@@ -40,5 +45,18 @@ module.exports = {
       ]
     };
   },
-
+  instrument: {
+    components: {
+      resolveFile: (componentName, filePath) => {
+        if (filePath.includes('theme-ui/dist')) {
+          const resolved = path.resolve(
+            path.dirname(filePath),
+            `../../@theme-ui/components/index.d.ts`,
+          );
+          return resolved;
+        }
+        return filePath;
+      },
+    },
+  }
 };

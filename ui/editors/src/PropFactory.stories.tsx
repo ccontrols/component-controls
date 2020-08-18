@@ -1,21 +1,26 @@
 import React, { ChangeEvent } from 'react';
-import { ControlTypes } from '@component-controls/core';
+import {
+  ControlTypes,
+  ComponentControlBoolean,
+} from '@component-controls/core';
+import { useControl, ControlsStateProvider } from '@component-controls/store';
+import {} from '@component-controls/store';
 import { PropertyEditor } from './types';
-import { ConrolsContextProvider, useControlContext } from './context';
+
 import { addPropertyEditor, getPropertyEditor } from './prop-factory';
 
 export default {
-  title: 'Editors/prop-factory',
+  title: 'Editors/Custom Control',
 };
 
 const CheckboxEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext({ name });
+  const [control, onChange] = useControl<ComponentControlBoolean>(name);
   return (
     <input
       type="checkbox"
       id={name}
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
-        onChange(name, e.target.checked);
+        onChange(e.target.checked);
       }}
       checked={control.value ?? false}
     />
@@ -27,7 +32,7 @@ export const overview = () => {
   const [state, setState] = React.useState(false);
   const Component = getPropertyEditor(ControlTypes.BOOLEAN);
   return (
-    <ConrolsContextProvider
+    <ControlsStateProvider
       onChange={(name: any, newVal: React.SetStateAction<boolean>) =>
         setState(newVal)
       }
@@ -36,6 +41,6 @@ export const overview = () => {
       }}
     >
       <Component name="prop" />
-    </ConrolsContextProvider>
+    </ControlsStateProvider>
   );
 };

@@ -5,11 +5,11 @@ import {
   ComponentControl,
   ComponentControlObject,
   mergeControlValues,
-  getControlValues,
+  ComponentControls,
 } from '@component-controls/core';
 import { Popover } from '@component-controls/components';
+import { useControl, ControlsStateProvider } from '@component-controls/store';
 import { PropertyEditor, PropertyControlProps } from '../types';
-import { useControlContext, ConrolsContextProvider } from '../context';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
 
 const ChildContainer: FC = props => (
@@ -38,18 +38,12 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   name,
   editLabel = 'edit...',
 }) => {
-  const { control, onChange, onClick } = useControlContext<
-    ComponentControlObject
-  >({ name });
+  const [control, onChange] = useControl<ComponentControlObject>(name);
+
   const { editLabel: controlEditLabel } = control;
   const [isOpen, setIsOpen] = React.useState(false);
-  const handleChange = (childName: string, value: any) => {
-    onChange(
-      name,
-      getControlValues(
-        mergeControlValues(control.value as any, childName, value),
-      ),
-    );
+  const handleChange = (childName: string | undefined, value: any) => {
+    onChange(mergeControlValues(control.value as any, childName, value));
   };
   let children: ({
     name: string;
@@ -73,6 +67,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       })
       .filter(p => p && p.node);
   }
+  const childControls: ComponentControls = control.value || {};
   return (
     <Popover
       trigger="click"
@@ -83,27 +78,26 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
       }}
       tooltip={() => (
         <ChildContainer>
-          <ConrolsContextProvider
-            controls={control.value || {}}
-            onChange={handleChange}
-            onClick={onClick}
-          >
-            <table>
-              <tbody>
-                {children &&
-                  children.map(child =>
-                    child ? (
-                      <tr key={`editor_${child.name}`}>
-                        <td>{child.prop.label || child.name}</td>
-                        <td>
+          <table>
+            <tbody>
+              {children &&
+                children.map(child =>
+                  child ? (
+                    <tr key={`editor_${child.name}`}>
+                      <td>{child.prop.label || child.name}</td>
+                      <td>
+                        <ControlsStateProvider
+                          onChange={handleChange}
+                          controls={childControls}
+                        >
                           <child.node name={child.name} />
-                        </td>
-                      </tr>
-                    ) : null,
-                  )}
-              </tbody>
-            </table>
-          </ConrolsContextProvider>
+                        </ControlsStateProvider>
+                      </td>
+                    </tr>
+                  ) : null,
+                )}
+            </tbody>
+          </table>
         </ChildContainer>
       )}
     >

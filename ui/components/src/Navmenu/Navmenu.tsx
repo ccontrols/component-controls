@@ -254,8 +254,7 @@ export const Navmenu: FC<NavMenuProps> = ({
 
   const renderItem = (item: MenuItem, level: number = 1) => {
     const { expandedItems } = state;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { items, id, label, widget, icon, onClick, ...rest } = item;
+    const { items, id, label, widget, icon, ...rest } = item;
     const itemId = id || label;
     const isExpanded: boolean =
       expandedItems && itemId ? expandedItems.includes(item) : false;
@@ -281,6 +280,7 @@ export const Navmenu: FC<NavMenuProps> = ({
             textDecoration: 'none',
             cursor: 'pointer',
           }}
+          {...rest}
           onClick={(e: any) => {
             if (items) {
               e.stopPropagation();
@@ -290,7 +290,6 @@ export const Navmenu: FC<NavMenuProps> = ({
             }
           }}
           className={isActiveParent ? 'active' : undefined}
-          {...rest}
         >
           <Flex variant="navmenu.itemcontainer">
             <Box variant="navmenu.iteminner">

@@ -6,11 +6,7 @@ Object {
     "2855216c2faa4ab43ed978e3ff6743e4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -18,8 +14,8 @@ Object {
     "componentsLookup": Object {
       "Button": "2855216c2faa4ab43ed978e3ff6743e4",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.653Z,
+    "dateModified": 2020-07-17T14:45:45.654Z,
     "package": "8c5cf9d9fa1d5bc7742765b451f2a255",
     "title": "Storybook/MDX",
   },
@@ -29,7 +25,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -48,7 +44,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -65,7 +61,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {},
@@ -90,11 +86,7 @@ Object {
     "adb0a7ff2c278d595f4ce67bb4b42887": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -102,8 +94,8 @@ Object {
     "componentsLookup": Object {
       "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.654Z,
+    "dateModified": 2020-07-17T14:45:45.655Z,
     "package": "5025d10bd14c417a3985dd520bbc8ce0",
     "title": "Storybook/MDX",
   },
@@ -113,7 +105,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -132,7 +124,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -149,7 +141,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -174,11 +166,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 57,
-          "line": 22,
+          "line": 12,
         },
         "start": Object {
           "column": 38,
-          "line": 22,
+          "line": 12,
         },
       },
       "name": "story-with-props",
@@ -241,8 +233,8 @@ export default Button;
     "componentsLookup": Object {
       "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.655Z,
+    "dateModified": 2020-07-17T14:45:45.655Z,
     "package": "9d6345a2d09c05cff0ad7c86fe40c4f9",
     "title": "Storybook/MDX",
   },
@@ -252,7 +244,7 @@ export default Button;
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -271,7 +263,7 @@ export default Button;
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -288,14 +280,14 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
     "9d6345a2d09c05cff0ad7c86fe40c4f9": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -314,7 +306,7 @@ export default Button;
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -331,7 +323,7 @@ export default Button;
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -340,11 +332,11 @@ export default Button;
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 24,
+          "line": 14,
         },
         "start": Object {
           "column": 32,
-          "line": 22,
+          "line": 12,
         },
       },
       "name": "smart story",
@@ -373,11 +365,7 @@ Object {
     "c63d685efb0c65f18ffc63184e852ef4": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -385,8 +373,8 @@ Object {
     "componentsLookup": Object {
       "Button": "c63d685efb0c65f18ffc63184e852ef4",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.655Z,
+    "dateModified": 2020-07-17T14:45:45.656Z,
     "package": "c151e21eacb60e5b077423daed2d02e2",
     "title": "Storybook/MDX",
   },
@@ -396,7 +384,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -415,7 +403,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -432,7 +420,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -515,11 +503,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 27,
+          "line": 17,
         },
         "start": Object {
           "column": 9,
-          "line": 23,
+          "line": 13,
         },
       },
       "name": "story-with-props",
@@ -552,11 +540,7 @@ Object {
     "88c2f5883a4daf6051d3f8a38ce7bf75": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -564,8 +548,8 @@ Object {
     "componentsLookup": Object {
       "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.656Z,
+    "dateModified": 2020-07-17T14:45:45.656Z,
     "package": "9c0d66b95cdae13733bdeb986761ca47",
     "title": "Storybook/MDX",
   },
@@ -575,7 +559,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -594,7 +578,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -611,7 +595,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -665,11 +649,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 67,
-          "line": 22,
+          "line": 12,
         },
         "start": Object {
           "column": 38,
-          "line": 22,
+          "line": 12,
         },
       },
       "name": "story-with-props",
@@ -697,11 +681,7 @@ Object {
     "fe664c2ffbbcacffdac896ace94db697": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -709,8 +689,8 @@ Object {
     "componentsLookup": Object {
       "Button": "fe664c2ffbbcacffdac896ace94db697",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.656Z,
+    "dateModified": 2020-07-17T14:45:45.657Z,
     "package": "82864065f08bddd8e5586424d90a51f0",
     "title": "Storybook/MDX",
   },
@@ -720,7 +700,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -739,7 +719,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -756,7 +736,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -795,11 +775,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 68,
-          "line": 22,
+          "line": 12,
         },
         "start": Object {
           "column": 38,
-          "line": 22,
+          "line": 12,
         },
       },
       "name": "story-with-props",
@@ -827,11 +807,7 @@ Object {
     "0a73df5cffa26ca62ec534813a77384f": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
-      "imports": undefined,
-      "loc": undefined,
       "name": "Button",
-      "request": undefined,
-      "source": undefined,
     },
   },
   "doc": Object {
@@ -839,8 +815,8 @@ Object {
     "componentsLookup": Object {
       "Button": "0a73df5cffa26ca62ec534813a77384f",
     },
-    "date": 2020-06-29T01:18:57.000Z,
-    "dateModified": 2020-06-29T01:18:57.000Z,
+    "date": 2020-07-17T14:45:45.657Z,
+    "dateModified": 2020-07-17T14:45:45.658Z,
     "package": "fea8eb808fd320237df6714339cbe69b",
     "title": "Storybook/MDX",
   },
@@ -850,7 +826,7 @@ Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.7.0",
+        "@component-controls/core": "^1.20.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -869,7 +845,7 @@ Object {
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
-        "@component-controls/ts-markdown-docs": "^1.5.0",
+        "@component-controls/ts-markdown-docs": "^1.10.0",
         "@rollup/plugin-node-resolve": "^7.1.1",
         "@types/find-cache-dir": "^3.2.0",
         "@types/hosted-git-info": "^3.0.0",
@@ -886,7 +862,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.7.1",
+      "version": "1.20.0",
     },
   },
   "stories": Object {
@@ -940,11 +916,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 46,
-          "line": 23,
+          "line": 13,
         },
         "start": Object {
           "column": 9,
-          "line": 23,
+          "line": 13,
         },
       },
       "name": "story-with-props",

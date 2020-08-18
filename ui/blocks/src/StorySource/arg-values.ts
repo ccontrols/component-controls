@@ -114,7 +114,7 @@ export const tagToValue = (param: ArgLocation, name: string) => {
       inlineCharacterLimit: 80,
     });
   } else {
-    retValue = value || name;
+    retValue = value ?? name;
     retValue =
       typeof retValue === 'string'
         ? `"${retValue}"`

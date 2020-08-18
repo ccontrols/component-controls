@@ -1,0 +1,31 @@
+{
+  "name": "component-controls-starter",
+  "description": "component-controls starter - works with gatsby and nextjs",
+  "private": true,
+  "version": "1.20.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-gatsby": "gatsby clean && gatsby build",
+    "start-gatsby": "gatsby develop -p 9030",
+    "build-next": "rm -rf .next && rm -rf dist && rm -rf out && next build && next export",
+    "start-next": "next -p 9031",
+    "start-next-server": "next build && next start -p 9031"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atanasster/gatsby-controls-starter.git"
+  },
+  "dependencies": {
+    "@component-controls/gatsby-theme-stories": "^1.20.0",
+    "@component-controls/nextjs-plugin": "^1.20.0",
+    "emotion": "^10.0.27",
+    "emotion-server": "^10.0.27",
+    "gatsby": "^2.23.11",
+    "next": "^9.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "theme-ui": "^0.4.0-rc.1",
+    "webpack-bundle-analyzer": "^3.8.0"
+  }
+}

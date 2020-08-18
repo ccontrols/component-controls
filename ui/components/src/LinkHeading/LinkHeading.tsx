@@ -5,9 +5,9 @@ import { LinkIcon } from '@primer/octicons-react';
 import { pageLink, titleToId } from './pageLink';
 
 const iconSize: Record<string, { size: number; level: number }> = {
-  h1: { size: 32, level: 1 },
-  h2: { size: 28, level: 2 },
-  h3: { size: 20, level: 3 },
+  h1: { size: 28, level: 1 },
+  h2: { size: 26, level: 2 },
+  h3: { size: 18, level: 3 },
   h4: { size: 16, level: 4 },
   h5: { size: 14, level: 5 },
   h6: { size: 12, level: 6 },

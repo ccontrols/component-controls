@@ -4,8 +4,8 @@ import {
   ComponentControlBoolean,
   ControlTypes,
 } from '@component-controls/core';
+import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';
-import { useControlContext } from '../context';
 import { addPropertyEditor } from '../prop-factory';
 
 /**
@@ -13,13 +13,11 @@ import { addPropertyEditor } from '../prop-factory';
  *
  */
 export const BooleanEditor: PropertyEditor = ({ name }) => {
-  const { control, onChange } = useControlContext<ComponentControlBoolean>({
-    name,
-  });
+  const [control, onChange] = useControl<ComponentControlBoolean>(name);
   return (
     <Toggle
       id={name}
-      onChange={checked => onChange(name, checked)}
+      onChange={checked => onChange(checked)}
       checked={control.value ?? false}
     />
   );

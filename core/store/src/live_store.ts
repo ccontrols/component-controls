@@ -1,16 +1,16 @@
-import { Store } from './Store/Store';
-import { loadStoryStore } from './serialization/load-store';
-import { saveStore } from './serialization/StoreStorage';
+import { loadStore } from './serialization/load-store';
+import { BroadcastStore } from './serialization/BroadcastStore';
+import { Store, getDefaultStore } from '@component-controls/core';
 
-export * from './Store/Store';
+const bundle = require('@component-controls/loader/story-store-data.js');
 
 /**
  * store variable, automatically filled with stories.
  */
-export const store = new Store();
+export const store: Store = new BroadcastStore(
+  bundle ? loadStore(bundle) : getDefaultStore(),
+);
 
-const stores = loadStoryStore();
-if (stores) {
-  store.setStore(stores);
-  saveStore(stores);
+if (bundle) {
+  (store as BroadcastStore).saveStore();
 }

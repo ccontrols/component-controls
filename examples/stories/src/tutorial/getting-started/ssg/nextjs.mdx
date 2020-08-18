@@ -1,0 +1,337 @@
+---
+title: Getting started/Site generators/Nextjs
+type: tutorial
+route: /tutorial/getting-started/nextjs
+description: getting started creating a documentation static site with nextjs and component-controls
+order: 1
+tags:
+  - nextjs
+---
+
+Below, we go over how to add a `component-controls` documentation site to both [new](#new-project) and [existing](#existing-nextjs-project) nextjs projects.
+
+You can find a [git repo](https://github.com/atanasster/nextjs-controls-starter) and a [live site](https://nextjs-controls-starter.netlify.app/).
+
+## Clone starter
+
+The easiest way to get started is to clone the nextjs-controls-starter project
+
+```sh
+git clone https://github.com/atanasster/nextjs-controls-starter my-nextjs-project
+```
+
+
+## New project
+
+If you want to create and configure a nextjs documentation site from scratch instead of cloning the starter repo, the following steps are required:
+
+```sh
+mkdir my-nextjs-project && cd my-nextjs-project
+```
+
+Initialize the project:
+
+```sh
+yarn init
+```
+
+Add `nextjs` and react packages:
+
+```sh
+yarn add next react react-dom
+```
+
+Optional (but recommended), add typescript dependencies
+
+```sh
+yarn add --dev typescript @types/react @types/node
+```
+
+```json:title=package.json
+
+  "scripts": {
+    "build": "next build && next export",
+    "start": "next",
+    "start-server": "next build && next start"
+  },
+
+```
+
+The remaining steps are the same as for an existing nextjs project.
+
+
+## Existing nextjs project
+
+### Add component-controls
+
+```sh
+yarn add @component-controls/nextjs-plugin
+```
+
+### Configure emotion SSR
+
+#### Add emotion packages
+
+```sh
+yarn add emotion emotion-server
+```
+
+
+To configure [emotion](https://emotion.sh/docs/introduction) for SSR, you can view this [`emotion starter project`](https://github.com/vercel/next.js/tree/canary/examples/with-emotion/pages)
+
+### Create a pages folder
+
+```sh
+mkdir pages
+```
+
+
+#### Add pages/_app.js
+
+Create a new or edit `_app.js` file in the pages folder:
+
+<details>
+  <summary>view source...</summary>
+
+```js:title=pages/_app.js
+import React from 'react';
+import NextApp from 'next/app';
+import { CacheProvider } from '@emotion/core';
+
+// Use only { cache } from 'emotion'. Don't use { css }.
+import { cache } from 'emotion';
+
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <CacheProvider value={cache}>
+        <Component {...pageProps} />
+      </CacheProvider>
+    );
+  }
+}
+```
+
+</details>
+
+#### Add pages/_document.js
+
+Create a new or edit `_document.js` file in the pages folder:
+
+<details>
+  <summary>view source...</summary>
+
+```js:title=pages/_document.js
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { extractCritical } from 'emotion-server';
+
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    const styles = extractCritical(initialProps.html);
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          <style
+            data-emotion-css={styles.ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: styles.css }}
+          />
+        </>
+      ),
+    };
+  }
+
+  render() {
+    return (
+      <html>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
+  }
+}
+```
+</details>
+
+
+### Enable component-controls
+
+The default options will configure `component-controls` to work with react apps,  with `react-docgen` for prop-types and `react-docgen-typescript` for typescript props information
+
+```js:title=next.config.js
+const withStories = require('@component-controls/nextjs-plugin/build');
+
+module.exports = withStories({ configPath: '.config', ....other options });
+```
+
+## Create content pages
+
+### Application home
+
+Create a new or edit `index.tsx` or `index.js` file in the pages folder:
+
+<details>
+  <summary>view source...</summary>
+
+```jsx:title=pages/index.tsx
+import React, { FC } from 'react';
+import { GetStaticProps } from 'next';
+import { DocType, defDocType } from '@component-controls/core';
+import { DocPage } from '@component-controls/app';
+import { Layout, store, getIndexPage } from '@component-controls/nextjs-plugin';
+
+interface PageListProps {
+  type: DocType;
+  docId?: string;
+  storyId?: string;
+}
+
+const HomePage: FC<PageListProps> = ({ type = defDocType, docId, storyId }) => {
+  return (
+    <Layout docId={docId} storyId={storyId}>
+      <DocPage type={type} />
+    </Layout>
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const homePage = getIndexPage(store);
+  const { docId = null, type = null, storyId = null } = homePage;
+  return { props: { docId, type, storyId } };
+};
+
+export default HomePage;
+```
+
+</details>
+
+### Document type home
+
+Create a new `[doctype].tsx` or `[doctype].js` file in the pages folder:
+
+<details>
+  <summary>view source...</summary>
+
+```jsx:title=pages/[doctype].tsx
+import React, { FC } from 'react';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { DocType, defDocType } from '@component-controls/core';
+import { DocumentHomePage } from '@component-controls/app';
+import {
+  Layout,
+  store,
+  getHomePagesPaths,
+  getDocHomePage,
+} from '@component-controls/nextjs-plugin';
+
+interface PageListProps {
+  type: DocType;
+  docId?: string;
+  storyId?: string;
+}
+
+const DocHomeTemplate: FC<PageListProps> = ({
+  type = defDocType,
+  docId,
+  storyId,
+}) => {
+  return (
+    <Layout docId={docId} storyId={storyId}>
+      <DocumentHomePage type={type} />
+    </Layout>
+  );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return { paths: getHomePagesPaths(store), fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { doctype: basepath } = params as { doctype: string };
+  const page = getDocHomePage(store, basepath);
+  const { type = null, docId = null, storyId = null } = page || {};
+  return { props: { docId, storyId, type } };
+};
+
+export default DocHomeTemplate;
+```
+</details>
+
+### Document and Story pages
+
+Create a new sub-folder `[doctype]` in the pages folder, and in it a new `[...docid].tsx` or `[...docid].js` file:
+
+### Create a pages folder
+
+```sh
+mkdir pages/[doctype]
+```
+
+<details>
+  <summary>view source...</summary>
+
+```jsx:title=pages/[doctype]/[...docid].tsx
+import React, { FC } from 'react';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { DocPage } from '@component-controls/app';
+import { DocType } from '@component-controls/core';
+import {
+  Layout,
+  store,
+  getDocPagesPaths,
+  getDocPage,
+} from '@component-controls/nextjs-plugin';
+
+interface DocPageProps {
+  docId?: string;
+  storyId?: string;
+  type: DocType;
+  activeTab?: string;
+  category?: string;
+}
+
+const DocPageTemplate: FC<DocPageProps> = ({
+  docId,
+  storyId,
+  type,
+  category,
+  activeTab,
+}) => {
+  return (
+    <Layout docId={docId} storyId={storyId} activeTab={activeTab}>
+      <DocPage type={type} category={category} />
+    </Layout>
+  );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return { paths: getDocPagesPaths(store), fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { doctype, docid } = params as { doctype: string; docid: string[] };
+  const page = getDocPage(store, doctype, docid);
+  const {
+    type = null,
+    docId = null,
+    storyId = null,
+    category = null,
+    activeTab = null,
+  } = page || {};
+  return { props: { docId, type, storyId, category, activeTab } };
+};
+
+export default DocPageTemplate;
+```
+</details>
+
+## Create your documentation site
+
+Check our [create a documentation site](/tutorial/getting-started/documentation-site) tutorial

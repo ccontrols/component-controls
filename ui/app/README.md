@@ -4,6 +4,7 @@
 -   [List of components](#list-of-components)
     -   [<ins>App</ins>](#insappins)
     -   [<ins>AppContext</ins>](#insappcontextins)
+    -   [<ins>AppError</ins>](#insapperrorins)
     -   [<ins>CategoryList</ins>](#inscategorylistins)
     -   [<ins>CategoryListItem</ins>](#inscategorylistitemins)
     -   [<ins>CategoryPage</ins>](#inscategorypageins)
@@ -60,13 +61,25 @@ _AppContext [source code](https://github.com/ccontrols/component-controls/tree/m
 
 ### properties
 
-| Name         | Type           | Description |
-| ------------ | -------------- | ----------- |
-| `type`       | _string_       |             |
-| `docId`      | _string_       |             |
-| `storyId`    | _string_       |             |
-| `store`      | _LoadingStore_ |             |
-| `linkClass*` | _any_          |             |
+| Name         | Type     | Description |
+| ------------ | -------- | ----------- |
+| `docId`      | _string_ |             |
+| `storyId`    | _string_ |             |
+| `store*`     | _Store_  |             |
+| `linkClass*` | _any_    |             |
+| `activeTab`  | _string_ |             |
+
+## <ins>AppError</ins>
+
+application build-time error container
+
+_AppError [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/AppError/AppError.tsx)_
+
+### properties
+
+| Name    | Type     | Description                       |
+| ------- | -------- | --------------------------------- |
+| `error` | _string_ | Error text, "apperror" theme key. |
 
 ## <ins>CategoryList</ins>
 
@@ -90,7 +103,7 @@ _CategoryListItem [source code](https://github.com/ccontrols/component-controls/
 
 | Name     | Type     | Description                         |
 | -------- | -------- | ----------------------------------- |
-| `link*`  | _string_ | link url                            |
+| `type*`  | _string_ | doc type                            |
 | `name*`  | _string_ | category name                       |
 | `count*` | _number_ | how many documents of this category |
 
@@ -120,10 +133,10 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name        | Type     | Description     |
-| ----------- | -------- | --------------- |
-| `type`      | _string_ | document type   |
-| `activeTab` | _string_ | active page tab |
+| Name       | Type     | Description   |
+| ---------- | -------- | ------------- |
+| `type`     | _string_ | document type |
+| `category` | _string_ |               |
 
 ## <ins>DocumentHomePage</ins>
 
@@ -136,7 +149,6 @@ _DocumentHomePage [source code](https://github.com/ccontrols/component-controls/
 | Name    | Type     | Description |
 | ------- | -------- | ----------- |
 | `type*` | _string_ |             |
-| `docId` | _string_ |             |
 
 ## <ins>DocumentsList</ins>
 
@@ -146,9 +158,10 @@ _DocumentsList [source code](https://github.com/ccontrols/component-controls/tre
 
 ### properties
 
-| Name     | Type    | Description            |
-| -------- | ------- | ---------------------- |
-| `pages*` | _Pages_ | list of document pages |
+| Name     | Type     | Description            |
+| -------- | -------- | ---------------------- |
+| `pages*` | _Pages_  | list of document pages |
+| `type*`  | _string_ | document type          |
 
 ## <ins>Footer</ins>
 
@@ -251,11 +264,10 @@ _Sidebar [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name        | Type        | Description                                           |
-| ----------- | ----------- | ----------------------------------------------------- |
-| `title`     | _ReactNode_ | title element                                         |
-| `type`      | _string_    | document type                                         |
-| `activeTab` | _string_    | currently active tab. Use to creae the sidemenu links |
+| Name    | Type        | Description   |
+| ------- | ----------- | ------------- |
+| `title` | _ReactNode_ | title element |
+| `type`  | _string_    | document type |
 
 ## <ins>SidebarsMDXPage</ins>
 
@@ -276,10 +288,9 @@ _SidebarsPage [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name        | Type     | Description     |
-| ----------- | -------- | --------------- |
-| `type*`     | _string_ | document type   |
-| `activeTab` | _string_ | active page tab |
+| Name    | Type     | Description   |
+| ------- | -------- | ------------- |
+| `type*` | _string_ | document type |
 
 ## <ins>SidebarsStoryPage</ins>
 
@@ -289,10 +300,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name        | Type       | Description     |
-| ----------- | ---------- | --------------- |
-| `type*`     | _string_   | document type   |
-| `activeTab` | _string_   | active page tab |
-| `doc*`      | _Document_ | document object |
+| Name    | Type       | Description     |
+| ------- | ---------- | --------------- |
+| `type*` | _string_   | document type   |
+| `doc*`  | _Document_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
