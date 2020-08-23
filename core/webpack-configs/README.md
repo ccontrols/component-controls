@@ -11,7 +11,7 @@
     -   [deepMerge](#deepmerge)
     -   [deepMergeWebpackConfig](#deepmergewebpackconfig)
     -   [deepMergeWithPresets](#deepmergewithpresets)
-    -   [getConfigredPreset](#getconfigredpreset)
+    -   [getConfiguredPreset](#getconfigredpreset)
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
     -   [presetsFactory](#presetsfactory)
@@ -151,11 +151,11 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 | `source*` | any  |             |
 | `returns` | any  |             |
 
-## getConfigredPreset
+## getConfiguredPreset
 
 _defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L27)_
 
-**function** getConfigredPreset(`name`\*: string, `options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
+**function** getConfiguredPreset(`name`\*: string, `options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
 
 ### parameters
 

@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import { log, setLogOptions } from '@component-controls/logger';
 import {
   CompileProps,
   CompileResults,
@@ -20,13 +20,12 @@ export const compile = (
     staticFolder,
     distFolder,
     bundleName,
+    logOptions,
   }: CompileProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
-  console.log(
-    chalk.bgRgb(244, 147, 66)('@start compilation'),
-    'optimized build',
-  );
+  setLogOptions(logOptions);
+  log('start compilation', 'optimized build');
   return runCompiler(
     (compiler, callback) => compiler.run(callback),
     {
@@ -55,13 +54,12 @@ export const watch = (
     staticFolder,
     distFolder,
     bundleName,
+    logOptions,
   }: WatchProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
-  console.log(
-    chalk.bgRgb(244, 147, 66)('@start compilation'),
-    'development mode watch',
-  );
+  setLogOptions(logOptions);
+  log('start compilation', 'development mode watch');
   return runCompiler(
     (compiler, callback) => compiler.watch({ ...watchOptions }, callback),
     {

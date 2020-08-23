@@ -17,6 +17,9 @@ export class ResolveExternals {
   }
   addAlias = (props: ExternalProps) => {
     const { lib, externalName } = props;
+    if (typeof this._config.externals !== 'object') {
+      this._config.externals = {};
+    }
     this._config.externals[lib] = externalName || lib;
   };
 }

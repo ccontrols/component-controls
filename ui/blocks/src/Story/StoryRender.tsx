@@ -1,20 +1,10 @@
 /** @jsx jsx */
-import { FC, useState, Fragment, createElement, forwardRef } from 'react';
+import { FC, useState, Fragment, forwardRef } from 'react';
 import { jsx, CSSProperties, Box } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
 import ReactResizeDetector from 'react-resize-detector';
-import {
-  useStoryControls,
-  useExternalOptions,
-  useCurrentDocument,
-} from '@component-controls/store';
-import {
-  Story,
-  StoryRenderFn,
-  getControlValues,
-  deepMerge,
-} from '@component-controls/core';
+import { useStore, useExternalOptions } from '@component-controls/store';
 
 export interface IframeWrapperProps {
   initialIframeContent?: string;
@@ -83,36 +73,20 @@ const StoryWrapper: FC<StoryWrapperProps> = ({
 const NAME = 'story';
 
 export interface StoryRenderProps {
-  story: Story;
+  storyId: string;
   ref?: React.Ref<HTMLDivElement>;
 }
 export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
   (
-    { story, wrapper, iframeStyle, ...rest },
+    { storyId, wrapper, iframeStyle, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
-    const doc = useCurrentDocument();
-    const controls = useStoryControls(story.id || '');
+    const store = useStore();
     const options = useExternalOptions();
-    const values = getControlValues(controls);
-    const { decorators: globalDecorators = [] } = options;
-    const { decorators: storyDecorators = [] } = story;
-    const decorators = deepMerge<StoryRenderFn[]>(
-      globalDecorators,
-      storyDecorators,
-    );
-    //parameters added to avoid bug in SB6 rc that assumes parameters exist
-    const storyContext = { story, doc, controls, parameters: {} };
-    const renderFn = decorators.reverse().reduce(
-      (acc: StoryRenderFn, item: StoryRenderFn) => () =>
-        item(acc, { ...storyContext, renderFn: acc }),
-      //@ts-ignore
-      () => story.renderFn(values, storyContext),
-    );
     return (
       <Box
         data-testid={NAME}
-        id={story.id}
+        id={storyId}
         variant={`${NAME}.container`}
         {...rest}
       >
@@ -122,7 +96,8 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
             variant={`${NAME}.wrapper`}
             ref={ref}
           >
-            {createElement(renderFn)}
+            {store.config.renderFn &&
+              store.config.renderFn(storyId, store, options)}
           </Box>
         </StoryWrapper>
       </Box>

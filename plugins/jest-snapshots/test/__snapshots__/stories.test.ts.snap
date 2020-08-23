@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component-controls tests 1`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 2`] = `
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-vurnku{box-sizing:border-box;margin:0;min-width:0;}",
+      }
+    }
+    data-emotion-css="vurnku"
+  />,
+  <div
+    className="css-vurnku"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "some error<br />text<br />",
+      }
+    }
+  />,
+]
+`;
+
+exports[`component-controls tests 3`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 4`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 5`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 6`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 7`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 8`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 9`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 10`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 11`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 12`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 13`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 14`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;
+
+exports[`component-controls tests 15`] = `
+<h1>
+  Unexpected error.
+</h1>
+`;

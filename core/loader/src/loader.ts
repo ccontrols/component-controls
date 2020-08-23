@@ -1,7 +1,7 @@
 import * as fs from 'fs';
-import * as chalk from 'chalk';
 import { getOptions } from 'loader-utils';
 import { loader } from 'webpack';
+import { log } from '@component-controls/logger';
 import { deepmerge } from '@component-controls/core';
 import {
   InstrumentOptions,
@@ -23,7 +23,7 @@ module.exports = async function() {
     options,
   );
   if (store?.doc) {
-    console.log(chalk.bgRgb(244, 147, 66)('@loaded: '), filePath);
+    log('loaded: ', filePath);
     if (store.stories && store.components && store.packages) {
       addStoriesDoc(options, filePath, context._compilation.records.hash, {
         stories: store.stories,

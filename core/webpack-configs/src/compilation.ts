@@ -1,6 +1,7 @@
 import path from 'path';
 import * as webpack from 'webpack';
 import { LoadingStore } from '@component-controls/store';
+import { LogOptions } from '@component-controls/logger';
 import { RuleTypes } from './types';
 
 /**
@@ -28,6 +29,11 @@ export interface CompileProps {
 
   /** public output folder for the assets like images */
   staticFolder?: string;
+
+  /**
+   * logger options
+   */
+  logOptions?: Partial<LogOptions>;
 }
 
 /**

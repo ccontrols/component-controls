@@ -24,7 +24,7 @@ export const presetsFactory: {
   react,
 };
 
-const getConfigredPreset = (name: string, options?: PresetOptions) => {
+const getConfiguredPreset = (name: string, options?: PresetOptions) => {
   const preset = presetsFactory[name];
   if (typeof preset === 'function') {
     return preset(options);
@@ -77,12 +77,12 @@ export const getWebpackConfig = (
   const result: WebpackConfiguration = presets.reduce(
     (acc: WebpackConfiguration, config: RuleType) => {
       if (typeof config === 'string') {
-        const p = getConfigredPreset(config, options);
+        const p = getConfiguredPreset(config, options);
         return deepMergeWithPresets(acc, p);
       }
       if (config && (config as RuleOptions).name) {
         const name = (config as RuleOptions).name;
-        const p = getConfigredPreset(name, options);
+        const p = getConfiguredPreset(name, options);
         if (p) {
           const r: WebpackConfiguration = p;
           const o: WebpackConfiguration = (config as RuleOptions).config;
@@ -123,7 +123,7 @@ export const mergeWebpackConfig = (
   options?: PresetOptions,
 ): WebpackConfiguration => {
   if (!presets) {
-    return {};
+    return webPack || {};
   }
   const newConfig = getWebpackConfig(presets, options);
   return deepMerge(webPack || {}, newConfig);

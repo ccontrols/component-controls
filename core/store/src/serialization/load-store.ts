@@ -15,6 +15,7 @@ import {
   PageLayoutProps,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
+import { render as reactRender } from '@component-controls/render/react';
 import { transformControls } from './transform-controls';
 
 export { LoadingStore };
@@ -35,13 +36,17 @@ export const loadStore = (store: LoadingStore): Store => {
         defaultRunConfig,
         deepMergeArrays(buildConfig, config),
       );
+      if (!globalStore.config.renderFn) {
+        globalStore.config.renderFn = reactRender;
+      }
       stores.forEach(s => {
         const storeDoc = s.doc;
         const storeStories = s.stories;
         if (storeDoc && storeStories && s.stories) {
-          const page = globalStore.config.pages?.[
-            storeDoc.type || defDocType
-          ] as PageConfiguration;
+          const page =
+            (globalStore.config.pages?.[
+              storeDoc.type || defDocType
+            ] as PageConfiguration) || defaultRunConfig.pages?.[defDocType];
           const pageLayout: PageLayoutProps = {
             contextSidebar: page.contextSidebar,
             fullPage: page.fullPage,

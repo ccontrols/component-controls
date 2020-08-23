@@ -17,6 +17,7 @@ export interface MessageType {
 }
 
 export class BroadcastStore implements Store {
+  // eslint-disable-next-line react/display-name
   config: RunConfiguration = {};
   docs: Documents = {};
   stories: Stories = {};

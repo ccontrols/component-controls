@@ -2,6 +2,17 @@ import { Configuration as WebpackConfiguration } from 'webpack';
 import { ActionItems } from '@component-controls/components';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
+import { ReactElement } from 'react';
+import { Store } from './document';
+
+/**
+ * render function by framework. By default 'react'
+ */
+export type FrameworkRenderFn = (
+  storyId: string,
+  store: Store,
+  options?: any,
+) => ReactElement;
 
 /**
  * story type pages can have multiple tabs with separate page configurations.
@@ -47,7 +58,7 @@ export interface PageLayoutProps {
    */
   fullPage?: boolean;
 }
-export type SideNavConfiguration = {
+export interface SideNavConfiguration {
   /**
    * if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
    */
@@ -57,7 +68,7 @@ export type SideNavConfiguration = {
    * if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
    */
   collapseSingle?: boolean;
-};
+}
 export type PageConfiguration = {
   /**
    * base url path for the page
@@ -114,7 +125,7 @@ export type PagesOnlyRoutes = Record<
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export type BuildConfiguration = {
+export interface BuildConfiguration {
   /**
    * wild card search string for the stories
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
@@ -140,7 +151,7 @@ export type BuildConfiguration = {
    * instrumentation configuration
    */
   instrument?: any;
-};
+}
 
 export interface ToolbarConfig {
   /**
@@ -170,6 +181,10 @@ export interface ControlsConfig {
  * stored in a file named main.js/main.ts
  */
 export interface RunOnlyConfiguration {
+  /**
+   * framework-specific render function. By default react render
+   */
+  renderFn?: FrameworkRenderFn;
   /**
    * story decorator functions - used to wrap stories
    * example: [story => <ThemeProvider>{story()}</ThemeProvider>]

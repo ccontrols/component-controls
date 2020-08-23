@@ -7,7 +7,7 @@ import webpack, {
 } from 'webpack';
 import path from 'path';
 import fs from 'fs';
-const chalk = require('chalk');
+import { log, error } from '@component-controls/logger';
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
@@ -80,7 +80,6 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
     presets,
     { staticFolder, distFolder },
   );
-
   //add all the aliases to avoid double loading of packages
   const alias = new ResolveExternals(webpackConfig as ResolveExternalsConfig);
   defaultExternals.forEach(a => alias.addAlias(a));
@@ -90,7 +89,6 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
   const userWebpackConfig =
     runConfig?.config &&
     (runConfig.config.webpack || runConfig.config.finalWebpack);
-
   if (!userWebpackConfig) {
     return webpackConfig;
   }
@@ -142,18 +140,11 @@ module.exports = ${JSON.stringify({
         return bailError(error);
       }
       const { store } = require('@component-controls/loader/store');
-      console.log(
-        chalk.bgRgb(
-          244,
-          147,
-          66,
-        )(
-          store
-            ? `compiled ${store.stores.length} documents`
-            : 'error creating bundle',
-        ),
-        bundleName,
-      );
+      if (store) {
+        log(`compiled ${store.stores.length} documents`, bundleName);
+      } else {
+        error('error creating bundle', bundleName);
+      }
       if (callback) {
         callback({ bundleName, stats, store });
       }
