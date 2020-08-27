@@ -68,7 +68,12 @@ export const ViewportBlock: FC<ViewportBlockProps> = ({
           {Object.keys(visible)
             .filter(name => visible[name])
             .map(name => (
-              <ViewportBox key={name} storyId={story.id} size={visible[name]} />
+              <ViewportBox
+                key={name}
+                storyId={story.id}
+                size={visible[name]}
+                sizeLabel={name}
+              />
             ))}
         </Box>
       </ActionContainer>

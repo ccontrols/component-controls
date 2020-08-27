@@ -1,5 +1,4 @@
-import path from 'path';
-import { render } from '../react';
+import { renderers } from '../src/renderers';
 import { runJestSnapshots } from '../dist/index';
-
-runJestSnapshots(render, { configPath: path.resolve(__dirname, './.config') });
+runJestSnapshots(renderers.enzyme);
+runJestSnapshots(renderers.react);

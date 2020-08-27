@@ -52,7 +52,13 @@ export const loadStore = (store: LoadingStore): Store => {
             fullPage: page.fullPage,
             navSidebar: page.navSidebar,
           };
-          const doc: Document = deepMerge<Document>(pageLayout, storeDoc);
+          const docGlobalProps = {
+            decorators: globalStore.config.decorators,
+          };
+          const doc: Document = deepMerge<Document>(
+            pageLayout,
+            deepMerge(docGlobalProps, storeDoc),
+          );
           //props shared by document and story, extract so story gets default values from doc
           const docStoryProps: StoryProps = {
             component: doc.component,

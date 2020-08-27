@@ -45,13 +45,13 @@ export const store: Store = {
       },
       devDependencies: {
         '@theme-ui/presets': '^0.3.0',
-        '@types/jest': '^25.1.2',
+        '@types/jest': '^26.0.10',
         '@types/mdx-js__react': '^1.5.1',
         '@types/stringify-object': '^3.2.0',
         '@types/theme-ui': '^0.3.0',
         'cross-env': '^5.2.1',
         eslint: '^6.5.1',
-        jest: '^24.9.0',
+        jest: '^26.4.2',
       },
       peerDependencies: {
         '@primer/octicons-react': '*',

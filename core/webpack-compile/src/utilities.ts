@@ -17,7 +17,7 @@ import {
   defBundleName,
 } from '@component-controls/webpack-configs';
 import { loadConfiguration } from '@component-controls/config';
-
+import { cliArgs } from './args';
 import { ResolveExternals, ResolveExternalsConfig } from './resolve_externals';
 import { defaultExternals } from './externals-config';
 
@@ -28,6 +28,19 @@ export type CompileRunProps = CompileProps & {
   mode: Configuration['mode'];
 };
 
+/**
+ * returns the default bumnle full path or args config
+ *  ./public/component-controls.js
+ */
+export const getBundleName = () => {
+  const args = cliArgs().parse();
+  let distFolder = args.dist || `${path.join(process.cwd(), 'public')}`;
+  if (!path.isAbsolute(distFolder)) {
+    distFolder = path.resolve(process.cwd(), distFolder);
+  }
+  const bundleName = args.bundle || defBundleName;
+  return `${path.join(distFolder, bundleName)}`;
+};
 /**
  * callback function to monitor new documents/deleted documents
  */
@@ -43,7 +56,10 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
     distFolder: propDistFolder,
     bundleName = defBundleName,
   } = options;
-  const distFolder = propDistFolder || `${path.join(process.cwd(), 'public')}`;
+  let distFolder = propDistFolder || `${path.join(process.cwd(), 'public')}`;
+  if (!path.isAbsolute(distFolder)) {
+    distFolder = path.resolve(process.cwd(), distFolder);
+  }
   const staticFolder = propStaticFolder || path.join(distFolder, 'static');
   const plugins = [
     new LoaderPlugin({

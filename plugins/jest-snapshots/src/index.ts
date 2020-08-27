@@ -1,35 +1,32 @@
 import { loadStore } from '@component-controls/store';
-import { compile } from '@component-controls/webpack-compile';
-import { CompileProps } from '@component-controls/webpack-configs';
+import { getBundleName } from '@component-controls/webpack-compile';
 import { Store } from '@component-controls/core';
 
-export type RendererFn = (storyId: string, store: Store, options?: any) => any;
+export type RendererFnResult = Promise<any> | any;
 
-export const runJestSnapshots = (
-  renderer: RendererFn,
-  config: CompileProps = {},
-  testName: string = 'component-controls tests',
-  timeout = 50000,
-) => {
-  test(
-    testName,
-    async () => {
-      const { bundleName } = await compile({
-        presets: ['react', 'react-docgen-typescript'],
-        logOptions: {
-          logLevel: 'none',
-        },
-        ...config,
-      });
-      if (bundleName) {
-        const store = loadStore(require(bundleName));
-        // const loadedStore = loadStore(store);
-        Object.keys(store.stories).forEach(storyId => {
-          const tree = renderer(storyId, store);
-          expect(tree).toMatchSnapshot();
+export type RendererFn = (
+  storyId: string,
+  store: Store,
+  options?: any,
+) => RendererFnResult;
+
+export const runJestSnapshots = (renderer: RendererFn, bundleName?: string) => {
+  const bundle = bundleName || getBundleName();
+  const store = loadStore(require(bundle));
+  Object.keys(store.docs).forEach(docId => {
+    const doc = store.docs[docId];
+
+    if (doc.stories && doc.stories.length) {
+      const stories = doc.stories;
+      describe(doc.title, () => {
+        stories.forEach(storyId => {
+          const story = store.stories[storyId];
+          it(story.name, () => {
+            const tree = renderer(storyId, store);
+            expect(tree).toMatchSnapshot();
+          });
         });
-      }
-    },
-    timeout,
-  );
+      });
+    }
+  });
 };

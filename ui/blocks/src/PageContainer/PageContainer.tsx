@@ -65,9 +65,14 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         } catch (err) {}
       };
       parseURLHash();
-      window.addEventListener('hashchange', parseURLHash, false);
-      return () =>
-        window.removeEventListener('hashchange', parseURLHash, false);
+      if (typeof window !== 'undefined' && window) {
+        window.addEventListener('hashchange', parseURLHash, false);
+      }
+      return () => {
+        if (typeof window !== 'undefined' && window) {
+          window.removeEventListener('hashchange', parseURLHash, false);
+        }
+      };
     }, []);
     const theme = useTheme();
     const doc = useCurrentDocument();

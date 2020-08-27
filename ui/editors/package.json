@@ -17,7 +17,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest"
+    "test": "cc-jest -c ./.config"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -34,23 +34,22 @@
     "@component-controls/core": "^1.21.0",
     "@component-controls/store": "^1.21.0",
     "@primer/octicons-react": "^10.0.0",
-    "deepmerge": "^4.2.2",
     "global": "^4.3.2",
     "polished": "^3.4.4",
     "react": "^16.13.1",
     "react-color": "^2.17.0",
     "react-dom": "^16.13.1",
-    "recoil": "^0.0.10",
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
+    "@component-controls/jest-snapshots": "^1.21.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^26.0.10",
     "@types/react-color": "^3.0.1",
-    "@types/recoil": "^0.0.1",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "jest": "^26.4.2"
+
   },
   "peerDependencies": {
     "@primer/octicons-react": ">= 10.0.0",
@@ -63,5 +62,9 @@
   "authors": [
     "Atanas Stoyanov"
   ],
+  "jest": {
+    "preset": "ts-jest",
+    "roots": ["./tests"]
+  },
   "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
 }

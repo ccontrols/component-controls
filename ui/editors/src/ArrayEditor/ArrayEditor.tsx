@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Button, Box, Flex } from 'theme-ui';
-import deepmerge from 'deepmerge';
+import { deepmerge } from '@component-controls/core';
 import { TrashcanIcon, PlusIcon } from '@primer/octicons-react';
 import {
   ComponentControl,

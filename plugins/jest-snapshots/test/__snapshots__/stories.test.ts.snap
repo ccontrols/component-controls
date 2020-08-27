@@ -1,106 +1,537 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`component-controls tests 1`] = `
-<h1>
-  Unexpected error.
-</h1>
-`;
-
-exports[`component-controls tests 2`] = `
+exports[`Blocks/Story Custom Title 1`] = `
 Array [
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ".css-vurnku{box-sizing:border-box;margin:0;min-width:0;}",
-      }
-    }
-    data-emotion-css="vurnku"
-  />,
+  "",
+  "",
   <div
-    className="css-vurnku"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "some error<br />text<br />",
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-jxxswp"
+      id=""
+    >
+      <div
+        className="css-xhp9da"
+      >
+        <h3
+          className="css-1p18zt3-BlockContainer"
+        >
+          <div
+            className="css-tmrrvx"
+          >
+            My Story Title
+            <a
+              aria-label="Collapse this block"
+              className="css-csemrf-BlockContainer"
+              onClick={[Function]}
+            >
+              <div
+                className="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="octicon"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<path fill-rule=\\"evenodd\\" d=\\"M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z\\"></path>",
+                    }
+                  }
+                  fill="currentColor"
+                  height={16}
+                  role="img"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "userSelect": "none",
+                      "verticalAlign": "middle",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                />
+              </div>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
       }
-    }
-  />,
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            className="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
 ]
 `;
 
-exports[`component-controls tests 3`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Custom Title 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        >
+          <div
+            class="css-tmrrvx"
+          >
+            My Story Title
+            <a
+              aria-label="Collapse this block"
+              class="css-csemrf-BlockContainer"
+            >
+              <div
+                class="css-1ibxxpj"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="octicon"
+                  fill="currentColor"
+                  height="16"
+                  role="img"
+                  style="display: inline-block; user-select: none; vertical-align: middle;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                >
+                  <path
+                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </h3>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            class="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`component-controls tests 4`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Description 1`] = `
+Array [
+  "",
+  "",
+  <div
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-jxxswp"
+      id=""
+    >
+      <div
+        className="css-xhp9da"
+      >
+        <h3
+          className="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className="css-154oin1"
+          data-testid="story"
+          id="id-of-story"
+        >
+          <div
+            className="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
-exports[`component-controls tests 5`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Description 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-154oin1"
+          data-testid="story"
+          id="id-of-story"
+        >
+          <div
+            class="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`component-controls tests 6`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Iframe 1`] = `
+Array [
+  "",
+  "",
+  <div
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-jxxswp"
+      id=""
+    >
+      <div
+        className="css-xhp9da"
+      >
+        <h3
+          className="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <iframe
+            style={
+              Object {
+                "border": 0,
+                "height": undefined,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
-exports[`component-controls tests 7`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Iframe 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <iframe
+            style="border: 0px; width: 100%;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`component-controls tests 8`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Not Collapsible 1`] = `
+Array [
+  "",
+  "",
+  <div
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-154oin1"
+      data-testid="story"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        className="story-render-container css-dhmrnb"
+      />
+    </div>
+  </div>,
+]
 `;
 
-exports[`component-controls tests 9`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Not Collapsible 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-154oin1"
+      data-testid="story"
+      id="blocks-core-story-plain--controls"
+    >
+      <div
+        class="story-render-container css-dhmrnb"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`component-controls tests 10`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Overview 1`] = `
+Array [
+  "",
+  "",
+  <div
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-jxxswp"
+      id=""
+    >
+      <div
+        className="css-xhp9da"
+      >
+        <h3
+          className="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            className="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
-exports[`component-controls tests 11`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Overview 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            class="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`component-controls tests 12`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Title 1`] = `
+Array [
+  "",
+  "",
+  <div
+    className="css-1xkyebe"
+  >
+    <div
+      className="css-jxxswp"
+      id=""
+    >
+      <div
+        className="css-xhp9da"
+      >
+        <h3
+          className="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            className="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
-exports[`component-controls tests 13`] = `
-<h1>
-  Unexpected error.
-</h1>
-`;
-
-exports[`component-controls tests 14`] = `
-<h1>
-  Unexpected error.
-</h1>
-`;
-
-exports[`component-controls tests 15`] = `
-<h1>
-  Unexpected error.
-</h1>
+exports[`Blocks/Story Title 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div
+          class="css-154oin1"
+          data-testid="story"
+          id="blocks-core-story-plain--controls"
+        >
+          <div
+            class="story-render-container css-dhmrnb"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;

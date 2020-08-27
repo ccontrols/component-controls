@@ -17,7 +17,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest --passWithNoTests"
+    "test": "cc-jest -c ./.config"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -41,12 +41,11 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
+    "@component-controls/jest-snapshots": "^1.21.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "@types/jest": "^25.1.2",
     "@types/react-helmet": "^6.0.0",
     "cross-env": "^5.2.1",
-    "eslint": "^6.5.1",
-    "jest": "^24.9.0"
+    "eslint": "^6.5.1"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",

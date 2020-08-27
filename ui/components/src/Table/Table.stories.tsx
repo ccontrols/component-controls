@@ -38,6 +38,7 @@ const columns = [
 ];
 const mockData = () => {
   let i = 10;
+  faker.seed(123);
   return Array.apply(null, Array(20)).map(() => ({
     id: i++,
     ...faker.helpers.userCard(),

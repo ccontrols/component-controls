@@ -15,6 +15,7 @@ type FakeItems = FakeItem[];
 let i = 10;
 const useMockData = (): [FakeItems, (searchTerm: string) => void] => {
   const [search, setSearch] = useState<string>('');
+  faker.seed(123);
   const [allItems] = useState(
     Array.apply(null, Array(30)).map(() => ({
       id: i++,

@@ -7,11 +7,16 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
+    "bin/",
     "package.json",
     "README.md",
-    "bundle.js"
+    "bundle.js",
+    "cli.js",
+    "cli.d.ts"
   ],
-  "scripts": {
+  "bin": {
+    "ccc": "./bin/index.js"
+  },  "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
     "docs": "ts-md",
@@ -36,15 +41,16 @@
     "@component-controls/webpack-configs": "^1.21.0",
     "memory-fs": "^0.5.0",
     "typescript": "^3.8.3",
+    "yargs": "^15.3.1",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^26.0.10",
     "@types/memory-fs": "^0.3.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^24.9.0",
+    "jest": "^26.4.2",
     "webpack-bundle-analyzer": "^3.7.0"
   },
   "jest": {

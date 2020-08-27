@@ -1,5 +1,5 @@
 import { Configuration as WebpackConfiguration } from 'webpack';
-import { ActionItems } from '@component-controls/components';
+import { ActionItems } from './utility';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
 import { ReactElement } from 'react';

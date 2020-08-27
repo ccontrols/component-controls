@@ -1,6 +1,9 @@
 import { OptionsListType } from '@component-controls/core';
 
-import { normalizeOptions, NormalizedOptions } from './utils';
+import {
+  normalizeOptions,
+  NormalizedOptions,
+} from '../src/OptionsEditor/utils';
 
 describe('Options utility functions', () => {
   const objectData: OptionsListType = { Dog: 'dog', Cat: 'cat' };

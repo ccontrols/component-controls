@@ -6,8 +6,13 @@ import { Story } from '@component-controls/blocks';
 export interface ViewportBoxProps {
   storyId?: string;
   size: number;
+  sizeLabel: string;
 }
-export const ViewportBox: FC<ViewportBoxProps> = ({ storyId, size }) => {
+export const ViewportBox: FC<ViewportBoxProps> = ({
+  storyId,
+  size,
+  sizeLabel,
+}) => {
   return (
     <Box
       sx={{
@@ -28,7 +33,7 @@ export const ViewportBox: FC<ViewportBoxProps> = ({ storyId, size }) => {
       >
         <Story id={storyId} sxStyle={{ mb: 0, minWidth: size }} />
       </Box>
-      <Text sx={{ color: 'muted', fontWeight: 'bold' }}>{`${size}px`}</Text>
+      <Text sx={{ color: 'muted', fontWeight: 'bold' }}>{sizeLabel}</Text>
     </Box>
   );
 };

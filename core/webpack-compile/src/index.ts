@@ -4,9 +4,8 @@ import {
   CompileResults,
   WatchProps,
 } from '@component-controls/webpack-configs';
-import { runCompiler, CompilerCallbackFn } from './utilities';
-
-export { CompilerCallbackFn };
+import { runCompiler, CompilerCallbackFn, getBundleName } from './utilities';
+export { CompilerCallbackFn, getBundleName };
 
 /**
  * compile the stories with webpack

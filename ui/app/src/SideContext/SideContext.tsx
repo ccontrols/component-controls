@@ -67,10 +67,14 @@ export const SideContext: FC<SideContext> = ({ pageRef }) => {
   }, [pageRef]);
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll, false);
+    if (typeof window !== 'undefined' && window) {
+      window.addEventListener('scroll', onScroll, false);
+    }
     onScroll();
     return () => {
-      window.removeEventListener('scroll', onScroll);
+      if (typeof window !== 'undefined' && window) {
+        window.removeEventListener('scroll', onScroll);
+      }
     };
   }, [onScroll]);
   return items.length ? (

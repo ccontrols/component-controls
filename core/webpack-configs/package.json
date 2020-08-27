@@ -45,11 +45,11 @@
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^26.0.10",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "file-loader": "^6.0.0",
-    "jest": "^24.9.0",
+    "jest": "^26.4.2",
     "url-loader": "^4.1.0"
   },
   "jest": {

@@ -22,7 +22,7 @@
     "fix": "yarn lint --fix",
     "lint": "yarn eslint . --ext mdx,ts,tsx",
     "prepare": "yarn build",
-    "test": "yarn jest --passWithNoTests"
+    "test": "cc-jest -c ./.config"
   },
   "homepage": "https://github.com/ccontrols/component-controls",
   "bugs": {
@@ -46,13 +46,14 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
+    "@component-controls/jest-snapshots": "^1.21.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@component-controls/blocks": "*",
+    "@component-controls/blocks": ">= 1.21.0",
     "react": ">= 16.8.0",
     "theme-ui": ">= 0.4.0-rc.1"
   },
