@@ -6,6 +6,8 @@ import {
   useActiveTab,
   useGetDocumentPath,
   useConfig,
+  useCurrentStory,
+  useGetStoryPath,
 } from '@component-controls/store';
 import * as pages from '@component-controls/pages';
 import {
@@ -36,8 +38,10 @@ export interface DocPageProps {
  */
 export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
   const docId = doc.title;
+  const story = useCurrentStory();
   const config = useConfig();
   const getDocumentPath = useGetDocumentPath();
+  const getStoryPath = useGetStoryPath();
   const activeTab = useActiveTab();
   const pageConfig = config.pages?.[type] || {};
   const { tabs = [] } = pageConfig;
@@ -81,7 +85,12 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
                   <Tab key={`tab_${route}`}>
                     <Link
                       href={
-                        docId
+                        story && story.id
+                          ? getStoryPath(
+                              story.id,
+                              tabIndex > 0 ? route : undefined,
+                            )
+                          : docId
                           ? getDocumentPath(
                               type,
                               docId,
