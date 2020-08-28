@@ -10,8 +10,10 @@
     "build-sample": "build-storybook -c .storybook -o ./public"
   },
   "dependencies": {
+    "@component-controls/axe-plugin": "^1.21.0",
     "@component-controls/core": "^1.21.0",
     "@component-controls/storybook": "^1.21.0",
+    "@component-controls/viewport-plugin": "^1.21.0",
     "@storybook/addon-docs": "next",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",

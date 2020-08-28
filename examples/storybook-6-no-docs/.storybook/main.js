@@ -5,6 +5,11 @@ module.exports = {
   addons: [{
     name: '@component-controls/storybook',
     options: {
+      pages: [
+        require.resolve('@component-controls/storybook/full-page'),
+        require.resolve('./testing-page.js'),
+        require.resolve('./viewport-page.js'),
+      ],
       webpack: ['instrument',
       {
         name: 'react-docgen-typescript', 

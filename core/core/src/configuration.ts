@@ -291,10 +291,7 @@ export const defaultRunConfig: RunConfiguration = {
       navSidebar: true,
       contextSidebar: true,
       topMenu: true,
-      tabs: [
-        { title: 'Documentation', type: 'ClassicPage' },
-        { title: 'Testing', type: 'TestingPage' },
-      ],
+      tabs: [{ title: 'Documentation', type: 'ClassicPage' }],
     },
     blog: {
       label: 'Blog',

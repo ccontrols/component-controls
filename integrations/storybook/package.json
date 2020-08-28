@@ -13,7 +13,10 @@
     "dist/",
     "package.json",
     "README.md",
-    "preset.js"
+    "preset.js",
+    "full-page.js",
+    "DocsContainer.js",
+    "DocsContainer.d.ts"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

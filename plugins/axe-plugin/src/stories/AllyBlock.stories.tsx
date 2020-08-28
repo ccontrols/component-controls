@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { BlockContextProvider, store } from '@component-controls/blocks';
-import { AxeAllyBlock } from '../index';
+import { AllyBlock } from '../index';
 
 export default {
-  title: 'Plugins/AxeAllyBlock',
-  component: AxeAllyBlock,
+  title: 'Plugins/AllyBlock',
+  component: AllyBlock,
 };
 
 export const overview: FC = () => {
@@ -13,7 +13,7 @@ export const overview: FC = () => {
       storyId="blocks-core-story-plain--controls"
       store={store}
     >
-      <AxeAllyBlock id="." />
+      <AllyBlock id="." />
     </BlockContextProvider>
   );
 };

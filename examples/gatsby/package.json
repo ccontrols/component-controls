@@ -14,6 +14,7 @@
     "directory": "examples/gatsby"
   },
   "dependencies": {
+    "@component-controls/axe-plugin": "^1.21.0",
     "@component-controls/gatsby-theme-stories": "^1.21.0",
     "@component-controls/viewport-plugin": "^1.21.0",
     "@theme-ui/presets": "^0.4.0-rc.1",

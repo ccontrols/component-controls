@@ -23,6 +23,11 @@ module.exports = {
     {
       name: '@component-controls/storybook',
       options: {
+        pages: [
+          require.resolve('@component-controls/storybook/full-page'),
+          require.resolve('./testing-page'),
+          require.resolve('./viewport-page'),
+        ],
         propsPanel: true,
         storySourcePanel: true,
         storyConfigPanel: true,

@@ -35,6 +35,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@component-controls/core": "^1.21.0",
     "@component-controls/blocks": "^1.21.0",
     "@component-controls/components": "^1.21.0",
     "@component-controls/store": "^1.21.0",

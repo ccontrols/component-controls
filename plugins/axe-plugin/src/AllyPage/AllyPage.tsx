@@ -8,8 +8,9 @@ import {
 import { getControlsCount } from '@component-controls/core';
 import { useCurrentStory } from '@component-controls/store';
 
-import { AxeAllyBlock } from '@component-controls/axe-plugin';
-export const TestingPage: FC = () => {
+import { AllyBlock } from '../AllyBlock';
+
+export const AllyPage: FC = () => {
   const story = useCurrentStory();
   const controlsCount = getControlsCount(story?.controls);
   return (
@@ -24,7 +25,7 @@ export const TestingPage: FC = () => {
           <PropsTable of="." title="Controls" visibility="controls" />
         </>
       )}
-      <AxeAllyBlock title="A11y tests" />
+      <AllyBlock title="A11y tests" />
     </>
   );
 };
