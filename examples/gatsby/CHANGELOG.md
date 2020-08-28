@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/ccontrols/component-controls/compare/v1.22.0...v1.22.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* export react.js from render ([9ffc315](https://github.com/ccontrols/component-controls/commit/9ffc3156162f115ccccabfe8ea35c72d4a73b00f))
+
+
+
+
+
 # [1.22.0](https://github.com/ccontrols/component-controls/compare/v1.21.0...v1.22.0) (2020-08-28)
 
 
