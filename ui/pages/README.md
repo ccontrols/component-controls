@@ -5,7 +5,6 @@
     -   [<ins>CanvasPage</ins>](#inscanvaspageins)
     -   [<ins>ClassicPage</ins>](#insclassicpageins)
     -   [<ins>CurrentStoryPage</ins>](#inscurrentstorypageins)
-    -   [<ins>TestingPage</ins>](#instestingpageins)
 
 # Overview
 
@@ -31,9 +30,5 @@ _ClassicPage [source code](https://github.com/ccontrols/component-controls/tree/
 ## <ins>CurrentStoryPage</ins>
 
 _CurrentStoryPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/CurrentStoryPage/CurrentStoryPage.tsx)_
-
-## <ins>TestingPage</ins>
-
-_TestingPage [source code](https://github.com/ccontrols/component-controls/tree/master/ui/pages/src/TestingPage/TestingPage.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

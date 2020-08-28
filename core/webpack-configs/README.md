@@ -11,7 +11,7 @@
     -   [deepMerge](#deepmerge)
     -   [deepMergeWebpackConfig](#deepmergewebpackconfig)
     -   [deepMergeWithPresets](#deepmergewithpresets)
-    -   [getConfiguredPreset](#getconfigredpreset)
+    -   [getConfiguredPreset](#getconfiguredpreset)
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
     -   [presetsFactory](#presetsfactory)

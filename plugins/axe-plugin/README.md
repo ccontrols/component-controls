@@ -6,7 +6,12 @@
     -   [Install](#install)
     -   [Configure](#configure)
 -   [API](#api)
-    -   [<ins>AxeAllyBlock</ins>](#insaxeallyblockins)
+    -   [<ins>AllyBlock</ins>](#insallyblockins)
+    -   [<ins>AllyPage</ins>](#insallypageins)
+    -   [<ins>AllyBlock</ins>](#insallyblockins-1)
+    -   [<ins>AllyBlock</ins>](#insallyblockins-2)
+    -   [<ins>AllyPage</ins>](#insallypageins-1)
+    -   [<ins>AllyPage</ins>](#insallypageins-2)
     -   [<ins>AxeContextProvider</ins>](#insaxecontextproviderins)
     -   [<ins>SelectionContextProvider</ins>](#insselectioncontextproviderins)
     -   [<ins>useIsTagSelected</ins>](#insuseistagselectedins)
@@ -73,11 +78,11 @@ export const TestingCustomePage= () => (
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 
-## <ins>AxeAllyBlock</ins>
+## <ins>AllyBlock</ins>
 
 Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
 
-_AxeAllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
+_AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
 
 ### properties
 
@@ -91,6 +96,56 @@ _AxeAllyBlock [source code](https://github.com/ccontrols/component-controls/tree
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
 | `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_             | testing id                                                                                                      |
+
+## <ins>AllyPage</ins>
+
+_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/index.tsx)_
+
+## <ins>AllyBlock</ins>
+
+Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
+
+_AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyBlock/AllyBlock.tsx)_
+
+### properties
+
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_               |                                                                                                                 |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_             |                                                                                                                 |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+
+## <ins>AllyBlock</ins>
+
+Story block container that displays displays the [axe](https://github.com/dequelabs/axe-core) ally test results
+
+_AllyBlock [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyBlock/index.ts)_
+
+### properties
+
+| Name          | Type                 | Description                                                                                                     |
+| ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `axeOptions`  | _Spec_               |                                                                                                                 |
+| `id`          | _string_             | optional id to be used for the block if no id is provided, one will be calculated automatically from the title. |
+| `name`        | _string_             |                                                                                                                 |
+| `title`       | _string_             | optional section title for the block.                                                                           |
+| `description` | _string_             | optional markdown description.                                                                                  |
+| `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                     |
+| `sxStyle`     | _ThemeUIStyleObject_ | theme-ui styling object for Block Box                                                                           |
+| `data-testid` | _string_             | testing id                                                                                                      |
+
+## <ins>AllyPage</ins>
+
+_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyPage/AllyPage.tsx)_
+
+## <ins>AllyPage</ins>
+
+_AllyPage [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin/src/AllyPage/index.ts)_
 
 ## <ins>AxeContextProvider</ins>
 

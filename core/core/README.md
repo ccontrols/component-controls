@@ -48,6 +48,7 @@
     -   [TypeValue](#typevalue)
     -   [getComponentName](#getcomponentname)
     -   [PropsInfoExtractorFunction](#propsinfoextractorfunction)
+    -   [ActionItem](#actionitem)
     -   [CodeLocation](#codelocation)
     -   [CodePosition](#codeposition)
     -   [ImportName](#importname)
@@ -55,22 +56,24 @@
     -   [PackageDependencies](#packagedependencies)
     -   [PackageInfo](#packageinfo)
     -   [PackageRepository](#packagerepository)
+    -   [ActionItems](#actionitems)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
+    -   [BuildConfiguration](#buildconfiguration)
     -   [ControlsConfig](#controlsconfig)
     -   [PageLayoutProps](#pagelayoutprops)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
+    -   [SideNavConfiguration](#sidenavconfiguration)
     -   [TabConfiguration](#tabconfiguration)
     -   [ToolbarConfig](#toolbarconfig)
-    -   [BuildConfiguration](#buildconfiguration)
     -   [DocType](#doctype)
+    -   [FrameworkRenderFn](#frameworkrenderfn)
     -   [PageConfiguration](#pageconfiguration)
     -   [PageTabs](#pagetabs)
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
     -   [RunConfiguration](#runconfiguration)
-    -   [SideNavConfiguration](#sidenavconfiguration)
     -   [WebpackConfig](#webpackconfig)
     -   [WebpackConfigFn](#webpackconfigfn)
     -   [defaultBuildConfig](#defaultbuildconfig)
@@ -89,27 +92,19 @@
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
-    -   [PagesConfiguration](#pagesconfiguration-1)
     -   [WebpackConfig](#webpackconfig-1)
     -   [PagesOnlyRoutes](#pagesonlyroutes-1)
-    -   [SideNavConfiguration](#sidenavconfiguration-1)
+    -   [PagesConfiguration](#pagesconfiguration-1)
+    -   [FrameworkRenderFn](#frameworkrenderfn-1)
+    -   [ActionItems](#actionitems-1)
     -   [PageTabs](#pagetabs-1)
     -   [PageConfiguration](#pageconfiguration-1)
-    -   [BuildConfiguration](#buildconfiguration-1)
     -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [Story](#story-2)
     -   [DocType](#doctype-2)
-    -   [SideNavConfiguration](#sidenavconfiguration-2)
     -   [PageTabs](#pagetabs-2)
-    -   [WebpackConfig](#webpackconfig-2)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-2)
     -   [StoryArguments](#storyarguments-2)
     -   [StoryRenderFn](#storyrenderfn-2)
-    -   [WebpackConfigFn](#webpackconfigfn-2)
-    -   [DocType](#doctype-3)
-    -   [PageConfiguration](#pageconfiguration-2)
-    -   [SideNavConfiguration](#sidenavconfiguration-3)
-    -   [PageTabs](#pagetabs-3)
 
 # Overview
 
@@ -865,12 +860,34 @@ _defined in [@component-controls/core/src/propsInfo.ts](https://github.com/ccont
 | `source`        | string                                                                                                   |             |
 | `returns`       | Promise&lt;[ComponentInfo](#componentinfo) \| undefined> \| [ComponentInfo](#componentinfo) \| undefined |             |
 
+## ActionItem
+
+an item in the ActionBar component
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L134)_
+
+
+
+### properties
+
+| Name         | Type                                                                                           | Description                                                                                                                                                        |
+| ------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `aria-label` | string                                                                                         | optional label visible to screen readers for aria accessibility.                                                                                                   |
+| `group`      | string \| number                                                                               | optional group. ActionItems in the same group will not be separated by horizonal margin                                                                            |
+| `hidden`     | boolean                                                                                        | hide an action item                                                                                                                                                |
+| `href`       | string                                                                                         | if the title is a string and href is set will use a default \`&lt;Link />\` component                                                                              |
+| `id`         | string                                                                                         | optional id, used if title is not set                                                                                                                              |
+| `node*`      | [React.ReactNode](#react.reactnode)                                                            | title - if a string, will use the built-in components, else can prvide custom React component                                                                      |
+| `onClick`    | **function** (`e`\*: MouseEvent&lt;[HTMLButtonElement](#htmlbuttonelement)>): void \| boolean; | if the title is a string and href is not set, onClick will be used on a \`&lt;Button />\` component                                                                |
+| `order`      | number                                                                                         | optional order, if not provided will use the natural order of items from right to left                                                                             |
+| `panel`      | [React.ReactNode](#react.reactnode)                                                            | panel for Tab-enabled UI, where an action item can open up a panel with tabs in this case, the onClick function can return true/false whether to open up the panel |
+
 ## CodeLocation
 
 location in the source code of a story or part of it
 ie. arguments, usage of arguments
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L16)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L18)_
 
 
 
@@ -886,7 +903,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 position in the stories source code
 usually taken from AST traverse loaders
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L6)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L8)_
 
 
 
@@ -901,7 +918,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 an import name
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L106)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L108)_
 
 
 
@@ -916,7 +933,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 imports - library/file as key and the imported names as an array
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L120)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L122)_
 
 `key`\*: string: [ImportName](#importname)\[]
 
@@ -924,7 +941,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 list of dependencies - package name as the key and the version as the value
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L49)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L51)_
 
 `name`\*: string: [PackageDependency](#packagedependency)
 
@@ -933,7 +950,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 package.json
 information about the repository of the stories and components
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L57)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L59)_
 
 
 
@@ -953,7 +970,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 repository information from package.json
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L24)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L26)_
 
 
 
@@ -965,11 +982,17 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `docs`   | string | link for project readme                 |
 | `issues` | string | link for filing issues with the project |
 
+## ActionItems
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+
+[ActionItem](#actionitem)\[]
+
 ## PackageDependency
 
 dependecy string - the package version number
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L44)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L46)_
 
 string
 
@@ -977,7 +1000,7 @@ string
 
 story render function
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L98)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -993,15 +1016,35 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 default export keyword
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L127)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L129)_
 
 
+
+## BuildConfiguration
+
+global configuration used at build time
+stored in a file named main.js/main.ts
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L128)_
+
+
+
+### properties
+
+| Name           | Type                                | Description                                                                                                                                    |
+| -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `categories`   | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
+| `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
+| `instrument`   | any                                 | instrumentation configuration                                                                                                                  |
+| `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `stories`      | string\[]                           | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
 ## ControlsConfig
 
 configuration options for the controls module
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L160)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L171)_
 
 
 
@@ -1015,7 +1058,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 page layout - sidebars, full width
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L36)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L47)_
 
 
 
@@ -1032,7 +1075,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L172)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L183)_
 
 
 
@@ -1047,6 +1090,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
 | `footer`          | [ToolbarConfig](#toolbarconfig)                      | custom footer items                                                                                                                                                                  |
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
+| `renderFn`        | [FrameworkRenderFn](#frameworkrenderfn)              | framework-specific render function. By default react render                                                                                                                          |
 | `sidebar`         | [ActionItems](#actionitems)                          | custom sidebar items                                                                                                                                                                 |
 | `siteCopyright`   | string                                               | copyright notice displayed in the footer                                                                                                                                             |
 | `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
@@ -1058,11 +1102,24 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
 | `toolbar`         | [ToolbarConfig](#toolbarconfig)                      | custom toolbar items                                                                                                                                                                 |
 
+## SideNavConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
+
+
+
+### properties
+
+| Name             | Type    | Description                                                                                                                  |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `collapseSingle` | boolean | if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself          |
+| `storyPaths`     | boolean | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories. |
+
 ## TabConfiguration
 
 story type pages can have multiple tabs with separate page configurations.
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L9)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L20)_
 
 
 
@@ -1077,7 +1134,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L145)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L156)_
 
 
 
@@ -1088,46 +1145,32 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `left`  | [ActionItems](#actionitems) | left side toolbar items  |
 | `right` | [ActionItems](#actionitems) | right side toolbar items |
 
-## BuildConfiguration
-
-global configuration used at build time
-stored in a file named main.js/main.ts
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
-
-page types that are considered as categories fields as well
-
-**categories**: [DocType](#doctype)\[]
-
-**finalWebpack**: [WebpackConfig](#webpackconfig)
-
-instrumentation configuration
-
-**instrument**: any
-
-base url path for API documentation pages. Default is "docs/"
-
-**pages**: [PagesOnlyRoutes](#pagesonlyroutes)
-
-wild card search string for the stories
-internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
-example: "./stories/
-
-**stories**: string\[]
-
-custom webpack configuration setup. One or the other will be used
-
-**webpack**: [WebpackConfig](#webpackconfig)
-
 ## DocType
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
+## FrameworkRenderFn
+
+render function by framework. By default 'react'
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
+
+**function** (`storyId`\*: string, `store`\*: [Store](#store), `options`: any): [ReactElement](#reactelement);
+
+### parameters
+
+| Name       | Type                          | Description |
+| ---------- | ----------------------------- | ----------- |
+| `storyId*` | string                        |             |
+| `store*`   | [Store](#store)               |             |
+| `options`  | any                           |             |
+| `returns`  | [ReactElement](#reactelement) |             |
+
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L72)_
 
 ### properties
 
@@ -1144,13 +1187,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## PageTabs
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L39)_
 
 [TabConfiguration](#tabconfiguration)\[]
 
 ## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L98)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L109)_
 
 Record&lt;
 
@@ -1164,7 +1207,7 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
 
 Record&lt;
 
@@ -1183,7 +1226,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L260)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L275)_
 
 ### properties
 
@@ -1192,27 +1235,15 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
 | `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
 
-## SideNavConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
-
-if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
-
-**collapseSingle**: boolean
-
-if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
-
-**storyPaths**: boolean
-
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L115)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1226,7 +1257,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L303)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L315)_
 
 
 
@@ -1239,7 +1270,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L263)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L278)_
 
 
 
@@ -1303,7 +1334,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L260)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L275)_
 
 ### properties
 
@@ -1361,7 +1392,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 story render function
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L98)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -1375,7 +1406,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ## DocType
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
@@ -1433,33 +1464,19 @@ _defined in [@component-controls/core/src/components.ts](https://github.com/ccon
 
 dependecy string - the package version number
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L44)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L46)_
 
 string
 
-## PagesConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L98)_
-
-Record&lt;
-
-[DocType](#doctype)
-
-, 
-
-[PageConfiguration](#pageconfiguration)
-
->
-
 ## WebpackConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L115)_
 
 [WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
 
 Record&lt;
 
@@ -1476,27 +1493,52 @@ Record&lt;
 
 >
 
-## SideNavConfiguration
+## PagesConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L109)_
 
-if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
+Record&lt;
 
-**collapseSingle**: boolean
+[DocType](#doctype)
 
-if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
+, 
 
-**storyPaths**: boolean
+[PageConfiguration](#pageconfiguration)
+
+>
+
+## FrameworkRenderFn
+
+render function by framework. By default 'react'
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
+
+**function** (`storyId`\*: string, `store`\*: [Store](#store), `options`: any): [ReactElement](#reactelement);
+
+### parameters
+
+| Name       | Type                          | Description |
+| ---------- | ----------------------------- | ----------- |
+| `storyId*` | string                        |             |
+| `store*`   | [Store](#store)               |             |
+| `options`  | any                           |             |
+| `returns`  | [ReactElement](#reactelement) |             |
+
+## ActionItems
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L180)_
+
+[ActionItem](#actionitem)\[]
 
 ## PageTabs
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L39)_
 
 [TabConfiguration](#tabconfiguration)\[]
 
 ## PageConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L72)_
 
 ### properties
 
@@ -1511,40 +1553,9 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
 | `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
 
-## BuildConfiguration
-
-global configuration used at build time
-stored in a file named main.js/main.ts
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
-
-page types that are considered as categories fields as well
-
-**categories**: [DocType](#doctype)\[]
-
-**finalWebpack**: [WebpackConfig](#webpackconfig)
-
-instrumentation configuration
-
-**instrument**: any
-
-base url path for API documentation pages. Default is "docs/"
-
-**pages**: [PagesOnlyRoutes](#pagesonlyroutes)
-
-wild card search string for the stories
-internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob
-example: "./stories/
-
-**stories**: string\[]
-
-custom webpack configuration setup. One or the other will be used
-
-**webpack**: [WebpackConfig](#webpackconfig)
-
 ## WebpackConfigFn
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
 
 **function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
 
@@ -1579,52 +1590,15 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## DocType
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
-## SideNavConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
-
-if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
-
-**collapseSingle**: boolean
-
-if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
-
-**storyPaths**: boolean
-
 ## PageTabs
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L39)_
 
 [TabConfiguration](#tabconfiguration)\[]
-
-## WebpackConfig
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L104)_
-
-[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
-
-## PagesOnlyRoutes
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L106)_
-
-Record&lt;
-
-[DocType](#doctype)
-
-, 
-
-### properties
-
-| Name   | Type                                                                      | Description |
-| ------ | ------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
-
->
 
 ## StoryArguments
 
@@ -1639,7 +1613,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 story render function
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L98)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
 **function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
 
@@ -1650,60 +1624,5 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `controlValues*` | \[key: string]: any |             |
 | `context`        | any                 |             |
 | `returns`        | any                 |             |
-
-## WebpackConfigFn
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L100)_
-
-**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
-
-### parameters
-
-| Name      | Type                                          | Description |
-| --------- | --------------------------------------------- | ----------- |
-| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
-| `options` | any                                           |             |
-| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
-
-## DocType
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L30)_
-
-'story' | 'blog' | 'page' | 'tags' | 'author' | string
-
-## PageConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L61)_
-
-### properties
-
-| Name              | Type                                          | Description                                                                                                                   |
-| ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`        | string                                        | base url path for the page                                                                                                    |
-| `container`       | [ComponentType](#componenttype) \| null       | page container react component                                                                                                |
-| `indexHome`       | boolean                                       | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
-| `label`           | string                                        | label - used for menu labels                                                                                                  |
-| `sideNav`         | [SideNavConfiguration](#sidenavconfiguration) | side navigation configuration                                                                                                 |
-| `tabs`            | [PageTabs](#pagetabs)                         | tabs configuration for story-type pages                                                                                       |
-| `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
-| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
-
-## SideNavConfiguration
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L50)_
-
-if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself
-
-**collapseSingle**: boolean
-
-if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories.
-
-**storyPaths**: boolean
-
-## PageTabs
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L28)_
-
-[TabConfiguration](#tabconfiguration)\[]
 
 <!-- END-TSDOC-TYPESCRIPT -->

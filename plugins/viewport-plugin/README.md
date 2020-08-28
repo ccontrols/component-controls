@@ -10,6 +10,8 @@
     -   [<ins>ViewportBlock</ins>](#insviewportblockins)
     -   [<ins>ViewportBox</ins>](#insviewportboxins)
     -   [<ins>ViewportPage</ins>](#insviewportpageins)
+    -   [<ins>overview</ins>](#insoverviewins)
+    -   [<ins>sizes</ins>](#inssizesins)
 
 # In action
 
@@ -98,10 +100,11 @@ _ViewportBox [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name      | Type     | Description |
-| --------- | -------- | ----------- |
-| `storyId` | _string_ |             |
-| `size*`   | _number_ |             |
+| Name         | Type     | Description |
+| ------------ | -------- | ----------- |
+| `storyId`    | _string_ |             |
+| `size*`      | _number_ |             |
+| `sizeLabel*` | _string_ |             |
 
 ## <ins>ViewportPage</ins>
 
@@ -119,5 +122,13 @@ _ViewportPage [source code](https://github.com/ccontrols/component-controls/tree
 | `sxStyle`     | _ThemeUIStyleObject_        | theme-ui styling object for Block Box                                                                           |
 | `data-testid` | _string_                    | testing id                                                                                                      |
 | `name`        | _string_                    |                                                                                                                 |
+
+## <ins>overview</ins>
+
+_overview [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/stories/ViewportBlock.stories.tsx)_
+
+## <ins>sizes</ins>
+
+_sizes [source code](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin/src/stories/ViewportBlock.stories.tsx)_
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

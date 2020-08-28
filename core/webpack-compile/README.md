@@ -37,7 +37,7 @@ $ npm install @component-controls/webpack-compile --save-dev
 compile the stories with webpack
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L15)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L14)_
 
 **function** compile(`__namedParameters`\*: **bundleName**: string**configPath**: string**distFolder**: string**logOptions**: **presets**: string | [RuleOptions](#ruleoptions)\[]**staticFolder**: string**webPack**: [Configuration](#configuration), `callback`: [CompilerCallbackFn](#compilercallbackfn)): Promise&lt;[CompileResults](#compileresults)>;
 
@@ -54,7 +54,7 @@ _defined in [@component-controls/webpack-compile/src/index.ts](https://github.co
 compile the stories with webpack and launch watching for changes
 returns the stories store object
 
-_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L48)_
+_defined in [@component-controls/webpack-compile/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile/src/index.ts#L47)_
 
 **function** watch(`__namedParameters`\*: **bundleName**: string**configPath**: string**distFolder**: string**logOptions**: **presets**: string | [RuleOptions](#ruleoptions)\[]**staticFolder**: string**watchOptions**: [WatchOptions](#watchoptions)**webPack**: [Configuration](#configuration), `callback`: [CompilerCallbackFn](#compilercallbackfn)): Promise&lt;[CompileResults](#compileresults)>;
 
