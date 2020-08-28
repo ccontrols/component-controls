@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Plugins/AllyBlock Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xkyebe"
+  >
+    <div
+      class="css-jxxswp"
+      id=""
+    >
+      <div
+        class="css-xhp9da"
+      >
+        <h3
+          class="css-1p18zt3-BlockContainer"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="rah-static rah-static--height-auto"
+      style="height: auto; overflow: visible;"
+    >
+      <div>
+        <div>
+          <div
+            class="css-15owl46"
+          >
+            <div
+              class="css-x60p33"
+            >
+              <div
+                class="css-1c62bzt"
+              >
+                <button
+                  aria-label="display the accessibility overview dashboard"
+                  class="css-1b2uwqj"
+                >
+                  close dashboard
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-y7renv"
+          >
+            <div>
+              <div
+                class="css-1oteowz"
+              >
+                <div
+                  class="css-1xkyebe"
+                >
+                  <div
+                    class="css-jxxswp"
+                    id=""
+                  >
+                    <div
+                      class="css-xhp9da"
+                    >
+                      <h3
+                        class="css-1p18zt3-BlockContainer"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="false"
+                    class="rah-static rah-static--height-auto"
+                    style="height: auto; overflow: visible;"
+                  >
+                    <div>
+                      <div
+                        class="css-154oin1"
+                        data-testid="story"
+                        id="blocks-core-story-plain--controls"
+                      >
+                        <div
+                          class="story-render-container css-dhmrnb"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="rah-animating rah-animating--down rah-animating--to-height-auto"
+              style="height: 0px; overflow: hidden; transition: height 250ms ease 0ms;"
+            >
+              <div
+                style=""
+              >
+                <div
+                  class="css-ez35gb"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
