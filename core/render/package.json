@@ -9,6 +9,7 @@
     "dist/",
     "package.json",
     "README.md",
+    "react.js",
     "react.d.ts"
   ],
   "scripts": {
