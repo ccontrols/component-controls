@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/render",
-  "version": "1.21.0",
+  "version": "1.22.0",
   "description": "framework render functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,17 +31,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.21.0",
+    "@component-controls/core": "^1.22.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "typescript": "^3.8.3",
     "@types/jest": "^26.0.10",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",

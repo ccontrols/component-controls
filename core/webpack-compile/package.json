@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-compile",
-  "version": "1.21.0",
+  "version": "1.22.0",
   "description": "Webpack compile api",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -16,7 +16,8 @@
   ],
   "bin": {
     "ccc": "./bin/index.js"
-  },  "scripts": {
+  },
+  "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
     "dev": "yarn cross-env NODE_ENV=development rollup -cw",
     "docs": "ts-md",
@@ -36,13 +37,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/loader": "^1.21.0",
-    "@component-controls/logger": "^1.21.0",
-    "@component-controls/webpack-configs": "^1.21.0",
+    "@component-controls/loader": "^1.22.0",
+    "@component-controls/logger": "^1.22.0",
+    "@component-controls/webpack-configs": "^1.22.0",
     "memory-fs": "^0.5.0",
     "typescript": "^3.8.3",
-    "yargs": "^15.3.1",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.21.0",
