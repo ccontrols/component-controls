@@ -3,8 +3,7 @@ import { jsx, Box, Text } from 'theme-ui';
 import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
-import { AllyPage } from "@component-controls/axe-plugin";
-import { ViewportPage } from "@component-controls/viewport-plugin";
+import { TestingPage } from "./TestingPage";
 
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
 
@@ -25,8 +24,7 @@ const config: RunOnlyConfiguration = {
       label: 'API',
       tabs: [
         ...defaultRunConfig.pages.story.tabs,
-        { title: 'Testing', render: () => <AllyPage /> },
-        { title: 'Viewport', render: () => <ViewportPage /> },
+        { title: 'Testing', render: () => <TestingPage /> },
       ],
       sideNav: {
         collapseSingle: false,

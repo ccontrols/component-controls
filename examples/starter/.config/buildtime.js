@@ -19,7 +19,7 @@ module.exports = {
     story: {
       tabs: [
         ...defaultBuildConfig.pages.story.tabs,
-        { route: 'viewport' },
+        { route: 'test' },
       ],
     },
   },

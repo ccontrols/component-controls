@@ -25,7 +25,7 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [{ route: 'page' }, { route: 'test' }, { route: 'viewport' }],
+      tabs: [{ route: 'page' }, { route: 'test' }],
     },
     blog: {
       basePath: 'blogs/',

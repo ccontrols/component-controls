@@ -1,6 +1,6 @@
 import React from 'react';
 import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
-import { ViewportPage } from "@component-controls/viewport-plugin";
+import { TestingPage } from "./TestingPage";
 
 const config: RunOnlyConfiguration = {
   siteTitle: `awLib`,
@@ -10,7 +10,7 @@ const config: RunOnlyConfiguration = {
     story: {
       tabs: [
         ...defaultRunConfig.pages.story.tabs,
-        { title: 'Viewport', render: () => <ViewportPage /> },
+        { title: 'Testing', render: () => <TestingPage /> },
       ],
     },
   },

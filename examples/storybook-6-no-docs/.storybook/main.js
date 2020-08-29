@@ -8,7 +8,6 @@ module.exports = {
       pages: [
         require.resolve('@component-controls/storybook/full-page'),
         require.resolve('./testing-page.js'),
-        require.resolve('./viewport-page.js'),
       ],
       webpack: ['instrument',
       {
