@@ -18,7 +18,7 @@
   "dependencies": {
     "@component-controls/axe-plugin": "^1.22.1",
     "@component-controls/blocks": "^1.22.1",
-    "@component-controls/core": "^1.22.1",
+    "@component-controls/core": "^1.22.0",
     "@component-controls/nextjs-plugin": "^1.22.1",
     "@component-controls/viewport-plugin": "^1.22.1",
     "@theme-ui/presets": "^0.4.0-rc.1",

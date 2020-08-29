@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@component-controls/axe-plugin": "^1.22.1",
+    "@component-controls/blocks": "^1.22.1",
     "@component-controls/core": "^1.22.0",
+    "@component-controls/store": "^1.22.1",
     "@component-controls/storybook": "^1.22.1",
     "@component-controls/viewport-plugin": "^1.22.1",
     "@storybook/react": "next",
