@@ -83,8 +83,8 @@ export const extractComponent = async (
     };
   }
 
-  globalCache[filePath] = { component, componentPackage };
-  return globalCache[filePath];
+  globalCache[cacheKey] = { component, componentPackage };
+  return globalCache[cacheKey];
 };
 
 export const extractStoreComponent = async (

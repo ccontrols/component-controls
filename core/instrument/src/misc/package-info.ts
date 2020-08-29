@@ -86,7 +86,7 @@ export const packageInfo = async (
         peerDependencies,
       } = packageJSON;
       const result: PackageInfo = {
-        fileHash: hashStoreId(filePath),
+        fileHash: hashStoreId(`${filePath}-${partName}`),
         name,
         version,
         repository: {},
