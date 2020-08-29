@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-snapshots",
-  "version": "1.24.1",
+  "version": "1.24.2",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -40,9 +40,9 @@
     "cc-jest": "./bin/index.js"
   },
   "dependencies": {
-    "@component-controls/store": "^1.24.1",
-    "@component-controls/webpack-compile": "^1.24.1",
-    "@component-controls/webpack-configs": "^1.24.1",
+    "@component-controls/store": "^1.24.2",
+    "@component-controls/webpack-compile": "^1.24.2",
+    "@component-controls/webpack-configs": "^1.24.2",
     "jest-cli": "^26.4.2",
     "rc-util": "^5.0.7"
   },

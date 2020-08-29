@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.2](https://github.com/ccontrols/component-controls/compare/v1.24.1...v1.24.2) (2020-08-29)
+
+
+### Bug Fixes
+
+* components package hash in same file ([d47b57d](https://github.com/ccontrols/component-controls/commit/d47b57d5220da37b7175caa3fccfd39316377b2d))
+
+
+
+
+
 ## [1.24.1](https://github.com/ccontrols/component-controls/compare/v1.24.0...v1.24.1) (2020-08-29)
 
 **Note:** Version bump only for package @component-controls/instrument
