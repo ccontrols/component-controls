@@ -1,5 +1,5 @@
 import React from 'react';
-import { Donut } from 'theme-ui';
+import { Donut, Text } from 'theme-ui';
 import { HoverBox } from '.';
 
 export default {
@@ -9,6 +9,7 @@ export default {
 
 export const overview = () => (
   <HoverBox label="donut component">
-    <Donut value={1 / 2} />,
+    <Donut value={1 / 2} />
+    <Text>some text</Text>
   </HoverBox>
 );

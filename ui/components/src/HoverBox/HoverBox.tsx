@@ -17,7 +17,9 @@ export const HoverBox: FC<HoverBoxProps> = ({ label, children }) => {
   return (
     <Box variant="hoverbox.container">
       <Box variant="hoverbox.inner">{children}</Box>
-      <Text variant="hoverbox.text">{label}</Text>
+      <Text variant="hoverbox.text" className="hoverbox-text">
+        {label}
+      </Text>
     </Box>
   );
 };
