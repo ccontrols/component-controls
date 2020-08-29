@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { FC } from 'react';
-import { Box, Theme, Text, jsx } from 'theme-ui';
+import React, { FC } from 'react';
 import { Story } from '@component-controls/blocks';
+import { HoverBox } from '@component-controls/components';
 
 export interface ViewportBoxProps {
   storyId?: string;
@@ -14,26 +13,8 @@ export const ViewportBox: FC<ViewportBoxProps> = ({
   sizeLabel,
 }) => {
   return (
-    <Box
-      sx={{
-        minHeight: '100%',
-        minWidth: 'unset',
-        pr: 4,
-        ':hover': {
-          '& > div': {
-            color: 'mutedText',
-          },
-        },
-      }}
-    >
-      <Box
-        sx={{
-          boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
-        }}
-      >
-        <Story id={storyId} sxStyle={{ mb: 0, minWidth: size }} />
-      </Box>
-      <Text sx={{ color: 'muted', fontWeight: 'bold' }}>{sizeLabel}</Text>
-    </Box>
+    <HoverBox label={sizeLabel}>
+      <Story id={storyId} sxStyle={{ mb: 0, minWidth: size }} />
+    </HoverBox>
   );
 };

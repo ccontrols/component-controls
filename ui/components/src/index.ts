@@ -5,6 +5,7 @@ export * from './Collapsible';
 export * from './ColorMode';
 export * from './ExternalLink';
 export * from './Header';
+export * from './HoverBox';
 export * from './Keyboard';
 export * from './Link';
 export * from './Markdown';

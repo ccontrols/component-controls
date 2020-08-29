@@ -47,6 +47,7 @@ export type ControlsTheme = {
   story: Record<string, ThemeUIStyleObject>;
   colormode: Record<string, ThemeUIStyleObject>;
   header: ThemeUIStyleObject;
+  hoverbox: Record<string, ThemeUIStyleObject>;
   navmenu: Record<string, ThemeUIStyleObject>;
   pagination: Record<string, ThemeUIStyleObject>;
   sidebar: Record<string, ThemeUIStyleObject>;
@@ -734,6 +735,22 @@ export const theme: ControlsTheme = {
     flexDirection: 'row',
     alignItems: 'center',
     boxShadow: (t: Theme) => `0 1px 3px 1px ${t.colors?.shadow}`,
+  },
+  hoverbox: {
+    container: {
+      minHeight: '100%',
+      minWidth: 'unset',
+      pr: 4,
+      ':hover': {
+        '& > div': {
+          color: 'mutedText',
+        },
+      },
+    },
+    inner: {
+      boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
+    },
+    text: { color: 'muted', fontWeight: 'bold' },
   },
   navmenu: {
     link: {

@@ -11,6 +11,7 @@
     -   [<ins>ColorMode</ins>](#inscolormodeins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>Header</ins>](#insheaderins)
+    -   [<ins>HoverBox</ins>](#inshoverboxins)
     -   [<ins>Keyboard</ins>](#inskeyboardins)
     -   [<ins>Link</ins>](#inslinkins)
     -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
@@ -191,6 +192,18 @@ _Header [source code](https://github.com/ccontrols/component-controls/tree/maste
 | --------- | --------------------- | ----------- |
 | `as`      | _ElementType&lt;any>_ |             |
 | `variant` | _string_              |             |
+
+## <ins>HoverBox</ins>
+
+Box component that will fade/outline a label at the bottom
+
+_HoverBox [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/HoverBox/HoverBox.tsx)_
+
+### properties
+
+| Name     | Type     | Description                                    |
+| -------- | -------- | ---------------------------------------------- |
+| `label*` | _string_ | laabel to be displayed when the box is hovered |
 
 ## <ins>Keyboard</ins>
 
