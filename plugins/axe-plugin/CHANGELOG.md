@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/ccontrols/component-controls/compare/v1.22.1...v1.23.0) (2020-08-29)
+
+
+### Features
+
+* custom Testing page ([c47e0ba](https://github.com/ccontrols/component-controls/commit/c47e0babc4544d729560524d78ff9045f213ba42))
+
+
+
+
+
 ## [1.22.1](https://github.com/ccontrols/component-controls/compare/v1.22.0...v1.22.1) (2020-08-28)
 
 **Note:** Version bump only for package @component-controls/axe-plugin
