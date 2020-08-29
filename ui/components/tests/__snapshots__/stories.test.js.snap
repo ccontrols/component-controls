@@ -952,7 +952,7 @@ exports[`Components/Header Overview 1`] = `
 exports[`Components/HoverBox Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-xs2u7b"
+    class="css-1hcw92l"
   >
     <div
       class="css-12caf47"
@@ -985,10 +985,14 @@ exports[`Components/HoverBox Overview 1`] = `
           transform="rotate(-90 16 16)"
         />
       </svg>
-      ,
+      <div
+        class="css-vurnku"
+      >
+        some text
+      </div>
     </div>
     <div
-      class="css-12z3jo9"
+      class="hoverbox-text css-12z3jo9"
     >
       donut component
     </div>

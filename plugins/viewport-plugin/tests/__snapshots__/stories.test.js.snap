@@ -52,7 +52,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
               class="css-iux8x2"
             >
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -92,13 +92,13 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   320px
                 </div>
               </div>
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -138,13 +138,13 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   375px
                 </div>
               </div>
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -184,13 +184,13 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   768px
                 </div>
               </div>
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -230,7 +230,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   1024px
                 </div>
@@ -296,7 +296,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
               class="css-iux8x2"
             >
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -336,13 +336,13 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   xsmall
                 </div>
               </div>
               <div
-                class="css-xs2u7b"
+                class="css-1hcw92l"
               >
                 <div
                   class="css-12caf47"
@@ -382,7 +382,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-12z3jo9"
+                  class="hoverbox-text css-12z3jo9"
                 >
                   small
                 </div>
