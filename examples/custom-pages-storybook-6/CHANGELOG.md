@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/ccontrols/component-controls/compare/v1.23.0...v1.24.0) (2020-08-29)
+
+**Note:** Version bump only for package custom-pages-storybook-6
+
+
+
+
+
 # [1.23.0](https://github.com/ccontrols/component-controls/compare/v1.22.1...v1.23.0) (2020-08-29)
 
 **Note:** Version bump only for package custom-pages-storybook-6
