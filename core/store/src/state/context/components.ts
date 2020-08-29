@@ -6,7 +6,7 @@ import {
 } from '@component-controls/core';
 
 import { useStore } from './store';
-import { useStory } from './story';
+import { useStory, useCurrentStory } from './story';
 import { useCurrentDocument } from './document';
 
 export interface ComponentInputProps {
@@ -134,13 +134,14 @@ export const useComponent = ({
  */
 
 export const useCurrentPropsCount = (): number => {
-  const components = useComponents({ of: '.' });
   const store = useStore();
+  const story = useCurrentStory();
+  const components = useComponents({ name: story?.id });
   const doc = useCurrentDocument();
   return components && doc
     ? Object.keys(components).reduce((acc, key) => {
         const component = store.components[doc.componentsLookup[key]];
-        return acc + Object.keys(component.info?.props || {}).length;
+        return acc + Object.keys(component?.info?.props || {}).length;
       }, 0)
     : 0;
 };
