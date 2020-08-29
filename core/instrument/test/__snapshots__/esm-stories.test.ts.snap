@@ -8,11 +8,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.142Z,
     "dateModified": 2020-07-17T14:45:46.142Z,
-    "package": "25920f3d7248502e343cd20b80fffb17",
+    "package": "a764e2f1f1f8cc23edccb9cfb301ec8e",
     "title": "Story",
   },
   "packages": Object {
-    "25920f3d7248502e343cd20b80fffb17": Object {
+    "a764e2f1f1f8cc23edccb9cfb301ec8e": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -45,7 +45,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "25920f3d7248502e343cd20b80fffb17",
+      "fileHash": "a764e2f1f1f8cc23edccb9cfb301ec8e",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -53,7 +53,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {},
@@ -73,11 +73,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.142Z,
     "dateModified": 2020-07-17T14:45:46.142Z,
-    "package": "bcca088a5f5c78ca90b1d26a540b85e8",
+    "package": "5f97f1689681bb75b22fb6973c4c8397",
     "title": "Story",
   },
   "packages": Object {
-    "bcca088a5f5c78ca90b1d26a540b85e8": Object {
+    "5f97f1689681bb75b22fb6973c4c8397": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -110,7 +110,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "bcca088a5f5c78ca90b1d26a540b85e8",
+      "fileHash": "5f97f1689681bb75b22fb6973c4c8397",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -118,7 +118,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -153,11 +153,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.141Z,
     "dateModified": 2020-07-17T14:45:46.141Z,
-    "package": "318ee2593df867f715fd861db60e5abf",
+    "package": "947c20fa355bb677d067a09d46558900",
     "title": "Story",
   },
   "packages": Object {
-    "318ee2593df867f715fd861db60e5abf": Object {
+    "947c20fa355bb677d067a09d46558900": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -190,7 +190,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "318ee2593df867f715fd861db60e5abf",
+      "fileHash": "947c20fa355bb677d067a09d46558900",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -198,7 +198,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {},
@@ -216,11 +216,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.141Z,
     "dateModified": 2020-07-17T14:45:46.141Z,
-    "package": "2ed1b6c570450cfa3cd7c74cc78ca56b",
+    "package": "c525e04e9beb03220dd4fa6d09af4958",
     "title": "Story",
   },
   "packages": Object {
-    "2ed1b6c570450cfa3cd7c74cc78ca56b": Object {
+    "c525e04e9beb03220dd4fa6d09af4958": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -253,7 +253,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "2ed1b6c570450cfa3cd7c74cc78ca56b",
+      "fileHash": "c525e04e9beb03220dd4fa6d09af4958",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -261,7 +261,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -311,11 +311,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.141Z,
     "dateModified": 2020-07-17T14:45:46.141Z,
-    "package": "f1a4b6accd2b3403016fbabeec45c742",
+    "package": "3135bea8e9a3103e26e81e541800e043",
     "title": "Story",
   },
   "packages": Object {
-    "f1a4b6accd2b3403016fbabeec45c742": Object {
+    "3135bea8e9a3103e26e81e541800e043": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -348,7 +348,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "f1a4b6accd2b3403016fbabeec45c742",
+      "fileHash": "3135bea8e9a3103e26e81e541800e043",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -356,7 +356,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -464,11 +464,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.140Z,
     "dateModified": 2020-07-17T14:45:46.140Z,
-    "package": "4c8ad6c7277231fb9a5b27d4311a8667",
+    "package": "33a786db69e3366a4131eef973b8ad77",
     "title": "Story",
   },
   "packages": Object {
-    "4c8ad6c7277231fb9a5b27d4311a8667": Object {
+    "33a786db69e3366a4131eef973b8ad77": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -501,7 +501,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "4c8ad6c7277231fb9a5b27d4311a8667",
+      "fileHash": "33a786db69e3366a4131eef973b8ad77",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -509,7 +509,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -573,11 +573,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.140Z,
     "dateModified": 2020-07-17T14:45:46.140Z,
-    "package": "ba875b7136e19d0acee47ecca70f30c1",
+    "package": "244bd9e12bf9fbfc25a493133455fa30",
     "title": "Story",
   },
   "packages": Object {
-    "ba875b7136e19d0acee47ecca70f30c1": Object {
+    "244bd9e12bf9fbfc25a493133455fa30": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -610,7 +610,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "ba875b7136e19d0acee47ecca70f30c1",
+      "fileHash": "244bd9e12bf9fbfc25a493133455fa30",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -618,7 +618,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -697,11 +697,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.140Z,
     "dateModified": 2020-07-17T14:45:46.140Z,
-    "package": "38da62adc9c63c890999f65a2c6f757e",
+    "package": "dda8a6c0184dad7581d495667190312f",
     "title": "Story",
   },
   "packages": Object {
-    "38da62adc9c63c890999f65a2c6f757e": Object {
+    "dda8a6c0184dad7581d495667190312f": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -734,7 +734,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "38da62adc9c63c890999f65a2c6f757e",
+      "fileHash": "dda8a6c0184dad7581d495667190312f",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -742,7 +742,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {
@@ -821,11 +821,11 @@ Object {
     "componentsLookup": Object {},
     "date": 2020-07-17T14:45:46.140Z,
     "dateModified": 2020-07-17T14:45:46.140Z,
-    "package": "3b3060a06e2dac8176e2c0a660f8b956",
+    "package": "b92edb32865b71e9d6623213bf5d565d",
     "title": "Story",
   },
   "packages": Object {
-    "3b3060a06e2dac8176e2c0a660f8b956": Object {
+    "b92edb32865b71e9d6623213bf5d565d": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -858,7 +858,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "3b3060a06e2dac8176e2c0a660f8b956",
+      "fileHash": "b92edb32865b71e9d6623213bf5d565d",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -866,7 +866,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {

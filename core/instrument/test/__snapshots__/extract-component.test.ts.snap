@@ -49,11 +49,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "c4da3ef5ae7dc15865c9b8aa98f719dc",
+    "fileHash": "68d46d6964a53de9df203beb8794fb61",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -107,11 +107,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "305b7edffa5cab1bfaf0c86ebde067bd",
+    "fileHash": "ceea0565a65f75c8c7b6b355d6d335ac",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -154,11 +154,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "b41f19e3aba66e13c7c63622846d80e1",
+    "fileHash": "f96a7e8142d3ef97c1bdda38ff7a5b92",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -203,11 +203,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "d817f3a58ea487eda1317bcff4199751",
+    "fileHash": "2f4bd34d15be236674abaf6e894afe6e",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -261,11 +261,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
+    "fileHash": "996a04cd0627e5de9c21977a04008534",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -296,7 +296,7 @@ Object {
       "@theme-ui/theme-provider": "^0.4.0-rc.1",
     },
     "devDependencies": undefined,
-    "fileHash": "55edc55c779e57609b549bd94f835be5",
+    "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
     "name": "theme-ui",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -336,7 +336,7 @@ Object {
       "theme-ui": "^0.4.0-rc.1",
     },
     "devDependencies": Object {
-      "@component-controls/jest-snapshots": "^1.24.0",
+      "@component-controls/jest-snapshots": "^1.24.1",
       "@component-controls/ts-markdown-docs": "^1.21.0",
       "@types/markdown-to-jsx": "^6.11.0",
       "@types/react-table": "^7.0.10",
@@ -344,7 +344,7 @@ Object {
       "cross-env": "^5.2.1",
       "eslint": "^6.5.1",
     },
-    "fileHash": "8b5cf5032e762d2f38ffd0462e3feea5",
+    "fileHash": "a8331272bc389f63195926fe6e7dd6d6",
     "name": "@component-controls/components",
     "peerDependencies": Object {
       "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -353,7 +353,7 @@ Object {
       "theme-ui": ">= 0.4.0-rc.1",
     },
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -418,11 +418,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "d817f3a58ea487eda1317bcff4199751",
+    "fileHash": "2f4bd34d15be236674abaf6e894afe6e",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;
@@ -476,11 +476,11 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "194f0fbb1af9ffd1038661a448b7ee1f",
+    "fileHash": "996a04cd0627e5de9c21977a04008534",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.24.0",
+    "version": "1.24.1",
   },
 }
 `;

@@ -17,11 +17,11 @@ Object {
     },
     "date": 2020-07-17T14:45:46.138Z,
     "dateModified": 2020-07-17T14:45:46.138Z,
-    "package": "874ad578fa3a5df897053afa7602e705",
+    "package": "bbdba31aae8aad2329b500b56e78cb36",
     "title": "Components/Toggle",
   },
   "packages": Object {
-    "874ad578fa3a5df897053afa7602e705": Object {
+    "bbdba31aae8aad2329b500b56e78cb36": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -54,7 +54,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "874ad578fa3a5df897053afa7602e705",
+      "fileHash": "bbdba31aae8aad2329b500b56e78cb36",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -62,7 +62,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
   },
   "stories": Object {

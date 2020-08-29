@@ -160,7 +160,7 @@ Object {
         },
       },
       "name": "Button",
-      "package": "999878322b2acba3a7ca83bc6972a800",
+      "package": "b5fffc2a9e710b29374f13f1d7ef028c",
       "request": "/Users/atanasster/component-controls/examples/stories/src/components/Button.tsx",
       "source": "import React, { FC } from 'react';
 
@@ -363,7 +363,7 @@ Button.defaultProps = {
         },
       },
       "name": "Button",
-      "package": "6b1e448146504b441f181f0e3fc41fc9",
+      "package": "dd96934cfa10038428b57421ede5ec17",
       "request": "/Users/atanasster/component-controls/examples/stories/src/components/PropTypesButton.js",
       "source": "import React from 'react';
 import { lighten } from 'polished';
@@ -454,18 +454,8 @@ Button.propTypes = {
   },
   "config": undefined,
   "packages": Object {
-    "2971104eea653041fd49648ff7a04be8": Object {
-      "fileHash": "2971104eea653041fd49648ff7a04be8",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.21.0",
-    },
-    "56bf0298abb3e6152739be8e0540ef47": Object {
-      "fileHash": "56bf0298abb3e6152739be8e0540ef47",
+    "092a5dfc0b16fa110a6ec9a0be19b9ba": Object {
+      "fileHash": "092a5dfc0b16fa110a6ec9a0be19b9ba",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-prop-type.stories.js",
@@ -474,48 +464,8 @@ Button.propTypes = {
       },
       "version": "1.21.0",
     },
-    "684baa68d45c8becd8f39da85795335b": Object {
-      "fileHash": "684baa68d45c8becd8f39da85795335b",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.21.0",
-    },
-    "6b1e448146504b441f181f0e3fc41fc9": Object {
-      "fileHash": "6b1e448146504b441f181f0e3fc41fc9",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.21.0",
-    },
-    "7661d674db5188cc22e26c1b22bef349": Object {
-      "fileHash": "7661d674db5188cc22e26c1b22bef349",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.21.0",
-    },
-    "999878322b2acba3a7ca83bc6972a800": Object {
-      "fileHash": "999878322b2acba3a7ca83bc6972a800",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.21.0",
-    },
-    "d1f03618863bd813182b2668bed6d262": Object {
-      "fileHash": "d1f03618863bd813182b2668bed6d262",
+    "0b32e7ea56b640582f1e26d14b10331d": Object {
+      "fileHash": "0b32e7ea56b640582f1e26d14b10331d",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
@@ -524,11 +474,61 @@ Button.propTypes = {
       },
       "version": "1.21.0",
     },
-    "f6e72e22789f0ec595d8610e56ea91ff": Object {
-      "fileHash": "f6e72e22789f0ec595d8610e56ea91ff",
+    "af3ea9029e5eedf5278b612cda3d978c": Object {
+      "fileHash": "af3ea9029e5eedf5278b612cda3d978c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.21.0",
+    },
+    "b5fffc2a9e710b29374f13f1d7ef028c": Object {
+      "fileHash": "b5fffc2a9e710b29374f13f1d7ef028c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.21.0",
+    },
+    "c08bdcb13ab5ab1d9a0e8a612ec1e872": Object {
+      "fileHash": "c08bdcb13ab5ab1d9a0e8a612ec1e872",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.21.0",
+    },
+    "dd96934cfa10038428b57421ede5ec17": Object {
+      "fileHash": "dd96934cfa10038428b57421ede5ec17",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.21.0",
+    },
+    "ee6ce583d6eb608b96bf9f66702326ef": Object {
+      "fileHash": "ee6ce583d6eb608b96bf9f66702326ef",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.21.0",
+    },
+    "f5f7bfce83c4ef863dae3d46f935a246": Object {
+      "fileHash": "f5f7bfce83c4ef863dae3d46f935a246",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -544,7 +544,7 @@ Button.propTypes = {
         "date": "2020-08-18T06:58:45.503Z",
         "dateModified": "2020-08-18T06:58:45.512Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-        "package": "7661d674db5188cc22e26c1b22bef349",
+        "package": "f5f7bfce83c4ef863dae3d46f935a246",
         "title": "Introduction/Starter",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
@@ -672,7 +672,7 @@ any *markdown* is allowed
         "date": "2020-07-17T14:45:45.848Z",
         "dateModified": "2020-07-17T14:45:45.849Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
-        "package": "684baa68d45c8becd8f39da85795335b",
+        "package": "ee6ce583d6eb608b96bf9f66702326ef",
         "title": "Introduction/Controls",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
@@ -1984,7 +1984,7 @@ any *markdown* is allowed
         "date": "2020-07-17T14:45:45.849Z",
         "dateModified": "2020-07-17T14:45:45.850Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
-        "package": "d1f03618863bd813182b2668bed6d262",
+        "package": "0b32e7ea56b640582f1e26d14b10331d",
         "title": "Introduction/Doc",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
@@ -2106,7 +2106,7 @@ any *markdown* is allowed
         "date": "2020-07-17T14:45:45.850Z",
         "dateModified": "2020-07-17T14:45:45.850Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
-        "package": "56bf0298abb3e6152739be8e0540ef47",
+        "package": "092a5dfc0b16fa110a6ec9a0be19b9ba",
         "title": "Introduction/Smart PropTypes",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
@@ -2291,7 +2291,7 @@ any *markdown* is allowed
         "date": "2020-07-17T14:45:45.850Z",
         "dateModified": "2020-07-17T14:45:45.851Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
-        "package": "2971104eea653041fd49648ff7a04be8",
+        "package": "af3ea9029e5eedf5278b612cda3d978c",
         "title": "Introduction/Smart Typescript",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
@@ -2473,7 +2473,7 @@ any *markdown* is allowed
         "date": "2020-07-17T14:45:46.127Z",
         "dateModified": "2020-07-17T14:45:46.127Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
-        "package": "f6e72e22789f0ec595d8610e56ea91ff",
+        "package": "c08bdcb13ab5ab1d9a0e8a612ec1e872",
         "title": "Introduction/ESM",
       },
       "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",

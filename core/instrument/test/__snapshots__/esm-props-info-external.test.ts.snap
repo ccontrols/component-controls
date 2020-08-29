@@ -2287,7 +2287,49 @@ Object {
   "component": Object {
     "from": "theme-ui",
     "importedName": "Button",
+    "imports": Object {
+      "@emotion/core": Array [
+        Object {
+          "importedName": "InterpolationWithTheme",
+          "name": "InterpolationWithTheme",
+        },
+      ],
+      "@emotion/styled": Array [
+        Object {
+          "importedName": "StyledComponent",
+          "name": "StyledComponent",
+        },
+      ],
+      "@theme-ui/css": Array [
+        Object {
+          "importedName": "ResponsiveStyleValue",
+          "name": "ResponsiveStyleValue",
+        },
+      ],
+      "react": Array [
+        Object {
+          "importedName": "namespace",
+          "name": "React",
+        },
+      ],
+      "styled-system": Array [
+        Object {
+          "importedName": "SpaceProps",
+          "name": "SpaceProps",
+        },
+        Object {
+          "importedName": "ColorProps",
+          "name": "ColorProps",
+        },
+        Object {
+          "importedName": "MarginProps",
+          "name": "MarginProps",
+        },
+      ],
+    },
     "name": "Button",
+    "package": "8f6835169f285fcd3ad5425d9268a8f1",
+    "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -2299,10 +2341,14 @@ Object {
       "@theme-ui/theme-provider": "^0.4.0-rc.1",
     },
     "devDependencies": undefined,
-    "fileHash": "55edc55c779e57609b549bd94f835be5",
+    "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
     "name": "theme-ui",
     "peerDependencies": undefined,
-    "repository": Object {},
+    "repository": Object {
+      "browse": "https://github.com/system-ui/theme-ui/tree/master/dist/index.js",
+      "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
+      "issues": "https://github.com/system-ui/theme-ui/issues",
+    },
     "version": "0.4.0-rc.1",
   },
 }
@@ -2355,7 +2401,7 @@ Object {
         ],
       },
       "name": "Button",
-      "package": "55edc55c779e57609b549bd94f835be5",
+      "package": "8f6835169f285fcd3ad5425d9268a8f1",
       "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
     },
   },
@@ -2367,11 +2413,11 @@ Object {
     },
     "date": 2020-08-18T06:58:44.428Z,
     "dateModified": 2020-08-18T06:58:44.435Z,
-    "package": "0de7221ca26b66ff42f614448352017c",
+    "package": "295d57ccad25aab2260adf38810e8858",
     "title": "Storybook/Blocks/Button",
   },
   "packages": Object {
-    "0de7221ca26b66ff42f614448352017c": Object {
+    "295d57ccad25aab2260adf38810e8858": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -2404,7 +2450,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "0de7221ca26b66ff42f614448352017c",
+      "fileHash": "295d57ccad25aab2260adf38810e8858",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -2412,9 +2458,9 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.24.0",
+      "version": "1.24.1",
     },
-    "55edc55c779e57609b549bd94f835be5": Object {
+    "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {
         "@theme-ui/color-modes": "^0.4.0-rc.1",
         "@theme-ui/components": "^0.4.0-rc.1",
@@ -2424,7 +2470,7 @@ Object {
         "@theme-ui/theme-provider": "^0.4.0-rc.1",
       },
       "devDependencies": undefined,
-      "fileHash": "55edc55c779e57609b549bd94f835be5",
+      "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
       "name": "theme-ui",
       "peerDependencies": undefined,
       "repository": Object {

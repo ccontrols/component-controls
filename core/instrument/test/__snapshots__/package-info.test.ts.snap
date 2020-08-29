@@ -34,7 +34,7 @@ Object {
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
   },
-  "fileHash": "c5f564f4216bb655c8b817bfbfaf2598",
+  "fileHash": "533576991b408a148e00826ca0fd358c",
   "name": "@component-controls/instrument",
   "peerDependencies": undefined,
   "repository": Object {
@@ -42,7 +42,7 @@ Object {
     "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
     "issues": "https://github.com/ccontrols/component-controls/issues",
   },
-  "version": "1.24.0",
+  "version": "1.24.1",
 }
 `;
 
@@ -55,7 +55,7 @@ Object {
     "react-dom": "^16.13.1",
   },
   "devDependencies": undefined,
-  "fileHash": "264d4a6a1e303f3c32b4e9f8d15aa4b7",
+  "fileHash": "0bc18efa255647cb090a51f916107c24",
   "name": "my-gatsby-project",
   "peerDependencies": undefined,
   "repository": Object {},
@@ -110,7 +110,7 @@ Object {
     "ts-node": "^8.5.4",
     "typescript": "^3.8.3",
   },
-  "fileHash": "517c91165bcc70a7895d90f1ae296268",
+  "fileHash": "82e7ff4ad10d0aa6da8708ad08b069ae",
   "name": "",
   "peerDependencies": undefined,
   "repository": Object {
