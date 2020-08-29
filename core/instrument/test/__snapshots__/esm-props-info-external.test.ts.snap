@@ -2412,7 +2412,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.22.0",
+      "version": "1.22.1",
     },
     "55edc55c779e57609b549bd94f835be5": Object {
       "dependencies": Object {
