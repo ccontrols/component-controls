@@ -13,6 +13,8 @@
     "dist/",
     "bin/",
     "package.json",
+    "args.js",
+    "args.d.ts",
     "renderers.js",
     "renderers.d.ts",
     "README.md"
