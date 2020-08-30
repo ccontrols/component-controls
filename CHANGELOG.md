@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.4](https://github.com/ccontrols/component-controls/compare/v1.24.3...v1.24.4) (2020-08-30)
+
+
+### Bug Fixes
+
+* include args in npm ([11f9862](https://github.com/ccontrols/component-controls/commit/11f98623f884c13f9ac36299be7480aa12b86a51))
+* jest dependencies ([d103e54](https://github.com/ccontrols/component-controls/commit/d103e54fd91c541b07244639ec5446b14338d93e))
+
+
+
+
+
 ## [1.24.3](https://github.com/ccontrols/component-controls/compare/v1.24.2...v1.24.3) (2020-08-30)
 
 

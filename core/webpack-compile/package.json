@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/webpack-compile",
-  "version": "1.24.3",
+  "version": "1.24.4",
   "description": "Webpack compile api",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -37,9 +37,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/loader": "^1.24.3",
+    "@component-controls/loader": "^1.24.4",
     "@component-controls/logger": "^1.22.0",
-    "@component-controls/webpack-configs": "^1.24.3",
+    "@component-controls/webpack-configs": "^1.24.4",
     "memory-fs": "^0.5.0",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
