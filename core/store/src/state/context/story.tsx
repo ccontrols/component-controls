@@ -29,12 +29,9 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
   children,
 }) => {
   const { store } = useContext(StoreContext);
-  const [story, setStory] = useState<Story | undefined>(
+  const [, setStory] = useState<Story | undefined>(
     storyId ? store.stories[storyId] : undefined,
   );
-  useEffect(() => {
-    setStory(storyId ? store.stories[storyId] : undefined);
-  }, [storyId, store]);
   useEffect(() => {
     const onObserver = (updatedStory?: Story) => {
       if (updatedStory?.id === storyId) {
@@ -47,7 +44,7 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
   return (
     <StoryContext.Provider
       value={{
-        story,
+        story: storyId ? store.stories[storyId] : undefined,
         updateStory: newValue => {
           if (storyId) {
             store.updateStory(newValue);
