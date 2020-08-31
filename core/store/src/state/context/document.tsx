@@ -183,52 +183,55 @@ interface NavigationResult {
   prevPage?: DocumentPage;
 }
 
+const useNavigationLinks = (doc: Document): NavigationResult => {
+  const docId = doc.title;
+  const type = doc.type || defDocType;
+  const docs = useDocByType(type);
+  const config = useConfig();
+  const activeTab = useActiveTab();
+  const result: NavigationResult = {};
+  //next page
+  const index = docs.findIndex(p => p.title === docId);
+  if (index >= 0 && index < docs.length - 1) {
+    const nextDoc = docs[index + 1];
+    result.nextPage = {
+      ...nextDoc,
+      link: getDocPath(
+        nextDoc.type || defDocType,
+        nextDoc,
+        config.pages,
+        nextDoc.title,
+        activeTab,
+      ),
+    };
+  }
+
+  //prev page
+  if (index > 0) {
+    const prevDoc = docs[index - 1];
+    result.prevPage = {
+      ...prevDoc,
+      link: getDocPath(
+        prevDoc.type || defDocType,
+        prevDoc,
+        config.pages,
+        prevDoc.title,
+        activeTab,
+      ),
+    };
+  }
+  return result;
+};
+
 /**
  * Returns the next/previous page objects for the current document
  */
 export const useNavigationInfo = (): NavigationResult => {
   const doc = useCurrentDocument();
-  const config = useConfig();
-  const activeTab = useActiveTab();
-  const getByDocType = useGetDocByType();
-  const result: NavigationResult = {};
   if (doc) {
-    const docId = doc.title;
-    const type = doc.type || defDocType;
-    const docs = getByDocType(type);
-    //next page
-    const nextIndex = docs.findIndex(p => p.title === docId);
-    if (nextIndex >= 0 && nextIndex < docs.length - 1) {
-      const nextDoc = docs[nextIndex + 1];
-      result.nextPage = {
-        ...nextDoc,
-        link: getDocPath(
-          nextDoc.type || defDocType,
-          nextDoc,
-          config.pages,
-          nextDoc.title,
-          activeTab,
-        ),
-      };
-    }
-
-    //prev page
-    const prevIndex = docs.findIndex(p => p.title === docId);
-    if (prevIndex > 0) {
-      const prevDoc = docs[prevIndex - 1];
-      result.prevPage = {
-        ...prevDoc,
-        link: getDocPath(
-          prevDoc.type || defDocType,
-          prevDoc,
-          config.pages,
-          prevDoc.title,
-          activeTab,
-        ),
-      };
-    }
+    return useNavigationLinks(doc);
   }
-  return result;
+  return {};
 };
 
 type UseGetDocumentPath = (
