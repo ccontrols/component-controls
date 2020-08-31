@@ -1,4 +1,5 @@
 const path = require('path');
+const { defaultBuildConfig } = require('@component-controls/core');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -9,6 +10,7 @@ module.exports = {
     '../../stories/src/tutorial/getting-started/ssg/*.mdx',
     '../../stories/src/tutorial/getting-started/*.mdx',
     '../../stories/src/tutorial/write-documentation/*.mdx',
+    '../../stories/src/tutorial/testing/*.mdx',
     '../../stories/src/tutorial/configuration/*.mdx',
     '../../stories/src/tutorial/reference/*.mdx',
     '../../stories/src/stories/*.stories.@(js|jsx|tsx|mdx)',
@@ -28,7 +30,7 @@ module.exports = {
   pages: {
     story: {
       basePath: 'api/',
-      tabs: [{ route: 'page' }, { route: 'test' }],
+      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'test' }],
     },
     blog: {
       basePath: 'blogs/',

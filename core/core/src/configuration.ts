@@ -321,7 +321,7 @@ export const defaultBuildConfig: BuildConfiguration = {
         storyPaths: true,
         collapseSingle: true,
       },
-      tabs: [{ route: 'page' }, { route: 'test' }],
+      tabs: [{ route: 'page' }],
     },
     blog: {
       basePath: 'blogs/',

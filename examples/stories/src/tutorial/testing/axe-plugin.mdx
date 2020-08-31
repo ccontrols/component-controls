@@ -1,0 +1,120 @@
+---
+title: Testing/A11Y Testing
+route: /tutorial/testing/axe-plugin
+type: tutorial
+tags:
+  - testing
+  - stories
+order: 2
+author: atanasster
+---
+import allyPageImg from './media/ally-page.jpg';
+import { Playground, Story } from '@component-controls/blocks';
+import { AllyBlock } from '@component-controls/axe-plugin';
+
+## Overview
+
+The [axe-plugin](https://github.com/ccontrols/component-controls/tree/master/plugins/axe-plugin) is an accessibility testing plugin using the [axe-core](https://github.com/dequelabs/axe-core) library from [deque](https://www.deque.com/axe/)
+
+Some of the design goals:
+
+-   Test at the component-level.
+-   Provide a dashboard view to quickly see the errors and tests for the compnnt.
+-   Ability to select and outline the sub-elements generating the errors.
+-   Ability to see details from the errors and passed rules.
+
+## Install
+
+```sh
+yarn add @component-controls/axe-plugin --dev
+```
+
+## 1. Add `AllyPage` to your site:
+
+The first integration option is to simply add the provided `AllyPage` on a route to your stories.
+
+### Add a build-time route
+
+```js:title=.config/buildtime.js
+const { defaultBuildConfig } = require('@component-controls/core');
+
+module.exports = {
+  stories: [...],
+  pages: {
+    story: {
+      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'ally' }],
+  },
+}  
+```
+
+### Add the page to site:
+
+```js:title=.config/runtime.tsx
+import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+import { AllyPage } from '@component-controls/axe-plugin';
+
+const config: RunOnlyConfiguration = {
+  pages: {
+    story: {
+      tabs: [
+        ...defaultRunConfig.pages.story.tabs,
+        { title: 'A11Y', render: AllyPage },
+      ],
+    },
+  },  
+}
+
+export default config;
+```
+<br />
+
+<img alt="ally page integration" title="ally page" src={allyPageImg} />
+
+<br />
+
+## 2. Add `AllyBlock` block to a page:
+
+A more advanced integration option is to create a custom page with an `AllyBlock` in it.
+
+```
+import {...} from '@component-controls/blocks';
+import { AllyBlock } from '@component-controls/axe-plugin';
+
+
+export const CustomePage= () => (
+  <>
+    <EditPage />
+    <Title />
+    <Subtitle />
+    <Description />
+    <Playground title=".">
+      <Story id="." />
+    </Playground>
+
+    <PropsTable of="." title="Controls" visibility="controls" />
+    <AllyBlock title="A11y tests" />
+  </>
+);
+```
+
+## AllyBlock parts
+
+For this tutorial, lets create an example story containing a `<span />` with a `grey` text color:
+
+```
+  <div>some <span style={{ color: 'grey'}}>text</span></div>
+```
+
+You can play with with `AllyBlock` below to get a better understanding of its functionality
+
+1. To outline the [color-contrast](https://dequeuniversity.com/rules/axe/3.5/color-contrast?application=axeAPI) error, click on the `show errors` checkbox
+2. To view the list of **errors**, click on the `errors (1)` tab
+3. To view the a11y tests that have **passed**, click on the `passed (1)` tab
+
+<AllyBlock name="ally-samples" />
+
+  <Story name='ally-samples' sxStyle={{ visibility: 'hidden' }}>
+    <div>
+      Some <span style={{ color: 'grey'}}>text</span>
+    </div>
+  </Story>
