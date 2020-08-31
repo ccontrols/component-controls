@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.6](https://github.com/ccontrols/component-controls/compare/v1.24.5...v1.24.6) (2020-08-31)
+
+**Note:** Version bump only for package @component-controls/config
+
+
+
+
+
 # [1.24.0](https://github.com/ccontrols/component-controls/compare/v1.23.0...v1.24.0) (2020-08-29)
 
 **Note:** Version bump only for package @component-controls/config
