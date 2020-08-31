@@ -27,9 +27,6 @@ Object {
           Object {
             "route": "page",
           },
-          Object {
-            "route": "test",
-          },
         ],
       },
       "tags": Object {
