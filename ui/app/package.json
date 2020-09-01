@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/app",
-  "version": "1.24.6",
+  "version": "1.24.7",
   "description": "Component controls standalone application.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,18 +30,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.24.6",
-    "@component-controls/components": "^1.24.6",
+    "@component-controls/blocks": "^1.24.7",
+    "@component-controls/components": "^1.24.7",
     "@component-controls/core": "^1.24.6",
-    "@component-controls/pages": "^1.24.6",
-    "@component-controls/store": "^1.24.6",
+    "@component-controls/pages": "^1.24.7",
+    "@component-controls/store": "^1.24.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.24.6",
+    "@component-controls/jest-snapshots": "^1.24.7",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/react-helmet": "^6.0.0",
     "cross-env": "^5.2.1",

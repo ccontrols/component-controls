@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.7](https://github.com/ccontrols/component-controls/compare/v1.24.6...v1.24.7) (2020-09-01)
+
+
+### Bug Fixes
+
+* cli default config folder ([7ac60d1](https://github.com/ccontrols/component-controls/commit/7ac60d1f64e455dcc9cc8c8b0067fea179945758))
+
+
+
+
+
 ## [1.24.6](https://github.com/ccontrols/component-controls/compare/v1.24.5...v1.24.6) (2020-08-31)
 
 **Note:** Version bump only for package component-controls
