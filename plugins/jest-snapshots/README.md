@@ -6,15 +6,15 @@
     -   [Install](#install)
 -   [API](#api)
 
-# In action
-
-[Example site](https://component-controls.com/api/components-actioncontainer--overview/viewport)
-
 # Overview
 
-# Getting Started
+-   Easy to use cli with "zero" configuration.
+-   More advanced level to customize the framework renderer.
+-   Advanced level for full control over which stories to use for the tests.
+-   Support for a variety of test rendderes starting with [react-test-renderer](https://reactjs.org/docs/test-renderer.html), [react-testing-library](docs) and [enzyme](https://enzymejs.github.io/enzyme/).
 
-## Install
+
+# Install
 
 ```sh
 yarn add @component-controls/jest-snapshots --dev

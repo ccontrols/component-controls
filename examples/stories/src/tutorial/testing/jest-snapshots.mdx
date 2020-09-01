@@ -1,0 +1,39 @@
+---
+title: Testing/Jest Snapshots
+route: /tutorial/testing/jest-snapshots
+type: tutorial
+tags:
+  - testing
+  - snapshots
+  - jest
+  - stories
+order: 1
+draft: true
+author: atanasster
+---
+
+## Overview
+
+The [jest-snapshots](https://github.com/ccontrols/component-controls/tree/master/plugins/jest-snapshots) package automatically creates snapshot tests for your component based on the already created documentation stories.
+
+-   Easy to use cli with "zero" configuration.
+-   More advanced level to customize the framework renderer.
+-   Advanced level for full control over which stories to use for the tests.
+-   Support for a variety of test rendderes starting with [react-test-renderer](https://reactjs.org/docs/test-renderer.html), [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) and [enzyme](https://enzymejs.github.io/enzyme/).
+
+## Install
+
+```sh
+yarn add @component-controls/jest-snapshots --dev
+```
+
+## CLI - `cc-jest`
+
+The command-line interface for jest-snapshots allows for the quickest, zero-config setup. You just need to add a `test` script to your `package.json` file
+
+```js:title=package.json
+"scripts": {
+  ...
+  "test": "cc-jest -c ./.config"
+},
+```
