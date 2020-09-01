@@ -4,6 +4,7 @@ route: /tutorial/testing/axe-plugin
 type: tutorial
 tags:
   - testing
+  - accessibility
   - stories
 order: 2
 author: atanasster
@@ -97,6 +98,8 @@ export const CustomePage= () => (
 );
 ```
 
+Example stories can be found [here](https://component-controls.com/api/plugins-allyblock--overview)
+
 ## AllyBlock parts
 
 For this tutorial, lets create an example story containing a `<span />` with a `grey` text color:
@@ -113,7 +116,7 @@ You can play with with `AllyBlock` below to get a better understanding of its fu
 
 <AllyBlock name="ally-samples" />
 
-  <Story name='ally-samples' sxStyle={{ visibility: 'hidden' }}>
+  <Story name='ally-samples' sxStyle={{ visibility: 'hidden', height: 0 }}>
     <div>
       Some <span style={{ color: 'grey'}}>text</span>
     </div>

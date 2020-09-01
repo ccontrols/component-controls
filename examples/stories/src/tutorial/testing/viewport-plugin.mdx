@@ -1,0 +1,139 @@
+---
+title: Testing/Responsive testing
+route: /tutorial/testing/viewport-plugin
+type: tutorial
+tags:
+  - testing
+  - mobile
+  - responsive
+  - stories
+order: 1
+author: atanasster
+---
+import viewportPageImg from './media/viewport-page.jpg';
+import { Playground, Story } from '@component-controls/blocks';
+import { ViewportBlock } from '@component-controls/viewport-plugin';
+
+## Overview
+
+Do you need to test how your components render under different screen resolutions - at the same time?
+
+The [viewport-plugin](https://github.com/ccontrols/component-controls/tree/master/plugins/viewport-plugin) is inspired by the [playroom](https://github.com/seek-oss/playroom) project, this addon contains a `ViewportBlock` that you can integrate into any page, as well as a standalone `ViewportPage`
+
+## Install
+
+```sh
+yarn add @component-controls/viewport-plugin --dev
+```
+
+## 1. Add `ViewportPage` to your site:
+
+The first integration option is to simply add the provided `ViewportPage` on a route to your stories.
+
+### Add a build-time route
+
+```js:title=.config/buildtime.js
+const { defaultBuildConfig } = require('@component-controls/core');
+
+module.exports = {
+  stories: [...],
+  pages: {
+    story: {
+      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'viewport' }],
+  },
+}  
+```
+
+### Add the page to site:
+
+```js:title=.config/runtime.tsx
+import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
+import { ViewportPage } from '@component-controls/viewport-plugin';
+
+const config: RunOnlyConfiguration = {
+  pages: {
+    story: {
+      tabs: [
+        ...defaultRunConfig.pages.story.tabs,
+        { title: 'Viewport', render: ViewportPage },
+      ],
+    },
+  },  
+}
+
+export default config;
+```
+<br />
+
+<img alt="viewport page integration" title="viewport page" src={viewportPageImg} />
+
+<br />
+
+## 2. Add `ViewportBlock` block to a page:
+
+A more advanced integration option is to create a custom page with an `ViewportBlock` in it.
+
+```
+import {...} from '@component-controls/blocks';
+import { ViewportBlock } from '@component-controls/viewport-plugin';
+
+
+export const CustomePage= () => (
+  <>
+    <EditPage />
+    <Title />
+    <Subtitle />
+    <Description />
+    <Playground title=".">
+      <Story id="." />
+    </Playground>
+
+    <PropsTable of="." title="Controls" visibility="controls" />
+    <ViewportBlock title="Viewport" />
+  </>
+);
+```
+
+Example stories can be found [here](https://component-controls.com/api/plugins-viewportblock--overview)
+
+## ViewportBlock parts
+
+For this tutorial, lets create an example story containing a `p` paragraph with a large amount of text:
+
+```
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui vitae nisl vestibulum tristique. Phasellus malesuada risus vitae purus faucibus, ornare dignissim erat lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam et nunc fermentum, consectetur nulla eu, imperdiet ligula. Morbi non nunc neque. Praesent sed aliquet nibh. In at consectetur justo. Sed rutrum, tellus vitae dictum efficitur, magna libero vehicula ex, nec vehicula lacus risus ut tortor. Sed vel odio lorem. Nulla nec laoreet sem. Fusce ac leo id lorem blandit tristique id in purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur felis arcu, consequat non finibus vitae, interdum id turpis.</p>
+```
+
+You can play with with `ViewportBlock` below to get a better understanding of its functionality
+
+1. To select which viewports are rendered, you can click on the `widths` button and select/unselect the options.
+2. To view different viewports rendering, you can scroll the block surface to the right.
+
+<ViewportBlock title='Viewport' name="viewport-samples" />
+
+<Story name='viewport-samples' sxStyle={{ visibility: 'hidden', height: 0 }}>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui vitae nisl vestibulum tristique. Phasellus malesuada risus vitae purus faucibus, ornare dignissim erat lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam et nunc fermentum, consectetur nulla eu, imperdiet ligula. Morbi non nunc neque. Praesent sed aliquet nibh. In at consectetur justo. Sed rutrum, tellus vitae dictum efficitur, magna libero vehicula ex, nec vehicula lacus risus ut tortor. Sed vel odio lorem. Nulla nec laoreet sem. Fusce ac leo id lorem blandit tristique id in purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur felis arcu, consequat non finibus vitae, interdum id turpis.
+  </p>
+</Story>
+
+## Custom viewports
+
+You can configure the `ViewportBlock` with custom viewport sizes:
+```
+<ViewportBlock
+  id="." 
+  sizes={{
+    large: 780,
+    xlarge: 1920,
+  }}
+/>
+``` 
+
+<ViewportBlock
+  name="viewport-samples"
+  sizes={{
+    large: 780,
+    xlarge: 1920,
+  }}
+/>

@@ -38,39 +38,15 @@ Some of the design goals:
   <img src="https://github.com/ccontrols/component-controls/raw/master/plugins/axe-plugin/images/axe-ally-testing.gif" alt="ally tests with axe plugin" width="738">
 </p>
 
-# Getting Started
-
-## Install
+# Install
 
 ```sh
 yarn add @component-controls/axe-plugin --dev
 ```
 
-## Configure
+# Documentation
 
-The axe-plugin is already installed part of [testing page](https://github.com/ccontrols/component-controls/blob/master/ui/pages/src/TestingPage/TestingPage.tsx) and you can also add it to any other documentation page:
-
-```
-import {...} from '@component-controls/blocks';
-import { AxeAllyBlock } from '@component-controls/axe-plugin';
-
-
-export const TestingCustomePage= () => (
-  <>
-    <EditPage />
-    <Title />
-    <Subtitle />
-    <Description />
-    <Playground title=".">
-      <Story id="." />
-    </Playground>
-
-    <PropsTable of="." title="Controls" visibility="controls" />
-    <AxeAllyBlock title="A11y tests" />
-  </>
-);
-
-```
+[A11Y Testing](https://component-controls.com/tutorial/testing/axe-plugin)
 
 # API
 
