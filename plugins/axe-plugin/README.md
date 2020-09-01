@@ -30,7 +30,7 @@ Accessibility testing plugin using the [axe-core](https://github.com/dequelabs/a
 Some of the design goals:
 
 -   Test at the component-level.
--   Provide a dashboard view to quickly see the errors and tests for the compnnt.
+-   Provide a dashboard view to quickly see the errors and tests for the component.
 -   Ability to select and outline the sub-elements generating the errors.
 -   Ability to see details from the errors and passed rules.
 
