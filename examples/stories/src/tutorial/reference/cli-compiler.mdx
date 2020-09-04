@@ -1,0 +1,240 @@
+---
+title: Reference/CLI Compiler
+route: /tutorial/reference/cli
+type: tutorial
+tags:
+  - documentation
+order: 7
+author: atanasster
+---
+
+## Overview
+
+The component-controls compiler [@component-controls/webpack-compile](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile) provides a command-line interface that allows you to compile documentation metadata on the fly.
+
+## Installation
+
+```sh
+yarn add @component-controls/webpack-compile --dev
+```
+
+## Parameters
+
+| Parameter    |  Explanation   |   Input type   |   Default value   |
+| ----------- | -------- | -------- | -------- | -------- | -------- |
+| `--config`<br/>`-c`    | configuration folder |  string  |  `.config`  |
+| `--watch`<br/>`-w`    | enable watch mode |  boolean  |  `false`  |
+| `--presets`<br/>`-p`    | webpack presets |  string[]  |  [`react`, `react-docgen-typescript`]  |
+| `--bundle`<br/>`-b`    |  generated bundle name  |  string  |  `component-controls.js`  |
+| `--dist`<br/>`-d`    | distribution (bundle output) folder |  string  |  `public`  |
+| `--static`<br/>`-s`    | static assets (images, media) folder |  string  |  `dist/static`  |
+| `--loglevel`<br/>`-l`    | log level | 'all' \| 'errors' \| 'none' |  `all`  |
+
+
+## Example
+
+```sh
+yarn ccc -c .storybook
+```
+
+The above example will use the build-time configuration from the `.storybook`  folder and generate a bundle of documentation stores (documents, stories, packages, components) in `public/component-controls.js`.
+
+## Static store
+
+The compiler creates a **static** bundle of stores containing the stories and documents before they are loaded into the browser. 
+
+> Any dynamic document and story properties that are calculated at run-time, as well as the stories render functions are not available from the static store.
+
+Following is a script that will require the static store, iterate through the individual document stores and finally output a `stories.json` file
+
+```js:title=stories/stories2json.js
+const path = require('path');
+const fs = require('fs');
+const bundleName = path.resolve(__dirname, '../public/component-controls.js');
+const store = require(bundleName);
+
+//filter only stores/documents that do have at least one story
+const stories = [];
+store.stores
+  .forEach(store => {
+    if (store.stories) {
+      Object.keys(store.stories).forEach(story => {
+        stories.push(store.stories[story]);
+      })
+    }  
+  });
+fs.writeFileSync(path.resolve(__dirname,'stories.json'), JSON.stringify(stories, null, 2));
+```
+
+You can run the above script from the command line:
+
+```bash
+node stories/stories2json.js
+```
+
+Following is an example of `JSON` output from the static store
+
+```js:title=stories/stories.json
+[
+  {
+    "name": "simple",
+    "component": "Button",
+    "id": "simple",
+    "arguments": [
+      {
+        "value": [
+          {
+            "value": "backgroundColor",
+            "name": "backgroundColor",
+            "loc": {
+              "start": {
+                "line": 0,
+                "column": 3
+              },
+              "end": {
+                "line": 0,
+                "column": 18
+              }
+            },
+            "usage": [
+              {
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 27
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 42
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 0,
+            "column": 1
+          },
+          "end": {
+            "line": 0,
+            "column": 20
+          }
+        }
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 32,
+        "column": 11
+      },
+      "end": {
+        "line": 34,
+        "column": 11
+      }
+    },
+    "source": "({ backgroundColor }) => (\n  <Button backgroundColor={backgroundColor}>click me</Button>\n)"
+  }
+]  
+```
+
+## Dynamic store
+
+To have access to the dynamic story and document properties, configuration settings, and render functions, you need to **load** a run-time version of the store.
+
+The `@component-controls/store` package contains utility functions to load and manipulate the stores of stories.
+
+```bash
+yarn add @component-controls/store
+```
+
+Following is a script that will require the static store, then load it using `@component-controls/store` **loadStore** function and finally output a `stories.json` file
+
+```js:title=stories/stories2json.js
+const path = require('path');
+const fs = require('fs');
+const { loadStore } = require('@component-controls/store');
+
+const bundleName = path.resolve(__dirname, '../public/component-controls.js');
+const staticStore = require(bundleName);
+const store = loadStore(staticStore);
+
+fs.writeFileSync(path.resolve(__dirname,'stories.json'), JSON.stringify(store.stories, null, 2));
+```
+
+
+Following is an example of `JSON` output from the dynamic store (most of the time, the output data is very similar to the static store)
+
+```js:title=stories/stories.json
+{
+  "first-story--simple": {
+    "name": "Simple",
+    "component": "Button",
+    "id": "first-story--simple",
+    "arguments": [
+      {
+        "value": [
+          {
+            "value": "backgroundColor",
+            "name": "backgroundColor",
+            "loc": {
+              "start": {
+                "line": 0,
+                "column": 3
+              },
+              "end": {
+                "line": 0,
+                "column": 18
+              }
+            },
+            "usage": [
+              {
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 27
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 42
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 0,
+            "column": 1
+          },
+          "end": {
+            "line": 0,
+            "column": 20
+          }
+        }
+      }
+    ],
+    "loc": {
+      "start": {
+        "line": 32,
+        "column": 11
+      },
+      "end": {
+        "line": 34,
+        "column": 11
+      }
+    },
+    "source": "({ backgroundColor }) => (\n  <Button backgroundColor={backgroundColor}>click me</Button>\n)",
+    "controls": {
+      "backgroundColor": {
+        "type": "color",
+        "value": "#fefefe",
+        "defaultValue": "#fefefe"
+      }
+    },
+    "doc": "First Story"
+  }
+}  
+```  

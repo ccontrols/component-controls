@@ -20,7 +20,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 'c',
       description: 'configuration folder',
       type: 'string',
-      default: './.config',
+      default: '.config',
     },
   },
   {
@@ -56,7 +56,7 @@ export const defaultCliArgs: ArgOptions = [
       alias: 'd',
       description: 'distribution (bundle output) folder',
       type: 'string',
-      default: './public',
+      default: 'public',
     },
   },
   {

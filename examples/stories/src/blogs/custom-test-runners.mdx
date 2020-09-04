@@ -1,0 +1,207 @@
+---
+title: Custom test runners
+type: blog
+date: 2020-09-04
+author: atanasster
+route: /blogs/custom-test-runners
+description: A step-by-step guide on how to create custom test runners using the component-controls stories compiler.
+tags:
+  - testing
+  - jest
+  - stories
+---
+
+# Overview
+
+The standalone stories compiler [@component-controls/webpack-compile](https://github.com/ccontrols/component-controls/tree/master/core/webpack-compile) makes it possible to create custom test runners for the stories embedded in your documentation.
+
+
+# Install the compiler:
+
+```bash
+yarn add @component-controls/webpack-compile
+```
+
+# Create a new test runner file 
+
+For this example, we will create a file `tests/testrunner.js` that we can launch using the shell or from a script in your project's `package.json`.
+
+```bash
+node tests/testrunner.js`.
+```
+
+# Compile the stories
+
+We will assume your component-controls configuration files are located in the `.config` folder of your project. We will also specify a custom distribution folder (by default `public`) and bundle name (by default `component-controls.js`) for the compiler stories bundle. The last parameter is an array of a few presets that are standard for `react` projects.
+
+> Before launching the webpack compiler, we need to set the `NODE_ENV` environment variable.
+
+
+```js:title=tests/testrunner.js
+const path = require('path');
+const { compile } = require('@component-controls/webpack-compile');
+
+(async () => {
+  process.env.NODE_ENV = 'development';
+  const { bundleName} = await compile({
+    configPath: path.resolve(__dirname, '../.config'),
+    distFolder: bundleFolder,
+    bundleName: 'stories.js',
+    presets: ['react', 'react-docgen-typescript'],
+  });
+
+  //more code below
+})();  
+```
+The compiler is an async function that returns the name of the bundle of static stories.
+
+## Load run-time store
+
+The above-compiled bundle of stores is the **static** version of the stories before they are loaded into the browser. 
+
+> Any dynamic document and story properties that are calculated at run-time, as well as the stories render functions are not available from the static store.
+
+To load the run-time stories, we will need to use the [@component-controls/store](https://github.com/ccontrols/component-controls/tree/master/core/store) package.
+
+```bash
+yarn add @component-controls/store
+```
+
+And create a file `store_loader.js` that will be used by the individual test files to load the static store at run-time.
+
+```js:title=tests/store_loader.js
+const path = require('path');
+const { loadStore } = require('@component-controls/store');
+
+const bundleName = path.resolve(__dirname,'stories.js');
+const store = loadStore(require(bundleName));
+module.exports.store = store;
+```
+## Create tests folder
+
+We will first create a separate folder for the dynamically created test files.
+
+> The dynamically created test files can be cleaned (erased) at the end of running the tests.
+
+```js:title=tests/testrunner.js
+const fs = require('fs');
+...
+  let testFolder = path.resolve(__dirname, 'tests');
+  if (!fs.existsSync(testFolder)) {
+    fs.mkdirSync(testFolder);
+  }
+...
+```
+
+## Create test files
+
+Next, we will iterate through the static store and create a test file for each store(one per document) that has at least one story.
+
+```js:title=tests/testrunner.js
+const staticStore = require(bundleName);
+  staticStore.stores.forEach(store => {
+    if (store.stories && Object.keys(store.stories).length) {
+      const doc = store.doc;
+      fs.writeFileSync(path.resolve(testFolder, `${doc.title}.test.js`), `
+      //import the 'dynamic' store
+      const { store } = require('../store_loader');
+      //we will use react-testing-library to render the stories
+      const { render: rtlRender, cleanup } = require('@testing-library/react');
+
+      //the document title is used for test describe
+      describe('${doc.title}', () => {
+        //rtl cleanup afdter each test
+        afterEach(cleanup);  
+        //gain a reference to the dynamnic version of the document
+        const doc = store.docs['${doc.title}'];
+        //iterate through the document stories
+        doc.stories.forEach(storyId => {
+          const story = store.stories[storyId];
+          const { renderFn } = story;
+          // will create a test only of the story has a valid render function
+          if (renderFn) {
+            it(story.name, () => {
+              //create a rendered story node
+              const storyRendered = store.config.renderFn(storyId, store);
+              //mount story on rtl rendered
+              const { asFragment } = rtlRender(storyRendered);
+              //compare snapshot
+              expect(asFragment).toMatchSnapshot();
+            });  
+          } 
+        });
+      });    
+      `);
+    }  
+  });
+```  
+
+## Run jest 
+
+We will use the `jest-cli` package to run jest using its API. 
+
+> All jest command-line options can be passed as the first argument to `jest-cli`.
+
+```js:title=tests/testrunner.js
+const { run: runJest } = require('jest-cli');
+...
+await runJest([], testFolder);
+
+```
+
+## The final result
+
+The full source code for `testrunner.js` file:
+
+```js:title=tests/testrunner.js
+const path = require('path');
+const fs = require('fs');
+const { run: runJest } = require('jest-cli');
+const { compile } = require('@component-controls/webpack-compile');
+
+(async () => {
+  const bundleFolder = __dirname;
+  process.env.NODE_ENV = 'development';
+  const { bundleName} = await compile({
+    configPath: path.resolve(__dirname, '../.config'),
+    distFolder: bundleFolder,
+    bundleName: 'stories.js',
+    presets: ['react', 'react-docgen-typescript'],
+    
+  });
+  let testFolder = path.resolve(__dirname, 'tests');
+  if (!fs.existsSync(testFolder)) {
+    fs.mkdirSync(testFolder);
+  }
+  const staticStore = require(bundleName);
+  staticStore.stores.forEach(store => {
+    if (store.stories && Object.keys(store.stories).length) {
+      const doc = store.doc;
+      fs.writeFileSync(path.resolve(testFolder, `${doc.title}.test.js`), `
+const { store } = require('../store_loader');
+const { render: rtlRender, cleanup } = require('@testing-library/react');
+
+describe('${doc.title}', () => {
+  afterEach(cleanup);  
+  const doc = store.docs['${doc.title}'];
+  doc.stories.forEach(storyId => {
+    const story = store.stories[storyId];
+    
+    const { renderFn } = story;
+    if (renderFn) {
+      it(story.name, () => {
+        const storyRendered = store.config.renderFn(storyId, store);
+        const { asFragment } = rtlRender(storyRendered);
+        expect(asFragment).toMatchSnapshot();
+      });  
+    } 
+  });
+});    
+`);
+        
+    }  
+  });
+
+  await runJest([], testFolder);
+})();
+```

@@ -17,6 +17,7 @@ export const jestCliArgs: ArgOptions = [
       alias: 't',
       description: 'tests output folder',
       type: 'string',
+      default: 'tests',
     },
   },
 ];
