@@ -1,0 +1,37 @@
+---
+name: Playground
+menu: Components
+---
+import { Playground } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+## Basic usage
+
+<Playground>
+  <Button>Click me</Button>
+  <Button kind="secondary">Click me</Button>
+</Playground>
+
+## Single child
+
+<Playground>
+  <Button>Click me</Button>
+</Playground>
+
+
+
+## Stateful
+
+<Playground>
+  {() => {
+    const [counter, setCounter] = React.useState(0);
+    return (
+      <>
+        <Button onClick={() => setCounter(counter => counter+1)}>
+          Increase
+        </Button>
+        <p>{counter}</p>
+      </>
+    )
+  }}
+</Playground>

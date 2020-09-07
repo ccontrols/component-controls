@@ -8,7 +8,12 @@ import { makeRe } from 'micromatch';
 import yargs from 'yargs';
 import { BuildConfiguration } from '@component-controls/core';
 
-export const buildConfigFileNames = ['buildtime.js', 'build.js', 'main.js'];
+export const buildConfigFileNames = [
+  'buildtime.js',
+  'build.js',
+  'main.js',
+  'doczrc.js',
+];
 
 export const optionsFileNames = [
   'runtime.js',
@@ -69,8 +74,11 @@ export const loadConfiguration = (
     optionsFileNames.includes(file.toLowerCase()),
   );
   if (buildConfigFile) {
+    const config = require('esm')(module)(
+      path.resolve(configPath, buildConfigFile),
+    );
     return {
-      config: require(path.resolve(configPath, buildConfigFile)),
+      config: config.default || config,
       optionsFilePath: optionsFile
         ? path.resolve(configPath, optionsFile)
         : undefined,
@@ -91,16 +99,22 @@ export const extractDocuments = ({
   config,
   configPath,
 }: ConfigrationResult): string[] | undefined => {
-  const documents =
-    config && config.stories
-      ? config.stories.reduce((acc: string[], storyRg: string) => {
-          const matches = globSync(path.resolve(configPath, fixGlob(storyRg)));
-          if (!matches.length) {
-            throw new Error(`${storyRg} did not match any files`);
-          }
-          return [...acc, ...matches];
-        }, [])
-      : undefined;
+  const stories = config ? config.stories || config.files : undefined;
+  const files = typeof stories === 'string' ? [stories] : stories;
+  const documents = files
+    ? files.reduce((acc: string[], storyRg: string) => {
+        const matches = globSync(path.resolve(configPath, fixGlob(storyRg)));
+        if (!matches.length) {
+          throw new Error(`${storyRg} did not match any files`);
+        }
+        const ignore = config.ignore || [];
+        const files = matches.filter(filename => {
+          const basename = path.basename(filename).toLowerCase();
+          return !ignore.includes(basename);
+        });
+        return [...acc, ...files];
+      }, [])
+    : undefined;
   return documents;
 };
 
@@ -119,24 +133,26 @@ export const configRequireContext = ({
   config,
   configPath,
 }: ConfigrationResult): RequireContextProps[] | undefined => {
-  const contexts =
-    config && config.stories
-      ? config.stories.reduce((acc: RequireContextProps[], storyRg: string) => {
-          const base = globBase(fixGlob(storyRg));
-          const useSubdirectories = base.glob.startsWith('**');
-          const glob = useSubdirectories ? base.glob.substr(3) : base.glob;
-          const regExp = base.isGlob
-            ? RegExp(makeRe(glob).source.substr(1))
-            : new RegExp(glob);
-          return [
-            ...acc,
-            {
-              directory: path.resolve(configPath, base.base),
-              useSubdirectories,
-              regExp,
-            },
-          ];
-        }, [])
-      : undefined;
+  const stories = config ? config.stories || config.files : undefined;
+  const files = typeof stories === 'string' ? [stories] : stories;
+
+  const contexts = files
+    ? files.reduce((acc: RequireContextProps[], storyRg: string) => {
+        const base = globBase(fixGlob(storyRg));
+        const useSubdirectories = base.glob.startsWith('**');
+        const glob = useSubdirectories ? base.glob.substr(3) : base.glob;
+        const regExp = base.isGlob
+          ? RegExp(makeRe(glob).source.substr(1))
+          : new RegExp(glob);
+        return [
+          ...acc,
+          {
+            directory: path.resolve(configPath, base.base),
+            useSubdirectories,
+            regExp,
+          },
+        ];
+      }, [])
+    : undefined;
   return contexts;
 };

@@ -22,7 +22,8 @@ Possible names for the file:
 | -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `categories`   | [DocType[]](/tutorial/reference/configuration#doctype)            | page types that are considered as categories fields as well                                                                                     |
 | `pages`        | [PagesOnlyRoutes](/tutorial/reference/configuration#pagesonlyroutes) | base url path for API documentation pages.|
-| `stories`      | string[]                           | wild card search string for the stories internally using [glob](https://www.npmjs.com/package/glob)|
+| `stories` or `files` | string | string[]                           | wild card search string for the stories internally using [glob](https://www.npmjs.com/package/glob)|
+| `ignore` | string[]                           | files to ignore while building the site, in lowercase. Defaults to ['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md',]|
 | `webpack` or `finalWebpack`     | [WebpackConfig](/tutorial/reference/configuration#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                             |
 
 

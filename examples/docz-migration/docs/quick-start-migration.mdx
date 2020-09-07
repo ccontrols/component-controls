@@ -1,0 +1,51 @@
+---
+name: Quick Start
+menu: ''
+route: /
+---
+# 🗒️ Migration of a docz site
+
+[docz](https://www.docz.site) is an easy to use, zero-config documentation system using [Gatsby](https://www.gatsbyjs.org/).
+
+component-controls provides migration compatibility for many of the documentation features in `docz`.
+
+a migration example can be found here: [source](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
+
+## Add gatsby theme
+
+```bash
+yarn add gatsby @component-controls/gatsby-theme-stories
+```
+
+## Configurattion file path
+
+ By default, the docz configurration file is kept in the project main folder, while component-controls uses a `.config` sub-folder by default.
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        configPath: '.',
+      },
+    },
+  ],
+};
+```
+
+## Launch scripts
+
+Next, you should add the gatsby develop and gatsby build scripts to the project's `package.json`
+
+```json:title=package.json
+  "scripts": {
+    //component-controls scripts
+    "build-docs": "gatsby clean && gatsby build",
+    "start": "gatsby develop -p 9022",
+    //docz original scripts
+    "develop": "docz dev",
+    "build": "docz build --dest public",
+    "serve": "docz serve"
+  },
+```

@@ -63,7 +63,8 @@ export const extractCSFStories = (
       const { declaration } = path.node;
       const attributes = extractAttributes(declaration);
 
-      const { title } = attributes || {};
+      const { title: docTitle, name } = attributes || {};
+      const title = docTitle || name;
       if (typeof title === 'string') {
         const attrComponents = componentsFromParams(attributes);
         components = attrComponents.reduce(

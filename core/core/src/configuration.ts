@@ -131,7 +131,17 @@ export interface BuildConfiguration {
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
    * example: "./stories/**/ /*.stories.(js|jsx|tsx|mdx)"
    */
-  stories?: string[];
+  stories?: string | string[];
+  /**
+   * alternative naming for docz compatibility
+   */
+  files?: string | string[];
+
+  /**
+   * files to ignore. by default ['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']
+   */
+  ignore?: string[];
+
   /**
    * base url path for API documentation pages. Default is "docs/"
    */
@@ -166,6 +176,11 @@ export interface ToolbarConfig {
 }
 
 /**
+ * static menu items
+ */
+export type StaticMenuItem = string | { name: string; menu?: StaticMenuItem[] };
+export type StaticMenuItems = StaticMenuItem[];
+/**
  * configuration options for the controls module
  */
 export interface ControlsConfig {
@@ -194,6 +209,10 @@ export interface RunOnlyConfiguration {
    * standalone site title. Default is "Component controls"
    */
   siteTitle?: string;
+  /**
+   * alternative site title field - docz compatibility
+   */
+  title?: string;
 
   /**
    * Deployed site url. Default is "https://component-controls.com"
@@ -204,6 +223,10 @@ export interface RunOnlyConfiguration {
    * site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
    */
   siteDescription?: string;
+  /**
+   * alternative site description field - docz compatibility
+   */
+  description?: string;
 
   /**
    * copyright notice displayed in the footer
@@ -253,6 +276,12 @@ export interface RunOnlyConfiguration {
    * custom sidebar items
    */
   sidebar?: ActionItems;
+
+  /**
+   * static menu items, can be used in conjunction with the menu prop on the document
+   * provides compatibility with docz
+   */
+  menu?: StaticMenuItems;
 
   /**
    * controls module configuration options
@@ -312,8 +341,24 @@ export const defaultRunConfig: RunConfiguration = {
   },
 };
 
+export const convertConfig = (config: RunConfiguration): RunConfiguration => {
+  const { siteTitle, siteDescription, title, description, ...rest } = config;
+  return {
+    siteTitle: siteTitle || title,
+    siteDescription: siteDescription || description,
+    ...rest,
+  };
+};
+
 export const defaultBuildConfig: BuildConfiguration = {
   categories: ['author', 'tags'],
+  ignore: [
+    'readme.md',
+    'changelog.md',
+    'code_of_conduct.md',
+    'contributing.md',
+    'license.md',
+  ],
   pages: {
     story: {
       basePath: 'docs/',

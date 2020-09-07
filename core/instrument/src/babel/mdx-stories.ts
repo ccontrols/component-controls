@@ -73,13 +73,14 @@ export const extractMDXStories = (props: any) => (
     }, components);
     return attrComponents.length > 0 ? attrComponents[0] : undefined;
   };
-
+  const { title, name, ...rest } = props;
+  const doc = props ? { ...rest, title: title || name } : undefined;
   const store: Required<Pick<
     ParseStorieReturnType,
     'stories' | 'doc' | 'components' | 'exports' | 'packages'
   >> = {
     stories: {},
-    doc: props ? { ...props } : undefined,
+    doc,
     components: {},
     exports: {},
     packages: {},
@@ -87,7 +88,7 @@ export const extractMDXStories = (props: any) => (
 
   if (props) {
     store.exports.default = {
-      story: props,
+      story: doc,
     };
   }
   const { transformMDX } = _options.mdx;
@@ -101,6 +102,7 @@ export const extractMDXStories = (props: any) => (
           'Story',
           'Preview',
           'PropsTable',
+          'Props',
           'Playground',
           'ComponentSource',
         ].indexOf(node.name.name) > -1
@@ -214,7 +216,8 @@ export const extractMDXStories = (props: any) => (
           case 'Meta': {
             const attributes = collectAttributes(node);
             const exports = transformMDX ? { story: attributes } : undefined;
-            const { title } = attributes;
+            const { title: docTitle, name } = attributes || {};
+            const title = docTitle || name;
             if (title) {
               const doc: Document = {
                 componentsLookup: {},

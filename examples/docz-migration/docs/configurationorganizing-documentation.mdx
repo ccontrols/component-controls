@@ -1,0 +1,27 @@
+---
+name: Organizing Documentation
+menu: Configuration
+route: /configuration/organizing-documentation/
+---
+import itemFieldsImg from './images/documentation-item-fields.jpg';
+
+# Organizing Documentation
+
+Thinking about the organization of your documentation ultimately is dependent on how you arrange your [Navigation Menu configuration](/configuration/navigation-menu/). By default, Docz will place your documentation Menu Items in alphabetical order, but you can change that order by explicitly adding those items in the Navigation Menu to control the order.
+
+To learn more about adding and arranging your Navigation Menu, see the [Navigation Menu configuration](/configuration/navigation-menu/) page.
+
+## Documentation Components
+
+Each documentation item is comprised of 4 components: Name, Menu, Route, and Body.
+
+The **Name** is what will be used to display a link in the Navigation Menu. When you add this item to the Menu, you need to add the Name exactly as it's added here in order for the compilation engine to correctly match the item.
+
+The **Menu** attribute is what's used to place a particular documentation item as a sub-Menu Item in the Navigation Menu. If you have a top level Menu Item of Configuration, as we do with this page, we would use Configuration as our Menu attribute, which would then place the doc under that item in the Navigation Menu.
+
+The **Route** component is what's used to define the URL the particular document is located at. It's recommended to use best practices when defining the route and organize it as you would a folder on a computer. For instance, as we're this page is nested under the Configuration menu and it's name is Organizing Documentation, then we might define the route as /configuration/organizing-documentation, as we have done here.
+
+The **Body** is what it used to create the content of the documentation page. Netlify CMS provides the option of writing in either Rich Text or Markdown.
+
+<img alt="documentation item attributes" title="Example of a documentation item attributes" src={itemFieldsImg} />
+

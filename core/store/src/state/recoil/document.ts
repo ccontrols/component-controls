@@ -184,9 +184,12 @@ const docTypeCountState = selector<DocCountType>({
     const { pages = {} } = store?.config || {};
     return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
       const docs = get(docsByTypeState(type));
+      const home = docs.length
+        ? docs.find(doc => doc.route === '/') || docs[0]
+        : undefined;
       return {
         ...acc,
-        [type]: { count: docs.length, home: docs.length ? docs[0] : undefined },
+        [type]: { count: docs.length, home },
       };
     }, {});
   },

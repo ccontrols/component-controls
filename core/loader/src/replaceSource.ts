@@ -17,7 +17,7 @@ export const replaceSource = (
 const configJSON = ${
     configFilePath ? `require("${configFilePath}")` : 'undefined'
   };
- const contexts = [];
+const contexts = [];
 ${contexts
   .map(
     context =>

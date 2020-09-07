@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.21.0",
-    "@types/next": "^9.0.0",
     "typescript": "^3.8.3"
   },
   "publishConfig": {

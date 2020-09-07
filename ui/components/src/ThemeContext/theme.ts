@@ -43,6 +43,7 @@ export type ControlsTheme = {
   zoom: ThemeUIStyleObject;
   editpage: Record<string, ThemeUIStyleObject>;
   pagecontainer: ThemeUIStyleObject;
+  playground: Record<string, ThemeUIStyleObject>;
   propstable: Record<string, ThemeUIStyleObject>;
   story: Record<string, ThemeUIStyleObject>;
   colormode: Record<string, ThemeUIStyleObject>;
@@ -185,7 +186,7 @@ export const theme: ControlsTheme = {
         alignItems: 'center',
         width: '100%',
       },
-    },
+    } as any,
   },
   styles: {
     root: {
@@ -672,6 +673,15 @@ export const theme: ControlsTheme = {
     page: { maxWidth: '1200px' },
     full: { maxWidth: 'unset', p: [0, 0, 0] },
   },
+  playground: {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      px: 4,
+      my: 4,
+    },
+  },
   propstable: {
     name: {
       fontWeight: 'bold',
@@ -944,6 +954,11 @@ export const theme: ControlsTheme = {
     },
   },
   appheader: {
+    title: {
+      textDecoration: 'none',
+      fontWeight: 'normal',
+      ':hover': { color: `secondary` },
+    },
     items: {
       display: 'flex',
       flexDirection: 'row',

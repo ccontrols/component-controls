@@ -7,7 +7,8 @@ export const GatsbyLink: FC<LinkProps & { to?: string }> = ({
   href,
   to,
   ...props
-}) => (
+}) => {
+  const link = href || to || '/';
   //@ts-ignore
-  <Link to={href || to || ''} {...props} activeClassName="active" />
-);
+  return link ? <Link to={link} {...props} activeClassName="active" /> : null;
+};

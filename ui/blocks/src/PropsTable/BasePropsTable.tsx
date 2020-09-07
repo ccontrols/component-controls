@@ -58,7 +58,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const story = useCurrentStory();
-  const info: Partial<ComponentInfo> = component.info || {};
+  const info: Partial<ComponentInfo> = useMemo(() => component.info || {}, [
+    component,
+  ]);
   const [, setControlValue] = useControl();
   const controls = useMemo(() => {
     const storyControls = visibility !== 'info' ? story?.controls || {} : {};
@@ -198,21 +200,23 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               <Box variant="propstable.description.container">
                 {description && <Markdown>{description}</Markdown>}
                 {(raw ?? typeName) && (
-                  <Styled.pre variant="propstable.description.type">
-                    {Array.isArray(value) && value.length > 1
-                      ? value.map(({ name: typeName, value }) => (
-                          <Tag
-                            key={`${name}_${value || typeName}`}
-                            color="grey"
-                            transparentAmount={0.9}
-                            borderSize={1}
-                            variant="tag.rightmargin"
-                          >
-                            {value || typeName}
-                          </Tag>
-                        ))
-                      : raw ?? typeName}
-                  </Styled.pre>
+                  <Box variant="propstable.description.type">
+                    <Styled.pre>
+                      {Array.isArray(value) && value.length > 1
+                        ? value.map(({ name: typeName, value }) => (
+                            <Tag
+                              key={`${name}_${value || typeName}`}
+                              color="grey"
+                              transparentAmount={0.9}
+                              borderSize={1}
+                              variant="tag.rightmargin"
+                            >
+                              {value || typeName}
+                            </Tag>
+                          ))
+                        : raw ?? typeName}
+                    </Styled.pre>
+                  </Box>
                 )}
               </Box>
             );

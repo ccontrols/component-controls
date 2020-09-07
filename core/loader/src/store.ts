@@ -130,7 +130,8 @@ export const initializeBuildOptions = (
   configPath?: string,
 ) => {
   config = loadConfiguration(rootPath, configPath);
-  store.buildConfig = config?.config
-    ? deepMergeArrays(defaultBuildConfig, config.config)
-    : defaultBuildConfig;
+  if (config && config.config) {
+    config.config = deepMergeArrays(defaultBuildConfig, config.config);
+  }
+  store.buildConfig = config?.config || defaultBuildConfig;
 };

@@ -65,3 +65,5 @@ export const PropsTable: FC<PropsTableProps> = props => {
     </ComponentsBlockContainer>
   );
 };
+
+export { PropsTable as Props };

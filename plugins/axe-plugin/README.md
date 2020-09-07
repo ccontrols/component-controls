@@ -2,9 +2,8 @@
 
 -   [In action](#in-action)
 -   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
-    -   [Configure](#configure)
+-   [Install](#install)
+-   [Documentation](#documentation)
 -   [API](#api)
     -   [<ins>AllyBlock</ins>](#insallyblockins)
     -   [<ins>AllyPage</ins>](#insallypageins)

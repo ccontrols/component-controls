@@ -7,6 +7,7 @@ import {
   deepMergeArrays,
   deepMerge,
   defaultRunConfig,
+  convertConfig,
   docStoryToId,
   storyNameFromExport,
   defDocType,
@@ -34,7 +35,7 @@ export const loadStore = (store: LoadingStore): Store => {
     if (stores) {
       globalStore.config = deepMergeArrays(
         defaultRunConfig,
-        deepMergeArrays(buildConfig, config),
+        convertConfig(deepMergeArrays(buildConfig, config)),
       );
       if (!globalStore.config.renderFn) {
         globalStore.config.renderFn = reactRender;

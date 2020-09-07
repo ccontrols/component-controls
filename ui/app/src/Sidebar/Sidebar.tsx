@@ -30,6 +30,7 @@ import {
   getStoryPath,
   getDocPath,
   PageConfiguration,
+  StaticMenuItems,
 } from '@component-controls/core';
 
 export interface SidebarProps {
@@ -110,7 +111,12 @@ const createMenuItem = (
         newItem.href = documentPath(type, doc.title, activeTab);
       }
     }
-    parent.push(newItem);
+    const findIndex = parent.findIndex(item => item.label === newItem.label);
+    if (findIndex > -1) {
+      parent[findIndex] = newItem;
+    } else {
+      parent.push(newItem);
+    }
   }
   return createMenuItem(
     store,
@@ -125,6 +131,33 @@ const createMenuItem = (
   );
 };
 
+const staticMenusToMenuItems = (menu: StaticMenuItems): MenuItems =>
+  menu
+    .filter(item => item)
+    .map(item => {
+      return typeof item === 'string'
+        ? { label: item }
+        : {
+            label: item.name,
+            items: item.menu ? staticMenusToMenuItems(item.menu) : undefined,
+          };
+    });
+
+const findMenuItem = (
+  items: MenuItems,
+  label: string,
+): MenuItem | undefined => {
+  for (const item of items) {
+    if (item.label === label) {
+      return item;
+    }
+    const child = item.items ? findMenuItem(item.items, label) : undefined;
+    if (child) {
+      return child;
+    }
+  }
+  return undefined;
+};
 /**
  * application sidebar component
  */
@@ -138,23 +171,46 @@ export const Sidebar: FC<SidebarProps> = ({
   const activeTab = useActiveTab();
   const { title: docId } = useCurrentDocument() || {};
 
-  const config = useConfig() || {};
-  const { pages, sidebar = [] } = config;
-  const page: PageConfiguration = pages?.[type] || {};
+  const config = useMemo(() => useConfig() || {}, []);
+  const { pages, menu, sidebar = [] } = config;
+  const page: PageConfiguration = useMemo(() => pages?.[type] || {}, [
+    pages,
+    type,
+  ]);
   const { label = '' } = page;
   const docs: Pages = useDocByType(type);
   const menuItems = useMemo(() => {
+    const staticMenus = Array.isArray(menu) ? staticMenusToMenuItems(menu) : [];
     if (store) {
       const menuItems = docs.reduce((acc: MenuItems, doc: Document) => {
-        const { title } = doc;
+        const { title, menu } = doc;
+        if (menu) {
+          const item = findMenuItem(acc, menu);
+          if (item) {
+            if (!item.items) {
+              item.items = [];
+            }
+            createMenuItem(
+              store,
+              config,
+              doc,
+              type,
+              [title],
+              page,
+              activeTab,
+              item.items,
+            );
+            return acc;
+          }
+        }
         const levels = title.split('/');
         createMenuItem(store, config, doc, type, levels, page, activeTab, acc);
         return acc;
-      }, []);
+      }, staticMenus);
       return menuItems;
     }
-    return [];
-  }, [type, activeTab, store, config, page, docs]);
+    return staticMenus;
+  }, [type, activeTab, store, config, page, docs, menu]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   const actions: ActionItems = [...sidebar];
 

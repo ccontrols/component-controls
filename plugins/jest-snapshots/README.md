@@ -1,9 +1,7 @@
 # Table of contents
 
--   [In action](#in-action)
 -   [Overview](#overview)
--   [Getting Started](#getting-started)
-    -   [Install](#install)
+-   [Install](#install)
 -   [API](#api)
 
 # Overview
@@ -12,7 +10,6 @@
 -   More advanced level to customize the framework renderer.
 -   Advanced level for full control over which stories to use for the tests.
 -   Support for a variety of test rendderes starting with [react-test-renderer](https://reactjs.org/docs/test-renderer.html), [react-testing-library](docs) and [enzyme](https://enzymejs.github.io/enzyme/).
-
 
 # Install
 

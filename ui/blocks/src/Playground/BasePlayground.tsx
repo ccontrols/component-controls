@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { PlusIcon, DashIcon, SyncIcon } from '@primer/octicons-react';
+import { Box } from 'theme-ui';
 import { Story } from '@component-controls/core';
 import {
   PanelContainer,
@@ -131,7 +132,7 @@ export const BasePlayground: FC<BasePlaygroundProps> = ({
       >
         <Zoom scale={scale || 1}>
           <PlaygroundContext.Provider value={{ useDescription: true }}>
-            {children}
+            <Box variant="playground.container">{children}</Box>
           </PlaygroundContext.Provider>
         </Zoom>
       </PanelContainer>

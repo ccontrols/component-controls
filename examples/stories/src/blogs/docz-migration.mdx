@@ -1,0 +1,147 @@
+---
+title: Migration from docz
+type: blog
+date: 2020-09-10
+author: atanasster
+route: /blogs/docz-migration
+description: A step-by-step guide on migrating a documentation site from docz to component-controls.
+tags:
+  - docz
+  - gatsby
+---
+
+# Migration
+
+[docz](https://www.docz.site) is an easy to use, zero-config documentation system using [Gatsby](https://www.gatsbyjs.org/).
+
+component-controls provides migration compatibility for many of the documentation features in `docz`.
+
+A migration example can be found here: 
+
+[source](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
+[live](https://docz-migration.netlify.app)
+
+The example was started from [gatsby-starter-docz-netlifycms](https://github.com/colbyfayock/gatsby-starter-docz-netlifycms)
+
+## Add gatsby theme
+
+```bash
+yarn add gatsby @component-controls/gatsby-theme-stories
+```
+
+## Configurattion file path
+
+ By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder by default.
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: '@component-controls/gatsby-theme-stories',
+      options: {
+        configPath: '.',
+      },
+    },
+  ],
+};
+```
+
+## Launch scripts
+
+Next, you should add the gatsby develop and gatsby build scripts to the project's `package.json`
+
+```json:title=package.json
+  "scripts": {
+    //component-controls scripts
+    "build-docs": "gatsby clean && gatsby build",
+    "start": "gatsby develop -p 9022",
+    //docz original scripts
+    "develop": "docz dev",
+    "build": "docz build --dest public",
+    "serve": "docz serve"
+  },
+```
+
+# Configuration fields
+
+component-controls is able to read directly the docz configuration file, following is an example `doczrc.js`:
+
+> the component-controls build-time and run-time configurations are merged, and we can use a single configuration file (`doczrc.js`) for both build-time and run-time configurations.
+
+```json:title=doczrc.js
+export default {
+  files: 'docs/**/*.mdx',
+  title: 'Docz & Netlify CMS',
+  menu: [
+    {
+      name: 'Quick Start',
+      menu: [''],
+    },
+    {
+      name: 'Getting Started',
+      menu: ['Manual Installation'],
+    },
+    {
+      name: 'Configuration',
+    },
+  ],
+};
+```
+
+## files
+
+The **files** field is mapped to the **stories** configuration field
+
+## title
+
+
+# Components
+
+## Playground
+
+component-controls provides a similar component to docz's `<Playground />` and it can be imported from the `@component-controls/blocks` 
+
+```
+import { Playground } from '@component-controls/blocks';
+```
+
+```js:title=playground.mdx
+---
+name: Playground
+menu: Components
+---
+
+import { Playground } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+# Button
+
+## Basic usage
+
+<Playground>
+  <Button>Click me</Button>
+  <Button kind="secondary">Click me</Button>
+</Playground>
+```
+
+
+## Props
+
+component-controls provides a similar component to docz's `<Props />` and it can be imported from the `@component-controls/blocks` 
+
+```
+import { Props } from '@component-controls/blocks';
+```
+
+```js:title=props.mdx
+---
+name: Props
+menu: Components
+---
+
+import { Props } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+# Button
+
+<Props of={Button} />

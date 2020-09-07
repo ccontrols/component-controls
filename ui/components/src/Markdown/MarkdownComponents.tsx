@@ -1,8 +1,6 @@
 /* eslint-disable react/display-name */
-/** @jsx jsx */
-import { ComponentType } from 'react';
+import React, { ComponentType } from 'react';
 import { preToCodeBlock } from 'mdx-utils';
-import { jsx } from 'theme-ui';
 import { Label, Button, Box } from 'theme-ui';
 import { Language } from 'prism-react-renderer';
 import { SyntaxHighlighter } from '../SyntaxHighlighter';

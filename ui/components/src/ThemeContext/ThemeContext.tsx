@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { merge } from 'theme-ui';
 import { ThemeProvider as ThemeUIProvider, Theme } from 'theme-ui';
 
@@ -18,7 +18,7 @@ export interface ThemeProviderProps {
   theme?: Theme;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+export const ThemeProvider: FC<ThemeProviderProps> = ({
   theme: customTheme,
   children,
   components = {},

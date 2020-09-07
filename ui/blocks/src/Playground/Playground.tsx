@@ -6,14 +6,17 @@ import { StoryPlayground } from './StoryPlayground';
  * Component to display a live playground of component examples. Has custom actions for zooming, switch direction, review story source and configuration.
  */
 export const Playground: FC<PlaygroundProps> = props => {
-  const { children } = props;
+  const { children, ...rest } = props;
   const childArr = Children.toArray(children);
-
   if (childArr.length === 1) {
     const child = childArr[0] as any;
     if (child.type.displayName === 'Story') {
       return <StoryPlayground storyProps={child.props} {...props} />;
     }
   }
-  return <BasePlayground {...props} />;
+  return (
+    <BasePlayground {...rest}>
+      {typeof children === 'function' ? children() : children}
+    </BasePlayground>
+  );
 };

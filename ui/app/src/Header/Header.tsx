@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, Heading } from 'theme-ui';
 import { DocType, getDocTypePath } from '@component-controls/core';
-import { ActionBar, ActionItems } from '@component-controls/components';
-
+import { ActionBar, ActionItems, Link } from '@component-controls/components';
 import {
   ColorMode,
   SidebarContext,
@@ -34,38 +33,44 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const docCounts = useDocTypeCount();
   const config = useConfig();
   const doc = useCurrentDocument();
-  const { pages } = config || {};
+  const { pages, siteTitle } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
       { node: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
     ];
-    const finalActions = pages
-      ? [
-          ...actions,
-          ...Object.keys(pages)
-            .map(type => {
-              const docType = type as DocType;
-              return { page: pages[docType], docType };
-            })
-            .filter(({ page, docType }) => {
-              const docInfo = docCounts[docType];
-              return (
-                page.topMenu &&
-                docInfo &&
-                docInfo.count &&
-                homePage.docId !== docInfo.home?.title
-              );
-            })
-            .map(({ page }) => ({
-              id: page.label?.toLowerCase(),
-              'aria-label': `go to page ${page.label}`,
-              href: getDocTypePath(page),
-              node: page.label,
-            })),
-        ]
-      : actions;
-    return toolbar.left ? [...finalActions, ...toolbar.left] : finalActions;
-  }, [pages, toolbar.left, docCounts, homePage.docId]);
+    if (pages) {
+      const pageItems = Object.keys(pages)
+        .map(type => {
+          const docType = type as DocType;
+          return { page: pages[docType], docType };
+        })
+        .filter(({ page, docType }) => {
+          const docInfo = docCounts[docType];
+          return (
+            page.topMenu &&
+            docInfo &&
+            docInfo.count &&
+            homePage.docId !== docInfo.home?.title
+          );
+        })
+        .map(({ page }) => ({
+          id: page.label?.toLowerCase(),
+          'aria-label': `go to page ${page.label}`,
+          href: getDocTypePath(page),
+          node: page.label,
+        }));
+      if (pageItems.length) {
+        Array.prototype.push.apply(actions, pageItems);
+      } else {
+        actions[0].node = (
+          <Link href="/" variant="appheader.title">
+            <Heading as="h2">{siteTitle}</Heading>
+          </Link>
+        );
+      }
+    }
+    return toolbar.left ? [...actions, ...toolbar.left] : actions;
+  }, [pages, toolbar.left, docCounts, homePage, siteTitle]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
