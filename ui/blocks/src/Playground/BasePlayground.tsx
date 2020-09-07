@@ -37,11 +37,13 @@ export type PlaygroundProps = PlaygroundOwnProps &
 
 export type BasePlaygroundProps = PlaygroundProps & {
   story?: Story;
+  wrapper?: boolean;
 };
 
 export const BasePlayground: FC<BasePlaygroundProps> = ({
   children,
   story,
+  wrapper = true,
   ...props
 }) => {
   const custom = useCustomProps<PlaygroundProps>(NAME, props);
@@ -132,7 +134,11 @@ export const BasePlayground: FC<BasePlaygroundProps> = ({
       >
         <Zoom scale={scale || 1}>
           <PlaygroundContext.Provider value={{ useDescription: true }}>
-            <Box variant="playground.container">{children}</Box>
+            {wrapper ? (
+              <Box variant="playground.container">{children}</Box>
+            ) : (
+              children
+            )}
           </PlaygroundContext.Provider>
         </Zoom>
       </PanelContainer>

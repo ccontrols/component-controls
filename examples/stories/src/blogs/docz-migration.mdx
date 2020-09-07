@@ -9,6 +9,9 @@ tags:
   - docz
   - gatsby
 ---
+import { Playground, Props, Story } from '@component-controls/blocks';
+import { Button } from '../components/Button'
+
 
 # Migration
 
@@ -101,10 +104,6 @@ The **files** field is mapped to the **stories** configuration field
 
 component-controls provides a similar component to docz's `<Playground />` and it can be imported from the `@component-controls/blocks` 
 
-```
-import { Playground } from '@component-controls/blocks';
-```
-
 ```js:title=playground.mdx
 ---
 name: Playground
@@ -116,22 +115,47 @@ import { Button } from '../src/components/Button'
 
 # Button
 
-## Basic usage
-
 <Playground>
-  <Button>Click me</Button>
   <Button kind="secondary">Click me</Button>
 </Playground>
 ```
+live example:
+
+<Playground>
+  <Button>Click me</Button>
+</Playground>
+
+You can also wrap the component code in a `<Story />` component in order to display the source code
+
+```js:title=playground.mdx
+---
+name: Playground
+menu: Components
+---
+
+import { Playground, Story } from '@component-controls/blocks';
+import { Button } from '../src/components/Button'
+
+# Button
+
+<Playground>
+  <Story name='example'>
+    <Button kind="secondary">Click me</Button>
+  </Story>  
+</Playground>
+```
+live example:
+
+<Playground>
+  <Story name='example'>
+    <Button kind="secondary">Click me</Button>
+  </Story>  
+</Playground>
 
 
 ## Props
 
 component-controls provides a similar component to docz's `<Props />` and it can be imported from the `@component-controls/blocks` 
-
-```
-import { Props } from '@component-controls/blocks';
-```
 
 ```js:title=props.mdx
 ---
@@ -143,5 +167,9 @@ import { Props } from '@component-controls/blocks';
 import { Button } from '../src/components/Button'
 
 # Button
+
+<Props of={Button} />
+```
+live example:
 
 <Props of={Button} />
