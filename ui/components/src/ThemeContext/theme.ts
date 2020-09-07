@@ -676,7 +676,7 @@ export const theme: ControlsTheme = {
   playground: {
     container: {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
       alignItems: 'flex-start',
       px: 4,
       my: 4,
