@@ -68,7 +68,7 @@ export const extraPanel = () => (
     <Playground
       actions={[
         {
-          title: 'custom panel',
+          node: 'custom panel',
           panel: <Donut value={1 / 2} />,
         },
       ]}

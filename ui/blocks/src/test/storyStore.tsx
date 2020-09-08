@@ -9,12 +9,16 @@ import {
   deepMerge,
   defaultRunConfig,
 } from '@component-controls/core';
+import { render as reactRender } from '@component-controls/render/react';
 
 import { MDXContent } from './MDXStory';
 
 export const store: Store = {
   ...getDefaultStore(),
-  config: deepMerge(defaultBuildConfig, defaultRunConfig),
+  config: {
+    renderFn: reactRender,
+    ...deepMerge(defaultBuildConfig, defaultRunConfig),
+  },
   packages: {
     'test-package': {
       fileHash: '28feb04b2447384a0bd648387e62bbc7',
