@@ -171,7 +171,7 @@ export const Sidebar: FC<SidebarProps> = ({
   const activeTab = useActiveTab();
   const { title: docId } = useCurrentDocument() || {};
 
-  const config = useMemo(() => useConfig() || {}, []);
+  const config = useConfig() || {};
   const { pages, menu, sidebar = [] } = config;
   const page: PageConfiguration = useMemo(() => pages?.[type] || {}, [
     pages,

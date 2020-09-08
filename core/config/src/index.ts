@@ -76,8 +76,11 @@ export const loadConfiguration = (
   if (buildConfigFile) {
     const buildPagth = path.resolve(configPath, buildConfigFile);
     let config = require('esm')(module)(buildPagth);
-    if (!config || (typeof config === 'object' && Object.keys(config).length === 0)) {
-      config = require(buildPagth)
+    if (
+      !config ||
+      (typeof config === 'object' && Object.keys(config).length === 0)
+    ) {
+      config = require(buildPagth);
     }
     return {
       config: config.default || config,

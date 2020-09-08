@@ -1,6 +1,6 @@
-const faker = require('faker/locale/en_US');
+import { randomizeData } from '../src/controls-randomize';
+import { faker } from '../src/faker';
 import { ControlTypes, ComponentControl, ComponentControls } from '../src';
-import { randomizeData } from '@component-controls/core/src/controls-randomize';
 
 describe('Options utility functions', () => {
   const name: ComponentControl = {

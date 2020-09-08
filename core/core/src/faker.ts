@@ -1,3 +1,3 @@
-import * as faker from 'faker/locale/en_US';
+import faker from 'faker/locale/en_US';
 
 export { faker };
