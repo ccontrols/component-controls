@@ -502,7 +502,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -511,6 +511,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -523,6 +527,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },

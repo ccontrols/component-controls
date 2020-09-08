@@ -15,11 +15,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 47,
+      "line": 48,
     },
     "start": Object {
       "column": 19,
-      "line": 44,
+      "line": 45,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -27,33 +27,34 @@ Object {
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
 var React = require('react');
-var React__default = _interopDefault(React);
 var blocks = require('@component-controls/blocks');
 var live_store = require('@component-controls/store/live_store');
 var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+
 const BlockContextProvider = ({ children, id, }) => {
     const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
+    return (React__default['default'].createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
 const ControlsProvider = ({ children }) => {
-    return React__default.createElement(BlockContextProvider, null, children);
+    return React__default['default'].createElement(BlockContextProvider, null, children);
 };
 
 const ComponentSource = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.ComponentSource, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.ComponentSource, Object.assign({}, props))));
 };
 
 const Description = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Description, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Description, Object.assign({}, props))));
 };
 
 /**
@@ -62,47 +63,47 @@ const Description = props => {
 const Meta = () => null;
 
 const Playground = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Playground, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Playground, Object.assign({}, props))));
 };
 
 const PropsTable = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.PropsTable, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.PropsTable, Object.assign({}, props))));
 };
 
 const Stories = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Stories, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Stories, Object.assign({}, props))));
 };
 
 const Story = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Story, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Story, Object.assign({}, props))));
 };
 
 const StoryConfig = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.StoryConfig, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.StoryConfig, Object.assign({}, props))));
 };
 
 const StorySource = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.StorySource, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.StorySource, Object.assign({}, props))));
 };
 
 const Subtitle = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Subtitle, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Subtitle, Object.assign({}, props))));
 };
 
 const Title = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Title, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Title, Object.assign({}, props))));
 };
 
 const ThemeProvider = ({ children }) => {
-    return React__default.createElement(blocks.ThemeProvider, null, children);
+    return React__default['default'].createElement(blocks.ThemeProvider, null, children);
 };
 
 exports.DocsContainer = DocsContainer.DocsContainer;
@@ -221,11 +222,11 @@ Object {
   "loc": Object {
     "end": Object {
       "column": 1,
-      "line": 47,
+      "line": 48,
     },
     "start": Object {
       "column": 19,
-      "line": 44,
+      "line": 45,
     },
   },
   "originalFilePath": "/Users/atanasster/component-controls/node_modules/@component-controls/storybook/dist/index.js",
@@ -233,33 +234,34 @@ Object {
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
 var React = require('react');
-var React__default = _interopDefault(React);
 var blocks = require('@component-controls/blocks');
 var live_store = require('@component-controls/store/live_store');
 var storybookCustomDocs = require('@component-controls/storybook-custom-docs');
 var DocsContainer = require('./DocsContainer.js');
 
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+
 const BlockContextProvider = ({ children, id, }) => {
     const { storyId: defaultStoyId, docId } = storybookCustomDocs.useCurrentData();
     const storyId = id ? id : defaultStoyId;
-    return (React__default.createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
+    return (React__default['default'].createElement(blocks.BlockContextProvider, { store: live_store.store, storyId: storyId, docId: docId }, children));
 };
 
 const ControlsProvider = ({ children }) => {
-    return React__default.createElement(BlockContextProvider, null, children);
+    return React__default['default'].createElement(BlockContextProvider, null, children);
 };
 
 const ComponentSource = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.ComponentSource, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.ComponentSource, Object.assign({}, props))));
 };
 
 const Description = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Description, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Description, Object.assign({}, props))));
 };
 
 /**
@@ -268,47 +270,47 @@ const Description = props => {
 const Meta = () => null;
 
 const Playground = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Playground, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Playground, Object.assign({}, props))));
 };
 
 const PropsTable = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.PropsTable, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.PropsTable, Object.assign({}, props))));
 };
 
 const Stories = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Stories, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Stories, Object.assign({}, props))));
 };
 
 const Story = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Story, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Story, Object.assign({}, props))));
 };
 
 const StoryConfig = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.StoryConfig, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.StoryConfig, Object.assign({}, props))));
 };
 
 const StorySource = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.StorySource, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.StorySource, Object.assign({}, props))));
 };
 
 const Subtitle = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Subtitle, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Subtitle, Object.assign({}, props))));
 };
 
 const Title = props => {
-    return (React__default.createElement(ControlsProvider, null,
-        React__default.createElement(blocks.Title, Object.assign({}, props))));
+    return (React__default['default'].createElement(ControlsProvider, null,
+        React__default['default'].createElement(blocks.Title, Object.assign({}, props))));
 };
 
 const ThemeProvider = ({ children }) => {
-    return React__default.createElement(blocks.ThemeProvider, null, children);
+    return React__default['default'].createElement(blocks.ThemeProvider, null, children);
 };
 
 exports.DocsContainer = DocsContainer.DocsContainer;

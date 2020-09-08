@@ -271,7 +271,7 @@ allows assistive technology to override the general default of reading in docume
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"grid\\" | \\"true\\" | \\"false\\" | \\"listbox\\" | \\"tree\\"",
+        "raw": "boolean | \\"dialog\\" | \\"menu\\" | \\"true\\" | \\"false\\" | \\"listbox\\" | \\"tree\\" | \\"grid\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -281,9 +281,6 @@ allows assistive technology to override the general default of reading in docume
           },
           Object {
             "name": "menu",
-          },
-          Object {
-            "name": "grid",
           },
           Object {
             "name": "true",
@@ -296,6 +293,9 @@ allows assistive technology to override the general default of reading in docume
           },
           Object {
             "name": "tree",
+          },
+          Object {
+            "name": "grid",
           },
         ],
       },
@@ -500,7 +500,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"all\\" | \\"additions\\" | \\"additions text\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"all\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -516,11 +516,31 @@ A hint could be a sample value or a brief description of the expected format.",
           },
           Object {
             "name": "string",
+            "value": "additions removals",
+          },
+          Object {
+            "name": "string",
             "value": "additions text",
           },
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -1969,7 +1989,7 @@ If an array of components is specified, each component will be displayed in a se
 if the function returns false, it can stop chabging to the new tab",
       "type": Object {
         "name": "function",
-        "raw": "((name: string, component: Component) => boolean | void) | ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
+        "raw": "((name: string, component: Component) => boolean | void) & ((event: SyntheticEvent<HTMLDivElement, Event>) => void)",
       },
     },
     "onSelectCapture": Object {
@@ -2947,7 +2967,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -2956,6 +2976,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -2968,6 +2992,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -5896,7 +5936,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -5905,6 +5945,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -5917,6 +5961,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -8831,7 +8891,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -8840,6 +8900,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -8852,6 +8916,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -11780,7 +11860,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -11789,6 +11869,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -11801,6 +11885,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },

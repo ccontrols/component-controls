@@ -288,19 +288,19 @@ Object {
   },
   "componentPackage": Object {
     "dependencies": Object {
-      "@theme-ui/color-modes": "^0.4.0-rc.1",
-      "@theme-ui/components": "^0.4.0-rc.1",
-      "@theme-ui/core": "^0.4.0-rc.1",
-      "@theme-ui/css": "^0.4.0-rc.1",
-      "@theme-ui/mdx": "^0.4.0-rc.1",
-      "@theme-ui/theme-provider": "^0.4.0-rc.1",
+      "@theme-ui/color-modes": "^0.4.0-rc.5",
+      "@theme-ui/components": "^0.4.0-rc.5",
+      "@theme-ui/core": "^0.4.0-rc.5",
+      "@theme-ui/css": "^0.4.0-rc.5",
+      "@theme-ui/mdx": "^0.4.0-rc.5",
+      "@theme-ui/theme-provider": "^0.4.0-rc.5",
     },
     "devDependencies": undefined,
     "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
     "name": "theme-ui",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "0.4.0-rc.1",
+    "version": "0.4.0-rc.5",
   },
 }
 `;

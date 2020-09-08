@@ -7,6 +7,13 @@ Object {
       "author",
       "tags",
     ],
+    "ignore": Array [
+      "readme.md",
+      "changelog.md",
+      "code_of_conduct.md",
+      "contributing.md",
+      "license.md",
+    ],
     "pages": Object {
       "author": Object {
         "basePath": "authors/",
@@ -72,8 +79,8 @@ Object {
             "description": "button label",
             "parentName": "ButtonProps",
             "type": Object {
-              "name": "ReactNode",
-              "raw": "ReactNode",
+              "name": "function",
+              "raw": "string | (string & {}) | (string & ReactElement<any, string | ((props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>) | (new (props: any) => Component<...>)>) | (string & ReactNodeArray) | (string & ReactPortal)",
             },
           },
           "color": Object {

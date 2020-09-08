@@ -2,8 +2,7 @@
 
 exports[`external-library Button 1`] = `
 Object {
-  "description": "Primitive button component with variants
-@see https://theme-ui.com/components/button",
+  "description": "Primitive button component with variants",
   "displayName": "Button",
   "methods": Array [],
   "props": Object {
@@ -501,7 +500,7 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"text\\" | \\"additions\\" | \\"additions text\\" | \\"all\\" | \\"removals\\"",
+        "raw": "\\"text\\" | \\"additions\\" | \\"additions removals\\" | \\"additions text\\" | \\"all\\" | \\"removals\\" | \\"removals additions\\" | \\"removals text\\" | \\"text additions\\" | \\"text removals\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -510,6 +509,10 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "additions",
+          },
+          Object {
+            "name": "string",
+            "value": "additions removals",
           },
           Object {
             "name": "string",
@@ -522,6 +525,22 @@ A hint could be a sample value or a brief description of the expected format.",
           Object {
             "name": "string",
             "value": "removals",
+          },
+          Object {
+            "name": "string",
+            "value": "removals additions",
+          },
+          Object {
+            "name": "string",
+            "value": "removals text",
+          },
+          Object {
+            "name": "string",
+            "value": "text additions",
+          },
+          Object {
+            "name": "string",
+            "value": "text removals",
           },
         ],
       },
@@ -2333,12 +2352,12 @@ Object {
   },
   "componentPackage": Object {
     "dependencies": Object {
-      "@theme-ui/color-modes": "^0.4.0-rc.1",
-      "@theme-ui/components": "^0.4.0-rc.1",
-      "@theme-ui/core": "^0.4.0-rc.1",
-      "@theme-ui/css": "^0.4.0-rc.1",
-      "@theme-ui/mdx": "^0.4.0-rc.1",
-      "@theme-ui/theme-provider": "^0.4.0-rc.1",
+      "@theme-ui/color-modes": "^0.4.0-rc.5",
+      "@theme-ui/components": "^0.4.0-rc.5",
+      "@theme-ui/core": "^0.4.0-rc.5",
+      "@theme-ui/css": "^0.4.0-rc.5",
+      "@theme-ui/mdx": "^0.4.0-rc.5",
+      "@theme-ui/theme-provider": "^0.4.0-rc.5",
     },
     "devDependencies": undefined,
     "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
@@ -2349,7 +2368,7 @@ Object {
       "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
       "issues": "https://github.com/system-ui/theme-ui/issues",
     },
-    "version": "0.4.0-rc.1",
+    "version": "0.4.0-rc.5",
   },
 }
 `;
@@ -2462,12 +2481,12 @@ Object {
     },
     "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {
-        "@theme-ui/color-modes": "^0.4.0-rc.1",
-        "@theme-ui/components": "^0.4.0-rc.1",
-        "@theme-ui/core": "^0.4.0-rc.1",
-        "@theme-ui/css": "^0.4.0-rc.1",
-        "@theme-ui/mdx": "^0.4.0-rc.1",
-        "@theme-ui/theme-provider": "^0.4.0-rc.1",
+        "@theme-ui/color-modes": "^0.4.0-rc.5",
+        "@theme-ui/components": "^0.4.0-rc.5",
+        "@theme-ui/core": "^0.4.0-rc.5",
+        "@theme-ui/css": "^0.4.0-rc.5",
+        "@theme-ui/mdx": "^0.4.0-rc.5",
+        "@theme-ui/theme-provider": "^0.4.0-rc.5",
       },
       "devDependencies": undefined,
       "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
@@ -2478,7 +2497,7 @@ Object {
         "docs": "https://github.com/system-ui/theme-ui/tree/master#readme",
         "issues": "https://github.com/system-ui/theme-ui/issues",
       },
-      "version": "0.4.0-rc.1",
+      "version": "0.4.0-rc.5",
     },
   },
   "stories": Object {},
