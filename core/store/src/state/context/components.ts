@@ -73,8 +73,8 @@ export const useComponents = ({
             }
             return { ...acc, ...comps };
           }
-          const name =
-            getComponentName(comp) || Object.keys(doc.componentsLookup)[0];
+          const keys = Object.keys(doc.componentsLookup);
+          const name = keys.length === 1 ? keys[0] : getComponentName(comp);
           if (name) {
             const component = getComponent(name);
             if (component) {
