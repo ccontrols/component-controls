@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/ccontrols/component-controls/compare/v1.24.7...v1.25.0) (2020-09-08)
+
+
+### Bug Fixes
+
+* component name lookup ([cc14aa3](https://github.com/ccontrols/component-controls/commit/cc14aa33cb8baca06e4c5a01328d55f6fbe6a53a))
+
+
+### Features
+
+* docz migration compatibility ([7cbba59](https://github.com/ccontrols/component-controls/commit/7cbba59092b06fbc12e6e0bac8f63480afeecd12))
+
+
+
+
+
 ## [1.24.7](https://github.com/ccontrols/component-controls/compare/v1.24.6...v1.24.7) (2020-09-01)
 
 **Note:** Version bump only for package @component-controls/store

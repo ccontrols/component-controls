@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/ccontrols/component-controls/compare/v1.24.7...v1.25.0) (2020-09-08)
+
+**Note:** Version bump only for package @component-controls/react-docgen-typescript-info
+
+
+
+
+
 ## [1.24.6](https://github.com/ccontrols/component-controls/compare/v1.24.5...v1.24.6) (2020-08-31)
 
 **Note:** Version bump only for package @component-controls/react-docgen-typescript-info
