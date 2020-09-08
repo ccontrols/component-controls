@@ -1,7 +1,7 @@
 ---
 title: Migration from docz
 type: blog
-date: 2020-09-10
+date: 2020-09-08
 author: atanasster
 route: /blogs/docz-migration
 description: A step-by-step guide on migrating a documentation site from docz to component-controls.
@@ -13,20 +13,23 @@ import { Playground, Props, Story } from '@component-controls/blocks';
 import { Button } from '../components/Button'
 
 
-# Migration
+# Migration from docz
 
 [docz](https://www.docz.site) is an easy to use, zero-config documentation system using [Gatsby](https://www.gatsbyjs.org/).
 
-component-controls provides migration compatibility for many of the documentation features in `docz`.
+component-controls provides migration compatibility for many of the documentation features in `docz`. And component-control can also use [gatsby](/tutorial/getting-started/gatsby) as a static site generator.
 
 A migration example can be found here: 
 
-[source](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
-[live](https://docz-migration.netlify.app)
+[source code](https://github.com/ccontrols/component-controls/tree/master/examples/docz-migration)
 
-The example was started from [gatsby-starter-docz-netlifycms](https://github.com/colbyfayock/gatsby-starter-docz-netlifycms)
+[live site](https://docz-migration.netlify.app)
+
+The sample project was bootstraped from [gatsby-starter-docz-netlifycms](https://github.com/colbyfayock/gatsby-starter-docz-netlifycms)
 
 ## Add gatsby theme
+
+we will add gatsby and the component-controls gatsby theme to the project
 
 ```bash
 yarn add gatsby @component-controls/gatsby-theme-stories
@@ -34,7 +37,7 @@ yarn add gatsby @component-controls/gatsby-theme-stories
 
 ## Configurattion file path
 
- By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder by default.
+ By default, the docz configuration file is kept in the project main folder, while component-controls uses a `.config` sub-folder. We will configure the gatsby stories theme in `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -42,6 +45,7 @@ module.exports = {
     {
       resolve: '@component-controls/gatsby-theme-stories',
       options: {
+        //doczrc.js file located in project main folder
         configPath: '.',
       },
     },
@@ -65,11 +69,11 @@ Next, you should add the gatsby develop and gatsby build scripts to the project'
   },
 ```
 
-# Configuration fields
+## Configuration fields
 
 component-controls can read directly the docz configuration file, the following is an example `doczrc.js`:
 
-> the component-controls build-time and run-time configurations are merged, and we can use a single configuration file (`doczrc.js`) for both build-time and run-time configurations.
+> the component-controls build-time and run-time configurations are merged, and we can use a single [configuration](/configuration/overview) file (`doczrc.js`) for both build-time and run-time configurations.
 
 ```json:title=doczrc.js
 export default {
@@ -91,27 +95,19 @@ export default {
 };
 ```
 
-## files
+* [**files**](https://www.docz.site/docs/project-configuration) field is mapped to the **stories** configuration field.
 
-The **files** field is mapped to the **stories** configuration field.
+* [**title**](https://www.docz.site/docs/project-configuration) field is mapped to the **siteTitle** configuration field.
 
-## title
+* [**description**](https://www.docz.site/docs/project-configuration) field is mapped to the **siteDescription** configuration field.
 
-The **title** field is mapped to the **siteTitle** configuration field.
+* [**menu**](https://www.docz.site/docs/project-configuration) field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
 
-## description
+## Components
 
-The **description** field is mapped to the **siteDescription** configuration field.
+### Playground
 
-## menu
-
-The **menu** field is used in component-controls in a similar way to docz. You will need to fill the menu field in a document to attach it to a menu item.
-
-# Components
-
-## Playground
-
-component-controls provides a similar component to docz's `<Playground />` and it can be imported from the `@component-controls/blocks` 
+component-controls provides a similar component to docz's [Playground](https://www.docz.site/docs/built-in-components#playground-component). The [Playground](/api/blocks-playground--overview) component can be imported from `@component-controls/blocks`.
 
 ```js:title=playground.mdx
 ---
@@ -134,7 +130,7 @@ live example:
   <Button>Click me</Button>
 </Playground>
 
-You can also wrap the component code in a `<Story />` component to display the source code
+You can also wrap the component code in a [Story](/api/blocks-story--overview) component to display the source code.
 
 ```js:title=playground.mdx
 ---
@@ -162,9 +158,9 @@ live example:
 </Playground>
 
 
-## Props
+### Props
 
-component-controls provides a similar component to docz's `<Props />` and it can be imported from the `@component-controls/blocks` 
+component-controls provides a similar component to docz's [Props](https://www.docz.site/docs/built-in-components#component-props). The [Props/PropsTable](/api/blocks-propstable--overview) component can be imported from `@component-controls/blocks`.
 
 ```js:title=props.mdx
 ---
