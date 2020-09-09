@@ -14,7 +14,7 @@ import {
 
 import { extractCSFStories } from './babel/esm-stories';
 import { extractMDXStories } from './babel/mdx-stories';
-import { removeMDXAttributes } from './babel/remove-mdx-attributes';
+import { transformTree } from './babel/transform-ast-tree';
 import { extractStoreComponent } from './babel/extract-component';
 import { packageInfo } from './misc/package-info';
 import { extractStoryExports } from './misc/mdx-exports';
@@ -162,7 +162,7 @@ export const parseStories = async (
       ...otherMDXOptions,
     });
     const ast = parser.parse(mdxParsed, mergedOptions.parser) as any;
-    traverse(ast, removeMDXAttributes());
+    traverse(ast, transformTree());
     ({ code } = generate(ast, {
       retainFunctionParens: true,
       retainLines: true,
