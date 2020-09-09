@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.25.1](https://github.com/ccontrols/component-controls/compare/v1.25.0...v1.25.1) (2020-09-09)
+
+**Note:** Version bump only for package @component-controls/axe-plugin
+
+
+
+
+
 # [1.25.0](https://github.com/ccontrols/component-controls/compare/v1.24.7...v1.25.0) (2020-09-08)
 
 
