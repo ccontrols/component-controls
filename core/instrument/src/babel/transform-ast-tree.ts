@@ -1,4 +1,4 @@
-import babel from '@babel/core';
+const babel = require('@babel/core');
 
 export const transformTree = () => {
   return {
