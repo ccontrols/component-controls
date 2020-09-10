@@ -1,5 +1,6 @@
 import React from 'react';
-import { ColorSwatch, ColorBlockProps } from './ColorSwatch';
+import { ColorSwatch } from './ColorSwatch';
+import { ColorBlockProps } from '../types';
 
 export default {
   title: 'Design Tokens/ColorSwatch',

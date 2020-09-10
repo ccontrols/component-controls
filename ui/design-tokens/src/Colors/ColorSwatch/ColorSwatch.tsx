@@ -2,11 +2,7 @@
 import { FC } from 'react';
 import { jsx, Box, Theme } from 'theme-ui';
 import { parseToRgb, rgbToColorString } from 'polished';
-
-export interface ColorBlockProps {
-  name?: string;
-  color: string;
-}
+import { ColorBlockProps } from '../types';
 
 export const ColorSwatch: FC<ColorBlockProps> = ({ name, color }) => {
   const colorStr = color.toLowerCase().startsWith('rgb')
