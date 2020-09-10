@@ -5,7 +5,7 @@ import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
 import { TestingPage } from "./TestingPage";
 
-const categories = ['Introduction', 'Application','Controls','Blocks', 'Editors', 'Components', 'Plugins']
+const categories = ['Introduction', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
 
 const config: RunOnlyConfiguration = {
   analytics: 'UA-172446254-1',

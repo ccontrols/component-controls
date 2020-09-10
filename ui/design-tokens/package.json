@@ -1,0 +1,62 @@
+{
+  "name": "@component-controls/design-tokens",
+  "version": "1.25.1",
+  "description": "Component controls design tokens components.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn cross-env NODE_ENV=production rollup -c",
+    "dev": "yarn cross-env NODE_ENV=development rollup -cw",
+    "docs": "ts-md",
+    "fix": "yarn lint --fix",
+    "lint": "yarn eslint . --ext mdx,ts,tsx",
+    "prepare": "yarn build",
+    "test": "cc-jest -c ./.config"
+  },
+  "homepage": "https://github.com/ccontrols/component-controls",
+  "bugs": {
+    "url": "https://github.com/ccontrols/component-controls/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccontrols/component-controls.git",
+    "directory": "ui/design-tokens"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@component-controls/components": "^1.25.1",
+    "@component-controls/core": "^1.25.0",
+    "@component-controls/editors": "^1.25.1",
+    "@component-controls/store": "^1.25.1",
+    "@primer/octicons-react": "^10.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "polished": "^3.4.4",
+    "theme-ui": "^0.4.0-rc.1"
+  },
+  "devDependencies": {
+    "@component-controls/jest-snapshots": "^1.25.1",
+    "@component-controls/ts-markdown-docs": "^1.21.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.5.1"
+  },
+  "peerDependencies": {
+    "@primer/octicons-react": ">= 10.0.0",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "theme-ui": ">= 0.4.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Atanas Stoyanov"
+  ],
+  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+}
