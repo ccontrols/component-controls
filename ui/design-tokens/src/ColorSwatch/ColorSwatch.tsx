@@ -32,6 +32,7 @@ export const ColorSwatch: FC<ColorBlockProps> = ({ name, color }) => {
           lineHeight: '16px',
           justifyContent: 'space-between',
           fontSize: 0,
+          py: 1,
         }}
       >
         <Box
