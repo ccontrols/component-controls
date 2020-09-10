@@ -1,19 +1,29 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box, Theme } from 'theme-ui';
-import { parseToRgb } from 'polished';
+import { parseToRgb, rgbToColorString } from 'polished';
 
 export interface ColorBlockProps {
   name?: string;
   color: string;
 }
 
-export const ColorBlock: FC<ColorBlockProps> = ({ name, color }) => {
-  const hex = color;
-  const rgb = parseToRgb(color);
+export const ColorSwatch: FC<ColorBlockProps> = ({ name, color }) => {
+  const colorStr = color.toLowerCase().startsWith('rgb')
+    ? rgbToColorString(parseToRgb(color))
+    : color;
+  const hex = colorStr.startsWith('#') ? colorStr : `#${colorStr}`;
+  const rgb = parseToRgb(hex);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', width: '220px' }}>
-      <Box sx={{ bg: color, width: 64, height: 64 }}></Box>
+      <Box
+        sx={{
+          bg: color,
+          width: 64,
+          height: 64,
+          border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+        }}
+      ></Box>
       <Box
         sx={{
           display: 'flex',
@@ -28,6 +38,7 @@ export const ColorBlock: FC<ColorBlockProps> = ({ name, color }) => {
           sx={{
             fontWeight: 'bold',
             borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+            pb: 1,
           }}
         >
           {name || hex}
