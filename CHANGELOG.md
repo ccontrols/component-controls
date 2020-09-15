@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.25.2](https://github.com/ccontrols/component-controls/compare/v1.25.1...v1.25.2) (2020-09-15)
+
+
+### Bug Fixes
+
+* stories display story name ([43b9174](https://github.com/ccontrols/component-controls/commit/43b9174703d05e12e981f7342024da5999d20068))
+
+
+
+
+
 ## [1.25.1](https://github.com/ccontrols/component-controls/compare/v1.25.0...v1.25.1) (2020-09-09)
 
 
