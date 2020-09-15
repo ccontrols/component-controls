@@ -1474,7 +1474,7 @@ any *markdown* is allowed
               "groupId": "General",
               "label": "Birthday",
               "type": "date",
-              "value": 1990-01-31T22:00:00.000Z,
+              "value": 1990-02-01T05:00:00.000Z,
             },
             "color": Object {
               "groupId": "Display",
