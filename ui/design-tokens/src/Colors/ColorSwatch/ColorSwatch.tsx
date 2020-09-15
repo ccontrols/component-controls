@@ -1,34 +1,39 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
-import { parseToRgb, rgbToColorString } from 'polished';
+import { jsx, Box, Theme, SxProps } from 'theme-ui';
+import { parseToRgb } from 'polished';
+import { colorToStr } from '../utils';
 import { ColorBlockProps } from '../types';
+import { CopyContainer } from '../../CopyContainer';
 
-export const ColorSwatch: FC<ColorBlockProps> = ({ name, color }) => {
-  const colorStr = color.toLowerCase().startsWith('rgb')
-    ? rgbToColorString(parseToRgb(color))
-    : color;
+export type ColorSwatchProps = { sx?: SxProps } & ColorBlockProps;
+
+export const ColorSwatch: FC<ColorSwatchProps> = ({ name, color, sx }) => {
+  const colorStr = colorToStr(color);
   const hex = colorStr.startsWith('#') ? colorStr : `#${colorStr}`;
   const rgb = parseToRgb(hex);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', width: '220px' }}>
-      <Box
-        sx={{
-          bg: color,
-          width: 64,
-          height: 64,
-          border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
-        }}
-      ></Box>
+      <CopyContainer value={hex} name={name}>
+        <Box
+          sx={{
+            bg: color,
+            width: 64,
+            height: 64,
+            border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+          }}
+        />
+      </CopyContainer>
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          ml: 2,
+          ml: 3,
           lineHeight: '16px',
           justifyContent: 'space-between',
           fontSize: 0,
           py: 1,
+          ...sx,
         }}
       >
         <Box

@@ -5,13 +5,22 @@ import { TooltipTriggerProps } from 'react-popper-tooltip/dist/types';
 import { jsx, Box } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
 
-export type PopoverProps = Omit<Partial<TooltipTriggerProps>, 'children'>;
+export interface PopoverOwnProps {
+  /**
+   * set to false to hide the arrow
+   */
+  arrowVisible?: boolean;
+}
+
+export type PopoverProps = PopoverOwnProps &
+  Omit<Partial<TooltipTriggerProps>, 'children'>;
 
 /**
  * A Popover container that is triggered by a click/hover event.
  * Used to display enhanced information that could not fit into the main scren.
  */
 export const Popover: FC<PopoverProps> = ({
+  arrowVisible = true,
   trigger,
   placement = 'bottom',
   modifiers,
@@ -46,12 +55,14 @@ export const Popover: FC<PopoverProps> = ({
             {...containerProps}
             sx={{ backgroundColor: 'background' }}
           >
-            <Arrow
-              placement={placement}
-              borderColor={borderColor}
-              ref={arrowRef as any}
-              {...getArrowProps()}
-            />
+            {arrowVisible && (
+              <Arrow
+                placement={placement}
+                borderColor={borderColor}
+                ref={arrowRef as any}
+                {...getArrowProps()}
+              />
+            )}
             {typeof tooltip === 'function' ? tooltip(tooltipProps) : tooltip}
           </Wrapper>
         );
