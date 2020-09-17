@@ -1,0 +1,127 @@
+---
+title: Design/Design tokens
+route: /tutorial/design/design-tokens
+type: tutorial
+tags:
+  - design
+  - colors
+  - typography
+order: 0
+author: atanasster
+---
+import { ColorSwatchPalette, ColorItemHorzPalette, ColorItemVertPalette } from '@component-controls/design-tokens';
+
+## Overview
+
+The [design-tokens](https://github.com/ccontrols/component-controls/tree/master/ui/design-tokens) package contains a collection of design tokens components.
+
+
+## Install
+
+```sh
+yarn add @component-controls/design-tokens --dev
+```
+
+## Colors
+
+Components that will display a single color or a palette of colors. The color can be a hex, rgb, or hsl string value.
+
+### ColorSwatch
+
+The [ColorSwatch](/api/design-tokens-colorswatch--overview) component design is inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html) and displays the color name and value in a compact block.
+
+```
+import { ColorSwatchPalette } from '@component-controls/design-tokens';
+
+<ColorSwatchPalette
+  palette={{
+    'color-1': '#fbce4a',
+    'color-2': '#fcfbe8',
+    'color-3': '#fff4d5',
+    'color-4': '#f6cab7',
+    'color-5': '#ec96ad',
+    'color-6': '#ca589d',
+  }}
+/>
+```
+
+<ColorSwatchPalette
+  palette={{
+    'color-1': '#fbce4a',
+    'color-2': '#fcfbe8',
+    'color-3': '#fff4d5',
+    'color-4': '#f6cab7',
+    'color-5': '#ec96ad',
+    'color-6': '#ca589d',
+  }}
+/>
+
+### ColorItemHorz
+
+The [ColorItemHorz](/api/design-tokens-coloritemhorz--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors). and displays a horizontal color block, with the color value visible on hover.
+
+```
+import { ColorItemHorzPalette } from '@component-controls/design-tokens';
+
+<ColorItemHorzPalette
+  palette={{
+    'green-1': '#f6ffed',
+    'green-2': '#d9f7be',
+    'green-3': '#b7eb8f',
+    'green-4': '#95de64',
+    'green-5': '#73d13d',
+    'green-6': '#52c41a',
+    'green-7': '#389e0d',
+    'green-8': '#237804',
+    'green-9': '#135200',
+    'green-10': '#092b00',
+  }}
+/>
+```
+<ColorItemHorzPalette
+  palette={{
+    'green-1': '#f6ffed',
+    'green-2': '#d9f7be',
+    'green-3': '#b7eb8f',
+    'green-4': '#95de64',
+    'green-5': '#73d13d',
+    'green-6': '#52c41a',
+    'green-7': '#389e0d',
+    'green-8': '#237804',
+    'green-9': '#135200',
+    'green-10': '#092b00',
+  }}
+/>
+
+### ColorItemVert
+
+The [ColorItemVert](/api/design-tokens-coloritemvert--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors). and displays a horizontal color block, with the color value visible on hover.
+
+```
+import { ColorItemVertPalette } from '@component-controls/design-tokens';
+
+<ColorItemVertPalette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>
+```
+<ColorItemVertPalette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>

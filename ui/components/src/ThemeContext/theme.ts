@@ -751,7 +751,7 @@ export const theme: ControlsTheme = {
       minHeight: '100%',
       minWidth: 'unset',
       pr: 4,
-      ':hover {': {
+      ':hover': {
         '& > .hoverbox-text': {
           color: 'mutedText',
         },

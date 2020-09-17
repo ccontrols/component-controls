@@ -1,16 +1,29 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, SxStyleProp } from 'theme-ui';
 import copy from 'copy-to-clipboard';
-import { Popover } from '@component-controls/components';
 import { CheckIcon } from '@primer/octicons-react';
+import { Popover } from '../Popover';
 
 export interface CopyContainerProps {
+  /** name of the property */
   name?: string;
+  /**
+   * value to copy
+   */
   value: string;
+  /**
+   * stying props
+   */
+  sxStyle?: SxStyleProp;
 }
 
+/**
+ * conainer to enclose items that will provide copy fnctionality on click
+ *
+ */
 export const CopyContainer: FC<CopyContainerProps> = ({
+  sxStyle,
   name,
   value,
   children,
@@ -20,6 +33,8 @@ export const CopyContainer: FC<CopyContainerProps> = ({
     <Popover
       sx={{
         cursor: 'pointer',
+        position: 'relative',
+        ...sxStyle,
       }}
       trigger="click"
       followCursor={true}

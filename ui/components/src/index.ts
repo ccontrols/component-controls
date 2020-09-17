@@ -3,6 +3,7 @@ export * from './ActionContainer';
 export * from './BlockContainer';
 export * from './Collapsible';
 export * from './ColorMode';
+export * from './CopyContainer';
 export * from './ExternalLink';
 export * from './Header';
 export * from './HoverBox';

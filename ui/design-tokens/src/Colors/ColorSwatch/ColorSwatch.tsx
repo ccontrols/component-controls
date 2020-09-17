@@ -1,17 +1,19 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box, Theme, SxProps } from 'theme-ui';
-import { parseToRgb } from 'polished';
+import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
-import { ColorBlockProps } from '../types';
-import { CopyContainer } from '../../CopyContainer';
+import { ColorProps } from '../types';
+import { GridContainerProps, GridContainer } from '../GridContainer';
 
-export type ColorSwatchProps = { sx?: SxProps } & ColorBlockProps;
+export type ColorSwatchProps = { sx?: SxProps } & ColorProps;
 
+/**
+ * Color item displaying the color as a block, as well as hex(string) and rgb values.
+ * Inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
+ */
 export const ColorSwatch: FC<ColorSwatchProps> = ({ name, color, sx }) => {
-  const colorStr = colorToStr(color);
-  const hex = colorStr.startsWith('#') ? colorStr : `#${colorStr}`;
-  const rgb = parseToRgb(hex);
+  const { hex, rgba } = colorToStr(color);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', width: '220px' }}>
       <CopyContainer value={hex} name={name}>
@@ -46,8 +48,23 @@ export const ColorSwatch: FC<ColorSwatchProps> = ({ name, color, sx }) => {
           {name || hex}
         </Box>
         <Box>HEX: {hex}</Box>
-        <Box>RGB: {`${rgb.red},${rgb.green},${rgb.blue}`}</Box>
+        <Box>
+          RGB:{' '}
+          {`${rgba.red}, ${rgba.green}, ${rgba.blue}${
+            rgba.alpha !== 1 ? `, ${rgba.alpha}` : ''
+          }`}
+        </Box>
       </Box>
     </Box>
   );
 };
+
+/**
+ *
+ * palette displayed with ColorSwatch items
+ * using a css grid for the dsplay
+ */
+export const ColorSwatchPalette: FC<Omit<
+  GridContainerProps,
+  'ColorBlock'
+>> = props => <GridContainer ColorBlock={ColorSwatch} {...props} />;
