@@ -12,9 +12,10 @@ import { FlexContainerProps, FlexContainer } from '../FlexContainer';
  * Design inspired from [And Design](https://ant.design/docs/spec/colors).
  */
 
-export const ColorItemVert: FC<ColorProps> = ({ name, color, hover }) => {
+export const ColorBlock3: FC<ColorProps> = ({ name, color, hover }) => {
   const [hoverMe, setHoverMe] = useState(false);
-  const { hex, rgba } = colorToStr(color);
+  const colorValue = typeof color === 'string' ? color : color.value;
+  const { hex, rgba } = colorToStr(colorValue);
   const textColor = readableColor(hex, '#000', '#fff', true);
   return (
     <Box sx={{ display: 'flex', flex: '1', height: 90, maxWidth: 120 }}>
@@ -30,7 +31,7 @@ export const ColorItemVert: FC<ColorProps> = ({ name, color, hover }) => {
             left: 0,
             display: 'flex',
             flexDirection: 'column',
-            bg: color,
+            bg: colorValue,
             color: textColor,
             alignItems: 'center',
             justifyContent: 'center',
@@ -70,12 +71,12 @@ export const ColorItemVert: FC<ColorProps> = ({ name, color, hover }) => {
 
 /**
  *
- * palette displayed with ColorItemVert items
+ * palette displayed with ColorBlock3 items
  * using a css flex display direction row
  */
-export const ColorItemVertPalette: FC<Omit<
+export const ColorBlock3Palette: FC<Omit<
   FlexContainerProps,
   'ColorBlock' | 'direction'
 >> = props => (
-  <FlexContainer ColorBlock={ColorItemVert} direction="row" {...props} />
+  <FlexContainer ColorBlock={ColorBlock3} direction="row" {...props} />
 );

@@ -6,20 +6,21 @@ import { colorToStr } from '../utils';
 import { ColorProps } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
 
-export type ColorSwatchProps = { sx?: SxProps } & ColorProps;
+export type ColoBlock1Props = { sx?: SxProps } & ColorProps;
 
 /**
  * Color item displaying the color as a block, as well as hex(string) and rgb values.
  * Inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
  */
-export const ColorSwatch: FC<ColorSwatchProps> = ({ name, color, sx }) => {
-  const { hex, rgba } = colorToStr(color);
+export const ColorBlock1: FC<ColoBlock1Props> = ({ name, color, sx }) => {
+  const colorValue = typeof color === 'string' ? color : color.value;
+  const { hex, rgba } = colorToStr(colorValue);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', width: '220px' }}>
       <CopyContainer value={hex} name={name}>
         <Box
           sx={{
-            bg: color,
+            bg: colorValue,
             width: 64,
             height: 64,
             border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
@@ -64,7 +65,7 @@ export const ColorSwatch: FC<ColorSwatchProps> = ({ name, color, sx }) => {
  * palette displayed with ColorSwatch items
  * using a css grid for the dsplay
  */
-export const ColorSwatchPalette: FC<Omit<
+export const ColorBlock1Palette: FC<Omit<
   GridContainerProps,
   'ColorBlock'
->> = props => <GridContainer ColorBlock={ColorSwatch} {...props} />;
+>> = props => <GridContainer ColorBlock={ColorBlock1} {...props} />;

@@ -1,0 +1,77 @@
+/** @jsx jsx */
+import { FC } from 'react';
+import { jsx, Box, Heading, SxProps } from 'theme-ui';
+import { readableColor } from 'polished';
+import { CopyContainer } from '@component-controls/components';
+import { colorToStr } from '../utils';
+import { ColorProps } from '../types';
+import { GridContainerProps, GridContainer } from '../GridContainer';
+
+export type ColorBlock4Props = { sx?: SxProps } & ColorProps;
+
+/**
+ * Color item displaying the color as a block with a title, as well as hex(string) and rgb values.
+ * Design inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/).
+ */
+export const ColorBlock4: FC<ColorBlock4Props> = ({ name, color, sx }) => {
+  const colorValue = typeof color === 'string' ? color : color.value;
+  const { hex } = colorToStr(colorValue);
+  const textColor = readableColor(hex, '#000', '#fff', true);
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', width: 180 }}>
+      <CopyContainer value={hex} name={name}>
+        <Box
+          sx={{
+            position: 'relative',
+            bg: colorValue,
+            height: 90,
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: 10,
+              left: 10,
+              height: 16,
+              width: 16,
+              borderRadius: '50%',
+              bg: textColor,
+            }}
+          ></Box>
+        </Box>
+      </CopyContainer>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          lineHeight: '16px',
+          justifyContent: 'space-between',
+          py: 1,
+          ...sx,
+        }}
+      >
+        <Heading
+          as="h2"
+          sx={{
+            my: 2,
+          }}
+        >
+          {name || hex}
+        </Heading>
+        <Box sx={{ fontSize: 1 }}>{`${
+          typeof color !== 'string' ? color.name : 'HEX:'
+        } ${hex}`}</Box>
+      </Box>
+    </Box>
+  );
+};
+
+/**
+ *
+ * palette displayed with ColorBlock4 items
+ * using a css grid for the dsplay
+ */
+export const ColorBlock4Palette: FC<Omit<
+  GridContainerProps,
+  'ColorBlock'
+>> = props => <GridContainer ColorBlock={ColorBlock4} {...props} />;

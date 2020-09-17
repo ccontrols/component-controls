@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+export type ColorValue = string | { name: string; value: string };
 export interface ColorProps {
   /**
    * name of the color, If none, or same as the color value, some color blocks will not display it
@@ -9,7 +10,7 @@ export interface ColorProps {
    * color value as a string.
    * accepted hex, rgb, hsl color strings
    */
-  color: string;
+  color: ColorValue;
 
   /**
    * hover prop
@@ -17,7 +18,7 @@ export interface ColorProps {
   hover?: boolean;
 }
 
-export type ColorPaletteProps = Record<string, string>;
+export type ColorPaletteProps = Record<string, ColorValue>;
 
 export type ColorBlockComponent = FC<ColorProps>;
 

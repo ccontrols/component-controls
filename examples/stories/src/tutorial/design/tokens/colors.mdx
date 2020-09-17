@@ -1,0 +1,156 @@
+---
+title: Design/Design tokens/Colors
+route: /tutorial/design-tokens/colors
+type: tutorial
+tags:
+  - design
+  - colors
+order: 0
+author: atanasster
+---
+import { ColorBlock1Palette, ColorBlock2Palette, ColorBlock3Palette, ColorBlock4Palette } from '@component-controls/design-tokens';
+
+## Overview
+
+The [design-tokens](https://github.com/ccontrols/component-controls/tree/master/ui/design-tokens) package contains a collection of design tokens components.
+
+
+## Install
+
+```sh
+yarn add @component-controls/design-tokens --dev
+```
+
+## Colors
+
+Components that will display a single color or a palette of colors. The color can be a hex, rgb, or hsl string value.
+
+### ColorBlock1
+
+The [ColorBlock1](/api/design-tokens-colors-colorblock1--overview) component design is inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html) and displays the color name and value in a compact block.
+
+```
+import { ColorBlock1Palette } from '@component-controls/design-tokens';
+
+<ColorBlock1Palette
+  palette={{
+    'color-1': '#fbce4a',
+    'color-2': '#fcfbe8',
+    'color-3': '#fff4d5',
+    'color-4': '#f6cab7',
+    'color-5': '#ec96ad',
+    'color-6': '#ca589d',
+  }}
+/>
+```
+
+<ColorBlock1Palette
+  palette={{
+    'color-1': '#fbce4a',
+    'color-2': '#fcfbe8',
+    'color-3': '#fff4d5',
+    'color-4': '#f6cab7',
+    'color-5': '#ec96ad',
+    'color-6': '#ca589d',
+  }}
+/>
+
+### ColorBlock2
+
+The [ColorBlock2](/api/design-tokens-colors-colorblock2--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors) and displays a horizontal color block, with the color value visible on hover.
+
+```
+import { ColorBlock2Palette } from '@component-controls/design-tokens';
+
+<ColorBlock2Palette
+  palette={{
+    'green-1': '#f6ffed',
+    'green-2': '#d9f7be',
+    'green-3': '#b7eb8f',
+    'green-4': '#95de64',
+    'green-5': '#73d13d',
+    'green-6': '#52c41a',
+    'green-7': '#389e0d',
+    'green-8': '#237804',
+    'green-9': '#135200',
+    'green-10': '#092b00',
+  }}
+/>
+```
+<ColorBlock2Palette
+  palette={{
+    'green-1': '#f6ffed',
+    'green-2': '#d9f7be',
+    'green-3': '#b7eb8f',
+    'green-4': '#95de64',
+    'green-5': '#73d13d',
+    'green-6': '#52c41a',
+    'green-7': '#389e0d',
+    'green-8': '#237804',
+    'green-9': '#135200',
+    'green-10': '#092b00',
+  }}
+/>
+
+### ColorBlock3
+
+The [ColorBlock3](/api/design-tokens-colors-colorblock3--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors) and displays a horizontal color block, with the color value visible on hover.
+
+```
+import { ColorBlock3Palette } from '@component-controls/design-tokens';
+
+<ColorBlock3Palette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>
+```
+<ColorBlock3Palette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>
+
+
+### ColorBlock4
+
+The [ColorBlock4](/api/design-tokens-colors-colorblock4--overview) component design is inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/) and displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
+
+```
+import { ColorBlock4Palette } from '@component-controls/design-tokens';
+
+<ColorBlock4Palette
+  palette={{
+    Critical: { value: '#f94d32', name: 'Red400' },
+    Warning: { value: '#ffc902', name: 'Yellow400' },
+    Success: { value: '#18a761', name: 'Green500' },
+    Info: { value: '#2270ee', name: 'Blue400' },
+    Border: { value: '#dfe0e1', name: 'Neutral60' },
+    Accent: { value: '#f5f5f5', name: 'Neutral40' },
+  }}
+/>
+```
+<ColorBlock4Palette
+  palette={{
+    Critical: { value: '#f94d32', name: 'Red400' },
+    Warning: { value: '#ffc902', name: 'Yellow400' },
+    Success: { value: '#18a761', name: 'Green500' },
+    Info: { value: '#2270ee', name: 'Blue400' },
+    Border: { value: '#dfe0e1', name: 'Neutral60' },
+    Accent: { value: '#f5f5f5', name: 'Neutral40' },
+  }}
+/>

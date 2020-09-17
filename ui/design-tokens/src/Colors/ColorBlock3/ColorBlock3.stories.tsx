@@ -1,14 +1,14 @@
 import React from 'react';
-import { ColorItemVert, ColorItemVertPalette } from './ColorItemVert';
+import { ColorBlock3, ColorBlock3Palette } from './ColorBlock3';
 import { ColorProps } from '../types';
 
 export default {
-  title: 'Design Tokens/ColorItemVert',
-  component: ColorItemVert,
+  title: 'Design Tokens/Colors/ColorBlock3',
+  component: ColorBlock3,
 };
 
 export const overview = ({ name, color }: ColorProps) => (
-  <ColorItemVert name={name} color={color} />
+  <ColorBlock3 name={name} color={color} />
 );
 
 overview.controls = {
@@ -16,24 +16,24 @@ overview.controls = {
   color: { type: 'color', value: '#cf1322' },
 };
 
-export const name = () => <ColorItemVert name="brand" color="#e95b54" />;
+export const name = () => <ColorBlock3 name="brand" color="#e95b54" />;
 
-export const rgb = () => <ColorItemVert name="text" color="rgb(0, 0, 0)" />;
+export const rgb = () => <ColorBlock3 name="text" color="rgb(0, 0, 0)" />;
 
 export const rgba = () => (
-  <ColorItemVert name="shadow" color="rgba(0, 0, 0, 0.5)" />
+  <ColorBlock3 name="shadow" color="rgba(0, 0, 0, 0.5)" />
 );
 
 export const hsl = () => (
-  <ColorItemVert name="accent" color="hsl(12, 10%, 50%)" />
+  <ColorBlock3 name="accent" color="hsl(12, 10%, 50%)" />
 );
 
 export const hsla = () => (
-  <ColorItemVert name="accent" color="hsl(12, 10%, 50%, .6)" />
+  <ColorBlock3 name="accent" color="hsl(12, 10%, 50%, .6)" />
 );
 
 export const palette = () => (
-  <ColorItemVertPalette
+  <ColorBlock3Palette
     palette={{
       'red-1': '#fff1f0',
       'red-2': '#ffccc7',

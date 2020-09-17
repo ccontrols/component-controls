@@ -1,3 +1,4 @@
-export * from './ColorSwatch';
-export * from './ColorItemHorz';
-export * from './ColorItemVert';
+export * from './ColorBlock1';
+export * from './ColorBlock2';
+export * from './ColorBlock3';
+export * from './ColorBlock4';

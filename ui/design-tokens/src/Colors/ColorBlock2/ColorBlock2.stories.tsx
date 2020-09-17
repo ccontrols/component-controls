@@ -1,14 +1,14 @@
 import React from 'react';
-import { ColorItemHorz, ColorItemHorzPalette } from './ColorItemHorz';
+import { ColorBlock2, ColorBlock2Palette } from './ColorBlock2';
 import { ColorProps } from '../types';
 
 export default {
-  title: 'Design Tokens/ColorItemHorz',
-  component: ColorItemHorz,
+  title: 'Design Tokens/Colors/ColorBlock2',
+  component: ColorBlock2,
 };
 
 export const overview = ({ name, color }: ColorProps) => (
-  <ColorItemHorz name={name} color={color} />
+  <ColorBlock2 name={name} color={color} />
 );
 
 overview.controls = {
@@ -16,24 +16,24 @@ overview.controls = {
   color: { type: 'color', value: '#cf1322' },
 };
 
-export const name = () => <ColorItemHorz name="brand" color="#e95b54" />;
+export const name = () => <ColorBlock2 name="brand" color="#e95b54" />;
 
-export const rgb = () => <ColorItemHorz name="text" color="rgb(0, 0, 0)" />;
+export const rgb = () => <ColorBlock2 name="text" color="rgb(0, 0, 0)" />;
 
 export const rgba = () => (
-  <ColorItemHorz name="shadow" color="rgba(0, 0, 0, 0.5)" />
+  <ColorBlock2 name="shadow" color="rgba(0, 0, 0, 0.5)" />
 );
 
 export const hsl = () => (
-  <ColorItemHorz name="accent" color="hsl(12, 10%, 50%)" />
+  <ColorBlock2 name="accent" color="hsl(12, 10%, 50%)" />
 );
 
 export const hsla = () => (
-  <ColorItemHorz name="accent" color="hsl(12, 10%, 50%, .6)" />
+  <ColorBlock2 name="accent" color="hsl(12, 10%, 50%, .6)" />
 );
 
 export const palette = () => (
-  <ColorItemHorzPalette
+  <ColorBlock2Palette
     palette={{
       'green-1': '#f6ffed',
       'green-2': '#d9f7be',
