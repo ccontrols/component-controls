@@ -14,7 +14,7 @@ export type FlexContainerProps = {
  * can be horizontal or vertical
  */
 export const FlexContainer: FC<FlexContainerProps> = ({
-  ColorBlock,
+  children,
   palette,
   direction,
   ...rest
@@ -30,14 +30,9 @@ export const FlexContainer: FC<FlexContainerProps> = ({
       }}
       {...rest}
     >
-      {Object.keys(palette).map(color => (
-        <ColorBlock
-          key={`color_item_${color}_${palette[color]}`}
-          name={color}
-          color={palette[color]}
-          hover={hover}
-        />
-      ))}
+      {Object.keys(palette).map(color =>
+        children({ name: color, value: palette[color], hover }),
+      )}
     </Box>
   );
 };

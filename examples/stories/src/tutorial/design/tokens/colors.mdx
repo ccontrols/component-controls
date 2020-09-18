@@ -5,29 +5,20 @@ type: tutorial
 tags:
   - design
   - colors
-order: 0
+order: 1
 author: atanasster
 ---
 import { ColorBlock1Palette, ColorBlock2Palette, ColorBlock3Palette, ColorBlock4Palette } from '@component-controls/design-tokens';
 
-## Overview
+# Overview
 
-The [design-tokens](https://github.com/ccontrols/component-controls/tree/master/ui/design-tokens) package contains a collection of design tokens components.
+Colors are one of the main [design tokens](/tutorial/design-tokens/intro) elements, and `component-controls` provides multiple components to document your colors and color palettes.
 
+The color can be a hex, rgb, or hsl string value.
 
-## Install
+## ColorBlock1
 
-```sh
-yarn add @component-controls/design-tokens --dev
-```
-
-## Colors
-
-Components that will display a single color or a palette of colors. The color can be a hex, rgb, or hsl string value.
-
-### ColorBlock1
-
-The [ColorBlock1](/api/design-tokens-colors-colorblock1--overview) component design is inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html) and displays the color name and value in a compact block.
+The [ColorBlock1](/api/design-tokens-colors-colorblock1--overview) component displays the color name and value in a compact block.
 
 ```
 import { ColorBlock1Palette } from '@component-controls/design-tokens';
@@ -55,9 +46,9 @@ import { ColorBlock1Palette } from '@component-controls/design-tokens';
   }}
 />
 
-### ColorBlock2
+## ColorBlock2
 
-The [ColorBlock2](/api/design-tokens-colors-colorblock2--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors) and displays a horizontal color block, with the color value visible on hover.
+The [ColorBlock2](/api/design-tokens-colors-colorblock2--overview) component displays a horizontal color block, with the color value visible on hover.
 
 ```
 import { ColorBlock2Palette } from '@component-controls/design-tokens';
@@ -92,9 +83,9 @@ import { ColorBlock2Palette } from '@component-controls/design-tokens';
   }}
 />
 
-### ColorBlock3
+## ColorBlock3
 
-The [ColorBlock3](/api/design-tokens-colors-colorblock3--overview) component design is inspired from [And Design](https://ant.design/docs/spec/colors) and displays a horizontal color block, with the color value visible on hover.
+The [ColorBlock3](/api/design-tokens-colors-colorblock3--overview) component displays a horizontal color block, with the color value visible on hover.
 
 ```
 import { ColorBlock3Palette } from '@component-controls/design-tokens';
@@ -126,9 +117,9 @@ import { ColorBlock3Palette } from '@component-controls/design-tokens';
 />
 
 
-### ColorBlock4
+## ColorBlock4
 
-The [ColorBlock4](/api/design-tokens-colors-colorblock4--overview) component design is inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/) and displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
+The [ColorBlock4](/api/design-tokens-colors-colorblock4--overview) component displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
 
 ```
 import { ColorBlock4Palette } from '@component-controls/design-tokens';

@@ -67,5 +67,11 @@ export const ColorBlock1: FC<ColoBlock1Props> = ({ name, color, sx }) => {
  */
 export const ColorBlock1Palette: FC<Omit<
   GridContainerProps,
-  'ColorBlock'
->> = props => <GridContainer ColorBlock={ColorBlock1} {...props} />;
+  'children'
+>> = props => (
+  <GridContainer {...props}>
+    {({ name, value }) => (
+      <ColorBlock1 key={`color_item_${name}}`} name={name} color={value} />
+    )}
+  </GridContainer>
+);

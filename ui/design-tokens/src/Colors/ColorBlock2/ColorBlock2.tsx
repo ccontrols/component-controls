@@ -70,12 +70,16 @@ export const ColorBlock2: FC<ColorProps> = ({ name, color, hover }) => {
  */
 export const ColorBlock2Palette: FC<Omit<
   FlexContainerProps,
-  'ColorBlock' | 'direction'
+  'children' | 'direction'
 >> = props => (
-  <FlexContainer
-    ColorBlock={ColorBlock2}
-    direction="column"
-    sx={{ width: 250 }}
-    {...props}
-  />
+  <FlexContainer direction="column" sx={{ width: 250 }} {...props}>
+    {({ name, value, hover }) => (
+      <ColorBlock2
+        key={`color_item_${name}}`}
+        name={name}
+        color={value}
+        hover={hover}
+      />
+    )}
+  </FlexContainer>
 );

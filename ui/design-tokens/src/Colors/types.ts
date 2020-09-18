@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 export type ColorValue = string | { name: string; value: string };
 export interface ColorProps {
@@ -22,10 +22,15 @@ export type ColorPaletteProps = Record<string, ColorValue>;
 
 export type ColorBlockComponent = FC<ColorProps>;
 
+export type ContaionerCallbackProps = {
+  name: string;
+  value: ColorValue;
+  hover: boolean;
+};
 /**
- * palette container
+ * design token container
  */
 export type ContainerProps = {
   palette: ColorPaletteProps;
-  ColorBlock: ColorBlockComponent;
+  children: (props: ContaionerCallbackProps) => ReactNode;
 };

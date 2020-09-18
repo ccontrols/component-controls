@@ -1,0 +1,35 @@
+---
+title: Design/Design tokens/Introduction
+route: /tutorial/design-tokens/intro
+type: tutorial
+tags:
+  - design
+order: 0
+author: atanasster
+---
+import { Embed } from 'theme-ui';
+import { ColorBlock1Palette, ColorBlock2Palette, ColorBlock3Palette, ColorBlock4Palette } from '@component-controls/design-tokens';
+
+## Overview
+
+Design tokens are the building blocks of your of the design-system to describe the visual appearance of your application. They can describe the colors, spacing, typography, elevation, icons, and other elements part of the design-system.
+
+Design tokens were introduced in 2016 by Jina Bolton and Jon Levine at their Salesforce Lightning Design System talk.
+
+![Using Design Tokens with the Lightning Design System](https://www.youtube.com/embed/wDBEc3dJJV8)
+
+## Install
+
+The [design-tokens](https://github.com/ccontrols/component-controls/tree/master/ui/design-tokens) package contains a collection of design tokens components.
+
+```sh
+yarn add @component-controls/design-tokens --dev
+```
+
+## Components
+
+`design-tokens` comes with multiple design-tokens components that can be used out of the box to document your design system. 
+
+### [Colors](/tutorial/design-tokens/colors)
+
+A collection of components that will display a single color or a palette of colors. The color can be a hex, rgb, or hsl string value.
