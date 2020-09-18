@@ -16,7 +16,7 @@ export type ColorBlock4Props = { sx?: SxProps } & ColorProps;
 export const ColorBlock4: FC<ColorBlock4Props> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex } = colorToStr(colorValue);
-  const textColor = readableColor(hex, '#000', '#fff', true);
+  const textColor = readableColor(hex);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', width: 180 }}>
       <CopyContainer value={hex} name={name}>

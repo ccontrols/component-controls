@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useState } from 'react';
+import { FC, useState, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { readableColor } from 'polished';
@@ -17,12 +17,23 @@ export const ColorBlock3: FC<ColorProps> = ({ name, color, hover }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   const textColor = readableColor(hex, '#000', '#fff', true);
+  const isContained = typeof hover !== 'undefined';
+
+  const onMouseEvents = useMemo(
+    () =>
+      isContained
+        ? {}
+        : {
+            onMouseOver: () => setHoverMe(true),
+            onMouseOut: () => setHoverMe(false),
+          },
+    [isContained],
+  );
   return (
     <Box sx={{ display: 'flex', flex: '1', height: 90, maxWidth: 120 }}>
       <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
         <Box
-          onMouseOver={() => setHoverMe(true)}
-          onMouseOut={() => setHoverMe(false)}
+          {...onMouseEvents}
           sx={{
             position: 'absolute',
             top: 0,
@@ -53,9 +64,10 @@ export const ColorBlock3: FC<ColorProps> = ({ name, color, hover }) => {
             {name || hex}
           </Box>
           <Box
-            sx={
-              hover || hoverMe ? undefined : { visibility: 'hidden', height: 0 }
-            }
+            sx={{
+              pointerEvents: 'none',
+              ...(hover || hoverMe ? {} : { visibility: 'hidden', height: 0 }),
+            }}
           >
             {!name
               ? `${rgba.red}, ${rgba.green}, ${rgba.blue}${
