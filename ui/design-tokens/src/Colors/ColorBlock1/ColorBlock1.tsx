@@ -51,8 +51,8 @@ export const ColorBlock1: FC<ColoBlock1Props> = ({ name, color, sx }) => {
         <Box>HEX: {hex}</Box>
         <Box>
           RGB:{' '}
-          {`${rgba.red}, ${rgba.green}, ${rgba.blue}${
-            rgba.alpha !== 1 ? `, ${rgba.alpha}` : ''
+          {`${rgba.r}, ${rgba.g}, ${rgba.b}${
+            rgba.a !== 1 ? `, ${rgba.a}` : ''
           }`}
         </Box>
       </Box>

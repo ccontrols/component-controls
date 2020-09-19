@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx, Box, Heading, SxProps } from 'theme-ui';
-import { readableColor } from 'polished';
 import { CopyContainer } from '@component-controls/components';
-import { colorToStr } from '../utils';
+import { colorToStr, mostReadable } from '../utils';
 import { ColorProps } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
 
@@ -16,7 +15,7 @@ export type ColorBlock4Props = { sx?: SxProps } & ColorProps;
 export const ColorBlock4: FC<ColorBlock4Props> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex } = colorToStr(colorValue);
-  const textColor = readableColor(hex);
+  const textColor = mostReadable(hex);
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', width: 180 }}>
       <CopyContainer value={hex} name={name}>

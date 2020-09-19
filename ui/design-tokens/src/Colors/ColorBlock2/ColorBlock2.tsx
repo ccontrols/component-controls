@@ -2,8 +2,7 @@
 import { FC, useState, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
-import { readableColor } from 'polished';
-import { colorToStr } from '../utils';
+import { colorToStr, mostReadable } from '../utils';
 import { ColorProps } from '../types';
 import { FlexContainerProps, FlexContainer } from '../FlexContainer';
 
@@ -16,7 +15,7 @@ export const ColorBlock2: FC<ColorProps> = ({ name, color, hover }) => {
   const [hoverMe, setHoverMe] = useState(false);
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
-  const textColor = readableColor(hex, '#000', '#fff', true);
+  const textColor = mostReadable(hex);
   const isContained = typeof hover !== 'undefined';
   const onMouseEvents = useMemo(
     () =>
@@ -66,8 +65,8 @@ export const ColorBlock2: FC<ColorProps> = ({ name, color, hover }) => {
             }}
           >
             {!name
-              ? `${rgba.red}, ${rgba.green}, ${rgba.blue}${
-                  rgba.alpha !== 1 ? `, ${rgba.alpha}` : ''
+              ? `${rgba.r}, ${rgba.g}, ${rgba.b}${
+                  rgba.a !== 1 ? `, ${rgba.a}` : ''
                 }`
               : hex}
           </Box>
