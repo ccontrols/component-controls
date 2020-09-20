@@ -8,7 +8,7 @@ export const GridContainer: FC<GridContainerProps> = ({
   children,
   palette,
   gap = 2,
-  columns = [3],
+  width = 220,
   ref,
   ...rest
 }) => {
@@ -19,7 +19,7 @@ export const GridContainer: FC<GridContainerProps> = ({
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
       gap={gap}
-      columns={columns}
+      width={width}
       {...rest}
     >
       {Object.keys(palette).map(color =>

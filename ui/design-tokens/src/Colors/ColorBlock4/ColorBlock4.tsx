@@ -17,7 +17,14 @@ export const ColorBlock4: FC<ColorBlock4Props> = ({ name, color, sx }) => {
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', width: 180 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minWidth: 180,
+        maxWidth: 450,
+      }}
+    >
       <CopyContainer value={hex} name={name}>
         <Box
           sx={{

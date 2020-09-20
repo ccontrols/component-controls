@@ -52,7 +52,14 @@ export const ColorBlock5: FC<ColorBlock5Props> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minWidth: 180 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minWidth: 180,
+        maxWidth: 450,
+      }}
+    >
       <CopyContainer value={hex} name={name}>
         <Box
           sx={{
