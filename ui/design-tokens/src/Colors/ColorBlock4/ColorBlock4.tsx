@@ -1,18 +1,16 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Heading, SxProps } from 'theme-ui';
+import { jsx, Box, Heading } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorProps } from '../types';
+import { ColorBlockProps } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
-
-export type ColorBlock4Props = { sx?: SxProps } & ColorProps;
 
 /**
  * Color item displaying the color as a block with a title, as well as hex(string) and rgb values.
  * Design inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/).
  */
-export const ColorBlock4: FC<ColorBlock4Props> = ({ name, color, sx }) => {
+export const ColorBlock4: FC<ColorBlockProps> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);

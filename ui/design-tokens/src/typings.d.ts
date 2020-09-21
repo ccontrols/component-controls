@@ -1,1 +1,1 @@
-declare module 'color-parse';
+declare module 'simple-color-converter';

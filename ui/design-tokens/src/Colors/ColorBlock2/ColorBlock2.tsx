@@ -3,15 +3,20 @@ import { FC, useState, useMemo } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorProps } from '../types';
+import { ColorBlockProps } from '../types';
 import { FlexContainerProps, FlexContainer } from '../FlexContainer';
 
 /**
  * Color item displaying the color as a small block, expanding on hover.
- * Design inspired from [And Design](https://ant.design/docs/spec/colors).
+ * Design inspired from [Antd](https://ant.design/docs/spec/colors).
  */
 
-export const ColorBlock2: FC<ColorProps> = ({ name, color, hover }) => {
+export const ColorBlock2: FC<ColorBlockProps> = ({
+  name,
+  color,
+  hover,
+  sx,
+}) => {
   const [hoverMe, setHoverMe] = useState(false);
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
@@ -29,7 +34,7 @@ export const ColorBlock2: FC<ColorProps> = ({ name, color, hover }) => {
   );
 
   return (
-    <Box sx={{ display: 'flex', flex: '1', width: 250 }}>
+    <Box sx={{ display: 'flex', flex: '1', width: 250, ...sx }}>
       <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
         <Box
           {...onMouseEvents}

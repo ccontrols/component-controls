@@ -1,18 +1,16 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Theme, SxProps } from 'theme-ui';
+import { jsx, Box, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
-import { ColorProps } from '../types';
+import { ColorBlockProps } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
-
-export type ColoBlock1Props = { sx?: SxProps } & ColorProps;
 
 /**
  * Color item displaying the color as a block, as well as hex(string) and rgb values.
  * Inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
  */
-export const ColorBlock1: FC<ColoBlock1Props> = ({ name, color, sx }) => {
+export const ColorBlock1: FC<ColorBlockProps> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   return (

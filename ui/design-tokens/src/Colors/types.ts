@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import { SxProps } from 'theme-ui';
 
 export type ColorValue = string | { name: string; value: string };
 export interface ColorProps {
@@ -17,6 +18,8 @@ export interface ColorProps {
    */
   hover?: boolean;
 }
+
+export type ColorBlockProps = { sx?: SxProps } & ColorProps;
 
 export type ColorPaletteProps = Record<string, ColorValue>;
 

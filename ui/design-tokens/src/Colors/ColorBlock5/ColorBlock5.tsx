@@ -1,13 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, SxProps } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import { colorToStr } from '../utils';
-import { ColorProps } from '../types';
+import { ColorBlockProps } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
-
-export type ColorBlock5Props = { sx?: SxProps } & ColorProps;
 
 const ContrastTest: FC<{
   bg: string;
@@ -48,7 +46,7 @@ const ContrastTest: FC<{
  * Color item displaying the color as a block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
  * Design inspired from [Atlassian Design System](https://atlassian.design/foundations/color).
  */
-export const ColorBlock5: FC<ColorBlock5Props> = ({ name, color, sx }) => {
+export const ColorBlock5: FC<ColorBlockProps> = ({ name, color, sx }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   return (

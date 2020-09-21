@@ -8,7 +8,8 @@ tags:
 order: 1
 author: atanasster
 ---
-import { ColorBlock1Palette, ColorBlock2Palette, ColorBlock3Palette, ColorBlock4Palette, ColorBlock5Palette } from '@component-controls/design-tokens';
+import { ColorBlock1Palette, ColorBlock2Palette, ColorBlock3Palette, 
+  ColorBlock4Palette, ColorBlock5Palette, ColorBlock6Palette } from '@component-controls/design-tokens';
 
 # Overview
 
@@ -16,7 +17,7 @@ Colors are one of the main [design tokens](/tutorial/design-tokens/intro) elemen
 
 The color can be a hex, rgb, or hsl string value.
 
-## ColorBlock1
+## ColorBlock1 (Alta UI)
 
 The [ColorBlock1](/api/design-tokens-colors-colorblock1--overview) component displays the color name and value in a compact block.
 
@@ -46,7 +47,7 @@ import { ColorBlock1Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock2
+## ColorBlock2 (Antd)
 
 The [ColorBlock2](/api/design-tokens-colors-colorblock2--overview) component displays a horizontal color block, with the color value visible on hover.
 
@@ -83,7 +84,7 @@ import { ColorBlock2Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock3
+## ColorBlock3 (Antd)
 
 The [ColorBlock3](/api/design-tokens-colors-colorblock3--overview) component displays a horizontal color block, with the color value visible on hover.
 
@@ -117,7 +118,7 @@ import { ColorBlock3Palette } from '@component-controls/design-tokens';
 />
 
 
-## ColorBlock4
+## ColorBlock4 (Anvil)
 
 The [ColorBlock4](/api/design-tokens-colors-colorblock4--overview) component displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
 
@@ -146,7 +147,7 @@ import { ColorBlock4Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock5
+## ColorBlock5 (Atlassian DS)
 
 The [ColorBlock5](/api/design-tokens-colors-colorblock5--overview) component displays a color block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
 
@@ -166,6 +167,36 @@ import { ColorBlock5Palette } from '@component-controls/design-tokens';
 ```
 
 <ColorBlock5Palette
+  palette={{
+    'Poppy surprise': { value: '#FF5630', name: 'R300' },
+    'Golden state': { value: '#FFAB00', name: 'Y300' },
+    'Fine pine': { value: '#36B37E', name: 'G300' },
+    Tamarama: { value: '#00B8D9', name: 'T300' },
+    "Da' juice": { value: '#6554C0', name: 'P300' },
+    Critical: { value: '#f94d32', name: 'Red400' },
+  }}
+/>
+
+## ColorBlock6 (Audi DS)
+
+The [ColorBlock6](/api/design-tokens-colors-colorblock6--overview) component displays a color block and color aliases for various standard is Pantone, CMYK.
+
+```
+import { ColorBlock6Palette } from '@component-controls/design-tokens';
+
+<ColorBlock6Palette
+  palette={{
+    'Poppy surprise': { value: '#FF5630', name: 'R300' },
+    'Golden state': { value: '#FFAB00', name: 'Y300' },
+    'Fine pine': { value: '#36B37E', name: 'G300' },
+    Tamarama: { value: '#00B8D9', name: 'T300' },
+    "Da' juice": { value: '#6554C0', name: 'P300' },
+    Critical: { value: '#f94d32', name: 'Red400' },
+  }}
+/>
+```
+
+<ColorBlock6Palette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },

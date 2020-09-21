@@ -8221,6 +8221,11 @@ color@^3.0.0:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
+color_library@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/color_library/-/color_library-0.0.2.tgz#1142167b8abf9b4ba074e95036438eb8442a6448"
+  integrity sha512-qdsir2B3bfOYLvdAiKaMHadulQBPp+1liP+1HK5KbB1mtlklA68xdIoudSWbPYVuWkd+4FOPPONDANnBw9pPbA==
+
 colorette@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.1.tgz#4d0b921325c14faf92633086a536db6e89564b1b"
@@ -21743,6 +21748,13 @@ signale@^1.4.0:
     chalk "^2.3.2"
     figures "^2.0.0"
     pkg-conf "^2.1.0"
+
+simple-color-converter@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/simple-color-converter/-/simple-color-converter-2.1.9.tgz#c922b06eea462494be633e27245283f38e2c26ee"
+  integrity sha512-Xm5TUJzqLDHN+Agi1ueFZugCCUXPGMu/cVJLvjAnlWJeyIjApvc8LhN4VcQkboQrPOk113gw9baG8gpQ7D+YUw==
+  dependencies:
+    color_library "0.0.2"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
