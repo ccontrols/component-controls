@@ -1,0 +1,32 @@
+import React from 'react';
+import { BaseWebColor, BaseWebColorPalette } from './BaseWebColor';
+import { ColorProps } from '../types';
+
+export default {
+  title: 'Design Tokens/Colors/BaseWebColor',
+  component: BaseWebColor,
+};
+
+export const overview = ({ name, color }: ColorProps) => (
+  <BaseWebColor name={name} color={color} />
+);
+
+overview.controls = {
+  name: { type: 'text', value: 'cobalt400' },
+  color: { type: 'color', value: '#0E1FC1' },
+};
+
+export const palette = () => (
+  <BaseWebColorPalette
+    palette={{
+      yellow50: '#FFFAF0',
+      yellow100: '#FFF2D9',
+      yellow200: '#FFE3AC',
+      yellow300: '#FFCF70',
+      yellow400: '#FFC043',
+      yellow500: '#BC8B2C',
+      yellow600: '#997328',
+      yellow700: '#674D1B',
+    }}
+  />
+);

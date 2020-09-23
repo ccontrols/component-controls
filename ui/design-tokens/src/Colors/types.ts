@@ -1,9 +1,8 @@
 import { FC, ReactNode } from 'react';
-import { SxProps } from 'theme-ui';
 
 export type ColorValue =
   | string
-  | { name?: string; value: string; dark?: ColorValue };
+  | { name?: string; value: string; dark?: ColorValue; varName?: string };
 export interface ColorProps {
   /**
    * name of the color, If none, or same as the color value, some color blocks will not display it
@@ -21,7 +20,7 @@ export interface ColorProps {
   hover?: boolean;
 }
 
-export type ColorBlockProps = { sx?: SxProps } & ColorProps;
+export type ColorBlockProps = ColorProps;
 
 export type ColorPaletteProps = Record<string, ColorValue>;
 

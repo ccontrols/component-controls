@@ -9,14 +9,15 @@ order: 1
 author: atanasster
 ---
 import { 
-  ColorBlock1Palette, 
-  ColorBlock2Palette, 
-  ColorBlock3Palette, 
-  ColorBlock4Palette, 
-  ColorBlock5Palette, 
-  ColorBlock6Palette,
-  ColorBlock7Palette,
-  ColorBlock8Palette,
+  AltaColorPalette, 
+  AntdHorzColorPalette, 
+  AntdVertColorPalette, 
+  AnvilColorPalette, 
+  AtlassianColorPalette, 
+  AudiDSColorPalette,
+  BackpackColorPalette,
+  BaseWebColorPalette,
+  BoltColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -25,14 +26,16 @@ Colors are one of the main [design tokens](/tutorial/design-tokens/intro) elemen
 
 The color can be a hex, rgb, or hsl string value.
 
-## ColorBlock1 (Alta UI)
+## AltaColor
 
-The [ColorBlock1](/api/design-tokens-colors-colorblock1--overview) component displays the color name and value in a compact block.
+The [AltaColor](/api/design-tokens-colors-altacolor--overview) component displays the color name and value in a compact block.
+
+Design inspired from Oracle's [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
 
 ```
-import { ColorBlock1Palette } from '@component-controls/design-tokens';
+import { AltaColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock1Palette
+<AltaColorPalette
   palette={{
     'color-1': '#fbce4a',
     'color-2': '#fcfbe8',
@@ -44,7 +47,7 @@ import { ColorBlock1Palette } from '@component-controls/design-tokens';
 />
 ```
 
-<ColorBlock1Palette
+<AltaColorPalette
   palette={{
     'color-1': '#fbce4a',
     'color-2': '#fcfbe8',
@@ -55,14 +58,52 @@ import { ColorBlock1Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock2 (Antd)
+## AntdHorzColor
 
-The [ColorBlock2](/api/design-tokens-colors-colorblock2--overview) component displays a horizontal color block, with the color value visible on hover.
+The [AntdHorzColor](/api/design-tokens-colors-antdhorzcolorpalette--overview) component displays a horizontal color block, with the color value visible on hover.
+
+Design inspired from [Antd](https://ant.design/docs/spec/colors).
 
 ```
-import { ColorBlock2Palette } from '@component-controls/design-tokens';
+import { AntdHorzColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock2Palette
+<AntdHorzColorPalette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>
+```
+<AntdHorzColorPalette
+  palette={{
+    'red-1': '#fff1f0',
+    'red-2': '#ffccc7',
+    'red-3': '#ffa39e',
+    'red-4': '#ff7875',
+    'red-5': '#ff4d4f',
+    'red-6': '#f5222d',
+    'red-7': '#cf1322',
+    'red-8': '#a8071a',
+  }}
+/>
+
+
+## AntdVertColor
+
+The [AntdVertColor](/api/design-tokens-colors-antdvertcolor--overview) component displays a horizontal color block, with the color value visible on hover.
+
+Design inspired from [Antd](https://ant.design/docs/spec/colors).
+
+```
+import { AntdVertColorPalette } from '@component-controls/design-tokens';
+
+<AntdVertColorPalette
   palette={{
     'green-1': '#f6ffed',
     'green-2': '#d9f7be',
@@ -77,7 +118,7 @@ import { ColorBlock2Palette } from '@component-controls/design-tokens';
   }}
 />
 ```
-<ColorBlock2Palette
+<AntdVertColorPalette
   palette={{
     'green-1': '#f6ffed',
     'green-2': '#d9f7be',
@@ -92,48 +133,18 @@ import { ColorBlock2Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock3 (Antd)
-
-The [ColorBlock3](/api/design-tokens-colors-colorblock3--overview) component displays a horizontal color block, with the color value visible on hover.
-
-```
-import { ColorBlock3Palette } from '@component-controls/design-tokens';
-
-<ColorBlock3Palette
-  palette={{
-    'red-1': '#fff1f0',
-    'red-2': '#ffccc7',
-    'red-3': '#ffa39e',
-    'red-4': '#ff7875',
-    'red-5': '#ff4d4f',
-    'red-6': '#f5222d',
-    'red-7': '#cf1322',
-    'red-8': '#a8071a',
-  }}
-/>
-```
-<ColorBlock3Palette
-  palette={{
-    'red-1': '#fff1f0',
-    'red-2': '#ffccc7',
-    'red-3': '#ffa39e',
-    'red-4': '#ff7875',
-    'red-5': '#ff4d4f',
-    'red-6': '#f5222d',
-    'red-7': '#cf1322',
-    'red-8': '#a8071a',
-  }}
-/>
 
 
-## ColorBlock4 (Anvil)
+## AnvilColor
 
-The [ColorBlock4](/api/design-tokens-colors-colorblock4--overview) component displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
+The [AnvilColor](/api/design-tokens-colors-anvilcolor--overview) component displays a color block with a dot suggesting the best text color and a block of text with the color title, name and value.
+
+Design inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/).
 
 ```
-import { ColorBlock4Palette } from '@component-controls/design-tokens';
+import { AnvilColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock4Palette
+<AnvilColorPalette
   palette={{
     Critical: { value: '#f94d32', name: 'Red400' },
     Warning: { value: '#ffc902', name: 'Yellow400' },
@@ -144,7 +155,7 @@ import { ColorBlock4Palette } from '@component-controls/design-tokens';
   }}
 />
 ```
-<ColorBlock4Palette
+<AnvilColorPalette
   palette={{
     Critical: { value: '#f94d32', name: 'Red400' },
     Warning: { value: '#ffc902', name: 'Yellow400' },
@@ -155,14 +166,16 @@ import { ColorBlock4Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock5 (Atlassian DS)
+## AtlassianColor
 
-The [ColorBlock5](/api/design-tokens-colors-colorblock5--overview) component displays a color block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
+The [AtlassianColor](/api/design-tokens-colors-atlassiancolor--overview) component displays a color block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
+
+Design inspired from [Atlassian Design System](https://atlassian.design/foundations/color).
 
 ```
-import { ColorBlock5Palette } from '@component-controls/design-tokens';
+import { AtlassianColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock5Palette
+<AtlassianColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -174,7 +187,7 @@ import { ColorBlock5Palette } from '@component-controls/design-tokens';
 />
 ```
 
-<ColorBlock5Palette
+<AtlassianColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -185,14 +198,16 @@ import { ColorBlock5Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock6 (Audi DS)
+## AudiDSColor
 
-The [ColorBlock6](/api/design-tokens-colors-colorblock6--overview) component displays a color block and color aliases for various standard is Pantone, CMYK.
+The [AudiDSColor](/api/design-tokens-colors-audidscolor--overview) component displays a color block and color aliases for various standard is Pantone, CMYK.
+
+Design inspired from [Audi Design System](https://www.audi.com/ci/en/intro/basics/colours.html).
 
 ```
-import { ColorBlock6Palette } from '@component-controls/design-tokens';
+import { AudiDSColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock6Palette
+<AudiDSColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -204,7 +219,7 @@ import { ColorBlock6Palette } from '@component-controls/design-tokens';
 />
 ```
 
-<ColorBlock6Palette
+<AudiDSColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -215,14 +230,16 @@ import { ColorBlock6Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock7 (Backpack)
+## BackpackColor
 
-The [ColorBlock7](/api/design-tokens-colors-colorblock7--overview) component displays a color block and color aliases for various standard is Pantone, CMYK. If specified, will display the dark color as a bottom-right side triangle.
+The [BackpackColor](/api/design-tokens-colors-backpackcolor--overview) component displays a color block and color aliases for various standard is Pantone, CMYK. If specified, will display the dark color as a bottom-right side triangle.
+
+Design inspired from [Backpack](https://backpack.github.io/guidelines/colors).
 
 ```
-import { ColorBlock7Palette } from '@component-controls/design-tokens';
+import { BackpackColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock7Palette
+<BackpackColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -234,7 +251,7 @@ import { ColorBlock7Palette } from '@component-controls/design-tokens';
 />
 ```
 
-<ColorBlock7Palette
+<BackpackColorPalette
   palette={{
     'Poppy surprise': { value: '#FF5630', name: 'R300' },
     'Golden state': { value: '#FFAB00', name: 'Y300' },
@@ -245,14 +262,16 @@ import { ColorBlock7Palette } from '@component-controls/design-tokens';
   }}
 />
 
-## ColorBlock8 (BaseWeb)
+## BaseWebColor
 
-The [ColorBlock8](/api/design-tokens-colors-colorblock8--overview) component displays a color block as a row, with color, name and hex value.
+The [BaseWebColor](/api/design-tokens-colors-basewebcolor--overview) component displays a color block as a row, with color, name and hex value.
+
+Design inspired from [BaseWeb](https://baseweb.design/components/tokens/).
 
 ```
-import { ColorBlock8Palette } from '@component-controls/design-tokens';
+import { BaseWebColorPalette } from '@component-controls/design-tokens';
 
-<ColorBlock8Palette
+<BaseWebColorPalette
   palette={{
     yellow50: '#FFFAF0',
     yellow100: '#FFF2D9',
@@ -266,7 +285,7 @@ import { ColorBlock8Palette } from '@component-controls/design-tokens';
 />
 ```
 
-<ColorBlock8Palette
+<BaseWebColorPalette
   palette={{
     yellow50: '#FFFAF0',
     yellow100: '#FFF2D9',
@@ -276,5 +295,47 @@ import { ColorBlock8Palette } from '@component-controls/design-tokens';
     yellow500: '#BC8B2C',
     yellow600: '#997328',
     yellow700: '#674D1B',
+  }}
+/>
+
+## BoltColor
+
+The [BoltColor](/api/design-tokens-colors-boltcolor--overview) component displays the color as a block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
+
+Design inspired from [Bolt](https://boltdesignsystem.com/pattern-lab/?p=visual-styles-color-system).
+
+```
+import { BoltColorPalette } from '@component-controls/design-tokens';
+
+<BoltColorPalette
+  palette={{
+    Navy: { value: '#001f5f', varName: 'var(--bolt-color-navy)' },
+    Teal: { value: '#10a5ac', varName: 'var(--bolt-color-teal)' },
+    Orange: { value: '#f76923', varName: 'var(--bolt-color-orange)' },
+    Yellow: { value: '#ffc836', varName: 'var(--bolt-color-yellow)' },
+    Wine: { value: '#661d34', varName: 'var(--bolt-color-wine)' },
+    Pink: { value: '#e63690', varName: 'var(--bolt-color-pink)' },
+    Berry: { value: '#ac1361', varName: 'var(--bolt-color-berry)' },
+    Violet: { value: '#5f67b9', varName: 'var(--bolt-color-violet)' },
+    Gray: { value: '#8d8e99', varName: 'var(--bolt-color-gray)' },
+    Black: { value: '#151619', varName: 'var(--bolt-color-black)' },
+    White: { value: '#ffffff', varName: 'var(--bolt-color-white)' },
+  }}
+/>
+```
+
+<BoltColorPalette
+  palette={{
+    Navy: { value: '#001f5f', varName: 'var(--bolt-color-navy)' },
+    Teal: { value: '#10a5ac', varName: 'var(--bolt-color-teal)' },
+    Orange: { value: '#f76923', varName: 'var(--bolt-color-orange)' },
+    Yellow: { value: '#ffc836', varName: 'var(--bolt-color-yellow)' },
+    Wine: { value: '#661d34', varName: 'var(--bolt-color-wine)' },
+    Pink: { value: '#e63690', varName: 'var(--bolt-color-pink)' },
+    Berry: { value: '#ac1361', varName: 'var(--bolt-color-berry)' },
+    Violet: { value: '#5f67b9', varName: 'var(--bolt-color-violet)' },
+    Gray: { value: '#8d8e99', varName: 'var(--bolt-color-gray)' },
+    Black: { value: '#151619', varName: 'var(--bolt-color-black)' },
+    White: { value: '#ffffff', varName: 'var(--bolt-color-white)' },
   }}
 />
