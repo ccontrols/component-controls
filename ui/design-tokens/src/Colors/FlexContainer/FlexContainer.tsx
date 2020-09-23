@@ -30,8 +30,8 @@ export const FlexContainer: FC<FlexContainerProps> = ({
       }}
       {...rest}
     >
-      {Object.keys(palette).map(color =>
-        children({ name: color, value: palette[color], hover }),
+      {Object.keys(palette).map((color, index) =>
+        children({ name: color, value: palette[color], hover, index }),
       )}
     </Box>
   );

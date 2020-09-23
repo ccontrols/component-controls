@@ -19,6 +19,7 @@ import {
   BaseWebColorPalette,
   BoltColorPalette,
   CanvasColorPalette,
+  CedarColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -389,6 +390,76 @@ import { CanvasColorPalette } from '@component-controls/design-tokens';
       value: '#fff3ee',
       name: 'SORBET_LIGHT',
       sass: '$color-sorbet-light',
+    },
+  }}
+/>
+
+## CedarColor
+
+The [CedarColor](/api/design-tokens-colors-cedarcolor--overview) component displays the color as a row, with color, name, description and hex value.
+
+Design inspired from REI's [Cedar](https://rei.github.io/rei-cedar-docs/foundation/color/).
+
+```
+import { CedarColorPalette } from '@component-controls/design-tokens';
+
+<CedarColorPalette
+  palette={{
+    primary: {
+      name: 'cdr-color-text-primary',
+      value: 'rgba(12, 11, 8, 0.75)',
+      description: 'The default, primary text color',
+    },
+    brand: {
+      name: 'cdr-color-text-brand',
+      value: '#113731',
+      description: 'Text set in our primary brand color',
+    },
+    sale: {
+      name: 'cdr-color-text-sale',
+      value: '#cc0000',
+      description: 'The color of sale text',
+    },
+    success: {
+      name: 'cdr-color-text-success',
+      value: '#2e6b34',
+      description: 'Color of success messages',
+    },
+    warning: {
+      name: 'cdr-color-text-warning',
+      value: '#854714',
+      description: 'Color of warning messages',
+    },
+  }}
+/>
+```
+
+<CedarColorPalette
+  palette={{
+    primary: {
+      name: 'cdr-color-text-primary',
+      value: 'rgba(12, 11, 8, 0.75)',
+      description: 'The default, primary text color',
+    },
+    brand: {
+      name: 'cdr-color-text-brand',
+      value: '#113731',
+      description: 'Text set in our primary brand color',
+    },
+    sale: {
+      name: 'cdr-color-text-sale',
+      value: '#cc0000',
+      description: 'The color of sale text',
+    },
+    success: {
+      name: 'cdr-color-text-success',
+      value: '#2e6b34',
+      description: 'Color of success messages',
+    },
+    warning: {
+      name: 'cdr-color-text-warning',
+      value: '#854714',
+      description: 'Color of warning messages',
     },
   }}
 />

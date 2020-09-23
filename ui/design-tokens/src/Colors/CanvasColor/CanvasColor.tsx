@@ -92,13 +92,8 @@ export const CanvasColorPalette: FC<Omit<
   'children' | 'direction'
 >> = props => (
   <FlexContainer direction="column" {...props}>
-    {({ name, value, hover }) => (
-      <CanvasColor
-        key={`color_item_${name}}`}
-        name={name}
-        color={value}
-        hover={hover}
-      />
+    {({ name, value }) => (
+      <CanvasColor key={`color_item_${name}}`} name={name} color={value} />
     )}
   </FlexContainer>
 );

@@ -8,6 +8,7 @@ export type ColorValue =
       dark?: ColorValue;
       varName?: string;
       sass?: string;
+      description?: string;
     };
 export interface ColorProps {
   /**
@@ -36,6 +37,7 @@ export type ContaionerCallbackProps = {
   name: string;
   value: ColorValue;
   hover: boolean;
+  index: number;
 };
 /**
  * design token container

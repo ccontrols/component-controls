@@ -3,16 +3,23 @@ import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps } from '../types';
+import { ColorBlockProps, ColorValue } from '../types';
 import { FlexContainerProps, FlexContainer } from '../FlexContainer';
 
 /**
- * Color item displaying as a row, with color, name and hex value
- * Design inspired from [BaseWeb](https://baseweb.design/components/tokens/).
+ * Color item displaying as a row, with color, name, description and hex value
+ * Design inspired from REI's [Cedar](https://rei.github.io/rei-cedar-docs/foundation/color/).
  */
 
-export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
-  const colorValue = typeof color === 'string' ? color : color.value;
+export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({
+  name,
+  color,
+  index = 0,
+}) => {
+  const colorObj: ColorValue =
+    typeof color === 'string' ? { value: color } : color;
+  const { value: colorValue, name: colorName, description } = colorObj;
+
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
@@ -22,17 +29,16 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          height: 50,
           alignItems: 'center',
-          fontSize: 2,
-          borderBottom: `1px solid ${hex}`,
-          bg: 'background',
+          fontSize: 1,
+          p: 2,
+          bg: index % 2 ? 'background' : 'gray',
         }}
       >
         <CopyContainer value={hex} name={name}>
           <Box
             sx={{
-              width: 100,
+              width: 50,
               height: 50,
               bg: colorValue,
               color: textColor,
@@ -45,9 +51,12 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
             flex: 1,
           }}
         >
-          {name}
+          <div sx={{ display: 'flex', flexDirection: 'column' }}>
+            <div sx={{ fontWeight: 'bold' }}>{colorName}</div>
+            <div> {description}</div>
+          </div>
         </Box>
-        <div sx={{ mr: 3 }}>{hex.toUpperCase()}</div>
+        <div sx={{ mr: 3, fontSize: 0 }}>{hex}</div>
       </Box>
     </Box>
   );
@@ -55,16 +64,21 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
 
 /**
  *
- * palette displayed with ColorBlock8 items
+ * palette displayed with CedarColor items
  * using a css flex display direction column
  */
-export const BaseWebColorPalette: FC<Omit<
+export const CedarColorPalette: FC<Omit<
   FlexContainerProps,
   'children' | 'direction'
 >> = props => (
   <FlexContainer direction="column" {...props}>
-    {({ name, value }) => (
-      <BaseWebColor key={`color_item_${name}}`} name={name} color={value} />
+    {({ name, value, index }) => (
+      <CedarColor
+        key={`color_item_${name}}`}
+        name={name}
+        color={value}
+        index={index}
+      />
     )}
   </FlexContainer>
 );
