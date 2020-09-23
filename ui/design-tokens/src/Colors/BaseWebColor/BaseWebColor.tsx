@@ -17,18 +17,19 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
   const textColor = mostReadable(hex);
   return (
     <Box sx={{ display: 'flex', flex: '1' }}>
-      <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            height: 50,
-            alignItems: 'center',
-            fontSize: 2,
-            borderBottom: `1px solid ${hex}`,
-            bg: 'background',
-          }}
-        >
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          height: 50,
+          alignItems: 'center',
+          fontSize: 2,
+          borderBottom: `1px solid ${hex}`,
+          bg: 'background',
+        }}
+      >
+        <CopyContainer value={hex} name={name}>
           <Box
             sx={{
               width: 100,
@@ -37,17 +38,17 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
               color: textColor,
               mr: 3,
             }}
-          ></Box>
-          <Box
-            sx={{
-              flex: 1,
-            }}
-          >
-            {name}
-          </Box>
-          <div sx={{ mr: 3 }}>{hex.toUpperCase()}</div>
+          />
+        </CopyContainer>
+        <Box
+          sx={{
+            flex: 1,
+          }}
+        >
+          {name}
         </Box>
-      </CopyContainer>
+        <div sx={{ mr: 3 }}>{hex.toUpperCase()}</div>
+      </Box>
     </Box>
   );
 };

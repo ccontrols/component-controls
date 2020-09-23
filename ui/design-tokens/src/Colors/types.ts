@@ -2,7 +2,13 @@ import { FC, ReactNode } from 'react';
 
 export type ColorValue =
   | string
-  | { name?: string; value: string; dark?: ColorValue; varName?: string };
+  | {
+      name?: string;
+      value: string;
+      dark?: ColorValue;
+      varName?: string;
+      sass?: string;
+    };
 export interface ColorProps {
   /**
    * name of the color, If none, or same as the color value, some color blocks will not display it

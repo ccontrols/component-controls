@@ -7,3 +7,4 @@ export * from './AudiDSColor';
 export * from './BackpackColor';
 export * from './BaseWebColor';
 export * from './BoltColor';
+export * from './CanvasColor';

@@ -18,6 +18,7 @@ import {
   BackpackColorPalette,
   BaseWebColorPalette,
   BoltColorPalette,
+  CanvasColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -337,5 +338,57 @@ import { BoltColorPalette } from '@component-controls/design-tokens';
     Gray: { value: '#8d8e99', varName: 'var(--bolt-color-gray)' },
     Black: { value: '#151619', varName: 'var(--bolt-color-black)' },
     White: { value: '#ffffff', varName: 'var(--bolt-color-white)' },
+  }}
+/>
+
+## CanvasColor
+
+The [CanvasColor](/api/design-tokens-colors-canvascolor--overview) component displays the color  as a row, with color, name, sass variable name and hex value.
+
+Design inspired from [Canvas Design System](https://canvas.hubspot.com/styles/colors).
+
+```
+import { CanvasColorPalette } from '@component-controls/design-tokens';
+
+<CanvasColorPalette
+  palette={{
+    Primary: { value: '#ff8f59', name: 'SORBET', sass: '$color-sorbet' },
+    Shade: {
+      value: '#e68250',
+      name: 'SORBET_DARK',
+      sass: '$color-sorbet-dark',
+    },
+    'Medium Tint': {
+      value: '#ffc7ac',
+      name: 'SORBET_MEDIUM',
+      sass: '$color-sorbet-medium',
+    },
+    'Light Tint': {
+      value: '#fff3ee',
+      name: 'SORBET_LIGHT',
+      sass: '$color-sorbet-light',
+    },
+  }}
+/>
+```
+
+<CanvasColorPalette
+  palette={{
+    Primary: { value: '#ff8f59', name: 'SORBET', sass: '$color-sorbet' },
+    Shade: {
+      value: '#e68250',
+      name: 'SORBET_DARK',
+      sass: '$color-sorbet-dark',
+    },
+    'Medium Tint': {
+      value: '#ffc7ac',
+      name: 'SORBET_MEDIUM',
+      sass: '$color-sorbet-medium',
+    },
+    'Light Tint': {
+      value: '#fff3ee',
+      name: 'SORBET_LIGHT',
+      sass: '$color-sorbet-light',
+    },
   }}
 />
