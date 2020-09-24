@@ -55,7 +55,7 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
 
 /**
  *
- * palette displayed with ColorBlock8 items
+ * palette displayed with BaseWebColor items
  * using a css flex display direction column
  */
 export const BaseWebColorPalette: FC<Omit<

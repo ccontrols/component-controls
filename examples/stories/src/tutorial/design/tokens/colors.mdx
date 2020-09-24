@@ -20,6 +20,7 @@ import {
   BoltColorPalette,
   CanvasColorPalette,
   CedarColorPalette,
+  CometColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -460,6 +461,67 @@ import { CedarColorPalette } from '@component-controls/design-tokens';
       name: 'cdr-color-text-warning',
       value: '#854714',
       description: 'Color of warning messages',
+    },
+  }}
+/>
+
+
+## CometColor
+
+The [CometColor](/api/design-tokens-colors-cometcolor--overview) component displays the color as a row, with color, name sass variable name and AA/AAA tests.
+
+Design inspired from [Comet](https://comet.discoveryeducation.com/visual-language/color.html).
+
+```
+import { CometColorPalette } from '@component-controls/design-tokens';
+
+<CometColorPalette
+  palette={{
+    'midnight-30': {
+      name: '30',
+      value: '#0C518D',
+      sass: '$comet-color-midnight-30',
+    },
+    'midnight-40': {
+      name: '40',
+      value: '#106CBC',
+      sass: '$comet-color-midnight-40',
+    },
+    'midnight-50': {
+      name: '50',
+      value: '#1487EB',
+      sass: '$comet-color-midnight-50',
+    },
+    'midnight-60': {
+      name: '60',
+      value: '#439FEF',
+      sass: '$comet-color-midnight-60',
+    },
+  }}
+/>
+```
+
+<CometColorPalette
+  palette={{
+    'midnight-30': {
+      name: '30',
+      value: '#0C518D',
+      sass: '$comet-color-midnight-30',
+    },
+    'midnight-40': {
+      name: '40',
+      value: '#106CBC',
+      sass: '$comet-color-midnight-40',
+    },
+    'midnight-50': {
+      name: '50',
+      value: '#1487EB',
+      sass: '$comet-color-midnight-50',
+    },
+    'midnight-60': {
+      name: '60',
+      value: '#439FEF',
+      sass: '$comet-color-midnight-60',
     },
   }}
 />
