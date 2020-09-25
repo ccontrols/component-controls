@@ -5,19 +5,8 @@ import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import { CheckCircleFillIcon, XCircleFillIcon } from '@primer/octicons-react';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
+import { ColorBlockProps, ColorValue, colorContrast } from '../types';
 import { GridContainerProps, GridContainer } from '../GridContainer';
-
-const tests: Record<string, { ratio: number; fontSize: string }> = {
-  small: {
-    ratio: 4.5,
-    fontSize: '14px',
-  },
-  large: {
-    ratio: 3,
-    fontSize: '18px',
-  },
-};
 
 const PassFail: FC<{ status: 'pass' | 'fail' }> = ({ status }) => (
   <div
@@ -47,10 +36,14 @@ const ContrastTest: FC<{
     <tr>
       <td sx={{ color }}>{`${color} (${contrast.toFixed(2)})`}</td>
       <td sx={{ textAlign: 'right', py: 1 }}>
-        <PassFail status={contrast >= tests.large.ratio ? 'pass' : 'fail'} />
+        <PassFail
+          status={contrast >= colorContrast.large.ratio ? 'pass' : 'fail'}
+        />
       </td>
       <td sx={{ textAlign: 'right', py: 1 }}>
-        <PassFail status={contrast >= tests.small.ratio ? 'pass' : 'fail'} />
+        <PassFail
+          status={contrast >= colorContrast.small.ratio ? 'pass' : 'fail'}
+        />
       </td>
     </tr>
   );
@@ -132,12 +125,18 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
                 <tr sx={{ color: textColor }}>
                   <td>Text size</td>
                   <td
-                    sx={{ textAlign: 'right', fontSize: tests.large.fontSize }}
+                    sx={{
+                      textAlign: 'right',
+                      fontSize: colorContrast.large.fontSize,
+                    }}
                   >
                     Aa
                   </td>
                   <td
-                    sx={{ textAlign: 'right', fontSize: tests.small.fontSize }}
+                    sx={{
+                      textAlign: 'right',
+                      fontSize: colorContrast.small.fontSize,
+                    }}
                   >
                     Aa
                   </td>

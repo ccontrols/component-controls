@@ -4,7 +4,7 @@ import { jsx, Box, SxStyleProp } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
+import { ColorBlockProps, ColorValue, colorContrast } from '../types';
 import { FlexContainerProps, FlexContainer } from '../FlexContainer';
 
 /**
@@ -29,11 +29,11 @@ export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {
     color: 'black',
     fontSize: 1,
   };
-  if (contrast >= 7) {
+  if (contrast >= colorContrast.AAA.ratio) {
     accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AAA</div>;
-  } else if (contrast >= 4.5) {
+  } else if (contrast >= colorContrast.small.ratio) {
     accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AA</div>;
-  } else if (contrast >= 3) {
+  } else if (contrast >= colorContrast.large.ratio) {
     accessibilityTest = <div sx={{ ...testProps, bg: '#e6c719' }}>AA18</div>;
   } else {
     accessibilityTest = (

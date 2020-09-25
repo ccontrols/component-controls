@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 
+export type TokenStatus = 'ok' | 'warning' | 'error';
 export type ColorValue =
   | string
   | {
@@ -9,6 +10,7 @@ export type ColorValue =
       varName?: string;
       sass?: string;
       description?: string;
+      status?: TokenStatus;
     };
 export interface ColorProps {
   /**
@@ -45,4 +47,22 @@ export type ContaionerCallbackProps = {
 export type ContainerProps = {
   palette: ColorPaletteProps;
   children: (props: ContaionerCallbackProps) => ReactNode;
+};
+
+export const colorContrast: Record<
+  string,
+  { ratio: number; fontSize: string }
+> = {
+  AAA: {
+    ratio: 7,
+    fontSize: '14px',
+  },
+  small: {
+    ratio: 4.5,
+    fontSize: '14px',
+  },
+  large: {
+    ratio: 3,
+    fontSize: '18px',
+  },
 };

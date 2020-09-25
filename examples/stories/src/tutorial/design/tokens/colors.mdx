@@ -22,6 +22,7 @@ import {
   CanvasColorPalette,
   CedarColorPalette,
   CometColorPalette,
+  DuetColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -558,6 +559,90 @@ import { CometColorPalette } from '@component-controls/design-tokens';
       name: '60',
       value: '#439FEF',
       sass: '$comet-color-midnight-60',
+    },
+  }}
+/>
+
+## DuetColor
+
+The [DuetColor](/api/design-tokens-colors-duetcolor--overview) component displays the color as a row, with color, name, description, var and sas variables and contrast ratio.
+
+Design inspired from [Duet](https://www.duetds.com/tokens/#color).
+
+```
+import { DuetColorPalette } from '@component-controls/design-tokens';
+
+<DuetColorPalette
+  palette={{
+    'Gray Darker': {
+      value: '#657787',
+      description:
+        'Darker gray that is accessible with white when used for text. Most commonly used as a text color for interface help texts.',
+      sass: '$color-gray-darker',
+      varName: 'var(--color-gray-darker)',
+      status: 'ok',
+    },
+    'Gray Dark': {
+      value: '#909599',
+      description:
+        'Dark gray is used for form borders that need to pass WCAG Level AA non-text contrast requirements. Please note that this color isn’t accessible when used for text.',
+      sass: '$color-gray-dark',
+      varName: 'var(--color-gray-dark)',
+      status: 'ok',
+    },
+    'Data 01': {
+      value: '#7a01c4',
+      description:
+        'Data visualization color that is accessible with white. Please note that this color should not be used for any other purpose.',
+      sass: '$color-data-01',
+      varName: 'var(--color-data-01)',
+      status: 'warning',
+    },
+    'Data 06': {
+      value: '#c21565',
+      description:
+        'Data visualization color that is accessible with white. Please note that this color should not be used for any other purpose.',
+      sass: '$color-data-06',
+      varName: 'var(--color-data-06)',
+      status: 'error',
+    },
+  }}
+/>
+```
+
+<DuetColorPalette
+  palette={{
+    'Gray Darker': {
+      value: '#657787',
+      description:
+        'Darker gray that is accessible with white when used for text. Most commonly used as a text color for interface help texts.',
+      sass: '$color-gray-darker',
+      varName: 'var(--color-gray-darker)',
+      status: 'ok',
+    },
+    'Gray Dark': {
+      value: '#909599',
+      description:
+        'Dark gray is used for form borders that need to pass WCAG Level AA non-text contrast requirements. Please note that this color isn’t accessible when used for text.',
+      sass: '$color-gray-dark',
+      varName: 'var(--color-gray-dark)',
+      status: 'ok',
+    },
+    'Data 01': {
+      value: '#7a01c4',
+      description:
+        'Data visualization color that is accessible with white. Please note that this color should not be used for any other purpose.',
+      sass: '$color-data-01',
+      varName: 'var(--color-data-01)',
+      status: 'warning',
+    },
+    'Data 06': {
+      value: '#c21565',
+      description:
+        'Data visualization color that is accessible with white. Please note that this color should not be used for any other purpose.',
+      sass: '$color-data-06',
+      varName: 'var(--color-data-06)',
+      status: 'error',
     },
   }}
 />

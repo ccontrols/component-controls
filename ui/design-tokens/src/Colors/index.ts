@@ -11,3 +11,4 @@ export * from './BoltColor';
 export * from './CanvasColor';
 export * from './CedarColor';
 export * from './CometColor';
+export * from './DuetColor';
