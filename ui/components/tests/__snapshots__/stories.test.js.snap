@@ -926,6 +926,25 @@ exports[`Components/ColorMode Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Components/CopyContainer Overview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-r60fd5"
+  >
+    <div
+      style="border: 1px solid black; padding: 5px;"
+    >
+      <p>
+        some text.
+      </p>
+      <p>
+        click to copy
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Components/ExternalLink Overview 1`] = `
 <DocumentFragment>
   <a
@@ -952,7 +971,7 @@ exports[`Components/Header Overview 1`] = `
 exports[`Components/HoverBox Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1hcw92l"
+    class="css-d51li0"
   >
     <div
       class="css-12caf47"

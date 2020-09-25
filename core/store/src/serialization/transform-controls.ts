@@ -12,6 +12,41 @@ import {
   getControlValue,
 } from '@component-controls/core';
 
+const controlShortcuts = (
+  control: ComponentControl | any,
+): ComponentControl => {
+  const valueType = typeof control;
+  switch (valueType) {
+    case 'string':
+      return { type: ControlTypes.TEXT, value: control };
+    case 'number':
+      return { type: ControlTypes.NUMBER, value: control };
+    case 'object': {
+      if (control instanceof Date) {
+        return { type: ControlTypes.DATE, value: control };
+      }
+      if (Array.isArray(control)) {
+        return { type: ControlTypes.OPTIONS, options: control };
+      }
+      if (
+        control.type === ControlTypes.OBJECT &&
+        typeof control.value === 'object'
+      ) {
+        return {
+          ...control,
+          value: Object.keys(control.value).reduce(
+            (acc, name) => ({
+              ...acc,
+              [name]: controlShortcuts(control.value[name]),
+            }),
+            {},
+          ),
+        };
+      }
+    }
+  }
+  return control;
+};
 export const transformControls = (
   story: Story,
   doc: Document,
@@ -20,17 +55,7 @@ export const transformControls = (
   const { controls: storyControls } = story;
   const controls: ComponentControls | undefined = storyControls
     ? Object.keys(storyControls).reduce((acc, key) => {
-        let control: ComponentControl;
-        const value = storyControls[key];
-        if (typeof value === 'string') {
-          control = { type: ControlTypes.TEXT, value };
-        } else if (typeof value === 'number') {
-          control = { type: ControlTypes.NUMBER, value };
-        } else if (typeof value === 'object' && value instanceof Date) {
-          control = { type: ControlTypes.DATE, value };
-        } else {
-          control = value;
-        }
+        const control = controlShortcuts(storyControls[key]);
         if (control.defaultValue === undefined) {
           const defaultValue = getControlValue(control);
           if (typeof defaultValue !== 'function') {

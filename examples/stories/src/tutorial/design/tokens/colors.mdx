@@ -23,6 +23,7 @@ import {
   CedarColorPalette,
   CometColorPalette,
   DuetColorPalette,
+  ETradeColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -646,3 +647,73 @@ import { DuetColorPalette } from '@component-controls/design-tokens';
     },
   }}
 />
+
+
+## ETradeColor
+
+The [ETradeColor](/api/design-tokens-colors-etradecolor--overview) component displays the color as a block with values for hex, class and sass can be copied to clipboard on hover.
+
+Design inspired from [E-Trade Design System](https://docs.etrade.design/colors).
+
+```
+import { ETradeColorPalette } from '@component-controls/design-tokens';
+
+<ETradeColorPalette
+  palette={{
+    Purple: {
+      value: '#5627d8',
+      description: 'Text links and other interactive elements',
+      sass: '$link-color',
+    },
+    'Negative red': {
+      value: '#cc0000',
+      name: 'Error state',
+      description: 'Data trending down',
+      sass: '$negative',
+    },
+    'Positive green': {
+      value: '#107a1b',
+      name: 'Success state',
+      description: 'Data trending up',
+      sass: '$positive',
+      css: '.text-positive',
+    },
+    'Background accent color': {
+      value: '#f1ecff',
+      description: 'Background color',
+      sass: '$background-accent-color-1',
+      css: '.background-accent-color-1',
+    },
+  }}
+/>
+```
+
+<ETradeColorPalette
+  palette={{
+    Purple: {
+      value: '#5627d8',
+      description: 'Text links and other interactive elements',
+      sass: '$link-color',
+    },
+    'Negative red': {
+      value: '#cc0000',
+      name: 'Error state',
+      description: 'Data trending down',
+      sass: '$negative',
+    },
+    'Positive green': {
+      value: '#107a1b',
+      name: 'Success state',
+      description: 'Data trending up',
+      sass: '$positive',
+      css: '.text-positive',
+    },
+    'Background accent color': {
+      value: '#f1ecff',
+      description: 'Background color',
+      sass: '$background-accent-color-1',
+      css: '.background-accent-color-1',
+    },
+  }}
+/>
+

@@ -9,6 +9,7 @@ export type ColorValue =
       dark?: ColorValue;
       varName?: string;
       sass?: string;
+      css?: string;
       description?: string;
       status?: TokenStatus;
     };
