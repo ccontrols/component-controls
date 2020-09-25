@@ -1,14 +1,14 @@
 import React from 'react';
-import { FinestraColor, FinestraColorPalette } from './FinestraColor';
+import { FinastraColor, FinastraColorPalette } from './FinastraColor';
 import { ColorProps } from '../types';
 
 export default {
-  title: 'Design Tokens/Colors/FinestraColor',
-  component: FinestraColor,
+  title: 'Design Tokens/Colors/FinastraColor',
+  component: FinastraColor,
 };
 
 export const overview = ({ name, color }: ColorProps) => (
-  <FinestraColor name={name} color={color} />
+  <FinastraColor name={name} color={color} />
 );
 
 overview.controls = {
@@ -24,7 +24,7 @@ overview.controls = {
 };
 
 export const palette = () => (
-  <FinestraColorPalette
+  <FinastraColorPalette
     palette={{
       'C 100 - dark': {
         value: '#2D2D2D',

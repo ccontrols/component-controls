@@ -9,10 +9,10 @@ import { FlexContainerProps, FlexContainer } from '../FlexContainer';
 
 /**
  * Color item displaying the color as a small block, with name and hex color on the side. If the color is a primary color, will display as a circle.
- * Design inspired from [Finestra](https://design.fusionfabric.cloud/foundations/colors).
+ * Design inspired from [Finastra](https://design.fusionfabric.cloud/foundations/colors).
  */
 
-export const FinestraColor: FC<ColorBlockProps> = ({ name, color }) => {
+export const FinastraColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color } : color;
   const { value: colorValue, name: colorName, primary } = colorObj;
@@ -78,16 +78,16 @@ export const FinestraColor: FC<ColorBlockProps> = ({ name, color }) => {
 
 /**
  *
- * palette displayed with FinestraColor items
+ * palette displayed with FinastraColor items
  * using a css flex display direction column
  */
-export const FinestraColorPalette: FC<Omit<
+export const FinastraColorPalette: FC<Omit<
   FlexContainerProps,
   'children' | 'direction'
 >> = props => (
   <FlexContainer direction="column" sx={{ width: 250 }} {...props}>
     {({ name, value, hover }) => (
-      <FinestraColor
+      <FinastraColor
         key={`color_item_${name}}`}
         name={name}
         color={value}
