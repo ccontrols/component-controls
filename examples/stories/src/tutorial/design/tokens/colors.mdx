@@ -26,6 +26,7 @@ import {
   ETradeColorPalette,
   FinastraColorPalette,
   FishTankColorPalette,
+  GovUKColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -814,6 +815,58 @@ import { FishTankColorPalette } from '@component-controls/design-tokens';
     'highlight-3': {
       sass: '$color-highlight-3',
       value: '#E0FFE0',
+    },
+  }}
+/>
+
+## GovUKColor
+
+The [GovUKColor](/api/design-tokens-colors-govukcolor--overview) component displays the color as a row with a color circle and the sass var name and hex color.
+
+Design inspired from [GOV.UK Design System](https://design-system.service.gov.uk/styles/colour/).
+
+```
+import { GovUKColorPalette } from '@component-controls/design-tokens';
+
+<GovUKColorPalette
+  palette={{
+    'brand-colour': {
+      sass: '$govuk-brand-colour',
+      value: '#1d70b8',
+    },
+    'hover-colour': {
+      sass: '$govuk-link-hover-colour',
+      value: '#003078',
+    },
+    'visited-colour': {
+      sass: '$govuk-link-visited-colour',
+      value: '#4c2c92',
+    },
+    red: {
+      varName: 'govuk-colour("red")',
+      value: '#d4351c',
+    },
+  }}
+/>
+```
+
+<GovUKColorPalette
+  palette={{
+    'brand-colour': {
+      sass: '$govuk-brand-colour',
+      value: '#1d70b8',
+    },
+    'hover-colour': {
+      sass: '$govuk-link-hover-colour',
+      value: '#003078',
+    },
+    'visited-colour': {
+      sass: '$govuk-link-visited-colour',
+      value: '#4c2c92',
+    },
+    red: {
+      varName: 'govuk-colour("red")',
+      value: '#d4351c',
     },
   }}
 />
