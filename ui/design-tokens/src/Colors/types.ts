@@ -4,14 +4,42 @@ export type TokenStatus = 'ok' | 'warning' | 'error';
 export type ColorValue =
   | string
   | {
+      /**
+       * color sub name
+       */
       name?: string;
+      /**
+       * color string. can be hex, rgb or hsl
+       */
       value: string;
+      /**
+       * if both dark and light variants are displayed
+       */
       dark?: ColorValue;
+      /**
+       * variable name ex var(--theme-ui-colors-palette4,#dc004e)
+       */
       varName?: string;
+      /**
+       * sass variable name ex: $text-input
+       */
       sass?: string;
+      /**
+       * css class name ex .text-input
+       */
       css?: string;
+      /**
+       * full text description of the color usage.
+       */
       description?: string;
+      /**
+       * design token status. can be work in progrss, obsolete etc.
+       */
       status?: TokenStatus;
+      /**
+       * for color palettes were each color palette has a primary color
+       */
+      primary?: boolean;
     };
 export interface ColorProps {
   /**

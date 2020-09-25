@@ -24,6 +24,7 @@ import {
   CometColorPalette,
   DuetColorPalette,
   ETradeColorPalette,
+  FinestraColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -713,6 +714,61 @@ import { ETradeColorPalette } from '@component-controls/design-tokens';
       description: 'Background color',
       sass: '$background-accent-color-1',
       css: '.background-accent-color-1',
+    },
+  }}
+/>
+
+
+## FinestraColor
+
+The [FinestraColor](/api/design-tokens-colors-finestracolor--overview) component displays the color as a small block, with name and hex color on the side. If the color is a primary color, will display as a circle.
+
+Design inspired from [Finestra](https://design.fusionfabric.cloud/foundations/colors).
+
+```
+import { FinestraColorPalette } from '@component-controls/design-tokens';
+
+<FinestraColorPalette
+  palette={{
+    'C 100 - dark': {
+      value: '#2D2D2D',
+    },
+    'C 100': {
+      value: '#414141',
+      name: 'C',
+      primary: true,
+    },
+    'C 75': {
+      value: '#707070',
+    },
+    'C 50': {
+      value: '#9F9F9F',
+    },
+    'C 25': {
+      value: '#CECECE',
+    },
+  }}
+/>
+```
+
+<FinestraColorPalette
+  palette={{
+    'C 100 - dark': {
+      value: '#2D2D2D',
+    },
+    'C 100': {
+      value: '#414141',
+      name: 'C',
+      primary: true,
+    },
+    'C 75': {
+      value: '#707070',
+    },
+    'C 50': {
+      value: '#9F9F9F',
+    },
+    'C 25': {
+      value: '#CECECE',
     },
   }}
 />

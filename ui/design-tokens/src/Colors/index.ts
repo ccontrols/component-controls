@@ -13,3 +13,4 @@ export * from './CedarColor';
 export * from './CometColor';
 export * from './DuetColor';
 export * from './ETradeColor';
+export * from './FinestraColor';

@@ -46,7 +46,9 @@ export const mergeControlValues = (
         controls[key],
         value[key] === undefined
           ? controls[key].value
-          : value[key].value || value[key],
+          : typeof value[key].value === 'undefined'
+          ? value[key]
+          : value[key].value,
       ),
     }),
     {},
