@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import { colorToStr } from '../utils';
-import { ColorBlockProps } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 const ContrastTest: FC<{
   bg: string;
@@ -17,7 +17,7 @@ const ContrastTest: FC<{
     size,
   }); //false
   return (
-    <Box
+    <div
       sx={{
         p: 2,
         display: 'flex',
@@ -39,7 +39,7 @@ const ContrastTest: FC<{
       >
         {pass ? 'PASS' : 'FAIL'}
       </span>
-    </Box>
+    </div>
   );
 };
 /**
@@ -50,7 +50,7 @@ export const AtlassianColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -59,14 +59,14 @@ export const AtlassianColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             bg: colorValue,
             height: 90,
             position: 'relative',
           }}
         >
-          <Box
+          <div
             sx={{
               position: 'absolute',
               left: 10,
@@ -82,10 +82,10 @@ export const AtlassianColor: FC<ColorBlockProps> = ({ name, color }) => {
             <ContrastTest bg={colorValue} color="#000" size="small" />
             <ContrastTest bg={colorValue} color="#fff" size="large" />
             <ContrastTest bg={colorValue} color="#fff" size="small" />
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CopyContainer>
-      <Box
+      <div
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -95,38 +95,38 @@ export const AtlassianColor: FC<ColorBlockProps> = ({ name, color }) => {
           fontSize: 1,
         }}
       >
-        <Box
+        <div
           sx={{
             display: 'flex',
             flexDirection: 'column',
           }}
         >
-          <Box>NAME</Box>
-          <Box sx={{ pt: 1, pb: 3 }}>
+          <div>NAME</div>
+          <div sx={{ pt: 1, pb: 3 }}>
             {`${typeof color !== 'string' ? `${color.name} - ` : ''} ${name ||
               hex}`}
-          </Box>
-        </Box>
-        <Box
+          </div>
+        </div>
+        <div
           sx={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}
         >
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <div sx={{ display: 'flex', flexDirection: 'column' }}>
             <div>HEX</div>
             <div>{hex}</div>
-          </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          </div>
+          <div sx={{ display: 'flex', flexDirection: 'column' }}>
             <div>RGB</div>
             <div>{`${rgba.r}, ${rgba.g}, ${rgba.b}${
               rgba.a !== 1 ? `, ${rgba.a}` : ''
             }`}</div>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnvilColor, AnvilColorPalette } from './AnvilColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AnvilColor',

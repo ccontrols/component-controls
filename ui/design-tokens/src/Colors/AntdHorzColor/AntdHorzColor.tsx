@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC, useState, useMemo } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a small block, expanding on hover.
@@ -29,9 +29,9 @@ export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
     [isContained],
   );
   return (
-    <Box sx={{ display: 'flex', flex: '1', height: 90, maxWidth: 120 }}>
+    <div sx={{ display: 'flex', flex: '1', height: 90, maxWidth: 120 }}>
       <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
-        <Box
+        <div
           {...onMouseEvents}
           sx={{
             position: 'absolute',
@@ -55,14 +55,14 @@ export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
             },
           }}
         >
-          <Box
+          <div
             sx={{
               fontWeight: 'bold',
             }}
           >
             {name || hex}
-          </Box>
-          <Box
+          </div>
+          <div
             sx={{
               pointerEvents: 'none',
               ...(hover || hoverMe ? {} : { visibility: 'hidden', height: 0 }),
@@ -73,10 +73,10 @@ export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
                   rgba.a !== 1 ? `, ${rgba.a}` : ''
                 }`
               : hex}
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CopyContainer>
-    </Box>
+    </div>
   );
 };
 

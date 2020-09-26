@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
+import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps, ColorValue } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name, sass variable name and hex value
@@ -19,8 +19,8 @@ export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box sx={{ display: 'flex', flex: '1', mb: 2 }}>
-      <Box
+    <div sx={{ display: 'flex', flex: '1', mb: 2 }}>
+      <div
         sx={{
           width: '100%',
           display: 'flex',
@@ -36,7 +36,7 @@ export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {
           name={name}
           sxStyle={{ width: '40%', height: '100%' }}
         >
-          <Box
+          <div
             sx={{
               width: '100%',
               height: '100%',
@@ -47,9 +47,9 @@ export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {
             }}
           >
             {name}
-          </Box>
+          </div>
         </CopyContainer>
-        <Box
+        <div
           sx={{
             flex: 1,
           }}
@@ -76,9 +76,9 @@ export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {
             </div>
             <div sx={{ fontSize: 0 }}>{sass}</div>
           </div>
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

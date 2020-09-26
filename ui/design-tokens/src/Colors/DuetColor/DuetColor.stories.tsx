@@ -1,6 +1,6 @@
 import React from 'react';
 import { DuetColor, DuetColorPalette } from './DuetColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/DuetColor',

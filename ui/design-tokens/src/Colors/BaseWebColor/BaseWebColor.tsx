@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name and hex value
@@ -16,8 +16,8 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box sx={{ display: 'flex', flex: '1' }}>
-      <Box
+    <div sx={{ display: 'flex', flex: '1' }}>
+      <div
         sx={{
           width: '100%',
           display: 'flex',
@@ -30,7 +30,7 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
         }}
       >
         <CopyContainer value={hex} name={name}>
-          <Box
+          <div
             sx={{
               width: 100,
               height: 50,
@@ -40,16 +40,16 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
             }}
           />
         </CopyContainer>
-        <Box
+        <div
           sx={{
             flex: 1,
           }}
         >
           {name}
-        </Box>
+        </div>
         <div sx={{ mr: 3 }}>{hex.toUpperCase()}</div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

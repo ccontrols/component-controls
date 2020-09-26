@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import { CheckCircleFillIcon, XCircleFillIcon } from '@primer/octicons-react';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 const PassFail: FC<{ status: 'pass' | 'fail' }> = ({ status }) => (
   <div
@@ -60,7 +60,7 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -68,7 +68,7 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             bg: colorValue,
             borderRadius: '.75em',
@@ -93,7 +93,7 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
             <div>{name}</div>
             <div>{hex}</div>
           </div>
-          <Box
+          <div
             sx={{
               position: 'absolute',
               left: 10,
@@ -145,10 +145,10 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
                 <ContrastTest bg={colorValue} color="#000" />
               </tbody>
             </table>
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CopyContainer>
-    </Box>
+    </div>
   );
 };
 

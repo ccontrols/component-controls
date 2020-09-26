@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
+import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
-import { ColorBlockProps } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block, as well as hex(string) and rgb values.
@@ -14,7 +14,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex, rgba } = colorToStr(colorValue);
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'row',
@@ -23,7 +23,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             bg: colorValue,
             width: 64,
@@ -32,7 +32,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
           }}
         />
       </CopyContainer>
-      <Box
+      <div
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -43,7 +43,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
           py: 1,
         }}
       >
-        <Box
+        <div
           sx={{
             fontWeight: 'bold',
             borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
@@ -51,16 +51,16 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
           }}
         >
           {name || hex}
-        </Box>
-        <Box>HEX: {hex}</Box>
-        <Box>
+        </div>
+        <div>HEX: {hex}</div>
+        <div>
           RGB:{' '}
           {`${rgba.r}, ${rgba.g}, ${rgba.b}${
             rgba.a !== 1 ? `, ${rgba.a}` : ''
           }`}
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps, ColorValue } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a row with a color circle and the sass var name and hex color.

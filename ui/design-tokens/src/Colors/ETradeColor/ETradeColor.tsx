@@ -5,8 +5,8 @@ import tinycolor from 'tinycolor2';
 import { CircleSlashIcon } from '@primer/octicons-react';
 import copy from 'copy-to-clipboard';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 const CopyItem: FC<{ name: string; value?: string }> = ({ name, value }) => {
   const [hover, setHover] = useState(false);

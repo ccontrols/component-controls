@@ -1,6 +1,6 @@
 import React from 'react';
 import { AudiDSColor, AudiDSColorPalette } from './AudiDSColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AudiDSColor',

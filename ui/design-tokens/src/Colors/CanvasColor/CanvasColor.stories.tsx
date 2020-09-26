@@ -1,6 +1,6 @@
 import React from 'react';
 import { CanvasColor, CanvasColorPalette } from './CanvasColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/CanvasColor',

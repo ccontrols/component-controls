@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, ReactNode, Fragment, useState } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
+import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import {
@@ -16,8 +16,8 @@ import {
   ColorValue,
   colorContrast,
   TokenStatus,
-} from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+} from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name, description, var and sas variables and contrast ratio.
@@ -51,8 +51,8 @@ export const DuetColor: FC<ColorBlockProps> = ({ name, color }) => {
   const { hex, rgba } = colorToStr(colorValue);
   const contrast = tinycolor.readability(hex, '#ffffff');
   return (
-    <Box sx={{ display: 'flex', flex: '1' }}>
-      <Box
+    <div sx={{ display: 'flex', flex: '1' }}>
+      <div
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
         sx={{
@@ -68,7 +68,7 @@ export const DuetColor: FC<ColorBlockProps> = ({ name, color }) => {
           sx={{ width: '25%', display: 'flex', flexDirection: 'column', px: 1 }}
         >
           <CopyContainer value={hex} name={colorName}>
-            <Box
+            <div
               sx={{
                 height: 50,
                 bg: colorValue,
@@ -104,8 +104,8 @@ export const DuetColor: FC<ColorBlockProps> = ({ name, color }) => {
         <div sx={{ width: '7%', textAlign: 'center' }}>
           {statusNode(status)}
         </div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

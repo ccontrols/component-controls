@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC, useState, useMemo } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a small block, expanding on hover.
@@ -29,9 +29,9 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
   );
 
   return (
-    <Box sx={{ display: 'flex', flex: '1', width: 250 }}>
+    <div sx={{ display: 'flex', flex: '1', width: 250 }}>
       <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
-        <Box
+        <div
           {...onMouseEvents}
           sx={{
             display: 'flex',
@@ -49,15 +49,15 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
             },
           }}
         >
-          <Box
+          <div
             sx={{
               fontWeight: 'bold',
               mr: 4,
             }}
           >
             {name || hex}
-          </Box>
-          <Box
+          </div>
+          <div
             className="item-text"
             sx={{
               pointerEvents: 'none',
@@ -69,10 +69,10 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
                   rgba.a !== 1 ? `, ${rgba.a}` : ''
                 }`
               : hex}
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CopyContainer>
-    </Box>
+    </div>
   );
 };
 

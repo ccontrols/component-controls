@@ -1,6 +1,6 @@
 import React from 'react';
 import { AntdHorzColor, AntdHorzColorPalette } from './AntdHorzColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AntdHorzColor',

@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps, ColorValue } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name, description and hex value
@@ -23,8 +23,8 @@ export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box sx={{ display: 'flex', flex: '1' }}>
-      <Box
+    <div sx={{ display: 'flex', flex: '1' }}>
+      <div
         sx={{
           width: '100%',
           display: 'flex',
@@ -36,7 +36,7 @@ export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({
         }}
       >
         <CopyContainer value={hex} name={name}>
-          <Box
+          <div
             sx={{
               width: 50,
               height: 50,
@@ -46,7 +46,7 @@ export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({
             }}
           />
         </CopyContainer>
-        <Box
+        <div
           sx={{
             flex: 1,
           }}
@@ -55,10 +55,10 @@ export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({
             <div sx={{ fontWeight: 'bold' }}>{colorName}</div>
             <div> {description}</div>
           </div>
-        </Box>
+        </div>
         <div sx={{ mr: 3, fontSize: 0 }}>{hex}</div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

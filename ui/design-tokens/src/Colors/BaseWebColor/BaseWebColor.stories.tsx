@@ -1,6 +1,6 @@
 import React from 'react';
 import { BaseWebColor, BaseWebColorPalette } from './BaseWebColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/BaseWebColor',

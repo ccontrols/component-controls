@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps, ColorValue } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block and color aliases for various standard is Pantone, CMYK.
@@ -30,7 +30,7 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
     to: 'pantone',
   });
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -39,7 +39,7 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             color: textColor,
             bg: colorValue,
@@ -51,7 +51,7 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
             },
           }}
         >
-          <Box
+          <div
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -65,7 +65,7 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
             }}
           >
             {typeof darkValue !== 'undefined' && (
-              <Box
+              <div
                 sx={{
                   position: 'absolute',
                   bottom: 0,
@@ -76,9 +76,9 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
                 }}
               />
             )}
-            <Box sx={{ pt: 1, pb: 2, fontWeight: 'bold' }}>{`${name || hex} ${
+            <div sx={{ pt: 1, pb: 2, fontWeight: 'bold' }}>{`${name || hex} ${
               typeof darkName !== 'string' ? colorName : ''
-            }`}</Box>
+            }`}</div>
             <div
               sx={{
                 lineHeight: 1.5,
@@ -104,10 +104,10 @@ export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
                 </div>
               )}
             </div>
-          </Box>
-        </Box>
+          </div>
+        </div>
       </CopyContainer>
-    </Box>
+    </div>
   );
 };
 

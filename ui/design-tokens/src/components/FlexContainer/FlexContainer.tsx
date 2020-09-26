@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
 import { jsx, Box, BoxProps } from 'theme-ui';
-import { ContainerProps } from '../types';
+import { ContainerProps } from '../../types';
 
 export type FlexContainerProps = {
   direction: 'row' | 'column';

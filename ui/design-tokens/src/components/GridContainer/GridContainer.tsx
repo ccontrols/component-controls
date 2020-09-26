@@ -1,6 +1,6 @@
 import React, { FC, RefObject, useState } from 'react';
 import { Grid, GridProps } from 'theme-ui';
-import { ContainerProps } from '../types';
+import { ContainerProps } from '../../types';
 
 export type GridContainerProps = ContainerProps & Omit<GridProps, 'children'>;
 

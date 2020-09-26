@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Heading } from 'theme-ui';
+import { jsx, Heading } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block with a title, as well as hex(string) and rgb values.
@@ -15,7 +15,7 @@ export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
   const { hex } = colorToStr(colorValue);
   const textColor = mostReadable(hex);
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -24,14 +24,14 @@ export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             position: 'relative',
             bg: colorValue,
             height: 90,
           }}
         >
-          <Box
+          <div
             sx={{
               position: 'absolute',
               bottom: 10,
@@ -41,10 +41,10 @@ export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
               borderRadius: '50%',
               bg: textColor,
             }}
-          ></Box>
-        </Box>
+          />
+        </div>
       </CopyContainer>
-      <Box
+      <div
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -61,11 +61,11 @@ export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
         >
           {name || hex}
         </Heading>
-        <Box sx={{ fontSize: 1 }}>{`${
+        <div sx={{ fontSize: 1 }}>{`${
           typeof color !== 'string' ? color.name : 'HEX:'
-        } ${hex}`}</Box>
-      </Box>
-    </Box>
+        } ${hex}`}</div>
+      </div>
+    </div>
   );
 };
 

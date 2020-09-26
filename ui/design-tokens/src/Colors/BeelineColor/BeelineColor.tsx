@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, Theme } from 'theme-ui';
+import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr } from '../utils';
-import { ColorBlockProps } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block with values for rgb and Pantone colors.
@@ -19,7 +19,7 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
     to: 'pantone',
   });
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -32,7 +32,7 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name} sxStyle={{ px: 2, pt: 2 }}>
-        <Box
+        <div
           sx={{
             bg: colorValue,
             ':after': {
@@ -43,7 +43,7 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
           }}
         />
       </CopyContainer>
-      <Box
+      <div
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -51,14 +51,14 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
           fontSize: 2,
         }}
       >
-        <Box
+        <div
           sx={{
             display: 'flex',
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ pb: 2, fontSize: 3 }}>{name || hex}</Box>
-        </Box>
+          <div sx={{ pb: 2, fontSize: 3 }}>{name || hex}</div>
+        </div>
         <div sx={{ fontSize: 0 }}>
           <div
             sx={{
@@ -96,8 +96,8 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
             <div>{pantone || '--'}:</div>
           </div>
         </div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

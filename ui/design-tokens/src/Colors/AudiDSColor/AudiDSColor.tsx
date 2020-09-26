@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr } from '../utils';
-import { ColorBlockProps } from '../types';
-import { GridContainerProps, GridContainer } from '../GridContainer';
+import { ColorBlockProps } from '../../types';
+import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block and color aliases for various standard is Pantone, CMYK.
@@ -27,7 +27,7 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
     to: 'pantone',
   });
   return (
-    <Box
+    <div
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -36,7 +36,7 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
       }}
     >
       <CopyContainer value={hex} name={name}>
-        <Box
+        <div
           sx={{
             bg: colorValue,
             ':after': {
@@ -47,7 +47,7 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
           }}
         />
       </CopyContainer>
-      <Box
+      <div
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -57,14 +57,14 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
           fontSize: 2,
         }}
       >
-        <Box
+        <div
           sx={{
             display: 'flex',
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ pt: 1, pb: 2, fontWeight: 'bold' }}>{name || hex}</Box>
-        </Box>
+          <div sx={{ pt: 1, pb: 2, fontWeight: 'bold' }}>{name || hex}</div>
+        </div>
         <div sx={{ lineHeight: 1.5 }}>
           <div>
             {`RGB: ${rgba.r}/${rgba.g}/${rgba.b}${
@@ -76,8 +76,8 @@ export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
           <div sx={{ mb: 1 }}>{`${pantone ? `Pantone ${pantone}` : '--'}`}</div>
           <div>{`RAL: ${ral.ral}`}</div>
         </div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

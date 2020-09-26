@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import { jsx, Box, SxStyleProp } from 'theme-ui';
+import { jsx, SxStyleProp } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../types';
-import { FlexContainerProps, FlexContainer } from '../FlexContainer';
+import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name sass variable name and AA/AAA tests
@@ -41,7 +41,7 @@ export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {
     );
   }
   return (
-    <Box sx={{ display: 'flex', flex: '1' }}>
+    <div sx={{ display: 'flex', flex: '1' }}>
       <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
         <div
           sx={{
@@ -79,7 +79,7 @@ export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {
           </div>
         </div>
       </CopyContainer>
-    </Box>
+    </div>
   );
 };
 

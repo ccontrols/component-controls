@@ -1,6 +1,6 @@
 import React from 'react';
 import { AltaColor, AltaColorPalette } from './AltaColor';
-import { ColorProps } from '../types';
+import { ColorProps } from '../../types';
 
 export default {
   title: 'Design Tokens/Colors/AltaColor',
