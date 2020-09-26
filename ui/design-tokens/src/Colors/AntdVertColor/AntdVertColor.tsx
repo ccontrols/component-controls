@@ -58,7 +58,6 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
             {name || hex}
           </div>
           <div
-            className="item-text"
             sx={{
               pointerEvents: 'none',
               ...(hover || hoverMe ? {} : { visibility: 'hidden', width: 0 }),

@@ -27,6 +27,7 @@ import {
   FinastraColorPalette,
   FishTankColorPalette,
   GovUKColorPalette,
+  HelpScoutColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -868,5 +869,39 @@ import { GovUKColorPalette } from '@component-controls/design-tokens';
       varName: 'govuk-colour("red")',
       value: '#d4351c',
     },
+  }}
+/>
+
+## HelpScoutColor
+
+The [HelpScoutColor](/api/design-tokens-colors-helpscoutcolor--overview) component displays the color as a row, expanding on hover. Separate visualization (header) for primary color.
+
+Design inspired from [HelpScout](https://style.helpscout.com/visual-elements/#color).
+
+```
+import { HelpScoutColorPalette } from '@component-controls/design-tokens';
+
+<HelpScoutColorPalette
+  palette={{
+    lavender: { value: '#9FA6FF', name: '500', primary: true },
+    'lavender-100': { value: '#F9F9FF', name: '100' },
+    'lavender-200': { value: '#EBECFF', name: '200' },
+    'lavender-300': { value: '#D9DCFD', name: '300' },
+    'lavender-400': { value: '#B9BEFF', name: '400' },
+    'lavender-500': { value: '#9FA6FF', name: '500' },
+    'lavender-600': { value: '#818AEC', name: '600' },
+  }}
+/>
+```
+
+<HelpScoutColorPalette
+  palette={{
+    lavender: { value: '#9FA6FF', name: '500', primary: true },
+    'lavender-100': { value: '#F9F9FF', name: '100' },
+    'lavender-200': { value: '#EBECFF', name: '200' },
+    'lavender-300': { value: '#D9DCFD', name: '300' },
+    'lavender-400': { value: '#B9BEFF', name: '400' },
+    'lavender-500': { value: '#9FA6FF', name: '500' },
+    'lavender-600': { value: '#818AEC', name: '600' },
   }}
 />
