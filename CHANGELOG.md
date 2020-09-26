@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.25.3](https://github.com/ccontrols/component-controls/compare/v1.25.2...v1.25.3) (2020-09-26)
+
+
+### Bug Fixes
+
+* stories.test.js extract to main folder ([4f6f97e](https://github.com/ccontrols/component-controls/commit/4f6f97eb00505ec264a1e2b5dc91e7274d3642f4))
+
+
+
+
+
 ## [1.25.2](https://github.com/ccontrols/component-controls/compare/v1.25.1...v1.25.2) (2020-09-15)
 
 

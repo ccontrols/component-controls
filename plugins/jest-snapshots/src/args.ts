@@ -1,5 +1,5 @@
 import { ArgOptions } from '@component-controls/webpack-compile/cli';
-import { renderers } from '@component-controls/jest-snapshots/renderers';
+import { renderers } from './renderers';
 
 export const jestCliArgs: ArgOptions = [
   {

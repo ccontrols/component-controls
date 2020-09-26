@@ -66,7 +66,7 @@ export const run = async () => {
     fs.mkdirSync(testFolder);
   }
   fs.copyFileSync(
-    path.resolve(__dirname, storiesFileName),
+    path.resolve(__dirname, '..', storiesFileName),
     path.resolve(testFolder, storiesFileName),
   );
   await runJest(jestArgs, testFolder);

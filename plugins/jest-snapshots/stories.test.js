@@ -1,15 +1,16 @@
-import { act } from 'react-dom/test-utils';
-import { loadStore } from '@component-controls/store';
-import { getBundleName } from '@component-controls/webpack-compile';
-import { cliArgs } from '@component-controls/webpack-compile/cli';
+const { act } = require('react-dom/test-utils');
+const { loadStore } = require('@component-controls/store');
+const { getBundleName } = require('@component-controls/webpack-compile');
+const { cliArgs } = require('@component-controls/webpack-compile/cli');
 
-import { jestCliArgs } from '@component-controls/jest-snapshots/args';
-import { renderers } from '@component-controls/jest-snapshots/renderers';
+const { jestCliArgs } = require('@component-controls/jest-snapshots/args');
+const { renderers } = require('@component-controls/jest-snapshots/renderers');
+
 const bundle = getBundleName();
 const store = loadStore(require(bundle));
 const args = cliArgs(jestCliArgs);
 
-const rendererName = args.parse().renderer as string;
+const rendererName = args.parse().renderer;
 
 const renderer = renderers[rendererName];
 

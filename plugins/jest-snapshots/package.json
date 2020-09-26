@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/jest-snapshots",
-  "version": "1.25.2",
+  "version": "1.25.3",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -17,7 +17,8 @@
     "args.d.ts",
     "renderers.js",
     "renderers.d.ts",
-    "README.md"
+    "README.md",
+    "stories.test.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
@@ -42,9 +43,9 @@
     "cc-jest": "./bin/index.js"
   },
   "dependencies": {
-    "@component-controls/store": "^1.25.2",
-    "@component-controls/webpack-compile": "^1.25.2",
-    "@component-controls/webpack-configs": "^1.25.2",
+    "@component-controls/store": "^1.25.3",
+    "@component-controls/webpack-compile": "^1.25.3",
+    "@component-controls/webpack-configs": "^1.25.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
     "enzyme": "^3.11.0",
