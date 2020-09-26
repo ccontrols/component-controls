@@ -8,6 +8,7 @@ tags:
 order: 1
 author: atanasster
 ---
+import { Tabs, TabList, Tab, TabPanel } from '@component-controls/components';
 import { 
   AltaColorPalette, 
   AntdHorzColorPalette, 
@@ -28,6 +29,8 @@ import {
   FishTankColorPalette,
   GovUKColorPalette,
   HelpScoutColorPalette,
+  ColorTabs,
+  IBMDLColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -905,3 +908,44 @@ import { HelpScoutColorPalette } from '@component-controls/design-tokens';
     'lavender-600': { value: '#818AEC', name: '600' },
   }}
 />
+
+
+## IBMDLColor
+
+The [IBMDLColor](/api/design-tokens-colors-ibmdlcolor--overview) component displays the color as a row with the color name and display option of hex, rgb, pms or cmyk color display.
+
+Design inspired from IBM's [Design Language](https://www.ibm.com/design/language/color).
+
+```
+import { ColorTabs, IBMDLColorPalette } from '@component-controls/design-tokens';
+
+<ColorTabs>
+  {display => (
+    <IBMDLColorPalette
+      display={display}
+      palette={{
+        'Red 100': '#2d0709',
+        'Red 90': '#520408',
+        'Red 80': '#750e13',
+        'Red 70': '#a2191f',
+        'Red 60': '#da1e28',
+      }}
+    />
+  )}
+</ColorTabs>
+```
+
+<ColorTabs>
+  {display => (
+    <IBMDLColorPalette
+      display={display}
+      palette={{
+        'Red 100': '#2d0709',
+        'Red 90': '#520408',
+        'Red 80': '#750e13',
+        'Red 70': '#a2191f',
+        'Red 60': '#da1e28',
+      }}
+    />
+  )}
+</ColorTabs>

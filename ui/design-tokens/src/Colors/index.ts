@@ -17,3 +17,4 @@ export * from './FinastraColor';
 export * from './FishTankColor';
 export * from './GovUKColor';
 export * from './HelpScoutColor';
+export * from './IBMDLColor';
