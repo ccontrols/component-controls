@@ -17,7 +17,8 @@
     "args.d.ts",
     "renderers.js",
     "renderers.d.ts",
-    "README.md"
+    "README.md",
+    "stories.test.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",
