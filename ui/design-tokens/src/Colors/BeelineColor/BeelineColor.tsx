@@ -31,7 +31,7 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
         boxShadow: (t: Theme) => `0 1px 2px 0 ${t.colors?.shadow}`,
       }}
     >
-      <CopyContainer value={hex} name={name} sxStyle={{ px: 2, pt: 2 }}>
+      <CopyContainer value={hex} name={name} sx={{ px: 2, pt: 2 }}>
         <div
           sx={{
             bg: colorValue,

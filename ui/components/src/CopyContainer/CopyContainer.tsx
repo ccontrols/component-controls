@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
-import { jsx, Box, SxStyleProp } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import copy from 'copy-to-clipboard';
 import { CheckIcon } from '@primer/octicons-react';
 import { Popover } from '../Popover';
@@ -12,10 +12,6 @@ export interface CopyContainerProps {
    * value to copy
    */
   value: string;
-  /**
-   * stying props
-   */
-  sxStyle?: SxStyleProp;
 }
 
 /**
@@ -23,10 +19,10 @@ export interface CopyContainerProps {
  *
  */
 export const CopyContainer: FC<CopyContainerProps> = ({
-  sxStyle,
   name,
   value,
   children,
+  ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -34,8 +30,8 @@ export const CopyContainer: FC<CopyContainerProps> = ({
       sx={{
         cursor: 'pointer',
         position: 'relative',
-        ...sxStyle,
       }}
+      {...rest}
       trigger="click"
       followCursor={true}
       tooltipShown={isOpen}

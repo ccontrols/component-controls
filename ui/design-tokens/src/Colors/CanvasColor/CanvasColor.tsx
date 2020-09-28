@@ -34,7 +34,7 @@ export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {
         <CopyContainer
           value={hex}
           name={name}
-          sxStyle={{ width: '40%', height: '100%' }}
+          sx={{ width: '40%', height: '100%' }}
         >
           <div
             sx={{

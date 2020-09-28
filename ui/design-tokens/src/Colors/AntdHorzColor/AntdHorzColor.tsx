@@ -30,7 +30,7 @@ export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
   );
   return (
     <div sx={{ display: 'flex', flex: '1', height: 90, maxWidth: 120 }}>
-      <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
+      <CopyContainer value={hex} name={name} sx={{ width: '100%' }}>
         <div
           {...onMouseEvents}
           sx={{

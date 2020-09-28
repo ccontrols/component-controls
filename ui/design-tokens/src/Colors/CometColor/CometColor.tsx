@@ -42,7 +42,7 @@ export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {
   }
   return (
     <div sx={{ display: 'flex', flex: '1' }}>
-      <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
+      <CopyContainer value={hex} name={name} sx={{ width: '100%' }}>
         <div
           sx={{
             width: '100%',

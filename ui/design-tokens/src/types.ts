@@ -40,6 +40,11 @@ export type ColorValue =
        * for color palettes were each color palette has a primary color
        */
       primary?: boolean;
+
+      /**
+       * custom fields
+       */
+      [field: string]: any;
     };
 export interface ColorProps {
   /**

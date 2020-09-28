@@ -32,7 +32,7 @@ export const FinastraColor: FC<ColorBlockProps> = ({ name, color }) => {
       <CopyContainer
         value={hex}
         name={name}
-        sxStyle={{ p: primary ? 0 : 2, width: 80 }}
+        sx={{ p: primary ? 0 : 2, width: 80 }}
       >
         <div
           sx={{

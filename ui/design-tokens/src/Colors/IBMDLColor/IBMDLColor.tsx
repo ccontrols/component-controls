@@ -59,7 +59,7 @@ export const IBMDLColor: FC<IBMDLColorProps> = ({
   };
   return (
     <div sx={{ display: 'flex', flex: '1' }}>
-      <CopyContainer value={hex} name={name} sxStyle={{ width: '100%' }}>
+      <CopyContainer value={hex} name={name} sx={{ width: '100%' }}>
         <div
           sx={{
             display: 'flex',
