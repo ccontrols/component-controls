@@ -34,6 +34,7 @@ import {
   LightningColorPalette,
   LiquidColorPalette,
   MorningstarColorPalette,
+  OPatternColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1237,6 +1238,71 @@ import { MorningstarColorPalette } from '@component-controls/design-tokens';
     Active: {
       value: '#004376',
       sass: '$mds-interactive-color-primary-active',
+    },
+  }}
+/>
+
+
+## OPatternColor
+
+The [OPatternColor](/api/design-tokens-colors-opatterncolor--overview) component displays the color as a table row, with color block, sass name, andhex, rgb and cmyk color values.
+
+Design inspired from [OPattern](https://ux.opower.com/opattern/color.html).
+
+```
+import { OPatternColorPalette } from '@component-controls/design-tokens';
+
+<OPatternColorPalette
+  palette={{
+    Primary: {
+      value: '#107CB2',
+      sass: '$primary-color',
+    },
+    PrimaryLight: {
+      value: '#b7d8e8',
+      description: '30% of $primary-color',
+      sass: '$primary-color-light',
+    },
+    Alert: {
+      value: '#D8400F',
+      sass: '$alert-color',
+    },
+    AlertLight: {
+      value: '#f3c6b7',
+      description: '30% of $alert-color',
+      sass: '$alert-color-light',
+    },
+    Weather: {
+      value: '#990099',
+      sass: '$weather-color',
+    },
+  }}
+/>
+```
+
+<OPatternColorPalette
+  palette={{
+    Primary: {
+      value: '#107CB2',
+      sass: '$primary-color',
+    },
+    PrimaryLight: {
+      value: '#b7d8e8',
+      description: '30% of $primary-color',
+      sass: '$primary-color-light',
+    },
+    Alert: {
+      value: '#D8400F',
+      sass: '$alert-color',
+    },
+    AlertLight: {
+      value: '#f3c6b7',
+      description: '30% of $alert-color',
+      sass: '$alert-color-light',
+    },
+    Weather: {
+      value: '#990099',
+      sass: '$weather-color',
     },
   }}
 />

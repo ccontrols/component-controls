@@ -30,6 +30,8 @@ export const TableContainer: FC<TableContainerProps> = ({
         bg: 'background',
         borderSpacing: 0,
         borderCollapse: 'separate',
+        tableLayout: 'fixed',
+        width: '100%',
         borderTop: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
         borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
         '& > tbody > tr > td': {

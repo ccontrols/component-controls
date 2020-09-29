@@ -114,9 +114,6 @@ export const DuetColorPalette: FC<Omit<
     ]}
     sx={{
       border: 'none',
-      '& > tbody > td': {
-        px: 1,
-      },
       '& > tbody > tr': {
         fontSize: 0,
         transition: 'background .3s ease',

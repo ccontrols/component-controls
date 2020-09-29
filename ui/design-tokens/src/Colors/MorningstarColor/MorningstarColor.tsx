@@ -92,7 +92,7 @@ export const MorningstarColorPalette: FC<Omit<
     }}
     columns={[
       { title: 'Name', sx: { width: '35%' } },
-      { title: 'Constant', sx: { width: '52%' } },
+      { title: 'Constant', sx: { width: '50%' } },
       { title: 'Color', sx: { width: '15%' } },
     ]}
     {...props}
