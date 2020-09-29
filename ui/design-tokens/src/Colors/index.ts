@@ -20,3 +20,4 @@ export * from './HelpScoutColor';
 export * from './IBMDLColor';
 export * from './LightningColor';
 export * from './LiquidColor';
+export * from './MorningstarColor';

@@ -33,6 +33,7 @@ import {
   IBMDLColorPalette,
   LightningColorPalette,
   LiquidColorPalette,
+  MorningstarColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1175,5 +1176,67 @@ import { LiquidColorPalette } from '@component-controls/design-tokens';
     'Rich Red': '#E61E50',
     'Vibrant Yellow': '#FFC832',
     'Rich Green': '#149B5F',
+  }}
+/>
+
+
+## MorningstarColor
+
+The [MorningstarColor](/api/design-tokens-colors-corningstarcolor--overview) component displays the color as a table row, with color, name, sass variable name and hex value.
+
+Design inspired from [Morningstar Design System](https://designsystem.morningstar.com/visual-language/color/?version=3.0.4&tab=backgrounds).
+
+```
+import { MorningstarColorPalette } from '@component-controls/design-tokens';
+
+<MorningstarColorPalette
+  palette={{
+    Error: {
+      value: '#ff0000',
+      sass: '$mds-feedback-color-error',
+    },
+    Warning: {
+      value: '#f5c400',
+      sass: '$mds-feedback-color-warning',
+    },
+    Success: {
+      value: '#00af41',
+      sass: '$mds-feedback-color-success',
+    },
+    'Success Background': {
+      value: '#e5f7eb',
+      sass: '$mds-feedback-color-success-background',
+    },
+    Active: {
+      value: '#004376',
+      sass: '$mds-interactive-color-primary-active',
+    },
+  }}
+/>
+
+```
+
+<MorningstarColorPalette
+  palette={{
+    Error: {
+      value: '#ff0000',
+      sass: '$mds-feedback-color-error',
+    },
+    Warning: {
+      value: '#f5c400',
+      sass: '$mds-feedback-color-warning',
+    },
+    Success: {
+      value: '#00af41',
+      sass: '$mds-feedback-color-success',
+    },
+    'Success Background': {
+      value: '#e5f7eb',
+      sass: '$mds-feedback-color-success-background',
+    },
+    Active: {
+      value: '#004376',
+      sass: '$mds-interactive-color-primary-active',
+    },
   }}
 />
