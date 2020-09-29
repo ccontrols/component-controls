@@ -15,7 +15,7 @@ export type LightningColorProps = {
 } & ColorBlockProps;
 /**
  * Color item displaying as a row, with color, name, description, var and sas variables and contrast ratio. allows for custom columns.
- * Design inspired from racle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
+ * Design inspired from Oracle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
  */
 
 export const LightningColor: FC<LightningColorProps> = props => (

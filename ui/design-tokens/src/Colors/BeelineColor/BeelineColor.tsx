@@ -68,7 +68,7 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
             }}
           >
             <div sx={{ fontWeight: 'bold', mr: 1 }}>HEX:</div>
-            <div>{hex}:</div>
+            <div>{hex}</div>
           </div>
           <div
             sx={{
@@ -82,7 +82,6 @@ export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
               {`rgb(${rgba.r},${rgba.g},${rgba.b}${
                 rgba.a !== 1 ? `,${rgba.a}` : ''
               })`}
-              :
             </div>
           </div>
           <div

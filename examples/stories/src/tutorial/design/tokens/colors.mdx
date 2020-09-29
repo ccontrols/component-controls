@@ -32,6 +32,7 @@ import {
   ColorTabs,
   IBMDLColorPalette,
   LightningColorPalette,
+  LiquidColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -957,7 +958,7 @@ import { ColorTabs, IBMDLColorPalette } from '@component-controls/design-tokens'
 
 The [LightningColor](/api/design-tokens-colors-lightningcolor--overview) component displays the color as a row, with color, name, description, var and sas variables and contrast ratio. allows for custom columns.
 
-Design inspired from racle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
+Design inspired from Oracle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
 
 ```
 import { LightningColorPalette } from '@component-controls/design-tokens';
@@ -1136,5 +1137,43 @@ import { LightningColorPalette } from '@component-controls/design-tokens';
       themeable: true,
       support: 'GA',
     },
+  }}
+/>
+
+
+
+
+## LiquidColor
+
+The [LiquidColor](/api/design-tokens-colors-liquidcolor--overview) component displays the color as a block with values for rgb and a palette of lighter and darker colors.
+
+Design inspired from [Liquid Design System](https://liquid.emd.design/fundamentals/color/).
+
+```
+import { LiquidColorPalette } from '@component-controls/design-tokens';
+
+<LiquidColorPalette
+  palette={{
+    'Vibrant Magenta': '#EB3C96',
+    'Rich Blue': '#0F69AF',
+    'Vibrant Cyan': '#2DBECD',
+    'Vibrant Green': '#A5CD50',
+    'Rich Red': '#E61E50',
+    'Vibrant Yellow': '#FFC832',
+    'Rich Green': '#149B5F',
+  }}
+/>
+
+```
+
+<LiquidColorPalette
+  palette={{
+    'Vibrant Magenta': '#EB3C96',
+    'Rich Blue': '#0F69AF',
+    'Vibrant Cyan': '#2DBECD',
+    'Vibrant Green': '#A5CD50',
+    'Rich Red': '#E61E50',
+    'Vibrant Yellow': '#FFC832',
+    'Rich Green': '#149B5F',
   }}
 />
