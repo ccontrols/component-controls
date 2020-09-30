@@ -28,3 +28,4 @@ export * from './PhotonColor';
 export * from './PrimerColor';
 export * from './SeedsColor';
 export * from './SeekColor';
+export * from './SkylineColor';

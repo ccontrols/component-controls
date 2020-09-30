@@ -25,6 +25,10 @@ export type ColorValue =
        */
       sass?: string;
       /**
+       * scss variable name ex: $text-input
+       */
+      scss?: string;
+      /**
        * css class name ex text-input or --pf-global--link--Color
        */
       css?: string;

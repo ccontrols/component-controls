@@ -50,6 +50,7 @@ export const TableContainer: FC<TableContainerProps> = ({
               sx={{
                 mx: 1,
                 textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
                 fontSize: 1,
                 ...column.sx,
               }}

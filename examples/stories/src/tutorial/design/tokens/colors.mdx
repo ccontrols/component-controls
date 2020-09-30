@@ -41,6 +41,7 @@ import {
   PrimerColorPalette,
   SeedsColorPalette,
   SeekColorPalette,
+  SkylineColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1607,5 +1608,58 @@ import { SeekColorPalette } from '@component-controls/design-tokens';
     '@sk-blue-lighter': '#2765cf',
     '@sk-pink': '#e60278',
     '@sk-green': '#157e00',
+  }}
+/>
+
+
+## SkylineColor
+
+The [SkylineColor](/api/design-tokens-colors-skylinecolor--overview) component displays the color as a row, with color name, custom columns for contrast checks scss variable name and color block.
+
+Design inspired from [Skyline](https://skyline.benevity.org/design-language/color/#hues).
+
+```
+import { SkylineColorPalette } from '@component-controls/design-tokens';
+
+<SkylineColorPalette
+  palette={{
+    Green: {
+      value: '#1a801b',
+      scss: 'get-hue(green)',
+    },
+    'Gray 500': {
+      value: '#8b8b8b',
+      scss: 'get-gray(500)',
+    },
+    'Gray 600': {
+      value: '#757575',
+      scss: 'get-gray(600)',
+    },
+    'Gray 700': {
+      value: '#616161',
+      scss: 'get-gray(700)',
+    },
+  }}
+/>
+```
+
+<SkylineColorPalette
+  palette={{
+    Green: {
+      value: '#1a801b',
+      scss: 'get-hue(green)',
+    },
+    'Gray 500': {
+      value: '#8b8b8b',
+      scss: 'get-gray(500)',
+    },
+    'Gray 600': {
+      value: '#757575',
+      scss: 'get-gray(600)',
+    },
+    'Gray 700': {
+      value: '#616161',
+      scss: 'get-gray(700)',
+    },
   }}
 />
