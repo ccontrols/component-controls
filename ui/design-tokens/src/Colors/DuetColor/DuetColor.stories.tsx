@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { DuetColor, DuetColorPalette } from './DuetColor';
 import { ColorProps } from '../../types';
 
@@ -12,20 +13,17 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Primary Blue Dark' },
+  name: 'Primary Blue Dark',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#004d80' },
-      description: {
-        type: 'text',
-        value:
-          'Dark version of primary blue that is accessible with white. Most commonly used to indicate hover and active states of an item with primary blue background.',
-      },
-      sass: { type: 'text', value: '$color-primary-dark' },
-      varName: { type: 'text', value: 'var(--color-primary-dark)' },
+      value: { type: ControlTypes.COLOR, value: '#004d80' },
+      description:
+        'Dark version of primary blue that is accessible with white. Most commonly used to indicate hover and active states of an item with primary blue background.',
+      sass: '$color-primary-dark',
+      varName: 'var(--color-primary-dark)',
       status: {
-        type: 'options',
+        type: ControlTypes.OPTIONS,
         options: ['ok', 'warning', 'error'],
         value: 'ok',
       },

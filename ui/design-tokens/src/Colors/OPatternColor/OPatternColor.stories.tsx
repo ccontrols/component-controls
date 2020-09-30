@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { OPatternColor, OPatternColorPalette } from './OPatternColor';
 import { ColorProps } from '../../types';
 
@@ -12,12 +13,12 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Weather' },
+  name: 'Weather',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#990099' },
-      sass: { type: 'text', value: '$weather-color' },
+      value: { type: ControlTypes.COLOR, value: '#990099' },
+      sass: '$weather-color',
     },
   },
 };

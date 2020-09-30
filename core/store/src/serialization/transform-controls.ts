@@ -17,6 +17,8 @@ const controlShortcuts = (
 ): ComponentControl => {
   const valueType = typeof control;
   switch (valueType) {
+    case 'boolean':
+      return { type: ControlTypes.BOOLEAN, value: control };
     case 'string':
       return { type: ControlTypes.TEXT, value: control };
     case 'number':

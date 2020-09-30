@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { CanvasColor, CanvasColorPalette } from './CanvasColor';
 import { ColorProps } from '../../types';
 
@@ -12,13 +13,13 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Primary' },
+  name: 'Primary',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      name: { type: 'text', value: 'LORAX' },
-      sass: { type: 'text', value: '$color-lorax' },
-      value: { type: 'color', value: '#ff7a59' },
+      name: 'LORAX',
+      sass: '$color-lorax',
+      value: { type: ControlTypes.COLOR, value: '#ff7a59' },
     },
   },
 };

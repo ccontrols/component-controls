@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { BeelineColor, BeelineColorPalette } from './BeelineColor';
 import { ColorProps } from '../../types';
 
@@ -12,8 +13,8 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Brand' },
-  color: { type: 'color', value: '#2270ee' },
+  name: 'Brand',
+  color: { type: ControlTypes.COLOR, value: '#2270ee' },
 };
 
 export const name = () => <BeelineColor name="Critical" color="#f94d32" />;

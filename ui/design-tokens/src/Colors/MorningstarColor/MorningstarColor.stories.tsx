@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { MorningstarColor, MorningstarColorPalette } from './MorningstarColor';
 import { ColorProps } from '../../types';
 
@@ -15,9 +16,9 @@ export const overview = ({ name, color }: ColorProps) => (
 overview.controls = {
   name: 'Informational',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#f2f2f2' },
+      value: { type: ControlTypes.COLOR, value: '#f2f2f2' },
       sass: '$mds-feedback-color-info',
     },
   },

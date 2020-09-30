@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { AltaColor, AltaColorPalette } from './AltaColor';
 import { ColorProps } from '../../types';
 
@@ -12,8 +13,8 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text' },
-  color: { type: 'color', value: '#fbce4a' },
+  name: { type: ControlTypes.TEXT },
+  color: { type: ControlTypes.COLOR, value: '#fbce4a' },
 };
 
 export const name = () => <AltaColor name="brand" color="#e95b54" />;

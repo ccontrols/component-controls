@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { PhotonColor, PhotonColorPalette } from './PhotonColor';
 import { ColorProps } from '../../types';
 
@@ -13,7 +14,7 @@ export const overview = ({ name, color }: ColorProps) => (
 
 overview.controls = {
   name: 'Orange 50',
-  color: { type: 'color', value: '#ff9400' },
+  color: { type: ControlTypes.COLOR, value: '#ff9400' },
 };
 
 export const palette = () => (

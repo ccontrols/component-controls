@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { GovUKColor, GovUKColorPalette } from './GovUKColor';
 import { ColorProps } from '../../types';
 
@@ -13,9 +14,9 @@ export const overview = ({ name, color }: ColorProps) => (
 
 overview.controls = {
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#1d70b8' },
+      value: { type: ControlTypes.COLOR, value: '#1d70b8' },
       sass: '$govuk-brand-colour',
     },
   },

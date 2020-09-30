@@ -40,7 +40,10 @@ export type ColorValue =
        * for color palettes were each color palette has a primary color
        */
       primary?: boolean;
-
+      /**
+       * array of color name variations
+       */
+      variants?: string[];
       /**
        * custom fields
        */

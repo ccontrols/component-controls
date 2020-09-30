@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { BaseWebColor, BaseWebColorPalette } from './BaseWebColor';
 import { ColorProps } from '../../types';
 
@@ -12,8 +13,8 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'cobalt400' },
-  color: { type: 'color', value: '#0E1FC1' },
+  name: 'cobalt400',
+  color: { type: ControlTypes.COLOR, value: '#0E1FC1' },
 };
 
 export const palette = () => (

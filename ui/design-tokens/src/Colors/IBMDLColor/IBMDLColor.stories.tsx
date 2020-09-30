@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import {
   IBMDLColor,
   IBMDLColorPalette,
@@ -17,8 +18,8 @@ export const overview = ({ name, color, display }: IBMDLColorProps) => (
 
 overview.controls = {
   name: 'Green 10',
-  color: { type: 'color', value: '#defbe6' },
-  display: { type: 'options', options: ['hex', 'rgb', 'pms', 'cmyk'] },
+  color: { type: ControlTypes.COLOR, value: '#defbe6' },
+  display: ['hex', 'rgb', 'pms', 'cmyk'],
 };
 
 export const palette = () => {

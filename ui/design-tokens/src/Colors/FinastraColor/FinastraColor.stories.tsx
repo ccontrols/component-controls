@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { FinastraColor, FinastraColorPalette } from './FinastraColor';
 import { ColorProps } from '../../types';
 
@@ -14,11 +15,11 @@ export const overview = ({ name, color }: ColorProps) => (
 overview.controls = {
   name: 'V 100',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
       name: 'V',
-      value: { type: 'color', value: '#cf1322' },
-      primary: { type: 'boolean', value: true },
+      value: { type: ControlTypes.COLOR, value: '#cf1322' },
+      primary: { type: ControlTypes.BOOLEAN, value: true },
     },
   },
 };

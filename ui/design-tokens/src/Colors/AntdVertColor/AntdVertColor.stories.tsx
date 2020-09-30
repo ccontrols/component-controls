@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { AntdVertColor, AntdVertColorPalette } from './AntdVertColor';
 import { ColorProps } from '../../types';
 
@@ -12,8 +13,8 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text' },
-  color: { type: 'color', value: '#cf1322' },
+  name: { type: ControlTypes.TEXT },
+  color: { type: ControlTypes.COLOR, value: '#cf1322' },
 };
 
 export const name = () => <AntdVertColor name="brand" color="#e95b54" />;

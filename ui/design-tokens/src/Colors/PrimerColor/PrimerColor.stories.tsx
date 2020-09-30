@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { PrimerColor, PrimerColorPalette } from './PrimerColor';
 import { ColorProps } from '../../types';
 
@@ -14,11 +15,11 @@ export const overview = ({ name, color }: ColorProps) => (
 overview.controls = {
   name: 'Yellow',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#ffd33d' },
+      value: { type: ControlTypes.COLOR, value: '#ffd33d' },
       sass: '$yellow-500',
-      primary: { type: 'boolean', value: true },
+      primary: { type: ControlTypes.BOOLEAN, value: true },
     },
   },
 };

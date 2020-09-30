@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { CedarColor, CedarColorPalette } from './CedarColor';
 import { ColorProps } from '../../types';
 
@@ -12,16 +13,13 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'cobalt400' },
+  name: 'cobalt400',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#225c4e' },
-      name: { type: 'text', value: 'cdr-color-text-button-primary-hover' },
-      description: {
-        type: 'text',
-        value: 'Text color for the hover state of primary buttons',
-      },
+      value: { type: ControlTypes.COLOR, value: '#225c4e' },
+      name: 'cdr-color-text-button-primary-hover',
+      description: 'Text color for the hover state of primary buttons',
     },
   },
 };

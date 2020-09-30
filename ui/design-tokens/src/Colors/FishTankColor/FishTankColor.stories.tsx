@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { FishTankColor, FishTankColorPalette } from './FishTankColor';
 import { ColorProps } from '../../types';
 
@@ -13,10 +14,10 @@ export const overview = ({ name, color }: ColorProps) => (
 
 overview.controls = {
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#0A7DAF' },
-      sass: { type: 'color', value: '$color-selected-darkest' },
+      value: { type: ControlTypes.COLOR, value: '#0A7DAF' },
+      sass: { type: ControlTypes.COLOR, value: '$color-selected-darkest' },
     },
   },
 };

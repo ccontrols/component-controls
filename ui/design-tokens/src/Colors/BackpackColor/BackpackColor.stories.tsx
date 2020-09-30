@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { BackpackColor, BackpackColorPalette } from './BackpackColor';
 import { ColorProps } from '../../types';
 
@@ -12,19 +13,19 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Brand' },
+  name: 'Brand',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#084eb2' },
+      value: { type: ControlTypes.COLOR, value: '#084eb2' },
       dark: {
-        type: 'object',
+        type: ControlTypes.OBJECT,
         value: {
-          value: { type: 'color', value: '#cddff8' },
-          name: { type: 'text', value: 'Blue800' },
+          value: { type: ControlTypes.COLOR, value: '#cddff8' },
+          name: 'Blue800',
         },
       },
-      name: { type: 'text', value: 'Blue400' },
+      name: 'Blue400',
     },
   },
 };

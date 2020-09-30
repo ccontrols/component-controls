@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { HelpScoutColor, HelpScoutColorPalette } from './HelpScoutColor';
 import { ColorProps } from '../../types';
 
@@ -14,11 +15,11 @@ export const overview = ({ name, color }: ColorProps) => (
 overview.controls = {
   name: 'Lavender',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#9FA6FF' },
+      value: { type: ControlTypes.COLOR, value: '#9FA6FF' },
       name: '500',
-      primary: { type: 'boolean', value: true },
+      primary: { type: ControlTypes.BOOLEAN, value: true },
     },
   },
 };

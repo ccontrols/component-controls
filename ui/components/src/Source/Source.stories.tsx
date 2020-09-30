@@ -102,7 +102,7 @@ const themes: {
 export const themeSelector = () => {
   const [theme, setTheme] = React.useState('dracula');
   const themeAction: ActionItem = {
-    title: theme,
+    node: theme,
     onClick: () => {
       const themeNames = Object.keys(themes);
       const selected = themeNames.indexOf(theme);

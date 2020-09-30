@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { CometColor, CometColorPalette } from './CometColor';
 import { ColorProps } from '../../types';
 
@@ -12,13 +13,13 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'emerald-40' },
+  name: 'emerald-40',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      name: { type: 'text', value: '40' },
-      sass: { type: 'text', value: '$comet-color-emerald-40' },
-      value: { type: 'color', value: '#2F9D89' },
+      name: '40',
+      sass: '$comet-color-emerald-40',
+      value: { type: ControlTypes.COLOR, value: '#2F9D89' },
     },
   },
 };

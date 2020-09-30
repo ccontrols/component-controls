@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { AudiDSColor, AudiDSColorPalette } from './AudiDSColor';
 import { ColorProps } from '../../types';
 
@@ -12,12 +13,12 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Brand' },
+  name: 'Brand',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#2270ee' },
-      name: { type: 'text', value: 'Blue400' },
+      value: { type: ControlTypes.COLOR, value: '#2270ee' },
+      name: 'Blue400',
     },
   },
 };

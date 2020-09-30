@@ -1,23 +1,66 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { LightningColor, LightningColorPalette } from './LightningColor';
+import { TableColumn } from '../../components';
 import { ColorProps } from '../../types';
 
+const lightningColumns: TableColumn[] = [
+  {
+    title: 'Released',
+    name: 'released',
+    render: value => <div style={{ textAlign: 'right' }}>{value}</div>,
+  },
+  {
+    title: 'Themeable',
+    name: 'themeable',
+    render: value => (
+      <div style={{ textAlign: 'center' }}>{value ? 'Yes' : 'No'}</div>
+    ),
+  },
+  {
+    title: 'Support',
+    name: 'support',
+    render: value => (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <div
+          style={{
+            textAlign: 'center',
+            width: '1.5rem',
+            height: '1.5rem',
+            lineHeight: '1.5rem',
+            fontSize: '.625rem',
+            color: '#fff',
+            backgroundColor: value === 'GA' ? '#54c473' : '#6488e3',
+          }}
+        >
+          {value}
+        </div>
+      </div>
+    ),
+  },
+];
 export default {
   title: 'Design Tokens/Colors/LightningColor',
   component: LightningColor,
 };
 
 export const overview = ({ name, color }: ColorProps) => (
-  <LightningColor name={name} color={color} />
+  <LightningColor columns={lightningColumns} name={name} color={color} />
 );
 
 overview.controls = {
   name: 'BRAND_ACCESSIBLE',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#004d80' },
+      value: { type: ControlTypes.COLOR, value: '#004d80' },
       description: 'Dark variant of BRAND that is accessible with white',
       sass: '$brand-accessible',
       released: '2.6.0',
@@ -29,47 +72,7 @@ overview.controls = {
 
 export const palette = () => (
   <LightningColorPalette
-    columns={[
-      {
-        title: 'Released',
-        name: 'released',
-        render: value => <div style={{ textAlign: 'right' }}>{value}</div>,
-      },
-      {
-        title: 'Themeable',
-        name: 'themeable',
-        render: value => (
-          <div style={{ textAlign: 'center' }}>{value ? 'Yes' : 'No'}</div>
-        ),
-      },
-      {
-        title: 'Support',
-        name: 'support',
-        render: value => (
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                textAlign: 'center',
-                width: '1.5rem',
-                height: '1.5rem',
-                lineHeight: '1.5rem',
-                fontSize: '.625rem',
-                color: '#fff',
-                backgroundColor: value === 'GA' ? '#54c473' : '#6488e3',
-              }}
-            >
-              {value}
-            </div>
-          </div>
-        ),
-      },
-    ]}
+    columns={lightningColumns}
     palette={{
       BRAND_DISABLED: {
         value: '#c9c7c5',

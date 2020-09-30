@@ -26,3 +26,4 @@ export * from './PajamasColor';
 export * from './PatternFlyColor';
 export * from './PhotonColor';
 export * from './PrimerColor';
+export * from './SeedsColor';

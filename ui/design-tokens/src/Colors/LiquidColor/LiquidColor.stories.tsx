@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { LiquidColor, LiquidColorPalette } from './LiquidColor';
 import { ColorProps } from '../../types';
 
@@ -12,8 +13,8 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Rich Purple' },
-  color: { type: 'color', value: '#503291' },
+  name: 'Rich Purple',
+  color: { type: ControlTypes.COLOR, value: '#503291' },
 };
 
 export const palette = () => (

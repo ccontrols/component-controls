@@ -39,6 +39,7 @@ import {
   PatternFlyColorPalette,
   PhotonColorPalette,
   PrimerColorPalette,
+  SeedsColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -339,7 +340,6 @@ import { BeelineColorPalette } from '@component-controls/design-tokens';
     'Blue 4': { value: '#FBFDFF' },
   }}
 />
-
 ```
 
 <BeelineColorPalette
@@ -1169,7 +1169,6 @@ import { LiquidColorPalette } from '@component-controls/design-tokens';
     'Rich Green': '#149B5F',
   }}
 />
-
 ```
 
 <LiquidColorPalette
@@ -1218,7 +1217,6 @@ import { MorningstarColorPalette } from '@component-controls/design-tokens';
     },
   }}
 />
-
 ```
 
 <MorningstarColorPalette
@@ -1335,7 +1333,6 @@ import { PajamasColorPalette } from '@component-controls/design-tokens';
     '$orange-950': '#421f00',
   }}
 />
-
 ```
 
 <PajamasColorPalette
@@ -1401,7 +1398,6 @@ import { PatternFlyColorPalette } from '@component-controls/design-tokens';
     },
   }}
 />
-
 ```
 
 <PatternFlyColorPalette
@@ -1461,8 +1457,6 @@ import { PhotonColorPalette } from '@component-controls/design-tokens';
     'Teal 90': '#002d3e',
   }}
 />
-
-
 ```
 
 <PhotonColorPalette
@@ -1505,3 +1499,78 @@ import { PrimerColorPalette } from '@component-controls/design-tokens';
   }}
 />
 
+## SeedsColor
+
+The [SeedsColor](/api/design-tokens-colors-seedscolor--overview) component displays the color as a block wuth rgb and cmyk colors. Below the block are displayed the color name and description.
+
+Design inspired from SproutSocial's [Seed](https://seeds.sproutsocial.com/visual/color/).
+
+```
+import { SeedsColorPalette } from '@component-controls/design-tokens';
+
+<SeedsColorPalette
+  palette={{
+    'Purple.700': {
+      value: '#6f5ed3',
+      variants: ['purple.700'],
+      description:
+        'Use Purple 700 to highlight or draw attention to important information that has no interaction. When using our primary purple with our primary green, green should always be the dominant color of the two.',
+    },
+    'Aqua.1100': {
+      value: '#002838',
+      variants: ['aqua.1100'],
+      description:
+        'Use Aqua 1100 for dark backgrounds and solid drop shadows. Aqua 1100 should not be used on text.',
+    },
+    'Aqua.600': {
+      value: '#0797ae',
+      variants: ['aqua.600'],
+      description:
+        'Use Aqua 600 for in-app text links and to highlight or draw attention to important information that has no interaction. Aqua is also the primary spot illustration color and is used for color blocking.',
+    },
+    Primary: {
+      value: '#2079c3',
+      name: 'Primary CTA',
+      variants: ['cta.primary', 'blue.700'],
+    },
+    Secondary: {
+      value: '#364141',
+      name: 'Secondary CTA',
+      variants: ['cta.scondary', 'neutral.800'],
+    },
+  }}
+/>
+```
+
+<SeedsColorPalette
+  palette={{
+    'Purple.700': {
+      value: '#6f5ed3',
+      variants: ['purple.700'],
+      description:
+        'Use Purple 700 to highlight or draw attention to important information that has no interaction. When using our primary purple with our primary green, green should always be the dominant color of the two.',
+    },
+    'Aqua.1100': {
+      value: '#002838',
+      variants: ['aqua.1100'],
+      description:
+        'Use Aqua 1100 for dark backgrounds and solid drop shadows. Aqua 1100 should not be used on text.',
+    },
+    'Aqua.600': {
+      value: '#0797ae',
+      variants: ['aqua.600'],
+      description:
+        'Use Aqua 600 for in-app text links and to highlight or draw attention to important information that has no interaction. Aqua is also the primary spot illustration color and is used for color blocking.',
+    },
+    Primary: {
+      value: '#2079c3',
+      name: 'Primary CTA',
+      variants: ['cta.primary', 'blue.700'],
+    },
+    Secondary: {
+      value: '#364141',
+      name: 'Secondary CTA',
+      variants: ['cta.scondary', 'neutral.800'],
+    },
+  }}
+/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { ETradeColor, ETradeColorPalette } from './ETradeColor';
 import { ColorProps } from '../../types';
 
@@ -12,11 +13,11 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: { type: 'text', value: 'Negative red' },
+  name: 'Negative red',
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#cc0000' },
+      value: { type: ControlTypes.COLOR, value: '#cc0000' },
       name: 'Error state',
       description: 'Data trending down',
       sass: '$negative',

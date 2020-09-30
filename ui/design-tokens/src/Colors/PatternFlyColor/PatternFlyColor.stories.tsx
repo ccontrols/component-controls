@@ -1,4 +1,5 @@
 import React from 'react';
+import { ControlTypes } from '@component-controls/core';
 import { PatternFlyColor, PatternFlyColorPalette } from './PatternFlyColor';
 import { ColorProps } from '../../types';
 
@@ -13,9 +14,9 @@ export const overview = ({ name, color }: ColorProps) => (
 
 overview.controls = {
   color: {
-    type: 'object',
+    type: ControlTypes.OBJECT,
     value: {
-      value: { type: 'color', value: '#1d70b8' },
+      value: { type: ControlTypes.COLOR, value: '#1d70b8' },
       css: '--pf-global--link--Color',
       description:
         'This color is used as a standard text and icon color as well as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.',
