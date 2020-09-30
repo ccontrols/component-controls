@@ -27,3 +27,4 @@ export * from './PatternFlyColor';
 export * from './PhotonColor';
 export * from './PrimerColor';
 export * from './SeedsColor';
+export * from './SeekColor';

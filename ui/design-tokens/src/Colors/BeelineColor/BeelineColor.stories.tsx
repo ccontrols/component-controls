@@ -36,13 +36,13 @@ export const hsla = () => (
 export const palette = () => (
   <BeelineColorPalette
     palette={{
-      'Blue 5': { value: '#001b38' },
-      'Blue Accessibility': { value: '#0352a0' },
-      'Blue Primary': { value: '#0575e6' },
-      'Blue 1': { value: '#4fa7ff' },
-      'Blue 2': { value: '#85dfff' },
-      'Blue 3': { value: '#ecf5ff' },
-      'Blue 4': { value: '#FBFDFF' },
+      'Blue 5': '#001b38',
+      'Blue Accessibility': '#0352a0',
+      'Blue Primary': '#0575e6',
+      'Blue 1': '#4fa7ff',
+      'Blue 2': '#85dfff',
+      'Blue 3': '#ecf5ff',
+      'Blue 4': '#FBFDFF',
     }}
   />
 );

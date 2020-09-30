@@ -40,6 +40,7 @@ import {
   PhotonColorPalette,
   PrimerColorPalette,
   SeedsColorPalette,
+  SeekColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -331,26 +332,26 @@ import { BeelineColorPalette } from '@component-controls/design-tokens';
 
 <BeelineColorPalette
   palette={{
-    'Blue 5': { value: '#001b38' },
-    'Blue Accessibility': { value: '#0352a0' },
-    'Blue Primary': { value: '#0575e6' },
-    'Blue 1': { value: '#4fa7ff' },
-    'Blue 2': { value: '#85dfff' },
-    'Blue 3': { value: '#ecf5ff' },
-    'Blue 4': { value: '#FBFDFF' },
+    'Blue 5': '#001b38',
+    'Blue Accessibility': '#0352a0',
+    'Blue Primary': '#0575e6',
+    'Blue 1': '#4fa7ff',
+    'Blue 2': '#85dfff',
+    'Blue 3': '#ecf5ff',
+    'Blue 4': '#FBFDFF',
   }}
 />
 ```
 
 <BeelineColorPalette
   palette={{
-    'Blue 5': { value: '#001b38' },
-    'Blue Accessibility': { value: '#0352a0' },
-    'Blue Primary': { value: '#0575e6' },
-    'Blue 1': { value: '#4fa7ff' },
-    'Blue 2': { value: '#85dfff' },
-    'Blue 3': { value: '#ecf5ff' },
-    'Blue 4': { value: '#FBFDFF' },
+    'Blue 5': '#001b38',
+    'Blue Accessibility': '#0352a0',
+    'Blue Primary': '#0575e6',
+    'Blue 1': '#4fa7ff',
+    'Blue 2': '#85dfff',
+    'Blue 3': '#ecf5ff',
+    'Blue 4': '#FBFDFF',
   }}
 />
 
@@ -1501,7 +1502,7 @@ import { PrimerColorPalette } from '@component-controls/design-tokens';
 
 ## SeedsColor
 
-The [SeedsColor](/api/design-tokens-colors-seedscolor--overview) component displays the color as a block wuth rgb and cmyk colors. Below the block are displayed the color name and description.
+The [SeedsColor](/api/design-tokens-colors-seedscolor--overview) component displays the color as a block with rgb and cmyk colors. Below the block are displayed the color name and description.
 
 Design inspired from SproutSocial's [Seed](https://seeds.sproutsocial.com/visual/color/).
 
@@ -1572,5 +1573,39 @@ import { SeedsColorPalette } from '@component-controls/design-tokens';
       name: 'Secondary CTA',
       variants: ['cta.scondary', 'neutral.800'],
     },
+  }}
+/>
+
+## SeekColor
+
+The [SeekColor](/api/design-tokens-colors-seekcolor--overview) component displays the color as a cirlce with the hev value and variable name below.
+
+Design inspired from [Seek OSS](https://seek-oss.github.io/seek-style-guide/palette).
+
+```
+import { SeekColorPalette } from '@component-controls/design-tokens';
+
+<SeekColorPalette
+  palette={{
+    '@sk-blue-darker': '#001b38',
+    '@sk-blue-dark': '#042763',
+    '@sk-blue': '#0d3880',
+    '@sk-blue-light': '#184da8',
+    '@sk-blue-lighter': '#2765cf',
+    '@sk-pink': '#e60278',
+    '@sk-green': '#157e00',
+  }}
+/>
+```
+
+<SeekColorPalette
+  palette={{
+    '@sk-blue-darker': '#001b38',
+    '@sk-blue-dark': '#042763',
+    '@sk-blue': '#0d3880',
+    '@sk-blue-light': '#184da8',
+    '@sk-blue-lighter': '#2765cf',
+    '@sk-pink': '#e60278',
+    '@sk-green': '#157e00',
   }}
 />

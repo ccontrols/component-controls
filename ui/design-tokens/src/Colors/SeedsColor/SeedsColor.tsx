@@ -8,7 +8,7 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block wuth rgb and cmyk colors. Below the block are displayed the color name and description.
+ * Color item displaying the color as a block with rgb and cmyk colors. Below the block are displayed the color name and description.
  * Design inspired from SproutSocial's [Seed](https://seeds.sproutsocial.com/visual/color/).
  */
 export const SeedsColor: FC<ColorBlockProps> = ({ name, color }) => {
