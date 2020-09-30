@@ -38,6 +38,7 @@ import {
   PajamasColorPalette,
   PatternFlyColorPalette,
   PhotonColorPalette,
+  PrimerColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1471,6 +1472,36 @@ import { PhotonColorPalette } from '@component-controls/design-tokens';
     'Teal 70': '#008ea4',
     'Teal 80': '#005a71',
     'Teal 90': '#002d3e',
+  }}
+/>
+
+## PrimerColor
+
+The [PrimerColor](/api/design-tokens-colors-primercolor--overview) component displays the color as a row, with sass variable name. Separate visualization (header) for primary color.
+
+Design inspired from GitHub's [Primer](https://styleguide.github.com/primer/support/color-system/).
+
+```
+import { PrimerColorPalette } from '@component-controls/design-tokens';
+
+<PrimerColorPalette
+  palette={{
+    Yellow: { value: '#ffd33d', sass: '$yellow-500', primary: true },
+    'yellow-400': { value: '#ffdf5d', sass: '$yellow-400' },
+    'yellow-500': { value: '#ffd33d', sass: '$yellow-500' },
+    'yellow-600': { value: '#f9c513', sass: '$yellow-600' },
+    'yellow-700': { value: '#dbab09', sass: '$yellow-700' },
+  }}
+/>
+```
+
+<PrimerColorPalette
+  palette={{
+    Yellow: { value: '#ffd33d', sass: '$yellow-500', primary: true },
+    'yellow-400': { value: '#ffdf5d', sass: '$yellow-400' },
+    'yellow-500': { value: '#ffd33d', sass: '$yellow-500' },
+    'yellow-600': { value: '#f9c513', sass: '$yellow-600' },
+    'yellow-700': { value: '#dbab09', sass: '$yellow-700' },
   }}
 />
 
