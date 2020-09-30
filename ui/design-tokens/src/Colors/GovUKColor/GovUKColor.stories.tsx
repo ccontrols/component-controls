@@ -16,7 +16,7 @@ overview.controls = {
     type: 'object',
     value: {
       value: { type: 'color', value: '#1d70b8' },
-      sass: { type: 'color', value: '$govuk-brand-colour' },
+      sass: '$govuk-brand-colour',
     },
   },
 };
