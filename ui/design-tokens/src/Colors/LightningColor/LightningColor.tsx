@@ -48,8 +48,8 @@ const BaseLightningColor: FC<LightningColorProps> = ({
         bg: 'background',
         '& > td ': {
           py: 3,
-          borderTop: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
-          borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+          borderTop: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
+          borderBottom: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
         },
       }}
     >
@@ -122,8 +122,8 @@ export const LightningColorPalette: FC<Optional<
         textAlign: 'left',
         fontSize: 0,
         bg: 'gray',
-        borderTop: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
-        borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+        borderTop: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
+        borderBottom: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
       },
     }}
     columns={[

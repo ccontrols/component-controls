@@ -29,7 +29,7 @@ export const AntdVertColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
   );
 
   return (
-    <div sx={{ display: 'flex', flex: '1', width: 250 }}>
+    <div sx={{ display: 'flex', flex: '1' }}>
       <CopyContainer value={hex} name={name} sx={{ width: '100%' }}>
         <div
           {...onMouseEvents}

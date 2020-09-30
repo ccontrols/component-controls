@@ -28,7 +28,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
             bg: colorValue,
             width: 64,
             height: 64,
-            border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+            border: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
           }}
         />
       </CopyContainer>
@@ -46,7 +46,7 @@ export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
         <div
           sx={{
             fontWeight: 'bold',
-            borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+            borderBottom: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
             pb: 1,
           }}
         >

@@ -20,7 +20,7 @@ export const HelpScoutColor: FC<ColorBlockProps> = ({ name, color }) => {
   const textColor = mostReadable(hex);
 
   return (
-    <div sx={{ display: 'flex', flex: '1', width: 250 }}>
+    <div sx={{ display: 'flex', flex: '1' }}>
       <CopyContainer value={hex} name={name} sx={{ width: '100%' }}>
         <div
           sx={{

@@ -44,6 +44,7 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
+    "@component-controls/core": "^1.25.0",
     "@component-controls/jest-snapshots": "^1.25.1",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/tinycolor2": "^1.4.2",

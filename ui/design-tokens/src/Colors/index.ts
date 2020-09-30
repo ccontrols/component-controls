@@ -22,3 +22,4 @@ export * from './LightningColor';
 export * from './LiquidColor';
 export * from './MorningstarColor';
 export * from './OPatternColor';
+export * from './PajamasColor';

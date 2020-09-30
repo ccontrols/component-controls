@@ -100,3 +100,5 @@ export const colorContrast: Record<
     fontSize: '18px',
   },
 };
+
+export type ContrastGrades = 'AAA' | 'AA' | 'AA+' | 'F';

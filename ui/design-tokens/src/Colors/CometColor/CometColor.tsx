@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { jsx, SxStyleProp } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
-import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
+import { colorToStr, mostReadable, contrastGrade } from '../utils';
+import { ColorBlockProps, ColorValue } from '../../types';
 import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
@@ -29,16 +29,21 @@ export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {
     color: 'black',
     fontSize: 1,
   };
-  if (contrast >= colorContrast.AAA.ratio) {
-    accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AAA</div>;
-  } else if (contrast >= colorContrast.small.ratio) {
-    accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AA</div>;
-  } else if (contrast >= colorContrast.large.ratio) {
-    accessibilityTest = <div sx={{ ...testProps, bg: '#e6c719' }}>AA18</div>;
-  } else {
-    accessibilityTest = (
-      <div sx={{ ...testProps, bg: '##b42818', color: 'white' }}>DNP</div>
-    );
+  const grade = contrastGrade(contrast);
+  switch (grade) {
+    case 'AAA':
+      accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AAA</div>;
+      break;
+    case 'AA':
+      accessibilityTest = <div sx={{ ...testProps, bg: 'gray' }}>AA</div>;
+      break;
+    case 'AA':
+      accessibilityTest = <div sx={{ ...testProps, bg: '#e6c719' }}>AA18</div>;
+      break;
+    default:
+      accessibilityTest = (
+        <div sx={{ ...testProps, bg: '##b42818', color: 'white' }}>DNP</div>
+      );
   }
   return (
     <div sx={{ display: 'flex', flex: '1' }}>
