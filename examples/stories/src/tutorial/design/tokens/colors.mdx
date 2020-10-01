@@ -44,6 +44,7 @@ import {
   SkylineColorPalette,
   SolidColorPalette,
   UniformColorPalette,
+  VanillaColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1760,5 +1761,46 @@ import { UniformColorPalette } from '@component-controls/design-tokens';
     Alert: '#D8400F',
     AlertLight: '#f3c6b7',
     Weather: '#990099',
+  }}
+/>
+
+
+## VanillaColor
+
+The [VanillaColor](/api/design-tokens-colors-vanillacolor--overview) component displays the color as a color block with sass variable name and hex color value.
+
+Design inspired from [Vanilla](https://vanillaframework.io/docs/settings/color-settings).
+
+```
+import { VanillaColorPalette } from '@component-controls/design-tokens';
+
+<VanillaColorPalette
+  palette={{
+    'x-light': { value: '#FFF', sass: '$color-x-light' },
+    brand: { value: '#333', sass: '$color-brand' },
+    caution: { value: '#F99B11', sass: '$color-caution' },
+    negative: { value: '#C7162B', sass: '$color-negative' },
+    positive: { value: '#0E8420', sass: '$color-positive' },
+    information: { value: '#06C', sass: '$color-information' },
+    'navigation-background': {
+      value: '#FFF',
+      sass: '$color-navigation-background',
+    },
+  }}
+/>
+```
+
+<VanillaColorPalette
+  palette={{
+    'x-light': { value: '#FFF', sass: '$color-x-light' },
+    brand: { value: '#333', sass: '$color-brand' },
+    caution: { value: '#F99B11', sass: '$color-caution' },
+    negative: { value: '#C7162B', sass: '$color-negative' },
+    positive: { value: '#0E8420', sass: '$color-positive' },
+    information: { value: '#06C', sass: '$color-information' },
+    'navigation-background': {
+      value: '#FFF',
+      sass: '$color-navigation-background',
+    },
   }}
 />

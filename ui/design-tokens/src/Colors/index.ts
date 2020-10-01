@@ -31,3 +31,4 @@ export * from './SeekColor';
 export * from './SkylineColor';
 export * from './SolidColor';
 export * from './UniformColor';
+export * from './VanillaColor';
