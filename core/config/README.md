@@ -49,7 +49,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 from the glob list of documents, extract require.context array of props
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L124)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L129)_
 
 
 
@@ -77,7 +77,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 convert glob patters from config file into require.context objects
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L132)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L137)_
 
 **function** configRequireContext(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): [RequireContextProps](#requirecontextprops)\[] | undefined;
 
@@ -93,7 +93,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 find the story files out of a configuration file
 using glob for the regex file search
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L98)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L103)_
 
 **function** extractDocuments(`__namedParameters`\*: **config**: [BuildConfiguration](#buildconfiguration)**configPath**: string): string\[] | undefined;
 
@@ -106,7 +106,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 ## fixGlob
 
-_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L92)_
+_defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L97)_
 
 **function** fixGlob(`golbExpr`\*: string): string;
 

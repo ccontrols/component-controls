@@ -3,7 +3,6 @@
 -   [Overview](#overview)
 -   [List of components](#list-of-components)
     -   [<ins>getPropertyEditor</ins>](#insgetpropertyeditorins)
-    -   [<ins>addPropertyEditor</ins>](#insaddpropertyeditorins)
     -   [<ins>ArrayEditor</ins>](#insarrayeditorins)
     -   [<ins>BooleanEditor</ins>](#insbooleaneditorins)
     -   [<ins>ButtonEditor</ins>](#insbuttoneditorins)
@@ -31,17 +30,8 @@ Some of the guiding design goals for this library:
 ## <ins>getPropertyEditor</ins>
 
 Property editors factory. Given a propey type, will return a editor compnent class.
-@param type : specify the type ie 'text'
-@returns a Property Editor class.
 
 _getPropertyEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
-
-## <ins>addPropertyEditor</ins>
-
-@param type : specify the type ie 'text'
-@param editor : a Property Editor class.
-
-_addPropertyEditor [source code](https://github.com/ccontrols/component-controls/tree/master/core/specification/src/prop-factory.ts)_
 
 ## <ins>ArrayEditor</ins>
 

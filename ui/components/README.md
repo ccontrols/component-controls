@@ -9,6 +9,7 @@
     -   [<ins>BlockContainer</ins>](#insblockcontainerins)
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
     -   [<ins>ColorMode</ins>](#inscolormodeins)
+    -   [<ins>CopyContainer</ins>](#inscopycontainerins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>HoverBox</ins>](#inshoverboxins)
@@ -38,6 +39,7 @@
     -   [<ins>TabPanel</ins>](#instabpanelins)
     -   [<ins>Tabs</ins>](#instabsins)
     -   [<ins>Tag</ins>](#instagins)
+    -   [<ins>ThemeProvider</ins>](#insthemeproviderins)
     -   [<ins>Title</ins>](#institleins)
     -   [<ins>TitledImage</ins>](#institledimageins)
     -   [<ins>Toggle</ins>](#instoggleins)
@@ -158,6 +160,19 @@ _ColorMode [source code](https://github.com/ccontrols/component-controls/tree/ma
 | `label` | _string_              | optional label to be displayed alongside the toggle |
 | `ref`   | _Ref&lt;ReactSwitch>_ | obtain a ref target                                 |
 
+## <ins>CopyContainer</ins>
+
+conainer to enclose items that will provide copy fnctionality on click
+
+_CopyContainer [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/CopyContainer/CopyContainer.tsx)_
+
+### properties
+
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| `name`   | _string_ | name of the property |
+| `value*` | _string_ | value to copy        |
+
 ## <ins>ExternalLink</ins>
 
 Anchor link to an external url,
@@ -213,12 +228,12 @@ _Keyboard [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name         | Type                                                                                                                                                                                                                                                                                  | Description                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `keys*`      | _number\[]_                                                                                                                                                                                                                                                                           | array of the keys to be trapped                                                   |
-| `target`     | _"children" \| "document" \| "window"_                                                                                                                                                                                                                                                | to where to attach the event handler                                              |
-| `onKeyDown*` | _KeyboardCallback_                                                                                                                                                                                                                                                                    | callbal on key down                                                               |
-| `children`   | _string \| number \| boolean \| {} \| ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)> \| ReactNodeArray \| ReactPortal \| ReactElement&lt;...>_ | child element to the key event handler will be attached to if target = 'children' |
+| Name         | Type                                                                                                                                                                                                                                                        | Description                                                                       |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `keys*`      | _number\[]_                                                                                                                                                                                                                                                 | array of the keys to be trapped                                                   |
+| `target`     | _"children" \| "document" \| "window"_                                                                                                                                                                                                                      | to where to attach the event handler                                              |
+| `onKeyDown*` | _KeyboardCallback_                                                                                                                                                                                                                                          | callbal on key down                                                               |
+| `children`   | _ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;any, any, any>)> \| ... 6 more ... \| (ReactElement&lt;...> & ReactPortal)_ | child element to the key event handler will be attached to if target = 'children' |
 
 ## <ins>Link</ins>
 
@@ -265,10 +280,10 @@ _Markdown [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name         | Type                                                                                                                                                                                                                     | Description                                           |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| `children`   | _ReactNode_                                                                                                                                                                                                              | the markdown source code is passed as a children pro. |
-| `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_ | components to customize the markdown display.         |
+| Name         | Type                                                                                                                                                                                                                                                                                 | Description                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| `children`   | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | the markdown source code is passed as a children pro. |
+| `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_                                                             | components to customize the markdown display.         |
 
 ## <ins>Multiselect</ins>
 
@@ -278,10 +293,11 @@ _Multiselect [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name        | Type                              | Description                                                |
-| ----------- | --------------------------------- | ---------------------------------------------------------- |
-| `items*`    | _MultiselectItem\[]_              | array of items to select from                              |
-| `onChange*` | _(item: MultiselectItem) => void_ | function called when the selected state of an item changes |
+| Name           | Type                              | Description                                                |
+| -------------- | --------------------------------- | ---------------------------------------------------------- |
+| `items*`       | _MultiselectItem\[]_              | array of items to select from                              |
+| `onChange*`    | _(item: MultiselectItem) => void_ | function called when the selected state of an item changes |
+| `arrowVisible` | _boolean_                         | set to false to hide the arrow                             |
 
 ## <ins>Navmenu</ins>
 
@@ -348,6 +364,12 @@ Used to display enhanced information that could not fit into the main scren.
 
 _Popover [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Popover/Popover.tsx)_
 
+### properties
+
+| Name           | Type      | Description                    |
+| -------------- | --------- | ------------------------------ |
+| `arrowVisible` | _boolean_ | set to false to hide the arrow |
+
 ## <ins>SearchInput</ins>
 
 an input component combined with a popover, can be used for incremental search.
@@ -356,14 +378,15 @@ _SearchInput [source code](https://github.com/ccontrols/component-controls/tree/
 
 ### properties
 
-| Name           | Type                                                                                                                                                                                            | Description                                                                  |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                  | callback on change of search input. user can retrieve items in this callback |
-| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                      | on select a search item.                                                     |
-| `items*`       | _ItemType\[]_                                                                                                                                                                                   | items array                                                                  |
-| `popoverProps` | _Pick&lt;Partial&lt;TooltipTriggerProps>, "closeOnReferenceHidden" \| "defaultTooltipShown" \| "delayHide" \| "delayShow" \| "followCursor" \| "getTooltipRef" \| ... 9 more ... \| "tooltip">_ | customize the popover                                                        |
-| `as`           | _ElementType&lt;any>_                                                                                                                                                                           |                                                                              |
-| `variant`      | _string_                                                                                                                                                                                        |                                                                              |
+| Name           | Type                                                                                                                                                                                                                                | Description                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `onSearch*`    | _(search: string) => void \| Promise&lt;void>_                                                                                                                                                                                      | callback on change of search input. user can retrieve items in this callback |
+| `onSelect`     | _(item: ItemType) => void_                                                                                                                                                                                                          | on select a search item.                                                     |
+| `children`     | _((props: SearchBoxCallbackProps&lt;ItemType>) => ReactNode) \| (((props: SearchBoxCallbackProps&lt;ItemType>) => ReactNode) & string) \| ... 5 more ... \| (((props: SearchBoxCallbackProps&lt;...>) => ReactNode) & ReactPortal)_ | children is a render prop to allow custom rendering of items, one at a time  |
+| `items*`       | _ItemType\[]_                                                                                                                                                                                                                       | items array                                                                  |
+| `popoverProps` | _PopoverProps_                                                                                                                                                                                                                      | customize the popover                                                        |
+| `as`           | _ElementType&lt;any>_                                                                                                                                                                                                               |                                                                              |
+| `variant`      | _string_                                                                                                                                                                                                                            |                                                                              |
 
 ## <ins>Sidebar</ins>
 
@@ -427,19 +450,19 @@ _Source [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name         | Type                                                               | Description                                                                                                                                                                      |
-| ------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actions`    | _ActionItem\[]_                                                    | optional actions provided to the component                                                                                                                                       |
-| `plain`      | _boolean_                                                          | if plain, skip the border and spacing around the children                                                                                                                        |
-| `children`   | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
-| `theme`      | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `title`      | _string_                                                           | optional title to display for the code block. Usually used from MDX                                                                                                              |
-| `language`   | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn`   | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
-| `dark`       | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`      | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
-| `as`         | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-| `metastring` | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
+| Name         | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `actions`    | _ActionItem\[]_                                                                                                                                                                                                                                                                      | optional actions provided to the component                                                                                                                                       |
+| `plain`      | _boolean_                                                                                                                                                                                                                                                                            | if plain, skip the border and spacing around the children                                                                                                                        |
+| `children`   | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
+| `theme`      | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `title`      | _string_                                                                                                                                                                                                                                                                             | optional title to display for the code block. Usually used from MDX                                                                                                              |
+| `language`   | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn`   | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                   | custom function to render the source code.                                                                                                                                       |
+| `dark`       | _boolean_                                                                                                                                                                                                                                                                            | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`      | _CSSProperties_                                                                                                                                                                                                                                                                      | css styles for the container.                                                                                                                                                    |
+| `as`         | _ElementType&lt;any>_                                                                                                                                                                                                                                                                | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `metastring` | _string_                                                                                                                                                                                                                                                                             | code configuration string passed from MDX                                                                                                                                        |
 
 ## <ins>Subheading</ins>
 
@@ -462,12 +485,12 @@ _Subtitle [source code](https://github.com/ccontrols/component-controls/tree/mas
 
 ### properties
 
-| Name       | Type                                                                           | Description                                |
-| ---------- | ------------------------------------------------------------------------------ | ------------------------------------------ |
-| `children` | _ReactNode_                                                                    | text to be displayed in the component.     |
-| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                         | DOM node type to render as. By default h3. |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                            |
-| `variant`  | _string_                                                                       |                                            |
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                                |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component.     |
+| `as`       | _"h1" \| "h2" \| "h3" \| "h4" \| "h5"_                                                                                                                                                                                                                                               | DOM node type to render as. By default h3. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                            |
+| `variant`  | _string_                                                                                                                                                                                                                                                                             |                                            |
 
 ## <ins>SyntaxHighlighter</ins>
 
@@ -477,17 +500,17 @@ _SyntaxHighlighter [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name         | Type                                                               | Description                                                                                                                                                                      |
-| ------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`   | _ReactNode_                                                        | source code to be displayed.                                                                                                                                                     |
-| `theme`      | _PrismTheme_                                                       | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
-| `title`      | _string_                                                           | optional title to display for the code block. Usually used from MDX                                                                                                              |
-| `language`   | _Language_                                                         | source lnguage used, by default "jsx".                                                                                                                                           |
-| `renderFn`   | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_ | custom function to render the source code.                                                                                                                                       |
-| `dark`       | _boolean_                                                          | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
-| `style`      | _CSSProperties_                                                    | css styles for the container.                                                                                                                                                    |
-| `as`         | _ElementType&lt;any>_                                              | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
-| `metastring` | _string_                                                           | code configuration string passed from MDX                                                                                                                                        |
+| Name         | Type                                                                                                                                                                                                                                                                                 | Description                                                                                                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`   | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | source code to be displayed.                                                                                                                                                     |
+| `theme`      | _PrismTheme_                                                                                                                                                                                                                                                                         | optional \`PrismTheme\` theme provided to the component. Themes can be imported from \`prism-react-renderer/themes\`.                                                            |
+| `title`      | _string_                                                                                                                                                                                                                                                                             | optional title to display for the code block. Usually used from MDX                                                                                                              |
+| `language`   | _Language_                                                                                                                                                                                                                                                                           | source lnguage used, by default "jsx".                                                                                                                                           |
+| `renderFn`   | _(props: RenderProps, other: { theme: PrismTheme; }) => ReactNode_                                                                                                                                                                                                                   | custom function to render the source code.                                                                                                                                       |
+| `dark`       | _boolean_                                                                                                                                                                                                                                                                            | used to specify a "dark" color theme - applcable only if no custom theme prop is provided. if dark: true, duotoneDark theme is used. if dark: false, duotoneLight theme is used. |
+| `style`      | _CSSProperties_                                                                                                                                                                                                                                                                      | css styles for the container.                                                                                                                                                    |
+| `as`         | _ElementType&lt;any>_                                                                                                                                                                                                                                                                | syntax container as element. Can be used as \`div\` or \`span\`.                                                                                                                 |
+| `metastring` | _string_                                                                                                                                                                                                                                                                             | code configuration string passed from MDX                                                                                                                                        |
 
 ## <ins>Table</ins>
 
@@ -563,18 +586,29 @@ _Tag [source code](https://github.com/ccontrols/component-controls/tree/master/u
 | `variant`           | _string_              | theme variant additional                                                                                               |
 | `as`                | _ElementType&lt;any>_ |                                                                                                                        |
 
+## <ins>ThemeProvider</ins>
+
+_ThemeProvider [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/ThemeContext/ThemeContext.tsx)_
+
+### properties
+
+| Name         | Type                    | Description                                   |
+| ------------ | ----------------------- | --------------------------------------------- |
+| `components` | _MarkdownComponentType_ | components to customize the markdown display. |
+| `theme`      | _Theme_                 |                                               |
+
 ## <ins>Title</ins>
 
 _Title [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Title/Title.tsx)_
 
 ### properties
 
-| Name       | Type                                                                           | Description                            |
-| ---------- | ------------------------------------------------------------------------------ | -------------------------------------- |
-| `children` | _ReactNode_                                                                    | text to be displayed in the component. |
-| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_ |                                        |
-| `as`       | _ElementType&lt;any>_                                                          |                                        |
-| `variant`  | _string_                                                                       |                                        |
+| Name       | Type                                                                                                                                                                                                                                                                                 | Description                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
+| `children` | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | text to be displayed in the component. |
+| `ref`      | _((instance: HTMLHeadingElement) => void) \| RefObject&lt;HTMLHeadingElement>_                                                                                                                                                                                                       |                                        |
+| `as`       | _ElementType&lt;any>_                                                                                                                                                                                                                                                                |                                        |
+| `variant`  | _string_                                                                                                                                                                                                                                                                             |                                        |
 
 ## <ins>TitledImage</ins>
 
