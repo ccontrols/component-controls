@@ -32,3 +32,4 @@ export * from './SkylineColor';
 export * from './SolidColor';
 export * from './UniformColor';
 export * from './VanillaColor';
+export * from './XColor';

@@ -45,6 +45,7 @@ import {
   SolidColorPalette,
   UniformColorPalette,
   VanillaColorPalette,
+  XColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1802,5 +1803,40 @@ import { VanillaColorPalette } from '@component-controls/design-tokens';
       value: '#FFF',
       sass: '$color-navigation-background',
     },
+  }}
+/>
+
+
+## XColor
+
+The [XColor](/api/design-tokens-colors-xcolor--overview) component displays the color as a cirlce with the variable name, hev, rgb, cmyk and pantone values below.
+
+Design inspired from Biteable's Design System [X](https://x.biteable.com/brand/).
+
+```
+import { XColorPalette } from '@component-controls/design-tokens';
+
+<XColorPalette
+  palette={{
+    'Dame Tangerine': '#FF5000',
+    'Señor Purple': '#5F285A',
+    'Baron Von Teal': '#1DE9B6',
+    'Agent Cyan': '#18FFFF',
+    'Madam Yellow': '#FFF500',
+    'Pastor Pink': '#FF96B4',
+    'Brigadier Blue': '#000A47',
+  }}
+/>
+```
+
+ <XColorPalette
+  palette={{
+    'Dame Tangerine': '#FF5000',
+    'Señor Purple': '#5F285A',
+    'Baron Von Teal': '#1DE9B6',
+    'Agent Cyan': '#18FFFF',
+    'Madam Yellow': '#FFF500',
+    'Pastor Pink': '#FF96B4',
+    'Brigadier Blue': '#000A47',
   }}
 />
