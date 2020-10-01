@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
+
+
+### Features
+
+* added etrade color token ([4d71cb9](https://github.com/ccontrols/component-controls/commit/4d71cb9ee6213b47d7cc5395b0eea2829ac050e2))
+
+
+
+
+
 # [1.25.0](https://github.com/ccontrols/component-controls/compare/v1.24.7...v1.25.0) (2020-09-08)
 
 

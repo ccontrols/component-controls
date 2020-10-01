@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
+
+
+### Features
+
+* added finestra color token ([170ff4c](https://github.com/ccontrols/component-controls/commit/170ff4c1010e90fef17dcc0ae772fd0ed6175c9a))
+
+
+
+
+
 # [1.25.0](https://github.com/ccontrols/component-controls/compare/v1.24.7...v1.25.0) (2020-09-08)
 
 

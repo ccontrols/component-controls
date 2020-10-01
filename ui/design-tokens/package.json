@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/design-tokens",
-  "version": "1.25.2",
+  "version": "1.26.0",
   "description": "Component controls design tokens components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,22 +30,22 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.25.1",
-    "@component-controls/core": "^1.25.0",
-    "@component-controls/editors": "^1.25.1",
-    "@component-controls/store": "^1.25.1",
+    "@component-controls/components": "^1.26.0",
+    "@component-controls/core": "^1.26.0",
+    "@component-controls/editors": "^1.26.0",
+    "@component-controls/store": "^1.26.0",
     "@primer/octicons-react": "^10.0.0",
     "@types/tinycolor2": "^1.4.2",
     "copy-to-clipboard": "^3.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "simple-color-converter": "^2.1.9",
-    "tinycolor2": "^1.4.1",
-    "theme-ui": "^0.4.0-rc.1"
+    "theme-ui": "^0.4.0-rc.1",
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "@component-controls/core": "^1.25.0",
-    "@component-controls/jest-snapshots": "^1.25.1",
+    "@component-controls/jest-snapshots": "^1.26.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/tinycolor2": "^1.4.2",
     "cross-env": "^5.2.1",

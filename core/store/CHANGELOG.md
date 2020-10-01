@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
+
+
+### Features
+
+* add seeds color token ([ee7de16](https://github.com/ccontrols/component-controls/commit/ee7de16a8ee6fb6f462c850fddd205ae8ce535f9))
+* added etrade color token ([4d71cb9](https://github.com/ccontrols/component-controls/commit/4d71cb9ee6213b47d7cc5395b0eea2829ac050e2))
+
+
+
+
+
 ## [1.25.3](https://github.com/ccontrols/component-controls/compare/v1.25.2...v1.25.3) (2020-09-26)
 
 **Note:** Version bump only for package @component-controls/store

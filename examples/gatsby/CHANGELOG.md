@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
+
+
+### Features
+
+* added antd  horz/vert color items ([ac450f5](https://github.com/ccontrols/component-controls/commit/ac450f5982b141e2a832ce8dd18e3094451d1871))
+* added anvil color block ([14470cc](https://github.com/ccontrols/component-controls/commit/14470cc068566b952f2686947b81c317ef3b00d8))
+* design tokens package ([f45c523](https://github.com/ccontrols/component-controls/commit/f45c5233d290f5562a83451efa88c2ee3571f8e6))
+
+
+
+
+
 ## [1.25.3](https://github.com/ccontrols/component-controls/compare/v1.25.2...v1.25.3) (2020-09-26)
 
 **Note:** Version bump only for package component-controls-gatsby-starter

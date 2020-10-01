@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
+
+
+### Bug Fixes
+
+* spelling updates ([dfd7ab0](https://github.com/ccontrols/component-controls/commit/dfd7ab0ca14b27a96cc36957403c296513b7067a))
+
+
+### Features
+
+* added etrade color token ([4d71cb9](https://github.com/ccontrols/component-controls/commit/4d71cb9ee6213b47d7cc5395b0eea2829ac050e2))
+
+
+
+
+
 ## [1.25.3](https://github.com/ccontrols/component-controls/compare/v1.25.2...v1.25.3) (2020-09-26)
 
 **Note:** Version bump only for package @component-controls/viewport-plugin
