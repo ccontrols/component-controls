@@ -33,3 +33,4 @@ export * from './SolidColor';
 export * from './UniformColor';
 export * from './VanillaColor';
 export * from './XColor';
+export * from './ZendeskColor';
