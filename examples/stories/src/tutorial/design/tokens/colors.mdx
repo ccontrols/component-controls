@@ -43,6 +43,7 @@ import {
   SeekColorPalette,
   SkylineColorPalette,
   SolidColorPalette,
+  UniformColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1729,5 +1730,35 @@ import { SolidColorPalette } from '@component-controls/design-tokens';
       sass: '$fill-twitter',
       css: '.fill-twitter',
     },
+  }}
+/>
+
+## UniformColor
+
+The [UniformColor](/api/design-tokens-colors-uniformcolor--overview) component displays the color as a table row, with color block, color name and rgb value.
+
+Design inspired from [Uniform](http://uniform.hudl.com/guidelines/colors/brand/design).
+
+```
+import { UniformColorPalette } from '@component-controls/design-tokens';
+
+<UniformColorPalette
+  palette={{
+    Primary: '#107CB2',
+    PrimaryLight: '#b7d8e8',
+    Alert: '#D8400F',
+    AlertLight: '#f3c6b7',
+    Weather: '#990099',
+  }}
+/>
+```
+
+<UniformColorPalette
+  palette={{
+    Primary: '#107CB2',
+    PrimaryLight: '#b7d8e8',
+    Alert: '#D8400F',
+    AlertLight: '#f3c6b7',
+    Weather: '#990099',
   }}
 />
