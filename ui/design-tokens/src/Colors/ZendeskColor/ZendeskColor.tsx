@@ -8,7 +8,7 @@ import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a small block with the color name and hex value.
- * Design inspired from [Zendesk Garden](https://zendeskgarden.github.io/react-components/theming/#!/PALETTE).
+ * Design inspired by [Zendesk Garden](https://zendeskgarden.github.io/react-components/theming/#!/PALETTE).
  */
 export const ZendeskColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

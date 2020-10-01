@@ -8,7 +8,7 @@ import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block, as well as hex(string) and rgb values.
- * Inspired from [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
+ * inspired by [Alta UI](https://www.oracle.com/webfolder/ux/middleware/alta_web_icon_guide/Alta-Colors/UI-Palette.html).
  */
 export const AltaColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

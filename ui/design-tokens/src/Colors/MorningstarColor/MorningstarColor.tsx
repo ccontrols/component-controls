@@ -8,7 +8,7 @@ import { TableContainerProps, TableContainer } from '../../components';
 
 /**
  * Color item displaying as a table row, with color, name, sass variable name and hex value.
- * Design inspired from [Morningstar Design System](https://designsystem.morningstar.com/visual-language/color/?version=3.0.4&tab=backgrounds).
+ * Design inspired by [Morningstar Design System](https://designsystem.morningstar.com/visual-language/color/?version=3.0.4&tab=backgrounds).
  */
 
 export const MorningstarColor: FC<ColorBlockProps> = props => (

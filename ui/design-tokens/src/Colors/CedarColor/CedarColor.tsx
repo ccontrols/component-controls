@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name, description and hex value
- * Design inspired from REI's [Cedar](https://rei.github.io/rei-cedar-docs/foundation/color/).
+ * Design inspired by REI's [Cedar](https://rei.github.io/rei-cedar-docs/foundation/color/).
  */
 
 export const CedarColor: FC<ColorBlockProps & { index?: number }> = ({

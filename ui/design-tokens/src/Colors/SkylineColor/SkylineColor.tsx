@@ -11,7 +11,7 @@ import { TableContainerProps, TableContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color name, custom columns for contrast checks scss variable name and color block.
- * Design inspired from [Skyline](https://skyline.benevity.org/design-language/color/#hues).
+ * Design inspired by [Skyline](https://skyline.benevity.org/design-language/color/#hues).
  */
 
 export const SkylineColor: FC<ColorBlockProps> = props => (

@@ -50,7 +50,7 @@ const ContrastTest: FC<{
 };
 /**
  * Color item displaying the color as a block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
- * Design inspired from [Bolt](https://boltdesignsystem.com/pattern-lab/?p=visual-styles-color-system).
+ * Design inspired by [Bolt](https://boltdesignsystem.com/pattern-lab/?p=visual-styles-color-system).
  */
 export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

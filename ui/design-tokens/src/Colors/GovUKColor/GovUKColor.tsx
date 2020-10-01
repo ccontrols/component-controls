@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a row with a color circle and the sass var name and hex color.
- * Design inspired from [GOV.UK Design System](https://design-system.service.gov.uk/styles/colour/).
+ * Design inspired by [GOV.UK Design System](https://design-system.service.gov.uk/styles/colour/).
  */
 
 export const GovUKColor: FC<ColorBlockProps> = ({ name, color }) => {

@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a small block, expanding on hover.
- * Design inspired from [Antd](https://ant.design/docs/spec/colors).
+ * Design inspired by [Antd](https://ant.design/docs/spec/colors).
  */
 
 export const AntdHorzColor: FC<ColorBlockProps> = ({ name, color, hover }) => {

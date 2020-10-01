@@ -20,8 +20,8 @@ import {
 import { TableContainerProps, TableContainer } from '../../components';
 
 /**
- * Color item displaying as a row, with color, name, description, var and sas variables and contrast ratio.
- * Design inspired from [Duet](https://www.duetds.com/tokens/#color).
+ * Color item displaying as a row, with color, name, description, var, and sass variables as well as the contrast ratio ad status.
+ * Design inspired by [Duet](https://www.duetds.com/tokens/#color).
  */
 
 export const DuetColor: FC<ColorBlockProps> = props => (

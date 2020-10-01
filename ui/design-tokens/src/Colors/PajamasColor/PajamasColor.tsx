@@ -8,8 +8,8 @@ import { ColorBlockProps } from '../../types';
 import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
- * Color item displaying the color as a table row, expanding on hover with display of contrast and passing level.
- * Design inspired from GitLab's [Pajamas](https://design.gitlab.com/product-foundations/colors/).
+ * Color item displaying the color as a table row, expanding on hover to display the contrast and passing level.
+ * Design inspired by GitLab's [Pajamas](https://design.gitlab.com/product-foundations/colors/).
  */
 
 export const PajamasColor: FC<ColorBlockProps> = ({ name, color, hover }) => {

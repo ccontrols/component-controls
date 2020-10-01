@@ -9,7 +9,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with a color block, name, hex value and AA/AAA tests for text and backgorund.
- * Design inspired from Firefox's [Photon Design System](https://design.firefox.com/photon/visuals/color.html).
+ * Design inspired by Firefox's [Photon Design System](https://design.firefox.com/photon/visuals/color.html).
  */
 
 export const PhotonColor: FC<ColorBlockProps> = ({ name, color }) => {

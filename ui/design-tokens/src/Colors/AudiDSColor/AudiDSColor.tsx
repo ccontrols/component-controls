@@ -8,8 +8,8 @@ import { ColorBlockProps } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block and color aliases for various standard is Pantone, CMYK.
- * Design inspired from [Audi Design System](https://www.audi.com/ci/en/intro/basics/colours.html).
+ * Color item displaying the color as a color block and the values for RGB, RML, CMYK and Pantone.
+ * Design inspired by [Audi Design System](https://www.audi.com/ci/en/intro/basics/colours.html).
  */
 export const AudiDSColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

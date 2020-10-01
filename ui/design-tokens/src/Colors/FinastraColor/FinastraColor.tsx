@@ -9,7 +9,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a small block, with name and hex color on the side. If the color is a primary color, will display as a circle.
- * Design inspired from [Finastra](https://design.fusionfabric.cloud/foundations/colors).
+ * Design inspired by [Finastra](https://design.fusionfabric.cloud/foundations/colors).
  */
 
 export const FinastraColor: FC<ColorBlockProps> = ({ name, color }) => {

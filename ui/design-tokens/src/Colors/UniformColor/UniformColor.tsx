@@ -8,7 +8,7 @@ import { TableContainerProps, TableContainer } from '../../components';
 
 /**
  * Color item displaying as a table row, with color block, color name and rgb value.
- * Design inspired from [Uniform](http://uniform.hudl.com/guidelines/colors/brand/design).
+ * Design inspired by [Uniform](http://uniform.hudl.com/guidelines/colors/brand/design).
  */
 
 export const UniformColor: FC<ColorBlockProps> = props => (

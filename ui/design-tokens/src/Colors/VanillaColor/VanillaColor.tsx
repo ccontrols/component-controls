@@ -7,7 +7,7 @@ import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a color block with sass variable name and hex color value.
- * Design inspired from [Vanilla](https://vanillaframework.io/docs/settings/color-settings).
+ * Design inspired by [Vanilla](https://vanillaframework.io/docs/settings/color-settings).
  */
 export const VanillaColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

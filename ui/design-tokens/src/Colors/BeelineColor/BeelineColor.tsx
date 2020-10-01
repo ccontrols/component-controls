@@ -9,7 +9,7 @@ import { GridContainerProps, GridContainer } from '../../components';
 
 /**
  * Color item displaying the color as a block with values for rgb and Pantone colors.
- * Design inspired from [Beeline Design System](http://beelinedesignsystem.com/color-palette/).
+ * Design inspired by [Beeline Design System](http://beelinedesignsystem.com/color-palette/).
  */
 export const BeelineColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

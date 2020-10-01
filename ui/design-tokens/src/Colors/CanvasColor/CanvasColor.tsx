@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name, sass variable name and hex value
- * Design inspired from [Canvas Design System](https://canvas.hubspot.com/styles/colors).
+ * Design inspired by [Canvas Design System](https://canvas.hubspot.com/styles/colors).
  */
 
 export const CanvasColor: FC<ColorBlockProps> = ({ name, color }) => {

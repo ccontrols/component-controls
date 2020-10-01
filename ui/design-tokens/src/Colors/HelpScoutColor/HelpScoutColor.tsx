@@ -7,8 +7,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
- * Color item displaying the color as a row, expanding on hover. Separate visualization (header) for primary color.
- * Design inspired from [HelpScout](https://style.helpscout.com/visual-elements/#color).
+ * Color item displaying the color as a row, expanding on hover. Separate visualization (header) for the primary color.
+ * Design inspired by [HelpScout](https://style.helpscout.com/visual-elements/#color).
  */
 
 export const HelpScoutColor: FC<ColorBlockProps> = ({ name, color }) => {

@@ -7,8 +7,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a cirlce with the hev value and variable name below.
- * Design inspired from [Seek OSS](https://seek-oss.github.io/seek-style-guide/palette).
+ * Color item displaying the color as a circle with the HEX value and variable name below.
+ * Design inspired by [Seek OSS](https://seek-oss.github.io/seek-style-guide/palette).
  */
 export const SeekColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

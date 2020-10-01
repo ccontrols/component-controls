@@ -39,8 +39,8 @@ const CopyItem: FC<{ name: string; value?: string }> = ({ name, value }) => {
   ) : null;
 };
 /**
- * Color item displaying the color as a block with values for hex, class and sass can be copied to clipboard on hover.
- * Design inspired from [E-Trade Design System](https://docs.etrade.design/colors).
+ * Color item displaying the color as a block with values for hex, class, and sass can be copied to clipboard on hover.
+ * Design inspired by [E-Trade Design System](https://docs.etrade.design/colors).
  */
 export const ETradeColor: FC<ColorBlockProps> = ({ name, color }) => {
   const [hover, setHover] = useState(false);

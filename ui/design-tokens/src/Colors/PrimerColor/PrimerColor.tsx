@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a row, with sass variable name. Separate visualization (header) for primary color.
- * Design inspired from GitHub's [Primer](https://styleguide.github.com/primer/support/color-system/).
+ * Design inspired by GitHub's [Primer](https://styleguide.github.com/primer/support/color-system/).
  */
 
 export const PrimerColor: FC<ColorBlockProps> = ({ name, color }) => {

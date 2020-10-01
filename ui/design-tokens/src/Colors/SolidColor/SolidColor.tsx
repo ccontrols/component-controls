@@ -7,8 +7,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block. The css class, hex value and sass name are placed above the color block.
- * Design inspired from [Solid](https://solid.buzzfeed.com/colors.html).
+ * Color item displaying the color as a block. The CSS class, HEX value, and SASS name are placed above the color block.
+ * Design inspired by [Solid](https://solid.buzzfeed.com/colors.html).
  */
 export const SolidColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

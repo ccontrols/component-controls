@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying the color as a row with the sass var name and hex color.
- * Design inspired from Blooomberg BNA's [FishTank](https://fishtank.bna.com/colors).
+ * Design inspired by Blooomberg BNA's [FishTank](https://fishtank.bna.com/colors).
  */
 
 export const FishTankColor: FC<ColorBlockProps> = ({ name, color }) => {

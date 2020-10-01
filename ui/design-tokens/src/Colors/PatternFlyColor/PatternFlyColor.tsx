@@ -7,8 +7,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
- * Color item displaying the color as a row with a color circle with css var name and on click popup.
- * Design inspired from [PatternFly](https://www.patternfly.org/v4/guidelines/colors/).
+ * Color item displaying the color as a row with a color circle with CSS var name and on click popup.
+ * Design inspired by [PatternFly](https://www.patternfly.org/v4/guidelines/colors/).
  */
 
 export const PatternFlyColor: FC<ColorBlockProps> = ({ name, color }) => {

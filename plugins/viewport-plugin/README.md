@@ -19,7 +19,7 @@
 
 # Overview
 
-Inspired from the [playroom](https://github.com/seek-oss/playroom) project, this addon contains a `ViewportBlock` that you can integrate into any page, as well as a standalone `ViewportPage`
+inspired by the [playroom](https://github.com/seek-oss/playroom) project, this addon contains a `ViewportBlock` that you can integrate into any page, as well as a standalone `ViewportPage`
 
 # Getting Started
 

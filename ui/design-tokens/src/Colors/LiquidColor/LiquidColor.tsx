@@ -8,8 +8,8 @@ import { ColorBlockProps } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block with values for rgb and a palette of lighter and darker colors.
- * Design inspired from [Liquid Design System](https://liquid.emd.design/fundamentals/color/).
+ * Color item displaying the color as a block with the RGB value and a palette of lighter and darker colors.
+ * Design inspired by [Liquid Design System](https://liquid.emd.design/fundamentals/color/).
  */
 export const LiquidColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

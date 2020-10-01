@@ -9,7 +9,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name sass variable name and AA/AAA tests
- * Design inspired from [Comet](https://comet.discoveryeducation.com/visual-language/color.html).
+ * Design inspired by [Comet](https://comet.discoveryeducation.com/visual-language/color.html).
  */
 
 export const CometColor: FC<ColorBlockProps> = ({ name, color }) => {

@@ -20,8 +20,8 @@ export type ColorDisplay = ColorDisplayTuple[number];
 
 export type IBMDLColorProps = ColorBlockProps & { display: ColorDisplay };
 /**
- * Color item displaying the color as a row with the color name and display option of hex, rgb, pms or cmyk color display.
- * Design inspired from IBM's [Design Language](https://www.ibm.com/design/language/color).
+ * Color item displaying the color as a row with the color name and display option of HEX, RGB, PMS, or CMYK color values.
+ * Design inspired by IBM's [Design Language](https://www.ibm.com/design/language/color).
  */
 
 export const IBMDLColor: FC<IBMDLColorProps> = ({

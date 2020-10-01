@@ -14,8 +14,8 @@ export type LightningColorProps = {
   columns?: TableColumn[];
 } & ColorBlockProps;
 /**
- * Color item displaying as a row, with color, name, description, var and sas variables and contrast ratio. allows for custom columns.
- * Design inspired from Oracle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
+ * Color item displaying as a table row, with color, name, description, and allows for custom columns.
+ * Design inspired by Oracle's [Lightning Design System](https://www.lightningdesignsystem.com/design-tokens/#category-color).
  */
 
 export const LightningColor: FC<LightningColorProps> = props => (

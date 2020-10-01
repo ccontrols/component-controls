@@ -8,7 +8,7 @@ import { FlexContainerProps, FlexContainer } from '../../components';
 
 /**
  * Color item displaying as a row, with color, name and hex value
- * Design inspired from [BaseWeb](https://baseweb.design/components/tokens/).
+ * Design inspired by [BaseWeb](https://baseweb.design/components/tokens/).
  */
 
 export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {

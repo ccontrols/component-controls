@@ -44,7 +44,7 @@ const ContrastTest: FC<{
 };
 /**
  * Color item displaying the color as a block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
- * Design inspired from [Atlassian Design System](https://atlassian.design/foundations/color).
+ * Design inspired by [Atlassian Design System](https://atlassian.design/foundations/color).
  */
 export const AtlassianColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;

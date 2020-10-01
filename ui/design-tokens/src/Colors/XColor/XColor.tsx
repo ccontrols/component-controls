@@ -8,8 +8,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a cirlce with the variable name, hev, rgb, cmyk and pantone values below.
- * Design inspired from Biteable's Design System [X](https://x.biteable.com/brand/).
+ * Color item displaying the color as a circle with the variable name, HEX, RGB, CMYK, and PANTONE values below.
+ * Design inspired by Biteable's Design System [X](https://x.biteable.com/brand/).
  */
 export const XColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

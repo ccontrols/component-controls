@@ -8,9 +8,9 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block and color aliases for various standard is Pantone, CMYK.
+ * Color item displaying the color as a color block and the values for RGB, CMYK and Pantone.
  * If specified, will display the dark color as a bottom-right side triangle.
- * Design inspired from [Backpack](https://backpack.github.io/guidelines/colors).
+ * Design inspired by [Backpack](https://backpack.github.io/guidelines/colors).
  */
 export const BackpackColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorObj: ColorValue =

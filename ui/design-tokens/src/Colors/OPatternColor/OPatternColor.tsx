@@ -8,8 +8,8 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import { TableContainerProps, TableContainer } from '../../components';
 
 /**
- * Color item displaying as a table row, with color block, sass name, andhex, rgb and cmyk color values.
- * Design inspired from [OPattern](https://ux.opower.com/opattern/color.html).
+ * Color item displaying as a table row, with color block, sass name, and hex, RGB, and CMYK color values.
+ * Design inspired by [OPattern](https://ux.opower.com/opattern/color.html).
  */
 
 export const OPatternColor: FC<ColorBlockProps> = props => (

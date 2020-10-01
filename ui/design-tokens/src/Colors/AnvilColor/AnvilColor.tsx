@@ -7,8 +7,8 @@ import { ColorBlockProps } from '../../types';
 import { GridContainerProps, GridContainer } from '../../components';
 
 /**
- * Color item displaying the color as a block with a title, as well as hex(string) and rgb values.
- * Design inspired from [Anvil](https://anvil.servicetitan.com/foundations/color/).
+ * Color item displaying the color as a color block with a dot suggesting the best text color and a block of text with the color title, name, and value.
+ * Design inspired by [Anvil](https://anvil.servicetitan.com/foundations/color/).
  */
 export const AnvilColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
