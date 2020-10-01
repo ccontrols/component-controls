@@ -4614,7 +4614,13 @@ exports[`Components/Source Theme Selector 1`] = `
         </div>
         <div
           class="css-1pb42xx"
-        />
+        >
+          <button
+            class="css-1b2uwqj"
+          >
+            dracula
+          </button>
+        </div>
       </div>
     </div>
     <div
