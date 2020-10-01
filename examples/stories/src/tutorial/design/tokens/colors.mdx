@@ -42,6 +42,7 @@ import {
   SeedsColorPalette,
   SeekColorPalette,
   SkylineColorPalette,
+  SolidColorPalette,
 } from '@component-controls/design-tokens';
 
 # Overview
@@ -1660,6 +1661,73 @@ import { SkylineColorPalette } from '@component-controls/design-tokens';
     'Gray 700': {
       value: '#616161',
       scss: 'get-gray(700)',
+    },
+  }}
+/>
+
+
+## SolidColor
+
+The [SolidColor](/api/design-tokens-colors-solidcolor--overview) component displays the color as a block. The css class, hex value and sass name are placed above the color block.
+
+Design inspired from [Solid](https://solid.buzzfeed.com/colors.html).
+
+```
+import { SolidColorPalette } from '@component-controls/design-tokens';
+
+<SolidColorPalette
+  palette={{
+    fillRed: { value: '#ee3322', sass: '$fill-red', css: '.fill-red' },
+    fillRedLighter: {
+      value: '#feebe9',
+      sass: '$fill-red-lighter',
+      css: '.fill-red-lighter',
+    },
+    fillPink: { value: '#e40c78', sass: '$fill-pink', css: '.fill-pink' },
+    fillBlue: { value: '#0f65ef', sass: '$fill-blue', css: '.fill-blue' },
+    fillPurple: {
+      value: '#6645dd',
+      sass: '$fill-purple',
+      css: '.fill-purple',
+    },
+    fillYellow: {
+      value: '#ffee00',
+      sass: ' $fill-yellow',
+      css: '.fill-promoted-orange',
+    },
+    fillTwitter: {
+      value: '#55acee',
+      sass: '$fill-twitter',
+      css: '.fill-twitter',
+    },
+  }}
+/>
+```
+
+<SolidColorPalette
+  palette={{
+    fillRed: { value: '#ee3322', sass: '$fill-red', css: '.fill-red' },
+    fillRedLighter: {
+      value: '#feebe9',
+      sass: '$fill-red-lighter',
+      css: '.fill-red-lighter',
+    },
+    fillPink: { value: '#e40c78', sass: '$fill-pink', css: '.fill-pink' },
+    fillBlue: { value: '#0f65ef', sass: '$fill-blue', css: '.fill-blue' },
+    fillPurple: {
+      value: '#6645dd',
+      sass: '$fill-purple',
+      css: '.fill-purple',
+    },
+    fillYellow: {
+      value: '#ffee00',
+      sass: ' $fill-yellow',
+      css: '.fill-promoted-orange',
+    },
+    fillTwitter: {
+      value: '#55acee',
+      sass: '$fill-twitter',
+      css: '.fill-twitter',
     },
   }}
 />

@@ -29,3 +29,4 @@ export * from './PrimerColor';
 export * from './SeedsColor';
 export * from './SeekColor';
 export * from './SkylineColor';
+export * from './SolidColor';
