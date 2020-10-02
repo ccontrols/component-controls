@@ -209,7 +209,7 @@ export interface MDXOptions {
   transformMDX?: boolean;
 
   /**
-   * generate storybok required fake exports for MDX compatibility
+   * generate storybook required fake exports for MDX compatibility
    */
   storybookExports?: boolean;
   /**

@@ -45,10 +45,10 @@ Parsing a source file will generate the following information:
 -   Source code of the entire stories file
 -   List of all attributes(ie parameters) passed to ESM/MDX stories
 -   List of story function arguments passed to ESM/MDX stories
--   Usage location (in thesource code) of the function arguments
--   Extract 'component' information for stories: import clause, source file,source loction
+-   Usage location (in the source code) of the function arguments
+-   Extract 'component' information for stories: import clause, source file, source location
 -   Extract package.json repository information for the stories file
--   Extract package.json repository information for the components file (in canse the components and the stories and in different packages)
+-   Extract package.json repository information for the components file (when the components and the stories and in different packages)
 
 # Installation
 

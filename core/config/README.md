@@ -3,7 +3,7 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [ConfigrationResult](#configrationresult)
+    -   [ConfigurationResult](#configurationresult)
     -   [RequireContextProps](#requirecontextprops)
     -   [buildConfigFileNames](#buildconfigfilenames)
     -   [optionsFileNames](#optionsfilenames)
@@ -15,7 +15,7 @@
 
 # Overview
 
-Configration file utilities. Uses the [glob](https://www.npmjs.com/package/glob) package to locate story files from the configuration
+Configuration file utilities. Uses the [glob](https://www.npmjs.com/package/glob) package to locate story files from the configuration
 
 # Installation
 
@@ -31,7 +31,7 @@ $ npm install @component-controls/config --save-dev
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
-## ConfigrationResult
+## ConfigurationResult
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L26)_
 
@@ -119,7 +119,7 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 ## getConfigurationArg
 
-return the configration folder from command-line parameters
+return the configuration folder from command-line parameters
 command line accepts -c/ -config parameter for config path
 the config file is assumed named main.js/main.ts
 
@@ -140,15 +140,15 @@ _defined in [@component-controls/config/src/index.ts](https://github.com/ccontro
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L58)_
 
-**function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigrationResult](#configrationresult) | undefined;
+**function** loadConfiguration(`baseFolder`\*: string, `configFolder`: string, `args`: string\[]): [ConfigurationResult](#configurationresult) | undefined;
 
 ### parameters
 
-| Name           | Type                                                   | Description                                    |
-| -------------- | ------------------------------------------------------ | ---------------------------------------------- |
-| `baseFolder*`  | string                                                 | project folder to start the search with        |
-| `configFolder` | string                                                 | folder where the configuration file is located |
-| `args`         | string\[]                                              | optional arguments                             |
-| `returns`      | [ConfigrationResult](#configrationresult) \| undefined |                                                |
+| Name           | Type                                                     | Description                                    |
+| -------------- | -------------------------------------------------------- | ---------------------------------------------- |
+| `baseFolder*`  | string                                                   | project folder to start the search with        |
+| `configFolder` | string                                                   | folder where the configuration file is located |
+| `args`         | string\[]                                                | optional arguments                             |
+| `returns`      | [ConfigurationResult](#configurationresult) \| undefined |                                                |
 
 <!-- END-TSDOC-TYPESCRIPT -->

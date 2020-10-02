@@ -15,7 +15,7 @@ import {
 
 import {
   loadConfiguration,
-  ConfigrationResult,
+  ConfigurationResult,
 } from '@component-controls/config';
 
 export interface LoadingStore {
@@ -123,7 +123,7 @@ export const getSerializedStore = async (): Promise<string> => {
   return JSON.stringify(store);
 };
 
-export let config: ConfigrationResult | undefined;
+export let config: ConfigurationResult | undefined;
 
 export const initializeBuildOptions = (
   rootPath: string,

@@ -23,13 +23,13 @@ export const optionsFileNames = [
   'options.ts',
   'options.tsx',
 ];
-export interface ConfigrationResult {
+export interface ConfigurationResult {
   config: BuildConfiguration;
   configPath: string;
   optionsFilePath?: string;
 }
 /**
- * return the configration folder from command-line parameters
+ * return the configuration folder from command-line parameters
  * command line accepts -c/ -config parameter for config path
  * the config file is assumed named main.js/main.ts
  * @param baseFolder project folder to start the search with
@@ -59,7 +59,7 @@ export const loadConfiguration = (
   baseFolder: string,
   configFolder?: string,
   args?: string[],
-): ConfigrationResult | undefined => {
+): ConfigurationResult | undefined => {
   const folder = configFolder ?? getConfigurationArg(args);
   const configPath = folder ? path.resolve(baseFolder, folder) : baseFolder;
   const hasConfigFolder = fs.existsSync(configPath);
@@ -103,7 +103,7 @@ const fixGlob = (golbExpr: string): string => golbExpr.replace('.(', '.@(');
 export const extractDocuments = ({
   config,
   configPath,
-}: ConfigrationResult): string[] | undefined => {
+}: ConfigurationResult): string[] | undefined => {
   const stories = config ? config.stories || config.files : undefined;
   const files = typeof stories === 'string' ? [stories] : stories;
   const documents = files
@@ -137,7 +137,7 @@ export interface RequireContextProps {
 export const configRequireContext = ({
   config,
   configPath,
-}: ConfigrationResult): RequireContextProps[] | undefined => {
+}: ConfigurationResult): RequireContextProps[] | undefined => {
   const stories = config ? config.stories || config.files : undefined;
   const files = typeof stories === 'string' ? [stories] : stories;
 

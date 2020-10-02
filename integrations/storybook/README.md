@@ -73,7 +73,7 @@ _defined in [@component-controls/storybook/src/types.ts](https://github.com/ccon
 
 ## Storybook addon panels
 
-The `component-controls` block components ahev been designed from the ground up to be able to be placed either on documentation pages or in addon tabs. 
+The `component-controls` block components have been designed from the ground up to be able to be placed either on documentation pages or in addon tabs. 
 
 You can turn on and off the available panels:
 

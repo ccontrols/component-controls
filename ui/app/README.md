@@ -27,7 +27,7 @@
 
 # Overview
 
-Components to create `@component-controls` standalone application, that are connected to the store of documents.
+Components to create `@component-controls` standalone application, that is connected to the store of documents.
 
 Some of the design goals:
 

@@ -5,7 +5,7 @@
 
 # Overview
 
-Utility functions and hooks to abstract loading and using the documentation store. Can also share the store accross bundles using localStorage and broadcastig messages.
+Utility functions and hooks to abstract loading and using the store. Can also share the store across bundles using localStorage and broadcasting messages.
 
 [Store reference documentation](https://component-controls.com/tutorial/reference/store)
 

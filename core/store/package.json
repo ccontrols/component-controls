@@ -1,7 +1,7 @@
 {
   "name": "@component-controls/store",
   "version": "1.26.0",
-  "description": "Component controls shared storage store",
+  "description": "Component controls shared store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",

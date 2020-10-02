@@ -44,7 +44,7 @@ Some of the guiding design goals for this library:
     -   that display story data (i.e. story source, story render)
     -   that display component(s) data (i.e. prop tables, component sources)
 -   Components accept a list of custom ActionItems to be extended. 
--   Compnents that deal with source code (story or component source) display actions to browse their respective repositories.
+-   Components that deal with source code (story or component source) display actions to browse their respective repositories.
 
 # List of components
 
