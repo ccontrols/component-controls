@@ -24,37 +24,37 @@ Before starting, take a look at our blog post [gatsby vs nextjs vs storybook](ht
 
 We believe in the practice of dogfooding, thus we have created the full documentation sites for component-controls using - well, component-controls. Everything from blog posts, tutorials, author profiles to auto-generated component documentation, and testing pages.
 
--   [built with gatsby](https://component-controls.com/) / [source](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby)
+-   [built with gatsby](https://component-controls.com/) - [source](https://github.com/ccontrols/component-controls/tree/master/examples/gatsby)
 
--   [built with nextjs](https://nextjs.component-controls.com/) / [source](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs)
+-   [built with nextjs](https://nextjs.component-controls.com/) - [source](https://github.com/ccontrols/component-controls/tree/master/examples/nextjs)
 
--   [built with storybook 6 without addon-docs](https://storybook.component-controls.com) / [source](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6-no-docs)
+-   [built with storybook 6 without addon-docs](https://storybook.component-controls.com) - [source](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6-no-docs)
 
--   [built with storybook 6](https://components-storybook-6.netlify.app/) / [source](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6)
+-   [built with storybook 6](https://components-storybook-6.netlify.app/) - [source](https://github.com/ccontrols/component-controls/tree/master/examples/storybook-6)
 
 ## 2. grommet-controls
 
 This site shows how to create documentation for a custom react UI component library
 
-[grommet-controls](https://grommet-controls.netlify.app) / [source](https://github.com/atanasster/grommet-controls)
+[grommet-controls](https://grommet-controls.netlify.app) - [source](https://github.com/atanasster/grommet-controls)
 
 ## 3. theme-ui design system
 
 This site showcases creating documentation sites for [third-party libraries](https://component-controls.com/tutorial/getting-started/external-libraries), that are installed in the `node_modules` folder of your project
 
-[theme-ui design system](https://theme-ui-design-system.netlify.app) / [source](https://github.com/atanasster/theme-ui-design-system)
+[theme-ui design system](https://theme-ui-design-system.netlify.app) - [source](https://github.com/atanasster/theme-ui-design-system)
 
 ## 4. starter projects
 
 A collection of simple starter projects, showcasing how to create an MDX pure documentation page, and MDX custom documentation page with a component interactive `story` and an ESM javascript page that automatically creates component documentation.
 
-[built with gatsby](https://gatsby-controls-starter.netlify.app) / [source](https://github.com/atanasster/gatsby-controls-starter)
+[built with gatsby](https://gatsby-controls-starter.netlify.app) - [source](https://github.com/atanasster/gatsby-controls-starter)
 
-[built with nextjs](https://nextjs-controls-starter.netlify.app) / [source](https://github.com/atanasster/nextjs-controls-starter)
+[built with nextjs](https://nextjs-controls-starter.netlify.app) - [source](https://github.com/atanasster/nextjs-controls-starter)
 
-[built with storybook 5](https://storybook-5-controls-starter.netlify.app/?path=/story/first-page--page) / [source](https://github.com/atanasster/storybook-5-controls-starter)
+[built with storybook 5](https://storybook-5-controls-starter.netlify.app/?path=/story/first-page--page) - [source](https://github.com/atanasster/storybook-5-controls-starter)
 
-[built with storybook 6](https://storybook-6-controls-starter.netlify.app) / [source](https://github.com/atanasster/storybook-6-controls-starter)
+[built with storybook 6](https://storybook-6-controls-starter.netlify.app) - [source](https://github.com/atanasster/storybook-6-controls-starter)
 
 # Motivation
 
