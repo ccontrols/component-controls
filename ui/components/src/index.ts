@@ -9,6 +9,7 @@ export * from './Header';
 export * from './HoverBox';
 export * from './Keyboard';
 export * from './Link';
+export * from './LinkHeading';
 export * from './Markdown';
 export * from './Multiselect';
 export * from './Navmenu';
