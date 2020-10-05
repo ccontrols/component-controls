@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/ccontrols/component-controls/compare/v1.26.0...v1.27.0) (2020-10-05)
+
+
+### Features
+
+* clean up color tokens and add table color ([8e72fb6](https://github.com/ccontrols/component-controls/commit/8e72fb6594f329c92bcad2baebd36c77264ca139))
+
+
+
+
+
 # [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
 
 **Note:** Version bump only for package @component-controls/app
