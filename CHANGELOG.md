@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.1](https://github.com/ccontrols/component-controls/compare/v1.27.0...v1.27.1) (2020-10-05)
+
+
+### Bug Fixes
+
+* adjust column sizes for table color ([1f044fa](https://github.com/ccontrols/component-controls/commit/1f044fae81c96a0afb5ce6f59670624bf5e9d29e))
+* export LinkedHeader cimponent ([720ea4d](https://github.com/ccontrols/component-controls/commit/720ea4d624092b376f8146107c7084f228f44222))
+
+
+
+
+
 # [1.27.0](https://github.com/ccontrols/component-controls/compare/v1.26.0...v1.27.0) (2020-10-05)
 
 
