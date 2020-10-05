@@ -8,6 +8,14 @@ export const NextLink: FC<LinkProps & { to?: string }> = ({
   children,
   ...props
 }) => {
+  if (href.startsWith('#')) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  }
+
   const urlparts = href.split('/');
   const isHomePage =
     urlparts.length === 2 && urlparts[0] === '' && urlparts[1] === '';
