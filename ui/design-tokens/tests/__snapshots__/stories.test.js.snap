@@ -15249,7 +15249,7 @@ exports[`Design Tokens/Colors/TableColor Overview 1`] = `
 exports[`Design Tokens/Colors/TableColor Palette 1`] = `
 <DocumentFragment>
   <table
-    class="css-9cfpcu"
+    class="css-wcvumq"
   >
     <colgroup>
       <col
@@ -15265,7 +15265,7 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
     <thead>
       <tr>
         <th
-          class="css-1s256tj"
+          class="css-5jq4lk"
         />
         <th
           class="css-1boibbe"
@@ -15279,7 +15279,7 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
       </tr>
       <tr>
         <th
-          class="css-1s256tj"
+          class="css-5jq4lk"
         >
           color
         </th>
@@ -15757,7 +15757,7 @@ exports[`Design Tokens/Colors/TableColor Palette 1`] = `
 exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
 <DocumentFragment>
   <table
-    class="css-9cfpcu"
+    class="css-wcvumq"
   >
     <colgroup>
       <col
@@ -15776,7 +15776,7 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
     <thead>
       <tr>
         <th
-          class="css-6klw4b"
+          class="css-1en8t82"
         />
         <th
           class="css-1boibbe"
@@ -15796,7 +15796,7 @@ exports[`Design Tokens/Colors/TableColor Palette Dark 1`] = `
       </tr>
       <tr>
         <th
-          class="css-6klw4b"
+          class="css-1en8t82"
         >
           color / dark
         </th>
