@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.2](https://github.com/ccontrols/component-controls/compare/v1.27.1...v1.27.2) (2020-10-05)
+
+
+### Bug Fixes
+
+* nextjs link on same page ([c209272](https://github.com/ccontrols/component-controls/commit/c209272829a842c07c358b907d504d52c2f8ad01))
+
+
+
+
+
 ## [1.27.1](https://github.com/ccontrols/component-controls/compare/v1.27.0...v1.27.1) (2020-10-05)
 
 
