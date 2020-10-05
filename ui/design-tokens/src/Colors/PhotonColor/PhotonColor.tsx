@@ -4,47 +4,49 @@ import { jsx, Theme } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable, contrastGrade } from '../utils';
-import { ColorBlockProps, ColorValue } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import {
+  ColorBlockProps,
+  ColorValue,
+  defaultBlackTextColor,
+  defaultWhiteTextColor,
+  ThemeColorProps,
+} from '../../types';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a row, with a color block, name, hex value and AA/AAA tests for text and backgorund.
  * Design inspired by Firefox's [Photon Design System](https://design.firefox.com/photon/visuals/color.html).
  */
+export const PhotonColor: FC<ColorBlockProps> = props => (
+  <TableRowContainer>
+    <BasePhotonColor {...props} />
+  </TableRowContainer>
+);
 
-export const PhotonColor: FC<ColorBlockProps> = ({ name, color }) => {
+const BasePhotonColor: FC<ColorBlockProps> = ({
+  name,
+  color,
+  blackTextColor = defaultBlackTextColor,
+  whiteTextColor = defaultWhiteTextColor,
+}) => {
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color, name } : color;
   const { value: colorValue, name: colorName = name } = colorObj;
 
   const { hex } = colorToStr(colorValue);
-  const textColor = mostReadable(hex);
-  const contrast = tinycolor.readability(hex, textColor);
+  const contrastColor = mostReadable(hex);
+  const contrast = tinycolor.readability(hex, blackTextColor);
   const grade = contrastGrade(contrast);
-  const contrastText = tinycolor.readability('#ffffff', hex);
+  const contrastText = tinycolor.readability(whiteTextColor, hex);
   const gradeText = contrastGrade(contrastText);
 
   return (
-    <div
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        flex: 1,
-        py: 1,
-        bg: 'background',
-        fontSize: 1,
-        border: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
-      }}
-    >
-      <div
-        sx={{
-          px: 2,
-          width: '40%',
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'row',
-        }}
-      >
+    <tr>
+      <td>
         <CopyContainer
           value={hex}
           name={name}
@@ -54,22 +56,14 @@ export const PhotonColor: FC<ColorBlockProps> = ({ name, color }) => {
             sx={{
               height: 35,
               width: 35,
-              alignItems: 'center',
-              px: 3,
               bg: colorValue,
-              color: textColor,
+              mr: 2,
             }}
           />
-          <div
-            sx={{
-              ml: 2,
-            }}
-          >
-            {colorName}
-          </div>
+          <div>{colorName}</div>
         </CopyContainer>
-      </div>
-      <div sx={{ p: 2, width: '30%', display: 'flex' }}>
+      </td>
+      <td>
         <CopyContainer value={hex} name={name}>
           <code
             sx={{
@@ -81,29 +75,69 @@ export const PhotonColor: FC<ColorBlockProps> = ({ name, color }) => {
             {hex}
           </code>
         </CopyContainer>
-      </div>
-      <div sx={{ p: 2, width: '15%', display: 'flex' }}>
-        <div sx={{ bg: hex, color: textColor, px: 1 }}>{grade}</div>
-      </div>
-      <div sx={{ p: 2, width: '15%', display: 'flex' }}>
-        <div sx={{ bg: 'white', color: hex, px: 1 }}>{gradeText}</div>
-      </div>
-    </div>
+      </td>
+      <td>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <div sx={{ bg: hex, color: contrastColor, px: 1 }}>{grade}</div>
+        </div>
+      </td>
+      <td>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <div sx={{ bg: 'white', color: hex, px: 1 }}>{gradeText}</div>
+        </div>
+      </td>
+    </tr>
   );
 };
 
 /**
  *
- * palette displayed with CometColor items
+ * palette displayed with PhotonColor items
  * using a css flex display direction column
  */
-export const PhotonColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
-  <FlexContainer direction="column" {...props}>
-    {({ name, value }) => (
-      <PhotonColor key={`color_item_${name}}`} name={name} color={value} />
-    )}
-  </FlexContainer>
-);
+export const PhotonColorPalette: FC<ThemeColorProps &
+  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+  const { blackTextColor, whiteTextColor, ...rest } = props;
+  return (
+    <TableContainer
+      columns={[
+        { title: 'color' },
+        { title: 'name' },
+        { title: 'text' },
+        { title: 'bkg' },
+      ]}
+      header={null}
+      sx={{
+        borderLeft: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
+        borderRight: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
+        '& > tbody > tr > td': {
+          p: 2,
+        },
+        borderTop: 'none',
+      }}
+      {...rest}
+    >
+      {({ name, value }) => (
+        <BasePhotonColor
+          key={`color_item_${name}}`}
+          name={name}
+          color={value}
+          blackTextColor={blackTextColor}
+          whiteTextColor={whiteTextColor}
+        />
+      )}
+    </TableContainer>
+  );
+};

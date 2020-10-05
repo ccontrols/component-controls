@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a circle with the HEX value and variable name below.

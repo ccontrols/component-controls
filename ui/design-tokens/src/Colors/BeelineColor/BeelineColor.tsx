@@ -5,7 +5,7 @@ import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr } from '../utils';
 import { ColorBlockProps } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a block with values for rgb and Pantone colors.

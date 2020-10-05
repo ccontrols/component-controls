@@ -30,6 +30,7 @@ export * from './SeedsColor';
 export * from './SeekColor';
 export * from './SkylineColor';
 export * from './SolidColor';
+export * from './TableColor';
 export * from './UniformColor';
 export * from './VanillaColor';
 export * from './XColor';

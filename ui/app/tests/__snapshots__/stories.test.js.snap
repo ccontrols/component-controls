@@ -4,7 +4,7 @@ exports[`Application/App Overview 1`] = `
 <DocumentFragment>
   <section
     aria-label="skip tab order to linked items"
-    class="css-yx7bo8"
+    class="css-u7r4qj"
   >
     <div
       class="css-vurnku"
@@ -41,7 +41,7 @@ exports[`Application/App Overview 1`] = `
     class="css-18pgspc"
   >
     <header
-      class="css-yf604i"
+      class="css-1hp4xbx"
     >
       <div
         class="css-2qw0qa"
@@ -257,7 +257,7 @@ exports[`Application/AppError Overview 1`] = `
 exports[`Application/CategoryList Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-6ztr4u"
+    class="css-isly2z"
     id="content"
   >
     <div
@@ -337,7 +337,7 @@ exports[`Application/CategoryList Overview 1`] = `
 exports[`Application/CategoryPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-6ztr4u"
+    class="css-isly2z"
     id="content"
   >
     <div
@@ -616,7 +616,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-32qhn2"
+    class="css-11ay4b0"
     id="content"
   >
     <div
@@ -669,7 +669,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-6ztr4u"
+    class="css-isly2z"
     id="content"
   >
     <div
@@ -989,7 +989,7 @@ exports[`Application/Footer Overview 1`] = `
 exports[`Application/Header Custom Left 1`] = `
 <DocumentFragment>
   <header
-    class="css-yf604i"
+    class="css-1hp4xbx"
   >
     <div
       class="css-2qw0qa"
@@ -1160,7 +1160,7 @@ exports[`Application/Header Custom Left 1`] = `
 exports[`Application/Header Custom Right 1`] = `
 <DocumentFragment>
   <header
-    class="css-yf604i"
+    class="css-1hp4xbx"
   >
     <div
       class="css-2qw0qa"
@@ -1335,7 +1335,7 @@ exports[`Application/Header Custom Right 1`] = `
 exports[`Application/Header Customized 1`] = `
 <DocumentFragment>
   <header
-    class="css-yf604i"
+    class="css-1hp4xbx"
   >
     <div
       class="css-2qw0qa"
@@ -1576,7 +1576,7 @@ exports[`Application/Header Customized 1`] = `
 exports[`Application/Header Overview 1`] = `
 <DocumentFragment>
   <header
-    class="css-yf604i"
+    class="css-1hp4xbx"
   >
     <div
       class="css-2qw0qa"
@@ -1738,7 +1738,7 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-atm8gx-Sidebar"
+    class="css-1mz8zpz-Sidebar"
     id="sidebar"
   >
     <div

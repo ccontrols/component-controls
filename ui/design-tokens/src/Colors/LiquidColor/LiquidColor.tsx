@@ -5,7 +5,7 @@ import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a block with the RGB value and a palette of lighter and darker colors.

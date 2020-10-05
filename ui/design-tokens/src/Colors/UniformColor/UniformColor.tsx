@@ -4,7 +4,11 @@ import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { TableContainerProps, TableContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a table row, with color block, color name and rgb value.
@@ -12,11 +16,9 @@ import { TableContainerProps, TableContainer } from '../../components';
  */
 
 export const UniformColor: FC<ColorBlockProps> = props => (
-  <table>
-    <tbody>
-      <BaseUniformColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseUniformColor {...props} />
+  </TableRowContainer>
 );
 
 const BaseUniformColor: FC<ColorBlockProps> = ({ name, color }) => {

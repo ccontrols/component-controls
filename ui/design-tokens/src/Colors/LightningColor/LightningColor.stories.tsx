@@ -2,7 +2,7 @@
 import React from 'react';
 import { ControlTypes } from '@component-controls/core';
 import { LightningColor, LightningColorPalette } from './LightningColor';
-import { TableColumn } from '../../components';
+import { TableColumn } from '../../containers';
 import { ColorProps } from '../../types';
 
 const lightningColumns: TableColumn[] = [

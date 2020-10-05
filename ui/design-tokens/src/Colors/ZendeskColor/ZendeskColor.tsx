@@ -4,7 +4,7 @@ import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr } from '../utils';
 import { ColorBlockProps } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a small block with the color name and hex value.

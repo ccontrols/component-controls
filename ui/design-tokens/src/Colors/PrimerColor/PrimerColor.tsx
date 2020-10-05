@@ -4,10 +4,10 @@ import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 /**
- * Color item displaying the color as a row, with sass variable name. Separate visualization (header) for primary color.
+ * Color item displaying the color as a row, with sass variable name. Separate visualization (header) for the primary color.
  * Design inspired by GitHub's [Primer](https://styleguide.github.com/primer/support/color-system/).
  */
 

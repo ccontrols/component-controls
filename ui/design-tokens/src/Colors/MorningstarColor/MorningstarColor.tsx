@@ -4,7 +4,11 @@ import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { TableContainerProps, TableContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a table row, with color, name, sass variable name and hex value.
@@ -12,11 +16,9 @@ import { TableContainerProps, TableContainer } from '../../components';
  */
 
 export const MorningstarColor: FC<ColorBlockProps> = props => (
-  <table>
-    <tbody>
-      <BaseMorningstarColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseMorningstarColor {...props} />
+  </TableRowContainer>
 );
 
 const BaseMorningstarColor: FC<ColorBlockProps> = ({ name, color }) => {

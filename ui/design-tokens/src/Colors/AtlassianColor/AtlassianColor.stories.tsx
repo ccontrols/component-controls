@@ -13,7 +13,6 @@ export const overview = ({ name, color }: ColorProps) => (
 );
 
 overview.controls = {
-  name: 'Brand',
   color: {
     type: ControlTypes.OBJECT,
     value: {

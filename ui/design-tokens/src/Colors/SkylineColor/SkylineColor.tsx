@@ -7,7 +7,11 @@ import { CheckIcon, XIcon } from '@primer/octicons-react';
 
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
-import { TableContainerProps, TableContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a row, with color name, custom columns for contrast checks scss variable name and color block.
@@ -15,11 +19,9 @@ import { TableContainerProps, TableContainer } from '../../components';
  */
 
 export const SkylineColor: FC<ColorBlockProps> = props => (
-  <table sx={{ width: '100%' }}>
-    <tbody>
-      <BaseSkylineColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseSkylineColor {...props} />
+  </TableRowContainer>
 );
 
 const PassTag: FC<{ contrast: number }> = ({ contrast }) => {

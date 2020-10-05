@@ -5,8 +5,14 @@ import tinycolor from 'tinycolor2';
 import { CircleSlashIcon } from '@primer/octicons-react';
 import copy from 'copy-to-clipboard';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import {
+  ColorBlockProps,
+  ColorValue,
+  colorContrast,
+  defaultWhiteTextColor,
+  ThemeColorProps,
+} from '../../types';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 const CopyItem: FC<{ name: string; value?: string }> = ({ name, value }) => {
   const [hover, setHover] = useState(false);
@@ -42,7 +48,11 @@ const CopyItem: FC<{ name: string; value?: string }> = ({ name, value }) => {
  * Color item displaying the color as a block with values for hex, class, and sass can be copied to clipboard on hover.
  * Design inspired by [E-Trade Design System](https://docs.etrade.design/colors).
  */
-export const ETradeColor: FC<ColorBlockProps> = ({ name, color }) => {
+export const ETradeColor: FC<ColorBlockProps> = ({
+  name,
+  color,
+  blackTextColor = defaultWhiteTextColor,
+}) => {
   const [hover, setHover] = useState(false);
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color } : color;
@@ -55,8 +65,8 @@ export const ETradeColor: FC<ColorBlockProps> = ({ name, color }) => {
   } = colorObj;
 
   const { hex } = colorToStr(colorValue);
-  const textColor = mostReadable(hex);
-  const contrast = tinycolor.readability(hex, '#ffffff');
+  const contrastColor = mostReadable(hex);
+  const contrast = tinycolor.readability(hex, blackTextColor);
   return (
     <div
       sx={{
@@ -72,7 +82,7 @@ export const ETradeColor: FC<ColorBlockProps> = ({ name, color }) => {
         onMouseLeave={() => setHover(false)}
         sx={{
           bg: colorValue,
-          color: textColor,
+          color: contrastColor,
           height: 85,
           position: 'relative',
         }}
@@ -148,13 +158,19 @@ export const ETradeColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with ETradeColor items
  * using a css grid for the dsplay
  */
-export const ETradeColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
-  <GridContainer width={210} gap={2} {...props}>
-    {({ name, value }) => (
-      <ETradeColor key={`color_item_${name}}`} name={name} color={value} />
-    )}
-  </GridContainer>
-);
+export const ETradeColorPalette: FC<ThemeColorProps &
+  Omit<GridContainerProps, 'children'>> = props => {
+  const { blackTextColor, ...rest } = props;
+  return (
+    <GridContainer width={210} gap={2} {...rest}>
+      {({ name, value }) => (
+        <ETradeColor
+          key={`color_item_${name}}`}
+          name={name}
+          color={value}
+          blackTextColor={blackTextColor}
+        />
+      )}
+    </GridContainer>
+  );
+};

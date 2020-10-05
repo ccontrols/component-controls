@@ -1494,7 +1494,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -1508,7 +1508,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -1522,7 +1522,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -1536,7 +1536,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -1550,7 +1550,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -1561,7 +1561,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
         <div
           class="css-1bn1hiw"
         >
-           accent
+          accent
         </div>
       </div>
       <div
@@ -1574,7 +1574,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsl 1`] = `
             HEX
           </div>
           <div>
-            #8c7873
+            #8C7873
           </div>
         </div>
         <div
@@ -1611,7 +1611,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -1625,7 +1625,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -1639,7 +1639,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -1653,7 +1653,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -1667,7 +1667,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -1678,7 +1678,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
         <div
           class="css-1bn1hiw"
         >
-           accent
+          accent
         </div>
       </div>
       <div
@@ -1691,7 +1691,7 @@ exports[`Design Tokens/Colors/AtlassianColor Hsla 1`] = `
             HEX
           </div>
           <div>
-            #8c7873
+            #8C7873
           </div>
         </div>
         <div
@@ -1728,7 +1728,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -1742,7 +1742,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -1756,7 +1756,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -1770,7 +1770,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -1784,7 +1784,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -1795,7 +1795,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
         <div
           class="css-1bn1hiw"
         >
-          brand -  Critical
+          brand - Critical
         </div>
       </div>
       <div
@@ -1808,7 +1808,7 @@ exports[`Design Tokens/Colors/AtlassianColor Name 1`] = `
             HEX
           </div>
           <div>
-            #f94d32
+            #F94D32
           </div>
         </div>
         <div
@@ -1845,7 +1845,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -1859,7 +1859,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -1873,7 +1873,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -1887,7 +1887,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -1901,7 +1901,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -1912,7 +1912,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
         <div
           class="css-1bn1hiw"
         >
-          Blue400 -  Brand
+          Blue400
         </div>
       </div>
       <div
@@ -1925,7 +1925,7 @@ exports[`Design Tokens/Colors/AtlassianColor Overview 1`] = `
             HEX
           </div>
           <div>
-            #2270ee
+            #2270EE
           </div>
         </div>
         <div
@@ -1965,7 +1965,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -1979,7 +1979,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -1993,7 +1993,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2007,7 +2007,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2021,7 +2021,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2032,7 +2032,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            R300 -  Poppy surprise
+            R300 - Poppy surprise
           </div>
         </div>
         <div
@@ -2045,7 +2045,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #ff5630
+              #FF5630
             </div>
           </div>
           <div
@@ -2077,7 +2077,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -2091,7 +2091,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -2105,7 +2105,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2119,7 +2119,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2133,7 +2133,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2144,7 +2144,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            Y300 -  Golden state
+            Y300 - Golden state
           </div>
         </div>
         <div
@@ -2157,7 +2157,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #ffab00
+              #FFAB00
             </div>
           </div>
           <div
@@ -2189,7 +2189,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -2203,7 +2203,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -2217,7 +2217,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2231,7 +2231,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2245,7 +2245,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2256,7 +2256,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            G300 -  Fine pine
+            G300 - Fine pine
           </div>
         </div>
         <div
@@ -2269,7 +2269,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #36b37e
+              #36B37E
             </div>
           </div>
           <div
@@ -2301,7 +2301,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -2315,7 +2315,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -2329,7 +2329,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2343,7 +2343,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2357,7 +2357,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2368,7 +2368,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            T300 -  Tamarama
+            T300 - Tamarama
           </div>
         </div>
         <div
@@ -2381,7 +2381,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #00b8d9
+              #00B8D9
             </div>
           </div>
           <div
@@ -2413,7 +2413,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -2427,7 +2427,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -2441,7 +2441,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2455,7 +2455,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2469,7 +2469,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2480,7 +2480,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            P300 -  Da' juice
+            P300 - Da' juice
           </div>
         </div>
         <div
@@ -2493,7 +2493,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #6554c0
+              #6554C0
             </div>
           </div>
           <div
@@ -2525,7 +2525,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-194fv2b"
+                class="css-1355pu2"
               >
                 A
               </span>
@@ -2539,7 +2539,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1q6mlg0"
+                class="css-1dnuuyj"
               >
                 A
               </span>
@@ -2553,7 +2553,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-1f5ijb5"
+                class="css-1dnync3"
               >
                 A
               </span>
@@ -2567,7 +2567,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               class="css-1doavpt"
             >
               <span
-                class="css-b1sohc"
+                class="css-9uxyyj"
               >
                 A
               </span>
@@ -2581,7 +2581,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
         </div>
       </div>
       <div
-        class="css-1ocpwm6"
+        class="css-13jfq8o"
       >
         <div
           class="css-j7qwjs"
@@ -2592,7 +2592,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
           <div
             class="css-1bn1hiw"
           >
-            Red400 -  Critical
+            Red400 - Critical
           </div>
         </div>
         <div
@@ -2605,7 +2605,7 @@ exports[`Design Tokens/Colors/AtlassianColor Palette 1`] = `
               HEX
             </div>
             <div>
-              #f94d32
+              #F94D32
             </div>
           </div>
           <div
@@ -2643,7 +2643,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -2657,7 +2657,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -2671,7 +2671,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -2685,7 +2685,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -2699,7 +2699,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -2710,7 +2710,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgb 1`] = `
         <div
           class="css-1bn1hiw"
         >
-           text
+          text
         </div>
       </div>
       <div
@@ -2760,7 +2760,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-194fv2b"
+              class="css-1355pu2"
             >
               A
             </span>
@@ -2774,7 +2774,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1q6mlg0"
+              class="css-1dnuuyj"
             >
               A
             </span>
@@ -2788,7 +2788,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-1f5ijb5"
+              class="css-1dnync3"
             >
               A
             </span>
@@ -2802,7 +2802,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
             class="css-1doavpt"
           >
             <span
-              class="css-b1sohc"
+              class="css-9uxyyj"
             >
               A
             </span>
@@ -2816,7 +2816,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
       </div>
     </div>
     <div
-      class="css-1ocpwm6"
+      class="css-13jfq8o"
     >
       <div
         class="css-j7qwjs"
@@ -2827,7 +2827,7 @@ exports[`Design Tokens/Colors/AtlassianColor Rgba 1`] = `
         <div
           class="css-1bn1hiw"
         >
-           shadow
+          shadow
         </div>
       </div>
       <div
@@ -3961,240 +3961,313 @@ exports[`Design Tokens/Colors/BackpackColor Rgba 1`] = `
 
 exports[`Design Tokens/Colors/BaseWebColor Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-13pmxen"
+  <table
+    class="css-hmrsmu"
   >
-    <div
-      class="css-13lqi91"
-    >
-      <div
-        class="css-h9xu0j-CopyContainer"
-      >
-        <div
-          class="css-s4l7ma"
-        />
-      </div>
-      <div
-        class="css-1rr4qq7"
-      >
-        cobalt400
-      </div>
-      <div
-        class="css-1ay9vb9"
-      >
-        #0E1FC1
-      </div>
-    </div>
-  </div>
+    <tbody>
+      <tr>
+        <td
+          class="css-v7v99c"
+        >
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1f2inne-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-hlwklo"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             cobalt400
+          </div>
+        </td>
+        <td
+          class="css-1dqs12s"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #0E1FC1
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/BaseWebColor Palette 1`] = `
 <DocumentFragment>
-  <div
-    class="css-uliqdc"
+  <table
+    class="css-18zazny"
   >
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-184buey"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td
+          class="css-v7v99c"
         >
           <div
-            class="css-4k1yh3"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow50
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #FFFAF0
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1239ytw"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1qsovbo-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-171tzjs"
         >
           <div
-            class="css-wlmzw6"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow100
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #FFF2D9
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-jcyuv6"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-mro3c9"
+          >
+             yellow50
+          </div>
+        </td>
+        <td
+          class="css-1dlj1jv"
         >
           <div
-            class="css-1cm076z"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow200
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #FFE3AC
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1vwthgp"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-mro3c9"
+          >
+            #FFFAF0
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
         >
           <div
-            class="css-ycautb"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow300
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #FFCF70
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-o3xyym"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-u4p24i"
+          >
+            <div
+              class="css-18e5f76-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-66pe1o"
         >
           <div
-            class="css-w3xl7b"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow400
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #FFC043
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-v4r3bg"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-mro3c9"
+          >
+             yellow100
+          </div>
+        </td>
+        <td
+          class="css-1dlmewf"
         >
           <div
-            class="css-ebyres"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow500
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #BC8B2C
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-mqiei2"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-mro3c9"
+          >
+            #FFF2D9
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
         >
           <div
-            class="css-zmdj7b"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          yellow600
-        </div>
-        <div
-          class="css-1ay9vb9"
-        >
-          #997328
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-ovkqnt"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1hakw51-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-1vsj9x3"
         >
           <div
-            class="css-1qnoaad"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
+            class="css-mro3c9"
+          >
+             yellow200
+          </div>
+        </td>
+        <td
+          class="css-rk2gby"
         >
-          yellow700
-        </div>
-        <div
-          class="css-1ay9vb9"
+          <div
+            class="css-mro3c9"
+          >
+            #FFE3AC
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
         >
-          #674D1B
-        </div>
-      </div>
-    </div>
-  </div>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-9r751v-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-8bv4yb"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             yellow300
+          </div>
+        </td>
+        <td
+          class="css-7x6sob"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #FFCF70
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
+        >
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1cexvah-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-ow1ax3"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             yellow400
+          </div>
+        </td>
+        <td
+          class="css-13voh6l"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #FFC043
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
+        >
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-oxbxxn-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-oap87k"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             yellow500
+          </div>
+        </td>
+        <td
+          class="css-1jsniwa"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #BC8B2C
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
+        >
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1r5rwxo-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-fyuibg"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             yellow600
+          </div>
+        </td>
+        <td
+          class="css-1lumyz7"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #997328
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-v7v99c"
+        >
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1ah3lco-CopyContainer"
+            />
+          </div>
+        </td>
+        <td
+          class="css-vuedz4"
+        >
+          <div
+            class="css-mro3c9"
+          >
+             yellow700
+          </div>
+        </td>
+        <td
+          class="css-54q"
+        >
+          <div
+            class="css-mro3c9"
+          >
+            #674D1B
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
@@ -5138,15 +5211,15 @@ exports[`Design Tokens/Colors/BoltColor Overview 1`] = `
               </tr>
               <tr>
                 <td
-                  class="css-16qv2i2"
+                  class="css-1smue61"
                 >
-                  #fff (4.55)
+                  #ffffff (4.55)
                 </td>
                 <td
                   class="css-kv3vgl"
                 >
                   <div
-                    class="css-18rtj9c"
+                    class="css-omoot4"
                   >
                     <div
                       class="css-u4p24i"
@@ -5174,7 +5247,7 @@ exports[`Design Tokens/Colors/BoltColor Overview 1`] = `
                   class="css-kv3vgl"
                 >
                   <div
-                    class="css-18rtj9c"
+                    class="css-omoot4"
                   >
                     <div
                       class="css-u4p24i"
@@ -5201,15 +5274,15 @@ exports[`Design Tokens/Colors/BoltColor Overview 1`] = `
               </tr>
               <tr>
                 <td
-                  class="css-7b7t20"
+                  class="css-5cm1aq"
                 >
-                  #000 (4.62)
+                  #000000 (4.62)
                 </td>
                 <td
                   class="css-kv3vgl"
                 >
                   <div
-                    class="css-18rtj9c"
+                    class="css-omoot4"
                   >
                     <div
                       class="css-u4p24i"
@@ -5237,7 +5310,7 @@ exports[`Design Tokens/Colors/BoltColor Overview 1`] = `
                   class="css-kv3vgl"
                 >
                   <div
-                    class="css-18rtj9c"
+                    class="css-omoot4"
                   >
                     <div
                       class="css-u4p24i"
@@ -5343,15 +5416,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (15.43)
+                    #ffffff (15.43)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5379,7 +5452,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5406,15 +5479,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (1.36)
+                    #000000 (1.36)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5442,7 +5515,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5540,15 +5613,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (3.00)
+                    #ffffff (3.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5576,7 +5649,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5603,15 +5676,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (7.00)
+                    #000000 (7.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5639,7 +5712,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5737,15 +5810,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (3.00)
+                    #ffffff (3.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5773,7 +5846,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5800,15 +5873,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (7.00)
+                    #000000 (7.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5836,7 +5909,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5934,15 +6007,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (1.55)
+                    #ffffff (1.55)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5970,7 +6043,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -5997,15 +6070,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (13.57)
+                    #000000 (13.57)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6033,7 +6106,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6131,15 +6204,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (11.73)
+                    #ffffff (11.73)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6167,7 +6240,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6194,15 +6267,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (1.79)
+                    #000000 (1.79)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6230,7 +6303,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6328,15 +6401,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (3.97)
+                    #ffffff (3.97)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6364,7 +6437,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6391,15 +6464,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (5.29)
+                    #000000 (5.29)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6427,7 +6500,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6525,15 +6598,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (6.95)
+                    #ffffff (6.95)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6561,7 +6634,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6588,15 +6661,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (3.02)
+                    #000000 (3.02)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6624,7 +6697,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6722,15 +6795,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (5.09)
+                    #ffffff (5.09)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6758,7 +6831,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6785,15 +6858,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (4.13)
+                    #000000 (4.13)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6821,7 +6894,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6919,15 +6992,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (3.25)
+                    #ffffff (3.25)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6955,7 +7028,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -6982,15 +7055,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (6.46)
+                    #000000 (6.46)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7018,7 +7091,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7116,15 +7189,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (18.09)
+                    #ffffff (18.09)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7152,7 +7225,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7179,15 +7252,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (1.16)
+                    #000000 (1.16)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7215,7 +7288,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7313,15 +7386,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-16qv2i2"
+                    class="css-1smue61"
                   >
-                    #fff (1.00)
+                    #ffffff (1.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7349,7 +7422,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7376,15 +7449,15 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                 </tr>
                 <tr>
                   <td
-                    class="css-7b7t20"
+                    class="css-5cm1aq"
                   >
-                    #000 (21.00)
+                    #000000 (21.00)
                   </td>
                   <td
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7412,7 +7485,7 @@ exports[`Design Tokens/Colors/BoltColor Palette 1`] = `
                     class="css-kv3vgl"
                   >
                     <div
-                      class="css-18rtj9c"
+                      class="css-omoot4"
                     >
                       <div
                         class="css-u4p24i"
@@ -7663,68 +7736,95 @@ exports[`Design Tokens/Colors/CanvasColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/CedarColor Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-13pmxen"
+  <table
+    class="css-hmrsmu"
   >
-    <div
-      class="css-nyzsgn"
-    >
-      <div
-        class="css-h9xu0j-CopyContainer"
+    <tbody>
+      <tr
+        class="css-habakr"
       >
-        <div
-          class="css-1gekrsi"
-        />
-      </div>
-      <div
-        class="css-1rr4qq7"
-      >
-        <div
-          class="css-j7qwjs"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-in3yi3"
+            class="css-u4p24i"
           >
-            cdr-color-text-button-primary-hover
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-1kr9kqk"
+              />
+            </div>
           </div>
-          <div>
-             Text color for the hover state of primary buttons
+        </td>
+        <td>
+          <div
+            class="css-1sgc73c"
+          >
+            <div
+              class="css-in3yi3"
+            >
+              cdr-color-text-button-primary-hover
+            </div>
+            <div>
+              Text color for the hover state of primary buttons
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-i0z7dd"
-      >
-        #225c4e
-      </div>
-    </div>
-  </div>
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
+          <div
+            class="css-1qxtz39"
+          >
+            #225c4e
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
 <DocumentFragment>
-  <div
-    class="css-uliqdc"
+  <table
+    class="css-z549ev"
   >
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-nyzsgn"
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr
+        class="css-habakr"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-156pvfq"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-12eo0hh"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7732,35 +7832,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-primary
             </div>
             <div>
-               The default, primary text color
+              The default, primary text color
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #0c0b08
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1hhxnz8"
+          <div
+            class="css-1qxtz39"
+          >
+            #0c0b08
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-0"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-22i337"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-1m29cjw"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7768,35 +7874,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-secondary
             </div>
             <div>
-               The secondary text color
+              The secondary text color
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #423b2f
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-nyzsgn"
+          <div
+            class="css-1qxtz39"
+          >
+            #423b2f
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-habakr"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-6ini0n"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-s4lf1n"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7804,35 +7916,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-brand
             </div>
             <div>
-               Text set in our primary brand color
+              Text set in our primary brand color
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #113731
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1hhxnz8"
+          <div
+            class="css-1qxtz39"
+          >
+            #113731
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-0"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-12zek00"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-e8kdoy"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7840,35 +7958,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-sale
             </div>
             <div>
-               The color of sale text
+              The color of sale text
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #cc0000
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-nyzsgn"
+          <div
+            class="css-1qxtz39"
+          >
+            #cc0000
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-habakr"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-w3q0it"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-1gzrwrp"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7876,35 +8000,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-inverse
             </div>
             <div>
-               Text color on dark background
+              Text color on dark background
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #f9f8f6
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1hhxnz8"
+          <div
+            class="css-1qxtz39"
+          >
+            #f9f8f6
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-0"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-1r995x8"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-ejhfs"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7912,35 +8042,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-disabled
             </div>
             <div>
-               The color of text when it is disabled
+              The color of text when it is disabled
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #d1cbbd
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-nyzsgn"
+          <div
+            class="css-1qxtz39"
+          >
+            #d1cbbd
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-habakr"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-156e7gr"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-1rg1p3"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7948,35 +8084,41 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-success
             </div>
             <div>
-               Color of success messages
+              Color of success messages
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #2e6b34
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-1hhxnz8"
+          <div
+            class="css-1qxtz39"
+          >
+            #2e6b34
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="css-0"
       >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        <td
+          class="css-80f6rl"
         >
           <div
-            class="css-12mlzdz"
-          />
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
+            class="css-u4p24i"
+          >
+            <div
+              class="css-h9xu0j-CopyContainer"
+            >
+              <div
+                class="css-1njtwnl"
+              />
+            </div>
+          </div>
+        </td>
+        <td>
           <div
-            class="css-j7qwjs"
+            class="css-1sgc73c"
           >
             <div
               class="css-in3yi3"
@@ -7984,434 +8126,484 @@ exports[`Design Tokens/Colors/CedarColor Palette 1`] = `
               cdr-color-text-warning
             </div>
             <div>
-               Color of warning messages
+              Color of warning messages
             </div>
           </div>
-        </div>
-        <div
-          class="css-i0z7dd"
+        </td>
+        <td
+          class="css-1gtfl7l"
         >
-          #854714
-        </div>
-      </div>
-    </div>
-  </div>
+          <div
+            class="css-1qxtz39"
+          >
+            #854714
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/CometColor Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-13pmxen"
+  <table
+    class="css-hmrsmu"
   >
-    <div
-      class="css-7ivygo-CopyContainer"
-    >
-      <div
-        class="css-149879y"
+    <tbody>
+      <tr
+        class="css-yb576g"
       >
-        <div
-          class="css-1cg3jcn"
-        >
-          40
-        </div>
-        <div
-          class="css-1rr4qq7"
-        >
-          $comet-color-emerald-40
-        </div>
-        <div
-          class="css-1xhj18k"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-s2uf1z"
+            class="css-dccdhy"
+          >
+            40
+          </div>
+        </td>
+        <td>
+          $comet-color-emerald-40
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
+          <div
+            class="css-p9kq03-CopyContainer"
           >
             #2F9D89
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-xtymee"
+            class="css-dvxtzn"
           >
-            AA
+            <div
+              class="css-xtymee"
+            >
+              AA
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/CometColor Palette 1`] = `
 <DocumentFragment>
-  <div
-    class="css-uliqdc"
+  <table
+    class="css-1xdr0gf"
   >
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr
+        class="css-6gijzr"
       >
-        <div
-          class="css-1lrl5ss"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             05
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-05
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-05
+            #020D17
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #020D17
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-j7o0h3"
       >
-        <div
-          class="css-1bdd15i"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             10
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-10
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-10
+            #041B2F
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #041B2F
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-15o8lyb"
       >
-        <div
-          class="css-u9uuty"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             20
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-20
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-20
+            #08365E
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #08365E
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-1lh7q0r"
       >
-        <div
-          class="css-2d5d5n"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             30
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-30
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-30
+            #0C518D
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #0C518D
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-bjxo5j"
       >
-        <div
-          class="css-13dghhi"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             40
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-40
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-40
+            #106CBC
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #106CBC
-            </div>
             <div
               class="css-xtymee"
             >
               AA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-qn7otg"
       >
-        <div
-          class="css-17rebwf"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             50
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-50
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-50
+            #1487EB
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #1487EB
-            </div>
             <div
               class="css-xtymee"
             >
               AA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-1xgs7cy"
       >
-        <div
-          class="css-ofw8nu"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             60
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-60
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-60
+            #439FEF
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #439FEF
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-18xf6av"
       >
-        <div
-          class="css-uadqeu"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             70
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-70
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-70
+            #72B7F3
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #72B7F3
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-zx74ct"
       >
-        <div
-          class="css-j6jcs1"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             80
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-80
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-80
+            #A1CFF7
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #A1CFF7
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-7ivygo-CopyContainer"
+        </td>
+      </tr>
+      <tr
+        class="css-19a98c8"
       >
-        <div
-          class="css-1fgmzdm"
+        <td
+          class="css-18467a"
         >
           <div
-            class="css-1cg3jcn"
+            class="css-dccdhy"
           >
             90
           </div>
+        </td>
+        <td>
+          $comet-color-midnight-90
+        </td>
+        <td
+          class="css-1gtfl7l"
+        >
           <div
-            class="css-1rr4qq7"
+            class="css-p9kq03-CopyContainer"
           >
-            $comet-color-midnight-90
+            #D0E7FB
           </div>
+        </td>
+        <td
+          class="css-1jgxixz"
+        >
           <div
-            class="css-1xhj18k"
+            class="css-dvxtzn"
           >
-            <div
-              class="css-s2uf1z"
-            >
-              #D0E7FB
-            </div>
             <div
               class="css-xtymee"
             >
               AAA
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/DuetColor Overview 1`] = `
 <DocumentFragment>
-  <table>
+  <table
+    class="css-hmrsmu"
+  >
     <tbody>
       <tr>
         <td>
@@ -8509,6 +8701,23 @@ exports[`Design Tokens/Colors/DuetColor Palette 1`] = `
   <table
     class="css-uce56p"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th
@@ -9906,140 +10115,159 @@ exports[`Design Tokens/Colors/FishTankColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/GovUKColor Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-13pmxen"
+  <table
+    class="css-hmrsmu"
   >
-    <div
-      class="css-n5o22w"
-    >
-      <div
-        class="css-h9xu0j-CopyContainer"
-      >
-        <div
-          class="css-1mjo87k"
-        />
-      </div>
-      <div
-        class="css-1jpwl20"
-      >
-        <div>
-          $govuk-brand-colour
-        </div>
-        <div>
-          #1d70b8
-        </div>
-      </div>
-    </div>
-  </div>
+    <tbody>
+      <tr>
+        <td
+          class="css-q2ms4q"
+        >
+          <div
+            class="css-1eh3st3-CopyContainer"
+          >
+            <div
+              class="css-1wblll1"
+            />
+          </div>
+        </td>
+        <td>
+          <div>
+            $govuk-brand-colour
+          </div>
+        </td>
+        <td
+          class="css-v7v99c"
+        >
+          <div>
+            #1d70b8
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/GovUKColor Palette 1`] = `
 <DocumentFragment>
-  <div
-    class="css-uliqdc"
+  <table
+    class="css-6eztaz"
   >
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-n5o22w"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td
+          class="css-q2ms4q"
         >
           <div
-            class="css-1mjo87k"
-          />
-        </div>
-        <div
-          class="css-1jpwl20"
-        >
+            class="css-1eh3st3-CopyContainer"
+          >
+            <div
+              class="css-1wblll1"
+            />
+          </div>
+        </td>
+        <td>
           <div>
             $govuk-brand-colour
           </div>
+        </td>
+        <td
+          class="css-v7v99c"
+        >
           <div>
             #1d70b8
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-n5o22w"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-q2ms4q"
         >
           <div
-            class="css-15r4d3y"
-          />
-        </div>
-        <div
-          class="css-1jpwl20"
-        >
+            class="css-1eh3st3-CopyContainer"
+          >
+            <div
+              class="css-1byv2y8"
+            />
+          </div>
+        </td>
+        <td>
           <div>
             $govuk-link-hover-colour
           </div>
+        </td>
+        <td
+          class="css-v7v99c"
+        >
           <div>
             #003078
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-n5o22w"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-q2ms4q"
         >
           <div
-            class="css-f4aog1"
-          />
-        </div>
-        <div
-          class="css-1jpwl20"
-        >
+            class="css-1eh3st3-CopyContainer"
+          >
+            <div
+              class="css-1ox4yfh"
+            />
+          </div>
+        </td>
+        <td>
           <div>
             $govuk-link-visited-colour
           </div>
+        </td>
+        <td
+          class="css-v7v99c"
+        >
           <div>
             #4c2c92
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-13pmxen"
-    >
-      <div
-        class="css-n5o22w"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="css-q2ms4q"
         >
           <div
-            class="css-1wnneag"
-          />
-        </div>
-        <div
-          class="css-1jpwl20"
-        >
+            class="css-1eh3st3-CopyContainer"
+          >
+            <div
+              class="css-1hvey69"
+            />
+          </div>
+        </td>
+        <td>
           <div>
             govuk-colour("red")
           </div>
+        </td>
+        <td
+          class="css-v7v99c"
+        >
           <div>
             #d4351c
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
@@ -10646,7 +10874,9 @@ exports[`Design Tokens/Colors/IBMDLColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/LightningColor Overview 1`] = `
 <DocumentFragment>
-  <table>
+  <table
+    class="css-hmrsmu"
+  >
     <tbody>
       <tr
         class="css-17zxk5b"
@@ -10729,6 +10959,23 @@ exports[`Design Tokens/Colors/LightningColor Palette 1`] = `
   <table
     class="css-92yo23"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th
@@ -11567,7 +11814,9 @@ exports[`Design Tokens/Colors/LiquidColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/MorningstarColor Overview 1`] = `
 <DocumentFragment>
-  <table>
+  <table
+    class="css-hmrsmu"
+  >
     <tbody>
       <tr
         class="css-2njn49"
@@ -11604,6 +11853,17 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
   <table
     class="css-6r67zz"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th
@@ -11831,7 +12091,9 @@ exports[`Design Tokens/Colors/MorningstarColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/OPatternColor Overview 1`] = `
 <DocumentFragment>
-  <table>
+  <table
+    class="css-hmrsmu"
+  >
     <tbody>
       <tr>
         <td
@@ -11872,6 +12134,23 @@ exports[`Design Tokens/Colors/OPatternColor Palette 1`] = `
   <table
     class="css-13nsfnr"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th
@@ -12552,321 +12831,319 @@ exports[`Design Tokens/Colors/PatternFlyColor Palette 1`] = `
 
 exports[`Design Tokens/Colors/PhotonColor Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-43pywe"
+  <table
+    class="css-hmrsmu"
   >
-    <div
-      class="css-1uhkez5"
-    >
-      <div
-        class="css-19c0a2o-CopyContainer"
-      >
-        <div
-          class="css-1dd9j05"
-        />
-        <div
-          class="css-1isemmb"
-        >
-          Orange 50
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-1awptdr"
-    >
-      <div
-        class="css-h9xu0j-CopyContainer"
-      >
-        <code
-          class="css-16d8aa2"
-        >
-          #ff9400
-        </code>
-      </div>
-    </div>
-    <div
-      class="css-8sr67i"
-    >
-      <div
-        class="css-14hxxs9"
-      >
-        AAA
-      </div>
-    </div>
-    <div
-      class="css-8sr67i"
-    >
-      <div
-        class="css-rjufhq"
-      >
-        F
-      </div>
-    </div>
-  </div>
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="css-19c0a2o-CopyContainer"
+          >
+            <div
+              class="css-ldp6k9"
+            />
+            <div>
+              Orange 50
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-h9xu0j-CopyContainer"
+          >
+            <code
+              class="css-16d8aa2"
+            >
+              #ff9400
+            </code>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-14hxxs9"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-rjufhq"
+            >
+              F
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
 exports[`Design Tokens/Colors/PhotonColor Palette 1`] = `
 <DocumentFragment>
-  <div
-    class="css-uliqdc"
+  <table
+    class="css-1tjh9b3"
   >
-    <div
-      class="css-43pywe"
-    >
-      <div
-        class="css-1uhkez5"
-      >
-        <div
-          class="css-19c0a2o-CopyContainer"
-        >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
           <div
-            class="css-12x0kd3"
-          />
-          <div
-            class="css-1isemmb"
+            class="css-19c0a2o-CopyContainer"
           >
-            Teal 50
+            <div
+              class="css-awyuke"
+            />
+            <div>
+              Teal 50
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-1awptdr"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
-        >
-          <code
-            class="css-16d8aa2"
-          >
-            #00feff
-          </code>
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-19hhrco"
-        >
-          AAA
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-botzei"
-        >
-          F
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-43pywe"
-    >
-      <div
-        class="css-1uhkez5"
-      >
-        <div
-          class="css-19c0a2o-CopyContainer"
-        >
+        </td>
+        <td>
           <div
-            class="css-174gq7v"
-          />
-          <div
-            class="css-1isemmb"
+            class="css-h9xu0j-CopyContainer"
           >
-            Teal 60
+            <code
+              class="css-16d8aa2"
+            >
+              #00feff
+            </code>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-1awptdr"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
-        >
-          <code
-            class="css-16d8aa2"
-          >
-            #00c8d7
-          </code>
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-pdi9u6"
-        >
-          AAA
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-10263p4"
-        >
-          F
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-43pywe"
-    >
-      <div
-        class="css-1uhkez5"
-      >
-        <div
-          class="css-19c0a2o-CopyContainer"
-        >
+        </td>
+        <td>
           <div
-            class="css-1ya8jdr"
-          />
-          <div
-            class="css-1isemmb"
+            class="css-u4p24i"
           >
-            Teal 70
+            <div
+              class="css-19hhrco"
+            >
+              AAA
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-1awptdr"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
-        >
-          <code
-            class="css-16d8aa2"
-          >
-            #008ea4
-          </code>
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-ivh4ty"
-        >
-          AA
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-j08hbs"
-        >
-          AA+
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-43pywe"
-    >
-      <div
-        class="css-1uhkez5"
-      >
-        <div
-          class="css-19c0a2o-CopyContainer"
-        >
+        </td>
+        <td>
           <div
-            class="css-pqtz0n"
-          />
-          <div
-            class="css-1isemmb"
+            class="css-u4p24i"
           >
-            Teal 80
+            <div
+              class="css-botzei"
+            >
+              F
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-1awptdr"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
-        >
-          <code
-            class="css-16d8aa2"
-          >
-            #005a71
-          </code>
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-1jgaz2i"
-        >
-          AAA
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-1hlvhr7"
-        >
-          AAA
-        </div>
-      </div>
-    </div>
-    <div
-      class="css-43pywe"
-    >
-      <div
-        class="css-1uhkez5"
-      >
-        <div
-          class="css-19c0a2o-CopyContainer"
-        >
+        </td>
+      </tr>
+      <tr>
+        <td>
           <div
-            class="css-44p1dn"
-          />
-          <div
-            class="css-1isemmb"
+            class="css-19c0a2o-CopyContainer"
           >
-            Teal 90
+            <div
+              class="css-q6gp5s"
+            />
+            <div>
+              Teal 60
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="css-1awptdr"
-      >
-        <div
-          class="css-h9xu0j-CopyContainer"
-        >
-          <code
-            class="css-16d8aa2"
+        </td>
+        <td>
+          <div
+            class="css-h9xu0j-CopyContainer"
           >
-            #002d3e
-          </code>
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-glcv26"
-        >
-          AAA
-        </div>
-      </div>
-      <div
-        class="css-8sr67i"
-      >
-        <div
-          class="css-16pq1x6"
-        >
-          AAA
-        </div>
-      </div>
-    </div>
-  </div>
+            <code
+              class="css-16d8aa2"
+            >
+              #00c8d7
+            </code>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-pdi9u6"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-10263p4"
+            >
+              F
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-19c0a2o-CopyContainer"
+          >
+            <div
+              class="css-16s461v"
+            />
+            <div>
+              Teal 70
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-h9xu0j-CopyContainer"
+          >
+            <code
+              class="css-16d8aa2"
+            >
+              #008ea4
+            </code>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-ivh4ty"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-j08hbs"
+            >
+              AA+
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-19c0a2o-CopyContainer"
+          >
+            <div
+              class="css-4nf810"
+            />
+            <div>
+              Teal 80
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-h9xu0j-CopyContainer"
+          >
+            <code
+              class="css-16d8aa2"
+            >
+              #005a71
+            </code>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1jgaz2i"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1hlvhr7"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-19c0a2o-CopyContainer"
+          >
+            <div
+              class="css-vx2c7e"
+            />
+            <div>
+              Teal 90
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-h9xu0j-CopyContainer"
+          >
+            <code
+              class="css-16d8aa2"
+            >
+              #002d3e
+            </code>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-glcv26"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-16pq1x6"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;
 
@@ -13791,7 +14068,7 @@ exports[`Design Tokens/Colors/SeekColor Palette 1`] = `
 exports[`Design Tokens/Colors/SkylineColor Overview 1`] = `
 <DocumentFragment>
   <table
-    class="css-8atqhb"
+    class="css-hmrsmu"
   >
     <tbody>
       <tr>
@@ -13889,6 +14166,23 @@ exports[`Design Tokens/Colors/SkylineColor Palette 1`] = `
   <table
     class="css-lfvt9l"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th
@@ -14733,9 +15027,1389 @@ exports[`Design Tokens/Colors/SolidColor Palette 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Design Tokens/Colors/UniformColor Overview 1`] = `
+exports[`Design Tokens/Colors/TableColor Legend 1`] = `
 <DocumentFragment>
   <table>
+    <thead>
+      <tr
+        class="css-1nqkm6o"
+      >
+        <th>
+          Score
+        </th>
+        <th>
+          Contrast ratio
+        </th>
+        <th>
+          Result
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="css-115x7l6"
+    >
+      <tr>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-hjviwh"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          &gt;= 7.0:1
+        </td>
+        <td>
+          Passes 
+          <a
+            class="css-vurnku"
+            href="https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            WCAG 2.0
+          </a>
+           AAA
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-visf8q"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          &gt;= 4.5:1
+        </td>
+        <td>
+          Passes 
+          <a
+            class="css-vurnku"
+            href="https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            WCAG 2.0
+          </a>
+           AA
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-146qvbj"
+            >
+              AA+
+            </div>
+          </div>
+        </td>
+        <td>
+          &gt;= 3.0:1
+        </td>
+        <td>
+          Passes 
+          <a
+            class="css-vurnku"
+            href="https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&versions=2.0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            WCAG 2.0
+          </a>
+           Large Text AA
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          &lt; 3.0:1
+        </td>
+        <td>
+          AA Test failed
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Design Tokens/Colors/TableColor Overview 1`] = `
+<DocumentFragment>
+  <table
+    class="css-hmrsmu"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-12gz1d7-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #5C6AC4
+              </div>
+            </div>
+            <div
+              class="css-jjxyku-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #EFEFEF
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            primary
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1cr58l2"
+            >
+              AA+
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1yhb22v"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1s9ejtw"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Design Tokens/Colors/TableColor Palette 1`] = `
+<DocumentFragment>
+  <table
+    class="css-9cfpcu"
+  >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="2"
+      />
+      <col
+        span="2"
+      />
+    </colgroup>
+    <thead>
+      <tr>
+        <th
+          class="css-13tbraf"
+        />
+        <th
+          class="css-1boibbe"
+        />
+        <th
+          class="css-1h206tv"
+          colspan="2"
+        >
+          AA color
+        </th>
+        <th
+          class="css-1h206tv"
+          colspan="2"
+        >
+          AA dark
+        </th>
+      </tr>
+      <tr>
+        <th
+          class="css-13tbraf"
+        >
+          color / dark
+        </th>
+        <th
+          class="css-1boibbe"
+        >
+          name
+        </th>
+        <th
+          class="css-1xnwoqy"
+        >
+          <div
+            class="css-41y5vx-CopyContainer"
+          >
+            <div
+              class="css-3i8kn7"
+            >
+              #FFFFFF
+            </div>
+          </div>
+        </th>
+        <th
+          class="css-1xnwoqy"
+        >
+          <div
+            class="css-sbp4ej-CopyContainer"
+          >
+            <div
+              class="css-3i8kn7"
+            >
+              #000000
+            </div>
+          </div>
+        </th>
+        <th
+          class="css-1xnwoqy"
+        >
+          <div
+            class="css-41y5vx-CopyContainer"
+          >
+            <div
+              class="css-3i8kn7"
+            >
+              #FFFFFF
+            </div>
+          </div>
+        </th>
+        <th
+          class="css-1xnwoqy"
+        >
+          <div
+            class="css-sbp4ej-CopyContainer"
+          >
+            <div
+              class="css-3i8kn7"
+            >
+              #000000
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1ch4auf-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #454F5B
+              </div>
+            </div>
+            <div
+              class="css-8gwlcm-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #D3D4DB
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            text
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-qwmst7"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-8btei9"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-41y5vx-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #FFFFFF
+              </div>
+            </div>
+            <div
+              class="css-39ge7w-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #38404A
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            background
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1iun5y"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1v6cza9"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-12gz1d7-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #5C6AC4
+              </div>
+            </div>
+            <div
+              class="css-jjxyku-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #EFEFEF
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            primary
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1cr58l2"
+            >
+              AA+
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1yhb22v"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1s9ejtw"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-o899t5-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #006FBB
+              </div>
+            </div>
+            <div
+              class="css-4zj5ol-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #B4E1FA
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            secondary
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1hupksi"
+            >
+              AA+
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-8epu53"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-xz5utn"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-5c2eee-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #E6E6E6
+              </div>
+            </div>
+            <div
+              class="css-5c2eee-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #E6E6E6
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            muted
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-6a54ki"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-6a54ki"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-mffn5q-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #69768C
+              </div>
+            </div>
+            <div
+              class="css-jauy35-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #C9CACF
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            mutedText
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-yi18up"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-te5b3t"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1x8nxmw"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-gavh0m-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #F49342
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            accent
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-p7que6"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-eevz1l-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #00044C
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            darken
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1hk2e6u"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1khjzwt-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #F6F6F6
+              </div>
+            </div>
+            <div
+              class="css-4kvm41-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #4D5866
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            gray
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-seksud"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1rexy8b"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1khjzwt-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #F6F6F6
+              </div>
+            </div>
+            <div
+              class="css-sbp4ej-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #000000
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            sidebar
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-seksud"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-7nxl95"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-10q30g9-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #D9F2F1
+              </div>
+            </div>
+            <div
+              class="css-1a6xjeg-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #B7ECEC
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            highlight
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1xncqy0"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-vz6cko"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1svrtkn-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #3B817D
+              </div>
+            </div>
+            <div
+              class="css-10q30g9-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #D9F2F1
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            action
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1cslxn7"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1gl3rwn"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1xncqy0"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1lh0zxt-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #027AC5
+              </div>
+            </div>
+            <div
+              class="css-1d2dkk1-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                #B3D9FF
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            selected
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-t1a4i4"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-xlpvct"
+            >
+              AA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-o95p0g"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            class="css-u4p24i"
+          >
+            <div
+              class="css-1qpb1jg-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                RGBA(0, 0, 0, 0.1)
+              </div>
+            </div>
+            <div
+              class="css-us7slb-CopyContainer"
+            >
+              <div
+                class="css-3i8kn7"
+              >
+                RGBA(211, 212, 219, 0.1)
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1iuj5ih"
+          >
+            shadow
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td
+          class="css-500bjb"
+        >
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-7nxl95"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1nxqwdm"
+            >
+              F
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-m59tez"
+          >
+            <div
+              class="css-1y1qkoy"
+            >
+              AAA
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Design Tokens/Colors/UniformColor Overview 1`] = `
+<DocumentFragment>
+  <table
+    class="css-hmrsmu"
+  >
     <tbody>
       <tr
         class="css-1kuy7z7"
@@ -14772,6 +16446,17 @@ exports[`Design Tokens/Colors/UniformColor Palette 1`] = `
   <table
     class="css-7coh46"
   >
+    <colgroup>
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+      <col
+        span="1"
+      />
+    </colgroup>
     <thead>
       <tr>
         <th

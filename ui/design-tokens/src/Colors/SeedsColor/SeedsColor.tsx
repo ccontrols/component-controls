@@ -5,7 +5,7 @@ import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a block with RGB and CMYK colors. The color name and description are displayed below the block.

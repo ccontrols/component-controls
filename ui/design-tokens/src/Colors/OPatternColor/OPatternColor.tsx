@@ -5,7 +5,11 @@ import { CopyContainer } from '@component-controls/components';
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { TableContainerProps, TableContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a table row, with color block, sass name, and hex, RGB, and CMYK color values.
@@ -13,11 +17,9 @@ import { TableContainerProps, TableContainer } from '../../components';
  */
 
 export const OPatternColor: FC<ColorBlockProps> = props => (
-  <table>
-    <tbody>
-      <BaseOPatternColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseOPatternColor {...props} />
+  </TableRowContainer>
 );
 
 const BaseOPatternColor: FC<ColorBlockProps> = ({ name, color }) => {

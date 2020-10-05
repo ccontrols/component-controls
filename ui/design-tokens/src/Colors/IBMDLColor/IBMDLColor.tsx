@@ -11,7 +11,7 @@ import {
 import simpleColorConverter from 'simple-color-converter';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 export const COLOR_OPTIONS = ['hex', 'rgb', 'pms', 'cmyk'] as const;
 

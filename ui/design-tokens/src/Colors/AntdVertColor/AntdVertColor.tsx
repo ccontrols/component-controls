@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a small block, expanding on hover.

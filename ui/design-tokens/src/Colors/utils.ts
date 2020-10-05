@@ -1,5 +1,10 @@
 import tinycolor from 'tinycolor2';
-import { colorContrast, ContrastGrades } from '../types';
+import {
+  colorContrast,
+  ContrastGrades,
+  defaultBlackTextColor,
+  defaultWhiteTextColor,
+} from '../types';
 /**
  * convert color
  */
@@ -16,8 +21,14 @@ export const colorToStr = (
   };
 };
 
-export const mostReadable = (color: string) =>
-  tinycolor.mostReadable(color, ['#000000', '#ffffff']).toString('hex');
+export const mostReadable = (
+  color: string,
+  blackTextColor: string | undefined = defaultBlackTextColor,
+  whiteTextColor: string | undefined = defaultWhiteTextColor,
+) =>
+  tinycolor
+    .mostReadable(color, [whiteTextColor, blackTextColor])
+    .toString('hex');
 
 export const contrastGrade = (contrast: number): ContrastGrades => {
   if (contrast >= colorContrast.AAA.ratio) {

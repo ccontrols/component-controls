@@ -16,8 +16,14 @@ import {
   ColorValue,
   colorContrast,
   TokenStatus,
+  defaultWhiteTextColor,
+  ThemeColorProps,
 } from '../../types';
-import { TableContainerProps, TableContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a row, with color, name, description, var, and sass variables as well as the contrast ratio ad status.
@@ -25,14 +31,16 @@ import { TableContainerProps, TableContainer } from '../../components';
  */
 
 export const DuetColor: FC<ColorBlockProps> = props => (
-  <table>
-    <tbody>
-      <BaseDuetColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseDuetColor {...props} />
+  </TableRowContainer>
 );
 
-const BaseDuetColor: FC<ColorBlockProps> = ({ name, color }) => {
+const BaseDuetColor: FC<ColorBlockProps> = ({
+  name,
+  color,
+  blackTextColor = defaultWhiteTextColor,
+}) => {
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color } : color;
   const {
@@ -56,7 +64,7 @@ const BaseDuetColor: FC<ColorBlockProps> = ({ name, color }) => {
     }
   };
   const { hex, rgba } = colorToStr(colorValue);
-  const contrast = tinycolor.readability(hex, '#ffffff');
+  const contrast = tinycolor.readability(hex, blackTextColor);
   return (
     <tr>
       <td>
@@ -100,38 +108,44 @@ const BaseDuetColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with DuetColor items
  * using a css flex display direction column
  */
-export const DuetColorPalette: FC<Omit<
-  TableContainerProps,
-  'children' | 'columns'
->> = props => (
-  <TableContainer
-    columns={[
-      { title: 'Example', sx: { width: '25%' } },
-      { title: 'Description', sx: { width: '28%' } },
-      { title: 'Token', sx: { width: '25%' } },
-      { title: 'Contrast', sx: { width: '10%' } },
-      { title: 'Status', sx: { width: '7%' } },
-    ]}
-    sx={{
-      border: 'none',
-      '& > tbody > tr': {
-        fontSize: 0,
-        transition: 'background .3s ease',
-        ':hover': {
-          bg: 'gray',
+export const DuetColorPalette: FC<ThemeColorProps &
+  Omit<TableContainerProps, 'children' | 'columns'>> = props => {
+  const { blackTextColor, ...rest } = props;
+  return (
+    <TableContainer
+      columns={[
+        { title: 'Example', sx: { width: '25%' } },
+        { title: 'Description', sx: { width: '28%' } },
+        { title: 'Token', sx: { width: '25%' } },
+        { title: 'Contrast', sx: { width: '10%' } },
+        { title: 'Status', sx: { width: '7%' } },
+      ]}
+      sx={{
+        border: 'none',
+        '& > tbody > tr': {
+          fontSize: 0,
+          transition: 'background .3s ease',
+          ':hover': {
+            bg: 'gray',
+          },
         },
-      },
-      '& > thead > tr > th': {
-        textAlign: 'left',
-        fontSize: 2,
-        fontWeight: 'normal',
-        pb: 2,
-      },
-    }}
-    {...props}
-  >
-    {({ name, value }) => (
-      <BaseDuetColor key={`color_item_${name}}`} name={name} color={value} />
-    )}
-  </TableContainer>
-);
+        '& > thead > tr > th': {
+          textAlign: 'left',
+          fontSize: 2,
+          fontWeight: 'normal',
+          pb: 2,
+        },
+      }}
+      {...rest}
+    >
+      {({ name, value }) => (
+        <BaseDuetColor
+          key={`color_item_${name}}`}
+          name={name}
+          color={value}
+          blackTextColor={blackTextColor}
+        />
+      )}
+    </TableContainer>
+  );
+};

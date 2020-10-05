@@ -43,6 +43,8 @@ import {
   SeekColorPalette,
   SkylineColorPalette,
   SolidColorPalette,
+  ColorAALegend,
+  TableColorPalette,
   UniformColorPalette,
   VanillaColorPalette,
   XColorPalette,
@@ -1479,7 +1481,7 @@ import { PhotonColorPalette } from '@component-controls/design-tokens';
 
 ## PrimerColor
 
-The [PrimerColor](/api/design-tokens-colors-primercolor--overview) component displays the color as a row, with sass variable name. Separate visualization (header) for primary color.
+The [PrimerColor](/api/design-tokens-colors-primercolor--overview) component displays the color as a row, with sass variable name. Separate visualization (header) for the primary color.
 
 Design inspired by GitHub's [Primer](https://styleguide.github.com/primer/support/color-system/).
 
@@ -1736,6 +1738,41 @@ import { SolidColorPalette } from '@component-controls/design-tokens';
     },
   }}
 />
+
+## TableColor
+
+The [TableColor](/api/design-tokens-colors-tablecolor--overview) component displays the color as a table row, with support for dark mode colors and AA accessibility tests. Design created to accomodate [theme-ui](https://theme-ui.com/home)-type color palettes.
+
+```
+import { TableColorPalette } from '@component-controls/design-tokens';
+
+<TableColorPalette
+  palette={{
+    text: { value: '#454f5b', dark: '#d3d4db' },
+    background: { value: '#ffffff', dark: '#38404a' },
+    primary: { value: '#5c6ac4', dark: '#efefef' },
+    secondary: { value: '#006fbb', dark: '#b4e1fa' },
+    muted: { value: '#e6e6e6', dark: '#e6e6e6' },
+    accent: '#f49342',
+    darken: '#00044c',
+  }}
+/>
+
+```
+<ColorAALegend />
+
+<TableColorPalette
+  palette={{
+    text: { value: '#454f5b', dark: '#d3d4db' },
+    background: { value: '#ffffff', dark: '#38404a' },
+    primary: { value: '#5c6ac4', dark: '#efefef' },
+    secondary: { value: '#006fbb', dark: '#b4e1fa' },
+    muted: { value: '#e6e6e6', dark: '#e6e6e6' },
+    accent: '#f49342',
+    darken: '#00044c',
+  }}
+/>
+
 
 ## UniformColor
 

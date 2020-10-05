@@ -71,7 +71,7 @@ export type ControlsTheme = {
 export const theme: ControlsTheme = {
   colors: {
     text: '#454f5b',
-    background: '#fff',
+    background: '#ffffff',
     primary: '#5c6ac4',
     secondary: '#006fbb',
     muted: '#e6e6e6',
@@ -106,7 +106,7 @@ export const theme: ControlsTheme = {
         mutedText: '#c9cacf',
         gray: '#4d5866',
         background: '#38404a',
-        sidebar: '#000',
+        sidebar: '#000000',
         text: '#d3d4db',
         selected: '#b3d9ff',
         action: '#d9f2f1',

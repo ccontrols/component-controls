@@ -5,7 +5,7 @@ import { CopyContainer } from '@component-controls/components';
 import { CheckIcon } from '@primer/octicons-react';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a small block, with name and hex color on the side. If the color is a primary color, will display as a circle.

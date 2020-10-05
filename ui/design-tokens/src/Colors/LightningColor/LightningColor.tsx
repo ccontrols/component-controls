@@ -7,8 +7,9 @@ import { ColorBlockProps, ColorValue } from '../../types';
 import {
   TableContainerProps,
   TableContainer,
+  TableRowContainer,
   TableColumn,
-} from '../../components';
+} from '../../containers';
 
 export type LightningColorProps = {
   columns?: TableColumn[];
@@ -19,11 +20,9 @@ export type LightningColorProps = {
  */
 
 export const LightningColor: FC<LightningColorProps> = props => (
-  <table>
-    <tbody>
-      <BaseLightningColor {...props} />
-    </tbody>
-  </table>
+  <TableRowContainer>
+    <BaseLightningColor {...props} />
+  </TableRowContainer>
 );
 
 const BaseLightningColor: FC<LightningColorProps> = ({

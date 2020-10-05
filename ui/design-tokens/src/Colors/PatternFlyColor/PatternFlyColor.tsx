@@ -4,7 +4,7 @@ import { jsx, Theme } from 'theme-ui';
 import { CopyContainer, Popover } from '@component-controls/components';
 import { colorToStr } from '../utils';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a row with a color circle with CSS var name and on click popup.

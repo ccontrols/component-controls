@@ -53,7 +53,24 @@ export type ColorValue =
        */
       [field: string]: any;
     };
-export interface ColorProps {
+export const defaultWhiteTextColor = '#ffffff';
+
+export const defaultBlackTextColor = '#000000';
+
+export interface ThemeColorProps {
+  /**
+   * text color for the theme. this property is used for AA contrast testing.
+   * by default, this is black = #000000
+   */
+  blackTextColor?: string;
+
+  /**
+   * dark mode text color for the theme. this property is used for AA contrast testing.
+   * by default, this is white = #ffffff
+   */
+  whiteTextColor?: string;
+}
+export type ColorProps = {
   /**
    * name of the color, If none, or same as the color value, some color blocks will not display it
    */
@@ -68,7 +85,7 @@ export interface ColorProps {
    * hover prop
    */
   hover?: boolean;
-}
+} & ThemeColorProps;
 
 export type ColorBlockProps = ColorProps;
 

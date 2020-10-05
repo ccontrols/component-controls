@@ -4,52 +4,54 @@ import { jsx } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable } from '../utils';
 import { ColorBlockProps } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import {
+  TableContainerProps,
+  TableContainer,
+  TableRowContainer,
+} from '../../containers';
 
 /**
  * Color item displaying as a row, with color, name and hex value
  * Design inspired by [BaseWeb](https://baseweb.design/components/tokens/).
  */
 
-export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
+export const BaseWebColor: FC<ColorBlockProps> = props => (
+  <TableRowContainer>
+    <BaseBaseWebColor {...props} />
+  </TableRowContainer>
+);
+
+export const BaseBaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex } = colorToStr(colorValue);
+  const hexValue = hex.toUpperCase();
   const textColor = mostReadable(hex);
   return (
-    <div sx={{ display: 'flex', flex: '1' }}>
-      <div
-        sx={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
-          height: 50,
-          alignItems: 'center',
-          fontSize: 2,
-          borderBottom: `1px solid ${hex}`,
-          bg: 'background',
-        }}
-      >
-        <CopyContainer value={hex} name={name}>
-          <div
+    <tr>
+      <td sx={{ width: 100 }}>
+        <div
+          sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+        >
+          <CopyContainer
+            value={hexValue}
+            name={name}
             sx={{
+              fontSize: 2,
               width: 100,
               height: 50,
               bg: colorValue,
               color: textColor,
-              mr: 3,
             }}
           />
-        </CopyContainer>
-        <div
-          sx={{
-            flex: 1,
-          }}
-        >
-          {name}
         </div>
-        <div sx={{ mr: 3 }}>{hex.toUpperCase()}</div>
-      </div>
-    </div>
+      </td>
+      <td sx={{ borderBottom: `1px solid ${hex}` }}>
+        <div sx={{ px: 2 }}> {name}</div>
+      </td>
+      <td sx={{ borderBottom: `1px solid ${hex}`, width: 100 }}>
+        <div sx={{ px: 2 }}>{hexValue}</div>
+      </td>
+    </tr>
   );
 };
 
@@ -59,12 +61,23 @@ export const BaseWebColor: FC<ColorBlockProps> = ({ name, color }) => {
  * using a css flex display direction column
  */
 export const BaseWebColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
+  TableContainerProps,
+  'children' | 'columns'
 >> = props => (
-  <FlexContainer direction="column" {...props}>
+  <TableContainer
+    columns={[{ title: 'color' }, { title: 'name' }, { title: 'hex' }]}
+    header={null}
+    sx={{
+      borderTop: 'none',
+      '& > tbody > tr > td': {
+        borderTop: 'none',
+        p: 0,
+      },
+    }}
+    {...props}
+  >
     {({ name, value }) => (
-      <BaseWebColor key={`color_item_${name}}`} name={name} color={value} />
+      <BaseBaseWebColor key={`color_item_${name}}`} name={name} color={value} />
     )}
-  </FlexContainer>
+  </TableContainer>
 );

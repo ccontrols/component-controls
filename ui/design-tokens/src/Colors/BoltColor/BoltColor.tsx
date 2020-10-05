@@ -5,8 +5,15 @@ import { CopyContainer } from '@component-controls/components';
 import tinycolor from 'tinycolor2';
 import { CheckCircleFillIcon, XCircleFillIcon } from '@primer/octicons-react';
 import { colorToStr, mostReadable } from '../utils';
-import { ColorBlockProps, ColorValue, colorContrast } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import {
+  ColorBlockProps,
+  ColorValue,
+  colorContrast,
+  defaultBlackTextColor,
+  defaultWhiteTextColor,
+  ThemeColorProps,
+} from '../../types';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 const PassFail: FC<{ status: 'pass' | 'fail' }> = ({ status }) => (
   <div
@@ -14,9 +21,16 @@ const PassFail: FC<{ status: 'pass' | 'fail' }> = ({ status }) => (
       bg: 'lightgrey',
       display: 'inline-block',
       borderRadius: 4,
+      px: 1,
     }}
   >
-    <div sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+    <div
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      }}
+    >
       {status}
       {status === 'fail' ? (
         <XCircleFillIcon sx={{ pl: 1, color: '#b42818' }} />
@@ -52,13 +66,18 @@ const ContrastTest: FC<{
  * Color item displaying the color as a block with [AA](https://www.w3.org/TR/WCAG/) color contrast tests.
  * Design inspired by [Bolt](https://boltdesignsystem.com/pattern-lab/?p=visual-styles-color-system).
  */
-export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
+export const BoltColor: FC<ColorBlockProps> = ({
+  name,
+  color,
+  blackTextColor = defaultBlackTextColor,
+  whiteTextColor = defaultWhiteTextColor,
+}) => {
   const colorObj: ColorValue =
     typeof color === 'string' ? { value: color } : color;
   const { value: colorValue, varName } = colorObj;
 
   const { hex } = colorToStr(colorValue);
-  const textColor = mostReadable(hex);
+  const contrastColor = mostReadable(hex);
   return (
     <div
       sx={{
@@ -85,7 +104,7 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
               justifyContent: 'space-between',
               fontSize: 3,
               fontWeight: 'bold',
-              color: textColor,
+              color: contrastColor,
               px: 2,
               pt: 2,
             }}
@@ -110,7 +129,7 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
                 width: '100%',
                 fontSize: [1, 1, 0],
                 borderSpacing: 0,
-                td: { borderTop: `1px solid ${textColor}` },
+                td: { borderTop: `1px solid ${contrastColor}` },
               }}
             >
               <colgroup>
@@ -119,10 +138,10 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
                 <col span={1} sx={{ width: '30%' }} />
               </colgroup>
               <tbody>
-                <tr sx={{ color: textColor }}>
+                <tr sx={{ color: contrastColor }}>
                   <td colSpan={3}>{varName}</td>
                 </tr>
-                <tr sx={{ color: textColor }}>
+                <tr sx={{ color: contrastColor }}>
                   <td>Text size</td>
                   <td
                     sx={{
@@ -141,8 +160,8 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
                     Aa
                   </td>
                 </tr>
-                <ContrastTest bg={colorValue} color="#fff" />
-                <ContrastTest bg={colorValue} color="#000" />
+                <ContrastTest bg={colorValue} color={whiteTextColor} />
+                <ContrastTest bg={colorValue} color={blackTextColor} />
               </tbody>
             </table>
           </div>
@@ -157,13 +176,20 @@ export const BoltColor: FC<ColorBlockProps> = ({ name, color }) => {
  * palette displayed with BoltColor items
  * using a css grid for the dsplay
  */
-export const BoltColorPalette: FC<Omit<
-  GridContainerProps,
-  'children'
->> = props => (
-  <GridContainer {...props}>
-    {({ name, value }) => (
-      <BoltColor key={`color_item_${name}}`} name={name} color={value} />
-    )}
-  </GridContainer>
-);
+export const BoltColorPalette: FC<ThemeColorProps &
+  Omit<GridContainerProps, 'children'>> = props => {
+  const { blackTextColor, whiteTextColor, ...rest } = props;
+  return (
+    <GridContainer {...rest}>
+      {({ name, value }) => (
+        <BoltColor
+          key={`color_item_${name}}`}
+          name={name}
+          color={value}
+          blackTextColor={blackTextColor}
+          whiteTextColor={whiteTextColor}
+        />
+      )}
+    </GridContainer>
+  );
+};

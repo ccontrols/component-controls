@@ -4,19 +4,30 @@ import { jsx } from 'theme-ui';
 import tinycolor from 'tinycolor2';
 import { CopyContainer } from '@component-controls/components';
 import { colorToStr, mostReadable, contrastGrade } from '../utils';
-import { ColorBlockProps } from '../../types';
-import { FlexContainerProps, FlexContainer } from '../../components';
+import {
+  ColorBlockProps,
+  defaultBlackTextColor,
+  defaultWhiteTextColor,
+  ThemeColorProps,
+} from '../../types';
+import { FlexContainerProps, FlexContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a table row, expanding on hover to display the contrast and passing level.
  * Design inspired by GitLab's [Pajamas](https://design.gitlab.com/product-foundations/colors/).
  */
 
-export const PajamasColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
+export const PajamasColor: FC<ColorBlockProps> = ({
+  name,
+  color,
+  hover,
+  blackTextColor = defaultBlackTextColor,
+  whiteTextColor = defaultWhiteTextColor,
+}) => {
   const [hoverMe, setHoverMe] = useState(false);
   const colorValue = typeof color === 'string' ? color : color.value;
   const { hex } = colorToStr(colorValue);
-  const textColor = mostReadable(hex);
+  const contrastColor = mostReadable(hex);
   const onMouseEvents = useMemo(
     () => ({
       onMouseOver: () => setHoverMe(true),
@@ -24,9 +35,9 @@ export const PajamasColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
     }),
     [],
   );
-  const contrastWhite = tinycolor.readability(hex, '#ffffff');
+  const contrastWhite = tinycolor.readability(hex, whiteTextColor);
   const contrastGradeWhite = contrastGrade(contrastWhite);
-  const contrastBlack = tinycolor.readability(hex, '#000000');
+  const contrastBlack = tinycolor.readability(hex, blackTextColor);
   const contrastGradeBlack = contrastGrade(contrastBlack);
   return (
     <div sx={{ display: 'flex', flex: '1' }}>
@@ -48,7 +59,7 @@ export const PajamasColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
               display: 'flex',
               flexDirection: 'row',
               bg: colorValue,
-              color: textColor,
+              color: contrastColor,
               height: 35,
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -148,18 +159,21 @@ export const PajamasColor: FC<ColorBlockProps> = ({ name, color, hover }) => {
  * palette displayed with PajamasColor items
  * using a css flex display direction column
  */
-export const PajamasColorPalette: FC<Omit<
-  FlexContainerProps,
-  'children' | 'direction'
->> = props => (
-  <FlexContainer direction="column" sx={{ width: 360 }} {...props}>
-    {({ name, value, hover }) => (
-      <PajamasColor
-        key={`color_item_${name}}`}
-        name={name}
-        color={value}
-        hover={hover}
-      />
-    )}
-  </FlexContainer>
-);
+export const PajamasColorPalette: FC<ThemeColorProps &
+  Omit<FlexContainerProps, 'children' | 'direction'>> = props => {
+  const { blackTextColor, whiteTextColor, ...rest } = props;
+  return (
+    <FlexContainer direction="column" sx={{ width: 360 }} {...rest}>
+      {({ name, value, hover }) => (
+        <PajamasColor
+          key={`color_item_${name}}`}
+          name={name}
+          color={value}
+          hover={hover}
+          blackTextColor={blackTextColor}
+          whiteTextColor={whiteTextColor}
+        />
+      )}
+    </FlexContainer>
+  );
+};

@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx, Theme } from 'theme-ui';
 import { CopyContainer } from '@component-controls/components';
 import { ColorBlockProps, ColorValue } from '../../types';
-import { GridContainerProps, GridContainer } from '../../components';
+import { GridContainerProps, GridContainer } from '../../containers';
 
 /**
  * Color item displaying the color as a color block with sass variable name and hex color value.
