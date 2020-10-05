@@ -124,7 +124,11 @@ const BaseTableColor: FC<ColorBlockProps & { hasDark?: boolean }> = ({
     <tr>
       <td>
         <div
-          sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
         >
           <ColorBox color={colorValue} name={colorName} />
           {darkColor && (
@@ -329,8 +333,8 @@ export const TableColorPalette: FC<ThemeColorProps &
   });
   const columns: TableColumn[] = [
     {
-      title: hasDark ? 'color / dark' : 'Color',
-      sx: { pl: hasDark ? 4 : 2 },
+      title: hasDark ? 'color / dark' : 'color',
+      sx: { pl: hasDark ? 4 : 2, width: hasDark ? 200 : 140 },
     },
     {
       title: 'name',
@@ -363,7 +367,7 @@ export const TableColorPalette: FC<ThemeColorProps &
         borderLeft: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
         borderRight: (t: Theme) => `1px solid  ${t.colors?.shadow}`,
         '& > tbody > tr > td': {
-          p: 2,
+          py: 2,
         },
       }}
       header={

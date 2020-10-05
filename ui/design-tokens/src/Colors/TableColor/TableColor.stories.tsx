@@ -28,6 +28,21 @@ export const legend = () => <ColorAALegend />;
 export const palette = () => (
   <TableColorPalette
     palette={{
+      background: '#FAFAF9',
+      blue: '#B6DEE2',
+      blueDark: '#247BA0',
+      green: '#B2E4DC',
+      greenDark: '#2D5948',
+      muted: 'RGBA(0,0,0,.1)',
+      primary: '#F25F5C',
+      primaryDark: '#B51916',
+      primaryLight: '#FCBAB1',
+    }}
+  />
+);
+export const paletteDark = () => (
+  <TableColorPalette
+    palette={{
       text: { value: '#454f5b', dark: '#d3d4db' },
       background: { value: '#ffffff', dark: '#38404a' },
       primary: { value: '#5c6ac4', dark: '#efefef' },
