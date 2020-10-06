@@ -61,16 +61,16 @@ Object {
   "packages": Object {
     "5633741e98073052cbece6fcd32011e3": Object {
       "dependencies": Object {
-        "@component-controls/components": "^1.27.1",
+        "@component-controls/components": "^1.27.2",
         "@component-controls/core": "^1.26.0",
-        "@component-controls/editors": "^1.27.1",
-        "@component-controls/store": "^1.27.1",
+        "@component-controls/editors": "^1.27.2",
+        "@component-controls/store": "^1.27.2",
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/css": "^0.4.0-rc.1",
         "copy-to-clipboard": "^3.2.1",
+        "fuse.js": "^6.4.1",
         "global": "^4.3.2",
         "js-string-escape": "^1.0.1",
-        "lunr": "^2.3.8",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-frame-component": "^4.1.2",
@@ -81,11 +81,10 @@ Object {
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.27.1",
+        "@component-controls/jest-snapshots": "^1.27.2",
         "@component-controls/render": "^1.26.0",
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@theme-ui/presets": "^0.3.0",
-        "@types/lunr": "^2.3.3",
         "@types/mdx-js__react": "^1.5.1",
         "@types/react-frame-component": "^4.1.1",
         "@types/react-resize-detector": "^4.2.0",
@@ -108,7 +107,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.1",
+      "version": "1.27.2",
     },
     "942f7c3f19d9e197f86041eed5e46838": Object {
       "dependencies": Object {
@@ -151,7 +150,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.1",
+      "version": "1.27.2",
     },
   },
   "stories": Object {},

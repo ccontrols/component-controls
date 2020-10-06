@@ -73,5 +73,5 @@ export const defaultExternals: ExternalProps[] = [
 
   { lib: 'axe-core' },
   { lib: 'faker/locale/en_US' },
-  { lib: 'lunr' },
+  { lib: 'fuse.js' },
 ];

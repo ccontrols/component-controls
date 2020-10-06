@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, Theme } from 'theme-ui';
 import { FC, useState, useRef, useCallback } from 'react';
-import lunr, { Index } from 'lunr';
+import Fuse from 'fuse.js';
 import { SearchInput, SearchInputProps } from '@component-controls/components';
-import { DocType, defDocType, Pages, Document } from '@component-controls/core';
+import { defDocType, Pages, Document } from '@component-controls/core';
 import {
   useGetDocumentPath,
   useGetDocument,
@@ -11,14 +11,18 @@ import {
 } from '@component-controls/store';
 import { DocumentItem } from '../DocumentItem';
 
-export interface SearchItem {
+interface SearchObject {
   id: string;
   title: string;
-  type: DocType;
-  component?: string;
+  type: string;
   description?: string;
   body?: string;
+  author?: string;
+  stories?: string[];
+  tags?: string[];
+  component: string[];
 }
+
 export const Search: FC<Omit<
   SearchInputProps<Document>,
   'items' | 'onSearch'
@@ -27,42 +31,48 @@ export const Search: FC<Omit<
   const getDocumentPath = useGetDocumentPath();
   const getDocument = useGetDocument();
   const pages = usePages();
-  const lunrRef = useRef<Index | undefined>(undefined);
+  const lunrRef = useRef<Fuse<SearchObject> | undefined>(undefined);
 
   const onSearch = useCallback(
     (search: string) => {
       if (!lunrRef.current) {
-        lunrRef.current = lunr(function() {
-          this.field('title');
-          this.field('description');
-          this.field('body');
-          this.field('author');
-          this.field('stories');
-          this.field('component');
-          this.field('tags');
-          pages.forEach(page => {
-            this.add({
+        lunrRef.current = new Fuse(
+          pages.map(page => {
+            const item: SearchObject = {
               id: page.title,
               title: page.title.replace('/', ' '),
               type: page.type || defDocType,
               description: page.description,
               body: page.source,
               author: page.author,
-              stories: page.stories
-                ?.map(story => story.split('-').join(' '))
-                .join(' '),
-              tags: page.tags ? page.tags.join(' ') : '',
-              component: Object.keys(page.componentsLookup).join(' '),
-            });
-          });
-        });
+              stories: page.stories?.map(story => story.split('-').join(' ')),
+              tags: page.tags,
+              component: Object.keys(page.componentsLookup),
+            };
+            return item;
+          }),
+          {
+            includeScore: true,
+            useExtendedSearch: true,
+            keys: [
+              { name: 'title', weight: 0.9 },
+              { name: 'description', weight: 0.9 },
+              { name: 'body', weight: 0.7 },
+              { name: 'author', weight: 0.3 },
+              { name: 'stories', weight: 0.2 },
+              { name: 'tags', weight: 1 },
+              { name: 'component', weight: 0.7 },
+            ],
+          },
+        );
       }
       const searchResults = lunrRef.current.search(search);
       const newItems: Pages = searchResults
+        .sort((a, b) => (a.score || 0) - (b.score || 0))
         .slice(0, 20)
-        .filter((item: { ref: string }) => getDocument(item.ref) as Document)
-        .map((item: { ref: string }) => {
-          const page = getDocument(item.ref) as Document;
+        .filter(result => getDocument(result.item.id) as Document)
+        .map(result => {
+          const page = getDocument(result.item.id) as Document;
           return { ...page, id: page.title };
         });
       setItems(newItems);
