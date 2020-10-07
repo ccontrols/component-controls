@@ -39,7 +39,8 @@ export const getBundleName = () => {
     distFolder = path.resolve(process.cwd(), distFolder);
   }
   const bundleName = args.bundle || defBundleName;
-  return `${path.join(distFolder, bundleName)}`;
+  
+  return path.join(distFolder, bundleName);
 };
 /**
  * callback function to monitor new documents/deleted documents
