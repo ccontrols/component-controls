@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
+
+
+### Bug Fixes
+
+* fix for nix filenames ([a3e1454](https://github.com/ccontrols/component-controls/commit/a3e1454240d6fa46e6ba7e91f57f5fced4525840))
+* normalize path for windows systems ([3224214](https://github.com/ccontrols/component-controls/commit/3224214d3870519d5e5db4423ec92826566773a0))
+* prettier fixes ([cadc70b](https://github.com/ccontrols/component-controls/commit/cadc70b532fde4822348555bfcca959efd9f5b61))
+
+
+
+
+
 ## [1.27.2](https://github.com/ccontrols/component-controls/compare/v1.27.1...v1.27.2) (2020-10-05)
 
 **Note:** Version bump only for package @component-controls/loader
