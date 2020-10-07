@@ -54,8 +54,9 @@ ${contexts
       let exports = null;
       for (const context of contexts) {
         const key = context.req.keys().find(k => {
-          const fullPath = path.join(context.folder, k).split('/').join('\\\\');
-          return doc.fileName === fullPath;
+          const fullPath = path.join(context.folder, k);
+          const normalizedPath = context.folder.indexOf('\\\\') >= 0 ? fullPath.split('/').join('\\\\') : fullPath;
+          return doc.fileName === normalizedPath;
         });
         if (key) {
           exports = context.req(key);
