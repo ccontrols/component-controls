@@ -20,7 +20,9 @@ export class StorePlugin {
 
   private installStoreLoader(compiler: webpack.Compiler) {
     const nmrp = new webpack.NormalModuleReplacementPlugin(
-      new RegExp(normalizePath(path.resolve(__dirname, '../controls-store.js'))),
+      new RegExp(
+        normalizePath(path.resolve(__dirname, '../controls-store.js')),
+      ),
       (resource: any) => {
         if (resource.resource) {
           resource.loaders.push({

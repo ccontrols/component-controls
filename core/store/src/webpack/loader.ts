@@ -1,6 +1,6 @@
 import { loader } from 'webpack';
 import { getOptions } from 'loader-utils';
-import { normalizePath }  from '@component-controls/core';
+import { normalizePath } from '@component-controls/core';
 
 module.exports = function(content: string) {
   const context = (this as unknown) as loader.LoaderContext;

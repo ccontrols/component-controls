@@ -12,7 +12,6 @@ export const replaceSource = (
   config: BuildConfiguration | undefined,
   hashKey: string,
 ) => {
-  
   const imports = `
 
 const configJSON = ${
