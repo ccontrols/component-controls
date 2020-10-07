@@ -5,8 +5,7 @@ type: page
 author: atanasster
 fullPage: true
 ---
-
-import { jsx, Flex, Grid, Box, Heading, Text, Button, Card, Divider, Image } from 'theme-ui';
+import { jsx, Grid, Box, Heading, Button, Card, Divider, Image } from 'theme-ui';
 import { Link } from '@component-controls/components';
 import documentationImg from './media/documentation.jpg';
 import controlsImg from './media/controls.jpg';
@@ -23,23 +22,26 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
   </Card>  
 );
 
-<Flex sx={{ py: 4, flexDirection: 'column',  minHeight: '350px', alignItems: 'center', justifyContent: 'space-between', bg: 'primary', color: 'background' }}>
-  <Flex sx={{ flexDirection: 'column', alignItems: 'center',  maxWidth: '600px' }}>
-    <Heading as="h1">component-controls</Heading>
+<Box sx={{ display: 'flex', flexDirection: 'column', py: 4, minHeight: '100vh', alignItems: 'center' }}>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [2, 2, 6], pb: [4, 4, 6] }} >
+    <Heading as="h1" sx={{ fontSize: 6, fontWeight: 'heading', py: 3, textAlign: 'center' }}>Blazing-fast documentation sites</Heading>
     <Heading sx={{ py: 3, textAlign: 'center', px: 1 }} as="h3">
-      Start documenting your components with <Link sx={{ color: 'background' }} aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link> and <Link sx={{ color: 'background' }} aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>.
+      Start documenting your components with <Link aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link> and <Link aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>.
     </Heading>  
-    <Text sx={{ py: 1, textAlign: 'center' }}>
-      From <Link sx={{ color: 'background' }} aria-label="create documents" href="/tutorial/reference/document">documentation</Link> and <Link sx={{ color: 'background' }} aria-label="create stories" href="/tutorial/reference/story">stories</Link> for your react components, all the way to a full-featured CMS with blogs, tutorials, tags, authors and full-text search: component-controls compbines the best of breed from all pre-existing tools in the industry into a flexible platform.
-    </Text>
-  </Flex>  
-  <Button aria-label="visit tutorial" as={Link} href='/tutorial/'>Start learning</Button>
-</Flex>  
+    <Box as="p" sx={{ py: 3, textAlign: 'center', fontSize: 3, maxWidth: 600 }}>
+      From <Link aria-label="create documents" href="/tutorial/reference/document">documentation</Link> and <Link aria-label="create stories" href="/tutorial/reference/story">stories</Link> for your react components, all the way to a full-featured CMS with blogs, tutorials, tags, authors and full-text search: component-controls compbines the best of breed from all pre-existing tools in the industry into a flexible platform.
+    </Box>
+  </Box>
+  <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+    <Button variant="rimary" aria-label="visit tutorial" as={Link} href='/tutorial/'>Start learning</Button>
+    <Button sx={{ ml: 4}} aria-label="visit api" as={Link} href='/api/'>Start learning</Button>
+  </Box>  
+</Box>  
 
 
 <Divider sx={{ my: 4 }}/>
-<Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
-  <Heading as="h1" sx={{ px: 1, textAlign: 'center' }}>Choose your favorite site generator</Heading>
+<Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+  <Heading as="h1" sx={{ px: 1, textAlign: 'center' }}>Choose your favorite <Link aria-label="gatsby vs nextjs vs storybook" href="/blogs/gatsby-vs-nextjs-vs-storybook">static site generator</Link></Heading>
   <Grid
     sx={{
       m: 4,
@@ -56,10 +58,10 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
       User interface development environment and playground: create components independently and showcase components interactively in an isolated development environment.
     </BoxItem>
   </Grid>
-</Flex>  
+</Box>  
 
 <Divider sx={{ my: 4 }}/>
-<Flex sx={{ flexDirection: 'column', alignItems: 'center'}}>
+<Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
   <Heading as="h1">At a glance</Heading>
   <Grid
     gap={2}
@@ -101,4 +103,4 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
       Component controls provides a fully customisable experience with <Link aria-label="custom configurations" href="/configuration/overview/">configuration</Link> files. Customize the user-interface, the meta information and create custom webpack settings.      
     </BoxItem>
   </Grid>
-</Flex>  
+</Box>  
