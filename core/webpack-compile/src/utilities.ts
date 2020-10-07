@@ -39,7 +39,7 @@ export const getBundleName = () => {
     distFolder = path.resolve(process.cwd(), distFolder);
   }
   const bundleName = args.bundle || defBundleName;
-  
+
   return path.join(distFolder, bundleName);
 };
 /**
