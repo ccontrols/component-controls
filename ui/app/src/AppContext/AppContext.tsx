@@ -28,8 +28,12 @@ export const AppContext: FC<AppContextProps> = ({
   linkClass,
   activeTab,
 }) => {
-  const query = queryString.parse(location.search);
+  const query =
+    typeof location !== 'undefined'
+      ? queryString.parse(location.search)
+      : undefined;
   const dynStoryId =
+    query &&
     docId &&
     storyId &&
     !store.stories[storyId] &&

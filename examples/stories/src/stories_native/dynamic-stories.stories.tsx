@@ -26,4 +26,4 @@ export const buttonColors = () => {
     });
 };
 
-buttonColors.factory = true;
+buttonColors.dynamic = true;

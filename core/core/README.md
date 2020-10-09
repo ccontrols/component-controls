@@ -365,20 +365,20 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                                                                                   |
-| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
-| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
-| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
-| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
-| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
-| `id`          | string                            | id of the story                                                                                                                                               |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
-| `name*`       | string                            | name of the Story.                                                                                                                                            |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
-| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
+| Name          | Type                              | Description                                                                                                                                       |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `description` | string                            | story extended description. can use markdown.                                                                                                     |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                |
+| `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
+| `dynamicId`   | string                            | if the story was created by a dynamic story (factory), this is the original story id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                   |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                               |
+| `name*`       | string                            | name of the Story.                                                                                                                                |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
 
 ## StoryArguments
 
@@ -391,19 +391,22 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## StoryFactoryFn
 
-dynamic story factory function type.
+dynamic story creator function type.
 returns an array of dynamically loaded stories
 
 _defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
 
-**function** (`doc`\*: [Document](#document)): [Story](#story)\[];
+**function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
+| ----------- | ------------------ | ----------- |
+| `undefined` | [Story](#story)\[] |             |
+| `Story`     | [Story](#story)    |             |;
 
 ### parameters
 
-| Name      | Type                  | Description |
-| --------- | --------------------- | ----------- |
-| `doc*`    | [Document](#document) |             |
-| `returns` | [Story](#story)\[]    |             |
+| Name      | Type                                                                                                                                                                                                                      | Description |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `doc*`    | [Document](#document)                                                                                                                                                                                                     |             |
+| `returns` | ### properties| Name        | Type               | Description | | ----------- | ------------------ | ----------- | | `undefined` | [Story](#story)\[] |             | | `Story`     | [Story](#story)    |             | |             |
 
 ## CURRENT_STORY
 
@@ -1365,20 +1368,20 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                                                                                   |
-| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
-| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
-| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
-| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
-| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
-| `id`          | string                            | id of the story                                                                                                                                               |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
-| `name*`       | string                            | name of the Story.                                                                                                                                            |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
-| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
+| Name          | Type                              | Description                                                                                                                                       |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `description` | string                            | story extended description. can use markdown.                                                                                                     |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                |
+| `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
+| `dynamicId`   | string                            | if the story was created by a dynamic story (factory), this is the original story id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                   |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                               |
+| `name*`       | string                            | name of the Story.                                                                                                                                |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
 
 ## Components
 
@@ -1650,20 +1653,20 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                                                                                   |
-| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
-| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
-| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
-| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
-| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
-| `id`          | string                            | id of the story                                                                                                                                               |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
-| `name*`       | string                            | name of the Story.                                                                                                                                            |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
-| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
+| Name          | Type                              | Description                                                                                                                                       |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `description` | string                            | story extended description. can use markdown.                                                                                                     |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                |
+| `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
+| `dynamicId`   | string                            | if the story was created by a dynamic story (factory), this is the original story id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                   |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                               |
+| `name*`       | string                            | name of the Story.                                                                                                                                |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                     |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                          |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                  |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                   |
 
 ## DocType
 

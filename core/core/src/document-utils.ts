@@ -70,11 +70,11 @@ export const getStoryPath = (
       : ensureStartingSlash(ensureTrailingSlash(basePath))
   }`;
   const story = store?.stories[storyId];
-  const { factoryId, name } = story || {};
-  const id = factoryId || storyId;
+  const { dynamicId, name } = story || {};
+  const id = dynamicId || storyId;
   const route = `${docRoute}${id ? ensureTrailingSlash(id) : ''}${
     activeTab ? ensureTrailingSlash(activeTab) : ''
-  }${factoryId ? `?story=${name}` : ''}`;
+  }${dynamicId ? `?story=${name}` : ''}`;
   return encodeURI(removeTrailingSlash(route));
 };
 
@@ -90,14 +90,14 @@ export const docStoryToId = (docId: string, storyId: string) =>
  * maps an exported story to an array of stories. Used for dynamically created stories.
  */
 export const mapDynamicStories = (story: Story, doc: Document): Story[] => {
-  if (story.factory && typeof story.renderFn === 'function') {
+  if (story.dynamic && typeof story.renderFn === 'function') {
     const stories = story.renderFn(doc);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, name, ...storyProps } = story;
     return Array.isArray(stories)
       ? stories.map(s => ({
           ...storyProps,
-          factoryId: docStoryToId(doc.title, id || name),
+          dynamicId: docStoryToId(doc.title, id || name),
           ...s,
         }))
       : [story];

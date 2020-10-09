@@ -427,15 +427,17 @@ overview.decorators = [
 <img alt="story decorators" title="story decorators" src={decoratorsImg} />
 
 
-### factory
+### dynamic
 
 type `boolean`
 
-If this flag is set to true, the story is considered a `factory` for creating dynamic stories at run-time
+If this flag is set to true, the story is a function creating dynamic stories at run-time
 
 [ESM](/tutorial/esmodules-stories)
 ```
 import React from 'react';
+import { theme } from '@component-controls/components';
+
 export default {
   title: 'Library/Components/Button',
 };
@@ -456,6 +458,6 @@ export const buttonColors = () => {
     });
 };
 
-buttonColors.factory = true;
+buttonColors.dynamic = true;
 ```
 
