@@ -235,7 +235,6 @@ export const Sidebar: FC<SidebarProps> = ({
     ),
     id: 'filter',
   });
-  console.log(docId);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
       {responsive && (
