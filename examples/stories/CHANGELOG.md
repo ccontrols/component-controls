@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* dynamic stories with fixed route ([e9b7919](https://github.com/ccontrols/component-controls/commit/e9b79192d3eed4076d5fa64e415594d6a31c11e5))
+* renamed factory to dynamic ([14218eb](https://github.com/ccontrols/component-controls/commit/14218ebcf00d54faa02b037898ca9173b113e9cf))
+
+
+### Features
+
+* dynamic esm stories ([b1c9c00](https://github.com/ccontrols/component-controls/commit/b1c9c004e9b3103d41bab2c6fca5ea1a3ffa17fe))
+
+
+
+
+
 # [1.27.0](https://github.com/ccontrols/component-controls/compare/v1.26.0...v1.27.0) (2020-10-05)
 
 

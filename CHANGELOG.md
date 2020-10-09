@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* building param optional ([b3e02f1](https://github.com/ccontrols/component-controls/commit/b3e02f144af77155ab616775cad56328c818574e))
+* dynamic stories with fixed route ([e9b7919](https://github.com/ccontrols/component-controls/commit/e9b79192d3eed4076d5fa64e415594d6a31c11e5))
+* remove console.log ([9b5ec26](https://github.com/ccontrols/component-controls/commit/9b5ec264bf1c3027786861c30a222128b07cee12))
+* renamed factory to dynamic ([14218eb](https://github.com/ccontrols/component-controls/commit/14218ebcf00d54faa02b037898ca9173b113e9cf))
+* story paths for storybook examples ([e66c802](https://github.com/ccontrols/component-controls/commit/e66c802bc46403736edf8ff6d5e3f785e81fd290))
+
+
+### Features
+
+* dynamic esm stories ([b1c9c00](https://github.com/ccontrols/component-controls/commit/b1c9c004e9b3103d41bab2c6fca5ea1a3ffa17fe))
+
+
+
+
+
 ## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
 
 
