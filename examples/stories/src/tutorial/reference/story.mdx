@@ -426,3 +426,36 @@ overview.decorators = [
 
 <img alt="story decorators" title="story decorators" src={decoratorsImg} />
 
+
+### factory
+
+type `boolean`
+
+If this flag is set to true, the story is considered a `factory` for creating dynamic stories at run-time
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const buttonColors = () => {
+  return Object.keys(theme.colors)
+    .filter(color => typeof theme.colors[color] === 'string')
+    .map(color => {
+      return {
+        name: color,
+        source: `<Button sx={{ bg: '${color}'}}>Color ${color}: ${theme.colors[color]}</Button>`,
+        renderFn: () => (
+          <Button
+            sx={{ bg: color }}
+          >{`Color ${color}: ${theme.colors[color]}`}</Button>
+        ),
+      };
+    });
+};
+
+buttonColors.factory = true;
+```
+

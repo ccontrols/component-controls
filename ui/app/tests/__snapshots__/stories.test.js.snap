@@ -1790,7 +1790,7 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-j6yaho"
             >
               <button
-                class="css-161l3jj"
+                class="active css-161l3jj"
               >
                 <div
                   class="css-1i09fc1"
@@ -1802,7 +1802,7 @@ exports[`Application/Sidebar Overview 1`] = `
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-11c8po5"
+                        class="css-1k0f1bf"
                       >
                         <strong>
                           Story
@@ -1810,7 +1810,7 @@ exports[`Application/Sidebar Overview 1`] = `
                       </div>
                     </div>
                     <div
-                      aria-label="expand items"
+                      aria-label="collapse items"
                       class="css-lzd0h4"
                     >
                       <svg
@@ -1824,7 +1824,7 @@ exports[`Application/Sidebar Overview 1`] = `
                         width="16"
                       >
                         <path
-                          d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"
+                          d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
                           fill-rule="evenodd"
                         />
                       </svg>
@@ -1832,6 +1832,202 @@ exports[`Application/Sidebar Overview 1`] = `
                   </div>
                 </div>
               </button>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-oao09s"
+              >
+                <a
+                  class="active css-1t6zyk7"
+                  href="/docs/id-of-story"
+                >
+                  <div
+                    class="css-1i09fc1"
+                  >
+                    <div
+                      class="css-11328uk"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <div
+                          class="css-9cwl6c"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="octicon"
+                            fill="currentColor"
+                            height="16"
+                            role="img"
+                            style="display: inline-block; user-select: none; vertical-align: middle;"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <path
+                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="css-1k0f1bf"
+                        >
+                          story
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-w1i3qo"
+              >
+                <a
+                  class="css-1t6zyk7"
+                  href="/docs/id-of-single"
+                >
+                  <div
+                    class="css-1i09fc1"
+                  >
+                    <div
+                      class="css-11328uk"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <div
+                          class="css-9cwl6c"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="octicon"
+                            fill="currentColor"
+                            height="16"
+                            role="img"
+                            style="display: inline-block; user-select: none; vertical-align: middle;"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <path
+                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="css-11c8po5"
+                        >
+                          story
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-w1i3qo"
+              >
+                <a
+                  class="css-1t6zyk7"
+                  href="/docs/id-of-button-story"
+                >
+                  <div
+                    class="css-1i09fc1"
+                  >
+                    <div
+                      class="css-11328uk"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <div
+                          class="css-9cwl6c"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="octicon"
+                            fill="currentColor"
+                            height="16"
+                            role="img"
+                            style="display: inline-block; user-select: none; vertical-align: middle;"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <path
+                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="css-11c8po5"
+                        >
+                          button
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="css-vurnku"
+            >
+              <div
+                class="css-w1i3qo"
+              >
+                <a
+                  class="css-1t6zyk7"
+                  href="/docs/blocks-core-story-plain--controls"
+                >
+                  <div
+                    class="css-1i09fc1"
+                  >
+                    <div
+                      class="css-11328uk"
+                    >
+                      <div
+                        class="css-f5h6sg"
+                      >
+                        <div
+                          class="css-9cwl6c"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="octicon"
+                            fill="currentColor"
+                            height="16"
+                            role="img"
+                            style="display: inline-block; user-select: none; vertical-align: middle;"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <path
+                              d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="css-11c8po5"
+                        >
+                          controls
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div

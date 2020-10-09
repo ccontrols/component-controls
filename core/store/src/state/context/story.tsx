@@ -13,7 +13,7 @@ import {
   getComponentName,
   Component,
 } from '@component-controls/core';
-import { useStore, StoreContext, useActiveTab, useConfig } from './store';
+import { useStore, StoreContext, useActiveTab } from './store';
 
 interface StoryContextProps {
   story?: Story;
@@ -160,21 +160,19 @@ export const useStoryComponent = (
 export const useStoryPath = (storyId: string): string => {
   const store = useStore();
   const activeTab = useActiveTab();
-  const config = useConfig();
   const story = store.stories[storyId];
   if (!story) {
     return '';
   }
   const doc = store.docs[story?.doc || ''];
-  return getStoryPath(story.id, doc, config.pages, activeTab);
+  return getStoryPath(story.id, doc, store, activeTab);
 };
 
 export const useGetStoryPath = () => {
   const store = useStore();
-  const config = useConfig();
   return (storyId: string, activeTab?: string): string => {
     const story = store.stories[storyId];
     const doc = story && story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(storyId, doc, config.pages, activeTab);
+    return getStoryPath(storyId, doc, store, activeTab);
   };
 };

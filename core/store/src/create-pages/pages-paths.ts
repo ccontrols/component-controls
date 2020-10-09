@@ -153,7 +153,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
                 ? doc.stories
                 : [undefined];
             stories.forEach((storyId?: string) => {
-              const path = getStoryPath(storyId, doc, pages, route);
+              const path = getStoryPath(storyId, doc, store, route);
               docPaths.push({
                 path,
                 type: docType,
@@ -172,7 +172,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
         const path = getDocPath(
           type as DocType,
           { title: tag, componentsLookup: {} },
-          pages,
+          store,
         );
         docPaths.push({
           path,

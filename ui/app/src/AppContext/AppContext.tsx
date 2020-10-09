@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from 'theme-ui';
-import { Store } from '@component-controls/core';
+import queryString from 'query-string';
+import { Store, docStoryToId } from '@component-controls/core';
 import {
   SidebarContextProvider,
   LinkContextProvider,
@@ -27,9 +28,17 @@ export const AppContext: FC<AppContextProps> = ({
   linkClass,
   activeTab,
 }) => {
+  const query = queryString.parse(location.search);
+  const dynStoryId =
+    docId &&
+    storyId &&
+    !store.stories[storyId] &&
+    typeof query.story === 'string'
+      ? docStoryToId(docId, query.story)
+      : storyId;
   return (
     <BlockContextProvider
-      storyId={storyId}
+      storyId={dynStoryId}
       docId={docId}
       store={store}
       activeTab={activeTab}

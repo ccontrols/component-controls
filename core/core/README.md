@@ -19,6 +19,7 @@
     -   [Stories](#stories)
     -   [Story](#story)
     -   [StoryArguments](#storyarguments)
+    -   [StoryFactoryFn](#storyfactoryfn)
     -   [CURRENT_STORY](#current_story)
     -   [defDocType](#defdoctype)
     -   [dateToLocalString](#datetolocalstring)
@@ -139,7 +140,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L340)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 
 
@@ -203,7 +204,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L301)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L317)_
 
 
 
@@ -260,7 +261,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L276)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
 
 Record&lt;string, 
 
@@ -274,7 +275,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L165)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
 
 ### properties
 
@@ -305,7 +306,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L281)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -317,7 +318,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -327,13 +328,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L283)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L299)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L295)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -348,7 +349,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L288)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
 
 Record&lt;string, 
 
@@ -364,18 +365,20 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                           |
-| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
-| `description` | string                            | story extended description. can use markdown.                                                         |
-| `doc`         | string                            | title of the file/group of stories                                                                    |
-| `id`          | string                            | id of the story                                                                                       |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
-| `name*`       | string                            | name of the Story.                                                                                    |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
-| `subtitle`    | string                            | optional story subtitle property                                                                      |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
+| Name          | Type                              | Description                                                                                                                                                   |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
+| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
+| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
+| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                               |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
+| `name*`       | string                            | name of the Story.                                                                                                                                            |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
 
 ## StoryArguments
 
@@ -386,21 +389,37 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 [StoryArgument](#storyargument)\[]
 
+## StoryFactoryFn
+
+dynamic story factory function type.
+returns an array of dynamically loaded stories
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
+
+**function** (`doc`\*: [Document](#document)): [Story](#story)\[];
+
+### parameters
+
+| Name      | Type                  | Description |
+| --------- | --------------------- | ----------- |
+| `doc*`    | [Document](#document) |             |
+| `returns` | [Story](#story)\[]    |             |
+
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L313)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L159)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L266)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -413,7 +432,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L366)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L382)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -1327,7 +1346,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L295)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1346,24 +1365,26 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                           |
-| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
-| `description` | string                            | story extended description. can use markdown.                                                         |
-| `doc`         | string                            | title of the file/group of stories                                                                    |
-| `id`          | string                            | id of the story                                                                                       |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
-| `name*`       | string                            | name of the Story.                                                                                    |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
-| `subtitle`    | string                            | optional story subtitle property                                                                      |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
+| Name          | Type                              | Description                                                                                                                                                   |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
+| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
+| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
+| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                               |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
+| `name*`       | string                            | name of the Story.                                                                                                                                            |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
 
 ## Components
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L276)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
 
 Record&lt;string, 
 
@@ -1386,7 +1407,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L281)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -1398,7 +1419,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -1410,7 +1431,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L288)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
 
 Record&lt;string, 
 
@@ -1455,7 +1476,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L165)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
 
 ### properties
 
@@ -1629,18 +1650,20 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name          | Type                              | Description                                                                                           |
-| ------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\` |
-| `description` | string                            | story extended description. can use markdown.                                                         |
-| `doc`         | string                            | title of the file/group of stories                                                                    |
-| `id`          | string                            | id of the story                                                                                       |
-| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                   |
-| `name*`       | string                            | name of the Story.                                                                                    |
-| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                         |
-| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                              |
-| `subtitle`    | string                            | optional story subtitle property                                                                      |
-| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                       |
+| Name          | Type                              | Description                                                                                                                                                   |
+| ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                                         |
+| `description` | string                            | story extended description. can use markdown.                                                                                                                 |
+| `doc`         | string                            | title of the file/group of stories                                                                                                                            |
+| `factory`     | boolean                           | if set to true, the function is a stories factory, returns a list of Story objects                                                                            |
+| `factoryId`   | string                            | if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id. it is set internally and will be used to create a story URL |
+| `id`          | string                            | id of the story                                                                                                                                               |
+| `loc`         | [CodeLocation](#codelocation)     | location in the source file of the story definition                                                                                                           |
+| `name*`       | string                            | name of the Story.                                                                                                                                            |
+| `renderFn`    | [StoryRenderFn](#storyrenderfn)   | render function for the story                                                                                                                                 |
+| `source`      | string                            | the source code of the story, extracted by the AST instrumenting loaders                                                                                      |
+| `subtitle`    | string                            | optional story subtitle property                                                                                                                              |
+| `StoryProps`  | [StoryProps](#storyprops)         |                                                                                                                                                               |
 
 ## DocType
 

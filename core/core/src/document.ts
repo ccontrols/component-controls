@@ -154,7 +154,23 @@ export type Story = {
    * optional story subtitle property
    */
   subtitle?: string;
+  /**
+   * if set to true, the function is a stories factory, returns a list of Story objects
+   */
+  factory?: boolean;
+
+  /**
+   * if the story was created by a dynacmi storiers factory, this is the original 'parent' factory id.
+   * it is set internally and will be used to create a story URL
+   */
+  factoryId?: string;
 } & StoryProps;
+
+/**
+ * dynamic story factory function type.
+ * returns an array of dynamically loaded stories
+ */
+export type StoryFactoryFn = (doc: Document) => Story[];
 
 export const defDocType: DocType = 'story';
 /**

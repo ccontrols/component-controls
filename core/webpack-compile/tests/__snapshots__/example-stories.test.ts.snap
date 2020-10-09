@@ -478,6 +478,16 @@ Button.propTypes = {
       },
       "version": "1.27.0",
     },
+    "2ee4e194b81724461f4c45baab611609": Object {
+      "fileHash": "2ee4e194b81724461f4c45baab611609",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/dynamic-stories.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.27.0",
+    },
     "af3ea9029e5eedf5278b612cda3d978c": Object {
       "fileHash": "af3ea9029e5eedf5278b612cda3d978c",
       "name": "component-controls-stories",
@@ -1969,6 +1979,54 @@ any *markdown* is allowed
           "name": "textDefaultProp",
           "renderFn": [Function],
           "source": "({ text }) => text",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "componentsLookup": Object {},
+        "date": "2020-10-08T17:00:16.577Z",
+        "dateModified": "2020-10-09T01:08:05.017Z",
+        "description": "ESM story file to demostrate creating 'dynamic' stories at run-time. Creates a story iterating through each theme color",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/dynamic-stories.stories.tsx",
+        "package": "2ee4e194b81724461f4c45baab611609",
+        "title": "Introduction/Dynamic stories",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/dynamic-stories.stories.tsx",
+      "stories": Object {
+        "buttonColors": Object {
+          "arguments": Array [],
+          "factory": true,
+          "id": "buttonColors",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 27,
+            },
+            "start": Object {
+              "column": 28,
+              "line": 13,
+            },
+          },
+          "name": "buttonColors",
+          "renderFn": [Function],
+          "source": "() => {
+  return Object.keys(theme.colors)
+    .filter(color => typeof theme.colors[color] === 'string')
+    .map(color => {
+      return {
+        name: color,
+        source: \`<Button sx={{ bg: '\${color}'}}>Color \${color}: \${theme.colors[color]}</Button>\`,
+        renderFn: () => (
+          <Button
+            sx={{ bg: color }}
+          >{\`Color \${color}: \${theme.colors[color]}\`}</Button>
+        ),
+      };
+    });
+}",
         },
       },
     },

@@ -8,6 +8,7 @@ import {
   useDocByType,
   useConfig,
   useActiveTab,
+  useCurrentStory,
 } from '@component-controls/store';
 import {
   Sidebar as AppSidebar,
@@ -25,7 +26,6 @@ import {
   DocType,
   Pages,
   defDocType,
-  RunConfiguration,
   Store,
   getStoryPath,
   getDocPath,
@@ -47,7 +47,6 @@ export interface SidebarProps {
 
 const createMenuItem = (
   store: Store,
-  config: RunConfiguration,
   doc: Document,
   type: DocType,
   levels: string[],
@@ -66,7 +65,7 @@ const createMenuItem = (
       return '';
     }
     const doc = story.doc ? store.docs[story.doc] : undefined;
-    return getStoryPath(story.id, doc, config.pages, activeTab);
+    return getStoryPath(story.id, doc, store, activeTab);
   };
 
   const documentPath = (
@@ -75,7 +74,7 @@ const createMenuItem = (
     activeTab?: string,
   ): string => {
     const doc = store.docs[name];
-    return getDocPath(type, doc, config.pages, name, activeTab);
+    return getDocPath(type, doc, store, name, activeTab);
   };
   const newItem: MenuItem = {
     id: levels[0],
@@ -120,7 +119,6 @@ const createMenuItem = (
   }
   return createMenuItem(
     store,
-    config,
     doc,
     type,
     levels.slice(1),
@@ -170,7 +168,8 @@ export const Sidebar: FC<SidebarProps> = ({
   const store = useStore();
   const activeTab = useActiveTab();
   const { title: docId } = useCurrentDocument() || {};
-
+  const story = useCurrentStory();
+  const activeId = story ? story.id : docId;
   const config = useConfig() || {};
   const { pages, menu, sidebar = [] } = config;
   const page: PageConfiguration = useMemo(() => pages?.[type] || {}, [
@@ -192,7 +191,6 @@ export const Sidebar: FC<SidebarProps> = ({
             }
             createMenuItem(
               store,
-              config,
               doc,
               type,
               [title],
@@ -204,13 +202,13 @@ export const Sidebar: FC<SidebarProps> = ({
           }
         }
         const levels = title.split('/');
-        createMenuItem(store, config, doc, type, levels, page, activeTab, acc);
+        createMenuItem(store, doc, type, levels, page, activeTab, acc);
         return acc;
       }, staticMenus);
       return menuItems;
     }
     return staticMenus;
-  }, [type, activeTab, store, config, page, docs, menu]);
+  }, [type, activeTab, store, page, docs, menu]);
   const [search, setSearch] = useState<string | undefined>(undefined);
   const actions: ActionItems = [...sidebar];
 
@@ -237,7 +235,7 @@ export const Sidebar: FC<SidebarProps> = ({
     ),
     id: 'filter',
   });
-
+  console.log(docId);
   return (
     <AppSidebar variant="appsidebar.sidebar" id="sidebar">
       {responsive && (
@@ -248,7 +246,11 @@ export const Sidebar: FC<SidebarProps> = ({
       )}
       <Box variant="appsidebar.container">
         <ActionBar themeKey="appsidebar" actions={actions} />
-        <Navmenu activeItem={{ id: docId }} search={search} items={menuItems} />
+        <Navmenu
+          activeItem={{ id: activeId }}
+          search={search}
+          items={menuItems}
+        />
       </Box>
     </AppSidebar>
   );
