@@ -92,7 +92,7 @@ export const docStoryToId = (docId: string, storyId: string) =>
 export const mapDynamicStories = (
   story: Story,
   doc: Document,
-  building: boolean,
+  building?: boolean,
 ): Story[] => {
   if (story.dynamic && typeof story.renderFn === 'function') {
     const stories = story.renderFn(doc);
