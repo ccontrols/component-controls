@@ -40,7 +40,7 @@ export const createPagesStatefully = async (
   };
   const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
     if (loadingStore) {
-      const store: Store = loadStore(loadingStore);
+      const store: Store = loadStore(loadingStore, true);
       const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
         gatsbyStore.getState().pages.forEach((page: Page) => {
           if (page.path === props.path && page.component === props.component) {

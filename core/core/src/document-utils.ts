@@ -89,7 +89,11 @@ export const docStoryToId = (docId: string, storyId: string) =>
 /**
  * maps an exported story to an array of stories. Used for dynamically created stories.
  */
-export const mapDynamicStories = (story: Story, doc: Document): Story[] => {
+export const mapDynamicStories = (
+  story: Story,
+  doc: Document,
+  building: boolean,
+): Story[] => {
   if (story.dynamic && typeof story.renderFn === 'function') {
     const stories = story.renderFn(doc);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -97,7 +101,7 @@ export const mapDynamicStories = (story: Story, doc: Document): Story[] => {
     return Array.isArray(stories)
       ? stories.map(s => ({
           ...storyProps,
-          dynamicId: docStoryToId(doc.title, id || name),
+          dynamicId: building ? undefined : docStoryToId(doc.title, id || name),
           ...s,
         }))
       : [story];

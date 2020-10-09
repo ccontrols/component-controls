@@ -22,7 +22,7 @@ import { transformControls } from './transform-controls';
 
 export { LoadingStore };
 
-export const loadStore = (store: LoadingStore): Store => {
+export const loadStore = (store: LoadingStore, building?: boolean): Store => {
   const globalStore: Store = getDefaultStore();
   try {
     const {
@@ -72,7 +72,11 @@ export const loadStore = (store: LoadingStore): Store => {
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
             const exportedStory: Story = storeStories[storyName];
-            let stories: Story[] = mapDynamicStories(exportedStory, doc);
+            let stories: Story[] = mapDynamicStories(
+              exportedStory,
+              doc,
+              building,
+            );
             stories.forEach(story => {
               story.id = story.id || story.name;
               Object.assign(story, deepMerge(docStoryProps, story));

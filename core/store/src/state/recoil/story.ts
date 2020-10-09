@@ -7,7 +7,7 @@ import {
   getComponentName,
   Component,
 } from '@component-controls/core';
-import { storeState, useStore, useActiveTab, useConfig } from './store';
+import { storeState, useStore, useActiveTab } from './store';
 
 export const storyIdState = atom<string | undefined>({
   key: 'story_id',
