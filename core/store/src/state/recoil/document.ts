@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import {
   atom,
   atomFamily,
@@ -14,6 +15,7 @@ import {
   DocType,
   defDocType,
   getDocPath,
+  getHomePath,
   getComponentName,
 } from '@component-controls/core';
 import { storeState, useStore, activeTabState } from './store';
@@ -176,10 +178,11 @@ const docTypeCountState = selector<DocCountType>({
   get: ({ get }) => {
     const store = get(storeState);
     const { pages = {} } = store?.config || {};
+    const homePath = useMemo(() => getHomePath(store), [store]);
     return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
       const docs = get(docsByTypeState(type));
       const home = docs.length
-        ? docs.find(doc => doc.route === '/') || docs[0]
+        ? docs.find(doc => doc.route === homePath) || docs[0]
         : undefined;
       return {
         ...acc,

@@ -5,7 +5,13 @@ import {
   getDocPages,
   DocPagesPath,
 } from '@component-controls/store';
-import { Store, DocType } from '@component-controls/core';
+import {
+  Store,
+  DocType,
+  getHomePath,
+  getRoutePath,
+  ensureTrailingSlash,
+} from '@component-controls/core';
 export { getIndexPage } from '@component-controls/store';
 
 export const getHomePagesPaths = (store: Store): string[] => {
@@ -18,7 +24,9 @@ export const getDocHomePage = (
   path: string,
 ): DocHomePagesPath | undefined => {
   const pages = getHomePages(store);
-  return pages.find(page => page.path === `/${path}`);
+  const resolvedPath = getRoutePath(store, path);
+  const page = pages.find(page => page.path === resolvedPath);
+  return page;
 };
 
 export const getDocPagesPaths = (store: Store): string[] => {
@@ -31,7 +39,9 @@ export const getDocPage = (
   docTyoe: DocType,
   docId: string[],
 ): DocPagesPath | undefined => {
-  const path = `/${docTyoe}/${docId.join('/')}`;
+  const homePath = getHomePath(store);
+  const path = `${ensureTrailingSlash(homePath)}${docTyoe}/${docId.join('/')}`;
   const pages = getDocPages(store);
-  return pages.find(page => page.path === path);
+  const page = pages.find(page => page.path === path);
+  return page;
 };

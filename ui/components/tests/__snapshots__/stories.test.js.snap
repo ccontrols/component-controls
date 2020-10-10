@@ -1965,6 +1965,8 @@ exports[`Components/Navmenu Overview 1`] = `
           >
             <a
               class="css-1t6zyk7"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div
                 class="css-1i09fc1"

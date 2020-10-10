@@ -16,6 +16,7 @@
     -   [<ins>Keyboard</ins>](#inskeyboardins)
     -   [<ins>Link</ins>](#inslinkins)
     -   [<ins>LinkContextProvider</ins>](#inslinkcontextproviderins)
+    -   [<ins>useIsLocalLink</ins>](#insuseislocallinkins)
     -   [<ins>LinkHeading</ins>](#inslinkheadingins)
     -   [<ins>Markdown</ins>](#insmarkdownins)
     -   [<ins>Multiselect</ins>](#insmultiselectins)
@@ -256,6 +257,10 @@ _LinkContextProvider [source code](https://github.com/ccontrols/component-contro
 | Name         | Type  | Description |
 | ------------ | ----- | ----------- |
 | `linkClass*` | _any_ |             |
+
+## <ins>useIsLocalLink</ins>
+
+_useIsLocalLink [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Link/useIsLocalLink.tsx)_
 
 ## <ins>LinkHeading</ins>
 

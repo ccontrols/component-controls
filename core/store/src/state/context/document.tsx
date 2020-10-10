@@ -1,4 +1,4 @@
-import React, { FC, createContext, useContext, useState } from 'react';
+import React, { FC, createContext, useContext, useState, useMemo } from 'react';
 import {
   Document,
   Documents,
@@ -7,6 +7,7 @@ import {
   DocType,
   defDocType,
   getDocPath,
+  getHomePath,
   getComponentName,
 } from '@component-controls/core';
 import { useStore, useActiveTab } from './store';
@@ -165,12 +166,13 @@ export type DocCountType = Record<DocType, { count: number; home?: Document }>;
  */
 export const useDocTypeCount = (): DocCountType => {
   const store = useStore();
+  const homePath = useMemo(() => getHomePath(store), [store]);
   const getByDocType = useGetDocByType();
   const { pages = {} } = store?.config || {};
   return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
     const docs = getByDocType(type);
     const home = docs.length
-      ? docs.find(doc => doc.route === '/') || docs[0]
+      ? docs.find(doc => doc.route === homePath) || docs[0]
       : undefined;
     return {
       ...acc,

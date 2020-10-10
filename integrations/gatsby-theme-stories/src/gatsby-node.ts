@@ -14,7 +14,7 @@ import {
   PluginCallback,
   Page,
 } from 'gatsby';
-import { Store } from '@component-controls/core';
+import { Store, getHomePath } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -56,7 +56,7 @@ export const createPagesStatefully = async (
       const { docId = null, type = null, storyId = null } =
         getIndexPage(store) || {};
       createGatsbyPage({
-        path: `/`,
+        path: getHomePath(store),
         component: require.resolve(`../src/templates/DocPage.tsx`),
         context: {
           docId,

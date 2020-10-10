@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
 import { jsx, Box, Heading } from 'theme-ui';
-import { DocType, getDocTypePath } from '@component-controls/core';
+import { DocType, getDocTypePath, getHomePath } from '@component-controls/core';
 import { ActionBar, ActionItems, Link } from '@component-controls/components';
 import {
   ColorMode,
@@ -30,13 +30,19 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const { SidebarToggle, collapsed, responsive } = useContext(SidebarContext);
   const store = useStore();
   const homePage = useMemo(() => getIndexPage(store), [store]);
+  const homePath = getHomePath(store);
   const docCounts = useDocTypeCount();
   const config = useConfig();
   const doc = useCurrentDocument();
   const { pages, siteTitle } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
-      { node: 'Home', href: '/', 'aria-label': 'go to home page', id: 'home' },
+      {
+        node: 'Home',
+        href: homePath,
+        'aria-label': 'go to home page',
+        id: 'home',
+      },
     ];
     if (pages) {
       const pageItems = Object.keys(pages)
@@ -56,21 +62,21 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         .map(({ page }) => ({
           id: page.label?.toLowerCase(),
           'aria-label': `go to page ${page.label}`,
-          href: getDocTypePath(page),
+          href: getDocTypePath(store, page),
           node: page.label,
         }));
       if (pageItems.length) {
         Array.prototype.push.apply(actions, pageItems);
       } else {
         actions[0].node = (
-          <Link href="/" variant="appheader.title">
+          <Link href={`${homePath}`} variant="appheader.title">
             <Heading as="h2">{siteTitle}</Heading>
           </Link>
         );
       }
     }
     return toolbar.left ? [...actions, ...toolbar.left] : actions;
-  }, [pages, toolbar.left, docCounts, homePage, siteTitle]);
+  }, [pages, toolbar.left, docCounts, homePath, store, homePage, siteTitle]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [

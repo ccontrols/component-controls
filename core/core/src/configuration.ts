@@ -136,7 +136,10 @@ export interface BuildConfiguration {
    * alternative naming for docz compatibility
    */
   files?: string | string[];
-
+  /**
+   * the site base url, by default the site starts at /
+   */
+  siteRoot?: string;
   /**
    * files to ignore. by default ['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']
    */
@@ -351,6 +354,7 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 };
 
 export const defaultBuildConfig: BuildConfiguration = {
+  siteRoot: '/',
   categories: ['author', 'tags'],
   ignore: [
     'readme.md',

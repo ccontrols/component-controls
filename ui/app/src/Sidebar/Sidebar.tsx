@@ -100,6 +100,7 @@ const createMenuItem = (
             };
           });
         } else {
+          newItem.id = doc.stories[0];
           newItem.icon = <NoteIcon verticalAlign="middle" />;
           //only one story -direct link to it
           newItem.href = storyPath(doc.stories[0], activeTab);
