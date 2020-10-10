@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/core",
-  "version": "1.28.0",
+  "version": "1.29.0",
   "description": "Component controls core types and utility functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
