@@ -76,6 +76,7 @@ Object {
     "@commitlint/config-lerna-scopes": "^8.2.0",
     "@component-controls/ts-markdown-docs": "^1.3.0",
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@types/fs-extra": "^8.0.0",

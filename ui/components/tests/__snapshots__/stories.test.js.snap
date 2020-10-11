@@ -13,7 +13,7 @@ exports[`Components/ActionBar Group End 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -22,7 +22,7 @@ exports[`Components/ActionBar Group End 1`] = `
           </button>
         </div>
         <div
-          class="css-1w2d84q"
+          class="css-dzb3k8"
         >
           <button
             class="css-1tf4h46"
@@ -31,7 +31,7 @@ exports[`Components/ActionBar Group End 1`] = `
           </button>
         </div>
         <div
-          class="css-1w2d84q"
+          class="css-dzb3k8"
         >
           <button
             class="css-1tf4h46"
@@ -58,7 +58,7 @@ exports[`Components/ActionBar Group Start 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-kbuoje"
+          class="css-1uhft3z"
         >
           <button
             class="css-1tf4h46"
@@ -67,7 +67,7 @@ exports[`Components/ActionBar Group Start 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -76,7 +76,7 @@ exports[`Components/ActionBar Group Start 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -103,7 +103,7 @@ exports[`Components/ActionBar Link 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <a
             class="css-1t54e2w"
@@ -133,7 +133,7 @@ exports[`Components/ActionBar Order 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <a
             class="css-1t54e2w"
@@ -145,7 +145,7 @@ exports[`Components/ActionBar Order 1`] = `
           </a>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -172,7 +172,7 @@ exports[`Components/ActionBar Override 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -181,7 +181,7 @@ exports[`Components/ActionBar Override 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <a
             class="css-1t54e2w"
@@ -211,7 +211,7 @@ exports[`Components/ActionBar Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -220,7 +220,7 @@ exports[`Components/ActionBar Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <a
             class="css-1t54e2w"
@@ -247,7 +247,7 @@ exports[`Components/ActionContainer Order 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <a
             class="css-ax59ca"
@@ -259,7 +259,7 @@ exports[`Components/ActionContainer Order 1`] = `
           </a>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -315,7 +315,7 @@ exports[`Components/ActionContainer Override 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -324,7 +324,7 @@ exports[`Components/ActionContainer Override 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <a
             class="css-ax59ca"
@@ -383,7 +383,7 @@ exports[`Components/ActionContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -392,7 +392,7 @@ exports[`Components/ActionContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <a
             class="css-ax59ca"
@@ -2803,7 +2803,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -2813,7 +2813,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -2823,7 +2823,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -2975,7 +2975,7 @@ exports[`Components/PanelContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -2985,7 +2985,7 @@ exports[`Components/PanelContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -2995,7 +2995,7 @@ exports[`Components/PanelContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -3063,7 +3063,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -3073,7 +3073,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -3083,7 +3083,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -3393,7 +3393,7 @@ exports[`Components/Source Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -3999,7 +3999,7 @@ exports[`Components/Source Theme 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -4605,7 +4605,7 @@ exports[`Components/Source Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -4615,7 +4615,7 @@ exports[`Components/Source Theme Selector 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -12308,7 +12308,7 @@ exports[`Components/Zoom Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -12317,7 +12317,7 @@ exports[`Components/Zoom Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -12326,7 +12326,7 @@ exports[`Components/Zoom Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
