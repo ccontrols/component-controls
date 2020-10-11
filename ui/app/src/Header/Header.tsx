@@ -16,7 +16,7 @@ import {
   useStore,
 } from '@component-controls/store';
 import { Search } from '@component-controls/blocks';
-import * as logoImg from './logo.jpg';
+import * as logoImg from './media/logo.png';
 
 export interface HeaderProps {
   toolbar?: {
