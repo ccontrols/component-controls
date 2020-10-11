@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { FC, useContext, useMemo } from 'react';
-import { jsx, Box, Heading } from 'theme-ui';
+import { jsx, Box, Heading, Image } from 'theme-ui';
 import { DocType, getDocTypePath, getHomePath } from '@component-controls/core';
 import { ActionBar, ActionItems, Link } from '@component-controls/components';
 import {
@@ -16,6 +16,7 @@ import {
   useStore,
 } from '@component-controls/store';
 import { Search } from '@component-controls/blocks';
+import * as logoImg from './logo.jpg';
 
 export interface HeaderProps {
   toolbar?: {
@@ -34,11 +35,38 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const docCounts = useDocTypeCount();
   const config = useConfig();
   const doc = useCurrentDocument();
-  const { pages, siteTitle } = config || {};
+  const { pages, siteTitle, logo, siteDescription } = config || {};
+  const LogoLink: FC = ({ children }) => (
+    <Link
+      variant="appheader.title"
+      href={homePath}
+      aria-label={siteTitle}
+      sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+    >
+      {children}
+    </Link>
+  );
+  const LogoImage: FC<{ src: string }> = ({ src }) => (
+    <Image alt={siteDescription} variant="appheader.logo" src={src} />
+  );
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [
       {
-        node: 'Home',
+        node: logo ? (
+          typeof logo === 'string' ? (
+            <LogoLink>
+              <LogoImage src={logo} />
+            </LogoLink>
+          ) : (
+            logo
+          )
+        ) : logo === null ? (
+          'Home'
+        ) : (
+          <LogoLink>
+            <LogoImage src={logoImg.default} />
+          </LogoLink>
+        ),
         href: homePath,
         'aria-label': 'go to home page',
         id: 'home',
@@ -69,14 +97,27 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
         Array.prototype.push.apply(actions, pageItems);
       } else {
         actions[0].node = (
-          <Link href={`${homePath}`} variant="appheader.title">
-            <Heading as="h2">{siteTitle}</Heading>
-          </Link>
+          <LogoLink>
+            {logo === null ? (
+              <Heading as="h2">{siteTitle}</Heading>
+            ) : (
+              <LogoImage src={logoImg.default} />
+            )}
+          </LogoLink>
         );
       }
     }
     return toolbar.left ? [...actions, ...toolbar.left] : actions;
-  }, [pages, toolbar.left, docCounts, homePath, store, homePage, siteTitle]);
+  }, [
+    pages,
+    toolbar.left,
+    logo,
+    docCounts,
+    homePath,
+    store,
+    homePage,
+    siteTitle,
+  ]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [

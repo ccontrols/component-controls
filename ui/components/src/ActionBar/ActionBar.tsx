@@ -39,6 +39,9 @@ export const ActionBar: FC<ActionBarProps> = ({
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
             }}
           >
             {typeof node === 'string' ? (

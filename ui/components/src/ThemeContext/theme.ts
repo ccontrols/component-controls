@@ -959,6 +959,11 @@ export const theme: ControlsTheme = {
       fontWeight: 'normal',
       ':hover': { color: `secondary` },
     },
+    logo: {
+      maxHeight: 30,
+      width: 'auto',
+      objectFit: 'cover',
+    },
     items: {
       display: 'flex',
       flexDirection: 'row',

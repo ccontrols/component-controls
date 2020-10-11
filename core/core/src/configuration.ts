@@ -218,6 +218,10 @@ export interface RunOnlyConfiguration {
   title?: string;
 
   /**
+   * logo for the site - can be a string link to an image, or a react node
+   */
+  logo?: string | ReactNode;
+  /**
    * Deployed site url. Default is "https://component-controls.com"
    */
   siteUrl?: string;

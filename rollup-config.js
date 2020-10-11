@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2';
 import json from '@rollup/plugin-json';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import image from '@rollup/plugin-image';
 
 const defaultExternal = id =>
   !id.startsWith('\0') &&
@@ -22,6 +23,7 @@ const createOutput = (dir = 'dist', defaultOpts) => {
       include: /\/node_modules\//,
     }),
     json(),
+    image(),
     typescript({
       typescript: require('typescript'),
       rollupCommonJSResolveHack: true,
