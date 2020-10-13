@@ -8,7 +8,7 @@ export type RendererFn = (
   storyId: string,
   store: Store,
   options?: any,
-) => RendererFnResult;
+) => Promise<RendererFnResult>;
 
 export const runJestSnapshots = (renderer: RendererFn, bundleName?: string) => {
   const bundle = bundleName || getBundleName();

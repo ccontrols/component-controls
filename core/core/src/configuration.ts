@@ -3,16 +3,16 @@ import { ActionItems } from './utility';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
 import { ReactElement } from 'react';
-import { Store } from './document';
+import { Story, Document } from './document';
 
 /**
  * render function by framework. By default 'react'
  */
 export type FrameworkRenderFn = (
-  storyId: string,
-  store: Store,
+  story: Story,
+  doc?: Document,
   options?: any,
-) => ReactElement;
+) => Promise<ReactElement>;
 
 /**
  * story type pages can have multiple tabs with separate page configurations.

@@ -7,14 +7,16 @@ import { RendererFn } from '../index';
 
 configure({ adapter: new Adapter() });
 
-export const render: RendererFn = (
+export const render: RendererFn = async (
   storyId: string,
   store: Store,
   options?: any,
 ) => {
   const renderFn = store.config.renderFn;
   if (renderFn) {
-    const component = mount(renderFn(storyId, store, options));
+    const story = store.stories[storyId];
+    const doc = story?.doc ? store.docs[story?.doc] : undefined;
+    const component = mount(await renderFn(story, doc, options));
     return toJson(component, { mode: 'deep' });
   }
   return undefined;

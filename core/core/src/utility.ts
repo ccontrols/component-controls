@@ -100,7 +100,7 @@ export interface PackageInfo {
 export type StoryRenderFn = (
   controlValues: { [key: string]: any },
   context?: any,
-) => any;
+) => Promise<any> | any;
 
 /**
  * an import name

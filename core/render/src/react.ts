@@ -3,38 +3,59 @@ import {
   StoryRenderFn,
   getControlValues,
   deepMerge,
-  Store,
   FrameworkRenderFn,
 } from '@component-controls/core';
 
-export const render: FrameworkRenderFn = (
-  storyId: string,
-  store: Store,
+const isPromise = (obj: any) => obj instanceof Promise;
+
+export const render: FrameworkRenderFn = async (
+  story,
+  doc,
   options: any = {},
 ) => {
-  const story = store.stories[storyId];
   if (!story) {
-    throw new Error(`Invalid story id ${storyId}`);
+    throw new Error(`Invalid story`);
   }
-  if (!story.doc) {
-    throw new Error(`Invalid doc id ${storyId}`);
+  if (!doc) {
+    throw new Error(`Invalid doc`);
   }
-  const doc = store.docs[story.doc];
   const controls = story.controls;
-  const values = getControlValues(controls);
+  let values = getControlValues(controls);
+  //parameters added to avoid bug in SB6 rc that assumes parameters exist
+  let context = { story, doc, controls, parameters: {} };
+
   const { decorators: globalDecorators = [] } = options;
   const { decorators: storyDecorators = [] } = story;
   const decorators = deepMerge<StoryRenderFn[]>(
     globalDecorators,
     storyDecorators,
   );
-  //parameters added to avoid bug in SB6 rc that assumes parameters exist
-  const storyContext = { story, doc, controls, parameters: {} };
-  const renderFn = decorators.reverse().reduce(
-    (acc: StoryRenderFn, item: StoryRenderFn) => () =>
-      item(acc, { ...storyContext, renderFn: acc }),
-    //@ts-ignore
-    () => story.renderFn(values, storyContext),
-  );
-  return createElement(renderFn);
+
+  const sortedDecorators = decorators.reverse();
+  let renderFn = story.renderFn;
+  for (let i = 0; i < sortedDecorators.length; i += 1) {
+    const decorator = sortedDecorators[i];
+    const childFn = renderFn;
+    if (isPromise(decorator)) {
+      renderFn = await decorator(values, {
+        ...context,
+        renderFn: childFn,
+      });
+    } else {
+      renderFn = () =>
+        decorator(values, {
+          ...context,
+          renderFn: childFn,
+        });
+    }
+  }
+  let node: any = null;
+  if (renderFn) {
+    if (story.async || isPromise(renderFn)) {
+      node = await (renderFn as any)(values, context);
+    } else {
+      node = () => (renderFn as any)(values, context);
+    }
+  }
+  return createElement(node);
 };

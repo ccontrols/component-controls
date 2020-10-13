@@ -2,14 +2,17 @@ import renderer from 'react-test-renderer';
 import { Store } from '@component-controls/core';
 import { RendererFn } from '../index';
 
-export const render: RendererFn = (
+export const render: RendererFn = async (
   storyId: string,
   store: Store,
   options?: any,
 ) => {
   const renderFn = store.config.renderFn;
   if (renderFn) {
-    const component = renderer.create(renderFn(storyId, store, options));
+    const story = store.stories[storyId];
+    const doc = story?.doc ? store.docs[story?.doc] : undefined;
+
+    const component = renderer.create(await renderFn(story, doc, options));
     return component.toJSON();
   }
   return undefined;

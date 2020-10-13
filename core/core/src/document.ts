@@ -164,6 +164,11 @@ export type Story = {
    * it is set internally and will be used to create a story URL
    */
   dynamicId?: string;
+
+  /**
+   * if the story is declared as an async function
+   */
+  async?: boolean;
 } & StoryProps;
 
 /**

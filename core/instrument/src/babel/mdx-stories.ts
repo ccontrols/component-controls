@@ -127,7 +127,15 @@ export const extractMDXStories = (props: any) => (
                 name,
                 id,
               };
-
+              if (
+                expression &&
+                expression.expression &&
+                expression.expression.type === 'ArrowFunctionExpression'
+              ) {
+                if (expression.expression.async) {
+                  story.async = true;
+                }
+              }
               if (
                 expression &&
                 (expression.expression.type === 'CallExpression' ||
