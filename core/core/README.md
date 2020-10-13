@@ -108,9 +108,11 @@
     -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [Story](#story-2)
     -   [DocType](#doctype-2)
+    -   [Document](#document-2)
     -   [PageTabs](#pagetabs-2)
     -   [StoryArguments](#storyarguments-2)
     -   [StoryRenderFn](#storyrenderfn-2)
+    -   [DocType](#doctype-3)
 
 # Overview
 
@@ -140,7 +142,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L361)_
 
 
 
@@ -204,7 +206,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L317)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L322)_
 
 
 
@@ -261,7 +263,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -275,7 +277,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
 
 ### properties
 
@@ -306,7 +308,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L302)_
 
 Record&lt;string, 
 
@@ -318,7 +320,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
 
 Record&lt;string, 
 
@@ -328,13 +330,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L299)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -349,7 +351,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -368,6 +370,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -394,7 +397,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L178)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -410,19 +413,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L313)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L318)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L180)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -435,7 +438,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L382)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L387)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -1030,15 +1033,15 @@ story render function
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
-**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): Promise&lt;**function** (): any;> | any;
 
 ### parameters
 
-| Name             | Type                | Description |
-| ---------------- | ------------------- | ----------- |
-| `controlValues*` | \[key: string]: any |             |
-| `context`        | any                 |             |
-| `returns`        | any                 |             |
+| Name             | Type                                     | Description |
+| ---------------- | ---------------------------------------- | ----------- |
+| `controlValues*` | \[key: string]: any                      |             |
+| `context`        | any                                      |             |
+| `returns`        | Promise&lt;**function** (): any;> \| any |             |
 
 ## defaultExport
 
@@ -1192,16 +1195,16 @@ render function by framework. By default 'react'
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
 
-**function** (`storyId`\*: string, `store`\*: [Store](#store), `options`: any): [ReactElement](#reactelement);
+**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): Promise&lt;[ReactElement](#reactelement)>;
 
 ### parameters
 
-| Name       | Type                          | Description |
-| ---------- | ----------------------------- | ----------- |
-| `storyId*` | string                        |             |
-| `store*`   | [Store](#store)               |             |
-| `options`  | any                           |             |
-| `returns`  | [ReactElement](#reactelement) |             |
+| Name      | Type                                      | Description |
+| --------- | ----------------------------------------- | ----------- |
+| `story*`  | [Story](#story)                           |             |
+| `doc`     | [Document](#document)                     |             |
+| `options` | any                                       |             |
+| `returns` | Promise&lt;[ReactElement](#reactelement)> |             |
 
 ## PageConfiguration
 
@@ -1352,7 +1355,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1374,6 +1377,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -1390,7 +1394,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -1413,7 +1417,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L302)_
 
 Record&lt;string, 
 
@@ -1425,7 +1429,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
 
 Record&lt;string, 
 
@@ -1437,7 +1441,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -1460,15 +1464,15 @@ story render function
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
-**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): Promise&lt;**function** (): any;> | any;
 
 ### parameters
 
-| Name             | Type                | Description |
-| ---------------- | ------------------- | ----------- |
-| `controlValues*` | \[key: string]: any |             |
-| `context`        | any                 |             |
-| `returns`        | any                 |             |
+| Name             | Type                                     | Description |
+| ---------------- | ---------------------------------------- | ----------- |
+| `controlValues*` | \[key: string]: any                      |             |
+| `context`        | any                                      |             |
+| `returns`        | Promise&lt;**function** (): any;> \| any |             |
 
 ## DocType
 
@@ -1482,7 +1486,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
 
 ### properties
 
@@ -1586,16 +1590,16 @@ render function by framework. By default 'react'
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
 
-**function** (`storyId`\*: string, `store`\*: [Store](#store), `options`: any): [ReactElement](#reactelement);
+**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): Promise&lt;[ReactElement](#reactelement)>;
 
 ### parameters
 
-| Name       | Type                          | Description |
-| ---------- | ----------------------------- | ----------- |
-| `storyId*` | string                        |             |
-| `store*`   | [Store](#store)               |             |
-| `options`  | any                           |             |
-| `returns`  | [ReactElement](#reactelement) |             |
+| Name      | Type                                      | Description |
+| --------- | ----------------------------------------- | ----------- |
+| `story*`  | [Story](#story)                           |             |
+| `doc`     | [Document](#document)                     |             |
+| `options` | any                                       |             |
+| `returns` | Promise&lt;[ReactElement](#reactelement)> |             |
 
 ## ActionItems
 
@@ -1659,6 +1663,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
+| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -1676,6 +1681,39 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
+
+## Document
+
+A documentation file's metadata.
+For MDX files, fromtmatter is used to declare the document properties.
+For ESM (ES Modules) documentation files, the default export is used.
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
+
+### properties
+
+| Name                | Type                                | Description                                                                                                                                                                                  |
+| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MDXPage`           | any                                 | for MDX documents, this is an MDXContent function, to be rendered inside a MDXProvider                                                                                                       |
+| `author`            | string                              | document author                                                                                                                                                                              |
+| `componentsLookup*` | \[name: string]: string             | lookup into the global store.components since multiple components of the same name can be used example: \['Button']: 'c:/myapp/Button.tsx'                                                   |
+| `date`              | [Date](#date)                       |  optional date the document was created. If not assigned, the instrumentation process will use birthtime                                                                                     |
+| `dateModified`      | [Date](#date)                       |  optional date the document was last modified. If not assigned, the instrumentation process will use mtime                                                                                   |
+| `description`       | string                              |  documentation file description                                                                                                                                                              |
+| `draft`             | boolean                             | if set to true, the document will be hidden in production builds.                                                                                                                            |
+| `fileName`          | string                              | file name of the file of stories                                                                                                                                                             |
+| `isMDXComponent`    | boolean                             | custom prop set by mdxjs                                                                                                                                                                     |
+| `menu`              | string                              | to which static menu to attach the document compatibility with docz                                                                                                                          |
+| `order`             | number                              | document order, used to sort documents within the same parent                                                                                                                                |
+| `package`           | string                              | lookup into the global store of PackageInfo package.json                                                                                                                                     |
+| `route`             | string                              | if provided, will be used as the route for the page. if not provided, the title in lowercase will be used as the route                                                                       |
+| `source`            | string                              | source code of the entire file of stories                                                                                                                                                    |
+| `stories`           | string\[]                           | list of story ids contained in the document.                                                                                                                                                 |
+| `tags`              | string\[]                           |  comma-separated list of document tags, used for search                                                                                                                                      |
+| `title*`            | string                              | title of the document. If no 'route' parameter is specifified, the title is used to generate the document url. This is the only required field, to show the document in the menu structures. |
+| `type`              | [DocType](#doctype)                 | document type - blogs, pages, stories and even custom ones. By default - story                                                                                                               |
+| `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
+| `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
 ## PageTabs
 
@@ -1698,14 +1736,20 @@ story render function
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L100)_
 
-**function** (`controlValues`\*: \[key: string]: any, `context`: any): any;
+**function** (`controlValues`\*: \[key: string]: any, `context`: any): Promise&lt;**function** (): any;> | any;
 
 ### parameters
 
-| Name             | Type                | Description |
-| ---------------- | ------------------- | ----------- |
-| `controlValues*` | \[key: string]: any |             |
-| `context`        | any                 |             |
-| `returns`        | any                 |             |
+| Name             | Type                                     | Description |
+| ---------------- | ---------------------------------------- | ----------- |
+| `controlValues*` | \[key: string]: any                      |             |
+| `context`        | any                                      |             |
+| `returns`        | Promise&lt;**function** (): any;> \| any |             |
+
+## DocType
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
+
+'story' | 'blog' | 'page' | 'tags' | 'author' | string
 
 <!-- END-TSDOC-TYPESCRIPT -->
