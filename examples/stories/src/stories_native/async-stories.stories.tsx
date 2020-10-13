@@ -16,6 +16,17 @@ export const asyncStory = async () => {
 
 asyncStory.description = 'Async story, can fetch data or other async activity.';
 
+export async function asyncFunction() {
+  const response = await fetch(
+    'http://dummy.restapiexample.com/api/v1/employee/1',
+  );
+  const { data } = await response.json();
+  return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
+}
+
+asyncFunction.description =
+  'Async exported function, can fetch data or other async activity.';
+
 export const hooksStory = () => {
   const [name, setName] = useState('');
   useEffect(() => {
@@ -42,20 +53,32 @@ hooksStory.decorators = [
     );
   },
 ];
-export const asyncDecorators = async () => {
-  const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
-  );
-  const { data } = await response.json();
-  return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
+
+export const asyncDecorators = (_, { employee }) => {
+  return <h2>{`Hello, my name is ${employee.employee_name}.`}</h2>;
 };
 
 asyncDecorators.description =
   'Decorators can also be async functions - if you have storyes that are async, you will need to await call them.';
 asyncDecorators.decorators = [
-  async (controls, context) => {
+  (controls, context) => {
+    const [employee, setEmployee] = useState({});
+    useEffect(() => {
+      const data = async () => {
+        const response = await fetch(
+          'http://dummy.restapiexample.com/api/v1/employee/1',
+        );
+        const { data } = await response.json();
+        setEmployee(data);
+      };
+      data();
+    }, []);
+
     const { renderFn } = context;
-    const next = await renderFn(controls, context);
-    return () => <div style={{ background: 'lightpink' }}>{next}</div>;
+    return (
+      <div style={{ background: 'lightpink' }}>
+        {renderFn(controls, { ...context, employee })}
+      </div>
+    );
   },
 ];
