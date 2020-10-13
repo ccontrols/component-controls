@@ -519,6 +519,16 @@ Button.propTypes = {
       },
       "version": "1.30.0",
     },
+    "c10c397609217009986a01bedb0da812": Object {
+      "fileHash": "c10c397609217009986a01bedb0da812",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories_native/async-stories.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.30.0",
+    },
     "dd96934cfa10038428b57421ede5ec17": Object {
       "fileHash": "dd96934cfa10038428b57421ede5ec17",
       "name": "component-controls-stories",
@@ -551,6 +561,171 @@ Button.propTypes = {
     },
   },
   "stores": Array [
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "componentsLookup": Object {},
+        "date": "2020-10-11T21:03:28.545Z",
+        "dateModified": "2020-10-13T18:51:20.644Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories_native/async-stories.stories.tsx",
+        "package": "c10c397609217009986a01bedb0da812",
+        "title": "Introduction/Async stories",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories_native/async-stories.stories.tsx",
+      "stories": Object {
+        "asyncDecorators": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 2,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "_",
+              "value": "_",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                  },
+                  "name": "employee",
+                  "value": "employee",
+                },
+              ],
+            },
+          ],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Decorators can also be async functions - if you have storyes that are async, you will need to await call them.",
+          "id": "asyncDecorators",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 60,
+            },
+            "start": Object {
+              "column": 31,
+              "line": 58,
+            },
+          },
+          "name": "asyncDecorators",
+          "renderFn": [Function],
+          "source": "(_, { employee }) => {
+  return <h2>{\`Hello, my name is \${employee.employee_name}.\`}</h2>;
+}",
+        },
+        "asyncFunction": Object {
+          "arguments": Array [],
+          "async": true,
+          "description": "Async exported function, can fetch data or other async activity.",
+          "id": "asyncFunction",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 26,
+            },
+            "start": Object {
+              "column": 7,
+              "line": 20,
+            },
+          },
+          "name": "asyncFunction",
+          "renderFn": [Function],
+          "source": "async function asyncFunction() {
+  const response = await fetch(
+    'http://dummy.restapiexample.com/api/v1/employee/1',
+  );
+  const { data } = await response.json();
+  return () => <h2>{\`Hello, my name is \${data.employee_name}.\`}</h2>;
+}",
+        },
+        "asyncStory": Object {
+          "arguments": Array [],
+          "async": true,
+          "description": "Async story, can *fetch* data or other async activity.",
+          "id": "asyncStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 15,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 9,
+            },
+          },
+          "name": "asyncStory",
+          "renderFn": [Function],
+          "source": "async () => {
+  const response = await fetch(
+    'http://dummy.restapiexample.com/api/v1/employee/1',
+  );
+  const { data } = await response.json();
+  return () => <h2>{\`Hello, my name is \${data.employee_name}.\`}</h2>;
+}",
+        },
+        "hooksStory": Object {
+          "arguments": Array [],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Story fetching data with react hooks/useEffect.",
+          "id": "hooksStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 44,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 31,
+            },
+          },
+          "name": "hooksStory",
+          "renderFn": [Function],
+          "source": "() => {
+  const [name, setName] = useState('');
+  useEffect(() => {
+    const data = async () => {
+      const response = await fetch(
+        'http://dummy.restapiexample.com/api/v1/employee/1',
+      );
+      const employee = await response.json();
+      setName(employee.data.employee_name);
+    };
+    data();
+  }, []);
+  return <h2>{\`Hello, my name is \${name}.\`}</h2>;
+}",
+        },
+      },
+    },
     Object {
       "doc": Object {
         "author": "atanasster",

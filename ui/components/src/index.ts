@@ -4,6 +4,7 @@ export * from './BlockContainer';
 export * from './Collapsible';
 export * from './ColorMode';
 export * from './CopyContainer';
+export * from './Description';
 export * from './ExternalLink';
 export * from './Header';
 export * from './HoverBox';

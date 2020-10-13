@@ -606,12 +606,16 @@ exports[`Components/BlockContainer Description 1`] = `
           </h3>
         </div>
       </div>
-      <p>
+      <p
+        class="css-1xlzx9v"
+      >
         <em>
           Markdown
         </em>
       </p>
-      <p>
+      <p
+        class="css-1xlzx9v"
+      >
         <a
           href="https://www.google.com"
         >
@@ -942,6 +946,20 @@ exports[`Components/CopyContainer Overview 1`] = `
       </p>
     </div>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Components/Description Overview 1`] = `
+<DocumentFragment>
+  <p
+    class="css-1xlzx9v"
+  >
+    Some 
+    <strong>
+      description
+    </strong>
+     markdown
+  </p>
 </DocumentFragment>
 `;
 

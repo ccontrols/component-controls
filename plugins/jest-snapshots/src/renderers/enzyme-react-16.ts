@@ -16,7 +16,8 @@ export const render: RendererFn = async (
   if (renderFn) {
     const story = store.stories[storyId];
     const doc = story?.doc ? store.docs[story?.doc] : undefined;
-    const component = mount(await renderFn(story, doc, options));
+    const rendered = await renderFn(story, doc, options);
+    const component = mount(rendered);
     return toJson(component, { mode: 'deep' });
   }
   return undefined;

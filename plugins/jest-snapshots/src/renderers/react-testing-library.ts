@@ -14,7 +14,8 @@ export const render: RendererFn = async (
     let fragment: DocumentFragment | undefined = undefined;
     const story = store.stories[storyId];
     const doc = story?.doc ? store.docs[story?.doc] : undefined;
-    const { asFragment } = rtlRender(await renderFn(story, doc, options));
+    const rendered = await renderFn(story, doc, options);
+    const { asFragment } = rtlRender(rendered);
     fragment = asFragment();
     return fragment;
   }

@@ -14,7 +14,8 @@ export const asyncStory = async () => {
   return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
 };
 
-asyncStory.description = 'Async story, can fetch data or other async activity.';
+asyncStory.description =
+  'Async story, can *fetch* data or other async activity.';
 
 export async function asyncFunction() {
   const response = await fetch(
