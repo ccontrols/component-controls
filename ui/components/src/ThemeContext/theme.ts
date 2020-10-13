@@ -411,6 +411,12 @@ export const theme: ControlsTheme = {
         },
       },
     },
+    description: {
+      p: {
+        my: 1,
+      },
+    },
+
     link: {
       position: 'absolute',
       left: -4,

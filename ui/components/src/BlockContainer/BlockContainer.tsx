@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 /** @jsx jsx */
 import React, { FC } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
@@ -92,7 +93,17 @@ export const BlockContainer: FC<BlockContainerProps> = ({
             ))}
         </LinkHeading>
       )}
-      {description && <Markdown>{description}</Markdown>}
+      {description && (
+        <Markdown
+          components={{
+            p: props => (
+              <Box as="p" variant="blockcontainer.description.p" {...props} />
+            ),
+          }}
+        >
+          {description}
+        </Markdown>
+      )}
       {collapsible && children ? (
         <Collapsible isOpen={isOpen}>{children}</Collapsible>
       ) : (

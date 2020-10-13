@@ -45,7 +45,7 @@ export const StorySource: FC<StorySourceProps> = ({
   const docPackage = usePackage(doc?.package);
 
   return (
-    <StoryBlockContainer {...rest}>
+    <StoryBlockContainer story={story} {...rest}>
       <BaseStorySource
         story={story}
         doc={doc}
