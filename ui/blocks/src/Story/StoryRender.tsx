@@ -106,7 +106,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
         );
       };
       asyncFn();
-    }, []);
+    }, [options, ref, store.config, store.docs, story]);
     return (
       <Box
         data-testid={NAME}
