@@ -1,4 +1,4 @@
-import { render as rtlRender, cleanup } from '@testing-library/react';
+import { render as rtlRender, cleanup, waitFor } from '@testing-library/react';
 
 import { Store } from '@component-controls/core';
 import { RendererFn } from '../index';
@@ -11,13 +11,18 @@ export const render: RendererFn = async (
   const renderFn = store.config.renderFn;
   if (renderFn) {
     cleanup();
-    let fragment: DocumentFragment | undefined = undefined;
     const story = store.stories[storyId];
     const doc = story?.doc ? store.docs[story?.doc] : undefined;
     const rendered = await renderFn(story, doc, options);
-    const { asFragment } = rtlRender(rendered);
-    fragment = asFragment();
-    return fragment;
+    const { asFragment, getByTestId } = rtlRender(rendered);
+    await waitFor(() => {
+      try {
+        return getByTestId('story-wrapper');
+      } catch (e) {
+        return true;
+      }
+    });
+    return asFragment();
   }
   return undefined;
 };

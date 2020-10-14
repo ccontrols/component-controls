@@ -71,7 +71,7 @@ const StoryWrapper: FC<StoryWrapperProps> = ({
       return <Fragment>{children}</Fragment>;
   }
 };
-const NAME = 'story';
+export const NAME = 'story';
 
 export interface StoryRenderProps {
   story: Story;
@@ -94,7 +94,16 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
               options,
             )
           : null;
-        setRenderedStory(rendered);
+        setRenderedStory(
+          <Box
+            data-testid={`${NAME}-wrapper`}
+            className="story-render-container"
+            variant={`${NAME}.wrapper`}
+            ref={ref}
+          >
+            {rendered}
+          </Box>,
+        );
       };
       asyncFn();
     }, []);
@@ -106,13 +115,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
         {...rest}
       >
         <StoryWrapper iframeStyle={iframeStyle} wrapper={wrapper}>
-          <Box
-            className="story-render-container"
-            variant={`${NAME}.wrapper`}
-            ref={ref}
-          >
-            {renderedStory}
-          </Box>
+          {renderedStory}
         </StoryWrapper>
       </Box>
     );

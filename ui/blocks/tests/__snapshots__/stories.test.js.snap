@@ -1919,7 +1919,37 @@ exports[`Blocks/Playground Custom Title 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2130,7 +2160,37 @@ exports[`Blocks/Playground Dark Theme 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2341,7 +2401,37 @@ exports[`Blocks/Playground Default Open Source 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2824,7 +2914,37 @@ exports[`Blocks/Playground Disable Zoom Pan 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3044,7 +3164,37 @@ exports[`Blocks/Playground Extra Panel 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3609,7 +3759,14 @@ exports[`Blocks/Playground Multi Stories 1`] = `
                           >
                             <div
                               class="story-render-container css-dhmrnb"
-                            />
+                              data-testid="story-wrapper"
+                            >
+                              <h2
+                                class="css-229nmx"
+                              >
+                                Components
+                              </h2>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3642,7 +3799,37 @@ exports[`Blocks/Playground Multi Stories 1`] = `
                           >
                             <div
                               class="story-render-container css-dhmrnb"
-                            />
+                              data-testid="story-wrapper"
+                            >
+                              <svg
+                                aria-valuemax="1"
+                                aria-valuemin="0"
+                                aria-valuenow="0.5"
+                                class="css-agj820"
+                                fill="none"
+                                height="128"
+                                role="img"
+                                stroke="currentcolor"
+                                stroke-width="2"
+                                viewBox="0 0 32 32"
+                                width="128"
+                              >
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  opacity="0.125"
+                                  r="14"
+                                />
+                                <circle
+                                  cx="16"
+                                  cy="16"
+                                  r="14"
+                                  stroke-dasharray="87.96459430051421"
+                                  stroke-dashoffset="43.982297150257104"
+                                  transform="rotate(-90 16 16)"
+                                />
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3873,7 +4060,37 @@ exports[`Blocks/Playground Not Collapsible 1`] = `
                     >
                       <div
                         class="story-render-container css-dhmrnb"
-                      />
+                        data-testid="story-wrapper"
+                      >
+                        <svg
+                          aria-valuemax="1"
+                          aria-valuemin="0"
+                          aria-valuenow="0.5"
+                          class="css-agj820"
+                          fill="none"
+                          height="128"
+                          role="img"
+                          stroke="currentcolor"
+                          stroke-width="2"
+                          viewBox="0 0 32 32"
+                          width="128"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            opacity="0.125"
+                            r="14"
+                          />
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="14"
+                            stroke-dasharray="87.96459430051421"
+                            stroke-dashoffset="43.982297150257104"
+                            transform="rotate(-90 16 16)"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4082,7 +4299,37 @@ exports[`Blocks/Playground Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4293,7 +4540,37 @@ exports[`Blocks/Playground Scale 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4562,7 +4839,14 @@ exports[`Blocks/Playground Title 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <h2
+                              class="css-229nmx"
+                            >
+                              Components
+                            </h2>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4773,7 +5057,37 @@ exports[`Blocks/Playground Visible Tabs 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4909,7 +5223,37 @@ exports[`Blocks/Playground Zoom Disabled 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                          />
+                            data-testid="story-wrapper"
+                          >
+                            <svg
+                              aria-valuemax="1"
+                              aria-valuemin="0"
+                              aria-valuenow="0.5"
+                              class="css-agj820"
+                              fill="none"
+                              height="128"
+                              role="img"
+                              stroke="currentcolor"
+                              stroke-width="2"
+                              viewBox="0 0 32 32"
+                              width="128"
+                            >
+                              <circle
+                                cx="16"
+                                cy="16"
+                                opacity="0.125"
+                                r="14"
+                              />
+                              <circle
+                                cx="16"
+                                cy="16"
+                                r="14"
+                                stroke-dasharray="87.96459430051421"
+                                stroke-dashoffset="43.982297150257104"
+                                transform="rotate(-90 16 16)"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -8502,7 +8846,37 @@ exports[`Blocks/Story Custom Title 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-          />
+            data-testid="story-wrapper"
+          >
+            <svg
+              aria-valuemax="1"
+              aria-valuemin="0"
+              aria-valuenow="0.5"
+              class="css-agj820"
+              fill="none"
+              height="128"
+              role="img"
+              stroke="currentcolor"
+              stroke-width="2"
+              viewBox="0 0 32 32"
+              width="128"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                opacity="0.125"
+                r="14"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke-dasharray="87.96459430051421"
+                stroke-dashoffset="43.982297150257104"
+                transform="rotate(-90 16 16)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -8540,7 +8914,14 @@ exports[`Blocks/Story Description 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-          />
+            data-testid="story-wrapper"
+          >
+            <h2
+              class="css-229nmx"
+            >
+              Components
+            </h2>
+          </div>
         </div>
       </div>
     </div>
@@ -8635,7 +9016,37 @@ exports[`Blocks/Story Not Collapsible 1`] = `
     >
       <div
         class="story-render-container css-dhmrnb"
-      />
+        data-testid="story-wrapper"
+      >
+        <svg
+          aria-valuemax="1"
+          aria-valuemin="0"
+          aria-valuenow="0.5"
+          class="css-agj820"
+          fill="none"
+          height="128"
+          role="img"
+          stroke="currentcolor"
+          stroke-width="2"
+          viewBox="0 0 32 32"
+          width="128"
+        >
+          <circle
+            cx="16"
+            cy="16"
+            opacity="0.125"
+            r="14"
+          />
+          <circle
+            cx="16"
+            cy="16"
+            r="14"
+            stroke-dasharray="87.96459430051421"
+            stroke-dashoffset="43.982297150257104"
+            transform="rotate(-90 16 16)"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -8671,7 +9082,37 @@ exports[`Blocks/Story Overview 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-          />
+            data-testid="story-wrapper"
+          >
+            <svg
+              aria-valuemax="1"
+              aria-valuemin="0"
+              aria-valuenow="0.5"
+              class="css-agj820"
+              fill="none"
+              height="128"
+              role="img"
+              stroke="currentcolor"
+              stroke-width="2"
+              viewBox="0 0 32 32"
+              width="128"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                opacity="0.125"
+                r="14"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke-dasharray="87.96459430051421"
+                stroke-dashoffset="43.982297150257104"
+                transform="rotate(-90 16 16)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -8762,7 +9203,37 @@ exports[`Blocks/Story Title 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-          />
+            data-testid="story-wrapper"
+          >
+            <svg
+              aria-valuemax="1"
+              aria-valuemin="0"
+              aria-valuenow="0.5"
+              class="css-agj820"
+              fill="none"
+              height="128"
+              role="img"
+              stroke="currentcolor"
+              stroke-width="2"
+              viewBox="0 0 32 32"
+              width="128"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                opacity="0.125"
+                r="14"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                r="14"
+                stroke-dasharray="87.96459430051421"
+                stroke-dashoffset="43.982297150257104"
+                transform="rotate(-90 16 16)"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
