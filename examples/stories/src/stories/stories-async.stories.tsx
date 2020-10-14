@@ -43,10 +43,9 @@ hooksStory.description =
 hooksStory.decorators = [
   (controls, context) => {
     const { renderFn } = context;
+    const story = typeof renderFn === 'function' ? renderFn : controls;
     return (
-      <div style={{ background: 'lightblue' }}>
-        {renderFn(controls, context)}
-      </div>
+      <div style={{ background: 'lightblue' }}>{story(controls, context)}</div>
     );
   },
 ];
@@ -58,11 +57,11 @@ asyncDecorators.description =
 asyncDecorators.decorators = [
   (controls, context) => {
     const { value } = useAsync(fetchData);
-
     const { renderFn } = context;
+    const story = typeof renderFn === 'function' ? renderFn : controls;
     return (
       <div style={{ background: 'lightpink' }}>
-        {renderFn(controls, { ...context, employee: value })}
+        {story(controls, { ...context, employee: value })}
       </div>
     );
   },
@@ -85,9 +84,10 @@ asyncHooksDecorators.decorators = [
     }, []);
 
     const { renderFn } = context;
+    const story = typeof renderFn === 'function' ? renderFn : controls;
     return (
       <div style={{ background: 'lightpink' }}>
-        {renderFn(controls, { ...context, employee })}
+        {story(controls, { ...context, employee })}
       </div>
     );
   },
