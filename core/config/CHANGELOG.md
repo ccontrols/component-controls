@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* add useAsync hook ([f37b1ba](https://github.com/ccontrols/component-controls/commit/f37b1ba0d56f15e77e1e97f6c3dece66de5e5a9b))
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+
+
+
 # [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
 
 **Note:** Version bump only for package @component-controls/config

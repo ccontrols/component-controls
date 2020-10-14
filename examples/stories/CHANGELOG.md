@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* add useAsync hook ([f37b1ba](https://github.com/ccontrols/component-controls/commit/f37b1ba0d56f15e77e1e97f6c3dece66de5e5a9b))
+* change request to https ([48576a6](https://github.com/ccontrols/component-controls/commit/48576a6efcd8e05ce9470213801dd6efcea86fac))
+* sb6 docs compatibility ([8d3a767](https://github.com/ccontrols/component-controls/commit/8d3a76794a0958b79c6d7d6c7ffbb9a530004478))
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+### Features
+
+* initial check in async esm and mdx ([18c78e2](https://github.com/ccontrols/component-controls/commit/18c78e21e6b8fd31056a3496f35ed557bdf66f20))
+
+
+
+
+
 # [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
 
 

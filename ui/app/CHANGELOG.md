@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+
+
+
 # [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
 
 
