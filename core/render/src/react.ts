@@ -36,25 +36,22 @@ export const render: FrameworkRenderFn = async (
   for (let i = 0; i < sortedDecorators.length; i += 1) {
     const decorator = sortedDecorators[i];
     const childFn = renderFn;
-    if (isPromise(decorator)) {
-      renderFn = await decorator(values, {
-        ...context,
-        renderFn: childFn,
-      });
-    } else {
-      renderFn = () =>
-        decorator(values, {
+    renderFn = () =>
+      decorator(
+        (_: any, nexContext: any) =>
+          (childFn as StoryRenderFn)(values, { ...context, ...nexContext }),
+        {
           ...context,
           renderFn: childFn,
-        });
-    }
+        },
+      );
   }
   let node: any = null;
   if (renderFn) {
     if (story.async || isPromise(renderFn)) {
-      node = await (renderFn as any)(values, context);
+      node = await (renderFn as StoryRenderFn)(values, context);
     } else {
-      node = () => (renderFn as any)(values, context);
+      node = () => (renderFn as StoryRenderFn)(values, context);
     }
   }
   return createElement(node);
