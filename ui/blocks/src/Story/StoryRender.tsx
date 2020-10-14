@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useState, useEffect, Fragment, forwardRef } from 'react';
+import { FC, useState, Fragment, forwardRef } from 'react';
 import { jsx, CSSProperties, Box } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
@@ -82,22 +82,15 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
     { story, wrapper, iframeStyle, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
-    const [renderedStory, setRenderedStory] = useState<any>(null);
     const store = useStore();
     const options = useExternalOptions();
-    useEffect(() => {
-      const asyncFn = async () => {
-        const rendered = store.config.renderFn
-          ? await store.config.renderFn(
-              story,
-              story.doc ? store.docs[story.doc] : undefined,
-              options,
-            )
-          : null;
-        setRenderedStory(rendered);
-      };
-      asyncFn();
-    }, [options, ref, store.config, store.docs, story]);
+    const rendered = store.config.renderFn
+      ? store.config.renderFn(
+          story,
+          story.doc ? store.docs[story.doc] : undefined,
+          options,
+        )
+      : null;
     return (
       <Box
         data-testid={NAME}
@@ -111,7 +104,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
             variant={`${NAME}.wrapper`}
             ref={ref}
           >
-            {renderedStory}
+            {rendered}
           </Box>
         </StoryWrapper>
       </Box>

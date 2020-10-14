@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { FC, useRef, useContext } from 'react';
+import React, { FC, useRef, useContext, useState, useEffect } from 'react';
 import { run as runAxe, configure as configureAxe, reset } from 'axe-core';
 
 import { useStory, StoryInputProps } from '@component-controls/store';
@@ -33,7 +33,12 @@ const RenderStory: FC<AllyBlockOwmProps & { storyId?: string }> = ({
 }) => {
   const storyRef = useRef<HTMLDivElement>(null);
   const { setResults } = useContext(AxeSetContext);
+  const [mounted, setMounted] = useState(true);
   const isRunning = useRef(false);
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
   const collectResults = () => {
     const canvas = storyRef.current?.firstChild;
     if (canvas && isRunning.current === false) {
@@ -43,9 +48,11 @@ const RenderStory: FC<AllyBlockOwmProps & { storyId?: string }> = ({
       resetTabCounter();
       runAxe(canvas)
         .then(results => {
-          const { passes, violations, incomplete } = results;
-          setResults({ passes, violations, incomplete });
-          setTimeout(() => (isRunning.current = false), 1000);
+          if (mounted) {
+            const { passes, violations, incomplete } = results;
+            setResults({ passes, violations, incomplete });
+            setTimeout(() => (isRunning.current = false), 1000);
+          }
         })
         .catch(e => {
           console.error('error running axe-core', e);

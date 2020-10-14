@@ -61,6 +61,7 @@
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
+    -   [useAsync](#useasync)
     -   [BuildConfiguration](#buildconfiguration)
     -   [ControlsConfig](#controlsconfig)
     -   [PageLayoutProps](#pagelayoutprops)
@@ -142,7 +143,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L361)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
 
 
 
@@ -206,7 +207,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L322)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L317)_
 
 
 
@@ -263,7 +264,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
 
 Record&lt;string, 
 
@@ -277,7 +278,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
 
 ### properties
 
@@ -308,7 +309,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L302)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -320,7 +321,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -330,13 +331,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L299)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -351,7 +352,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
 
 Record&lt;string, 
 
@@ -370,7 +371,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
-| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -397,7 +397,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L178)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -413,19 +413,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L318)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L313)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L180)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L287)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -438,7 +438,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L387)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L382)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -1051,6 +1051,20 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 
 
+## useAsync
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L183)_
+
+**function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'idle' | 'pending' | 'success' | 'error'**value**: ;
+
+### parameters
+
+| Name             | Type                                                                                                                                      | Description |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `asyncFunction*` | **function** (): Promise&lt;>;                                                                                                            |             |
+| `immediate*`     | boolean                                                                                                                                   |             |
+| `returns`        | **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'idle' \| 'pending' \| 'success' \| 'error'**value**:  |             |
+
 ## BuildConfiguration
 
 global configuration used at build time
@@ -1195,16 +1209,16 @@ render function by framework. By default 'react'
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
 
-**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): Promise&lt;[ReactElement](#reactelement)>;
+**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): [ReactElement](#reactelement);
 
 ### parameters
 
-| Name      | Type                                      | Description |
-| --------- | ----------------------------------------- | ----------- |
-| `story*`  | [Story](#story)                           |             |
-| `doc`     | [Document](#document)                     |             |
-| `options` | any                                       |             |
-| `returns` | Promise&lt;[ReactElement](#reactelement)> |             |
+| Name      | Type                          | Description |
+| --------- | ----------------------------- | ----------- |
+| `story*`  | [Story](#story)               |             |
+| `doc`     | [Document](#document)         |             |
+| `options` | any                           |             |
+| `returns` | [ReactElement](#reactelement) |             |
 
 ## PageConfiguration
 
@@ -1355,7 +1369,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L316)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1377,7 +1391,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
-| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -1394,7 +1407,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
 
 Record&lt;string, 
 
@@ -1417,7 +1430,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L302)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
 
 Record&lt;string, 
 
@@ -1429,7 +1442,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
 
 Record&lt;string, 
 
@@ -1441,7 +1454,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
 
 Record&lt;string, 
 
@@ -1486,7 +1499,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
 
 ### properties
 
@@ -1590,16 +1603,16 @@ render function by framework. By default 'react'
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L11)_
 
-**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): Promise&lt;[ReactElement](#reactelement)>;
+**function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): [ReactElement](#reactelement);
 
 ### parameters
 
-| Name      | Type                                      | Description |
-| --------- | ----------------------------------------- | ----------- |
-| `story*`  | [Story](#story)                           |             |
-| `doc`     | [Document](#document)                     |             |
-| `options` | any                                       |             |
-| `returns` | Promise&lt;[ReactElement](#reactelement)> |             |
+| Name      | Type                          | Description |
+| --------- | ----------------------------- | ----------- |
+| `story*`  | [Story](#story)               |             |
+| `doc`     | [Document](#document)         |             |
+| `options` | any                           |             |
+| `returns` | [ReactElement](#reactelement) |             |
 
 ## ActionItems
 
@@ -1663,7 +1676,6 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | Name          | Type                              | Description                                                                                                                                       |
 | ------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `arguments`   | [StoryArguments](#storyarguments) | arguments passed to the story function. eg \`export const story = props => &lt;Story {...props} />;\`                                             |
-| `async`       | boolean                           | if the story is declared as an async function                                                                                                     |
 | `description` | string                            | story extended description. can use markdown.                                                                                                     |
 | `doc`         | string                            | title of the file/group of stories                                                                                                                |
 | `dynamic`     | boolean                           | if set to true, the function is dynamically creating stories, returns a list of Story objects                                                     |
@@ -1688,7 +1700,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
 
 ### properties
 

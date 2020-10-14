@@ -6,13 +6,7 @@ import {
   FrameworkRenderFn,
 } from '@component-controls/core';
 
-const isPromise = (obj: any) => obj instanceof Promise;
-
-export const render: FrameworkRenderFn = async (
-  story,
-  doc,
-  options: any = {},
-) => {
+export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   if (!story) {
     throw new Error(`Invalid story`);
   }
@@ -47,12 +41,6 @@ export const render: FrameworkRenderFn = async (
       );
   }
   let node: any = null;
-  if (renderFn) {
-    if (story.async || isPromise(renderFn)) {
-      node = await (renderFn as StoryRenderFn)(values, context);
-    } else {
-      node = () => (renderFn as StoryRenderFn)(values, context);
-    }
-  }
+  node = () => (renderFn as StoryRenderFn)(values, context);
   return createElement(node);
 };

@@ -1,4 +1,4 @@
-import { render as rtlRender, act } from '@testing-library/react';
+import { render as rtlRender } from '@testing-library/react';
 
 import { Store } from '@component-controls/core';
 import { RendererFn } from '../index';
@@ -13,14 +13,9 @@ export const render: RendererFn = async (
     const story = store.stories[storyId];
     const doc = story?.doc ? store.docs[story?.doc] : undefined;
 
-    let asFragment: any;
-    await act(async () => {
-      const rendered = await renderFn(story, doc, options);
-      ({ asFragment } = rtlRender(rendered));
-    });
-    if (asFragment) {
-      return asFragment();
-    }
+    const rendered = renderFn(story, doc, options);
+    const { asFragment } = rtlRender(rendered);
+    return asFragment();
   }
   return undefined;
 };

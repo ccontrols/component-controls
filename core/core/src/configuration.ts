@@ -12,7 +12,7 @@ export type FrameworkRenderFn = (
   story: Story,
   doc?: Document,
   options?: any,
-) => Promise<ReactElement>;
+) => ReactElement;
 
 /**
  * story type pages can have multiple tabs with separate page configurations.

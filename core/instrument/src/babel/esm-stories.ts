@@ -31,9 +31,6 @@ export const extractCSFStories = (
             name,
             id: name,
           };
-          if (declaration.init.async) {
-            story.async = true;
-          }
           traverse(path.node, extractFunctionParameters(story), path.scope);
           return story;
         }
@@ -55,9 +52,6 @@ export const extractCSFStories = (
         name,
         id: name,
       };
-      if (declaration.async) {
-        story.async = true;
-      }
       traverse(path.node, extractFunctionParameters(story), path.scope);
       return story;
     }

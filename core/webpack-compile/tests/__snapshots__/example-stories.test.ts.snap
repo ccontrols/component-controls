@@ -489,6 +489,16 @@ Button.propTypes = {
       },
       "version": "1.30.0",
     },
+    "872a13aed459690f92f1efc4366b1f3c": Object {
+      "fileHash": "872a13aed459690f92f1efc4366b1f3c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-async.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.30.0",
+    },
     "af3ea9029e5eedf5278b612cda3d978c": Object {
       "fileHash": "af3ea9029e5eedf5278b612cda3d978c",
       "name": "component-controls-stories",
@@ -514,16 +524,6 @@ Button.propTypes = {
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.30.0",
-    },
-    "c10c397609217009986a01bedb0da812": Object {
-      "fileHash": "c10c397609217009986a01bedb0da812",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories_native/async-stories.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -561,171 +561,6 @@ Button.propTypes = {
     },
   },
   "stores": Array [
-    Object {
-      "doc": Object {
-        "author": "atanasster",
-        "components": Object {},
-        "componentsLookup": Object {},
-        "date": "2020-10-14T06:45:03.199Z",
-        "dateModified": "2020-10-14T06:45:03.201Z",
-        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories_native/async-stories.stories.tsx",
-        "package": "c10c397609217009986a01bedb0da812",
-        "title": "Introduction/Async stories",
-      },
-      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories_native/async-stories.stories.tsx",
-      "stories": Object {
-        "asyncDecorators": Object {
-          "arguments": Array [
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 2,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 1,
-                  "line": 0,
-                },
-              },
-              "name": "_",
-              "value": "_",
-            },
-            Object {
-              "loc": Object {
-                "end": Object {
-                  "column": 16,
-                  "line": 0,
-                },
-                "start": Object {
-                  "column": 4,
-                  "line": 0,
-                },
-              },
-              "value": Array [
-                Object {
-                  "loc": Object {
-                    "end": Object {
-                      "column": 14,
-                      "line": 0,
-                    },
-                    "start": Object {
-                      "column": 6,
-                      "line": 0,
-                    },
-                  },
-                  "name": "employee",
-                  "value": "employee",
-                },
-              ],
-            },
-          ],
-          "decorators": Array [
-            [Function],
-          ],
-          "description": "Decorators can also be async functions - if you have storyes that are async, you will need to await call them.",
-          "id": "asyncDecorators",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 60,
-            },
-            "start": Object {
-              "column": 31,
-              "line": 58,
-            },
-          },
-          "name": "asyncDecorators",
-          "renderFn": [Function],
-          "source": "(_, { employee }) => {
-  return <h2>{\`Hello, my name is \${employee.employee_name}.\`}</h2>;
-}",
-        },
-        "asyncFunction": Object {
-          "arguments": Array [],
-          "async": true,
-          "description": "Async exported function, can fetch data or other async activity.",
-          "id": "asyncFunction",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 26,
-            },
-            "start": Object {
-              "column": 7,
-              "line": 20,
-            },
-          },
-          "name": "asyncFunction",
-          "renderFn": [Function],
-          "source": "async function asyncFunction() {
-  const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
-  );
-  const { data } = await response.json();
-  return () => <h2>{\`Hello, my name is \${data.employee_name}.\`}</h2>;
-}",
-        },
-        "asyncStory": Object {
-          "arguments": Array [],
-          "async": true,
-          "description": "Async story, can *fetch* data or other async activity.",
-          "id": "asyncStory",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 15,
-            },
-            "start": Object {
-              "column": 26,
-              "line": 9,
-            },
-          },
-          "name": "asyncStory",
-          "renderFn": [Function],
-          "source": "async () => {
-  const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
-  );
-  const { data } = await response.json();
-  return () => <h2>{\`Hello, my name is \${data.employee_name}.\`}</h2>;
-}",
-        },
-        "hooksStory": Object {
-          "arguments": Array [],
-          "decorators": Array [
-            [Function],
-          ],
-          "description": "Story fetching data with react hooks/useEffect.",
-          "id": "hooksStory",
-          "loc": Object {
-            "end": Object {
-              "column": 1,
-              "line": 44,
-            },
-            "start": Object {
-              "column": 26,
-              "line": 31,
-            },
-          },
-          "name": "hooksStory",
-          "renderFn": [Function],
-          "source": "() => {
-  const [name, setName] = useState('');
-  useEffect(() => {
-    const data = async () => {
-      const response = await fetch(
-        'http://dummy.restapiexample.com/api/v1/employee/1',
-      );
-      const employee = await response.json();
-      setName(employee.data.employee_name);
-    };
-    data();
-  }, []);
-  return <h2>{\`Hello, my name is \${name}.\`}</h2>;
-}",
-        },
-      },
-    },
     Object {
       "doc": Object {
         "author": "atanasster",
@@ -2700,6 +2535,202 @@ any *markdown* is allowed
             ],
           },
           "source": "props => <Button {...props}>Choose colors</Button>",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "componentsLookup": Object {},
+        "date": "2020-10-14T06:45:03.199Z",
+        "dateModified": "2020-10-14T19:42:21.593Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
+        "package": "872a13aed459690f92f1efc4366b1f3c",
+        "title": "Introduction/Async stories",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
+      "stories": Object {
+        "asyncDecorators": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 2,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "_",
+              "value": "_",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                  },
+                  "name": "employee",
+                  "value": "employee",
+                },
+              ],
+            },
+          ],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Decorators can also fetch async data using the useAsync hook.",
+          "id": "asyncDecorators",
+          "loc": Object {
+            "end": Object {
+              "column": 75,
+              "line": 54,
+            },
+            "start": Object {
+              "column": 31,
+              "line": 54,
+            },
+          },
+          "name": "asyncDecorators",
+          "renderFn": [Function],
+          "source": "(_, { employee }) => storyTemplate(employee)",
+        },
+        "asyncHooksDecorators": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 2,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "_",
+              "value": "_",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                  },
+                  "name": "employee",
+                  "value": "employee",
+                },
+              ],
+            },
+          ],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Decorators can also fetch async data using react hooks/useEffect.",
+          "id": "asyncHooksDecorators",
+          "loc": Object {
+            "end": Object {
+              "column": 25,
+              "line": 72,
+            },
+            "start": Object {
+              "column": 36,
+              "line": 71,
+            },
+          },
+          "name": "asyncHooksDecorators",
+          "renderFn": [Function],
+          "source": "(_, { employee }) =>
+  storyTemplate(employee)",
+        },
+        "asyncStory": Object {
+          "arguments": Array [],
+          "description": "Stories can invoke async operations using the useAsync hook.",
+          "id": "asyncStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 21,
+            },
+          },
+          "name": "asyncStory",
+          "renderFn": [Function],
+          "source": "() => {
+  const { value } = useAsync(fetchData);
+  return storyTemplate(value);
+}",
+        },
+        "hooksStory": Object {
+          "arguments": Array [],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Story fetching data with regular react hooks/useEffect.",
+          "id": "hooksStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 29,
+            },
+          },
+          "name": "hooksStory",
+          "renderFn": [Function],
+          "source": "() => {
+  const [employee, setEmployee] = useState('');
+  useEffect(() => {
+    const data = async () => {
+      const employee = await fetchData();
+      setEmployee(employee);
+    };
+    data();
+  }, []);
+  return storyTemplate(employee);
+}",
         },
       },
     },

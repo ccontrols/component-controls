@@ -113,27 +113,24 @@ buttonColors.dynamic = true;
 
 ### Async stories
 
-Sometimes, you might need to fetch data in your stories, and component-controls can automatically detect async arrow function or regular functions
+Sometimes, you might need to fetch data (or execute some other async activity) in your stories or decorators, and component-controls provides a custom `useAsync` hook for that purpose:
 
 ```
-// async arrow function
-export const asyncStory = async () => {
-  const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
-  );
-  const { data } = await response.json();
-  return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
-};
+import { useAsync } from '@component-controls/core';
 
-// async function
-export async function asyncFunction() {
-  const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
-  );
-  const { data } = await response.json();
-  return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
-}
+export const asyncFetch = () => {
+  // async function to fetch data
+  const fetchData = async () => {
+    const response = await fetch('//dummy.restapiexample.com/api/v1/employee/1');
+    const { data } = await response.json();
+    return data;
+  };
+  const { value: employee } = useAsync(fetchData);
+  return <h2>{`Hello, my name is ${
+    employee ? employee.employee_name : 'loading...'
+  }.`}</h2>;
+};
 ```
 [live example](/api/introduction-async-stories--async-story)
 
-> Note that you can also fetch data using react's useEffect hooks, without the need fot async stories.
+> Note that you can also fetch data using react's useEffect hooks, without using `useAsync`.

@@ -31,8 +31,8 @@ _defined in [@component-controls/render/src/index.ts](https://github.com/ccontro
 
 ### properties
 
-| Name     | Type                                                                                                                                | Description |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `react*` | **function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): Promise&lt;[ReactElement](#reactelement)>; |             |
+| Name     | Type                                                                                                                    | Description |
+| -------- | ----------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `react*` | **function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): [ReactElement](#reactelement); |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->
