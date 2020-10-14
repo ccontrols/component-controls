@@ -85,7 +85,6 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -161,7 +160,6 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -237,7 +235,6 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -313,7 +310,6 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -449,7 +445,6 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -525,7 +520,6 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"

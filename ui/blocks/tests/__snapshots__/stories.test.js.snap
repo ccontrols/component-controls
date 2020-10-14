@@ -1919,7 +1919,6 @@ exports[`Blocks/Playground Custom Title 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -2160,7 +2159,6 @@ exports[`Blocks/Playground Dark Theme 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -2401,7 +2399,6 @@ exports[`Blocks/Playground Default Open Source 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -2914,7 +2911,6 @@ exports[`Blocks/Playground Disable Zoom Pan 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -3164,7 +3160,6 @@ exports[`Blocks/Playground Extra Panel 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -3759,7 +3754,6 @@ exports[`Blocks/Playground Multi Stories 1`] = `
                           >
                             <div
                               class="story-render-container css-dhmrnb"
-                              data-testid="story-wrapper"
                             >
                               <h2
                                 class="css-229nmx"
@@ -3799,7 +3793,6 @@ exports[`Blocks/Playground Multi Stories 1`] = `
                           >
                             <div
                               class="story-render-container css-dhmrnb"
-                              data-testid="story-wrapper"
                             >
                               <svg
                                 aria-valuemax="1"
@@ -4060,7 +4053,6 @@ exports[`Blocks/Playground Not Collapsible 1`] = `
                     >
                       <div
                         class="story-render-container css-dhmrnb"
-                        data-testid="story-wrapper"
                       >
                         <svg
                           aria-valuemax="1"
@@ -4299,7 +4291,6 @@ exports[`Blocks/Playground Overview 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -4540,7 +4531,6 @@ exports[`Blocks/Playground Scale 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -4839,7 +4829,6 @@ exports[`Blocks/Playground Title 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <h2
                               class="css-229nmx"
@@ -5057,7 +5046,6 @@ exports[`Blocks/Playground Visible Tabs 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -5223,7 +5211,6 @@ exports[`Blocks/Playground Zoom Disabled 1`] = `
                         >
                           <div
                             class="story-render-container css-dhmrnb"
-                            data-testid="story-wrapper"
                           >
                             <svg
                               aria-valuemax="1"
@@ -8846,7 +8833,6 @@ exports[`Blocks/Story Custom Title 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-            data-testid="story-wrapper"
           >
             <svg
               aria-valuemax="1"
@@ -8914,7 +8900,6 @@ exports[`Blocks/Story Description 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-            data-testid="story-wrapper"
           >
             <h2
               class="css-229nmx"
@@ -9016,7 +9001,6 @@ exports[`Blocks/Story Not Collapsible 1`] = `
     >
       <div
         class="story-render-container css-dhmrnb"
-        data-testid="story-wrapper"
       >
         <svg
           aria-valuemax="1"
@@ -9082,7 +9066,6 @@ exports[`Blocks/Story Overview 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-            data-testid="story-wrapper"
           >
             <svg
               aria-valuemax="1"
@@ -9203,7 +9186,6 @@ exports[`Blocks/Story Title 1`] = `
         >
           <div
             class="story-render-container css-dhmrnb"
-            data-testid="story-wrapper"
           >
             <svg
               aria-valuemax="1"

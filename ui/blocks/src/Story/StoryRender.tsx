@@ -94,16 +94,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
               options,
             )
           : null;
-        setRenderedStory(
-          <Box
-            data-testid={`${NAME}-wrapper`}
-            className="story-render-container"
-            variant={`${NAME}.wrapper`}
-            ref={ref}
-          >
-            {rendered}
-          </Box>,
-        );
+        setRenderedStory(rendered);
       };
       asyncFn();
     }, [options, ref, store.config, store.docs, story]);
@@ -115,7 +106,13 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
         {...rest}
       >
         <StoryWrapper iframeStyle={iframeStyle} wrapper={wrapper}>
-          {renderedStory}
+          <Box
+            className="story-render-container"
+            variant={`${NAME}.wrapper`}
+            ref={ref}
+          >
+            {renderedStory}
+          </Box>
         </StoryWrapper>
       </Box>
     );

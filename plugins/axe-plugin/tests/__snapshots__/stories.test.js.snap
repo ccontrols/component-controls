@@ -77,7 +77,6 @@ exports[`Plugins/AllyBlock Overview 1`] = `
                       >
                         <div
                           class="story-render-container css-dhmrnb"
-                          data-testid="story-wrapper"
                         >
                           <svg
                             aria-valuemax="1"
