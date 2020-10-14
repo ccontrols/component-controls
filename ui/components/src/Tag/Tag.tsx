@@ -32,7 +32,7 @@ export interface TagProps {
  */
 export const Tag: FC<TagProps & Omit<BoxProps, 'variant'>> = ({
   children,
-  color,
+  color = 'white',
   borderSize = 2,
   transparentAmount = 0.85,
   variant,
