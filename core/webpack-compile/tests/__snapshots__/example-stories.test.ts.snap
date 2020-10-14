@@ -2544,7 +2544,7 @@ any *markdown* is allowed
         "components": Object {},
         "componentsLookup": Object {},
         "date": "2020-10-14T06:45:03.199Z",
-        "dateModified": "2020-10-14T19:42:21.593Z",
+        "dateModified": "2020-10-14T21:00:12.622Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
         "package": "872a13aed459690f92f1efc4366b1f3c",
         "title": "Introduction/Async stories",
@@ -2604,11 +2604,11 @@ any *markdown* is allowed
           "loc": Object {
             "end": Object {
               "column": 75,
-              "line": 54,
+              "line": 53,
             },
             "start": Object {
               "column": 31,
-              "line": 54,
+              "line": 53,
             },
           },
           "name": "asyncDecorators",
@@ -2668,11 +2668,11 @@ any *markdown* is allowed
           "loc": Object {
             "end": Object {
               "column": 25,
-              "line": 72,
+              "line": 71,
             },
             "start": Object {
               "column": 36,
-              "line": 71,
+              "line": 70,
             },
           },
           "name": "asyncHooksDecorators",
