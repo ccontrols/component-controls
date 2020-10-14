@@ -10,6 +10,7 @@
     -   [<ins>Collapsible</ins>](#inscollapsibleins)
     -   [<ins>ColorMode</ins>](#inscolormodeins)
     -   [<ins>CopyContainer</ins>](#inscopycontainerins)
+    -   [<ins>Description</ins>](#insdescriptionins)
     -   [<ins>ExternalLink</ins>](#insexternallinkins)
     -   [<ins>Header</ins>](#insheaderins)
     -   [<ins>HoverBox</ins>](#inshoverboxins)
@@ -173,6 +174,19 @@ _CopyContainer [source code](https://github.com/ccontrols/component-controls/tre
 | -------- | -------- | -------------------- |
 | `name`   | _string_ | name of the property |
 | `value*` | _string_ | value to copy        |
+
+## <ins>Description</ins>
+
+Markdown content with custom components - for example `<p />` is with smaller margin than regular markdown content.
+
+_Description [source code](https://github.com/ccontrols/component-controls/tree/master/ui/components/src/Description/Description.tsx)_
+
+### properties
+
+| Name         | Type                                                                                                                                                                                                                                                                                 | Description                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| `children`   | _string \| (string & {}) \| (string & ReactElement&lt;any, string \| ((props: any) => ReactElement&lt;any, string \| ... \| (new (props: any) => Component&lt;any, any, any>)>) \| (new (props: any) => Component&lt;...>)>) \| (string & ReactNodeArray) \| (string & ReactPortal)_ | the markdown source code is passed as a children pro. |
+| `components` | _{ \[key: string]: ComponentOverride&lt;any, any>; a?: ComponentOverride&lt;any, any>; br?: ComponentOverride&lt;any, any>; button?: ComponentOverride&lt;any, any>; ... 27 more ...; ul?: ComponentOverride&lt;...>; }_                                                             | components to customize the markdown display.         |
 
 ## <ins>ExternalLink</ins>
 
