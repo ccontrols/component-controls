@@ -8,7 +8,7 @@ export default {
 
 export const asyncStory = async () => {
   const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
+    'https://dummy.restapiexample.com/api/v1/employee/1',
   );
   const { data } = await response.json();
   return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
@@ -19,7 +19,7 @@ asyncStory.description =
 
 export async function asyncFunction() {
   const response = await fetch(
-    'http://dummy.restapiexample.com/api/v1/employee/1',
+    'https://dummy.restapiexample.com/api/v1/employee/1',
   );
   const { data } = await response.json();
   return () => <h2>{`Hello, my name is ${data.employee_name}.`}</h2>;
@@ -33,7 +33,7 @@ export const hooksStory = () => {
   useEffect(() => {
     const data = async () => {
       const response = await fetch(
-        'http://dummy.restapiexample.com/api/v1/employee/1',
+        'https://dummy.restapiexample.com/api/v1/employee/1',
       );
       const employee = await response.json();
       setName(employee.data.employee_name);
@@ -67,7 +67,7 @@ asyncDecorators.decorators = [
     useEffect(() => {
       const data = async () => {
         const response = await fetch(
-          'http://dummy.restapiexample.com/api/v1/employee/1',
+          'https://dummy.restapiexample.com/api/v1/employee/1',
         );
         const { data } = await response.json();
         setEmployee(data);
