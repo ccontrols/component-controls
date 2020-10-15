@@ -426,3 +426,38 @@ overview.decorators = [
 
 <img alt="story decorators" title="story decorators" src={decoratorsImg} />
 
+
+### dynamic
+
+type `boolean`
+
+If this flag is set to true, the story is a function creating dynamic stories at run-time
+
+[ESM](/tutorial/esmodules-stories)
+```
+import React from 'react';
+import { theme } from '@component-controls/components';
+
+export default {
+  title: 'Library/Components/Button',
+};
+
+export const buttonColors = () => {
+  return Object.keys(theme.colors)
+    .filter(color => typeof theme.colors[color] === 'string')
+    .map(color => {
+      return {
+        name: color,
+        source: `<Button sx={{ bg: '${color}'}}>Color ${color}: ${theme.colors[color]}</Button>`,
+        renderFn: () => (
+          <Button
+            sx={{ bg: color }}
+          >{`Color ${color}: ${theme.colors[color]}`}</Button>
+        ),
+      };
+    });
+};
+
+buttonColors.dynamic = true;
+```
+

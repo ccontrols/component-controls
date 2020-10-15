@@ -20,10 +20,7 @@ export const extractCSFStories = (
   const globals: Stories = {};
   const localStories: Stories = {};
 
-  const extractArrowFunction = (
-    path: any,
-    declaration: any,
-  ): Story | undefined => {
+  const extractFunction = (path: any, declaration: any): Story | undefined => {
     if (declaration.init) {
       switch (declaration.init.type) {
         case 'ArrowFunctionExpression': {
@@ -48,6 +45,15 @@ export const extractCSFStories = (
           );
         }
       }
+    } else if (declaration.type === 'FunctionDeclaration') {
+      const name = declaration.id.name;
+      const story: Story = {
+        loc: sourceLocation(declaration.body.loc),
+        name,
+        id: name,
+      };
+      traverse(path.node, extractFunctionParameters(story), path.scope);
+      return story;
     }
     return undefined;
   };
@@ -126,7 +132,7 @@ export const extractCSFStories = (
           const name = declaration.id.name;
           //check if it was a named export
           if (!store.stories[name]) {
-            const story = extractArrowFunction(path, declaration);
+            const story = extractFunction(path, declaration);
             if (story && story.name) {
               localStories[story.name] = story;
             }
@@ -154,14 +160,27 @@ export const extractCSFStories = (
       const { declaration } = path.node;
       if (declaration) {
         const { declarations } = declaration;
-        if (Array.isArray(declarations) && declarations.length > 0) {
-          const story = extractArrowFunction(path, declarations[0]);
-          if (story) {
-            const name = story.name;
-            store.stories[name] = {
-              ...story,
-              ...globals[name],
-            };
+        if (declarations) {
+          if (Array.isArray(declarations) && declarations.length > 0) {
+            const story = extractFunction(path, declarations[0]);
+            if (story) {
+              const name = story.name;
+              store.stories[name] = {
+                ...story,
+                ...globals[name],
+              };
+            }
+          }
+        } else {
+          if (declaration.type === 'FunctionDeclaration') {
+            const story = extractFunction(path, declaration);
+            if (story) {
+              const name = story.name;
+              store.stories[name] = {
+                ...story,
+                ...globals[name],
+              };
+            }
           }
         }
       }

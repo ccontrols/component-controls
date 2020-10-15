@@ -1,5 +1,5 @@
 import { RequireContextProps } from '@component-controls/config';
-import { BuildConfiguration } from '@component-controls/core';
+import { BuildConfiguration, normalizePath } from '@component-controls/core';
 
 export interface StoryPath {
   absPath: string;
@@ -15,15 +15,15 @@ export const replaceSource = (
   const imports = `
 
 const configJSON = ${
-    configFilePath ? `require("${configFilePath}")` : 'undefined'
+    configFilePath ? `require("${normalizePath(configFilePath)}")` : 'undefined'
   };
 const contexts = [];
 ${contexts
   .map(
     context =>
       `contexts.push({
-        folder: "${context.directory}", 
-        req: require.context('${context.directory}', ${
+        folder: "${normalizePath(context.directory)}", 
+        req: require.context('${normalizePath(context.directory)}', ${
         context.useSubdirectories ? 'true' : 'false'
       }, ${context.regExp})
     });`,
@@ -54,9 +54,10 @@ ${contexts
       let exports = null;
       for (const context of contexts) {
         const key = context.req.keys().find(k => {
-          const fullPath = path.resolve(context.folder, k);
-          return doc.fileName === fullPath;
-        })
+          const fullPath = path.join(context.folder, k);
+          const normalizedPath = context.folder.indexOf('\\\\') >= 0 ? fullPath.split('/').join('\\\\') : fullPath;
+          return doc.fileName === normalizedPath;
+        });
         if (key) {
           exports = context.req(key);
           break;

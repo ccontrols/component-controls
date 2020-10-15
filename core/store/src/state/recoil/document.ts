@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import {
   atom,
   atomFamily,
@@ -14,15 +15,10 @@ import {
   DocType,
   defDocType,
   getDocPath,
+  getHomePath,
   getComponentName,
 } from '@component-controls/core';
-import {
-  storeState,
-  useStore,
-  useConfig,
-  configState,
-  activeTabState,
-} from './store';
+import { storeState, useStore, activeTabState } from './store';
 
 export const documentIdState = atom<string | undefined>({
   key: 'document_id',
@@ -182,10 +178,11 @@ const docTypeCountState = selector<DocCountType>({
   get: ({ get }) => {
     const store = get(storeState);
     const { pages = {} } = store?.config || {};
+    const homePath = useMemo(() => getHomePath(store), [store]);
     return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
       const docs = get(docsByTypeState(type));
       const home = docs.length
-        ? docs.find(doc => doc.route === '/') || docs[0]
+        ? docs.find(doc => doc.route === homePath) || docs[0]
         : undefined;
       return {
         ...acc,
@@ -213,7 +210,7 @@ const navigationState = selector<NavigationResult>({
   key: 'navigation_selector',
   get: ({ get }) => {
     const doc = get(currentDocumentState);
-    const config = get(configState);
+    const store = get(storeState);
     const activeTab = get(activeTabState);
 
     const result: NavigationResult = {};
@@ -230,7 +227,7 @@ const navigationState = selector<NavigationResult>({
           link: getDocPath(
             nextDoc.type || defDocType,
             nextDoc,
-            config.pages,
+            store,
             nextDoc.title,
             activeTab,
           ),
@@ -246,7 +243,7 @@ const navigationState = selector<NavigationResult>({
           link: getDocPath(
             prevDoc.type || defDocType,
             prevDoc,
-            config.pages,
+            store,
             prevDoc.title,
             activeTab,
           ),
@@ -280,16 +277,16 @@ export const useDocumentPath: UseGetDocumentPath = (
   activeTab,
 ) => {
   const doc = useDocument(docId);
-  const config = useConfig();
-  return getDocPath(type, doc, config.pages, name, activeTab);
+  const store = useStore();
+  return getDocPath(type, doc, store, name, activeTab);
 };
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
   const getDoc = useGetDocument();
-  const config = useConfig();
+  const store = useStore();
   return (type = defDocType, docId, activeTab) => {
     const doc = getDoc(docId);
-    return getDocPath(type, doc, config.pages, docId, activeTab);
+    return getDocPath(type, doc, store, docId, activeTab);
   };
 };
 

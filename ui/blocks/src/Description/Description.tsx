@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
-import { Markdown, MarkdownProps } from '@component-controls/components';
+import {
+  Description as BaseDescription,
+  MarkdownProps,
+} from '@component-controls/components';
 import { ComponentsContainer } from '../BlockContainer/components/ComponentsContainer';
 import {
   useComponents,
@@ -24,11 +27,15 @@ export const Description: FC<DescriptionProps> = ({ of, ...rest }) => {
           if (!component || !component.info || !component.info.description) {
             return null;
           }
-          return <Markdown {...rest}>{component.info.description}</Markdown>;
+          return (
+            <BaseDescription {...rest}>
+              {component.info.description}
+            </BaseDescription>
+          );
         }}
       </ComponentsContainer>
       {doc && doc.description && (
-        <Markdown {...rest}>{doc.description}</Markdown>
+        <BaseDescription {...rest}>{doc.description}</BaseDescription>
       )}
     </>
   );

@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Link, Value } from '@component-controls/components';
-import { useConfig, useCurrentDocument } from '@component-controls/store';
+import { useStore, useCurrentDocument } from '@component-controls/store';
 import {
   Pagination,
   Container as BlocksContainer,
@@ -16,7 +16,7 @@ import {
 export const Container: FC = ({ children }) => {
   const doc = useCurrentDocument();
   const { author, tags } = doc || {};
-  const config = useConfig();
+  const store = useStore();
   return (
     <Box variant="container.container">
       <BlocksContainer
@@ -26,9 +26,7 @@ export const Container: FC = ({ children }) => {
               <Value
                 label="by"
                 value={
-                  <Link
-                    href={getDocPath('author', undefined, config.pages, author)}
-                  >
+                  <Link href={getDocPath('author', undefined, store, author)}>
                     {author}
                   </Link>
                 }

@@ -3,7 +3,7 @@ import { FC, useState, useEffect } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { getDocPath } from '@component-controls/core';
 import { Tag, Link, getPaletteColor } from '@component-controls/components';
-import { useConfig, useDocPropCount } from '@component-controls/store';
+import { useStore, useDocPropCount } from '@component-controls/store';
 
 export interface TagsListProps {
   /**
@@ -18,7 +18,7 @@ export interface TagsListProps {
 export const TagsList: FC<TagsListProps> = ({ tags }) => {
   const [tagColors, setTagColors] = useState<{ [tag: string]: string }>({});
   const tagCounts = useDocPropCount('tags');
-  const config = useConfig();
+  const store = useStore();
   useEffect(() => {
     setTagColors(
       Object.keys(tagCounts).reduce(
@@ -34,7 +34,7 @@ export const TagsList: FC<TagsListProps> = ({ tags }) => {
   return tags ? (
     <Box variant="taglist.container">
       {tags.map(tag => (
-        <Link key={tag} href={getDocPath('tags', undefined, config.pages, tag)}>
+        <Link key={tag} href={getDocPath('tags', undefined, store, tag)}>
           <Tag color={tagColors[tag] || '#dddddd'} variant="tag.leftmargin">
             {tag}
           </Tag>

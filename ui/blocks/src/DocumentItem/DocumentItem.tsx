@@ -8,7 +8,7 @@ import {
   dateToLocalString,
 } from '@component-controls/core';
 import { Subtitle, Markdown, Link } from '@component-controls/components';
-import { useConfig } from '@component-controls/store';
+import { useStore } from '@component-controls/store';
 import { PageTypeTag } from '../PageTypeTag';
 import { TagsList } from '../TagsList';
 
@@ -29,7 +29,7 @@ export interface DocumentItemProps {
  */
 export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
   const { type = defDocType, tags = [], date, author } = doc;
-  const config = useConfig();
+  const store = useStore();
   const dateNode = date ? (
     <Box variant="documentitem.info.inner">
       {date ? (
@@ -43,7 +43,7 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
         <Box variant="documentitem.info.author">
           {date && <Text variant="documentitem.info.comma">,</Text>}
           <Text variant="documentitem.info.by">by</Text>
-          <Link href={getDocPath('author', undefined, config.pages, author)}>
+          <Link href={getDocPath('author', undefined, store, author)}>
             {author}
           </Link>
         </Box>

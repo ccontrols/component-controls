@@ -35,6 +35,11 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     value: '',
     description: 'Standalone site title. Default is "Component controls"',
   },
+  logo: {
+    type: ControlTypes.TEXT,
+    value: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg',
+    description: 'Custom logo url - set to null to remove the logo',
+  },
   siteUrl: {
     type: ControlTypes.TEXT,
     value: '',
@@ -61,18 +66,18 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     description: 'Site author. Default is "@component-controls"',
   }
 }}>
-  {({ siteTitle, siteUrl, siteDescription, siteCopyright, siteLanguage, author }) => {
+  {({ siteTitle, logo, siteUrl, siteDescription, siteCopyright, siteLanguage, author }) => {
     return (
       <Fragment>
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">
   {`export default {
-${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
+${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${logo ? `  logo: '${logo}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
 }`}
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: { 
-          siteTitle, siteUrl, siteDescription, siteLanguage, author, siteCopyright,
+          siteTitle, logo, siteUrl, siteDescription, siteLanguage, author, siteCopyright,
           theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
       </Fragment>
     );  
@@ -221,7 +226,7 @@ ${leftItems.length ? `    left: [\n${itemsToString(leftItems)}\n    ],${rightIte
 
 <PropsTable name="custom-toolbar" expanded={{ 'prop.parentName:first': true, 'prop.parentName:second': true }} />
 
-### Insert toolbar logo
+### Insert toolbar item
 
 You can insert a toolbar item at any position, by specifying the `order` property.
 

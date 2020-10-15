@@ -40,6 +40,7 @@ Object {
         "basePath": "tags/",
       },
     },
+    "siteRoot": "/",
     "stories": Array [
       "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
@@ -466,7 +467,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "0b32e7ea56b640582f1e26d14b10331d": Object {
       "fileHash": "0b32e7ea56b640582f1e26d14b10331d",
@@ -476,7 +477,27 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
+    },
+    "38eb30a76456bbd1c244968c2ca8e4b8": Object {
+      "fileHash": "38eb30a76456bbd1c244968c2ca8e4b8",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.31.0",
+    },
+    "872a13aed459690f92f1efc4366b1f3c": Object {
+      "fileHash": "872a13aed459690f92f1efc4366b1f3c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-async.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.31.0",
     },
     "af3ea9029e5eedf5278b612cda3d978c": Object {
       "fileHash": "af3ea9029e5eedf5278b612cda3d978c",
@@ -486,7 +507,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "b5fffc2a9e710b29374f13f1d7ef028c": Object {
       "fileHash": "b5fffc2a9e710b29374f13f1d7ef028c",
@@ -496,7 +517,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "c08bdcb13ab5ab1d9a0e8a612ec1e872": Object {
       "fileHash": "c08bdcb13ab5ab1d9a0e8a612ec1e872",
@@ -506,7 +527,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "dd96934cfa10038428b57421ede5ec17": Object {
       "fileHash": "dd96934cfa10038428b57421ede5ec17",
@@ -516,7 +537,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "ee6ce583d6eb608b96bf9f66702326ef": Object {
       "fileHash": "ee6ce583d6eb608b96bf9f66702326ef",
@@ -526,7 +547,7 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
     "f5f7bfce83c4ef863dae3d46f935a246": Object {
       "fileHash": "f5f7bfce83c4ef863dae3d46f935a246",
@@ -536,10 +557,58 @@ Button.propTypes = {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.0",
+      "version": "1.31.0",
     },
   },
   "stores": Array [
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "componentsLookup": Object {},
+        "date": "2020-10-09T05:32:09.028Z",
+        "dateModified": "2020-10-09T05:32:09.031Z",
+        "description": "ESM story file to demostrate creating 'dynamic' stories at run-time. Creates a story iterating through each theme color",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+        "package": "38eb30a76456bbd1c244968c2ca8e4b8",
+        "title": "Introduction/Dynamic stories",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+      "stories": Object {
+        "buttonColors": Object {
+          "arguments": Array [],
+          "dynamic": true,
+          "id": "buttonColors",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 27,
+            },
+            "start": Object {
+              "column": 28,
+              "line": 13,
+            },
+          },
+          "name": "buttonColors",
+          "renderFn": [Function],
+          "source": "() => {
+  return Object.keys(theme.colors)
+    .filter(color => typeof theme.colors[color] === 'string')
+    .map(color => {
+      return {
+        name: color,
+        source: \`<Button sx={{ bg: '\${color}'}}>Color \${color}: \${theme.colors[color]}</Button>\`,
+        renderFn: () => (
+          <Button
+            sx={{ bg: color }}
+          >{\`Color \${color}: \${theme.colors[color]}\`}</Button>
+        ),
+      };
+    });
+}",
+        },
+      },
+    },
     Object {
       "doc": Object {
         "author": "atanasster",
@@ -2466,6 +2535,202 @@ any *markdown* is allowed
             ],
           },
           "source": "props => <Button {...props}>Choose colors</Button>",
+        },
+      },
+    },
+    Object {
+      "doc": Object {
+        "author": "atanasster",
+        "components": Object {},
+        "componentsLookup": Object {},
+        "date": "2020-10-14T06:45:03.199Z",
+        "dateModified": "2020-10-14T21:00:12.622Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
+        "package": "872a13aed459690f92f1efc4366b1f3c",
+        "title": "Introduction/Async stories",
+      },
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
+      "stories": Object {
+        "asyncDecorators": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 2,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "_",
+              "value": "_",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                  },
+                  "name": "employee",
+                  "value": "employee",
+                },
+              ],
+            },
+          ],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Decorators can also fetch async data using the useAsync hook.",
+          "id": "asyncDecorators",
+          "loc": Object {
+            "end": Object {
+              "column": 75,
+              "line": 53,
+            },
+            "start": Object {
+              "column": 31,
+              "line": 53,
+            },
+          },
+          "name": "asyncDecorators",
+          "renderFn": [Function],
+          "source": "(_, { employee }) => storyTemplate(employee)",
+        },
+        "asyncHooksDecorators": Object {
+          "arguments": Array [
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 2,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 1,
+                  "line": 0,
+                },
+              },
+              "name": "_",
+              "value": "_",
+            },
+            Object {
+              "loc": Object {
+                "end": Object {
+                  "column": 16,
+                  "line": 0,
+                },
+                "start": Object {
+                  "column": 4,
+                  "line": 0,
+                },
+              },
+              "value": Array [
+                Object {
+                  "loc": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 0,
+                    },
+                    "start": Object {
+                      "column": 6,
+                      "line": 0,
+                    },
+                  },
+                  "name": "employee",
+                  "value": "employee",
+                },
+              ],
+            },
+          ],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Decorators can also fetch async data using react hooks/useEffect.",
+          "id": "asyncHooksDecorators",
+          "loc": Object {
+            "end": Object {
+              "column": 25,
+              "line": 71,
+            },
+            "start": Object {
+              "column": 36,
+              "line": 70,
+            },
+          },
+          "name": "asyncHooksDecorators",
+          "renderFn": [Function],
+          "source": "(_, { employee }) =>
+  storyTemplate(employee)",
+        },
+        "asyncStory": Object {
+          "arguments": Array [],
+          "description": "Stories can invoke async operations using the useAsync hook.",
+          "id": "asyncStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 24,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 21,
+            },
+          },
+          "name": "asyncStory",
+          "renderFn": [Function],
+          "source": "() => {
+  const { value } = useAsync(fetchData);
+  return storyTemplate(value);
+}",
+        },
+        "hooksStory": Object {
+          "arguments": Array [],
+          "decorators": Array [
+            [Function],
+          ],
+          "description": "Story fetching data with regular react hooks/useEffect.",
+          "id": "hooksStory",
+          "loc": Object {
+            "end": Object {
+              "column": 1,
+              "line": 39,
+            },
+            "start": Object {
+              "column": 26,
+              "line": 29,
+            },
+          },
+          "name": "hooksStory",
+          "renderFn": [Function],
+          "source": "() => {
+  const [employee, setEmployee] = useState('');
+  useEffect(() => {
+    const data = async () => {
+      const employee = await fetchData();
+      setEmployee(employee);
+    };
+    data();
+  }, []);
+  return storyTemplate(employee);
+}",
         },
       },
     },

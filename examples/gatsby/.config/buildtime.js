@@ -15,6 +15,7 @@ module.exports = {
     '../../stories/src/tutorial/configuration/*.mdx',
     '../../stories/src/tutorial/reference/*.mdx',
     '../../stories/src/stories/*.stories.@(js|jsx|tsx|mdx)',
+    '../../stories/src/stories_native/*.stories.@(js|jsx|tsx|mdx)',
     '../../stories/src/mdx-stories/*.mdx',
     '../../../ui/app/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.@(js|jsx|tsx|mdx)',

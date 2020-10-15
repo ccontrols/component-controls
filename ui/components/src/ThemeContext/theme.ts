@@ -29,6 +29,7 @@ export type ControlsTheme = {
   footer: Record<string, ThemeUIStyleObject>;
   actioncontainer: ThemeUIStyleObject | Record<string, ThemeUIStyleObject>;
   blockcontainer: Record<string, ThemeUIStyleObject>;
+  description: Record<string, ThemeUIStyleObject>;
   blockpagecontainer: Record<string, ThemeUIStyleObject>;
   linkheading: Record<string, ThemeUIStyleObject>;
   multiselect: Record<string, ThemeUIStyleObject>;
@@ -423,6 +424,11 @@ export const theme: ControlsTheme = {
     },
     titleblock: { flexDirection: 'row', alignItems: 'center' },
     expandicon: { ml: 2, pb: 2 },
+  },
+  description: {
+    p: {
+      my: 2,
+    },
   },
   blockpagecontainer: {
     container: {},
@@ -958,6 +964,11 @@ export const theme: ControlsTheme = {
       textDecoration: 'none',
       fontWeight: 'normal',
       ':hover': { color: `secondary` },
+    },
+    logo: {
+      maxHeight: 30,
+      width: 'auto',
+      objectFit: 'cover',
     },
     items: {
       display: 'flex',

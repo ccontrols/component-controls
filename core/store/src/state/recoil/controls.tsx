@@ -70,10 +70,7 @@ export interface ControlsStateProviderProps {
   controls?: ComponentControls;
 }
 export const ControlsStateProvider: FC<ControlsStateProviderProps> = ({
-  controls,
-  onChange,
   children,
 }) => {
-  console.log(controls, onChange);
   return <RecoilRoot>{children}</RecoilRoot>;
 };

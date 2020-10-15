@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/viewport-plugin",
-  "version": "1.27.2",
+  "version": "1.31.2",
   "description": "Viewport plugin",
   "keywords": [
     "addon",
@@ -34,13 +34,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.27.2",
-    "@component-controls/components": "^1.27.2",
+    "@component-controls/blocks": "^1.31.2",
+    "@component-controls/components": "^1.31.2",
     "react": "^16.12.0",
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.27.2",
+    "@component-controls/jest-snapshots": "^1.31.2",
     "@types/react": "^16.9.34",
     "typescript": "^3.8.3"
   },
@@ -56,5 +56,5 @@
     "Martin Stoyanov",
     "Atanas Stoyanov"
   ],
-  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+  "gitHead": "10e8615f01a50cc411cdb09105727e5cd9017067"
 }

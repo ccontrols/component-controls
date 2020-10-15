@@ -40,6 +40,7 @@ Object {
         "basePath": "tags/",
       },
     },
+    "siteRoot": "/",
     "stories": Array [
       "../../../../ui/components/src/ActionBar/*.stories.(js|jsx|tsx|mdx)",
     ],
@@ -104,7 +105,7 @@ actions can accept an order prop, and can also be superimposed",
       "loc": Object {
         "end": Object {
           "column": 1,
-          "line": 75,
+          "line": 78,
         },
         "start": Object {
           "column": 45,
@@ -155,6 +156,9 @@ export const ActionBar: FC<ActionBarProps> = ({
             sx={{
               mr: index === 0 ? 1 : 0,
               ml: nextGroup !== group || group === undefined ? 2 : 1,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
             }}
           >
             {typeof node === 'string' ? (
@@ -216,7 +220,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.27.2",
+        "@component-controls/jest-snapshots": "^1.31.2",
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -237,7 +241,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.2",
+      "version": "1.31.2",
     },
     "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
@@ -261,7 +265,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.27.2",
+        "@component-controls/jest-snapshots": "^1.31.2",
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@types/markdown-to-jsx": "^6.11.0",
         "@types/react-table": "^7.0.10",
@@ -282,7 +286,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.27.2",
+      "version": "1.31.2",
     },
   },
   "stores": Array [

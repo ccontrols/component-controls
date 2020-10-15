@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/pages",
-  "version": "1.27.2",
+  "version": "1.31.2",
   "description": "Component controls pre-built documentation page templates.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.27.2",
+    "@component-controls/blocks": "^1.31.2",
     "react": "^16.8.3"
   },
   "devDependencies": {
@@ -49,5 +49,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+  "gitHead": "10e8615f01a50cc411cdb09105727e5cd9017067"
 }

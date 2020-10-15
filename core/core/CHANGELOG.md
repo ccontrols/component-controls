@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+## [1.31.1](https://github.com/ccontrols/component-controls/compare/v1.31.0...v1.31.1) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/core
+
+
+
+
+
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* add useAsync hook ([f37b1ba](https://github.com/ccontrols/component-controls/commit/f37b1ba0d56f15e77e1e97f6c3dece66de5e5a9b))
+
+
+### Features
+
+* initial check in async esm and mdx ([18c78e2](https://github.com/ccontrols/component-controls/commit/18c78e21e6b8fd31056a3496f35ed557bdf66f20))
+
+
+
+
+
+# [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
+
+
+### Features
+
+* site logo, default and custom ([8d941dd](https://github.com/ccontrols/component-controls/commit/8d941dd0b6aca276ea70a18e3f0d137b728b5ffb))
+
+
+
+
+
+# [1.29.0](https://github.com/ccontrols/component-controls/compare/v1.28.0...v1.29.0) (2020-10-10)
+
+
+### Features
+
+* base url siteRoot configuration option ([4baa386](https://github.com/ccontrols/component-controls/commit/4baa386bc06853502dc006a74afa65788af21a05))
+
+
+
+
+
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* building param optional ([b3e02f1](https://github.com/ccontrols/component-controls/commit/b3e02f144af77155ab616775cad56328c818574e))
+* dynamic stories with fixed route ([e9b7919](https://github.com/ccontrols/component-controls/commit/e9b79192d3eed4076d5fa64e415594d6a31c11e5))
+* renamed factory to dynamic ([14218eb](https://github.com/ccontrols/component-controls/commit/14218ebcf00d54faa02b037898ca9173b113e9cf))
+
+
+### Features
+
+* dynamic esm stories ([b1c9c00](https://github.com/ccontrols/component-controls/commit/b1c9c004e9b3103d41bab2c6fca5ea1a3ffa17fe))
+
+
+
+
+
+## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
+
+
+### Bug Fixes
+
+* normalize path for windows systems ([3224214](https://github.com/ccontrols/component-controls/commit/3224214d3870519d5e5db4423ec92826566773a0))
+* prettier fixes ([cadc70b](https://github.com/ccontrols/component-controls/commit/cadc70b532fde4822348555bfcca959efd9f5b61))
+
+
+
+
+
 # [1.26.0](https://github.com/ccontrols/component-controls/compare/v1.25.3...v1.26.0) (2020-10-01)
 
 

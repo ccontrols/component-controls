@@ -15,7 +15,7 @@ You can create interactive component examples (aka stories) in pure Javascript o
 
 To do so, you need to create a [default export](#metadata) with at least a title attribute and at least one [named export](#stories), which is considered a story.
 
-Our ESM stories format is loosely compatible with storybook's [CSF](https://storybook.js.org/docs/formats/component-story-format/) with a few properties in common (ie title, component, decorators). However, our ESM stories format is fully extensible beyond just using a select few hard-coded props (ie parameters).
+Our ESM story format is loosely compatible with Storybook's [CSF](https://storybook.js.org/docs/formats/component-story-format/) with a few properties in common (ie title, component, decorators). However, our ESM story format is fully extensible beyond just using a select few hard-coded props (ie parameters).
 
 ## Advantages
 
@@ -36,7 +36,7 @@ By default, your ESM story files should end with `.(story|stories).(js|jsx|ts|ts
 
 ## Metadata
 
-All the document metadata is exported as the default module export (there can be only one default export per es module). For example the document(page) title, component etc. are defined as properties:
+All the document metadata is exported as the default module export (there can be only one default export per es module). For example the document(page) title, component, etc. are defined as properties:
 
 ```
 export default {
@@ -76,3 +76,61 @@ myStory.story = {
 };
  
 ```
+
+### Dynamic stories
+
+You can create multiple stories dynamically from a function To do this, all you need is to add `dynamic = true` flag to the exported story:
+
+```
+import React from 'react';
+import { theme } from '@component-controls/components';
+
+export default {
+  title: Components/Button',
+};
+
+export const buttonColors = () => {
+  return Object.keys(theme.colors)
+    .filter(color => typeof theme.colors[color] === 'string')
+    .map(color => {
+      return {
+        name: color,
+        source: `<Button sx={{ bg: '${color}'}}>Color ${color}: ${theme.colors[color]}</Button>`,
+        renderFn: () => (
+          <Button
+            sx={{ bg: color }}
+          >{`Color ${color}: ${theme.colors[color]}`}</Button>
+        ),
+      };
+    });
+};
+
+buttonColors.dynamic = true;
+```
+[live example](/api/introduction-dynamic-stories--button-colors/?story=Background)
+
+> dynamic stories are created at run-time (when the site loads in the browser), while in the case of [gatsby](/tutorial/getting-started/gatsby), the static page routes are created under a `nodejs` process. This makes it so all the newly created dynamic stories for `gatsby` will reside under the URL of the dynamic parent story, with a `story` parameter: `https://xxx/api/components-button--button-colors/?story=Background`
+
+### Async stories
+
+Sometimes, you might need to fetch data (or execute some other async activity) in your stories or decorators, and component-controls provides a custom `useAsync` hook for that purpose:
+
+```
+import { useAsync } from '@component-controls/core';
+
+export const asyncFetch = () => {
+  // async function to fetch data
+  const fetchData = async () => {
+    const response = await fetch('//dummy.restapiexample.com/api/v1/employee/1');
+    const { data } = await response.json();
+    return data;
+  };
+  const { value: employee } = useAsync(fetchData);
+  return <h2>{`Hello, my name is ${
+    employee ? employee.employee_name : 'loading...'
+  }.`}</h2>;
+};
+```
+[live example](/api/introduction-async-stories--async-story)
+
+> Note that you can also fetch data using react's useEffect hooks, without using `useAsync`.

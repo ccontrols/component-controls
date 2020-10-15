@@ -13,7 +13,7 @@ exports[`Components/ActionBar Group End 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -22,7 +22,7 @@ exports[`Components/ActionBar Group End 1`] = `
           </button>
         </div>
         <div
-          class="css-1w2d84q"
+          class="css-dzb3k8"
         >
           <button
             class="css-1tf4h46"
@@ -31,7 +31,7 @@ exports[`Components/ActionBar Group End 1`] = `
           </button>
         </div>
         <div
-          class="css-1w2d84q"
+          class="css-dzb3k8"
         >
           <button
             class="css-1tf4h46"
@@ -58,7 +58,7 @@ exports[`Components/ActionBar Group Start 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-kbuoje"
+          class="css-1uhft3z"
         >
           <button
             class="css-1tf4h46"
@@ -67,7 +67,7 @@ exports[`Components/ActionBar Group Start 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -76,7 +76,7 @@ exports[`Components/ActionBar Group Start 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -103,7 +103,7 @@ exports[`Components/ActionBar Link 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <a
             class="css-1t54e2w"
@@ -133,7 +133,7 @@ exports[`Components/ActionBar Order 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <a
             class="css-1t54e2w"
@@ -145,7 +145,7 @@ exports[`Components/ActionBar Order 1`] = `
           </a>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <button
             class="css-1tf4h46"
@@ -172,7 +172,7 @@ exports[`Components/ActionBar Override 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -181,7 +181,7 @@ exports[`Components/ActionBar Override 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <a
             class="css-1t54e2w"
@@ -211,7 +211,7 @@ exports[`Components/ActionBar Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-18il91f"
+          class="css-7mlh6m"
         >
           <button
             class="css-1tf4h46"
@@ -220,7 +220,7 @@ exports[`Components/ActionBar Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-117h1ma"
+          class="css-7fe059"
         >
           <a
             class="css-1t54e2w"
@@ -247,7 +247,7 @@ exports[`Components/ActionContainer Order 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <a
             class="css-ax59ca"
@@ -259,7 +259,7 @@ exports[`Components/ActionContainer Order 1`] = `
           </a>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -315,7 +315,7 @@ exports[`Components/ActionContainer Override 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -324,7 +324,7 @@ exports[`Components/ActionContainer Override 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <a
             class="css-ax59ca"
@@ -383,7 +383,7 @@ exports[`Components/ActionContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -392,7 +392,7 @@ exports[`Components/ActionContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <a
             class="css-ax59ca"
@@ -606,12 +606,16 @@ exports[`Components/BlockContainer Description 1`] = `
           </h3>
         </div>
       </div>
-      <p>
+      <p
+        class="css-1xlzx9v"
+      >
         <em>
           Markdown
         </em>
       </p>
-      <p>
+      <p
+        class="css-1xlzx9v"
+      >
         <a
           href="https://www.google.com"
         >
@@ -747,37 +751,7 @@ exports[`Components/BlockContainer Overview 1`] = `
       >
         <h3
           class="css-a77kmg"
-        >
-          <div
-            class="css-tmrrvx"
-          >
-            Block title
-            <a
-              aria-label="Collapse this block"
-              class="css-15uzteg"
-            >
-              <div
-                class="css-1ibxxpj"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="octicon"
-                  fill="currentColor"
-                  height="16"
-                  role="img"
-                  style="display: inline-block; user-select: none; vertical-align: middle;"
-                  viewBox="0 0 16 16"
-                  width="16"
-                >
-                  <path
-                    d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </h3>
+        />
       </div>
     </div>
     <div
@@ -945,16 +919,27 @@ exports[`Components/CopyContainer Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Components/Description Overview 1`] = `
+<DocumentFragment>
+  <p
+    class="css-1xlzx9v"
+  >
+    Some 
+    <strong>
+      description
+    </strong>
+     markdown
+  </p>
+</DocumentFragment>
+`;
+
 exports[`Components/ExternalLink Overview 1`] = `
 <DocumentFragment>
   <a
     class="css-ax59ca"
-    href="https://www.google.com"
     rel="noopener noreferrer"
     target="_blank"
-  >
-    https://www.google.com
-  </a>
+  />
 </DocumentFragment>
 `;
 
@@ -1034,41 +1019,14 @@ exports[`Components/LinkHeading Overview 1`] = `
 <DocumentFragment>
   <div
     class="css-jxxswp"
-    id="linkheading-text"
+    id=""
   >
     <div
       class="css-xhp9da"
     >
-      <a
-        class="css-4sd90b"
-        data-id="linkheading-text"
-        data-level="1"
-        data-title="LinkHeading text"
-        href="http://localhost/#linkheading-text"
-      >
-        <svg
-          aria-hidden="true"
-          class="octicon"
-          fill="currentColor"
-          height="28"
-          role="img"
-          style="display: inline-block; user-select: none; vertical-align: middle;"
-          viewBox="0 0 24 24"
-          width="28"
-        >
-          <path
-            d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z"
-          />
-          <path
-            d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z"
-          />
-        </svg>
-      </a>
-      <h1
-        class="css-ixvu55"
-      >
-        LinkHeading text
-      </h1>
+      <h3
+        class="css-1xpnkao"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -1965,6 +1923,8 @@ exports[`Components/Navmenu Overview 1`] = `
           >
             <a
               class="css-1t6zyk7"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div
                 class="css-1i09fc1"
@@ -2801,7 +2761,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -2811,7 +2771,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -2821,7 +2781,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -2973,7 +2933,7 @@ exports[`Components/PanelContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -2983,7 +2943,7 @@ exports[`Components/PanelContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -2993,7 +2953,7 @@ exports[`Components/PanelContainer Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -3061,7 +3021,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="display panel 1"
@@ -3071,7 +3031,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="display panel 2"
@@ -3081,7 +3041,7 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             aria-label="some action without panel"
@@ -3391,7 +3351,7 @@ exports[`Components/Source Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -3414,572 +3374,9 @@ exports[`Components/Source Overview 1`] = `
           style="color: rgb(114, 143, 203);"
         >
           <span
-            class="token keyword css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            export
-          </span>
-          <span
             class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token keyword css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            const
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token function-variable function css-1baulvz"
-            style="color: rgb(178, 151, 98);"
-          >
-            sample
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token operator css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            =
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token operator css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            =&gt;
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token plain css-1baulvz"
+            style="display: inline-block;"
           />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain css-1baulvz"
-          >
-              
-          </span>
-          <span
-            class="token keyword css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            const
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            [
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-            state
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             setState
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ]
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token operator css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            =
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             React
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            .
-          </span>
-          <span
-            class="token function css-1baulvz"
-            style="color: rgb(178, 151, 98);"
-          >
-            useState
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token boolean css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            false
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain css-1baulvz"
-          >
-              
-          </span>
-          <span
-            class="token keyword css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            return
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          >
-             
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain css-1baulvz"
-          >
-                
-          </span>
-          <span
-            class="token tag punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            &lt;
-          </span>
-          <span
-            class="token tag class-name css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            BooleanEditor
-          </span>
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-                  
-          </span>
-          <span
-            class="token tag attr-name css-1baulvz"
-            style="color: rgb(137, 103, 36);"
-          >
-            name
-          </span>
-          <span
-            class="token tag attr-value punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag attr-value punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            "
-          </span>
-          <span
-            class="token tag attr-value css-1baulvz"
-            style="color: rgb(114, 143, 203);"
-          >
-            prop
-          </span>
-          <span
-            class="token tag attr-value punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            "
-          </span>
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-                  
-          </span>
-          <span
-            class="token tag attr-name css-1baulvz"
-            style="color: rgb(137, 103, 36);"
-          >
-            onChange
-          </span>
-          <span
-            class="token tag script language-javascript script-punctuation punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token tag script language-javascript parameter css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            name
-          </span>
-          <span
-            class="token tag script language-javascript parameter punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token tag script language-javascript parameter css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             newVal
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             
-          </span>
-          <span
-            class="token tag script language-javascript operator css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            =&gt;
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             
-          </span>
-          <span
-            class="token tag script language-javascript function css-1baulvz"
-            style="color: rgb(178, 151, 98);"
-          >
-            setState
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            (
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            newVal
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-                  
-          </span>
-          <span
-            class="token tag attr-name css-1baulvz"
-            style="color: rgb(137, 103, 36);"
-          >
-            prop
-          </span>
-          <span
-            class="token tag script language-javascript script-punctuation punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            =
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            {
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             type
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            :
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             ControlTypes
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            .
-          </span>
-          <span
-            class="token tag script language-javascript constant css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-            BOOLEAN
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ,
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             value
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            :
-          </span>
-          <span
-            class="token tag script language-javascript css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-             state 
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag script language-javascript punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token tag css-1baulvz"
-            style="color: rgb(6, 50, 137);"
-          >
-                
-          </span>
-          <span
-            class="token tag punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            /&gt;
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain css-1baulvz"
-          >
-              
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            )
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
-          </span>
-          <span
-            class="token plain css-1baulvz"
-          />
-        </div>
-        <div
-          class="token-line css-vurnku"
-          style="color: rgb(114, 143, 203);"
-        >
-          <span
-            class="token plain css-1baulvz"
-          />
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            }
-          </span>
-          <span
-            class="token punctuation css-1baulvz"
-            style="color: rgb(182, 173, 154);"
-          >
-            ;
-          </span>
         </div>
       </pre>
     </div>
@@ -3997,7 +3394,7 @@ exports[`Components/Source Theme 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -4603,7 +4000,7 @@ exports[`Components/Source Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             aria-label="copy the displayed source code"
@@ -4613,7 +4010,7 @@ exports[`Components/Source Theme Selector 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -5208,9 +4605,7 @@ exports[`Components/Subheading Overview 1`] = `
 <DocumentFragment>
   <h3
     class="css-1sr91xu"
-  >
-    Subheading text
-  </h3>
+  />
 </DocumentFragment>
 `;
 
@@ -5218,9 +4613,7 @@ exports[`Components/Subtitle Overview 1`] = `
 <DocumentFragment>
   <h2
     class="css-1942w8h"
-  >
-    Subtitle text
-  </h2>
+  />
 </DocumentFragment>
 `;
 
@@ -5235,61 +4628,9 @@ exports[`Components/SyntaxHighlighter Overview 1`] = `
       style="color: rgb(114, 143, 203);"
     >
       <span
-        class="token keyword css-1baulvz"
-        style="color: rgb(114, 143, 203);"
-      >
-        import
-      </span>
-      <span
         class="token plain css-1baulvz"
-      >
-         
-      </span>
-      <span
-        class="token punctuation css-1baulvz"
-        style="color: rgb(182, 173, 154);"
-      >
-        {
-      </span>
-      <span
-        class="token plain css-1baulvz"
-      >
-         Button 
-      </span>
-      <span
-        class="token punctuation css-1baulvz"
-        style="color: rgb(182, 173, 154);"
-      >
-        }
-      </span>
-      <span
-        class="token plain css-1baulvz"
-      >
-         
-      </span>
-      <span
-        class="token keyword css-1baulvz"
-        style="color: rgb(114, 143, 203);"
-      >
-        from
-      </span>
-      <span
-        class="token plain css-1baulvz"
-      >
-         
-      </span>
-      <span
-        class="token string css-1baulvz"
-        style="color: rgb(114, 143, 203);"
-      >
-        'theme-ui'
-      </span>
-      <span
-        class="token punctuation css-1baulvz"
-        style="color: rgb(182, 173, 154);"
-      >
-        ;
-      </span>
+        style="display: inline-block;"
+      />
     </span>
   </pre>
 </DocumentFragment>
@@ -11934,7 +11275,7 @@ exports[`Components/Tabs Overview 1`] = `
 exports[`Components/Tag Overview 1`] = `
 <DocumentFragment>
   <span
-    class="css-1oh7pq1"
+    class="css-137nkct"
   >
     <div
       class="css-vurnku"
@@ -11949,29 +11290,17 @@ exports[`Components/Title Overview 1`] = `
 <DocumentFragment>
   <h1
     class="css-ixvu55"
-  >
-    Title text
-  </h1>
+  />
 </DocumentFragment>
 `;
 
 exports[`Components/TitledImage Overview 1`] = `
 <DocumentFragment>
-  <div
-    class="css-yyvsvt"
-  >
-    <img
-      alt="alt text"
-      class="css-9taffg"
-      src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
-      title="some image title"
-    />
-    <div
-      class="css-1g2kr6o"
-    >
-      some image title
-    </div>
-  </div>
+  <img
+    alt="alt text"
+    class="css-9taffg"
+    src="https://github.com/ccontrols/component-controls/raw/master/misc/storybook-custom-docs/images/simple-page.jpg"
+  />
 </DocumentFragment>
 `;
 
@@ -12284,14 +11613,10 @@ exports[`Components/Value Overview 1`] = `
   >
     <div
       class="css-p2xb4o"
-    >
-      date created
-    </div>
+    />
     <div
       class="css-uv6qe8"
-    >
-      01/01/2020
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
@@ -12306,7 +11631,7 @@ exports[`Components/Zoom Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-mb10wn"
+          class="css-192nmz2"
         >
           <button
             class="css-1b2uwqj"
@@ -12315,7 +11640,7 @@ exports[`Components/Zoom Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"
@@ -12324,7 +11649,7 @@ exports[`Components/Zoom Overview 1`] = `
           </button>
         </div>
         <div
-          class="css-1uyzm0d"
+          class="css-wo8d8v"
         >
           <button
             class="css-1b2uwqj"

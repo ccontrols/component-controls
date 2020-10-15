@@ -2,9 +2,9 @@
 import React, { FC } from 'react';
 import { jsx, Flex, Link, Divider, Box, SxStyleProp, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
-import { Markdown } from '../Markdown';
 import { Collapsible } from '../Collapsible';
 import { LinkHeading } from '../LinkHeading';
+import { Description } from '../Description';
 
 export interface BlockContainerProps {
   /**
@@ -92,7 +92,7 @@ export const BlockContainer: FC<BlockContainerProps> = ({
             ))}
         </LinkHeading>
       )}
-      {description && <Markdown>{description}</Markdown>}
+      {description && <Description>{description}</Description>}
       {collapsible && children ? (
         <Collapsible isOpen={isOpen}>{children}</Collapsible>
       ) : (

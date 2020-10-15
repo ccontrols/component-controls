@@ -14,7 +14,7 @@ import {
   PluginCallback,
   Page,
 } from 'gatsby';
-import { Store } from '@component-controls/core';
+import { Store, getHomePath } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -40,7 +40,7 @@ export const createPagesStatefully = async (
   };
   const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
     if (loadingStore) {
-      const store: Store = loadStore(loadingStore);
+      const store: Store = loadStore(loadingStore, true);
       const createGatsbyPage: CreatePagesArgs['actions']['createPage'] = props => {
         gatsbyStore.getState().pages.forEach((page: Page) => {
           if (page.path === props.path && page.component === props.component) {
@@ -56,7 +56,7 @@ export const createPagesStatefully = async (
       const { docId = null, type = null, storyId = null } =
         getIndexPage(store) || {};
       createGatsbyPage({
-        path: `/`,
+        path: getHomePath(store),
         component: require.resolve(`../src/templates/DocPage.tsx`),
         context: {
           docId,

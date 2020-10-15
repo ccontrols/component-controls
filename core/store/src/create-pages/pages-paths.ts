@@ -3,6 +3,8 @@ import {
   defDocType,
   DocType,
   getDocTypePath,
+  getHomePath,
+  getRoutePath,
   removeTrailingSlash,
   ensureStartingSlash,
   Pages,
@@ -15,9 +17,10 @@ import { HomePageInfo } from '../types';
 
 export const getIndexPage = (store: Store): HomePageInfo => {
   const docs = Object.keys(store.docs);
+  const homePath = getHomePath(store);
   const homePageId = docs.find(key => {
     const doc = store.docs[key];
-    return doc.route === '/';
+    return getRoutePath(store, doc.route) === homePath;
   });
   const homePage = homePageId
     ? store.docs[homePageId]
@@ -50,7 +53,7 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
     const paths: DocHomePagesPath[] = Object.keys(pages)
       .map((type: DocType) => {
         const page = pages[type];
-        const path = getDocTypePath(page) as string;
+        const path = getDocTypePath(store, page) as string;
 
         const docId = page.indexHome
           ? undefined
@@ -133,6 +136,7 @@ export interface DocPagesPath {
 export const getDocPages = (store: Store): DocPagesPath[] => {
   const { pages = {}, categories = [] } = store?.config || {};
   const docPaths: DocPagesPath[] = [];
+  const homePath = getHomePath(store);
   Object.keys(pages).forEach(type => {
     if (!categories.includes(type as DocType)) {
       const page = pages[type as DocType];
@@ -147,13 +151,13 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
             ? tab.route || (tab.title ? tab.title.toLowerCase() : '')
             : undefined;
         docs.forEach(doc => {
-          if (doc.route !== '/') {
+          if (getRoutePath(store, doc.route) !== homePath) {
             const stories =
               page.sideNav?.storyPaths && doc.stories?.length
                 ? doc.stories
                 : [undefined];
             stories.forEach((storyId?: string) => {
-              const path = getStoryPath(storyId, doc, pages, route);
+              const path = getStoryPath(storyId, doc, store, route);
               docPaths.push({
                 path,
                 type: docType,
@@ -172,7 +176,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
         const path = getDocPath(
           type as DocType,
           { title: tag, componentsLookup: {} },
-          pages,
+          store,
         );
         docPaths.push({
           path,

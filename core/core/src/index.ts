@@ -18,3 +18,6 @@ export type SetControlValueFn = (
   value: any,
 ) => void;
 export type ClickControlFn = (storyId: string, propertyName: string) => void;
+
+export const normalizePath = (fillePath: string) =>
+  process.platform === 'win32' ? fillePath.replace(/\\/g, '\\\\') : fillePath;

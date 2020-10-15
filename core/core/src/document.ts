@@ -154,7 +154,23 @@ export type Story = {
    * optional story subtitle property
    */
   subtitle?: string;
+  /**
+   * if set to true, the function is dynamically creating stories, returns a list of Story objects
+   */
+  dynamic?: boolean;
+
+  /**
+   * if the story was created by a dynamic story (factory), this is the original story id.
+   * it is set internally and will be used to create a story URL
+   */
+  dynamicId?: string;
 } & StoryProps;
+
+/**
+ * dynamic story creator function type.
+ * returns an array of dynamically loaded stories
+ */
+export type StoryFactoryFn = (doc: Document) => Story[] & Story;
 
 export const defDocType: DocType = 'story';
 /**

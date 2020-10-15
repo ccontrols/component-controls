@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
+
+**Note:** Version bump only for package component-controls
+
+
+
+
+
+## [1.31.1](https://github.com/ccontrols/component-controls/compare/v1.31.0...v1.31.1) (2020-10-14)
+
+**Note:** Version bump only for package component-controls
+
+
+
+
+
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* add useAsync hook ([f37b1ba](https://github.com/ccontrols/component-controls/commit/f37b1ba0d56f15e77e1e97f6c3dece66de5e5a9b))
+* change request to https ([48576a6](https://github.com/ccontrols/component-controls/commit/48576a6efcd8e05ce9470213801dd6efcea86fac))
+* pass decorators first param ([ad8c358](https://github.com/ccontrols/component-controls/commit/ad8c3587f59767a8444e8dda5000433e5086f029))
+* rule of hooks ([976717f](https://github.com/ccontrols/component-controls/commit/976717f52a39b82d6e4c33c0cb6d4edf7836661a))
+* sb6 docs compatibility ([8d3a767](https://github.com/ccontrols/component-controls/commit/8d3a76794a0958b79c6d7d6c7ffbb9a530004478))
+* story description visibility ([215698f](https://github.com/ccontrols/component-controls/commit/215698f7e186e59d0a9b9389c430bc4986b8b24f))
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+### Features
+
+* initial check in async esm and mdx ([18c78e2](https://github.com/ccontrols/component-controls/commit/18c78e21e6b8fd31056a3496f35ed557bdf66f20))
+
+
+
+
+
+# [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
+
+
+### Features
+
+* add favicons ([e106e45](https://github.com/ccontrols/component-controls/commit/e106e45af256535434f31d60f32d4a71a912d8ba))
+* site logo, default and custom ([8d941dd](https://github.com/ccontrols/component-controls/commit/8d941dd0b6aca276ea70a18e3f0d137b728b5ffb))
+
+
+
+
+
+# [1.29.0](https://github.com/ccontrols/component-controls/compare/v1.28.0...v1.29.0) (2020-10-10)
+
+
+### Features
+
+* base url siteRoot configuration option ([4baa386](https://github.com/ccontrols/component-controls/commit/4baa386bc06853502dc006a74afa65788af21a05))
+
+
+
+
+
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* building param optional ([b3e02f1](https://github.com/ccontrols/component-controls/commit/b3e02f144af77155ab616775cad56328c818574e))
+* dynamic stories with fixed route ([e9b7919](https://github.com/ccontrols/component-controls/commit/e9b79192d3eed4076d5fa64e415594d6a31c11e5))
+* remove console.log ([9b5ec26](https://github.com/ccontrols/component-controls/commit/9b5ec264bf1c3027786861c30a222128b07cee12))
+* renamed factory to dynamic ([14218eb](https://github.com/ccontrols/component-controls/commit/14218ebcf00d54faa02b037898ca9173b113e9cf))
+* story paths for storybook examples ([e66c802](https://github.com/ccontrols/component-controls/commit/e66c802bc46403736edf8ff6d5e3f785e81fd290))
+
+
+### Features
+
+* dynamic esm stories ([b1c9c00](https://github.com/ccontrols/component-controls/commit/b1c9c004e9b3103d41bab2c6fca5ea1a3ffa17fe))
+
+
+
+
+
+## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
+
+
+### Bug Fixes
+
+* eslint ([947bcf2](https://github.com/ccontrols/component-controls/commit/947bcf241c16ebafdc4fdb9bd2dbd4248675b3a1))
+* fix for nix filenames ([a3e1454](https://github.com/ccontrols/component-controls/commit/a3e1454240d6fa46e6ba7e91f57f5fced4525840))
+* normalize path for windows systems ([3224214](https://github.com/ccontrols/component-controls/commit/3224214d3870519d5e5db4423ec92826566773a0))
+* prettier fixes ([cadc70b](https://github.com/ccontrols/component-controls/commit/cadc70b532fde4822348555bfcca959efd9f5b61))
+
+
+
+
+
 ## [1.27.2](https://github.com/ccontrols/component-controls/compare/v1.27.1...v1.27.2) (2020-10-05)
 
 

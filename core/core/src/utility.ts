@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useEffect, useState, useCallback } from 'react';
 
 /**
  * position in the stories source code
@@ -100,7 +100,7 @@ export interface PackageInfo {
 export type StoryRenderFn = (
   controlValues: { [key: string]: any },
   context?: any,
-) => any;
+) => Promise<() => any> | any;
 
 /**
  * an import name
@@ -178,3 +178,46 @@ export interface ActionItem {
 }
 
 export type ActionItems = ActionItem[];
+
+// source https://usehooks.com/useAsync/
+export const useAsync = <T, E = string>(
+  asyncFunction: () => Promise<T>,
+  immediate = true,
+) => {
+  const [status, setStatus] = useState<
+    'idle' | 'pending' | 'success' | 'error'
+  >('idle');
+  const [value, setValue] = useState<T | null>(null);
+  const [error, setError] = useState<E | null>(null);
+
+  // The execute function wraps asyncFunction and
+  // handles setting state for pending, value, and error.
+  // useCallback ensures the below useEffect is not called
+  // on every render, but only if asyncFunction changes.
+  const execute = useCallback(() => {
+    setStatus('pending');
+    setValue(null);
+    setError(null);
+    return asyncFunction()
+      .then((response: any) => {
+        setStatus('success');
+        setValue(response);
+      })
+      .catch((error: any) => {
+        setError(error);
+        setStatus('error');
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Call execute if we want to fire it right away.
+  // Otherwise execute can be called later, such as
+  // in an onClick handler.
+  useEffect(() => {
+    if (immediate) {
+      execute();
+    }
+  }, [execute, immediate]);
+
+  return { execute, status, value, error };
+};

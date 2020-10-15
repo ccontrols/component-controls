@@ -127,7 +127,6 @@ export const extractMDXStories = (props: any) => (
                 name,
                 id,
               };
-
               if (
                 expression &&
                 (expression.expression.type === 'CallExpression' ||

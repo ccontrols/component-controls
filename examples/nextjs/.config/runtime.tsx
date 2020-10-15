@@ -11,7 +11,7 @@ const config: RunOnlyConfiguration = {
   analytics: 'UA-172446254-1',
   siteTitle: `Component controls`,
   siteUrl: `https://nextjs.component-controls.com`,
-  siteDescription: `A next-generation tool to create blazing-fast documentation sites.`,
+  siteDescription: `A next-generation tool to create blazing-fast documentation sites`,
   siteLanguage: `en`,
   author: `@component-controls`,
   theme: {

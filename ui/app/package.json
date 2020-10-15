@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/app",
-  "version": "1.27.2",
+  "version": "1.31.2",
   "description": "Component controls standalone application.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,19 +30,21 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.27.2",
-    "@component-controls/components": "^1.27.2",
-    "@component-controls/core": "^1.26.0",
-    "@component-controls/pages": "^1.27.2",
-    "@component-controls/store": "^1.27.2",
+    "@component-controls/blocks": "^1.31.2",
+    "@component-controls/components": "^1.31.2",
+    "@component-controls/core": "^1.31.2",
+    "@component-controls/pages": "^1.31.2",
+    "@component-controls/store": "^1.31.2",
+    "query-string": "^6.13.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.27.2",
+    "@component-controls/jest-snapshots": "^1.31.2",
     "@component-controls/ts-markdown-docs": "^1.21.0",
+    "@types/query-string": "^6.3.0",
     "@types/react-helmet": "^6.0.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1"
@@ -58,5 +60,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+  "gitHead": "10e8615f01a50cc411cdb09105727e5cd9017067"
 }

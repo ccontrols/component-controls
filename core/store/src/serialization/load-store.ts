@@ -14,6 +14,7 @@ import {
   PageConfiguration,
   Pages,
   PageLayoutProps,
+  mapDynamicStories,
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { render as reactRender } from '@component-controls/render/react';
@@ -21,7 +22,7 @@ import { transformControls } from './transform-controls';
 
 export { LoadingStore };
 
-export const loadStore = (store: LoadingStore): Store => {
+export const loadStore = (store: LoadingStore, building?: boolean): Store => {
   const globalStore: Store = getDefaultStore();
   try {
     const {
@@ -70,22 +71,30 @@ export const loadStore = (store: LoadingStore): Store => {
           };
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
-            const story: Story = storeStories[storyName];
-            Object.assign(story, deepMerge(docStoryProps, story));
-            story.controls = transformControls(story, doc, loadedComponents);
-            if (doc.title && story.id) {
-              const id = docStoryToId(doc.title, story.id);
-              if (!doc.stories) {
-                doc.stories = [];
+            const exportedStory: Story = storeStories[storyName];
+            let stories: Story[] = mapDynamicStories(
+              exportedStory,
+              doc,
+              building,
+            );
+            stories.forEach(story => {
+              story.id = story.id || story.name;
+              Object.assign(story, deepMerge(docStoryProps, story));
+              story.controls = transformControls(story, doc, loadedComponents);
+              if (doc.title && story.id) {
+                const id = docStoryToId(doc.title, story.id);
+                if (!doc.stories) {
+                  doc.stories = [];
+                }
+                doc.stories.push(id);
+                globalStore.stories[id] = {
+                  ...story,
+                  name: storyNameFromExport(story.name),
+                  id,
+                  doc: doc.title,
+                };
               }
-              doc.stories.push(id);
-              globalStore.stories[id] = {
-                ...story,
-                name: storyNameFromExport(story.name),
-                id,
-                doc: doc.title,
-              };
-            }
+            });
           });
         }
       });

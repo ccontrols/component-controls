@@ -1,4 +1,4 @@
-import React, { FC, createContext, useContext, useState } from 'react';
+import React, { FC, createContext, useContext, useState, useMemo } from 'react';
 import {
   Document,
   Documents,
@@ -7,9 +7,10 @@ import {
   DocType,
   defDocType,
   getDocPath,
+  getHomePath,
   getComponentName,
 } from '@component-controls/core';
-import { useStore, useConfig, useActiveTab } from './store';
+import { useStore, useActiveTab } from './store';
 
 const DocumentContext = createContext<Document | undefined>(undefined);
 
@@ -165,12 +166,13 @@ export type DocCountType = Record<DocType, { count: number; home?: Document }>;
  */
 export const useDocTypeCount = (): DocCountType => {
   const store = useStore();
+  const homePath = useMemo(() => getHomePath(store), [store]);
   const getByDocType = useGetDocByType();
   const { pages = {} } = store?.config || {};
   return Object.keys(pages).reduce((acc: DocCountType, type: DocType) => {
     const docs = getByDocType(type);
     const home = docs.length
-      ? docs.find(doc => doc.route === '/') || docs[0]
+      ? docs.find(doc => doc.route === homePath) || docs[0]
       : undefined;
     return {
       ...acc,
@@ -190,7 +192,7 @@ const useNavigationLinks = (doc: Document): NavigationResult => {
   const docId = doc.title;
   const type = doc.type || defDocType;
   const docs = useDocByType(type);
-  const config = useConfig();
+  const store = useStore();
   const activeTab = useActiveTab();
   const result: NavigationResult = {};
   //next page
@@ -202,7 +204,7 @@ const useNavigationLinks = (doc: Document): NavigationResult => {
       link: getDocPath(
         nextDoc.type || defDocType,
         nextDoc,
-        config.pages,
+        store,
         nextDoc.title,
         activeTab,
       ),
@@ -217,7 +219,7 @@ const useNavigationLinks = (doc: Document): NavigationResult => {
       link: getDocPath(
         prevDoc.type || defDocType,
         prevDoc,
-        config.pages,
+        store,
         prevDoc.title,
         activeTab,
       ),
@@ -252,16 +254,15 @@ export const useDocumentPath: UseGetDocumentPath = (
   activeTab,
 ) => {
   const doc = useDocument(docId);
-  const config = useConfig();
-  return getDocPath(type, doc, config.pages, docId, activeTab);
+  const store = useStore();
+  return getDocPath(type, doc, store, docId, activeTab);
 };
 
 export const useGetDocumentPath = (): UseGetDocumentPath => {
   const store = useStore();
-  const config = useConfig();
   return (type = defDocType, docId, activeTab) => {
     const doc = store.docs[docId];
-    return getDocPath(type, doc, config.pages, docId, activeTab);
+    return getDocPath(type, doc, store, docId, activeTab);
   };
 };
 

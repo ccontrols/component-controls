@@ -3,38 +3,44 @@ import {
   StoryRenderFn,
   getControlValues,
   deepMerge,
-  Store,
   FrameworkRenderFn,
 } from '@component-controls/core';
 
-export const render: FrameworkRenderFn = (
-  storyId: string,
-  store: Store,
-  options: any = {},
-) => {
-  const story = store.stories[storyId];
+export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   if (!story) {
-    throw new Error(`Invalid story id ${storyId}`);
+    throw new Error(`Invalid story`);
   }
-  if (!story.doc) {
-    throw new Error(`Invalid doc id ${storyId}`);
+  if (!doc) {
+    throw new Error(`Invalid doc`);
   }
-  const doc = store.docs[story.doc];
   const controls = story.controls;
-  const values = getControlValues(controls);
+  let values = getControlValues(controls);
+  //parameters added to avoid bug in SB6 rc that assumes parameters exist
+  let context = { story, doc, controls, parameters: {} };
+
   const { decorators: globalDecorators = [] } = options;
   const { decorators: storyDecorators = [] } = story;
   const decorators = deepMerge<StoryRenderFn[]>(
     globalDecorators,
     storyDecorators,
   );
-  //parameters added to avoid bug in SB6 rc that assumes parameters exist
-  const storyContext = { story, doc, controls, parameters: {} };
-  const renderFn = decorators.reverse().reduce(
-    (acc: StoryRenderFn, item: StoryRenderFn) => () =>
-      item(acc, { ...storyContext, renderFn: acc }),
-    //@ts-ignore
-    () => story.renderFn(values, storyContext),
-  );
-  return createElement(renderFn);
+
+  const sortedDecorators = decorators.reverse();
+  let renderFn = story.renderFn;
+  for (let i = 0; i < sortedDecorators.length; i += 1) {
+    const decorator = sortedDecorators[i];
+    const childFn = renderFn;
+    renderFn = () =>
+      decorator(
+        (_: any, nexContext: any) =>
+          (childFn as StoryRenderFn)(values, { ...context, ...nexContext }),
+        {
+          ...context,
+          renderFn: childFn,
+        },
+      );
+  }
+  let node: any = null;
+  node = () => (renderFn as StoryRenderFn)(values, context);
+  return createElement(node);
 };

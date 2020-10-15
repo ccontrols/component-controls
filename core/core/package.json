@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/core",
-  "version": "1.26.0",
+  "version": "1.31.2",
   "description": "Component controls core types and utility functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -55,5 +55,5 @@
   "authors": [
     "Atanas Stoyanov"
   ],
-  "gitHead": "c5145d66c6b8a355839e53c3bca97fd361ce9377"
+  "gitHead": "10e8615f01a50cc411cdb09105727e5cd9017067"
 }

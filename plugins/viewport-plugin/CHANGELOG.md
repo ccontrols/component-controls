@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
+## [1.31.1](https://github.com/ccontrols/component-controls/compare/v1.31.0...v1.31.1) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+
+
+
+# [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
+# [1.29.0](https://github.com/ccontrols/component-controls/compare/v1.28.0...v1.29.0) (2020-10-10)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
+## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
+
+**Note:** Version bump only for package @component-controls/viewport-plugin
+
+
+
+
+
 ## [1.27.2](https://github.com/ccontrols/component-controls/compare/v1.27.1...v1.27.2) (2020-10-05)
 
 **Note:** Version bump only for package @component-controls/viewport-plugin

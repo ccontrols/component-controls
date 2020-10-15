@@ -19,6 +19,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/Collapsible/Collapsible.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/ColorMode/ColorMode.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/CopyContainer/CopyContainer.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/Description/Description.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/ExternalLink/ExternalLink.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/HoverBox/HoverBox.stories.tsx",
@@ -63,11 +64,13 @@ Array [
   "/Users/atanasster/component-controls/ui/blocks/src/Subtitle/Subtitle.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/TagsList/TagsList.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;
@@ -91,6 +94,7 @@ Array [
   "/Users/atanasster/component-controls/ui/components/src/Collapsible/Collapsible.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/ColorMode/ColorMode.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/CopyContainer/CopyContainer.stories.tsx",
+  "/Users/atanasster/component-controls/ui/components/src/Description/Description.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/ExternalLink/ExternalLink.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/Header/Header.stories.tsx",
   "/Users/atanasster/component-controls/ui/components/src/HoverBox/HoverBox.stories.tsx",
@@ -135,11 +139,13 @@ Array [
   "/Users/atanasster/component-controls/ui/blocks/src/Subtitle/Subtitle.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/TagsList/TagsList.stories.tsx",
   "/Users/atanasster/component-controls/ui/blocks/src/Title/Title.stories.tsx",
+  "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
 ]
 `;

@@ -3,6 +3,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const { defaultBuildConfig } = require('@component-controls/core');
 
 module.exports = {
+  siteRoot: '/root/',
   stories: [
     '../src/docs/*.@(mdx|tsx)',
   ],

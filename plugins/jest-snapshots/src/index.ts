@@ -8,7 +8,7 @@ export type RendererFn = (
   storyId: string,
   store: Store,
   options?: any,
-) => RendererFnResult;
+) => Promise<RendererFnResult>;
 
 export const runJestSnapshots = (renderer: RendererFn, bundleName?: string) => {
   const bundle = bundleName || getBundleName();
@@ -21,8 +21,8 @@ export const runJestSnapshots = (renderer: RendererFn, bundleName?: string) => {
       describe(doc.title, () => {
         stories.forEach(storyId => {
           const story = store.stories[storyId];
-          it(story.name, () => {
-            const tree = renderer(storyId, store);
+          it(story.name, async () => {
+            const tree = await renderer(storyId, store);
             expect(tree).toMatchSnapshot();
           });
         });

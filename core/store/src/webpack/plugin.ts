@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
+import { normalizePath } from '@component-controls/core';
 
 export interface StorePluginOptions {
   bundleFileName: string;
@@ -19,7 +20,9 @@ export class StorePlugin {
 
   private installStoreLoader(compiler: webpack.Compiler) {
     const nmrp = new webpack.NormalModuleReplacementPlugin(
-      new RegExp(path.resolve(__dirname, '../controls-store.js')),
+      new RegExp(
+        normalizePath(path.resolve(__dirname, '../controls-store.js')),
+      ),
       (resource: any) => {
         if (resource.resource) {
           resource.loaders.push({

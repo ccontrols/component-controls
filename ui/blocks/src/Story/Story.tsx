@@ -48,10 +48,10 @@ export const Story: FC<StoryProps> = forwardRef(
 
     if (story && story.id && story.renderFn) {
       return (
-        <StoryBlockContainer {...rest}>
+        <StoryBlockContainer {...rest} story={story}>
           <StoryRender
             ref={ref}
-            storyId={story.id}
+            story={story}
             iframeStyle={iframeStyle}
             wrapper={wrapper}
           />

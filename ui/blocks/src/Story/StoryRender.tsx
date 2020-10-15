@@ -4,6 +4,7 @@ import { jsx, CSSProperties, Box } from 'theme-ui';
 
 import Iframe from 'react-frame-component';
 import ReactResizeDetector from 'react-resize-detector';
+import { Story } from '@component-controls/core';
 import { useStore, useExternalOptions } from '@component-controls/store';
 
 export interface IframeWrapperProps {
@@ -70,23 +71,30 @@ const StoryWrapper: FC<StoryWrapperProps> = ({
       return <Fragment>{children}</Fragment>;
   }
 };
-const NAME = 'story';
+export const NAME = 'story';
 
 export interface StoryRenderProps {
-  storyId: string;
+  story: Story;
   ref?: React.Ref<HTMLDivElement>;
 }
 export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
   (
-    { storyId, wrapper, iframeStyle, ...rest },
+    { story, wrapper, iframeStyle, ...rest },
     ref: React.Ref<HTMLDivElement>,
   ) => {
     const store = useStore();
     const options = useExternalOptions();
+    const rendered = store.config.renderFn
+      ? store.config.renderFn(
+          story,
+          story.doc ? store.docs[story.doc] : undefined,
+          options,
+        )
+      : null;
     return (
       <Box
         data-testid={NAME}
-        id={storyId}
+        id={story.id}
         variant={`${NAME}.container`}
         {...rest}
       >
@@ -96,8 +104,7 @@ export const StoryRender: FC<StoryRenderProps & StoryWrapperProps> = forwardRef(
             variant={`${NAME}.wrapper`}
             ref={ref}
           >
-            {store.config.renderFn &&
-              store.config.renderFn(storyId, store, options)}
+            {rendered}
           </Box>
         </StoryWrapper>
       </Box>

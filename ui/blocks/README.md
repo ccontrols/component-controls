@@ -450,7 +450,7 @@ _StoryRender [source code](https://github.com/ccontrols/component-controls/tree/
 
 | Name          | Type                     | Description |
 | ------------- | ------------------------ | ----------- |
-| `storyId*`    | _string_                 |             |
+| `story*`      | _Story_                  |             |
 | `ref`         | _Ref&lt;HTMLDivElement>_ |             |
 | `wrapper`     | _StoryWrapperType_       |             |
 | `iframeStyle` | _CSSProperties_          |             |

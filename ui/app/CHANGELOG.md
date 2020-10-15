@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+## [1.31.1](https://github.com/ccontrols/component-controls/compare/v1.31.0...v1.31.1) (2020-10-14)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
+# [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
+
+
+### Bug Fixes
+
+* update jest tests and tests ([206a641](https://github.com/ccontrols/component-controls/commit/206a6411b3884a2ad9c9ed063c2d0c08bf90cc79))
+
+
+
+
+
+# [1.30.0](https://github.com/ccontrols/component-controls/compare/v1.29.0...v1.30.0) (2020-10-11)
+
+
+### Features
+
+* add favicons ([e106e45](https://github.com/ccontrols/component-controls/commit/e106e45af256535434f31d60f32d4a71a912d8ba))
+* site logo, default and custom ([8d941dd](https://github.com/ccontrols/component-controls/commit/8d941dd0b6aca276ea70a18e3f0d137b728b5ffb))
+
+
+
+
+
+# [1.29.0](https://github.com/ccontrols/component-controls/compare/v1.28.0...v1.29.0) (2020-10-10)
+
+
+### Features
+
+* base url siteRoot configuration option ([4baa386](https://github.com/ccontrols/component-controls/commit/4baa386bc06853502dc006a74afa65788af21a05))
+
+
+
+
+
+# [1.28.0](https://github.com/ccontrols/component-controls/compare/v1.27.3...v1.28.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* remove console.log ([9b5ec26](https://github.com/ccontrols/component-controls/commit/9b5ec264bf1c3027786861c30a222128b07cee12))
+* renamed factory to dynamic ([14218eb](https://github.com/ccontrols/component-controls/commit/14218ebcf00d54faa02b037898ca9173b113e9cf))
+
+
+### Features
+
+* dynamic esm stories ([b1c9c00](https://github.com/ccontrols/component-controls/commit/b1c9c004e9b3103d41bab2c6fca5ea1a3ffa17fe))
+
+
+
+
+
+## [1.27.3](https://github.com/ccontrols/component-controls/compare/v1.27.2...v1.27.3) (2020-10-07)
+
+**Note:** Version bump only for package @component-controls/app
+
+
+
+
+
 ## [1.27.2](https://github.com/ccontrols/component-controls/compare/v1.27.1...v1.27.2) (2020-10-05)
 
 **Note:** Version bump only for package @component-controls/app
