@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { FC } from 'react';
-import { jsx, Box, Label } from 'theme-ui';
+import React, { FC } from 'react';
+import { Label } from 'theme-ui';
 import { Search } from '@component-controls/blocks';
 import { Title, Subtitle } from '@component-controls/components';
 import { Layout } from '../components/Layout';
@@ -8,35 +7,39 @@ import { Layout } from '../components/Layout';
 const ErrorPage: FC = () => {
   return (
     <Layout>
-      <Box
-        sx={{
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           flex: 1,
-          py: 6,
+          paddingTop: 128,
+          paddingBottom: 128,
         }}
       >
-        <Box sx={{ maxWidth: 800 }}>
+        <div style={{ maxWidth: 800 }}>
           <Title>Page not found</Title>
           <Subtitle>
             Oops! The page you are looking for has been removed or relocated
           </Subtitle>
-          <Box
-            sx={{
-              pt: 4,
+          <div
+            style={{
+              paddingTop: 16,
               display: 'flex',
               flexDirection: 'row',
               alignItems: 'center',
             }}
           >
-            <Label sx={{ width: 'inherit', mr: 2 }} htmlFor="searchterm">
+            <Label
+              style={{ width: 'inherit', marginRight: 2 }}
+              htmlFor="searchterm"
+            >
               search for a term:
             </Label>
             <Search id="searchterm" />
-          </Box>
-        </Box>
-      </Box>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
