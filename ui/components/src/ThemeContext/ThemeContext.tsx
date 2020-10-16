@@ -34,7 +34,6 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
     >
       <ThemeUIProvider
         theme={theme}
-        //@ts-ignore
         components={{ ...markdownComponents, ...components }}
       >
         {children}

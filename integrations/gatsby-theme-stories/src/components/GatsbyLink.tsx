@@ -12,6 +12,6 @@ export const GatsbyLink: FC<LinkProps & { to?: string }> = ({
   const store = useStore();
   const homePath = useMemo(() => getHomePath(store), [store]);
   const link = href || to || homePath;
-  //@ts-ignore
+  //
   return link ? <Link to={link} {...props} activeClassName="active" /> : null;
 };

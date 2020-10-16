@@ -12,8 +12,9 @@ export const LinkContextProvider: FC<LinkContextProviderProps> = ({
 }) => {
   return (
     <LinkContext.Provider
-      //@ts-ignore
-      value={props => <Box variant="styles.a" as={LinkClass} {...props} />}
+      value={(props: any) => (
+        <Box variant="styles.a" as={LinkClass} {...props} />
+      )}
     >
       {children}
     </LinkContext.Provider>

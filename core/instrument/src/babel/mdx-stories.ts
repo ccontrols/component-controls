@@ -56,8 +56,7 @@ export const extractMDXStories = (props: any) => (
         }
         if (store.doc && typeof store.doc.subcomponents === 'object') {
           Object.keys(store.doc.subcomponents).forEach((name: any) => {
-            //@ts-ignore
-            const sub = store.doc.subcomponents[name];
+            const sub = store.doc?.subcomponents?.[name];
             newComps[sub as string] = undefined;
           });
         }

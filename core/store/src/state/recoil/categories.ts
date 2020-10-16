@@ -47,8 +47,7 @@ export const useDocsByCategory = (category: string, value?: any): Pages => {
   return Object.keys(docs)
     .filter(key => {
       const doc = docs[key];
-      //@ts-ignore
-      const catValue = doc[category];
+      const catValue = (doc as any)[category];
       if (value === undefined) {
         return catValue !== undefined;
       }

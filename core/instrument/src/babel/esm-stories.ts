@@ -187,8 +187,7 @@ export const extractCSFStories = (
     },
   });
   if (store.doc) {
-    //@ts-ignore
-    store.doc.componentsLookup = components;
+    store.doc.componentsLookup = components as Document['componentsLookup'];
   } else {
     throw new Error(`esm files should have one default export`);
   }
