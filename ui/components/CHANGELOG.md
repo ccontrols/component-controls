@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.3](https://github.com/ccontrols/component-controls/compare/v1.31.2...v1.31.3) (2020-10-16)
+
+
+### Bug Fixes
+
+* linting ([5094112](https://github.com/ccontrols/component-controls/commit/5094112c2c4b0c7ebadf5a7b8d76048c87a801ce))
+
+
+
+
+
 ## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
 
 **Note:** Version bump only for package @component-controls/components

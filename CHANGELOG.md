@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.3](https://github.com/ccontrols/component-controls/compare/v1.31.2...v1.31.3) (2020-10-16)
+
+
+### Bug Fixes
+
+* change header ([b5067cc](https://github.com/ccontrols/component-controls/commit/b5067cc18fcd0f5f85e0d454d9d626c24e83e3f0))
+* linting ([5094112](https://github.com/ccontrols/component-controls/commit/5094112c2c4b0c7ebadf5a7b8d76048c87a801ce))
+* remove jsx pragmas ([7efb94d](https://github.com/ccontrols/component-controls/commit/7efb94d42c7c7c8faaa498dea11601672a725736))
+* remove jsx pragmas ([e7da248](https://github.com/ccontrols/component-controls/commit/e7da248fce7716a422b2942025acc0793e51c421))
+
+
+
+
+
 ## [1.31.2](https://github.com/ccontrols/component-controls/compare/v1.31.1...v1.31.2) (2020-10-14)
 
 **Note:** Version bump only for package component-controls

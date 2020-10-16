@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.3](https://github.com/ccontrols/component-controls/compare/v1.31.2...v1.31.3) (2020-10-16)
+
+
+### Bug Fixes
+
+* change header ([b5067cc](https://github.com/ccontrols/component-controls/commit/b5067cc18fcd0f5f85e0d454d9d626c24e83e3f0))
+
+
+
+
+
 # [1.31.0](https://github.com/ccontrols/component-controls/compare/v1.30.0...v1.31.0) (2020-10-14)
 
 
