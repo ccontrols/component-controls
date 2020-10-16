@@ -121,7 +121,7 @@ export const theme: ControlsTheme = {
       'medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 42, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 32, 42, 48, 64, 96],
   fontWeights: {
     thin: 300,
     body: 400,
@@ -985,6 +985,8 @@ export const theme: ControlsTheme = {
   },
   appfooter: {
     container: {
+      borderTop: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+      fontWeight: 'bolder',
       display: 'flex',
       p: 3,
       flexDirection: 'row',

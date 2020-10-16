@@ -11,9 +11,12 @@ import documentationImg from './media/documentation.jpg';
 import controlsImg from './media/controls.jpg';
 import cmsImg from './media/cms.jpg';
 import configurationImg from './media/configuration.jpg';
+import testingImg from './media/testing.jpg';
+import designTokensImg from './media/design-tokens.jpg';
+
 
 export const BoxItem = ({ children, title, action, ...rest }) => (
-  <Card sx={{ overflow: 'hidden', py: 4, height: '360px', justifyContent: 'space-between', bg: 'gray', ...rest }}>
+  <Card sx={{ overflow: 'hidden', py: 4, my: 4, mx: [1, 1, 4], height: [ 'auto', 360], justifyContent: 'space-between', bg: 'gray', ...rest }}>
     <Box>
       <Heading sx={{ textAlign: 'center' }} as="h2">{title}</Heading>
       <p>{children}</p>
@@ -22,19 +25,24 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
   </Card>  
 );
 
-<Box sx={{ display: 'flex', flexDirection: 'column', py: 4, minHeight: '100vh', alignItems: 'center' }}>
-  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [2, 2, 6], pb: [4, 4, 6] }} >
-    <Heading as="h1" sx={{ fontSize: 6, fontWeight: 'heading', py: 3, textAlign: 'center' }}>Blazing-fast documentation sites</Heading>
-    <Heading sx={{ py: 3, textAlign: 'center', px: 1 }} as="h3">
-      Start documenting your components with <Link aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link> and <Link aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>.
-    </Heading>  
-    <Box as="p" sx={{ py: 3, textAlign: 'center', fontSize: 3, maxWidth: 600 }}>
+<Box sx={{ display: 'flex', flexDirection: 'column', pt: 5, pb: 4, minHeight: '100vh', alignItems: 'center' }}>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  px: [2, 2, 6], pb: 2 }} >
+    <Heading as="h1" sx={{ fontSize: 7, fontWeight: 'heading', py: 3, textAlign: 'center' }}>Blazing-fast documentation sites</Heading>
+    <Box sx={{ px: 4, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%'}}>
+      <Heading  as="h3" sx={{ py: 3, fontWeight: 'body' }}>
+        documentation, blogs, pages with <Link aria-label="create mdx stories" href="/tutorial/mdx-stories">MDX</Link>
+      </Heading>
+      <Heading  as="h3" sx={{ py: 3, fontWeight: 'body' }}>
+        testable component examples with <Link aria-label="create esm stories" href="/tutorial/esmodules-stories">ESM</Link>.
+      </Heading>
+    </Box>
+    <Box as="p" sx={{ py: 3, textAlign: 'center', fontSize: 3, fontWeight: 'heading', maxWidth: 600 }}>
       From <Link aria-label="create documents" href="/tutorial/reference/document">documentation</Link> and <Link aria-label="create stories" href="/tutorial/reference/story">stories</Link> for your react components, all the way to a full-featured CMS with blogs, tutorials, tags, authors and full-text search: component-controls compbines the best of breed from all pre-existing tools in the industry into a flexible platform.
     </Box>
   </Box>
   <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
     <Button variant="rimary" aria-label="visit tutorial" as={Link} href='/tutorial/'>Start learning</Button>
-    <Button sx={{ ml: 4}} aria-label="visit api" as={Link} href='/api/'>Start learning</Button>
+    <Button sx={{ ml: 4}} aria-label="visit blog" as={Link} href='/blogs/'>Latest blog posts</Button>
   </Box>  
 </Box>  
 
@@ -85,6 +93,23 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
       action={<Image src={controlsImg} alt="interactive controls" />}
     >
       Let your users interact with your components and get the generated code using our powerful <Link aria-label="interactive controls" href="/blogs/introduction-to-controls/">controls</Link>. Create custom controls for your own property types.
+    </BoxItem>
+    
+    <BoxItem
+      height="500px"
+      bg="background"
+      title="Auto-generated testing"
+      action={<Image src={testingImg} alt="testing" />}
+    >
+      Who said there isnt such a thing as free lunch? Once you have written your component's stories, you get automatically <Link aria-label="jest snapshot testing" href="/tutorial/testing/jest-snapshots">snapshot testing</Link>, <Link aria-label="mobile testing" href="/tutorial/testing/viewport-plugin">mobile testing</Link>, <Link aria-label="a11y testing" href="/tutorial/testing/axe-plugin">accessibility testing</Link>.
+    </BoxItem>
+    <BoxItem
+      height="500px"
+      bg="background"
+      title="Design tokens"
+      action={<Image src={designTokensImg} alt="design tokens" />}
+    >
+      Component controls with the most extensive library of pre-made <Link aria-label="design tokens" href="/tutorial/design-tokens/intro">design tokens</Link> to shocase your desogn system.      
     </BoxItem>
     <BoxItem
       height="500px"
