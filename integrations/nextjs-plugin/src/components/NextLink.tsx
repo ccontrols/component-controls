@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { FC, useMemo } from 'react';
-import { jsx, LinkProps } from 'theme-ui';
+import React, { FC, useMemo } from 'react';
+import { LinkProps } from 'theme-ui';
 import Link from 'next/link';
 import { getHomePath, ensureTrailingSlash } from '@component-controls/core';
 import { useStore } from '@component-controls/store';
