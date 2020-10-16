@@ -86,6 +86,7 @@ Object {
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@theme-ui/presets": "^0.3.0",
         "@types/mdx-js__react": "^1.5.1",
+        "@types/react": "^16.9.34",
         "@types/react-frame-component": "^4.1.1",
         "@types/react-resize-detector": "^4.2.0",
         "@types/recoil": "^0.0.1",

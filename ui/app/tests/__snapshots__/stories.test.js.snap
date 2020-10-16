@@ -199,7 +199,7 @@ exports[`Application/App Overview 1`] = `
       </div>
     </header>
     <footer
-      class="css-1q4h9js"
+      class="css-1y4ny45"
     >
       <div
         class="css-vurnku"
@@ -945,7 +945,7 @@ exports[`Application/DocumentsList Overview 1`] = `
 exports[`Application/Footer Overview 1`] = `
 <DocumentFragment>
   <footer
-    class="css-1q4h9js"
+    class="css-1y4ny45"
   >
     <div
       class="css-vurnku"

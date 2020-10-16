@@ -339,6 +339,7 @@ Object {
       "@component-controls/jest-snapshots": "^1.31.2",
       "@component-controls/ts-markdown-docs": "^1.21.0",
       "@types/markdown-to-jsx": "^6.11.0",
+      "@types/react": "^16.9.34",
       "@types/react-table": "^7.0.10",
       "@types/react-tabs": "^2.3.1",
       "cross-env": "^5.2.1",

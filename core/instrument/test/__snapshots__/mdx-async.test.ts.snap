@@ -14,8 +14,8 @@ Object {
     "componentsLookup": Object {
       "Button": "fbc7c3606fe52918c0716b2079a81097",
     },
-    "date": 2020-10-14T01:25:54.688Z,
-    "dateModified": 2020-10-14T01:25:54.689Z,
+    "date": 2020-10-15T00:19:23.169Z,
+    "dateModified": 2020-10-15T00:19:23.172Z,
     "package": "74d5ae881b6029d05c88093109de57a1",
     "title": "Storybook/MDX",
   },
