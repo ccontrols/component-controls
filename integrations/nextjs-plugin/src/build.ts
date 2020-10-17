@@ -48,7 +48,7 @@ module.exports = ({
           if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
             const sitemap = getSiteMap(store);
             const sitemapname = path.join(
-              config.distFolder as string,
+              path.resolve(config.staticFolder as string, '..'),
               'sitemap.xml',
             );
             fs.writeFileSync(sitemapname, sitemap, 'utf8');
