@@ -230,7 +230,7 @@ exports[`Application/App Overview 1`] = `
             <a
               aria-label="visit project home page"
               class="css-ax59ca"
-              href="https://component-controls.com"
+              href="/"
             >
               Component controls
             </a>
@@ -976,7 +976,7 @@ exports[`Application/Footer Overview 1`] = `
           <a
             aria-label="visit project home page"
             class="css-ax59ca"
-            href="https://component-controls.com"
+            href="/"
           >
             Component controls
           </a>
