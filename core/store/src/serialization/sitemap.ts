@@ -8,18 +8,19 @@ import {
 } from '../create-pages';
 
 export const getSiteMap = (store: Store): string => {
+  const config = store.config.siteMap;
   const pages: { path?: string; priority: number }[] = [];
   //home page
   const { path } = getIndexPage(store) || {};
-  pages.push({ path, priority: 1 });
+  pages.push({ path, priority: config?.pages?.home.priority || 1 });
   const homePages = getHomePages(store);
   homePages.forEach(({ path }: DocHomePagesPath) => {
-    pages.push({ path, priority: 0.8 });
+    pages.push({ path, priority: config?.pages?.index.priority || 1 });
   });
 
   const docPages = getDocPages(store);
   docPages.forEach(({ path }: DocPagesPath) => {
-    pages.push({ path, priority: 0.5 });
+    pages.push({ path, priority: config?.pages?.doc.priority || 1 });
   });
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

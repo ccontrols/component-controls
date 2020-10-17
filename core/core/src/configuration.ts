@@ -121,6 +121,18 @@ export type PagesOnlyRoutes = Record<
   }
 >;
 
+export interface SitemapConfigPage {
+  priority: number;
+}
+export interface SitemapConfig {
+  outputFolder: string;
+  pages?: {
+    home: SitemapConfigPage;
+    index: SitemapConfigPage;
+    doc: SitemapConfigPage;
+  };
+}
+
 /**
  * global configuration used at build time
  * stored in a file named main.js/main.ts
@@ -163,7 +175,7 @@ export interface BuildConfiguration {
   /**
    * if false, disable automatic sitemap generation
    */
-  siteMap?: boolean;
+  siteMap?: SitemapConfig;
 
   /**
    * instrumentation configuration
@@ -364,7 +376,20 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
-  siteMap: true,
+  siteMap: {
+    outputFolder: 'public/',
+    pages: {
+      home: {
+        priority: 1,
+      },
+      index: {
+        priority: 0.8,
+      },
+      doc: {
+        priority: 0.5,
+      },
+    },
+  },
   categories: ['author', 'tags'],
   ignore: [
     'readme.md',

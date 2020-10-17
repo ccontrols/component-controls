@@ -104,9 +104,9 @@ export const createPagesStatefully = async (
       );
       if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
         const sitemap = getSiteMap(store);
-        const sitemapname = sysPath.join(
+        const sitemapname = sysPath.resolve(
           process.cwd(),
-          'public',
+          store.config.siteMap.outputFolder,
           'sitemap.xml',
         );
         fs.writeFileSync(sitemapname, sitemap, 'utf8');
