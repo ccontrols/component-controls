@@ -61,10 +61,10 @@ Object {
   "packages": Object {
     "5633741e98073052cbece6fcd32011e3": Object {
       "dependencies": Object {
-        "@component-controls/components": "^1.32.3",
+        "@component-controls/components": "^1.32.4",
         "@component-controls/core": "^1.32.3",
-        "@component-controls/editors": "^1.32.3",
-        "@component-controls/store": "^1.32.3",
+        "@component-controls/editors": "^1.32.4",
+        "@component-controls/store": "^1.32.4",
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/css": "^0.4.0-rc.1",
         "copy-to-clipboard": "^3.2.1",
@@ -81,7 +81,7 @@ Object {
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.32.3",
+        "@component-controls/jest-snapshots": "^1.32.4",
         "@component-controls/render": "^1.32.3",
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@theme-ui/presets": "^0.3.0",
@@ -108,7 +108,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.32.3",
+      "version": "1.32.4",
     },
     "942f7c3f19d9e197f86041eed5e46838": Object {
       "dependencies": Object {
@@ -151,7 +151,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.32.3",
+      "version": "1.32.4",
     },
   },
   "stories": Object {},

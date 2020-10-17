@@ -54,6 +54,7 @@ Object {
       },
     },
     "siteRoot": "/",
+    "siteUrl": "https://component-controls.com",
     "stories": Array [
       "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
