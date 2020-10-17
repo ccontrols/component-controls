@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.32.3](https://github.com/ccontrols/component-controls/compare/v1.32.2...v1.32.3) (2020-10-17)
+
+
+### Bug Fixes
+
+* sitemap location to static folder ([b0421fa](https://github.com/ccontrols/component-controls/commit/b0421fa36b2b9c664a260318a26476442a1a5e1e))
+
+
+
+
+
 ## [1.32.2](https://github.com/ccontrols/component-controls/compare/v1.32.1...v1.32.2) (2020-10-17)
 
 **Note:** Version bump only for package @component-controls/app
