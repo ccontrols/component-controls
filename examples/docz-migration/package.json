@@ -2,7 +2,7 @@
   "name": "docz-migration-component-controls",
   "private": true,
   "author": "Atanas Stoyanov",
-  "version": "1.32.1",
+  "version": "1.32.2",
   "description": "Docz migration to component-controls",
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@component-controls/gatsby-theme-stories": "^1.32.1",
+    "@component-controls/gatsby-theme-stories": "^1.32.2",
     "docz": "latest",
     "gatsby": "^2.24.53",
     "prop-types": "^15.7.2",

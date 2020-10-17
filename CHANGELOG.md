@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.32.2](https://github.com/ccontrols/component-controls/compare/v1.32.1...v1.32.2) (2020-10-17)
+
+
+### Bug Fixes
+
+* add sitemap configuration object ([87f6288](https://github.com/ccontrols/component-controls/commit/87f6288d0c455bbd47e658b64988cba57d37336a))
+
+
+
+
+
 ## [1.32.1](https://github.com/ccontrols/component-controls/compare/v1.32.0...v1.32.1) (2020-10-17)
 
 **Note:** Version bump only for package component-controls
