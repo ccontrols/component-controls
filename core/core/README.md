@@ -67,6 +67,7 @@
     -   [PageLayoutProps](#pagelayoutprops)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
     -   [SideNavConfiguration](#sidenavconfiguration)
+    -   [SitemapConfigPage](#sitemapconfigpage)
     -   [TabConfiguration](#tabconfiguration)
     -   [ToolbarConfig](#toolbarconfig)
     -   [DocType](#doctype)
@@ -76,6 +77,7 @@
     -   [PagesConfiguration](#pagesconfiguration)
     -   [PagesOnlyRoutes](#pagesonlyroutes)
     -   [RunConfiguration](#runconfiguration)
+    -   [SitemapConfig](#sitemapconfig)
     -   [StaticMenuItem](#staticmenuitem)
     -   [StaticMenuItems](#staticmenuitems)
     -   [WebpackConfig](#webpackconfig)
@@ -99,6 +101,7 @@
     -   [PackageDependency](#packagedependency-1)
     -   [WebpackConfig](#webpackconfig-1)
     -   [PagesOnlyRoutes](#pagesonlyroutes-1)
+    -   [SitemapConfig](#sitemapconfig-1)
     -   [StaticMenuItems](#staticmenuitems-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [FrameworkRenderFn](#frameworkrenderfn-1)
@@ -1070,7 +1073,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L128)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L141)_
 
 
 
@@ -1084,7 +1087,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `ignore`       | string\[]                           | files to ignore. by default \['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']                              |
 | `instrument`   | any                                 | instrumentation configuration                                                                                                                  |
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
-| `siteMap`      | boolean                             | if false, disable automatic sitemap generation                                                                                                 |
+| `siteMap`      | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
 | `siteRoot`     | string                              | the site base url, by default the site starts at /                                                                                             |
 | `stories`      | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 | `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
@@ -1093,7 +1096,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 configuration options for the controls module
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L194)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
 
 
 
@@ -1124,7 +1127,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L206)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L219)_
 
 
 
@@ -1168,6 +1171,18 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `collapseSingle` | boolean | if a single story in the document, and storyPaths is true= will only generate a single menu item for the doc itself          |
 | `storyPaths`     | boolean | if true, generate story-based paths. This is for documents with a navSidebar that would allow selection of specific stories. |
 
+## SitemapConfigPage
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L124)_
+
+
+
+### properties
+
+| Name        | Type   | Description |
+| ----------- | ------ | ----------- |
+| `priority*` | number |             |
+
 ## TabConfiguration
 
 story type pages can have multiple tabs with separate page configurations.
@@ -1187,7 +1202,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L174)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L187)_
 
 
 
@@ -1279,7 +1294,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L316)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L329)_
 
 ### properties
 
@@ -1288,17 +1303,23 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `RunOnlyConfiguration` | [RunOnlyConfiguration](#runonlyconfiguration)               |             |
 | `Omit`                 | Omit&lt;[BuildConfiguration](#buildconfiguration), 'pages'> |             |
 
+## SitemapConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L127)_
+
+**pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
+
 ## StaticMenuItem
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L189)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L202)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
 
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L203)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
@@ -1324,7 +1345,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## convertConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L356)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L369)_
 
 **function** convertConfig(`config`\*: [RunConfiguration](#runconfiguration)): [RunConfiguration](#runconfiguration);
 
@@ -1337,7 +1358,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L365)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L378)_
 
 
 
@@ -1347,13 +1368,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | ------------- | --------- | ----------- |
 | `categories*` | string\[] |             |
 | `ignore*`     | string\[] |             |
-| `siteMap*`    | true      |             |
 | `siteRoot*`   | string    |             |
 | `pages*`      | object    |             |
+| `siteMap*`    | object    |             |
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L319)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L332)_
 
 
 
@@ -1419,7 +1440,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L316)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L329)_
 
 ### properties
 
@@ -1579,9 +1600,15 @@ Record&lt;
 
 >
 
+## SitemapConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L127)_
+
+**pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
+
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L190)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L203)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
@@ -1649,7 +1676,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L189)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L202)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
 
