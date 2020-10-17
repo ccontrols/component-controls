@@ -161,6 +161,11 @@ export interface BuildConfiguration {
   finalWebpack?: WebpackConfig;
 
   /**
+   * if false, disable automatic sitemap generation
+   */
+  siteMap?: boolean;
+
+  /**
    * instrumentation configuration
    */
   instrument?: any;
@@ -359,6 +364,7 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
+  siteMap: true,
   categories: ['author', 'tags'],
   ignore: [
     'readme.md',

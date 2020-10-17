@@ -36,6 +36,11 @@ export interface CompileProps {
   logOptions?: Partial<LogOptions>;
 }
 
+const defaultPresets = ['react', 'react-docgen-typescript'];
+
+export const defaultCompileProps: CompileProps = {
+  presets: defaultPresets,
+};
 /**
  * return type from compile and watch functions
  */

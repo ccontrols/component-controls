@@ -31,6 +31,7 @@ export const SEO = ({
     siteLanguage,
     siteImage: defaultImage,
     author,
+    siteMap,
   } = config || {};
   const image = propImage || defaultImage;
   const seo = {
@@ -48,6 +49,9 @@ export const SEO = ({
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
       {seo.image && <meta name="image" content={seo.image} />}
+      {siteMap && (
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+      )}
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:description" content={seo.description} />

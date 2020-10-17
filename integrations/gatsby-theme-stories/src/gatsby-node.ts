@@ -1,3 +1,5 @@
+import fs from 'fs';
+import sysPath from 'path';
 import {
   compile,
   watch,
@@ -5,6 +7,7 @@ import {
 } from '@component-controls/webpack-compile';
 import {
   CompileProps,
+  defaultCompileProps,
   getBundleName,
 } from '@component-controls/webpack-configs';
 
@@ -14,7 +17,7 @@ import {
   PluginCallback,
   Page,
 } from 'gatsby';
-import { Store, getHomePath } from '@component-controls/core';
+import { Store } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -22,11 +25,10 @@ import {
   getDocPages,
   DocPagesPath,
   loadStore,
+  getSiteMap,
 } from '@component-controls/store';
 
 const { StorePlugin } = require('@component-controls/store/plugin');
-
-const defaultPresets = ['react', 'react-docgen-typescript'];
 
 export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
@@ -35,7 +37,7 @@ export const createPagesStatefully = async (
 ) => {
   const { createPage, deletePage } = actions;
   const config: CompileProps = {
-    presets: defaultPresets,
+    ...defaultCompileProps,
     ...options,
   };
   const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
@@ -53,10 +55,10 @@ export const createPagesStatefully = async (
         createPage(props);
       };
       //home page
-      const { docId = null, type = null, storyId = null } =
+      const { path, docId = null, type = null, storyId = null } =
         getIndexPage(store) || {};
       createGatsbyPage({
-        path: getHomePath(store),
+        path,
         component: require.resolve(`../src/templates/DocPage.tsx`),
         context: {
           docId,
@@ -100,7 +102,17 @@ export const createPagesStatefully = async (
           });
         },
       );
+      if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
+        const sitemap = getSiteMap(store);
+        const sitemapname = sysPath.join(
+          process.cwd(),
+          'public',
+          'sitemap.xml',
+        );
+        fs.writeFileSync(sitemapname, sitemap, 'utf8');
+      }
     }
+
     doneCb(null, null);
   };
   const run = process.env.NODE_ENV === 'development' ? watch : compile;

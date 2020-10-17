@@ -34,6 +34,7 @@ export const getIndexPage = (store: Store): HomePageInfo => {
     ? docStories[0]
     : undefined;
   return {
+    path: homePath,
     storyId,
     docId,
     type: homePage?.type || defDocType,

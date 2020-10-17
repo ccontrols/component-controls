@@ -3,7 +3,6 @@ module.exports = {
     siteUrl: 'https://component-controls.com',
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
     {
       resolve: '@component-controls/gatsby-theme-stories',
       options: {

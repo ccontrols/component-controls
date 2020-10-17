@@ -1,8 +1,16 @@
+import fs from 'fs';
 import path from 'path';
-import { compile, watch } from '@component-controls/webpack-compile';
-import { CompileProps } from '@component-controls/webpack-configs';
-
-const defaultPresets = ['react', 'react-docgen-typescript'];
+import {
+  compile,
+  watch,
+  CompilerCallbackFn,
+} from '@component-controls/webpack-compile';
+import {
+  CompileProps,
+  defaultCompileProps,
+} from '@component-controls/webpack-configs';
+import { Store } from '@component-controls/core';
+import { loadStore, getSiteMap } from '@component-controls/store';
 
 module.exports = ({
   bundleName,
@@ -22,18 +30,35 @@ module.exports = ({
         configPath,
         webPack,
       };
-      const options: CompileProps = {
-        presets: presets || defaultPresets,
-        distFolder: path.resolve(__dirname),
-        staticFolder:
-          staticFolder || path.join(process.cwd(), 'public', 'static'),
-        ...userProps,
+      const config: CompileProps = {
+        ...defaultCompileProps,
+        ...{
+          distFolder: path.resolve(__dirname),
+          staticFolder:
+            staticFolder || path.join(process.cwd(), 'public', 'static'),
+          ...userProps,
+        },
       };
-
+      if (presets) {
+        config.presets = presets;
+      }
+      const onBundle: CompilerCallbackFn = ({ store: loadingStore }) => {
+        if (loadingStore) {
+          const store: Store = loadStore(loadingStore, true);
+          if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
+            const sitemap = getSiteMap(store);
+            const sitemapname = path.join(
+              config.distFolder as string,
+              'sitemap.xml',
+            );
+            fs.writeFileSync(sitemapname, sitemap, 'utf8');
+          }
+        }
+      };
       const compiler =
         process.env.NODE_ENV === 'development'
-          ? watch(options)
-          : compile(options);
+          ? watch(config, onBundle)
+          : compile(config, onBundle);
       await compiler;
 
       return [];
