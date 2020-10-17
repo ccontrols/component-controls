@@ -11,7 +11,7 @@ export const Footer: FC = () => {
   const config = useConfig();
   const {
     author,
-    siteUrl,
+    siteUrl = '/',
     siteTitle,
     siteCopyright = `Copyright \u00A9 ${new Date().getFullYear()}`,
     footer = {},

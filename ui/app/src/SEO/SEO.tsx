@@ -26,7 +26,7 @@ export const SEO = ({
   const config = useConfig();
   const {
     siteTitle,
-    siteUrl,
+    siteUrl = '',
     siteDescription: defaultDescription,
     siteLanguage,
     siteImage: defaultImage,

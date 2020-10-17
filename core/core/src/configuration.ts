@@ -179,7 +179,7 @@ export interface BuildConfiguration {
   siteMap?: SitemapConfig;
 
   /**
-   * Deployed site url. Default is "https://component-controls.com". Also used for auto generated sitemap.
+   * Deployed site url. Also used for auto generated sitemap.
    */
   siteUrl?: string;
 
@@ -377,7 +377,6 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
-  siteUrl: 'https://component-controls.com',
   siteMap: {
     pages: {
       home: {

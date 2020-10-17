@@ -1089,7 +1089,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `siteMap`      | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
 | `siteRoot`     | string                              | the site base url, by default the site starts at /                                                                                             |
-| `siteUrl`      | string                              | Deployed site url. Default is "https&#x3A;//component-controls.com". Also used for auto generated sitemap.                                     |
+| `siteUrl`      | string                              | Deployed site url. Also used for auto generated sitemap.                                     |
 | `stories`      | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 | `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
