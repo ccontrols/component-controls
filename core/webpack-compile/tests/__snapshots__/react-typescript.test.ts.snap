@@ -40,6 +40,7 @@ Object {
         "basePath": "tags/",
       },
     },
+    "siteMap": true,
     "siteRoot": "/",
     "stories": Array [
       "../../../../ui/components/src/ActionBar/*.stories.(js|jsx|tsx|mdx)",
