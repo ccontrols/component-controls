@@ -1089,6 +1089,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `siteMap`      | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
 | `siteRoot`     | string                              | the site base url, by default the site starts at /                                                                                             |
+| `siteUrl`      | string                              | Deployed site url. Default is "https&#x3A;//component-controls.com". Also used for auto generated sitemap.                                     |
 | `stories`      | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 | `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
@@ -1096,7 +1097,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 configuration options for the controls module
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L212)_
 
 
 
@@ -1127,7 +1128,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L219)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
 
 
 
@@ -1152,7 +1153,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
 | `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
 | `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
-| `siteUrl`         | string                                               | Deployed site url. Default is "https&#x3A;//component-controls.com"                                                                                                                  |
 | `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
 | `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
 | `title`           | string                                               | alternative site title field - docz compatibility                                                                                                                                    |
@@ -1202,7 +1202,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L187)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L192)_
 
 
 
@@ -1294,7 +1294,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L329)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L330)_
 
 ### properties
 
@@ -1313,13 +1313,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L202)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
 
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L203)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L208)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
@@ -1369,12 +1369,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `categories*` | string\[] |             |
 | `ignore*`     | string\[] |             |
 | `siteRoot*`   | string    |             |
+| `siteUrl*`    | string    |             |
 | `pages*`      | object    |             |
 | `siteMap*`    | object    |             |
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L332)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L333)_
 
 
 
@@ -1386,7 +1387,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `siteDescription*` | string |             |
 | `siteLanguage*`    | string |             |
 | `siteTitle*`       | string |             |
-| `siteUrl*`         | string |             |
 | `controls*`        | object |             |
 | `pages*`           | object |             |
 
@@ -1440,7 +1440,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L329)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L330)_
 
 ### properties
 
@@ -1608,7 +1608,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L203)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L208)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
@@ -1676,7 +1676,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L202)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
 
