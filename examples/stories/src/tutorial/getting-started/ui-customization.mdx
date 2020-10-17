@@ -40,11 +40,6 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     value: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg',
     description: 'Custom logo url - set to null to remove the logo',
   },
-  siteUrl: {
-    type: ControlTypes.TEXT,
-    value: '',
-    description: 'Deployed site url. Default is "https://component-controls.com"',
-  },
   siteDescription: {
     type: ControlTypes.TEXT,
     value: '',
@@ -66,18 +61,18 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     description: 'Site author. Default is "@component-controls"',
   }
 }}>
-  {({ siteTitle, logo, siteUrl, siteDescription, siteCopyright, siteLanguage, author }) => {
+  {({ siteTitle, logo, siteDescription, siteCopyright, siteLanguage, author }) => {
     return (
       <Fragment>
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">
   {`export default {
-${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${logo ? `  logo: '${logo}',\n` : ''}${siteUrl ? `  siteUrl: '${siteUrl}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
+${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${logo ? `  logo: '${logo}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
 }`}
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: { 
-          siteTitle, logo, siteUrl, siteDescription, siteLanguage, author, siteCopyright,
+          siteTitle, logo, siteDescription, siteLanguage, author, siteCopyright,
           theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
       </Fragment>
     );  

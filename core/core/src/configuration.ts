@@ -179,6 +179,11 @@ export interface BuildConfiguration {
   siteMap?: SitemapConfig;
 
   /**
+   * Deployed site url. Default is "https://component-controls.com". Also used for auto generated sitemap.
+   */
+  siteUrl?: string;
+
+  /**
    * instrumentation configuration
    */
   instrument?: any;
@@ -239,10 +244,6 @@ export interface RunOnlyConfiguration {
    * logo for the site - can be a string link to an image, or a react node
    */
   logo?: string | ReactNode;
-  /**
-   * Deployed site url. Default is "https://component-controls.com"
-   */
-  siteUrl?: string;
 
   /**
    * site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
@@ -331,7 +332,6 @@ export type RunConfiguration = RunOnlyConfiguration &
 
 export const defaultRunConfig: RunConfiguration = {
   siteTitle: 'Component controls',
-  siteUrl: 'https://component-controls.com',
   siteDescription:
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
   siteLanguage: 'en',
@@ -377,6 +377,7 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
+  siteUrl: 'https://component-controls.com',
   siteMap: {
     pages: {
       home: {

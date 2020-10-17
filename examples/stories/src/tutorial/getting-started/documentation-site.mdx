@@ -34,6 +34,7 @@ module.exports = {
   stories: [
     '../src/docs/*.@(mdx|tsx)',
   ],
+  siteUrl: `https://component-controls-gatsby.netlify.app`,
 };
 ```
 more: [run-time configuration](/configuration/buildtime)
@@ -45,7 +46,6 @@ In `.config`, create a `runtime.js` file and change some of the site's meta info
 ```js:title=.config/runtime.js
 module.exports = {
   siteTitle: `awLib`,
-  siteUrl: `https://component-controls-gatsby.netlify.app`,
   siteDescription: `Some description meta.`,
   author: 'my name'
 };

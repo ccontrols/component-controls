@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://component-controls.com',
+    siteUrl: 'https://docz-migration.netlify.app',
   },
   plugins: [
     {
