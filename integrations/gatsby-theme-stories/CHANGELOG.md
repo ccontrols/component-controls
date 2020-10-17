@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.32.0](https://github.com/ccontrols/component-controls/compare/v1.31.3...v1.32.0) (2020-10-17)
+
+
+### Features
+
+* auto generated sitemap ([bc209ff](https://github.com/ccontrols/component-controls/commit/bc209ff9a6e50f7ae128b929c7a701046c39f1ec))
+
+
+
+
+
 ## [1.31.3](https://github.com/ccontrols/component-controls/compare/v1.31.2...v1.31.3) (2020-10-16)
 
 
