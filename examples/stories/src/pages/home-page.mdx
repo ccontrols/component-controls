@@ -16,12 +16,12 @@ import designTokensImg from './media/design-tokens.jpg';
 
 
 export const BoxItem = ({ children, title, action, ...rest }) => (
-  <Card sx={{ overflow: 'hidden', py: 4, my: 4, mx: [1, 1, 4], height: [ 'auto', 360], justifyContent: 'space-between', bg: 'gray', ...rest }}>
+  <Card sx={{ overflow: 'hidden', pt: 4, my: 4, mx: [1, 1, 4], height: [ 'auto', 360], justifyContent: 'space-between', bg: 'gray', ...rest }}>
     <Box>
       <Heading sx={{ textAlign: 'center' }} as="h2">{title}</Heading>
       <p>{children}</p>
     </Box>  
-    {action}
+    {action && <Box sx={{ pb: 3, overflow: 'hidden' }}>{action}</Box>}
   </Card>  
 );
 
@@ -101,7 +101,7 @@ export const BoxItem = ({ children, title, action, ...rest }) => (
       title="Auto-generated testing"
       action={<Image src={testingImg} alt="testing" />}
     >
-      Who said there isnt such a thing as free lunch? Once you have written your component's stories, you get automatically <Link aria-label="jest snapshot testing" href="/tutorial/testing/jest-snapshots">snapshot testing</Link>, <Link aria-label="mobile testing" href="/tutorial/testing/viewport-plugin">mobile testing</Link>, <Link aria-label="a11y testing" href="/tutorial/testing/axe-plugin">accessibility testing</Link>.
+      Who said there isnt such a thing as free lunch? Once you have written your component's stories, you get automatically <Link aria-label="jest snapshot testing" href="/tutorial/testing/jest-snapshots">snapshot testing</Link>, <Link aria-label="mobile testing" href="/tutorial/testing/viewport-plugin">mobile testing</Link>, <Link aria-label="a11y testing" href="/tutorial/testing/axe-plugin">accessibility testing</Link> and more to come.
     </BoxItem>
     <BoxItem
       height="500px"
