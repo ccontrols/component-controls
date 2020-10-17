@@ -9,6 +9,7 @@ import {
 
 export const getSiteMap = (store: Store): string => {
   const config = store.config.siteMap;
+  const siteMapPages = typeof config === 'object' ? config.pages : undefined;
   const pages: {
     path?: string;
     priority: number;
@@ -18,14 +19,14 @@ export const getSiteMap = (store: Store): string => {
   const { path, lastModified } = getIndexPage(store) || {};
   pages.push({
     path,
-    priority: config?.pages?.home.priority || 1,
+    priority: siteMapPages?.home.priority || 1,
     lastModified,
   });
   const homePages = getHomePages(store);
   homePages.forEach(({ path, lastModified }: DocHomePagesPath) => {
     pages.push({
       path,
-      priority: config?.pages?.index.priority || 1,
+      priority: siteMapPages?.index.priority || 1,
       lastModified,
     });
   });
@@ -34,7 +35,7 @@ export const getSiteMap = (store: Store): string => {
   docPages.forEach(({ path, lastModified }: DocPagesPath) => {
     pages.push({
       path,
-      priority: config?.pages?.doc.priority || 1,
+      priority: siteMapPages?.doc.priority || 1,
       lastModified,
     });
   });
