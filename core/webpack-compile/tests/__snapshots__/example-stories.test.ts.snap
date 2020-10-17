@@ -41,7 +41,6 @@ Object {
       },
     },
     "siteMap": Object {
-      "outputFolder": "public/",
       "pages": Object {
         "doc": Object {
           "priority": 0.5,
