@@ -1,4 +1,4 @@
-import { Store } from '@component-controls/core';
+import { Store, removeTrailingSlash } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -9,6 +9,8 @@ import {
 
 export const getSiteMap = (store: Store): string => {
   const config = store.config.siteMap;
+  const { siteUrl = '' } = store.config;
+  const sitePath = removeTrailingSlash(siteUrl);
   const siteMapPages = typeof config === 'object' ? config.pages : undefined;
   const pages: {
     path?: string;
@@ -45,7 +47,7 @@ export const getSiteMap = (store: Store): string => {
 ${pages
   .map(
     ({ path, priority, lastModified }) =>
-      `<url><loc>${path}</loc>${
+      `<url><loc>${sitePath}${path}</loc>${
         lastModified ? `<lastmod>${lastModified}</lastmod>` : ''
       }<changefreq>daily</changefreq><priority>${priority}</priority></url>`,
   )
