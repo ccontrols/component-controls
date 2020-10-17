@@ -40,7 +40,20 @@ Object {
         "basePath": "tags/",
       },
     },
-    "siteMap": true,
+    "siteMap": Object {
+      "outputFolder": "public/",
+      "pages": Object {
+        "doc": Object {
+          "priority": 0.5,
+        },
+        "home": Object {
+          "priority": 1,
+        },
+        "index": Object {
+          "priority": 0.8,
+        },
+      },
+    },
     "siteRoot": "/",
     "stories": Array [
       "../../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
