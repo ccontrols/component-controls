@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.32.4](https://github.com/ccontrols/component-controls/compare/v1.32.3...v1.32.4) (2020-10-17)
+
+
+### Bug Fixes
+
+* change sitemap output folder ([c81f58f](https://github.com/ccontrols/component-controls/commit/c81f58fc6948445d262baf1aa829c913baaa6b1c))
+
+
+
+
+
 ## [1.32.3](https://github.com/ccontrols/component-controls/compare/v1.32.2...v1.32.3) (2020-10-17)
 
 
