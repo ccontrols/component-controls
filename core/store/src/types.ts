@@ -14,12 +14,14 @@ export interface DocPageInfo {
   docId?: string;
   storyId?: string;
   category?: string;
+  lastModified?: string;
 }
 export interface HomePageInfo {
   type: string;
   docId?: string;
   storyId?: string;
   path: string;
+  lastModified?: string;
 }
 
 export interface StoryStore {

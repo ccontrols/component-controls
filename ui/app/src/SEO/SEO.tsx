@@ -50,7 +50,7 @@ export const SEO = ({
       <meta name="description" content={seo.description} />
       {seo.image && <meta name="image" content={seo.image} />}
       {siteMap && (
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" href="/static/sitemap.xml" />
       )}
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />

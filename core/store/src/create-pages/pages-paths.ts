@@ -11,6 +11,7 @@ import {
   TabConfiguration,
   getDocPath,
   getStoryPath,
+  dateToLocalString,
 } from '@component-controls/core';
 
 import { HomePageInfo } from '../types';
@@ -34,6 +35,7 @@ export const getIndexPage = (store: Store): HomePageInfo => {
     ? docStories[0]
     : undefined;
   return {
+    lastModified: dateToLocalString(homePage?.dateModified),
     path: homePath,
     storyId,
     docId,
@@ -46,6 +48,7 @@ export interface DocHomePagesPath {
   path: string;
   docId?: string;
   storyId?: string;
+  lastModified?: string;
 }
 export const getHomePages = (store: Store): DocHomePagesPath[] => {
   const { pages = {} } = store?.config || {};
@@ -66,12 +69,13 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
               );
             }) ||
             docs.find(key => (store.docs[key].type || defDocType) === type);
-        const docStories: string[] =
-          docId && store.docs[docId] ? store.docs[docId].stories || [] : [];
+        const doc = docId ? store.docs[docId] : undefined;
+        const docStories: string[] = doc?.stories || [];
         const storyId: string | undefined = docStories.length
           ? docStories[0]
           : undefined;
         return {
+          lastModified: dateToLocalString(doc?.dateModified),
           type,
           path,
           docId,
@@ -129,6 +133,7 @@ export const getUniquesByField = (
 export interface DocPagesPath {
   type: DocType;
   path: string;
+  lastModified?: string;
   docId?: string | null;
   storyId?: string | null;
   category?: string | null;
@@ -160,6 +165,7 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
             stories.forEach((storyId?: string) => {
               const path = getStoryPath(storyId, doc, store, route);
               docPaths.push({
+                lastModified: dateToLocalString(doc.dateModified),
                 path,
                 type: docType,
                 activeTab: route,

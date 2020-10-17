@@ -1,5 +1,6 @@
 import fs from 'fs';
 import sysPath from 'path';
+import { log } from '@component-controls/logger';
 import {
   compile,
   watch,
@@ -104,11 +105,11 @@ export const createPagesStatefully = async (
       );
       if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
         const sitemap = getSiteMap(store);
-        const sitemapname = sysPath.resolve(
-          process.cwd(),
-          store.config.siteMap.outputFolder,
-          'sitemap.xml',
-        );
+        const staticFolder =
+          config.staticFolder ||
+          sysPath.join(process.cwd(), 'public', 'static');
+        const sitemapname = sysPath.resolve(staticFolder, 'sitemap.xml');
+        log('creating sitemap', sitemapname);
         fs.writeFileSync(sitemapname, sitemap, 'utf8');
       }
     }

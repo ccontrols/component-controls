@@ -124,14 +124,15 @@ export type PagesOnlyRoutes = Record<
 export interface SitemapConfigPage {
   priority: number;
 }
-export interface SitemapConfig {
-  outputFolder: string;
-  pages?: {
-    home: SitemapConfigPage;
-    index: SitemapConfigPage;
-    doc: SitemapConfigPage;
-  };
-}
+export type SitemapConfig =
+  | {
+      pages?: {
+        home: SitemapConfigPage;
+        index: SitemapConfigPage;
+        doc: SitemapConfigPage;
+      };
+    }
+  | boolean;
 
 /**
  * global configuration used at build time
@@ -377,7 +378,6 @@ export const convertConfig = (config: RunConfiguration): RunConfiguration => {
 export const defaultBuildConfig: BuildConfiguration = {
   siteRoot: '/',
   siteMap: {
-    outputFolder: 'public/',
     pages: {
       home: {
         priority: 1,

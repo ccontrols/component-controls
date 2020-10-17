@@ -5,6 +5,7 @@ import {
   watch,
   CompilerCallbackFn,
 } from '@component-controls/webpack-compile';
+import { log } from '@component-controls/logger';
 import {
   CompileProps,
   defaultCompileProps,
@@ -48,10 +49,10 @@ module.exports = ({
           if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
             const sitemap = getSiteMap(store);
             const sitemapname = path.resolve(
-              store.config.siteMap.outputFolder,
-              './',
+              config.staticFolder as string,
               'sitemap.xml',
             );
+            log('creating sitemap', sitemapname);
             fs.writeFileSync(sitemapname, sitemap, 'utf8');
           }
         }
