@@ -108,7 +108,11 @@ export const createPagesStatefully = async (
         const staticFolder =
           config.staticFolder ||
           sysPath.join(process.cwd(), 'public', 'static');
-        const sitemapname = sysPath.resolve(staticFolder, 'sitemap.xml');
+        const sitemapfolder = sysPath.resolve(staticFolder as string, '..');
+        if (!fs.existsSync(sitemapfolder)) {
+          fs.mkdirSync(sitemapfolder, { recursive: true });
+        }
+        const sitemapname = sysPath.resolve(sitemapfolder, 'sitemap.xml');
         log('creating sitemap', sitemapname);
         fs.writeFileSync(sitemapname, sitemap, 'utf8');
       }

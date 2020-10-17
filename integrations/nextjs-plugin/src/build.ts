@@ -48,10 +48,14 @@ module.exports = ({
           const store: Store = loadStore(loadingStore, true);
           if (process.env.NODE_ENV === 'production' && store.config.siteMap) {
             const sitemap = getSiteMap(store);
-            const sitemapname = path.resolve(
+            const sitemapfolder = path.resolve(
               config.staticFolder as string,
-              'sitemap.xml',
+              '..',
             );
+            if (!fs.existsSync(sitemapfolder)) {
+              fs.mkdirSync(sitemapfolder, { recursive: true });
+            }
+            const sitemapname = path.join(sitemapfolder, 'sitemap.xml');
             log('creating sitemap', sitemapname);
             fs.writeFileSync(sitemapname, sitemap, 'utf8');
           }
