@@ -11,7 +11,6 @@ import {
   TabConfiguration,
   getDocPath,
   getStoryPath,
-  dateToLocalString,
 } from '@component-controls/core';
 
 import { HomePageInfo } from '../types';
@@ -35,7 +34,9 @@ export const getIndexPage = (store: Store): HomePageInfo => {
     ? docStories[0]
     : undefined;
   return {
-    lastModified: dateToLocalString(homePage?.dateModified),
+    lastModified: homePage?.dateModified
+      ? new Date(homePage?.dateModified).toISOString()
+      : undefined,
     path: homePath,
     storyId,
     docId,
@@ -75,7 +76,9 @@ export const getHomePages = (store: Store): DocHomePagesPath[] => {
           ? docStories[0]
           : undefined;
         return {
-          lastModified: dateToLocalString(doc?.dateModified),
+          lastModified: doc?.dateModified
+            ? new Date(doc?.dateModified).toISOString()
+            : undefined,
           type,
           path,
           docId,
@@ -165,7 +168,9 @@ export const getDocPages = (store: Store): DocPagesPath[] => {
             stories.forEach((storyId?: string) => {
               const path = getStoryPath(storyId, doc, store, route);
               docPaths.push({
-                lastModified: dateToLocalString(doc.dateModified),
+                lastModified: doc.dateModified
+                  ? new Date(doc.dateModified).toISOString()
+                  : undefined,
                 path,
                 type: docType,
                 activeTab: route,
