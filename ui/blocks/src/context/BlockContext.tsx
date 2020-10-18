@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import queryString from 'query-string';
 import { deepMerge } from '@component-controls/core';
 import { StateRoot, StateRootProps, useStore } from '@component-controls/store';
 import { ErrorBoundary } from './ErrorBoundary';
 import { ThemeProvider, ThemeProviderProps } from '../ThemeProvider';
+import { getURL } from '../utils/url';
 
 export const BlockContextProvider: React.FC<StateRootProps &
   Pick<ThemeProviderProps, 'components'>> = ({
@@ -10,8 +12,18 @@ export const BlockContextProvider: React.FC<StateRootProps &
   components,
   ...props
 }) => {
+  const values = useMemo(() => {
+    const url = getURL();
+    const parsedParams = queryString.parse(url.search);
+    if (typeof parsedParams.controls === 'string') {
+      return typeof parsedParams.controls === 'string'
+        ? JSON.parse(parsedParams.controls)
+        : parsedParams.controls;
+    }
+    return undefined;
+  }, []);
   return (
-    <StateRoot {...props}>
+    <StateRoot values={values} {...props}>
       <ErrorBoundary>
         <ThemeProvider components={components}>{children}</ThemeProvider>
       </ErrorBoundary>

@@ -28,6 +28,10 @@ export interface StateRootProps {
    * active page tab
    */
   activeTab?: string;
+  /**
+   * initial control values. usually passed from the url
+   */
+  values?: any;
 
   /**
    * global options passed from container
@@ -42,6 +46,7 @@ export const StateRoot: FC<StateRootProps> = ({
   docId,
   store,
   options = {},
+  values,
   activeTab,
 }) => {
   return (
@@ -51,7 +56,7 @@ export const StateRoot: FC<StateRootProps> = ({
           <OptionsContextProvider options={options}>
             <DocumentContextProvider docId={docId}>
               <DocsSortContextProvider>
-                <StoryContextProvider storyId={storyId}>
+                <StoryContextProvider storyId={storyId} values={values}>
                   <ControlsContextStoryProvider>
                     {children}
                   </ControlsContextStoryProvider>

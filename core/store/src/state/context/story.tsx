@@ -12,6 +12,7 @@ import {
   docStoryToId,
   getComponentName,
   Component,
+  mergeControlValues,
 } from '@component-controls/core';
 import { useStore, StoreContext, useActiveTab } from './store';
 
@@ -24,10 +25,10 @@ export const StoryContext = createContext<StoryContextProps>({
   updateStory: () => {},
 });
 
-export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
-  storyId,
-  children,
-}) => {
+export const StoryContextProvider: FC<{
+  storyId?: string;
+  values?: any;
+}> = ({ storyId, values, children }) => {
   const { store } = useContext(StoreContext);
   const [, setStory] = useState<Story | undefined>(
     storyId ? store.stories[storyId] : undefined,
@@ -41,6 +42,18 @@ export const StoryContextProvider: FC<{ storyId: string | undefined }> = ({
     store.addObserver(onObserver);
     return () => store.removeObserver(onObserver);
   }, [store, storyId]);
+  useEffect(() => {
+    if (values && storyId) {
+      const story = store.stories[storyId];
+      const storyControls = story.controls || {};
+      const newValue = {
+        ...story,
+        controls: mergeControlValues(storyControls, undefined, values),
+      };
+      store.updateStory(newValue);
+      setStory(newValue);
+    }
+  }, [values, storyId, store]);
   return (
     <StoryContext.Provider
       value={{

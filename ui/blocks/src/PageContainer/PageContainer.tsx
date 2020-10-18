@@ -13,6 +13,7 @@ import { get } from '@theme-ui/css';
 import { useTheme } from '@component-controls/components';
 import { useCurrentDocument } from '@component-controls/store';
 import { Container } from '../Container/Container';
+import { getURL } from '../utils/url';
 
 export interface PageContainerOwnProps {
   /**
@@ -45,14 +46,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     useEffect(() => {
       const parseURLHash = () => {
         try {
-          const pageURL =
-            (typeof window !== 'undefined' &&
-            window.location !== window.parent.location &&
-            window.parent.location
-              ? window.parent.location.href
-              : document.location.href) || '';
-          const url = new URL(pageURL);
-
+          const url = getURL();
           const scrollId = url.hash ? url.hash.substring(1) : undefined;
           if (scrollId) {
             const element = document.getElementById(scrollId);

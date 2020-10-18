@@ -1,6 +1,7 @@
 import React, { useMemo, MouseEvent } from 'react';
 import { window } from 'global';
 import copy from 'copy-to-clipboard';
+import queryString from 'query-string';
 import {
   resetControlValues,
   getControlValues,
@@ -10,6 +11,7 @@ import {
   canRandomizeControl,
   canResetControl,
 } from '@component-controls/core';
+import { getURL } from '../utils/url';
 
 export interface UseControlsActionsProps {
   controls?: ComponentControls;
@@ -19,6 +21,7 @@ export interface UseControlsActionsProps {
 export const useControlsActions = (props: UseControlsActionsProps) => {
   const { controls, setControlValue, storyId } = props;
   const [copied, setCopied] = React.useState(false);
+  const [urlCopied, setURLCopied] = React.useState(false);
   const { hasControls, canReset, canRandomize } = useMemo(() => {
     const keys = controls ? Object.keys(controls) : [];
     const canRandomize =
@@ -76,6 +79,29 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
       },
       id: 'randomize',
       'aria-label': 'generate random values for the component controls',
+    });
+    actions.push({
+      node: urlCopied ? 'url copied' : 'share',
+      group: 'controls',
+      onClick: () => {
+        if (controls) {
+          const url = getURL();
+          const parsedParams = queryString.parse(url.search);
+          const values = getControlValues(controls);
+          parsedParams.controls = JSON.stringify(values);
+          const strValues = queryString.stringify(parsedParams);
+          const copyURL = `${url.protocol}//${url.host}${url.pathname}${
+            strValues ? `?${strValues}` : ''
+          }${url.hash ? `#${url.hash}` : ''}`;
+          copy(copyURL);
+          if (typeof window !== 'undefined') {
+            setURLCopied(true);
+            window.setTimeout(() => setURLCopied(false), 1500);
+          }
+        }
+      },
+      id: 'share_controls',
+      'aria-label': 'copy the control values as url search params',
     });
   }
   if (canReset) {

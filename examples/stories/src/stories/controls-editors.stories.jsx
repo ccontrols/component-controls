@@ -50,7 +50,7 @@ export const kitchenSink = ({
         {new Date(birthday).toLocaleTimeString()}
       </p>
       <p>I live in NY for {years} years.</p>
-      <p>My wallet contains: ${dollars.toFixed(2)}</p>
+      <p>My wallet contains: ${parseFloat(dollars).toFixed(2)}</p>
       <p>In my backpack, I have:</p>
       <ul>
         {items && items.map(item => <li key={item.name}>{item.name}</li>)}
