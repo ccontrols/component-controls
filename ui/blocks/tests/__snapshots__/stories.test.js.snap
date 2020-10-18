@@ -5333,6 +5333,16 @@ exports[`Blocks/PropsTable Controls 1`] = `
                 class="css-32tlqk"
               >
                 <button
+                  aria-label="copy the control values as url search params"
+                  class="css-1b2uwqj"
+                >
+                  share
+                </button>
+              </div>
+              <div
+                class="css-32tlqk"
+              >
+                <button
                   aria-label="reset control values to their initial value"
                   class="css-1b2uwqj"
                 >

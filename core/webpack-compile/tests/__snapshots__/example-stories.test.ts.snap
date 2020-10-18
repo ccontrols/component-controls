@@ -756,7 +756,7 @@ any *markdown* is allowed
         "components": Object {},
         "componentsLookup": Object {},
         "date": "2020-07-17T14:45:45.848Z",
-        "dateModified": "2020-07-17T14:45:45.849Z",
+        "dateModified": "2020-10-18T05:05:08.317Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
         "package": "ee6ce583d6eb608b96bf9f66702326ef",
         "title": "Introduction/Controls",
@@ -1217,11 +1217,11 @@ any *markdown* is allowed
                     Object {
                       "loc": Object {
                         "end": Object {
-                          "column": 38,
+                          "column": 49,
                           "line": 35,
                         },
                         "start": Object {
-                          "column": 31,
+                          "column": 42,
                           "line": 35,
                         },
                       },
@@ -1754,7 +1754,7 @@ any *markdown* is allowed
         {new Date(birthday).toLocaleTimeString()}
       </p>
       <p>I live in NY for {years} years.</p>
-      <p>My wallet contains: \${dollars.toFixed(2)}</p>
+      <p>My wallet contains: \${parseFloat(dollars).toFixed(2)}</p>
       <p>In my backpack, I have:</p>
       <ul>
         {items && items.map(item => <li key={item.name}>{item.name}</li>)}
