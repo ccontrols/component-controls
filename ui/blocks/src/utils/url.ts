@@ -4,7 +4,7 @@ export const getURL = () => {
     window.location !== window.parent.location &&
     window.parent.location
       ? window.parent.location.href
-      : typeof document
+      : typeof document !== 'undefined'
       ? document.location.href
       : '') || '';
   return new URL(pageURL);
