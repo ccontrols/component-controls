@@ -4,6 +4,8 @@ export const getURL = () => {
     window.location !== window.parent.location &&
     window.parent.location
       ? window.parent.location.href
-      : document.location.href) || '';
+      : typeof document
+      ? document.location.href
+      : '') || '';
   return new URL(pageURL);
 };
