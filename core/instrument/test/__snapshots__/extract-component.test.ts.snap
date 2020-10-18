@@ -21,7 +21,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -53,7 +53,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -79,7 +79,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -111,7 +111,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -126,7 +126,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -158,7 +158,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -175,7 +175,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -207,7 +207,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -233,7 +233,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -265,7 +265,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -336,7 +336,7 @@ Object {
       "theme-ui": "^0.4.0-rc.1",
     },
     "devDependencies": Object {
-      "@component-controls/jest-snapshots": "^1.32.4",
+      "@component-controls/jest-snapshots": "^1.32.5",
       "@component-controls/ts-markdown-docs": "^1.21.0",
       "@types/markdown-to-jsx": "^6.11.0",
       "@types/react": "^16.9.34",
@@ -354,7 +354,7 @@ Object {
       "theme-ui": ">= 0.4.0-rc.1",
     },
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -391,7 +391,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -423,7 +423,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
@@ -449,7 +449,7 @@ Object {
       "@babel/generator": "^7.9.4",
       "@babel/parser": "^7.9.4",
       "@babel/traverse": "^7.9.0",
-      "@component-controls/core": "^1.32.3",
+      "@component-controls/core": "^1.32.5",
       "@hutson/parse-repository-url": "^5.0.0",
       "@mdx-js/loader": "^1.5.5",
       "@mdx-js/react": "^1.6.5",
@@ -481,7 +481,7 @@ Object {
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
-    "version": "1.32.4",
+    "version": "1.32.5",
   },
 }
 `;
