@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.33.0](https://github.com/ccontrols/component-controls/compare/v1.32.5...v1.33.0) (2020-10-18)
+
+
+### Bug Fixes
+
+* document typecheck ([3d4a38e](https://github.com/ccontrols/component-controls/commit/3d4a38e9339d59ed593f7bdb95f736196eb06aa1))
+* ssr invalid url ([aa7b5a2](https://github.com/ccontrols/component-controls/commit/aa7b5a280851cf6fbe5b01153eb8b42ebe29431e))
+* typecheck ([e7a36ab](https://github.com/ccontrols/component-controls/commit/e7a36abd4a40628137a5ad2a16c8e5bcfa821d11))
+
+
+### Features
+
+* share control values in url ([b668105](https://github.com/ccontrols/component-controls/commit/b668105e0fafc9dbd66c2434aefeb6c9b7015cc3))
+
+
+
+
+
 ## [1.32.5](https://github.com/ccontrols/component-controls/compare/v1.32.4...v1.32.5) (2020-10-17)
 
 **Note:** Version bump only for package @component-controls/blocks

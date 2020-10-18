@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.33.0](https://github.com/ccontrols/component-controls/compare/v1.32.5...v1.33.0) (2020-10-18)
+
+
+### Bug Fixes
+
+* date last modified iso format ([923141f](https://github.com/ccontrols/component-controls/commit/923141fcf003a777db361d248cfe04430a097442))
+
+
+### Features
+
+* share control values in url ([b668105](https://github.com/ccontrols/component-controls/commit/b668105e0fafc9dbd66c2434aefeb6c9b7015cc3))
+
+
+
+
+
 ## [1.32.5](https://github.com/ccontrols/component-controls/compare/v1.32.4...v1.32.5) (2020-10-17)
 
 **Note:** Version bump only for package @component-controls/store
