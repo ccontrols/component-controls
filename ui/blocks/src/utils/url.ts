@@ -6,6 +6,6 @@ export const getURL = () => {
       ? window.parent.location.href
       : typeof document !== 'undefined'
       ? document.location.href
-      : '') || '';
-  return new URL(pageURL);
+      : undefined) || undefined;
+  return pageURL ? new URL(pageURL) : undefined;
 };

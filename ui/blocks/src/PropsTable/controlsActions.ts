@@ -86,17 +86,19 @@ export const useControlsActions = (props: UseControlsActionsProps) => {
       onClick: () => {
         if (controls) {
           const url = getURL();
-          const parsedParams = queryString.parse(url.search);
-          const values = getControlValues(controls);
-          parsedParams.controls = JSON.stringify(values);
-          const strValues = queryString.stringify(parsedParams);
-          const copyURL = `${url.protocol}//${url.host}${url.pathname}${
-            strValues ? `?${strValues}` : ''
-          }${url.hash ? `#${url.hash}` : ''}`;
-          copy(copyURL);
-          if (typeof window !== 'undefined') {
-            setURLCopied(true);
-            window.setTimeout(() => setURLCopied(false), 1500);
+          if (url) {
+            const parsedParams = queryString.parse(url.search);
+            const values = getControlValues(controls);
+            parsedParams.controls = JSON.stringify(values);
+            const strValues = queryString.stringify(parsedParams);
+            const copyURL = `${url.protocol}//${url.host}${url.pathname}${
+              strValues ? `?${strValues}` : ''
+            }${url.hash ? `#${url.hash}` : ''}`;
+            copy(copyURL);
+            if (typeof window !== 'undefined') {
+              setURLCopied(true);
+              window.setTimeout(() => setURLCopied(false), 1500);
+            }
           }
         }
       },

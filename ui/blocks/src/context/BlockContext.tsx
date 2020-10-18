@@ -14,11 +14,13 @@ export const BlockContextProvider: React.FC<StateRootProps &
 }) => {
   const values = useMemo(() => {
     const url = getURL();
-    const parsedParams = queryString.parse(url.search);
-    if (typeof parsedParams.controls === 'string') {
-      return typeof parsedParams.controls === 'string'
-        ? JSON.parse(parsedParams.controls)
-        : parsedParams.controls;
+    if (url) {
+      const parsedParams = queryString.parse(url.search);
+      if (typeof parsedParams.controls === 'string') {
+        return typeof parsedParams.controls === 'string'
+          ? JSON.parse(parsedParams.controls)
+          : parsedParams.controls;
+      }
     }
     return undefined;
   }, []);

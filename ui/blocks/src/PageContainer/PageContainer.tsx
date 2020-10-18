@@ -47,13 +47,18 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
       const parseURLHash = () => {
         try {
           const url = getURL();
-          const scrollId = url.hash ? url.hash.substring(1) : undefined;
-          if (scrollId) {
-            const element = document.getElementById(scrollId);
-            if (element) {
-              setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100);
+          if (url) {
+            const scrollId = url.hash ? url.hash.substring(1) : undefined;
+            if (scrollId) {
+              const element = document.getElementById(scrollId);
+              if (element) {
+                setTimeout(() => {
+                  element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }, 100);
+              }
             }
           }
         } catch (err) {}
