@@ -1,8 +1,8 @@
-import * as webpack from 'webpack';
+import { Configuration } from 'webpack';
 
 export interface ResolveExternalsConfig {
   resolve: { alias: { [key: string]: string } };
-  externals: webpack.ExternalsObjectElement;
+  externals: Configuration['externals'];
 }
 
 export interface ExternalProps {
@@ -20,6 +20,6 @@ export class ResolveExternals {
     if (typeof this._config.externals !== 'object') {
       this._config.externals = {};
     }
-    this._config.externals[lib] = externalName || lib;
+    (this._config.externals as Record<string, any>)[lib] = externalName || lib;
   };
 }

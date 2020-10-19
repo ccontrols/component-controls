@@ -115,10 +115,7 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
 };
 
 export const runCompiler = (
-  run: (
-    compiler: Compiler,
-    callback: (err: Error, stats: Stats) => void,
-  ) => void,
+  run: (compiler: Compiler, callback: Parameters<Compiler['run']>[0]) => void,
 
   props: CompileRunProps,
   callback?: CompilerCallbackFn,
@@ -127,8 +124,10 @@ export const runCompiler = (
     const compiler = webpack(createConfig(props));
     run(compiler, (err, stats) => {
       const bundleName = path.join(
-        stats.compilation.outputOptions.path,
-        stats.compilation.outputOptions.filename,
+        stats?.compilation.outputOptions?.path || '',
+        typeof stats?.compilation.outputOptions.filename === 'string'
+          ? stats.compilation.outputOptions.filename
+          : '',
       );
       const bailError = (error: string) => {
         fs.writeFileSync(
@@ -144,12 +143,12 @@ module.exports = ${JSON.stringify({
           `,
         );
         console.error(error);
-        return resolve({ bundleName, stats }); //reject(error);
+        return resolve({ bundleName, stats: stats as Stats }); //reject(error);
       };
       if (err) {
         return bailError(err.toString());
       }
-      if (stats.hasErrors() || stats.hasWarnings()) {
+      if (stats?.hasErrors() || stats?.hasWarnings()) {
         const error = stats.toString({
           errorDetails: true,
           warnings: true,
@@ -163,9 +162,9 @@ module.exports = ${JSON.stringify({
         error('error creating bundle', bundleName);
       }
       if (callback) {
-        callback({ bundleName, stats, store });
+        callback({ bundleName, stats: stats as Stats, store });
       }
-      resolve({ bundleName, stats, store });
+      resolve({ bundleName, stats: stats as Stats, store });
     });
   });
 };

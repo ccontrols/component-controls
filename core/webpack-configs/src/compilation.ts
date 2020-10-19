@@ -1,5 +1,5 @@
 import path from 'path';
-import * as webpack from 'webpack';
+import { Compiler, Stats, Configuration } from 'webpack';
 import { LoadingStore } from '@component-controls/store';
 import { LogOptions } from '@component-controls/logger';
 import { RuleTypes } from './types';
@@ -11,7 +11,7 @@ export interface CompileProps {
   /**
    * webpack configuration object
    */
-  webPack?: webpack.Configuration;
+  webPack?: Configuration;
   /**
    * a list of webpack configuration presets from webpack-configs packages
    */
@@ -52,18 +52,20 @@ export interface CompileResults {
   /**
    * the webpack stats object
    */
-  stats: webpack.Stats;
+  stats: Stats;
   /**
    * the stories store
    */
   store?: LoadingStore;
 }
 
+export type WatchOptions = Parameters<Compiler['watch']>[0];
+
 /**
  * adds webpack WatchOptions to the Compiler options
  */
 export type WatchProps = {
-  watchOptions?: webpack.ICompiler.WatchOptions;
+  watchOptions?: WatchOptions;
 } & CompileProps;
 
 export const defBundleName = 'component-controls.js';
