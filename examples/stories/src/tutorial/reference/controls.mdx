@@ -191,7 +191,12 @@ color: {
 },
 ```  
 
-all properties of [ControlType](/tutorial/reference/controls-api/#controltype)
+all properties of [ControlType](/tutorial/reference/controls-api/#controltype) in addition to:
+
+| Name           | Type                                                           | Description                                                                                                                                           |
+| -------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `kind`   | 'hex' \| 'rgb' \| 'rgba' \| 'hsl' \| 'hsla'   | in what format to save the color as a string (default to `hex`) |
+
 
 <Playground>
   <Story name="color-control" controls={{ color: {

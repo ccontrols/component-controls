@@ -37,16 +37,17 @@
     "global": "^4.3.2",
     "polished": "^3.4.4",
     "react": "^16.13.1",
-    "react-color": "^2.17.0",
+    "react-colorful": "^4.1.4",
     "react-dom": "^16.13.1",
-    "theme-ui": "^0.4.0-rc.1"
+    "theme-ui": "^0.4.0-rc.1",
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^1.33.1",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
-    "@types/react-color": "^3.0.1",
+    "@types/tinycolor2": "^1.4.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2"

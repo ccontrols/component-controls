@@ -224,8 +224,14 @@ export interface ComponentControlBoolean extends ComponentControlBase<boolean> {
   type: ControlTypes.BOOLEAN;
 }
 
+export type ColorPickerKind = 'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla';
+
 export interface ComponentControlColor extends ComponentControlBase<string> {
   type: ControlTypes.COLOR;
+  /**
+   * format to save the color as a string
+   */
+  kind?: ColorPickerKind;
 }
 
 export interface ComponentControlDate extends ComponentControlBase<Date> {

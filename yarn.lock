@@ -20177,6 +20177,11 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-colorful@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-4.1.4.tgz#2497b88be7f7ede17e34fe11dd9d00307bfe9023"
+  integrity sha512-SibjGNHZeDeENUVqLJg6L9YLXn/gp9OliGILmGS8kT5LC6cQlreTL+7OtQo+da1+DgN6dd+N8G1Bx7aTJMfYWg==
+
 react-dev-utils@^10.0.0:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
