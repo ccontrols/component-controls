@@ -227,11 +227,11 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 
 ### properties
 
-| Name      | Type                                                                                                                                                                                                                                                                                  | Description                         |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| `type*`   | _string_                                                                                                                                                                                                                                                                              | document type                       |
-| `variant` | _string_                                                                                                                                                                                                                                                                              | theme variant                       |
-| `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement> \| (((instance: HTMLDivElement) => void) & string) \| (((instance: HTMLDivElement) => void) & RefObject&lt;...>) \| (RefObject&lt;...> & string) \| (RefObject&lt;...> & ((instance: HTMLDivElement) => void))_ | ref to the page container component |
+| Name      | Type                     | Description                         |
+| --------- | ------------------------ | ----------------------------------- |
+| `type*`   | _string_                 | document type                       |
+| `variant` | _string_                 | theme variant                       |
+| `ref`     | _Ref&lt;HTMLDivElement>_ | ref to the page container component |
 
 ## <ins>SEO</ins>
 

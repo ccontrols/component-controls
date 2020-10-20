@@ -218,10 +218,11 @@ _Header [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name      | Type                  | Description |
-| --------- | --------------------- | ----------- |
-| `as`      | _ElementType&lt;any>_ |             |
-| `variant` | _string_              |             |
+| Name      | Type                                                                   | Description |
+| --------- | ---------------------------------------------------------------------- | ----------- |
+| `ref`     | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |             |
+| `as`      | _ElementType&lt;any>_                                                  |             |
+| `variant` | _string_                                                               |             |
 
 ## <ins>HoverBox</ins>
 
@@ -415,13 +416,14 @@ _Sidebar [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 ### properties
 
-| Name          | Type                  | Description                                          |
-| ------------- | --------------------- | ---------------------------------------------------- |
-| `title`       | _any_                 | Title string or any react node                       |
-| `collapsible` | _boolean_             | Whether the sidebar can be collapsed                 |
-| `children`    | _any_                 | children content elements to be displayed in Sidebar |
-| `as`          | _ElementType&lt;any>_ |                                                      |
-| `variant`     | _string_              |                                                      |
+| Name          | Type                                                                   | Description                                          |
+| ------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| `title`       | _any_                                                                  | Title string or any react node                       |
+| `collapsible` | _boolean_                                                              | Whether the sidebar can be collapsed                 |
+| `children`    | _any_                                                                  | children content elements to be displayed in Sidebar |
+| `ref`         | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                      |
+| `as`          | _ElementType&lt;any>_                                                  |                                                      |
+| `variant`     | _string_                                                               |                                                      |
 
 ## <ins>SidebarContextProvider</ins>
 
@@ -540,24 +542,25 @@ _Table [source code](https://github.com/ccontrols/component-controls/tree/master
 
 ### properties
 
-| Name                    | Type                                             | Description                                                                    |
-| ----------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `columns*`              | _Column&lt;{}>\[]_                               | the columns object as an array.                                                |
-| `data`                  | _any\[]_                                         | array of data rows.                                                            |
-| `header`                | _boolean_                                        | show or hide the header element.                                               |
-| `sorting`               | _boolean_                                        | enable.disable sorting.                                                        |
-| `filtering`             | _boolean_                                        | enable/disable filtering.                                                      |
-| `itemsLabel`            | _string_                                         | string label for 'items' - used in the filter placeholder and grouping header. |
-| `groupBy`               | _string\[]_                                      | field to be grouped by.                                                        |
-| `hiddenColumns`         | _string\[]_                                      | list of columns to hide.                                                       |
-| `rowSelect`             | _boolean_                                        | if true, will enable row selection                                             |
-| `initialSelected`       | _Record&lt;number, boolean>_                     | initially selected rows                                                        |
-| `onSelectRowsChange`    | _(selected: Record&lt;number, boolean>) => void_ | callback when selected rows change                                             |
-| `expanded`              | _{ \[key: string]: boolean; }_                   | object listing the initially expanded rows.                                    |
-| `skipPageReset`         | _boolean_                                        | reset state update while update table data                                     |
-| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_     | callback to render a SubComponent row                                          |
-| `as`                    | _ElementType&lt;any>_                            |                                                                                |
-| `variant`               | _string_                                         |                                                                                |
+| Name                    | Type                                                                   | Description                                                                    |
+| ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `columns*`              | _Column&lt;{}>\[]_                                                     | the columns object as an array.                                                |
+| `data`                  | _any\[]_                                                               | array of data rows.                                                            |
+| `header`                | _boolean_                                                              | show or hide the header element.                                               |
+| `sorting`               | _boolean_                                                              | enable.disable sorting.                                                        |
+| `filtering`             | _boolean_                                                              | enable/disable filtering.                                                      |
+| `itemsLabel`            | _string_                                                               | string label for 'items' - used in the filter placeholder and grouping header. |
+| `groupBy`               | _string\[]_                                                            | field to be grouped by.                                                        |
+| `hiddenColumns`         | _string\[]_                                                            | list of columns to hide.                                                       |
+| `rowSelect`             | _boolean_                                                              | if true, will enable row selection                                             |
+| `initialSelected`       | _Record&lt;number, boolean>_                                           | initially selected rows                                                        |
+| `onSelectRowsChange`    | _(selected: Record&lt;number, boolean>) => void_                       | callback when selected rows change                                             |
+| `expanded`              | _{ \[key: string]: boolean; }_                                         | object listing the initially expanded rows.                                    |
+| `skipPageReset`         | _boolean_                                                              | reset state update while update table data                                     |
+| `renderRowSubComponent` | _(props: { row: Row&lt;{}>; }) => ReactNode_                           | callback to render a SubComponent row                                          |
+| `ref`                   | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                |
+| `as`                    | _ElementType&lt;any>_                                                  |                                                                                |
+| `variant`               | _string_                                                               |                                                                                |
 
 ## <ins>Tab</ins>
 
@@ -597,13 +600,14 @@ _Tag [source code](https://github.com/ccontrols/component-controls/tree/master/u
 
 ### properties
 
-| Name                | Type                  | Description                                                                                                            |
-| ------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `color`             | _string_              | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
-| `transparentAmount` | _number_              | transparent amount - 0 to 1                                                                                            |
-| `borderSize`        | _number_              | borderSize in pixels                                                                                                   |
-| `variant`           | _string_              | theme variant additional                                                                                               |
-| `as`                | _ElementType&lt;any>_ |                                                                                                                        |
+| Name                | Type                                                                   | Description                                                                                                            |
+| ------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `color`             | _string_                                                               | color for the tag. The full color will be applied to the border and a transparentized color will be used as background |
+| `transparentAmount` | _number_                                                               | transparent amount - 0 to 1                                                                                            |
+| `borderSize`        | _number_                                                               | borderSize in pixels                                                                                                   |
+| `variant`           | _string_                                                               | theme variant additional                                                                                               |
+| `ref`               | _((instance: HTMLDivElement) => void) \| RefObject&lt;HTMLDivElement>_ |                                                                                                                        |
+| `as`                | _ElementType&lt;any>_                                                  |                                                                                                                        |
 
 ## <ins>ThemeProvider</ins>
 

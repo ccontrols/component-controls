@@ -38,6 +38,7 @@
     -   [ComponentControlOptions](#componentcontroloptions)
     -   [ComponentControlText](#componentcontroltext)
     -   [ComponentControls](#componentcontrols)
+    -   [ColorPickerKind](#colorpickerkind)
     -   [ComponentControl](#componentcontrol)
     -   [OptionsListType](#optionslisttype)
     -   [OptionsValueType](#optionsvaluetype)
@@ -96,6 +97,7 @@
     -   [StoryRenderFn](#storyrenderfn-1)
     -   [DocType](#doctype-1)
     -   [Document](#document-1)
+    -   [ColorPickerKind](#colorpickerkind-1)
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
@@ -471,7 +473,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlArray
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L256)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L262)_
 
 ** extends ComponentControlBase&lt;\[key: string]: any\[]>**
 
@@ -539,7 +541,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlButton
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L278)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L284)_
 
 ** extends ComponentControlBase&lt;>**
 
@@ -561,7 +563,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlColor
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L227)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L229)_
 
 ** extends ComponentControlBase&lt;string>**
 
@@ -574,6 +576,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `description`  | string                                                         | full text property description. can use markdown.                                                                                                      |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `kind`         | [ColorPickerKind](#colorpickerkind)                            | format to save the color as a string                                                                                                                   |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
@@ -595,7 +598,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlDate
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L231)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L237)_
 
 ** extends ComponentControlBase&lt;[Date](#date)>**
 
@@ -618,7 +621,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlFiles
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L247)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L253)_
 
 ** extends ComponentControlBase&lt;string\[]>**
 
@@ -640,7 +643,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlNumber
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L328)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L334)_
 
 ** extends ComponentControlBase&lt;number>**
 
@@ -665,7 +668,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlObject
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L269)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L275)_
 
 ** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
 
@@ -692,7 +695,7 @@ list of options can be
 2\. array of strings
 3\. array of key-value pair objects
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L309)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L315)_
 
 ** extends ComponentControlBase&lt;OptionsValueType&lt;>>**
 
@@ -743,9 +746,15 @@ ComponentControls are defined in key value pairs
 the name of the property is the key
 and the value is the ComponentControl
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L381)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L387)_
 
 `name`\*: string: [ComponentControl](#componentcontrol)
+
+## ColorPickerKind
+
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L227)_
+
+'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla'
 
 ## ComponentControl
 
@@ -755,7 +764,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L364)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L370)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -763,13 +772,13 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 value/label pairs or array of OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L298)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L304)_
 
 \[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L288)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L294)_
 
  | number | string\[] \| number\[] \| **label**: string**value**: any
 
@@ -1089,7 +1098,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
 | `siteMap`      | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
 | `siteRoot`     | string                              | the site base url, by default the site starts at /                                                                                             |
-| `siteUrl`      | string                              | Deployed site url. Also used for auto generated sitemap.                                     |
+| `siteUrl`      | string                              | Deployed site url. Also used for auto generated sitemap.                                                                                       |
 | `stories`      | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 | `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
 
@@ -1369,7 +1378,6 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `categories*` | string\[] |             |
 | `ignore*`     | string\[] |             |
 | `siteRoot*`   | string    |             |
-| `siteUrl*`    | string    |             |
 | `pages*`      | object    |             |
 | `siteMap*`    | object    |             |
 
@@ -1549,6 +1557,12 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 | `StoryProps`        | [StoryProps](#storyprops)           |                                                                                                                                                                                              |
 | `PageLayoutProps`   | [PageLayoutProps](#pagelayoutprops) |                                                                                                                                                                                              |
 
+## ColorPickerKind
+
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L227)_
+
+'hex' | 'rgb' | 'rgba' | 'hsl' | 'hsla'
+
 ## ComponentControl
 
 ComponentControl is a either an object of property settings
@@ -1557,7 +1571,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L364)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L370)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
