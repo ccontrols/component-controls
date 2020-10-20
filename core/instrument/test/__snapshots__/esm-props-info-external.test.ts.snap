@@ -42,7 +42,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"none\\" | \\"inline\\" | \\"list\\" | \\"both\\"",
+        "raw": "\\"none\\" | \\"list\\" | \\"inline\\" | \\"both\\"",
         "value": Array [
           Object {
             "name": "string",
@@ -50,11 +50,11 @@ presented if they are made.",
           },
           Object {
             "name": "string",
-            "value": "inline",
+            "value": "list",
           },
           Object {
             "name": "string",
-            "value": "list",
+            "value": "inline",
           },
           Object {
             "name": "string",
@@ -138,7 +138,7 @@ presented if they are made.",
       "parentName": "AriaAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"time\\" | \\"true\\" | \\"false\\" | \\"page\\" | \\"step\\" | \\"location\\" | \\"date\\"",
+        "raw": "boolean | \\"time\\" | \\"true\\" | \\"false\\" | \\"step\\" | \\"page\\" | \\"location\\" | \\"date\\"",
         "value": Array [
           Object {
             "name": "boolean",
@@ -153,10 +153,10 @@ presented if they are made.",
             "name": "false",
           },
           Object {
-            "name": "page",
+            "name": "step",
           },
           Object {
-            "name": "step",
+            "name": "page",
           },
           Object {
             "name": "location",
@@ -721,19 +721,19 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "union",
-        "raw": "boolean | \\"true\\" | \\"false\\" | \\"inherit\\"",
+        "raw": "boolean | \\"inherit\\" | \\"true\\" | \\"false\\"",
         "value": Array [
           Object {
             "name": "boolean",
+          },
+          Object {
+            "name": "inherit",
           },
           Object {
             "name": "true",
           },
           Object {
             "name": "false",
-          },
-          Object {
-            "name": "inherit",
           },
         ],
       },
@@ -959,8 +959,16 @@ A hint could be a sample value or a brief description of the expected format.",
     "key": Object {
       "parentName": "Attributes",
       "type": Object {
-        "name": "ReactText",
-        "raw": "ReactText",
+        "name": "union",
+        "raw": "string | number",
+        "value": Array [
+          Object {
+            "name": "string",
+          },
+          Object {
+            "name": "number",
+          },
+        ],
       },
     },
     "lang": Object {
@@ -2213,15 +2221,15 @@ A hint could be a sample value or a brief description of the expected format.",
       "parentName": "HTMLAttributes",
       "type": Object {
         "name": "enum",
-        "raw": "\\"yes\\" | \\"no\\"",
+        "raw": "\\"no\\" | \\"yes\\"",
         "value": Array [
           Object {
             "name": "string",
-            "value": "yes",
+            "value": "no",
           },
           Object {
             "name": "string",
-            "value": "no",
+            "value": "yes",
           },
         ],
       },

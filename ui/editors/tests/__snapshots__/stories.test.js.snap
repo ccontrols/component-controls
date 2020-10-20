@@ -97,31 +97,108 @@ exports[`Editors/ButtonEditor Overview 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Editors/ColorEditor Hsl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-12hibeq"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-1ik7gzn"
+    >
+      <div
+        class="css-be517z"
+      />
+      hsl(213, 50%, 16%)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Editors/ColorEditor Hsla 1`] = `
+<DocumentFragment>
+  <div
+    class="css-12hibeq"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-1ik7gzn"
+    >
+      <div
+        class="css-d6z8g1"
+      />
+      hsla(213, 50%, 16%, 0.5)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Editors/ColorEditor Overview 1`] = `
 <DocumentFragment>
-  <button
-    class="css-1ik7gzn"
-    name="prop"
+  <div
+    class="css-12hibeq"
   >
-    <div
-      class="css-6hasx1"
-    />
-    #DEDEDE
-  </button>
+    <button
+      aria-label="edit the selected color"
+      class="css-1ik7gzn"
+    >
+      <div
+        class="css-6hasx1"
+      />
+      #dedede
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Editors/ColorEditor Rgb 1`] = `
 <DocumentFragment>
-  <button
-    class="css-1ik7gzn"
-    name="prop"
+  <div
+    class="css-12hibeq"
   >
-    <div
-      class="css-94jhil"
-    />
-    RGB(192,0,0)
-  </button>
+    <button
+      aria-label="edit the selected color"
+      class="css-1ik7gzn"
+    >
+      <div
+        class="css-my0xph"
+      />
+      rgb(192, 0, 0)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Editors/ColorEditor Rgba 1`] = `
+<DocumentFragment>
+  <div
+    class="css-12hibeq"
+  >
+    <button
+      aria-label="edit the selected color"
+      class="css-1ik7gzn"
+    >
+      <div
+        class="css-tokkmc"
+      />
+      rgba(0, 192, 0, 0.5)
+      <div
+        class="css-vurnku"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 

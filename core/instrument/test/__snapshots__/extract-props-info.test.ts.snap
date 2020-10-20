@@ -2204,10 +2204,9 @@ if the function returns false, it can stop chabging to the new tab",
       },
     },
     "ref": Object {
-      "parentName": "ClassAttributes",
       "type": Object {
-        "name": "LegacyRef<HTMLDivElement>",
-        "raw": "LegacyRef<HTMLDivElement>",
+        "name": "function",
+        "raw": "((instance: HTMLDivElement) => void) | RefObject<HTMLDivElement>",
       },
     },
     "renderRowSubComponent": Object {
