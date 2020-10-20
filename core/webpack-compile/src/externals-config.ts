@@ -52,7 +52,7 @@ export const defaultExternals: ExternalProps[] = [
 
   { lib: 'react-helmet' },
   { lib: 'react-table' },
-  { lib: 'react-color' },
+  { lib: 'react-colorful' },
   { lib: 'react-google-charts' },
   { lib: 'react-tabs' },
   { lib: 'react-switch' },
