@@ -1,10 +1,12 @@
-import { createElement } from 'react';
+/* eslint-disable react/display-name */
+import React, { createElement } from 'react';
 import {
   StoryRenderFn,
   getControlValues,
   deepMerge,
   FrameworkRenderFn,
 } from '@component-controls/core';
+import StyleContext from 'isomorphic-style-loader/StyleContext';
 
 export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   if (!story) {
@@ -41,6 +43,15 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
       );
   }
   let node: any = null;
-  node = () => (renderFn as StoryRenderFn)(values, context);
+  const css = new Set();
+  const insertCss = (...styles: any[]) => {
+    console.log(styles);
+    styles.forEach(style => css.add(style._getCss()));
+  };
+  node = () => (
+    <StyleContext.Provider value={{ insertCss }}>
+      {(renderFn as StoryRenderFn)(values, context)}
+    </StyleContext.Provider>
+  );
   return createElement(node);
 };

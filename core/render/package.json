@@ -33,6 +33,7 @@
   "license": "MIT",
   "dependencies": {
     "@component-controls/core": "^1.34.0",
+    "isomorphic-style-loader": "^5.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -40,6 +41,7 @@
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
+
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2",

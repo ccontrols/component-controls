@@ -62,8 +62,17 @@ export const react: PresetType = (options?: PresetOptions) => {
           },
         },
         {
-          test: /\.css$/i,
-          use: [require.resolve('style-loader'), require.resolve('css-loader')],
+          test: /\.css$/,
+          use: [
+            'isomorphic-style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                esModule: false,
+              },
+            },
+          ],
         },
         {
           test: /\.txt$/i,
