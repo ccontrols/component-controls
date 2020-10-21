@@ -37,7 +37,7 @@
     "global": "^4.3.2",
     "polished": "^3.4.4",
     "react": "^16.13.1",
-    "react-colorful": "^4.1.4",
+    "react-colorful": "^4.3.0",
     "react-dom": "^16.13.1",
     "theme-ui": "^0.4.0-rc.1",
     "tinycolor2": "^1.4.1"
