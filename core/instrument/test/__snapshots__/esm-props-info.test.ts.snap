@@ -61,10 +61,10 @@ Object {
   "packages": Object {
     "5633741e98073052cbece6fcd32011e3": Object {
       "dependencies": Object {
-        "@component-controls/components": "^1.34.0",
-        "@component-controls/core": "^1.34.0",
-        "@component-controls/editors": "^1.34.0",
-        "@component-controls/store": "^1.34.0",
+        "@component-controls/components": "^1.35.0",
+        "@component-controls/core": "^1.35.0",
+        "@component-controls/editors": "^1.35.0",
+        "@component-controls/store": "^1.35.0",
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/css": "^0.4.0-rc.1",
         "copy-to-clipboard": "^3.2.1",
@@ -82,8 +82,8 @@ Object {
         "theme-ui": "^0.4.0-rc.1",
       },
       "devDependencies": Object {
-        "@component-controls/jest-snapshots": "^1.34.0",
-        "@component-controls/render": "^1.34.0",
+        "@component-controls/jest-snapshots": "^1.35.0",
+        "@component-controls/render": "^1.35.0",
         "@component-controls/ts-markdown-docs": "^1.21.0",
         "@theme-ui/presets": "^0.3.0",
         "@types/mdx-js__react": "^1.5.1",
@@ -110,14 +110,14 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.34.0",
+      "version": "1.35.0",
     },
     "942f7c3f19d9e197f86041eed5e46838": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
         "@babel/traverse": "^7.9.0",
-        "@component-controls/core": "^1.34.0",
+        "@component-controls/core": "^1.35.0",
         "@hutson/parse-repository-url": "^5.0.0",
         "@mdx-js/loader": "^1.5.5",
         "@mdx-js/react": "^1.6.5",
@@ -153,7 +153,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.34.0",
+      "version": "1.35.0",
     },
   },
   "stories": Object {},
