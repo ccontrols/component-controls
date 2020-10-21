@@ -1,5 +1,7 @@
 {
-  "name": "simple",
+  "name": "component-controls-simple",
+  "description": "component-controls example with css styles",
+  "private": true,
   "version": "1.35.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,5 +14,6 @@
     "gatsby": "^2.23.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "gitHead": "db62ecc61d3445304bbc4f8f104dc4b1ebba96ba"
 }
