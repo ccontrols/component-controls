@@ -25,5 +25,7 @@ export const EditPage: FC = () => {
         </Box>
       </ExternalLink>
     </Box>
-  ) : null;
+  ) : (
+    <div />
+  );
 };
