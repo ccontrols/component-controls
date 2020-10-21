@@ -60,24 +60,16 @@ export const Keyboard: FC<KeyboardProps> = ({
   );
 
   useEffect(() => {
-    if (target === 'document' && typeof document !== 'undefined' && document) {
+    if (target === 'document' && typeof document !== 'undefined') {
       document.addEventListener('keydown', onKeyDownFn);
-    } else if (target === 'window' && typeof window !== 'undefined' && window) {
+    } else if (target === 'window' && typeof window !== 'undefined') {
       window.addEventListener('keydown', onKeyDownFn);
     }
 
     return () => {
-      if (
-        target === 'document' &&
-        typeof document !== 'undefined' &&
-        document
-      ) {
+      if (target === 'document' && typeof document !== 'undefined') {
         document.removeEventListener('keydown', onKeyDownFn);
-      } else if (
-        target === 'window' &&
-        typeof window !== 'undefined' &&
-        window
-      ) {
+      } else if (target === 'window' && typeof window !== 'undefined') {
         window.removeEventListener('keydown', onKeyDownFn);
       }
     };

@@ -112,7 +112,9 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         const downIndex = Math.min((selected || -1) + 1, items.length - 1);
         if (downIndex >= 0) {
           selectItem(items[downIndex], downIndex, false);
-          const itemEl = document.getElementById(`search_item_${downIndex}`);
+          const itemEl =
+            typeof document !== 'undefined' &&
+            document.getElementById(`search_item_${downIndex}`);
           if (itemEl) {
             scrollIntoView(itemEl, { block: 'end', scrollMode: 'if-needed' });
           }
@@ -122,7 +124,9 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
         const upIndex = Math.max((selected || items.length) - 1, 0);
         if (upIndex < items.length) {
           selectItem(items[upIndex], upIndex, false);
-          const itemEl = document.getElementById(`search_item_${upIndex}`);
+          const itemEl =
+            typeof document !== 'undefined' &&
+            document.getElementById(`search_item_${upIndex}`);
           if (itemEl) {
             scrollIntoView(itemEl, { block: 'start', scrollMode: 'if-needed' });
           }

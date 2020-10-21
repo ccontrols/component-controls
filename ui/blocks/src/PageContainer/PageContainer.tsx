@@ -50,7 +50,9 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
           if (url) {
             const scrollId = url.hash ? url.hash.substring(1) : undefined;
             if (scrollId) {
-              const element = document.getElementById(scrollId);
+              const element =
+                typeof document !== 'undefined' &&
+                document.getElementById(scrollId);
               if (element) {
                 setTimeout(() => {
                   element.scrollIntoView({
