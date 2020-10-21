@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/instrument",
-  "version": "1.33.1",
+  "version": "1.34.0",
   "description": "Component controls instrumentation library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -33,7 +33,7 @@
     "@babel/generator": "^7.9.4",
     "@babel/parser": "^7.9.4",
     "@babel/traverse": "^7.9.0",
-    "@component-controls/core": "^1.32.5",
+    "@component-controls/core": "^1.34.0",
     "@hutson/parse-repository-url": "^5.0.0",
     "@mdx-js/loader": "^1.5.5",
     "@mdx-js/react": "^1.6.5",

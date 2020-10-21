@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.34.0](https://github.com/ccontrols/component-controls/compare/v1.33.1...v1.34.0) (2020-10-21)
+
+
+### Bug Fixes
+
+* react 17 warnings and single tab page ([bcd2d01](https://github.com/ccontrols/component-controls/commit/bcd2d01929bd40892ba58956e1224b7e28145a9b))
+
+
+### Features
+
+* replace react-color with react-colorful ([64d8da5](https://github.com/ccontrols/component-controls/commit/64d8da5203da1c2a1fe39c1fd774070001926a6b))
+
+
+
+
+
 ## [1.33.1](https://github.com/ccontrols/component-controls/compare/v1.33.0...v1.33.1) (2020-10-18)
 
 **Note:** Version bump only for package component-controls
