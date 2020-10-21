@@ -103,7 +103,7 @@ export const theme: ControlsTheme = {
         primary: '#efefef',
         secondary: '#b4e1fa',
         highlight: '#b7ecec',
-        muted: '#e6e6e6',
+        muted: '#262626',
         mutedText: '#c9cacf',
         gray: '#4d5866',
         background: '#38404a',
