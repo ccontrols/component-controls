@@ -1,14 +1,13 @@
 /** @jsx jsx */
-import React, { ReactNode } from 'react';
+import React, { ComponentType } from 'react';
 import {
   HexColorPicker,
-  HslaColorPicker,
-  HslColorPicker,
-  RgbColorPicker,
-  RgbaColorPicker,
+  HslaStringColorPicker,
+  HslStringColorPicker,
+  RgbStringColorPicker,
+  RgbaStringColorPicker,
 } from 'react-colorful';
 import { jsx, Button, Box, SxStyleProp } from 'theme-ui';
-import tinycolor from 'tinycolor2';
 import { Popover } from '@component-controls/components';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
@@ -114,6 +113,12 @@ const sxProps: SxStyleProp = {
     zIndex: 2,
   },
 };
+
+interface ColorPickerBaseProps {
+  color?: string;
+  onChange: (newColor: string) => void;
+}
+
 /**
  * Color control editor.
  */
@@ -125,81 +130,27 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
   const handleChange = (color: string) => {
     onChange(color);
   };
-  const color = tinycolor(control.value);
-  let colorPicker: ReactNode;
+  let ColorPicker: ComponentType<ColorPickerBaseProps>;
   switch (kind) {
     case 'hex':
     default:
-      colorPicker = (
-        <HexColorPicker
-          sx={sxProps}
-          color={control.value}
-          onChange={handleChange}
-        />
-      );
-
+      ColorPicker = HexColorPicker;
       break;
     case 'rgb': {
-      colorPicker = (
-        <RgbColorPicker
-          sx={sxProps}
-          color={color.toRgb()}
-          onChange={({ r, g, b }) =>
-            handleChange(
-              `rgb(${r.toFixed(0)}, ${g.toFixed(0)}, ${b.toFixed(0)})`,
-            )
-          }
-        />
-      );
+      ColorPicker = RgbStringColorPicker;
 
       break;
     }
     case 'rgba': {
-      colorPicker = (
-        <RgbaColorPicker
-          sx={sxProps}
-          color={color.toRgb()}
-          onChange={({ r, g, b, a }) =>
-            handleChange(
-              `rgba(${r.toFixed(0)}, ${g.toFixed(0)}, ${b.toFixed(
-                0,
-              )}, ${a.toFixed(2)})`,
-            )
-          }
-        />
-      );
+      ColorPicker = RgbaStringColorPicker;
       break;
     }
     case 'hsl': {
-      const hsl = color.toHsl();
-      colorPicker = (
-        <HslColorPicker
-          sx={sxProps}
-          color={{ h: hsl.h, s: hsl.s * 100, l: hsl.l * 100 }}
-          onChange={({ h, s, l }) =>
-            handleChange(
-              `hsl(${h.toFixed(0)}, ${s.toFixed(0)}%, ${l.toFixed(0)}%)`,
-            )
-          }
-        />
-      );
+      ColorPicker = HslStringColorPicker;
       break;
     }
     case 'hsla': {
-      const hsl = color.toHsl();
-      colorPicker = (
-        <HslaColorPicker
-          sx={sxProps}
-          color={{ h: hsl.h, s: hsl.s * 100, l: hsl.l * 100, a: hsl.a }}
-          onChange={({ h, s, l, a }) =>
-            handleChange(
-              `hsla(${h.toFixed(0)}, ${s.toFixed(0)}%, ${l.toFixed(
-                0,
-              )}%, ${a.toFixed(2)})`,
-            )
-          }
-        />
-      );
+      ColorPicker = HslaStringColorPicker;
       break;
     }
   }
@@ -212,7 +163,15 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
       onVisibilityChange={(isVisible: boolean) => {
         setIsOpen(isVisible);
       }}
-      tooltip={() => <Box sx={{ p: 2 }}>{colorPicker}</Box>}
+      tooltip={() => (
+        <Box sx={{ p: 2 }}>
+          <ColorPicker
+            sx={sxProps}
+            color={control.value}
+            onChange={handleChange}
+          />
+        </Box>
+      )}
     >
       <Button
         css={{
