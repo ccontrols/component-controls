@@ -104,13 +104,17 @@ export const getHomePath = (store: Store) => {
 
 export const getRoutePath = (store: Store, route?: string) => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
-
-  return route
-    ? removeTrailingSlash(
-        `${ensureTrailingSlash(siteRoot)}${removeStartingSlash(route)}`,
-      )
-    : undefined;
+  if (route) {
+    if (route.startsWith('#')) {
+      return route;
+    }
+    return removeTrailingSlash(
+      `${ensureTrailingSlash(siteRoot)}${removeStartingSlash(route)}`,
+    );
+  }
+  return undefined;
 };
+
 export const docStoryToId = (docId: string, storyId: string) =>
   toId(docId, storyNameFromExport(storyId));
 
