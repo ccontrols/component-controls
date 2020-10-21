@@ -59,6 +59,11 @@ exports[`Application/App Overview 1`] = `
                 aria-label="Component controls"
                 class="css-30gkju"
                 href="/"
+              />
+              <a
+                aria-label="Component controls"
+                class="css-30gkju"
+                href="/"
               >
                 <img
                   alt="Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
@@ -270,6 +275,7 @@ exports[`Application/CategoryList Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
+          <div />
           <div
             class="css-1hu569t"
           />
@@ -350,6 +356,7 @@ exports[`Application/CategoryPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
+          <div />
           <div
             class="css-1hu569t"
           />
@@ -577,6 +584,7 @@ exports[`Application/Container Overview 1`] = `
       <div
         class="css-1nu2k4w"
       >
+        <div />
         <div
           class="css-1hu569t"
         />
@@ -629,6 +637,7 @@ exports[`Application/DocPage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
+          <div />
           <div
             class="css-1hu569t"
           />
@@ -682,6 +691,7 @@ exports[`Application/DocumentHomePage Overview 1`] = `
         <div
           class="css-1nu2k4w"
         >
+          <div />
           <div
             class="css-1hu569t"
           />
@@ -1008,6 +1018,11 @@ exports[`Application/Header Custom Left 1`] = `
               aria-label="Component controls"
               class="css-30gkju"
               href="/"
+            />
+            <a
+              aria-label="Component controls"
+              class="css-30gkju"
+              href="/"
             >
               <img
                 alt="Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
@@ -1176,6 +1191,11 @@ exports[`Application/Header Custom Right 1`] = `
           <div
             class="css-ldwe25"
           >
+            <a
+              aria-label="Component controls"
+              class="css-30gkju"
+              href="/"
+            />
             <a
               aria-label="Component controls"
               class="css-30gkju"
@@ -1352,6 +1372,11 @@ exports[`Application/Header Customized 1`] = `
           <div
             class="css-ldwe25"
           >
+            <a
+              aria-label="Component controls"
+              class="css-30gkju"
+              href="/"
+            />
             <a
               aria-label="Component controls"
               class="css-30gkju"
@@ -1594,6 +1619,11 @@ exports[`Application/Header Overview 1`] = `
           <div
             class="css-ldwe25"
           >
+            <a
+              aria-label="Component controls"
+              class="css-30gkju"
+              href="/"
+            />
             <a
               aria-label="Component controls"
               class="css-30gkju"

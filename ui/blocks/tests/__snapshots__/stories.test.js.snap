@@ -1253,6 +1253,7 @@ exports[`Blocks/Container Overview 1`] = `
     <div
       class="css-1nu2k4w"
     >
+      <div />
       <div
         class="css-1hu569t"
       />
@@ -1427,7 +1428,11 @@ exports[`Blocks/DocumentItem Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/EditPage Overview 1`] = `<DocumentFragment />`;
+exports[`Blocks/EditPage Overview 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;
 
 exports[`Blocks/PageContainer Components 1`] = `
 <DocumentFragment>
