@@ -1,7 +1,9 @@
 import * as path from 'path';
 import { PresetType, PresetOptions } from '../types';
+import MiniCssExtractPLugin from 'mini-css-extract-plugin';
 
 export const react: PresetType = (options?: PresetOptions) => {
+  const isProd = process.env.NODE_ENV === 'production';
   return {
     performance: { hints: false },
     module: {
@@ -64,12 +66,14 @@ export const react: PresetType = (options?: PresetOptions) => {
         {
           test: /\.css$/,
           use: [
-            'isomorphic-style-loader',
+            isProd ? MiniCssExtractPLugin.loader : 'style-loader',
             {
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
-                esModule: false,
+                modules: {
+                  localIdentName: '[name]__[local]__[hash:base64:5]',
+                },
               },
             },
           ],

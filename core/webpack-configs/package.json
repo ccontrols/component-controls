@@ -45,13 +45,14 @@
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
+    "@types/mini-css-extract-plugin": "^1.0.0",
     "@types/jest": "^26.0.10",
     "css-loader": "^5.0.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "file-loader": "^6.0.0",
-    "isomorphic-style-loader": "^5.1.0",
     "jest": "^26.4.2",
+    "mini-css-extract-plugin": "^1.1.1",
     "url-loader": "^4.1.0"
   },
   "jest": {
