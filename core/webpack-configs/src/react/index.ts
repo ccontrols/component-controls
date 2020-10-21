@@ -61,7 +61,10 @@ export const react: PresetType = (options?: PresetOptions) => {
             ),
           },
         },
-
+        {
+          test: /\.css$/i,
+          use: [require.resolve('style-loader'), require.resolve('css-loader')],
+        },
         {
           test: /\.txt$/i,
           use: require.resolve('raw-loader'),
