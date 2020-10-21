@@ -113,15 +113,17 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
             ref={pageRef}
           >
             {tabs &&
-              tabs.map((tab, index) => {
-                const route =
-                  tab.route || (tab.title ? tab.title.toLowerCase() : '');
-                return (
-                  <TabPanel key={`panel_${route}`}>
-                    {tabIndex === index ? renderTab(tab) : null}
-                  </TabPanel>
-                );
-              })}
+              (tabs.length === 1
+                ? renderTab(tabs[0])
+                : tabs.map((tab, index) => {
+                    const route =
+                      tab.route || (tab.title ? tab.title.toLowerCase() : '');
+                    return (
+                      <TabPanel key={`panel_${route}`}>
+                        {tabIndex === index ? renderTab(tab) : null}
+                      </TabPanel>
+                    );
+                  }))}
           </PageContainer>
         </Tabs>
       </Box>

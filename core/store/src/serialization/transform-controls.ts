@@ -45,9 +45,11 @@ const controlShortcuts = (
           ),
         };
       }
+      return control;
     }
+    default:
+      return control;
   }
-  return control;
 };
 export const transformControls = (
   story: Story,

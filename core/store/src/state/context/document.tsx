@@ -188,9 +188,9 @@ interface NavigationResult {
   prevPage?: DocumentPage;
 }
 
-const useNavigationLinks = (doc: Document): NavigationResult => {
-  const docId = doc.title;
-  const type = doc.type || defDocType;
+const useNavigationLinks = (doc?: Document): NavigationResult => {
+  const docId = doc?.title;
+  const type = doc?.type || defDocType;
   const docs = useDocByType(type);
   const store = useStore();
   const activeTab = useActiveTab();
@@ -233,10 +233,7 @@ const useNavigationLinks = (doc: Document): NavigationResult => {
  */
 export const useNavigationInfo = (): NavigationResult => {
   const doc = useCurrentDocument();
-  if (doc) {
-    return useNavigationLinks(doc);
-  }
-  return {};
+  return useNavigationLinks(doc);
 };
 
 type UseGetDocumentPath = (

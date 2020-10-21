@@ -29,8 +29,8 @@ export const AppContext: FC<AppContextProps> = ({
   activeTab,
 }) => {
   const query =
-    typeof location !== 'undefined'
-      ? queryString.parse(location.search)
+    typeof window !== 'undefined'
+      ? queryString.parse(window.location.search)
       : undefined;
   const dynStoryId =
     query &&
