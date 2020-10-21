@@ -50,23 +50,29 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
     const LogoImage: FC<{ src: string }> = ({ src }) => (
       <Image alt={siteDescription} variant="appheader.logo" src={src} />
     );
-    const actions: ActionItems = [
-      {
-        node: logo ? (
-          typeof logo === 'string' ? (
-            <LogoLink>
-              <LogoImage src={logo} />
-            </LogoLink>
-          ) : (
-            logo
-          )
-        ) : logo === null ? (
+    let logoNode;
+    if (logo) {
+      logoNode =
+        typeof logo === 'string' ? (
+          <LogoLink>
+            <LogoImage src={logo} />
+          </LogoLink>
+        ) : (
+          logo
+        );
+    } else {
+      logoNode =
+        logo === null ? (
           'Home'
         ) : (
           <LogoLink>
             <LogoImage src={logoImg.default} />
           </LogoLink>
-        ),
+        );
+    }
+    const actions: ActionItems = [
+      {
+        node: logoNode,
         href: homePath,
         'aria-label': 'go to home page',
         id: 'home',
@@ -98,11 +104,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
       } else {
         actions[0].node = (
           <LogoLink>
-            {logo === null ? (
-              <Heading as="h2">{siteTitle}</Heading>
-            ) : (
-              <LogoImage src={logoImg.default} />
-            )}
+            {logo === null ? <Heading as="h2">{siteTitle}</Heading> : logoNode}
           </LogoLink>
         );
       }
