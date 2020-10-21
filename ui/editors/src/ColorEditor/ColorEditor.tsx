@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { ComponentType } from 'react';
+import React from 'react';
 import {
   HexColorPicker,
   HslaStringColorPicker,
@@ -114,11 +114,6 @@ const sxProps: SxStyleProp = {
   },
 };
 
-interface ColorPickerBaseProps {
-  color?: string;
-  onChange: (newColor: string) => void;
-}
-
 /**
  * Color control editor.
  */
@@ -130,7 +125,7 @@ export const ColorEditor: PropertyEditor = ({ name }) => {
   const handleChange = (color: string) => {
     onChange(color);
   };
-  let ColorPicker: ComponentType<ColorPickerBaseProps>;
+  let ColorPicker: typeof HexColorPicker;
   switch (kind) {
     case 'hex':
     default:
