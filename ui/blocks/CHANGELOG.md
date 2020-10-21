@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/ccontrols/component-controls/compare/v1.34.0...v1.35.0) (2020-10-21)
+
+
+### Bug Fixes
+
+* return empty div if no package ([654ae78](https://github.com/ccontrols/component-controls/commit/654ae78ab6639d488d9f238764e3bde0e9872b4b))
+
+
+
+
+
 # [1.34.0](https://github.com/ccontrols/component-controls/compare/v1.33.1...v1.34.0) (2020-10-21)
 
 **Note:** Version bump only for package @component-controls/blocks

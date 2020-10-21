@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/ccontrols/component-controls/compare/v1.34.0...v1.35.0) (2020-10-21)
+
+
+### Bug Fixes
+
+* local route remove site root ([f298df9](https://github.com/ccontrols/component-controls/commit/f298df9c1ccb80d2080524638699aa836da46899))
+* logo config when 1 doc type ([011a917](https://github.com/ccontrols/component-controls/commit/011a91719a93e233a4f5fb54ec7eb7896a277509))
+* muted color for dark theme ([2389f6a](https://github.com/ccontrols/component-controls/commit/2389f6aa61bd2e08f9df938433791616b919a974))
+* remove build script ([dbcf694](https://github.com/ccontrols/component-controls/commit/dbcf6946838a5a861884851ec6b7767ea47daba4))
+* return empty div if no package ([654ae78](https://github.com/ccontrols/component-controls/commit/654ae78ab6639d488d9f238764e3bde0e9872b4b))
+
+
+### Features
+
+* add built-in css loaders ([25ad34b](https://github.com/ccontrols/component-controls/commit/25ad34b6ab2c5ede4a5570c16a8d8fd3d639e729))
+* initial isomorphic css loader ([949b132](https://github.com/ccontrols/component-controls/commit/949b132147be8bec94d4cea91f793ad6bf7f1401))
+
+
+
+
+
 # [1.34.0](https://github.com/ccontrols/component-controls/compare/v1.33.1...v1.34.0) (2020-10-21)
 
 

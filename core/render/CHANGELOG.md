@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/ccontrols/component-controls/compare/v1.34.0...v1.35.0) (2020-10-21)
+
+
+### Features
+
+* initial isomorphic css loader ([949b132](https://github.com/ccontrols/component-controls/commit/949b132147be8bec94d4cea91f793ad6bf7f1401))
+
+
+
+
+
 # [1.34.0](https://github.com/ccontrols/component-controls/compare/v1.33.1...v1.34.0) (2020-10-21)
 
 **Note:** Version bump only for package @component-controls/render

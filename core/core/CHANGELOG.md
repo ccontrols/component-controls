@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/ccontrols/component-controls/compare/v1.34.0...v1.35.0) (2020-10-21)
+
+
+### Bug Fixes
+
+* local route remove site root ([f298df9](https://github.com/ccontrols/component-controls/commit/f298df9c1ccb80d2080524638699aa836da46899))
+
+
+
+
+
 # [1.34.0](https://github.com/ccontrols/component-controls/compare/v1.33.1...v1.34.0) (2020-10-21)
 
 
