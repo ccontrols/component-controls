@@ -1,10 +1,19 @@
 import * as path from 'path';
-import { PresetType, PresetOptions } from '../types';
-import MiniCssExtractPLugin from 'mini-css-extract-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import {
+  PresetType,
+  BuildProps,
+  defCssFileName,
+} from '@component-controls/core';
 
-export const react: PresetType = (options?: PresetOptions) => {
+export const react: PresetType = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
   return {
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: options.cssFileName || defCssFileName,
+      }),
+    ],
     performance: { hints: false },
     module: {
       rules: [
@@ -66,15 +75,25 @@ export const react: PresetType = (options?: PresetOptions) => {
         {
           test: /\.css$/,
           use: [
-            isProd ? MiniCssExtractPLugin.loader : 'style-loader',
+            // Creates `style` nodes from JS strings
+            isProd
+              ? MiniCssExtractPlugin.loader
+              : {
+                  loader: 'style-loader',
+                },
             {
+              // Translates CSS into CommonJS
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
                 modules: {
-                  localIdentName: '[name]__[local]__[hash:base64:5]',
+                  localIdentName: '[name].[local].[hash]',
                 },
               },
+            },
+            {
+              // Compiles Sass to CSS
+              loader: 'sass-loader',
             },
           ],
         },
