@@ -1,4 +1,4 @@
-import { RuleTypes } from '@component-controls/webpack-configs';
+import { RuleTypes } from '@component-controls/core';
 
 export interface PresetOptions {
   /**

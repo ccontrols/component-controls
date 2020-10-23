@@ -5,14 +5,12 @@ import { instrument } from './instrument';
 import { reactDocgen } from './react-docgen';
 import { reactDocgenTypescript } from './react-docgen-typescript';
 import {
+  BuildProps,
+  PresetType,
   RuleOptions,
   RuleTypes,
   RuleType,
-  PresetOptions,
-  PresetType,
-} from './types';
-export * from './types';
-export * from './compilation';
+} from '@component-controls/core';
 
 export { WebpackConfiguration };
 export const presetsFactory: {
@@ -24,7 +22,7 @@ export const presetsFactory: {
   react,
 };
 
-const getConfiguredPreset = (name: string, options?: PresetOptions) => {
+const getConfiguredPreset = (name: string, options: BuildProps) => {
   const preset = presetsFactory[name];
   if (typeof preset === 'function') {
     return preset(options);
@@ -72,7 +70,7 @@ const deepMerge = (dest: any, source: any) => {
  */
 export const getWebpackConfig = (
   presets: RuleTypes,
-  options?: PresetOptions,
+  options: BuildProps,
 ): WebpackConfiguration => {
   const result: WebpackConfiguration = presets.reduce(
     (acc: WebpackConfiguration, config: RuleType) => {
@@ -113,18 +111,18 @@ export const deepMergeWebpackConfig = (
 
 /**
  * merge webpack config with custom set of presets
- * @param webPack passed configuration to merge with
+ * @param webpack passed configuration to merge with
  * @param presets custom config
  */
 
 export const mergeWebpackConfig = (
-  webPack?: WebpackConfiguration,
-  presets?: RuleTypes,
-  options?: PresetOptions,
+  webpack: WebpackConfiguration | undefined,
+  presets: RuleTypes | undefined,
+  options: BuildProps,
 ): WebpackConfiguration => {
   if (!presets) {
-    return webPack || {};
+    return webpack || {};
   }
   const newConfig = getWebpackConfig(presets, options);
-  return deepMerge(webPack || {}, newConfig);
+  return deepMerge(webpack || {}, newConfig);
 };

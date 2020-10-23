@@ -7,10 +7,11 @@ import {
   CompilerCallbackFn,
 } from '@component-controls/webpack-compile';
 import {
-  CompileProps,
+  BuildProps,
   defaultCompileProps,
   getBundleName,
-} from '@component-controls/webpack-configs';
+  Store,
+} from '@component-controls/core';
 
 import {
   CreatePagesArgs,
@@ -18,7 +19,6 @@ import {
   PluginCallback,
   Page,
 } from 'gatsby';
-import { Store } from '@component-controls/core';
 import {
   getIndexPage,
   getHomePages,
@@ -33,11 +33,11 @@ const { StorePlugin } = require('@component-controls/store/plugin');
 
 export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
-  options: CompileProps,
+  options: BuildProps,
   doneCb: PluginCallback,
 ) => {
   const { createPage, deletePage } = actions;
-  const config: CompileProps = {
+  const config: BuildProps = {
     ...defaultCompileProps,
     ...options,
   };
@@ -126,7 +126,7 @@ export const createPagesStatefully = async (
 
 exports.onCreateWebpackConfig = (
   { actions }: CreateWebpackConfigArgs,
-  options: CompileProps,
+  options: BuildProps,
 ) => {
   //inject store bundle name
   actions.setWebpackConfig({

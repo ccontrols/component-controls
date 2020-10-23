@@ -6,10 +6,7 @@ import {
   CompilerCallbackFn,
 } from '@component-controls/webpack-compile';
 import { log } from '@component-controls/logger';
-import {
-  CompileProps,
-  defaultCompileProps,
-} from '@component-controls/webpack-configs';
+import { BuildProps, defaultCompileProps } from '@component-controls/core';
 import { Store } from '@component-controls/core';
 import { loadStore, getSiteMap } from '@component-controls/store';
 
@@ -18,20 +15,20 @@ module.exports = ({
   configPath,
   presets,
   staticFolder,
-  webPack,
+  webpack,
   ...rest
-}: CompileProps) => () => {
+}: BuildProps) => () => {
   return {
     /**
      * we need some async function, to make sure the compilation process is completed
      */
     async headers() {
-      const userProps: CompileProps = {
+      const userProps: BuildProps = {
         bundleName,
         configPath,
-        webPack,
+        webpack,
       };
-      const config: CompileProps = {
+      const config: BuildProps = {
         ...defaultCompileProps,
         ...{
           distFolder: path.resolve(__dirname),
