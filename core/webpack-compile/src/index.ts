@@ -1,26 +1,20 @@
 import { log, setLogOptions } from '@component-controls/logger';
+import { BuildProps, WatchProps } from '@component-controls/core';
+
 import {
-  CompileProps,
+  runCompiler,
+  CompilerCallbackFn,
+  getBundleName,
   CompileResults,
-  WatchProps,
-} from '@component-controls/webpack-configs';
-import { runCompiler, CompilerCallbackFn, getBundleName } from './utilities';
-export { CompilerCallbackFn, getBundleName };
+} from './utilities';
+export { CompilerCallbackFn, CompileResults, getBundleName };
 
 /**
  * compile the stories with webpack
  * returns the stories store object
  */
 export const compile = (
-  {
-    webPack,
-    presets,
-    configPath,
-    staticFolder,
-    distFolder,
-    bundleName,
-    logOptions,
-  }: CompileProps,
+  { logOptions, ...rest }: BuildProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   setLogOptions(logOptions);
@@ -28,13 +22,8 @@ export const compile = (
   return runCompiler(
     (compiler, callback) => compiler.run(callback),
     {
-      webPack,
+      ...rest,
       mode: 'production',
-      presets,
-      configPath,
-      staticFolder,
-      distFolder,
-      bundleName,
     },
     callback,
   );
@@ -45,16 +34,7 @@ export const compile = (
  * returns the stories store object
  */
 export const watch = (
-  {
-    webPack,
-    presets,
-    configPath,
-    watchOptions,
-    staticFolder,
-    distFolder,
-    bundleName,
-    logOptions,
-  }: WatchProps,
+  { watchOptions, logOptions, ...rest }: WatchProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   setLogOptions(logOptions);
@@ -62,13 +42,8 @@ export const watch = (
   return runCompiler(
     (compiler, callback) => compiler.watch({ ...watchOptions }, callback),
     {
-      webPack,
+      ...rest,
       mode: 'development',
-      presets,
-      configPath,
-      staticFolder,
-      distFolder,
-      bundleName,
     },
     callback,
   );

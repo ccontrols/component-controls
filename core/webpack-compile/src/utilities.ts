@@ -1,5 +1,4 @@
 import webpack, {
-  Configuration,
   Compiler,
   Stats,
   HotModuleReplacementPlugin,
@@ -8,25 +7,36 @@ import webpack, {
 import path from 'path';
 import fs from 'fs';
 import { log, error } from '@component-controls/logger';
+import { mergeBuildConfiguration } from '@component-controls/config';
+import { BuildProps, defBundleName } from '@component-controls/core';
+import { LoadingStore } from '@component-controls/store';
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {
   mergeWebpackConfig,
   deepMergeWebpackConfig,
-  CompileProps,
-  CompileResults,
-  defBundleName,
 } from '@component-controls/webpack-configs';
-import { loadConfiguration } from '@component-controls/config';
 import { cliArgs } from './args';
 import { ResolveExternals, ResolveExternalsConfig } from './resolve_externals';
 import { defaultExternals } from './externals-config';
 
-export type CompileRunProps = CompileProps & {
+/**
+ * return type from compile and watch functions
+ */
+export interface CompileResults {
   /**
-   * webpack mode
+   * bundle full path and name
    */
-  mode: Configuration['mode'];
-};
+
+  bundleName: string;
+  /**
+   * the webpack stats object
+   */
+  stats: Stats;
+  /**
+   * the stories store
+   */
+  store?: LoadingStore;
+}
 
 /**
  * returns the default bumnle full path or args config
@@ -47,9 +57,9 @@ export const getBundleName = () => {
  */
 export type CompilerCallbackFn = (results: CompileResults) => void;
 
-const createConfig = (options: CompileRunProps): webpack.Configuration => {
+const createConfig = (options: BuildProps): webpack.Configuration => {
   const {
-    webPack,
+    webpack,
     presets,
     configPath,
     mode,
@@ -92,20 +102,18 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
       },
       externals: {},
       plugins,
-      ...(webPack || {}),
+      ...(webpack || {}),
     },
     presets,
-    { staticFolder, distFolder },
+    { staticFolder, distFolder, ...options },
   );
   //add all the aliases to avoid double loading of packages
   const alias = new ResolveExternals(webpackConfig as ResolveExternalsConfig);
   defaultExternals.forEach(a => alias.addAlias(a));
 
-  const runConfig = loadConfiguration(process.cwd(), configPath);
-
   const userWebpackConfig =
-    runConfig?.config &&
-    (runConfig.config.webpack || runConfig.config.finalWebpack);
+    options && (options.webpack || options.finalWebpack);
+
   if (!userWebpackConfig) {
     return webpackConfig;
   }
@@ -116,12 +124,13 @@ const createConfig = (options: CompileRunProps): webpack.Configuration => {
 
 export const runCompiler = (
   run: (compiler: Compiler, callback: Parameters<Compiler['run']>[0]) => void,
-
-  props: CompileRunProps,
+  props: BuildProps,
   callback?: CompilerCallbackFn,
 ): Promise<CompileResults> => {
   return new Promise(resolve => {
-    const compiler = webpack(createConfig(props));
+    const buildConfig = mergeBuildConfiguration(props);
+    const compiler = webpack(createConfig(buildConfig));
+
     run(compiler, (err, stats) => {
       const bundleName = path.join(
         stats?.compilation.outputOptions?.path || '',
