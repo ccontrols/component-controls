@@ -37,10 +37,18 @@
     "@component-controls/store": "^1.35.1",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
+    "css-loader": "^5.0.0",
     "deepmerge": "^4.2.2",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^1.1.1",
     "raw-loader": "^4.0.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
     "typescript": "^3.8.3",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0"
+
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
@@ -48,12 +56,8 @@
     "@types/jest": "^26.0.10",
     "@types/mini-css-extract-plugin": "^1.0.0",
     "cross-env": "^5.2.1",
-    "css-loader": "^5.0.0",
     "eslint": "^6.5.1",
-    "file-loader": "^6.0.0",
-    "jest": "^26.4.2",
-    "mini-css-extract-plugin": "^1.1.1",
-    "url-loader": "^4.1.0"
+    "jest": "^26.4.2"
   },
   "jest": {
     "testEnvironment": "node",
