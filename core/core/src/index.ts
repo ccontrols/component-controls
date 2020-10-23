@@ -1,3 +1,4 @@
+export * from './build';
 export * from './components';
 export * from './configuration';
 export * from './controls';
