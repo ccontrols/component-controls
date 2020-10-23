@@ -1,4 +1,4 @@
-import { Configuration as WebpackConfiguration } from 'webpack';
+import { BuildProps } from './build';
 import { ActionItems } from './utility';
 import { ComponentType, ReactNode } from 'react';
 import { StoryRenderFn } from './utility';
@@ -108,12 +108,6 @@ export type PageConfiguration = {
 
 export type PagesConfiguration = Record<DocType, PageConfiguration>;
 
-type WebpackConfigFn = (
-  config: WebpackConfiguration,
-  options?: any,
-) => WebpackConfiguration;
-type WebpackConfig = WebpackConfiguration | WebpackConfigFn;
-
 export type PagesOnlyRoutes = Record<
   DocType,
   Pick<PageConfiguration, 'basePath' | 'sideNav'> & {
@@ -138,7 +132,7 @@ export type SitemapConfig =
  * global configuration used at build time
  * stored in a file named main.js/main.ts
  */
-export interface BuildConfiguration {
+export type BuildConfiguration = BuildProps & {
   /**
    * wild card search string for the stories
    * internally using `glob` for the search: https://www.npmjs.com/package/glob
@@ -168,12 +162,6 @@ export interface BuildConfiguration {
    */
   categories?: DocType[];
   /**
-   * custom webpack configuration setup. One or the other will be used
-   */
-  webpack?: WebpackConfig;
-  finalWebpack?: WebpackConfig;
-
-  /**
    * if false, disable automatic sitemap generation
    */
   siteMap?: SitemapConfig;
@@ -187,7 +175,7 @@ export interface BuildConfiguration {
    * instrumentation configuration
    */
   instrument?: any;
-}
+};
 
 export interface ToolbarConfig {
   /**

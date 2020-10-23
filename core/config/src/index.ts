@@ -161,3 +161,12 @@ export const configRequireContext = ({
     : undefined;
   return contexts;
 };
+
+/**
+ * merge a configuration passed through cli or tools, with the build configration from the config path
+ */
+export const mergeBuildConfiguration = (config: BuildConfiguration) => {
+  const { configPath } = config;
+  const buildConfig = loadConfiguration(process.cwd(), configPath);
+  return { ...buildConfig?.config, ...config };
+};
