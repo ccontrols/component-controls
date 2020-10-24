@@ -1,5 +1,6 @@
 import * as path from 'path';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ExtractCssPlugin from 'extract-css-chunks-webpack-plugin';
+
 import {
   PresetType,
   BuildProps,
@@ -9,7 +10,7 @@ import {
 export const react: PresetType = (options: BuildProps) => {
   return {
     plugins: [
-      new MiniCssExtractPlugin({
+      new ExtractCssPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
     ],
@@ -76,7 +77,7 @@ export const react: PresetType = (options: BuildProps) => {
           use: [
             // Creates `style` nodes from JS strings
             // will export to a consolidated css file
-            MiniCssExtractPlugin.loader,
+            ExtractCssPlugin.loader,
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',

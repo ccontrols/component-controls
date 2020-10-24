@@ -39,8 +39,8 @@
     "babel-preset-react-app": "^9.0.0",
     "css-loader": "^5.0.0",
     "deepmerge": "^4.2.2",
+    "extract-css-chunks-webpack-plugin": "^4.7.5",
     "file-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^1.1.1",
     "raw-loader": "^4.0.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
@@ -54,7 +54,6 @@
     "@babel/preset-env": "^7.9.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/jest": "^26.0.10",
-    "@types/mini-css-extract-plugin": "^1.0.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2"
