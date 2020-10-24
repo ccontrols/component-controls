@@ -15,7 +15,8 @@
     "package.json",
     "README.md",
     "gatsby-config.js",
-    "gatsby-node.js"
+    "gatsby-node.js",
+    "gatsby-ssr.js"
   ],
   "scripts": {
     "build": "yarn cross-env NODE_ENV=production rollup -c",

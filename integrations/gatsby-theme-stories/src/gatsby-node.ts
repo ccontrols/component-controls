@@ -10,8 +10,10 @@ import {
   BuildProps,
   defaultCompileProps,
   getBundleName,
+  getCSSBundleName,
   Store,
 } from '@component-controls/core';
+import { mergeBuildConfiguration } from '@component-controls/config';
 
 import {
   CreatePagesArgs,
@@ -116,6 +118,7 @@ export const createPagesStatefully = async (
         log('creating sitemap', sitemapname);
         fs.writeFileSync(sitemapname, sitemap, 'utf8');
       }
+      process.env.GATSBY_CC_CSS_FILENAME = getCSSBundleName(store.config);
     }
 
     doneCb(null, null);
@@ -130,6 +133,10 @@ exports.onCreateWebpackConfig = (
 ) => {
   //inject store bundle name
   actions.setWebpackConfig({
-    plugins: [new StorePlugin({ bundleFileName: getBundleName(options) })],
+    plugins: [
+      new StorePlugin({
+        bundleFileName: getBundleName(mergeBuildConfiguration(options)),
+      }),
+    ],
   });
 };

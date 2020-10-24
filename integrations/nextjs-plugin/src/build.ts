@@ -6,7 +6,11 @@ import {
   CompilerCallbackFn,
 } from '@component-controls/webpack-compile';
 import { log } from '@component-controls/logger';
-import { BuildProps, defaultCompileProps } from '@component-controls/core';
+import {
+  BuildProps,
+  defaultCompileProps,
+  getCSSBundleName,
+} from '@component-controls/core';
 import { Store } from '@component-controls/core';
 import { loadStore, getSiteMap } from '@component-controls/store';
 
@@ -56,6 +60,7 @@ module.exports = ({
             log('creating sitemap', sitemapname);
             fs.writeFileSync(sitemapname, sitemap, 'utf8');
           }
+          process.env.NEXT_CC_CSS_FILENAME = getCSSBundleName(store.config);
         }
       };
       const compiler =

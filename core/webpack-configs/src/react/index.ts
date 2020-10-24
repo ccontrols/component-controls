@@ -7,7 +7,6 @@ import {
 } from '@component-controls/core';
 
 export const react: PresetType = (options: BuildProps) => {
-  const isProd = process.env.NODE_ENV === 'production';
   return {
     plugins: [
       new MiniCssExtractPlugin({
@@ -76,11 +75,8 @@ export const react: PresetType = (options: BuildProps) => {
           test: /\.css$/,
           use: [
             // Creates `style` nodes from JS strings
-            isProd
-              ? MiniCssExtractPlugin.loader
-              : {
-                  loader: 'style-loader',
-                },
+            // will export to a consolidated css file
+            MiniCssExtractPlugin.loader,
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',
