@@ -1,5 +1,6 @@
 import * as path from 'path';
 import ExtractCssPlugin from 'extract-css-chunks-webpack-plugin';
+import OptimizeCssAssetsWebpackPlugin from 'optimize-css-assets-webpack-plugin';
 
 import {
   PresetType,
@@ -8,12 +9,14 @@ import {
 } from '@component-controls/core';
 
 export const react: PresetType = (options: BuildProps) => {
-  return {
+  const isProd = process.env.NODE_ENV === 'production';
+  const result: PresetType = {
     plugins: [
       new ExtractCssPlugin({
         filename: options.cssFileName || defCssFileName,
       }),
     ],
+    optimization: { minimizer: [] },
     performance: { hints: false },
     module: {
       rules: [
@@ -121,4 +124,16 @@ export const react: PresetType = (options: BuildProps) => {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
   };
+  if (isProd) {
+    result.optimization = {
+      minimizer: [
+        new OptimizeCssAssetsWebpackPlugin({
+          cssProcessorOptions: {
+            discardComments: { removeAll: true },
+          },
+        }),
+      ],
+    };
+  }
+  return result;
 };
