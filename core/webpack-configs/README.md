@@ -15,12 +15,6 @@
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
     -   [presetsFactory](#presetsfactory)
-    -   [PresetOptions](#presetoptions)
-    -   [RuleOptions](#ruleoptions)
-    -   [PresetCallback](#presetcallback)
-    -   [PresetType](#presettype)
-    -   [RuleType](#ruletype)
-    -   [RuleTypes](#ruletypes)
 
 # Overview
 
@@ -95,7 +89,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## arrayMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L35)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L33)_
 
 **function** arrayMerge(`dest`\*: any\[], `src`\*: any\[]): any\[];
 
@@ -109,7 +103,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMerge
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L62)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L60)_
 
 **function** deepMerge(`dest`\*: any, `source`\*: any): any;
 
@@ -125,7 +119,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 deep merge two webpack configurations
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L103)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L101)_
 
 **function** deepMergeWebpackConfig(`dest`: [WebpackConfiguration](#webpackconfiguration), `source`: [WebpackConfiguration](#webpackconfiguration)): [WebpackConfiguration](#webpackconfiguration);
 
@@ -139,7 +133,7 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## deepMergeWithPresets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L54)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L52)_
 
 **function** deepMergeWithPresets(`dest`\*: any, `source`\*: any): any;
 
@@ -153,121 +147,64 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 
 ## getConfiguredPreset
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L27)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L25)_
 
-**function** getConfiguredPreset(`name`\*: string, `options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
+**function** getConfiguredPreset(`name`\*: string, `options`\*: [BuildProps](#buildprops)): [Configuration](#configuration);
 
 ### parameters
 
-| Name      | Type                            | Description |
-| --------- | ------------------------------- | ----------- |
-| `name*`   | string                          |             |
-| `options` | [PresetOptions](#presetoptions) |             |
-| `returns` | [Configuration](#configuration) |             |
+| Name       | Type                            | Description |
+| ---------- | ------------------------------- | ----------- |
+| `name*`    | string                          |             |
+| `options*` | [BuildProps](#buildprops)       |             |
+| `returns`  | [Configuration](#configuration) |             |
 
 ## getWebpackConfig
 
 expands the presets into webpack config
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L73)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L71)_
 
-**function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes), `options`: [PresetOptions](#presetoptions)): [WebpackConfiguration](#webpackconfiguration);
+**function** getWebpackConfig(`presets`\*: [RuleTypes](#ruletypes), `options`\*: [BuildProps](#buildprops)): [WebpackConfiguration](#webpackconfiguration);
 
 ### parameters
 
 | Name       | Type                                          | Description    |
 | ---------- | --------------------------------------------- | -------------- |
 | `presets*` | [RuleTypes](#ruletypes)                       | custom config  |
-| `options`  | [PresetOptions](#presetoptions)               |                |
+| `options*` | [BuildProps](#buildprops)                     |                |
 | `returns`  | [WebpackConfiguration](#webpackconfiguration) |                |
 
 ## mergeWebpackConfig
 
 merge webpack config with custom set of presets
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L120)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L118)_
 
-**function** mergeWebpackConfig(`webPack`: [WebpackConfiguration](#webpackconfiguration), `presets`: [RuleTypes](#ruletypes), `options`: [PresetOptions](#presetoptions)): [WebpackConfiguration](#webpackconfiguration);
+**function** mergeWebpackConfig(`webpack`\*: [WebpackConfiguration](#webpackconfiguration) | undefined, `presets`\*: [RuleTypes](#ruletypes) | undefined, `options`\*: [BuildProps](#buildprops)): [WebpackConfiguration](#webpackconfiguration);
 
 ### parameters
 
-| Name      | Type                                          | Description                        |
-| --------- | --------------------------------------------- | ---------------------------------- |
-| `webPack` | [WebpackConfiguration](#webpackconfiguration) | passed configuration to merge with |
-| `presets` | [RuleTypes](#ruletypes)                       | custom config                      |
-| `options` | [PresetOptions](#presetoptions)               |                                    |
-| `returns` | [WebpackConfiguration](#webpackconfiguration) |                                    |
+| Name       | Type                                                       | Description                        |
+| ---------- | ---------------------------------------------------------- | ---------------------------------- |
+| `webpack*` | [WebpackConfiguration](#webpackconfiguration) \| undefined | passed configuration to merge with |
+| `presets*` | [RuleTypes](#ruletypes) \| undefined                       | custom config                      |
+| `options*` | [BuildProps](#buildprops)                                  |                                    |
+| `returns`  | [WebpackConfiguration](#webpackconfiguration)              |                                    |
 
 ## presetsFactory
 
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L18)_
+_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L16)_
 
 
 
 ### properties
 
-| Name                       | Type                                                                                                                           | Description |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `instrument*`              | [Configuration](#configuration)                                                                                                |             |
-| `react*`                   | [Configuration](#configuration) \| **function** (`options`: [PresetOptions](#presetoptions)): [Configuration](#configuration); |             |
-| `react-docgen*`            | [Configuration](#configuration)                                                                                                |             |
-| `react-docgen-typescript*` | [Configuration](#configuration)                                                                                                |             |
-
-## PresetOptions
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L11)_
-
-
-
-### properties
-
-| Name           | Type   | Description |
-| -------------- | ------ | ----------- |
-| `distFolder`   | string |             |
-| `staticFolder` | string |             |
-
-## RuleOptions
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L3)_
-
-
-
-### properties
-
-| Name      | Type                            | Description |
-| --------- | ------------------------------- | ----------- |
-| `config*` | [Configuration](#configuration) |             |
-| `name*`   | string                          |             |
-
-## PresetCallback
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L18)_
-
-**function** (`options`: [PresetOptions](#presetoptions)): [Configuration](#configuration);
-
-### parameters
-
-| Name      | Type                            | Description |
-| --------- | ------------------------------- | ----------- |
-| `options` | [PresetOptions](#presetoptions) |             |
-| `returns` | [Configuration](#configuration) |             |
-
-## PresetType
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L19)_
-
-[Configuration](#configuration) \| [PresetCallback](#presetcallback)
-
-## RuleType
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L7)_
-
-string | [RuleOptions](#ruleoptions)
-
-## RuleTypes
-
-_defined in [@component-controls/webpack-configs/src/types.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/types.ts#L9)_
-
-[RuleType](#ruletype)\[]
+| Name                       | Type                                                                                                                       | Description |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `instrument*`              | [Configuration](#configuration)                                                                                            |             |
+| `react*`                   | [Configuration](#configuration) \| **function** (`options`\*: [BuildProps](#buildprops)): [Configuration](#configuration); |             |
+| `react-docgen*`            | [Configuration](#configuration)                                                                                            |             |
+| `react-docgen-typescript*` | [Configuration](#configuration)                                                                                            |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

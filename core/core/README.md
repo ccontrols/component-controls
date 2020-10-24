@@ -63,7 +63,6 @@
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
     -   [useAsync](#useasync)
-    -   [BuildConfiguration](#buildconfiguration)
     -   [ControlsConfig](#controlsconfig)
     -   [PageLayoutProps](#pagelayoutprops)
     -   [RunOnlyConfiguration](#runonlyconfiguration)
@@ -71,6 +70,7 @@
     -   [SitemapConfigPage](#sitemapconfigpage)
     -   [TabConfiguration](#tabconfiguration)
     -   [ToolbarConfig](#toolbarconfig)
+    -   [BuildConfiguration](#buildconfiguration)
     -   [DocType](#doctype)
     -   [FrameworkRenderFn](#frameworkrenderfn)
     -   [PageConfiguration](#pageconfiguration)
@@ -81,8 +81,6 @@
     -   [SitemapConfig](#sitemapconfig)
     -   [StaticMenuItem](#staticmenuitem)
     -   [StaticMenuItems](#staticmenuitems)
-    -   [WebpackConfig](#webpackconfig)
-    -   [WebpackConfigFn](#webpackconfigfn)
     -   [convertConfig](#convertconfig)
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
@@ -101,24 +99,27 @@
     -   [ComponentControl](#componentcontrol-1)
     -   [TypeValue](#typevalue-1)
     -   [PackageDependency](#packagedependency-1)
-    -   [WebpackConfig](#webpackconfig-1)
-    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
-    -   [SitemapConfig](#sitemapconfig-1)
     -   [StaticMenuItems](#staticmenuitems-1)
     -   [PagesConfiguration](#pagesconfiguration-1)
     -   [FrameworkRenderFn](#frameworkrenderfn-1)
     -   [ActionItems](#actionitems-1)
+    -   [PagesOnlyRoutes](#pagesonlyroutes-1)
+    -   [SitemapConfig](#sitemapconfig-1)
     -   [PageTabs](#pagetabs-1)
     -   [PageConfiguration](#pageconfiguration-1)
+    -   [BuildConfiguration](#buildconfiguration-1)
     -   [StaticMenuItem](#staticmenuitem-1)
-    -   [WebpackConfigFn](#webpackconfigfn-1)
     -   [Story](#story-2)
     -   [DocType](#doctype-2)
     -   [Document](#document-2)
     -   [PageTabs](#pagetabs-2)
+    -   [PagesOnlyRoutes](#pagesonlyroutes-2)
+    -   [SitemapConfig](#sitemapconfig-2)
     -   [StoryArguments](#storyarguments-2)
     -   [StoryRenderFn](#storyrenderfn-2)
     -   [DocType](#doctype-3)
+    -   [PageConfiguration](#pageconfiguration-2)
+    -   [PageTabs](#pagetabs-3)
 
 # Overview
 
@@ -1077,36 +1078,11 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | `immediate*`     | boolean                                                                                                                                   |             |
 | `returns`        | **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'idle' \| 'pending' \| 'success' \| 'error'**value**:  |             |
 
-## BuildConfiguration
-
-global configuration used at build time
-stored in a file named main.js/main.ts
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L141)_
-
-
-
-### properties
-
-| Name           | Type                                | Description                                                                                                                                    |
-| -------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `categories`   | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
-| `files`        | string \| string\[]                 | alternative naming for docz compatibility                                                                                                      |
-| `finalWebpack` | [WebpackConfig](#webpackconfig)     |                                                                                                                                                |
-| `ignore`       | string\[]                           | files to ignore. by default \['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']                              |
-| `instrument`   | any                                 | instrumentation configuration                                                                                                                  |
-| `pages`        | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
-| `siteMap`      | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
-| `siteRoot`     | string                              | the site base url, by default the site starts at /                                                                                             |
-| `siteUrl`      | string                              | Deployed site url. Also used for auto generated sitemap.                                                                                       |
-| `stories`      | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
-| `webpack`      | [WebpackConfig](#webpackconfig)     | custom webpack configuration setup. One or the other will be used                                                                              |
-
 ## ControlsConfig
 
 configuration options for the controls module
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L212)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L200)_
 
 
 
@@ -1137,7 +1113,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 global configuration used at build time
 stored in a file named main.js/main.ts
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L224)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L212)_
 
 
 
@@ -1182,7 +1158,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## SitemapConfigPage
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L124)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L118)_
 
 
 
@@ -1211,7 +1187,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## ToolbarConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L192)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L180)_
 
 
 
@@ -1221,6 +1197,28 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | ------- | --------------------------- | ------------------------ |
 | `left`  | [ActionItems](#actionitems) | left side toolbar items  |
 | `right` | [ActionItems](#actionitems) | right side toolbar items |
+
+## BuildConfiguration
+
+global configuration used at build time
+stored in a file named main.js/main.ts
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L135)_
+
+### properties
+
+| Name         | Type                                | Description                                                                                                                                    |
+| ------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BuildProps` | [BuildProps](#buildprops)           |                                                                                                                                                |
+| `categories` | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
+| `files`      | string \| string\[]                 | alternative naming for docz compatibility                                                                                                      |
+| `ignore`     | string\[]                           | files to ignore. by default \['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']                              |
+| `instrument` | any                                 | instrumentation configuration                                                                                                                  |
+| `pages`      | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `siteMap`    | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
+| `siteRoot`   | string                              | the site base url, by default the site starts at /                                                                                             |
+| `siteUrl`    | string                              | Deployed site url. Also used for auto generated sitemap.                                                                                       |
+| `stories`    | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
 
 ## DocType
 
@@ -1284,7 +1282,7 @@ Record&lt;
 
 ## PagesOnlyRoutes
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
 
 Record&lt;
 
@@ -1303,7 +1301,7 @@ Record&lt;
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L330)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L318)_
 
 ### properties
 
@@ -1314,7 +1312,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## SitemapConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L127)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L121)_
 
 **pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
 
@@ -1322,39 +1320,19 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L195)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
 
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L208)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L196)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
-## WebpackConfig
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L115)_
-
-[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
-
-## WebpackConfigFn
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
-
-**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
-
-### parameters
-
-| Name      | Type                                          | Description |
-| --------- | --------------------------------------------- | ----------- |
-| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
-| `options` | any                                           |             |
-| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
-
 ## convertConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L369)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L357)_
 
 **function** convertConfig(`config`\*: [RunConfiguration](#runconfiguration)): [RunConfiguration](#runconfiguration);
 
@@ -1367,7 +1345,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultBuildConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L378)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L366)_
 
 
 
@@ -1383,7 +1361,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 ## defaultRunConfig
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L333)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L321)_
 
 
 
@@ -1448,7 +1426,7 @@ Record&lt;string,
 
 ## RunConfiguration
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L330)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L318)_
 
 ### properties
 
@@ -1589,40 +1567,9 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 string
 
-## WebpackConfig
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L115)_
-
-[WebpackConfiguration](#webpackconfiguration) \| [WebpackConfigFn](#webpackconfigfn)
-
-## PagesOnlyRoutes
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L117)_
-
-Record&lt;
-
-[DocType](#doctype)
-
-, 
-
-### properties
-
-| Name   | Type                                                                      | Description |
-| ------ | ------------------------------------------------------------------------- | ----------- |
-| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
-| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
-
->
-
-## SitemapConfig
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L127)_
-
-**pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
-
 ## StaticMenuItems
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L208)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L196)_
 
 [StaticMenuItem](#staticmenuitem)\[]
 
@@ -1663,6 +1610,31 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 [ActionItem](#actionitem)\[]
 
+## PagesOnlyRoutes
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
+
+Record&lt;
+
+[DocType](#doctype)
+
+, 
+
+### properties
+
+| Name   | Type                                                                      | Description |
+| ------ | ------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
+
+>
+
+## SitemapConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L121)_
+
+**pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
+
 ## PageTabs
 
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L39)_
@@ -1686,27 +1658,35 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
 | `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
 
+## BuildConfiguration
+
+global configuration used at build time
+stored in a file named main.js/main.ts
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L135)_
+
+### properties
+
+| Name         | Type                                | Description                                                                                                                                    |
+| ------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BuildProps` | [BuildProps](#buildprops)           |                                                                                                                                                |
+| `categories` | [DocType](#doctype)\[]              | page types that are considered as categories fields as well                                                                                    |
+| `files`      | string \| string\[]                 | alternative naming for docz compatibility                                                                                                      |
+| `ignore`     | string\[]                           | files to ignore. by default \['readme.md', 'changelog.md', 'code_of_conduct.md', 'contributing.md', 'license.md']                              |
+| `instrument` | any                                 | instrumentation configuration                                                                                                                  |
+| `pages`      | [PagesOnlyRoutes](#pagesonlyroutes) | base url path for API documentation pages. Default is "docs/"                                                                                  |
+| `siteMap`    | [SitemapConfig](#sitemapconfig)     | if false, disable automatic sitemap generation                                                                                                 |
+| `siteRoot`   | string                              | the site base url, by default the site starts at /                                                                                             |
+| `siteUrl`    | string                              | Deployed site url. Also used for auto generated sitemap.                                                                                       |
+| `stories`    | string \| string\[]                 | wild card search string for the stories internally using \`glob\` for the search: https&#x3A;//www.npmjs.com/package/glob example: "./stories/ |
+
 ## StaticMenuItem
 
 static menu items
 
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L207)_
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L195)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
-
-## WebpackConfigFn
-
-_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
-
-**function** (`config`\*: [WebpackConfiguration](#webpackconfiguration), `options`: any): [WebpackConfiguration](#webpackconfiguration);
-
-### parameters
-
-| Name      | Type                                          | Description |
-| --------- | --------------------------------------------- | ----------- |
-| `config*` | [WebpackConfiguration](#webpackconfiguration) |             |
-| `options` | any                                           |             |
-| `returns` | [WebpackConfiguration](#webpackconfiguration) |             |
 
 ## Story
 
@@ -1776,6 +1756,31 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 [TabConfiguration](#tabconfiguration)\[]
 
+## PagesOnlyRoutes
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L111)_
+
+Record&lt;
+
+[DocType](#doctype)
+
+, 
+
+### properties
+
+| Name   | Type                                                                      | Description |
+| ------ | ------------------------------------------------------------------------- | ----------- |
+| `Pick` | Pick&lt;[PageConfiguration](#pageconfiguration), 'basePath' \| 'sideNav'> |             |
+| `tabs` | Pick&lt;[TabConfiguration](#tabconfiguration), 'route'>\[]                |             |
+
+>
+
+## SitemapConfig
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L121)_
+
+**pages**: **doc**: [SitemapConfigPage](#sitemapconfigpage)**home**: [SitemapConfigPage](#sitemapconfigpage)**index**: [SitemapConfigPage](#sitemapconfigpage) | boolean
+
 ## StoryArguments
 
 list of story arguments. Each argument can be a deconstructed argument of itself
@@ -1806,5 +1811,28 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L41)_
 
 'story' | 'blog' | 'page' | 'tags' | 'author' | string
+
+## PageConfiguration
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L72)_
+
+### properties
+
+| Name              | Type                                          | Description                                                                                                                   |
+| ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | string                                        | base url path for the page                                                                                                    |
+| `container`       | [ComponentType](#componenttype) \| null       | page container react component                                                                                                |
+| `indexHome`       | boolean                                       | whether to have an index home page for the doc type. if false, will show the first document of the doc type as the home page. |
+| `label`           | string                                        | label - used for menu labels                                                                                                  |
+| `sideNav`         | [SideNavConfiguration](#sidenavconfiguration) | side navigation configuration                                                                                                 |
+| `tabs`            | [PageTabs](#pagetabs)                         | tabs configuration for story-type pages                                                                                       |
+| `topMenu`         | boolean                                       | whether to add to the top navigation menu                                                                                     |
+| `PageLayoutProps` | [PageLayoutProps](#pagelayoutprops)           |                                                                                                                               |
+
+## PageTabs
+
+_defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L39)_
+
+[TabConfiguration](#tabconfiguration)\[]
 
 <!-- END-TSDOC-TYPESCRIPT -->

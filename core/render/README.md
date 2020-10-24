@@ -3,7 +3,6 @@
 -   [Overview](#overview)
 -   [Installation](#installation)
 -   [API](#api)
-    -   [renderers](#renderers)
 
 # Overview
 
@@ -22,17 +21,5 @@ $ npm install @component-controls/logger --save-dev
 <tsdoc-typescript entry="./src/index.ts" files="../specification/src/configuration.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
-
-## renderers
-
-_defined in [@component-controls/render/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/render/src/index.ts#L5)_
-
-
-
-### properties
-
-| Name     | Type                                                                                                                    | Description |
-| -------- | ----------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `react*` | **function** (`story`\*: [Story](#story), `doc`: [Document](#document), `options`: any): [ReactElement](#reactelement); |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->
