@@ -81,7 +81,6 @@ export const react: PresetType = (options: BuildProps) => {
               // Translates CSS into CommonJS
               loader: 'css-loader',
               options: {
-                importLoaders: 1,
                 modules: {
                   localIdentName: '[name].[local].[hash]',
                 },

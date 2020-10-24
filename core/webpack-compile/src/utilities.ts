@@ -8,11 +8,7 @@ import path from 'path';
 import fs from 'fs';
 import { log, error } from '@component-controls/logger';
 import { mergeBuildConfiguration } from '@component-controls/config';
-import {
-  BuildProps,
-  defBundleName,
-  getCSSBundleName,
-} from '@component-controls/core';
+import { BuildProps, defBundleName } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/store';
 import LoaderPlugin from '@component-controls/loader/plugin';
 import {

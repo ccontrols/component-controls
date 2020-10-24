@@ -124,6 +124,7 @@ Create a new or edit `_document.js` file in the pages folder:
 
 ```js:title=pages/_document.js
 import React from 'react';
+import fs from 'fs';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { extractCritical } from 'emotion-server';
 
@@ -131,6 +132,13 @@ export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     const styles = extractCritical(initialProps.html);
+    // following only if you are usng css in your componentes
+    let cssStyles;
+    const cssBundle = process.env.NEXT_CC_CSS_FILENAME;
+    if (cssBundle && fs.existsSync(cssBundle)) {
+      cssStyles = fs.readFileSync(cssBundle, 'utf8');
+    }
+    // end css styles
     return {
       ...initialProps,
       styles: (
@@ -140,6 +148,8 @@ export default class MyDocument extends Document {
             data-emotion-css={styles.ids.join(' ')}
             dangerouslySetInnerHTML={{ __html: styles.css }}
           />
+
+          {cssStyles && <style>{cssStyles}</style>}
         </>
       ),
     };
