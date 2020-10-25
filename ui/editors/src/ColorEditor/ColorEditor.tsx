@@ -22,22 +22,17 @@ const sxProps: SxStyleProp = {
   height: 200,
   userSelect: 'none',
   cursor: 'default',
+
   '.react-colorful__saturation': {
     position: 'relative',
     flexGrow: 1,
     borderBottom: '12px solid #000',
     borderRadius: '8px 8px 0 0',
     backgroundImage:
-      'linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #fff, rgba(255, 255, 255, 0));',
+      'linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #fff, rgba(255, 255, 255, 0))',
   },
-  '.react-colorful__alpha>div': {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    right: 0,
-    bottom: 0,
-  },
-  '.react-colorful__alpha:after, .react-colorful__saturation-pointer>div, .react-colorful__hue-pointer>div, .react-colorful__alpha-pointer>div': {
+
+  '.react-colorful__pointer-fill, .react-colorful__alpha-gradient': {
     content: '""',
     position: 'absolute',
     left: 0,
@@ -49,7 +44,7 @@ const sxProps: SxStyleProp = {
   },
 
   /* Improve elements rendering on light backgrounds */
-  '.react-colorful__alpha:after, .react-colorful__saturation': {
+  '.react-colorful__alpha-gradient, .react-colorful__saturation': {
     boxShadow: 'inset 0 0 0 1px rgba(0, 0, 0, 0.05)',
   },
 
@@ -60,15 +55,15 @@ const sxProps: SxStyleProp = {
 
   '.react-colorful__hue': {
     background:
-      'linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)',
+      'linear-gradient( to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%)',
   },
 
   /* Round bottom corners of the last element: `Hue` for `ColorPicker` or `Alpha` for `AlphaColorPicker` */
-  '.react-colorful__lastControl': {
+  '.react-colorful__last-control': {
     borderRadius: '0 0 8px 8px',
   },
 
-  'div[role=slider]': {
+  '.react-colorful__interactive': {
     position: 'absolute',
     left: 0,
     top: 0,
@@ -80,11 +75,7 @@ const sxProps: SxStyleProp = {
     touchAction: 'none',
   },
 
-  'div[role=slider]:focus .react-colorful__saturation-pointer, div[role=slider]:focus .react-colorful__hue-pointer, div[role=slider]:focus .react-colorful__alpha-pointer': {
-    transform: 'translate(-50%, -50%) scale(1.1)',
-  },
-
-  '.react-colorful__saturation-pointer, .react-colorful__hue-pointer, .react-colorful__alpha-pointer': {
+  '.react-colorful__pointer': {
     position: 'absolute',
     zIndex: 1,
     boxSizing: 'border-box',
@@ -97,8 +88,12 @@ const sxProps: SxStyleProp = {
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
   },
 
+  '.react-colorful__interactive:focus .react-colorful__pointer': {
+    transform: 'translate(-50%, -50%) scale(1.1)',
+  },
+
   /* Chessboard-like pattern for alpha related elements */
-  '.react-colorful__alpha': {
+  '.react-colorful__alpha, .react-colorful__alpha-pointer': {
     backgroundColor: '#fff',
     backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><rect x="8" width="8" height="8"/><rect y="8" width="8" height="8"/></svg>')`,
   },
