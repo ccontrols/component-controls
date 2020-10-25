@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.36.0](https://github.com/ccontrols/component-controls/compare/v1.35.1...v1.36.0) (2020-10-25)
+
+
+### Features
+
+* loaders quick configuration ([13c6c3a](https://github.com/ccontrols/component-controls/commit/13c6c3a516ffbd2607b1ca8b937d339f32618e87))
+
+
+
+
+
 ## [1.35.1](https://github.com/ccontrols/component-controls/compare/v1.35.0...v1.35.1) (2020-10-21)
 
 **Note:** Version bump only for package component-controls-nextjs-starter

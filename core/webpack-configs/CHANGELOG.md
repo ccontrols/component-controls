@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.36.0](https://github.com/ccontrols/component-controls/compare/v1.35.1...v1.36.0) (2020-10-25)
+
+
+### Features
+
+* add optimize-css-assets-webpack-plugin ([ed297f5](https://github.com/ccontrols/component-controls/commit/ed297f57ac3f6f8b4facc9f289a74f217c3717d1))
+* handled gatsby ssr css production ([08f6e5c](https://github.com/ccontrols/component-controls/commit/08f6e5c0ab2274cacd152a4d384c525fd751454a))
+* loaders quick configuration ([13c6c3a](https://github.com/ccontrols/component-controls/commit/13c6c3a516ffbd2607b1ca8b937d339f32618e87))
+* nextjs css ssr production ([01cd343](https://github.com/ccontrols/component-controls/commit/01cd3436e74c40fd1197190bd2a7d24705a4d513))
+* replace with extract-css-chunks-webpack-plugin ([75a1eef](https://github.com/ccontrols/component-controls/commit/75a1eef616c2f4e31e1231dd84253ede584b67a9))
+
+
+
+
+
 ## [1.35.1](https://github.com/ccontrols/component-controls/compare/v1.35.0...v1.35.1) (2020-10-21)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

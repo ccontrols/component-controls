@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/blocks",
-  "version": "1.35.1",
+  "version": "1.36.0",
   "description": "Component controls core documentation blocks.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,10 +30,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/components": "^1.35.1",
-    "@component-controls/core": "^1.35.1",
-    "@component-controls/editors": "^1.35.1",
-    "@component-controls/store": "^1.35.1",
+    "@component-controls/components": "^1.36.0",
+    "@component-controls/core": "^1.36.0",
+    "@component-controls/editors": "^1.36.0",
+    "@component-controls/store": "^1.36.0",
     "@primer/octicons-react": "^10.0.0",
     "@theme-ui/css": "^0.4.0-rc.1",
     "copy-to-clipboard": "^3.2.1",
@@ -51,8 +51,8 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.35.1",
-    "@component-controls/render": "^1.35.1",
+    "@component-controls/jest-snapshots": "^1.36.0",
+    "@component-controls/render": "^1.36.0",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@theme-ui/presets": "^0.3.0",
     "@types/mdx-js__react": "^1.5.1",
