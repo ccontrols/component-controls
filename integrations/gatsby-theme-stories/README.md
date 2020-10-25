@@ -71,7 +71,7 @@ _CategoryPage [source code](https://github.com/ccontrols/component-controls/tree
 
 | Name           | Type                                                  | Description |
 | -------------- | ----------------------------------------------------- | ----------- |
-| `pathContext*` | _{ type: string; category: string; docId?: string; }_ |             |
+| `pageContext*` | _{ type: string; category: string; docId?: string; }_ |             |
 
 ## <ins>DocHome</ins>
 
@@ -81,7 +81,7 @@ _DocHome [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 | Name           | Type                                                  | Description |
 | -------------- | ----------------------------------------------------- | ----------- |
-| `pathContext*` | _{ type: string; docId?: string; storyId?: string; }_ |             |
+| `pageContext*` | _{ type: string; docId?: string; storyId?: string; }_ |             |
 
 ## <ins>DocPage</ins>
 
@@ -91,6 +91,6 @@ _DocPage [source code](https://github.com/ccontrols/component-controls/tree/mast
 
 | Name           | Type                                                                                         | Description |
 | -------------- | -------------------------------------------------------------------------------------------- | ----------- |
-| `pathContext*` | _{ docId?: string; storyId?: string; type: string; activeTab?: string; category?: string; }_ |             |
+| `pageContext*` | _{ docId?: string; storyId?: string; type: string; activeTab?: string; category?: string; }_ |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

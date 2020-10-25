@@ -1,5 +1,5 @@
 import path from 'path';
-import { Compiler, Configuration } from 'webpack';
+import { Compiler, Configuration, RuleSetQuery } from 'webpack';
 import { LogOptions } from '@component-controls/logger';
 
 type WebpackConfigFn = (config: Configuration, options?: any) => Configuration;
@@ -15,6 +15,16 @@ export type RuleTypes = RuleType[];
 
 export type PresetCallback = (options: BuildProps) => Configuration;
 export type PresetType = Configuration | PresetCallback;
+
+export type WebpackLoader =
+  | 'css-loader'
+  | 'postcss-loader'
+  | 'sass-loader'
+  | 'less-loader'
+  | 'stylus-loader'
+  | 'url-loader'
+  | 'raw-loader'
+  | 'file-loader';
 
 /**
  * configuration properties for compile and run
@@ -50,11 +60,28 @@ export interface BuildProps {
    * logger options
    */
   logOptions?: Partial<LogOptions>;
+
   /**
    * webpack mode
    */
   mode?: Configuration['mode'];
+  /**
+   * loaders custom options shortcut.
+   * This can be used for quick options setup instead of using the webpack hook
+   */
+  loaders?: { [_ in WebpackLoader]?: RuleSetQuery };
 }
+
+export const customLoaderOptions = (
+  config: BuildProps,
+  loader: WebpackLoader,
+  defaultOptions: RuleSetQuery,
+): RuleSetQuery => {
+  const customOptions = config.loaders?.[loader];
+  return typeof defaultOptions === 'object' && typeof customOptions === 'object'
+    ? { ...defaultOptions, ...customOptions }
+    : defaultOptions;
+};
 
 const defaultPresets = ['react', 'react-docgen-typescript'];
 

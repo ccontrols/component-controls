@@ -104,10 +104,10 @@ exports[`Editors/ColorEditor Hsl 1`] = `
   >
     <button
       aria-label="edit the selected color"
-      class="css-1ik7gzn"
+      class="css-d5hyew-ColorEditor"
     >
       <div
-        class="css-be517z"
+        class="css-mgrfxb-ColorEditor"
       />
       hsl(213, 50%, 16%)
       <div
@@ -125,10 +125,10 @@ exports[`Editors/ColorEditor Hsla 1`] = `
   >
     <button
       aria-label="edit the selected color"
-      class="css-1ik7gzn"
+      class="css-d5hyew-ColorEditor"
     >
       <div
-        class="css-d6z8g1"
+        class="css-1p4oor3-ColorEditor"
       />
       hsla(213, 50%, 16%, 0.5)
       <div
@@ -146,10 +146,10 @@ exports[`Editors/ColorEditor Overview 1`] = `
   >
     <button
       aria-label="edit the selected color"
-      class="css-1ik7gzn"
+      class="css-d5hyew-ColorEditor"
     >
       <div
-        class="css-6hasx1"
+        class="css-1d6mdq8-ColorEditor"
       />
       #dedede
       <div
@@ -167,10 +167,10 @@ exports[`Editors/ColorEditor Rgb 1`] = `
   >
     <button
       aria-label="edit the selected color"
-      class="css-1ik7gzn"
+      class="css-d5hyew-ColorEditor"
     >
       <div
-        class="css-my0xph"
+        class="css-1wwiszi-ColorEditor"
       />
       rgb(192, 0, 0)
       <div
@@ -188,10 +188,10 @@ exports[`Editors/ColorEditor Rgba 1`] = `
   >
     <button
       aria-label="edit the selected color"
-      class="css-1ik7gzn"
+      class="css-d5hyew-ColorEditor"
     >
       <div
-        class="css-tokkmc"
+        class="css-1vun8o6-ColorEditor"
       />
       rgba(0, 192, 0, 0.5)
       <div

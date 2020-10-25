@@ -28,4 +28,94 @@ Possible names for the file:
 | `siteRoot` | string                           | the site base url, by default the site starts at /|
 | `siteMap`         |   `{ pages?: { home: SitemapConfigPage; index: SitemapConfigPage; doc: SitemapConfigPage;};`     | if false, disable automatic sitemap generation or specify priority of pages|
 | `siteUrl`         | string                               | Deployed site url, also used for auto generated sitemap.                                                                                                |
+| `loaders`         |  'css-loader'/| 'postcss-loader' /| 'sass-loader' /| 'less-loader' /| 'stylus-loader' /| 'url-loader' /| 'raw-loader' /| 'file-loader';                              | Shortcut to change the webpack loaders' options, instead of using the webpack setting|
 
+## categories
+
+by default, `author` and `tags` are category page types
+the following example adds a `language` category
+
+```js:title=.config/buildtime.js
+module.exports = {
+  categories: ['author', 'tags', 'language']
+  pages: {
+    language: {
+      basePath: 'lang/',
+    },
+  },
+}  
+```
+
+
+## pages
+
+the following example sets up custom page types and routes
+- `api` is replacing standard `docs` and adds a new custom tab `test`
+- `tutorial` is a new page type
+
+```js:title=.config/buildtime.js
+module.exports = {
+  pages: {
+    story: {
+      basePath: 'api/',
+      tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'test' }],
+    },
+    tutorial: {
+      basePath: 'tutorial/',
+    },
+  },
+}  
+```
+
+## stories
+
+the paths are relative to the config folder where the `buildtime.js` configuration file is located.
+
+the following example will search for documents in the `../src/docs` folder
+
+```js:title=.config/buildtime.js
+module.exports = {
+  stories: [
+    '../src/docs/*.@(mdx|tsx)',
+  ],
+}  
+```
+
+## siteRoot
+
+this option allows to install the `component-controls` site under a custom sub-folder on a site
+
+the following example will prefix all paths with `/docs/`
+
+```js:title=.config/buildtime.js
+module.exports = {
+  siteRoot: '/docs/',
+}  
+```
+
+## siteMap
+
+the following example will disable automatic generating the `sitemap.xml` file.
+
+```js:title=.config/buildtime.js
+module.exports = {
+  siteMap: false,
+}  
+```
+
+
+## loaders
+
+the following example creates options to use modules for CSS class names
+
+```js:title=.config/buildtime.js
+module.exports = {
+  loaders: {
+    'css-loader': {
+      modules: {
+        localIdentName: '[name].[local].[hash]',
+      },
+    },
+  },
+}
+```

@@ -33,9 +33,6 @@ module.exports = {
       basePath: 'api/',
       tabs: [...defaultBuildConfig.pages.story.tabs, { route: 'test' }],
     },
-    blog: {
-      basePath: 'blogs/',
-    },
     tutorial: {
       basePath: 'tutorial/',
     },

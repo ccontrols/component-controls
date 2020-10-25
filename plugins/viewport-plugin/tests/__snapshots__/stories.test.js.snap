@@ -49,7 +49,7 @@ exports[`Plugins/ViewportBlock Overview 1`] = `
             class="css-y7renv"
           >
             <div
-              class="css-iux8x2"
+              class="css-1ur9rf0-ViewportBlock"
             >
               <div
                 class="css-d51li0"
@@ -409,7 +409,7 @@ exports[`Plugins/ViewportBlock Sizes 1`] = `
             class="css-y7renv"
           >
             <div
-              class="css-iux8x2"
+              class="css-1ur9rf0-ViewportBlock"
             >
               <div
                 class="css-d51li0"

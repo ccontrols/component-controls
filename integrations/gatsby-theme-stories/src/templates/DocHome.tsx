@@ -5,7 +5,7 @@ import { DocumentHomePage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface PageListProps {
-  pathContext: {
+  pageContext: {
     type: DocType;
     docId?: string;
     storyId?: string;
@@ -13,7 +13,7 @@ interface PageListProps {
 }
 
 const DocHomeTemplate: FC<PageListProps> = ({
-  pathContext: { type = defDocType, docId, storyId },
+  pageContext: { type = defDocType, docId, storyId },
 }) => {
   return (
     <Layout docId={docId} storyId={storyId}>

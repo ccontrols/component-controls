@@ -5,6 +5,31 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
+        "exclude": Array [
+          /node_modules/,
+        ],
+        "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+        "use": Array [
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                  Object {
+                    "modules": "commonjs",
+                  },
+                ],
+                "@babel/preset-react",
+              ],
+            },
+          },
+        ],
+      },
+      Object {
+        "exclude": Array [
+          /node_modules/,
+        ],
         "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
         "use": Array [
           Object {
@@ -39,107 +64,63 @@ Object {
             "@babel/preset-react",
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/i,
       },
       Object {
-        "enforce": "pre",
         "exclude": Array [
           /node_modules/,
-          /node_modules/,
         ],
-        "loader": "@component-controls/loader/loader",
+        "loader": "url-loader",
         "options": Object {
-          "mdx": Object {
-            "storybookExports": true,
-            "transformMDX": true,
-          },
-          "propsLoaders": Array [
-            Object {
-              "name": "@component-controls/react-docgen-info",
-              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
-            },
-            Object {
-              "name": "@component-controls/react-docgen-typescript-info",
-              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
-            },
-          ],
+          "limit": 25000,
+          "name": "[name].[hash].[ext]",
+          "outputPath": "",
+          "publicPath": "/static",
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.\\(eot\\|md\\|svg\\|ico\\|jpg\\|jpeg\\|png\\|gif\\|ttf\\|woff\\|woff2\\|pdf\\|mp4\\|web\\|wav\\|mp3\\|m4a\\|aac\\|oga\\)\\$/i,
       },
       Object {
-        "enforce": "pre",
-        "exclude": Array [
-          /node_modules/,
-          /node_modules/,
-        ],
-        "loader": "@component-controls/loader/loader",
-        "options": Object {
-          "propsLoaders": Array [
-            Object {
-              "name": "@component-controls/react-docgen-info",
-              "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
-            },
-            Object {
-              "name": "@component-controls/react-docgen-typescript-info",
-              "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
-            },
-          ],
-        },
-        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\)\\$/,
-      },
-    ],
-  },
-  "resolve": Object {
-    "extensions": Array [
-      ".ts",
-      ".tsx",
-      ".js",
-      ".jsx",
-    ],
-  },
-}
-`;
-
-exports[`merge instrument and react-docgen-typescript merge options 1`] = `
-Object {
-  "module": Object {
-    "rules": Array [
-      Object {
-        "test": /\\\\\\.\\(ts\\|tsx\\)\\$/,
+        "test": /\\\\\\.\\(woff\\(2\\)\\?\\|ttf\\|eot\\|svg\\)\\(\\\\\\?v=\\\\d\\+\\\\\\.\\\\d\\+\\\\\\.\\\\d\\+\\)\\?\\$/,
         "use": Array [
           Object {
-            "loader": "babel-loader",
+            "loader": "file-loader",
             "options": Object {
-              "presets": Array [
-                Array [
-                  "react-app",
-                  Object {
-                    "flow": false,
-                    "typescript": true,
-                  },
-                ],
-              ],
+              "name": "[name].[ext]",
+              "outputPath": "",
             },
           },
         ],
       },
       Object {
-        "exclude": Array [
-          /node_modules/,
+        "test": /\\\\\\.\\(css\\|sass\\|scss\\|less\\|styl\\)\\$/i,
+        "use": Array [
+          "/Users/atanasster/component-controls/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
+          Object {
+            "loader": "css-loader",
+            "options": Object {},
+          },
+          Object {
+            "loader": "sass-loader",
+            "options": Object {},
+          },
+          Object {
+            "loader": "less-loader",
+            "options": Object {},
+          },
+          Object {
+            "loader": "stylus-loader",
+            "options": Object {},
+          },
         ],
-        "loader": "babel-loader",
-        "options": Object {
-          "presets": Array [
-            Array [
-              "@babel/preset-env",
-              Object {
-                "modules": "commonjs",
-              },
-            ],
-            "@babel/preset-react",
-          ],
-        },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+      },
+      Object {
+        "test": /\\\\\\.txt\\$/i,
+        "use": Array [
+          Object {
+            "loader": "raw-loader",
+            "options": Object {},
+          },
+        ],
       },
       Object {
         "enforce": "pre",
@@ -150,11 +131,7 @@ Object {
         "loader": "@component-controls/loader/loader",
         "options": Object {
           "mdx": Object {
-            "storybookExports": true,
             "transformMDX": true,
-          },
-          "prettier": Object {
-            "tabWidth": 4,
           },
           "propsLoaders": Array [
             Object {
@@ -167,7 +144,7 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(md\\|mdx\\)\\$/,
+        "test": /\\\\\\.\\(md\\|mdx\\)\\$/i,
       },
       Object {
         "enforce": "pre",
@@ -188,10 +165,27 @@ Object {
             },
           ],
         },
-        "test": /\\\\\\.\\(story\\|stories\\)\\.\\(js\\|jsx\\|ts\\|tsx\\)\\$/,
+        "test": /\\\\\\.\\(story\\|stories\\|doc\\|docs\\)\\.\\(js\\|jsx\\|ts\\|tsx\\)\\$/,
       },
     ],
   },
+  "optimization": Object {
+    "minimizer": Array [],
+  },
+  "performance": Object {
+    "hints": false,
+  },
+  "plugins": Array [
+    ExtractCssChunksPlugin {
+      "options": Object {
+        "chunkFilename": "[id].component-controls.css",
+        "filename": "component-controls.css",
+        "ignoreOrder": false,
+        "insert": null,
+        "moduleFilename": [Function],
+      },
+    },
+  ],
   "resolve": Object {
     "extensions": Array [
       ".ts",

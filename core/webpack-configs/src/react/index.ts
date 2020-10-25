@@ -1,4 +1,5 @@
-import * as path from 'path';
+import path from 'path';
+import { RuleSetLoader } from 'webpack';
 import ExtractCssPlugin from 'extract-css-chunks-webpack-plugin';
 import OptimizeCssAssetsWebpackPlugin from 'optimize-css-assets-webpack-plugin';
 
@@ -6,10 +7,23 @@ import {
   PresetType,
   BuildProps,
   defCssFileName,
+  customLoaderOptions,
 } from '@component-controls/core';
+import { findUpFile } from '@component-controls/instrument';
 
 export const react: PresetType = (options: BuildProps) => {
   const isProd = process.env.NODE_ENV === 'production';
+  const cssLoaders: RuleSetLoader[] = [];
+  const postcssOptions = customLoaderOptions(options, 'postcss-loader', {});
+  const hasPostCss =
+    Object.keys(postcssOptions).length ||
+    findUpFile(process.cwd(), 'postcss.config.js');
+  if (hasPostCss) {
+    cssLoaders.push({
+      loader: 'postcss-loader',
+      options: {},
+    });
+  }
   const result: PresetType = {
     plugins: [
       new ExtractCssPlugin({
@@ -28,11 +42,8 @@ export const react: PresetType = (options: BuildProps) => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  [
-                    require.resolve('@babel/preset-env'),
-                    { modules: 'commonjs' },
-                  ],
-                  require.resolve('@babel/preset-react'),
+                  ['@babel/preset-env', { modules: 'commonjs' }],
+                  '@babel/preset-react',
                 ],
               },
             },
@@ -43,7 +54,7 @@ export const react: PresetType = (options: BuildProps) => {
           exclude: [/node_modules/],
           use: [
             {
-              loader: require.resolve('babel-loader'),
+              loader: 'babel-loader',
               options: {
                 presets: [['react-app', { flow: false, typescript: true }]],
               },
@@ -56,8 +67,8 @@ export const react: PresetType = (options: BuildProps) => {
           loader: 'babel-loader',
           options: {
             presets: [
-              [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
-              require.resolve('@babel/preset-react'),
+              ['@babel/preset-env', { modules: 'commonjs' }],
+              '@babel/preset-react',
             ],
           },
         },
@@ -65,7 +76,7 @@ export const react: PresetType = (options: BuildProps) => {
           test: /\.(eot|md|svg|ico|jpg|jpeg|png|gif|ttf|woff|woff2|pdf|mp4|web|wav|mp3|m4a|aac|oga)$/i,
           exclude: [/node_modules/],
           loader: 'url-loader',
-          options: {
+          options: customLoaderOptions(options, 'url-loader', {
             limit: 25000,
             name: '[name].[hash].[ext]',
             publicPath: '/static',
@@ -73,10 +84,25 @@ export const react: PresetType = (options: BuildProps) => {
               options?.distFolder || process.cwd(),
               path.resolve(options?.staticFolder || process.cwd()),
             ),
-          },
+          }),
         },
         {
-          test: /\.css$/,
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: customLoaderOptions(options, 'file-loader', {
+                name: '[name].[ext]',
+                outputPath: path.relative(
+                  options?.distFolder || process.cwd(),
+                  path.resolve(options?.staticFolder || process.cwd()),
+                ),
+              }),
+            },
+          ],
+        },
+        {
+          test: /\.(css|sass|scss|less|styl)$/i,
           use: [
             // Creates `style` nodes from JS strings
             // will export to a consolidated css file
@@ -84,21 +110,34 @@ export const react: PresetType = (options: BuildProps) => {
             {
               // Translates CSS into CommonJS
               loader: 'css-loader',
-              options: {
-                modules: {
-                  localIdentName: '[name].[local].[hash]',
-                },
-              },
+              options: customLoaderOptions(options, 'css-loader', {}),
             },
+            ...cssLoaders,
             {
               // Compiles Sass to CSS
               loader: 'sass-loader',
+              options: customLoaderOptions(options, 'sass-loader', {}),
+            },
+            {
+              // Compiles less to CSS
+              loader: 'less-loader',
+              options: customLoaderOptions(options, 'less-loader', {}),
+            },
+            {
+              // Compiles stylus to CSS
+              loader: 'stylus-loader',
+              options: customLoaderOptions(options, 'stylus-loader', {}),
             },
           ],
         },
         {
           test: /\.txt$/i,
-          use: require.resolve('raw-loader'),
+          use: [
+            {
+              loader: 'raw-loader',
+              options: customLoaderOptions(options, 'raw-loader', {}),
+            },
+          ],
         },
 
         {

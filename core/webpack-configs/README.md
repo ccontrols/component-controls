@@ -6,7 +6,6 @@
     -   [Basic usage](#basic-usage)
     -   [Advanced usage](#advanced-usage)
 -   [API](#api)
-    -   [merge](#merge)
     -   [arrayMerge](#arraymerge)
     -   [deepMerge](#deepmerge)
     -   [deepMergeWebpackConfig](#deepmergewebpackconfig)
@@ -15,6 +14,12 @@
     -   [getWebpackConfig](#getwebpackconfig)
     -   [mergeWebpackConfig](#mergewebpackconfig)
     -   [presetsFactory](#presetsfactory)
+    -   [BuildProps](#buildprops)
+    -   [RuleTypes](#ruletypes)
+    -   [WebpackConfig](#webpackconfig)
+    -   [RuleType](#ruletype)
+    -   [WebpackConfigFn](#webpackconfigfn)
+    -   [RuleOptions](#ruleoptions)
 
 # Overview
 
@@ -77,15 +82,9 @@ addons: [
 
 # API
 
-<tsdoc-typescript files="@types/webpack/index.d.ts" entry="./src/index.ts,./src/types.ts"/>
+<tsdoc-typescript files="../core/src/build.ts" entry="./src/index.ts,./src/types.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
-
-## merge
-
-_defined in [@component-controls/webpack-configs/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/webpack-configs/src/index.ts#L1)_
-
-
 
 ## arrayMerge
 
@@ -206,5 +205,74 @@ _defined in [@component-controls/webpack-configs/src/index.ts](https://github.co
 | `react*`                   | [Configuration](#configuration) \| **function** (`options`\*: [BuildProps](#buildprops)): [Configuration](#configuration); |             |
 | `react-docgen*`            | [Configuration](#configuration)                                                                                            |             |
 | `react-docgen-typescript*` | [Configuration](#configuration)                                                                                            |             |
+
+## BuildProps
+
+configuration properties for compile and run
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L32)_
+
+
+
+### properties
+
+| Name           | Type                                  | Description                                                                                                 |
+| -------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `bundleName`   | string                                | public file name the bundle, by default 'component-controls.js'                                             |
+| `configPath`   | string                                | path to the configuration file e.g : '.storybook'                                                           |
+| `cssFileName`  | string                                | file name where css styles are exported to load for ssr                                                     |
+| `distFolder`   | string                                | public output folder for the bundle                                                                         |
+| `finalWebpack` | [WebpackConfig](#webpackconfig)       |                                                                                                             |
+| `loaders`      |                                       | loaders custom options shortcut. This can be used for quick options setup instead of using the webpack hook |
+| `logOptions`   | Partial&lt;[LogOptions](#logoptions)> | logger options                                                                                              |
+| `mode`         |                                       | webpack mode                                                                                                |
+| `presets`      | [RuleTypes](#ruletypes)               | a list of webpack configuration presets from webpack-configs packages                                       |
+| `staticFolder` | string                                | public output folder for the assets like images                                                             |
+| `webpack`      | [WebpackConfig](#webpackconfig)       | webpack configuration object                                                                                |
+
+## RuleTypes
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L14)_
+
+[RuleType](#ruletype)\[]
+
+## WebpackConfig
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L6)_
+
+[Configuration](#configuration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## RuleType
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L12)_
+
+string | [RuleOptions](#ruleoptions)
+
+## WebpackConfigFn
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L5)_
+
+**function** (`config`\*: [Configuration](#configuration), `options`: any): [Configuration](#configuration);
+
+### parameters
+
+| Name      | Type                            | Description |
+| --------- | ------------------------------- | ----------- |
+| `config*` | [Configuration](#configuration) |             |
+| `options` | any                             |             |
+| `returns` | [Configuration](#configuration) |             |
+
+## RuleOptions
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L8)_
+
+
+
+### properties
+
+| Name      | Type                            | Description |
+| --------- | ------------------------------- | ----------- |
+| `config*` | [Configuration](#configuration) |             |
+| `name*`   | string                          |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

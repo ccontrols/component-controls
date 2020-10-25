@@ -454,7 +454,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-lwjvje"
+          class="css-urjp6w-LinkHeading"
           data-id="custom-id"
           data-level="3"
           data-title="BlockContainer"
@@ -477,7 +477,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
           </svg>
         </a>
         <h3
-          class="css-a77kmg"
+          class="css-1p18zt3-BlockContainer"
         >
           <div
             class="css-tmrrvx"
@@ -485,7 +485,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
             BlockContainer
             <a
               aria-label="Collapse this block"
-              class="css-15uzteg"
+              class="css-csemrf-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -564,7 +564,7 @@ exports[`Components/BlockContainer Description 1`] = `
         class="css-xhp9da"
       >
         <h3
-          class="css-a77kmg"
+          class="css-1p18zt3-BlockContainer"
         />
       </div>
     </div>
@@ -577,7 +577,7 @@ exports[`Components/BlockContainer Description 1`] = `
           class="css-xhp9da"
         >
           <a
-            class="css-lwjvje"
+            class="css-urjp6w-LinkHeading"
             data-id="h3-title"
             data-level="3"
             data-title="H3 title"
@@ -676,7 +676,7 @@ exports[`Components/BlockContainer Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1xqg6cb"
+          class="css-1qbcv7x-LinkHeading"
           data-id="blockcontainer"
           data-level="4"
           data-title="BlockContainer"
@@ -699,7 +699,7 @@ exports[`Components/BlockContainer Not Collapsible 1`] = `
           </svg>
         </a>
         <h4
-          class="css-15v77uq"
+          class="css-1inb7tb-BlockContainer"
         >
           BlockContainer
         </h4>
@@ -750,7 +750,7 @@ exports[`Components/BlockContainer Overview 1`] = `
         class="css-xhp9da"
       >
         <h3
-          class="css-a77kmg"
+          class="css-1p18zt3-BlockContainer"
         />
       </div>
     </div>
@@ -903,7 +903,7 @@ exports[`Components/ColorMode Overview 1`] = `
 exports[`Components/CopyContainer Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-r60fd5"
+    class="css-h9xu0j-CopyContainer"
   >
     <div
       style="border: 1px solid black; padding: 5px;"
@@ -1055,7 +1055,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-4sd90b"
+          class="css-1os730g-LinkHeading"
           data-id="header-h1"
           data-level="1"
           data-title="Header H1"
@@ -1094,7 +1094,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1d41gvt"
+          class="css-8ylp1b-LinkHeading"
           data-id="header-h2"
           data-level="2"
           data-title="Header H2"
@@ -1133,7 +1133,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-lwjvje"
+          class="css-urjp6w-LinkHeading"
           data-id="header-h3"
           data-level="3"
           data-title="Header H3"
@@ -1170,7 +1170,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1xqg6cb"
+          class="css-1qbcv7x-LinkHeading"
           data-id="header-h4"
           data-level="4"
           data-title="Header H4"
@@ -1207,7 +1207,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-64d8tk"
+          class="css-1hj0i8j-LinkHeading"
           data-id="header-h5"
           data-level="5"
           data-title="Header H5"
@@ -3119,16 +3119,16 @@ exports[`Components/SearchInput Default Render 1`] = `
     class="css-12hibeq"
   >
     <div
-      class="css-79elbk"
+      class="css-t2f9yn-SearchInput"
     >
       <input
         aria-label="type some text to start searching"
-        class="css-135on5p"
+        class="css-1uvmzy6-SearchInput"
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-f2pxa6"
+        class="css-nxci97-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -3152,16 +3152,16 @@ exports[`Components/SearchInput Overview 1`] = `
     class="css-12hibeq"
   >
     <div
-      class="css-79elbk"
+      class="css-t2f9yn-SearchInput"
     >
       <input
         aria-label="type some text to start searching"
-        class="css-135on5p"
+        class="css-1uvmzy6-SearchInput"
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-f2pxa6"
+        class="css-nxci97-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -3185,17 +3185,17 @@ exports[`Components/SearchInput Placeholder 1`] = `
     class="css-12hibeq"
   >
     <div
-      class="css-79elbk"
+      class="css-t2f9yn-SearchInput"
     >
       <input
         aria-label="search items"
-        class="css-135on5p"
+        class="css-1uvmzy6-SearchInput"
         placeholder="start typing..."
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-f2pxa6"
+        class="css-nxci97-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -4875,7 +4875,7 @@ exports[`Components/Table Filterable 1`] = `
         class="css-vurnku"
       >
         <th
-          class="css-1sdq30t"
+          class="css-ilsc62-Table"
           colspan="6"
         >
           <div
@@ -11275,7 +11275,7 @@ exports[`Components/Tabs Overview 1`] = `
 exports[`Components/Tag Overview 1`] = `
 <DocumentFragment>
   <span
-    class="css-137nkct"
+    class="css-1rvwfc0-Tag"
   >
     <div
       class="css-vurnku"

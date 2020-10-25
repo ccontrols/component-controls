@@ -4,7 +4,7 @@ import { DocPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface DocPageProps {
-  pathContext: {
+  pageContext: {
     docId?: string;
     storyId?: string;
     type: DocType;
@@ -14,7 +14,7 @@ interface DocPageProps {
 }
 
 const DocPageTemplate: FC<DocPageProps> = ({
-  pathContext: { docId, storyId, type, activeTab, category },
+  pageContext: { docId, storyId, type, activeTab, category },
 }) => {
   return (
     <Layout docId={docId} storyId={storyId} activeTab={activeTab}>

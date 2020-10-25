@@ -1,4 +1,3 @@
-const merge = require('deepmerge');
 import { Configuration as WebpackConfiguration } from 'webpack';
 import { react } from './react';
 import { instrument } from './instrument';
@@ -10,6 +9,7 @@ import {
   RuleOptions,
   RuleTypes,
   RuleType,
+  deepmerge,
 } from '@component-controls/core';
 
 export { WebpackConfiguration };
@@ -51,7 +51,7 @@ const arrayMerge = (dest: any[], src: any[]) => {
 
 const deepMergeWithPresets = (dest: any, source: any) => {
   return dest && source
-    ? merge(dest, source, {
+    ? deepmerge(dest, source, {
         arrayMerge: arrayMerge,
       })
     : source || dest || {};
@@ -59,7 +59,7 @@ const deepMergeWithPresets = (dest: any, source: any) => {
 
 const deepMerge = (dest: any, source: any) => {
   return dest && source
-    ? merge(dest, source, {
+    ? deepmerge(dest, source, {
         arrayMerge: (d: any[], s: any[]) => (d && s ? [...d, ...s] : d || s),
       })
     : source || dest || {};
@@ -103,7 +103,7 @@ export const deepMergeWebpackConfig = (
   source?: WebpackConfiguration,
 ): WebpackConfiguration => {
   return dest && source
-    ? merge(dest, source, {
+    ? deepmerge(dest, source, {
         arrayMerge: arrayMerge,
       })
     : source || dest || {};
@@ -120,9 +120,12 @@ export const mergeWebpackConfig = (
   presets: RuleTypes | undefined,
   options: BuildProps,
 ): WebpackConfiguration => {
-  if (!presets) {
-    return webpack || {};
+  let newConfig = {};
+  if (presets) {
+    newConfig = getWebpackConfig(presets, options);
   }
-  const newConfig = getWebpackConfig(presets, options);
-  return deepMerge(webpack || {}, newConfig);
+  if (webpack) {
+    return deepMerge(webpack, newConfig);
+  }
+  return newConfig;
 };

@@ -84,6 +84,25 @@
     -   [convertConfig](#convertconfig)
     -   [defaultBuildConfig](#defaultbuildconfig)
     -   [defaultRunConfig](#defaultrunconfig)
+    -   [BuildProps](#buildprops)
+    -   [RuleOptions](#ruleoptions)
+    -   [PresetCallback](#presetcallback)
+    -   [PresetType](#presettype)
+    -   [RuleType](#ruletype)
+    -   [RuleTypes](#ruletypes)
+    -   [WatchOptions](#watchoptions)
+    -   [WatchProps](#watchprops)
+    -   [WebpackConfig](#webpackconfig)
+    -   [WebpackConfigFn](#webpackconfigfn)
+    -   [WebpackLoader](#webpackloader)
+    -   [defBundleName](#defbundlename)
+    -   [defCssFileName](#defcssfilename)
+    -   [defaultPresets](#defaultpresets)
+    -   [customLoaderOptions](#customloaderoptions)
+    -   [getBundleName](#getbundlename)
+    -   [getCSSBundleName](#getcssbundlename)
+    -   [getDistName](#getdistname)
+    -   [defaultCompileProps](#defaultcompileprops)
     -   [StoreObserver](#storeobserver-1)
     -   [Story](#story-1)
     -   [Components](#components-1)
@@ -109,6 +128,13 @@
     -   [PageConfiguration](#pageconfiguration-1)
     -   [BuildConfiguration](#buildconfiguration-1)
     -   [StaticMenuItem](#staticmenuitem-1)
+    -   [WebpackConfig](#webpackconfig-1)
+    -   [RuleTypes](#ruletypes-1)
+    -   [PresetCallback](#presetcallback-1)
+    -   [RuleType](#ruletype-1)
+    -   [WatchOptions](#watchoptions-1)
+    -   [WebpackConfigFn](#webpackconfigfn-1)
+    -   [WebpackLoader](#webpackloader-1)
     -   [Story](#story-2)
     -   [DocType](#doctype-2)
     -   [Document](#document-2)
@@ -143,7 +169,7 @@ $ npm install @component-controls/core --save-dev
 
 # API
 
-<tsdoc-typescript entry="./src/document.ts,./src/controls.ts,./src/components.ts,./src/propsInfo.ts,./src/utility.ts,./src/configuration.ts"/>
+<tsdoc-typescript files="@types/webpack/index.d.ts" entry="./src/document.ts,./src/controls.ts,./src/components.ts,./src/propsInfo.ts,./src/utility.ts,./src/configuration.ts,./src/build.ts"/>
 
 <!-- START-TSDOC-TYPESCRIPT -->
 
@@ -1068,7 +1094,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L183)_
 
-**function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'idle' | 'pending' | 'success' | 'error'**value**: ;
+**function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'error' | 'idle' | 'pending' | 'success'**value**: ;
 
 ### parameters
 
@@ -1076,7 +1102,7 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | `asyncFunction*` | **function** (): Promise&lt;>;                                                                                                            |             |
 | `immediate*`     | boolean                                                                                                                                   |             |
-| `returns`        | **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'idle' \| 'pending' \| 'success' \| 'error'**value**:  |             |
+| `returns`        | **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'error' \| 'idle' \| 'pending' \| 'success'**value**:  |             |
 
 ## ControlsConfig
 
@@ -1375,6 +1401,201 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `siteTitle*`       | string |             |
 | `controls*`        | object |             |
 | `pages*`           | object |             |
+
+## BuildProps
+
+configuration properties for compile and run
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L32)_
+
+
+
+### properties
+
+| Name           | Type                                  | Description                                                                                                 |
+| -------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `bundleName`   | string                                | public file name the bundle, by default 'component-controls.js'                                             |
+| `configPath`   | string                                | path to the configuration file e.g : '.storybook'                                                           |
+| `cssFileName`  | string                                | file name where css styles are exported to load for ssr                                                     |
+| `distFolder`   | string                                | public output folder for the bundle                                                                         |
+| `finalWebpack` | [WebpackConfig](#webpackconfig)       |                                                                                                             |
+| `loaders`      |                                       | loaders custom options shortcut. This can be used for quick options setup instead of using the webpack hook |
+| `logOptions`   | Partial&lt;[LogOptions](#logoptions)> | logger options                                                                                              |
+| `mode`         |                                       | webpack mode                                                                                                |
+| `presets`      | [RuleTypes](#ruletypes)               | a list of webpack configuration presets from webpack-configs packages                                       |
+| `staticFolder` | string                                | public output folder for the assets like images                                                             |
+| `webpack`      | [WebpackConfig](#webpackconfig)       | webpack configuration object                                                                                |
+
+## RuleOptions
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L8)_
+
+
+
+### properties
+
+| Name      | Type                            | Description |
+| --------- | ------------------------------- | ----------- |
+| `config*` | [Configuration](#configuration) |             |
+| `name*`   | string                          |             |
+
+## PresetCallback
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L16)_
+
+**function** (`options`\*: [BuildProps](#buildprops)): [Configuration](#configuration);
+
+### parameters
+
+| Name       | Type                            | Description |
+| ---------- | ------------------------------- | ----------- |
+| `options*` | [BuildProps](#buildprops)       |             |
+| `returns`  | [Configuration](#configuration) |             |
+
+## PresetType
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L17)_
+
+[Configuration](#configuration) \| [PresetCallback](#presetcallback)
+
+## RuleType
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L12)_
+
+string | [RuleOptions](#ruleoptions)
+
+## RuleTypes
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L14)_
+
+[RuleType](#ruletype)\[]
+
+## WatchOptions
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L92)_
+
+## WatchProps
+
+adds webpack WatchOptions to the Compiler options
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L97)_
+
+### properties
+
+| Name           | Type                          | Description |
+| -------------- | ----------------------------- | ----------- |
+| `watchOptions` | [WatchOptions](#watchoptions) |             |
+| `BuildProps`   | [BuildProps](#buildprops)     |             |
+
+## WebpackConfig
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L6)_
+
+[Configuration](#configuration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## WebpackConfigFn
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L5)_
+
+**function** (`config`\*: [Configuration](#configuration), `options`: any): [Configuration](#configuration);
+
+### parameters
+
+| Name      | Type                            | Description |
+| --------- | ------------------------------- | ----------- |
+| `config*` | [Configuration](#configuration) |             |
+| `options` | any                             |             |
+| `returns` | [Configuration](#configuration) |             |
+
+## WebpackLoader
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L19)_
+
+'css-loader' | 'postcss-loader' | 'sass-loader' | 'less-loader' | 'stylus-loader' | 'url-loader' | 'raw-loader' | 'file-loader'
+
+## defBundleName
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L106)_
+
+
+
+## defCssFileName
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L111)_
+
+
+
+## defaultPresets
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L86)_
+
+
+
+## customLoaderOptions
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L75)_
+
+**function** customLoaderOptions(`config`\*: [BuildProps](#buildprops), `loader`\*: [WebpackLoader](#webpackloader), `defaultOptions`\*: [RuleSetQuery](#rulesetquery)): [RuleSetQuery](#rulesetquery);
+
+### parameters
+
+| Name              | Type                            | Description |
+| ----------------- | ------------------------------- | ----------- |
+| `config*`         | [BuildProps](#buildprops)       |             |
+| `loader*`         | [WebpackLoader](#webpackloader) |             |
+| `defaultOptions*` | [RuleSetQuery](#rulesetquery)   |             |
+| `returns`         | [RuleSetQuery](#rulesetquery)   |             |
+
+## getBundleName
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L108)_
+
+**function** getBundleName(`options`\*: [BuildProps](#buildprops)): string;
+
+### parameters
+
+| Name       | Type                      | Description |
+| ---------- | ------------------------- | ----------- |
+| `options*` | [BuildProps](#buildprops) |             |
+| `returns`  | string                    |             |
+
+## getCSSBundleName
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L113)_
+
+**function** getCSSBundleName(`options`\*: [BuildProps](#buildprops)): string;
+
+### parameters
+
+| Name       | Type                      | Description |
+| ---------- | ------------------------- | ----------- |
+| `options*` | [BuildProps](#buildprops) |             |
+| `returns`  | string                    |             |
+
+## getDistName
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L101)_
+
+**function** getDistName(`options`\*: [BuildProps](#buildprops)): string;
+
+### parameters
+
+| Name       | Type                      | Description |
+| ---------- | ------------------------- | ----------- |
+| `options*` | [BuildProps](#buildprops) |             |
+| `returns`  | string                    |             |
+
+## defaultCompileProps
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L88)_
+
+
+
+### properties
+
+| Name       | Type      | Description |
+| ---------- | --------- | ----------- |
+| `presets*` | string\[] |             |
 
 ## StoreObserver
 
@@ -1687,6 +1908,61 @@ static menu items
 _defined in [@component-controls/core/src/configuration.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/configuration.ts#L195)_
 
 string | **menu**: [StaticMenuItem](#staticmenuitem)\[]**name**: string
+
+## WebpackConfig
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L6)_
+
+[Configuration](#configuration) \| [WebpackConfigFn](#webpackconfigfn)
+
+## RuleTypes
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L14)_
+
+[RuleType](#ruletype)\[]
+
+## PresetCallback
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L16)_
+
+**function** (`options`\*: [BuildProps](#buildprops)): [Configuration](#configuration);
+
+### parameters
+
+| Name       | Type                            | Description |
+| ---------- | ------------------------------- | ----------- |
+| `options*` | [BuildProps](#buildprops)       |             |
+| `returns`  | [Configuration](#configuration) |             |
+
+## RuleType
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L12)_
+
+string | [RuleOptions](#ruleoptions)
+
+## WatchOptions
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L92)_
+
+## WebpackConfigFn
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L5)_
+
+**function** (`config`\*: [Configuration](#configuration), `options`: any): [Configuration](#configuration);
+
+### parameters
+
+| Name      | Type                            | Description |
+| --------- | ------------------------------- | ----------- |
+| `config*` | [Configuration](#configuration) |             |
+| `options` | any                             |             |
+| `returns` | [Configuration](#configuration) |             |
+
+## WebpackLoader
+
+_defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/build.ts#L19)_
+
+'css-loader' | 'postcss-loader' | 'sass-loader' | 'less-loader' | 'stylus-loader' | 'url-loader' | 'raw-loader' | 'file-loader'
 
 ## Story
 

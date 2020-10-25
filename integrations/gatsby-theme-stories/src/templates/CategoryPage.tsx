@@ -5,7 +5,7 @@ import { CategoryPage } from '@component-controls/app';
 import { Layout } from '../components/Layout';
 
 interface CategoryPageProps {
-  pathContext: {
+  pageContext: {
     type: DocType;
     category: string;
     docId?: string;
@@ -13,7 +13,7 @@ interface CategoryPageProps {
 }
 
 const CategoryPageTemplate: FC<CategoryPageProps> = ({
-  pathContext: { type, category, docId },
+  pageContext: { type, category, docId },
 }) => (
   <Layout docId={docId}>
     <CategoryPage type={type} category={category} />

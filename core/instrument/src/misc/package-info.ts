@@ -8,24 +8,21 @@ import { hashStoreId } from './hashStore';
 import { PackageInfoOptions } from '../types';
 import { getPackageInfo } from './source-options';
 
-const traverseFolder = (
+export const findUpFile = (
   filePath: string,
-  levels: number,
-  packageJsonName: string,
+  fileName: string | string[],
+  levels: number = 10,
 ): string | null => {
   var files = fs.readdirSync(filePath);
   if (levels === 0) {
     return null;
   }
-  const pckg = files.find(file => file === packageJsonName);
+  const arFiles: string[] = Array.isArray(fileName) ? fileName : [fileName];
+  const pckg = files.find(file => arFiles.includes(file));
   if (pckg) {
     return path.resolve(filePath, pckg);
   }
-  return traverseFolder(
-    path.resolve(filePath, '..'),
-    levels - 1,
-    packageJsonName,
-  );
+  return findUpFile(path.resolve(filePath, '..'), fileName, levels - 1);
 };
 
 const getPackageJson = async (
@@ -42,10 +39,10 @@ const getPackageJson = async (
     if (opts === false) {
       return resolve(null);
     }
-    const fileName = traverseFolder(
+    const fileName = findUpFile(
       fs.lstatSync(filePath).isDirectory() ? filePath : path.dirname(filePath),
-      opts?.maxLevels || 10,
       opts?.packageJsonName || 'package.json',
+      opts?.maxLevels,
     );
     if (!fileName) {
       return resolve(null);

@@ -57,12 +57,12 @@ exports[`Application/App Overview 1`] = `
             >
               <a
                 aria-label="Component controls"
-                class="css-30gkju"
+                class="css-1s49mzj-LogoLink"
                 href="/"
               />
               <a
                 aria-label="Component controls"
-                class="css-30gkju"
+                class="css-1s49mzj-LogoLink"
                 href="/"
               >
                 <img
@@ -1016,12 +1016,12 @@ exports[`Application/Header Custom Left 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             >
               <img
@@ -1193,12 +1193,12 @@ exports[`Application/Header Custom Right 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             >
               <img
@@ -1374,12 +1374,12 @@ exports[`Application/Header Customized 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             >
               <img
@@ -1621,12 +1621,12 @@ exports[`Application/Header Overview 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-30gkju"
+              class="css-1s49mzj-LogoLink"
               href="/"
             >
               <img

@@ -7,7 +7,7 @@ export const instrument: Configuration = {
         test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: require.resolve('babel-loader'),
+            loader: 'babel-loader',
             options: {
               presets: [['react-app', { flow: false, typescript: true }]],
             },
@@ -20,8 +20,8 @@ export const instrument: Configuration = {
         loader: 'babel-loader',
         options: {
           presets: [
-            [require.resolve('@babel/preset-env'), { modules: 'commonjs' }],
-            require.resolve('@babel/preset-react'),
+            ['@babel/preset-env', { modules: 'commonjs' }],
+            '@babel/preset-react',
           ],
         },
       },
