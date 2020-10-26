@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "1.36.5",
+  "version": "1.36.6",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -32,7 +32,6 @@
   "license": "MIT",
   "dependencies": {
     "@primer/octicons-react": "^10.0.0",
-    
     "@theme-ui/match-media": "^0.4.0-rc.1",
     "@theme-ui/presets": "^0.4.0-rc.1",
     "copy-to-clipboard": "^3.2.1",
@@ -45,10 +44,10 @@
     "react-switch": "^5.0.1",
     "react-table": "^7.0.0",
     "react-tabs": "^3.1.0",
-    "scroll-into-view-if-needed": "^2.2.25"    
+    "scroll-into-view-if-needed": "^2.2.25"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.36.5",
+    "@component-controls/jest-snapshots": "^1.36.6",
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@theme-ui/css": "^0.4.0-rc.1",
     "@types/markdown-to-jsx": "^6.11.0",

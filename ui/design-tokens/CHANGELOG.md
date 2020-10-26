@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.6](https://github.com/ccontrols/component-controls/compare/v1.36.5...v1.36.6) (2020-10-26)
+
+
+### Bug Fixes
+
+* remove [@types](https://github.com/types) ([a06a9dc](https://github.com/ccontrols/component-controls/commit/a06a9dc428f3bf05f5831435571f168cff16ac40))
+
+
+
+
+
 ## [1.36.5](https://github.com/ccontrols/component-controls/compare/v1.36.4...v1.36.5) (2020-10-26)
 
 **Note:** Version bump only for package @component-controls/design-tokens
