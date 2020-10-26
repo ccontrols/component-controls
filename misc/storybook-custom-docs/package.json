@@ -52,8 +52,8 @@
     "@storybook/api": "5.x 6.x",
     "@storybook/client-api": "5.x 6.x",
     "@storybook/core-events": "5.x 6.x",
-    "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0"
+    "react": "^16.8.0 || ^17",
+    "react-dom": "^16.8.0 || ^17"
   },
   "publishConfig": {
     "access": "public"

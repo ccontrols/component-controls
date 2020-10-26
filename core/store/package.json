@@ -60,7 +60,7 @@
     "webpack": "^4.41.6"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": "^16.8.0 || ^17"
   },
   "publishConfig": {
     "access": "public"

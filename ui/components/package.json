@@ -62,8 +62,8 @@
   },
   "peerDependencies": {
     "@theme-ui/css": ">= 0.4.0-rc.1",
-    "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
+    "react": "^16.8.0 || ^17",
+    "react-dom": "^16.8.0 || ^17",
     "theme-ui": ">= 0.4.0-rc.1"
   },
   "publishConfig": {

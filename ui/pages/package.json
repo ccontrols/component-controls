@@ -42,7 +42,7 @@
     "jest": "^26.4.2"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": "^16.8.0 || ^17"
   },
   "publishConfig": {
     "access": "public"

@@ -47,7 +47,7 @@
   },
   "peerDependencies": {
     "@component-controls/core": ">= 1.18.1",
-    "react": ">= 16.8.0"
+    "react": "^16.8.0 || ^17"
   },
   "jest": {
     "testEnvironment": "node",
