@@ -32,7 +32,6 @@
   "dependencies": {
     "@component-controls/components": "^1.36.5",
     "@primer/octicons-react": "^10.0.0",
-    "@types/tinycolor2": "^1.4.2",
     "copy-to-clipboard": "^3.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
