@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.5](https://github.com/ccontrols/component-controls/compare/v1.36.4...v1.36.5) (2020-10-26)
+
+
+### Bug Fixes
+
+* yarn.lock and external styled ([5c729a3](https://github.com/ccontrols/component-controls/commit/5c729a340fee3b9fe10c6d113a126302e6f7f580))
+
+
+
+
+
 ## [1.36.4](https://github.com/ccontrols/component-controls/compare/v1.36.3...v1.36.4) (2020-10-26)
 
 **Note:** Version bump only for package @component-controls/webpack-compile

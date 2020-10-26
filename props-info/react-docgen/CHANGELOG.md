@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.5](https://github.com/ccontrols/component-controls/compare/v1.36.4...v1.36.5) (2020-10-26)
+
+**Note:** Version bump only for package @component-controls/react-docgen-info
+
+
+
+
+
 # [1.36.0](https://github.com/ccontrols/component-controls/compare/v1.35.1...v1.36.0) (2020-10-25)
 
 **Note:** Version bump only for package @component-controls/react-docgen-info
