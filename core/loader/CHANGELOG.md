@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.4](https://github.com/ccontrols/component-controls/compare/v1.36.3...v1.36.4) (2020-10-26)
+
+**Note:** Version bump only for package @component-controls/loader
+
+
+
+
+
 ## [1.36.3](https://github.com/ccontrols/component-controls/compare/v1.36.2...v1.36.3) (2020-10-26)
 
 **Note:** Version bump only for package @component-controls/loader

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.4](https://github.com/ccontrols/component-controls/compare/v1.36.3...v1.36.4) (2020-10-26)
+
+
+### Bug Fixes
+
+* move dependeency @component-controls/render ([0a3eab8](https://github.com/ccontrols/component-controls/commit/0a3eab85a695c4f974f884cebafeea2b9bde929b))
+
+
+
+
+
 ## [1.36.3](https://github.com/ccontrols/component-controls/compare/v1.36.2...v1.36.3) (2020-10-26)
 
 **Note:** Version bump only for package @component-controls/blocks
