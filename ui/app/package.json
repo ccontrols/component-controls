@@ -36,10 +36,7 @@
     "@component-controls/pages": "^1.36.5",
     "@component-controls/store": "^1.36.5",
     "query-string": "^6.13.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
-    "theme-ui": "^0.4.0-rc.1"
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^1.36.5",
@@ -48,7 +45,10 @@
     "@types/react": "^16.9.34",
     "@types/react-helmet": "^6.0.0",
     "cross-env": "^5.2.1",
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "theme-ui": "^0.4.0-rc.1"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17",

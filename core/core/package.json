@@ -35,7 +35,6 @@
     "deepmerge": "^4.2.2",
     "escape-html": "^1.0.3",
     "faker": "^4.1.0",
-    "react": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
@@ -46,6 +45,7 @@
     "cross-env": "^5.2.1",
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
+    "react": "^16.13.1",
     "webpack": "^4.43.0"
   },
   "peerDependencies": {

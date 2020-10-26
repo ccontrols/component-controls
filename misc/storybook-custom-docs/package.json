@@ -34,10 +34,6 @@
     "directory": "misc/storybook-custom-docs"
   },
   "license": "MIT",
-  "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@storybook/addons": "next",
@@ -45,6 +41,8 @@
     "@storybook/client-api": "next",
     "@storybook/core-events": "next",
     "@types/react": "^16.9.34",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
