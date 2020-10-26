@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
 import { TooltipTriggerProps } from 'react-popper-tooltip/dist/types';
-import { jsx, Box } from 'theme-ui';
+import { jsx, Box, SxStyleProp } from 'theme-ui';
 import { Arrow, Wrapper } from './PopoverUtils';
 
 export interface PopoverOwnProps {
@@ -52,15 +52,19 @@ export const Popover: FC<PopoverProps> = ({
             borderColor={borderColor}
             hidden={hidden}
             ref={tooltipRef as any}
-            {...containerProps}
-            sx={{ backgroundColor: 'background' }}
+            sx={{
+              ...(containerProps.style as SxStyleProp),
+              backgroundColor: 'background',
+            }}
           >
             {arrowVisible && (
               <Arrow
                 placement={placement}
                 borderColor={borderColor}
                 ref={arrowRef as any}
-                {...getArrowProps()}
+                sx={{
+                  ...(getArrowProps().style as SxStyleProp),
+                }}
               />
             )}
             {typeof tooltip === 'function' ? tooltip(tooltipProps) : tooltip}
