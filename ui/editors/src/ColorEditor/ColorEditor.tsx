@@ -7,7 +7,7 @@ import {
   RgbStringColorPicker,
   RgbaStringColorPicker,
 } from 'react-colorful';
-import { jsx, Button, Box, SxStyleProp } from 'theme-ui';
+import { jsx, Button, Box, SxStyleProp, Theme } from 'theme-ui';
 import { Popover } from '@component-controls/components';
 import { ComponentControlColor, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
@@ -26,10 +26,10 @@ const sxProps: SxStyleProp = {
   '.react-colorful__saturation': {
     position: 'relative',
     flexGrow: 1,
-    borderBottom: '12px solid #000',
+    borderBottom: (t: Theme) => `12px solid ${t.colors?.text}`,
     borderRadius: '8px 8px 0 0',
-    backgroundImage:
-      'linear-gradient(to top, #000, rgba(0, 0, 0, 0)), linear-gradient(to right, #fff, rgba(255, 255, 255, 0))',
+    backgroundImage: (t: Theme) =>
+      `linear-gradient(to top,  ${t.colors?.text}, rgba(0, 0, 0, 0)), linear-gradient(to right,  ${t.colors?.text}, rgba(255, 255, 255, 0))`,
   },
 
   '.react-colorful__pointer-fill, .react-colorful__alpha-gradient': {
@@ -45,7 +45,7 @@ const sxProps: SxStyleProp = {
 
   /* Improve elements rendering on light backgrounds */
   '.react-colorful__alpha-gradient, .react-colorful__saturation': {
-    boxShadow: 'inset 0 0 0 1px rgba(0, 0, 0, 0.05)',
+    boxShadow: (t: Theme) => `inset 0 0 0 1px ${t.colors?.shadow}`,
   },
 
   '.react-colorful__hue, .react-colorful__alpha': {
@@ -82,10 +82,10 @@ const sxProps: SxStyleProp = {
     width: 28,
     height: 28,
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#fff',
-    border: '2px solid #fff',
+    bg: 'background',
+    border: (t: Theme) => `2px solid ${t?.colors?.background}`,
     borderRadius: '50%',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+    boxShadow: (t: Theme) => `0 2px 4px ${t.colors?.shadow}`,
   },
 
   '.react-colorful__interactive:focus .react-colorful__pointer': {
@@ -94,7 +94,7 @@ const sxProps: SxStyleProp = {
 
   /* Chessboard-like pattern for alpha related elements */
   '.react-colorful__alpha, .react-colorful__alpha-pointer': {
-    backgroundColor: '#fff',
+    bg: 'white',
     backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><rect x="8" width="8" height="8"/><rect y="8" width="8" height="8"/></svg>')`,
   },
 
