@@ -2321,6 +2321,12 @@ Object {
           "name": "InterpolationWithTheme",
         },
       ],
+      "@emotion/styled": Array [
+        Object {
+          "importedName": "StyledComponent",
+          "name": "StyledComponent",
+        },
+      ],
       "@theme-ui/css": Array [
         Object {
           "importedName": "ResponsiveStyleValue",
@@ -2386,6 +2392,12 @@ Object {
           Object {
             "importedName": "InterpolationWithTheme",
             "name": "InterpolationWithTheme",
+          },
+        ],
+        "@emotion/styled": Array [
+          Object {
+            "importedName": "StyledComponent",
+            "name": "StyledComponent",
           },
         ],
         "@theme-ui/css": Array [

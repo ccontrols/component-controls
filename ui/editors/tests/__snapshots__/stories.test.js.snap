@@ -376,7 +376,7 @@ exports[`Editors/OptionsEditor Multi Select Numeric 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="1"
@@ -416,7 +416,7 @@ exports[`Editors/OptionsEditor Multi Select Objects 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="one"
@@ -456,7 +456,7 @@ exports[`Editors/OptionsEditor Multi Select Simple 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="one"
@@ -496,7 +496,7 @@ exports[`Editors/OptionsEditor Numeric 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="1"
@@ -533,10 +533,10 @@ exports[`Editors/OptionsEditor Numeric 1`] = `
 exports[`Editors/OptionsEditor Numeric Check 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-0"
+      class="css-vurnku"
     >
       <div>
         <input
@@ -547,7 +547,7 @@ exports[`Editors/OptionsEditor Numeric Check 1`] = `
           value="1"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="One-1"
         >
           One
@@ -561,7 +561,7 @@ exports[`Editors/OptionsEditor Numeric Check 1`] = `
           value="2"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Two-2"
         >
           Two
@@ -575,7 +575,7 @@ exports[`Editors/OptionsEditor Numeric Check 1`] = `
           value="3"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Three-3"
         >
           Three
@@ -589,10 +589,10 @@ exports[`Editors/OptionsEditor Numeric Check 1`] = `
 exports[`Editors/OptionsEditor Numeric Check Inline 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-pb8m90"
+      class="css-1o5oq06-CheckboxesWrapper"
     >
       <div>
         <input
@@ -603,7 +603,7 @@ exports[`Editors/OptionsEditor Numeric Check Inline 1`] = `
           value="1"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="One-1"
         >
           One
@@ -617,7 +617,7 @@ exports[`Editors/OptionsEditor Numeric Check Inline 1`] = `
           value="2"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Two-2"
         >
           Two
@@ -631,7 +631,7 @@ exports[`Editors/OptionsEditor Numeric Check Inline 1`] = `
           value="3"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Three-3"
         >
           Three
@@ -645,7 +645,7 @@ exports[`Editors/OptionsEditor Numeric Check Inline 1`] = `
 exports[`Editors/OptionsEditor Numeric Radios 1`] = `
 <DocumentFragment>
   <div
-    class="css-0"
+    class="css-vurnku"
   >
     <div>
       <input
@@ -656,7 +656,7 @@ exports[`Editors/OptionsEditor Numeric Radios 1`] = `
         value="1"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="One-1"
       >
         One
@@ -670,7 +670,7 @@ exports[`Editors/OptionsEditor Numeric Radios 1`] = `
         value="2"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Two-2"
       >
         Two
@@ -684,7 +684,7 @@ exports[`Editors/OptionsEditor Numeric Radios 1`] = `
         value="3"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Three-3"
       >
         Three
@@ -697,7 +697,7 @@ exports[`Editors/OptionsEditor Numeric Radios 1`] = `
 exports[`Editors/OptionsEditor Numeric Radios Inline 1`] = `
 <DocumentFragment>
   <div
-    class="css-pb8m90"
+    class="css-jcfekw-RadiosWrapper"
   >
     <div>
       <input
@@ -708,7 +708,7 @@ exports[`Editors/OptionsEditor Numeric Radios Inline 1`] = `
         value="1"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="One-1"
       >
         One
@@ -722,7 +722,7 @@ exports[`Editors/OptionsEditor Numeric Radios Inline 1`] = `
         value="2"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Two-2"
       >
         Two
@@ -736,7 +736,7 @@ exports[`Editors/OptionsEditor Numeric Radios Inline 1`] = `
         value="3"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Three-3"
       >
         Three
@@ -752,7 +752,7 @@ exports[`Editors/OptionsEditor Objects 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="one"
@@ -789,10 +789,10 @@ exports[`Editors/OptionsEditor Objects 1`] = `
 exports[`Editors/OptionsEditor Objects Check 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-0"
+      class="css-vurnku"
     >
       <div>
         <input
@@ -803,7 +803,7 @@ exports[`Editors/OptionsEditor Objects Check 1`] = `
           value="one"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="One-one"
         >
           One
@@ -817,7 +817,7 @@ exports[`Editors/OptionsEditor Objects Check 1`] = `
           value="two"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Two-two"
         >
           Two
@@ -831,7 +831,7 @@ exports[`Editors/OptionsEditor Objects Check 1`] = `
           value="three"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Three-three"
         >
           Three
@@ -845,10 +845,10 @@ exports[`Editors/OptionsEditor Objects Check 1`] = `
 exports[`Editors/OptionsEditor Objects Check Inline 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-pb8m90"
+      class="css-1o5oq06-CheckboxesWrapper"
     >
       <div>
         <input
@@ -859,7 +859,7 @@ exports[`Editors/OptionsEditor Objects Check Inline 1`] = `
           value="one"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="One-one"
         >
           One
@@ -873,7 +873,7 @@ exports[`Editors/OptionsEditor Objects Check Inline 1`] = `
           value="two"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Two-two"
         >
           Two
@@ -887,7 +887,7 @@ exports[`Editors/OptionsEditor Objects Check Inline 1`] = `
           value="three"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="Three-three"
         >
           Three
@@ -901,7 +901,7 @@ exports[`Editors/OptionsEditor Objects Check Inline 1`] = `
 exports[`Editors/OptionsEditor Objects Radios 1`] = `
 <DocumentFragment>
   <div
-    class="css-0"
+    class="css-vurnku"
   >
     <div>
       <input
@@ -912,7 +912,7 @@ exports[`Editors/OptionsEditor Objects Radios 1`] = `
         value="one"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="One-one"
       >
         One
@@ -926,7 +926,7 @@ exports[`Editors/OptionsEditor Objects Radios 1`] = `
         value="two"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Two-two"
       >
         Two
@@ -940,7 +940,7 @@ exports[`Editors/OptionsEditor Objects Radios 1`] = `
         value="three"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Three-three"
       >
         Three
@@ -953,7 +953,7 @@ exports[`Editors/OptionsEditor Objects Radios 1`] = `
 exports[`Editors/OptionsEditor Objects Radios Inline 1`] = `
 <DocumentFragment>
   <div
-    class="css-pb8m90"
+    class="css-jcfekw-RadiosWrapper"
   >
     <div>
       <input
@@ -964,7 +964,7 @@ exports[`Editors/OptionsEditor Objects Radios Inline 1`] = `
         value="one"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="One-one"
       >
         One
@@ -978,7 +978,7 @@ exports[`Editors/OptionsEditor Objects Radios Inline 1`] = `
         value="two"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Two-two"
       >
         Two
@@ -992,7 +992,7 @@ exports[`Editors/OptionsEditor Objects Radios Inline 1`] = `
         value="three"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="Three-three"
       >
         Three
@@ -1008,7 +1008,7 @@ exports[`Editors/OptionsEditor Overview 1`] = `
     class="css-4cffwv"
   >
     <select
-      class="css-2ty81"
+      class="css-f2jwlh-OptionsSelect"
     >
       <option
         value="one"
@@ -1045,10 +1045,10 @@ exports[`Editors/OptionsEditor Overview 1`] = `
 exports[`Editors/OptionsEditor Simple Check 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-0"
+      class="css-vurnku"
     >
       <div>
         <input
@@ -1059,7 +1059,7 @@ exports[`Editors/OptionsEditor Simple Check 1`] = `
           value="one"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="one-one"
         >
           one
@@ -1073,7 +1073,7 @@ exports[`Editors/OptionsEditor Simple Check 1`] = `
           value="two"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="two-two"
         >
           two
@@ -1087,7 +1087,7 @@ exports[`Editors/OptionsEditor Simple Check 1`] = `
           value="three"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="three-three"
         >
           three
@@ -1101,10 +1101,10 @@ exports[`Editors/OptionsEditor Simple Check 1`] = `
 exports[`Editors/OptionsEditor Simple Check Inline 1`] = `
 <DocumentFragment>
   <fieldset
-    class="css-1m9i1li"
+    class="css-11feseq-CheckboxFieldset"
   >
     <div
-      class="css-pb8m90"
+      class="css-1o5oq06-CheckboxesWrapper"
     >
       <div>
         <input
@@ -1115,7 +1115,7 @@ exports[`Editors/OptionsEditor Simple Check Inline 1`] = `
           value="one"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="one-one"
         >
           one
@@ -1129,7 +1129,7 @@ exports[`Editors/OptionsEditor Simple Check Inline 1`] = `
           value="two"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="two-two"
         >
           two
@@ -1143,7 +1143,7 @@ exports[`Editors/OptionsEditor Simple Check Inline 1`] = `
           value="three"
         />
         <label
-          class="css-1d6afgx"
+          class="css-17g78q-CheckboxLabel"
           for="three-three"
         >
           three
@@ -1157,7 +1157,7 @@ exports[`Editors/OptionsEditor Simple Check Inline 1`] = `
 exports[`Editors/OptionsEditor Simple Radios 1`] = `
 <DocumentFragment>
   <div
-    class="css-0"
+    class="css-vurnku"
   >
     <div>
       <input
@@ -1168,7 +1168,7 @@ exports[`Editors/OptionsEditor Simple Radios 1`] = `
         value="one"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="one-one"
       >
         one
@@ -1182,7 +1182,7 @@ exports[`Editors/OptionsEditor Simple Radios 1`] = `
         value="two"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="two-two"
       >
         two
@@ -1196,7 +1196,7 @@ exports[`Editors/OptionsEditor Simple Radios 1`] = `
         value="three"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="three-three"
       >
         three
@@ -1209,7 +1209,7 @@ exports[`Editors/OptionsEditor Simple Radios 1`] = `
 exports[`Editors/OptionsEditor Simple Radios Inline 1`] = `
 <DocumentFragment>
   <div
-    class="css-pb8m90"
+    class="css-jcfekw-RadiosWrapper"
   >
     <div>
       <input
@@ -1220,7 +1220,7 @@ exports[`Editors/OptionsEditor Simple Radios Inline 1`] = `
         value="one"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="one-one"
       >
         one
@@ -1234,7 +1234,7 @@ exports[`Editors/OptionsEditor Simple Radios Inline 1`] = `
         value="two"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="two-two"
       >
         two
@@ -1248,7 +1248,7 @@ exports[`Editors/OptionsEditor Simple Radios Inline 1`] = `
         value="three"
       />
       <label
-        class="css-1d6afgx"
+        class="css-1px3shr-RadioLabel"
         for="three-three"
       >
         three
