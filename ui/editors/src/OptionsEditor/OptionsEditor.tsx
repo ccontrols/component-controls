@@ -1,6 +1,6 @@
-import React, { ChangeEvent } from 'react';
-import { Select } from 'theme-ui';
-import styled from '@emotion/styled';
+/** @jsx jsx */
+import { FC, ChangeEvent } from 'react';
+import { jsx, Select, SelectProps } from 'theme-ui';
 import {
   ComponentControlOptions,
   ControlTypes,
@@ -12,10 +12,15 @@ import { RadiosEditor } from './RadiosEditor';
 import { CheckboxEditor } from './CheckboxEditor';
 import { addPropertyEditor } from '../prop-factory';
 
-const OptionsSelect = styled(Select)({
-  color: 'black',
-  flexBasis: '100%',
-});
+const OptionsSelect: FC<SelectProps> = props => (
+  <Select
+    sx={{
+      color: 'black',
+      flexBasis: '100%',
+    }}
+    {...props}
+  />
+);
 
 /**
  * Options control editor.

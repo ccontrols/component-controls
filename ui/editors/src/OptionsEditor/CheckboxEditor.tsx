@@ -1,34 +1,51 @@
-import React, { ChangeEvent } from 'react';
-import styled from '@emotion/styled';
+/** @jsx jsx */
+import { FC, ChangeEvent } from 'react';
+import { jsx, Box, Label, LabelProps } from 'theme-ui';
 import { ComponentControlOptions } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 import { normalizeOptions, NormalizedOption } from './utils';
 import { PropertyEditor } from '../types';
 
-const CheckboxesWrapper = styled.div<{ isInline: boolean }>(({ isInline }) =>
-  isInline
-    ? {
+const CheckboxesWrapper: FC<{ isInline: boolean }> = ({ isInline, ...rest }) =>
+  isInline ? (
+    <Box
+      sx={{
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         '> * + *': {
           marginLeft: 10,
         },
-      }
-    : {},
+      }}
+      {...rest}
+    />
+  ) : (
+    <Box {...rest} />
+  );
+
+const CheckboxFieldset: FC = props => (
+  <Box
+    as="fieldset"
+    sx={{
+      border: 0,
+      padding: 0,
+      margin: 0,
+    }}
+    {...props}
+  />
 );
 
-const CheckboxFieldset = styled.fieldset({
-  border: 0,
-  padding: 0,
-  margin: 0,
-});
-
-const CheckboxLabel = styled.label({
-  padding: '3px 0 3px 5px',
-  lineHeight: '18px',
-  display: 'inline-block',
-});
+const CheckboxLabel: FC<LabelProps> = props => (
+  <Label
+    sx={{
+      width: 'unset',
+      padding: '3px 0 3px 5px',
+      lineHeight: '18px',
+      display: 'inline-block',
+    }}
+    {...props}
+  />
+);
 
 export const CheckboxEditor: PropertyEditor = ({ name }) => {
   const [control, onChange] = useControl<ComponentControlOptions>(name);
