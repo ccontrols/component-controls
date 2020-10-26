@@ -166,11 +166,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 57,
-          "line": 12,
+          "line": 13,
         },
         "start": Object {
           "column": 38,
-          "line": 12,
+          "line": 13,
         },
       },
       "name": "story-with-props",
@@ -332,11 +332,11 @@ export default Button;
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 14,
+          "line": 15,
         },
         "start": Object {
           "column": 32,
-          "line": 12,
+          "line": 13,
         },
       },
       "name": "smart story",
@@ -503,11 +503,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 24,
-          "line": 17,
+          "line": 18,
         },
         "start": Object {
           "column": 9,
-          "line": 13,
+          "line": 14,
         },
       },
       "name": "story-with-props",
@@ -649,11 +649,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 67,
-          "line": 12,
+          "line": 13,
         },
         "start": Object {
           "column": 38,
-          "line": 12,
+          "line": 13,
         },
       },
       "name": "story-with-props",
@@ -775,11 +775,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 68,
-          "line": 12,
+          "line": 13,
         },
         "start": Object {
           "column": 38,
-          "line": 12,
+          "line": 13,
         },
       },
       "name": "story-with-props",
@@ -916,11 +916,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 46,
-          "line": 13,
+          "line": 14,
         },
         "start": Object {
           "column": 9,
-          "line": 13,
+          "line": 14,
         },
       },
       "name": "story-with-props",

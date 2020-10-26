@@ -86,11 +86,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 63,
-          "line": 12,
+          "line": 13,
         },
         "start": Object {
           "column": 38,
-          "line": 12,
+          "line": 13,
         },
       },
       "name": "story-with-props",

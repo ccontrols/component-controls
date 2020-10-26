@@ -32,6 +32,7 @@ Object {
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 
+/* @jsxRuntime classic */
 /* @jsx mdx */
 import { customStory } from '../../components/external-story';
 import { Story, Meta } from '@component-controls/blocks';
@@ -152,6 +153,7 @@ Object {
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 
+/* @jsxRuntime classic */
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-deconstructed-props';
 
@@ -261,6 +263,7 @@ Object {
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 
+/* @jsxRuntime classic */
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-props';
 
@@ -324,11 +327,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 13,
+          "line": 14,
         },
         "start": Object {
           "column": 30,
-          "line": 11,
+          "line": 12,
         },
       },
       "name": "mdx-story",
@@ -339,6 +342,7 @@ Object {
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 
+/* @jsxRuntime classic */
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
 
@@ -432,11 +436,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 63,
-          "line": 11,
+          "line": 12,
         },
         "start": Object {
           "column": 31,
-          "line": 11,
+          "line": 12,
         },
       },
       "name": "mdx-story",
@@ -447,6 +451,7 @@ Object {
 import React from 'react';
 import { mdx } from '@mdx-js/react';
 
+/* @jsxRuntime classic */
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
 

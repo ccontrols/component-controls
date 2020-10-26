@@ -142,11 +142,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 50,
-          "line": 13,
+          "line": 14,
         },
         "start": Object {
           "column": 6,
-          "line": 13,
+          "line": 14,
         },
       },
       "name": "my-story",
@@ -215,11 +215,11 @@ Object {
       "loc": Object {
         "end": Object {
           "column": 8,
-          "line": 19,
+          "line": 20,
         },
         "start": Object {
           "column": 6,
-          "line": 13,
+          "line": 14,
         },
       },
       "name": "story",
