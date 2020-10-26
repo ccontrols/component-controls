@@ -66,6 +66,7 @@ export const defaultExternals: ExternalProps[] = [
   { lib: 'prism-react-renderer' },
 
   { lib: '@primer/octicons-react' },
+  { lib: '@emotion/styled' },
   { lib: '@mdx-js/react' },
 
   { lib: 'markdown-to-jsx' },
