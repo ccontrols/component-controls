@@ -30,7 +30,7 @@ export const Arrow: FC<{
       sx={{
         position: 'absolute',
         borderStyle: 'solid',
-        background: 'background',
+        bg: 'background',
         marginBottom: matchPx('top', placement, 0, SPACING),
         marginTop: matchPx('bottom', placement, 0, SPACING),
         marginRight: matchPx('left', placement, 0, SPACING),
