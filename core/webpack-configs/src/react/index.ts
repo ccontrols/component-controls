@@ -43,12 +43,7 @@ export const react: PresetType = (options: BuildProps) => {
               options: {
                 presets: [
                   ['@babel/preset-env', { modules: 'commonjs' }],
-                  [
-                    '@babel/preset-react',
-                    {
-                      runtime: 'automatic',
-                    },
-                  ],
+                  '@babel/preset-react',
                 ],
               },
             },
@@ -73,12 +68,7 @@ export const react: PresetType = (options: BuildProps) => {
           options: {
             presets: [
               ['@babel/preset-env', { modules: 'commonjs' }],
-              [
-                '@babel/preset-react',
-                {
-                  runtime: 'automatic',
-                },
-              ],
+              '@babel/preset-react',
             ],
           },
         },
