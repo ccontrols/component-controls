@@ -1,6 +1,13 @@
 import { PropTypes, PropType, TypeInformation } from '@component-controls/core';
+import {
+  RdPropInfo,
+  RdValue,
+  RdPropType,
+  RdTypescriptType,
+  RdPropInfoRecord,
+} from './types';
 
-const rdPropToCCProp = (rdProp: any): PropType => {
+const rdPropToCCProp = (rdProp: RdPropInfo): PropType => {
   const prop: Partial<PropType> = {};
   if (rdProp.description) {
     prop.description = rdProp.description;
@@ -19,7 +26,8 @@ const rdPropToCCProp = (rdProp: any): PropType => {
   prop.type = type as TypeInformation;
   return prop as PropType;
 };
-const propTypeToCCType = (dgType: any): TypeInformation => {
+
+const propTypeToCCType = (dgType: RdPropType): TypeInformation => {
   let type: Partial<TypeInformation> = {};
   if (dgType) {
     const typeName = dgType.name;
@@ -32,9 +40,10 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
         type = {
           name: 'array',
         };
-        if (dgType.value) {
-          type.value = Object.keys(dgType.value).map(name => ({
-            name: dgType.value[name],
+        const values = dgType.value;
+        if (typeof values === 'object') {
+          type.value = Object.keys(values).map(name => ({
+            name: (values as Record<string, RdValue>)[name],
           }));
         }
         break;
@@ -46,12 +55,14 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
       case 'enum':
         type = {
           name: 'enum',
-          value: dgType.value.map(({ value }: any) => {
-            return {
-              name: typeof value,
-              value,
-            };
-          }),
+          value: Array.isArray(dgType.value)
+            ? dgType.value.map(({ value }: any) => {
+                return {
+                  name: typeof value,
+                  value,
+                };
+              })
+            : undefined,
         };
         break;
       case 'element':
@@ -67,7 +78,7 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
         type = {
           name: 'object',
           value: Object.keys(dgType.value).map(key => ({
-            name: dgType.value[key],
+            name: (dgType.value as Record<string, RdValue>)[key],
           })),
         };
         break;
@@ -85,10 +96,11 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
           name: 'object',
           value: Object.keys(dgType.value).map(name => {
             const t: TypeInformation = {
-              name: dgType.value[name].name,
+              name: (dgType.value as Record<string, { name: string }>)[name]
+                .name,
               value: name,
             };
-            if (dgType.value[name].required) {
+            if ((dgType.value as Record<string, RdValue>)[name].required) {
               t.required = true;
             }
             return t;
@@ -99,7 +111,9 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
       case 'union':
         type = {
           name: 'union',
-          value: dgType.value.map((v: any) => propTypeToCCType(v)),
+          value: (dgType.value as RdValue[]).map((v: any) =>
+            propTypeToCCType(v),
+          ),
         };
         break;
       case 'func':
@@ -116,7 +130,7 @@ const propTypeToCCType = (dgType: any): TypeInformation => {
   return type as TypeInformation;
 };
 
-const tsTypeToCCType = (dgType: any): TypeInformation => {
+const tsTypeToCCType = (dgType: RdTypescriptType): TypeInformation => {
   let type: Partial<TypeInformation> = {};
   if (dgType) {
     const typeName = dgType.name;
@@ -131,7 +145,7 @@ const tsTypeToCCType = (dgType: any): TypeInformation => {
         };
         break;
       case 'signature':
-        if (dgType.signature.arguments) {
+        if (dgType.signature?.arguments) {
           type = {
             name: 'function',
             value: tsTypeToCCType(dgType.signature.return),
@@ -155,7 +169,9 @@ const tsTypeToCCType = (dgType: any): TypeInformation => {
   }
   return type as TypeInformation;
 };
-export const transformProps = (props: any): PropTypes | undefined => {
+export const transformProps = (
+  props: RdPropInfoRecord,
+): PropTypes | undefined => {
   return props
     ? Object.keys(props).reduce((acc, name) => {
         const rdProp: any = props[name];

@@ -7,6 +7,5 @@ Object {
 \`<IconButton icon='...' />\`<br />",
   "displayName": "Button",
   "methods": Array [],
-  "props": undefined,
 }
 `;

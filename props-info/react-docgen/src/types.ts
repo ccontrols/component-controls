@@ -51,3 +51,36 @@ export interface RectDocgenOptions {
   handlers?: HandlerType[];
   options?: OptionsType;
 }
+
+export interface RdPropInfo {
+  description?: string;
+  defaultValue?: null | {
+    value?: string;
+  };
+  type?: RdPropType;
+  tsType?: RdTypescriptType;
+  flowType?: RdTypescriptType;
+  required?: boolean;
+}
+export type RdPropInfoRecord = Record<string, RdPropInfo>;
+export interface RdValue {
+  name: string;
+  value: string;
+  required?: boolean;
+}
+export interface RdPropType {
+  name: string;
+  required?: boolean;
+  value: Record<string, RdValue> | RdValue[];
+}
+export interface RdTypescriptType {
+  name: string;
+  required?: boolean;
+
+  elements: RdTypescriptType[];
+  signature: {
+    return: RdTypescriptType;
+    arguments: RdTypescriptType[];
+    properties: RdTypescriptType[];
+  };
+}

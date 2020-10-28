@@ -29,10 +29,13 @@ export const run = (
 
     if (propTable) {
       const props = transformProps(propTable.props);
-      return {
-        ...propTable,
-        props,
-      };
+      if (props) {
+        return {
+          ...propTable,
+          props,
+        };
+      }
+      return propTable;
     }
     return undefined;
   };
