@@ -94,7 +94,7 @@ Object {
       Object {
         "test": /\\\\\\.\\(css\\|sass\\|scss\\|less\\|styl\\)\\$/i,
         "use": Array [
-          "/Users/atanasster/cc/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
+          "/Users/atanasster/component-controls/node_modules/extract-css-chunks-webpack-plugin/dist/loader.js",
           Object {
             "loader": "css-loader",
             "options": Object {},
