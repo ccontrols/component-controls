@@ -418,25 +418,27 @@ export const extractTSDoc = (
       }
 
       case 'tuple': {
-        return [
-          {
-            type: 'paragraph',
-            children: [
-              { type: 'text', value: '[' },
-              ...p.elements.reduce((acc: Node[], t: any, idx: number) => {
-                const r = extractPropType(t);
-                if (idx < p.elements.length - 1) {
-                  r.push({
-                    type: 'text',
-                    value: ', ',
-                  });
-                }
-                return [...acc, ...r];
-              }, []),
-              { type: 'text', value: ']' },
-            ],
-          },
-        ];
+        return p.elements
+          ? [
+              {
+                type: 'paragraph',
+                children: [
+                  { type: 'text', value: '[' },
+                  ...p.elements.reduce((acc: Node[], t: any, idx: number) => {
+                    const r = extractPropType(t);
+                    if (idx < p.elements.length - 1) {
+                      r.push({
+                        type: 'text',
+                        value: ', ',
+                      });
+                    }
+                    return [...acc, ...r];
+                  }, []),
+                  { type: 'text', value: ']' },
+                ],
+              },
+            ]
+          : [];
       }
       case 'stringLiteral': {
         return [

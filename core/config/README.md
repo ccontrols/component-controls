@@ -180,13 +180,13 @@ merge a configuration passed through cli or tools, with the build configration f
 
 _defined in [@component-controls/config/src/index.ts](https://github.com/ccontrols/component-controls/tree/master/core/config/src/index.ts#L168)_
 
-**function** mergeBuildConfiguration(`config`\*: [BuildConfiguration](#buildconfiguration)): ;
+**function** mergeBuildConfiguration(`config`\*: [BuildConfiguration](#buildconfiguration)): [BuildConfiguration](#buildconfiguration);
 
 ### parameters
 
 | Name      | Type                                      | Description |
 | --------- | ----------------------------------------- | ----------- |
 | `config*` | [BuildConfiguration](#buildconfiguration) |             |
-| `returns` |                                           |             |
+| `returns` | [BuildConfiguration](#buildconfiguration) |             |
 
 <!-- END-TSDOC-TYPESCRIPT -->

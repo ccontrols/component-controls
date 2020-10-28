@@ -15,9 +15,6 @@
     -   [Scope](#scope)
     -   [ParserPlugin](#parserplugin)
     -   [ParserPluginWithOptions](#parserpluginwithoptions)
-    -   [DecoratorsPluginOptions](#decoratorspluginoptions)
-    -   [PipelineOperatorPluginOptions](#pipelineoperatorpluginoptions)
-    -   [FlowPluginOptions](#flowpluginoptions)
 
 # Overview
 
@@ -200,42 +197,6 @@ _defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/b
 
 _defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
 
-\['decorators', [DecoratorsPluginOptions](#decoratorspluginoptions)] \| \['pipelineOperator', [PipelineOperatorPluginOptions](#pipelineoperatorpluginoptions)] \| \['flow', [FlowPluginOptions](#flowpluginoptions)]
-
-## DecoratorsPluginOptions
-
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
-
-
-
-### properties
-
-| Name                     | Type    | Description |
-| ------------------------ | ------- | ----------- |
-| `decoratorsBeforeExport` | boolean |             |
-
-## PipelineOperatorPluginOptions
-
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
-
-
-
-### properties
-
-| Name        | Type                 | Description |
-| ----------- | -------------------- | ----------- |
-| `proposal*` | 'minimal' \| 'smart' |             |
-
-## FlowPluginOptions
-
-_defined in [@babel/parser/typings/babel-parser.d.ts](https://github.com/babel/babel/tree/master/packages/babel-parser)_
-
-
-
-### properties
-
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| `all` | boolean |             |
+ \|  \| 
 
 <!-- END-TSDOC-TYPESCRIPT -->

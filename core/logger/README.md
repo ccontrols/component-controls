@@ -39,10 +39,10 @@ _defined in [@component-controls/logger/src/index.ts](https://github.com/ccontro
 
 ### properties
 
-| Name       | Type                      | Description |
-| ---------- | ------------------------- | ----------- |
-| `colors*`  | \[number, number, number] |             |
-| `logLevel` | [LogLevel](#loglevel)     |             |
+| Name       | Type                  | Description |
+| ---------- | --------------------- | ----------- |
+| `colors*`  |                       |             |
+| `logLevel` | [LogLevel](#loglevel) |             |
 
 ## LogLevel
 
