@@ -3,7 +3,7 @@
 exports[`mdx-async arrow-function.mdx 1`] = `
 Object {
   "components": Object {
-    "fbc7c3606fe52918c0716b2079a81097": Object {
+    "b41dd42675c27f380600a64c73f1dfa7": Object {
       "from": "../components/BaseButton",
       "importedName": "default",
       "name": "Button",
@@ -12,15 +12,15 @@ Object {
   "doc": Object {
     "component": "Button",
     "componentsLookup": Object {
-      "Button": "fbc7c3606fe52918c0716b2079a81097",
+      "Button": "b41dd42675c27f380600a64c73f1dfa7",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-10-21T01:23:26.440Z,
-    "package": "74d5ae881b6029d05c88093109de57a1",
+    "date": 2020-10-28T15:50:29.515Z,
+    "dateModified": 2020-10-28T15:50:29.515Z,
+    "package": "66a856a4db21472e4e1261ba82e63676",
     "title": "Storybook/MDX",
   },
   "packages": Object {
-    "74d5ae881b6029d05c88093109de57a1": Object {
+    "66a856a4db21472e4e1261ba82e63676": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -53,7 +53,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "74d5ae881b6029d05c88093109de57a1",
+      "fileHash": "66a856a4db21472e4e1261ba82e63676",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {

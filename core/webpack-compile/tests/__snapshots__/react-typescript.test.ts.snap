@@ -59,7 +59,7 @@ Object {
     ],
   },
   "components": Object {
-    "fded7dbaa855ea6869a794f877eab680": Object {
+    "a7f1f4b5c292e9cb3abbe57b40b31ac9": Object {
       "from": "./ActionBar",
       "importedName": "ActionBar",
       "imports": Object {
@@ -126,8 +126,8 @@ actions can accept an order prop, and can also be superimposed",
         },
       },
       "name": "ActionBar",
-      "package": "fded7dbaa855ea6869a794f877eab680",
-      "request": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.tsx",
+      "package": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
+      "request": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.tsx",
       "source": "/** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { Box, Button, jsx } from 'theme-ui';
@@ -211,7 +211,7 @@ export const ActionBar: FC<ActionBarProps> = ({
   },
   "config": undefined,
   "packages": Object {
-    "8c5a495b6c81e803332610dad9861480": Object {
+    "7dc443c3b001200a0fb292826387410a": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/match-media": "^0.4.0-rc.1",
@@ -242,7 +242,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
       },
-      "fileHash": "8c5a495b6c81e803332610dad9861480",
+      "fileHash": "7dc443c3b001200a0fb292826387410a",
       "name": "@component-controls/components",
       "peerDependencies": Object {
         "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -256,7 +256,7 @@ export const ActionBar: FC<ActionBarProps> = ({
       },
       "version": "1.36.7",
     },
-    "fded7dbaa855ea6869a794f877eab680": Object {
+    "a7f1f4b5c292e9cb3abbe57b40b31ac9": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/match-media": "^0.4.0-rc.1",
@@ -287,7 +287,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
       },
-      "fileHash": "fded7dbaa855ea6869a794f877eab680",
+      "fileHash": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
       "name": "@component-controls/components",
       "peerDependencies": Object {
         "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -308,15 +308,15 @@ export const ActionBar: FC<ActionBarProps> = ({
         "component": "ActionBar",
         "components": Object {},
         "componentsLookup": Object {
-          "ActionBar": "fded7dbaa855ea6869a794f877eab680",
+          "ActionBar": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
         },
-        "date": "2020-08-18T06:58:47.265Z",
-        "dateModified": "2020-08-18T06:58:47.271Z",
-        "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
-        "package": "8c5a495b6c81e803332610dad9861480",
+        "date": "2020-10-28T15:50:29.960Z",
+        "dateModified": "2020-10-28T15:50:29.960Z",
+        "fileName": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.stories.tsx",
+        "package": "7dc443c3b001200a0fb292826387410a",
         "title": "Components/ActionBar",
       },
-      "filePath": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
+      "filePath": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.stories.tsx",
       "stories": Object {
         "groupEnd": Object {
           "arguments": Array [],

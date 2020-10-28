@@ -2355,8 +2355,8 @@ Object {
       ],
     },
     "name": "Button",
-    "package": "8f6835169f285fcd3ad5425d9268a8f1",
-    "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
+    "package": "887816ea10bb7ca8ebbfa7e076270514",
+    "request": "/Users/atanasster/cc/node_modules/@theme-ui/components/index.d.ts",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -2368,7 +2368,7 @@ Object {
       "@theme-ui/theme-provider": "^0.4.0-rc.5",
     },
     "devDependencies": undefined,
-    "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
+    "fileHash": "887816ea10bb7ca8ebbfa7e076270514",
     "name": "theme-ui",
     "peerDependencies": undefined,
     "repository": Object {
@@ -2384,7 +2384,7 @@ Object {
 exports[`external-library theme-ui.jsx 1`] = `
 Object {
   "components": Object {
-    "98b2111b08fbab8e38c938acaf3e129a": Object {
+    "a4d1c2c6e8361c4fc57eaf8f99c68a27": Object {
       "from": "theme-ui",
       "importedName": "Button",
       "imports": Object {
@@ -2428,23 +2428,23 @@ Object {
         ],
       },
       "name": "Button",
-      "package": "8f6835169f285fcd3ad5425d9268a8f1",
-      "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/index.d.ts",
+      "package": "887816ea10bb7ca8ebbfa7e076270514",
+      "request": "/Users/atanasster/cc/node_modules/@theme-ui/components/index.d.ts",
     },
   },
   "doc": Object {
     "component": "Button",
     "components": Object {},
     "componentsLookup": Object {
-      "Button": "98b2111b08fbab8e38c938acaf3e129a",
+      "Button": "a4d1c2c6e8361c4fc57eaf8f99c68a27",
     },
-    "date": 2020-10-21T01:23:26.430Z,
-    "dateModified": 2020-10-21T01:23:26.430Z,
-    "package": "295d57ccad25aab2260adf38810e8858",
+    "date": 2020-10-28T15:50:29.500Z,
+    "dateModified": 2020-10-28T15:50:29.500Z,
+    "package": "07962e5354728483629b3b06c303b763",
     "title": "Storybook/Blocks/Button",
   },
   "packages": Object {
-    "295d57ccad25aab2260adf38810e8858": Object {
+    "07962e5354728483629b3b06c303b763": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -2477,7 +2477,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "295d57ccad25aab2260adf38810e8858",
+      "fileHash": "07962e5354728483629b3b06c303b763",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -2487,7 +2487,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "8f6835169f285fcd3ad5425d9268a8f1": Object {
+    "887816ea10bb7ca8ebbfa7e076270514": Object {
       "dependencies": Object {
         "@theme-ui/color-modes": "^0.4.0-rc.5",
         "@theme-ui/components": "^0.4.0-rc.5",
@@ -2497,7 +2497,7 @@ Object {
         "@theme-ui/theme-provider": "^0.4.0-rc.5",
       },
       "devDependencies": undefined,
-      "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
+      "fileHash": "887816ea10bb7ca8ebbfa7e076270514",
       "name": "theme-ui",
       "peerDependencies": undefined,
       "repository": Object {

@@ -14,7 +14,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-class-export.js",
+    "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-default-class-export.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -49,7 +49,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "68d46d6964a53de9df203beb8794fb61",
+    "fileHash": "b1509e6189968fcb82d51674b1c020b4",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -72,7 +72,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-default-arrow-func.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -107,7 +107,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "ceea0565a65f75c8c7b6b355d6d335ac",
+    "fileHash": "68aebf519ff8f8359ff912b07a1678ac",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -154,7 +154,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "f96a7e8142d3ef97c1bdda38ff7a5b92",
+    "fileHash": "cf8cae2b156ca5febd7ad92770417e81",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -203,7 +203,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "2f4bd34d15be236674abaf6e894afe6e",
+    "fileHash": "37426d3b0c28836644ead936e512dfa6",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -226,7 +226,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
+    "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-class.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -261,7 +261,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "996a04cd0627e5de9c21977a04008534",
+    "fileHash": "7de4e5cb8aa9c40357d3c78e320bf77d",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -284,7 +284,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/node_modules/@theme-ui/components/src/Button.js",
+    "request": "/Users/atanasster/cc/node_modules/@theme-ui/components/src/Button.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -296,7 +296,7 @@ Object {
       "@theme-ui/theme-provider": "^0.4.0-rc.5",
     },
     "devDependencies": undefined,
-    "fileHash": "8f6835169f285fcd3ad5425d9268a8f1",
+    "fileHash": "887816ea10bb7ca8ebbfa7e076270514",
     "name": "theme-ui",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -312,7 +312,7 @@ Object {
     "importedName": "Subtitle",
     "imports": Object {},
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/node_modules/@component-controls/components/dist/index.js",
+    "request": "/Users/atanasster/cc/node_modules/@component-controls/components/dist/index.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -345,7 +345,7 @@ Object {
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
     },
-    "fileHash": "a8331272bc389f63195926fe6e7dd6d6",
+    "fileHash": "755b9269001f7556001ee9532aaf222c",
     "name": "@component-controls/components",
     "peerDependencies": Object {
       "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -383,7 +383,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+    "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-arrow-func.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -418,7 +418,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "2f4bd34d15be236674abaf6e894afe6e",
+    "fileHash": "37426d3b0c28836644ead936e512dfa6",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},
@@ -441,7 +441,7 @@ Object {
       ],
     },
     "name": "Button",
-    "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-class.js",
+    "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-class.js",
   },
   "componentPackage": Object {
     "dependencies": Object {
@@ -476,7 +476,7 @@ Object {
       "eslint": "^6.5.1",
       "jest": "^26.4.2",
     },
-    "fileHash": "996a04cd0627e5de9c21977a04008534",
+    "fileHash": "7de4e5cb8aa9c40357d3c78e320bf77d",
     "name": "@component-controls/instrument",
     "peerDependencies": undefined,
     "repository": Object {},

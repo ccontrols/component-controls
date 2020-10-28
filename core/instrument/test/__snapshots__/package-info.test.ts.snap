@@ -34,7 +34,7 @@ Object {
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
   },
-  "fileHash": "533576991b408a148e00826ca0fd358c",
+  "fileHash": "4f67cd06152cc0022a590e36e828e2e9",
   "name": "@component-controls/instrument",
   "peerDependencies": undefined,
   "repository": Object {
@@ -55,7 +55,7 @@ Object {
     "react-dom": "^16.13.1",
   },
   "devDependencies": undefined,
-  "fileHash": "0bc18efa255647cb090a51f916107c24",
+  "fileHash": "c02ac2104a38af2edb9d3c8b8bcf87d5",
   "name": "my-gatsby-project",
   "peerDependencies": undefined,
   "repository": Object {},
@@ -111,7 +111,7 @@ Object {
     "ts-node": "^8.5.4",
     "typescript": "^3.8.3",
   },
-  "fileHash": "82e7ff4ad10d0aa6da8708ad08b069ae",
+  "fileHash": "9c4027b52c8ed7f77a97a73bbabaa444",
   "name": "",
   "peerDependencies": undefined,
   "repository": Object {

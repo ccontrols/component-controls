@@ -3,23 +3,23 @@
 exports[`esm-hoisted name-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "57e65d42bacf0af9b3f4dd3fe2377cde": Object {
+    "8a129136debaab6d318e8503d7263a0a": Object {
       "name": "ControlsTable",
-      "package": "57e65d42bacf0af9b3f4dd3fe2377cde",
+      "package": "8a129136debaab6d318e8503d7263a0a",
     },
   },
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {
-      "ControlsTable": "57e65d42bacf0af9b3f4dd3fe2377cde",
+      "ControlsTable": "8a129136debaab6d318e8503d7263a0a",
     },
-    "date": 2020-10-21T01:23:26.428Z,
-    "dateModified": 2020-10-21T01:23:26.428Z,
-    "package": "f287f1a0ceeea6cbbc4c37123d236d06",
+    "date": 2020-10-28T15:50:29.499Z,
+    "dateModified": 2020-10-28T15:50:29.499Z,
+    "package": "3144c6f71ded447845a74a0246dbe049",
     "title": "Story",
   },
   "packages": Object {
-    "57e65d42bacf0af9b3f4dd3fe2377cde": Object {
+    "3144c6f71ded447845a74a0246dbe049": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -52,7 +52,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "57e65d42bacf0af9b3f4dd3fe2377cde",
+      "fileHash": "3144c6f71ded447845a74a0246dbe049",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -62,7 +62,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "f287f1a0ceeea6cbbc4c37123d236d06": Object {
+    "8a129136debaab6d318e8503d7263a0a": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -95,7 +95,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "f287f1a0ceeea6cbbc4c37123d236d06",
+      "fileHash": "8a129136debaab6d318e8503d7263a0a",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -145,13 +145,13 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-21T01:23:26.428Z,
-    "dateModified": 2020-10-21T01:23:26.429Z,
-    "package": "882d9c5faa549a3a402322c66bc1fc90",
+    "date": 2020-10-28T15:50:29.499Z,
+    "dateModified": 2020-10-28T15:50:29.499Z,
+    "package": "8e9a83dcf383ce79f8b576f6e59174f8",
     "title": "Story",
   },
   "packages": Object {
-    "882d9c5faa549a3a402322c66bc1fc90": Object {
+    "8e9a83dcf383ce79f8b576f6e59174f8": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -184,7 +184,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "882d9c5faa549a3a402322c66bc1fc90",
+      "fileHash": "8e9a83dcf383ce79f8b576f6e59174f8",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -248,13 +248,13 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-21T01:23:26.429Z,
-    "dateModified": 2020-10-21T01:23:26.429Z,
-    "package": "60758f1e6b5e3aeeaa541b7d91504436",
+    "date": 2020-10-28T15:50:29.499Z,
+    "dateModified": 2020-10-28T15:50:29.499Z,
+    "package": "d4d530d532529b339874b8f939939ae2",
     "title": "Story",
   },
   "packages": Object {
-    "60758f1e6b5e3aeeaa541b7d91504436": Object {
+    "d4d530d532529b339874b8f939939ae2": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -287,7 +287,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "60758f1e6b5e3aeeaa541b7d91504436",
+      "fileHash": "d4d530d532529b339874b8f939939ae2",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {

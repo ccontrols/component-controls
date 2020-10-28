@@ -3,7 +3,7 @@
 exports[`mdx-component component-parameters.mdx 1`] = `
 Object {
   "components": Object {
-    "2f4bd34d15be236674abaf6e894afe6e": Object {
+    "37426d3b0c28836644ead936e512dfa6": Object {
       "from": "../../components/button-named-arrow-func",
       "importedName": "Button",
       "imports": Object {
@@ -15,16 +15,16 @@ Object {
         ],
       },
       "name": "Button",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
   },
   "doc": Object {
     "component": "Button",
     "componentsLookup": Object {
-      "Button": "2f4bd34d15be236674abaf6e894afe6e",
+      "Button": "37426d3b0c28836644ead936e512dfa6",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-10-21T01:23:26.440Z,
+    "date": 2020-10-28T15:50:29.515Z,
+    "dateModified": 2020-10-28T15:50:29.515Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -43,7 +43,7 @@ import { Button } from '../../components/button-named-arrow-func';
 exports[`mdx-component named-alias-import.mdx 1`] = `
 Object {
   "components": Object {
-    "dc86c4457416c54c13147e780d972747": Object {
+    "5d044ee4562dc0dc028fd9cb2727114d": Object {
       "from": "../../components/button-named-class",
       "importedName": "Btn",
       "name": "Button",
@@ -52,10 +52,10 @@ Object {
   "doc": Object {
     "component": "Button",
     "componentsLookup": Object {
-      "Button": "dc86c4457416c54c13147e780d972747",
+      "Button": "5d044ee4562dc0dc028fd9cb2727114d",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-10-21T01:23:26.440Z,
+    "date": 2020-10-28T15:50:29.515Z,
+    "dateModified": 2020-10-28T15:50:29.515Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -72,7 +72,7 @@ import { Btn as Button } from '../../components/button-named-class';
 exports[`mdx-component propstable-of.mdx 1`] = `
 Object {
   "components": Object {
-    "dc262d21cd7820523c7e0bacca461e87": Object {
+    "3058c83bfd1ea05ca4b611ea98c7f835": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "imports": Object {
@@ -84,15 +84,15 @@ Object {
         ],
       },
       "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-default-arrow-func.js",
     },
   },
   "doc": Object {
     "componentsLookup": Object {
-      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
+      "ArrowButton": "3058c83bfd1ea05ca4b611ea98c7f835",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-10-21T01:23:26.440Z,
+    "date": 2020-10-28T15:50:29.515Z,
+    "dateModified": 2020-10-28T15:50:29.515Z,
     "title": "Story",
   },
   "packages": Object {},
@@ -113,12 +113,12 @@ import ArrowButton from '../../components/button-default-arrow-func';
 exports[`mdx-component story-import.mdx 1`] = `
 Object {
   "components": Object {
-    "1e542c3ba23e8699f77ec19bf3f9e3ea": Object {
+    "a655b73afc93a760272abc2d07f304fb": Object {
       "from": "./Button",
       "importedName": "Btn",
       "name": "Button",
     },
-    "7e2f74e50bd73c6a0bf50c40d3c149d4": Object {
+    "c38d1ceb9cd2f7c51c0677442bc017e2": Object {
       "from": "./Toggle",
       "importedName": "Toggle",
       "name": "Toggle",
@@ -127,11 +127,11 @@ Object {
   "doc": Object {
     "component": "Button",
     "componentsLookup": Object {
-      "Button": "1e542c3ba23e8699f77ec19bf3f9e3ea",
-      "Toggle": "7e2f74e50bd73c6a0bf50c40d3c149d4",
+      "Button": "a655b73afc93a760272abc2d07f304fb",
+      "Toggle": "c38d1ceb9cd2f7c51c0677442bc017e2",
     },
-    "date": 2020-10-21T01:23:26.440Z,
-    "dateModified": 2020-10-21T01:23:26.440Z,
+    "date": 2020-10-28T15:50:29.515Z,
+    "dateModified": 2020-10-28T15:50:29.515Z,
     "title": "Storybook/MDX",
   },
   "packages": Object {},
@@ -169,21 +169,7 @@ import { Toggle } from './Toggle';
 exports[`mdx-component story-subcomponents.mdx 1`] = `
 Object {
   "components": Object {
-    "2f4bd34d15be236674abaf6e894afe6e": Object {
-      "from": "../../components/button-named-arrow-func",
-      "importedName": "Button",
-      "imports": Object {
-        "react": Array [
-          Object {
-            "importedName": "default",
-            "name": "React",
-          },
-        ],
-      },
-      "name": "Button",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
-    },
-    "dc262d21cd7820523c7e0bacca461e87": Object {
+    "3058c83bfd1ea05ca4b611ea98c7f835": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "imports": Object {
@@ -195,16 +181,30 @@ Object {
         ],
       },
       "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+    "37426d3b0c28836644ead936e512dfa6": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "Button",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
   },
   "doc": Object {
     "componentsLookup": Object {
-      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
-      "Button": "2f4bd34d15be236674abaf6e894afe6e",
+      "ArrowButton": "3058c83bfd1ea05ca4b611ea98c7f835",
+      "Button": "37426d3b0c28836644ead936e512dfa6",
     },
-    "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
+    "date": 2020-10-28T15:50:29.516Z,
+    "dateModified": 2020-10-28T15:50:29.516Z,
     "title": "Story",
   },
   "packages": Object {},
@@ -252,21 +252,7 @@ import { Button } from '../../components/button-named-arrow-func';
 exports[`mdx-component subcomponents.mdx 1`] = `
 Object {
   "components": Object {
-    "2f4bd34d15be236674abaf6e894afe6e": Object {
-      "from": "../../components/button-named-arrow-func",
-      "importedName": "Button",
-      "imports": Object {
-        "react": Array [
-          Object {
-            "importedName": "default",
-            "name": "React",
-          },
-        ],
-      },
-      "name": "Button",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-named-arrow-func.js",
-    },
-    "dc262d21cd7820523c7e0bacca461e87": Object {
+    "3058c83bfd1ea05ca4b611ea98c7f835": Object {
       "from": "../../components/button-default-arrow-func",
       "importedName": "default",
       "imports": Object {
@@ -278,17 +264,31 @@ Object {
         ],
       },
       "name": "ArrowButton",
-      "request": "/Users/atanasster/component-controls/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-default-arrow-func.js",
+    },
+    "37426d3b0c28836644ead936e512dfa6": Object {
+      "from": "../../components/button-named-arrow-func",
+      "importedName": "Button",
+      "imports": Object {
+        "react": Array [
+          Object {
+            "importedName": "default",
+            "name": "React",
+          },
+        ],
+      },
+      "name": "Button",
+      "request": "/Users/atanasster/cc/core/instrument/test/fixtures/components/button-named-arrow-func.js",
     },
   },
   "doc": Object {
     "component": "ArrowButton",
     "componentsLookup": Object {
-      "ArrowButton": "dc262d21cd7820523c7e0bacca461e87",
-      "Button": "2f4bd34d15be236674abaf6e894afe6e",
+      "ArrowButton": "3058c83bfd1ea05ca4b611ea98c7f835",
+      "Button": "37426d3b0c28836644ead936e512dfa6",
     },
-    "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
+    "date": 2020-10-28T15:50:29.516Z,
+    "dateModified": 2020-10-28T15:50:29.516Z,
     "subcomponents": Object {
       "Button": "Button",
     },

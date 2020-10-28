@@ -3,7 +3,7 @@
 exports[`esm-props-info resolve-node-modules.jsx 1`] = `
 Object {
   "components": Object {
-    "26090286b0d42fa7a92590e6843f1687": Object {
+    "62308338275c8562f65bc6e32bfcaf74": Object {
       "from": "@component-controls/blocks",
       "importedName": "PropsTable",
       "imports": Object {
@@ -43,23 +43,23 @@ Object {
         ],
       },
       "name": "PropsTable",
-      "package": "5633741e98073052cbece6fcd32011e3",
-      "request": "/Users/atanasster/component-controls/ui/blocks/src/PropsTable/PropsTable.tsx",
+      "package": "26d6671fcf308ae91633d1ed825edd28",
+      "request": "/Users/atanasster/cc/ui/blocks/src/PropsTable/PropsTable.tsx",
     },
   },
   "doc": Object {
     "component": "PropsTable",
     "components": Object {},
     "componentsLookup": Object {
-      "PropsTable": "26090286b0d42fa7a92590e6843f1687",
+      "PropsTable": "62308338275c8562f65bc6e32bfcaf74",
     },
-    "date": 2020-10-21T01:23:26.430Z,
-    "dateModified": 2020-10-21T01:23:26.430Z,
-    "package": "942f7c3f19d9e197f86041eed5e46838",
+    "date": 2020-10-28T15:50:29.500Z,
+    "dateModified": 2020-10-28T15:50:29.500Z,
+    "package": "5244047243d27e6301eee03cf009b768",
     "title": "Storybook/Blocks/PropsTable",
   },
   "packages": Object {
-    "5633741e98073052cbece6fcd32011e3": Object {
+    "26d6671fcf308ae91633d1ed825edd28": Object {
       "dependencies": Object {
         "@component-controls/components": "^1.36.7",
         "@component-controls/core": "^1.36.6",
@@ -96,7 +96,7 @@ Object {
         "react-dom": "^16.13.1",
         "react-table": "^7.0.0",
       },
-      "fileHash": "5633741e98073052cbece6fcd32011e3",
+      "fileHash": "26d6671fcf308ae91633d1ed825edd28",
       "name": "@component-controls/blocks",
       "peerDependencies": Object {
         "@primer/octicons-react": ">= 10.0.0",
@@ -111,7 +111,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "942f7c3f19d9e197f86041eed5e46838": Object {
+    "5244047243d27e6301eee03cf009b768": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -144,7 +144,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "942f7c3f19d9e197f86041eed5e46838",
+      "fileHash": "5244047243d27e6301eee03cf009b768",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
