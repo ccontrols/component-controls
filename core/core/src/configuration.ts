@@ -307,7 +307,7 @@ export interface RunOnlyConfiguration {
    * components: { story:{ wrapper: 'iframe' } },
    *
    */
-  components?: Record<string, any>;
+  components?: Record<string, unknown>;
 
   /**
    * analytics options

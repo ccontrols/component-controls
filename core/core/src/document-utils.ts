@@ -11,15 +11,16 @@ import {
 import { Document, Story, defDocType, Store } from './document';
 
 export const storyNameFromExport = csfStoryNameFromExport;
-export const strToId = (str: string) => str.replace(/\W/g, '-').toLowerCase();
+export const strToId = (str: string): string =>
+  str.replace(/\W/g, '-').toLowerCase();
 
-export const ensureTrailingSlash = (route: string) =>
+export const ensureTrailingSlash = (route: string): string =>
   route.endsWith('/') ? route : route + '/';
 
-export const ensureStartingSlash = (route: string) =>
+export const ensureStartingSlash = (route: string): string =>
   route.startsWith('/') ? route : '/' + route;
 
-export const removeTrailingSlash = (route: string) => {
+export const removeTrailingSlash = (route: string): string => {
   let result = route;
   while (result.length > 1 && result.endsWith('/')) {
     result = result.substr(0, result.length - 1);
@@ -27,7 +28,7 @@ export const removeTrailingSlash = (route: string) => {
   return result;
 };
 
-export const removeStartingSlash = (route: string) => {
+export const removeStartingSlash = (route: string): string => {
   let result = route;
   while (result.length > 1 && result.startsWith('/')) {
     result = result.substr(1);
@@ -39,7 +40,7 @@ export const getDocPath = (
   docType: DocType,
   doc?: Document,
   store?: Store,
-  name: string = '',
+  name = '',
   tab?: string,
 ): string => {
   const pagesConfig: PagesOnlyRoutes | undefined = store
@@ -90,19 +91,25 @@ export const getStoryPath = (
   return encodeURI(`${siteRoot}${route}`);
 };
 
-export const getDocTypePath = (store: Store, type: PageConfiguration) => {
+export const getDocTypePath = (
+  store: Store,
+  type: PageConfiguration,
+): string | undefined => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
   return type.basePath
     ? `${siteRoot}${removeTrailingSlash(type.basePath)}`
     : undefined;
 };
 
-export const getHomePath = (store: Store) => {
+export const getHomePath = (store: Store): string => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
   return siteRoot.length > 1 ? removeTrailingSlash(siteRoot) : siteRoot;
 };
 
-export const getRoutePath = (store: Store, route?: string) => {
+export const getRoutePath = (
+  store: Store,
+  route?: string,
+): string | undefined => {
   const { siteRoot = '/' } = (store?.config as BuildConfiguration) || {};
   if (route) {
     if (route.startsWith('#')) {
@@ -115,7 +122,7 @@ export const getRoutePath = (store: Store, route?: string) => {
   return undefined;
 };
 
-export const docStoryToId = (docId: string, storyId: string) =>
+export const docStoryToId = (docId: string, storyId: string): string =>
   toId(docId, storyNameFromExport(storyId));
 
 /**

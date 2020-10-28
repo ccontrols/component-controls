@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import escape from 'escape-html';
 import { deepmerge } from './deepMerge';
 import {
@@ -10,7 +11,7 @@ import {
 import { Story } from './document';
 
 const mergeValue = (control: ComponentControl, value: any): any => {
-  if (control && control.type === ControlTypes.OBJECT) {
+  if (typeof control === 'object' && control.type === ControlTypes.OBJECT) {
     const objValue = mergeControlValues(
       control.value as ComponentControls,
       undefined,

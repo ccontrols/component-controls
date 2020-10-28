@@ -83,13 +83,13 @@ export interface StoryProps {
   /**
    * id for component associated with the story
    */
-  component?: string | object;
+  component?: string | Record<string, unknown>;
 
   /**
    * multiple components option
    */
   subcomponents?: {
-    [key: string]: string | object;
+    [key: string]: string | Record<string, unknown>;
   };
 
   /**
@@ -166,6 +166,7 @@ export type Story = {
   dynamicId?: string;
 } & StoryProps;
 
+export type Example = Story;
 /**
  * dynamic story creator function type.
  * returns an array of dynamically loaded stories

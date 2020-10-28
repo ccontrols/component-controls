@@ -179,14 +179,18 @@ export interface ActionItem {
 
 export type ActionItems = ActionItem[];
 
+export type AsyncFnReturn<T, E> = {
+  execute: () => Promise<void>;
+  status: 'idle' | 'pending' | 'success' | 'error';
+  value: T | null;
+  error: E | null;
+};
 // source https://usehooks.com/useAsync/
 export const useAsync = <T, E = string>(
   asyncFunction: () => Promise<T>,
   immediate = true,
-) => {
-  const [status, setStatus] = useState<
-    'idle' | 'pending' | 'success' | 'error'
-  >('idle');
+): AsyncFnReturn<T, E> => {
+  const [status, setStatus] = useState<AsyncFnReturn<T, E>['status']>('idle');
   const [value, setValue] = useState<T | null>(null);
   const [error, setError] = useState<E | null>(null);
 

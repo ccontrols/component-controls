@@ -98,17 +98,17 @@ export type WatchProps = {
   watchOptions?: WatchOptions;
 } & BuildProps;
 
-export const getDistName = (options: BuildProps) => {
+export const getDistName = (options: BuildProps): string => {
   const dist = options.distFolder || path.join(process.cwd(), 'public');
   return dist;
 };
 
 export const defBundleName = 'component-controls.js';
 
-export const getBundleName = (options: BuildProps) =>
+export const getBundleName = (options: BuildProps): string =>
   path.join(getDistName(options), options.bundleName || defBundleName);
 
 export const defCssFileName = 'component-controls.css';
 
-export const getCSSBundleName = (options: BuildProps) =>
+export const getCSSBundleName = (options: BuildProps): string =>
   path.join(getDistName(options), options.cssFileName || defCssFileName);
