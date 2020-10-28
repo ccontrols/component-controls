@@ -5,6 +5,7 @@ import { FORCE_RE_RENDER } from '@storybook/core-events';
 
 import { store } from '@component-controls/store/live_store';
 import { getControlValues } from '@component-controls/core';
+import { Args } from '@storybook/api';
 
 store.addObserver(() => {
   addons.getChannel().emit(FORCE_RE_RENDER);
@@ -20,12 +21,10 @@ addDecorator(
         story && story.controls ? getControlValues(story.controls) : undefined;
       if (context.hasOwnProperty('args')) {
         //storybook-6 beta fake args
-        //@ts-ignore
-        return storyFn({ ...context, args: values });
+        return storyFn({ ...context, args: values as Args });
       }
       //storybook 5 and 6 alphas
-      //@ts-ignore
-      return values ? storyFn(values, context) : storyFn(context);
+      return values ? (storyFn as any)(values, context) : storyFn(context);
     },
   }),
 );
