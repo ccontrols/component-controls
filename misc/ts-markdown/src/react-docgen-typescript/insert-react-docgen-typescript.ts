@@ -28,7 +28,7 @@ const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
   remark()
     .use(() => (node: Node) => {
       if (node.children) {
-        nodes.push.apply(nodes, [...node.children]);
+        nodes.push(...node.children);
       }
     })
     .process(propTable.description);
@@ -68,14 +68,15 @@ const propsToMDNodes = (propTable: ComponentDoc, repoFileName: string) => {
       };
     });
     const { propsTable } = createPropsTable('properties', props);
-    nodes.push.apply(nodes, propsTable);
+    // eslint-disable-next-line prefer-spread
+    nodes.push(...propsTable);
   }
   return nodes;
 };
 export const insertReactDocgenTypescript = (
   settings: Settings = { path: './src' },
 ) => {
-  return (node: Node) => {
+  return (node: Node): void => {
     const {
       propFilter = (prop: RDPropItem) => {
         // Currently not working, prop.parent is always null.
@@ -110,7 +111,8 @@ export const insertReactDocgenTypescript = (
                 propTable,
                 `${repoFolder}/${name}`,
               );
-              newNodes.push.apply(newNodes, propNodes);
+              // eslint-disable-next-line prefer-spread
+              newNodes.push(...propNodes);
             });
           }
         });

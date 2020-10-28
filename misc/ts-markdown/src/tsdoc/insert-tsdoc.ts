@@ -1,16 +1,17 @@
+/* eslint-disable prefer-spread */
 import path from 'path';
 import { Node } from '../common/types';
 import { extractCustomTag, inlineNewContent } from '../common/utils';
 import { extractTSDoc } from './extract-tsdoc';
 
-export const insertTSDoc = () => {
+export const insertTSDoc = (): ((node: Node) => void) => {
   const resolve = (file: string): string => {
     if (file.startsWith('.')) {
       return path.join(path.resolve('./'), file);
     }
     return require.resolve(file);
   };
-  return (node: Node) => {
+  return (node: Node): void => {
     const sections = extractCustomTag(node, 'tsdoc-typescript');
     if (sections) {
       sections.forEach(({ attrs, attributes }) => {
@@ -32,14 +33,14 @@ export const insertTSDoc = () => {
           if (entry) {
             const fileNames = files ? files[1].split(',').filter(s => s) : [];
             const entryNames = entry ? entry[1].split(',').filter(s => s) : [];
-            fileNames.push.apply(fileNames, entryNames);
+            fileNames.push(...entryNames);
             const tsNodes = extractTSDoc(
               fileNames.map(file => resolve(file)),
               entryNames.map(file => resolve(file)),
               linkMaps,
             );
             if (tsNodes) {
-              newNodes.push.apply(newNodes, tsNodes);
+              newNodes.push(...tsNodes);
             }
             // console.log(tsdocs);
           }

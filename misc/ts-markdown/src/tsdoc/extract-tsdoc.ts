@@ -1,3 +1,4 @@
+/* eslint-disable prefer-spread */
 import path from 'path';
 import fs from 'fs';
 import { Application } from 'typedoc';
@@ -134,10 +135,7 @@ export const extractTSDoc = (
             type: 'text',
             value: ': ',
           });
-          declaration.children.push.apply(
-            declaration.children,
-            extractPropType(p.type),
-          );
+          declaration.children.push(...extractPropType(p.type));
         }
       }
       declaration.children.push({
@@ -149,10 +147,7 @@ export const extractTSDoc = (
           type: 'text',
           value: ': ',
         });
-        declaration.children.push.apply(
-          declaration.children,
-          extractPropType(signature.type),
-        );
+        declaration.children.push(...extractPropType(signature.type));
       }
       declaration.children.push({
         type: 'text',
@@ -173,7 +168,7 @@ export const extractTSDoc = (
             }),
           );
         }
-        result.push.apply(result, propsTable);
+        result.push(...propsTable);
       }
     }
     return result;
@@ -228,20 +223,14 @@ export const extractTSDoc = (
             type: 'text',
             value: ': ',
           });
-          declaration.children.push.apply(
-            declaration.children,
-            extractPropType(p.type),
-          );
+          declaration.children.push(...extractPropType(p.type));
         }
         if (signature.type) {
           declaration.children.push({
             type: 'text',
             value: ': ',
           });
-          declaration.children.push.apply(
-            declaration.children,
-            extractPropType(signature.type),
-          );
+          declaration.children.push(...extractPropType(signature.type));
         }
       });
     }
@@ -249,7 +238,7 @@ export const extractTSDoc = (
       node.children || node.type,
       'properties',
     );
-    result.push.apply(result, propsTable);
+    result.push(...propsTable);
     return result;
   };
 
@@ -294,7 +283,7 @@ export const extractTSDoc = (
 
         if (p.nodeArguments) {
           p.nodeArguments.forEach((arg: any) =>
-            nodeArguments.push.apply(nodeArguments, extractPropType(arg)),
+            nodeArguments.push(...extractPropType(arg)),
           );
         }
         return [
@@ -513,7 +502,7 @@ export const extractTSDoc = (
       const { line }: { fileName?: string; line?: number; character?: number } =
         source || {};
       if (line) {
-        let sourceLocation = fileName.includes('node_modules')
+        const sourceLocation = fileName.includes('node_modules')
           ? repo
           : `${repo}/${relativePath}#L${line}`;
         result.push({
@@ -544,21 +533,21 @@ export const extractTSDoc = (
     }
     switch (node.kindString) {
       case 'Type alias':
-        result.push.apply(result, extractPropType(node.type, true));
+        result.push(...extractPropType(node.type, true));
         break;
       case 'Type literal':
         node.children.forEach((child: any) => {
-          result.push.apply(result, extractPropType(child, true));
+          result.push(...extractPropType(child, true));
         });
         break;
       case 'Class':
       case 'Interface':
       default: {
-        result.push.apply(result, extractInterface(node));
+        result.push(...extractInterface(node));
         break;
       }
       case 'Function': {
-        result.push.apply(result, extractFunction(node));
+        result.push(...extractFunction(node));
         break;
       }
     }
@@ -581,7 +570,7 @@ export const extractTSDoc = (
           main.children.forEach((child: any) => {
             if (child.sources) {
               const nodes = extractTSType(child, main.originalName);
-              result.push.apply(result, nodes);
+              result.push(...nodes);
             }
           });
         }
@@ -603,7 +592,7 @@ export const extractTSDoc = (
           if (propNode) {
             if (propNode.sources) {
               const nodes = extractTSType(propNode, fileName);
-              result.push.apply(result, nodes);
+              result.push(...nodes);
             }
           } else {
             console.log('could not find external reference: ', propName);

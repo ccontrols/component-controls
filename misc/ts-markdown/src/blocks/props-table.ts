@@ -76,9 +76,9 @@ export const createPropsTable = (
       type: 'paragraph',
       children: [table],
     });
-    table.children.push.apply(
-      table.children,
-      children.map((child: PropItem) => createPropsRow(child)),
+    // eslint-disable-next-line prefer-spread
+    table.children.push(
+      ...children.map((child: PropItem) => createPropsRow(child)),
     );
   }
   return { propsTable, table };

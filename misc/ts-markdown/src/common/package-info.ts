@@ -6,7 +6,7 @@ export const traverseFolder = (
   levels: number = 10,
   fileName: string = 'package.json',
 ): string | null => {
-  var files = fs.readdirSync(filePath);
+  const files = fs.readdirSync(filePath);
   if (levels === 0) {
     return null;
   }

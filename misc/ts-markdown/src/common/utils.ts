@@ -44,7 +44,7 @@ export const extractCustomTag = (
 export const inlineNewContent = (
   { section, tagName, node }: AttrsArg,
   newContent: Node[],
-) => {
+): void => {
   const startTag = `<!-- START-${tagName.toUpperCase()} -->`;
   const endTag = `<!-- END-${tagName.toUpperCase()} -->`;
   const index = node.children ? node.children.indexOf(section) : -1;
@@ -93,7 +93,7 @@ export const inlineNewContent = (
 export const traverseDirs = (
   attributes: string[][] | undefined,
   callback: TraverseCallback,
-) => {
+): void => {
   const getDirectories = (
     folder: string,
     excludeFiles: string[],

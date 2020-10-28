@@ -5,7 +5,7 @@ import { Node } from '../common/types';
 import { extractCustomTag, inlineNewContent } from '../common/utils';
 
 export const insertOverview = () => {
-  return (node: Node) => {
+  return (node: Node): void => {
     const sections = extractCustomTag(node, 'package-section');
     if (sections) {
       sections.forEach(({ attrs, attributes }) => {

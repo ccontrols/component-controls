@@ -8,7 +8,7 @@ import { insertOverview } from './overview-sections/insert-overview';
 import { insertTSDoc } from './tsdoc/insert-tsdoc';
 import { insertReactDocgenTypescript } from './react-docgen-typescript/insert-react-docgen-typescript';
 
-export default () => {
+export default (): void => {
   const options = yargs
     .usage('ts-md -f <file>')
     .option('f', {
