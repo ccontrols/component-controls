@@ -1,8 +1,8 @@
-export const titleToId = (id: any) => {
+export const titleToId = (id: any): string => {
   const strId = typeof id === 'string' ? id : '';
   return strId.replace(/\W/g, '-').toLowerCase();
 };
-export const pageLink = (id: string) => {
+export const pageLink = (id: string): string => {
   let url = '';
   if (typeof window !== 'undefined') {
     if (window.location !== window.parent.location) {

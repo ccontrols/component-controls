@@ -18,6 +18,7 @@ export interface SidebarContextProps {
 export const SidebarContext = createContext<SidebarContextProps>({
   SidebarToggle: () => null,
   SidebarClose: () => null,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setCollapsed: () => {},
   responsive: false,
 });

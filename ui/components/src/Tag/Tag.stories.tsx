@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example, ControlTypes } from '@component-controls/core';
 import { Tag, TagProps } from './Tag';
 
 export default {
@@ -6,12 +7,10 @@ export default {
   component: Tag,
 };
 
-export const overview = ({ color }: TagProps) => {
+export const overview: Example = ({ color }: TagProps) => {
   return <Tag color={color}>some text</Tag>;
 };
 
-overview.story = {
-  controls: {
-    color: { type: 'color', value: 'red' },
-  },
+overview.controls = {
+  color: { type: ControlTypes.COLOR, value: 'red' },
 };

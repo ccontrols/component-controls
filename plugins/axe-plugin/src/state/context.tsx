@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useContext, useState, FC, useMemo } from 'react';
 import { Result } from 'axe-core';
 
@@ -17,10 +18,17 @@ export interface AxeSetContextProps {
   setResults: (value: AxeResults) => void;
 }
 
-//@ts-ignore
-export const AxeContext = createContext<AxeContextProps>({});
-//@ts-ignore
-export const AxeSetContext = createContext<AxeSetContextProps>({});
+export const AxeContext = createContext<AxeContextProps>({
+  results: {
+    violations: [],
+    passes: [],
+    incomplete: [],
+  },
+});
+
+export const AxeSetContext = createContext<AxeSetContextProps>({
+  setResults: () => {},
+});
 export const AxeContextProvider: FC = ({ children }) => {
   const [state, setState] = useState<AxeResults>({
     violations: [],
@@ -69,8 +77,11 @@ export interface SelectionContextProps {
   setSelection: (value: string[]) => void;
   isSelected: (targets: string[]) => boolean;
 }
-//@ts-ignore
-export const SelectionContext = createContext<SelectionContextProps>({});
+export const SelectionContext = createContext<SelectionContextProps>({
+  selection: [],
+  setSelection: () => {},
+  isSelected: () => false,
+});
 
 export const SelectionContextProvider: FC = ({ children }) => {
   const [selection, setSelection] = useState<string[]>([]);
@@ -90,7 +101,7 @@ export const SelectionContextProvider: FC = ({ children }) => {
   );
 };
 
-export const useIsTagSelected = (tag: string = '') => {
+export const useIsTagSelected = (tag: string = ''): boolean => {
   const tagged = useTaggedList();
   const { selection } = useContext(SelectionContext);
   return tagged[tag]

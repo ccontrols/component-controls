@@ -43,7 +43,7 @@ interface TableOwnProps {
   /**
    * the columns object as an array.
    */
-  columns: Column[];
+  columns: Column<Record<string, unknown>>[];
   /**
    * array of data rows.
    */
@@ -140,10 +140,10 @@ export const Table: FC<TableProps> = ({
   if (rowSelect) {
     plugins.push(useRowSelectionColumn);
   }
-  const initialState: Partial<TableState<{}>> &
-    Partial<UseExpandedState<{}>> &
-    Partial<UseGroupByState<{}>> &
-    Partial<UseRowSelectState<{}>> = {};
+  const initialState: Partial<TableState<Record<string, unknown>>> &
+    Partial<UseExpandedState<Record<string, unknown>>> &
+    Partial<UseGroupByState<Record<string, unknown>>> &
+    Partial<UseRowSelectState<Record<string, unknown>>> = {};
   if (Array.isArray(groupBy)) {
     initialState.groupBy = groupBy;
     initialState.hiddenColumns = hiddenColumns || groupBy;
@@ -154,17 +154,17 @@ export const Table: FC<TableProps> = ({
     initialState.expanded = expanded;
   }
   initialState.selectedRowIds = initialSelected;
-  const options: TableOptions<{}> &
-    UseFiltersOptions<{}> &
-    UseExpandedOptions<{}> &
-    UsePaginationOptions<{}> &
-    UseGroupByOptions<{}> &
-    UseRowSelectOptions<{}> &
-    UseSortByOptions<{}> &
-    UseRowStateOptions<{}> = {
+  const options: TableOptions<Record<string, unknown>> &
+    UseFiltersOptions<Record<string, unknown>> &
+    UseExpandedOptions<Record<string, unknown>> &
+    UsePaginationOptions<Record<string, unknown>> &
+    UseGroupByOptions<Record<string, unknown>> &
+    UseRowSelectOptions<Record<string, unknown>> &
+    UseSortByOptions<Record<string, unknown>> &
+    UseRowStateOptions<Record<string, unknown>> = {
     columns,
     data,
-    defaultColumn: defaultColumn() as Column,
+    defaultColumn: defaultColumn() as Column<Record<string, unknown>>,
     initialState,
     autoResetPage: !skipPageReset,
     autoResetExpanded: !skipPageReset,
@@ -231,6 +231,7 @@ export const Table: FC<TableProps> = ({
               <Box
                 as="th"
                 variant="styles.th"
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 //@ts-ignore
                 colSpan={visibleColumns.length}
                 sx={{
@@ -250,7 +251,12 @@ export const Table: FC<TableProps> = ({
       )}
       <Box as="tbody" variant="styles.tbody" {...getTableBodyProps()}>
         {rows.map(
-          (row: Row & UseGroupByRowProps<{}> & { isExpanded?: boolean }) => {
+          (
+            row: Row &
+              UseGroupByRowProps<Record<string, unknown>> & {
+                isExpanded?: boolean;
+              },
+          ) => {
             prepareRow(row);
             const { key, ...rowProps } = row.getRowProps();
             return (
@@ -259,7 +265,12 @@ export const Table: FC<TableProps> = ({
                   {row.isGrouped
                     ? row.cells[0].render('Aggregated')
                     : row.cells.map(
-                        (cell: Cell & Partial<UseGroupByCellProps<{}>>) => {
+                        (
+                          cell: Cell &
+                            Partial<
+                              UseGroupByCellProps<Record<string, unknown>>
+                            >,
+                        ) => {
                           return (
                             <Box
                               as="td"

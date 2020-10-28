@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Value, ValueProps } from './Value';
 
 export default {
@@ -6,13 +7,11 @@ export default {
   component: Value,
 };
 
-export const overview = ({ label, value }: ValueProps) => {
+export const overview: Example = ({ label, value }: ValueProps) => {
   return <Value label={label} value={value} />;
 };
 
-overview.story = {
-  controls: {
-    label: 'date created',
-    value: '01/01/2020',
-  },
+overview.controls = {
+  label: 'date created',
+  value: '01/01/2020',
 };

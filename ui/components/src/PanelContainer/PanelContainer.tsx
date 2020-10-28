@@ -6,7 +6,7 @@ import { getSortedPanels, ActionItems, ActionItem } from '../ActionBar';
 import { ActionContainer, ActionContainerProps } from '../ActionContainer';
 import { useTheme } from '../ThemeContext';
 
-export const IconButton = (props: ButtonProps) => (
+export const IconButton: FC<ButtonProps> = props => (
   <Button style={{ paddingTop: '3px', paddingBottom: '3px' }} {...props} />
 );
 

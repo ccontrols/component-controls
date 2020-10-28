@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Tabs, Tab, TabList, TabPanel } from './Tabs';
 
 export default {
@@ -17,7 +18,7 @@ const tabs: {
   'panel 1': 'panel 1',
   'panel 2': 'panel 2',
 };
-export const overview = () => {
+export const overview: Example = () => {
   return (
     <Tabs>
       <TabList>
@@ -32,7 +33,7 @@ export const overview = () => {
   );
 };
 
-export const onSelect = () => {
+export const onSelect: Example = () => {
   return (
     <Tabs onSelect={index => console.log(index)}>
       <TabList>
@@ -47,7 +48,7 @@ export const onSelect = () => {
   );
 };
 
-export const direction = () => {
+export const direction: Example = () => {
   return (
     <Tabs onSelect={index => console.log(index)} dir="rtl">
       <TabList>
@@ -62,7 +63,7 @@ export const direction = () => {
   );
 };
 
-export const fontSize = () => {
+export const fontSize: Example = () => {
   return (
     <Tabs fontSize={4}>
       <TabList>

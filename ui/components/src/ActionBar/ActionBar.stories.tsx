@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from 'theme-ui';
+import { Example, ControlTypes } from '@component-controls/core';
 import { ActionBar, ActionBarProps } from './ActionBar';
 import { ThemeProvider } from '../ThemeContext';
 import { ExternalLink } from '../ExternalLink';
@@ -21,7 +22,7 @@ const Container: React.FC = ({ children }) => (
     </Box>
   </ThemeProvider>
 );
-export const overview = ({ themeKey }: ActionBarProps) => (
+export const overview: Example = ({ themeKey }: ActionBarProps) => (
   <Container>
     <ActionBar
       themeKey={themeKey}
@@ -39,17 +40,15 @@ export const overview = ({ themeKey }: ActionBarProps) => (
   </Container>
 );
 
-overview.story = {
-  controls: {
-    themeKey: {
-      type: 'options',
-      options: ['actionbar', 'toolbar', 'footer'],
-      value: 'actionbar',
-    },
+overview.controls = {
+  themeKey: {
+    type: ControlTypes.OPTIONS,
+    options: ['actionbar', 'toolbar', 'footer'],
+    value: 'actionbar',
   },
 };
 
-export const link = () => (
+export const link: Example = () => (
   <Container>
     <ActionBar
       actions={[
@@ -61,7 +60,7 @@ export const link = () => (
   </Container>
 );
 
-export const order = () => (
+export const order: Example = () => (
   <Container>
     <ActionBar
       actions={[
@@ -80,7 +79,7 @@ export const order = () => (
   </Container>
 );
 
-export const override = () => (
+export const override: Example = () => (
   <Container>
     <ActionBar
       actions={[
@@ -102,7 +101,7 @@ export const override = () => (
   </Container>
 );
 
-export const groupEnd = () => (
+export const groupEnd: Example = () => (
   <Container>
     <ActionBar
       actions={[
@@ -122,7 +121,7 @@ export const groupEnd = () => (
   </Container>
 );
 
-export const groupStart = () => (
+export const groupStart: Example = () => (
   <Container>
     <ActionBar
       actions={[

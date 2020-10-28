@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { faker } from '@component-controls/core';
+import { Example, faker } from '@component-controls/core';
 import { Table } from './Table';
 import { ThemeProvider } from '../ThemeContext';
 
@@ -39,6 +39,7 @@ const columns = [
 const mockData = () => {
   let i = 10;
   faker.seed(123);
+  // eslint-disable-next-line prefer-spread
   return Array.apply(null, Array(20)).map(() => ({
     id: i++,
     ...faker.helpers.userCard(),
@@ -47,7 +48,7 @@ const mockData = () => {
   }));
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
@@ -56,7 +57,7 @@ export const overview = () => {
   );
 };
 
-export const noHeader = () => {
+export const noHeader: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
@@ -69,7 +70,7 @@ export const noHeader = () => {
     </ThemeProvider>
   );
 };
-export const sortable = () => {
+export const sortable: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
@@ -78,7 +79,7 @@ export const sortable = () => {
   );
 };
 
-export const filterable = () => {
+export const filterable: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
@@ -87,7 +88,7 @@ export const filterable = () => {
   );
 };
 
-export const grouping = () => {
+export const grouping: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>
@@ -101,7 +102,7 @@ export const grouping = () => {
   );
 };
 
-export const editing = () => {
+export const editing: Example = () => {
   const [data, setData] = React.useState([{ value: 'example' }]);
   const [skipPageReset, setSkipPageReset] = React.useState(false);
   React.useEffect(() => {
@@ -135,7 +136,7 @@ export const editing = () => {
   );
 };
 
-export const rowSelect = () => {
+export const rowSelect: Example = () => {
   const data = React.useMemo(mockData, []);
   return (
     <ThemeProvider>

@@ -76,8 +76,7 @@ export const getSortedActions = (actions: ActionItems): ActionItems =>
         } as ActionItem),
     )
     .sort((a: ActionItem, b: ActionItem) => {
-      //@ts-ignore
-      return a.order - b.order;
+      return (a.order as number) - (b.order as number);
     });
 
 /**
@@ -87,6 +86,5 @@ export const getSortedPanels = (actions: ActionItems): ActionItems =>
   getSortedActions(actions)
     .filter(action => action.panel)
     .sort((a: ActionItem, b: ActionItem) => {
-      //@ts-ignore
-      return b.order - a.order;
+      return (b.order as number) - (a.order as number);
     });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex, Checkbox, Label } from 'theme-ui';
 import { EyeIcon, EyeClosedIcon } from '@primer/octicons-react';
+import { Example } from '@component-controls/core';
 import { Toggle } from './Toggle';
 
 export default {
@@ -8,12 +9,12 @@ export default {
   component: Toggle,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [checked, setChecked] = React.useState(false);
   return <Toggle checked={checked} onChange={check => setChecked(check)} />;
 };
 
-export const label = () => {
+export const label: Example = () => {
   const [checked, setChecked] = React.useState(false);
   return (
     <Toggle
@@ -25,7 +26,7 @@ export const label = () => {
   );
 };
 
-export const customIcons = () => {
+export const customIcons: Example = () => {
   const [checked, setChecked] = React.useState(false);
   return (
     <Toggle
@@ -45,7 +46,7 @@ export const customIcons = () => {
   );
 };
 
-export const octicons = () => {
+export const octicons: Example = () => {
   const [checked, setChecked] = React.useState(false);
   return (
     <Toggle
@@ -105,7 +106,7 @@ export const octicons = () => {
   );
 };
 
-export const checkbox = () => {
+export const checkbox: Example = () => {
   const [checked, setChecked] = React.useState(true);
   return (
     <Label>

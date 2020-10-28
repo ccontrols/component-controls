@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example, ControlTypes } from '@component-controls/core';
 import { Title, TitleProps } from './Title';
 
 export default {
@@ -6,12 +7,10 @@ export default {
   component: Title,
 };
 
-export const overview = ({ children }: TitleProps) => {
+export const overview: Example = ({ children }: TitleProps) => {
   return <Title>{children}</Title>;
 };
 
-overview.story = {
-  controls: {
-    children: { type: 'text', value: 'Title text' },
-  },
+overview.controls = {
+  children: { type: ControlTypes.TEXT, value: 'Title text' },
 };

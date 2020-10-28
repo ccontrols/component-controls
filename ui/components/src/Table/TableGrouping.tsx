@@ -11,7 +11,8 @@ import {
 import { Flex, Text } from 'theme-ui';
 import { ChevronRightIcon, ChevronDownIcon } from '@primer/octicons-react';
 
-type GroupByState = TableState & Partial<UseGroupByState<{}>>;
+type GroupByState = TableState &
+  Partial<UseGroupByState<Record<string, unknown>>>;
 const useControlledState = (state: GroupByState) => {
   return React.useMemo(() => {
     if (state?.groupBy?.length) {
@@ -27,11 +28,14 @@ const useControlledState = (state: GroupByState) => {
   }, [state]);
 };
 export const useExpanderColumn = (itemsLabel: string) => (
-  hooks: UseTableHooks<{}>,
-) => {
+  hooks: UseTableHooks<Record<string, unknown>>,
+): void => {
   hooks.useControlledState.push(useControlledState);
   hooks.visibleColumns.push((columns, { instance }) => {
-    if (!(instance.state as UseGroupByState<{}>).groupBy.length) {
+    if (
+      !(instance.state as UseGroupByState<Record<string, unknown>>).groupBy
+        .length
+    ) {
       return columns;
     }
 
@@ -43,8 +47,8 @@ export const useExpanderColumn = (itemsLabel: string) => (
         Cell: ({
           row,
         }: {
-          row: UseExpandedRowProps<{}> &
-            UseTableRowProps<{}> & {
+          row: UseExpandedRowProps<Record<string, unknown>> &
+            UseTableRowProps<Record<string, unknown>> & {
               groupByVal: any;
             };
         }) => {

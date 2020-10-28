@@ -38,7 +38,7 @@ export const NodesTable: FC<NodesTableProps> = ({
   nodes,
   hideErrorColumns,
 }) => {
-  const columns: Column[] = useMemo(
+  const columns: Column<Record<string, unknown>>[] = useMemo(
     () => [
       {
         Header: '',

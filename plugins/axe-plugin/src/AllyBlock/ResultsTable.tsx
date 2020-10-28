@@ -54,7 +54,7 @@ export interface ResultsTableProps {
 }
 
 const ResultsTable: FC<ResultsTableProps> = ({ results, hideErrorColumns }) => {
-  const columns: Column[] = useMemo(
+  const columns: Column<Record<string, unknown>>[] = useMemo(
     () => [
       {
         // Build our expander column

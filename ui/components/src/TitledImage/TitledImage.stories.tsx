@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageProps } from 'theme-ui';
-
+import { Example, ControlTypes } from '@component-controls/core';
 import { TitledImage } from './TitledImage';
 
 export default {
@@ -8,7 +8,7 @@ export default {
   component: TitledImage,
 };
 
-export const overview = ({ title }: ImageProps) => {
+export const overview: Example = ({ title }: ImageProps) => {
   return (
     <TitledImage
       title={title}
@@ -18,8 +18,6 @@ export const overview = ({ title }: ImageProps) => {
   );
 };
 
-overview.story = {
-  controls: {
-    title: { type: 'text', value: 'some image title' },
-  },
+overview.controls = {
+  title: { type: ControlTypes.TEXT, value: 'some image title' },
 };

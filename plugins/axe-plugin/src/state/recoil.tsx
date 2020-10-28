@@ -1,4 +1,4 @@
-import { atom, selector } from 'recoil';
+import { atom, selector, RecoilValueReadOnly } from 'recoil';
 import { Result } from 'axe-core';
 
 export type Selection = string[];
@@ -70,7 +70,7 @@ export const selectionList = atom<string[]>({
   default: [],
 });
 
-export const isSelected = (targets?: Selection) =>
+export const isSelected = (targets?: Selection): RecoilValueReadOnly<boolean> =>
   selector<boolean>({
     key: `isSelected_${targets ? targets.join('_') : 'none'}`,
     get: ({ get }: any) => {
@@ -81,7 +81,9 @@ export const isSelected = (targets?: Selection) =>
     },
   });
 
-export const useIsTagSelected = (tag: string = '') =>
+export const useIsTagSelected = (
+  tag: string = '',
+): RecoilValueReadOnly<boolean> =>
   selector<boolean>({
     key: `isTagSelected_${tag}`,
     get: ({ get }: any) => {

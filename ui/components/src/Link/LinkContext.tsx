@@ -20,6 +20,6 @@ export const LinkContextProvider: FC<LinkContextProviderProps> = ({
     </LinkContext.Provider>
   );
 };
-export const useGetLinkClass = () => {
+export const useGetLinkClass = (): FC<LinkProps> => {
   return useContext(LinkContext) || Link;
 };

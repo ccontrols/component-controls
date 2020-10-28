@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Zoom } from './Zoom';
 import { Donut } from 'theme-ui';
 import { ActionContainer } from '../ActionContainer';
@@ -8,7 +9,7 @@ export default {
   component: Zoom,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [scale, setScale] = React.useState(1);
   return (
     <ActionContainer

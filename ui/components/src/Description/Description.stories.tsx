@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Description } from '.';
 
 export default {
@@ -6,6 +7,6 @@ export default {
   component: Description,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <Description>Some **description** markdown</Description>
 );

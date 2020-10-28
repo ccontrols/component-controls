@@ -74,7 +74,7 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
   onSelect,
   popoverProps,
   ...rest
-}: SearchInputProps<ItemType>) => {
+}: SearchInputProps<ItemType>): JSX.Element => {
   const [selected, setSelected] = useState<number | undefined>(undefined);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [search, setSearch] = useState<string | undefined>(undefined);

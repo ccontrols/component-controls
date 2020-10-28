@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/display-name */
 import React, { ComponentType } from 'react';
 import { preToCodeBlock } from 'mdx-utils';
@@ -41,7 +42,7 @@ const mdxLanguageMap: MDXLanguageType = {
 export interface MarkdownComponentType {
   [key: string]: ComponentType<any>;
 }
-const paramsFromClassName = (className: string = ``) => {
+const paramsFromClassName = (className = ``) => {
   const [lang = ``, params = ``] = className.split(`:`);
 
   return [
@@ -75,7 +76,9 @@ export const markdownComponents: MarkdownComponentType = {
     const otherProps = Array.isArray(rest)
       ? rest.reduce(
           (acc, p) =>
-            typeof p === 'object' ? { ...acc, ...(p as object) } : acc,
+            typeof p === 'object'
+              ? { ...acc, ...(p as Record<string, unknown>) }
+              : acc,
           {},
         )
       : undefined;

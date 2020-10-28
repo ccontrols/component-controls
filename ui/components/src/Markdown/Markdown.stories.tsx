@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Markdown } from './Markdown';
 import { ThemeProvider } from '../ThemeContext';
 
@@ -7,7 +8,7 @@ export default {
   component: Markdown,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <ThemeProvider>
     <Markdown>{`
 # Header H1
@@ -23,7 +24,7 @@ some text
   </ThemeProvider>
 );
 
-export const image = () => (
+export const image: Example = () => (
   <ThemeProvider>
     <Markdown>
       ![integrated in

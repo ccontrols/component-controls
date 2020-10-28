@@ -168,10 +168,10 @@ export const theme: ControlsTheme = {
   forms: {
     checkbox: {
       cursor: 'pointer',
-      border: (t: Theme) => `1px solid ${t?.colors?.text}`,
+      border: (t: Theme): string => `1px solid ${t?.colors?.text}`,
       '&:focus': {
         backgroundColor: 'transarent',
-        boxShadow: (t: Theme) => `0 0 0 2px ${t?.colors?.primary}`,
+        boxShadow: (t: Theme): string => `0 0 0 2px ${t?.colors?.primary}`,
         outline: 'none',
       },
     },
@@ -204,7 +204,7 @@ export const theme: ControlsTheme = {
       ...heading,
       fontSize: 5,
       my: 3,
-      borderBottom: (t: Theme) => `4px solid ${t.colors?.text}`,
+      borderBottom: (t: Theme): string => `4px solid ${t.colors?.text}`,
       width: '100%',
     },
     h3: {
@@ -250,7 +250,7 @@ export const theme: ControlsTheme = {
       bg: 'muted',
     },
     blockquote: {
-      borderLeft: (t: Theme) => `4px solid ${t.colors?.shadow}`,
+      borderLeft: (t: Theme): string => `4px solid ${t.colors?.shadow}`,
       pl: 4,
       m: 0,
     },
@@ -320,14 +320,13 @@ export const theme: ControlsTheme = {
       px: 2,
       pl: 3,
     },
-    //@ts-ignore
     tbody: {
       'tr:last-of-type': {
         borderBottom: 0,
       },
     },
     thead: {
-      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+      borderBottom: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
       backgroundColor: 'muted',
       color: 'text',
     },
@@ -347,7 +346,7 @@ export const theme: ControlsTheme = {
       alignItems: 'center',
     },
     tr: {
-      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+      borderBottom: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
     },
   },
   actionbar: {
@@ -390,8 +389,8 @@ export const theme: ControlsTheme = {
   },
   actioncontainer: {
     borderRadius: '4px',
-    boxShadow: (t: Theme) => `0px 1px 3px 0px ${t.colors?.shadow}`,
-    border: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+    boxShadow: (t: Theme): string => `0px 1px 3px 0px ${t.colors?.shadow}`,
+    border: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
     display: 'flex',
     flexDirection: 'column',
   },
@@ -507,7 +506,7 @@ export const theme: ControlsTheme = {
         backgroundColor: 'shadow',
         fontWeight: 'bold',
         color: 'primary',
-        border: (t: Theme) => `1px solid ${t?.colors?.primary}`,
+        border: (t: Theme): string => `1px solid ${t?.colors?.primary}`,
       },
     },
   },
@@ -527,7 +526,7 @@ export const theme: ControlsTheme = {
     highlight: {
       pl: 1,
       backgroundColor: 'highlight',
-      borderLeft: (t: Theme) => `4px solid ${t.colors?.primary}`,
+      borderLeft: (t: Theme): string => `4px solid ${t.colors?.primary}`,
     },
     normal: {},
     title: {
@@ -578,7 +577,7 @@ export const theme: ControlsTheme = {
       },
     },
     '.react-tabs__tab--selected': {
-      borderBottom: (t: Theme) => `3px solid ${t?.colors?.primary}`,
+      borderBottom: (t: Theme): string => `3px solid ${t?.colors?.primary}`,
       color: 'primary',
     },
     '.react-tabs__tab--disabled': {
@@ -750,7 +749,7 @@ export const theme: ControlsTheme = {
     justifyContent: `space-between`,
     flexDirection: 'row',
     alignItems: 'center',
-    boxShadow: (t: Theme) => `0 1px 3px 1px ${t.colors?.shadow}`,
+    boxShadow: (t: Theme): string => `0 1px 3px 1px ${t.colors?.shadow}`,
   },
   hoverbox: {
     container: {
@@ -764,7 +763,7 @@ export const theme: ControlsTheme = {
       },
     },
     inner: {
-      boxShadow: (t: Theme) => `0px 2px 6px 0px ${t.colors?.shadow}`,
+      boxShadow: (t: Theme): string => `0px 2px 6px 0px ${t.colors?.shadow}`,
     },
     text: { color: 'muted', fontWeight: 'bold' },
   },
@@ -874,7 +873,7 @@ export const theme: ControlsTheme = {
     inner: {
       a: {
         '&.active': {
-          borderLeft: (t: Theme) => `4px solid ${t?.colors?.accent}`,
+          borderLeft: (t: Theme): string => `4px solid ${t?.colors?.accent}`,
           fontWeight: 'bold',
         },
         ':hover': {
@@ -895,7 +894,7 @@ export const theme: ControlsTheme = {
   skiplinks: {
     container: {
       display: 'flex',
-      border: (t: Theme) => `1px solid ${t.colors?.primary}`,
+      border: (t: Theme): string => `1px solid ${t.colors?.primary}`,
       clip: `react(0 0 0 0)`,
       width: '0.01em',
       height: '0.01em',
@@ -928,7 +927,7 @@ export const theme: ControlsTheme = {
   sidecontext: {
     container: {
       px: 3,
-      borderLeft: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+      borderLeft: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
     nav: { display: 'flex', flexDirection: 'column' },
     navlink: {
@@ -951,7 +950,7 @@ export const theme: ControlsTheme = {
       my: 2,
     },
     sidebar: {
-      borderRight: (t: Theme) => `1px solid ${t.colors?.shadow}`,
+      borderRight: (t: Theme): string => `1px solid ${t.colors?.shadow}`,
     },
     container: {
       display: 'flex',
@@ -985,7 +984,7 @@ export const theme: ControlsTheme = {
   },
   appfooter: {
     container: {
-      borderTop: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+      borderTop: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
       fontWeight: 'bolder',
       display: 'flex',
       p: 3,
@@ -1109,7 +1108,7 @@ export const theme: ControlsTheme = {
       p: 0,
     },
     listitem: {
-      borderBottom: (t: Theme) => ` 1px solid  ${t.colors?.shadow}`,
+      borderBottom: (t: Theme): string => ` 1px solid  ${t.colors?.shadow}`,
     },
   },
 };
@@ -1122,9 +1121,11 @@ export const useTheme = (): Theme => {
 const paletteColorCount = 6;
 
 export const getPaletteColor = (index: number): string =>
-  //@ts-ignore
-  theme.colors[`palette${index % paletteColorCount}`];
+  (theme.colors as Record<string, string>)[
+    `palette${index % paletteColorCount}`
+  ];
 
 export const getAccentPaletteColor = (index: number): string =>
-  //@ts-ignore
-  theme.colors[`accentPalette${index % paletteColorCount}`];
+  (theme.colors as Record<string, string>)[
+    `accentPalette${index % paletteColorCount}`
+  ];

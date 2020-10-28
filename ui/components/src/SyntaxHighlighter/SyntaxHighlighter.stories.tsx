@@ -1,5 +1,6 @@
 import React from 'react';
 import shadesOfPurple from 'prism-react-renderer/themes/shadesOfPurple';
+import { Example, ControlTypes } from '@component-controls/core';
 import { SyntaxHighlighter, SyntaxHighlighterProps } from './SyntaxHighlighter';
 
 export default {
@@ -8,22 +9,23 @@ export default {
 };
 
 const source = `import { Button } from 'theme-ui';`;
-export const overview = ({ children, dark }: SyntaxHighlighterProps) => (
+export const overview: Example = ({
+  children,
+  dark,
+}: SyntaxHighlighterProps) => (
   <SyntaxHighlighter dark={dark}>{children}</SyntaxHighlighter>
 );
 
-overview.story = {
-  controls: {
-    children: {
-      type: 'text',
-      rows: 10,
-      value: source,
-      data: null,
-    },
-    dark: { type: 'boolean' },
+overview.controls = {
+  children: {
+    type: ControlTypes.TEXT,
+    rows: 10,
+    value: source,
+    data: null,
   },
+  dark: { type: ControlTypes.BOOLEAN },
 };
 
-export const theme = () => (
+export const theme: Example = () => (
   <SyntaxHighlighter theme={shadesOfPurple}>{source}</SyntaxHighlighter>
 );

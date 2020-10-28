@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { faker } from '@component-controls/core';
+import { Example, faker } from '@component-controls/core';
 import { SearchInput } from './SearchInput';
 
 export default {
@@ -17,6 +17,7 @@ const useMockData = (): [FakeItems, (searchTerm: string) => void] => {
   const [search, setSearch] = useState<string>('');
   faker.seed(123);
   const [allItems] = useState(
+    // eslint-disable-next-line prefer-spread
     Array.apply(null, Array(30)).map(() => ({
       id: i++,
       label: faker.name.findName(),
@@ -32,7 +33,7 @@ const useMockData = (): [FakeItems, (searchTerm: string) => void] => {
   return [items, setSearch];
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [items, setSearch] = useMockData();
   return (
     <SearchInput<FakeItem>
@@ -45,7 +46,7 @@ export const overview = () => {
   );
 };
 
-export const defaultRender = () => {
+export const defaultRender: Example = () => {
   const [items, setSearch] = useMockData();
   return (
     <SearchInput
@@ -56,7 +57,7 @@ export const defaultRender = () => {
   );
 };
 
-export const placeholder = () => {
+export const placeholder: Example = () => {
   const [items, setSearch] = useMockData();
   return (
     <SearchInput

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { ThemeProvider } from '../ThemeContext';
 import { ColorMode } from '.';
 
@@ -7,7 +8,7 @@ export default {
   component: ColorMode,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <ThemeProvider>
     <ColorMode />
   </ThemeProvider>

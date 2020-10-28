@@ -19,7 +19,9 @@ const IndeterminateCheckbox: React.FC<TableToggleAllRowsSelectedProps> = React.f
     );
   },
 );
-export const useRowSelectionColumn = (hooks: UseTableHooks<{}>) => {
+export const useRowSelectionColumn = (
+  hooks: UseTableHooks<Record<string, unknown>>,
+): void => {
   hooks.visibleColumns.push(columns => [
     {
       id: 'selection',

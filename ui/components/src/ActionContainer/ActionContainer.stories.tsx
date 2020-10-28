@@ -1,5 +1,6 @@
 import React from 'react';
 import { Donut } from 'theme-ui';
+import { Example } from '@component-controls/core';
 import { ExternalLink } from '../ExternalLink';
 import { ActionContainer } from './ActionContainer';
 
@@ -8,7 +9,7 @@ export default {
   component: ActionContainer,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   return (
     <ActionContainer
       actions={[
@@ -27,7 +28,7 @@ export const overview = () => {
   );
 };
 
-export const order = () => (
+export const order: Example = () => (
   <ActionContainer
     actions={[
       {
@@ -46,7 +47,7 @@ export const order = () => (
   </ActionContainer>
 );
 
-export const override = () => (
+export const override: Example = () => (
   <ActionContainer
     actions={[
       {

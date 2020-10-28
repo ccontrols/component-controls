@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Badge, Input } from 'theme-ui';
+import { Example } from '@component-controls/core';
 import {
   InboxIcon,
   MailIcon,
@@ -16,7 +17,7 @@ export default {
   component: Navmenu,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <Box css={{ width: 200 }}>
     <Navmenu
       activeItem={{ id: 'c_drive' }}
@@ -122,13 +123,13 @@ const navItems = [
   },
 ];
 
-export const items = () => (
+export const items: Example = () => (
   <Box css={{ width: 250 }}>
     <Navmenu activeItem={{ id: 'all' }} items={navItems} />
   </Box>
 );
 
-export const search = () => {
+export const search: Example = () => {
   const [search, setSearch] = React.useState<string | undefined>(undefined);
 
   return (

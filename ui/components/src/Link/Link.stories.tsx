@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Link } from '.';
 
 export default {
@@ -6,4 +7,4 @@ export default {
   component: Link,
 };
 
-export const overview = () => <Link href="/">link to home</Link>;
+export const overview: Example = () => <Link href="/">link to home</Link>;

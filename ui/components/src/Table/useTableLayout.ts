@@ -1,6 +1,6 @@
 import { Hooks } from 'react-table';
 
-export function useTableLayout(hooks: Hooks) {
+export function useTableLayout(hooks: Hooks): void {
   hooks.getHeaderProps.push(getHeaderProps);
   hooks.getCellProps.push(getCellProps);
 }

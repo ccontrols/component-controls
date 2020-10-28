@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example, ControlTypes } from '@component-controls/core';
 import { ExternalLink, ExternalLinkProps } from './ExternalLink';
 
 export default {
@@ -6,19 +7,18 @@ export default {
   component: ExternalLink,
 };
 
-export const overview = ({ href }: ExternalLinkProps) => {
+export const overview: Example = ({ href }: ExternalLinkProps) => {
   return <ExternalLink href={href}>{href}</ExternalLink>;
 };
 
-overview.story = {
-  smartControls: {
-    smart: false,
-  },
-  controls: {
-    href: {
-      type: 'text',
-      value: 'https://www.google.com',
-      data: { name: 'internet.url' },
-    },
+overview.smartControls = {
+  smart: false,
+};
+
+overview.controls = {
+  href: {
+    type: ControlTypes.TEXT,
+    value: 'https://www.google.com',
+    data: { name: 'internet.url' },
   },
 };
