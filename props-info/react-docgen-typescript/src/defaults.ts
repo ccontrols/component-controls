@@ -1,7 +1,7 @@
 import * as ts from 'typescript';
 import * as path from 'path';
 
-export const getDefaultExportForFile = (source: ts.SourceFile) => {
+export const getDefaultExportForFile = (source: ts.SourceFile): string => {
   const name = path.basename(source.fileName, path.extname(source.fileName));
   const filename =
     name === 'index' ? path.basename(path.dirname(source.fileName)) : name;

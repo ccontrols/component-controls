@@ -23,7 +23,7 @@ export const transformProps = (props: Props): PropTypes => {
       prop.defaultValue = rdProp.defaultValue.value ?? rdProp.defaultValue;
     }
     const typeName = rdProp.type.name || '';
-    let propType: Partial<TypeInformation> = {};
+    const propType: Partial<TypeInformation> = {};
     if (rdProp.required) {
       propType.required = rdProp.required;
     }

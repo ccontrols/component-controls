@@ -6,7 +6,7 @@ export const extractDocgenTypescriptInfo = (
   fileName: string,
   componentName?: string,
   reactDocGenTypescriptOptions?: RectDocgenTypescriptOptions,
-) => {
+): any => {
   const {
     transformProps = (tables: any[]) => {
       const byName =
@@ -24,14 +24,13 @@ export const extractDocgenTypescriptInfo = (
 
   const parserOptions: ParserOptions = {
     propFilter,
-    //@ts-ignore
     componentNameResolver,
     shouldExtractLiteralValuesFromEnum,
     savePropValueAsString,
   };
   const parser = withDefaultConfig(parserOptions);
   try {
-    let docgenInfo = parser.parse(fileName);
+    const docgenInfo = parser.parse(fileName);
     if (Array.isArray(docgenInfo) && docgenInfo.length > 0) {
       return transformProps(docgenInfo);
     }
