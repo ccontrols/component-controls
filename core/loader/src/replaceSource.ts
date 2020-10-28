@@ -11,7 +11,7 @@ export const replaceSource = (
   configFilePath: string | undefined,
   config: BuildConfiguration | undefined,
   hashKey: string,
-) => {
+): string => {
   const imports = `
 
 const configJSON = ${
@@ -31,7 +31,7 @@ ${contexts
   .join('\n')}
 `;
   const storeConst = `const store = ${hashKey};\n`;
-  let loadStories = `
+  const loadStories = `
   const assignProps = (obj, { storyName, story, ...props}) => {
     //preserve component and subcomponents as strings
     const componentName = obj.component;

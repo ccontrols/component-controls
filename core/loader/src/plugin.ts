@@ -24,7 +24,7 @@ export class LoaderPlugin {
     };
   }
 
-  apply(compiler: webpack.Compiler) {
+  apply(compiler: webpack.Compiler): void {
     initializeBuildOptions(compiler.context, this.options.config);
     this.replaceRuntimeModule(compiler);
     compiler.hooks.compilation.tap(LoaderPlugin.pluginName, compilation => {

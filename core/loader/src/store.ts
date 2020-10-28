@@ -61,12 +61,12 @@ export const store: LoadingStore = {
 
 let instrumentOptions: InstrumentOptions = {};
 
-export const reserveStories = (filePaths: string[]) => {
+export const reserveStories = (filePaths: string[]): void => {
   if (store.stores.length === 0) {
     filePaths.forEach(filePath => store.stores.push({ filePath }));
   }
 };
-export const removeStoriesDoc = (filePath: string) => {
+export const removeStoriesDoc = (filePath: string): void => {
   store.stores = store.stores.filter(s => s.filePath !== filePath);
 };
 export const addStoriesDoc = (
@@ -74,7 +74,7 @@ export const addStoriesDoc = (
   filePath: string,
   hash: string,
   added: LoadingDocStore,
-) => {
+): void => {
   instrumentOptions = options;
   const { components, packages, stories, doc } = added;
   if (!doc) {
@@ -128,7 +128,7 @@ export let config: ConfigurationResult | undefined;
 export const initializeBuildOptions = (
   rootPath: string,
   configPath?: string,
-) => {
+): void => {
   config = loadConfiguration(rootPath, configPath);
   if (config && config.config) {
     config.config = deepMergeArrays(defaultBuildConfig, config.config);

@@ -41,7 +41,7 @@
     "@component-controls/logger": "^1.22.0",
     "js-string-escape": "^1.0.1",
     "loader-utils": "^1.2.3",
-    "typescript": "^3.8.3",
+    "typescript": "^4.0.5",
     "webpack": "^4.41.6"
   },
   "devDependencies": {
