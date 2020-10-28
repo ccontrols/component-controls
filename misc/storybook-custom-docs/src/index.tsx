@@ -1,5 +1,5 @@
 import * as React from 'react';
-import addons from '@storybook/addons';
+import addons, { Channel } from '@storybook/addons';
 import { ConfigApi } from '@storybook/client-api';
 import { UPDATE_STORY_CONTEXT } from './types';
 export * from './types';
@@ -13,7 +13,6 @@ export const getGlobalOptions = (): any => {
     window &&
     (window as any).__STORYBOOK_CLIENT_API__ &&
     (window as any).__STORYBOOK_CLIENT_API__.store();
-  //@ts-ignore
   return store._globalMetadata;
 };
 
@@ -27,7 +26,6 @@ export const getCurrentStoryId = (): string | undefined => {
     (window as any).__STORYBOOK_CLIENT_API__.store();
 
   const selection = store.getSelection();
-  //@ts-ignore
   return selection ? selection.storyId : undefined;
 };
 
@@ -43,7 +41,7 @@ const getGlobalStoryId = (): string => {
  * React hook hook that tracks the changes to the current story and returns it's id
  * @returns a story id as a React hook, when the the current story changes, will call back
  */
-export const useStoryId = () => {
+export const useStoryId = (): string => {
   const [storyId, setStoryId] = React.useState<string>(getGlobalStoryId());
   const channel = React.useMemo(() => addons.getChannel(), []);
   React.useEffect(() => {
@@ -97,18 +95,27 @@ export const useCurrentData = (): CurrentSelection => {
     parameters,
   };
 };
+export interface StorybookContext {
+  configApi: ConfigApi;
+  storyStore: any;
+  channel: Channel;
+  clientApi: any;
+  selectedKind: string;
+  selectedStory: string;
+  parameters: any;
+  storyId: string;
+}
+
 /**
  * React hook - returns a context similar (but not identical) that can be used as an input attribute to `<DocsContainer />`
  */
-export const useContext = () => {
+export const useContext = (): StorybookContext => {
   const channel = addons.getChannel();
   const storyId = useStoryId();
   const clientApi = (window as any).__STORYBOOK_CLIENT_API__;
   const storyStore = clientApi._storyStore;
   const configApi = new ConfigApi({
     storyStore,
-    //@ts-ignore
-    channel: addons.getChannel(),
   });
   const context = {
     configApi,
