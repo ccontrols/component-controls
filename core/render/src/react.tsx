@@ -15,9 +15,9 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
     throw new Error(`Invalid doc`);
   }
   const controls = story.controls;
-  let values = getControlValues(controls);
+  const values = getControlValues(controls);
   //parameters added to avoid bug in SB6 rc that assumes parameters exist
-  let context = { story, doc, controls, parameters: {} };
+  const context = { story, doc, controls, parameters: {} };
 
   const { decorators: globalDecorators = [] } = options;
   const { decorators: storyDecorators = [] } = story;
