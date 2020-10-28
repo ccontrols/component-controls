@@ -1,3 +1,4 @@
+import { TraverseOptions } from '@babel/traverse';
 import {
   Story,
   StoryArguments,
@@ -55,7 +56,10 @@ export const addArgumentUsage = (
   }
   return undefined;
 };
-export const extractArgumentsUsage = (story: Story, args: StoryArguments) => {
+export const extractArgumentsUsage = (
+  story: Story,
+  args: StoryArguments,
+): TraverseOptions => {
   return {
     TemplateLiteral: (path: any) => {
       path.node.expressions.forEach((expression: any) => {

@@ -1,4 +1,4 @@
-import traverse from '@babel/traverse';
+import traverse, { TraverseOptions } from '@babel/traverse';
 import generate from '@babel/generator';
 import { Story, CodeLocation, StoryArguments } from '@component-controls/core';
 import { adjustSourceLocation } from '../misc/source-location';
@@ -106,7 +106,7 @@ const extractPatameters = (
 export const extractFunctionParameters = (
   story: Story,
   exports?: MDXExportType,
-) => ({
+): TraverseOptions => ({
   ArrowFunctionExpression: (path: any) => {
     extractPatameters(path, story, exports);
     path.skip();

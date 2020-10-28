@@ -1,5 +1,5 @@
 import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import traverse, { TraverseOptions } from '@babel/traverse';
 
 export interface ImportType {
   name: string;
@@ -11,7 +11,7 @@ export interface ImportTypes {
   [key: string]: ImportType;
 }
 
-export const traverseImports = (results: ImportTypes) => {
+export const traverseImports = (results: ImportTypes): TraverseOptions => {
   return {
     ImportDeclaration: (path: any) => {
       const node = path.node;
@@ -43,7 +43,7 @@ export const traverseImports = (results: ImportTypes) => {
 export const extractImports = (
   source: string,
   parserOptions?: parser.ParserOptions,
-) => {
+): ImportTypes => {
   const results: ImportTypes = {};
   const ast = parser.parse(source, parserOptions);
 

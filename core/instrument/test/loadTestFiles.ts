@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import jsStringEscape from 'js-string-escape';
-import { parseStories } from '../src/index';
+import { InstrumentOptions, parseStories } from '../src/index';
 import { getComponentProps } from '../src/misc/props-info';
 
 expect.addSnapshotSerializer({
@@ -17,7 +17,7 @@ export const loadTestFiles = (
   callback: LoadTestCallbackFn,
   filePaths: string[],
   include?: string[],
-) => {
+): void => {
   const folderName = path.join(__dirname, 'fixtures', ...filePaths);
   const fileNames = fs.readdirSync(folderName);
   //.filter(name => name === 'string-template.js');
@@ -36,10 +36,10 @@ export const loadTestFiles = (
 };
 
 export const loadStoriesTests = (
-  options,
+  options: InstrumentOptions,
   filePaths: string[],
   include?: string[],
-) => {
+): void => {
   loadTestFiles(
     async fileName => {
       const content = fs.readFileSync(fileName, 'utf8');
@@ -53,7 +53,7 @@ export const loadStoriesTests = (
 export const extractComponentProps = (
   componentName: string,
   fileName: string,
-) => {
+): void => {
   it(componentName, async () => {
     expect(
       await getComponentProps(

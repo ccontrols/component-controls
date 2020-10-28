@@ -18,14 +18,31 @@ import { ParseStorieReturnType, InstrumentOptions } from '../types';
 
 import { componentsFromParams } from '../misc/component-attributes';
 
-export const extractMDXStories = (props: any) => (
+type PartialStore = Required<
+  Pick<
+    ParseStorieReturnType,
+    'stories' | 'doc' | 'components' | 'exports' | 'packages'
+  >
+>;
+
+type SourceFile = {
+  source: string;
+  filePath: string;
+};
+export const extractMDXStories: (
+  props: any,
+) => (
+  ast: File,
+  options: Required<InstrumentOptions>,
+  source: SourceFile,
+) => PartialStore | undefined = (props: any) => (
   ast: File,
   _options: Required<InstrumentOptions>,
-  { source, filePath }: { source: string; filePath: string },
-): ParseStorieReturnType | undefined => {
-  const collectAttributes = (node: any): Record<string, any> => {
+  { source, filePath }: SourceFile,
+): PartialStore | undefined => {
+  const collectAttributes = (node: any): Record<string, string> => {
     return node.attributes.reduce(
-      (acc: Record<string, any>, attribute: any) => {
+      (acc: Record<string, unknown>, attribute: any) => {
         if (attribute.value.type === 'StringLiteral') {
           return {
             ...acc,
@@ -74,10 +91,7 @@ export const extractMDXStories = (props: any) => (
   };
   const { title, name, ...rest } = props;
   const doc = props ? { ...rest, title: title || name } : undefined;
-  const store: Required<Pick<
-    ParseStorieReturnType,
-    'stories' | 'doc' | 'components' | 'exports' | 'packages'
-  >> = {
+  const store: PartialStore = {
     stories: {},
     doc,
     components: {},

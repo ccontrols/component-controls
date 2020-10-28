@@ -65,11 +65,11 @@ const nodeToAttribute = (
 };
 export const extractAttributes = (
   node: any,
-): Record<string, any> | any | undefined => {
+): Record<string, unknown> | any | undefined => {
   if (node) {
     if (node.properties) {
-      const attributes: Record<string, any> = node.properties.reduce(
-        (acc: Record<string, any>, propNode: any) => {
+      const attributes: Record<string, unknown> = node.properties.reduce(
+        (acc: Record<string, unknown>, propNode: any) => {
           const attribute = nodeToAttribute(propNode);
           if (attribute) {
             const name: string = propNode.key

@@ -1,5 +1,5 @@
 import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import traverse, { TraverseOptions } from '@babel/traverse';
 import { CodeLocation } from '@component-controls/core';
 import { sourceLocation } from '../misc/source-location';
 
@@ -26,7 +26,7 @@ export interface ExportTypes {
   default?: ExportType;
   named: NamedExportTypes;
 }
-export const traverseExports = (results: ExportTypes) => {
+export const traverseExports = (results: ExportTypes): TraverseOptions => {
   const globals: NamedExportTypes = {};
   const localExports: NamedExportTypes = {};
 
@@ -209,7 +209,7 @@ export const traverseExports = (results: ExportTypes) => {
 export const extractExports = (
   source: string,
   parserOptions?: parser.ParserOptions,
-) => {
+): ExportTypes => {
   const results: ExportTypes = {
     named: {},
   };

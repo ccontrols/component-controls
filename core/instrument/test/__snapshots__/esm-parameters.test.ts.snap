@@ -3,23 +3,23 @@
 exports[`esm-parameters name-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "b636e697276b1a67f961b7c6845986f6": Object {
+    "3880efc294775fe5c4afbb60ef59b162": Object {
       "name": "ControlsTable",
-      "package": "b636e697276b1a67f961b7c6845986f6",
+      "package": "3880efc294775fe5c4afbb60ef59b162",
     },
   },
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {
-      "ControlsTable": "b636e697276b1a67f961b7c6845986f6",
+      "ControlsTable": "3880efc294775fe5c4afbb60ef59b162",
     },
-    "date": 2020-10-28T15:50:29.499Z,
-    "dateModified": 2020-10-28T15:50:29.500Z,
-    "package": "1033db4076e9e95aa330858f63e297e0",
+    "date": 2020-10-21T01:23:26.429Z,
+    "dateModified": 2020-10-21T01:23:26.429Z,
+    "package": "88c5aea0fddc19a67df23e2335e64036",
     "title": "Story",
   },
   "packages": Object {
-    "1033db4076e9e95aa330858f63e297e0": Object {
+    "3880efc294775fe5c4afbb60ef59b162": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -39,7 +39,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -52,7 +52,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "1033db4076e9e95aa330858f63e297e0",
+      "fileHash": "3880efc294775fe5c4afbb60ef59b162",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -62,7 +62,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "b636e697276b1a67f961b7c6845986f6": Object {
+    "88c5aea0fddc19a67df23e2335e64036": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -82,7 +82,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -95,7 +95,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "b636e697276b1a67f961b7c6845986f6",
+      "fileHash": "88c5aea0fddc19a67df23e2335e64036",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -147,13 +147,13 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-28T15:50:29.500Z,
-    "dateModified": 2020-10-28T15:50:29.500Z,
-    "package": "12427a612cf1eff29b182772cc813e39",
+    "date": 2020-10-21T01:23:26.429Z,
+    "dateModified": 2020-10-21T01:23:26.429Z,
+    "package": "34bc7325264153ecebfb43811bd20164",
     "title": "Story",
   },
   "packages": Object {
-    "12427a612cf1eff29b182772cc813e39": Object {
+    "34bc7325264153ecebfb43811bd20164": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -173,7 +173,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -186,7 +186,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "12427a612cf1eff29b182772cc813e39",
+      "fileHash": "34bc7325264153ecebfb43811bd20164",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -252,13 +252,13 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-28T15:50:29.500Z,
-    "dateModified": 2020-10-28T15:50:29.500Z,
-    "package": "e0ad2654611f57115cd0b56130a79f83",
+    "date": 2020-10-21T01:23:26.429Z,
+    "dateModified": 2020-10-21T01:23:26.429Z,
+    "package": "514de6078cace1101b526c04fd631dce",
     "title": "Story",
   },
   "packages": Object {
-    "e0ad2654611f57115cd0b56130a79f83": Object {
+    "514de6078cace1101b526c04fd631dce": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -278,7 +278,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -291,7 +291,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "e0ad2654611f57115cd0b56130a79f83",
+      "fileHash": "514de6078cace1101b526c04fd631dce",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {

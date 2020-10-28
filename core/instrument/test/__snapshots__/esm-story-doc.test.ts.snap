@@ -6,14 +6,14 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-28T15:50:29.498Z,
-    "dateModified": 2020-10-28T15:50:29.498Z,
-    "package": "95818343884d9c2e50eddd6ed85462d2",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
+    "package": "83b753fa3df66b059c513b747422168d",
     "test": 1,
     "title": "Story",
   },
   "packages": Object {
-    "95818343884d9c2e50eddd6ed85462d2": Object {
+    "83b753fa3df66b059c513b747422168d": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -33,7 +33,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -46,7 +46,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "95818343884d9c2e50eddd6ed85462d2",
+      "fileHash": "83b753fa3df66b059c513b747422168d",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -69,27 +69,27 @@ Object {
 exports[`esm-story-doc title-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "f29e1c3480a0fd298d3db43afe4f9302": Object {
+    "73cac298d983c71aec166657453a64fe": Object {
       "name": "ControlsTable",
-      "package": "f29e1c3480a0fd298d3db43afe4f9302",
+      "package": "73cac298d983c71aec166657453a64fe",
     },
   },
   "doc": Object {
     "component": "ControlsTable",
     "components": Object {},
     "componentsLookup": Object {
-      "ControlsTable": "f29e1c3480a0fd298d3db43afe4f9302",
+      "ControlsTable": "73cac298d983c71aec166657453a64fe",
     },
-    "date": 2020-10-28T15:50:29.498Z,
-    "dateModified": 2020-10-28T15:50:29.498Z,
-    "package": "f4f5467e3b5d9c2ec024316d3e12115b",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
+    "package": "66a23e9fdf3e9e6ca71ed416ae8a58d5",
     "smartControls": Object {
       "smart": false,
     },
     "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
-    "f29e1c3480a0fd298d3db43afe4f9302": Object {
+    "66a23e9fdf3e9e6ca71ed416ae8a58d5": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -109,7 +109,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -122,7 +122,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "f29e1c3480a0fd298d3db43afe4f9302",
+      "fileHash": "66a23e9fdf3e9e6ca71ed416ae8a58d5",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -132,7 +132,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "f4f5467e3b5d9c2ec024316d3e12115b": Object {
+    "73cac298d983c71aec166657453a64fe": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -152,7 +152,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -165,7 +165,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "f4f5467e3b5d9c2ec024316d3e12115b",
+      "fileHash": "73cac298d983c71aec166657453a64fe",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -191,16 +191,16 @@ Object {
 exports[`esm-story-doc title-controls-and-parameters.js 1`] = `
 Object {
   "components": Object {
-    "13d5c226bc002ee3ac230f50e2feea93": Object {
+    "eef0b4fe04a3c49402964c3c8dbe5bc8": Object {
       "name": "ControlsTable",
-      "package": "13d5c226bc002ee3ac230f50e2feea93",
+      "package": "eef0b4fe04a3c49402964c3c8dbe5bc8",
     },
   },
   "doc": Object {
     "component": "ControlsTable",
     "components": Object {},
     "componentsLookup": Object {
-      "ControlsTable": "13d5c226bc002ee3ac230f50e2feea93",
+      "ControlsTable": "eef0b4fe04a3c49402964c3c8dbe5bc8",
     },
     "controls": Object {
       "name": Object {
@@ -210,13 +210,13 @@ Object {
         "value": "Mark",
       },
     },
-    "date": 2020-10-28T15:50:29.498Z,
-    "dateModified": 2020-10-28T15:50:29.498Z,
-    "package": "52f732eca80612e84515673b48c41796",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
+    "package": "e194529ece324f1590bfbf7aaec14410",
     "title": "Storybook/Kind",
   },
   "packages": Object {
-    "13d5c226bc002ee3ac230f50e2feea93": Object {
+    "e194529ece324f1590bfbf7aaec14410": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -236,7 +236,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -249,7 +249,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "13d5c226bc002ee3ac230f50e2feea93",
+      "fileHash": "e194529ece324f1590bfbf7aaec14410",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -259,7 +259,7 @@ Object {
       },
       "version": "1.36.7",
     },
-    "52f732eca80612e84515673b48c41796": Object {
+    "eef0b4fe04a3c49402964c3c8dbe5bc8": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -279,7 +279,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -292,7 +292,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "52f732eca80612e84515673b48c41796",
+      "fileHash": "eef0b4fe04a3c49402964c3c8dbe5bc8",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -326,13 +326,13 @@ Object {
   "doc": Object {
     "components": Object {},
     "componentsLookup": Object {},
-    "date": 2020-10-28T15:50:29.498Z,
-    "dateModified": 2020-10-28T15:50:29.498Z,
-    "package": "a449a2d036821485bc54d1cfb8fe7800",
+    "date": 2020-10-21T01:23:26.428Z,
+    "dateModified": 2020-10-21T01:23:26.428Z,
+    "package": "7eb653b10808310c21c23cba95a76b32",
     "title": "Storybook/Blocks/ControlsTable",
   },
   "packages": Object {
-    "a449a2d036821485bc54d1cfb8fe7800": Object {
+    "7eb653b10808310c21c23cba95a76b32": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -352,7 +352,7 @@ Object {
         "remark-emoji": "^2.1.0",
         "remark-images": "^2.0.0",
         "resolve": "^1.15.1",
-        "typescript": "^3.8.3",
+        "typescript": "^4.0.5",
       },
       "devDependencies": Object {
         "@babel/types": "^7.9.0",
@@ -365,7 +365,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "a449a2d036821485bc54d1cfb8fe7800",
+      "fileHash": "7eb653b10808310c21c23cba95a76b32",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {

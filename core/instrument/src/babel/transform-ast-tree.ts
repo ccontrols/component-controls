@@ -1,6 +1,8 @@
+import { TraverseOptions } from '@babel/traverse';
+
 const babel = require('@babel/core');
 
-export const transformTree = () => {
+export const transformTree = (): TraverseOptions => {
   return {
     JSXAttribute: (path: any) => {
       const node = path.node;

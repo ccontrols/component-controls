@@ -1,6 +1,8 @@
 import { Story, Document } from '@component-controls/core';
 
-const componentName = (component: string | object | undefined) => {
+const componentName = (
+  component: string | Record<string, unknown> | undefined,
+) => {
   if (component) {
     if (typeof component === 'string') {
       return component;
@@ -15,7 +17,7 @@ export const componentsFromParams = (
   element: (Document | Story) & { of?: string },
 ): string[] => {
   const result = [];
-  let { component } = element;
+  const { component } = element;
   const name = componentName(component);
   if (name) {
     result.push(name);
@@ -25,13 +27,14 @@ export const componentsFromParams = (
   if (ofName) {
     result.push(ofName);
   }
-  let { subcomponents } = element;
+  const { subcomponents } = element;
   if (typeof subcomponents === 'string') {
     result.push(subcomponents);
   }
   if (typeof subcomponents === 'object') {
-    //@ts-ignore
-    Object.keys(subcomponents).forEach(key => result.push(subcomponents[key]));
+    Object.keys(subcomponents).forEach(key =>
+      result.push((subcomponents as any)[key]),
+    );
   }
   return result;
 };

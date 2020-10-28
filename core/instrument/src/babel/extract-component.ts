@@ -93,7 +93,7 @@ export const extractStoreComponent = async (
   source: string,
   options?: InstrumentOptions,
   initialAST?: File,
-) => {
+): Promise<void> => {
   if (store.doc) {
     const doc: Document = store.doc;
     if (doc.componentsLookup) {

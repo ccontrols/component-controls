@@ -13,7 +13,7 @@ export const findUpFile = (
   fileName: string | string[],
   levels: number = 10,
 ): string | null => {
-  var files = fs.readdirSync(filePath);
+  const files = fs.readdirSync(filePath);
   if (levels === 0) {
     return null;
   }
