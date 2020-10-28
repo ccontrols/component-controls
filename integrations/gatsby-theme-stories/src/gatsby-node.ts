@@ -37,7 +37,7 @@ export const createPagesStatefully = async (
   { actions, store: gatsbyStore }: CreatePagesArgs,
   options: BuildProps,
   doneCb: PluginCallback,
-) => {
+): Promise<void> => {
   const { createPage, deletePage } = actions;
   const config: BuildProps = {
     ...defaultCompileProps,

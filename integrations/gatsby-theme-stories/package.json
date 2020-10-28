@@ -45,7 +45,7 @@
     "@component-controls/webpack-configs": "^1.36.7",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-plugin-typescript": "^2.4.3",
+    "gatsby-plugin-typescript": "^2.4.24",
     "react-helmet": "^6.0.0",
     "theme-ui": "^0.4.0-rc.1"
   },
@@ -54,10 +54,10 @@
     "@component-controls/ts-markdown-docs": "^1.21.0",
     "@types/react": "^16.9.34",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "gatsby": "^2.24.78",
+    "gatsby": "^2.24.53",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^3.8.3"
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "gatsby": "2.x",

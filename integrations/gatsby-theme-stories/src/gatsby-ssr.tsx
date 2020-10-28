@@ -5,7 +5,7 @@ import { PreRenderHTMLArgs } from 'gatsby';
 export const onPreRenderHTML = ({
   getHeadComponents,
   replaceHeadComponents,
-}: PreRenderHTMLArgs) => {
+}: PreRenderHTMLArgs): void => {
   const headComponents = getHeadComponents();
   const cssBundle = process.env.GATSBY_CC_CSS_FILENAME;
   if (cssBundle && fs.existsSync(cssBundle)) {
