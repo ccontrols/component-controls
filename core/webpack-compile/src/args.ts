@@ -88,7 +88,7 @@ export const defaultCliArgs: ArgOptions = [
   },
 ];
 
-export const cliArgs = (options: ArgOptions = []) => {
+export const cliArgs = (options: ArgOptions = []): Argv<CliArgTypes> => {
   return [...defaultCliArgs, ...options].reduce(
     (acc, option) => acc.option(option.name, option.options),
     yargs(process.argv),

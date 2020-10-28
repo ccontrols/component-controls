@@ -59,7 +59,7 @@ Object {
     ],
   },
   "components": Object {
-    "a7f1f4b5c292e9cb3abbe57b40b31ac9": Object {
+    "fded7dbaa855ea6869a794f877eab680": Object {
       "from": "./ActionBar",
       "importedName": "ActionBar",
       "imports": Object {
@@ -126,8 +126,8 @@ actions can accept an order prop, and can also be superimposed",
         },
       },
       "name": "ActionBar",
-      "package": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
-      "request": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.tsx",
+      "package": "fded7dbaa855ea6869a794f877eab680",
+      "request": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.tsx",
       "source": "/** @jsx jsx */
 import { FC, useMemo } from 'react';
 import { Box, Button, jsx } from 'theme-ui';
@@ -211,7 +211,7 @@ export const ActionBar: FC<ActionBarProps> = ({
   },
   "config": undefined,
   "packages": Object {
-    "7dc443c3b001200a0fb292826387410a": Object {
+    "8c5a495b6c81e803332610dad9861480": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/match-media": "^0.4.0-rc.1",
@@ -242,7 +242,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
       },
-      "fileHash": "7dc443c3b001200a0fb292826387410a",
+      "fileHash": "8c5a495b6c81e803332610dad9861480",
       "name": "@component-controls/components",
       "peerDependencies": Object {
         "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -256,7 +256,7 @@ export const ActionBar: FC<ActionBarProps> = ({
       },
       "version": "1.36.7",
     },
-    "a7f1f4b5c292e9cb3abbe57b40b31ac9": Object {
+    "fded7dbaa855ea6869a794f877eab680": Object {
       "dependencies": Object {
         "@primer/octicons-react": "^10.0.0",
         "@theme-ui/match-media": "^0.4.0-rc.1",
@@ -287,7 +287,7 @@ export const ActionBar: FC<ActionBarProps> = ({
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
       },
-      "fileHash": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
+      "fileHash": "fded7dbaa855ea6869a794f877eab680",
       "name": "@component-controls/components",
       "peerDependencies": Object {
         "@theme-ui/css": ">= 0.4.0-rc.1",
@@ -308,15 +308,15 @@ export const ActionBar: FC<ActionBarProps> = ({
         "component": "ActionBar",
         "components": Object {},
         "componentsLookup": Object {
-          "ActionBar": "a7f1f4b5c292e9cb3abbe57b40b31ac9",
+          "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
-        "date": "2020-10-28T15:50:29.960Z",
-        "dateModified": "2020-10-28T15:50:29.960Z",
-        "fileName": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.stories.tsx",
-        "package": "7dc443c3b001200a0fb292826387410a",
+        "date": "2020-08-18T06:58:47.265Z",
+        "dateModified": "2020-10-28T05:48:43.789Z",
+        "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
+        "package": "8c5a495b6c81e803332610dad9861480",
         "title": "Components/ActionBar",
       },
-      "filePath": "/Users/atanasster/cc/ui/components/src/ActionBar/ActionBar.stories.tsx",
+      "filePath": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
       "stories": Object {
         "groupEnd": Object {
           "arguments": Array [],
@@ -324,11 +324,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 123,
+              "line": 122,
             },
             "start": Object {
-              "column": 24,
-              "line": 105,
+              "column": 33,
+              "line": 104,
             },
           },
           "name": "groupEnd",
@@ -359,11 +359,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 143,
+              "line": 142,
             },
             "start": Object {
-              "column": 26,
-              "line": 125,
+              "column": 35,
+              "line": 124,
             },
           },
           "name": "groupStart",
@@ -394,11 +394,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 62,
+              "line": 61,
             },
             "start": Object {
-              "column": 20,
-              "line": 52,
+              "column": 29,
+              "line": 51,
             },
           },
           "name": "link",
@@ -421,11 +421,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 81,
+              "line": 80,
             },
             "start": Object {
-              "column": 21,
-              "line": 64,
+              "column": 30,
+              "line": 63,
             },
           },
           "name": "order",
@@ -455,11 +455,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 103,
+              "line": 102,
             },
             "start": Object {
-              "column": 24,
-              "line": 83,
+              "column": 33,
+              "line": 82,
             },
           },
           "name": "override",
@@ -546,11 +546,11 @@ export const ActionBar: FC<ActionBarProps> = ({
           "loc": Object {
             "end": Object {
               "column": 1,
-              "line": 40,
+              "line": 41,
             },
             "start": Object {
-              "column": 24,
-              "line": 24,
+              "column": 33,
+              "line": 25,
             },
           },
           "name": "overview",

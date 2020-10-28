@@ -59,7 +59,7 @@ Object {
     ],
   },
   "components": Object {
-    "ca0808c110e3bd63f607dae3b53ade73": Object {
+    "b5fffc2a9e710b29374f13f1d7ef028c": Object {
       "from": "../components/Button",
       "importedName": "Button",
       "imports": Object {
@@ -178,8 +178,8 @@ Object {
         },
       },
       "name": "Button",
-      "package": "ca0808c110e3bd63f607dae3b53ade73",
-      "request": "/Users/atanasster/cc/examples/stories/src/components/Button.tsx",
+      "package": "b5fffc2a9e710b29374f13f1d7ef028c",
+      "request": "/Users/atanasster/component-controls/examples/stories/src/components/Button.tsx",
       "source": "import React, { FC } from 'react';
 
 interface ButtonProps {
@@ -264,7 +264,7 @@ Button.defaultProps = {
 };
 ",
     },
-    "e603c3ede18c44b2c0fc903c6ee64dea": Object {
+    "dd96934cfa10038428b57421ede5ec17": Object {
       "from": "../components/PropTypesButton",
       "importedName": "Button",
       "imports": Object {
@@ -381,8 +381,8 @@ Button.defaultProps = {
         },
       },
       "name": "Button",
-      "package": "e603c3ede18c44b2c0fc903c6ee64dea",
-      "request": "/Users/atanasster/cc/examples/stories/src/components/PropTypesButton.js",
+      "package": "dd96934cfa10038428b57421ede5ec17",
+      "request": "/Users/atanasster/component-controls/examples/stories/src/components/PropTypesButton.js",
       "source": "import React from 'react';
 import { lighten } from 'polished';
 import PropTypes from 'prop-types';
@@ -472,28 +472,8 @@ Button.propTypes = {
   },
   "config": undefined,
   "packages": Object {
-    "02160a7c297dc7782e7827095bce12bd": Object {
-      "fileHash": "02160a7c297dc7782e7827095bce12bd",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.36.7",
-    },
-    "05109120a152507af6854b76918b4486": Object {
-      "fileHash": "05109120a152507af6854b76918b4486",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.36.7",
-    },
-    "0621624cf2724a0e9a6efdece4576aed": Object {
-      "fileHash": "0621624cf2724a0e9a6efdece4576aed",
+    "092a5dfc0b16fa110a6ec9a0be19b9ba": Object {
+      "fileHash": "092a5dfc0b16fa110a6ec9a0be19b9ba",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-prop-type.stories.js",
@@ -502,18 +482,8 @@ Button.propTypes = {
       },
       "version": "1.36.7",
     },
-    "321df572829c70ec049239495d4b368b": Object {
-      "fileHash": "321df572829c70ec049239495d4b368b",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-async.stories.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.36.7",
-    },
-    "3ac60216ad8339f7537249173f49541f": Object {
-      "fileHash": "3ac60216ad8339f7537249173f49541f",
+    "0b32e7ea56b640582f1e26d14b10331d": Object {
+      "fileHash": "0b32e7ea56b640582f1e26d14b10331d",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/inherit-from-doc.stories.tsx",
@@ -522,18 +492,8 @@ Button.propTypes = {
       },
       "version": "1.36.7",
     },
-    "40f129c2fcd219476f3bef83753f1c14": Object {
-      "fileHash": "40f129c2fcd219476f3bef83753f1c14",
-      "name": "component-controls-stories",
-      "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
-        "issues": "https://github.com/ccontrols/component-controls/issues",
-      },
-      "version": "1.36.7",
-    },
-    "87b667d400080dea8c4e2ab085be6573": Object {
-      "fileHash": "87b667d400080dea8c4e2ab085be6573",
+    "38eb30a76456bbd1c244968c2ca8e4b8": Object {
+      "fileHash": "38eb30a76456bbd1c244968c2ca8e4b8",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
@@ -542,8 +502,28 @@ Button.propTypes = {
       },
       "version": "1.36.7",
     },
-    "ca0808c110e3bd63f607dae3b53ade73": Object {
-      "fileHash": "ca0808c110e3bd63f607dae3b53ade73",
+    "872a13aed459690f92f1efc4366b1f3c": Object {
+      "fileHash": "872a13aed459690f92f1efc4366b1f3c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-async.stories.tsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.36.7",
+    },
+    "af3ea9029e5eedf5278b612cda3d978c": Object {
+      "fileHash": "af3ea9029e5eedf5278b612cda3d978c",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/smart-typescript.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.36.7",
+    },
+    "b5fffc2a9e710b29374f13f1d7ef028c": Object {
+      "fileHash": "b5fffc2a9e710b29374f13f1d7ef028c",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/Button.tsx",
@@ -552,8 +532,18 @@ Button.propTypes = {
       },
       "version": "1.36.7",
     },
-    "e603c3ede18c44b2c0fc903c6ee64dea": Object {
-      "fileHash": "e603c3ede18c44b2c0fc903c6ee64dea",
+    "c08bdcb13ab5ab1d9a0e8a612ec1e872": Object {
+      "fileHash": "c08bdcb13ab5ab1d9a0e8a612ec1e872",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.36.7",
+    },
+    "dd96934cfa10038428b57421ede5ec17": Object {
+      "fileHash": "dd96934cfa10038428b57421ede5ec17",
       "name": "component-controls-stories",
       "repository": Object {
         "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/components/PropTypesButton.js",
@@ -562,11 +552,21 @@ Button.propTypes = {
       },
       "version": "1.36.7",
     },
-    "ffd1dbb1fb25a21707736be64d0e8469": Object {
-      "fileHash": "ffd1dbb1fb25a21707736be64d0e8469",
+    "ee6ce583d6eb608b96bf9f66702326ef": Object {
+      "fileHash": "ee6ce583d6eb608b96bf9f66702326ef",
       "name": "component-controls-stories",
       "repository": Object {
-        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/stories-esm.stories.js",
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors.stories.jsx",
+        "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
+        "issues": "https://github.com/ccontrols/component-controls/issues",
+      },
+      "version": "1.36.7",
+    },
+    "f5f7bfce83c4ef863dae3d46f935a246": Object {
+      "fileHash": "f5f7bfce83c4ef863dae3d46f935a246",
+      "name": "component-controls-stories",
+      "repository": Object {
+        "browse": "https://github.com/ccontrols/component-controls/tree/master/examples/stories/src/stories/controls-editors-starter.stories.tsx",
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
@@ -579,14 +579,14 @@ Button.propTypes = {
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": "2020-10-28T15:50:29.684Z",
-        "dateModified": "2020-10-28T15:50:29.684Z",
+        "date": "2020-10-15T00:19:23.447Z",
+        "dateModified": "2020-10-15T00:19:23.448Z",
         "description": "ESM story file to demostrate creating 'dynamic' stories at run-time. Creates a story iterating through each theme color",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
-        "package": "87b667d400080dea8c4e2ab085be6573",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+        "package": "38eb30a76456bbd1c244968c2ca8e4b8",
         "title": "Introduction/Dynamic stories",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories_native/dynamic-stories.stories.tsx",
       "stories": Object {
         "buttonColors": Object {
           "arguments": Array [],
@@ -627,13 +627,13 @@ Button.propTypes = {
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": "2020-10-28T15:50:29.682Z",
-        "dateModified": "2020-10-28T15:50:29.682Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/controls-editors-starter.stories.tsx",
-        "package": "40f129c2fcd219476f3bef83753f1c14",
+        "date": "2020-08-18T06:58:45.503Z",
+        "dateModified": "2020-08-18T06:58:45.512Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+        "package": "f5f7bfce83c4ef863dae3d46f935a246",
         "title": "Introduction/Starter",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/controls-editors-starter.stories.tsx",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors-starter.stories.tsx",
       "stories": Object {
         "overview": Object {
           "arguments": Array [
@@ -755,13 +755,13 @@ any *markdown* is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": "2020-10-28T15:50:29.682Z",
-        "dateModified": "2020-10-28T15:50:29.682Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/controls-editors.stories.jsx",
-        "package": "05109120a152507af6854b76918b4486",
+        "date": "2020-07-17T14:45:45.848Z",
+        "dateModified": "2020-10-18T05:05:08.317Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
+        "package": "ee6ce583d6eb608b96bf9f66702326ef",
         "title": "Introduction/Controls",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/controls-editors.stories.jsx",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/controls-editors.stories.jsx",
       "stories": Object {
         "XssSafety": Object {
           "arguments": Array [
@@ -2067,13 +2067,13 @@ any *markdown* is allowed
             "value": "Mark",
           },
         },
-        "date": "2020-10-28T15:50:29.683Z",
-        "dateModified": "2020-10-28T15:50:29.683Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/inherit-from-doc.stories.tsx",
-        "package": "3ac60216ad8339f7537249173f49541f",
+        "date": "2020-07-17T14:45:45.849Z",
+        "dateModified": "2020-07-17T14:45:45.850Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+        "package": "0b32e7ea56b640582f1e26d14b10331d",
         "title": "Introduction/Doc",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/inherit-from-doc.stories.tsx",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/inherit-from-doc.stories.tsx",
       "stories": Object {
         "docsControlsTable": Object {
           "arguments": Array [
@@ -2187,15 +2187,15 @@ any *markdown* is allowed
         "component": "Button",
         "components": Object {},
         "componentsLookup": Object {
-          "Button": "e603c3ede18c44b2c0fc903c6ee64dea",
+          "Button": "dd96934cfa10038428b57421ede5ec17",
         },
-        "date": "2020-10-28T15:50:29.683Z",
-        "dateModified": "2020-10-28T15:50:29.683Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/smart-prop-type.stories.js",
-        "package": "0621624cf2724a0e9a6efdece4576aed",
+        "date": "2020-07-17T14:45:45.850Z",
+        "dateModified": "2020-07-17T14:45:45.850Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
+        "package": "092a5dfc0b16fa110a6ec9a0be19b9ba",
         "title": "Introduction/Smart PropTypes",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/smart-prop-type.stories.js",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-prop-type.stories.js",
       "stories": Object {
         "allProps": Object {
           "arguments": Array [
@@ -2372,15 +2372,15 @@ any *markdown* is allowed
         "component": "Button",
         "components": Object {},
         "componentsLookup": Object {
-          "Button": "ca0808c110e3bd63f607dae3b53ade73",
+          "Button": "b5fffc2a9e710b29374f13f1d7ef028c",
         },
-        "date": "2020-10-28T15:50:29.683Z",
-        "dateModified": "2020-10-28T15:50:29.683Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/smart-typescript.stories.js",
-        "package": "02160a7c297dc7782e7827095bce12bd",
+        "date": "2020-07-17T14:45:45.850Z",
+        "dateModified": "2020-07-17T14:45:45.851Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
+        "package": "af3ea9029e5eedf5278b612cda3d978c",
         "title": "Introduction/Smart Typescript",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/smart-typescript.stories.js",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
       "stories": Object {
         "allProps": Object {
           "arguments": Array [
@@ -2556,13 +2556,13 @@ any *markdown* is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": "2020-10-28T15:50:29.683Z",
-        "dateModified": "2020-10-28T15:50:29.684Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/stories-async.stories.tsx",
-        "package": "321df572829c70ec049239495d4b368b",
+        "date": "2020-10-15T00:19:23.446Z",
+        "dateModified": "2020-10-15T00:19:23.447Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
+        "package": "872a13aed459690f92f1efc4366b1f3c",
         "title": "Introduction/Async stories",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/stories-async.stories.tsx",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
       "stories": Object {
         "asyncDecorators": Object {
           "arguments": Array [
@@ -2752,13 +2752,13 @@ any *markdown* is allowed
         "author": "atanasster",
         "components": Object {},
         "componentsLookup": Object {},
-        "date": "2020-10-28T15:50:29.684Z",
-        "dateModified": "2020-10-28T15:50:29.684Z",
-        "fileName": "/Users/atanasster/cc/examples/stories/src/stories/stories-esm.stories.js",
-        "package": "ffd1dbb1fb25a21707736be64d0e8469",
+        "date": "2020-07-17T14:45:46.127Z",
+        "dateModified": "2020-07-17T14:45:46.127Z",
+        "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
+        "package": "c08bdcb13ab5ab1d9a0e8a612ec1e872",
         "title": "Introduction/ESM",
       },
-      "filePath": "/Users/atanasster/cc/examples/stories/src/stories/stories-esm.stories.js",
+      "filePath": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
       "stories": Object {
         "externalStory": Object {
           "arguments": Array [],

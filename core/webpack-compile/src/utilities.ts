@@ -42,7 +42,7 @@ export interface CompileResults {
  * returns the default bumnle full path or args config
  *  ./public/component-controls.js
  */
-export const getBundleName = () => {
+export const getBundleName = (): string => {
   const args = cliArgs().parse();
   let distFolder = args.dist || `${path.join(process.cwd(), 'public')}`;
   if (!path.isAbsolute(distFolder)) {

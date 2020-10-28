@@ -8,7 +8,7 @@ export const getArgs = (options?: ArgOptions): CliArgTypes => {
   const argv = cliArgs(options);
   return argv.help().alias('help', 'h').argv;
 };
-export const run = async (options?: ArgOptions) => {
+export const run = async (options?: ArgOptions): Promise<void> => {
   const argv = getArgs(options);
   process.env.NODE_ENV = argv.mode;
   const exec = argv.watch ? watch : compile;

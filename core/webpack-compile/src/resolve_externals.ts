@@ -15,11 +15,12 @@ export class ResolveExternals {
   constructor(config: ResolveExternalsConfig) {
     this._config = config;
   }
-  addAlias = (props: ExternalProps) => {
+  addAlias = (props: ExternalProps): void => {
     const { lib, externalName } = props;
     if (typeof this._config.externals !== 'object') {
       this._config.externals = {};
     }
-    (this._config.externals as Record<string, any>)[lib] = externalName || lib;
+    (this._config.externals as Record<string, unknown>)[lib] =
+      externalName || lib;
   };
 }

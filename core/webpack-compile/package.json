@@ -42,7 +42,7 @@
     "@component-controls/logger": "^1.22.0",
     "@component-controls/webpack-configs": "^1.36.7",
     "memory-fs": "^0.5.0",
-    "typescript": "^3.8.3",
+    "typescript": "^4.0.5",
     "webpack": "^4.43.0",
     "yargs": "^15.3.1"
   },
