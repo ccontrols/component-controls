@@ -72,7 +72,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
           globalStore.docs[doc.title] = doc;
           Object.keys(storeStories).forEach((storyName: string) => {
             const exportedStory: Story = storeStories[storyName];
-            let stories: Story[] = mapDynamicStories(
+            const stories: Story[] = mapDynamicStories(
               exportedStory,
               doc,
               building,

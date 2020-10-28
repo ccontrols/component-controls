@@ -14,7 +14,7 @@ export class StorePlugin {
     this.options = options;
   }
 
-  apply(compiler: webpack.Compiler) {
+  apply(compiler: webpack.Compiler): void {
     this.installStoreLoader(compiler);
   }
 

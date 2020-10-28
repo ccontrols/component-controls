@@ -32,7 +32,10 @@ export const useDocPropCount = (category: string): DocCountType => {
 /**
  * Returns an array of documents that have a specific value in their `category` field
  */
-export const useDocsByCategory = (category: string, value?: any): Pages => {
+export const useDocsByCategory = (
+  category: string,
+  value?: string | number,
+): Pages => {
   const [state, setState] = useState<Pages>([]);
   const docs = useDocs();
   const [sort] = useDocSort(category);

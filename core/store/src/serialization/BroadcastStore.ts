@@ -41,31 +41,32 @@ export class BroadcastStore implements Store {
   /**
    * add observer callback function
    */
-  addObserver = (observer: StoreObserver) => this.observers.push(observer);
+  addObserver = (observer: StoreObserver): number =>
+    this.observers.push(observer);
 
   /**
    * remove installed observer callback function
    */
-  removeObserver = (observer: StoreObserver) =>
+  removeObserver = (observer: StoreObserver): StoreObserver[] =>
     (this.observers = this.observers.filter(o => o !== observer));
 
-  notifyObservers = (story?: Story) => {
+  notifyObservers = (story?: Story): void => {
     if (this.observers.length > 0) {
       this.observers.forEach(observer => observer(story));
     }
   };
-  saveStore = (story?: Story) => {
+  saveStore = (story?: Story): void => {
     saveStore(this);
     this.broadcastMessage(story);
   };
-  private assignStore = (store: Store) => {
+  private assignStore = (store: Store): void => {
     this.config = store.config;
     this.docs = store.docs;
     this.stories = store.stories;
     this.components = store.components;
     this.packages = store.packages;
   };
-  readData = () => {
+  readData = (): void => {
     const store = readStore(this.stories);
     this.assignStore(store);
   };

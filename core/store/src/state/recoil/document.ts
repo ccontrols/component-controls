@@ -6,6 +6,7 @@ import {
   useRecoilState,
   selectorFamily,
   selector,
+  SetterOrUpdater,
 } from 'recoil';
 import {
   Document,
@@ -40,12 +41,12 @@ export const currentDocumentState = selector<Document | undefined>({
 /**
  * Retrieves a Document object from a document id
  */
-export const useDocument = (docId: string) => {
+export const useDocument = (docId: string): Document | undefined => {
   const store = useStore();
   return store.docs[docId];
 };
 
-export const useGetDocument = () => {
+export const useGetDocument = (): ((docId: string) => Document | undefined) => {
   const store = useStore();
   return (docId: string) => store.docs[docId];
 };
@@ -83,7 +84,8 @@ export const docsState = selector<Documents>({
 /**
  *  Returns a key-value object of all documents in the store
  */
-export const useDocs = () => useRecoilValue(docsState);
+export const useDocs = (): Record<string, Document> =>
+  useRecoilValue(docsState);
 
 export const pagesState = selector<Pages>({
   key: 'pages',
@@ -97,14 +99,14 @@ export const pagesState = selector<Pages>({
  *  Returns an array of all documents in the store
  */
 
-export const usePages = () => useRecoilValue(pagesState);
+export const usePages = (): Pages => useRecoilValue(pagesState);
 
 export type DocSortOrder = 'date' | 'dateModified' | 'title';
 
 export const docSortFn = (sort: DocSortOrder) => (
   p1: Document,
   p2: Document,
-) => {
+): number => {
   const v1: any | undefined = p1[sort];
   const v2: any | undefined = p2[sort];
   if (v1 && v2) {
@@ -127,7 +129,9 @@ export const docSortByTypeState = atomFamily<DocSortOrder, DocType>({
  * Returns the doc sort order and a setter to update the sort order
  * for a specific doc type
  */
-export const useDocSort = (type: DocType) =>
+export const useDocSort = (
+  type: DocType,
+): [DocSortOrder, SetterOrUpdater<DocSortOrder>] =>
   useRecoilState(docSortByTypeState(type));
 
 const docsByTypeState = selectorFamily<Pages, DocType>({

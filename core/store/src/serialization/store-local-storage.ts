@@ -23,8 +23,8 @@ const encodeFn = (name: string, val: any) => {
   }
   return val;
 };
-export const saveStore = (store: Store) => {
-  for (var key in localStorage) {
+export const saveStore = (store: Store): void => {
+  for (const key in localStorage) {
     if (key.indexOf(COMPONENT_CONTROLS_STORAGE) === 0) {
       localStorage.removeItem(key);
     }

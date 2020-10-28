@@ -22,6 +22,7 @@ interface StoryContextProps {
 }
 
 export const StoryContext = createContext<StoryContextProps>({
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   updateStory: () => {},
 });
 
@@ -82,7 +83,7 @@ export const useCurrentStory = (): Story | undefined => {
 /**
  * Retrieves a Story object from a story id
  */
-export const useStoryById = (storyId: string) => {
+export const useStoryById = (storyId: string): Story | undefined => {
   const store = useStore();
   return store.stories[storyId];
 };
@@ -181,7 +182,10 @@ export const useStoryPath = (storyId: string): string => {
   return getStoryPath(story.id, doc, store, activeTab);
 };
 
-export const useGetStoryPath = () => {
+export const useGetStoryPath = (): ((
+  storyId: string,
+  activeTab?: string,
+) => string) => {
   const store = useStore();
   return (storyId: string, activeTab?: string): string => {
     const story = store.stories[storyId];

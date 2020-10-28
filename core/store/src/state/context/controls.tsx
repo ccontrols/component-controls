@@ -14,6 +14,7 @@ export interface ControlsContextProps {
   updateValue: ControlUpdateFn;
 }
 const ControlsContext = createContext<ControlsContextProps>({
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   updateValue: () => {},
 });
 

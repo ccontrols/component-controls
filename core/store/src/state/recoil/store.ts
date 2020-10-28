@@ -1,5 +1,10 @@
 import { atom, useRecoilValue, selector } from 'recoil';
-import { Store, getDefaultStore, PackageInfo } from '@component-controls/core';
+import {
+  Store,
+  getDefaultStore,
+  PackageInfo,
+  RunConfiguration,
+} from '@component-controls/core';
 
 export const storeState = atom<Store>({
   key: 'store',
@@ -23,7 +28,7 @@ export const configState = selector<Store['config']>({
 /**
  * Returns the configuration object part of the store
  */
-export const useConfig = () => useRecoilValue(configState);
+export const useConfig = (): RunConfiguration => useRecoilValue(configState);
 
 export const activeTabState = atom<string | undefined>({
   key: 'active_tab',
@@ -33,7 +38,8 @@ export const activeTabState = atom<string | undefined>({
 /**
  * Returns the current active tab for documenta that have multiple tabs/pages
  */
-export const useActiveTab = () => useRecoilValue(activeTabState);
+export const useActiveTab = (): string | undefined =>
+  useRecoilValue(activeTabState);
 
 /**
  * packageId Returns a package object from a package package id. The package id can come from a Document or a Component object.
@@ -48,4 +54,4 @@ export const optionsState = atom<any>({
   default: {},
 });
 
-export const useExternalOptions = () => useRecoilValue(optionsState);
+export const useExternalOptions = (): any => useRecoilValue(optionsState);

@@ -45,6 +45,7 @@ interface ConfigContextProps {
 
 export const ConfigContext = createContext<ConfigContextProps>({
   config: {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setConfig: () => {},
 });
 

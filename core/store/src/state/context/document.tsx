@@ -29,12 +29,12 @@ export const DocumentContextProvider: FC<{ docId: string | undefined }> = ({
 /**
  * Retrieves a Document object from a document id
  */
-export const useDocument = (docId?: string) => {
+export const useDocument = (docId?: string): Document | undefined => {
   const store = useStore();
   return docId ? store.docs[docId] : undefined;
 };
 
-export const useGetDocument = () => {
+export const useGetDocument = (): ((docId: string) => Document | undefined) => {
   const store = useStore();
   return (docId: string) => store.docs[docId];
 };
@@ -77,7 +77,7 @@ export type DocSortOrder = 'date' | 'dateModified' | 'title';
 export const docSortFn = (sort: DocSortOrder) => (
   p1: Document,
   p2: Document,
-) => {
+): number => {
   const v1: any | undefined = p1[sort];
   const v2: any | undefined = p2[sort];
   if (v1 && v2) {
@@ -99,6 +99,7 @@ interface DocsSortContextProps {
 
 const DocsSortContext = createContext<DocsSortContextProps>({
   sort: {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setSort: () => {},
 });
 
