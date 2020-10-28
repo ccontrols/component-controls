@@ -10,7 +10,10 @@ export type RendererFn = (
   options?: any,
 ) => Promise<RendererFnResult>;
 
-export const runJestSnapshots = (renderer: RendererFn, bundleName?: string) => {
+export const runJestSnapshots = (
+  renderer: RendererFn,
+  bundleName?: string,
+): void => {
   const bundle = bundleName || getBundleName();
   const store = loadStore(require(bundle));
   Object.keys(store.docs).forEach(docId => {

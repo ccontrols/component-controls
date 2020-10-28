@@ -10,7 +10,7 @@ import { jestCliArgs } from './args';
 
 const isCommandArg = (arg: string) =>
   arg.startsWith('--') || arg.startsWith('-');
-export const run = async () => {
+export const run = async (): Promise<void> => {
   await runCompiler(jestCliArgs);
   const args = cliArgs(jestCliArgs);
 
