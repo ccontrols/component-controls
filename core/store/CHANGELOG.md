@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.12](https://github.com/ccontrols/component-controls/compare/v1.36.11...v1.36.12) (2020-10-29)
+
+
+### Bug Fixes
+
+* update @component-controls/render version ([d93003f](https://github.com/ccontrols/component-controls/commit/d93003fc3d3e2fc43ec1c41ade23193afaf28ca9))
+
+
+
+
+
 ## [1.36.11](https://github.com/ccontrols/component-controls/compare/v1.36.10...v1.36.11) (2020-10-29)
 
 **Note:** Version bump only for package @component-controls/store

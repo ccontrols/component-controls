@@ -1,7 +1,7 @@
 {
   "name": "component-controls-nextjs-starter",
   "private": true,
-  "version": "1.36.11",
+  "version": "1.36.12",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,11 +16,11 @@
     "directory": "examples/nextjs"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.36.11",
-    "@component-controls/blocks": "^1.36.11",
+    "@component-controls/axe-plugin": "^1.36.12",
+    "@component-controls/blocks": "^1.36.12",
     "@component-controls/core": "^1.36.8",
-    "@component-controls/nextjs-plugin": "^1.36.11",
-    "@component-controls/viewport-plugin": "^1.36.11",
+    "@component-controls/nextjs-plugin": "^1.36.12",
+    "@component-controls/viewport-plugin": "^1.36.12",
     "@emotion/core": "^10.0.27",
     "@theme-ui/presets": "^0.4.0-rc.1",
     "emotion": "^10.0.27",
