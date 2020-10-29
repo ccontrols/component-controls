@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ButtonEditor } from './ButtonEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: ButtonEditor,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <ControlsStateProvider
     onChange={() => console.log('clicked')}
     controls={{

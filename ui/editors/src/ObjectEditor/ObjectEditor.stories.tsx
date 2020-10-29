@@ -1,5 +1,9 @@
 import React from 'react';
-import { ControlTypes, ComponentControls } from '@component-controls/core';
+import {
+  ControlTypes,
+  ComponentControls,
+  Example,
+} from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ObjectEditor } from './ObjectEditor';
 
@@ -8,7 +12,7 @@ export default {
   component: ObjectEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },
@@ -27,7 +31,7 @@ export const overview = () => {
   );
 };
 
-export const editLabel = () => {
+export const editLabel: Example = () => {
   const [state, setState] = React.useState<ComponentControls>({
     border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
     borderRadius: { type: ControlTypes.NUMBER, value: 10 },

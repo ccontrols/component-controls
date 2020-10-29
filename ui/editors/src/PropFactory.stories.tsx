@@ -2,6 +2,7 @@ import React, { ChangeEvent } from 'react';
 import {
   ControlTypes,
   ComponentControlBoolean,
+  Example,
 } from '@component-controls/core';
 import { useControl, ControlsStateProvider } from '@component-controls/store';
 import {} from '@component-controls/store';
@@ -28,7 +29,7 @@ const CheckboxEditor: PropertyEditor = ({ name }) => {
 };
 
 addPropertyEditor(ControlTypes.BOOLEAN, CheckboxEditor);
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState(false);
   const Component = getPropertyEditor(ControlTypes.BOOLEAN);
   return (

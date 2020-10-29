@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { DateEditor } from './DateEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: DateEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState(new Date());
   return (
     <ControlsStateProvider
@@ -22,7 +22,7 @@ export const overview = () => {
   );
 };
 
-export const onlyDatePicker = () => {
+export const onlyDatePicker: Example = () => {
   const [state, setState] = React.useState(new Date());
   return (
     <ControlsStateProvider
@@ -36,7 +36,7 @@ export const onlyDatePicker = () => {
   );
 };
 
-export const onlyTimePicker = () => {
+export const onlyTimePicker: Example = () => {
   const [state, setState] = React.useState(new Date());
   return (
     <ControlsStateProvider

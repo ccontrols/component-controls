@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { OptionsEditor } from './OptionsEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: OptionsEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -26,7 +26,7 @@ export const overview = () => {
   );
 };
 
-export const objects = () => {
+export const objects: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -44,7 +44,7 @@ export const objects = () => {
   );
 };
 
-export const numeric = () => {
+export const numeric: Example = () => {
   const [state, setState] = React.useState(1);
   return (
     <ControlsStateProvider
@@ -66,7 +66,7 @@ export const numeric = () => {
   );
 };
 
-export const multiSelectSimple = () => {
+export const multiSelectSimple: Example = () => {
   const [state, setState] = React.useState(['one']);
   return (
     <ControlsStateProvider
@@ -85,7 +85,7 @@ export const multiSelectSimple = () => {
   );
 };
 
-export const multiSelectObjects = () => {
+export const multiSelectObjects: Example = () => {
   const [state, setState] = React.useState(['one']);
   return (
     <ControlsStateProvider
@@ -104,7 +104,7 @@ export const multiSelectObjects = () => {
   );
 };
 
-export const multiSelectNumeric = () => {
+export const multiSelectNumeric: Example = () => {
   const [state, setState] = React.useState([1]);
   return (
     <ControlsStateProvider
@@ -127,7 +127,7 @@ export const multiSelectNumeric = () => {
   );
 };
 
-export const simpleRadios = () => {
+export const simpleRadios: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -146,7 +146,7 @@ export const simpleRadios = () => {
   );
 };
 
-export const objectsRadios = () => {
+export const objectsRadios: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -165,7 +165,7 @@ export const objectsRadios = () => {
   );
 };
 
-export const numericRadios = () => {
+export const numericRadios: Example = () => {
   const [state, setState] = React.useState(1);
   return (
     <ControlsStateProvider
@@ -188,7 +188,7 @@ export const numericRadios = () => {
   );
 };
 
-export const simpleRadiosInline = () => {
+export const simpleRadiosInline: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -207,7 +207,7 @@ export const simpleRadiosInline = () => {
   );
 };
 
-export const objectsRadiosInline = () => {
+export const objectsRadiosInline: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -226,7 +226,7 @@ export const objectsRadiosInline = () => {
   );
 };
 
-export const numericRadiosInline = () => {
+export const numericRadiosInline: Example = () => {
   const [state, setState] = React.useState(1);
   return (
     <ControlsStateProvider
@@ -249,7 +249,7 @@ export const numericRadiosInline = () => {
   );
 };
 
-export const simpleCheck = () => {
+export const simpleCheck: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -268,7 +268,7 @@ export const simpleCheck = () => {
   );
 };
 
-export const objectsCheck = () => {
+export const objectsCheck: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -287,7 +287,7 @@ export const objectsCheck = () => {
   );
 };
 
-export const numericCheck = () => {
+export const numericCheck: Example = () => {
   const [state, setState] = React.useState(1);
   return (
     <ControlsStateProvider
@@ -310,7 +310,7 @@ export const numericCheck = () => {
   );
 };
 
-export const simpleCheckInline = () => {
+export const simpleCheckInline: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -329,7 +329,7 @@ export const simpleCheckInline = () => {
   );
 };
 
-export const objectsCheckInline = () => {
+export const objectsCheckInline: Example = () => {
   const [state, setState] = React.useState('one');
   return (
     <ControlsStateProvider
@@ -348,7 +348,7 @@ export const objectsCheckInline = () => {
   );
 };
 
-export const numericCheckInline = () => {
+export const numericCheckInline: Example = () => {
   const [state, setState] = React.useState(1);
   return (
     <ControlsStateProvider

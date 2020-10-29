@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { ColorEditor } from './ColorEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: ColorEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState('#dedede');
   return (
     <ControlsStateProvider
@@ -22,7 +22,7 @@ export const overview = () => {
   );
 };
 
-export const rgb = () => {
+export const rgb: Example = () => {
   const [state, setState] = React.useState('rgb(192, 0, 0)');
   return (
     <ControlsStateProvider
@@ -36,7 +36,7 @@ export const rgb = () => {
   );
 };
 
-export const rgba = () => {
+export const rgba: Example = () => {
   const [state, setState] = React.useState('rgba(0, 192, 0, 0.5)');
   return (
     <ControlsStateProvider
@@ -50,7 +50,7 @@ export const rgba = () => {
   );
 };
 
-export const hsl = () => {
+export const hsl: Example = () => {
   const [state, setState] = React.useState('hsl(213, 50%, 16%)');
   return (
     <ControlsStateProvider
@@ -64,7 +64,7 @@ export const hsl = () => {
   );
 };
 
-export const hsla = () => {
+export const hsla: Example = () => {
   const [state, setState] = React.useState('hsla(213, 50%, 16%, 0.5)');
   return (
     <ControlsStateProvider

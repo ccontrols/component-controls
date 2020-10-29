@@ -47,7 +47,8 @@
     "eslint": "^6.5.1",
     "jest": "^26.4.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "@primer/octicons-react": ">= 10.0.0",

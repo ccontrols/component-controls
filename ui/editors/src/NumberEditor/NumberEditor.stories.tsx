@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { NumberEditor } from './NumberEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: NumberEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [value, setValue] = React.useState(10);
   return (
     <ControlsStateProvider
@@ -22,7 +22,7 @@ export const overview = () => {
   );
 };
 
-export const range = () => {
+export const range: Example = () => {
   const [value, setValue] = React.useState(10);
   return (
     <ControlsStateProvider
@@ -42,7 +42,7 @@ export const range = () => {
   );
 };
 
-export const step = () => {
+export const step: Example = () => {
   const [value, setValue] = React.useState(10);
   return (
     <ControlsStateProvider

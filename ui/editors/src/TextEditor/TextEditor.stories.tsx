@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { TextEditor } from './TextEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: TextEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState('Hello');
   return (
     <ControlsStateProvider
@@ -22,7 +22,7 @@ export const overview = () => {
   );
 };
 
-export const placeholder = () => {
+export const placeholder: Example = () => {
   const [state, setState] = React.useState();
   return (
     <ControlsStateProvider
@@ -40,7 +40,7 @@ export const placeholder = () => {
   );
 };
 
-export const textArea = () => {
+export const textArea: Example = () => {
   const [state, setState] = React.useState();
   return (
     <ControlsStateProvider

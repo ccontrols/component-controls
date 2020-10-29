@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { ControlsStateProvider } from '@component-controls/store';
 import { BooleanEditor } from './BooleanEditor';
 
@@ -8,7 +8,7 @@ export default {
   component: BooleanEditor,
 };
 
-export const overview = () => {
+export const overview: Example = () => {
   const [state, setState] = React.useState(false);
   return (
     <ControlsStateProvider
