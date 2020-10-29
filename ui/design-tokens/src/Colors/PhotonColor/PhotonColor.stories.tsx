@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { PhotonColor, PhotonColorPalette } from './PhotonColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: PhotonColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <PhotonColor name={name} color={color} />
 );
 
@@ -17,7 +17,7 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#ff9400' },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <PhotonColorPalette
     palette={{
       'Teal 50': '#00feff',

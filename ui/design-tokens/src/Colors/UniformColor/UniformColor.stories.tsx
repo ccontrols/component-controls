@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { UniformColor, UniformColorPalette } from './UniformColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: UniformColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <UniformColor name={name} color={color} />
 );
 
@@ -17,7 +17,7 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#990099' },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <UniformColorPalette
     palette={{
       Primary: '#107CB2',

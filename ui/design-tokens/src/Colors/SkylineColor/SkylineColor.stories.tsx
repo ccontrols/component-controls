@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { SkylineColor, SkylineColorPalette } from './SkylineColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: SkylineColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <SkylineColor name={name} color={color} />
 );
 
@@ -25,7 +25,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <SkylineColorPalette
     palette={{
       Green: {

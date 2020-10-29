@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { MorningstarColor, MorningstarColorPalette } from './MorningstarColor';
 import { ColorProps } from '../../types';
 
@@ -9,7 +9,7 @@ export default {
   component: MorningstarColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <MorningstarColor name={name} color={color} />
 );
 
@@ -24,7 +24,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <MorningstarColorPalette
     palette={{
       Informational: {

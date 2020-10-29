@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { PajamasColor, PajamasColorPalette } from './PajamasColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: PajamasColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <PajamasColor name={name} color={color} />
 );
 
@@ -17,7 +17,7 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#e9f3fc' },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <PajamasColorPalette
     palette={{
       '$orange-50': '#fdf1dd',

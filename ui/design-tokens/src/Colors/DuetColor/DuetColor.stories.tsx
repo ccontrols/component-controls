@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { DuetColor, DuetColorPalette } from './DuetColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: DuetColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <DuetColor name={name} color={color} />
 );
 
@@ -31,7 +31,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <DuetColorPalette
     palette={{
       'Status Danger': {

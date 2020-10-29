@@ -25,7 +25,7 @@ export const mostReadable = (
   color: string,
   blackTextColor: string | undefined = defaultBlackTextColor,
   whiteTextColor: string | undefined = defaultWhiteTextColor,
-) =>
+): string =>
   tinycolor
     .mostReadable(color, [whiteTextColor, blackTextColor])
     .toString('hex');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { HelpScoutColor, HelpScoutColorPalette } from './HelpScoutColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: HelpScoutColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <HelpScoutColor name={name} color={color} />
 );
 
@@ -24,7 +24,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <HelpScoutColorPalette
     palette={{
       lavender: { value: '#9FA6FF', name: '500', primary: true },

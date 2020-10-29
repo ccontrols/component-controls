@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { SolidColor, SolidColorPalette } from './SolidColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: SolidColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <SolidColor name={name} color={color} />
 );
 
@@ -22,7 +22,7 @@ overview.controls = {
     },
   },
 };
-export const palette = () => (
+export const palette: Example = () => (
   <SolidColorPalette
     palette={{
       fillRed: { value: '#ee3322', sass: '$fill-red', css: '.fill-red' },

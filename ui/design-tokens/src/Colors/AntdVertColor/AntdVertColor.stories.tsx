@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { AntdVertColor, AntdVertColorPalette } from './AntdVertColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: AntdVertColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <AntdVertColor name={name} color={color} />
 );
 
@@ -17,23 +17,27 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#cf1322' },
 };
 
-export const name = () => <AntdVertColor name="brand" color="#e95b54" />;
+export const name: Example = () => (
+  <AntdVertColor name="brand" color="#e95b54" />
+);
 
-export const rgb = () => <AntdVertColor name="text" color="rgb(0, 0, 0)" />;
+export const rgb: Example = () => (
+  <AntdVertColor name="text" color="rgb(0, 0, 0)" />
+);
 
-export const rgba = () => (
+export const rgba: Example = () => (
   <AntdVertColor name="shadow" color="rgba(0, 0, 0, 0.5)" />
 );
 
-export const hsl = () => (
+export const hsl: Example = () => (
   <AntdVertColor name="accent" color="hsl(12, 10%, 50%)" />
 );
 
-export const hsla = () => (
+export const hsla: Example = () => (
   <AntdVertColor name="accent" color="hsl(12, 10%, 50%, .6)" />
 );
 
-export const palette = () => (
+export const palette: Example = () => (
   <AntdVertColorPalette
     palette={{
       'green-1': '#f6ffed',

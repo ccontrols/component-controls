@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { XColor, XColorPalette } from './XColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: XColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <XColor name={name} color={color} />
 );
 
@@ -17,7 +17,7 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#3C3C3B' },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <XColorPalette
     palette={{
       'Dame Tangerine': '#FF5000',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { SeekColor, SeekColorPalette } from './SeekColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: SeekColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <SeekColor name={name} color={color} />
 );
 
@@ -17,7 +17,7 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#071d40' },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <SeekColorPalette
     palette={{
       '@sk-blue-darker': '#001b38',

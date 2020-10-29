@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { LightningColor, LightningColorPalette } from './LightningColor';
 import { TableColumn } from '../../containers';
 import { ColorProps } from '../../types';
@@ -51,7 +51,7 @@ export default {
   component: LightningColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <LightningColor columns={lightningColumns} name={name} color={color} />
 );
 
@@ -70,7 +70,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <LightningColorPalette
     columns={lightningColumns}
     palette={{

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { TableColor, TableColorPalette, ColorAALegend } from './TableColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: TableColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <TableColor name={name} color={color} />
 );
 
@@ -23,9 +23,9 @@ overview.controls = {
   },
 };
 
-export const legend = () => <ColorAALegend />;
+export const legend: Example = () => <ColorAALegend />;
 
-export const palette = () => (
+export const palette: Example = () => (
   <TableColorPalette
     palette={{
       background: '#FAFAF9',
@@ -40,7 +40,7 @@ export const palette = () => (
     }}
   />
 );
-export const paletteDark = () => (
+export const paletteDark: Example = () => (
   <TableColorPalette
     palette={{
       text: { value: '#454f5b', dark: '#d3d4db' },

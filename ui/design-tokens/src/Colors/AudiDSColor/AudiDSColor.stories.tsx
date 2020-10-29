@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { AudiDSColor, AudiDSColorPalette } from './AudiDSColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: AudiDSColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <AudiDSColor name={name} color={color} />
 );
 
@@ -23,25 +23,27 @@ overview.controls = {
   },
 };
 
-export const name = () => (
+export const name: Example = () => (
   <AudiDSColor name="Critical" color={{ name: 'brand', value: '#f94d32' }} />
 );
 
-export const rgb = () => <AudiDSColor name="text" color="rgb(0, 0, 0)" />;
+export const rgb: Example = () => (
+  <AudiDSColor name="text" color="rgb(0, 0, 0)" />
+);
 
-export const rgba = () => (
+export const rgba: Example = () => (
   <AudiDSColor name="shadow" color="rgba(0, 0, 0, 0.1)" />
 );
 
-export const hsl = () => (
+export const hsl: Example = () => (
   <AudiDSColor name="accent" color="hsl(12, 10%, 50%)" />
 );
 
-export const hsla = () => (
+export const hsla: Example = () => (
   <AudiDSColor name="accent" color="hsl(12, 10%, 50%, .3)" />
 );
 
-export const palette = () => (
+export const palette: Example = () => (
   <AudiDSColorPalette
     palette={{
       'Poppy surprise': { value: '#FF5630', name: 'R300' },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { PrimerColor, PrimerColorPalette } from './PrimerColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: PrimerColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <PrimerColor name={name} color={color} />
 );
 
@@ -24,7 +24,7 @@ overview.controls = {
   },
 };
 
-export const palette = () => (
+export const palette: Example = () => (
   <PrimerColorPalette
     palette={{
       Yellow: { value: '#ffd33d', sass: '$yellow-500', primary: true },

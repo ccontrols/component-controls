@@ -1,5 +1,5 @@
 import React from 'react';
-import { ControlTypes } from '@component-controls/core';
+import { Example, ControlTypes } from '@component-controls/core';
 import { BeelineColor, BeelineColorPalette } from './BeelineColor';
 import { ColorProps } from '../../types';
 
@@ -8,7 +8,7 @@ export default {
   component: BeelineColor,
 };
 
-export const overview = ({ name, color }: ColorProps) => (
+export const overview: Example = ({ name, color }: ColorProps) => (
   <BeelineColor name={name} color={color} />
 );
 
@@ -17,23 +17,27 @@ overview.controls = {
   color: { type: ControlTypes.COLOR, value: '#2270ee' },
 };
 
-export const name = () => <BeelineColor name="Critical" color="#f94d32" />;
+export const name: Example = () => (
+  <BeelineColor name="Critical" color="#f94d32" />
+);
 
-export const rgb = () => <BeelineColor name="text" color="rgb(0, 0, 0)" />;
+export const rgb: Example = () => (
+  <BeelineColor name="text" color="rgb(0, 0, 0)" />
+);
 
-export const rgba = () => (
+export const rgba: Example = () => (
   <BeelineColor name="shadow" color="rgba(0, 0, 0, 0.1)" />
 );
 
-export const hsl = () => (
+export const hsl: Example = () => (
   <BeelineColor name="accent" color="hsl(12, 10%, 50%)" />
 );
 
-export const hsla = () => (
+export const hsla: Example = () => (
   <BeelineColor name="accent" color="hsl(12, 10%, 50%, .3)" />
 );
 
-export const palette = () => (
+export const palette: Example = () => (
   <BeelineColorPalette
     palette={{
       'Blue 5': '#001b38',
