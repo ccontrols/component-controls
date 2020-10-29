@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.9](https://github.com/ccontrols/component-controls/compare/v1.36.8...v1.36.9) (2020-10-29)
+
+
+### Bug Fixes
+
+* nextfn for renderFn parameter ([68b53cd](https://github.com/ccontrols/component-controls/commit/68b53cd9830c8b235447a1e3180a342c46b97123))
+
+
+
+
+
 ## [1.36.8](https://github.com/ccontrols/component-controls/compare/v1.36.7...v1.36.8) (2020-10-29)
 
 **Note:** Version bump only for package @component-controls/render

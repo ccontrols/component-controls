@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.9](https://github.com/ccontrols/component-controls/compare/v1.36.8...v1.36.9) (2020-10-29)
+
+**Note:** Version bump only for package @component-controls/editors
+
+
+
+
+
 ## [1.36.8](https://github.com/ccontrols/component-controls/compare/v1.36.7...v1.36.8) (2020-10-29)
 
 **Note:** Version bump only for package @component-controls/editors
