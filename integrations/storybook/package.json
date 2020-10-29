@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/storybook",
-  "version": "1.36.10",
+  "version": "1.36.11",
   "description": "Storybook Addon For live editing of component controls",
   "keywords": [
     "addon",
@@ -38,14 +38,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.36.10",
-    "@component-controls/components": "^1.36.10",
+    "@component-controls/blocks": "^1.36.11",
+    "@component-controls/components": "^1.36.11",
     "@component-controls/core": "^1.36.8",
-    "@component-controls/loader": "^1.36.10",
-    "@component-controls/pages": "^1.36.10",
-    "@component-controls/store": "^1.36.10",
+    "@component-controls/loader": "^1.36.11",
+    "@component-controls/pages": "^1.36.11",
+    "@component-controls/store": "^1.36.11",
     "@component-controls/storybook-custom-docs": "^1.36.8",
-    "@component-controls/webpack-configs": "^1.36.10",
+    "@component-controls/webpack-configs": "^1.36.11",
     "broadcast-channel": "^3.1.0",
     "deepmerge": "^4.2.2",
     "global": "^4.3.2",

@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/components",
-  "version": "1.36.10",
+  "version": "1.36.11",
   "description": "Component controls commonly used UI components.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -48,7 +48,7 @@
     "theme-ui": "^0.4.0-rc.1"
   },
   "devDependencies": {
-    "@component-controls/jest-snapshots": "^1.36.10",
+    "@component-controls/jest-snapshots": "^1.36.11",
     "@component-controls/ts-markdown-docs": "^1.36.8",
     "@theme-ui/css": "^0.4.0-rc.1",
     "@types/markdown-to-jsx": "^6.11.0",
