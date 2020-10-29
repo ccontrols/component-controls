@@ -25,18 +25,17 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
     globalDecorators,
     storyDecorators,
   );
-
   const sortedDecorators = decorators.reverse();
   let renderFn = story.renderFn;
   for (let i = 0; i < sortedDecorators.length; i += 1) {
     const decorator = sortedDecorators[i];
     const childFn = renderFn;
-    const nextFn = (_: any, nexContext: any) =>
+    const nextRenderFn = (_: any, nexContext: any) =>
       (childFn as StoryRenderFn)(values, { ...context, ...nexContext });
     renderFn = () =>
-      decorator(nextFn, {
+      decorator(nextRenderFn, {
         ...context,
-        renderFn: nextFn,
+        renderFn: nextRenderFn,
       });
   }
   let node: any = null;
