@@ -31,15 +31,13 @@ export const render: FrameworkRenderFn = (story, doc, options: any = {}) => {
   for (let i = 0; i < sortedDecorators.length; i += 1) {
     const decorator = sortedDecorators[i];
     const childFn = renderFn;
+    const nextFn = (_: any, nexContext: any) =>
+      (childFn as StoryRenderFn)(values, { ...context, ...nexContext });
     renderFn = () =>
-      decorator(
-        (_: any, nexContext: any) =>
-          (childFn as StoryRenderFn)(values, { ...context, ...nexContext }),
-        {
-          ...context,
-          renderFn: childFn,
-        },
-      );
+      decorator(nextFn, {
+        ...context,
+        renderFn: nextFn,
+      });
   }
   let node: any = null;
   node = () => (renderFn as StoryRenderFn)(values, context);
