@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/render",
-  "version": "1.36.6",
+  "version": "1.36.8",
   "description": "framework render functions",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -32,10 +32,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/core": "^1.36.6"
+    "@component-controls/core": "^1.36.8"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.21.0",
+    "@component-controls/ts-markdown-docs": "^1.36.8",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "cross-env": "^5.2.1",

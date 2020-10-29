@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.8](https://github.com/ccontrols/component-controls/compare/v1.36.7...v1.36.8) (2020-10-29)
+
+
+### Reverts
+
+* Revert "chore: preset-react runtime: automatic react 17" ([92833ed](https://github.com/ccontrols/component-controls/commit/92833ed034ac08a359c15fcad71e2f6c3e2b43fb))
+
+
+
+
+
 ## [1.36.7](https://github.com/ccontrols/component-controls/compare/v1.36.6...v1.36.7) (2020-10-26)
 
 **Note:** Version bump only for package @component-controls/webpack-configs

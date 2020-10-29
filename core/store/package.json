@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/store",
-  "version": "1.36.7",
+  "version": "1.36.8",
   "description": "Component controls shared store",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -38,16 +38,16 @@
   "license": "MIT",
   "dependencies": {
     "@analytics/google-analytics": "^0.4.0",
-    "@component-controls/core": "^1.36.6",
-    "@component-controls/loader": "^1.36.7",
-    "@component-controls/render": "^1.36.6",
+    "@component-controls/core": "^1.36.8",
+    "@component-controls/loader": "^1.36.8",
+    "@component-controls/render": "^1.36.8",
     "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
     "recoil": "^0.0.10",
     "typescript": "^4.0.5"
   },
   "devDependencies": {
-    "@component-controls/ts-markdown-docs": "^1.21.0",
+    "@component-controls/ts-markdown-docs": "^1.36.8",
     "@types/jest": "^26.0.10",
     "@types/react": "^16.9.34",
     "@types/recoil": "^0.0.1",
