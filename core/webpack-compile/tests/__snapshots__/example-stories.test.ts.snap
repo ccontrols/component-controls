@@ -2557,7 +2557,7 @@ any *markdown* is allowed
         "components": Object {},
         "componentsLookup": Object {},
         "date": "2020-10-15T00:19:23.446Z",
-        "dateModified": "2020-10-15T00:19:23.447Z",
+        "dateModified": "2020-10-29T05:14:34.916Z",
         "fileName": "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
         "package": "872a13aed459690f92f1efc4366b1f3c",
         "title": "Introduction/Async stories",
