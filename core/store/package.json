@@ -40,7 +40,7 @@
     "@analytics/google-analytics": "^0.4.0",
     "@component-controls/core": "^1.36.8",
     "@component-controls/loader": "^1.36.11",
-    "@component-controls/render": "^1.36.10",
+    "@component-controls/render": "^1.36.8",
     "analytics": "^0.5.2",
     "broadcast-channel": "^3.1.0",
     "recoil": "^0.0.10",
