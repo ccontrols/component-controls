@@ -312,8 +312,8 @@ export const ActionBar: FC<ActionBarProps> = ({
         "componentsLookup": Object {
           "ActionBar": "fded7dbaa855ea6869a794f877eab680",
         },
-        "date": "2020-08-18T06:58:47.265Z",
-        "dateModified": "2020-10-28T05:48:43.789Z",
+        "date": "2020-10-29T01:16:52.595Z",
+        "dateModified": "2020-10-29T01:16:52.596Z",
         "fileName": "/Users/atanasster/component-controls/ui/components/src/ActionBar/ActionBar.stories.tsx",
         "package": "8c5a495b6c81e803332610dad9861480",
         "title": "Components/ActionBar",
