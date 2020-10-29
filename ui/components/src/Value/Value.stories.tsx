@@ -7,7 +7,7 @@ export default {
   component: Value,
 };
 
-export const overview: Example = ({ label, value }: ValueProps) => {
+export const overview: Example<ValueProps> = ({ label, value }) => {
   return <Value label={label} value={value} />;
 };
 

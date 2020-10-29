@@ -8,7 +8,7 @@ export default {
   component: SolidColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <SolidColor name={name} color={color} />
 );
 

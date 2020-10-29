@@ -8,7 +8,7 @@ export default {
   component: PajamasColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <PajamasColor name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: SeekColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <SeekColor name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: AntdHorzColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <AntdHorzColor name={name} color={color} />
 );
 

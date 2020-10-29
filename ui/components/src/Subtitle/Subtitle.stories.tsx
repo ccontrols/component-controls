@@ -7,7 +7,7 @@ export default {
   component: Subtitle,
 };
 
-export const overview: Example = ({ children }: SubtitleProps) => {
+export const overview: Example<SubtitleProps> = ({ children }) => {
   return <Subtitle>{children}</Subtitle>;
 };
 

@@ -8,7 +8,7 @@ export default {
   component: ZendeskColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <ZendeskColor name={name} color={color} />
 );
 

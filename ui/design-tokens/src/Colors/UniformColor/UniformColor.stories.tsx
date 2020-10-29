@@ -8,7 +8,7 @@ export default {
   component: UniformColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <UniformColor name={name} color={color} />
 );
 

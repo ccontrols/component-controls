@@ -8,7 +8,7 @@ export default {
   component: FinastraColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <FinastraColor name={name} color={color} />
 );
 

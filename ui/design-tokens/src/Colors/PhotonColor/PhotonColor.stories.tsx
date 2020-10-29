@@ -8,7 +8,7 @@ export default {
   component: PhotonColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <PhotonColor name={name} color={color} />
 );
 

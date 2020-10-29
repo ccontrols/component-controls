@@ -8,7 +8,7 @@ export default {
   component: HelpScoutColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <HelpScoutColor name={name} color={color} />
 );
 

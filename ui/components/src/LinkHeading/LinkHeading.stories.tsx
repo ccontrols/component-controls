@@ -8,7 +8,7 @@ export default {
   component: LinkHeading,
 };
 
-export const overview: Example = ({ as, children }: LinkHeadingProps) => (
+export const overview: Example<LinkHeadingProps> = ({ as, children }) => (
   <LinkHeading as={as}>{children}</LinkHeading>
 );
 

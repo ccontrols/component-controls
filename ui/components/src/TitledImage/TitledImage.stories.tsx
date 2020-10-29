@@ -8,7 +8,7 @@ export default {
   component: TitledImage,
 };
 
-export const overview: Example = ({ title }: ImageProps) => {
+export const overview: Example<ImageProps> = ({ title }) => {
   return (
     <TitledImage
       title={title}

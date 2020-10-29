@@ -8,7 +8,7 @@ export default {
   component: CometColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <CometColor name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: GovUKColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <GovUKColor name={name} color={color} />
 );
 

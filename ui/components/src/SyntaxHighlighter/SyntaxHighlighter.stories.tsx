@@ -9,12 +9,10 @@ export default {
 };
 
 const source = `import { Button } from 'theme-ui';`;
-export const overview: Example = ({
+export const overview: Example<SyntaxHighlighterProps> = ({
   children,
   dark,
-}: SyntaxHighlighterProps) => (
-  <SyntaxHighlighter dark={dark}>{children}</SyntaxHighlighter>
-);
+}) => <SyntaxHighlighter dark={dark}>{children}</SyntaxHighlighter>;
 
 overview.controls = {
   children: {

@@ -8,7 +8,7 @@ export default {
   component: PrimerColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <PrimerColor name={name} color={color} />
 );
 

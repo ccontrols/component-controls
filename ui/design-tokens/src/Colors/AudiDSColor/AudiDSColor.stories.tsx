@@ -8,7 +8,7 @@ export default {
   component: AudiDSColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <AudiDSColor name={name} color={color} />
 );
 

@@ -51,7 +51,7 @@ export default {
   component: LightningColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <LightningColor columns={lightningColumns} name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: AtlassianColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <AtlassianColor name={name} color={color} />
 );
 

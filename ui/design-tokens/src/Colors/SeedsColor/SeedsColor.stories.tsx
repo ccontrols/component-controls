@@ -8,7 +8,7 @@ export default {
   component: SeedsColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <SeedsColor name={name} color={color} />
 );
 

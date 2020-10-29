@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+import { PropsWithChildren, ReactElement } from 'react';
 import { CodeLocation, PackageInfo, StoryRenderFn } from './utility';
 import { Component } from './components';
 import { ComponentControls } from './controls';
@@ -166,7 +168,10 @@ export type Story = {
   dynamicId?: string;
 } & StoryProps;
 
-export type Example = Story;
+export type Example<P = {}> = {
+  (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
+} & Story;
+
 /**
  * dynamic story creator function type.
  * returns an array of dynamically loaded stories

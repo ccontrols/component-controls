@@ -8,7 +8,7 @@ export default {
   component: ETradeColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <ETradeColor name={name} color={color} />
 );
 

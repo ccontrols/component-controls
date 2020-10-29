@@ -8,7 +8,7 @@ export default {
   component: AnvilColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <AnvilColor name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: BackpackColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <BackpackColor name={name} color={color} />
 );
 

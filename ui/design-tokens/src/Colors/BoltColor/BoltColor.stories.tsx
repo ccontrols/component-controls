@@ -8,7 +8,7 @@ export default {
   component: BoltColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <BoltColor name={name} color={color} />
 );
 

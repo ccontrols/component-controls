@@ -8,7 +8,7 @@ export default {
   component: FishTankColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <FishTankColor name={name} color={color} />
 );
 

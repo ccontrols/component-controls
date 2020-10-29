@@ -8,7 +8,7 @@ export default {
   component: XColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <XColor name={name} color={color} />
 );
 

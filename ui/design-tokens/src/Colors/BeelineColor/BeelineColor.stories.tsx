@@ -8,7 +8,7 @@ export default {
   component: BeelineColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <BeelineColor name={name} color={color} />
 );
 

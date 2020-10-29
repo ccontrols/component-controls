@@ -8,7 +8,7 @@ export default {
   component: TableColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <TableColor name={name} color={color} />
 );
 

@@ -8,7 +8,7 @@ export default {
   component: PatternFlyColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <PatternFlyColor name={name} color={color} />
 );
 

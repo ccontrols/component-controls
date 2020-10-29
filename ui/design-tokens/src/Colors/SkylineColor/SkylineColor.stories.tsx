@@ -8,7 +8,7 @@ export default {
   component: SkylineColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <SkylineColor name={name} color={color} />
 );
 

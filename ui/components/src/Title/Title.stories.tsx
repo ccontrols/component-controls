@@ -7,7 +7,7 @@ export default {
   component: Title,
 };
 
-export const overview: Example = ({ children }: TitleProps) => {
+export const overview: Example<TitleProps> = ({ children }) => {
   return <Title>{children}</Title>;
 };
 

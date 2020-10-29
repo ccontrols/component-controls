@@ -9,7 +9,7 @@ export default {
   component: MorningstarColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <MorningstarColor name={name} color={color} />
 );
 

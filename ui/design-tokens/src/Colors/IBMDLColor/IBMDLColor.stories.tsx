@@ -12,13 +12,11 @@ export default {
   component: IBMDLColor,
 };
 
-export const overview: Example = ({
+export const overview: Example<IBMDLColorProps> = ({
   name,
   color,
   display,
-}: IBMDLColorProps) => (
-  <IBMDLColor name={name} color={color} display={display} />
-);
+}) => <IBMDLColor name={name} color={color} display={display} />;
 
 overview.controls = {
   name: 'Green 10',

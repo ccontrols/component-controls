@@ -7,7 +7,7 @@ export default {
   component: Subheading,
 };
 
-export const overview: Example = ({ children }: SubheadingProps) => {
+export const overview: Example<SubheadingProps> = ({ children }) => {
   return <Subheading>{children}</Subheading>;
 };
 

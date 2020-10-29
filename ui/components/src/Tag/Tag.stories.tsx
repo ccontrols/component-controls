@@ -7,7 +7,7 @@ export default {
   component: Tag,
 };
 
-export const overview: Example = ({ color }: TagProps) => {
+export const overview: Example<TagProps> = ({ color }) => {
   return <Tag color={color}>some text</Tag>;
 };
 

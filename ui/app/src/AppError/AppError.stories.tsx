@@ -8,7 +8,7 @@ export default {
   component: AppError,
 };
 
-export const overview: Example = ({ error }: AppErrorProps) => (
+export const overview: Example<AppErrorProps> = ({ error }) => (
   <AppError error={error} />
 );
 

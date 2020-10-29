@@ -8,7 +8,7 @@ export default {
   component: BaseWebColor,
 };
 
-export const overview: Example = ({ name, color }: ColorProps) => (
+export const overview: Example<ColorProps> = ({ name, color }) => (
   <BaseWebColor name={name} color={color} />
 );
 
