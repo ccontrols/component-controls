@@ -344,6 +344,7 @@ Object {
       "eslint": "^6.5.1",
       "react": "^16.13.1",
       "react-dom": "^16.13.1",
+      "typescript": "^4.0.5",
     },
     "fileHash": "a8331272bc389f63195926fe6e7dd6d6",
     "name": "@component-controls/components",

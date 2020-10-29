@@ -3,12 +3,12 @@
 exports[`require-context exact names 1`] = `
 Array [
   Object {
-    "directory": "/Users/atanasster/cc/examples/stories/src/stories",
+    "directory": "/Users/atanasster/component-controls/examples/stories/src/stories",
     "regExp": /controls-editors-starter\\.stories\\.tsx/,
     "useSubdirectories": false,
   },
   Object {
-    "directory": "/Users/atanasster/cc/examples/stories/src/blogs",
+    "directory": "/Users/atanasster/component-controls/examples/stories/src/blogs",
     "regExp": /gatsby-nextjs-storybook\\.mdx/,
     "useSubdirectories": false,
   },

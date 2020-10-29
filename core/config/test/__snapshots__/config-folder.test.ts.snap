@@ -21,7 +21,7 @@ Object {
       "../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
   },
-  "configPath": "/Users/atanasster/cc/core/config/test/fixtures",
+  "configPath": "/Users/atanasster/component-controls/core/config/test/fixtures",
   "optionsFilePath": undefined,
 }
 `;
@@ -47,7 +47,7 @@ Object {
       "../../../../examples/stories/src/**/*.stories.(js|jsx|tsx|mdx)",
     ],
   },
-  "configPath": "/Users/atanasster/cc/core/config/test/fixtures",
+  "configPath": "/Users/atanasster/component-controls/core/config/test/fixtures",
   "optionsFilePath": undefined,
 }
 `;

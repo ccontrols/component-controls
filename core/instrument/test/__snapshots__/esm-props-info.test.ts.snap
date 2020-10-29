@@ -95,6 +95,7 @@ Object {
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-table": "^7.0.0",
+        "typescript": "^4.0.5",
       },
       "fileHash": "5633741e98073052cbece6fcd32011e3",
       "name": "@component-controls/blocks",

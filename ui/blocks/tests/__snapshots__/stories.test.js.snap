@@ -11048,15 +11048,15 @@ exports[`Blocks/StoryConfig Theme 1`] = `
           >
             <pre
               class="prism-code language-json css-f5wbqg"
-              style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
+              style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
@@ -11066,7 +11066,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11075,13 +11075,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "id"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11092,13 +11092,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "blocks-core-story-plain--controls"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11108,7 +11108,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11117,13 +11117,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "doc"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11134,13 +11134,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "Story"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11150,7 +11150,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11159,13 +11159,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "name"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11176,13 +11176,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "controls"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11192,7 +11192,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11201,13 +11201,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "component"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11218,13 +11218,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "Control"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11234,7 +11234,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11243,13 +11243,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "controls"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11260,7 +11260,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
@@ -11270,7 +11270,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11279,13 +11279,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "name"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11296,7 +11296,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
@@ -11306,7 +11306,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11315,13 +11315,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "type"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11332,13 +11332,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "text"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11348,7 +11348,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11357,13 +11357,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "label"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11374,13 +11374,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "Name"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11390,7 +11390,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11399,13 +11399,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "value"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11416,7 +11416,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "Mark"
                 </span>
@@ -11426,7 +11426,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11435,13 +11435,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11451,7 +11451,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11460,13 +11460,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "age"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11477,7 +11477,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
@@ -11487,7 +11487,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11496,13 +11496,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "type"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11513,13 +11513,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "number"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11529,7 +11529,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11538,13 +11538,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "label"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11555,13 +11555,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   "Age"
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
@@ -11571,7 +11571,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11580,13 +11580,13 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   "value"
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   :
                 </span>
@@ -11597,7 +11597,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token number css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 98, 140);"
                 >
                   19
                 </span>
@@ -11607,7 +11607,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11616,7 +11616,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
@@ -11626,7 +11626,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -11635,7 +11635,7 @@ exports[`Blocks/StoryConfig Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
@@ -11645,14 +11645,14 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               </div>
               <div
                 class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
                 />
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
@@ -11668,661 +11668,657 @@ exports[`Blocks/StoryConfig Theme 1`] = `
 
 exports[`Blocks/StoryConfig Theme Selector 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
-  >
+  <div>
     <div
-      class="css-jxxswp"
-      id=""
+      class="css-15owl46"
     >
       <div
-        class="css-xhp9da"
+        class="css-x60p33"
       >
-        <h3
-          class="css-1p18zt3-BlockContainer"
-        />
+        <div
+          class="css-192nmz2"
+        >
+          <button
+            class="css-1b2uwqj"
+          >
+            dracula
+          </button>
+        </div>
       </div>
     </div>
     <div
-      aria-hidden="false"
-      class="rah-static rah-static--height-auto"
-      style="height: auto; overflow: visible;"
+      class="css-y7renv"
     >
-      <div>
-        <div>
+      <div
+        class="css-1xkyebe"
+      >
+        <div
+          class="css-jxxswp"
+          id=""
+        >
           <div
-            class="css-15owl46"
+            class="css-xhp9da"
           >
-            <div
-              class="css-x60p33"
-            >
+            <h3
+              class="css-1p18zt3-BlockContainer"
+            />
+          </div>
+        </div>
+        <div
+          aria-hidden="false"
+          class="rah-static rah-static--height-auto"
+          style="height: auto; overflow: visible;"
+        >
+          <div>
+            <div>
               <div
-                class="css-192nmz2"
+                class="css-15owl46"
               >
-                <button
-                  aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                <div
+                  class="css-x60p33"
                 >
-                  copy
-                </button>
+                  <div
+                    class="css-192nmz2"
+                  >
+                    <button
+                      aria-label="copy the displayed source code"
+                      class="css-1b2uwqj"
+                    >
+                      copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-y7renv"
+              >
+                <pre
+                  class="prism-code language-json css-f5wbqg"
+                  style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; display: block; margin: 0px;"
+                >
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "id"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "blocks-core-story-plain--controls"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "doc"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "Story"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "name"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "controls"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "component"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "Control"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "controls"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                          
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "name"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "type"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "text"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "label"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "Name"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "value"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "Mark"
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                          
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                          
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "age"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "type"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "number"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "label"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      "Age"
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                            
+                    </span>
+                    <span
+                      class="token property css-1baulvz"
+                    >
+                      "value"
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token number css-1baulvz"
+                    >
+                      19
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                          
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line css-vurnku"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                  </div>
+                </pre>
               </div>
             </div>
-          </div>
-          <div
-            class="css-y7renv"
-          >
-            <pre
-              class="prism-code language-json css-f5wbqg"
-              style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
-            >
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "id"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "blocks-core-story-plain--controls"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "doc"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "Story"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "name"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "controls"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "component"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "Control"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "controls"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                      
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "name"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "type"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "text"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "Name"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "Mark"
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                      
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                      
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "age"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "type"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "number"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  "Age"
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                        
-                </span>
-                <span
-                  class="token property css-1baulvz"
-                  style="color: rgb(178, 151, 98);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  :
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token number css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  19
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                      
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line css-vurnku"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                />
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-              </div>
-            </pre>
           </div>
         </div>
       </div>
@@ -13026,27 +13022,27 @@ exports[`Blocks/StorySource Theme 1`] = `
           >
             <pre
               class="prism-code language-jsx css-f5wbqg"
-              style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
+              style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
                 class="token-line"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   (
                 </span>
                 <span
                   class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
                  
                 <span
-                  class="token parameter css-te7mrm-Tag"
+                  class="token parameter css-1ass8z9-Tag"
                 >
                   <div
                     class="css-vurnku"
@@ -13056,13 +13052,13 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ,
                 </span>
                  
                 <span
-                  class="token parameter css-1ri2a17-Tag"
+                  class="token parameter css-c7ifsm-Tag"
                 >
                   <div
                     class="css-vurnku"
@@ -13073,13 +13069,13 @@ exports[`Blocks/StorySource Theme 1`] = `
                  
                 <span
                   class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   )
                 </span>
@@ -13090,7 +13086,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   =&gt;
                 </span>
@@ -13101,7 +13097,7 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   (
                 </span>
@@ -13111,7 +13107,7 @@ exports[`Blocks/StorySource Theme 1`] = `
               </div>
               <div
                 class="token-line"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
@@ -13120,48 +13116,48 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   &lt;
                 </span>
                 <span
                   class="token tag css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   h2
                 </span>
                 <span
                   class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   &gt;
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   {
                 </span>
                 <span
                   class="token template-string template-punctuation string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   \`
                 </span>
                 <span
                   class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   Hello, my name is 
                 </span>
                 <span
                   class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-te7mrm-Tag"
+                  class="token template-string interpolation css-1ass8z9-Tag"
                 >
                   <div
                     class="css-vurnku"
@@ -13171,24 +13167,24 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
                   class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   , and I am 
                 </span>
                 <span
                   class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   \${
                 </span>
                 <span
-                  class="token template-string interpolation css-1ri2a17-Tag"
+                  class="token template-string interpolation css-c7ifsm-Tag"
                 >
                   <div
                     class="css-vurnku"
@@ -13198,43 +13194,43 @@ exports[`Blocks/StorySource Theme 1`] = `
                 </span>
                 <span
                   class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
                   class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                    years old.
                 </span>
                 <span
                   class="token template-string template-punctuation string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
+                  style="color: rgb(165, 255, 144);"
                 >
                   \`
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   }
                 </span>
                 <span
                   class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   &lt;/
                 </span>
                 <span
                   class="token tag css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
+                  style="color: rgb(255, 157, 0);"
                 >
                   h2
                 </span>
                 <span
                   class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   &gt;
                 </span>
@@ -13244,20 +13240,20 @@ exports[`Blocks/StorySource Theme 1`] = `
               </div>
               <div
                 class="token-line"
-                style="color: rgb(114, 143, 203);"
+                style="color: rgb(158, 254, 255);"
               >
                 <span
                   class="token plain css-1baulvz"
                 />
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   )
                 </span>
                 <span
                   class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
+                  style="color: rgb(255, 255, 255);"
                 >
                   ;
                 </span>
@@ -13273,297 +13269,319 @@ exports[`Blocks/StorySource Theme 1`] = `
 
 exports[`Blocks/StorySource Theme Selector 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1xkyebe"
-  >
+  <div>
     <div
-      class="css-jxxswp"
-      id=""
+      class="css-15owl46"
     >
       <div
-        class="css-xhp9da"
+        class="css-x60p33"
       >
-        <h3
-          class="css-1p18zt3-BlockContainer"
-        />
+        <div
+          class="css-192nmz2"
+        >
+          <button
+            class="css-1b2uwqj"
+          >
+            dracula
+          </button>
+        </div>
       </div>
     </div>
     <div
-      aria-hidden="false"
-      class="rah-static rah-static--height-auto"
-      style="height: auto; overflow: visible;"
+      class="css-y7renv"
     >
-      <div>
-        <div>
+      <div
+        class="css-1xkyebe"
+      >
+        <div
+          class="css-jxxswp"
+          id=""
+        >
           <div
-            class="css-15owl46"
+            class="css-xhp9da"
           >
-            <div
-              class="css-x60p33"
-            >
+            <h3
+              class="css-1p18zt3-BlockContainer"
+            />
+          </div>
+        </div>
+        <div
+          aria-hidden="false"
+          class="rah-static rah-static--height-auto"
+          style="height: auto; overflow: visible;"
+        >
+          <div>
+            <div>
               <div
-                class="css-192nmz2"
+                class="css-15owl46"
               >
-                <button
-                  aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                <div
+                  class="css-x60p33"
                 >
-                  copy
-                </button>
+                  <div
+                    class="css-192nmz2"
+                  >
+                    <button
+                      aria-label="copy the displayed source code"
+                      class="css-1b2uwqj"
+                    >
+                      copy
+                    </button>
+                  </div>
+                  <div
+                    class="css-wo8d8v"
+                  >
+                    <button
+                      class="css-1b2uwqj"
+                    >
+                      values
+                    </button>
+                  </div>
+                </div>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-y7renv"
               >
-                <button
-                  class="css-1b2uwqj"
+                <pre
+                  class="prism-code language-jsx css-f5wbqg"
+                  style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; margin: 0px;"
                 >
-                  values
-                </button>
+                  <div
+                    class="token-line"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      (
+                    </span>
+                    <span
+                      class="token parameter punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                     
+                    <span
+                      class="token parameter css-pyuulf-Tag"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        name
+                      </div>
+                    </span>
+                    <span
+                      class="token parameter punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ,
+                    </span>
+                     
+                    <span
+                      class="token parameter css-1uvgilm-Tag"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        age
+                      </div>
+                    </span>
+                     
+                    <span
+                      class="token parameter punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      )
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token operator css-1baulvz"
+                    >
+                      =&gt;
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                       
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      (
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    >
+                        
+                    </span>
+                    <span
+                      class="token tag punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      &lt;
+                    </span>
+                    <span
+                      class="token tag css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      h2
+                    </span>
+                    <span
+                      class="token tag punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      &gt;
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      {
+                    </span>
+                    <span
+                      class="token template-string template-punctuation string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      \`
+                    </span>
+                    <span
+                      class="token template-string string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      Hello, my name is 
+                    </span>
+                    <span
+                      class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      \${
+                    </span>
+                    <span
+                      class="token template-string interpolation css-pyuulf-Tag"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        name
+                      </div>
+                    </span>
+                    <span
+                      class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token template-string string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      , and I am 
+                    </span>
+                    <span
+                      class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      \${
+                    </span>
+                    <span
+                      class="token template-string interpolation css-1uvgilm-Tag"
+                    >
+                      <div
+                        class="css-vurnku"
+                      >
+                        age
+                      </div>
+                    </span>
+                    <span
+                      class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token template-string string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                       years old.
+                    </span>
+                    <span
+                      class="token template-string template-punctuation string css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      \`
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      }
+                    </span>
+                    <span
+                      class="token tag punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      &lt;/
+                    </span>
+                    <span
+                      class="token tag css-1baulvz"
+                      style="color: rgb(255, 121, 198);"
+                    >
+                      h2
+                    </span>
+                    <span
+                      class="token tag punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      &gt;
+                    </span>
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                  </div>
+                  <div
+                    class="token-line"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    <span
+                      class="token plain css-1baulvz"
+                    />
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      )
+                    </span>
+                    <span
+                      class="token punctuation css-1baulvz"
+                      style="color: rgb(248, 248, 242);"
+                    >
+                      ;
+                    </span>
+                  </div>
+                </pre>
               </div>
             </div>
-          </div>
-          <div
-            class="css-y7renv"
-          >
-            <pre
-              class="prism-code language-jsx css-f5wbqg"
-              style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
-            >
-              <div
-                class="token-line"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  (
-                </span>
-                <span
-                  class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                 
-                <span
-                  class="token parameter css-te7mrm-Tag"
-                >
-                  <div
-                    class="css-vurnku"
-                  >
-                    name
-                  </div>
-                </span>
-                <span
-                  class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ,
-                </span>
-                 
-                <span
-                  class="token parameter css-1ri2a17-Tag"
-                >
-                  <div
-                    class="css-vurnku"
-                  >
-                    age
-                  </div>
-                </span>
-                 
-                <span
-                  class="token parameter punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  )
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token operator css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  =&gt;
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                >
-                   
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  (
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                >
-                    
-                </span>
-                <span
-                  class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  &lt;
-                </span>
-                <span
-                  class="token tag css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  h2
-                </span>
-                <span
-                  class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  {
-                </span>
-                <span
-                  class="token template-string template-punctuation string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  \`
-                </span>
-                <span
-                  class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  Hello, my name is 
-                </span>
-                <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  \${
-                </span>
-                <span
-                  class="token template-string interpolation css-te7mrm-Tag"
-                >
-                  <div
-                    class="css-vurnku"
-                  >
-                    name
-                  </div>
-                </span>
-                <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  , and I am 
-                </span>
-                <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  \${
-                </span>
-                <span
-                  class="token template-string interpolation css-1ri2a17-Tag"
-                >
-                  <div
-                    class="css-vurnku"
-                  >
-                    age
-                  </div>
-                </span>
-                <span
-                  class="token template-string interpolation interpolation-punctuation punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token template-string string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                   years old.
-                </span>
-                <span
-                  class="token template-string template-punctuation string css-1baulvz"
-                  style="color: rgb(114, 143, 203);"
-                >
-                  \`
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  &lt;/
-                </span>
-                <span
-                  class="token tag css-1baulvz"
-                  style="color: rgb(6, 50, 137);"
-                >
-                  h2
-                </span>
-                <span
-                  class="token tag punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token plain css-1baulvz"
-                />
-              </div>
-              <div
-                class="token-line"
-                style="color: rgb(114, 143, 203);"
-              >
-                <span
-                  class="token plain css-1baulvz"
-                />
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  )
-                </span>
-                <span
-                  class="token punctuation css-1baulvz"
-                  style="color: rgb(182, 173, 154);"
-                >
-                  ;
-                </span>
-              </div>
-            </pre>
           </div>
         </div>
       </div>
