@@ -1,5 +1,4 @@
-/* eslint-disable react/display-name */
-import React from 'react';
+import React, { FC } from 'react';
 import { LinkProps } from 'theme-ui';
 import { getRoutePath } from '@component-controls/core';
 import {
@@ -9,7 +8,7 @@ import {
 } from '@component-controls/components';
 import { useStore } from '@component-controls/store';
 
-const AnchorElement = (props: LinkProps) => {
+const AnchorElement: FC<LinkProps> = props => {
   const { href, ...rest } = props;
   const isLocal = useIsLocalLink(href);
   const store = useStore();

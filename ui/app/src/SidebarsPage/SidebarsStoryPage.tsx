@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC, useRef } from 'react';
+import { FC, ComponentType, useRef } from 'react';
 import { jsx, Box } from 'theme-ui';
 import { DocType, TabConfiguration, Document } from '@component-controls/core';
 import {
@@ -63,8 +63,7 @@ export const SidebarsStoryPage: FC<DocPageProps> = ({ type, doc }) => {
       return tab.render({ docId });
     }
     if (tab.type) {
-      //@ts-ignore
-      const Page = pages[tab.type];
+      const Page = (pages as Record<string, ComponentType>)[tab.type];
       if (Page) {
         return <Page />;
       }

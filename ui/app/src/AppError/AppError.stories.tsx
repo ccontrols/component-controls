@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { ControlTypes } from '@component-controls/core';
+import { ControlTypes, Example } from '@component-controls/core';
 import { AppError, AppErrorProps } from './AppError';
 
 export default {
@@ -8,7 +8,7 @@ export default {
   component: AppError,
 };
 
-export const overview = ({ error }: AppErrorProps) => (
+export const overview: Example = ({ error }: AppErrorProps) => (
   <AppError error={error} />
 );
 

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Text, Box } from 'theme-ui';
 import { OctofaceIcon, HeartFillIcon } from '@primer/octicons-react';
+import { Example } from '@component-controls/core';
 import { Link } from '@component-controls/components';
 import { MockContext } from '@component-controls/blocks';
 import { Header } from './Header';
@@ -10,13 +11,13 @@ export default {
   component: Header,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="id-of-story">
     <Header />
   </MockContext>
 );
 
-export const customLeft = () => (
+export const customLeft: Example = () => (
   <MockContext storyId="id-of-story">
     <Header
       toolbar={{
@@ -26,7 +27,7 @@ export const customLeft = () => (
   </MockContext>
 );
 
-export const customRight = () => (
+export const customRight: Example = () => (
   <MockContext storyId="id-of-story">
     <Header
       toolbar={{
@@ -42,7 +43,7 @@ export const customRight = () => (
   </MockContext>
 );
 
-export const customized = () => (
+export const customized: Example = () => (
   <MockContext storyId="id-of-story">
     <Header
       toolbar={{

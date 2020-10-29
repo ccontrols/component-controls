@@ -1,6 +1,6 @@
 import { Document } from '@component-controls/core';
 
-export const docToVariant = (doc: Document) => {
+export const docToVariant = (doc: Document): string => {
   const variant = 'appsidebarpage';
   if (doc.navSidebar && doc.contextSidebar) {
     return `${variant}.allsidebar`;

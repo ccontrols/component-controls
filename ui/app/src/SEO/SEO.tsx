@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { useConfig } from '@component-controls/store';
 
@@ -16,13 +16,13 @@ import * as favIcon192 from './media/android-chrome-192x192.png';
 import * as favIcon512 from './media/android-chrome-512x512.png';
 import * as pinnedTab from './media/safari-pinned-tab.svg';
 
-export const SEO = ({
+export const SEO: FC<SEOProps> = ({
   title,
   description,
   pathname,
   image: propImage,
   children,
-}: SEOProps) => {
+}) => {
   const config = useConfig();
   const {
     siteTitle,

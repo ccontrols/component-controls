@@ -4,7 +4,7 @@ import Analytics from 'analytics';
 import googleAnalytics from '@analytics/google-analytics';
 import { useConfig } from '@component-controls/store';
 
-export const useAnalytics = () => {
+export const useAnalytics = (): void => {
   const config = useConfig();
   const analytics = useMemo(() => {
     const options = config.analytics;

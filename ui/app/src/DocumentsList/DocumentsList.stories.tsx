@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { MockContext } from '@component-controls/blocks';
 import { useDocByType } from '@component-controls/store';
 import { DocumentsList } from './DocumentsList';
@@ -13,7 +14,7 @@ const MockList = () => {
   return <DocumentsList pages={pages} type="story" />;
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="id-of-story">
     <MockList />
   </MockContext>

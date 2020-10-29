@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { MockContext } from '@component-controls/blocks';
 import { App } from './App';
 
@@ -7,7 +8,7 @@ export default {
   component: App,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="id-of-story">
     <App />
   </MockContext>
