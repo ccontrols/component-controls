@@ -13,6 +13,7 @@
     -   [Components](#components)
     -   [Document](#document)
     -   [Documents](#documents)
+    -   [Example](#example)
     -   [Packages](#packages)
     -   [Pages](#pages)
     -   [StoreObserver](#storeobserver)
@@ -59,6 +60,7 @@
     -   [PackageInfo](#packageinfo)
     -   [PackageRepository](#packagerepository)
     -   [ActionItems](#actionitems)
+    -   [AsyncFnReturn](#asyncfnreturn)
     -   [PackageDependency](#packagedependency)
     -   [StoryRenderFn](#storyrenderfn)
     -   [defaultExport](#defaultexport)
@@ -175,7 +177,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L356)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L357)_
 
 
 
@@ -239,7 +241,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L317)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L318)_
 
 
 
@@ -284,19 +286,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ### properties
 
-| Name            | Type                                    | Description                                                                                |
-| --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `component`     | string \| object                        | id for component associated with the story                                                 |
-| `controls`      | [ComponentControls](#componentcontrols) | object of key/value pairs specifying the controls for the story                            |
-| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]      | array of wrapper functions (decorators) to be called when rendering each individual story. |
-| `smartControls` | [SmartControls](#smartcontrols)         | "smart" controls options                                                                   |
-| `subcomponents` | \[key: string]: string \| object        | multiple components option                                                                 |
+| Name            | Type                                                 | Description                                                                                |
+| --------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `component`     | string \| Record&lt;string, unknown>                 | id for component associated with the story                                                 |
+| `controls`      | [ComponentControls](#componentcontrols)              | object of key/value pairs specifying the controls for the story                            |
+| `decorators`    | [StoryRenderFn](#storyrenderfn)\[]                   | array of wrapper functions (decorators) to be called when rendering each individual story. |
+| `smartControls` | [SmartControls](#smartcontrols)                      | "smart" controls options                                                                   |
+| `subcomponents` | \[key: string]: string \| Record&lt;string, unknown> | multiple components option                                                                 |
 
 ## Components
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
 
 Record&lt;string, 
 
@@ -310,7 +312,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
 
 ### properties
 
@@ -341,7 +343,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
 
 Record&lt;string, 
 
@@ -349,11 +351,17 @@ Record&lt;string,
 
 >
 
+## Example
+
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L169)_
+
+[Story](#story)
+
 ## Packages
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L310)_
 
 Record&lt;string, 
 
@@ -363,13 +371,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L299)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L300)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L312)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -384,7 +392,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
 
 Record&lt;string, 
 
@@ -429,7 +437,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L173)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L174)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -445,19 +453,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L313)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L175)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L176)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L282)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L283)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -470,7 +478,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L382)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L383)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -1058,6 +1066,18 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 [ActionItem](#actionitem)\[]
 
+## AsyncFnReturn
+
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L182)_
+
+**error**:  | null
+
+**execute**: **function** (): Promise&lt;void>;
+
+**status**: 'idle' | 'pending' | 'success' | 'error'
+
+**value**:  | null
+
 ## PackageDependency
 
 dependecy string - the package version number
@@ -1092,17 +1112,17 @@ _defined in [@component-controls/core/src/utility.ts](https://github.com/ccontro
 
 ## useAsync
 
-_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L183)_
+_defined in [@component-controls/core/src/utility.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/utility.ts#L189)_
 
-**function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'error' | 'idle' | 'pending' | 'success'**value**: ;
+**function** useAsync(`asyncFunction`\*: **function** (): Promise&lt;>;, `immediate`\*: boolean): AsyncFnReturn&lt;, >;
 
 ### parameters
 
-| Name             | Type                                                                                                                                      | Description |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `asyncFunction*` | **function** (): Promise&lt;>;                                                                                                            |             |
-| `immediate*`     | boolean                                                                                                                                   |             |
-| `returns`        | **error**: **execute**: [(Anonymous function)](<#(anonymous function)>)**status**: 'error' \| 'idle' \| 'pending' \| 'success'**value**:  |             |
+| Name             | Type                           | Description |
+| ---------------- | ------------------------------ | ----------- |
+| `asyncFunction*` | **function** (): Promise&lt;>; |             |
+| `immediate*`     | boolean                        |             |
+| `returns`        | AsyncFnReturn&lt;, >           |             |
 
 ## ControlsConfig
 
@@ -1149,7 +1169,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `analytics`       | any                                                  | analytics options                                                                                                                                                                    |
 | `author`          | string                                               | author: Default is "@component-controls"                                                                                                                                             |
-| `components`      | Record&lt;string, any>                               | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
+| `components`      | Record&lt;string, unknown>                           | custom props to components ex: components: { story:{ wrapper: 'iframe' } },                                                                                                          |
 | `controls`        | [ControlsConfig](#controlsconfig)                    | controls module configuration options                                                                                                                                                |
 | `decorators`      | [StoryRenderFn](#storyrenderfn)\[]                   | story decorator functions - used to wrap stories example: \[story => &lt;ThemeProvider>{story()}&lt;/ThemeProvider>]                                                                 |
 | `description`     | string                                               | alternative site description field - docz compatibility                                                                                                                              |
@@ -1599,7 +1619,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L311)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L312)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1637,7 +1657,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L292)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
 
 Record&lt;string, 
 
@@ -1660,7 +1680,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L297)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
 
 Record&lt;string, 
 
@@ -1672,7 +1692,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L309)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L310)_
 
 Record&lt;string, 
 
@@ -1684,7 +1704,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L304)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
 
 Record&lt;string, 
 
@@ -1729,7 +1749,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
 
 ### properties
 
@@ -1999,7 +2019,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L181)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
 
 ### properties
 

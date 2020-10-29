@@ -11,6 +11,7 @@
         -   [Render story](#render-story)
 -   [API](#api)
     -   [CurrentSelection](#currentselection)
+    -   [StorybookContext](#storybookcontext)
     -   [globalStoryId](#globalstoryid)
     -   [getCurrentStoryId](#getcurrentstoryid)
     -   [getGlobalOptions](#getglobaloptions)
@@ -134,7 +135,7 @@ export default {
 
 ## CurrentSelection
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L65)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L63)_
 
 
 
@@ -147,9 +148,28 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 | `parameters*` | any    | story parameters                    |
 | `storyId*`    | string | current story id                    |
 
+## StorybookContext
+
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L98)_
+
+
+
+### properties
+
+| Name             | Type                    | Description |
+| ---------------- | ----------------------- | ----------- |
+| `channel*`       | [Channel](#channel)     |             |
+| `clientApi*`     | any                     |             |
+| `configApi*`     | [ConfigApi](#configapi) |             |
+| `parameters*`    | any                     |             |
+| `selectedKind*`  | string                  |             |
+| `selectedStory*` | string                  |             |
+| `storyId*`       | string                  |             |
+| `storyStore*`    | any                     |             |
+
 ## globalStoryId
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L34)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L32)_
 
 
 
@@ -157,7 +177,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 function returning the current story id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L23)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L22)_
 
 **function** getCurrentStoryId(): string | undefined;
 
@@ -172,7 +192,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 ## getGlobalStoryId
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L35)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L33)_
 
 **function** getGlobalStoryId(): string;
 
@@ -180,15 +200,15 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 React hook - returns a context similar (but not identical) that can be used as an input attribute to \`&lt;DocsContainer />\`
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L103)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L112)_
 
-**function** useContext(): any;
+**function** useContext(): [StorybookContext](#storybookcontext);
 
 ## useCurrentData
 
 React hook hook that tracks the changes to the current story and returns the data
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L88)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L86)_
 
 **function** useCurrentData(): [CurrentSelection](#currentselection);
 
@@ -196,7 +216,7 @@ _defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://gi
 
 React hook hook that tracks the changes to the current story and returns it's id
 
-_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L46)_
+_defined in [@component-controls/storybook-custom-docs/src/index.tsx](https://github.com/ccontrols/component-controls/tree/master/misc/storybook-custom-docs/src/index.tsx#L44)_
 
 **function** useStoryId(): string;
 

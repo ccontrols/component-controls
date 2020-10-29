@@ -197,18 +197,11 @@ _ExternalLink [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name             | Type                                                                                                      | Description                                                                       |
-| ---------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `download`       | _any_                                                                                                     | specifies that the target will be downloaded when a user clicks on the hyperlink. |
-| `href`           | _string_                                                                                                  | specifies the URL of the page the link goes to.                                   |
-| `hrefLang`       | _string_                                                                                                  | specifies the language of the linked document.                                    |
-| `media`          | _string_                                                                                                  | specifies what media/device the linked document is optimized for.                 |
-| `ping`           | _string_                                                                                                  | specifies a list of URLs to be notified if the user follows the hyperlink.        |
-| `type`           | _string_                                                                                                  | specifies the media type of the linked document.                                  |
-| `referrerPolicy` | _"no-referrer" \| "no-referrer-when-downgrade" \| "origin" \| "origin-when-cross-origin" \| "unsafe-url"_ | specifies which referrer to send.                                                 |
-| `as`             | _ElementType&lt;any>_                                                                                     |                                                                                   |
-| `variant`        | _string_                                                                                                  |                                                                                   |
-| `css`            | _InterpolationWithTheme&lt;any>_                                                                          |                                                                                   |
+| Name      | Type                                                                         | Description |
+| --------- | ---------------------------------------------------------------------------- | ----------- |
+| `ref`     | _((instance: HTMLAnchorElement) => void) \| RefObject&lt;HTMLAnchorElement>_ |             |
+| `as`      | _ElementType&lt;any>_                                                        |             |
+| `variant` | _string_                                                                     |             |
 
 ## <ins>Header</ins>
 
@@ -544,7 +537,7 @@ _Table [source code](https://github.com/ccontrols/component-controls/tree/master
 
 | Name                    | Type                                                                   | Description                                                                    |
 | ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| `columns*`              | _Column&lt;{}>\[]_                                                     | the columns object as an array.                                                |
+| `columns*`              | _Column&lt;Record&lt;string, unknown>>\[]_                             | the columns object as an array.                                                |
 | `data`                  | _any\[]_                                                               | array of data rows.                                                            |
 | `header`                | _boolean_                                                              | show or hide the header element.                                               |
 | `sorting`               | _boolean_                                                              | enable.disable sorting.                                                        |
