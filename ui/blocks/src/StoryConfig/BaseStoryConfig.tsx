@@ -31,7 +31,7 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
   const allActions: ActionItem[] = [];
   const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
-    allActions.push.apply(allActions, repositoryItems);
+    allActions.push(...repositoryItems);
   }
   if (doc?.source) {
     allActions.push({
@@ -39,15 +39,8 @@ export const BaseStoryConfig: FC<BaseStoryConfigProps> = ({
       onClick: onShowFileSource,
     });
   }
-  const {
-    loc,
-    renderFn,
-    source,
-    //@ts-ignore
-    moduleId,
-    arguments: storyArgs,
-    ...restStory
-  } = story || {};
+  const { loc, renderFn, source, arguments: storyArgs, ...restStory } =
+    story || {};
   return Object.keys(restStory).length ? (
     <Source language="json" {...sourceProps} actions={allActions}>
       {JSON.stringify(restStory, null, 2)}

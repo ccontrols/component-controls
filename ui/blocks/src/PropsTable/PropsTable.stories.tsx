@@ -1,4 +1,5 @@
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { useStoryControls } from '@component-controls/store';
 import { PropsTable } from './PropsTable';
 import { MockContext } from '../test/MockContext';
@@ -8,27 +9,26 @@ export default {
   component: PropsTable,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="id-of-button-story">
     <PropsTable />
   </MockContext>
 );
 
-export const subcomponents = () => (
+export const subcomponents: Example = () => (
   <MockContext storyId="id-of-story">
     <PropsTable />
   </MockContext>
 );
 
-export const extraColumns = () => (
+export const extraColumns: Example = () => (
   <MockContext storyId="id-of-button-story">
     <PropsTable
       extraColumns={[
         {
           Header: 'Custom',
           Cell: ({ row }) => {
-            //@ts-ignore`
-            return row.original.name.toUpperCase();
+            return (row.original as any).name.toUpperCase();
           },
         },
       ]}
@@ -36,7 +36,7 @@ export const extraColumns = () => (
   </MockContext>
 );
 
-export const controls = () => {
+export const controls: Example = () => {
   const Story = () => {
     const controls = useStoryControls('blocks-core-story-plain--controls');
     return (
@@ -51,18 +51,18 @@ export const controls = () => {
   );
 };
 
-export const title = () => (
+export const title: Example = () => (
   <MockContext storyId="id-of-story">
     <PropsTable title="." />
   </MockContext>
 );
 
-export const customTitle = () => (
+export const customTitle: Example = () => (
   <MockContext storyId="id-of-story">
     <PropsTable title="Custom Props Table Title" />
   </MockContext>
 );
-export const notCollapsible = () => (
+export const notCollapsible: Example = () => (
   <MockContext storyId="id-of-story">
     <PropsTable title="." collapsible={false} />
   </MockContext>

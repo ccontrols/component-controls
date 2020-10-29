@@ -11,6 +11,7 @@ import {
   PropType,
   ComponentInfo,
   visibleControls,
+  PropTypes,
 } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 
@@ -83,12 +84,12 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
   const { columns, rows, groupProps } = useMemo(
     () => {
       const parents = new Set();
-      const rows: (PropRow | null)[] = infoKeys
+      let rows: (PropRow | null)[] = infoKeys
         .map(key => {
-          //@ts-ignore
-          const prop = info.props[key];
+          const prop = (info.props as PropTypes)[key];
           const control = propControls[key];
-          const parentName = control?.groupId || prop.parentName || '-';
+          const parentName =
+            control?.groupId || (prop && prop.parentName) || '-';
           const { description, label, required } = control || {};
           if (control) {
             delete propControls[key];
@@ -103,9 +104,9 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
               type: {
                 label,
                 required,
-                ...prop.type,
+                ...prop?.type,
               },
-              description: description ?? prop.description,
+              description: description ?? prop?.description,
               parentName,
             },
             control,
@@ -134,7 +135,7 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
             });
           }
         });
-        rows.unshift.apply(rows, controlsRows);
+        rows = [...controlsRows, ...rows];
       }
       const groupProps: GroupingProps = {};
       if (parents.size > 1 && !flat) {
@@ -297,8 +298,8 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     const quotedValue = (value: string) => `"${jsStringEscape(value)}"`;
     e.preventDefault();
     const csvRows = rows
-      //@ts-ignore
-      .map((row: PropRow) => {
+      .map(rowOrNull => {
+        const row = rowOrNull as PropRow;
         const r = [
           quotedValue(row.name),
           quotedValue(row.prop.type.raw ?? row.prop.type.name),
@@ -329,9 +330,8 @@ export const BasePropsTable: FC<BasePropsTableProps> = ({
     'aria-label': 'copy table as csv',
   });
 
-  actions.push.apply(
-    actions,
-    useControlsActions({
+  actions.push(
+    ...useControlsActions({
       controls,
       storyId: story?.id,
       setControlValue: (

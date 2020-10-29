@@ -1,5 +1,5 @@
-/* eslint-disable react/display-name */
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { PageTypeTag } from '.';
 import { MockContext } from '../test/MockContext';
 
@@ -8,7 +8,7 @@ export default {
   component: PageTypeTag,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="id-of-story">
     <PageTypeTag type="story" />
   </MockContext>

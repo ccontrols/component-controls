@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 /**
  * error message when the control type is not found.
  */
-export const InvalidType = () => <span>Invalid Type</span>;
+export const InvalidType: FC = () => <span>Invalid Type</span>;

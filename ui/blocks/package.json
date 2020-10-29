@@ -63,7 +63,8 @@
     "eslint": "^6.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-table": "^7.0.0"
+    "react-table": "^7.0.0",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "@primer/octicons-react": ">= 10.0.0",

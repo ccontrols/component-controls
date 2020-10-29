@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { Description } from './Description';
 import { MockContext } from '../test/MockContext';
 export default {
@@ -7,13 +8,13 @@ export default {
   component: Description,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext id="id-of-story">
     <Description of="Button" />
   </MockContext>
 );
 
-export const components = () => (
+export const components: Example = () => (
   <MockContext id="id-of-story">
     <Description
       of="Button"

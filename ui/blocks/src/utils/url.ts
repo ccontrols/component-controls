@@ -1,4 +1,4 @@
-export const getURL = () => {
+export const getURL = (): URL | undefined => {
   let pageURL = undefined;
   if (typeof window !== 'undefined') {
     if (window.location !== window.parent.location && window.parent.location) {

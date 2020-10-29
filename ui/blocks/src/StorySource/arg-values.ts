@@ -67,7 +67,7 @@ export const getArgumentsLocations = (
       }, [])
     : undefined;
 
-export const getTagColor = (tag: ArgLocation, theme: PrismTheme) => {
+export const getTagColor = (tag: ArgLocation, theme: PrismTheme): string => {
   const colorIdx = tag.index % (theme.styles.length - 1);
   const style = theme.styles[colorIdx];
   return style.style.color || theme.plain.color || '#fff';
@@ -104,7 +104,7 @@ export const findTagLocation = (
   return undefined;
 };
 
-export const tagToValue = (param: ArgLocation, name: string) => {
+export const tagToValue = (param: ArgLocation, name: string): any => {
   const value =
     getControlValue(param.controls[name]) ?? getControlValues(param.controls);
   let retValue: any;

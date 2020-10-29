@@ -1,5 +1,5 @@
-/* eslint-disable react/display-name */
 import React from 'react';
+import { Example } from '@component-controls/core';
 import { EditPage } from './EditPage';
 import { MockContext } from '../test/MockContext';
 export default {
@@ -7,7 +7,7 @@ export default {
   component: EditPage,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext id="id-of-story">
     <EditPage />
   </MockContext>

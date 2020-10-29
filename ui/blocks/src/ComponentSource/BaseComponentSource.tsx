@@ -47,10 +47,10 @@ export const BaseComponentSource: FC<BaseComponentSourceProps> = props => {
   }
   const repositoryItems = component && repositoryActions(componentPackage);
   if (repositoryItems) {
-    allActions.push.apply(allActions, repositoryItems);
+    allActions.push(...repositoryItems);
   }
   if (actions) {
-    allActions.push.apply(allActions, actions);
+    allActions.push(...actions);
   }
   return (
     <Source data-testid={NAME} {...rest} actions={allActions}>

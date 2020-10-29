@@ -53,7 +53,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
   const allActions: ActionItem[] = [];
   const repositoryItems = repositoryActions(docPackage);
   if (repositoryItems) {
-    allActions.push.apply(allActions, repositoryItems);
+    allActions.push(...repositoryItems);
   }
   if (doc?.source) {
     allActions.push({
@@ -72,7 +72,7 @@ export const BaseStorySource: FC<BaseStorySourceProps> = ({
     }
   }
   if (actions) {
-    allActions.push.apply(allActions, actions);
+    allActions.push(...actions);
   }
   let source: string;
   if (!showFileSource) {

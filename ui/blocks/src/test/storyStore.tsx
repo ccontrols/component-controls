@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Donut, Button, Heading } from 'theme-ui';
 import {
   Store,
@@ -331,13 +331,13 @@ and a [link](https://google.com)
       title: 'MDX Story',
       componentsLookup: {},
       author: 'atanasster',
-      MDXPage: () => <MDXContent components={{}} />,
+      MDXPage: (): ReactElement => <MDXContent components={{}} />,
       stories: ['mdx-story'],
     },
   },
   stories: {
     'id-of-story': {
-      renderFn: () => <Heading>Components</Heading>,
+      renderFn: (): ReactElement => <Heading>Components</Heading>,
       id: 'id-of-story',
       doc: 'Story',
       component: 'ArrowButton',
@@ -361,7 +361,7 @@ and a [link](https://google.com)
     },
     'id-of-single': {
       id: 'id-of-single',
-      renderFn: () => <Heading>Components</Heading>,
+      renderFn: (): ReactElement => <Heading>Components</Heading>,
       doc: 'Story',
       component: 'ArrowButton',
       loc: {
@@ -383,7 +383,7 @@ and a [link](https://google.com)
     },
     'id-of-button-story': {
       id: 'id-of-button-story',
-      renderFn: () => <Button>test</Button>,
+      renderFn: (): ReactElement => <Button>test</Button>,
       doc: 'Story',
       component: 'Button',
       loc: {
@@ -400,7 +400,7 @@ and a [link](https://google.com)
       source: "() => 'hello'",
     },
     'blocks-core-story-plain--controls': {
-      renderFn: () => <Donut value={1 / 2} />,
+      renderFn: (): ReactElement => <Donut value={1 / 2} />,
       id: 'blocks-core-story-plain--controls',
       doc: 'Story',
       name: 'controls',
@@ -496,14 +496,14 @@ and a [link](https://google.com)
 `,
     },
     'id-no-component': {
-      renderFn: () => <Heading>Components</Heading>,
+      renderFn: (): ReactElement => <Heading>Components</Heading>,
       id: 'id-no-component',
       doc: 'Story',
       name: 'no component',
       source: "() => 'hello'",
     },
     'mdx-story': {
-      renderFn: () => <Heading>mdx story</Heading>,
+      renderFn: (): ReactElement => <Heading>mdx story</Heading>,
       id: 'mdx-story',
       doc: 'mdxStory',
       name: 'mdx story',

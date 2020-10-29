@@ -1,5 +1,6 @@
 import React from 'react';
-import { ActionItem } from '@component-controls/components';
+import { Example } from '@component-controls/core';
+import { ActionItem, ActionContainer } from '@component-controls/components';
 import { PrismTheme } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/dracula';
 import duotoneDark from 'prism-react-renderer/themes/duotoneDark';
@@ -18,15 +19,15 @@ export default {
   component: StorySource,
 };
 
-export const overview = () => (
+export const overview: Example = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
     <StorySource id="." />
   </MockContext>
 );
 
-export const theme = () => (
+export const theme: Example = () => (
   <MockContext storyId="blocks-core-story-plain--controls">
-    <StorySource id="." theme={shadesOfPurple} />
+    <StorySource id="." sourceProps={{ theme: shadesOfPurple }} />
   </MockContext>
 );
 
@@ -43,10 +44,10 @@ const themes: {
   palenight,
   shadesOfPurple,
 };
-export const themeSelector = () => {
+export const themeSelector: Example = () => {
   const [theme, setTheme] = React.useState('dracula');
   const themeAction: ActionItem = {
-    title: theme,
+    node: theme,
     onClick: () => {
       const themeNames = Object.keys(themes);
       const selected = themeNames.indexOf(theme);
@@ -56,24 +57,26 @@ export const themeSelector = () => {
   };
   return (
     <MockContext storyId="blocks-core-story-plain--controls">
-      <StorySource id="." actions={[themeAction]} theme={themes[theme]} />
+      <ActionContainer actions={[themeAction]}>
+        <StorySource id="." sourceProps={{ theme: themes[theme] }} />
+      </ActionContainer>
     </MockContext>
   );
 };
 
-export const customTitle = () => (
+export const customTitle: Example = () => (
   <MockContext storyId="id-of-story">
     <StorySource title="Story source" />
   </MockContext>
 );
 
-export const notCollapsible = () => (
+export const notCollapsible: Example = () => (
   <MockContext storyId="id-of-story">
     <StorySource title="." collapsible={false} />
   </MockContext>
 );
 
-export const noMargin = () => (
+export const noMargin: Example = () => (
   <MockContext storyId="id-of-story">
     <StorySource sx={{ mt: 0, mb: 0 }} />
   </MockContext>

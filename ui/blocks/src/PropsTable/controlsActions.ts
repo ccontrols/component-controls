@@ -18,7 +18,15 @@ export interface UseControlsActionsProps {
   storyId?: string;
   setControlValue?: SetControlValueFn;
 }
-export const useControlsActions = (props: UseControlsActionsProps) => {
+export const useControlsActions = (
+  props: UseControlsActionsProps,
+): {
+  node: string;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  group: string;
+  id: string;
+  'aria-label': string;
+}[] => {
   const { controls, setControlValue, storyId } = props;
   const [copied, setCopied] = React.useState(false);
   const [urlCopied, setURLCopied] = React.useState(false);
