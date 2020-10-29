@@ -8,7 +8,7 @@
     "props-info/**/*",
     "ui/**/*"
   ],
-  "version": "1.36.13",
+  "version": "1.36.14",
   "npmClient": "yarn",
   "useWorkspaces": true
 }

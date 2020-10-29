@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.36.13",
+  "version": "1.36.14",
   "name": "component-controls-storybook-6-no-docs",
   "license": "MIT",
   "scripts": {
@@ -9,12 +9,12 @@
     "build-sample": "rm -rf node_modules/.cache/storybook && build-storybook -c .storybook -o ./public"
   },
   "dependencies": {
-    "@component-controls/axe-plugin": "^1.36.13",
-    "@component-controls/blocks": "^1.36.13",
-    "@component-controls/core": "^1.36.8",
-    "@component-controls/store": "^1.36.13",
-    "@component-controls/storybook": "^1.36.13",
-    "@component-controls/viewport-plugin": "^1.36.13",
+    "@component-controls/axe-plugin": "^1.36.14",
+    "@component-controls/blocks": "^1.36.14",
+    "@component-controls/core": "^1.36.14",
+    "@component-controls/store": "^1.36.14",
+    "@component-controls/storybook": "^1.36.14",
+    "@component-controls/viewport-plugin": "^1.36.14",
     "@storybook/react": "next",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
