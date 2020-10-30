@@ -188,6 +188,12 @@ export const theme: ControlsTheme = {
         width: '100%',
       },
     } as any,
+    input: {
+      p: 1,
+    },
+    textarea: {
+      p: 1,
+    },
   },
   styles: {
     root: {

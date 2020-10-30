@@ -1,5 +1,6 @@
-import React, { ChangeEvent } from 'react';
-import { Input, Textarea } from 'theme-ui';
+/** @jsx jsx */
+import { ChangeEvent } from 'react';
+import { jsx, Input, Textarea } from 'theme-ui';
 import { ComponentControlText, ControlTypes } from '@component-controls/core';
 import { useControl } from '@component-controls/store';
 import { PropertyEditor } from '../types';

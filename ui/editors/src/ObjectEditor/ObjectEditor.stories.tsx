@@ -49,3 +49,22 @@ export const editLabel: Example = () => {
     </ControlsStateProvider>
   );
 };
+
+export const inline: Example = () => {
+  const [state, setState] = React.useState<ComponentControls>({
+    border: { type: ControlTypes.TEXT, value: '2px dashed silver' },
+    borderRadius: { type: ControlTypes.NUMBER, value: 10 },
+    padding: { type: ControlTypes.NUMBER, value: 10 },
+  });
+
+  return (
+    <ControlsStateProvider
+      onChange={(_name, newVal) => setState(newVal)}
+      controls={{
+        prop: { type: ControlTypes.OBJECT, value: state, inline: true },
+      }}
+    >
+      <ObjectEditor name="prop" />
+    </ControlsStateProvider>
+  );
+};

@@ -270,6 +270,10 @@ export interface ComponentControlArray
    * the label for the editor button
    */
   editLabel?: string;
+  /**
+   *  if true, the editor will be rendered inline instead of a popup
+   */
+  inline?: boolean;
 }
 
 export interface ComponentControlObject
@@ -279,6 +283,10 @@ export interface ComponentControlObject
    * the label for the editor button
    */
   editLabel?: string;
+  /**
+   *  if true, the editor will be rendered inline instead of a popup
+   */
+  inline?: boolean;
 }
 
 export interface ComponentControlButton<ClickEvent = () => void>

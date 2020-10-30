@@ -32,3 +32,29 @@ export const overview: Example = () => {
     </ControlsStateProvider>
   );
 };
+
+export const inline: Example = () => {
+  const [state, setState] = React.useState([
+    { name: 'Laptop' },
+    { name: 'Book' },
+    { name: 'Whiskey' },
+  ]);
+  return (
+    <ControlsStateProvider
+      onChange={(name, newVal) => setState(newVal)}
+      controls={{
+        prop: {
+          type: ControlTypes.ARRAY,
+          rowType: { name: { type: ControlTypes.TEXT } },
+          value: state,
+          inline: true,
+        },
+      }}
+    >
+      <ul>
+        {state && state.map(item => <li key={item.name}>{item.name}</li>)}
+      </ul>
+      <ArrayEditor name="prop" />
+    </ControlsStateProvider>
+  );
+};

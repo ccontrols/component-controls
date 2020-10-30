@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button, Box } from 'theme-ui';
+import { Box } from 'theme-ui';
 import {
   ControlTypes,
   ComponentControl,
@@ -7,10 +7,11 @@ import {
   mergeControlValues,
   ComponentControls,
 } from '@component-controls/core';
-import { Popover } from '@component-controls/components';
 import { useControl, ControlsStateProvider } from '@component-controls/store';
 import { PropertyEditor, PropertyControlProps } from '../types';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
+import { PopupInline } from '../PopupInline';
+import { EditButton } from '../EditButton';
 
 const ChildContainer: FC = props => (
   <Box
@@ -40,7 +41,7 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
 }) => {
   const [control, onChange] = useControl<ComponentControlObject>(name);
 
-  const { editLabel: controlEditLabel } = control;
+  const { editLabel: controlEditLabel, inline } = control;
   const [isOpen, setIsOpen] = React.useState(false);
   const handleChange = (childName: string | undefined, value: any) => {
     onChange(mergeControlValues(control.value as any, childName, value));
@@ -69,7 +70,8 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
   }
   const childControls: ComponentControls = control.value || {};
   return (
-    <Popover
+    <PopupInline
+      inline={inline}
       trigger="click"
       placement="bottom"
       tooltipShown={isOpen}
@@ -101,11 +103,10 @@ export const ObjectEditor: PropertyEditor<ObjectEditorProps> = ({
         </ChildContainer>
       )}
     >
-      <Button aria-label="edit the properties of the object">
+      <EditButton aria-label="edit the properties of the object">
         {controlEditLabel || editLabel}
-        <Box />
-      </Button>
-    </Popover>
+      </EditButton>
+    </PopupInline>
   );
 };
 

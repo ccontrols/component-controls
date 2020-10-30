@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
-import { Button, Box, Flex } from 'theme-ui';
+/** @jsx jsx */
+import { FC, useState } from 'react';
+import { jsx, Button, Box, Flex } from 'theme-ui';
 import { deepmerge } from '@component-controls/core';
 import { TrashcanIcon, PlusIcon } from '@primer/octicons-react';
 import {
@@ -9,11 +10,11 @@ import {
   newControlValues,
   ComponentControls,
 } from '@component-controls/core';
-
-import { Popover } from '@component-controls/components';
 import { useControl, ControlsStateProvider } from '@component-controls/store';
 import { PropertyEditor, PropertyControlProps } from '../types';
 import { addPropertyEditor, getPropertyEditor } from '../prop-factory';
+import { PopupInline } from '../PopupInline';
+import { EditButton } from '../EditButton';
 
 const ChildContainer: FC = props => (
   <Box
@@ -81,8 +82,8 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
   editLabel = 'edit...',
 }) => {
   const [control, setProp] = useControl<ComponentControlArray>(name);
-  const { editLabel: controlEditLabel } = control;
-  const [isOpen, setIsOpen] = React.useState(false);
+  const { editLabel: controlEditLabel, inline } = control;
+  const [isOpen, setIsOpen] = useState(false);
   const handleChange = (
     rowIndex: number,
     propName: string | undefined,
@@ -107,7 +108,8 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
     }
   };
   return (
-    <Popover
+    <PopupInline
+      inline={inline}
       trigger="click"
       placement="bottom"
       tooltipShown={isOpen}
@@ -117,16 +119,18 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
       tooltip={() => (
         <ChildContainer>
           <table>
-            <thead>
-              <tr>
-                {control.rowType &&
-                  Object.keys(control.rowType).map(key => (
-                    <th key={`head_${key}`}>
-                      {control.rowType[key].label || key}
-                    </th>
-                  ))}
-              </tr>
-            </thead>
+            {!inline && (
+              <thead>
+                <tr>
+                  {control.rowType &&
+                    Object.keys(control.rowType).map(key => (
+                      <th key={`head_${key}`}>
+                        {control.rowType[key].label || key}
+                      </th>
+                    ))}
+                </tr>
+              </thead>
+            )}
             <tbody>
               {Array.isArray(control.value) &&
                 control.value.map((row, idx) => (
@@ -160,6 +164,7 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
                       <Button
                         onClick={() => handleOnDelete(idx)}
                         aria-label="delete row"
+                        sx={{ py: 1 }}
                       >
                         <TrashcanIcon />
                       </Button>
@@ -168,11 +173,11 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
                 ))}
             </tbody>
           </table>
-          <Button onClick={handleOnAdd} aria-label="add new row">
+          <EditButton onClick={handleOnAdd} aria-label="add new row">
             <PlusIcon />
             {` `}
             Add row
-          </Button>
+          </EditButton>
         </ChildContainer>
       )}
     >
@@ -180,7 +185,7 @@ export const ArrayEditor: PropertyEditor<ArrayEditorProps> = ({
         {controlEditLabel || editLabel}
         <Box />
       </Button>
-    </Popover>
+    </PopupInline>
   );
 };
 
