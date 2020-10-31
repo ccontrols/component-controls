@@ -49,6 +49,9 @@ export const extractTSDoc = (
       nodes.map &&
       nodes.reduce((acc: any, child: any) => {
         if (child.declaration) {
+          if (!child.declaration.children) {
+            return acc;
+          }
           return [
             ...acc,
             ...child.declaration.children.map((d: any) => ({

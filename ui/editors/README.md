@@ -23,7 +23,7 @@ Some of the guiding design goals for this library:
 
 # List of components
 
-<react-docgen-typescript path="./src" exclude="index.ts,.stories.tsx$,CheckboxEditor.tsx,RadiosEditor.tsx" />
+<react-docgen-typescript path="./src" exclude="index.ts,.stories.tsx$,CheckboxEditor.tsx,RadiosEditor.tsx,EditButton.tsx,PopupInline.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
 

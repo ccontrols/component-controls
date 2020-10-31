@@ -177,7 +177,7 @@ $ npm install @component-controls/core --save-dev
 
 ## DefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L357)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L367)_
 
 
 
@@ -196,7 +196,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## ArgUsageLocation
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L12)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L14)_
 
 
 
@@ -210,7 +210,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## SmartControls
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L62)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L64)_
 
 
 
@@ -226,7 +226,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 an identifier/variable.argument in the source code
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L8)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L10)_
 
 
 
@@ -241,7 +241,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 store of stories information in memory after the loader is applied
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L318)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L328)_
 
 
 
@@ -263,7 +263,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 arguments passed to the 'story' function, extracted by an AST loader
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L36)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L38)_
 
 
 
@@ -280,7 +280,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 story prooperties that can be inherited from the document, or each story can have its properties
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L82)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L84)_
 
 
 
@@ -298,7 +298,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L303)_
 
 Record&lt;string, 
 
@@ -312,7 +312,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
 
 ### properties
 
@@ -343,7 +343,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L308)_
 
 Record&lt;string, 
 
@@ -353,15 +353,22 @@ Record&lt;string,
 
 ## Example
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L169)_
+es named export function, excapsulates a contained example code.
 
-[Story](#story)
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L174)_
+
+### properties
+
+| Name       | Type                                         | Description |
+| ---------- | -------------------------------------------- | ----------- |
+| `Omit`     | Omit&lt;[Story](#story), 'controls'>         |             |
+| `controls` |  \| string \| string\[] \| boolean \| number |             |
 
 ## Packages
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L310)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L320)_
 
 Record&lt;string, 
 
@@ -371,13 +378,13 @@ Record&lt;string,
 
 ## Pages
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L300)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L310)_
 
 [Document](#document)\[]
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L312)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L322)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -392,7 +399,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L315)_
 
 Record&lt;string, 
 
@@ -404,7 +411,7 @@ Record&lt;string,
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L115)_
 
 ### properties
 
@@ -428,7 +435,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L60)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L62)_
 
 [StoryArgument](#storyargument)\[]
 
@@ -437,7 +444,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 dynamic story creator function type.
 returns an array of dynamically loaded stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L174)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L184)_
 
 **function** (`doc`\*: [Document](#document)): ### properties| Name        | Type               | Description |
 | ----------- | ------------------ | ----------- |
@@ -453,19 +460,19 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## CURRENT_STORY
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L314)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L324)_
 
 
 
 ## defDocType
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L176)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L186)_
 
 
 
 ## dateToLocalString
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L283)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
 
 **function** dateToLocalString(`date`: [Date](#date)): string;
 
@@ -478,7 +485,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 ## getDefaultStore
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L383)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L393)_
 
 **function** getDefaultStore(): [Store](#store);
 
@@ -522,6 +529,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `inline`       | boolean                                                        |  if true, the editor will be rendered inline instead of a popup                                                                                        |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
@@ -576,7 +584,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlButton
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L284)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L292)_
 
 ** extends ComponentControlBase&lt;>**
 
@@ -678,7 +686,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlNumber
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L334)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L342)_
 
 ** extends ComponentControlBase&lt;number>**
 
@@ -703,7 +711,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 ## ComponentControlObject
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L275)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L279)_
 
 ** extends ComponentControlBase&lt;[ComponentControls](#componentcontrols)>**
 
@@ -717,6 +725,7 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 | `editLabel`    | string                                                         | the label for the editor button                                                                                                                        |
 | `groupId`      | string                                                         | allows grouping of the properties in a property editor for example different editor tabs                                                               |
 | `hidden`       | boolean                                                        | hide the property editor for this property will only use the value                                                                                     |
+| `inline`       | boolean                                                        |  if true, the editor will be rendered inline instead of a popup                                                                                        |
 | `label`        | string                                                         | label to display next to the field editor by default uses the property name itself                                                                     |
 | `order`        | number                                                         | allows custom sorting of the properties if 'order' is not provided, the props will be sorted by the order/key of the object (unreliable)               |
 | `required`     | boolean                                                        | visually display the control property as required                                                                                                      |
@@ -730,7 +739,7 @@ list of options can be
 2\. array of strings
 3\. array of key-value pair objects
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L315)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L323)_
 
 ** extends ComponentControlBase&lt;OptionsValueType&lt;>>**
 
@@ -781,7 +790,7 @@ ComponentControls are defined in key value pairs
 the name of the property is the key
 and the value is the ComponentControl
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L387)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L395)_
 
 `name`\*: string: [ComponentControl](#componentcontrol)
 
@@ -799,7 +808,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L370)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L378)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -807,13 +816,13 @@ _defined in [@component-controls/core/src/controls.ts](https://github.com/ccontr
 
 value/label pairs or array of OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L304)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L312)_
 
 \[key: string]:  \| OptionsValueType&lt;>\[]
 
 ## OptionsValueType
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L294)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L302)_
 
  | number | string\[] \| number\[] \| **label**: string**value**: any
 
@@ -1619,7 +1628,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 ## StoreObserver
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L312)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L322)_
 
 **function** (`story`: [Story](#story)): void;
 
@@ -1634,7 +1643,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L115)_
 
 ### properties
 
@@ -1657,7 +1666,7 @@ _defined in [@component-controls/core/src/document.ts](https://github.com/ccontr
 
 list of components used in stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L293)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L303)_
 
 Record&lt;string, 
 
@@ -1680,7 +1689,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 
 list of story files, or groups
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L298)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L308)_
 
 Record&lt;string, 
 
@@ -1692,7 +1701,7 @@ Record&lt;string,
 
 list of repositories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L310)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L320)_
 
 Record&lt;string, 
 
@@ -1704,7 +1713,7 @@ Record&lt;string,
 
 list of stories
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L305)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L315)_
 
 Record&lt;string, 
 
@@ -1717,7 +1726,7 @@ Record&lt;string,
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L60)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L62)_
 
 [StoryArgument](#storyargument)\[]
 
@@ -1749,7 +1758,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
 
 ### properties
 
@@ -1790,7 +1799,7 @@ or a shortcut can be used:
   text: 'Hello',
 },
 
-_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L370)_
+_defined in [@component-controls/core/src/controls.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/controls.ts#L378)_
 
 [ComponentControlText](#componentcontroltext) \| [ComponentControlBoolean](#componentcontrolboolean) \| [ComponentControlColor](#componentcontrolcolor) \| [ComponentControlDate](#componentcontroldate) \| [ComponentControlObject](#componentcontrolobject) \| [ComponentControlButton](#componentcontrolbutton) \| [ComponentControlOptions](#componentcontroloptions) \| [ComponentControlNumber](#componentcontrolnumber) \| [ComponentControlArray](#componentcontrolarray) \| [ComponentControlFiles](#componentcontrolfiles)
 
@@ -1988,7 +1997,7 @@ _defined in [@component-controls/core/src/build.ts](https://github.com/ccontrols
 
 Story interface - usually extracted by the AST instrumenting loader
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L113)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L115)_
 
 ### properties
 
@@ -2019,7 +2028,7 @@ A documentation file's metadata.
 For MDX files, fromtmatter is used to declare the document properties.
 For ESM (ES Modules) documentation files, the default export is used.
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L182)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L192)_
 
 ### properties
 
@@ -2082,7 +2091,7 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 list of story arguments. Each argument can be a deconstructed argument of itself
 the first argument are the control 'values'
 
-_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L60)_
+_defined in [@component-controls/core/src/document.ts](https://github.com/ccontrols/component-controls/tree/master/core/core/src/document.ts#L62)_
 
 [StoryArgument](#storyargument)\[]
 
