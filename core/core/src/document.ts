@@ -168,9 +168,14 @@ export type Story = {
   dynamicId?: string;
 } & StoryProps;
 
+/**
+ * es named export function, excapsulates a contained example code.
+ */
 export type Example<P = {}> = {
   (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
-} & Story;
+} & Omit<Story, 'controls'> & {
+    controls?: Story['controls'] | string | string[] | boolean | number;
+  };
 
 /**
  * dynamic story creator function type.
