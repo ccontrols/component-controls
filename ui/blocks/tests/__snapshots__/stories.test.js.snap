@@ -5501,7 +5501,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       class="css-1ye8g6w"
                     >
                       <input
-                        class="css-iyqgnx"
+                        class="css-1onaisy"
                         id="name"
                         name="name"
                         value="Mark"
@@ -5570,7 +5570,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       class="css-1ye8g6w"
                     >
                       <input
-                        class="css-iyqgnx"
+                        class="css-1onaisy"
                         name="age"
                         type="number"
                         value="19"
@@ -8756,7 +8756,7 @@ exports[`Blocks/Search Overview 1`] = `
     >
       <input
         aria-label="full text search"
-        class="css-1uvmzy6-SearchInput"
+        class="css-yc2jh4-SearchInput"
         placeholder="search..."
         value=""
       />

@@ -2069,7 +2069,7 @@ exports[`Components/Navmenu Search 1`] = `
     class="css-1w9pxwp"
   >
     <input
-      class="css-iyqgnx"
+      class="css-1onaisy"
       type="search"
       value=""
     />
@@ -3183,7 +3183,7 @@ exports[`Components/SearchInput Default Render 1`] = `
     >
       <input
         aria-label="type some text to start searching"
-        class="css-1uvmzy6-SearchInput"
+        class="css-yc2jh4-SearchInput"
         value=""
       />
       <svg
@@ -3216,7 +3216,7 @@ exports[`Components/SearchInput Overview 1`] = `
     >
       <input
         aria-label="type some text to start searching"
-        class="css-1uvmzy6-SearchInput"
+        class="css-yc2jh4-SearchInput"
         value=""
       />
       <svg
@@ -3249,7 +3249,7 @@ exports[`Components/SearchInput Placeholder 1`] = `
     >
       <input
         aria-label="search items"
-        class="css-1uvmzy6-SearchInput"
+        class="css-yc2jh4-SearchInput"
         placeholder="start typing..."
         value=""
       />
@@ -5566,7 +5566,7 @@ exports[`Components/Table Filterable 1`] = `
               search:
             </label>
             <input
-              class="css-iyqgnx"
+              class="css-1onaisy"
               placeholder="20 properties..."
               value=""
             />
