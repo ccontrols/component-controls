@@ -1,5 +1,6 @@
 # Table of contents
 
+-   [Important](#important)
 -   [In action](#in-action)
 -   [Overview](#overview)
 -   [Getting Started](#getting-started)
@@ -23,6 +24,26 @@
     -   [CustomPageRenderFnParams](#custompagerenderfnparams)
     -   [CustomPageRenderFn](#custompagerenderfn)
     -   [UPDATE_STORY_CONTEXT](#update_story_context)
+
+# Important
+
+Storybook 6 final release, there is a [regression](https://github.com/storybookjs/storybook/blob/506f64758f5fdc00c3a0df86c0f731cc2eb04e79/lib/core/src/client/preview/url.ts#L66) that forces the viewMOde to `story`, unless the tab page key starts with `docs` or `story`. This used to work fine for storybook5 and storybook6 betas.
+
+So until this is fixed, please replace code like
+
+    const page = {
+      key: 'mixed-page',
+      title: 'Mixed blocks',
+      render: ({ active }) => active ? <Page /> : null,
+    }
+
+with (notice the key/route starting with docs)
+
+    const page = {
+      key: 'docs-mixed',
+      title: 'Mixed blocks',
+      render: ({ active }) => active ? <Page /> : null,
+    }
 
 # In action
 
