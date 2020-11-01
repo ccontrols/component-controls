@@ -34,7 +34,7 @@ const TestingPage = () => {
 }
 
 export default {
-  key: 'test',
+  key: 'docs-test',
   title: 'Testing',
   render: ({ active }) => {
     return (

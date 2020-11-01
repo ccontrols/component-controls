@@ -13,7 +13,7 @@ const Page = ({ active }) => (
 );
 
 const page = {
-  key: 'component-page',
+  key: 'docs-component',
   title: 'Controls blocks',
   render: ({ active }) => active ? <Page /> : null
 }

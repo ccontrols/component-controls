@@ -4,7 +4,7 @@ import { ClassicPage } from '@component-controls/pages';
 import { DocsContainer } from './DocsContainer';
 
 module.exports = {
-  key: 'page',
+  key: 'docs-page',
   title: 'Page',
   render: ({ active }: { active: boolean }) => {
     return (

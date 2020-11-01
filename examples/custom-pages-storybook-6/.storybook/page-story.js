@@ -11,7 +11,7 @@ const CustomPage = () => {
   );  
 }
 const page = {
-  key: 'custom',
+  key: 'docs-custom',
   title: 'Simple Page',
   render: ({ active }) => active ? <CustomPage  /> : null,
 }

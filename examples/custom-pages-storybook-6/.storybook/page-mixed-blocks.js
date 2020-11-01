@@ -28,7 +28,7 @@ const Page = () => {
   )
 }
 const page = {
-  key: 'mixed-page',
+  key: 'docs-mixed',
   title: 'Mixed blocks',
   render: ({ active }) => active ? <Page /> : null,
 }
