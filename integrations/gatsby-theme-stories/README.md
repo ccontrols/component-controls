@@ -13,7 +13,7 @@
 
 # In action
 
-[Example site](https://components-storybook-6-no-docs.netlify.app/?path=/test/components-actioncontainer--overview)
+[Example site](https://components-storybook-6-no-docs.netlify.app/?path=/docs-test/components-actioncontainer--overview)
 
 # Overview
 
