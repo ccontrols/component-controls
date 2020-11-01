@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.37.0](https://github.com/ccontrols/component-controls/compare/v1.36.14...v1.37.0) (2020-11-01)
+
+
+### Features
+
+* inline option array and object editors ([c59f400](https://github.com/ccontrols/component-controls/commit/c59f400d514d30562f9867b1b19c2fbfd4ed637e))
+
+
+
+
+
 ## [1.36.14](https://github.com/ccontrols/component-controls/compare/v1.36.13...v1.36.14) (2020-10-29)
 
 **Note:** Version bump only for package @component-controls/components
