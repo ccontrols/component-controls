@@ -35,7 +35,6 @@ export const SEO: FC<SEOProps> = ({ doc, config }) => {
     isLocalImage && pageImage
       ? ensureTrailingSlash(siteUrl) + removeStartingSlash(pageImage)
       : 'hello' || pageImage;
-  console.log(typeof imageUrl, imageUrl);
   const pageDescription = story?.description || docDescription || description;
   const url = typeof window === 'undefined' ? siteUrl : window.location.href;
   const author = doc?.author || siteAuthor;
