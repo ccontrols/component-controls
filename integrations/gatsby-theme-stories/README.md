@@ -3,6 +3,7 @@
 -   [In action](#in-action)
 -   [Overview](#overview)
 -   [API](#api)
+    -   [<ins>onRenderBody</ins>](#insonrenderbodyins)
     -   [<ins>onPreRenderHTML</ins>](#insonprerenderhtmlins)
     -   [<ins>GatsbyLink</ins>](#insgatsbylinkins)
     -   [<ins>Layout</ins>](#inslayoutins)
@@ -31,6 +32,10 @@ Special thanks for the inspiration drawn from [Gatsby themes](https://github.com
 <react-docgen-typescript path="./src" exclude="Store.tsx" />
 
 <!-- START-REACT-DOCGEN-TYPESCRIPT -->
+
+## <ins>onRenderBody</ins>
+
+_onRenderBody [source code](https://github.com/ccontrols/component-controls/tree/master/integrations/gatsby-theme-stories/src/gatsby-ssr.tsx)_
 
 ## <ins>onPreRenderHTML</ins>
 

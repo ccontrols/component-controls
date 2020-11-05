@@ -1,21 +1,29 @@
-import React, { FC } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { FC, ReactNode } from 'react';
 import {
   ensureTrailingSlash,
   removeStartingSlash,
   RunConfiguration,
   Document,
+  getStoryPath,
 } from '@component-controls/core';
-import { useCurrentStory, useDocDescription } from '@component-controls/store';
+import {
+  useActiveTab,
+  useCurrentStory,
+  useDocDescription,
+  useStore,
+} from '@component-controls/store';
 import { useIsLocalLink, useTheme } from '@component-controls/components';
 import { defaultLinks } from './defaultLinks';
-export { Helmet };
+
 export interface SEOProps {
+  Helmet?: FC<{ children: ReactNode }>;
   doc?: Document;
   config?: RunConfiguration;
 }
-export const SEO: FC<SEOProps> = ({ doc, config }) => {
+export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
   const story = useCurrentStory();
+  const store = useStore();
+  const tab = useActiveTab();
   const titleParts = doc?.title ? doc.title.split('/') : [''];
   const docTitle = titleParts[titleParts.length - 1];
   const docDescription = useDocDescription(doc);
@@ -34,11 +42,15 @@ export const SEO: FC<SEOProps> = ({ doc, config }) => {
   const imageUrl =
     isLocalImage && pageImage
       ? ensureTrailingSlash(siteUrl) + removeStartingSlash(pageImage)
-      : 'hello' || pageImage;
+      : pageImage;
   const pageDescription = story?.description || docDescription || description;
-  const url = typeof window === 'undefined' ? siteUrl : window.location.href;
+  const url =
+    typeof window === 'undefined'
+      ? getStoryPath(story?.id, doc, store, tab)
+      : window.location.href;
   const author = doc?.author || siteAuthor;
-  return (
+
+  return Helmet ? (
     <Helmet>
       {Array.isArray(keywords) && (
         <meta name="keywords" content={keywords.join(',')} />
@@ -78,5 +90,5 @@ export const SEO: FC<SEOProps> = ({ doc, config }) => {
       <meta name="application-name" content={title} />
       <meta name="theme-color" content={theme.colors?.background} />
     </Helmet>
-  );
+  ) : null;
 };

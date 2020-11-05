@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { jsx } from 'theme-ui';
 import queryString from 'query-string';
 import { Store, docStoryToId } from '@component-controls/core';
@@ -17,6 +17,7 @@ export interface AppContextProps {
   storyId?: string;
   store: Store;
   linkClass: LinkContextProviderProps['linkClass'];
+  Helmet?: FC<{ children: ReactNode }>;
   activeTab?: string;
 }
 
@@ -27,6 +28,7 @@ export const AppContext: FC<AppContextProps> = ({
   store,
   linkClass,
   activeTab,
+  Helmet,
 }) => {
   const query =
     typeof window !== 'undefined'
@@ -50,7 +52,7 @@ export const AppContext: FC<AppContextProps> = ({
     >
       <SidebarContextProvider>
         <LinkContextProvider linkClass={linkClass}>
-          <App>{children}</App>
+          <App Helmet={Helmet}>{children}</App>
         </LinkContextProvider>
       </SidebarContextProvider>
     </BlockContextProvider>

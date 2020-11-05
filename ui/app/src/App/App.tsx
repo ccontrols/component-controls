@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { FC, Fragment } from 'react';
+import { FC, ReactNode, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
-import { Helmet } from 'react-helmet';
 import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
 import {
   useStore,
@@ -13,13 +12,15 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useAnalytics } from './useAnalytics';
 import { AppError } from '../AppError';
-export interface AppProps {}
+export interface AppProps {
+  Helmet?: FC<{ children: ReactNode }>;
+}
 
 /**
  * application container component. adds SEO, SkipLinks, Header and Footer.
  *
  */
-export const App: FC<AppProps> = ({ children }) => {
+export const App: FC<AppProps> = ({ children, Helmet }) => {
   const store = useStore();
   const doc = useCurrentDocument();
   const config = useConfig();
@@ -47,17 +48,16 @@ export const App: FC<AppProps> = ({ children }) => {
   const Wrapper = app || Fragment;
   return (
     <Fragment>
-      <Helmet
-        title={docTitle}
-        defaultTitle={title}
-        titleTemplate={`%s | ${title}`}
-      >
-        <html lang={language} />
-        {siteMap && (
-          <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        )}
-      </Helmet>
-      {seo || <SEO doc={doc} config={config} />}
+      {Helmet && (
+        <Helmet>
+          <title>{`${docTitle} | ${title}`}</title>
+          <html lang={language} />
+          {siteMap && (
+            <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+          )}
+        </Helmet>
+      )}
+      {seo || <SEO Helmet={Helmet} doc={doc} config={config} />}
       <SkipLinks items={items} />
       <Wrapper>
         <Box variant="app">

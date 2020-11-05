@@ -1,2 +1,3 @@
-const { onPreRenderHTML } = require('./dist/gatsby-ssr');
+const { onPreRenderHTML, onRenderBody } = require('./dist/gatsby-ssr');
+exports.onRenderBody = onRenderBody;
 exports.onPreRenderHTML = onPreRenderHTML;

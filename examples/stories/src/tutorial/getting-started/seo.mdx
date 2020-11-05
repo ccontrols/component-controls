@@ -131,7 +131,8 @@ You can use the `Helmet` component to add any custom tags to the `<head >` secti
 
 ```js:title=.config/runtime.ts
 import { RunOnlyConfiguration } from "@component-controls/core";
-import { Helmet } from "@component-controls/app";
+import { Helmet } from "@component-controls/gatsby-theme-stories";
+//or import { Helmet } from "@component-controls/nextjs-plugin";
 
 const config: RunOnlyConfiguration = {
   title: `My custom title`,
@@ -154,7 +155,8 @@ you can even completely replace the default seo meta tags:
 
 ```js:title=.config/runtime.ts
 import { RunOnlyConfiguration } from "@component-controls/core";
-import { Helmet } from "@component-controls/app";
+import { Helmet } from "@component-controls/gatsby-theme-stories";
+//or import { Helmet } from "@component-controls/nextjs-plugin";
 
 const config: RunOnlyConfiguration = {
   title: `My custom title`,

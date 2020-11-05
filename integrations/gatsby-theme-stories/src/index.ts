@@ -1,1 +1,1 @@
-//noop
+export { Helmet } from 'react-helmet';

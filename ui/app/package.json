@@ -35,8 +35,7 @@
     "@component-controls/core": "^1.37.0",
     "@component-controls/pages": "^1.37.0",
     "@component-controls/store": "^1.37.0",
-    "query-string": "^6.13.5",
-    "react-helmet": "^6.0.0"
+    "query-string": "^6.13.5"
   },
   "devDependencies": {
     "@component-controls/jest-snapshots": "^1.37.0",

@@ -18,6 +18,7 @@
     -   [<ins>DocsLink</ins>](#insdocslinkins)
     -   [<ins>StoryLink</ins>](#insstorylinkins)
     -   [<ins>PageContainer</ins>](#inspagecontainerins)
+    -   [<ins>Helmet</ins>](#inshelmetins)
     -   [<ins>SEO</ins>](#insseoins)
     -   [<ins>SideContext</ins>](#inssidecontextins)
     -   [<ins>Sidebar</ins>](#inssidebarins)
@@ -48,12 +49,6 @@ Some of the design goals:
 application container component. adds SEO, SkipLinks, Header and Footer.
 
 _App [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/App/App.tsx)_
-
-### properties
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `title` | _string_ | page title  |
 
 ## <ins>AppContext</ins>
 
@@ -233,18 +228,20 @@ _PageContainer [source code](https://github.com/ccontrols/component-controls/tre
 | `variant` | _string_                 | theme variant                       |
 | `ref`     | _Ref&lt;HTMLDivElement>_ | ref to the page container component |
 
+## <ins>Helmet</ins>
+
+_Helmet [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SEO/SEO.tsx)_
+
 ## <ins>SEO</ins>
 
 _SEO [source code](https://github.com/ccontrols/component-controls/tree/master/ui/app/src/SEO/SEO.tsx)_
 
 ### properties
 
-| Name          | Type     | Description |
-| ------------- | -------- | ----------- |
-| `title`       | _string_ |             |
-| `description` | _string_ |             |
-| `pathname`    | _string_ |             |
-| `image`       | _string_ |             |
+| Name     | Type               | Description |
+| -------- | ------------------ | ----------- |
+| `doc`    | _Document_         |             |
+| `config` | _RunConfiguration_ |             |
 
 ## <ins>SideContext</ins>
 
