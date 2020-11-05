@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
+
+
+### Bug Fixes
+
+* remove log ([eefa113](https://github.com/ccontrols/component-controls/commit/eefa1139254860139964dfa36b721e94228bd0dc))
+* update Helmet prop ([d1de02c](https://github.com/ccontrols/component-controls/commit/d1de02c1f7e9e6fe6f7a2aa0514a9c4d1514282e))
+
+
+### Features
+
+* customize seo tags ([2803219](https://github.com/ccontrols/component-controls/commit/2803219542bbd4a17ba6333fbcbf2e48b6ae3811))
+
+
+
+
+
 # [1.37.0](https://github.com/ccontrols/component-controls/compare/v1.36.14...v1.37.0) (2020-11-01)
 
 

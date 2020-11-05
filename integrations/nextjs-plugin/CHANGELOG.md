@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
+
+
+### Bug Fixes
+
+* update Helmet prop ([d1de02c](https://github.com/ccontrols/component-controls/commit/d1de02c1f7e9e6fe6f7a2aa0514a9c4d1514282e))
+
+
+
+
+
 # [1.37.0](https://github.com/ccontrols/component-controls/compare/v1.36.14...v1.37.0) (2020-11-01)
 
 **Note:** Version bump only for package @component-controls/nextjs-plugin
