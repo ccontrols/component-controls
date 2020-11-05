@@ -11,7 +11,7 @@ export const useAnalytics = (): void => {
     if (options) {
       if (typeof options === 'string') {
         return Analytics({
-          app: config.siteTitle,
+          app: config.title,
           plugins: [
             googleAnalytics({
               trackingId: options,

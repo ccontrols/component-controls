@@ -9,7 +9,7 @@ export default {
 
 export const overview = (props: ButtonProps) => {
   const store = useStore();
-  return <Button {...props}>{store.config.siteTitle}</Button>;
+  return <Button {...props}>{store.config.title}</Button>;
 };
 
 overview.component = Button;

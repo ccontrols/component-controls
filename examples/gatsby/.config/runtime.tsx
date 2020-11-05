@@ -3,16 +3,25 @@ import { jsx, Box, Text } from 'theme-ui';
 import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core";
 import { Link } from "@component-controls/components";
 import { OctofaceIcon } from '@primer/octicons-react';
+import { Helmet } from "@component-controls/app";
 import { TestingPage } from "./TestingPage";
 
 const categories = ['Introduction', 'Application','Controls','Blocks', 'Design Tokens',  'Editors', 'Components', 'Plugins']
 
 const config: RunOnlyConfiguration = {
   analytics: 'UA-172446254-1',
-  siteTitle: `Component controls`,
-  siteDescription: `A next-generation tool to create blazing-fast documentation sites`,
-  siteLanguage: `en`,
+  title: `Component controls`,
+  description: `A next-generation tool to create blazing-fast documentation sites`,
+  language: `en`,
   author: `@component-controls`,
+  app:  ({ children }) => (
+    <div>
+      <Helmet>
+        <meta name="description" content="a page with custom meta description" />
+      </Helmet>
+      {children}
+    </div>
+  ),
   theme: {
     colors: {
       // primary: 'pink',

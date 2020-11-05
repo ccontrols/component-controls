@@ -1,93 +1,83 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { useConfig } from '@component-controls/store';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  pathname?: string;
-  image?: string;
-  children?: React.ReactNode;
+import {
+  ensureTrailingSlash,
+  removeStartingSlash,
+  RunConfiguration,
+  Document,
+} from '@component-controls/core';
+import { useCurrentStory, useDocDescription } from '@component-controls/store';
+import { useIsLocalLink, useTheme } from '@component-controls/components';
+import { defaultLinks } from './defaultLinks';
+export { Helmet };
+export interface SEOProps {
+  doc?: Document;
+  config?: RunConfiguration;
 }
-import * as appleTouchIcon from './media/apple-touch-icon.png';
-import * as favIcon32 from './media/favicon-32x32.png';
-import * as favIcon16 from './media/favicon-16x16.png';
-import * as favIcon192 from './media/android-chrome-192x192.png';
-import * as favIcon512 from './media/android-chrome-512x512.png';
-import * as pinnedTab from './media/safari-pinned-tab.svg';
-
-export const SEO: FC<SEOProps> = ({
-  title,
-  description,
-  pathname,
-  image: propImage,
-  children,
-}) => {
-  const config = useConfig();
+export const SEO: FC<SEOProps> = ({ doc, config }) => {
+  const story = useCurrentStory();
+  const titleParts = doc?.title ? doc.title.split('/') : [''];
+  const docTitle = titleParts[titleParts.length - 1];
+  const docDescription = useDocDescription(doc);
+  const keywords = doc?.keywords || doc?.tags;
   const {
-    siteTitle,
+    title,
     siteUrl = '',
-    siteDescription: defaultDescription,
-    siteLanguage,
-    siteImage: defaultImage,
-    author,
-    siteMap,
+    description,
+    image,
+    author: siteAuthor,
+    links = defaultLinks,
   } = config || {};
-  const image = propImage || defaultImage;
-  const seo = {
-    title: title || siteTitle,
-    description: description || defaultDescription,
-    url: `${siteUrl}${pathname || ``}`,
-    image: image ? `${siteUrl}${image}` : undefined,
-  };
+  const pageImage = doc?.image || image;
+  const isLocalImage = pageImage && useIsLocalLink(pageImage);
+  const theme = useTheme();
+  const imageUrl =
+    isLocalImage && pageImage
+      ? ensureTrailingSlash(siteUrl) + removeStartingSlash(pageImage)
+      : 'hello' || pageImage;
+  console.log(typeof imageUrl, imageUrl);
+  const pageDescription = story?.description || docDescription || description;
+  const url = typeof window === 'undefined' ? siteUrl : window.location.href;
+  const author = doc?.author || siteAuthor;
   return (
-    <Helmet
-      title={title}
-      defaultTitle={siteTitle}
-      titleTemplate={`%s | ${siteTitle}`}
-    >
-      <html lang={siteLanguage} />
-      <meta name="description" content={seo.description} />
-      {seo.image && <meta name="image" content={seo.image} />}
-      {siteMap && (
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <Helmet>
+      {Array.isArray(keywords) && (
+        <meta name="keywords" content={keywords.join(',')} />
       )}
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:url" content={seo.url} />
-      <meta property="og:description" content={seo.description} />
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      {pageDescription && <meta name="description" content={pageDescription} />}
+      {imageUrl && <meta name="image" content={imageUrl} />}
+      <meta property="og:title" content={docTitle} />
+      <meta property="og:url" content={url} />
+      {pageDescription && (
+        <meta property="og:description" content={pageDescription} />
+      )}
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      {pageDescription && (
+        <meta property="og:image:alt" content={pageDescription} />
+      )}
       <meta property="og:type" content="website" />
-      <meta property="og:image:alt" content={seo.description} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:url" content={seo.url} />
-      <meta name="twitter:description" content={seo.description} />
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
-      <meta name="twitter:image:alt" content={seo.description} />
+
+      <meta
+        name="twitter:card"
+        content={imageUrl ? 'summary_large_image' : 'summary'}
+      />
+
+      <meta name="twitter:site" content={siteAuthor} />
+      <meta name="twitter:title" content={docTitle} />
+      <meta name="twitter:url" content={url} />
+      {pageDescription && (
+        <meta name="twitter:description" content={pageDescription} />
+      )}
+      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+      {pageDescription && (
+        <meta name="twitter:image:alt" content={pageDescription} />
+      )}
       <meta name="twitter:creator" content={author} />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href={appleTouchIcon.default}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href={favIcon32.default}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href={favIcon16.default}
-      />
-      <link rel="icon" sizes="192x192" href={favIcon192.default} />
-      <link rel="icon" sizes="512x512" href={favIcon512.default} />
-      <link rel="mask-icon" color="#5bbad5" href={pinnedTab.default} />
-      <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#ffffff" />
-      {children}
+      {links &&
+        links.map((link, idx) => <link key={`meta_key${idx}`} {...link} />)}
+      <meta name="msapplication-TileColor" content={theme.colors?.primary} />
+      <meta name="application-name" content={title} />
+      <meta name="theme-color" content={theme.colors?.background} />
     </Helmet>
   );
 };

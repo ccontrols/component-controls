@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC, Fragment } from 'react';
 import { jsx, Box } from 'theme-ui';
+import { Helmet } from 'react-helmet';
 import { SkipLinks, SkiLinksItemProps } from '@component-controls/components';
 import {
   useStore,
   useCurrentDocument,
-  useDocDescription,
   useConfig,
 } from '@component-controls/store';
 import { SEO } from '../SEO';
@@ -13,18 +13,13 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useAnalytics } from './useAnalytics';
 import { AppError } from '../AppError';
-export interface AppProps {
-  /**
-   * page title
-   */
-  title?: string;
-}
+export interface AppProps {}
 
 /**
  * application container component. adds SEO, SkipLinks, Header and Footer.
  *
  */
-export const App: FC<AppProps> = ({ title = '', children }) => {
+export const App: FC<AppProps> = ({ children }) => {
   const store = useStore();
   const doc = useCurrentDocument();
   const config = useConfig();
@@ -45,20 +40,33 @@ export const App: FC<AppProps> = ({ title = '', children }) => {
       text: 'skip to context sidebar',
     });
   }
-  const titleParts = title ? title.split('/') : [''];
-  const pageTitle = titleParts[titleParts.length - 1];
-  const pageDescription = useDocDescription(doc);
   useAnalytics();
+  const titleParts = doc?.title ? doc.title.split('/') : [''];
+  const docTitle = titleParts[titleParts.length - 1];
+  const { title, language, siteMap, seo, app } = config || {};
+  const Wrapper = app || Fragment;
   return (
     <Fragment>
-      <SEO title={pageTitle} description={pageDescription} />
+      <Helmet
+        title={docTitle}
+        defaultTitle={title}
+        titleTemplate={`%s | ${title}`}
+      >
+        <html lang={language} />
+        {siteMap && (
+          <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        )}
+      </Helmet>
+      {seo || <SEO doc={doc} config={config} />}
       <SkipLinks items={items} />
-      <Box variant="app">
-        <Header toolbar={toolbar} />
-        <AppError error={store.error} />
-        {children}
-        <Footer />
-      </Box>
+      <Wrapper>
+        <Box variant="app">
+          <Header toolbar={toolbar} />
+          <AppError error={store.error} />
+          {children}
+          <Footer />
+        </Box>
+      </Wrapper>
     </Fragment>
   );
 };

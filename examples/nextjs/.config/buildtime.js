@@ -27,7 +27,7 @@ module.exports = {
     '../../../plugins/viewport-plugin/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     // '../../stories/src/blogs/introduction-to-controls.mdx',
   ],
-  siteUrl: `https://nextjs.component-controls.com`,
+  siteUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:9021' : `https://nextjs.component-controls.com`,
   pages: {
     story: {
       basePath: 'api/',

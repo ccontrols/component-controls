@@ -30,7 +30,7 @@ module.exports = {
     //'../../stories/src/blogs/gatsby-nextjs-storybook.mdx',
     
   ],
-  siteUrl: `https://component-controls.com`,
+  siteUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:9020' : 'https://component-controls.com',
   pages: {
     story: {
       basePath: 'api/',

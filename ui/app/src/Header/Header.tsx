@@ -35,20 +35,20 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
   const docCounts = useDocTypeCount();
   const config = useConfig();
   const doc = useCurrentDocument();
-  const { pages, siteTitle, logo, siteDescription } = config || {};
+  const { pages, title, logo, description } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const LogoLink: FC = ({ children }) => (
       <Link
         variant="appheader.title"
         href={homePath}
-        aria-label={siteTitle}
+        aria-label={title}
         sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
       >
         {children}
       </Link>
     );
     const LogoImage: FC<{ src: string }> = ({ src }) => (
-      <Image alt={siteDescription} variant="appheader.logo" src={src} />
+      <Image alt={description} variant="appheader.logo" src={src} />
     );
     let logoNode;
     if (logo) {
@@ -104,7 +104,7 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
       } else {
         actions[0].node = (
           <LogoLink>
-            {logo === null ? <Heading as="h2">{siteTitle}</Heading> : logoNode}
+            {logo === null ? <Heading as="h2">{title}</Heading> : logoNode}
           </LogoLink>
         );
       }
@@ -118,8 +118,8 @@ export const Header: FC<HeaderProps> = ({ toolbar = {} }) => {
     homePath,
     store,
     homePage,
-    siteTitle,
-    siteDescription,
+    title,
+    description,
   ]);
 
   const rightActions: ActionItems = useMemo(() => {

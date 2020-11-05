@@ -1,6 +1,13 @@
+import {
+  FC,
+  ComponentType,
+  ReactNode,
+  DetailedHTMLProps,
+  LinkHTMLAttributes,
+} from 'react';
 import { BuildProps } from './build';
 import { ActionItems } from './utility';
-import { ComponentType, ReactNode } from 'react';
+
 import { StoryRenderFn } from './utility';
 import { ReactElement } from 'react';
 import { Story, Document } from './document';
@@ -170,7 +177,6 @@ export type BuildConfiguration = BuildProps & {
    * Deployed site url. Also used for auto generated sitemap.
    */
   siteUrl?: string;
-
   /**
    * instrumentation configuration
    */
@@ -222,10 +228,6 @@ export interface RunOnlyConfiguration {
   /**
    * standalone site title. Default is "Component controls"
    */
-  siteTitle?: string;
-  /**
-   * alternative site title field - docz compatibility
-   */
   title?: string;
 
   /**
@@ -234,22 +236,23 @@ export interface RunOnlyConfiguration {
   logo?: string | ReactNode;
 
   /**
-   * site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
+   * application wrapper, can be used to insert tags or styles. The application will be passed as children
    */
-  siteDescription?: string;
+  app?: FC;
+
   /**
-   * alternative site description field - docz compatibility
+   * site description. Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site."
    */
   description?: string;
 
   /**
    * copyright notice displayed in the footer
    */
-  siteCopyright?: string;
+  copyright?: string;
   /**
    * site language, Deault is "en"
    */
-  siteLanguage?: string;
+  language?: string;
 
   /**
    * author: Default is "@component-controls"
@@ -259,8 +262,19 @@ export interface RunOnlyConfiguration {
   /**
    * link to site image
    */
-  siteImage?: string;
+  image?: string;
+  /**
+   * meta links for seo header
+   */
+  links?: DetailedHTMLProps<
+    LinkHTMLAttributes<HTMLLinkElement>,
+    HTMLLinkElement
+  >[];
 
+  /**
+   * custom seo rendering.
+   */
+  seo?: ReactNode;
   /**
    * page types configurations
    */
@@ -319,10 +333,10 @@ export type RunConfiguration = RunOnlyConfiguration &
   Omit<BuildConfiguration, 'pages'>;
 
 export const defaultRunConfig: RunConfiguration = {
-  siteTitle: 'Component controls',
-  siteDescription:
+  title: 'Component controls',
+  description:
     'Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site.',
-  siteLanguage: 'en',
+  language: 'en',
   author: '@component-controls',
   controls: {
     threshold: 10,
@@ -355,12 +369,7 @@ export const defaultRunConfig: RunConfiguration = {
 };
 
 export const convertConfig = (config: RunConfiguration): RunConfiguration => {
-  const { siteTitle, siteDescription, title, description, ...rest } = config;
-  return {
-    siteTitle: siteTitle || title,
-    siteDescription: siteDescription || description,
-    ...rest,
-  };
+  return config;
 };
 
 export const defaultBuildConfig: BuildConfiguration = {

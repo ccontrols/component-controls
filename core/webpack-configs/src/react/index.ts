@@ -78,7 +78,7 @@ export const react: PresetType = (options: BuildProps) => {
           loader: 'url-loader',
           options: customLoaderOptions(options, 'url-loader', {
             limit: 25000,
-            name: '[name].[hash].[ext]',
+            name: '[name].[ext]',
             publicPath: '/static',
             outputPath: path.relative(
               options?.distFolder || process.cwd(),

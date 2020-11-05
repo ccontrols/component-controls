@@ -17,12 +17,15 @@ export const prettify = async (
       );
       allPrettierOptions = { ...userOptions, ...allPrettierOptions };
     }
-
-    return prettier.format(code, {
-      parser: 'typescript',
-      plugins: [parserBabel],
-      ...allPrettierOptions,
-    });
+    try {
+      return prettier.format(code, {
+        parser: 'typescript',
+        plugins: [parserBabel],
+        ...allPrettierOptions,
+      });
+    } catch (e) {
+      return code;
+    }
   } else {
     return code || '';
   }

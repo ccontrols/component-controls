@@ -1188,14 +1188,13 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | `pages`           | [PagesConfiguration](#pagesconfiguration)            | page types configurations                                                                                                                                                            |
 | `renderFn`        | [FrameworkRenderFn](#frameworkrenderfn)              | framework-specific render function. By default react render                                                                                                                          |
 | `sidebar`         | [ActionItems](#actionitems)                          | custom sidebar items                                                                                                                                                                 |
-| `siteCopyright`   | string                                               | copyright notice displayed in the footer                                                                                                                                             |
-| `siteDescription` | string                                               | site description. siteDescription: Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
-| `siteImage`       | string                                               | link to site image                                                                                                                                                                   |
-| `siteLanguage`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
-| `siteTitle`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
+| `copyright`   | string                                               | copyright notice displayed in the footer                                                                                                                                             |
+| `description` | string                                               | site description. Default is "Component controls stories. Write your components documentation with MDX and JSX. Design, develop, test and review in a single site." |
+| `image`       | string                                               | link to site image                                                                                                                                                                   |
+| `language`    | string                                               | site language, Deault is "en"                                                                                                                                                        |
+| `title`       | string                                               | standalone site title. Default is "Component controls"                                                                                                                               |
 | `storySort`       | **function** (`a`\*: string, `b`\*: string): number; | story sorting function                                                                                                                                                               |
 | `theme`           | \[key: string]: any                                  | theme-ui theme configuration                                                                                                                                                         |
-| `title`           | string                                               | alternative site title field - docz compatibility                                                                                                                                    |
 | `toolbar`         | [ToolbarConfig](#toolbarconfig)                      | custom toolbar items                                                                                                                                                                 |
 
 ## SideNavConfiguration
@@ -1425,9 +1424,9 @@ _defined in [@component-controls/core/src/configuration.ts](https://github.com/c
 | Name               | Type   | Description |
 | ------------------ | ------ | ----------- |
 | `author*`          | string |             |
-| `siteDescription*` | string |             |
-| `siteLanguage*`    | string |             |
-| `siteTitle*`       | string |             |
+| `description*` | string |             |
+| `language*`    | string |             |
+| `title*`       | string |             |
 | `controls*`        | object |             |
 | `pages*`           | object |             |
 

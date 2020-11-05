@@ -43,7 +43,9 @@ export const extractMDXStories: (
   const collectAttributes = (node: any): Record<string, string> => {
     return node.attributes.reduce(
       (acc: Record<string, unknown>, attribute: any) => {
-        if (attribute.value.type === 'StringLiteral') {
+        if (!attribute.value) {
+          //console.log(attribute);
+        } else if (attribute.value.type === 'StringLiteral') {
           return {
             ...acc,
             [attribute.name.name]: attribute.value.value,

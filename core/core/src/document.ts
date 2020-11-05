@@ -223,15 +223,23 @@ export type Document = {
   draft?: boolean;
 
   /**
-   *  comma-separated list of document tags, used for search
+   *  comma-separated list of document tags, used for search and for SOE keywords unless keyswords are specified.
    */
   tags?: string[];
+
+  /**
+   *  comma-separated list of SEO keywords
+   */
+  keywords?: string[];
 
   /**
    *  documentation file description
    */
   description?: string;
-
+  /**
+   * link to an image for the document, will be used for SEO
+   */
+  image?: string;
   /**
    * document author
    */

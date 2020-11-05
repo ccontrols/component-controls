@@ -50,7 +50,7 @@ export const AppContext: FC<AppContextProps> = ({
     >
       <SidebarContextProvider>
         <LinkContextProvider linkClass={linkClass}>
-          <App title={docId}>{children}</App>
+          <App>{children}</App>
         </LinkContextProvider>
       </SidebarContextProvider>
     </BlockContextProvider>

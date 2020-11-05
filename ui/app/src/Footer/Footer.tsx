@@ -12,35 +12,35 @@ export const Footer: FC = () => {
   const {
     author,
     siteUrl = '/',
-    siteTitle,
-    siteCopyright = `Copyright \u00A9 ${new Date().getFullYear()}`,
+    title,
+    copyright = `Copyright \u00A9 ${new Date().getFullYear()}`,
     footer = {},
   } = config || {};
   const leftActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [];
-    if (siteCopyright || author) {
+    if (copyright || author) {
       actions.push({
-        node: <Text>{`${siteCopyright}${author ? ` by ${author}` : ''}`}</Text>,
+        node: <Text>{`${copyright}${author ? ` by ${author}` : ''}`}</Text>,
         id: 'copyright',
       });
     }
     return footer.left ? [...actions, ...footer.left] : actions;
-  }, [footer.left, siteCopyright, author]);
+  }, [footer.left, copyright, author]);
 
   const rightActions: ActionItems = useMemo(() => {
     const actions: ActionItems = [];
-    if (siteTitle || siteUrl) {
+    if (title || siteUrl) {
       actions.push({
         node: (
           <Link aria-label="visit project home page" href={siteUrl}>
-            {siteTitle}
+            {title}
           </Link>
         ),
         id: 'site',
       });
     }
     return footer.right ? [...footer.right, ...actions] : actions;
-  }, [footer.right, siteTitle, siteUrl]);
+  }, [footer.right, title, siteUrl]);
 
   if (leftActions.length || rightActions.length) {
     return (

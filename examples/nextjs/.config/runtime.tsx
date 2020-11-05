@@ -9,9 +9,9 @@ const categories = ['Introduction', 'Application','Controls','Blocks', 'Design T
 
 const config: RunOnlyConfiguration = {
   analytics: 'UA-172446254-1',
-  siteTitle: `Component controls`,
-  siteDescription: `A next-generation tool to create blazing-fast documentation sites`,
-  siteLanguage: `en`,
+  title: `Component controls`,
+  description: `A next-generation tool to create blazing-fast documentation sites`,
+  language: `en`,
   author: `@component-controls`,
   theme: {
     colors: {

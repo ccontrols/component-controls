@@ -3,8 +3,8 @@ import { RunOnlyConfiguration, defaultRunConfig } from "@component-controls/core
 import { TestingPage } from "./TestingPage";
 
 const config: RunOnlyConfiguration = {
-  siteTitle: `awLib`,
-  siteDescription: `Some description meta.`,
+  title: `awLib`,
+  description: `Some description meta.`,
   author: 'my name',
   pages: {
     story: {

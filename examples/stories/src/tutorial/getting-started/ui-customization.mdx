@@ -21,7 +21,7 @@ import * as Icons from '@primer/octicons-react';
 import { Playground, Story, PropsTable } from '@component-controls/blocks';
 
 
-`component-controls` allows extensive customization of the user interface - from theming, SEO tags to toolbars, sidebars, and footer. Most of the user-interface customizations can be set up in your .`config/runtime.js` file.
+`component-controls` allows extensive customization of the user interface - from theming, SEO tags to toolbars, sidebars, and footer. Most of the user-interface customizations can be set up in your `.config/runtime.js` file.
 
 In the following examples, you can play with control values and see live the source code changes to be copy/pasted in the `buildtime.js` configuration file.
 
@@ -30,7 +30,7 @@ In the following examples, you can play with control values and see live the sou
 The site meta settings are used both for SEO purposes as page `<meta />` tags and displayed in the application user interface.
 
 <Story name="site-info" controls={{ 
-  siteTitle: {
+  title: {
     type: ControlTypes.TEXT,
     value: '',
     description: 'Standalone site title. Default is "Component controls"',
@@ -40,17 +40,17 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     value: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg',
     description: 'Custom logo url - set to null to remove the logo',
   },
-  siteDescription: {
+  description: {
     type: ControlTypes.TEXT,
     value: '',
     description: 'Site description. Used in page "description" meta tag'
   },
-  siteCopyright : {
+  copyright : {
     type: ControlTypes.TEXT,
     value: `Copyright \u00A9 ${new Date().getFullYear()}`,
     description: 'Copyright notice displayed in the footer'
   }, 
-  siteLanguage: {
+  language: {
     type: ControlTypes.TEXT,
     value: '',
     description: 'Site language, Deault is "en"',
@@ -61,18 +61,18 @@ The site meta settings are used both for SEO purposes as page `<meta />` tags an
     description: 'Site author. Default is "@component-controls"',
   }
 }}>
-  {({ siteTitle, logo, siteDescription, siteCopyright, siteLanguage, author }) => {
+  {({ title, logo, description, copyright, language, author }) => {
     return (
       <Fragment>
         <Box sx={{ mb: 2 }}>
           <Source title=".config/runtime.js">
   {`export default {
-${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${logo ? `  logo: '${logo}',\n` : ''}${siteDescription ? `  siteDescription: '${siteDescription}',\n` : ''}${siteCopyright ? `  siteCopyright: '${siteCopyright}',\n` : ''}${siteLanguage ? `  siteLanguage: '${siteLanguage}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
+${title ? `  title: '${title}',\n` : ''}${logo ? `  logo: '${logo}',\n` : ''}${description ? `  description: '${description}',\n` : ''}${copyright ? `  copyright: '${copyright}',\n` : ''}${language ? `  language: '${language}',\n` : ''}${author ? `  author: '${author}',\n` : ''}
 }`}
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: { 
-          siteTitle, logo, siteDescription, siteLanguage, author, siteCopyright,
+          title, logo, description, language, author, copyright,
           theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}}/>
       </Fragment>
     );  
@@ -80,6 +80,26 @@ ${siteTitle ? `  siteTitle: '${siteTitle}',\n` : ''}${logo ? `  logo: '${logo}',
 </Story>
 
 <PropsTable name="site-info" />
+
+## Wrapping the app
+
+You can wrap the application and create any additional components or insert styles.
+
+<Story name="wrap-app">
+  <Fragment>
+    <Box sx={{ mb: 2 }}>
+      <Source title=".config/runtime.js">
+        {`export default {
+  app: ({ children }) => <div style={{ background: 'pink'}}>{children}</div>,
+}`}
+      </Source>
+    </Box>    
+    <AppContext store={{...getDefaultStore(), config: { 
+      app: ({ children }) => <div style={{ background: 'pink'}}>{children}</div>,
+      theme: { app: { minHeight: 'unset' }, header: { zIndex: 0 } } }}} 
+    />
+  </Fragment>
+</Story>
 
 ## Installing a theme
 
@@ -208,7 +228,7 @@ ${leftItems.length ? `    left: [\n${itemsToString(leftItems)}\n    ],${rightIte
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: {
-          siteCopyright: '',
+          copyright: '',
           toolbar: {
             left: leftNodes,
             right: rightNodes,
@@ -248,7 +268,7 @@ You can insert a toolbar item at any position, by specifying the `order` propert
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: {
-          siteCopyright: '',
+          copyright: '',
           toolbar: {
             left: [{
             order,
@@ -313,7 +333,7 @@ ${toolbar.join(',\n')}
           </Source>
         </Box>  
         <AppContext store={{...getDefaultStore(), config: {
-          siteCopyright: '',
+          copyright: '',
           toolbar: {
             left: left.map(item => ({ id: item, hidden: true })),
             right: right.map(item => ({ id: item, hidden: true })),
