@@ -68,10 +68,7 @@ export const SEO: FC<SEOProps> = ({ Helmet, doc, config }) => {
       )}
       <meta property="og:type" content="website" />
 
-      <meta
-        name="twitter:card"
-        content={imageUrl ? 'summary_large_image' : 'summary'}
-      />
+      <meta name="twitter:card" content="summary" />
 
       <meta name="twitter:site" content={siteAuthor} />
       <meta name="twitter:title" content={docTitle} />
