@@ -69,6 +69,7 @@
     "babel-preset-react-app": "^9.1.2",
     "commitizen": "^3.1.2",
     "cross-env": "^5.2.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-mdx": "^1.6.8",
@@ -87,6 +88,31 @@
     "ts-jest": "^24.0.2",
     "ts-node": "^8.5.4",
     "typescript": "^4.0.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "changelog": {
+    "repo": "ccontrols/component-controls",
+    "labels": {
+      "Breaking Change 🔨": "🔨 Breaking Changes",
+      "Type: Feature 🚀": "🚀 Features",
+      "Topic: Component API ⚙️": "⚙️ Component API",
+      "Topic: Accessibility (A11y) ♿️": "♿ Accessibility",
+      "Type: Bug 🐛": "🐛 Bugfixes",
+      "Topic: TypeScript 🤠": "🤠 Types",
+      "Topic: Documentation 📚": "📝 Documentation"
+    },
+    "ignoreCommitters": [
+      "dependabot",
+      "allcontributors"
+    ],
+    "cacheDir": ".changelog"
   },
   "workspaces": {
     "packages": [
