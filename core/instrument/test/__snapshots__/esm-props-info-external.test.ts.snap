@@ -2485,7 +2485,7 @@ Object {
         "docs": "https://github.com/ccontrols/component-controls/tree/master#readme",
         "issues": "https://github.com/ccontrols/component-controls/issues",
       },
-      "version": "1.38.0",
+      "version": "1.38.1",
     },
     "8f6835169f285fcd3ad5425d9268a8f1": Object {
       "dependencies": Object {
