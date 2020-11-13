@@ -21,13 +21,23 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
       setStoryId(props.storyId);
     };
     const { id } = api.getCurrentStoryData() || {};
+    console.log(api.storyId);
     setStoryId(id);
     channel.on(SET_CURRENT_STORY, onChangeStory);
     return () => channel.off(SET_CURRENT_STORY, onChangeStory);
   }, [api, channel]);
-  const docId = storyId && store ? store.stories[storyId].doc : undefined;
-  return active && storyId ? (
-    <BlockContextProvider store={store} storyId={storyId} docId={docId}>
+  const docId =
+    storyId && store
+      ? store.stories[storyId]
+        ? store.stories[storyId].doc
+        : storyId
+      : undefined;
+  return active && docId ? (
+    <BlockContextProvider
+      store={store}
+      storyId={storyId !== docId ? storyId : undefined}
+      docId={docId}
+    >
       {children}
     </BlockContextProvider>
   ) : null;
