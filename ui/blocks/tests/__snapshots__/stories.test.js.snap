@@ -1488,7 +1488,7 @@ exports[`Blocks/Pagination Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Child 1`] = `
+exports[`Blocks/Playground/ESM Child 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -1708,7 +1708,7 @@ exports[`Blocks/Playground Child 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Custom Title 1`] = `
+exports[`Blocks/Playground/ESM Custom Title 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -1978,7 +1978,7 @@ exports[`Blocks/Playground Custom Title 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Dark Theme 1`] = `
+exports[`Blocks/Playground/ESM Dark Theme 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -2218,7 +2218,7 @@ exports[`Blocks/Playground Dark Theme 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Default Open Source 1`] = `
+exports[`Blocks/Playground/ESM Default Open Source 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -2805,7 +2805,7 @@ exports[`Blocks/Playground Default Open Source 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Disable Zoom Pan 1`] = `
+exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -2970,7 +2970,7 @@ exports[`Blocks/Playground Disable Zoom Pan 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Extra Panel 1`] = `
+exports[`Blocks/Playground/ESM Extra Panel 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3314,7 +3314,7 @@ exports[`Blocks/Playground Extra Panel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Multi Child 1`] = `
+exports[`Blocks/Playground/ESM Multi Child 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3590,7 +3590,7 @@ exports[`Blocks/Playground Multi Child 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Multi Stories 1`] = `
+exports[`Blocks/Playground/ESM Multi Stories 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -3853,7 +3853,7 @@ exports[`Blocks/Playground Multi Stories 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Not Collapsible 1`] = `
+exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -4110,7 +4110,7 @@ exports[`Blocks/Playground Not Collapsible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Overview 1`] = `
+exports[`Blocks/Playground/ESM Overview 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -4350,7 +4350,7 @@ exports[`Blocks/Playground Overview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Scale 1`] = `
+exports[`Blocks/Playground/ESM Scale 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -4590,7 +4590,7 @@ exports[`Blocks/Playground Scale 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Title 1`] = `
+exports[`Blocks/Playground/ESM Title 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -4865,7 +4865,7 @@ exports[`Blocks/Playground Title 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Visible Tabs 1`] = `
+exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
@@ -5105,7 +5105,7 @@ exports[`Blocks/Playground Visible Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Blocks/Playground Zoom Disabled 1`] = `
+exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
 <DocumentFragment>
   <div
     class="css-1xkyebe"
