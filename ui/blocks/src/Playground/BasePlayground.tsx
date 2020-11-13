@@ -27,7 +27,7 @@ export interface PlaygroundOwnProps {
    */
   scale?: number;
   /**
-   * playground source option - this when a Story is not embedded inside the Playground.
+   * playground source option - valid when a Story is not embedded inside the Playground.
    */
   source?: string;
 
