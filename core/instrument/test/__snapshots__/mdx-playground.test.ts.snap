@@ -6,7 +6,7 @@ Object {
   "doc": Object {
     "componentsLookup": Object {},
     "date": 2020-11-12T13:44:39.824Z,
-    "dateModified": 2020-11-12T13:45:11.125Z,
+    "dateModified": 2020-11-13T15:50:05.556Z,
     "title": "MDX",
   },
   "packages": Object {},
@@ -35,9 +35,9 @@ function MDXContent({
   <Button onClick={() => setCounter(counter => counter + 1)} >
     Increase
   </Button>
-  <text style={{
+  <span style={{
       marginLeft: 20
-    }}>{counter}</text>
+    }}>{counter}</span>
 </>;
 }}\`}>
   {() => {
@@ -46,9 +46,9 @@ function MDXContent({
         <Button onClick={() => setCounter(counter => counter + 1)}>
           Increase
         </Button>
-        <text style={{
+        <span style={{
             marginLeft: 20
-          }}>{counter}</text>
+          }}>{counter}</span>
       </>;
       }}
     </Playground>
