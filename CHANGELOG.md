@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.39.0](https://github.com/ccontrols/component-controls/compare/v1.38.2...v1.39.0) (2020-11-13)
+
+
+### Bug Fixes
+
+* global replace of mdxType attribute ([e12ee67](https://github.com/ccontrols/component-controls/commit/e12ee675eab5f1b9732c2042f3b0dff2921e0cf4))
+* remove log ([60bffbe](https://github.com/ccontrols/component-controls/commit/60bffbe01dcc51349de5b5ea74e19784b944f817))
+* workarounds sb issues with current story on mdx ([38684a3](https://github.com/ccontrols/component-controls/commit/38684a3ff5500e7f6645cc395a4d9ffc034f7a93))
+
+
+### Features
+
+* ability to show source for Playground ([08cba79](https://github.com/ccontrols/component-controls/commit/08cba79ef57c6004f28cf39680f3690cee27e4ed))
+
+
+
+
+
 ## [1.38.2](https://github.com/ccontrols/component-controls/compare/v1.38.1...v1.38.2) (2020-11-11)
 
 **Note:** Version bump only for package component-controls
