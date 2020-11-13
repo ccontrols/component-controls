@@ -19,7 +19,7 @@ module.exports = {
     '../../stories/src/mdx-stories/*.mdx',
     '../../../ui/app/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/components/src/**/*.stories.@(js|jsx|tsx|mdx)',
-    '../../../ui/blocks/src/**/*.stories.@(js|jsx|tsx|mdx)',
+    '../../../ui/blocks/src/**/*.@(stories.@(js|jsx|tsx)|mdx)',
     '../../../ui/design-tokens/src/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../core/core/src/stories/**/*.stories.@(js|jsx|tsx|mdx)',
     '../../../ui/editors/src/**/*.stories.@(js|jsx|tsx|mdx)',
