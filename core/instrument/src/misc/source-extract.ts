@@ -47,7 +47,7 @@ export const adjustArgumentsLocation = (
   });
 
 export const removeMDXAttributes = (source: string): string =>
-  source.replace(/mdxType="[^"]*"\s?/, '');
+  source.replace(/mdxType="[^"]*"\s?/g, '');
 export const extractSource = (
   source?: string,
   story?: Story,
