@@ -21,7 +21,6 @@ export const AddonPanel: React.FC<AddonPanelProps> = ({
       setStoryId(props.storyId);
     };
     const { id } = api.getCurrentStoryData() || {};
-    console.log(api.storyId);
     setStoryId(id);
     channel.on(SET_CURRENT_STORY, onChangeStory);
     return () => channel.off(SET_CURRENT_STORY, onChangeStory);
