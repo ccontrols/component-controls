@@ -1,0 +1,21 @@
+import { Donut } from 'theme-ui';
+import { ThemeProvider } from '@component-controls/components';
+import { Meta } from './Meta';
+import { Playground } from './Playground';
+import { MockContext } from '../test/MockContext';
+
+<Meta title="Blocks/Playground/MDX" />
+
+## Playground without Story
+
+<ThemeProvider>
+  <Playground title="Single child donut">
+    <Donut value={1 / 2} />
+  </Playground>
+
+  <Playground title="Multiple childs">
+    <Donut value={1 / 2} />
+    <Donut value={1 / 2} />
+    <Donut value={1 / 2} />
+  </Playground>
+</ThemeProvider>

@@ -126,33 +126,6 @@ live example:
   <Button>Click me</Button>
 </Playground>
 
-You can also wrap the component code in a [Story](/api/blocks-story--overview) component to display the source code.
-
-```js:title=playground.mdx
----
-name: Playground
-menu: Components
----
-
-import { Playground, Story } from '@component-controls/blocks';
-import { Button } from '../src/components/Button'
-
-# Button
-
-<Playground>
-  <Story name='example'>
-    <Button kind="secondary">Click me</Button>
-  </Story>  
-</Playground>
-```
-live example:
-
-<Playground>
-  <Story name='example'>
-    <Button kind="secondary">Click me</Button>
-  </Story>  
-</Playground>
-
 
 ### Props
 

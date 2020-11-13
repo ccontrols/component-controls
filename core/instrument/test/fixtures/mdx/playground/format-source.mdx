@@ -1,0 +1,19 @@
+---
+title: MDX
+---
+import { Playground } from '@component-controls/blocks';
+import Button from '../components/BaseButton';
+
+<Playground>
+  {() => {
+    const [counter, setCounter] = React.useState(0);
+    return (
+      <>
+        <Button onClick={() => setCounter(counter => counter+1)}>
+          Increase
+        </Button>
+        <text style={{ marginLeft : 20 }}>{counter}</text>
+      </>
+    )
+  }}
+</Playground>

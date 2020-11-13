@@ -7,15 +7,12 @@ import {
 import camelCase from 'camelcase';
 import { File } from '@babel/types';
 import traverse from '@babel/traverse';
-import {
-  extractFunctionParameters,
-  adjustArgumentsLocation,
-} from './extract-function-parameters';
+import { extractFunctionParameters } from './extract-function-parameters';
 import { followStoryImport } from './follow-imports';
-import { extractAttributes } from './extract-attributes';
+import { collectAttributes } from './extract-attributes';
 import { sourceLocation } from '../misc/source-location';
 import { ParseStorieReturnType, InstrumentOptions } from '../types';
-
+import { extractSource } from '../misc/source-extract';
 import { componentsFromParams } from '../misc/component-attributes';
 
 type PartialStore = Required<
@@ -40,30 +37,6 @@ export const extractMDXStories: (
   _options: Required<InstrumentOptions>,
   { source, filePath }: SourceFile,
 ): PartialStore | undefined => {
-  const collectAttributes = (node: any): Record<string, string> => {
-    return node.attributes.reduce(
-      (acc: Record<string, unknown>, attribute: any) => {
-        if (!attribute.value) {
-          //console.log(attribute);
-        } else if (attribute.value.type === 'StringLiteral') {
-          return {
-            ...acc,
-            [attribute.name.name]: attribute.value.value,
-          };
-        } else if (attribute.value.type === 'JSXExpressionContainer') {
-          return {
-            ...acc,
-            [attribute.name.name]: extractAttributes(
-              attribute.value.expression,
-            ),
-          };
-        }
-        return acc;
-      },
-      {},
-    );
-  };
-
   let components: { [key: string]: string | undefined } = {};
   const collectComponent = (attributes: any) => {
     const attrComponents = componentsFromParams(attributes);
@@ -186,38 +159,8 @@ export const extractMDXStories: (
                 );
                 // adjust for source code wraping issues
                 const storySource = getASTSource(source, loc);
-                const storyLines = storySource?.split('\n');
-                //remove as many spaces as there are in the line with the smallest amount of white spaces (but still some)
-                const whiteSpaces = storyLines?.reduce((spaces, line) => {
-                  if (line.substring(0, 1) === ' ' && line.trim() !== '') {
-                    const startSpaces = line.search(/\S/);
-                    if (startSpaces && (spaces === 0 || startSpaces < spaces)) {
-                      return startSpaces;
-                    }
-                  }
-                  return spaces;
-                }, 0);
                 story.loc = sourceLocation(loc);
-                story.source =
-                  storyLines && whiteSpaces
-                    ? storyLines
-                        .map((line, lineIndex) => {
-                          if (line.search(/\S/) >= whiteSpaces) {
-                            //adjust location of arguments usage
-                            if (story.arguments) {
-                              story.arguments = adjustArgumentsLocation(
-                                story.arguments,
-                                lineIndex,
-                                whiteSpaces,
-                              );
-                            }
-                            return line.substr(whiteSpaces);
-                          }
-                          return line;
-                        })
-                        .join('\n')
-                        .trim()
-                    : storySource;
+                story.source = extractSource(storySource, story);
               }
 
               store.stories[id] = story;
@@ -254,7 +197,6 @@ export const extractMDXStories: (
             collectComponent(attributes);
             break;
         }
-        // console.log(node.name.name, attributes);
       }
     },
   });

@@ -54,6 +54,7 @@ export const StoryPlayground: FC<StoryPlaygroundProps> = ({
     <BasePlayground
       wrapper={false}
       story={story}
+      isDark={isDark}
       actions={[...actions, ...storyActions]}
       {...props}
     />

@@ -33,19 +33,17 @@ import React from 'react';
 import { mdx } from '@mdx-js/react';
 
 /* @jsxRuntime classic */
+
 /* @jsx mdx */
 import { customStory } from '../../components/external-story';
 import { Story, Meta } from '@component-controls/blocks';
-
-
 const layoutProps = {};
-
-
 const MDXLayout = \\"wrapper\\";
+
 function MDXContent({
   components,
-  ...props })
-{
+  ...props
+}) {
   return <MDXLayout {...layoutProps} {...props} components={components}>
 
     <Meta title=\\"MDX\\" />
@@ -154,6 +152,7 @@ import React from 'react';
 import { mdx } from '@mdx-js/react';
 
 /* @jsxRuntime classic */
+
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-deconstructed-props';
 
@@ -161,16 +160,16 @@ const makeShortcode = name => function MDXDefaultShortcode(props) {
   console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\");
   return <div {...props} />;
 };
+
 const Meta = makeShortcode(\\"Meta\\");
 const Story = makeShortcode(\\"Story\\");
 const layoutProps = {};
-
-
 const MDXLayout = \\"wrapper\\";
+
 function MDXContent({
   components,
-  ...props })
-{
+  ...props
+}) {
   return <MDXLayout {...layoutProps} {...props} components={components}>
 
     <Meta title=\\"MDX\\" />
@@ -264,6 +263,7 @@ import React from 'react';
 import { mdx } from '@mdx-js/react';
 
 /* @jsxRuntime classic */
+
 /* @jsx mdx */
 import { customStory } from '../../components/external-story-props';
 
@@ -271,16 +271,16 @@ const makeShortcode = name => function MDXDefaultShortcode(props) {
   console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\");
   return <div {...props} />;
 };
+
 const Meta = makeShortcode(\\"Meta\\");
 const Story = makeShortcode(\\"Story\\");
 const layoutProps = {};
-
-
 const MDXLayout = \\"wrapper\\";
+
 function MDXContent({
   components,
-  ...props })
-{
+  ...props
+}) {
   return <MDXLayout {...layoutProps} {...props} components={components}>
 
     <Meta title=\\"MDX\\" />
@@ -343,18 +343,16 @@ import React from 'react';
 import { mdx } from '@mdx-js/react';
 
 /* @jsxRuntime classic */
+
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
-
-
 const layoutProps = {};
-
-
 const MDXLayout = \\"wrapper\\";
+
 function MDXContent({
   components,
-  ...props })
-{
+  ...props
+}) {
   return <MDXLayout {...layoutProps} {...props} components={components}>
 
     <Meta title=\\"MDX\\" />
@@ -452,18 +450,16 @@ import React from 'react';
 import { mdx } from '@mdx-js/react';
 
 /* @jsxRuntime classic */
+
 /* @jsx mdx */
 import { Story, Meta } from '@component-controls/blocks';
-
-
 const layoutProps = {};
-
-
 const MDXLayout = \\"wrapper\\";
+
 function MDXContent({
   components,
-  ...props })
-{
+  ...props
+}) {
   return <MDXLayout {...layoutProps} {...props} components={components}>
 
     <Meta title=\\"MDX\\" />

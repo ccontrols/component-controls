@@ -15,12 +15,13 @@ Object {
       "Button": "2855216c2faa4ab43ed978e3ff6743e4",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "b29a0e49c5ef1bad8c8d49f9bbe91430",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:53:37.800Z,
+    "mdxType": "Meta",
+    "package": "3ae9354c82688a27372041e032d9a3d2",
+    "title": "MDX",
   },
   "packages": Object {
-    "b29a0e49c5ef1bad8c8d49f9bbe91430": Object {
+    "3ae9354c82688a27372041e032d9a3d2": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -53,7 +54,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "b29a0e49c5ef1bad8c8d49f9bbe91430",
+      "fileHash": "3ae9354c82688a27372041e032d9a3d2",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -71,7 +72,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story>
   <Button />
@@ -95,12 +96,13 @@ Object {
       "Button": "adb0a7ff2c278d595f4ce67bb4b42887",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "4da0570dc7f50cc938725dc7a4736505",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:53:49.622Z,
+    "mdxType": "Meta",
+    "package": "2a402139de103fe4f924b61618619173",
+    "title": "MDX",
   },
   "packages": Object {
-    "4da0570dc7f50cc938725dc7a4736505": Object {
+    "2a402139de103fe4f924b61618619173": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -133,7 +135,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "4da0570dc7f50cc938725dc7a4736505",
+      "fileHash": "2a402139de103fe4f924b61618619173",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -165,14 +167,15 @@ Object {
       "id": "storyWithProps",
       "loc": Object {
         "end": Object {
-          "column": 57,
-          "line": 13,
+          "column": 45,
+          "line": 18,
         },
         "start": Object {
-          "column": 38,
-          "line": 13,
+          "column": 9,
+          "line": 18,
         },
       },
+      "mdxType": "Story",
       "name": "story-with-props",
       "source": "props => <Button />",
     },
@@ -183,7 +186,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {props => <Button />}
@@ -234,12 +237,13 @@ export default Button;
       "Button": "ceea0565a65f75c8c7b6b355d6d335ac",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "64b354f73c75e0bb54ecee01220c65ec",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:53:53.942Z,
+    "mdxType": "Meta",
+    "package": "a588f2668941163f0163aabd28f5304e",
+    "title": "MDX",
   },
   "packages": Object {
-    "64b354f73c75e0bb54ecee01220c65ec": Object {
+    "a588f2668941163f0163aabd28f5304e": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -272,7 +276,7 @@ export default Button;
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "64b354f73c75e0bb54ecee01220c65ec",
+      "fileHash": "a588f2668941163f0163aabd28f5304e",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -332,13 +336,14 @@ export default Button;
       "loc": Object {
         "end": Object {
           "column": 6,
-          "line": 15,
+          "line": 19,
         },
         "start": Object {
-          "column": 32,
-          "line": 13,
+          "column": 48,
+          "line": 17,
         },
       },
+      "mdxType": "Story",
       "name": "smart story",
       "source": "<Button />",
     },
@@ -349,7 +354,7 @@ export default Button;
 import Button from '../../components/button-default-arrow-func';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"smart story\\">
   <Button />
@@ -374,12 +379,13 @@ Object {
       "Button": "c63d685efb0c65f18ffc63184e852ef4",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "3995fd670fa3627d8fc37155479f45c9",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:54:01.166Z,
+    "mdxType": "Meta",
+    "package": "92ff07f5e66bce7d793d8a6b561a1e0d",
+    "title": "MDX",
   },
   "packages": Object {
-    "3995fd670fa3627d8fc37155479f45c9": Object {
+    "92ff07f5e66bce7d793d8a6b561a1e0d": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -412,7 +418,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "3995fd670fa3627d8fc37155479f45c9",
+      "fileHash": "92ff07f5e66bce7d793d8a6b561a1e0d",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -429,8 +435,8 @@ Object {
         Object {
           "loc": Object {
             "end": Object {
-              "column": 1,
-              "line": 4,
+              "column": 31,
+              "line": 0,
             },
             "start": Object {
               "column": 1,
@@ -442,12 +448,12 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 23,
-                  "line": 1,
+                  "column": 24,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 8,
-                  "line": 1,
+                  "column": 9,
+                  "line": 0,
                 },
               },
               "name": "name",
@@ -455,12 +461,12 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 15,
-                      "line": 1,
+                      "column": 16,
+                      "line": 0,
                     },
                     "start": Object {
-                      "column": 10,
-                      "line": 1,
+                      "column": 11,
+                      "line": 0,
                     },
                   },
                   "name": "first",
@@ -469,12 +475,12 @@ Object {
                 Object {
                   "loc": Object {
                     "end": Object {
-                      "column": 21,
-                      "line": 1,
+                      "column": 22,
+                      "line": 0,
                     },
                     "start": Object {
-                      "column": 17,
-                      "line": 1,
+                      "column": 18,
+                      "line": 0,
                     },
                   },
                   "name": "last",
@@ -485,12 +491,12 @@ Object {
             Object {
               "loc": Object {
                 "end": Object {
-                  "column": 5,
-                  "line": 3,
+                  "column": 29,
+                  "line": 0,
                 },
                 "start": Object {
-                  "column": 2,
-                  "line": 3,
+                  "column": 26,
+                  "line": 0,
                 },
               },
               "name": "age",
@@ -502,20 +508,17 @@ Object {
       "id": "storyWithProps",
       "loc": Object {
         "end": Object {
-          "column": 24,
+          "column": 72,
           "line": 18,
         },
         "start": Object {
           "column": 9,
-          "line": 14,
+          "line": 18,
         },
       },
+      "mdxType": "Story",
       "name": "story-with-props",
-      "source": "({
-  name: { first, last },
-
-  age,
-}) => <Button />",
+      "source": "({ name: { first, last }, age }) => <Button />",
     },
   },
   "transformed": "
@@ -524,7 +527,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name: { first, last }, age }) => <Button />}
@@ -549,12 +552,13 @@ Object {
       "Button": "88c2f5883a4daf6051d3f8a38ce7bf75",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "c905face9d8a864f8419fa636d268a20",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:54:04.623Z,
+    "mdxType": "Meta",
+    "package": "6e59e023145bf99af36eacdfc87d4c4e",
+    "title": "MDX",
   },
   "packages": Object {
-    "c905face9d8a864f8419fa636d268a20": Object {
+    "6e59e023145bf99af36eacdfc87d4c4e": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -587,7 +591,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "c905face9d8a864f8419fa636d268a20",
+      "fileHash": "6e59e023145bf99af36eacdfc87d4c4e",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -648,14 +652,15 @@ Object {
       "id": "storyWithProps",
       "loc": Object {
         "end": Object {
-          "column": 67,
-          "line": 13,
+          "column": 55,
+          "line": 18,
         },
         "start": Object {
-          "column": 38,
-          "line": 13,
+          "column": 9,
+          "line": 18,
         },
       },
+      "mdxType": "Story",
       "name": "story-with-props",
       "source": "({ name, age }) => <Button />",
     },
@@ -666,7 +671,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name, age }) => <Button />}
@@ -690,12 +695,13 @@ Object {
       "Button": "fe664c2ffbbcacffdac896ace94db697",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "0b289894317c97c742b92505a4f795c5",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:54:08.214Z,
+    "mdxType": "Meta",
+    "package": "a1ab80046bc96afbd8544a77ddf630e5",
+    "title": "MDX",
   },
   "packages": Object {
-    "0b289894317c97c742b92505a4f795c5": Object {
+    "a1ab80046bc96afbd8544a77ddf630e5": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -728,7 +734,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "0b289894317c97c742b92505a4f795c5",
+      "fileHash": "a1ab80046bc96afbd8544a77ddf630e5",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -774,14 +780,15 @@ Object {
       "id": "storyWithProps",
       "loc": Object {
         "end": Object {
-          "column": 68,
-          "line": 13,
+          "column": 56,
+          "line": 18,
         },
         "start": Object {
-          "column": 38,
-          "line": 13,
+          "column": 9,
+          "line": 18,
         },
       },
+      "mdxType": "Story",
       "name": "story-with-props",
       "source": "(props, context) => <Button />",
     },
@@ -792,7 +799,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {(props, context) => <Button />}
@@ -816,12 +823,13 @@ Object {
       "Button": "0a73df5cffa26ca62ec534813a77384f",
     },
     "date": 2020-10-21T01:23:26.441Z,
-    "dateModified": 2020-10-21T01:23:26.441Z,
-    "package": "4ff26e593a393f9612e5c89b1e8bd1f3",
-    "title": "Storybook/MDX",
+    "dateModified": 2020-11-12T23:54:11.826Z,
+    "mdxType": "Meta",
+    "package": "195529eaaf75e7a96c882e2a716448ae",
+    "title": "MDX",
   },
   "packages": Object {
-    "4ff26e593a393f9612e5c89b1e8bd1f3": Object {
+    "195529eaaf75e7a96c882e2a716448ae": Object {
       "dependencies": Object {
         "@babel/generator": "^7.9.4",
         "@babel/parser": "^7.9.4",
@@ -854,7 +862,7 @@ Object {
         "eslint": "^6.5.1",
         "jest": "^26.4.2",
       },
-      "fileHash": "4ff26e593a393f9612e5c89b1e8bd1f3",
+      "fileHash": "195529eaaf75e7a96c882e2a716448ae",
       "name": "@component-controls/instrument",
       "peerDependencies": undefined,
       "repository": Object {
@@ -915,14 +923,15 @@ Object {
       "id": "storyWithProps",
       "loc": Object {
         "end": Object {
-          "column": 46,
-          "line": 14,
+          "column": 63,
+          "line": 18,
         },
         "start": Object {
           "column": 9,
-          "line": 14,
+          "line": 18,
         },
       },
+      "mdxType": "Story",
       "name": "story-with-props",
       "source": "({ name: MyName, age }) => <Button />",
     },
@@ -933,7 +942,7 @@ Object {
 import Button from '../components/BaseButton';
 
 
-<Meta title=\\"Storybook/MDX\\" component={Button} />
+<Meta title=\\"MDX\\" component={Button} />
 
 <Story name=\\"story-with-props\\">
   {({ name: MyName, age }) => <Button />}

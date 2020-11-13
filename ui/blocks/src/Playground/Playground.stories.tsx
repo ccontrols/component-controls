@@ -5,7 +5,7 @@ import { Playground } from './index';
 import { Story } from '../Story';
 import { MockContext } from '../test/MockContext';
 export default {
-  title: 'Blocks/Playground',
+  title: 'Blocks/Playground/ESM',
   component: Playground,
 };
 

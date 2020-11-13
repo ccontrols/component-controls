@@ -4,8 +4,8 @@ import { PrettierOptions } from '../types';
 
 export const prettify = async (
   code: string,
-  filePath: string,
   options: PrettierOptions | false,
+  filePath?: string,
 ): Promise<string> => {
   if (options !== false) {
     const { resolveConfigOptions, ...otherOptions } = options || {};
