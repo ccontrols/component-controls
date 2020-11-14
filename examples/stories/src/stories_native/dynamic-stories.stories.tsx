@@ -23,8 +23,7 @@ export const buttonColors = (): Example => {
           <Button sx={{ bg: color }}>{`Color ${theme.colors[color]}`}</Button>
         ),
       };
-    })
-    .slice(0, 1);
+    });
 };
 
 buttonColors.dynamic = true;
