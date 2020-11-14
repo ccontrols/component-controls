@@ -206,12 +206,12 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
             }}
             onClick={() => updateIsOpen(!isOpen)}
             onChange={e => updateSearch(e.target.value)}
-            sx={{ pl: '32px' }}
+            sx={{ pl: 4, py: 2, lineHeight: 'normal' }}
             {...rest}
           />
           <Box
             as={SearchIcon}
-            sx={{ position: 'absolute', left: '10px', top: '15px' }}
+            sx={{ position: 'absolute', left: '8px', top: 0, bottom: 0, margin: 'auto' }}
           />
         </div>
       </Popover>
