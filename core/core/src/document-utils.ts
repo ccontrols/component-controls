@@ -84,11 +84,10 @@ export const getStoryPath = (
   const docRoute = removeTrailingSlash(doc?.route || basePath);
   const story = store?.stories[storyId];
   const { dynamicId, name } = story || {};
-  const route = `${docRoute}${
-    !dynamicId && storyId ? ensureStartingSlash(storyId) : ''
-  }${activeTab ? ensureStartingSlash(activeTab) : ''}${
-    dynamicId ? `?story=${name}` : ''
-  }`;
+  const id = dynamicId || storyId;
+  const route = `${docRoute}${id ? ensureStartingSlash(id) : ''}${
+    activeTab ? ensureStartingSlash(activeTab) : ''
+  }${dynamicId ? `?story=${name}` : ''}`;
   return encodeURI(`${siteRoot}${route}`);
 };
 
