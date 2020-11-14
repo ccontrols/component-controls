@@ -42,7 +42,18 @@ export const react: PresetType = (options: BuildProps) => {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  ['@babel/preset-env', { modules: 'commonjs' }],
+                  ['@babel/preset-env', {
+                    targets: {
+                      browsers:[
+                        'last 5 versions',
+                        'ie >= 9'
+                      ],
+                      node: 'current',
+                    },   
+                    modules: 'commonjs', 
+                    useBuiltIns: 'usage',
+                    corejs: 3 
+                  }],
                   '@babel/preset-react',
                 ],
               },
@@ -67,7 +78,18 @@ export const react: PresetType = (options: BuildProps) => {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', { modules: 'commonjs' }],
+              ['@babel/preset-env', {
+                targets: {
+                  browsers:[
+                    'last 5 versions',
+                    'ie >= 9'
+                  ],
+                  node: 'current',
+                },
+                modules: 'commonjs', 
+                useBuiltIns: 'usage',
+                corejs: 3 
+           }],
               '@babel/preset-react',
             ],
           },
