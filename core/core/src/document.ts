@@ -168,14 +168,24 @@ export type Story = {
   dynamicId?: string;
 } & StoryProps;
 
+export type DynamicExamples = {
+  name: string;
+  source?: string;
+  renderFn: () => JSX.Element;
+}[];
 /**
  * es named export function, excapsulates a contained example code.
  */
-export type Example<P = {}> = {
-  (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
-} & Omit<Story, 'controls'> & {
-    controls?: Story['controls'] | string | string[] | boolean | number;
-  };
+export type Example<P = {}> =
+  | ({
+      (props: PropsWithChildren<P>, context?: any): ReactElement<
+        any,
+        any
+      > | null;
+    } & Omit<Story, 'controls'> & {
+        controls?: Story['controls'] | string | string[] | boolean | number;
+      })
+  | DynamicExamples;
 
 /**
  * dynamic story creator function type.

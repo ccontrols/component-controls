@@ -128,6 +128,6 @@ describe('paths', () => {
         storeSiteRoot2,
         'test',
       ),
-    ).toEqual('/root/docs/api-introducetion--story-mame/test?story=Dynamic');
+    ).toEqual('/root/docs/test?story=Dynamic');
   });
 });

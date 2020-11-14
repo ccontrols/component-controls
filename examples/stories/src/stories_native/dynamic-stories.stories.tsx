@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Button } from 'theme-ui';
+import { Example } from '@component-controls/core';
 import { theme } from '@component-controls/components';
 
 export default {
@@ -10,7 +11,7 @@ export default {
     "ESM story file to demostrate creating 'dynamic' stories at run-time. Creates a story iterating through each theme color",
 };
 
-export const buttonColors = () => {
+export const buttonColors = (): Example => {
   return Object.keys(theme.colors)
     .filter(color => typeof theme.colors[color] === 'string')
     .map(color => {

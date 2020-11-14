@@ -1360,7 +1360,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="active css-161l3jj"
+            class="css-161l3jj"
           >
             <div
               class="css-1i09fc1"
@@ -1902,7 +1902,7 @@ exports[`Components/Navmenu Overview 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="active css-161l3jj"
+            class="css-161l3jj"
           >
             <div
               class="css-1i09fc1"
@@ -2083,7 +2083,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="active css-161l3jj"
+            class="css-161l3jj"
           >
             <div
               class="css-1i09fc1"

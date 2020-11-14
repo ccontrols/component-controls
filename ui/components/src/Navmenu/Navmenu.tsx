@@ -224,6 +224,12 @@ export const Navmenu: FC<NavMenuProps> = ({
       }),
     );
   }, [items, expandAll, activeItem, search]);
+  //workaround gatsby ssr not updating classnames on active item
+  const [isClient, setClient] = useState(false);
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
 
   const onMenuChange = (item: MenuItem, expanded: boolean) => {
     const { expandedItems, filteredItems } = state;
@@ -289,7 +295,7 @@ export const Navmenu: FC<NavMenuProps> = ({
               onSelect(item);
             }
           }}
-          className={isActiveParent ? 'active' : undefined}
+          className={isActiveItem ? 'active' : undefined}
         >
           <Flex variant="navmenu.itemcontainer">
             <Box variant="navmenu.iteminner">
@@ -344,8 +350,9 @@ export const Navmenu: FC<NavMenuProps> = ({
     );
   };
   const { filteredItems } = state;
+
   return (
-    <Box as="nav">
+    <Box as="nav" key={isClient ? 'client' : 'ssr'}>
       {filteredItems && filteredItems.map(item => renderItem(item, 1))}
     </Box>
   );
