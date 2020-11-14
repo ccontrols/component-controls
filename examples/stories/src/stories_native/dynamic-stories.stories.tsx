@@ -8,7 +8,7 @@ export default {
   title: 'Introduction/Dynamic stories',
   author: 'atanasster',
   description:
-    "ESM story file to demostrate creating 'dynamic' stories at run-time. Creates a story iterating through each theme color",
+    "You can create 'dynamic' stories - below are created separate stories for each theme color.",
 };
 
 export const buttonColors = (): Example => {
@@ -17,14 +17,14 @@ export const buttonColors = (): Example => {
     .map(color => {
       return {
         name: color,
-        source: `<Button sx={{ bg: '${color}'}}>Color ${color}: ${theme.colors[color]}</Button>`,
+        description: `theme.colors.${color}: **${theme.colors[color]}**`,
+        source: `<Button sx={{ bg: '${color}'}}>Color ${theme.colors[color]}</Button>`,
         renderFn: () => (
-          <Button
-            sx={{ bg: color }}
-          >{`Color ${color}: ${theme.colors[color]}`}</Button>
+          <Button sx={{ bg: color }}>{`Color ${theme.colors[color]}`}</Button>
         ),
       };
-    });
+    })
+    .slice(0, 1);
 };
 
 buttonColors.dynamic = true;

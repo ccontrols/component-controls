@@ -168,11 +168,7 @@ export type Story = {
   dynamicId?: string;
 } & StoryProps;
 
-export type DynamicExamples = {
-  name: string;
-  source?: string;
-  renderFn: () => JSX.Element;
-}[];
+export type DynamicExamples = Story[];
 /**
  * es named export function, excapsulates a contained example code.
  */

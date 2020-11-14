@@ -15,7 +15,7 @@ import {
 import { currentStoryState } from './story';
 import { storeState } from './store';
 
-const currentControlsState = selector<ComponentControls | undefined>({
+export const currentControlsState = selector<ComponentControls | undefined>({
   key: 'current_controls',
   get: ({ get }) => {
     const story = get(currentStoryState);

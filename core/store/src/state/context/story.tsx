@@ -34,6 +34,9 @@ export const StoryContextProvider: FC<{
   const [, setStory] = useState<Story | undefined>(
     storyId ? store.stories[storyId] : undefined,
   );
+  //workaround gatsby ssr not updating classnames on active item
+  const [client, setClient] = useState('ssr');
+
   useEffect(() => {
     const onObserver = (updatedStory?: Story) => {
       if (updatedStory?.id === storyId) {
@@ -41,6 +44,12 @@ export const StoryContextProvider: FC<{
       }
     };
     store.addObserver(onObserver);
+    const story: Story | undefined = storyId
+      ? store.stories[storyId]
+      : undefined;
+    if (story?.dynamicId) {
+      setClient('client');
+    }
     return () => store.removeObserver(onObserver);
   }, [store, storyId]);
   useEffect(() => {
@@ -57,6 +66,7 @@ export const StoryContextProvider: FC<{
   }, [values, storyId, store]);
   return (
     <StoryContext.Provider
+      key={client}
       value={{
         story: storyId ? store.stories[storyId] : undefined,
         updateStory: newValue => {
