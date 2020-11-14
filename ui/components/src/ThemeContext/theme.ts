@@ -70,6 +70,7 @@ export type ControlsTheme = {
   documentslist: Record<string, ThemeUIStyleObject>;
 } & Theme;
 export const theme: ControlsTheme = {
+  useCustomProperties: false,
   colors: {
     text: '#454f5b',
     background: '#ffffff',
