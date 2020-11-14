@@ -213,7 +213,7 @@ _Playground [source code](https://github.com/ccontrols/component-controls/tree/m
 | Name          | Type                 | Description                                                                                                     |
 | ------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                    |
-| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                             |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                            |
 | `dark`        | _boolean_            | whether to use the dark theme for the story source component.                                                   |
 | `title`       | _string_             | optional section title for the block.                                                                           |
 | `description` | _string_             | optional markdown description.                                                                                  |
@@ -275,7 +275,7 @@ _Stories [source code](https://github.com/ccontrols/component-controls/tree/mast
 | `name`        | _string_             |                                                                                                                            |
 | `storyProps`  | _any_                |                                                                                                                            |
 | `scale`       | _number_             | default scale for the zoom feature. If scale is set to 0, the zoom feature will be disabled.                               |
-| `source`      | _string_             | playground source option - this when a Story is not embedded inside the Playground.                                        |
+| `source`      | _string_             | playground source option - valid when a Story is not embedded inside the Playground.                                       |
 | `title`       | _string_             | optional section title for the block.                                                                                      |
 | `description` | _string_             | optional markdown description.                                                                                             |
 | `collapsible` | _boolean_            | if false, will nothave a collapsible frame.                                                                                |
