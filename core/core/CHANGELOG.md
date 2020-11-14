@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* cleanup dynamic stories ssr ([f828a34](https://github.com/ccontrols/component-controls/commit/f828a34e918186f25a991dca37a36d515f63ba41))
+* dynamic stories routes for gatsby ssr ([7943752](https://github.com/ccontrols/component-controls/commit/7943752c65549c7b8f9e7c2d680fab7b5eb8fc85))
+* dynamic story paths ([7dff541](https://github.com/ccontrols/component-controls/commit/7dff541243ea4f3607970f4af44f5fe0dd344f9c))
+
+
+
+
+
 # [1.38.0](https://github.com/ccontrols/component-controls/compare/v1.37.0...v1.38.0) (2020-11-05)
 
 

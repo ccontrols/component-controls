@@ -1,6 +1,6 @@
 {
   "name": "@component-controls/pages",
-  "version": "1.39.0",
+  "version": "1.39.1",
   "description": "Component controls pre-built documentation page templates.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@component-controls/blocks": "^1.39.0"
+    "@component-controls/blocks": "^1.39.1"
   },
   "devDependencies": {
     "@component-controls/ts-markdown-docs": "^1.37.0",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.1](https://github.com/ccontrols/component-controls/compare/v1.39.0...v1.39.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* cleanup dynamic stories ssr ([f828a34](https://github.com/ccontrols/component-controls/commit/f828a34e918186f25a991dca37a36d515f63ba41))
+
+
+
+
+
 # [1.39.0](https://github.com/ccontrols/component-controls/compare/v1.38.2...v1.39.0) (2020-11-13)
 
 **Note:** Version bump only for package @component-controls/store
