@@ -20,23 +20,24 @@ export type DescriptionProps = Omit<MarkdownProps, 'children'> &
 export const Description: FC<DescriptionProps> = ({ of, ...rest }) => {
   const components = useComponents({ of });
   const doc = useCurrentDocument();
-  return (
-    <>
-      <ComponentsContainer components={components}>
-        {component => {
-          if (!component || !component.info || !component.info.description) {
-            return null;
-          }
-          return (
-            <BaseDescription {...rest}>
-              {component.info.description}
-            </BaseDescription>
-          );
-        }}
-      </ComponentsContainer>
-      {doc && doc.description && (
-        <BaseDescription {...rest}>{doc.description}</BaseDescription>
-      )}
-    </>
+  return doc && doc.description ? (
+    typeof doc.description === 'string' ? (
+      <BaseDescription {...rest}>{doc.description}</BaseDescription>
+    ) : (
+      doc.description
+    )
+  ) : (
+    <ComponentsContainer components={components}>
+      {component => {
+        if (!component || !component.info || !component.info.description) {
+          return null;
+        }
+        return (
+          <BaseDescription {...rest}>
+            {component.info.description}
+          </BaseDescription>
+        );
+      }}
+    </ComponentsContainer>
   );
 };

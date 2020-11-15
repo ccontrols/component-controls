@@ -15,7 +15,7 @@ interface SearchObject {
   id: string;
   title: string;
   type: string;
-  description?: string;
+  description?: string | JSX.Element;
   body?: string;
   author?: string;
   stories?: string[];

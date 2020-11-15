@@ -187,7 +187,7 @@ export type Example<Props = unknown> = {
     any,
     any
   > | null;
-  bind: (props: any) => Example<Props>;
+  bind: (props?: Story<Props>) => Example<Props>;
 } & Omit<Story<Props>, 'controls'> & {
     controls?: ExampleControls;
   };
@@ -250,7 +250,7 @@ export type Document<Props = unknown> = {
   /**
    *  documentation file description
    */
-  description?: string;
+  description?: string | JSX.Element;
   /**
    * link to an image for the document, will be used for SEO
    */

@@ -18,7 +18,7 @@ import {
 } from '@component-controls/core';
 import { LoadingStore } from '@component-controls/loader';
 import { render as reactRender } from '@component-controls/render/react';
-import { transformControls } from './transform-controls';
+import { getControls } from './transform-controls';
 
 export { LoadingStore };
 
@@ -80,7 +80,7 @@ export const loadStore = (store: LoadingStore, building?: boolean): Store => {
             stories.forEach(story => {
               story.id = story.id || story.name;
               Object.assign(story, deepMerge(docStoryProps, story));
-              story.controls = transformControls(story, doc, loadedComponents);
+              story.controls = getControls(story, doc, loadedComponents);
               if (doc.title && story.id) {
                 const id = docStoryToId(doc.title, story.id);
                 if (!doc.stories) {

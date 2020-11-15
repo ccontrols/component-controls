@@ -1,18 +1,18 @@
 /* eslint-disable react/display-name */
 /** @jsx jsx */
 import { jsx, Button } from 'theme-ui';
-import { Example } from '@component-controls/core';
+import { DynamicExamples } from '@component-controls/core';
 import { theme } from '@component-controls/components';
 
 export default {
   title: 'Introduction/Dynamic stories',
   author: 'atanasster',
-  order: 9,
+  order: 10,
   description:
     "You can create 'dynamic' stories - below are created separate stories for each theme color.",
 };
 
-export const buttonColors = (): Example => {
+export const buttonColors = (): DynamicExamples => {
   return Object.keys(theme.colors)
     .filter(color => typeof theme.colors[color] === 'string')
     .map(color => {

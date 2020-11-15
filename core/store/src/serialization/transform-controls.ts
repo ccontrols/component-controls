@@ -3,7 +3,6 @@ import {
   ComponentControl,
   ControlTypes,
   Story,
-  deepMergeReplaceArrays,
   Document,
   Components,
   getComponentName,
@@ -13,22 +12,30 @@ import {
 } from '@component-controls/core';
 
 const controlShortcuts = (
-  control: ComponentControl | any,
+  name: string,
+  controls: ComponentControls,
+  propControls?: ComponentControls,
 ): ComponentControl => {
+  const control: ComponentControl | any = controls[name];
+  const propControl = propControls?.[name] || {};
   const valueType = typeof control;
   switch (valueType) {
     case 'boolean':
-      return { type: ControlTypes.BOOLEAN, value: control };
+      return {
+        type: ControlTypes.BOOLEAN,
+        ...propControl,
+        value: control,
+      };
     case 'string':
-      return { type: ControlTypes.TEXT, value: control };
+      return { type: ControlTypes.TEXT, ...propControl, value: control };
     case 'number':
-      return { type: ControlTypes.NUMBER, value: control };
+      return { type: ControlTypes.NUMBER, ...propControl, value: control };
     case 'object': {
       if (control instanceof Date) {
-        return { type: ControlTypes.DATE, value: control };
+        return { type: ControlTypes.DATE, ...propControl, value: control };
       }
       if (Array.isArray(control)) {
-        return { type: ControlTypes.OPTIONS, options: control };
+        return { type: ControlTypes.OPTIONS, ...propControl, options: control };
       }
       if (
         control.type === ControlTypes.OBJECT &&
@@ -36,30 +43,30 @@ const controlShortcuts = (
       ) {
         return {
           ...control,
+          ...propControl,
           value: Object.keys(control.value).reduce(
             (acc, name) => ({
               ...acc,
-              [name]: controlShortcuts(control.value[name]),
+              [name]: controlShortcuts(name, control.value, propControl),
             }),
             {},
           ),
         };
       }
-      return control;
+      return { ...propControl, ...control };
     }
     default:
-      return control;
+      return { ...propControl, ...control };
   }
 };
-export const transformControls = (
-  story: Story,
-  doc: Document,
-  components: Components,
-): ComponentControls | undefined => {
-  const { controls: storyControls } = story;
-  const controls: ComponentControls | undefined = storyControls
-    ? Object.keys(storyControls).reduce((acc, key) => {
-        const control = controlShortcuts(storyControls[key]);
+
+const transformControls = (
+  controls?: ComponentControls,
+  propControls?: ComponentControls,
+) => {
+  return controls
+    ? Object.keys(controls).reduce((acc, key) => {
+        const control = controlShortcuts(key, controls, propControls);
         if (control.defaultValue === undefined) {
           const defaultValue = getControlValue(control);
           if (typeof defaultValue !== 'function') {
@@ -69,22 +76,25 @@ export const transformControls = (
         return { ...acc, [key]: control };
       }, {})
     : undefined;
+};
+export const getControls = (
+  story: Story,
+  doc: Document,
+  components: Components,
+): ComponentControls | undefined => {
+  const { controls: storyControls } = story;
   if (!story.arguments || story.arguments.length < 1) {
     //story has no arguments
-    return controls;
+    return transformControls(storyControls);
   }
   const smartControls: SmartControls = story.smartControls || {};
 
   const { smart = true } = smartControls;
-  if (!smart || story.smartControls === false) {
-    return controls;
+  if (!story.component || !smart || story.smartControls === false) {
+    return transformControls(storyControls);
   }
 
-  const storyComponent = story.component;
-  if (!storyComponent) {
-    return controls;
-  }
-  let componentName = getComponentName(storyComponent);
+  let componentName = getComponentName(story.component);
   if (
     !componentName ||
     ((!doc.componentsLookup ||
@@ -120,8 +130,8 @@ export const transformControls = (
           return true;
         })
         .reduce((acc, key) => ({ ...acc, [key]: newControls[key] }), {});
-      return deepMergeReplaceArrays(filteredControls, controls || {});
+      return transformControls(storyControls, filteredControls);
     }
   }
-  return controls;
+  return transformControls(storyControls);
 };

@@ -18,7 +18,7 @@ export const extractCSFStories = (
   { source, filePath }: { source: string; filePath: string },
 ): ParseStorieReturnType => {
   const globals: Stories = {};
-  const localStories: Stories = {};
+  const localFunctions: Stories = {};
 
   const extractFunction = (path: any, declaration: any): Story | undefined => {
     if (declaration.init) {
@@ -43,6 +43,25 @@ export const extractCSFStories = (
             _options,
             ast,
           );
+        }
+        case 'CallExpression': {
+          //template.bind
+          if (declaration.init.callee?.property?.name === 'bind') {
+            const callee = declaration.init.callee?.object;
+            if (callee?.name) {
+              const template = localFunctions[callee.name];
+              if (template) {
+                const name = declaration.id.name;
+                const story: Story = {
+                  loc: template.loc,
+                  name,
+                  id: name,
+                  arguments: template.arguments,
+                };
+                return story;
+              }
+            }
+          }
         }
       }
     } else if (declaration.type === 'FunctionDeclaration') {
@@ -134,7 +153,7 @@ export const extractCSFStories = (
           if (!store.stories[name]) {
             const story = extractFunction(path, declaration);
             if (story && story.name) {
-              localStories[story.name] = story;
+              localFunctions[story.name] = story;
             }
           }
         }
@@ -144,11 +163,11 @@ export const extractCSFStories = (
       const { node } = path;
       const localName = node.local.name;
       const exportedName = node.exported.name;
-      const story = localStories[localName];
+      const story = localFunctions[localName];
       if (story) {
         const global = globals[localName];
         if (global) {
-          localStories[localName] = {
+          localFunctions[localName] = {
             ...story,
             ...global,
           };

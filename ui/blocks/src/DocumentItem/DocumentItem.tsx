@@ -59,7 +59,11 @@ export const DocumentItem: FC<DocumentItemProps> = ({ doc, link }) => {
         </Link>
         <PageTypeTag type={type} />
       </Box>
-      {doc.description && <Markdown>{doc.description}</Markdown>}
+      {doc.description && typeof doc.description === 'string' ? (
+        <Markdown>{doc.description}</Markdown>
+      ) : (
+        doc.description
+      )}
       {(tagsNode || dateNode) && (
         <Box variant="documentitem.info.container">
           {dateNode || <div />}
