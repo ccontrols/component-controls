@@ -1072,20 +1072,20 @@ export const theme: ControlsTheme = {
   appsidebarpage: {
     allsidebar: {
       display: 'flex',
-      flexDirection: "row",
+      flexDirection: 'row',
       flex: '1 0 auto',
       position: 'relative',
     },
     navsidebar: {
       display: 'flex',
-      flexDirection: "row",
+      flexDirection: 'row',
       flex: '1 0 auto',
       minHeight: '100vh',
       position: 'relative',
     },
     contextsidebar: {
       display: 'flex',
-      flexDirection: "row",
+      flexDirection: 'row',
       flex: '1 0 auto',
       minHeight: '100vh',
       position: 'relative',

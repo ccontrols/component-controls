@@ -211,7 +211,13 @@ export const SearchInput = <ItemType extends SearchInputItemType>({
           />
           <Box
             as={SearchIcon}
-            sx={{ position: 'absolute', left: '8px', top: 0, bottom: 0, margin: 'auto' }}
+            sx={{
+              position: 'absolute',
+              left: '8px',
+              top: 0,
+              bottom: 0,
+              margin: 'auto',
+            }}
           />
         </div>
       </Popover>

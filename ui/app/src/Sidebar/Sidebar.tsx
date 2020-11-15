@@ -229,7 +229,7 @@ export const Sidebar: FC<SidebarProps> = ({
         <Input
           sx={{
             // fix ie 11
-            lineHeight: 'normal'
+            lineHeight: 'normal',
           }}
           placeholder="filter..."
           value={search}
