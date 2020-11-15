@@ -227,6 +227,10 @@ export const Sidebar: FC<SidebarProps> = ({
     node: (
       <Box variant="appsidebar.items">
         <Input
+          sx={{
+            // fix ie 11
+            lineHeight: 'normal'
+          }}
           placeholder="filter..."
           value={search}
           onChange={e => setSearch(e.target.value)}
