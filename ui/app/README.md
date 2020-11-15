@@ -243,7 +243,7 @@ _SEO [source code](https://github.com/ccontrols/component-controls/tree/master/u
 | Name     | Type                              | Description |
 | -------- | --------------------------------- | ----------- |
 | `Helmet` | _FC&lt;{ children: ReactNode; }>_ |             |
-| `doc`    | _Document_                        |             |
+| `doc`    | _Document&lt;unknown>_            |             |
 | `config` | _RunConfiguration_                |             |
 
 ## <ins>SideContext</ins>
@@ -277,10 +277,10 @@ _SidebarsMDXPage [source code](https://github.com/ccontrols/component-controls/t
 
 ### properties
 
-| Name    | Type       | Description     |
-| ------- | ---------- | --------------- |
-| `type*` | _string_   | document type   |
-| `doc*`  | _Document_ | document object |
+| Name    | Type                   | Description     |
+| ------- | ---------------------- | --------------- |
+| `type*` | _string_               | document type   |
+| `doc*`  | _Document&lt;unknown>_ | document object |
 
 ## <ins>SidebarsPage</ins>
 
@@ -300,9 +300,9 @@ _SidebarsStoryPage [source code](https://github.com/ccontrols/component-controls
 
 ### properties
 
-| Name    | Type       | Description     |
-| ------- | ---------- | --------------- |
-| `type*` | _string_   | document type   |
-| `doc*`  | _Document_ | document object |
+| Name    | Type                   | Description     |
+| ------- | ---------------------- | --------------- |
+| `type*` | _string_               | document type   |
+| `doc*`  | _Document&lt;unknown>_ | document object |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->

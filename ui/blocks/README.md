@@ -79,7 +79,7 @@ _StoryBlockContainer [source code](https://github.com/ccontrols/component-contro
 
 | Name                  | Type                 | Description                                                                                                     |
 | --------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `story`               | _Story_              |                                                                                                                 |
+| `story`               | _Story&lt;unknown>_  |                                                                                                                 |
 | `useStoryDescription` | _boolean_            |                                                                                                                 |
 | `title`               | _string_             | optional section title for the block.                                                                           |
 | `description`         | _string_             | optional markdown description.                                                                                  |
@@ -209,10 +209,10 @@ _DocumentItem [source code](https://github.com/ccontrols/component-controls/tree
 
 ### properties
 
-| Name    | Type       | Description              |
-| ------- | ---------- | ------------------------ |
-| `link*` | _string_   | link to the document     |
-| `doc*`  | _Document_ | document to be displayed |
+| Name    | Type                   | Description              |
+| ------- | ---------------------- | ------------------------ |
+| `link*` | _string_               | link to the document     |
+| `doc*`  | _Document&lt;unknown>_ | document to be displayed |
 
 ## <ins>EditPage</ins>
 
@@ -283,7 +283,7 @@ _BasePlayground [source code](https://github.com/ccontrols/component-controls/tr
 | `direction`   | _DirectionType_      | direction type                                                                                                  |
 | `actions`     | _ActionItem\[]_      | optional actions provided to the component                                                                      |
 | `plain`       | _boolean_            | if plain, skip the border and spacing around the children                                                       |
-| `story`       | _Story_              |                                                                                                                 |
+| `story`       | _Story&lt;unknown>_  |                                                                                                                 |
 | `isDark`      | _boolean_            |                                                                                                                 |
 | `wrapper`     | _boolean_            |                                                                                                                 |
 
@@ -380,11 +380,11 @@ _useControlsActions [source code](https://github.com/ccontrols/component-control
 
 ### properties
 
-| Name              | Type                | Description |
-| ----------------- | ------------------- | ----------- |
-| `controls`        | _ComponentControls_ |             |
-| `storyId`         | _string_            |             |
-| `setControlValue` | _SetControlValueFn_ |             |
+| Name              | Type                                             | Description |
+| ----------------- | ------------------------------------------------ | ----------- |
+| `controls`        | _ComponentControls&lt;ComponentControl&lt;any>>_ |             |
+| `storyId`         | _string_                                         |             |
+| `setControlValue` | _SetControlValueFn_                              |             |
 
 ## <ins>Search</ins>
 
@@ -392,11 +392,11 @@ _Search [source code](https://github.com/ccontrols/component-controls/tree/maste
 
 ### properties
 
-| Name           | Type                                                                                                                                                                                                                                                     | Description                                                                 |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `onSelect`     | _(item: Document) => void_                                                                                                                                                                                                                               | on select a search item.                                                    |
-| `children`     | _((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) \| (((props: SearchBoxCallbackProps&lt;Document>) => ReactNode) & string) \| ... 35 more ... \| (((props: SearchBoxCallbackProps&lt;...>) => ReactNode) & ... 1 more ... & ReactNodeArray)_ | children is a render prop to allow custom rendering of items, one at a time |
-| `popoverProps` | _PopoverProps_                                                                                                                                                                                                                                           | customize the popover                                                       |
+| Name           | Type                                                                                                                                                                                                                                                                             | Description                                                                 |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `onSelect`     | _(item: Document&lt;unknown>) => void_                                                                                                                                                                                                                                           | on select a search item.                                                    |
+| `children`     | _((props: SearchBoxCallbackProps&lt;Document&lt;unknown>>) => ReactNode) \| (((props: SearchBoxCallbackProps&lt;Document&lt;unknown>>) => ReactNode) & string) \| ... 35 more ... \| (((props: SearchBoxCallbackProps&lt;...>) => ReactNode) & ... 1 more ... & ReactNodeArray)_ | children is a render prop to allow custom rendering of items, one at a time |
+| `popoverProps` | _PopoverProps_                                                                                                                                                                                                                                                                   | customize the popover                                                       |
 
 ## <ins>Stories</ins>
 
@@ -456,7 +456,7 @@ _StoryRender [source code](https://github.com/ccontrols/component-controls/tree/
 
 | Name          | Type                     | Description |
 | ------------- | ------------------------ | ----------- |
-| `story*`      | _Story_                  |             |
+| `story*`      | _Story&lt;unknown>_      |             |
 | `ref`         | _Ref&lt;HTMLDivElement>_ |             |
 | `wrapper`     | _StoryWrapperType_       |             |
 | `iframeStyle` | _CSSProperties_          |             |
@@ -578,9 +578,9 @@ _getStoryBlockTitle [source code](https://github.com/ccontrols/component-control
 
 ### properties
 
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `story` | _Story_  |             |
-| `title` | _string_ |             |
+| Name    | Type                | Description |
+| ------- | ------------------- | ----------- |
+| `story` | _Story&lt;unknown>_ |             |
+| `title` | _string_            |             |
 
 <!-- END-REACT-DOCGEN-TYPESCRIPT -->
