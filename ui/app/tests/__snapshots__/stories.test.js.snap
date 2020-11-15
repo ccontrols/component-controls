@@ -4,7 +4,7 @@ exports[`Application/App Overview 1`] = `
 <DocumentFragment>
   <section
     aria-label="skip tab order to linked items"
-    class="css-u7r4qj"
+    class="css-7x1h4p"
   >
     <div
       class="css-vurnku"
@@ -41,10 +41,10 @@ exports[`Application/App Overview 1`] = `
     class="css-18pgspc"
   >
     <header
-      class="css-1hp4xbx"
+      class="css-10bhldn"
     >
       <div
-        class="css-2qw0qa"
+        class="css-1995r1v"
       >
         <div
           class="css-vurnku"
@@ -57,12 +57,12 @@ exports[`Application/App Overview 1`] = `
             >
               <a
                 aria-label="Component controls"
-                class="css-1s49mzj-LogoLink"
+                class="css-881li9-LogoLink"
                 href="/"
               />
               <a
                 aria-label="Component controls"
-                class="css-1s49mzj-LogoLink"
+                class="css-881li9-LogoLink"
                 href="/"
               >
                 <img
@@ -76,7 +76,7 @@ exports[`Application/App Overview 1`] = `
         </div>
       </div>
       <div
-        class="css-2qw0qa"
+        class="css-1995r1v"
       >
         <div
           class="css-vurnku"
@@ -95,13 +95,13 @@ exports[`Application/App Overview 1`] = `
                 >
                   <input
                     aria-label="full text search"
-                    class="css-yc2jh4-SearchInput"
+                    class="css-19xk8th-SearchInput"
                     placeholder="search..."
                     value=""
                   />
                   <svg
                     aria-hidden="true"
-                    class="css-nxci97-SearchInput"
+                    class="css-q4atzm-SearchInput"
                     fill="currentColor"
                     height="16"
                     role="img"
@@ -204,7 +204,7 @@ exports[`Application/App Overview 1`] = `
       </div>
     </header>
     <footer
-      class="css-1y4ny45"
+      class="css-gtql5a"
     >
       <div
         class="css-vurnku"
@@ -234,7 +234,7 @@ exports[`Application/App Overview 1`] = `
           >
             <a
               aria-label="visit project home page"
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/"
             >
               Component controls
@@ -263,7 +263,7 @@ exports[`Application/AppError Overview 1`] = `
 exports[`Application/CategoryList Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -290,7 +290,7 @@ exports[`Application/CategoryList Overview 1`] = `
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -308,11 +308,11 @@ exports[`Application/CategoryList Overview 1`] = `
                 class="css-1dj4wno"
               >
                 <a
-                  class="css-ax59ca"
+                  class="css-1t54e2w"
                   href="/authors/atanasster"
                 >
                   <h2
-                    class="css-1942w8h"
+                    class="css-1uqrmoi"
                   >
                     atanasster (2)
                   </h2>
@@ -344,7 +344,7 @@ exports[`Application/CategoryList Overview 1`] = `
 exports[`Application/CategoryPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -371,7 +371,7 @@ exports[`Application/CategoryPage Overview 1`] = `
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -384,7 +384,7 @@ exports[`Application/CategoryPage Overview 1`] = `
             atanasster
           </h1>
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="/authors/"
           >
             All Authors
@@ -446,7 +446,7 @@ exports[`Application/CategoryPage Overview 1`] = `
               class="css-da1yre"
             >
               <li
-                class="css-1ijilga"
+                class="css-ijvt85"
               >
                 <div
                   class="css-127g8mg"
@@ -455,17 +455,17 @@ exports[`Application/CategoryPage Overview 1`] = `
                     class="css-4136op"
                   >
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/id-of-story"
                     >
                       <h2
-                        class="css-1942w8h"
+                        class="css-1uqrmoi"
                       >
                         Story
                       </h2>
                     </a>
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/"
                     >
                       <span
@@ -486,7 +486,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-83lfx1"
+                        class="css-z4eqsg"
                       >
                         created: 1/1/2020
                       </div>
@@ -504,7 +504,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                           by
                         </div>
                         <a
-                          class="css-ax59ca"
+                          class="css-1t54e2w"
                           href="/authors/atanasster"
                         >
                           atanasster
@@ -515,7 +515,7 @@ exports[`Application/CategoryPage Overview 1`] = `
                 </div>
               </li>
               <li
-                class="css-1ijilga"
+                class="css-ijvt85"
               >
                 <div
                   class="css-127g8mg"
@@ -524,17 +524,17 @@ exports[`Application/CategoryPage Overview 1`] = `
                     class="css-4136op"
                   >
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/mdx-story"
                     >
                       <h2
-                        class="css-1942w8h"
+                        class="css-1uqrmoi"
                       >
                         MDX Story
                       </h2>
                     </a>
                     <a
-                      class="css-ax59ca"
+                      class="css-1t54e2w"
                       href="/docs/"
                     >
                       <span
@@ -599,7 +599,7 @@ exports[`Application/Container Overview 1`] = `
         </h1>
       </div>
       <h2
-        class="css-1942w8h"
+        class="css-1uqrmoi"
       >
         story subtitle
       </h2>
@@ -625,7 +625,7 @@ exports[`Application/Container Overview 1`] = `
 exports[`Application/DocPage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-11ay4b0"
+    class="css-8f52r4"
     id="content"
   >
     <div
@@ -652,7 +652,7 @@ exports[`Application/DocPage Overview 1`] = `
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -679,7 +679,7 @@ exports[`Application/DocPage Overview 1`] = `
 exports[`Application/DocumentHomePage Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-isly2z"
+    class="css-rtbfsf"
     id="content"
   >
     <div
@@ -706,7 +706,7 @@ exports[`Application/DocumentHomePage Overview 1`] = `
           </h1>
         </div>
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           story subtitle
         </h2>
@@ -843,7 +843,7 @@ exports[`Application/DocumentsList Overview 1`] = `
       class="css-da1yre"
     >
       <li
-        class="css-1ijilga"
+        class="css-ijvt85"
       >
         <div
           class="css-127g8mg"
@@ -852,17 +852,17 @@ exports[`Application/DocumentsList Overview 1`] = `
             class="css-4136op"
           >
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/docs/id-of-story"
             >
               <h2
-                class="css-1942w8h"
+                class="css-1uqrmoi"
               >
                 Story
               </h2>
             </a>
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/docs/"
             >
               <span
@@ -883,7 +883,7 @@ exports[`Application/DocumentsList Overview 1`] = `
               class="css-f5h6sg"
             >
               <div
-                class="css-83lfx1"
+                class="css-z4eqsg"
               >
                 created: 1/1/2020
               </div>
@@ -901,7 +901,7 @@ exports[`Application/DocumentsList Overview 1`] = `
                   by
                 </div>
                 <a
-                  class="css-ax59ca"
+                  class="css-1t54e2w"
                   href="/authors/atanasster"
                 >
                   atanasster
@@ -912,7 +912,7 @@ exports[`Application/DocumentsList Overview 1`] = `
         </div>
       </li>
       <li
-        class="css-1ijilga"
+        class="css-ijvt85"
       >
         <div
           class="css-127g8mg"
@@ -921,17 +921,17 @@ exports[`Application/DocumentsList Overview 1`] = `
             class="css-4136op"
           >
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/docs/mdx-story"
             >
               <h2
-                class="css-1942w8h"
+                class="css-1uqrmoi"
               >
                 MDX Story
               </h2>
             </a>
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="/docs/"
             >
               <span
@@ -955,7 +955,7 @@ exports[`Application/DocumentsList Overview 1`] = `
 exports[`Application/Footer Overview 1`] = `
 <DocumentFragment>
   <footer
-    class="css-1y4ny45"
+    class="css-gtql5a"
   >
     <div
       class="css-vurnku"
@@ -985,7 +985,7 @@ exports[`Application/Footer Overview 1`] = `
         >
           <a
             aria-label="visit project home page"
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="/"
           >
             Component controls
@@ -1000,10 +1000,10 @@ exports[`Application/Footer Overview 1`] = `
 exports[`Application/Header Custom Left 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1016,12 +1016,12 @@ exports[`Application/Header Custom Left 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1035,7 +1035,7 @@ exports[`Application/Header Custom Left 1`] = `
             class="css-vhp4dg"
           >
             <button
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               custom
             </button>
@@ -1044,7 +1044,7 @@ exports[`Application/Header Custom Left 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1063,13 +1063,13 @@ exports[`Application/Header Custom Left 1`] = `
               >
                 <input
                   aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-nxci97-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1177,10 +1177,10 @@ exports[`Application/Header Custom Left 1`] = `
 exports[`Application/Header Custom Right 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1193,12 +1193,12 @@ exports[`Application/Header Custom Right 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1212,7 +1212,7 @@ exports[`Application/Header Custom Right 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1244,13 +1244,13 @@ exports[`Application/Header Custom Right 1`] = `
               >
                 <input
                   aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-nxci97-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1358,10 +1358,10 @@ exports[`Application/Header Custom Right 1`] = `
 exports[`Application/Header Customized 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1374,12 +1374,12 @@ exports[`Application/Header Customized 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1403,7 +1403,7 @@ exports[`Application/Header Customized 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1415,7 +1415,7 @@ exports[`Application/Header Customized 1`] = `
             class="css-ldwe25"
           >
             <a
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="https://github.com/ccontrols/component-controls"
               rel="noopener noreferrer"
               target="_blank"
@@ -1450,7 +1450,7 @@ exports[`Application/Header Customized 1`] = `
           >
             <a
               aria-label="visit github repo"
-              class="css-ax59ca"
+              class="css-1t54e2w"
               href="https://github.com/ccontrols/component-controls"
               rel="noopener noreferrer"
               target="_blank"
@@ -1491,13 +1491,13 @@ exports[`Application/Header Customized 1`] = `
               >
                 <input
                   aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-nxci97-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1605,10 +1605,10 @@ exports[`Application/Header Customized 1`] = `
 exports[`Application/Header Overview 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1621,12 +1621,12 @@ exports[`Application/Header Overview 1`] = `
           >
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             />
             <a
               aria-label="Component controls"
-              class="css-1s49mzj-LogoLink"
+              class="css-881li9-LogoLink"
               href="/"
             >
               <img
@@ -1640,7 +1640,7 @@ exports[`Application/Header Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-2qw0qa"
+      class="css-1995r1v"
     >
       <div
         class="css-vurnku"
@@ -1659,13 +1659,13 @@ exports[`Application/Header Overview 1`] = `
               >
                 <input
                   aria-label="full text search"
-                  class="css-yc2jh4-SearchInput"
+                  class="css-19xk8th-SearchInput"
                   placeholder="search..."
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="css-nxci97-SearchInput"
+                  class="css-q4atzm-SearchInput"
                   fill="currentColor"
                   height="16"
                   role="img"
@@ -1773,14 +1773,14 @@ exports[`Application/Header Overview 1`] = `
 exports[`Application/Sidebar Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mz8zpz-Sidebar"
+    class="css-18srebt-Sidebar"
     id="sidebar"
   >
     <div
       class="css-6cvfyb"
     />
     <div
-      class="css-t8rvym"
+      class="css-15nu33e"
     >
       <div
         class="css-1es5hcv"
@@ -1807,7 +1807,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-1dj4wno"
               >
                 <input
-                  class="css-1onaisy"
+                  class="css-h1q0sm-Sidebar"
                   placeholder="filter..."
                   value=""
                 />
@@ -1825,7 +1825,7 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-j6yaho"
             >
               <button
-                class="css-161l3jj"
+                class="css-1jz8wry"
               >
                 <div
                   class="css-1i09fc1"
@@ -1837,7 +1837,7 @@ exports[`Application/Sidebar Overview 1`] = `
                       class="css-f5h6sg"
                     >
                       <div
-                        class="css-1k0f1bf"
+                        class="css-4f3mio"
                       >
                         <strong>
                           Story
@@ -1875,7 +1875,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-oao09s"
               >
                 <a
-                  class="active css-1t6zyk7"
+                  class="active css-1g97bar"
                   href="/docs/id-of-story"
                 >
                   <div
@@ -1907,7 +1907,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-1k0f1bf"
+                          class="css-4f3mio"
                         >
                           story
                         </div>
@@ -1924,7 +1924,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-w1i3qo"
               >
                 <a
-                  class="css-1t6zyk7"
+                  class="css-1g97bar"
                   href="/docs/id-of-single"
                 >
                   <div
@@ -1956,7 +1956,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-11c8po5"
+                          class="css-6e1m2i"
                         >
                           story
                         </div>
@@ -1973,7 +1973,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-w1i3qo"
               >
                 <a
-                  class="css-1t6zyk7"
+                  class="css-1g97bar"
                   href="/docs/id-of-button-story"
                 >
                   <div
@@ -2005,7 +2005,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-11c8po5"
+                          class="css-6e1m2i"
                         >
                           button
                         </div>
@@ -2022,7 +2022,7 @@ exports[`Application/Sidebar Overview 1`] = `
                 class="css-w1i3qo"
               >
                 <a
-                  class="css-1t6zyk7"
+                  class="css-1g97bar"
                   href="/docs/blocks-core-story-plain--controls"
                 >
                   <div
@@ -2054,7 +2054,7 @@ exports[`Application/Sidebar Overview 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="css-11c8po5"
+                          class="css-6e1m2i"
                         >
                           controls
                         </div>
@@ -2072,7 +2072,7 @@ exports[`Application/Sidebar Overview 1`] = `
               class="css-j6yaho"
             >
               <a
-                class="css-1t6zyk7"
+                class="css-1g97bar"
                 href="/docs/mdx-story"
               >
                 <div
@@ -2104,7 +2104,7 @@ exports[`Application/Sidebar Overview 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="css-11c8po5"
+                        class="css-6e1m2i"
                       >
                         MDX Story
                       </div>

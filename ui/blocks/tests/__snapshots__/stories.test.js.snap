@@ -24,7 +24,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -68,7 +68,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
                 role="table"
               >
                 <thead
-                  class="css-1p3zs8b"
+                  class="css-1g841yx"
                 >
                   <tr
                     class="css-vurnku"
@@ -145,7 +145,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="css-1ijilga"
+                    class="css-ijvt85"
                     role="row"
                   >
                     <td
@@ -154,7 +154,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
                       style="width: 150px;"
                     >
                       <a
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://npmjs.com/package/@component-controls/components/v/1.0.1"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -203,7 +203,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
                     />
                   </tr>
                   <tr
-                    class="css-1ijilga"
+                    class="css-ijvt85"
                     role="row"
                   >
                     <td
@@ -212,7 +212,7 @@ exports[`Blocks/ComponentDeps Overview 1`] = `
                       style="width: 150px;"
                     >
                       <a
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://npmjs.com/package/react/v/16.13.1"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -301,7 +301,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-urjp6w-LinkHeading"
+          class="css-1puzp06-LinkHeading"
           data-id="my-story-title"
           data-level="3"
           data-title="My Story Title"
@@ -332,7 +332,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
             My Story Title
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -365,7 +365,7 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -411,21 +411,21 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy the displayed source code"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy
                       </button>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse repository"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -434,11 +434,11 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse readme documentation"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master#readme"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -447,11 +447,11 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse filed issues"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/issues"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -462,10 +462,10 @@ exports[`Blocks/ComponentSource Custom Title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <pre
-                    class="prism-code language-jsx css-f5wbqg"
+                    class="prism-code language-jsx css-3y8hb3"
                     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
                   >
                     <div
@@ -540,7 +540,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="arrowbutton"
           data-level="4"
           data-title="ArrowButton"
@@ -570,7 +570,7 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
       </div>
     </div>
     <div
-      class="css-3ulaim"
+      class="css-zdn29g"
     >
       <div
         class="react-tabs"
@@ -616,21 +616,21 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-192nmz2"
+                  class="css-7mlh6m"
                 >
                   <button
                     aria-label="copy the displayed source code"
-                    class="css-1b2uwqj"
+                    class="css-1tf4h46"
                   >
                     copy
                   </button>
                 </div>
                 <div
-                  class="css-32tlqk"
+                  class="css-dzb3k8"
                 >
                   <a
                     aria-label="browse repository"
-                    class="css-ax59ca"
+                    class="css-1t54e2w"
                     href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -639,11 +639,11 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                   </a>
                 </div>
                 <div
-                  class="css-32tlqk"
+                  class="css-dzb3k8"
                 >
                   <a
                     aria-label="browse readme documentation"
-                    class="css-ax59ca"
+                    class="css-1t54e2w"
                     href="https://github.com/ccontrols/component-controls/tree/master#readme"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -652,11 +652,11 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
                   </a>
                 </div>
                 <div
-                  class="css-32tlqk"
+                  class="css-dzb3k8"
                 >
                   <a
                     aria-label="browse filed issues"
-                    class="css-ax59ca"
+                    class="css-1t54e2w"
                     href="https://github.com/ccontrols/component-controls/issues"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -667,10 +667,10 @@ exports[`Blocks/ComponentSource Not Collapsible 1`] = `
               </div>
             </div>
             <div
-              class="css-y7renv"
+              class="css-m61a58"
             >
               <pre
-                class="prism-code language-jsx css-f5wbqg"
+                class="prism-code language-jsx css-3y8hb3"
                 style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
               >
                 <div
@@ -752,7 +752,7 @@ exports[`Blocks/ComponentSource Overview 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -798,21 +798,21 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy the displayed source code"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy
                       </button>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse repository"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -821,11 +821,11 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse readme documentation"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master#readme"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -834,11 +834,11 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse filed issues"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/issues"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -849,10 +849,10 @@ exports[`Blocks/ComponentSource Overview 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <pre
-                    class="prism-code language-jsx css-f5wbqg"
+                    class="prism-code language-jsx css-3y8hb3"
                     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
                   >
                     <div
@@ -943,11 +943,11 @@ exports[`Blocks/ComponentSource Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -955,10 +955,10 @@ exports[`Blocks/ComponentSource Theme 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-jsx css-f5wbqg"
+              class="prism-code language-jsx css-3y8hb3"
               style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
@@ -1052,7 +1052,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
             ArrowButton
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -1085,7 +1085,7 @@ exports[`Blocks/ComponentSource Title 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -1131,21 +1131,21 @@ exports[`Blocks/ComponentSource Title 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy the displayed source code"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy
                       </button>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse repository"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master/ui/blocks/src/Title/Title.stories.tsx"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1154,11 +1154,11 @@ exports[`Blocks/ComponentSource Title 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse readme documentation"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/tree/master#readme"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1167,11 +1167,11 @@ exports[`Blocks/ComponentSource Title 1`] = `
                       </a>
                     </div>
                     <div
-                      class="css-32tlqk"
+                      class="css-dzb3k8"
                     >
                       <a
                         aria-label="browse filed issues"
-                        class="css-ax59ca"
+                        class="css-1t54e2w"
                         href="https://github.com/ccontrols/component-controls/issues"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -1182,10 +1182,10 @@ exports[`Blocks/ComponentSource Title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <pre
-                    class="prism-code language-jsx css-f5wbqg"
+                    class="prism-code language-jsx css-3y8hb3"
                     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
                   >
                     <div
@@ -1268,7 +1268,7 @@ exports[`Blocks/Container Overview 1`] = `
       </h1>
     </div>
     <h2
-      class="css-1942w8h"
+      class="css-1uqrmoi"
     >
       story subtitle
     </h2>
@@ -1313,7 +1313,7 @@ exports[`Blocks/Description Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1os730g-LinkHeading"
+          class="css-tw9evh-LinkHeading"
           data-id="with-a-heading"
           data-level="1"
           data-title="With a heading"
@@ -1367,17 +1367,17 @@ exports[`Blocks/DocumentItem Overview 1`] = `
       class="css-4136op"
     >
       <a
-        class="css-ax59ca"
+        class="css-1t54e2w"
         href="/docs/id-of-story"
       >
         <h2
-          class="css-1942w8h"
+          class="css-1uqrmoi"
         >
           Story
         </h2>
       </a>
       <a
-        class="css-ax59ca"
+        class="css-1t54e2w"
         href="/docs/"
       >
         <span
@@ -1398,7 +1398,7 @@ exports[`Blocks/DocumentItem Overview 1`] = `
         class="css-f5h6sg"
       >
         <div
-          class="css-83lfx1"
+          class="css-z4eqsg"
         >
           created: 1/1/2020
         </div>
@@ -1416,7 +1416,7 @@ exports[`Blocks/DocumentItem Overview 1`] = `
             by
           </div>
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="/authors/atanasster"
           >
             atanasster
@@ -1457,7 +1457,7 @@ exports[`Blocks/PageContainer Overview 1`] = `
 exports[`Blocks/PageTypeTag Overview 1`] = `
 <DocumentFragment>
   <a
-    class="css-ax59ca"
+    class="css-1t54e2w"
     href="/docs/"
   >
     <span
@@ -1510,7 +1510,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
             My donut example 
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -1550,29 +1550,29 @@ exports[`Blocks/Playground/ESM Child 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1593,11 +1593,11 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1618,11 +1618,11 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1645,7 +1645,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -1663,7 +1663,7 @@ exports[`Blocks/Playground/ESM Child 1`] = `
                       aria-valuemax="1"
                       aria-valuemin="0"
                       aria-valuenow="0.5"
-                      class="css-agj820"
+                      class="css-14d2907"
                       fill="none"
                       height="128"
                       role="img"
@@ -1730,7 +1730,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
             Custom playground title
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -1770,29 +1770,29 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1813,11 +1813,11 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1838,11 +1838,11 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -1863,21 +1863,21 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -1885,7 +1885,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -1929,7 +1929,7 @@ exports[`Blocks/Playground/ESM Custom Title 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -2010,29 +2010,29 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2053,11 +2053,11 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2078,11 +2078,11 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2103,21 +2103,21 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -2125,7 +2125,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -2169,7 +2169,7 @@ exports[`Blocks/Playground/ESM Dark Theme 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -2250,29 +2250,29 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2293,11 +2293,11 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2318,11 +2318,11 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -2343,21 +2343,21 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   close source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -2365,7 +2365,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -2409,7 +2409,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -2450,7 +2450,7 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                 style=""
               >
                 <div
-                  class="css-3ulaim"
+                  class="css-zdn29g"
                 >
                   <div
                     class="react-tabs"
@@ -2525,20 +2525,20 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                   class="css-x60p33"
                                 >
                                   <div
-                                    class="css-192nmz2"
+                                    class="css-7mlh6m"
                                   >
                                     <button
                                       aria-label="copy the displayed source code"
-                                      class="css-1b2uwqj"
+                                      class="css-1tf4h46"
                                     >
                                       copy
                                     </button>
                                   </div>
                                   <div
-                                    class="css-wo8d8v"
+                                    class="css-7fe059"
                                   >
                                     <button
-                                      class="css-1b2uwqj"
+                                      class="css-1tf4h46"
                                     >
                                       values
                                     </button>
@@ -2546,10 +2546,10 @@ exports[`Blocks/Playground/ESM Default Open Source 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="css-y7renv"
+                                class="css-m61a58"
                               >
                                 <pre
-                                  class="prism-code language-jsx css-f5wbqg"
+                                  class="prism-code language-jsx css-3y8hb3"
                                   style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
                                 >
                                   <div
@@ -2837,39 +2837,39 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -2877,7 +2877,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -2921,7 +2921,7 @@ exports[`Blocks/Playground/ESM Disable Zoom Pan 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -3002,29 +3002,29 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3045,11 +3045,11 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3070,11 +3070,11 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3095,30 +3095,30 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   close custom panel
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -3126,7 +3126,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -3170,7 +3170,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -3211,7 +3211,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                 style=""
               >
                 <div
-                  class="css-3ulaim"
+                  class="css-zdn29g"
                 >
                   <div
                     class="react-tabs"
@@ -3277,7 +3277,7 @@ exports[`Blocks/Playground/ESM Extra Panel 1`] = `
                         aria-valuemax="1"
                         aria-valuemin="0"
                         aria-valuenow="0.5"
-                        class="css-agj820"
+                        class="css-14d2907"
                         fill="none"
                         height="128"
                         role="img"
@@ -3336,7 +3336,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
             Multiple donuts
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -3376,29 +3376,29 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3419,11 +3419,11 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3444,11 +3444,11 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3471,7 +3471,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -3489,7 +3489,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                       aria-valuemax="1"
                       aria-valuemin="0"
                       aria-valuenow="0.5"
-                      class="css-agj820"
+                      class="css-14d2907"
                       fill="none"
                       height="128"
                       role="img"
@@ -3517,7 +3517,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                       aria-valuemax="1"
                       aria-valuemin="0"
                       aria-valuenow="0.5"
-                      class="css-agj820"
+                      class="css-14d2907"
                       fill="none"
                       height="128"
                       role="img"
@@ -3545,7 +3545,7 @@ exports[`Blocks/Playground/ESM Multi Child 1`] = `
                       aria-valuemax="1"
                       aria-valuemin="0"
                       aria-valuenow="0.5"
-                      class="css-agj820"
+                      class="css-14d2907"
                       fill="none"
                       height="128"
                       role="img"
@@ -3622,29 +3622,29 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3665,11 +3665,11 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3690,11 +3690,11 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -3717,7 +3717,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -3803,7 +3803,7 @@ exports[`Blocks/Playground/ESM Multi Stories 1`] = `
                                 aria-valuemax="1"
                                 aria-valuemin="0"
                                 aria-valuenow="0.5"
-                                class="css-agj820"
+                                class="css-14d2907"
                                 fill="none"
                                 height="128"
                                 role="img"
@@ -3867,7 +3867,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="blocks-core-story-plain--controls"
           data-level="4"
           data-title="controls"
@@ -3904,29 +3904,29 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-19b6uc0"
+            class="css-1uhft3z"
           >
             <button
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               dark
             </button>
           </div>
           <div
-            class="css-wo8d8v"
+            class="css-7fe059"
           >
             <button
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               RTL
             </button>
           </div>
           <div
-            class="css-32tlqk"
+            class="css-dzb3k8"
           >
             <button
               aria-label="reset zoom"
-              class="css-1t03gh7"
+              class="css-j69xip"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -3947,11 +3947,11 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-32tlqk"
+            class="css-dzb3k8"
           >
             <button
               aria-label="zoom out"
-              class="css-1t03gh7"
+              class="css-j69xip"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -3972,11 +3972,11 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-wo8d8v"
+            class="css-7fe059"
           >
             <button
               aria-label="zoom in"
-              class="css-1t03gh7"
+              class="css-j69xip"
               style="padding-top: 3px; padding-bottom: 3px;"
             >
               <svg
@@ -3997,21 +3997,21 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
             </button>
           </div>
           <div
-            class="css-32tlqk"
+            class="css-dzb3k8"
           >
             <button
               aria-label="display story source code"
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               open source
             </button>
           </div>
           <div
-            class="css-32tlqk"
+            class="css-dzb3k8"
           >
             <button
               aria-label="display story configuration object"
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               open config
             </button>
@@ -4019,7 +4019,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
         </div>
       </div>
       <div
-        class="css-y7renv"
+        class="css-m61a58"
       >
         <div
           style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -4063,7 +4063,7 @@ exports[`Blocks/Playground/ESM Not Collapsible 1`] = `
                           aria-valuemax="1"
                           aria-valuemin="0"
                           aria-valuenow="0.5"
-                          class="css-agj820"
+                          class="css-14d2907"
                           fill="none"
                           height="128"
                           role="img"
@@ -4142,29 +4142,29 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4185,11 +4185,11 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4210,11 +4210,11 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4235,21 +4235,21 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -4257,7 +4257,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -4301,7 +4301,7 @@ exports[`Blocks/Playground/ESM Overview 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -4382,29 +4382,29 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4425,11 +4425,11 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4450,11 +4450,11 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4475,21 +4475,21 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -4497,7 +4497,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -4541,7 +4541,7 @@ exports[`Blocks/Playground/ESM Scale 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -4604,7 +4604,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-urjp6w-LinkHeading"
+          class="css-1puzp06-LinkHeading"
           data-id="id-of-story"
           data-level="3"
           data-title="story"
@@ -4635,7 +4635,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
             story
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -4680,29 +4680,29 @@ exports[`Blocks/Playground/ESM Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4723,11 +4723,11 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4748,11 +4748,11 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4773,21 +4773,21 @@ exports[`Blocks/Playground/ESM Title 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -4795,7 +4795,7 @@ exports[`Blocks/Playground/ESM Title 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -4897,29 +4897,29 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset zoom"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4940,11 +4940,11 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="zoom out"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4965,11 +4965,11 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
                   aria-label="zoom in"
-                  class="css-1t03gh7"
+                  class="css-j69xip"
                   style="padding-top: 3px; padding-bottom: 3px;"
                 >
                   <svg
@@ -4990,21 +4990,21 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -5012,7 +5012,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -5056,7 +5056,7 @@ exports[`Blocks/Playground/ESM Visible Tabs 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -5137,39 +5137,39 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-19b6uc0"
+                class="css-1uhft3z"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   dark
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   RTL
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open source
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="display story configuration object"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   open config
                 </button>
@@ -5177,7 +5177,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <div
               style="direction: ltr; background-color: rgb(255, 255, 255); background-size: 20px 20px;"
@@ -5221,7 +5221,7 @@ exports[`Blocks/Playground/ESM Zoom Disabled 1`] = `
                               aria-valuemax="1"
                               aria-valuemin="0"
                               aria-valuenow="0.5"
-                              class="css-agj820"
+                              class="css-14d2907"
                               fill="none"
                               height="128"
                               role="img"
@@ -5305,51 +5305,51 @@ exports[`Blocks/PropsTable Controls 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy table as csv"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy table
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="copy control values"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy values
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="generate random values for the component controls"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   randomize
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="copy the control values as url search params"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   share
                 </button>
               </div>
               <div
-                class="css-32tlqk"
+                class="css-dzb3k8"
               >
                 <button
                   aria-label="reset control values to their initial value"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   reset
                 </button>
@@ -5357,14 +5357,14 @@ exports[`Blocks/PropsTable Controls 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <table
               class="css-1in6ude-BasePropsTable"
               role="table"
             >
               <thead
-                class="css-1p3zs8b"
+                class="css-1g841yx"
               >
                 <tr
                   class="css-vurnku"
@@ -5441,7 +5441,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -5467,10 +5467,10 @@ exports[`Blocks/PropsTable Controls 1`] = `
                         a name property
                       </p>
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           string
                         </pre>
@@ -5486,7 +5486,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -5510,7 +5510,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -5536,10 +5536,10 @@ exports[`Blocks/PropsTable Controls 1`] = `
                         age is a number property
                       </p>
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           number
                         </pre>
@@ -5555,7 +5555,7 @@ exports[`Blocks/PropsTable Controls 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -5610,7 +5610,7 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
             Custom Props Table Title
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -5643,7 +5643,7 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -5689,11 +5689,11 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy table as csv"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy table
                       </button>
@@ -5701,14 +5701,14 @@ exports[`Blocks/PropsTable Custom Title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <table
                     class="css-1in6ude-BasePropsTable"
                     role="table"
                   >
                     <thead
-                      class="css-1p3zs8b"
+                      class="css-1g841yx"
                     >
                       <tr
                         class="css-vurnku"
@@ -5818,11 +5818,11 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy table as csv"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy table
                 </button>
@@ -5830,14 +5830,14 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <table
               class="css-1in6ude-BasePropsTable"
               role="table"
             >
               <thead
-                class="css-1p3zs8b"
+                class="css-1g841yx"
               >
                 <tr
                   class="css-vurnku"
@@ -5914,7 +5914,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -5937,10 +5937,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any[]
                         </pre>
@@ -5956,7 +5956,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -5971,7 +5971,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -5994,10 +5994,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           number[]
                         </pre>
@@ -6013,7 +6013,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6028,7 +6028,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6051,10 +6051,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           boolean
                         </pre>
@@ -6070,7 +6070,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6085,7 +6085,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6108,10 +6108,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -6127,7 +6127,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6142,7 +6142,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6165,10 +6165,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           Element
                         </pre>
@@ -6184,7 +6184,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6199,7 +6199,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6222,10 +6222,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           <span
                             class="css-1mul6ih-Tag"
@@ -6258,7 +6258,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6273,7 +6273,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6296,10 +6296,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           (args: any) =&gt; any
                         </pre>
@@ -6315,7 +6315,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6330,7 +6330,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6353,10 +6353,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           Message
                         </pre>
@@ -6372,7 +6372,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6387,7 +6387,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6410,10 +6410,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -6429,7 +6429,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6444,7 +6444,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6467,10 +6467,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           number
                         </pre>
@@ -6486,7 +6486,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         21
                       </pre>
@@ -6501,7 +6501,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6524,10 +6524,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           object
                         </pre>
@@ -6543,7 +6543,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6558,7 +6558,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6581,10 +6581,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { [key: string]: number; }
                         </pre>
@@ -6600,7 +6600,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6615,7 +6615,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6638,10 +6638,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { optionalProperty?: string; requiredProperty: number; }
                         </pre>
@@ -6657,7 +6657,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6672,7 +6672,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6695,10 +6695,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { optionalProperty?: string; requiredProperty: number; }
                         </pre>
@@ -6714,7 +6714,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6729,7 +6729,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6752,10 +6752,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           string
                         </pre>
@@ -6771,7 +6771,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6786,7 +6786,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6809,10 +6809,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           symbol
                         </pre>
@@ -6828,7 +6828,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6843,7 +6843,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6866,10 +6866,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           <span
                             class="css-1mul6ih-Tag"
@@ -6911,7 +6911,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6926,7 +6926,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -6957,10 +6957,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -6976,7 +6976,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -6991,7 +6991,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7022,10 +7022,10 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           (prop: any) =&gt; any
                         </pre>
@@ -7041,7 +7041,7 @@ exports[`Blocks/PropsTable Extra Columns 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7079,7 +7079,7 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="arrowbutton"
           data-level="4"
           data-title="ArrowButton"
@@ -7109,7 +7109,7 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
       </div>
     </div>
     <div
-      class="css-3ulaim"
+      class="css-zdn29g"
     >
       <div
         class="react-tabs"
@@ -7155,11 +7155,11 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
                 class="css-x60p33"
               >
                 <div
-                  class="css-192nmz2"
+                  class="css-7mlh6m"
                 >
                   <button
                     aria-label="copy table as csv"
-                    class="css-1b2uwqj"
+                    class="css-1tf4h46"
                   >
                     copy table
                   </button>
@@ -7167,14 +7167,14 @@ exports[`Blocks/PropsTable Not Collapsible 1`] = `
               </div>
             </div>
             <div
-              class="css-y7renv"
+              class="css-m61a58"
             >
               <table
                 class="css-1in6ude-BasePropsTable"
                 role="table"
               >
                 <thead
-                  class="css-1p3zs8b"
+                  class="css-1g841yx"
                 >
                   <tr
                     class="css-vurnku"
@@ -7282,11 +7282,11 @@ exports[`Blocks/PropsTable Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy table as csv"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy table
                 </button>
@@ -7294,14 +7294,14 @@ exports[`Blocks/PropsTable Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <table
               class="css-1in6ude-BasePropsTable"
               role="table"
             >
               <thead
-                class="css-1p3zs8b"
+                class="css-1g841yx"
               >
                 <tr
                   class="css-vurnku"
@@ -7362,7 +7362,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7385,10 +7385,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any[]
                         </pre>
@@ -7404,7 +7404,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7412,7 +7412,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7435,10 +7435,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           number[]
                         </pre>
@@ -7454,7 +7454,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7462,7 +7462,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7485,10 +7485,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           boolean
                         </pre>
@@ -7504,7 +7504,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7512,7 +7512,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7535,10 +7535,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -7554,7 +7554,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7562,7 +7562,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7585,10 +7585,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           Element
                         </pre>
@@ -7604,7 +7604,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7612,7 +7612,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7635,10 +7635,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           <span
                             class="css-1mul6ih-Tag"
@@ -7671,7 +7671,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7679,7 +7679,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7702,10 +7702,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           (args: any) =&gt; any
                         </pre>
@@ -7721,7 +7721,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7729,7 +7729,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7752,10 +7752,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           Message
                         </pre>
@@ -7771,7 +7771,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7779,7 +7779,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7802,10 +7802,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -7821,7 +7821,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7829,7 +7829,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7852,10 +7852,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           number
                         </pre>
@@ -7871,7 +7871,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         21
                       </pre>
@@ -7879,7 +7879,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7902,10 +7902,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           object
                         </pre>
@@ -7921,7 +7921,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7929,7 +7929,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -7952,10 +7952,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { [key: string]: number; }
                         </pre>
@@ -7971,7 +7971,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -7979,7 +7979,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8002,10 +8002,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { optionalProperty?: string; requiredProperty: number; }
                         </pre>
@@ -8021,7 +8021,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8029,7 +8029,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8052,10 +8052,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           { optionalProperty?: string; requiredProperty: number; }
                         </pre>
@@ -8071,7 +8071,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8079,7 +8079,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8102,10 +8102,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           string
                         </pre>
@@ -8121,7 +8121,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8129,7 +8129,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8152,10 +8152,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           symbol
                         </pre>
@@ -8171,7 +8171,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8179,7 +8179,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8202,10 +8202,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           <span
                             class="css-1mul6ih-Tag"
@@ -8247,7 +8247,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8255,7 +8255,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8286,10 +8286,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           any
                         </pre>
@@ -8305,7 +8305,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8313,7 +8313,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                   </td>
                 </tr>
                 <tr
-                  class="css-1ijilga"
+                  class="css-ijvt85"
                   role="row"
                 >
                   <td
@@ -8344,10 +8344,10 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-uliqdc"
                     >
                       <div
-                        class="css-vc9ei2"
+                        class="css-1tcjtkx"
                       >
                         <pre
-                          class="css-f5wbqg"
+                          class="css-3y8hb3"
                         >
                           (prop: any) =&gt; any
                         </pre>
@@ -8363,7 +8363,7 @@ exports[`Blocks/PropsTable Overview 1`] = `
                       class="css-1ydg41s"
                     >
                       <pre
-                        class="css-f5wbqg"
+                        class="css-3y8hb3"
                       >
                         -
                       </pre>
@@ -8405,7 +8405,7 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -8451,11 +8451,11 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy table as csv"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy table
                       </button>
@@ -8463,14 +8463,14 @@ exports[`Blocks/PropsTable Subcomponents 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <table
                     class="css-1in6ude-BasePropsTable"
                     role="table"
                   >
                     <thead
-                      class="css-1p3zs8b"
+                      class="css-1g841yx"
                     >
                       <tr
                         class="css-vurnku"
@@ -8570,7 +8570,7 @@ exports[`Blocks/PropsTable Title 1`] = `
             ArrowButton
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -8603,7 +8603,7 @@ exports[`Blocks/PropsTable Title 1`] = `
     >
       <div>
         <div
-          class="css-3ulaim"
+          class="css-zdn29g"
         >
           <div
             class="react-tabs"
@@ -8649,11 +8649,11 @@ exports[`Blocks/PropsTable Title 1`] = `
                     class="css-x60p33"
                   >
                     <div
-                      class="css-192nmz2"
+                      class="css-7mlh6m"
                     >
                       <button
                         aria-label="copy table as csv"
-                        class="css-1b2uwqj"
+                        class="css-1tf4h46"
                       >
                         copy table
                       </button>
@@ -8661,14 +8661,14 @@ exports[`Blocks/PropsTable Title 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-y7renv"
+                  class="css-m61a58"
                 >
                   <table
                     class="css-1in6ude-BasePropsTable"
                     role="table"
                   >
                     <thead
-                      class="css-1p3zs8b"
+                      class="css-1g841yx"
                     >
                       <tr
                         class="css-vurnku"
@@ -8756,13 +8756,13 @@ exports[`Blocks/Search Overview 1`] = `
     >
       <input
         aria-label="full text search"
-        class="css-yc2jh4-SearchInput"
+        class="css-19xk8th-SearchInput"
         placeholder="search..."
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-nxci97-SearchInput"
+        class="css-q4atzm-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -8809,7 +8809,7 @@ exports[`Blocks/Story Custom Title 1`] = `
             My Story Title
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -8853,7 +8853,7 @@ exports[`Blocks/Story Custom Title 1`] = `
               aria-valuemax="1"
               aria-valuemin="0"
               aria-valuenow="0.5"
-              class="css-agj820"
+              class="css-14d2907"
               fill="none"
               height="128"
               role="img"
@@ -8980,7 +8980,7 @@ exports[`Blocks/Story Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="blocks-core-story-plain--controls"
           data-level="4"
           data-title="controls"
@@ -9021,7 +9021,7 @@ exports[`Blocks/Story Not Collapsible 1`] = `
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="0.5"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -9086,7 +9086,7 @@ exports[`Blocks/Story Overview 1`] = `
               aria-valuemax="1"
               aria-valuemin="0"
               aria-valuenow="0.5"
-              class="css-agj820"
+              class="css-14d2907"
               fill="none"
               height="128"
               role="img"
@@ -9131,7 +9131,7 @@ exports[`Blocks/Story Title 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-urjp6w-LinkHeading"
+          class="css-1puzp06-LinkHeading"
           data-id="blocks-core-story-plain--controls"
           data-level="3"
           data-title="controls"
@@ -9162,7 +9162,7 @@ exports[`Blocks/Story Title 1`] = `
             controls
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -9206,7 +9206,7 @@ exports[`Blocks/Story Title 1`] = `
               aria-valuemax="1"
               aria-valuemin="0"
               aria-valuenow="0.5"
-              class="css-agj820"
+              class="css-14d2907"
               fill="none"
               height="128"
               role="img"
@@ -9259,7 +9259,7 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
             Story configuration
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -9299,11 +9299,11 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -9311,10 +9311,10 @@ exports[`Blocks/StoryConfig Custom Title 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-json css-f5wbqg"
+              class="prism-code language-json css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
@@ -9728,11 +9728,11 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -9740,10 +9740,10 @@ exports[`Blocks/StoryConfig No Margin 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-json css-f5wbqg"
+              class="prism-code language-json css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
@@ -10139,7 +10139,7 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="id-of-story"
           data-level="4"
           data-title="story"
@@ -10176,11 +10176,11 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-192nmz2"
+            class="css-7mlh6m"
           >
             <button
               aria-label="copy the displayed source code"
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               copy
             </button>
@@ -10188,10 +10188,10 @@ exports[`Blocks/StoryConfig Not Collapsible 1`] = `
         </div>
       </div>
       <div
-        class="css-y7renv"
+        class="css-m61a58"
       >
         <pre
-          class="prism-code language-json css-f5wbqg"
+          class="prism-code language-json css-3y8hb3"
           style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
         >
           <div
@@ -10603,11 +10603,11 @@ exports[`Blocks/StoryConfig Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -10615,10 +10615,10 @@ exports[`Blocks/StoryConfig Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-json css-f5wbqg"
+              class="prism-code language-json css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
@@ -11032,11 +11032,11 @@ exports[`Blocks/StoryConfig Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -11044,10 +11044,10 @@ exports[`Blocks/StoryConfig Theme 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-json css-f5wbqg"
+              class="prism-code language-json css-3y8hb3"
               style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
             >
               <div
@@ -11676,10 +11676,10 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             dracula
           </button>
@@ -11687,7 +11687,7 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div
         class="css-1xkyebe"
@@ -11718,11 +11718,11 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-192nmz2"
+                    class="css-7mlh6m"
                   >
                     <button
                       aria-label="copy the displayed source code"
-                      class="css-1b2uwqj"
+                      class="css-1tf4h46"
                     >
                       copy
                     </button>
@@ -11730,10 +11730,10 @@ exports[`Blocks/StoryConfig Theme Selector 1`] = `
                 </div>
               </div>
               <div
-                class="css-y7renv"
+                class="css-m61a58"
               >
                 <pre
-                  class="prism-code language-json css-f5wbqg"
+                  class="prism-code language-json css-3y8hb3"
                   style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; display: block; margin: 0px;"
                 >
                   <div
@@ -12348,7 +12348,7 @@ exports[`Blocks/StorySource Custom Title 1`] = `
             Story source
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -12388,11 +12388,11 @@ exports[`Blocks/StorySource Custom Title 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -12400,10 +12400,10 @@ exports[`Blocks/StorySource Custom Title 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-jsx css-f5wbqg"
+              class="prism-code language-jsx css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -12485,11 +12485,11 @@ exports[`Blocks/StorySource No Margin 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
@@ -12497,10 +12497,10 @@ exports[`Blocks/StorySource No Margin 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-jsx css-f5wbqg"
+              class="prism-code language-jsx css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -12564,7 +12564,7 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="id-of-story"
           data-level="4"
           data-title="story"
@@ -12601,11 +12601,11 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
           class="css-x60p33"
         >
           <div
-            class="css-192nmz2"
+            class="css-7mlh6m"
           >
             <button
               aria-label="copy the displayed source code"
-              class="css-1b2uwqj"
+              class="css-1tf4h46"
             >
               copy
             </button>
@@ -12613,10 +12613,10 @@ exports[`Blocks/StorySource Not Collapsible 1`] = `
         </div>
       </div>
       <div
-        class="css-y7renv"
+        class="css-m61a58"
       >
         <pre
-          class="prism-code language-jsx css-f5wbqg"
+          class="prism-code language-jsx css-3y8hb3"
           style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
         >
           <div
@@ -12696,20 +12696,20 @@ exports[`Blocks/StorySource Overview 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   values
                 </button>
@@ -12717,10 +12717,10 @@ exports[`Blocks/StorySource Overview 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-jsx css-f5wbqg"
+              class="prism-code language-jsx css-3y8hb3"
               style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -12997,20 +12997,20 @@ exports[`Blocks/StorySource Theme 1`] = `
               class="css-x60p33"
             >
               <div
-                class="css-192nmz2"
+                class="css-7mlh6m"
               >
                 <button
                   aria-label="copy the displayed source code"
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   copy
                 </button>
               </div>
               <div
-                class="css-wo8d8v"
+                class="css-7fe059"
               >
                 <button
-                  class="css-1b2uwqj"
+                  class="css-1tf4h46"
                 >
                   values
                 </button>
@@ -13018,10 +13018,10 @@ exports[`Blocks/StorySource Theme 1`] = `
             </div>
           </div>
           <div
-            class="css-y7renv"
+            class="css-m61a58"
           >
             <pre
-              class="prism-code language-jsx css-f5wbqg"
+              class="prism-code language-jsx css-3y8hb3"
               style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; margin: 0px;"
             >
               <div
@@ -13277,10 +13277,10 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             dracula
           </button>
@@ -13288,7 +13288,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div
         class="css-1xkyebe"
@@ -13319,20 +13319,20 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                   class="css-x60p33"
                 >
                   <div
-                    class="css-192nmz2"
+                    class="css-7mlh6m"
                   >
                     <button
                       aria-label="copy the displayed source code"
-                      class="css-1b2uwqj"
+                      class="css-1tf4h46"
                     >
                       copy
                     </button>
                   </div>
                   <div
-                    class="css-wo8d8v"
+                    class="css-7fe059"
                   >
                     <button
-                      class="css-1b2uwqj"
+                      class="css-1tf4h46"
                     >
                       values
                     </button>
@@ -13340,10 +13340,10 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
                 </div>
               </div>
               <div
-                class="css-y7renv"
+                class="css-m61a58"
               >
                 <pre
-                  class="prism-code language-jsx css-f5wbqg"
+                  class="prism-code language-jsx css-3y8hb3"
                   style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; margin: 0px;"
                 >
                   <div
@@ -13593,7 +13593,7 @@ exports[`Blocks/StorySource Theme Selector 1`] = `
 exports[`Blocks/Subtitle Overview 1`] = `
 <DocumentFragment>
   <h2
-    class="css-1942w8h"
+    class="css-1uqrmoi"
   >
     story subtitle
   </h2>
@@ -13606,7 +13606,7 @@ exports[`Blocks/TagsList Overview 1`] = `
     class="css-f5h6sg"
   >
     <a
-      class="css-ax59ca"
+      class="css-1t54e2w"
       href="/tags/atanasster"
     >
       <span

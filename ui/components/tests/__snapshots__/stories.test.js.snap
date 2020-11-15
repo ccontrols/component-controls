@@ -247,10 +247,10 @@ exports[`Components/ActionContainer Order 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="https://google.com"
             rel="noopener noreferrer"
             target="_blank"
@@ -259,10 +259,10 @@ exports[`Components/ActionContainer Order 1`] = `
           </a>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             action 1
           </button>
@@ -270,13 +270,13 @@ exports[`Components/ActionContainer Order 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <svg
         aria-valuemax="1"
         aria-valuemin="0"
         aria-valuenow="0.5"
-        class="css-agj820"
+        class="css-14d2907"
         fill="none"
         height="128"
         role="img"
@@ -315,19 +315,19 @@ exports[`Components/ActionContainer Override 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             Copy
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="https://google.com"
             rel="noopener noreferrer"
             target="_blank"
@@ -338,13 +338,13 @@ exports[`Components/ActionContainer Override 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <svg
         aria-valuemax="1"
         aria-valuemin="0"
         aria-valuenow="0.5"
-        class="css-agj820"
+        class="css-14d2907"
         fill="none"
         height="128"
         role="img"
@@ -383,19 +383,19 @@ exports[`Components/ActionContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             action 1
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <a
-            class="css-ax59ca"
+            class="css-1t54e2w"
             href="https://google.com"
             rel="noopener noreferrer"
             target="_blank"
@@ -406,13 +406,13 @@ exports[`Components/ActionContainer Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <svg
         aria-valuemax="1"
         aria-valuemin="0"
         aria-valuenow="0.5"
-        class="css-agj820"
+        class="css-14d2907"
         fill="none"
         height="128"
         role="img"
@@ -454,7 +454,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-urjp6w-LinkHeading"
+          class="css-1puzp06-LinkHeading"
           data-id="custom-id"
           data-level="3"
           data-title="BlockContainer"
@@ -485,7 +485,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
             BlockContainer
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -521,7 +521,7 @@ exports[`Components/BlockContainer Custom Id 1`] = `
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="0.5"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -577,7 +577,7 @@ exports[`Components/BlockContainer Description 1`] = `
           class="css-xhp9da"
         >
           <a
-            class="css-urjp6w-LinkHeading"
+            class="css-1puzp06-LinkHeading"
             data-id="h3-title"
             data-level="3"
             data-title="H3 title"
@@ -676,7 +676,7 @@ exports[`Components/BlockContainer Not Collapsible 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="blockcontainer"
           data-level="4"
           data-title="BlockContainer"
@@ -709,7 +709,7 @@ exports[`Components/BlockContainer Not Collapsible 1`] = `
       aria-valuemax="1"
       aria-valuemin="0"
       aria-valuenow="0.5"
-      class="css-agj820"
+      class="css-14d2907"
       fill="none"
       height="128"
       role="img"
@@ -758,7 +758,7 @@ exports[`Components/BlockContainer Overview 1`] = `
             Block title
             <a
               aria-label="Collapse this block"
-              class="css-csemrf-BlockContainer"
+              class="css-pkdnvg-BlockContainer"
             >
               <div
                 class="css-1ibxxpj"
@@ -794,7 +794,7 @@ exports[`Components/BlockContainer Overview 1`] = `
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="0.5"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -830,7 +830,7 @@ exports[`Components/Collapsible Overview 1`] = `
     class="css-vurnku"
   >
     <button
-      class="css-1t03gh7"
+      class="css-j69xip"
     >
       open
     </button>
@@ -966,7 +966,7 @@ exports[`Components/Description Overview 1`] = `
 exports[`Components/ExternalLink Overview 1`] = `
 <DocumentFragment>
   <a
-    class="css-ax59ca"
+    class="css-1t54e2w"
     href="https://www.google.com"
     rel="noopener noreferrer"
     target="_blank"
@@ -979,7 +979,7 @@ exports[`Components/ExternalLink Overview 1`] = `
 exports[`Components/Header Overview 1`] = `
 <DocumentFragment>
   <header
-    class="css-1hp4xbx"
+    class="css-10bhldn"
   >
     header
   </header>
@@ -989,16 +989,16 @@ exports[`Components/Header Overview 1`] = `
 exports[`Components/HoverBox Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-d51li0"
+    class="css-vkd8ti"
   >
     <div
-      class="css-12caf47"
+      class="css-xtndwh"
     >
       <svg
         aria-valuemax="1"
         aria-valuemin="0"
         aria-valuenow="0.5"
-        class="css-agj820"
+        class="css-14d2907"
         fill="none"
         height="128"
         role="img"
@@ -1029,7 +1029,7 @@ exports[`Components/HoverBox Overview 1`] = `
       </div>
     </div>
     <div
-      class="hoverbox-text css-12z3jo9"
+      class="hoverbox-text css-1cgogy4"
     >
       donut component
     </div>
@@ -1040,7 +1040,7 @@ exports[`Components/HoverBox Overview 1`] = `
 exports[`Components/Link Overview 1`] = `
 <DocumentFragment>
   <a
-    class="css-ax59ca"
+    class="css-1t54e2w"
     href="/"
   >
     link to home
@@ -1058,7 +1058,7 @@ exports[`Components/LinkHeading Overview 1`] = `
       class="css-xhp9da"
     >
       <a
-        class="css-1os730g-LinkHeading"
+        class="css-tw9evh-LinkHeading"
         data-id="linkheading-text"
         data-level="1"
         data-title="LinkHeading text"
@@ -1115,7 +1115,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1os730g-LinkHeading"
+          class="css-tw9evh-LinkHeading"
           data-id="header-h1"
           data-level="1"
           data-title="Header H1"
@@ -1154,7 +1154,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-8ylp1b-LinkHeading"
+          class="css-128as7-LinkHeading"
           data-id="header-h2"
           data-level="2"
           data-title="Header H2"
@@ -1193,7 +1193,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-urjp6w-LinkHeading"
+          class="css-1puzp06-LinkHeading"
           data-id="header-h3"
           data-level="3"
           data-title="Header H3"
@@ -1230,7 +1230,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1qbcv7x-LinkHeading"
+          class="css-add61a-LinkHeading"
           data-id="header-h4"
           data-level="4"
           data-title="Header H4"
@@ -1267,7 +1267,7 @@ exports[`Components/Markdown Overview 1`] = `
         class="css-xhp9da"
       >
         <a
-          class="css-1hj0i8j-LinkHeading"
+          class="css-xqsbvh-LinkHeading"
           data-id="header-h5"
           data-level="5"
           data-title="Header H5"
@@ -1337,7 +1337,7 @@ exports[`Components/Multiselect Overview 1`] = `
     class="css-12hibeq"
   >
     <button
-      class="css-1t03gh7"
+      class="css-j69xip"
     >
       open
     </button>
@@ -1360,7 +1360,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="css-161l3jj"
+            class="css-1jz8wry"
           >
             <div
               class="css-1i09fc1"
@@ -1391,7 +1391,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-1k0f1bf"
+                    class="css-4f3mio"
                   >
                     <strong>
                       Inbox
@@ -1429,7 +1429,7 @@ exports[`Components/Navmenu Items 1`] = `
             class="css-oao09s"
           >
             <a
-              class="active css-1t6zyk7"
+              class="active css-1g97bar"
               href="/inbox/all"
             >
               <div
@@ -1442,7 +1442,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-1k0f1bf"
+                      class="css-4f3mio"
                     >
                       All
                     </div>
@@ -1451,7 +1451,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       10
                     </div>
@@ -1468,7 +1468,7 @@ exports[`Components/Navmenu Items 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/gmail"
             >
               <div
@@ -1481,7 +1481,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       GMail
                     </div>
@@ -1490,7 +1490,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       8
                     </div>
@@ -1507,7 +1507,7 @@ exports[`Components/Navmenu Items 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/work"
             >
               <div
@@ -1520,7 +1520,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       Work
                     </div>
@@ -1529,7 +1529,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       1
                     </div>
@@ -1546,7 +1546,7 @@ exports[`Components/Navmenu Items 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/amazon"
             >
               <div
@@ -1559,7 +1559,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       Amazon
                     </div>
@@ -1568,7 +1568,7 @@ exports[`Components/Navmenu Items 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       1
                     </div>
@@ -1586,7 +1586,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/sent"
           >
             <div
@@ -1618,7 +1618,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Sent
                   </div>
@@ -1635,7 +1635,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/flagged"
           >
             <div
@@ -1667,7 +1667,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Flagged
                   </div>
@@ -1676,7 +1676,7 @@ exports[`Components/Navmenu Items 1`] = `
                   class="css-vurnku"
                 >
                   <div
-                    class="css-9wpmtp"
+                    class="css-1jxn1yx"
                   >
                     3
                   </div>
@@ -1693,7 +1693,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/starred"
           >
             <div
@@ -1725,7 +1725,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Starred
                   </div>
@@ -1742,7 +1742,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/drafts"
           >
             <div
@@ -1774,7 +1774,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Drafts
                   </div>
@@ -1791,7 +1791,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/tagged"
           >
             <div
@@ -1823,7 +1823,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Tagged
                   </div>
@@ -1840,7 +1840,7 @@ exports[`Components/Navmenu Items 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/trash"
           >
             <div
@@ -1872,7 +1872,7 @@ exports[`Components/Navmenu Items 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Trash
                   </div>
@@ -1902,7 +1902,7 @@ exports[`Components/Navmenu Overview 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="css-161l3jj"
+            class="css-1jz8wry"
           >
             <div
               class="css-1i09fc1"
@@ -1914,7 +1914,7 @@ exports[`Components/Navmenu Overview 1`] = `
                   class="css-f5h6sg"
                 >
                   <div
-                    class="css-1k0f1bf"
+                    class="css-4f3mio"
                   >
                     <strong>
                       Local
@@ -1952,7 +1952,7 @@ exports[`Components/Navmenu Overview 1`] = `
             class="css-oao09s"
           >
             <a
-              class="active css-1t6zyk7"
+              class="active css-1g97bar"
               href="/c_drive"
             >
               <div
@@ -1965,7 +1965,7 @@ exports[`Components/Navmenu Overview 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-1k0f1bf"
+                      class="css-4f3mio"
                     >
                       C: drive
                     </div>
@@ -1982,7 +1982,7 @@ exports[`Components/Navmenu Overview 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -1996,7 +1996,7 @@ exports[`Components/Navmenu Overview 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       F: drive
                     </div>
@@ -2014,7 +2014,7 @@ exports[`Components/Navmenu Overview 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="css-161l3jj"
+            class="css-1jz8wry"
           >
             <div
               class="css-1i09fc1"
@@ -2026,7 +2026,7 @@ exports[`Components/Navmenu Overview 1`] = `
                   class="css-f5h6sg"
                 >
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     <strong>
                       Cloud
@@ -2083,7 +2083,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <button
-            class="css-161l3jj"
+            class="css-1jz8wry"
           >
             <div
               class="css-1i09fc1"
@@ -2114,7 +2114,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-1k0f1bf"
+                    class="css-4f3mio"
                   >
                     <strong>
                       Inbox
@@ -2152,7 +2152,7 @@ exports[`Components/Navmenu Search 1`] = `
             class="css-oao09s"
           >
             <a
-              class="active css-1t6zyk7"
+              class="active css-1g97bar"
               href="/inbox/all"
             >
               <div
@@ -2165,7 +2165,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-1k0f1bf"
+                      class="css-4f3mio"
                     >
                       All
                     </div>
@@ -2174,7 +2174,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       10
                     </div>
@@ -2191,7 +2191,7 @@ exports[`Components/Navmenu Search 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/gmail"
             >
               <div
@@ -2204,7 +2204,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       GMail
                     </div>
@@ -2213,7 +2213,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       8
                     </div>
@@ -2230,7 +2230,7 @@ exports[`Components/Navmenu Search 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/work"
             >
               <div
@@ -2243,7 +2243,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       Work
                     </div>
@@ -2252,7 +2252,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       1
                     </div>
@@ -2269,7 +2269,7 @@ exports[`Components/Navmenu Search 1`] = `
             class="css-w1i3qo"
           >
             <a
-              class="css-1t6zyk7"
+              class="css-1g97bar"
               href="/inbox/amazon"
             >
               <div
@@ -2282,7 +2282,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-f5h6sg"
                   >
                     <div
-                      class="css-11c8po5"
+                      class="css-6e1m2i"
                     >
                       Amazon
                     </div>
@@ -2291,7 +2291,7 @@ exports[`Components/Navmenu Search 1`] = `
                     class="css-vurnku"
                   >
                     <div
-                      class="css-9wpmtp"
+                      class="css-1jxn1yx"
                     >
                       1
                     </div>
@@ -2309,7 +2309,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/sent"
           >
             <div
@@ -2341,7 +2341,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Sent
                   </div>
@@ -2358,7 +2358,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/flagged"
           >
             <div
@@ -2390,7 +2390,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Flagged
                   </div>
@@ -2399,7 +2399,7 @@ exports[`Components/Navmenu Search 1`] = `
                   class="css-vurnku"
                 >
                   <div
-                    class="css-9wpmtp"
+                    class="css-1jxn1yx"
                   >
                     3
                   </div>
@@ -2416,7 +2416,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/starred"
           >
             <div
@@ -2448,7 +2448,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Starred
                   </div>
@@ -2465,7 +2465,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/drafts"
           >
             <div
@@ -2497,7 +2497,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Drafts
                   </div>
@@ -2514,7 +2514,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/tagged"
           >
             <div
@@ -2546,7 +2546,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Tagged
                   </div>
@@ -2563,7 +2563,7 @@ exports[`Components/Navmenu Search 1`] = `
           class="css-j6yaho"
         >
           <a
-            class="css-1t6zyk7"
+            class="css-1g97bar"
             href="/inbox/trash"
           >
             <div
@@ -2595,7 +2595,7 @@ exports[`Components/Navmenu Search 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="css-11c8po5"
+                    class="css-6e1m2i"
                   >
                     Trash
                   </div>
@@ -2629,12 +2629,12 @@ exports[`Components/Pagination Only Next 1`] = `
           class="css-1my6hv5"
         >
           <div
-            class="css-1263nmx"
+            class="css-c3r86m"
           >
             Next
           </div>
           <div
-            class="css-5geu1p"
+            class="css-9tifnv"
           >
             <div
               class="css-1s8umv4"
@@ -2680,12 +2680,12 @@ exports[`Components/Pagination Only Prev 1`] = `
           class="css-1gq2x6q"
         >
           <div
-            class="css-1263nmx"
+            class="css-c3r86m"
           >
             Previous
           </div>
           <div
-            class="css-5geu1p"
+            class="css-9tifnv"
           >
             <svg
               aria-hidden="true"
@@ -2734,12 +2734,12 @@ exports[`Components/Pagination Overview 1`] = `
           class="css-1gq2x6q"
         >
           <div
-            class="css-1263nmx"
+            class="css-c3r86m"
           >
             Previous
           </div>
           <div
-            class="css-5geu1p"
+            class="css-9tifnv"
           >
             <svg
               aria-hidden="true"
@@ -2776,12 +2776,12 @@ exports[`Components/Pagination Overview 1`] = `
           class="css-1my6hv5"
         >
           <div
-            class="css-1263nmx"
+            class="css-c3r86m"
           >
             Next
           </div>
           <div
-            class="css-5geu1p"
+            class="css-9tifnv"
           >
             <div
               class="css-1s8umv4"
@@ -2821,31 +2821,31 @@ exports[`Components/PanelContainer Open Tab 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="display panel 1"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             close panel-1
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="display panel 2"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             open panel-2
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="some action without panel"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             action
           </button>
@@ -2853,14 +2853,14 @@ exports[`Components/PanelContainer Open Tab 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div>
         <svg
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="1"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -2894,7 +2894,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
           style=""
         >
           <div
-            class="css-3ulaim"
+            class="css-zdn29g"
           >
             <div
               class="react-tabs"
@@ -2948,7 +2948,7 @@ exports[`Components/PanelContainer Open Tab 1`] = `
                     aria-valuemax="1"
                     aria-valuemin="0"
                     aria-valuenow="0.5"
-                    class="css-agj820"
+                    class="css-14d2907"
                     fill="none"
                     height="64"
                     role="img"
@@ -2993,31 +2993,31 @@ exports[`Components/PanelContainer Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="display panel 1"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             open panel-1
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="display panel 2"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             open panel-2
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="some action without panel"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             action
           </button>
@@ -3025,14 +3025,14 @@ exports[`Components/PanelContainer Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div>
         <svg
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="1"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -3081,31 +3081,31 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="display panel 1"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             open panel-1
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="display panel 2"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             open panel-2
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
             aria-label="some action without panel"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             action
           </button>
@@ -3113,14 +3113,14 @@ exports[`Components/PanelContainer Visible Tabs 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div>
         <svg
           aria-valuemax="1"
           aria-valuemin="0"
           aria-valuenow="1"
-          class="css-agj820"
+          class="css-14d2907"
           fill="none"
           height="128"
           role="img"
@@ -3165,7 +3165,7 @@ exports[`Components/Popover Overview 1`] = `
     class="css-12hibeq"
   >
     <button
-      class="css-e00o0e"
+      class="css-gnc703"
     >
       Click to open
     </button>
@@ -3183,12 +3183,12 @@ exports[`Components/SearchInput Default Render 1`] = `
     >
       <input
         aria-label="type some text to start searching"
-        class="css-yc2jh4-SearchInput"
+        class="css-19xk8th-SearchInput"
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-nxci97-SearchInput"
+        class="css-q4atzm-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -3216,12 +3216,12 @@ exports[`Components/SearchInput Overview 1`] = `
     >
       <input
         aria-label="type some text to start searching"
-        class="css-yc2jh4-SearchInput"
+        class="css-19xk8th-SearchInput"
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-nxci97-SearchInput"
+        class="css-q4atzm-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -3249,13 +3249,13 @@ exports[`Components/SearchInput Placeholder 1`] = `
     >
       <input
         aria-label="search items"
-        class="css-yc2jh4-SearchInput"
+        class="css-19xk8th-SearchInput"
         placeholder="start typing..."
         value=""
       />
       <svg
         aria-hidden="true"
-        class="css-nxci97-SearchInput"
+        class="css-q4atzm-SearchInput"
         fill="currentColor"
         height="16"
         role="img"
@@ -3411,11 +3411,11 @@ exports[`Components/Source Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             copy
           </button>
@@ -3423,10 +3423,10 @@ exports[`Components/Source Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <pre
-        class="prism-code language-jsx css-f5wbqg"
+        class="prism-code language-jsx css-3y8hb3"
         style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
@@ -4017,11 +4017,11 @@ exports[`Components/Source Theme 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             copy
           </button>
@@ -4029,10 +4029,10 @@ exports[`Components/Source Theme 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <pre
-        class="prism-code language-jsx css-f5wbqg"
+        class="prism-code language-jsx css-3y8hb3"
         style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
@@ -4623,20 +4623,20 @@ exports[`Components/Source Theme Selector 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
             aria-label="copy the displayed source code"
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             copy
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             dracula
           </button>
@@ -4644,10 +4644,10 @@ exports[`Components/Source Theme Selector 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <pre
-        class="prism-code language-jsx css-f5wbqg"
+        class="prism-code language-jsx css-3y8hb3"
         style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 25px 10px 10px; display: block; margin: 0px;"
       >
         <div
@@ -5237,7 +5237,7 @@ exports[`Components/Subheading Overview 1`] = `
 exports[`Components/Subtitle Overview 1`] = `
 <DocumentFragment>
   <h2
-    class="css-1942w8h"
+    class="css-1uqrmoi"
   >
     Subtitle text
   </h2>
@@ -5247,7 +5247,7 @@ exports[`Components/Subtitle Overview 1`] = `
 exports[`Components/SyntaxHighlighter Overview 1`] = `
 <DocumentFragment>
   <pre
-    class="prism-code language-jsx css-f5wbqg"
+    class="prism-code language-jsx css-3y8hb3"
     style="background-color: rgb(250, 248, 245); color: rgb(114, 143, 203); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
@@ -5318,7 +5318,7 @@ exports[`Components/SyntaxHighlighter Overview 1`] = `
 exports[`Components/SyntaxHighlighter Theme 1`] = `
 <DocumentFragment>
   <pre
-    class="prism-code language-jsx css-f5wbqg"
+    class="prism-code language-jsx css-3y8hb3"
     style="color: rgb(158, 254, 255); background-color: rgb(45, 42, 85); padding: 3px 5px; display: inline; margin: 0px;"
   >
     <span
@@ -11737,7 +11737,7 @@ exports[`Components/Table Sortable 1`] = `
 exports[`Components/Tabs Direction 1`] = `
 <DocumentFragment>
   <div
-    class="css-3ulaim"
+    class="css-zdn29g"
   >
     <div
       class="react-tabs"
@@ -11792,7 +11792,7 @@ exports[`Components/Tabs Direction 1`] = `
 exports[`Components/Tabs Font Size 1`] = `
 <DocumentFragment>
   <div
-    class="css-1yh40i5"
+    class="css-lzwm0p"
   >
     <div
       class="react-tabs"
@@ -11846,7 +11846,7 @@ exports[`Components/Tabs Font Size 1`] = `
 exports[`Components/Tabs On Select 1`] = `
 <DocumentFragment>
   <div
-    class="css-3ulaim"
+    class="css-zdn29g"
   >
     <div
       class="react-tabs"
@@ -11900,7 +11900,7 @@ exports[`Components/Tabs On Select 1`] = `
 exports[`Components/Tabs Overview 1`] = `
 <DocumentFragment>
   <div
-    class="css-3ulaim"
+    class="css-zdn29g"
   >
     <div
       class="react-tabs"
@@ -11987,7 +11987,7 @@ exports[`Components/TitledImage Overview 1`] = `
       title="some image title"
     />
     <div
-      class="css-1g2kr6o"
+      class="css-2t5mx4"
     >
       some image title
     </div>
@@ -12010,7 +12010,7 @@ exports[`Components/Toggle Checkbox 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="css-3gej9x"
+        class="css-yx4ubw"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"
@@ -12023,7 +12023,7 @@ exports[`Components/Toggle Checkbox 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="css-1l5l38o"
+        class="css-14rgxio"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"
@@ -12303,7 +12303,7 @@ exports[`Components/Value Overview 1`] = `
     class="css-zf8zhj"
   >
     <div
-      class="css-p2xb4o"
+      class="css-13o2efz"
     >
       date created
     </div>
@@ -12326,28 +12326,28 @@ exports[`Components/Zoom Overview 1`] = `
         class="css-x60p33"
       >
         <div
-          class="css-192nmz2"
+          class="css-7mlh6m"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             reset
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             zoom out
           </button>
         </div>
         <div
-          class="css-wo8d8v"
+          class="css-7fe059"
         >
           <button
-            class="css-1b2uwqj"
+            class="css-1tf4h46"
           >
             zoom in
           </button>
@@ -12355,7 +12355,7 @@ exports[`Components/Zoom Overview 1`] = `
       </div>
     </div>
     <div
-      class="css-y7renv"
+      class="css-m61a58"
     >
       <div
         class="css-1s8zxab"
@@ -12367,7 +12367,7 @@ exports[`Components/Zoom Overview 1`] = `
             aria-valuemax="1"
             aria-valuemin="0"
             aria-valuenow="0.5"
-            class="css-agj820"
+            class="css-14d2907"
             fill="none"
             height="128"
             role="img"

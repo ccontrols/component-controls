@@ -17,7 +17,16 @@ Object {
                 Array [
                   "@babel/preset-env",
                   Object {
+                    "corejs": 3,
                     "modules": "commonjs",
+                    "targets": Object {
+                      "browsers": Array [
+                        "last 5 versions",
+                        "ie >= 9",
+                      ],
+                      "node": "current",
+                    },
+                    "useBuiltIns": "usage",
                   },
                 ],
                 "@babel/preset-react",
@@ -58,7 +67,16 @@ Object {
             Array [
               "@babel/preset-env",
               Object {
+                "corejs": 3,
                 "modules": "commonjs",
+                "targets": Object {
+                  "browsers": Array [
+                    "last 5 versions",
+                    "ie >= 9",
+                  ],
+                  "node": "current",
+                },
+                "useBuiltIns": "usage",
               },
             ],
             "@babel/preset-react",
