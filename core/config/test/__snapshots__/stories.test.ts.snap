@@ -72,6 +72,7 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
 ]
 `;
 
@@ -147,5 +148,6 @@ Array [
   "/Users/atanasster/component-controls/examples/stories/src/stories/smart-typescript.stories.js",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-async.stories.tsx",
   "/Users/atanasster/component-controls/examples/stories/src/stories/stories-esm.stories.js",
+  "/Users/atanasster/component-controls/examples/stories/src/stories/template-bind.stories.tsx",
 ]
 `;

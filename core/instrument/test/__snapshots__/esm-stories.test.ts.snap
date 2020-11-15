@@ -352,7 +352,7 @@ export const Button: FC<ButtonProps> = props => (
       "Button": "fbea66d4bd64ea2b935855efa5d522a1",
     },
     "date": 2020-11-15T16:47:23.994Z,
-    "dateModified": 2020-11-15T19:31:09.255Z,
+    "dateModified": 2020-11-15T22:23:04.311Z,
     "package": "43299b3f0d3e0b156df31ed88d68174e",
     "title": "Components/Button",
   },
@@ -561,12 +561,12 @@ const Template: Example<ButtonProps> = props => (
   <Button {...props}>Button</Button>
 );
 
-export const John = Template.bind({});
+export const John = Template.bind();
 John.controls = {
   name: 'john',
 };
 
-export const Mary = Template.bind({});
+export const Mary = Template.bind();
 Mary.controls = {
   name: 'mary',
 };
